@@ -20,11 +20,27 @@ import java.util.Set;
 public class WebScraper {
     private static final int TIMEOUT_MS = 10000;
     private static final String USER_AGENT = "Mozilla/5.0 (compatible; SearchEngineBot/1.0)";
+    private Set<String> blacklist = new HashSet<>();
 
     private final DatabaseConfig dbConfig;
 
     public WebScraper() {
         this.dbConfig = DatabaseConfig.getInstance();
+        loadBlacklist();
+    }
+
+    private void loadBlacklist() {
+        try (java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.FileReader("blacklist.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                line = line.trim().toLowerCase();
+                if (!line.isEmpty()) {
+                    blacklist.add(line);
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Warning: Could not load blacklist.txt: " + e.getMessage());
+        }
     }
 
     /**
@@ -33,6 +49,11 @@ public class WebScraper {
     public ScrapeResult scrapeUrl(String url) {
         System.out.println("Crawling: " + url);
 
+        if (isBlacklisted(url)) {
+            System.out.println("✗ Skipped (URL blacklisted): " + url);
+            return new ScrapeResult(false, Collections.emptySet());
+        }
+
         try {
             // Fetch the page
             Document doc = Jsoup.connect(url)
@@ -40,9 +61,23 @@ public class WebScraper {
                     .timeout(TIMEOUT_MS)
                     .get();
 
-            // Extract title, content, and links
+            // Extract title
             String title = doc.title();
+
+            // Check title for blacklisted words
+            if (isBlacklisted(title)) {
+                System.out.println("✗ Skipped (Title blacklisted): " + title);
+                return new ScrapeResult(false, Collections.emptySet());
+            }
+
             String content = extractContent(doc);
+
+            // Check content for blacklisted words (simple check)
+            if (isBlacklisted(content)) {
+                System.out.println("✗ Skipped (Content blacklisted)");
+                return new ScrapeResult(false, Collections.emptySet());
+            }
+
             Set<String> links = extractLinks(doc, url);
 
             // Store in database
@@ -60,14 +95,26 @@ public class WebScraper {
         }
     }
 
+    private boolean isBlacklisted(String text) {
+        if (text == null)
+            return false;
+        String lowerText = text.toLowerCase();
+        for (String badWord : blacklist) {
+            if (lowerText.contains(badWord)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     private Set<String> extractLinks(Document doc, String baseUrl) {
         Set<String> links = new HashSet<>();
         Elements elements = doc.select("a[href]");
 
         for (Element element : elements) {
             String link = element.attr("abs:href");
-            // Basic validation to ensure useful http/https links
-            if (isValidLink(link)) {
+            // Basic validation and blacklist check
+            if (isValidLink(link) && !isBlacklisted(link)) {
                 links.add(link);
             }
         }

@@ -90,20 +90,35 @@ public class ScraperMain {
         try {
             System.out.println(">> Committing and pushing updates to Git...");
 
+<<<<<<< HEAD
             // 1. Git Add
             new ProcessBuilder("git", "add", "frontend/search-data.js", "urls.txt")
+=======
+            // 1. Git Pull - Sync changes from remote first
+            new ProcessBuilder("git", "pull")
+>>>>>>> e34ef52 (git pull first!)
                     .directory(new java.io.File("."))
                     .inheritIO()
                     .start().waitFor();
 
+<<<<<<< HEAD
             // 2. Git Commit
             new ProcessBuilder("git", "commit", "-m", "Auto-update search index & discovered URLs [Bot]")
+=======
+            // 2. Git Add
+            new ProcessBuilder("git", "add", "frontend/search-data.js", "urls.txt", "blacklist.txt")
+>>>>>>> e34ef52 (git pull first!)
                     .directory(new java.io.File("."))
                     .inheritIO()
                     .start().waitFor();
 
+<<<<<<< HEAD
             // 3. Git Pull (Rebase) - Sync AFTER committing local changes
             new ProcessBuilder("git", "pull", "--rebase")
+=======
+            // 3. Git Commit
+            new ProcessBuilder("git", "commit", "-m", "Auto-update search index & discovered URLs [Bot]")
+>>>>>>> e34ef52 (git pull first!)
                     .directory(new java.io.File("."))
                     .inheritIO()
                     .start().waitFor();
