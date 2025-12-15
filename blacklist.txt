@@ -16,10 +16,6 @@ sexual
 gore
 dismemberment
 mutilation
-stab
-shoot
-gun
-drug
 cocaine
 heroin
 meth
@@ -29,7 +25,6 @@ stoned
 drunk
 alcohol
 beer
-wine
 liquor
 
 propaganda
@@ -67,7 +62,6 @@ streamate
 strip
 escort
 massage
-dating
 hookup
 swingers
 personals
