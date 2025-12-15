@@ -68,15 +68,19 @@ function handleSearch() {
     const query = searchInput.value.trim();
 
     if (!query) {
-        showError('Please enter a search query');
+        // showError('Please enter a search query');
         return;
     }
 
     hideError();
 
-    // Perform client-side search
-    const results = searchPages(query);
-    displayResults(query, results);
+    if (currentMode === 'web') {
+        const results = searchPages(query);
+        displayResults(query, results);
+    } else {
+        const results = searchImages(query);
+        displayImageResults(query, results);
+    }
 }
 
 // Client-side search implementation
@@ -121,6 +125,42 @@ function searchPages(query) {
     return results;
 }
 
+// Client-side image search
+function searchImages(query) {
+    const queryTerms = query.toLowerCase().split(/\s+/);
+    const results = [];
+
+    if (!window.imageData) return [];
+
+    for (const img of window.imageData) {
+        const altLower = (img.alt || '').toLowerCase();
+        const titleLower = (img.pageTitle || '').toLowerCase();
+
+        let score = 0;
+        let matchedTerms = 0;
+
+        for (const term of queryTerms) {
+            const altMatches = (altLower.match(new RegExp(term, 'g')) || []).length;
+            const titleMatches = (titleLower.match(new RegExp(term, 'g')) || []).length;
+
+            if (altMatches > 0 || titleMatches > 0) {
+                matchedTerms++;
+                score += altMatches * 10 + titleMatches;
+            }
+        }
+
+        if (matchedTerms === queryTerms.length && score > 0) {
+            results.push({
+                img: img,
+                score: score
+            });
+        }
+    }
+
+    results.sort((a, b) => b.score - a.score);
+    return results;
+}
+
 // Generate a snippet with highlighted query terms
 function generateSnippet(content, queryTerms) {
     if (!content) return 'No preview available';
@@ -161,6 +201,9 @@ function generateSnippet(content, queryTerms) {
 function displayResults(query, results) {
     resultsContainer.innerHTML = '';
 
+    // Update stats
+    updateStats(results.length, query);
+
     if (results.length === 0) {
         resultsContainer.innerHTML = `
             <div class="no-results">
@@ -168,7 +211,6 @@ function displayResults(query, results) {
                 <p>Try different keywords.</p>
             </div>
         `;
-        statsElement.textContent = `No results for "${query}"`;
         return;
     }
 
@@ -177,11 +219,48 @@ function displayResults(query, results) {
         const resultElement = createResultElement(result.page, result.snippet);
         resultsContainer.appendChild(resultElement);
     });
+}
 
-    // Update stats
-    const resultCount = results.length;
-    const resultText = resultCount === 1 ? 'result' : 'results';
-    statsElement.textContent = `${resultCount} ${resultText} for "${query}"`;
+function displayImageResults(query, results) {
+    imageResultsContainer.innerHTML = '';
+    imageResultsContainer.className = 'image-grid';
+
+    updateStats(results.length, query);
+
+    if (results.length === 0) {
+        imageResultsContainer.innerHTML = `
+            <div class="no-results" style="grid-column: 1/-1">
+                <h2>No image results found</h2>
+            </div>
+        `;
+        return;
+    }
+
+    results.forEach(result => {
+        const div = document.createElement('div');
+        div.className = 'image-item';
+        div.innerHTML = `
+            <a href="${escapeHtml(result.img.pageUrl)}" target="_blank">
+                <img src="${escapeHtml(result.img.src)}" alt="${escapeHtml(result.img.alt)}" loading="lazy">
+                <div class="image-info">${escapeHtml(result.img.alt || result.img.pageTitle)}</div>
+            </a>
+        `;
+        imageResultsContainer.appendChild(div);
+    });
+}
+
+function updateStats(count, query) {
+    const resultText = count === 1 ? 'result' : 'results';
+    const baseText = `${count} ${resultText} for "${query}"`;
+
+    // Keep the commit count if it's already there
+    const currentHTML = statsElement.innerHTML;
+    if (currentHTML.includes('|')) {
+        const commitPart = currentHTML.split('|')[1];
+        statsElement.innerHTML = `${baseText} &nbsp;|&nbsp;${commitPart}`;
+    } else {
+        statsElement.textContent = baseText;
+    }
 }
 
 // Create a single result element

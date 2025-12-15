@@ -176,6 +176,44 @@ public class WebScraper {
 
             stmt.executeUpdate();
         }
+
+        // Store images
+        storeImages(url, content);
+    }
+
+    private void storeImages(String pageUrl, String htmlContent) {
+        try {
+            Document doc = Jsoup.parse(htmlContent, pageUrl);
+            Elements images = doc.select("img[src]");
+
+            String sql = "INSERT INTO images (src, alt, page_url) VALUES (?, ?, ?)";
+
+            try (Connection conn = dbConfig.getConnection();
+                    PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+                for (Element img : images) {
+                    String src = img.attr("abs:src");
+                    String alt = img.attr("alt");
+
+                    if (isValidImage(src)) {
+                        stmt.setString(1, src);
+                        stmt.setString(2, alt.length() > 255 ? alt.substring(0, 255) : alt);
+                        stmt.setString(3, pageUrl);
+                        stmt.addBatch();
+                    }
+                }
+                stmt.executeBatch();
+            }
+        } catch (Exception e) {
+            System.err.println("Error storing images for " + pageUrl + ": " + e.getMessage());
+        }
+    }
+
+    private boolean isValidImage(String src) {
+        return src != null &&
+                (src.startsWith("http://") || src.startsWith("https://")) &&
+                !src.contains("pixel") &&
+                !src.contains("analytics");
     }
 
     /**

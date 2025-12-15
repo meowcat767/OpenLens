@@ -20,6 +20,11 @@
             <button type="submit" id="searchButton">Search</button>
         </form>
 
+        <div class="search-tabs">
+            <button id="tabWeb" class="tab active">Web</button>
+            <button id="tabImages" class="tab">Images</button>
+        </div>
+
         <div id="stats"></div>
 
         <div id="loadingIndicator" style="display: none;">
@@ -31,6 +36,7 @@
         </div>
 
         <div id="resultsContainer"></div>
+        <div id="imageResultsContainer" style="display: none;"></div>
     </div>
 
     <script src="search-data.js"></script>

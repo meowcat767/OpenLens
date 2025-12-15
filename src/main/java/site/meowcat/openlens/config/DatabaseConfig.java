@@ -64,14 +64,26 @@ public class DatabaseConfig {
                 );
                 """;
 
+        String createImagesTable = """
+                CREATE TABLE IF NOT EXISTS images (
+                    id SERIAL PRIMARY KEY,
+                    src TEXT NOT NULL,
+                    alt TEXT,
+                    page_url TEXT,
+                    FOREIGN KEY (page_url) REFERENCES pages(url) ON DELETE CASCADE
+                );
+                """;
+
         String createIndexes = """
                 CREATE INDEX IF NOT EXISTS idx_pages_url ON pages(url);
+                CREATE INDEX IF NOT EXISTS idx_images_page_url ON images(page_url);
                 """;
 
         try (Connection conn = getConnection();
                 Statement stmt = conn.createStatement()) {
 
             stmt.execute(createPagesTable);
+            stmt.execute(createImagesTable);
             stmt.execute(createIndexes);
 
             System.out.println("Database schema initialized successfully (H2 Local DB)");

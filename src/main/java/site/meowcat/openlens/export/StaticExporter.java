@@ -34,37 +34,67 @@ public class StaticExporter {
         }
     }
 
+    public static class ImageData {
+        public String src;
+        public String alt;
+        public String pageTitle;
+        public String pageUrl;
+
+        public ImageData(String src, String alt, String pageTitle, String pageUrl) {
+            this.src = src;
+            this.alt = alt;
+            this.pageTitle = pageTitle;
+            this.pageUrl = pageUrl;
+        }
+    }
+
     public static void main(String[] args) {
         String outputFile = args.length > 0 ? args[0] : "frontend/search-data.js";
         export(outputFile);
     }
 
     public static void export(String outputFile) {
-        // System.out.println("Exporting database to: " + outputFile);
-
         DatabaseConfig dbConfig = DatabaseConfig.getInstance();
         List<PageData> pages = new ArrayList<>();
+        List<ImageData> images = new ArrayList<>();
 
-        String sql = "SELECT id, url, title, content, scraped_at FROM pages ORDER BY scraped_at DESC";
+        String pageSql = "SELECT id, url, title, content, scraped_at FROM pages ORDER BY scraped_at DESC";
+        String imageSql = """
+                SELECT i.src, i.alt, p.title, p.url
+                FROM images i
+                JOIN pages p ON i.page_url = p.url
+                ORDER BY p.scraped_at DESC
+                """;
 
-        try (Connection conn = dbConfig.getConnection();
-                PreparedStatement stmt = conn.prepareStatement(sql);
-                ResultSet rs = stmt.executeQuery()) {
+        try (Connection conn = dbConfig.getConnection()) {
 
-            while (rs.next()) {
-                // Truncate content for smaller file size
-                String content = rs.getString("content");
-                if (content != null && content.length() > 5000) {
-                    content = content.substring(0, 5000);
+            // 1. Export Pages
+            try (PreparedStatement stmt = conn.prepareStatement(pageSql);
+                    ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    String content = rs.getString("content");
+                    if (content != null && content.length() > 5000) {
+                        content = content.substring(0, 5000);
+                    }
+                    pages.add(new PageData(
+                            rs.getInt("id"),
+                            rs.getString("url"),
+                            rs.getString("title"),
+                            content,
+                            rs.getTimestamp("scraped_at").toString()));
                 }
+            }
 
-                PageData page = new PageData(
-                        rs.getInt("id"),
-                        rs.getString("url"),
-                        rs.getString("title"),
-                        content,
-                        rs.getTimestamp("scraped_at").toString());
-                pages.add(page);
+            // 2. Export Images
+            try (PreparedStatement stmt = conn.prepareStatement(imageSql);
+                    ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    images.add(new ImageData(
+                            rs.getString("src"),
+                            rs.getString("alt"),
+                            rs.getString("title"),
+                            rs.getString("url")));
+                }
             }
 
             // Write to JS file
@@ -72,9 +102,11 @@ public class StaticExporter {
             try (FileWriter writer = new FileWriter(outputFile)) {
                 writer.write("window.searchData = ");
                 gson.toJson(pages, writer);
+                writer.write(";\n\n");
+
+                writer.write("window.imageData = ");
+                gson.toJson(images, writer);
                 writer.write(";");
-                // System.out.println("✓ Updated index: " + outputFile + " (" + pages.size() + "
-                // pages)");
             }
 
         } catch (SQLException | IOException e) {
