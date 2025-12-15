@@ -52,6 +52,8 @@ public class ScraperMain {
                     if (!visited.contains(newLink)) {
                         visited.add(newLink);
                         urlQueue.add(newLink);
+                        // Persist new URL to file
+                        saveUrl(urlFile, newLink);
                     }
                 }
 
@@ -89,18 +91,27 @@ public class ScraperMain {
             System.out.println(">> Committing and pushing updates to Git...");
 
             // 1. Git Add
-            new ProcessBuilder("git", "add", "frontend/search-data.js")
+            new ProcessBuilder("git", "add", "frontend/search-data.js", "urls.txt")
                     .directory(new java.io.File("."))
+                    .inheritIO()
                     .start().waitFor();
 
             // 2. Git Commit
-            new ProcessBuilder("git", "commit", "-m", "Auto-update search index [Bot]")
+            new ProcessBuilder("git", "commit", "-m", "Auto-update search index & discovered URLs [Bot]")
                     .directory(new java.io.File("."))
+                    .inheritIO()
                     .start().waitFor();
 
-            // 3. Git Push
+            // 3. Git Pull (Rebase) - Sync AFTER committing local changes
+            new ProcessBuilder("git", "pull", "--rebase")
+                    .directory(new java.io.File("."))
+                    .inheritIO()
+                    .start().waitFor();
+
+            // 4. Git Push
             Process p = new ProcessBuilder("git", "push")
                     .directory(new java.io.File("."))
+                    .inheritIO()
                     .start();
             int exitCode = p.waitFor();
 
@@ -112,6 +123,14 @@ public class ScraperMain {
 
         } catch (Exception e) {
             System.err.println(">> ⚠ Git operation failed: " + e.getMessage());
+        }
+    }
+
+    private static void saveUrl(String filename, String url) {
+        try (java.io.FileWriter writer = new java.io.FileWriter(filename, true)) {
+            writer.write(url + "\n");
+        } catch (IOException e) {
+            System.err.println("Error saving URL to " + filename + ": " + e.getMessage());
         }
     }
 
