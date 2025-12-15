@@ -86,6 +86,9 @@ public class WebScraper {
             // Store in database
             storeInDatabase(url, title, content);
 
+            // Store images (using the original doc which still has image tags)
+            storeImages(url, doc);
+
             System.out.println("✓ Indexed: " + title + " (" + links.size() + " new links)");
             return new ScrapeResult(true, links);
 
@@ -176,17 +179,23 @@ public class WebScraper {
 
             stmt.executeUpdate();
         }
-
-        // Store images
-        storeImages(url, content);
     }
 
-    private void storeImages(String pageUrl, String htmlContent) {
+    private void storeImages(String pageUrl, Document doc) {
         try {
-            Document doc = Jsoup.parse(htmlContent, pageUrl);
             Elements images = doc.select("img[src]");
 
+            System.out.println("   > Found " + images.size() + " <img> tags on page.");
+
+            // First delete existing images for this page to prevent duplicates
+            try (Connection conn = dbConfig.getConnection();
+                    PreparedStatement delStmt = conn.prepareStatement("DELETE FROM images WHERE page_url = ?")) {
+                delStmt.setString(1, pageUrl);
+                delStmt.executeUpdate();
+            }
+
             String sql = "INSERT INTO images (src, alt, page_url) VALUES (?, ?, ?)";
+            int count = 0;
 
             try (Connection conn = dbConfig.getConnection();
                     PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -200,9 +209,13 @@ public class WebScraper {
                         stmt.setString(2, alt.length() > 255 ? alt.substring(0, 255) : alt);
                         stmt.setString(3, pageUrl);
                         stmt.addBatch();
+                        count++;
                     }
                 }
                 stmt.executeBatch();
+            }
+            if (count > 0) {
+                System.out.println("   > Stored " + count + " valid images.");
             }
         } catch (Exception e) {
             System.err.println("Error storing images for " + pageUrl + ": " + e.getMessage());
