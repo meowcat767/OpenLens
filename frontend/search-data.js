@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 47,
+    "url": "https://en.wikipedia.org/wiki/File:Wellcome_Collection_Rocking_Bed.jpg",
+    "title": "File:Wellcome Collection Rocking Bed.jpg - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia File File history File usage Metadata Size of this preview: 800 × 532 pixels. Other resolutions: 320 × 213 pixels | 640 × 426 pixels | 1,024 × 681 pixels | 1,280 × 852 pixels | 2,560 × 1,704 pixels | 3,677 × 2,447 pixels. Original file (3,677 × 2,447 pixels, file size: 543 KB, MIME type: image/jpeg) This is a file from the Wikimedia Commons. Information from its description page there is shown below. Commons is a freely licensed media file repository. You can help. Summary DescriptionWellcome Collection Rocking Bed.jpg English: Patients with breathing difficulties were treated using this rocking bed. It was invented by Dr Jessie Wright (1900-70) in the mid-1940s. She was an English doctor living in the US. The first rocking beds were used by patients who had experienced polio, which can paralyse the chest muscles. This leaves the patient unable to breath for themselves. ; This example was made by the Cape Engineering Co. Ltd based in Warwick, England. The patient lies on the bed and is slowly rocked horizontally, like a seesaw. When the patient’s head is raised, the diaphragm is pulled down by gravity. This draws air into the lungs. When the patient’s feet are raised, air is forced out of the lungs. The speed of the rocking bed was adjusted depending on how much help a person needed to breathe. Rocking beds could be used with patients who were not completely dependent on an iron lung. They gave patients greater freedom of movement instead of being almost completely encased. Rocking beds are still used to assist breathing for numerous medical complaints. Maker: Cape Engineering Company Limited Place made: Warwick, Warwickshire England, United Kingdom Date 1973 Source https://www.jstor.org/stable/community.24786554 Author Science Museum, London Licensing This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. https://creativecommons.org/licenses/by/4.0CC BY 4.0 Creative Commons Attribution 4.0 truetrue This media file is uncategorized. Please help improve this media file by adding it to one or more categories, so it may be associated with related media files (how?), and so that it can be more easily found. Please notify the uploader with {{subst:Please link images|File:Wellcome Collection Rocking Bed.jpg}} ~~~~ Captions English Add a one-line explanation of what this file represents Items portrayed in this file depicts copyright status copyrighted copyright license Creative Commons Attribution 4.0 International source of file file available on the internet described at URL: https://www.jstor.org/stable/community.24786554 inception 1973 data size 556,015 byte height 2,447 pixel width 3,677 pixel media type image/jpeg checksum 5fc465f219f05d6f9fcd481946255d17c2e415cf determination method or standard: SHA-1 File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 02:48, 26 October 2025 3,677 × 2,447 (543 KB) Darth Stabro Uploaded a work by Science Museum, London from https://www.jstor.org/stable/community.24786554 with UploadWizard File usage More than 100 pages use this file. The following list shows the first 100 pages that use this file only. A full list is available. Talk:Main Page/Archive 34 User:4v4l0n42/Today User:Afterword User:Afterword/pretty User:Allard User:AmiDaniel/Sandbox User:Bannus User:Cactus.man User:ChrisG/sandbox User:David Levy/Test User:David Levy/Test2 User:Dbmag9/Main Page User:DonWilson User:Drumguy8800/Main page draft User:Eloquence/Tour 01 User:Encephalon/Main User:Furchild User:Hamedog/Main Page User:Hamedog/Old school main page User:Hellinterface User:Hemanshu/Tomorrow\u0027s main page User:Hemanshu/edmainpage User:Itai User:J. Finkelstein/Old page User:JamieHughes User:Jcrwiki~enwiki User:JonMoore/Main Page User:JustinWick/mydraft User:Kinhull User:Krik~enwiki/mp User:Krik~enwiki/nmp User:Leopard~enwiki User:Lovelac7 User:Malomeat User:MarSch/Main body User:MarSch/Main page User:MattKingston User:Member/Wikipedia Front Page User:Nickg331 User:Node ue/MainPageTemplate2 User:Pufferfish101/Edit User:Quentin Smith/Magazine User:Quentin Smith/Shadow Main Page User:Ral315/Main Page User:RaptorX User:Rodsan18 User:SCLamont User:SGCommand User:Sintonak.X/SandBox/Main Page User:Sj/M2 User:Tazmaniacs User:Texture User:The bellman User:Thetorpedodog/xptablefree User:ThinkOutsideTheTesseract User:Tim Robinson/Main Page (Proposal) User:Tlogmer User:Tom-/sandbox User:Vincent7 User:Vir/sandbox/mainpagealt User talk:Dr. Dan User talk:Guty~enwiki User talk:Stor stark7 Wikipedia:Main Page/French2 Wi",
+    "scrapedAt": "2025-12-15 19:21:07.106221"
+  },
+  {
+    "id": 46,
+    "url": "https://ku.wikipedia.org/wiki/Destp%C3%AAk",
+    "title": "Wîkîpediya",
+    "content": "Here naverokê Ji Wîkîpediya, ensîklopediya azad. Hûn bi xêr hatin Wîkîpediyaya kurdî, ensîklopediya azad. Ji meha kanûna paşîn a sala 2004an ve 90.924 gotarên bi kurdî hatine nivîsandin. Civak Çand û Huner Dîn Teknolojî Werziş Zanist Dîrok Erdnîgarî Muzîk Alîkarî · Çapemenî · Dîroka Wîkîpediyayê · Pêwendî · Statîstîk · Zimanên din — — Îro, 9ê kanûna pêşîna 2025an e (UTC) Nivîsara hefteyê Wêneyê gotarê Guherîna avhewayê, guherîna seqayê, germbûna gerdûnî yan jî germbûna cîhanî, germbûna hewayê ye ku ji ber gazên serayê û zêdebûna gazên karbondîoksîd li seranserê cîhanê çêdibe. Her çend di serdemên berê de guherîna avhewayê hebin jî lê ji nîvê sedsala 20an û vir ve jiber pîşesaziyên ku zirarê dide sîstema evhewayê bandoreke neyînî ya bêmînak li ser sîstema avhewayê pêk aniye ku li hinek deverên cîhanê wekî zêdebûna baranê û zêdebûna germahiyê li seranserê cihanê zêde bûye. Guhertinên bi vî awayî di asta global de pêk hatiye. Sedema herî mezin a germbûnê, belavkirina gazên serayê ye ku bi giranî karbondîoksîd (CO 2) û gazê metan e. Bi tevkariyên zêde yên çandinî, bêdaristanî û reaksiyonên kîmyewî yên di hinek pêvajoyên hilberînan de, bikaranîna şewata sotemeniya fosîl (komir, petrol û gaza xwezayî) ku ji bo xerckirina enerjiyê tê bikaranîn, çavkaniya sereke ya van emîsyonan e. (zêdetir...) Arşîv – Gotara berê Zaravayên kurdî Soranî Kurdiya navendî · soranî Be xêr bên bo Wîkîpîdiya! Wîkîpîdiya însaykllopîdiyayekî azade ke hemû kesêk detiwanêt destkarîy bikat. Witare soranîyekan le mangî 8î 2009ewe le mallperrî ciyawazî kurdîy nawîn û be elfubêy erebî billaw debinewe. (ویکیپیدیای کوردیی ناوەندی (سۆرانی – Kurdiya navendî (soranî be latînî) Kurdí Xwarig Kurdiya başûrî (kirmaşanî, kelhurî, feylî, şêxbizinî) We xêr hatine Wîkîpêdiya! Wíkípédíya zanistnameyg azas ke le nawya her kes tiwanêd we zanayî xwey tiya beşdarî biked. Îwenîş fermûne îre beşdarî biken. incubator:Wp/sdh/دەسپێک – Wetar we zaraway kurdî xwarig Dimilkî Zazakî · kirmanckî · dimilkî · kirdkî Şima xêr ameyî! Îtîya de Wîkîpediya, ensîklopediya verên bi ziwanê kurdkî vecîyena. Ina ensîklopediya azadî her merdim bese keno nuşteyan binuso yan zî bivurno. Wîkîpediya Zazakîyê cîya zî esta – Şo pela kirmanckî Danasîn Wîkîpediya, ensîklopediyeke azad a bi zimanê kurdî ye. Ev projeya navneteweyî, derfeteke girîng a ji bo pêşdexistina zimanan e. Mirovên ku dixwazin zimanê kurdî pêşde biçe, dikarin di Wîkîpediyayê de alîkariya zimanê me bikin. Hûn jî dikarin li vir tevlî me bibin. Keremkin bi beşên alîkarî û pênc hîmên sereke yên wîkîpediyayê fêr bibin ka gotar çawa têne nivîsandin. Hesabê nû çêke Hesabekî te heye? Têkeve. Di dîrokê de îro… Bûyer 1856 – Hêzên îranî, li bajarê Bûşêhr hêzên brîtanî dorpêçkirin. 1905 – Li Fransayê zagona ji hev veqetandina karê dewletê û karê dînê hate pejirandin. 1917 – Hêzên dewleta Brîtanyayê, bajarê Orşelîmê zemt kirin. 1941 – Şerê cîhanî yê duyem; Komara Gel a Çînê, Kûba û Guatemala li dijî Japon û Almanya şer îlankirin. 1961 – Herêm Tanganyîka ya Tanzanyayê ji Brîtanyayê serxwebûna xwe bi dest xist. 1966 – Barbados tevlî Neteweyên Yekbûyî bû. 1971 – Mîrnişînên Erebî yên Yekbûyî tevlî Neteweyên Yekbûyî bû. 1987 – Pirsgirêka Îsraêl-Filîstînê; Întîfadaya yekem li Şirîta Xezeyê destpê kir. 1990 – Serokê Solidarnośćê ((Tevgera Hevkariyê) Lech Wałęsa li Polonyayê di hilbijartinan de biserket. Jidayikbûn 1926 – Henry Way Kendall, fizîknasê xwediyê Xelata Nobelê 1968 – Kurt Angle, gemşkarê profesyonel ê amerîkî Mirin 1916 – Théodule-Armand Ribot, fîlozof û psîkologê fransî 1937 – Nils Gustaf Dalén, fizîknasê xwediyê Xelata Nobelê 1955 – Hermann Weyl, matematîkzanê alman Arşîv – Bêhtir… Îro, 9ê kanûna pêşîn a 2025an e (UTC) – nûkirin Wêneyê hefteyê Çiyayê Bêllî Peykerên Çiyayê Bêllî, Semsûr, Bakurê Kurdistanê Wênesaz: Yarl Arşîv – Wêneyê berê Wêneyê rojê ji Commonsê Malbata Wîkîmedyayê Meta-Wîkî – Koordînasyon Commons – Wêne û medyayên din Wîkîferheng – Ferheng Wîkîpirtûk – Pirtûk ji bo zanînê Wîkîçavkanî – Çavkaniya azad Wîkîgotin – Gotinên kesan Wîkîcure – Rêbernameya cureyan Wîkînûçe – Nûçe Wîkîversîte – Platforma fêrbûnê Wîkîdane – Bingeha zanîna azad Wîkîgeşt – Rêbernameya geşt û guzarê MedyaWîkî – Nermamrazên azad Rêveberî — Dîwan — Kurdîgeh — Şêwaz Ji \"https://ku.wikipedia.org/w/index.php?title\u003dDestpêk\u0026oldid\u003d1703155\" hatiye standin. Bi 43 zimanên din العربية ܐܪܡܝܐ Català Cebuano کوردی Čeština Dansk Deutsch Zazaki Ελληνικά English Esperanto Español Eesti Euskara فارسی Suomi Français Galego گیلکی עברית Hrvatski Հայերեն ქართული لۊری شومالی مازِرونی Norsk nynorsk Norsk bokmål Polski پښتو Português Română Armãneashti Русский Svenska Türkçe Татарча / tatarça Tiếng Việt 吴语 中文 文言 閩南語 / Bân-lâm-gí 粵語 Lêgerîn Lêgerîn Destpêk Bi 43 zimanên din Mijarekê lê zêde bike",
+    "scrapedAt": "2025-12-15 19:21:05.636983"
+  },
+  {
+    "id": 45,
+    "url": "https://hif.wikipedia.org/wiki/Pahila_Panna",
+    "title": "Wikipedia",
+    "content": "Jump to content Wikipedia se Fiji Hindi Wikipedia Ii ek muft me jankari de waala Encyclopedia hae Isme koi bhi likhe sake hae Fiji Hindi Wikipedia me abhi 12,092 lekh hae. Suchi: 1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Vibhag Fiji Fiji ke Hindustani Fiji Hindi Fiji me football Girmit Parrhai likhai Dunia ke des Dunia ke log Dunia ke itihass Science aur technology Jaruri article Fiji Hindi Wiktionary Aaj ke khaas lekh Hereford 14th jahaaj rahaa jisme gimitya log ke lae ke India se Fiji lawa gais rahaa. Iske baad ii jahaaj dui aur dafe Fiji aais. Ii jahaaj 1510 ton garrhu aur loha ke banaa, paal waala jahaaj rahaa jiske 1869 me Glasgow ke J. Elder \u0026 Company, Merchant Shipping Company of London khatir banais rahaa. Suruu me iske New Zealand nawa immigrant logan ke lae jaae khaatir kaam me lawa gais rahaa. 1882 me ii jahaaj ke Nourse Line kharid liis aur iske West Indies girmitya logan ke lae jaae khatir kaam me lawa gais. Ii jahaaj Fiji pahila dafe 24 April 1888 ke 539 girmitya logan ke lae ke, duusra dafe 15 June 1892 ke 479 girmitya logan ke lae ke aur tiisra dafe, 28 June 1894 ke, 511 girmitya logan ke lae ke aais. 1898 me Hereford ke Norway ke ek Company ke bech dewa giais aur 1907 me ii Argentina ke nangich ek chattan pe charr ke duub gais. (aur...) Aap janta hai... Ratu Cakobau 1875 ke measles epidemic, jisme 20% Kaiviti logan mar gae rahin, ke Fiji me failae waala, Ratu Cakobau aur uske dui larrka logan rahin jon ki March 1875 me Sydney se ghuum ke lauta rahin. 1879 se lae ke 1916 tak, 42 jahaaj, 87 trip me 60,553 girmitya logan ke lae ke Fiji se aais rahaa. Isme se 45,439 log Calcutta se aur 15,114 log Madras se jahaaj me charrhin rahaa. Fiji ke Legislative Council ke pahila Hindustani member Badri Maharaj rahaa, jiske Governor nominate karis rahaa aur jon 1917 - 1923 aur 1926 - 1929 tak Council ke member rahaa. Fiji me pahila football competition Nasau Park, Levuka me 1924 me, Cession ke golden jublee celebrate kare ke time, chhe Kaiviti team ke biich me Ricarnie Cup khatir, khela gais rahaa. Fiji ke Hindustani ke army me join kare ke khatir, 1934 me Indian Platoon banawa gais rahaa lekin iske 1940 me disband kar dewa gais rahaa. Royal Air Force ke khatir fighter plane kharide ke khatir, 1943 me ek Fighter Fund suruu karaa gais rahaa, aur ii paisa se nau fighter aur paanch bomber kharida gais rahaa. Ek fighter ke naam Fiji Indian Fighter rahaa. Fiji Trade Union Congress se pahile Ami Chandra, 1950s me Fiji Industrial Workers Congress suruu karis rahaa. Fiji ke 1997 ke constitution me English aur Kaiviti ke saathe Hindustani ke Fiji ke official language banawa gais rahaa. Archive Taaja khabar Biman Prasad 29 October - Fiji ke Deputy Prime Minister aur Minister of Finance, Biman Prasad rsign kar dis kaaheki uske FICAC corruption ke khaatir charge karis hae. 22 June - United States ke Air Force aur Navy, Iran ke tiin nuclear facilities ke attack karis. 21 April - Pope Francis ke maut Vatican City me bhais rahaa. 30 March - Ek 7.7 magnitude bhukamp ke kaaran Myanmar aur Thailand me 2,000 log ke maut hoe gais. 19 February - Toronto Airport me Delta Air Lines ke plane, utarte ke samay ulut gais lekin sab passengers bach gain 16 February - 78 British Academy Film Awards me, Conclave ke chaar award milaa. 29 December - Jimmy Carter, America ke 39th President, ke maut Plains, Georgia me bhais. \u0027 Aaj se sau saal pahile, 1925 me... Ii saal, Fiji me 64,963 bigha jamiin me ganna boya gais rahaa, jisme se 33,679 bigha (52%) CSR bois rahaa, 4,446 bigha (7%) ke Goraa kisaan boy rahin, 6,905 bigha (10%), ke CSR ke asaami log boy rahin aur 19,933 bigha (31%) ke Hindustani contractors boy rahin. Ii saal, Fiji me Hindustani ke birth rate 33.14 per thousand rahaa, jab ki Kaiviti ke birth rate of 32.29 per thousand rahaa, lekin Hindustani ke death rate 7.25 per thousand rahaa, jab ki Kaiviti death rate of 22.75 per thousand rahaa Ii saal Fiji me khaali 174 Hindustani saadi ke register karaa gais rahaa, jab ki 857 Kaiviti saadi ke register karaa gais rahaa. Saal ke end me, Fiji ke abaadi 169,667 rahaa, jisme se 88,431 Kaiviti rahin aur 68,136 Hindustani rahin. Iske matlab hae ki ii saal Fiji me 3,956 aur Kaiviti aur aur 7,502 aur Hindustani rahin agar iske April 1921 ke census se compare karaa jaae. Britain ke sarkar ii nischay karis ki Fiji ke election common roll pe nai hoe sake, kaaheki ii Deed of Cession ke against rahii. 9 May – Fiji me ek typhoid ke epidemic faelaa, jisme tiin Goraa log ke maut bhais. Kuchh Hindustani log bhi aspataal me bharti rahin, lekin Kaiviti log pe koi asar nai rahaa. Indian Reform League,volunteer nurses ke provide karis rahaa. 9 July - Guru Dutt, Hindi film actor, ke janam Bangalore, India me bhais rahaa. Pahile waala saal: 1908 1909 1910 1911 1912 1913 1914 1915 1916 1917 1920 1921 1923 1924 Aaj ke khaas chhaapa Tulsi (Scientific naam: Ocimum basilicum , English: basil, common basil, mint, sweet basil, Kaiviti: tomole) ek rakam ke herb hai jiske Hindu log puja m",
+    "scrapedAt": "2025-12-15 19:21:04.051272"
+  },
+  {
+    "id": 44,
+    "url": "https://en.wikipedia.org/wiki/1945",
+    "title": "1945 - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia 1945 January February March April May June July August September October November December This article is about the year 1945. For other uses, see 1945 (disambiguation). From top to bottom, left to right: The Atomic bombings of Hiroshima and Nagasaki devastate Japan and force the Surrender of Japan, ending World War II; the Battle of Berlin brings the fall of Nazi Germany, the death of Adolf Hitler, and the end of World War II in Europe; the Battle of Iwo Jima sees the United States capture a vital island after fierce fighting; the Yalta Conference unites Winston Churchill, Franklin D. Roosevelt, and Joseph Stalin to shape postwar Europe and establish the United Nations; the Bombing of Dresden levels the city with heavy civilian losses; the death of Benito Mussolini marks the collapse of Fascist Italy; the Bombing of Tokyo becomes one of the deadliest air raids of the war; the death of Franklin D. Roosevelt sees Harry S. Truman assume the U.S. presidency; and the 1945 Empire State Building B-25 crash strikes New York City, killing 14. Calendar year Years Millennium 2nd millennium Centuries 19th century 20th century 21st century Decades 1920s 1930s 1940s 1950s 1960s Years 1942 1943 1944 1945 1946 1947 1948 v t e 1945 by topic Subject Animation Archaeology Architecture Art Aviation Awards Comics Film Literature Poetry Meteorology Music Country Jazz Rail transport Radio Science Spaceflight Sports Football Television American British By country Afghanistan Australia Belgium Brazil Bulgaria Canada China Denmark France Germany India Indonesia Ireland Italy Japan Malaya Netherlands New Zealand Norway Palestine Mandate Philippines Portugal South Africa South Korea Soviet Union Spain Sweden Switzerland Thailand Turkey United Kingdom United States Venezuela Lists of leaders Sovereign states Sovereign state leaders Territorial governors Religious leaders Law Birth and death categories Births Deaths Establishments and disestablishments categories Establishments Disestablishments Works category Works Introductions v t e 1945 in various calendars Gregorian calendar 1945 MCMXLV Ab urbe condita 2698 Armenian calendar 1394 ԹՎ ՌՅՂԴ Assyrian calendar 6695 Baháʼí calendar 101–102 Balinese saka calendar 1866–1867 Bengali calendar 1351–1352 Berber calendar 2895 British Regnal year 9 Geo. 6 – 10 Geo. 6 Buddhist calendar 2489 Burmese calendar 1307 Byzantine calendar 7453–7454 Chinese calendar 甲申年 (Wood Monkey) 4642 or 4435 — to — 乙酉年 (Wood Rooster) 4643 or 4436 Coptic calendar 1661–1662 Discordian calendar 3111 Ethiopian calendar 1937–1938 Hebrew calendar 5705–5706 Hindu calendars - Vikram Samvat 2001–2002 - Shaka Samvat 1866–1867 - Kali Yuga 5045–5046 Holocene calendar 11945 Igbo calendar 945–946 Iranian calendar 1323–1324 Islamic calendar 1364–1365 Japanese calendar Shōwa 20 (昭和２０年) Javanese calendar 1875–1876 Juche calendar 34 Julian calendar Gregorian minus 13 days Korean calendar 4278 Minguo calendar ROC 34 民國34年 Nanakshahi calendar 477 Thai solar calendar 2488 Tibetan calendar ཤིང་ཕོ་སྤྲེ་ལོ་ (male Wood-Monkey) 2071 or 1690 or 918 — to — ཤིང་མོ་བྱ་ལོ་ (female Wood-Bird) 2072 or 1691 or 919 Wikimedia Commons has media related to 1945. 1945 (MCMXLV) was a common year starting on Monday of the Gregorian calendar, the 1945th year of the Common Era (CE) and Anno Domini (AD) designations, the 945th year of the 2nd millennium, the 45th year of the 20th century, and the 6th year of the 1940s decade. Calendar year A turning point[1] in human history, 1945 marked the end of World War II, ending with the defeat and occupation of Nazi Germany, and the Empire of Japan. It is also the year the Nazi concentration camps were liberated and the only year in which atomic weapons have been used in warfare. Events [edit] World War II will be abbreviated as \"WWII\" January [edit] Main article: January 1945 January 27 – The Soviet Red Army liberates Auschwitz. January 1 – WWII: Germany begins Operation Bodenplatte, an attempt by the Luftwaffe to cripple Allied air forces in the Low Countries.[2] Chenogne massacre: German prisoners are allegedly killed by American forces near the village of Chenogne, Belgium. January 6 – WWII: A German offensive recaptures Esztergom, Hungary from the Soviets. January 9 – WWII: American and Australian troops land at Lingayen Gulf on western coast of the largest Philippine island of Luzon, occupied by Japan since 1942. January 12 – WWII: The Soviet Union begins the Vistula–Oder Offensive in Eastern Europe, against the German Army.[3] January 13 – WWII: The Soviet Union begins the East Prussian Offensive, to eliminate German forces in East Prussia. January 16 – WWII: Adolf Hitler takes residence in the Führerbunker in Berlin.[4] January 17 WWII: The Soviet Union occupies Warsaw, Poland. The Holocaust: Swedish diplomat Raoul Wallenberg, who has saved thousands of Jews, is taken into custody by a Soviet patrol during the Siege of Budapest and is never again seen publ",
+    "scrapedAt": "2025-12-15 19:21:02.335001"
+  },
+  {
+    "id": 43,
+    "url": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions",
+    "title": "Wikipedia:Recent additions - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia Archive page of the Main Page Did you know section \"WP:DYKA\" redirects here. For the list of approved Did you know nominations, see WP:DYKNA. Shortcut WP:DYKAWP:DYKA This is a record of material that was recently featured on the Main Page as part of Did you know (DYK). Recently created new articles, greatly expanded former stub articles and recently promoted good articles are eligible; you can submit them for consideration. Archives are generally grouped by month of Main Page appearance. (Currently, DYK hooks are archived according to the date and time that they were taken off the Main Page.) To find which archive contains the fact that appeared on Did you know, go to the article\u0027s talk page and follow the archive link in the DYK talk page message box or the Article Milestones box. Current archive 2025 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2024 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2023 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2022 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2021 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2020 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2019 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2018 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2017 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2016 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2015 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2014 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2013 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2012 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2011 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2010 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2009 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2008 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2007 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2006 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2005 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2004 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Edit the DYK archive navigation template Did you know? Introduction and rules Introduction WP:DYK General discussion WT:DYK Guidelines WP:DYKCRIT Reviewer instructions WP:DYKRI Nominations Nominate an article WP:DYKCNN Awaiting approval WP:DYKN Approved WP:DYKNA April 1 hooks WP:DYKAPRIL Holding area WP:SOHA Preparation Preps and queues TM:DYK/Q Prepper instructions WP:DYKPBI Admin instructions WP:DYKAI Main Page errors WP:ERRORS History Statistics WP:DYKSTATS Archived sets WP:DYKA Just for fun Monthly wraps WP:DYKW Awards WP:DYKAWARDS Userboxes WP:DYKUBX Hall of Fame WP:DYK/HoF List of users ... ... by nominations WP:DYKNC ... by promotions WP:DYKPC Administrative Scripts and bots WP:DYKSB On the Main Page TM:DYK Main Page errors WP:ERRORS To ping the DYK admins {{DYK admins}} v t e Did you know... 15 December 2025 00:00, 15 December 2025 (UTC) Lorens von der Linde ... that Swedish general Lorens von der Linde (pictured) once shocked an English diplomat with his stories of King Charles X Gustav\u0027s German liaisons? ... that scholars have described the 1946 book The Failure of Technology as a precursor to the environmental movement? ... that Romanian far-right journalist Ilariu Dobridor died after being beaten and locked in his own home? ... that the Dutch-built and Turkish-operated Birinci İnönü-class submarines were used to discreetly develop German U-boats? ... that Dredge is a Lovecraftian horror and fishing video game? ... that the killing of an official by seven women was held up as an example of filial piety? ... that, when Mariame Clément directed Mozart\u0027s Così fan tutte, she froze a wedding tableau during the overture and restarted it in the finale? ... that Turkey is facing its worst drought in the last 50 years? ... that Nobuhiko Jimbo saved future Philippine president Manuel Roxas from execution during World War II, and Roxas did the same for Jimbo four years later? 14 December 2025 00:00, 14 December 2025 (UTC) Dammusi on Pantelleria ... that traditional stone houses on the island of Pantelleria (examples pictured) passively maintain an internal temperature up to 8 °C (14 °F) cooler than the ambient air temperature in summer? ... that Kenssy Dwi Ekaningsih used her skills in traditional Javanese dance at diplomatic receptions during an assignment in Rome? ... that Yonki-no-kai Productions was founded by Akira Kurosawa, Masaki Kobayashi, Kon Ichikawa and Keisuke Kinoshita with the aim of reviving the struggling Japanese film industry? ... that, after Uruapan mayor Carlos Manzo was assassinated, his wife Grecia Quiroz was chosen to complete his term in office? ... that A. A. Gill saw \"poseurs, pimps, phoney counts, lounge lizards, poodle fakers, ageing gigolos and remittance men\" at San Lorenzo? ... that Catalan artist Josefa Tolrà created paintings and embroideries while in a trance? ... that 10 Things I Want to Do Before I Turn 40 was originally conceived as a science-fiction story about an older male succu",
+    "scrapedAt": "2025-12-15 19:20:59.426941"
+  },
+  {
     "id": 42,
     "url": "https://ann.wikipedia.org/wiki/Uwu",
     "title": "Wìkìpedia",
@@ -1377,41 +1412,6 @@ window.searchData = [
     "title": "Wikipedia, ensiklopedia bebas",
     "content": "Pergi ke kandungan Daripada Wikipedia, ensiklopedia bebas. Selamat Datang ke Wikipedia ensiklopedia bebas yang boleh disunting oleh sesiapa jua. سلامت داتڠ کويکيڤيديا Versi Bahasa Melayu telah dimulakan pada (2002-10-26) 26 Oktober 2002 (umur 23). Kini, kami mempunyai 435,092 buah rencana. Tarikh: Ahad, 14 Disember 2025 | Pengumuman · Soalan lazim · Embassy · Pengenalan bahasa Melayu Tutorial · Meja bantuan · Meja rujukan · Indeks A–Z Senarai gerbang · Biografi · Falsafah · Geografi · Sejarah · Matematik · Sains · Sastera · Teknologi · Undang-undang Rencana pilihan Wikipedia:Rencana pilihan/Disember 2025 Tiada rencana pilihan dicalonkan pada bulan Disember 2025. Jika anda mahu mencalonkan rencana untuk bulan ini dan bulan seterusnya. Sila mencalonkannya di Wikipedia:Calon rencana pilihan dan ikut langkah demi langkah yang sudah ditetapkan. Selamat menyumbang! Arkib Pencalonan Lagi rencana pilihan... Berita terkini Rosen Zhelyazkov Satu kejadian tembakan beramai-ramai telah berlaku di Pantai Bondi, Australia. Perdana Menteri Bulgaria, Rosen Zhelyazkov (gambar) dan kerajaannya meletak jawatan selepas protes selama beberapa hari. Di Australia, larangan penggunaan platform media sosial tertentu oleh kanak-kanak bawah 16 tahun berkuat kuasa. Dalam sukan motor, Lando Norris memenangi Kejohanan Pemandu Dunia Formula Satu. Dalam serangan tentera, Majlis Sementara Selatan merampas hampir semua selatan Yaman daripada kerajaan. Sedang berlaku: Perang Gaza garis masa genosid Pencerobohan Rusia ke atas Ukraine garis masa Perang saudara Sudan garis masa Kematian terkini: Ismail Muhammad Bung Moktar Radin Dharma Harun Al Rashid Amirul Azwan Lagi hal semasa... Tahukah anda... Unjuran retroazimut Craig yang berpusatkan kota Makkah \"... bahawa unjuran retroazimut Craig yang dicipta oleh James Ireland Craig pada tahun 1909 kadang-kala juga dikenali sebagai unjuran Makkah?\" \"... bahawa germanena ialah suatu bahan yang diperbuat daripada satu lapis tunggal atom germanium dan diiktiraf sebagai bahan paling bermutu tinggi dalam penggunaan peranti semikonduktor dan penyelidikan sains bahan?\" ... bahawa Ketuanan Melayu adalah ideologi politik haluan kanan di Malaysia yang meletakkan kedudukan orang Melayu sebagai \"tuan\" kepada semua warga penduduk Malaysia lain? ... bahawa kebanyakan pelacur ialah perempuan, namun ada juga pelacur lelaki? \"... bahawa Perisytiharan Hak Asasi Manusia Sejagat timbul daripada kekejaman Jerman Nazi?\" Muat semula info · Cipta rencana baru · Cadangan info · Lagi... Hari ini dalam sejarah 14 Disember: 1896 – Sistem metro bawah tanah yang ketiga tertua di dunia, Kereta Api Bawah Tanah Glasgow memulakan operasi di Glasgow, Scotland. 1911 – Penjelajah Norway Roald Amundsen dan pasukannya menjadi manusia pertama tiba di Kutub Selatan. 1918 – Raja Väinö I dari Finland yang berketurunan Jerman melepaskan takhtanya selepas Empayar Jerman tewas dalam Perang Dunia Pertama. 1994 – Pembinaan Empangan Tiga Gaung (gambar) di Sungai Yangtze, China bermula. 2008 – Ketika sidang akhbar di Baghdad, wartawan Iraq Muntadhar al-Zaidi membaling kasutnya kepada Presiden A.S. George W. Bush. Hari-hari sebelum: 13 Disember – 12 Disember – 11 Disember Arkib · Melalui e-mel · Lagi... Gambar pilihan Plogoff ialah komun di jabatan Finistère di wilayah Brittany, barat-laut Perancis. Di sini terdapat tiga pelabuhan yang sesuai untuk kapal kecil: Pors-Loubous, Feunten-Aod dan Bestrée. Industri tempatan termasuklah pelancongan, biskut tradisional, pertanian dan penangkapan ikan. Gambar pilihan sebelum ini: Penyengat pasir Seri Pagi Padi teres Arkib Pencalonan Selanjutnya... Gotong-royong sunting Kerjasama rencana baharu Cabaran gotong-royong Taman Negara Ulu Temburong (en) Istana Kota Manggalela (en) Benzokaina (en) Pars pro toto (en) Ikan elektrik (en) Totum pro parte (en) Muriel Robin (en) Grande école (en) Permohonan sementara (perjanjian) (en) Akta Wilayah Luar Negeri Britain 2002 (en) Hasil gotong-royong terbaru Taman Eden (novel) (en) Thronecast (en) Jorah Mormont (en) Ariel Henry (en) Aliran puing (en) Anugerah Locus (en) The Twilight Zone (siri televisyen 1985) (en) Undang-undang Arab Saudi (en) Canopus di Argos (en) Kambing hitam (en) Segera Cipta Rencana-rencana di Portal:Hal semasa (en; fr) Rencana mingguan di Penterjemahan minggu ini Khas:Laman dikehendaki (WikiProjek Malaysia • WikiProjek Brunei • WikiProjek Perubatan • 10,000 rencana perlu) Segera Selenggara Rencana-rencana di dalam kategori Kategori:Projek BukanTeamBiasa Perangkaan WBM Kedalaman Rencana Laman Suntingan Pengguna Pentadbir Fail 16.3 435,092 1,169,542 6,708,617 374,920 (2,667 aktif) 13 17,905 Perbaiki kandungan 9,454 rencana dengan pautan luar mati 1 rencana kekurangan sumber yang dipercayai 3,198 rencana dengan kenyataan tidak bersumber 237 rencana dengan topik yang kekurangan kelayakan 35 rencana yang memerlukan perapian 568 rencana dengan bahagian kosong 35 rencana dengan pertikaian pandangan berkecuali 409 rencana yang memerlukan pengemaskinian 208 rencan",
     "scrapedAt": "2025-12-15 19:09:18.586311"
-  },
-  {
-    "id": 47,
-    "url": "https://en.wikipedia.org/wiki/File:Wellcome_Collection_Rocking_Bed.jpg",
-    "title": "File:Wellcome Collection Rocking Bed.jpg - Wikipedia",
-    "content": "Jump to content From Wikipedia, the free encyclopedia File File history File usage Metadata Size of this preview: 800 × 532 pixels. Other resolutions: 320 × 213 pixels | 640 × 426 pixels | 1,024 × 681 pixels | 1,280 × 852 pixels | 2,560 × 1,704 pixels | 3,677 × 2,447 pixels. Original file (3,677 × 2,447 pixels, file size: 543 KB, MIME type: image/jpeg) This is a file from the Wikimedia Commons. Information from its description page there is shown below. Commons is a freely licensed media file repository. You can help. Summary DescriptionWellcome Collection Rocking Bed.jpg English: Patients with breathing difficulties were treated using this rocking bed. It was invented by Dr Jessie Wright (1900-70) in the mid-1940s. She was an English doctor living in the US. The first rocking beds were used by patients who had experienced polio, which can paralyse the chest muscles. This leaves the patient unable to breath for themselves. ; This example was made by the Cape Engineering Co. Ltd based in Warwick, England. The patient lies on the bed and is slowly rocked horizontally, like a seesaw. When the patient’s head is raised, the diaphragm is pulled down by gravity. This draws air into the lungs. When the patient’s feet are raised, air is forced out of the lungs. The speed of the rocking bed was adjusted depending on how much help a person needed to breathe. Rocking beds could be used with patients who were not completely dependent on an iron lung. They gave patients greater freedom of movement instead of being almost completely encased. Rocking beds are still used to assist breathing for numerous medical complaints. Maker: Cape Engineering Company Limited Place made: Warwick, Warwickshire England, United Kingdom Date 1973 Source https://www.jstor.org/stable/community.24786554 Author Science Museum, London Licensing This file is licensed under the Creative Commons Attribution 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. https://creativecommons.org/licenses/by/4.0CC BY 4.0 Creative Commons Attribution 4.0 truetrue This media file is uncategorized. Please help improve this media file by adding it to one or more categories, so it may be associated with related media files (how?), and so that it can be more easily found. Please notify the uploader with {{subst:Please link images|File:Wellcome Collection Rocking Bed.jpg}} ~~~~ Captions English Add a one-line explanation of what this file represents Items portrayed in this file depicts copyright status copyrighted copyright license Creative Commons Attribution 4.0 International source of file file available on the internet described at URL: https://www.jstor.org/stable/community.24786554 inception 1973 data size 556,015 byte height 2,447 pixel width 3,677 pixel media type image/jpeg checksum 5fc465f219f05d6f9fcd481946255d17c2e415cf determination method or standard: SHA-1 File history Click on a date/time to view the file as it appeared at that time. Date/Time Thumbnail Dimensions User Comment current 02:48, 26 October 2025 3,677 × 2,447 (543 KB) Darth Stabro Uploaded a work by Science Museum, London from https://www.jstor.org/stable/community.24786554 with UploadWizard File usage More than 100 pages use this file. The following list shows the first 100 pages that use this file only. A full list is available. Talk:Main Page/Archive 34 User:4v4l0n42/Today User:Afterword User:Afterword/pretty User:Allard User:AmiDaniel/Sandbox User:Bannus User:Cactus.man User:ChrisG/sandbox User:David Levy/Test User:David Levy/Test2 User:Dbmag9/Main Page User:DonWilson User:Drumguy8800/Main page draft User:Eloquence/Tour 01 User:Encephalon/Main User:Furchild User:Hamedog/Main Page User:Hamedog/Old school main page User:Hellinterface User:Hemanshu/Tomorrow\u0027s main page User:Hemanshu/edmainpage User:Itai User:J. Finkelstein/Old page User:JamieHughes User:Jcrwiki~enwiki User:JonMoore/Main Page User:JustinWick/mydraft User:Kinhull User:Krik~enwiki/mp User:Krik~enwiki/nmp User:Leopard~enwiki User:Lovelac7 User:Malomeat User:MarSch/Main body User:MarSch/Main page User:MattKingston User:Member/Wikipedia Front Page User:Nickg331 User:Node ue/MainPageTemplate2 User:Pufferfish101/Edit User:Quentin Smith/Magazine User:Quentin Smith/Shadow Main Page User:Ral315/Main Page User:RaptorX User:Rodsan18 User:SCLamont User:SGCommand User:Sintonak.X/SandBox/Main Page User:Sj/M2 User:Tazmaniacs User:Texture User:The bellman User:Thetorpedodog/xptablefree User:ThinkOutsideTheTesseract User:Tim Robinson/Main Page (Proposal) User:Tlogmer User:Tom-/sandbox User:Vincent7 User:Vir/sandbox/mainpagealt User talk:Dr. Dan User talk:Guty~enwiki User talk:Stor stark7 Wikipedia:Main Page/French2 Wi",
-    "scrapedAt": "2025-12-15 19:09:14.607223"
-  },
-  {
-    "id": 46,
-    "url": "https://ku.wikipedia.org/wiki/Destp%C3%AAk",
-    "title": "Wîkîpediya",
-    "content": "Here naverokê Ji Wîkîpediya, ensîklopediya azad. Hûn bi xêr hatin Wîkîpediyaya kurdî, ensîklopediya azad. Ji meha kanûna paşîn a sala 2004an ve 90.924 gotarên bi kurdî hatine nivîsandin. Civak Çand û Huner Dîn Teknolojî Werziş Zanist Dîrok Erdnîgarî Muzîk Alîkarî · Çapemenî · Dîroka Wîkîpediyayê · Pêwendî · Statîstîk · Zimanên din — — Îro, 9ê kanûna pêşîna 2025an e (UTC) Nivîsara hefteyê Wêneyê gotarê Guherîna avhewayê, guherîna seqayê, germbûna gerdûnî yan jî germbûna cîhanî, germbûna hewayê ye ku ji ber gazên serayê û zêdebûna gazên karbondîoksîd li seranserê cîhanê çêdibe. Her çend di serdemên berê de guherîna avhewayê hebin jî lê ji nîvê sedsala 20an û vir ve jiber pîşesaziyên ku zirarê dide sîstema evhewayê bandoreke neyînî ya bêmînak li ser sîstema avhewayê pêk aniye ku li hinek deverên cîhanê wekî zêdebûna baranê û zêdebûna germahiyê li seranserê cihanê zêde bûye. Guhertinên bi vî awayî di asta global de pêk hatiye. Sedema herî mezin a germbûnê, belavkirina gazên serayê ye ku bi giranî karbondîoksîd (CO 2) û gazê metan e. Bi tevkariyên zêde yên çandinî, bêdaristanî û reaksiyonên kîmyewî yên di hinek pêvajoyên hilberînan de, bikaranîna şewata sotemeniya fosîl (komir, petrol û gaza xwezayî) ku ji bo xerckirina enerjiyê tê bikaranîn, çavkaniya sereke ya van emîsyonan e. (zêdetir...) Arşîv – Gotara berê Zaravayên kurdî Soranî Kurdiya navendî · soranî Be xêr bên bo Wîkîpîdiya! Wîkîpîdiya însaykllopîdiyayekî azade ke hemû kesêk detiwanêt destkarîy bikat. Witare soranîyekan le mangî 8î 2009ewe le mallperrî ciyawazî kurdîy nawîn û be elfubêy erebî billaw debinewe. (ویکیپیدیای کوردیی ناوەندی (سۆرانی – Kurdiya navendî (soranî be latînî) Kurdí Xwarig Kurdiya başûrî (kirmaşanî, kelhurî, feylî, şêxbizinî) We xêr hatine Wîkîpêdiya! Wíkípédíya zanistnameyg azas ke le nawya her kes tiwanêd we zanayî xwey tiya beşdarî biked. Îwenîş fermûne îre beşdarî biken. incubator:Wp/sdh/دەسپێک – Wetar we zaraway kurdî xwarig Dimilkî Zazakî · kirmanckî · dimilkî · kirdkî Şima xêr ameyî! Îtîya de Wîkîpediya, ensîklopediya verên bi ziwanê kurdkî vecîyena. Ina ensîklopediya azadî her merdim bese keno nuşteyan binuso yan zî bivurno. Wîkîpediya Zazakîyê cîya zî esta – Şo pela kirmanckî Danasîn Wîkîpediya, ensîklopediyeke azad a bi zimanê kurdî ye. Ev projeya navneteweyî, derfeteke girîng a ji bo pêşdexistina zimanan e. Mirovên ku dixwazin zimanê kurdî pêşde biçe, dikarin di Wîkîpediyayê de alîkariya zimanê me bikin. Hûn jî dikarin li vir tevlî me bibin. Keremkin bi beşên alîkarî û pênc hîmên sereke yên wîkîpediyayê fêr bibin ka gotar çawa têne nivîsandin. Hesabê nû çêke Hesabekî te heye? Têkeve. Di dîrokê de îro… Bûyer 1856 – Hêzên îranî, li bajarê Bûşêhr hêzên brîtanî dorpêçkirin. 1905 – Li Fransayê zagona ji hev veqetandina karê dewletê û karê dînê hate pejirandin. 1917 – Hêzên dewleta Brîtanyayê, bajarê Orşelîmê zemt kirin. 1941 – Şerê cîhanî yê duyem; Komara Gel a Çînê, Kûba û Guatemala li dijî Japon û Almanya şer îlankirin. 1961 – Herêm Tanganyîka ya Tanzanyayê ji Brîtanyayê serxwebûna xwe bi dest xist. 1966 – Barbados tevlî Neteweyên Yekbûyî bû. 1971 – Mîrnişînên Erebî yên Yekbûyî tevlî Neteweyên Yekbûyî bû. 1987 – Pirsgirêka Îsraêl-Filîstînê; Întîfadaya yekem li Şirîta Xezeyê destpê kir. 1990 – Serokê Solidarnośćê ((Tevgera Hevkariyê) Lech Wałęsa li Polonyayê di hilbijartinan de biserket. Jidayikbûn 1926 – Henry Way Kendall, fizîknasê xwediyê Xelata Nobelê 1968 – Kurt Angle, gemşkarê profesyonel ê amerîkî Mirin 1916 – Théodule-Armand Ribot, fîlozof û psîkologê fransî 1937 – Nils Gustaf Dalén, fizîknasê xwediyê Xelata Nobelê 1955 – Hermann Weyl, matematîkzanê alman Arşîv – Bêhtir… Îro, 9ê kanûna pêşîn a 2025an e (UTC) – nûkirin Wêneyê hefteyê Çiyayê Bêllî Peykerên Çiyayê Bêllî, Semsûr, Bakurê Kurdistanê Wênesaz: Yarl Arşîv – Wêneyê berê Wêneyê rojê ji Commonsê Malbata Wîkîmedyayê Meta-Wîkî – Koordînasyon Commons – Wêne û medyayên din Wîkîferheng – Ferheng Wîkîpirtûk – Pirtûk ji bo zanînê Wîkîçavkanî – Çavkaniya azad Wîkîgotin – Gotinên kesan Wîkîcure – Rêbernameya cureyan Wîkînûçe – Nûçe Wîkîversîte – Platforma fêrbûnê Wîkîdane – Bingeha zanîna azad Wîkîgeşt – Rêbernameya geşt û guzarê MedyaWîkî – Nermamrazên azad Rêveberî — Dîwan — Kurdîgeh — Şêwaz Ji \"https://ku.wikipedia.org/w/index.php?title\u003dDestpêk\u0026oldid\u003d1703155\" hatiye standin. Bi 43 zimanên din العربية ܐܪܡܝܐ Català Cebuano کوردی Čeština Dansk Deutsch Zazaki Ελληνικά English Esperanto Español Eesti Euskara فارسی Suomi Français Galego گیلکی עברית Hrvatski Հայերեն ქართული لۊری شومالی مازِرونی Norsk nynorsk Norsk bokmål Polski پښتو Português Română Armãneashti Русский Svenska Türkçe Татарча / tatarça Tiếng Việt 吴语 中文 文言 閩南語 / Bân-lâm-gí 粵語 Lêgerîn Lêgerîn Destpêk Bi 43 zimanên din Mijarekê lê zêde bike",
-    "scrapedAt": "2025-12-15 19:09:13.180081"
-  },
-  {
-    "id": 45,
-    "url": "https://hif.wikipedia.org/wiki/Pahila_Panna",
-    "title": "Wikipedia",
-    "content": "Jump to content Wikipedia se Fiji Hindi Wikipedia Ii ek muft me jankari de waala Encyclopedia hae Isme koi bhi likhe sake hae Fiji Hindi Wikipedia me abhi 12,092 lekh hae. Suchi: 1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Vibhag Fiji Fiji ke Hindustani Fiji Hindi Fiji me football Girmit Parrhai likhai Dunia ke des Dunia ke log Dunia ke itihass Science aur technology Jaruri article Fiji Hindi Wiktionary Aaj ke khaas lekh Hereford 14th jahaaj rahaa jisme gimitya log ke lae ke India se Fiji lawa gais rahaa. Iske baad ii jahaaj dui aur dafe Fiji aais. Ii jahaaj 1510 ton garrhu aur loha ke banaa, paal waala jahaaj rahaa jiske 1869 me Glasgow ke J. Elder \u0026 Company, Merchant Shipping Company of London khatir banais rahaa. Suruu me iske New Zealand nawa immigrant logan ke lae jaae khaatir kaam me lawa gais rahaa. 1882 me ii jahaaj ke Nourse Line kharid liis aur iske West Indies girmitya logan ke lae jaae khatir kaam me lawa gais. Ii jahaaj Fiji pahila dafe 24 April 1888 ke 539 girmitya logan ke lae ke, duusra dafe 15 June 1892 ke 479 girmitya logan ke lae ke aur tiisra dafe, 28 June 1894 ke, 511 girmitya logan ke lae ke aais. 1898 me Hereford ke Norway ke ek Company ke bech dewa giais aur 1907 me ii Argentina ke nangich ek chattan pe charr ke duub gais. (aur...) Aap janta hai... Ratu Cakobau 1875 ke measles epidemic, jisme 20% Kaiviti logan mar gae rahin, ke Fiji me failae waala, Ratu Cakobau aur uske dui larrka logan rahin jon ki March 1875 me Sydney se ghuum ke lauta rahin. 1879 se lae ke 1916 tak, 42 jahaaj, 87 trip me 60,553 girmitya logan ke lae ke Fiji se aais rahaa. Isme se 45,439 log Calcutta se aur 15,114 log Madras se jahaaj me charrhin rahaa. Fiji ke Legislative Council ke pahila Hindustani member Badri Maharaj rahaa, jiske Governor nominate karis rahaa aur jon 1917 - 1923 aur 1926 - 1929 tak Council ke member rahaa. Fiji me pahila football competition Nasau Park, Levuka me 1924 me, Cession ke golden jublee celebrate kare ke time, chhe Kaiviti team ke biich me Ricarnie Cup khatir, khela gais rahaa. Fiji ke Hindustani ke army me join kare ke khatir, 1934 me Indian Platoon banawa gais rahaa lekin iske 1940 me disband kar dewa gais rahaa. Royal Air Force ke khatir fighter plane kharide ke khatir, 1943 me ek Fighter Fund suruu karaa gais rahaa, aur ii paisa se nau fighter aur paanch bomber kharida gais rahaa. Ek fighter ke naam Fiji Indian Fighter rahaa. Fiji Trade Union Congress se pahile Ami Chandra, 1950s me Fiji Industrial Workers Congress suruu karis rahaa. Fiji ke 1997 ke constitution me English aur Kaiviti ke saathe Hindustani ke Fiji ke official language banawa gais rahaa. Archive Taaja khabar Biman Prasad 29 October - Fiji ke Deputy Prime Minister aur Minister of Finance, Biman Prasad rsign kar dis kaaheki uske FICAC corruption ke khaatir charge karis hae. 22 June - United States ke Air Force aur Navy, Iran ke tiin nuclear facilities ke attack karis. 21 April - Pope Francis ke maut Vatican City me bhais rahaa. 30 March - Ek 7.7 magnitude bhukamp ke kaaran Myanmar aur Thailand me 2,000 log ke maut hoe gais. 19 February - Toronto Airport me Delta Air Lines ke plane, utarte ke samay ulut gais lekin sab passengers bach gain 16 February - 78 British Academy Film Awards me, Conclave ke chaar award milaa. 29 December - Jimmy Carter, America ke 39th President, ke maut Plains, Georgia me bhais. \u0027 Aaj se sau saal pahile, 1925 me... Ii saal, Fiji me 64,963 bigha jamiin me ganna boya gais rahaa, jisme se 33,679 bigha (52%) CSR bois rahaa, 4,446 bigha (7%) ke Goraa kisaan boy rahin, 6,905 bigha (10%), ke CSR ke asaami log boy rahin aur 19,933 bigha (31%) ke Hindustani contractors boy rahin. Ii saal, Fiji me Hindustani ke birth rate 33.14 per thousand rahaa, jab ki Kaiviti ke birth rate of 32.29 per thousand rahaa, lekin Hindustani ke death rate 7.25 per thousand rahaa, jab ki Kaiviti death rate of 22.75 per thousand rahaa Ii saal Fiji me khaali 174 Hindustani saadi ke register karaa gais rahaa, jab ki 857 Kaiviti saadi ke register karaa gais rahaa. Saal ke end me, Fiji ke abaadi 169,667 rahaa, jisme se 88,431 Kaiviti rahin aur 68,136 Hindustani rahin. Iske matlab hae ki ii saal Fiji me 3,956 aur Kaiviti aur aur 7,502 aur Hindustani rahin agar iske April 1921 ke census se compare karaa jaae. Britain ke sarkar ii nischay karis ki Fiji ke election common roll pe nai hoe sake, kaaheki ii Deed of Cession ke against rahii. 9 May – Fiji me ek typhoid ke epidemic faelaa, jisme tiin Goraa log ke maut bhais. Kuchh Hindustani log bhi aspataal me bharti rahin, lekin Kaiviti log pe koi asar nai rahaa. Indian Reform League,volunteer nurses ke provide karis rahaa. 9 July - Guru Dutt, Hindi film actor, ke janam Bangalore, India me bhais rahaa. Pahile waala saal: 1908 1909 1910 1911 1912 1913 1914 1915 1916 1917 1920 1921 1923 1924 Aaj ke khaas chhaapa Tulsi (Scientific naam: Ocimum basilicum , English: basil, common basil, mint, sweet basil, Kaiviti: tomole) ek rakam ke herb hai jiske Hindu log puja m",
-    "scrapedAt": "2025-12-15 19:09:11.719789"
-  },
-  {
-    "id": 44,
-    "url": "https://en.wikipedia.org/wiki/1945",
-    "title": "1945 - Wikipedia",
-    "content": "Jump to content From Wikipedia, the free encyclopedia 1945 January February March April May June July August September October November December This article is about the year 1945. For other uses, see 1945 (disambiguation). From top to bottom, left to right: The Atomic bombings of Hiroshima and Nagasaki devastate Japan and force the Surrender of Japan, ending World War II; the Battle of Berlin brings the fall of Nazi Germany, the death of Adolf Hitler, and the end of World War II in Europe; the Battle of Iwo Jima sees the United States capture a vital island after fierce fighting; the Yalta Conference unites Winston Churchill, Franklin D. Roosevelt, and Joseph Stalin to shape postwar Europe and establish the United Nations; the Bombing of Dresden levels the city with heavy civilian losses; the death of Benito Mussolini marks the collapse of Fascist Italy; the Bombing of Tokyo becomes one of the deadliest air raids of the war; the death of Franklin D. Roosevelt sees Harry S. Truman assume the U.S. presidency; and the 1945 Empire State Building B-25 crash strikes New York City, killing 14. Calendar year Years Millennium 2nd millennium Centuries 19th century 20th century 21st century Decades 1920s 1930s 1940s 1950s 1960s Years 1942 1943 1944 1945 1946 1947 1948 v t e 1945 by topic Subject Animation Archaeology Architecture Art Aviation Awards Comics Film Literature Poetry Meteorology Music Country Jazz Rail transport Radio Science Spaceflight Sports Football Television American British By country Afghanistan Australia Belgium Brazil Bulgaria Canada China Denmark France Germany India Indonesia Ireland Italy Japan Malaya Netherlands New Zealand Norway Palestine Mandate Philippines Portugal South Africa South Korea Soviet Union Spain Sweden Switzerland Thailand Turkey United Kingdom United States Venezuela Lists of leaders Sovereign states Sovereign state leaders Territorial governors Religious leaders Law Birth and death categories Births Deaths Establishments and disestablishments categories Establishments Disestablishments Works category Works Introductions v t e 1945 in various calendars Gregorian calendar 1945 MCMXLV Ab urbe condita 2698 Armenian calendar 1394 ԹՎ ՌՅՂԴ Assyrian calendar 6695 Baháʼí calendar 101–102 Balinese saka calendar 1866–1867 Bengali calendar 1351–1352 Berber calendar 2895 British Regnal year 9 Geo. 6 – 10 Geo. 6 Buddhist calendar 2489 Burmese calendar 1307 Byzantine calendar 7453–7454 Chinese calendar 甲申年 (Wood Monkey) 4642 or 4435 — to — 乙酉年 (Wood Rooster) 4643 or 4436 Coptic calendar 1661–1662 Discordian calendar 3111 Ethiopian calendar 1937–1938 Hebrew calendar 5705–5706 Hindu calendars - Vikram Samvat 2001–2002 - Shaka Samvat 1866–1867 - Kali Yuga 5045–5046 Holocene calendar 11945 Igbo calendar 945–946 Iranian calendar 1323–1324 Islamic calendar 1364–1365 Japanese calendar Shōwa 20 (昭和２０年) Javanese calendar 1875–1876 Juche calendar 34 Julian calendar Gregorian minus 13 days Korean calendar 4278 Minguo calendar ROC 34 民國34年 Nanakshahi calendar 477 Thai solar calendar 2488 Tibetan calendar ཤིང་ཕོ་སྤྲེ་ལོ་ (male Wood-Monkey) 2071 or 1690 or 918 — to — ཤིང་མོ་བྱ་ལོ་ (female Wood-Bird) 2072 or 1691 or 919 Wikimedia Commons has media related to 1945. 1945 (MCMXLV) was a common year starting on Monday of the Gregorian calendar, the 1945th year of the Common Era (CE) and Anno Domini (AD) designations, the 945th year of the 2nd millennium, the 45th year of the 20th century, and the 6th year of the 1940s decade. Calendar year A turning point[1] in human history, 1945 marked the end of World War II, ending with the defeat and occupation of Nazi Germany, and the Empire of Japan. It is also the year the Nazi concentration camps were liberated and the only year in which atomic weapons have been used in warfare. Events [edit] World War II will be abbreviated as \"WWII\" January [edit] Main article: January 1945 January 27 – The Soviet Red Army liberates Auschwitz. January 1 – WWII: Germany begins Operation Bodenplatte, an attempt by the Luftwaffe to cripple Allied air forces in the Low Countries.[2] Chenogne massacre: German prisoners are allegedly killed by American forces near the village of Chenogne, Belgium. January 6 – WWII: A German offensive recaptures Esztergom, Hungary from the Soviets. January 9 – WWII: American and Australian troops land at Lingayen Gulf on western coast of the largest Philippine island of Luzon, occupied by Japan since 1942. January 12 – WWII: The Soviet Union begins the Vistula–Oder Offensive in Eastern Europe, against the German Army.[3] January 13 – WWII: The Soviet Union begins the East Prussian Offensive, to eliminate German forces in East Prussia. January 16 – WWII: Adolf Hitler takes residence in the Führerbunker in Berlin.[4] January 17 WWII: The Soviet Union occupies Warsaw, Poland. The Holocaust: Swedish diplomat Raoul Wallenberg, who has saved thousands of Jews, is taken into custody by a Soviet patrol during the Siege of Budapest and is never again seen publ",
-    "scrapedAt": "2025-12-15 19:09:09.988354"
-  },
-  {
-    "id": 43,
-    "url": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions",
-    "title": "Wikipedia:Recent additions - Wikipedia",
-    "content": "Jump to content From Wikipedia, the free encyclopedia Archive page of the Main Page Did you know section \"WP:DYKA\" redirects here. For the list of approved Did you know nominations, see WP:DYKNA. Shortcut WP:DYKAWP:DYKA This is a record of material that was recently featured on the Main Page as part of Did you know (DYK). Recently created new articles, greatly expanded former stub articles and recently promoted good articles are eligible; you can submit them for consideration. Archives are generally grouped by month of Main Page appearance. (Currently, DYK hooks are archived according to the date and time that they were taken off the Main Page.) To find which archive contains the fact that appeared on Did you know, go to the article\u0027s talk page and follow the archive link in the DYK talk page message box or the Article Milestones box. Current archive 2025 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2024 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2023 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2022 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2021 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2020 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2019 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2018 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2017 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2016 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2015 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2014 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2013 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2012 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2011 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2010 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2009 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2008 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2007 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2006 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2005 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2004 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Edit the DYK archive navigation template Did you know? Introduction and rules Introduction WP:DYK General discussion WT:DYK Guidelines WP:DYKCRIT Reviewer instructions WP:DYKRI Nominations Nominate an article WP:DYKCNN Awaiting approval WP:DYKN Approved WP:DYKNA April 1 hooks WP:DYKAPRIL Holding area WP:SOHA Preparation Preps and queues TM:DYK/Q Prepper instructions WP:DYKPBI Admin instructions WP:DYKAI Main Page errors WP:ERRORS History Statistics WP:DYKSTATS Archived sets WP:DYKA Just for fun Monthly wraps WP:DYKW Awards WP:DYKAWARDS Userboxes WP:DYKUBX Hall of Fame WP:DYK/HoF List of users ... ... by nominations WP:DYKNC ... by promotions WP:DYKPC Administrative Scripts and bots WP:DYKSB On the Main Page TM:DYK Main Page errors WP:ERRORS To ping the DYK admins {{DYK admins}} v t e Did you know... 15 December 2025 00:00, 15 December 2025 (UTC) Lorens von der Linde ... that Swedish general Lorens von der Linde (pictured) once shocked an English diplomat with his stories of King Charles X Gustav\u0027s German liaisons? ... that scholars have described the 1946 book The Failure of Technology as a precursor to the environmental movement? ... that Romanian far-right journalist Ilariu Dobridor died after being beaten and locked in his own home? ... that the Dutch-built and Turkish-operated Birinci İnönü-class submarines were used to discreetly develop German U-boats? ... that Dredge is a Lovecraftian horror and fishing video game? ... that the killing of an official by seven women was held up as an example of filial piety? ... that, when Mariame Clément directed Mozart\u0027s Così fan tutte, she froze a wedding tableau during the overture and restarted it in the finale? ... that Turkey is facing its worst drought in the last 50 years? ... that Nobuhiko Jimbo saved future Philippine president Manuel Roxas from execution during World War II, and Roxas did the same for Jimbo four years later? 14 December 2025 00:00, 14 December 2025 (UTC) Dammusi on Pantelleria ... that traditional stone houses on the island of Pantelleria (examples pictured) passively maintain an internal temperature up to 8 °C (14 °F) cooler than the ambient air temperature in summer? ... that Kenssy Dwi Ekaningsih used her skills in traditional Javanese dance at diplomatic receptions during an assignment in Rome? ... that Yonki-no-kai Productions was founded by Akira Kurosawa, Masaki Kobayashi, Kon Ichikawa and Keisuke Kinoshita with the aim of reviving the struggling Japanese film industry? ... that, after Uruapan mayor Carlos Manzo was assassinated, his wife Grecia Quiroz was chosen to complete his term in office? ... that A. A. Gill saw \"poseurs, pimps, phoney counts, lounge lizards, poodle fakers, ageing gigolos and remittance men\" at San Lorenzo? ... that Catalan artist Josefa Tolrà created paintings and embroideries while in a trance? ... that 10 Things I Want to Do Before I Turn 40 was originally conceived as a science-fiction story about an older male succu",
-    "scrapedAt": "2025-12-15 19:09:07.14927"
   },
   {
     "id": 498,
@@ -3488,6 +3488,900 @@ window.searchData = [
 ];
 
 window.imageData = [
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png",
+    "alt": "This is a file from the Wikimedia Commons",
+    "pageTitle": "File:Wellcome Collection Rocking Bed.jpg - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/File:Wellcome_Collection_Rocking_Bed.jpg"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Wellcome_Collection_Rocking_Bed.jpg/960px-Wellcome_Collection_Rocking_Bed.jpg",
+    "alt": "File:Wellcome Collection Rocking Bed.jpg",
+    "pageTitle": "File:Wellcome Collection Rocking Bed.jpg - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/File:Wellcome_Collection_Rocking_Bed.jpg"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "icon",
+    "pageTitle": "File:Wellcome Collection Rocking Bed.jpg - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/File:Wellcome_Collection_Rocking_Bed.jpg"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/120px-CC_some_rights_reserved.svg.png",
+    "alt": "w:en:Creative Commons",
+    "pageTitle": "File:Wellcome Collection Rocking Bed.jpg - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/File:Wellcome_Collection_Rocking_Bed.jpg"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/40px-Cc-by_new_white.svg.png",
+    "alt": "attribution",
+    "pageTitle": "File:Wellcome Collection Rocking Bed.jpg - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/File:Wellcome_Collection_Rocking_Bed.jpg"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Gnome-applications-office.svg/60px-Gnome-applications-office.svg.png",
+    "alt": "",
+    "pageTitle": "File:Wellcome Collection Rocking Bed.jpg - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/File:Wellcome_Collection_Rocking_Bed.jpg"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Wellcome_Collection_Rocking_Bed.jpg/120px-Wellcome_Collection_Rocking_Bed.jpg",
+    "alt": "Thumbnail for version as of 02:48, 26 October 2025",
+    "pageTitle": "File:Wellcome Collection Rocking Bed.jpg - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/File:Wellcome_Collection_Rocking_Bed.jpg"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "File:Wellcome Collection Rocking Bed.jpg - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/File:Wellcome_Collection_Rocking_Bed.jpg"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/P_social_sciences-lightblue.png/20px-P_social_sciences-lightblue.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/P_art-lightblue.png/20px-P_art-lightblue.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/P_religion-lightblue.png/20px-P_religion-lightblue.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/P_transport-lightblue.png/20px-P_transport-lightblue.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/P_sport-lightblue.png/20px-P_sport-lightblue.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/P_social_sciences-lightblue.png/20px-P_social_sciences-lightblue.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/P_history-lightblue.png/20px-P_history-lightblue.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/P_countries-lightblue.png/20px-P_countries-lightblue.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/P_music.png/20px-P_music.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/20px-X_logo_2023.svg.png",
+    "alt": "Wîkîpediya li ser Xê",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Translatewiki.net_logo.svg/20px-Translatewiki.net_logo.svg.png",
+    "alt": "Statîstîkên wergerê bo kurdî",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Emblem-star.svg/40px-Emblem-star.svg.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/33/Wikibar.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Soil_moisture_and_climate_change.svg/120px-Soil_moisture_and_climate_change.svg.png",
+    "alt": "Wêneyê gotarê",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Gnome-fs-blockdev.svg/40px-Gnome-fs-blockdev.svg.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/33/Wikibar.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Nuvola_apps_kbluebox2.png/40px-Nuvola_apps_kbluebox2.png",
+    "alt": "Soranî",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Redbox.png/40px-Redbox.png",
+    "alt": "Kurdí Xwarig",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Yellowbox.png/40px-Yellowbox.png",
+    "alt": "Dimilkî",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/40px-Wikipedia-logo-v2.svg.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/33/Wikibar.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Gnome-web-calendar.svg/40px-Gnome-web-calendar.svg.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/33/Wikibar.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Nils_Gustaf_Dal%C3%A9n.jpg/120px-Nils_Gustaf_Dal%C3%A9n.jpg",
+    "alt": "Nils Gustaf Dalén",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/38254-new_folder-13.svg/40px-38254-new_folder-13.svg.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/33/Wikibar.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Mount_Nemrut_-_East_Terrace_%284961323529%29.jpg/330px-Mount_Nemrut_-_East_Terrace_%284961323529%29.jpg",
+    "alt": "Çiyayê Bêllî",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/20px-Wikimedia_Community_Logo.svg.png",
+    "alt": "Meta-Wiki",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png",
+    "alt": "Commons",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Wiktionary-logo-ku.png/20px-Wiktionary-logo-ku.png",
+    "alt": "Wîkîferheng",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/20px-Wikibooks-logo.svg.png",
+    "alt": "Wîkîpirtûk",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/20px-Wikisource-logo.svg.png",
+    "alt": "Wîkîçavkanî",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/20px-Wikiquote-logo.svg.png",
+    "alt": "Wîkîgotin",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/20px-Wikispecies-logo.svg.png",
+    "alt": "Wîkîcure",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/20px-Wikinews-logo.svg.png",
+    "alt": "Wîkînûçe",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/20px-Wikiversity-logo.svg.png",
+    "alt": "Wîkîversîte",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Wikidata-logo-en.svg/20px-Wikidata-logo-en.svg.png",
+    "alt": "Wîkîdane",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/20px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "Wikivoyage",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MediaWiki-2020-icon.svg/20px-MediaWiki-2020-icon.svg.png",
+    "alt": "MediaWiki",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Mail-reply-all.svg/40px-Mail-reply-all.svg.png",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://ku.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wîkîpediya",
+    "pageUrl": "https://ku.wikipedia.org/wiki/Destp%C3%AAk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/hif/thumb/a/a8/HerefordShip.jpg/120px-HerefordShip.jpg",
+    "alt": "Hereford Jahaaj",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://hif.wikipedia.org/wiki/Pahila_Panna"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Cakobau%2C_died_February_1883%2C_photograph_by_Francis_H._Dufty.jpg/120px-Cakobau%2C_died_February_1883%2C_photograph_by_Francis_H._Dufty.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://hif.wikipedia.org/wiki/Pahila_Panna"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Biman_Prasad_2023.jpg/120px-Biman_Prasad_2023.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://hif.wikipedia.org/wiki/Pahila_Panna"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Shyamaa_Tulasi_0001.jpg/250px-Shyamaa_Tulasi_0001.jpg",
+    "alt": "Tulsi",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://hif.wikipedia.org/wiki/Pahila_Panna"
+  },
+  {
+    "src": "https://hif.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://hif.wikipedia.org/wiki/Pahila_Panna"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Atomic_bombing_of_Japan.jpg/250px-Atomic_bombing_of_Japan.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Raising_a_flag_over_the_Reichstag_-_Restoration.jpg/120px-Raising_a_flag_over_the_Reichstag_-_Restoration.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Raising_the_Flag_on_Iwo_Jima%2C_larger_-_edit1.jpg/120px-Raising_the_Flag_on_Iwo_Jima%2C_larger_-_edit1.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Yalta_Conference_%28Churchill%2C_Roosevelt%2C_Stalin%29_%28B%26W%29.jpg/120px-Yalta_Conference_%28Churchill%2C_Roosevelt%2C_Stalin%29_%28B%26W%29.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Bundesarchiv_Bild_146-1994-041-07%2C_Dresden%2C_zerst%C3%B6rtes_Stadtzentrum.jpg/250px-Bundesarchiv_Bild_146-1994-041-07%2C_Dresden%2C_zerst%C3%B6rtes_Stadtzentrum.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/The_corpse_of_Mussolini.png/120px-The_corpse_of_Mussolini.png",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Tokyo_1945-3-10-1.jpg/120px-Tokyo_1945-3-10-1.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Franklin_D._Roosevelt_in_Washington%2C_Washington%2C_D.C_-_NARA_-_196789.jpg/120px-Franklin_D._Roosevelt_in_Washington%2C_Washington%2C_D.C_-_NARA_-_196789.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Empire_State_Building_plane_crash_wreckage_1945.jpg/120px-Empire_State_Building_plane_crash_wreckage_1945.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Bundesarchiv_Bild_183-32279-007%2C_KZ_Auschwitz%2C_Eingang.jpg/250px-Bundesarchiv_Bild_183-32279-007%2C_KZ_Auschwitz%2C_Eingang.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Yalta_Conference_%28Churchill%2C_Roosevelt%2C_Stalin%29_%28B%26W%29.jpg/250px-Yalta_Conference_%28Churchill%2C_Roosevelt%2C_Stalin%29_%28B%26W%29.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/USMC-M-IwoJima-cvr.jpg/250px-USMC-M-IwoJima-cvr.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Explosion_of_the_Japanese_battleship_Yamato_on_7_April_1945_%2880-G-413914%29.jpg/250px-Explosion_of_the_Japanese_battleship_Yamato_on_7_April_1945_%2880-G-413914%29.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Stars_%26_Stripes_%26_Hitler_Dead2.jpg/250px-Stars_%26_Stripes_%26_Hitler_Dead2.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ww2_158.jpg/250px-Ww2_158.jpg",
+    "alt": "a black and white image of two Marines in their combat uniforms. One Marine is providing cover fire with his M1 Thompson submachinegun as the other with a Browning Automatic Rifle, prepares to break cover to move to a different position. There are bare st",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Americans_on_Okinawa_hear_of_victory_in_Europe.jpg/250px-Americans_on_Okinawa_hear_of_victory_in_Europe.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Prague_liberation_1945_konev.jpg/250px-Prague_liberation_1945_konev.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Montgomery_receives_Order_of_Victory_HD-SN-99-02756_cropped.JPG/250px-Montgomery_receives_Order_of_Victory_HD-SN-99-02756_cropped.JPG",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Trinity_shot_color.jpg/250px-Trinity_shot_color.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Nagasakibomb.jpg/250px-Nagasakibomb.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Zhongshan_Warship_Tourist_Area_-_Victory_memorial_-_P1540113.JPG/250px-Zhongshan_Warship_Tourist_Area_-_Victory_memorial_-_P1540113.JPG",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Mamoru_Shigemitsu_signs_the_Instrument_of_Surrender%2C_officially_ending_the_Second_World_War.jpg/250px-Mamoru_Shigemitsu_signs_the_Instrument_of_Surrender%2C_officially_ending_the_Second_World_War.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Japanese_flag_down_US_flag_up_%28cropped%29.png/250px-Japanese_flag_down_US_flag_up_%28cropped%29.png",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Buchenwald_Slave_Laborers_Liberation.jpg/250px-Buchenwald_Slave_Laborers_Liberation.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Stephen_Stills_2012-10-22_2.jpg/120px-Stephen_Stills_2012-10-22_2.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Rod_Stewart_at_Xcel_Center_DSC_0470_%2814905955253%29_cropped.jpg/120px-Rod_Stewart_at_Xcel_Center_DSC_0470_%2814905955253%29_cropped.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Javed_Akhtar_in_2012.jpg/120px-Javed_Akhtar_in_2012.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Tom_Selleck_at_PaleyFest_2014.jpg/120px-Tom_Selleck_at_PaleyFest_2014.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bob-Marley.jpg/120px-Bob-Marley.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Ed_Catmull_at_Web_Summit_2015_%28cropped%29.jpg/120px-Ed_Catmull_at_Web_Summit_2015_%28cropped%29.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ana_L%C3%BAcia_Torre.jpg/120px-Ana_L%C3%BAcia_Torre.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Bj%C3%B6rn_Ulvaeus_in_May_2013.jpg/120px-Bj%C3%B6rn_Ulvaeus_in_May_2013.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Bob_Seger_2013.jpg/120px-Bob_Seger_2013.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Yochanan_Vollach_1970.jpg/120px-Yochanan_Vollach_1970.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Priscilla_Presley_2014.jpg/120px-Priscilla_Presley_2014.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Laurent_Gbagbo_%282008%29.jpg/120px-Laurent_Gbagbo_%282008%29.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/John_Carlos_%28cropped%29.jpg/120px-John_Carlos_%28cropped%29.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/W_Schuessel7.jpg/120px-W_Schuessel7.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/HRH_Crown_Prince_Alexander_II_with_Legion_of_Honour.jpg/120px-HRH_Crown_Prince_Alexander_II_with_Legion_of_Honour.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Helen_Mirren-2208_%28cropped%29.jpg/120px-Helen_Mirren-2208_%28cropped%29.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Patrick_Modiano_6_dec_2014_-_22.jpg/120px-Patrick_Modiano_6_dec_2014_-_22.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/David_Sanborn_2008_2.jpg/120px-David_Sanborn_2008_2.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Steve_Martin%2C_120th_Anniversary_Of_Carnegie_Hall_%28cropped%29.jpg/120px-Steve_Martin%2C_120th_Anniversary_Of_Carnegie_Hall_%28cropped%29.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Vince_McMahon_2.jpg/120px-Vince_McMahon_2.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Wyomia_Tyus_1968.jpg/120px-Wyomia_Tyus_1968.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Luiz_In%C3%A1cio_Lula_da_Silva_2023.jpg/120px-Luiz_In%C3%A1cio_Lula_da_Silva_2023.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Franz_Beckenbauer_%281975%29.jpg/120px-Franz_Beckenbauer_%281975%29.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Gerd_M%C3%BCller_c1973_%28cropped%29.jpg/120px-Gerd_M%C3%BCller_c1973_%28cropped%29.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Goldie_Hawn_at_TED_2008_cropped.jpg/120px-Goldie_Hawn_at_TED_2008_cropped.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Bette_Midler_2021_Kennedy_Center_Honors_%28cropped%29.jpg/120px-Bette_Midler_2021_Kennedy_Center_Honors_%28cropped%29.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Ernie_Hudson_Photo_Op_GalaxyCon_Raleigh_2024.jpg/120px-Ernie_Hudson_Photo_Op_GalaxyCon_Raleigh_2024.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Kiss_-_Peter_Criss_%281977%29.jpg/120px-Kiss_-_Peter_Criss_%281977%29.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Lemmy-02.jpg/120px-Lemmy-02.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/The_Monkees_1966_-_Jones.JPG/120px-The_Monkees_1966_-_Jones.JPG",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Ricardo_Jim%C3%A9nez_Oreamuno.jpg/120px-Ricardo_Jim%C3%A9nez_Oreamuno.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Else_Lasker-Sch%C3%BCler_1875.jpg/120px-Else_Lasker-Sch%C3%BCler_1875.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Anne_Frank_passport_photo%2C_May_1942.jpg/120px-Anne_Frank_passport_photo%2C_May_1942.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Jose_Maria_Moncada_1910.jpg/120px-Jose_Maria_Moncada_1910.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/ANTolstoy.jpg/120px-ANTolstoy.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/David_Lloyd_George.jpg/120px-David_Lloyd_George.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Hans_Fischer_%28Nobel%29.jpg/120px-Hans_Fischer_%28Nobel%29.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/FDR_1944_Color_Portrait.jpg/120px-FDR_1944_Color_Portrait.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Mussolini_biografia.jpg/120px-Mussolini_biografia.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Hitler_portrait_crop.jpg/120px-Hitler_portrait_crop.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Bundesarchiv_Bild_146-1968-101-20A%2C_Joseph_Goebbels.jpg/120px-Bundesarchiv_Bild_146-1968-101-20A%2C_Joseph_Goebbels.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Prince_Waldemar_Wilhelm_Ludwig_Friedrich_of%2C_Germany.jpg/120px-Prince_Waldemar_Wilhelm_Ludwig_Friedrich_of%2C_Germany.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Prince_Kanin_Kotohito_with_handlebar_moustaches_%28cropped%29.jpg/120px-Prince_Kanin_Kotohito_with_handlebar_moustaches_%28cropped%29.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Prince_Luis_Fernando_d%27Orleans.jpg/120px-Prince_Luis_Fernando_d%27Orleans.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/%C3%93scar_Benavides.jpg/120px-%C3%93scar_Benavides.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/El_Ingeniero_Don_Florencio_Harmodio_Arosemena.jpg/120px-El_Ingeniero_Don_Florencio_Harmodio_Arosemena.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Bart%C3%B3k_B%C3%A9la_1927.jpg/120px-Bart%C3%B3k_B%C3%A9la_1927.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Pierre_Laval_a_Meurisse_1931.jpg/120px-Pierre_Laval_a_Meurisse_1931.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Sigur%C3%B0ur_Eggerz.jpg/120px-Sigur%C3%B0ur_Eggerz.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/General_George_S_Patton.jpg/120px-General_George_S_Patton.jpg",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6a/Nobel_medal.png/120px-Nobel_medal.png",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png",
+    "alt": "Edit this at Wikidata",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "1945 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/1945"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/20px-Semi-protection-shackle.svg.png",
+    "alt": "Page semi-protected",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Lorens-von-der-Linde.jpg/250px-Lorens-von-der-Linde.jpg",
+    "alt": "Lorens von der Linde",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Khamma_Blue.jpg/250px-Khamma_Blue.jpg",
+    "alt": "Dammusi on Pantelleria",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/General_Motors_Technical_Center_Aerial_%2851146060916%29.jpg/250px-General_Motors_Technical_Center_Aerial_%2851146060916%29.jpg",
+    "alt": "General Motors Technical Center",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/The_Australian_Church_1887.jpg/120px-The_Australian_Church_1887.jpg",
+    "alt": "Australian Church building",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/J_S_Copley_-_Paul_Revere_%28cropped%29.jpg/250px-J_S_Copley_-_Paul_Revere_%28cropped%29.jpg",
+    "alt": "Portrait of Paul Revere",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Satank_Bridge_2012.JPG/250px-Satank_Bridge_2012.JPG",
+    "alt": "The restored Satank Bridge",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Portrait_of_Ahmad-Shah_Durrani._Mughal_miniature._ca._1757%2C_Biblioth%C3%A8que_nationale_de_France.jpg/250px-Portrait_of_Ahmad-Shah_Durrani._Mughal_miniature._ca._1757%2C_Biblioth%C3%A8que_nationale_de_France.jpg",
+    "alt": "Ahmad Shah Durrani",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Daniela_Melchior_-_2021_%2851654741921%29_%28cropped%29.jpg/120px-Daniela_Melchior_-_2021_%2851654741921%29_%28cropped%29.jpg",
+    "alt": "Daniela Melchior",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Plagiolophus_size_comparison_with_arrowed_scales.png/250px-Plagiolophus_size_comparison_with_arrowed_scales.png",
+    "alt": "Size chart of various Plagiolophus species",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Sneeze_Achiu.jpg/250px-Sneeze_Achiu.jpg",
+    "alt": "Sneeze Achiu",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Jacob_Jordaens_-_Cleopatra%27s_Feast_-_WGA11990.jpg/250px-Jacob_Jordaens_-_Cleopatra%27s_Feast_-_WGA11990.jpg",
+    "alt": "The Banquet of Cleopatra",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Marie_Goldsmith_%28retouched%29.jpg/120px-Marie_Goldsmith_%28retouched%29.jpg",
+    "alt": "Marie Goldsmith",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Eppelsheim_Soprillo_Saxophone_2000s_%28rotate%29.jpg/120px-Eppelsheim_Soprillo_Saxophone_2000s_%28rotate%29.jpg",
+    "alt": "Soprillo",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Planetoid_crashing_into_primordial_Earth.jpg/250px-Planetoid_crashing_into_primordial_Earth.jpg",
+    "alt": "Artist\u0027s depiction of an apocalyptic impact event",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Portrett_av_stasjonsmester_Fritz_Skullerud_%28URN_NBN_no-nb_digifoto_20250305_00037_bldsa_eske17_oPORTR_0052%29_%28cropped%29.jpg/250px-Portrett_av_stasjonsmester_Fritz_Skullerud_%28URN_NBN_no-nb_digifoto_20250305_00037_bldsa_eske17_oPORTR_0052%29_%28cropped%29.jpg",
+    "alt": "Fritz Skullerud",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia:Recent additions - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Recent_additions"
+  },
   {
     "src": "https://upload.wikimedia.org/wikipedia/commons/1/10/Wikipedia-logo-v2-200px-transparent.png",
     "alt": "",
