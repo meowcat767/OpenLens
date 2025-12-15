@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 246,
+    "url": "https://spacecatgames.site",
+    "title": "Space Cat Games - Home",
+    "content": "Hey there! You need Javascript enabled to view this site! Error Code \u003d 0x00004 Home Games News Source Code Credits Changelog Archive Help Welcome to Space Cat Games 17.1 - Codename 64 Play Now Why Play at Space Cat Games? Free Games All our games are completely free to play, with no hidden costs or subscriptions needed. No Downloads Play directly in your browser - no installations, no waiting, just instant gaming. You will need an OpenGL Driver to play. Variety of Games From classics like Tetris and Snake to modern hits like Geometry Dash and CrazyCattle3D, we have something for everyone. Free and Open Source This website is free and Open Source, so you can always contribute! Featured Games SuperTuxKart Minecraft Crazy Cattle 3D See All Games FPS: -- 🏳️",
+    "scrapedAt": "2025-12-15 17:11:59.41516"
+  },
+  {
+    "id": 245,
+    "url": "https://github.com/meowcat767",
+    "title": "meowcat767 (Ben) · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} meowcat767 Follow More Overview Repositories Projects Packages Stars meowcat767 Follow Ben meowcat767 Follow professional circle clicker 13 followers · 19 following @Starry-Systems 17:11 (UTC) https://meowcat.site https://orcid.org/0009-0005-2648-1898 Achievements Achievements Block or Report Block or report meowcat767 Block user Prevent this user from interacting with your repositories and sending you notifications. Learn more about blocking users. You must be logged in to block users. Add an optional note \n Maximum 250 characters. Please don\u0027t include any personal information such as legal names or email addresses. Markdown supported. This note will be visible to only you. Block user Report abuse Contact GitHub support about this user’s behavior. Learn more about reporting abuse. Report abuse More Overview Repositories Projects Packages Stars meowcat767/README.md Meowcat767 i like java :\u003c Pinned Loading cobolt-mirror cobolt-mirror Public mirror of https://git.meowcat.site/meowcat/cobolt Java josuframework josuframework Public the osu! framework, ported to Java. Java blog.meowcat.site blog.meowcat.site Public Forked from glitchdotcom/11ty-to-compute blog src. HTML spacecatgames spacecatgames Public HTML OpenLens OpenLens Public Java Something went wrong, please refresh the page to try again. If the problem persists, check the GitHub status page or contact support. Uh oh! There was an error while loading. Please reload this page. You can’t perform that action at this time.",
+    "scrapedAt": "2025-12-15 17:11:55.985698"
+  },
+  {
+    "id": 244,
+    "url": "https://git.meowcat.site",
+    "title": "Meowcat\u0027s Git",
+    "content": "This website works better with JavaScript. Explore Help Register Sign In Meowcat\u0027s Git A painless, self-hosted Git service Easy to install Simply run the binary for your platform, ship it with Docker, or get it packaged. Cross-platform Gitea runs anywhere Go can compile for: Windows, macOS, Linux, ARM, etc. Choose the one you love! Lightweight Gitea has low minimal requirements and can run on an inexpensive Raspberry Pi. Save your machine energy! Open Source Go get code.gitea.io/gitea! Join us by contributing to make this project even better. Don\u0027t be shy to be a contributor!",
+    "scrapedAt": "2025-12-15 17:11:52.285389"
+  },
+  {
+    "id": 243,
+    "url": "https://files.meowcat.site",
+    "title": "Index of /",
+    "content": "Index of / Generated on 2025-11-18 17:55:18 files.meowcat.site aur-files/ files/ generate_index.py — 2.8 KB, modified 2025-11-10 16:16:38 index.html — 956.0 B, modified 2025-11-16 17:21:45 meowcat-files.iml — 373.0 B, modified 2025-11-14 18:40:11",
+    "scrapedAt": "2025-12-15 17:11:49.115309"
+  },
+  {
+    "id": 242,
+    "url": "https://meowcat.site",
+    "title": "Meowcat767 | Developer \u0026 Creator",
+    "content": "Meowcat767 Hello there! 👋 I\u0027m a Java software developer, and my current focus is my implementation of mct (Meowcat\u0027s Text Editor). 💡 Want to download it? Check out the file server About Me I\u0027m a Java software developer passionate about creating useful tools and applications. Currently, I\u0027m focused on developing mct (Meowcat\u0027s Text Editor), a text editor implementation that I\u0027m building from the ground up. I maintain 28+ repositories across GitHub and my self-hosted Gitea instance. Most of my active development work happens on my Gitea server, where I work on various projects ranging from web applications to system utilities. When I\u0027m not coding, I enjoy contributing to open source projects, experimenting with new technologies, and building tools that make development workflows smoother. 🐙 GitHub 🔧 Gitea Main workspace Featured Projects mct (Meowcat\u0027s Text Editor) Java My implementation of a text editor, built with Java. Currently in active development and available for download. Download osu! Taiko MIDI Drums Python A Python tool for connecting MIDI Electronic Drum Kits to osu!(lazer) on Linux. Enables using real drum kits with osu!. View on GitHub Viewed Java Viewed is an MPEG/AAC/Other open format media player. View on GitHub Rolling Girl for micro:bit Embedded Wowaka\u0027s \"Rolling Girl\" implemented for the BBC micro:bit. Plays the song using a connected speaker or buzzer. View on GitHub More Projects Explore Check out all my projects on GitHub and Gitea. Most of my active work is on my self-hosted Gitea instance. GitHub Gitea 🕐 00:00:00 Current Time 💡 Loading... Did You Know? Quick Links 🖼️ Gallery Images of all time 💻 Projects My open source work 📊 Status Service status 🔧 Git Server Code repository 📦 File Server Downloads \u0026 files",
+    "scrapedAt": "2025-12-15 17:11:45.817926"
+  },
+  {
     "id": 241,
     "url": "https://en.wikipedia.org/wiki/Python_(programming_language)",
     "title": "Python (programming language) - Wikipedia",
@@ -271,41 +306,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat\u0027s blog Welcome welcome to generic blog #8023043. opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2025-12-15 17:04:39.420865"
-  },
-  {
-    "id": 246,
-    "url": "https://spacecatgames.site",
-    "title": "Space Cat Games - Home",
-    "content": "Hey there! You need Javascript enabled to view this site! Error Code \u003d 0x00004 Home Games News Source Code Credits Changelog Archive Help Welcome to Space Cat Games 17.1 - Codename 64 Play Now Why Play at Space Cat Games? Free Games All our games are completely free to play, with no hidden costs or subscriptions needed. No Downloads Play directly in your browser - no installations, no waiting, just instant gaming. You will need an OpenGL Driver to play. Variety of Games From classics like Tetris and Snake to modern hits like Geometry Dash and CrazyCattle3D, we have something for everyone. Free and Open Source This website is free and Open Source, so you can always contribute! Featured Games SuperTuxKart Minecraft Crazy Cattle 3D See All Games FPS: -- 🏳️",
-    "scrapedAt": "2025-12-15 17:04:35.823624"
-  },
-  {
-    "id": 245,
-    "url": "https://github.com/meowcat767",
-    "title": "meowcat767 (Ben) · GitHub",
-    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} meowcat767 Follow More Overview Repositories Projects Packages Stars meowcat767 Follow Ben meowcat767 Follow professional circle clicker 13 followers · 19 following @Starry-Systems 17:04 (UTC) https://meowcat.site https://orcid.org/0009-0005-2648-1898 Achievements Achievements Block or Report Block or report meowcat767 Block user Prevent this user from interacting with your repositories and sending you notifications. Learn more about blocking users. You must be logged in to block users. Add an optional note \n Maximum 250 characters. Please don\u0027t include any personal information such as legal names or email addresses. Markdown supported. This note will be visible to only you. Block user Report abuse Contact GitHub support about this user’s behavior. Learn more about reporting abuse. Report abuse More Overview Repositories Projects Packages Stars meowcat767/README.md Meowcat767 i like java :\u003c Pinned Loading cobolt-mirror cobolt-mirror Public mirror of https://git.meowcat.site/meowcat/cobolt Java josuframework josuframework Public the osu! framework, ported to Java. Java blog.meowcat.site blog.meowcat.site Public Forked from glitchdotcom/11ty-to-compute blog src. HTML spacecatgames spacecatgames Public HTML OpenLens OpenLens Public Java Something went wrong, please refresh the page to try again. If the problem persists, check the GitHub status page or contact support. Uh oh! There was an error while loading. Please reload this page. You can’t perform that action at this time.",
-    "scrapedAt": "2025-12-15 17:04:31.987234"
-  },
-  {
-    "id": 244,
-    "url": "https://git.meowcat.site",
-    "title": "Meowcat\u0027s Git",
-    "content": "This website works better with JavaScript. Explore Help Register Sign In Meowcat\u0027s Git A painless, self-hosted Git service Easy to install Simply run the binary for your platform, ship it with Docker, or get it packaged. Cross-platform Gitea runs anywhere Go can compile for: Windows, macOS, Linux, ARM, etc. Choose the one you love! Lightweight Gitea has low minimal requirements and can run on an inexpensive Raspberry Pi. Save your machine energy! Open Source Go get code.gitea.io/gitea! Join us by contributing to make this project even better. Don\u0027t be shy to be a contributor!",
-    "scrapedAt": "2025-12-15 17:04:28.203192"
-  },
-  {
-    "id": 243,
-    "url": "https://files.meowcat.site",
-    "title": "Index of /",
-    "content": "Index of / Generated on 2025-11-18 17:55:18 files.meowcat.site aur-files/ files/ generate_index.py — 2.8 KB, modified 2025-11-10 16:16:38 index.html — 956.0 B, modified 2025-11-16 17:21:45 meowcat-files.iml — 373.0 B, modified 2025-11-14 18:40:11",
-    "scrapedAt": "2025-12-15 17:04:24.738722"
-  },
-  {
-    "id": 242,
-    "url": "https://meowcat.site",
-    "title": "Meowcat767 | Developer \u0026 Creator",
-    "content": "Meowcat767 Hello there! 👋 I\u0027m a Java software developer, and my current focus is my implementation of mct (Meowcat\u0027s Text Editor). 💡 Want to download it? Check out the file server About Me I\u0027m a Java software developer passionate about creating useful tools and applications. Currently, I\u0027m focused on developing mct (Meowcat\u0027s Text Editor), a text editor implementation that I\u0027m building from the ground up. I maintain 28+ repositories across GitHub and my self-hosted Gitea instance. Most of my active development work happens on my Gitea server, where I work on various projects ranging from web applications to system utilities. When I\u0027m not coding, I enjoy contributing to open source projects, experimenting with new technologies, and building tools that make development workflows smoother. 🐙 GitHub 🔧 Gitea Main workspace Featured Projects mct (Meowcat\u0027s Text Editor) Java My implementation of a text editor, built with Java. Currently in active development and available for download. Download osu! Taiko MIDI Drums Python A Python tool for connecting MIDI Electronic Drum Kits to osu!(lazer) on Linux. Enables using real drum kits with osu!. View on GitHub Viewed Java Viewed is an MPEG/AAC/Other open format media player. View on GitHub Rolling Girl for micro:bit Embedded Wowaka\u0027s \"Rolling Girl\" implemented for the BBC micro:bit. Plays the song using a connected speaker or buzzer. View on GitHub More Projects Explore Check out all my projects on GitHub and Gitea. Most of my active work is on my self-hosted Gitea instance. GitHub Gitea 🕐 00:00:00 Current Time 💡 Loading... Did You Know? Quick Links 🖼️ Gallery Images of all time 💻 Projects My open source work 📊 Status Service status 🔧 Git Server Code repository 📦 File Server Downloads \u0026 files",
-    "scrapedAt": "2025-12-15 17:04:20.899242"
   },
   {
     "id": 572,
