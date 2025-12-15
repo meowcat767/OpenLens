@@ -49,8 +49,9 @@ public class WebScraper {
     public ScrapeResult scrapeUrl(String url) {
         System.out.println("Crawling: " + url);
 
-        if (isBlacklisted(url)) {
-            System.out.println("✗ Skipped (URL blacklisted): " + url);
+        String urlMatch = getBlacklistedTerm(url);
+        if (urlMatch != null) {
+            System.out.println("✗ Skipped (URL blacklisted by '" + urlMatch + "'): " + url);
             return new ScrapeResult(false, Collections.emptySet());
         }
 
@@ -65,16 +66,18 @@ public class WebScraper {
             String title = doc.title();
 
             // Check title for blacklisted words
-            if (isBlacklisted(title)) {
-                System.out.println("✗ Skipped (Title blacklisted): " + title);
+            String titleMatch = getBlacklistedTerm(title);
+            if (titleMatch != null) {
+                System.out.println("✗ Skipped (Title blacklisted by '" + titleMatch + "'): " + title);
                 return new ScrapeResult(false, Collections.emptySet());
             }
 
             String content = extractContent(doc);
 
-            // Check content for blacklisted words (simple check)
-            if (isBlacklisted(content)) {
-                System.out.println("✗ Skipped (Content blacklisted)");
+            // Check content for blacklisted words
+            String contentMatch = getBlacklistedTerm(content);
+            if (contentMatch != null) {
+                System.out.println("✗ Skipped (Content blacklisted by '" + contentMatch + "')");
                 return new ScrapeResult(false, Collections.emptySet());
             }
 
@@ -95,16 +98,20 @@ public class WebScraper {
         }
     }
 
-    private boolean isBlacklisted(String text) {
+    // Returns the blacklisted term encountered, or null if none
+    private String getBlacklistedTerm(String text) {
         if (text == null)
-            return false;
+            return null;
         String lowerText = text.toLowerCase();
+
         for (String badWord : blacklist) {
-            if (lowerText.contains(badWord)) {
-                return true;
+            // Use regex for whole word matching to avoid "Sussex" matching "sex"
+            // \b matches word boundaries
+            if (lowerText.matches(".*\\b" + java.util.regex.Pattern.quote(badWord) + "\\b.*")) {
+                return badWord;
             }
         }
-        return false;
+        return null;
     }
 
     private Set<String> extractLinks(Document doc, String baseUrl) {
@@ -114,7 +121,7 @@ public class WebScraper {
         for (Element element : elements) {
             String link = element.attr("abs:href");
             // Basic validation and blacklist check
-            if (isValidLink(link) && !isBlacklisted(link)) {
+            if (isValidLink(link) && getBlacklistedTerm(link) == null) {
                 links.add(link);
             }
         }
