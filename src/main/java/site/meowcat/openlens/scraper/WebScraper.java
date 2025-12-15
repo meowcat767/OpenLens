@@ -47,14 +47,6 @@ public class WebScraper {
      * Scrape a single URL and return the result
      */
     public ScrapeResult scrapeUrl(String url) {
-        System.out.println("Checking: " + url);
-
-        // Check if we need to scrape this URL (re-crawl logic)
-        if (!shouldScrape(url)) {
-            // Recently scraped (< 7 days). Skip but return success to keep crawler moving.
-            return new ScrapeResult(true, Collections.emptySet());
-        }
-
         System.out.println("Crawling: " + url);
 
         String urlMatch = getBlacklistedTerm(url);
@@ -228,34 +220,6 @@ public class WebScraper {
         } catch (Exception e) {
             System.err.println("Error storing images for " + pageUrl + ": " + e.getMessage());
         }
-    }
-
-    private boolean shouldScrape(String url) {
-        String sql = "SELECT scraped_at FROM pages WHERE url = ?";
-
-        try (Connection conn = dbConfig.getConnection();
-                PreparedStatement stmt = conn.prepareStatement(sql)) {
-
-            stmt.setString(1, url);
-            try (java.sql.ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    java.sql.Timestamp scrapedAt = rs.getTimestamp("scraped_at");
-                    if (scrapedAt != null) {
-                        long sevenDaysInMillis = 7L * 24 * 60 * 60 * 1000;
-                        long timeSinceScrape = System.currentTimeMillis() - scrapedAt.getTime();
-
-                        if (timeSinceScrape < sevenDaysInMillis) {
-                            System.out.println("   > Skipped (Recently scraped: " + scrapedAt + ")");
-                            return false;
-                        }
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            System.err.println("Warning: Could not check crawl status for " + url + ": " + e.getMessage());
-            // Safe-fail: scrape if check fails
-        }
-        return true;
     }
 
     private boolean isValidImage(String src) {
