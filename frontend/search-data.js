@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 82,
+    "url": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama",
+    "title": "Wikipedia",
+    "content": "Ae ba nösi Moroi ba Wikipedia Wikipedia Nias ensiklopedia nifalului zato ba li Niha. No so 1.766 ngawua zura. Oguna\u0027ö nahia yaŵa ba högö zura (faigi gambara ) ba wangalui hadia ia. Agama • Biologi • Famatörö • Geografi • Hada • Matematika • Media • Sains • Sejarah • Teknologi Sura si bohou tesura Fa\u0027anö zura si bohou Halö templat zura si faudu ba Formulir wanura Moguna inspirasi? So gangolifa zura sinangea mu\u0027a\u0027asogö ba da\u0027a. Baero da\u0027ö so göi ngawalö zura si lö tesöndra ba da\u0027a. Sura amilita Banio no töi mbua nohi ba li Niha. Ulinia tanö baero nifotöi sawu tola labali\u0027ö ezoi, ulinia sabe\u0027e bakha nifotöi sole tola tobali mako nidanö ma ngawalö gama-gama tanö bö\u0027ö ba nomo. Ösinia safusi ba ombuyu tola la\u0027oköli\u0027ö tobali kopra, moroi khönia lafarö wanikha sasese te\u0027oguna\u0027ö ba wangomuhua boto (parfum) ma zui ba wamoadu bawa (kosmetik). Baero da\u0027ö fanikha mbanio tola tobali fangali gö soya bakha khönia kalori, ba so göi ni\u0027oguna\u0027ö tobali fanikha moto. Lala wanihoi sawu mbanio, la\u0027oguna\u0027ö nifotöi sula ba wangeheta sawu. (Baso dohu-tohunia) Gambara amilita Ba nahia wa\u0027atumbu Yesu no mufasindro Gereja nifotöi Gereja Wa\u0027atumbu Yesu. Molo\u0027ö Zura Ni\u0027amoni\u0027ö nahia andrö no sambua kandra gurifö ba kabu. Börö me lö lasöndra nahia ba nomo zo\u0027omo, lasaŵa gandra andre Yosefo ba Maria, ba i\u0027anema\u0027ö göi madono Maria. Andrö wa asese lafazökhi gandra Natal ba ginötö wanörötödö wa\u0027atumbu Yesu, töra-töra bakha ba Gereja Katolik. Na tafaigi gandra Natal andrö itörö tödöda wa\u0027alumana Nono Lowalangi me möi ia ba gulidanö ba wangöhöli niha. Ba gandra andre göi tohare ndra sangalui So\u0027aya moroi ba gatumbukha. Hadia ö\u0027ila? Hadia ö\u0027ila wa itugu ambö fahuhuo Nono Niha ba li Niha börö me lö khöra lala wombaso ba li Niha? Ba Wikibuku Nias tefa\u0027anö ngawalö nibaso sedöna mondrou\u0027ö li Niha. wa ba Wikibuku Nias so göi Zura Ni\u0027amoni\u0027ö. Baso ia ba da\u0027a. wa ba Wikibuku Nias tesöndra göi cerpen awö novella btn.? Baso cerpen ba da\u0027a ba novela ba da\u0027a. wa ba Wikibuku Nias so göi nifotöi WikiYunior sangowuloi ngawalö nibaso si faudu khoi ndraono si 5-12 ndröfi? Ae baso ngawalö nidunö-dunö ba ndraono ba da\u0027a. wa baero da\u0027ö so göi hendri-hendri, hoho, btn. ba Wikibuku Nias? Salua föna Salua föna ba mbawa si felendrua: 02/12/1915: Ifa\u0027ele ba zato Albert Einstein sambua teori nifotöi teori relativitas umum. 07/12/1995: Köfa mbanua si yaŵa sotöi Galileo tohare ba Yupiter. 08/12/2019: Kasus virus korona si föföna sibai tefaduhu\u0027ö ba Tiongkok. 10/12/1901: Tebörögö wame\u0027e nifotöi Buala Nobel (Indonesia hadiah nobel) ba Stockholm, Swedia, lima fakhe aefa wa\u0027amate Alfred Nobel samatumbu\u0027ö mbuala andrö. 10/12/1948: Rafe sebua nitotöi majelis umum PBB mamaduhu\u0027ö Universal Declaration of Human Rights (Indonesia, deklarasi universal hak azasi manusia) 10/12/1799: Ibörögö Perancis wangoguna\u0027ö meter tobali fanu\u0027a resmi. 11/12/1901: Guglielmo Marconi mama\u0027ohe\u0027ö sinyal radio moroi ba Poldhu, Cornwall, Inggris lumalö ba Saint John, Newfoundland, Kanada, si tobali böröta wangoguna\u0027ö radio ba gulidanö. 11/12/1972: Apollo 17 tohare ba mbaŵa, tobali nomoro önö ba afuriata misi Apollo sofeta ba mbaŵa. 21/12/1898: Marie Curie dan Pierre Curie manöndra radium, sambua unsur Kimia nibe nomoro 88 ba simbol Ra. 24/12/1818: Sinunö natal Bongi ba Humaga (li Jerman Stille Nacht, li Inggris Silent Night) nifa\u0027anö Franz Xaver Gruber te\u0027anunöisi si föföna sibai ba Gereja St. Nikolaus ba Oberndorf, Austria. 24/12/2000: Laboto bom ira teroris ba zi sagörö Indonesia: Batam, Pekanbaru, Jakarta, Sukabumi, Pangandaran, Bandung, Kudus, Mojokerto ba Mataram. 26/12/1991: Adudu Uni Soviet. 26/12/2004: Alua ndruru danö tektonik ba Samudra Hindia si tobali börö tsunami sebua samakiko oi zinga nasi ba Aceh ba Nias ba Asia Tenggara, Asia Selatan ba Afrika Timur. Mato 227.898 niha zi mate Bale zato Angombakhata • Bawagöli zato • Monganga afo • Nahia wamakori • Nga\u0027örö spesial • Ngawalö wanolo • Safuria tebulö • Sanandrösa • Sangai halöŵö Halöŵö si fakhai Wikikamus • Wikibuku • Wikiyunior Halöŵö bö\u0027ö Wikimedia Wikipedia andre no nihönagö Wikimedia Foundation, sambua amaota si lö mangalui hare. Baero ba Li Niha so na sa Wikipedia ba Li Indonesia ba ba ngawalö li bö\u0027ö ba Indonesia simane: Aceh, Bali, Banjar, Banyumasan, Bugis, Gorontalo, Jawa, Madura, Melayu, Minangkabau, Sunda, ba Tetun. Baero Wikipedia ba so göi na sa proyek tanö bö\u0027ö multi-bahasa khö Wikimedia Foundation: Commons Girö-girö media Wiktionary Kamus Wikisource Ngawalö gumbu Wikinews Ngawalö duria Wikibooks Ngawalö mbuku Wikiquote Ngawalö gamaedola Wikispecies Ngawalö spesies Wikiversity Ngawalö wamomaha Wikivoyage Ngawalö wanörö Wikidata Wikidata Meta-Wiki Koordinasi Wikimedia MediaWiki Software Wiki No noro dödö zanura wa\u0027enahöi ngawalö nisura ba da\u0027e Höndrögö ba da\u0027a wombaso goi-goinia sisa ba Wikipedia Indonesia. Tenga ba hulu Wikimedia Foundation wa\u0027enahöi nisura ba da\u0027e. Itaögö samösa lua-lua nisurania ma nibulö\u0027önia sanura. So wanofu? So wanolo ba da\u0027e! Tehalö moroi ba \"https://nia.wikipedia.org/w/index.php?title\u003dWikipedia:Olayama\u0026",
+    "scrapedAt": "2025-12-15 19:22:33.468308"
+  },
+  {
+    "id": 81,
+    "url": "https://smn.wikipedia.org/wiki/Ovd%C3%A2sij%C4%91o",
+    "title": "Wikipedia",
+    "content": "Njuškii siskáldâsân Wikipedia:st Tiervâpuáttim anarâškielâ Wikipedian! Tot lii Wikipedia anarâškielâlâš versio, mii vuáđudui roovvâdmáánu 19. peeivi 2020. Anarâškielâlii Wikipediast láá 6 507 artikkâlid. Puoh siijđoh • Kuhes siijđoh • Uđđâ siijđoh Haldâšeijeeh • Aktiivliih kevtteeh Savâstâllâm Aanaar Čaittâleijeeh Čääci Eennâmtiätu Elleeh Kemia Kieldah Kulttuur Musikkáreh Palhâšumeh Sämmiliih Puoh kategoriah Räähti uđđâ siijđo: Oho 51 artikkâl Julius Caesar Juliaanlâš kalender lii kalender, mii lii lamaš kiävtust Euroopâst antiik ääigi rääjist. Tot finnij noomâs Julius Caesar mield. 1500-lovvoost rahtui täärhib gregoriaanlâš kalender, mon katolilâš enâmeh valdii kiävtun jo 1500-lovvoost, eres enâmeh iänááš 1750-lovvoost já Ruoššâ vääldikomettem ohtâvuođâst ive 1918. Juliaanlâš kalender ivveest láá koskâmiärálávt 365 já 1/4 pirrâmpeivid nuuvt, ete kalenderivveest láá 365 pirrâmpeivid eereeb jyehi niäljád ive ko pirrâmpeeivih láá 366. Juliaanlâš kalender lii tääl (ive 1900 rääjist) 13 peivid gregoriaanlâš kalender maajaabeln. Ive 2100 iäru lii 14 peivid. Juliaanlâš kalender vuáđudui rekinistmân, mon mield trooppisâš ivveest láá 365,25 pirrâmpeivid. Tondiet ko tuotâvuođâst trooppisâš ihe lii suulâi 11 minuttid uánihub, juliaanlâš kalenderijn itá ain 128 ivveest ohtâ pirrâmpeivi liijkás ennuv. Koskâääigi huámmášii, ete juliaanlâš kalender ájánij luándulijn iveaaigijn. Tanen ovdâmerkkân kiđđâpeeivijorgáldâh lâi 1500-loho älgidijn sirdâšum njuhčâmáánu 25. peeivist 11. piäiván. Arkkâdâh Tiettih-uv tun, ete... ...Haenyeoh láá čepis puohčâleijeenisoneh Maadâ-Koreast? ...puoh syemmiliih artisteh ive 2025 Euroviisuin šoddii siämmáá ive? ...Franciscus lâi vuosmuš Eennâmpáálu máddáábeln šoddâm paavi? ...ergikištoh algii ive 1932? ...Schabziger lii ruánáá já korrâ vuástá, mii valmâštuvvoo Glarus kantonist Sveeicist? ...Anna Göldi lii majemuš nuáidin sujâttum nissoon Euroopist? ...Q\u0027eroh láá majemuuh Inkai maajeeldpuátteeh, kiäh láá siäiluttâm puigâ Inka-kulttuur já ärbivuovijd? ...Uluru lii Australia algâaalmugij pase pähti? ...Roland TB-303 lii bassosyntetisaattor, mon Roland Corporation almostitij ive 1981 já valmâštij ive 1984 räi? ...Aanaar lii Suomâ áinoo neeljikielâsâš kieldâ? ...Shanghai lii ohtâ Kiina tehálumosijn ekonomâlijn kuávdáin já ohtâ maailm stuárráámuin hamânijn? ...Stonehenge keđgikehá rähtim algâttui jo 3100 oKr., já majemuš muddo valmâštui 1500 oKr. maŋa? ...tälviuággum lii kuálástemvyehi, mast kuálástuvvoo tälviv jieŋân puhhum rääigi peht? ...Gilgameš lii maailm puárásumos eepos? ...Matti Nykänen vuoitij nelji kollemiitaal já oovtâ silbâmiitaal tälviolympialijn? ...tlingiteh láá algâaalmug Alaskast já Kanadast? ...šiljoboŋŋam lii Suomâ stuárráámus loddetábáhtume? ...Sari Essayah lii oovdiš kištoväzzee, kote šoodâi maailmmiäštárin ive 1993? ...Eennâmpáálu áimukeerdist 78 % lii typpi já 21 % lii happi? ...Aanaarjäävrist láá 3 318 suollud já Päijännest láá 2 690 suollud? ...Braunwald lii sijdâ Sveeicist, kost muáttá koskâmiärálávt 9 m jyehi täälvi? ...Aila-duo vuoittijn ive 2014 Sámi Grand Prix -kišto lávlumuási lavluin Naharij kandâ? ...Michael Collins jaamij purâstaavdân cuáŋuimáánu 28. peeivi 2021? ...Aanaarjáávrán lii ive 1984 koččâm rakkeet? ...Flavia Pennetta lii vuáittám ohtsis 49 WTA-turnaamid karrieeris ääigi? ...ores laahul láálá moonijd 18–27 peivid? ...Marie Curie lii vuáittám Nobel-palhâšume kuohtii? ...Helsigist láá 59 kaavpuguássid? ...Suomâst láá paijeel 100 000 sorvâd? ...Niillas Holmberg vuoitij Ive sämmilâš -palhâšume ive 2016? ...olesstuárusii viäpsákuáđist pyehtih leđe joba 20 000 viäpsád? ...čapis soormán jammii áárvu mield 30–60 % Euroop aalmugist? ...kapybara puáhtá teddiđ joba 79 kg? ...Hermann Hesse jaamij porgemáánu 9. peeivi 1962 85-ihásâžžân vuoiŋâšvardemân? ...täsni šadda ko kaasusovđâ čokkâšuvá jieijâs tiädduvyeimi keežild? ...káránâs lii tovle onnum paa tiettee lodden, jäämmim pyehten já pahakkâs litolâžžân? ...uárree kulovijđodâh lii suullân 2,5 keerdi vijđásub ko ulmust? ...kiemâsämikielâ lii sämikielâ, mii čaaskâi 1700-lovo já 1800-lovo ääigi? ...tááláá ääigi láá kiävtust kuttâ trigonometrisâš funktio? Kalender: juovlâmáánu Šoddâmeh 1. peeivi (1969) – Ann-Mari Andersen, taažâsämmilâš lávloo já musikkár 4. peeivi (1965) – Elvira Galkina, kieldâsämmilâš tihtâčällee, kirječällee já musikkár 6. peeivi (1972) – Katja Gauriloff, nuorttâlâš dokumentelleekovestivrejeijee já elleekovestivrejeijee 8. peeivi (1947) – Kati-Claudia Fofonoff, nuorttâlâš kirječällee (j. 2011) 24. peeivi (1984) – Amoc, anarâš ráppájeijee 28. peeivi (1942) – Kuobžâ-Saammâl Matti, anarâškielâ iäláskittee já Anarâškielâ seervi kuhesáigásâš saavâjođetteijee. Jämimeh 14. peeivi (1956) – J. K. Paasikivi, syemmilâš paŋkkihovdâ, politikkár, diplomaat já Suomâ täsivääldi 7. president (š. 1870) 19. peeivi (1940) – Kyösti Kallio, syemmilâš politikkár já Suomâ täsivääldi 4. president (š. 1873) 22. peeivi (1989) – Samuel Beckett, ive 1969 Nobel-kirjálâšvuotâpalhâšume finnim irlandlâš kirječällee (š. 1906) 28. peei",
+    "scrapedAt": "2025-12-15 19:22:31.753707"
+  },
+  {
+    "id": 80,
+    "url": "https://fa.wikipedia.org/wiki/",
+    "title": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "content": "پرش به محتوا از ویکی‌پدیا، دانشنامهٔ آزاد دانشنامه‌ای آزاد که همه می‌توانند آن را ویرایش کنند؛ با ۱٬۰۶۴٬۵۳۹ مقاله به زبان فارسی آشنایی با دانشنامه آشنایی با اصول ویرایش کارهای قابل انجام سیاست‌ها و رهنمودها فهرست الفبایی مقاله‌ها مقالهٔ برگزیده ویرایش چستین در سال ۲۰۲۵ جسیکا میشل چَستِین بازیگر و تهیه‌کنندهٔ آمریکایی است. او اساساً بابت بازی در فیلم‌هایی با مضمون فمینیستی مشهور است و جوایز مختلفی از جمله یک جایزهٔ اسکار و یک جایزهٔ گلدن گلوب برنده شده است و همچنین یک بار نامزد جایزهٔ امی ساعات پربیننده بوده است. مجلهٔ تایم در سال ۲۰۱۲ از او به‌عنوان یکی از ۱۰۰ فرد دارای بیشترین تأثیر در جهان یاد کرد. چستین از سنین پایین به بازیگری علاقه نشان داد و اولین نقش رسمی خود در تئاتر را در سال ۱۹۹۸ با بازی در نقش ژولیت اثر ویلیام شکسپیر ایفا کرد. سپس برای تعلیم در رشتهٔ بازیگری به مدرسه جولیارد رفت، و پس از آن با جان ولز، تهیه‌کنندهٔ تلویزیون، قرارداد امضا کرد. او بارها در مجموعه‌های تلویزیونی مختلف، از جمله نظم و قانون: دادگاه با هیئت منصفه، به دفعات در نقش‌های مهمان بازی کرد. نخستین نقش چستین در سینما، مربوط به بازی در درام جولین بود اما در سال ۲۰۱۱ و پس از بازی در شش فیلم، از جمله درام‌های پناه بگیر و درخت زندگی به شهرت رسید. بازی در نقش زنی مشتاق در درام خدمتکاران و یک تحلیل‌گر سی‌آی‌اِی در فیلم مهیج سی دقیقه پس از نیمه‌شب منجر به نامزد شدن وی برای جایزهٔ اسکار شد. موفقیت تجاری چستین با بازی در فیلم‌های علمی تخیلی میان‌ستاره‌ای و مریخی و فیلم ترسناک آن: بخش دوم حاصل شد. او بابت بازی در نقش زنانی با اراده قوی، در درام‌های خشن‌ترین سال، دوشیزه اسلون و بازی مالی، و مینی‌سریال صحنه‌هایی از یک ازدواج مورد ستایش قرار گرفت. او در ادامه تامی فی بکر را در فیلم زندگی‌نامه‌ای چشم‌های تامی فی به تصویر کشید که برای آن برندهٔ جایزهٔ اسکار بهترین بازیگر زن شد، و همچنین تمی وینت را در جرج و تمی. در تئاتر برادوی، چستین در بازآفرینی نمایش وارثه و خانه عروسک حضور داشته است. ادامه… مقاله‌های برگزیده – مقالهٔ امروز آیا می‌دانستید که …؟ ویرایش … بزرگ‌ترین میزان بمباران تاریخ در جنگ ویتنام رخ داد؛ آمریکا بیش از ۵ میلیون تُن بمب استفاده کرد که مقدار آن بیش از دو برابر بمب‌های مصرفی نیروی هوایی این کشور در جنگ جهانی دوم بود؟ (در تصویر) … شهر وینزر در کانادا و دیترویت در آمریکا یک منطقهٔ شهری به هم چسبیده هستند که توسط رود دیترویت تفکیک می‌شوند؟ … بدنهٔ خودروهای ترابانت ساخت آلمان شرقی، از جنس دوروپلاست بود که نوعی رزین آمیخته با پنبهٔ بازیافتی به‌شمار می‌رفت؟ … غیاث‌الدین جمشید کاشانی دقت عدد پی را از ۶ به ۱۶ رقم اعشار رساند؛ رکوردی که حدود ۱۹۰ سال پابرجا ماند؟ …اتحادیه کشاورزان کجور و کلارستاق با پشتیبانی حکومت پهلوی، در غرب مازندران علیه حزب توده مبارزهٔ مسلحانه می‌کرد؟ … زبان روتوکاس فقط ۱۱ واج دارد که شامل ۵ مصوت و ۶ صامت است؟ بیشتر… – پیشنهاد یک مقاله دربارهٔ ویکی‌پدیا ویرایش ویکی‌پدیا دانشنامه‌ای اینترنتی با بیش از ۳۲۹ زبان با محتوای آزاد است که با همکاری افراد داوطلب نوشته می‌شود و هر کس که به اینترنت دسترسی داشته باشد می‌تواند مقاله‌های آن را ویرایش کند. هدف ویکی‌پدیا آفرینش و انتشار جهانی یک دانشنامهٔ آزاد به تمامی زبان‌های زندهٔ دنیاست. با رشد روزافزون این دانشنامه گردانندگان آن در بنیاد ویکی‌مدیا چندین پروژهٔ مشابه دیگر همچون ویکی‌واژه، ویکی‌کتاب، ویکی‌گفتاورد، ویکی‌خبر، ویکی‌دانشگاه، ویکی‌سفر، ویکی‌داده و ویکی‌گونه را پدیدآوردند. ویکی‌پدیای فارسی دو سال پس از شروع پروژهٔ ویکی‌پدیای انگلیسی، در ۲۸ آذر ۱۳۸۲ (۱۹ دسامبر ۲۰۰۳) فعالیت خود را آغاز کرد و اکنون در ردهٔ نوزدهم ویکی‌پدیاها قرار دارد و بزرگترین دانشنامهٔ فارسی محسوب می‌شود. ویکی‌پدیای فارسی هم اکنون (۲۴ آذر ۱۴۰۴ خورشیدی) ۱٬۰۶۴٬۵۳۹ نوشتار دارد. ادامه… ویکی‌پدیا، بدون نیاز به اینترنت از میان خبرها ویرایش جف کیلی در استرالیا، ۱۶ نفر در تیراندازی جمعی در جشن حنوکا در بوندای بیچ کشته شدند. کلر آبسکیور: اکسپدیشن ۳۳ در گیم آواردز (میزبان مراسم جف کیلی در تصویر) برندهٔ جایزهٔ بازی سال شد. لندو نوریس برندهٔ عنوان قهرمانی جهانی رانندگان فرمول یک شد. در یک تهاجم نظامی، شورای انتقالی جنوب بیشتر بخش‌های جنوبی یمن را تصرف کرد و کنترل آن‌ها را از دست دولت خارج کرد. رویدادهای کنونی: جنگ غزه گاه‌شمار نسل‌کشی جنگ روسیه و اوکراین جنگ داخلی سودان (کشتار) مرگ‌های اخیر: راد پیج مارتین پار فرانک گری آن بدسول به‌روزرسانی از پیش‌نویس کاربران یادبودها ویرایش امروز: دوشنبه، ۱۵ دسامبر ۲۰۲۵ میلادی برابر ۲۴ آذر ۱۴۰۴ هجری خورشیدی و ۲۴ جمادی‌الثانی ۱۴۴۷ هجری قمری (UTC) رویدادها ۱۲۵۶ - هولاکو خان قلعه الموت اسماعیلیان را تصرف و آن را نابود کرد. ۱۹۷۶ - کشور ساموا به عضویت سازمان ملل متحد درآمد. زادروزها ۳۷ - زادروز نرون امپراتور روم از سال ۵۴ تا ۶۸ میلادی ۱۳۰ - زادروز لوسیوس وروس امپراتور روم به طور مشترک با مارکوس اورلیوس از سال ۱۶۱ میلادی تا هنگام مرگش در ۱۶۹ میلادی ۱۸۳۲ - زادروز گوستاو ایفل مهندس ساختمان، معمار و متخصص سازه‌های فلزی فرانسوی ۱۸۵۲ - زادروز آنری بکرل فیزیکدان فرانسوی، برندهٔ جایزه نوبل فیزیک سال ۱۹۰۳ ۱۸۵۹ - زادروز لودویک زامنهوف آفرینندهٔ زبان بین‌المللی اسپرانتو اهل لهستان ۱۹۰۷ - زادروز اسکار نیمایر معمار برزیلی، از طراحان بنای مرکز سازمان ملل در نیویورک ۱۹۵۳ - زادروز فرانسیسکو فادول سیاستمدار اهل گینه بیسائو درگذشت‌ها ۱۰۷۲ - درگذشت آلپ ارسلان (در تصویر) دومین پادشاه از دودمان سلجوقی ۱۵۷۴ - درگذشت سلیم دوم یازدهمین سلطان امپراتوری عثمانی و نودمین خلیفه اسلامی ۱۶۷۵ - درگذشت یوهانس فرمیر از معروف‌ترین نقاشان هلندی دورهٔ باروک ۱۸۵۳ - درگذشت گئورگ فریدریش گروتفند باستان‌شناس آلمانی ۱۹۵۸ - ",
+    "scrapedAt": "2025-12-15 19:22:29.989476"
+  },
+  {
+    "id": 79,
+    "url": "https://kbp.wikipedia.org/wiki/Tal%C9%A9_%C9%96eu",
+    "title": "Wikipediya",
+    "content": "Aller au contenu Pɩlɩɩna Wikipediya Talɩ ɖeu Kabɩyɛ Wikipediya yɔɔ. Bienvenue dans la Wikipédia en Kabiyè. Welcome to the Kabiye Wikipedia. Petendiɣ mba pasɩma kabɩyɛ kalʊʊ nɛ maʊ yɔ se papɩzɩɣ patasɩ maʊ kabɩyɛ tɔm cɔɖɩŋ ɖeʊ nɛ pɔsɔzɩ. Tous ceux qui savent lire et écrire le kabiyè sont encouragés à créer autant d\u0027articles de haute qualité que possible et d\u0027améliorer les articles existants. Anyone who knows how to read and write Kabiye is encouraged to create as many top-quality articles as possible and to improve the existing articles. 1 715 Tɔm cɔɖɩŋ tɩŋa Takayɩhatʊ tɩŋa Pɩlɩŋ tɩŋa Pɩɖaɣna mʋʋna \"https://kbp.wikipedia.org/w/index.php?title\u003dTalɩ_ɖeu\u0026oldid\u003d15090\" Pɩlɩʋ : Wikipediya 343 langues Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fiji Hindi Hrvatski Hornjoserbsce Kreyòl ayisyen Magyar Հայերեն Արեւմտահայերէն Interlingua Jaku Iban Bahasa Indonesia Interlingue Igbo Igala Iñupiatun Ilokano ГӀалгӀай Ido Íslenska Italiano ᐃᓄᒃᑎᑐᑦ / inuktitut 日本語 Patois La .lojban. Jawa ქართული Qaraqalpaqsha Taqbaylit Адыгэбзэ Tyap Kongo Kumoring Gĩkũyũ Қазақша Kalaallisut ភាសាខ្មែរ ಕನ್ನಡ Yerwa Kanuri 한국어 Перем коми Къарачай-малкъар کٲشُر Ripoarisch Kurdî Kʋsaal Коми Kernowek Кыргызча Latina Ladino Lëtzebuergesch Лакку Лезги Lingua Franca Nova Luganda Limburgs Ligure Ladin Lombard Lingála ລາວ Lietuvių Latgaļu Latviešu Madhurâ मैथिली Basa Banyumasan Мокшень Malagasy Олык марий Māori Minangkabau Македонски മലയാളം Монгол ꯃꯤꯇꯩ ꯂꯣꯟ ဘာသာမန် Moore मराठी Кырык мары Bahasa Melayu Malti Mirandés မြန်မာဘာသာ Эрзянь مازِرونی Nāhuatl Napulitano Plattdüütsch Nedersaksies नेपाली नेपाल भाषा Li Niha Nederlands Norsk nynorsk Norsk bokmål Novial ߒߞߏ IsiNdebele seSewula Nouormand Sesotho sa Leboa Nupe Diné bizaad Chi-Chewa Occitan Livvinkarjala Oromoo ଓଡ଼ିଆ Ирон ਪੰਜਾਬੀ Pangasinan Kapampangan Papiamentu Picard Naijá Deitsch Pälzisch पालि Polski Piemontèis پنجابی Ποντιακά پښتو Português Pinayuanan Runa Simi ရခိုင် Rumantsch Romani čhib Ikirundi Română Armãneashti Tarandíne Руски Русский Русиньскый Ikinyarwanda संस्कृतम् Саха тыла ᱥᱟᱱᱛᱟᱲᱤ Sardu Sicilianu Scots سنڌي Davvisámegiella Sängö Srpskohrvatski / српскохрватски Taclḥit တႆး සිංහල Simple English Slovenčina سرائیکی Slovenščina Gagana Samoa Anarâškielâ ChiShona Soomaaliga Shqip Српски / srpski Sranantongo SiSwati Sesotho Seeltersk Sunda Svenska Kiswahili ꠍꠤꠟꠐꠤ Ślůnski Sakizaya தமிழ் Tayal ತುಳು ᥖᥭᥰ ᥖᥬᥲ ᥑᥨᥒᥰ తెలుగు Tetun Тоҷикӣ ไทย ትግርኛ ትግሬ Türkmençe Tagalog Tolışi Setswana Lea faka-Tonga Toki pona Tok Pisin Türkçe Seediq Xitsonga Татарча / tatarça ChiTumbuka Twi Reo tahiti Тыва дыл Удмурт ئۇيغۇرچە / Uyghurche Українська اردو Oʻzbekcha / ўзбекча Tshivenda Vèneto Vepsän kel’ Tiếng Việt West-Vlams Volapük Walon Winaray Wolof 吴语 Хальмг IsiXhosa მარგალური ייִדיש Yorùbá Vahcuengh Zeêuws ⵜⴰⵎⴰⵣⵉⵖⵜ ⵜⴰⵏⴰⵡⴰⵢⵜ 中文 文言 閩南語 / Bân-lâm-gí 粵語 IsiZulu Ñɔɔzɩ kpasɩ Ñɩnɩ Ñɩnɩ Talɩ ɖeu 343 langues Sɔɔzɩ tɔm natʋyʋ",
+    "scrapedAt": "2025-12-15 19:22:28.204919"
+  },
+  {
+    "id": 78,
+    "url": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD",
+    "title": "ዊኪፒድያ",
+    "content": "አስክ ጸብጥ ተዐዴ ምን ዊኪፒድያ መርሐበ ብኩም እት ዊኪፒድያ ህግየ ትግሬ፡ ለገብአ ምንኩም እግል-ለአስንዮ ለቀድር ሑር ኤንሳይክሉፒድያ! ዐድነ ነኣምር ኣሳር ወስያሐት ፈን ወዓዳት ስያሰት አክትበት ዕሉም ወቴክኖሎጂ ታሪክ ዓፍየት ታሪክ ሐያት ሕበርበሮ ርያደት ህርከክ መራጄዕ ህግያ ትግሬ ብለዕ ወስታይ ርክን ስወር መንታይ ዊኪፒድያ ላቱ መሻርዕ ኮመንስ ሚድያዊኪ ዊኪሚድያ ዊኪቡክስ ዊኪደታ ዊኪኒዩስ ዊኪኮት ዊኪሶርስ ዊኪመድያ ዊኪቨርሲቲ ዊኪቮያጅ ዊክሸነሪ ምን \"https://tig.wikipedia.org/w/index.php?title\u003dአግዳ_ገጽ\u0026oldid\u003d8461\" ጀለበ 343 ሀገጊት Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fiji Hindi Hrvatski Hornjoserbsce Kreyòl ayisyen Magyar Հայերեն Արեւմտահայերէն Interlingua Jaku Iban Bahasa Indonesia Interlingue Igbo Igala Iñupiatun Ilokano ГӀалгӀай Ido Íslenska Italiano ᐃᓄᒃᑎᑐᑦ / inuktitut 日本語 Patois La .lojban. Jawa ქართული Qaraqalpaqsha Taqbaylit Адыгэбзэ Kabɩyɛ Tyap Kongo Kumoring Gĩkũyũ Қазақша Kalaallisut ភាសាខ្មែរ ಕನ್ನಡ Yerwa Kanuri 한국어 Перем коми Къарачай-малкъар کٲشُر Ripoarisch Kurdî Kʋsaal Коми Kernowek Кыргызча Latina Ladino Lëtzebuergesch Лакку Лезги Lingua Franca Nova Luganda Limburgs Ligure Ladin Lombard Lingála ລາວ Lietuvių Latgaļu Latviešu Madhurâ मैथिली Basa Banyumasan Мокшень Malagasy Олык марий Māori Minangkabau Македонски മലയാളം Монгол ꯃꯤꯇꯩ ꯂꯣꯟ ဘာသာမန် Moore मराठी Кырык мары Bahasa Melayu Malti Mirandés မြန်မာဘာသာ Эрзянь مازِرونی Nāhuatl Napulitano Plattdüütsch Nedersaksies नेपाली नेपाल भाषा Li Niha Nederlands Norsk nynorsk Norsk bokmål Novial ߒߞߏ IsiNdebele seSewula Nouormand Sesotho sa Leboa Nupe Diné bizaad Chi-Chewa Occitan Livvinkarjala Oromoo ଓଡ଼ିଆ Ирон ਪੰਜਾਬੀ Pangasinan Kapampangan Papiamentu Picard Naijá Deitsch Pälzisch पालि Polski Piemontèis پنجابی Ποντιακά پښتو Português Pinayuanan Runa Simi ရခိုင် Rumantsch Romani čhib Ikirundi Română Armãneashti Tarandíne Руски Русский Русиньскый Ikinyarwanda संस्कृतम् Саха тыла ᱥᱟᱱᱛᱟᱲᱤ Sardu Sicilianu Scots سنڌي Davvisámegiella Sängö Srpskohrvatski / српскохрватски Taclḥit တႆး සිංහල Simple English Slovenčina سرائیکی Slovenščina Gagana Samoa Anarâškielâ ChiShona Soomaaliga Shqip Српски / srpski Sranantongo SiSwati Sesotho Seeltersk Sunda Svenska Kiswahili ꠍꠤꠟꠐꠤ Ślůnski Sakizaya தமிழ் Tayal ತುಳು ᥖᥭᥰ ᥖᥬᥲ ᥑᥨᥒᥰ తెలుగు Tetun Тоҷикӣ ไทย ትግርኛ Türkmençe Tagalog Tolışi Setswana Lea faka-Tonga Toki pona Tok Pisin Türkçe Seediq Xitsonga Татарча / tatarça ChiTumbuka Twi Reo tahiti Тыва дыл Удмурт ئۇيغۇرچە / Uyghurche Українська اردو Oʻzbekcha / ўзбекча Tshivenda Vèneto Vepsän kel’ Tiếng Việt West-Vlams Volapük Walon Winaray Wolof 吴语 Хальмг IsiXhosa მარგალური ייִדיש Yorùbá Vahcuengh Zeêuws ⵜⴰⵎⴰⵣⵉⵖⵜ ⵜⴰⵏⴰⵡⴰⵢⵜ 中文 文言 閩南語 / Bân-lâm-gí 粵語 IsiZulu ዐደሎት መዐደዪ ሕዘው ሕዘው አግዳ ገጽ 343 ሀገጊት Add topic",
+    "scrapedAt": "2025-12-15 19:22:24.115961"
+  },
+  {
     "id": 77,
     "url": "https://fi.wikipedia.org/wiki/",
     "title": "Wikipedia, vapaa tietosanakirja",
@@ -1377,41 +1412,6 @@ window.searchData = [
     "title": "Wikipedia",
     "content": "Menyang kontèn Sekang Wikipedia, Ensiklopedia Bebas sing nganggo Basa Banyumasan: dhialek Banyumas, Purbalingga, Tegal lan Purwokerto. Sugeng teka nang Wikipedia, ensiklopedia bebas sing teyeng disunting nang sapa baen. Sekiye wis ana 13.940 artikel sing ditulis nganggo basa Banyumasan. Agama Agama Budaya Budaya Geografi Geografi Matematika Matematika Astronomi Astronomi Indonesia Indonesia Banyumasan Banyumasan Seni Seni Tokoh Tokoh Informasi map-bms.wikipedia.org Mangga manjing … Mangga nglengkapi Wikipédia Basa Banyumasan, sedulur kabéh olih nambah, ngobah, nyisipna mbuh tulisan utawa gambar, sing penting apa baén sing dimuat kuwe ora nyalaih aturan pemeréntah, agama, tata krama lan liya-liyané, artiné sing pantes-pantes utawa wajar tur cocok karo ketentuan Wikipedia. Mangga uga deleng halaman takon (FAQ) sing cokan dadi pitakonan, uga halaman bantuan (hélp) kanggo nggolét bantuan nyunting nang Wikipedia Banyumasan kiyé. Kanggo njajal mangga njajal nyunting nang Kothak Njajal! Isi Wikipedia kuwé debawah naungan Lisénsi Dokuméntasi Bébas GNU, dadi aturané bébas ning sing manut aturan umum karo bertanggungjawab. Deleng uga aturan-aturan Hak Cipta sing ngatur bab latar belakang hak cipta, sumber terbuka karo isi bébas. Mangga kakang-kakang, mbekayu-mbekayu ... Nulis/Ngisi artikel Sugeng maca - Aturan - Hak Cipta - Nggawe halaman anyar - Nyunting kaca/halaman/artikel - Nerjemahna artikel - Panduan tata artikel - Tata basa/ejaan - Artikel sing dejaluk - Daftar artikel dasar/wajib Bab Wikipedia Wikipedia - Wikimedhia - Pengumuman - Dopokan/Warung kopi - Anggota - Pangurus - Milis - Kliping (Wikipedia nang Médhia Massa) - Mangga de-etung cacaeh suntingan Rika! - Sumbangan dana Hubungi kami Artikel pilihan Mesjid Agung Purbalingga digawe taun 1853 M utawa 1269 H nang ulama setempat sing jenenge KH Abdullah Ibrahim. Pas agi direnovasi taun 2002, mesjid iki digawe karo perpaduan antara arsitektur Jawa lan Wetan Tengah. Lan dideleng sedela kaya kemutan maring mesjid sing ana nang Madinah. Pembangunan dilakokna nang duwur lemah luase 5.500 meter persegi. Siki mesjid iku ngalami renovasi nganti lima wektu. Nang taun 1918, 1960, 1970, 1980-1985 lan terakhir nang taun 2002-2004. Dana sing dialokasikna nang rehab taun 2002 nganti 2 miliar rupiah. (Selengkape...) Artikel pilihan sedurungé: Piala Donya Sepak Bola · Tsunami · Thomas Alva Edison Artikel Pilihan liyane... Rika Weruh Ora... Kipas Dano, buchae jenis tanseon \"... nék tepung umbi iles-iles (Amorphophallus muelleri) teyeng digunakna nggo lem, agar-agar, mi, tahu, kosmetik, lan roti\"? \"... nék Taman High Line nang New York, Amerika Serikat, gemiyen kuwe asale anu jalur kereta?\" \"... nék arsitek Renaisans Andrea Palladio dikenal sekang karya arsitekture sing nduwe gaya Romawi?\" \"... nék kipas sing asale sekang Korea kuwe jenenge buchae lan dikategorikna dadi loro, yakuwe tanseon, kipas bunder, lan chwilbuchae utawa cheopseon, kipas lipat?\" Arsip – Molai gawe artikel anyar Prastawa énggal Whitney Houston, penyanyi dan aktris asal Amerika Serikat meninggal dunia pada usia 48 tahun. Mohammed Waheed Hassan diambil sumpahnya sebagai Presiden Maladewa setelah Mohamed Nasheed mundur dari jabatannya. HIM Damsyik, penari dan aktor Indonesia, meninggal dunia pada usia 82 tahun. Lebih dari 70 orang tewas dalam kerusuhan pada pertandingan sepak bola di Port Said, Mesir. Ade Namnung, pelawak Indonesia, meninggal dunia pada usia 34 tahun. Departemen Kehakiman Amerika Serikat menutup situs berbagi berkas Megaupload karena melakukan pelanggaran hak cipta. Prastawa énggal liyané... sunting Dina kiye nang sejarah (9 Desember) Cithakan:Dina Kiye Nang Sejarah/Desember Wikipedia basa liyane Basa Indonesia Aceh Banjar Bugis Jawa Melayu Tetun Sunda Wikipedia basa Banyumasan dimulai taun 2006 lan sekiye uwis nduweni 13.940 artikel. Wikipedia uga disediakna nganggo pirang-pirang basa nang donya, neng antarane yakuwe: Lewih sekang 1.000.000 artikel: English (Inggris) · Deutsch (Jerman) · français (Perancis) · Nederlands (Belanda) · italiano (Italia) · русский (Rusia) · español (Spanyol) · svenska (Swedia) Lewih sekang 500.000 artikel: polski (Polandia) · 日本語 (Jepang) · português (Portugis) · 中文 (Tionghoa) · Tiếng Việt (Vietnam) Lewih sekang 100.000 artikel: Bahasa Indonesia (Indonesia) · norsk (Norwegia Bokmål) · suomi (Finlandia) · català (Katalan) · українська (Ukraina) · magyar (Hongaria) · čeština (Ceko) · Türkçe (Turki) · română (Rumania) · 한국어 (Korea) · Esperanto (Esperanto) · dansk (Denmark) · العربية (Arab) · Volapük (Volapuk) · slovenčina (Slovenia) · српски / srpski (Serbia) · lietuvių (Lithuania) · עברית (Ibrani) · български (Bulgaria) · فارسی (Persia) · slovenščina (Slovenia) · Winaray (Waray-waray) · hrvatski (Kroasia) · हिन्दी (Hindi) · eesti (Estonia) · Simple English (Inggris Sederhana) Wikimedia Incubator · Selengkape Proyek Wikimedia liyane Wikipedia basa Banyumasan kiye disediakna gratisan nang Wikimedia Foundation, salah siji organisasi nirlaba, sing uga ngoperasikna pir",
     "scrapedAt": "2025-12-15 19:10:41.164823"
-  },
-  {
-    "id": 82,
-    "url": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama",
-    "title": "Wikipedia",
-    "content": "Ae ba nösi Moroi ba Wikipedia Wikipedia Nias ensiklopedia nifalului zato ba li Niha. No so 1.766 ngawua zura. Oguna\u0027ö nahia yaŵa ba högö zura (faigi gambara ) ba wangalui hadia ia. Agama • Biologi • Famatörö • Geografi • Hada • Matematika • Media • Sains • Sejarah • Teknologi Sura si bohou tesura Fa\u0027anö zura si bohou Halö templat zura si faudu ba Formulir wanura Moguna inspirasi? So gangolifa zura sinangea mu\u0027a\u0027asogö ba da\u0027a. Baero da\u0027ö so göi ngawalö zura si lö tesöndra ba da\u0027a. Sura amilita Banio no töi mbua nohi ba li Niha. Ulinia tanö baero nifotöi sawu tola labali\u0027ö ezoi, ulinia sabe\u0027e bakha nifotöi sole tola tobali mako nidanö ma ngawalö gama-gama tanö bö\u0027ö ba nomo. Ösinia safusi ba ombuyu tola la\u0027oköli\u0027ö tobali kopra, moroi khönia lafarö wanikha sasese te\u0027oguna\u0027ö ba wangomuhua boto (parfum) ma zui ba wamoadu bawa (kosmetik). Baero da\u0027ö fanikha mbanio tola tobali fangali gö soya bakha khönia kalori, ba so göi ni\u0027oguna\u0027ö tobali fanikha moto. Lala wanihoi sawu mbanio, la\u0027oguna\u0027ö nifotöi sula ba wangeheta sawu. (Baso dohu-tohunia) Gambara amilita Ba nahia wa\u0027atumbu Yesu no mufasindro Gereja nifotöi Gereja Wa\u0027atumbu Yesu. Molo\u0027ö Zura Ni\u0027amoni\u0027ö nahia andrö no sambua kandra gurifö ba kabu. Börö me lö lasöndra nahia ba nomo zo\u0027omo, lasaŵa gandra andre Yosefo ba Maria, ba i\u0027anema\u0027ö göi madono Maria. Andrö wa asese lafazökhi gandra Natal ba ginötö wanörötödö wa\u0027atumbu Yesu, töra-töra bakha ba Gereja Katolik. Na tafaigi gandra Natal andrö itörö tödöda wa\u0027alumana Nono Lowalangi me möi ia ba gulidanö ba wangöhöli niha. Ba gandra andre göi tohare ndra sangalui So\u0027aya moroi ba gatumbukha. Hadia ö\u0027ila? Hadia ö\u0027ila wa itugu ambö fahuhuo Nono Niha ba li Niha börö me lö khöra lala wombaso ba li Niha? Ba Wikibuku Nias tefa\u0027anö ngawalö nibaso sedöna mondrou\u0027ö li Niha. wa ba Wikibuku Nias so göi Zura Ni\u0027amoni\u0027ö. Baso ia ba da\u0027a. wa ba Wikibuku Nias tesöndra göi cerpen awö novella btn.? Baso cerpen ba da\u0027a ba novela ba da\u0027a. wa ba Wikibuku Nias so göi nifotöi WikiYunior sangowuloi ngawalö nibaso si faudu khoi ndraono si 5-12 ndröfi? Ae baso ngawalö nidunö-dunö ba ndraono ba da\u0027a. wa baero da\u0027ö so göi hendri-hendri, hoho, btn. ba Wikibuku Nias? Salua föna Salua föna ba mbawa si felendrua: 02/12/1915: Ifa\u0027ele ba zato Albert Einstein sambua teori nifotöi teori relativitas umum. 07/12/1995: Köfa mbanua si yaŵa sotöi Galileo tohare ba Yupiter. 08/12/2019: Kasus virus korona si föföna sibai tefaduhu\u0027ö ba Tiongkok. 10/12/1901: Tebörögö wame\u0027e nifotöi Buala Nobel (Indonesia hadiah nobel) ba Stockholm, Swedia, lima fakhe aefa wa\u0027amate Alfred Nobel samatumbu\u0027ö mbuala andrö. 10/12/1948: Rafe sebua nitotöi majelis umum PBB mamaduhu\u0027ö Universal Declaration of Human Rights (Indonesia, deklarasi universal hak azasi manusia) 10/12/1799: Ibörögö Perancis wangoguna\u0027ö meter tobali fanu\u0027a resmi. 11/12/1901: Guglielmo Marconi mama\u0027ohe\u0027ö sinyal radio moroi ba Poldhu, Cornwall, Inggris lumalö ba Saint John, Newfoundland, Kanada, si tobali böröta wangoguna\u0027ö radio ba gulidanö. 11/12/1972: Apollo 17 tohare ba mbaŵa, tobali nomoro önö ba afuriata misi Apollo sofeta ba mbaŵa. 21/12/1898: Marie Curie dan Pierre Curie manöndra radium, sambua unsur Kimia nibe nomoro 88 ba simbol Ra. 24/12/1818: Sinunö natal Bongi ba Humaga (li Jerman Stille Nacht, li Inggris Silent Night) nifa\u0027anö Franz Xaver Gruber te\u0027anunöisi si föföna sibai ba Gereja St. Nikolaus ba Oberndorf, Austria. 24/12/2000: Laboto bom ira teroris ba zi sagörö Indonesia: Batam, Pekanbaru, Jakarta, Sukabumi, Pangandaran, Bandung, Kudus, Mojokerto ba Mataram. 26/12/1991: Adudu Uni Soviet. 26/12/2004: Alua ndruru danö tektonik ba Samudra Hindia si tobali börö tsunami sebua samakiko oi zinga nasi ba Aceh ba Nias ba Asia Tenggara, Asia Selatan ba Afrika Timur. Mato 227.898 niha zi mate Bale zato Angombakhata • Bawagöli zato • Monganga afo • Nahia wamakori • Nga\u0027örö spesial • Ngawalö wanolo • Safuria tebulö • Sanandrösa • Sangai halöŵö Halöŵö si fakhai Wikikamus • Wikibuku • Wikiyunior Halöŵö bö\u0027ö Wikimedia Wikipedia andre no nihönagö Wikimedia Foundation, sambua amaota si lö mangalui hare. Baero ba Li Niha so na sa Wikipedia ba Li Indonesia ba ba ngawalö li bö\u0027ö ba Indonesia simane: Aceh, Bali, Banjar, Banyumasan, Bugis, Gorontalo, Jawa, Madura, Melayu, Minangkabau, Sunda, ba Tetun. Baero Wikipedia ba so göi na sa proyek tanö bö\u0027ö multi-bahasa khö Wikimedia Foundation: Commons Girö-girö media Wiktionary Kamus Wikisource Ngawalö gumbu Wikinews Ngawalö duria Wikibooks Ngawalö mbuku Wikiquote Ngawalö gamaedola Wikispecies Ngawalö spesies Wikiversity Ngawalö wamomaha Wikivoyage Ngawalö wanörö Wikidata Wikidata Meta-Wiki Koordinasi Wikimedia MediaWiki Software Wiki No noro dödö zanura wa\u0027enahöi ngawalö nisura ba da\u0027e Höndrögö ba da\u0027a wombaso goi-goinia sisa ba Wikipedia Indonesia. Tenga ba hulu Wikimedia Foundation wa\u0027enahöi nisura ba da\u0027e. Itaögö samösa lua-lua nisurania ma nibulö\u0027önia sanura. So wanofu? So wanolo ba da\u0027e! Tehalö moroi ba \"https://nia.wikipedia.org/w/index.php?title\u003dWikipedia:Olayama\u0026",
-    "scrapedAt": "2025-12-15 19:10:37.374711"
-  },
-  {
-    "id": 81,
-    "url": "https://smn.wikipedia.org/wiki/Ovd%C3%A2sij%C4%91o",
-    "title": "Wikipedia",
-    "content": "Njuškii siskáldâsân Wikipedia:st Tiervâpuáttim anarâškielâ Wikipedian! Tot lii Wikipedia anarâškielâlâš versio, mii vuáđudui roovvâdmáánu 19. peeivi 2020. Anarâškielâlii Wikipediast láá 6 507 artikkâlid. Puoh siijđoh • Kuhes siijđoh • Uđđâ siijđoh Haldâšeijeeh • Aktiivliih kevtteeh Savâstâllâm Aanaar Čaittâleijeeh Čääci Eennâmtiätu Elleeh Kemia Kieldah Kulttuur Musikkáreh Palhâšumeh Sämmiliih Puoh kategoriah Räähti uđđâ siijđo: Oho 51 artikkâl Julius Caesar Juliaanlâš kalender lii kalender, mii lii lamaš kiävtust Euroopâst antiik ääigi rääjist. Tot finnij noomâs Julius Caesar mield. 1500-lovvoost rahtui täärhib gregoriaanlâš kalender, mon katolilâš enâmeh valdii kiävtun jo 1500-lovvoost, eres enâmeh iänááš 1750-lovvoost já Ruoššâ vääldikomettem ohtâvuođâst ive 1918. Juliaanlâš kalender ivveest láá koskâmiärálávt 365 já 1/4 pirrâmpeivid nuuvt, ete kalenderivveest láá 365 pirrâmpeivid eereeb jyehi niäljád ive ko pirrâmpeeivih láá 366. Juliaanlâš kalender lii tääl (ive 1900 rääjist) 13 peivid gregoriaanlâš kalender maajaabeln. Ive 2100 iäru lii 14 peivid. Juliaanlâš kalender vuáđudui rekinistmân, mon mield trooppisâš ivveest láá 365,25 pirrâmpeivid. Tondiet ko tuotâvuođâst trooppisâš ihe lii suulâi 11 minuttid uánihub, juliaanlâš kalenderijn itá ain 128 ivveest ohtâ pirrâmpeivi liijkás ennuv. Koskâääigi huámmášii, ete juliaanlâš kalender ájánij luándulijn iveaaigijn. Tanen ovdâmerkkân kiđđâpeeivijorgáldâh lâi 1500-loho älgidijn sirdâšum njuhčâmáánu 25. peeivist 11. piäiván. Arkkâdâh Tiettih-uv tun, ete... ...Haenyeoh láá čepis puohčâleijeenisoneh Maadâ-Koreast? ...puoh syemmiliih artisteh ive 2025 Euroviisuin šoddii siämmáá ive? ...Franciscus lâi vuosmuš Eennâmpáálu máddáábeln šoddâm paavi? ...ergikištoh algii ive 1932? ...Schabziger lii ruánáá já korrâ vuástá, mii valmâštuvvoo Glarus kantonist Sveeicist? ...Anna Göldi lii majemuš nuáidin sujâttum nissoon Euroopist? ...Q\u0027eroh láá majemuuh Inkai maajeeldpuátteeh, kiäh láá siäiluttâm puigâ Inka-kulttuur já ärbivuovijd? ...Uluru lii Australia algâaalmugij pase pähti? ...Roland TB-303 lii bassosyntetisaattor, mon Roland Corporation almostitij ive 1981 já valmâštij ive 1984 räi? ...Aanaar lii Suomâ áinoo neeljikielâsâš kieldâ? ...Shanghai lii ohtâ Kiina tehálumosijn ekonomâlijn kuávdáin já ohtâ maailm stuárráámuin hamânijn? ...Stonehenge keđgikehá rähtim algâttui jo 3100 oKr., já majemuš muddo valmâštui 1500 oKr. maŋa? ...tälviuággum lii kuálástemvyehi, mast kuálástuvvoo tälviv jieŋân puhhum rääigi peht? ...Gilgameš lii maailm puárásumos eepos? ...Matti Nykänen vuoitij nelji kollemiitaal já oovtâ silbâmiitaal tälviolympialijn? ...tlingiteh láá algâaalmug Alaskast já Kanadast? ...šiljoboŋŋam lii Suomâ stuárráámus loddetábáhtume? ...Sari Essayah lii oovdiš kištoväzzee, kote šoodâi maailmmiäštárin ive 1993? ...Eennâmpáálu áimukeerdist 78 % lii typpi já 21 % lii happi? ...Aanaarjäävrist láá 3 318 suollud já Päijännest láá 2 690 suollud? ...Braunwald lii sijdâ Sveeicist, kost muáttá koskâmiärálávt 9 m jyehi täälvi? ...Aila-duo vuoittijn ive 2014 Sámi Grand Prix -kišto lávlumuási lavluin Naharij kandâ? ...Michael Collins jaamij purâstaavdân cuáŋuimáánu 28. peeivi 2021? ...Aanaarjáávrán lii ive 1984 koččâm rakkeet? ...Flavia Pennetta lii vuáittám ohtsis 49 WTA-turnaamid karrieeris ääigi? ...ores laahul láálá moonijd 18–27 peivid? ...Marie Curie lii vuáittám Nobel-palhâšume kuohtii? ...Helsigist láá 59 kaavpuguássid? ...Suomâst láá paijeel 100 000 sorvâd? ...Niillas Holmberg vuoitij Ive sämmilâš -palhâšume ive 2016? ...olesstuárusii viäpsákuáđist pyehtih leđe joba 20 000 viäpsád? ...čapis soormán jammii áárvu mield 30–60 % Euroop aalmugist? ...kapybara puáhtá teddiđ joba 79 kg? ...Hermann Hesse jaamij porgemáánu 9. peeivi 1962 85-ihásâžžân vuoiŋâšvardemân? ...täsni šadda ko kaasusovđâ čokkâšuvá jieijâs tiädduvyeimi keežild? ...káránâs lii tovle onnum paa tiettee lodden, jäämmim pyehten já pahakkâs litolâžžân? ...uárree kulovijđodâh lii suullân 2,5 keerdi vijđásub ko ulmust? ...kiemâsämikielâ lii sämikielâ, mii čaaskâi 1700-lovo já 1800-lovo ääigi? ...tááláá ääigi láá kiävtust kuttâ trigonometrisâš funktio? Kalender: juovlâmáánu Šoddâmeh 1. peeivi (1969) – Ann-Mari Andersen, taažâsämmilâš lávloo já musikkár 4. peeivi (1965) – Elvira Galkina, kieldâsämmilâš tihtâčällee, kirječällee já musikkár 6. peeivi (1972) – Katja Gauriloff, nuorttâlâš dokumentelleekovestivrejeijee já elleekovestivrejeijee 8. peeivi (1947) – Kati-Claudia Fofonoff, nuorttâlâš kirječällee (j. 2011) 24. peeivi (1984) – Amoc, anarâš ráppájeijee 28. peeivi (1942) – Kuobžâ-Saammâl Matti, anarâškielâ iäláskittee já Anarâškielâ seervi kuhesáigásâš saavâjođetteijee. Jämimeh 14. peeivi (1956) – J. K. Paasikivi, syemmilâš paŋkkihovdâ, politikkár, diplomaat já Suomâ täsivääldi 7. president (š. 1870) 19. peeivi (1940) – Kyösti Kallio, syemmilâš politikkár já Suomâ täsivääldi 4. president (š. 1873) 22. peeivi (1989) – Samuel Beckett, ive 1969 Nobel-kirjálâšvuotâpalhâšume finnim irlandlâš kirječällee (š. 1906) 28. peei",
-    "scrapedAt": "2025-12-15 19:10:35.657953"
-  },
-  {
-    "id": 80,
-    "url": "https://fa.wikipedia.org/wiki/",
-    "title": "ویکی‌پدیا، دانشنامهٔ آزاد",
-    "content": "پرش به محتوا از ویکی‌پدیا، دانشنامهٔ آزاد دانشنامه‌ای آزاد که همه می‌توانند آن را ویرایش کنند؛ با ۱٬۰۶۴٬۵۳۹ مقاله به زبان فارسی آشنایی با دانشنامه آشنایی با اصول ویرایش کارهای قابل انجام سیاست‌ها و رهنمودها فهرست الفبایی مقاله‌ها مقالهٔ برگزیده ویرایش چستین در سال ۲۰۲۵ جسیکا میشل چَستِین بازیگر و تهیه‌کنندهٔ آمریکایی است. او اساساً بابت بازی در فیلم‌هایی با مضمون فمینیستی مشهور است و جوایز مختلفی از جمله یک جایزهٔ اسکار و یک جایزهٔ گلدن گلوب برنده شده است و همچنین یک بار نامزد جایزهٔ امی ساعات پربیننده بوده است. مجلهٔ تایم در سال ۲۰۱۲ از او به‌عنوان یکی از ۱۰۰ فرد دارای بیشترین تأثیر در جهان یاد کرد. چستین از سنین پایین به بازیگری علاقه نشان داد و اولین نقش رسمی خود در تئاتر را در سال ۱۹۹۸ با بازی در نقش ژولیت اثر ویلیام شکسپیر ایفا کرد. سپس برای تعلیم در رشتهٔ بازیگری به مدرسه جولیارد رفت، و پس از آن با جان ولز، تهیه‌کنندهٔ تلویزیون، قرارداد امضا کرد. او بارها در مجموعه‌های تلویزیونی مختلف، از جمله نظم و قانون: دادگاه با هیئت منصفه، به دفعات در نقش‌های مهمان بازی کرد. نخستین نقش چستین در سینما، مربوط به بازی در درام جولین بود اما در سال ۲۰۱۱ و پس از بازی در شش فیلم، از جمله درام‌های پناه بگیر و درخت زندگی به شهرت رسید. بازی در نقش زنی مشتاق در درام خدمتکاران و یک تحلیل‌گر سی‌آی‌اِی در فیلم مهیج سی دقیقه پس از نیمه‌شب منجر به نامزد شدن وی برای جایزهٔ اسکار شد. موفقیت تجاری چستین با بازی در فیلم‌های علمی تخیلی میان‌ستاره‌ای و مریخی و فیلم ترسناک آن: بخش دوم حاصل شد. او بابت بازی در نقش زنانی با اراده قوی، در درام‌های خشن‌ترین سال، دوشیزه اسلون و بازی مالی، و مینی‌سریال صحنه‌هایی از یک ازدواج مورد ستایش قرار گرفت. او در ادامه تامی فی بکر را در فیلم زندگی‌نامه‌ای چشم‌های تامی فی به تصویر کشید که برای آن برندهٔ جایزهٔ اسکار بهترین بازیگر زن شد، و همچنین تمی وینت را در جرج و تمی. در تئاتر برادوی، چستین در بازآفرینی نمایش وارثه و خانه عروسک حضور داشته است. ادامه… مقاله‌های برگزیده – مقالهٔ امروز آیا می‌دانستید که …؟ ویرایش … بزرگ‌ترین میزان بمباران تاریخ در جنگ ویتنام رخ داد؛ آمریکا بیش از ۵ میلیون تُن بمب استفاده کرد که مقدار آن بیش از دو برابر بمب‌های مصرفی نیروی هوایی این کشور در جنگ جهانی دوم بود؟ (در تصویر) … شهر وینزر در کانادا و دیترویت در آمریکا یک منطقهٔ شهری به هم چسبیده هستند که توسط رود دیترویت تفکیک می‌شوند؟ … بدنهٔ خودروهای ترابانت ساخت آلمان شرقی، از جنس دوروپلاست بود که نوعی رزین آمیخته با پنبهٔ بازیافتی به‌شمار می‌رفت؟ … غیاث‌الدین جمشید کاشانی دقت عدد پی را از ۶ به ۱۶ رقم اعشار رساند؛ رکوردی که حدود ۱۹۰ سال پابرجا ماند؟ …اتحادیه کشاورزان کجور و کلارستاق با پشتیبانی حکومت پهلوی، در غرب مازندران علیه حزب توده مبارزهٔ مسلحانه می‌کرد؟ … زبان روتوکاس فقط ۱۱ واج دارد که شامل ۵ مصوت و ۶ صامت است؟ بیشتر… – پیشنهاد یک مقاله دربارهٔ ویکی‌پدیا ویرایش ویکی‌پدیا دانشنامه‌ای اینترنتی با بیش از ۳۲۹ زبان با محتوای آزاد است که با همکاری افراد داوطلب نوشته می‌شود و هر کس که به اینترنت دسترسی داشته باشد می‌تواند مقاله‌های آن را ویرایش کند. هدف ویکی‌پدیا آفرینش و انتشار جهانی یک دانشنامهٔ آزاد به تمامی زبان‌های زندهٔ دنیاست. با رشد روزافزون این دانشنامه گردانندگان آن در بنیاد ویکی‌مدیا چندین پروژهٔ مشابه دیگر همچون ویکی‌واژه، ویکی‌کتاب، ویکی‌گفتاورد، ویکی‌خبر، ویکی‌دانشگاه، ویکی‌سفر، ویکی‌داده و ویکی‌گونه را پدیدآوردند. ویکی‌پدیای فارسی دو سال پس از شروع پروژهٔ ویکی‌پدیای انگلیسی، در ۲۸ آذر ۱۳۸۲ (۱۹ دسامبر ۲۰۰۳) فعالیت خود را آغاز کرد و اکنون در ردهٔ نوزدهم ویکی‌پدیاها قرار دارد و بزرگترین دانشنامهٔ فارسی محسوب می‌شود. ویکی‌پدیای فارسی هم اکنون (۲۴ آذر ۱۴۰۴ خورشیدی) ۱٬۰۶۴٬۵۳۹ نوشتار دارد. ادامه… ویکی‌پدیا، بدون نیاز به اینترنت از میان خبرها ویرایش جف کیلی در استرالیا، ۱۶ نفر در تیراندازی جمعی در جشن حنوکا در بوندای بیچ کشته شدند. کلر آبسکیور: اکسپدیشن ۳۳ در گیم آواردز (میزبان مراسم جف کیلی در تصویر) برندهٔ جایزهٔ بازی سال شد. لندو نوریس برندهٔ عنوان قهرمانی جهانی رانندگان فرمول یک شد. در یک تهاجم نظامی، شورای انتقالی جنوب بیشتر بخش‌های جنوبی یمن را تصرف کرد و کنترل آن‌ها را از دست دولت خارج کرد. رویدادهای کنونی: جنگ غزه گاه‌شمار نسل‌کشی جنگ روسیه و اوکراین جنگ داخلی سودان (کشتار) مرگ‌های اخیر: راد پیج مارتین پار فرانک گری آن بدسول به‌روزرسانی از پیش‌نویس کاربران یادبودها ویرایش امروز: دوشنبه، ۱۵ دسامبر ۲۰۲۵ میلادی برابر ۲۴ آذر ۱۴۰۴ هجری خورشیدی و ۲۴ جمادی‌الثانی ۱۴۴۷ هجری قمری (UTC) رویدادها ۱۲۵۶ - هولاکو خان قلعه الموت اسماعیلیان را تصرف و آن را نابود کرد. ۱۹۷۶ - کشور ساموا به عضویت سازمان ملل متحد درآمد. زادروزها ۳۷ - زادروز نرون امپراتور روم از سال ۵۴ تا ۶۸ میلادی ۱۳۰ - زادروز لوسیوس وروس امپراتور روم به طور مشترک با مارکوس اورلیوس از سال ۱۶۱ میلادی تا هنگام مرگش در ۱۶۹ میلادی ۱۸۳۲ - زادروز گوستاو ایفل مهندس ساختمان، معمار و متخصص سازه‌های فلزی فرانسوی ۱۸۵۲ - زادروز آنری بکرل فیزیکدان فرانسوی، برندهٔ جایزه نوبل فیزیک سال ۱۹۰۳ ۱۸۵۹ - زادروز لودویک زامنهوف آفرینندهٔ زبان بین‌المللی اسپرانتو اهل لهستان ۱۹۰۷ - زادروز اسکار نیمایر معمار برزیلی، از طراحان بنای مرکز سازمان ملل در نیویورک ۱۹۵۳ - زادروز فرانسیسکو فادول سیاستمدار اهل گینه بیسائو درگذشت‌ها ۱۰۷۲ - درگذشت آلپ ارسلان (در تصویر) دومین پادشاه از دودمان سلجوقی ۱۵۷۴ - درگذشت سلیم دوم یازدهمین سلطان امپراتوری عثمانی و نودمین خلیفه اسلامی ۱۶۷۵ - درگذشت یوهانس فرمیر از معروف‌ترین نقاشان هلندی دورهٔ باروک ۱۸۵۳ - درگذشت گئورگ فریدریش گروتفند باستان‌شناس آلمانی ۱۹۵۸ - ",
-    "scrapedAt": "2025-12-15 19:10:34.011658"
-  },
-  {
-    "id": 79,
-    "url": "https://kbp.wikipedia.org/wiki/Tal%C9%A9_%C9%96eu",
-    "title": "Wikipediya",
-    "content": "Aller au contenu Pɩlɩɩna Wikipediya Talɩ ɖeu Kabɩyɛ Wikipediya yɔɔ. Bienvenue dans la Wikipédia en Kabiyè. Welcome to the Kabiye Wikipedia. Petendiɣ mba pasɩma kabɩyɛ kalʊʊ nɛ maʊ yɔ se papɩzɩɣ patasɩ maʊ kabɩyɛ tɔm cɔɖɩŋ ɖeʊ nɛ pɔsɔzɩ. Tous ceux qui savent lire et écrire le kabiyè sont encouragés à créer autant d\u0027articles de haute qualité que possible et d\u0027améliorer les articles existants. Anyone who knows how to read and write Kabiye is encouraged to create as many top-quality articles as possible and to improve the existing articles. 1 715 Tɔm cɔɖɩŋ tɩŋa Takayɩhatʊ tɩŋa Pɩlɩŋ tɩŋa Pɩɖaɣna mʋʋna \"https://kbp.wikipedia.org/w/index.php?title\u003dTalɩ_ɖeu\u0026oldid\u003d15090\" Pɩlɩʋ : Wikipediya 343 langues Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fiji Hindi Hrvatski Hornjoserbsce Kreyòl ayisyen Magyar Հայերեն Արեւմտահայերէն Interlingua Jaku Iban Bahasa Indonesia Interlingue Igbo Igala Iñupiatun Ilokano ГӀалгӀай Ido Íslenska Italiano ᐃᓄᒃᑎᑐᑦ / inuktitut 日本語 Patois La .lojban. Jawa ქართული Qaraqalpaqsha Taqbaylit Адыгэбзэ Tyap Kongo Kumoring Gĩkũyũ Қазақша Kalaallisut ភាសាខ្មែរ ಕನ್ನಡ Yerwa Kanuri 한국어 Перем коми Къарачай-малкъар کٲشُر Ripoarisch Kurdî Kʋsaal Коми Kernowek Кыргызча Latina Ladino Lëtzebuergesch Лакку Лезги Lingua Franca Nova Luganda Limburgs Ligure Ladin Lombard Lingála ລາວ Lietuvių Latgaļu Latviešu Madhurâ मैथिली Basa Banyumasan Мокшень Malagasy Олык марий Māori Minangkabau Македонски മലയാളം Монгол ꯃꯤꯇꯩ ꯂꯣꯟ ဘာသာမန် Moore मराठी Кырык мары Bahasa Melayu Malti Mirandés မြန်မာဘာသာ Эрзянь مازِرونی Nāhuatl Napulitano Plattdüütsch Nedersaksies नेपाली नेपाल भाषा Li Niha Nederlands Norsk nynorsk Norsk bokmål Novial ߒߞߏ IsiNdebele seSewula Nouormand Sesotho sa Leboa Nupe Diné bizaad Chi-Chewa Occitan Livvinkarjala Oromoo ଓଡ଼ିଆ Ирон ਪੰਜਾਬੀ Pangasinan Kapampangan Papiamentu Picard Naijá Deitsch Pälzisch पालि Polski Piemontèis پنجابی Ποντιακά پښتو Português Pinayuanan Runa Simi ရခိုင် Rumantsch Romani čhib Ikirundi Română Armãneashti Tarandíne Руски Русский Русиньскый Ikinyarwanda संस्कृतम् Саха тыла ᱥᱟᱱᱛᱟᱲᱤ Sardu Sicilianu Scots سنڌي Davvisámegiella Sängö Srpskohrvatski / српскохрватски Taclḥit တႆး සිංහල Simple English Slovenčina سرائیکی Slovenščina Gagana Samoa Anarâškielâ ChiShona Soomaaliga Shqip Српски / srpski Sranantongo SiSwati Sesotho Seeltersk Sunda Svenska Kiswahili ꠍꠤꠟꠐꠤ Ślůnski Sakizaya தமிழ் Tayal ತುಳು ᥖᥭᥰ ᥖᥬᥲ ᥑᥨᥒᥰ తెలుగు Tetun Тоҷикӣ ไทย ትግርኛ ትግሬ Türkmençe Tagalog Tolışi Setswana Lea faka-Tonga Toki pona Tok Pisin Türkçe Seediq Xitsonga Татарча / tatarça ChiTumbuka Twi Reo tahiti Тыва дыл Удмурт ئۇيغۇرچە / Uyghurche Українська اردو Oʻzbekcha / ўзбекча Tshivenda Vèneto Vepsän kel’ Tiếng Việt West-Vlams Volapük Walon Winaray Wolof 吴语 Хальмг IsiXhosa მარგალური ייִדיש Yorùbá Vahcuengh Zeêuws ⵜⴰⵎⴰⵣⵉⵖⵜ ⵜⴰⵏⴰⵡⴰⵢⵜ 中文 文言 閩南語 / Bân-lâm-gí 粵語 IsiZulu Ñɔɔzɩ kpasɩ Ñɩnɩ Ñɩnɩ Talɩ ɖeu 343 langues Sɔɔzɩ tɔm natʋyʋ",
-    "scrapedAt": "2025-12-15 19:10:32.347318"
-  },
-  {
-    "id": 78,
-    "url": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD",
-    "title": "ዊኪፒድያ",
-    "content": "አስክ ጸብጥ ተዐዴ ምን ዊኪፒድያ መርሐበ ብኩም እት ዊኪፒድያ ህግየ ትግሬ፡ ለገብአ ምንኩም እግል-ለአስንዮ ለቀድር ሑር ኤንሳይክሉፒድያ! ዐድነ ነኣምር ኣሳር ወስያሐት ፈን ወዓዳት ስያሰት አክትበት ዕሉም ወቴክኖሎጂ ታሪክ ዓፍየት ታሪክ ሐያት ሕበርበሮ ርያደት ህርከክ መራጄዕ ህግያ ትግሬ ብለዕ ወስታይ ርክን ስወር መንታይ ዊኪፒድያ ላቱ መሻርዕ ኮመንስ ሚድያዊኪ ዊኪሚድያ ዊኪቡክስ ዊኪደታ ዊኪኒዩስ ዊኪኮት ዊኪሶርስ ዊኪመድያ ዊኪቨርሲቲ ዊኪቮያጅ ዊክሸነሪ ምን \"https://tig.wikipedia.org/w/index.php?title\u003dአግዳ_ገጽ\u0026oldid\u003d8461\" ጀለበ 343 ሀገጊት Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fiji Hindi Hrvatski Hornjoserbsce Kreyòl ayisyen Magyar Հայերեն Արեւմտահայերէն Interlingua Jaku Iban Bahasa Indonesia Interlingue Igbo Igala Iñupiatun Ilokano ГӀалгӀай Ido Íslenska Italiano ᐃᓄᒃᑎᑐᑦ / inuktitut 日本語 Patois La .lojban. Jawa ქართული Qaraqalpaqsha Taqbaylit Адыгэбзэ Kabɩyɛ Tyap Kongo Kumoring Gĩkũyũ Қазақша Kalaallisut ភាសាខ្មែរ ಕನ್ನಡ Yerwa Kanuri 한국어 Перем коми Къарачай-малкъар کٲشُر Ripoarisch Kurdî Kʋsaal Коми Kernowek Кыргызча Latina Ladino Lëtzebuergesch Лакку Лезги Lingua Franca Nova Luganda Limburgs Ligure Ladin Lombard Lingála ລາວ Lietuvių Latgaļu Latviešu Madhurâ मैथिली Basa Banyumasan Мокшень Malagasy Олык марий Māori Minangkabau Македонски മലയാളം Монгол ꯃꯤꯇꯩ ꯂꯣꯟ ဘာသာမန် Moore मराठी Кырык мары Bahasa Melayu Malti Mirandés မြန်မာဘာသာ Эрзянь مازِرونی Nāhuatl Napulitano Plattdüütsch Nedersaksies नेपाली नेपाल भाषा Li Niha Nederlands Norsk nynorsk Norsk bokmål Novial ߒߞߏ IsiNdebele seSewula Nouormand Sesotho sa Leboa Nupe Diné bizaad Chi-Chewa Occitan Livvinkarjala Oromoo ଓଡ଼ିଆ Ирон ਪੰਜਾਬੀ Pangasinan Kapampangan Papiamentu Picard Naijá Deitsch Pälzisch पालि Polski Piemontèis پنجابی Ποντιακά پښتو Português Pinayuanan Runa Simi ရခိုင် Rumantsch Romani čhib Ikirundi Română Armãneashti Tarandíne Руски Русский Русиньскый Ikinyarwanda संस्कृतम् Саха тыла ᱥᱟᱱᱛᱟᱲᱤ Sardu Sicilianu Scots سنڌي Davvisámegiella Sängö Srpskohrvatski / српскохрватски Taclḥit တႆး සිංහල Simple English Slovenčina سرائیکی Slovenščina Gagana Samoa Anarâškielâ ChiShona Soomaaliga Shqip Српски / srpski Sranantongo SiSwati Sesotho Seeltersk Sunda Svenska Kiswahili ꠍꠤꠟꠐꠤ Ślůnski Sakizaya தமிழ் Tayal ತುಳು ᥖᥭᥰ ᥖᥬᥲ ᥑᥨᥒᥰ తెలుగు Tetun Тоҷикӣ ไทย ትግርኛ Türkmençe Tagalog Tolışi Setswana Lea faka-Tonga Toki pona Tok Pisin Türkçe Seediq Xitsonga Татарча / tatarça ChiTumbuka Twi Reo tahiti Тыва дыл Удмурт ئۇيغۇرچە / Uyghurche Українська اردو Oʻzbekcha / ўзбекча Tshivenda Vèneto Vepsän kel’ Tiếng Việt West-Vlams Volapük Walon Winaray Wolof 吴语 Хальмг IsiXhosa მარგალური ייִדיש Yorùbá Vahcuengh Zeêuws ⵜⴰⵎⴰⵣⵉⵖⵜ ⵜⴰⵏⴰⵡⴰⵢⵜ 中文 文言 閩南語 / Bân-lâm-gí 粵語 IsiZulu ዐደሎት መዐደዪ ሕዘው ሕዘው አግዳ ገጽ 343 ሀገጊት Add topic",
-    "scrapedAt": "2025-12-15 19:10:27.708362"
   },
   {
     "id": 498,
@@ -3488,6 +3488,552 @@ window.searchData = [
 ];
 
 window.imageData = [
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/20px-Search_Icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Buah_kelapa_-_panoramio.jpg/250px-Buah_kelapa_-_panoramio.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/%27Church_of_nativity%28Bethlehem%29%27.JPG/330px-%27Church_of_nativity%28Bethlehem%29%27.JPG",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "Wikimedia Commons",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/40px-Wiktionary-logo.svg.png",
+    "alt": "Wiktionary",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "Wikisource",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/40px-Wikinews-logo.svg.png",
+    "alt": "Wikinews",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "Wikibooks",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "Wikiquote",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "Wikispecies",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/40px-Wikiversity-logo.svg.png",
+    "alt": "Wikiversity",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "Wikivoyage",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/40px-Wikidata-logo.svg.png",
+    "alt": "Wikidata",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/20px-Wikimedia_Community_Logo.svg.png",
+    "alt": "Meta-Wiki",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MediaWiki-2020-icon.svg/40px-MediaWiki-2020-icon.svg.png",
+    "alt": "MediaWiki",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Crystal_128_mail.png/40px-Crystal_128_mail.png",
+    "alt": "Fanolo",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://nia.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://nia.wikipedia.org/wiki/Wikipedia:Olayama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Portrait_of_Julius_Caesar_%28side_view%29%2C_1st_cent._B.C.jpg/250px-Portrait_of_Julius_Caesar_%28side_view%29%2C_1st_cent._B.C.jpg",
+    "alt": "Julius Caesar",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://smn.wikipedia.org/wiki/Ovd%C3%A2sij%C4%91o"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Baby_Hamster_-_2_Weeks_Old.jpg/500px-Baby_Hamster_-_2_Weeks_Old.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://smn.wikipedia.org/wiki/Ovd%C3%A2sij%C4%91o"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Gnome-applications-science.svg/40px-Gnome-applications-science.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://smn.wikipedia.org/wiki/Ovd%C3%A2sij%C4%91o"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Gnome-applications-internet2.svg/40px-Gnome-applications-internet2.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://smn.wikipedia.org/wiki/Ovd%C3%A2sij%C4%91o"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Gnome-preferences-desktop-drawing.svg/40px-Gnome-preferences-desktop-drawing.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://smn.wikipedia.org/wiki/Ovd%C3%A2sij%C4%91o"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Gnome-applications-graphics.svg/40px-Gnome-applications-graphics.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://smn.wikipedia.org/wiki/Ovd%C3%A2sij%C4%91o"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gnome_User_Speech.svg/40px-Gnome_User_Speech.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://smn.wikipedia.org/wiki/Ovd%C3%A2sij%C4%91o"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Sami_flag.svg/40px-Sami_flag.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://smn.wikipedia.org/wiki/Ovd%C3%A2sij%C4%91o"
+  },
+  {
+    "src": "https://smn.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://smn.wikipedia.org/wiki/Ovd%C3%A2sij%C4%91o"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Wikipedia_Greeting.svg/250px-Wikipedia_Greeting.svg.png",
+    "alt": "به ویکی‌پدیا خوش‌آمدید",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Symbol_star_gold.svg/40px-Symbol_star_gold.svg.png",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Jessica_Chastain-64424_%28cropped_2%29.jpg/250px-Jessica_Chastain-64424_%28cropped_2%29.jpg",
+    "alt": "چستین در سال ۲۰۲۵",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Symbol_star_gold.svg/20px-Symbol_star_gold.svg.png",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Help-browser_-_ar.svg/40px-Help-browser_-_ar.svg.png",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/A-4E_Skyhawk_of_VA-56_drops_bomb_over_Vietnam_c1966.jpg/250px-A-4E_Skyhawk_of_VA-56_drops_bomb_over_Vietnam_c1966.jpg",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Symbol_question_fa.svg/20px-Symbol_question_fa.svg.png",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/W-circle.svg/40px-W-circle.svg.png",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Ambox_globe.svg/40px-Ambox_globe.svg.png",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Geoff_Keighley_-_19th_Annual_Game_Developers_Choice_Awards_%28D5X_8647%29_%28cropped%29.jpg/250px-Geoff_Keighley_-_19th_Annual_Game_Developers_Choice_Awards_%28D5X_8647%29_%28cropped%29.jpg",
+    "alt": "جف کیلی",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Nuvola_apps_date-fa.png/40px-Nuvola_apps_date-fa.png",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/AlpArslan.PNG/120px-AlpArslan.PNG",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Symbol_star_blue.svg/40px-Symbol_star_blue.svg.png",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Giovanni_Paolo_Panini_%E2%80%93_Ancient_Rome.jpg/960px-Giovanni_Paolo_Panini_%E2%80%93_Ancient_Rome.jpg",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Cscr-featured.svg/20px-Cscr-featured.svg.png",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Text-x-generic.svg/40px-Text-x-generic.svg.png",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/40px-Wikimedia-logo.svg.png",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "لوگوی ویکی‌انبار",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MediaWiki-2020-icon.svg/40px-MediaWiki-2020-icon.svg.png",
+    "alt": "لوگوی مدیاویکی",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "لوگوی فراویکی",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "لوگوی ویکی‌کتاب",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/60px-Wikidata-logo.svg.png",
+    "alt": "لوگوی ویکی‌داده",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/60px-Wikinews-logo.svg.png",
+    "alt": "لوگوی ویکی‌خبر",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "لوگوی ویکی‌گفتاورد",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "لوگوی ویکی‌نبشته",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "لوگوی ویکی‌گونه",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wikiversity_logo_2017.svg/60px-Wikiversity_logo_2017.svg.png",
+    "alt": "لوگوی ویکی‌دانشگاه",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "لوگوی ویکی‌سفر",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/40px-Wiktionary-logo.svg.png",
+    "alt": "لوگوی ویکی‌واژه",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/60px-Wiktionary-logo.svg.png",
+    "alt": "لوگوی ویکی‌واژه",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Wikipedia%27s_W.svg/40px-Wikipedia%27s_W.svg.png",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://fa.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "ویکی‌پدیا، دانشنامهٔ آزاد",
+    "pageUrl": "https://fa.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Flag_of_Togo.svg/250px-Flag_of_Togo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipediya",
+    "pageUrl": "https://kbp.wikipedia.org/wiki/Tal%C9%A9_%C9%96eu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/LocationTogo.svg/330px-LocationTogo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipediya",
+    "pageUrl": "https://kbp.wikipedia.org/wiki/Tal%C9%A9_%C9%96eu"
+  },
+  {
+    "src": "https://kbp.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipediya",
+    "pageUrl": "https://kbp.wikipedia.org/wiki/Tal%C9%A9_%C9%96eu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/250px-Wikipedia-logo-v2.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flag_Eritrea_template.svg/40px-Flag_Eritrea_template.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Noun_Project_World_Tour_icon_2962185.svg/40px-Noun_Project_World_Tour_icon_2962185.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/P_culture.svg/40px-P_culture.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Fist_-_game-icons.svg/40px-Fist_-_game-icons.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Stacked_books_icon.svg/40px-Stacked_books_icon.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Noun-technology.svg/40px-Noun-technology.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Font_Awesome_5_solid_history.svg/40px-Font_Awesome_5_solid_history.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Noun_Health_4215.svg/40px-Noun_Health_4215.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Icons8-biography-64.png/40px-Icons8-biography-64.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Ethics_of_Open_Sharing_icon_-_Learning.svg/40px-Ethics_of_Open_Sharing_icon_-_Learning.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Football_%28soccer_ball%29.svg/40px-Football_%28soccer_ball%29.svg.png",
+    "alt": "Soccer_Eritrea",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Android_Emoji_263a.svg/40px-Android_Emoji_263a.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia_Library_owl.svg/20px-Wikipedia_Library_owl.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/%E1%89%B5%E1%8C%8D%E1%88%AC.png/20px-%E1%89%B5%E1%8C%8D%E1%88%AC.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Noun_Project_vegetables_icon_1422990_cc.svg/40px-Noun_Project_vegetables_icon_1422990_cc.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Picture_font_awesome.svg/40px-Picture_font_awesome.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MediaWiki-2020-icon.svg/40px-MediaWiki-2020-icon.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/40px-Wikidata-logo.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/40px-Wikinews-logo.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/40px-Wikiversity-logo.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wiktionary-logo-en-v2.svg/40px-Wiktionary-logo-en-v2.svg.png",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
+  {
+    "src": "https://tig.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "ዊኪፒድያ",
+    "pageUrl": "https://tig.wikipedia.org/wiki/%E1%8A%A0%E1%8C%8D%E1%8B%B3_%E1%8C%88%E1%8C%BD"
+  },
   {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Recherche_silhouette.svg/60px-Recherche_silhouette.svg.png",
     "alt": "Haku Wikipediasta",
