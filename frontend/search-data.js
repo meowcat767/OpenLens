@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 10,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)",
+    "title": "Java (programming language) - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia Object-oriented programming language Not to be confused with JavaScript. \"Openframe\" redirects here. For the ten-pin bowling term, see Open frame. Java Paradigm Multi-paradigm: generic, object-oriented (class-based), functional, imperative, reflective, concurrent Designed by James Gosling Developer Oracle Corporation First appeared May 23, 1995; 30 years ago (1995-05-23)[1] Stable release Java SE 25[2] / 16 September 2025; 2 months ago (16 September 2025) Typing discipline Static, strong, safe, nominative, manifest Memory management Garbage-collected Filename extensions .java, .class, .jar, .jmod, .war Website oracle.com/java/ java.com dev.java Influenced by CLU,[3] Simula67,[3] Lisp,[3] Smalltalk,[3] Ada 83, C++,[4] C#,[5] Eiffel,[6] Mesa,[7] Modula-3,[8] Oberon,[9] Objective-C,[10] UCSD Pascal,[11][12] Object Pascal[13] Influenced Ada 2005, ArkTS, BeanShell, C#, Chapel,[14] Clojure, ECMAScript, Fantom, Gambas,[15] Groovy, Hack,[16] Haxe, J#, JavaScript, JS++, Kotlin, PHP, Python, Scala, Vala Java Programming at Wikibooks Java is a high-level, general-purpose, memory-safe, object-oriented programming language. It is intended to let programmers write once, run anywhere (WORA),[17] meaning that compiled Java code can run on all platforms that support Java without the need to recompile.[18] Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to C and C++, but has fewer low-level facilities than either of them. The Java runtime provides dynamic capabilities (such as reflection and runtime code modification) that are typically not available in traditional compiled languages. Java gained popularity shortly after its release, and has been a popular programming language since then.[19] Java was the third most popular programming language in 2022[update] according to GitHub.[20] Although still widely popular, there has been a gradual decline in use of Java in recent years with other languages using JVM gaining popularity.[21] Java was designed by James Gosling at Sun Microsystems. It was released in May 1995 as a core component of Sun\u0027s Java platform. The original and reference implementation Java compilers, virtual machines, and class libraries were released by Sun under proprietary licenses. As of May 2007, in compliance with the specifications of the Java Community Process, Sun had relicensed most of its Java technologies under the GPL-2.0-only license. Oracle, which bought Sun in 2010, offers its own HotSpot Java Virtual Machine. However, the official reference implementation is the OpenJDK JVM, which is open-source software used by most developers and is the default JVM for almost all Linux distributions. Java 25 is the version current as of September 2025[update]. Java 8, 11, 17, 21, and 25 are long-term support versions still under maintenance. History See also: Java (software platform) § History Duke, the Java mascot James Gosling, the creator of Java, in 2008 James Gosling, Mike Sheridan, and Patrick Naughton initiated the Java language project in June 1991.[22] Java was originally designed for interactive television, but it was too advanced for the digital cable television industry at the time.[23] The language was initially called Oak after an oak tree that stood outside Gosling\u0027s office. Later the project went by the name Green and was finally renamed Java, from Java coffee, a type of coffee from Indonesia.[24] Gosling designed Java with a C/C++-style syntax that system and application programmers would find familiar.[25] Sun Microsystems released the first public implementation as Java 1.0 in 1996.[26] It promised write once, run anywhere (WORA) functionality, providing no-cost run-times on popular platforms. Fairly secure and featuring configurable security, it allowed network- and file-access restrictions. Major web browsers soon incorporated the ability to run Java applets within web pages, and Java quickly became popular. The Java 1.0 compiler was re-written in Java by Arthur van Hoff to comply strictly with the Java 1.0 language specification.[27] With the advent of Java 2 (released initially as J2SE 1.2 in December 1998 – 1999), new versions had multiple configurations built for different types of platforms. J2EE included technologies and APIs for enterprise applications typically run in server environments, while J2ME featured APIs optimized for mobile applications. The desktop version was renamed J2SE. In 2006, for marketing purposes, Sun renamed new J2 versions as Java EE, Java ME, and Java SE, respectively. In 1997, Sun Microsystems approached the ISO/IEC JTC 1 standards body and later the Ecma International to formalize Java, but it soon withdrew from the process.[28][29][30] Java remains a de facto standard, controlled through the Java Community Process.[31] At one time, Sun made most of its Java implementatio",
+    "scrapedAt": "2025-12-15 19:19:20.027196"
+  },
+  {
+    "id": 9,
+    "url": "https://en.wikipedia.org/wiki/Web_server",
+    "title": "Web server - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia Computer software that distributes web pages This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. Find sources: \"Web server\" – news · newspapers · books · scholar · JSTOR (March 2009) (Learn how and when to remove this message) PC clients communicating via the network with a web server serving static content only The inside and front of a Dell PowerEdge server, a computer designed to be mounted in a rack mount environment. Servers similar to this one are often used as web servers. Multiple web servers may be used for a high-traffic website. Server farm with thousands of web servers used for super-high traffic websites ADSL modem running an embedded web server serving dynamic web pages used for modem configuration A web server is computer software and underlying hardware that accepts requests via HTTP (the network protocol created to distribute web content) or its secure variant HTTPS. A user agent, commonly a web browser or web crawler, initiates communication by making a request for a web page or other resource using HTTP, and the server responds with the content of that resource or an error message. A web server can also accept and store resources sent from the user agent if configured to do so.[1][2][3][4][5] The hardware used to run a web server can vary according to the volume of requests that it needs to handle. At the low end of the range are embedded systems, such as a router that runs a small web server as its configuration interface. A high-traffic Internet website might handle requests with hundreds of servers that run on racks of high-speed computers.[6] A resource sent from a web server can be a pre-existing file (static content) available to the web server, or it can be generated at the time of the request (dynamic content) by another program that communicates with the server software. The former usually can be served faster and can be more easily cached for repeated requests, while the latter supports a broader range of applications. Technologies such as REST and SOAP, which use HTTP as a basis for general computer-to-computer communication, as well as support for WebDAV extensions, have extended the application of web servers well beyond their original purpose of serving human-readable pages. History [edit] First web proposal (1989) evaluated as \"vague but exciting...\" The world\u0027s first web server, a NeXT Computer workstation with Ethernet, 1990. The case label reads: \"This machine is a server. DO NOT POWER IT DOWN!!\" See also: History of the web browser, History of the World Wide Web, and History of the Internet This is a very brief history of web server programs, so some information necessarily overlaps with the histories of the web browsers, the World Wide Web and the Internet; therefore, for the sake of clarity and understandability, some key historical information below reported may be similar to that found also in one or more of the above-mentioned history articles.[7] Initial WWW project (1989–1991) [edit] In March 1989, Sir Tim Berners-Lee proposed a new project to his employer CERN, with the goal of easing the exchange of information between scientists by using a hypertext system. The proposal titled \"HyperText and CERN\", asked for comments and it was read by several people. In October 1990 the proposal was reformulated and enriched (having as co-author Robert Cailliau), and finally, it was approved.[8][9][10] Between late 1990 and early 1991 the project resulted in Berners-Lee and his developers writing and testing several software libraries along with three programs, which initially ran on NeXTSTEP OS installed on NeXT workstations:[11][12][10] a graphical web browser, called WorldWideWeb; a portable line mode web browser; a web server, later known as CERN httpd. Those early browsers retrieved web pages written in a simple early form of HTML from web servers using a new basic communication protocol that was named HTTP 0.9. In August 1991 Tim Berners-Lee announced the birth of WWW technology and encouraged scientists to adopt and develop it.[13] Soon after, those programs, along with their source code, were made available to people interested in their usage.[11] Although the source code was not formally licensed or placed in the public domain, CERN informally allowed users and developers to experiment and further develop on top of them. Berners-Lee started promoting the adoption and the usage of those programs along with their porting to other operating systems.[10] Fast and wild development (1991–1995) [edit] In December 1991, the first web server outside Europe was installed at SLAC (U.S.A.).[12] This was a very important event because it started trans-continental web communications between web browsers and web servers. In 1991–1993, CERN web server program continued to be actively developed by the w",
+    "scrapedAt": "2025-12-15 19:19:16.407354"
+  },
+  {
+    "id": 8,
+    "url": "https://en.wikipedia.org/wiki/Windowing_system",
+    "title": "Windowing system - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. Find sources: \"Windowing system\" – news · newspapers · books · scholar · JSTOR (December 2019) (Learn how and when to remove this message) Software that manages separately different parts of display screens Typical elements of a window. The window decoration is either drawn by the window manager or by the client. The drawing of the content is the task of the client. In computing, a windowing system (or window system) is a software suite that manages separately different parts of display screens.[1] It is a type of graphical user interface (GUI) which implements the WIMP (windows, icons, menus, pointer) paradigm for a user interface. Each currently running application is assigned a usually resizable and usually rectangular surface of the display to present its GUI to the user; these windows may overlap each other, as opposed to a tiling interface where they are not allowed to overlap. Usually a window decoration is drawn around each window. The programming of both the window decoration and of available widgets inside of the window, which are graphical elements for direct user interaction, such as sliders, buttons, etc., is eased and simplified through the use of widget toolkits. Technical details [edit] The main component of any windowing system is usually called the display server, although alternative terms such as window server are also in use. Any application that runs and presents its GUI in a window, is a client of the display server. The display server and its clients communicate with each other over an application programming interface (API) or a communications protocol, which is usually called display server protocol, the display server being the mediator between the clients and the user. It receives all the input from the kernel, that the kernel receives from all attached input devices, such as keyboard, pointing devices, or touchscreen and transmits it to the correct client. The display server is also responsible for the output of the clients to the computer monitor. The output of sound is usually not managed by the display server, but the sound volume is usually handled through GUI applets and it is the display server who decides which applications are on top. A windowing system enables the computer user to work with several programs at the same time. Each program presents its GUI in its own window, which is generally a rectangular area of the screen.[citation needed] From a programmer\u0027s point of view, a windowing system implements graphical primitives. For example: rendering fonts or drawing a line on the screen. It provides an abstraction of the graphics hardware for use by higher-level elements of the graphical interface such as a window manager.[citation needed] A display server protocol can be network capable or even network transparent, facilitating the implementation of thin clients.[citation needed] Display server [edit] The basic components of a GUI: The display server implements the windowing system. A simple window manager merely draws the window decorations, but compositing window managers do more. A display server or window server is a program whose primary task is to coordinate the input and output of its clients to and from the rest of the operating system, the hardware, and each other. The display server communicates with its clients over the display server protocol, a communications protocol, which can be network-transparent or simply network-capable. The display server is a key component in any graphical user interface, specifically the windowing system. The server/client relationship of a standalone display server is somewhat counterintuitive in that a \"server\" is usually thought of as a large, remote machine, whereas a standalone \"display server\" is a small local system, with most clients being executed on a larger central machine. The explanation is that a display server provides the services of a display and input devices. Display server communications protocols [edit] X11 [edit] Main articles: X Window System core protocol and X Window System The X.Org Server communicates with X clients (local or remote) and peripherals over the X11 protocol. X Window System logo The X Window System was first released in 1984 and is historically the main windowing system for Unix and Unix-like operating systems. The core protocol has been at version 11 since 1987, hence it commonly being known as \"X11\". The current reference implementation of the X11 protocol is the X.Org Server, which provides the display server and some ancillary components. The X Window System does not define a look and feel; instead, users run a window manager (either standalone or part of a broader desktop environment) and applications designed using a widget toolkit. The X.Org repositor",
+    "scrapedAt": "2025-12-15 19:19:14.431931"
+  },
+  {
+    "id": 7,
+    "url": "https://git.meowcat.site",
+    "title": "Meowcat\u0027s Git",
+    "content": "This website works better with JavaScript. Explore Help Register Sign In Meowcat\u0027s Git A painless, self-hosted Git service Easy to install Simply run the binary for your platform, ship it with Docker, or get it packaged. Cross-platform Gitea runs anywhere Go can compile for: Windows, macOS, Linux, ARM, etc. Choose the one you love! Lightweight Gitea has low minimal requirements and can run on an inexpensive Raspberry Pi. Save your machine energy! Open Source Go get code.gitea.io/gitea! Join us by contributing to make this project even better. Don\u0027t be shy to be a contributor!",
+    "scrapedAt": "2025-12-15 19:19:12.856904"
+  },
+  {
+    "id": 6,
+    "url": "https://files.meowcat.site",
+    "title": "Index of /",
+    "content": "Index of / Generated on 2025-11-18 17:55:18 files.meowcat.site aur-files/ files/ generate_index.py — 2.8 KB, modified 2025-11-10 16:16:38 index.html — 956.0 B, modified 2025-11-16 17:21:45 meowcat-files.iml — 373.0 B, modified 2025-11-14 18:40:11",
+    "scrapedAt": "2025-12-15 19:19:11.343228"
+  },
+  {
     "id": 5,
     "url": "https://meowcat.site",
     "title": "Meowcat767 | Developer \u0026 Creator",
@@ -1358,20 +1393,6 @@ window.searchData = [
     "scrapedAt": "2025-12-15 19:07:47.700104"
   },
   {
-    "id": 7,
-    "url": "https://git.meowcat.site",
-    "title": "Meowcat\u0027s Git",
-    "content": "This website works better with JavaScript. Explore Help Register Sign In Meowcat\u0027s Git A painless, self-hosted Git service Easy to install Simply run the binary for your platform, ship it with Docker, or get it packaged. Cross-platform Gitea runs anywhere Go can compile for: Windows, macOS, Linux, ARM, etc. Choose the one you love! Lightweight Gitea has low minimal requirements and can run on an inexpensive Raspberry Pi. Save your machine energy! Open Source Go get code.gitea.io/gitea! Join us by contributing to make this project even better. Don\u0027t be shy to be a contributor!",
-    "scrapedAt": "2025-12-15 19:07:45.92285"
-  },
-  {
-    "id": 6,
-    "url": "https://files.meowcat.site",
-    "title": "Index of /",
-    "content": "Index of / Generated on 2025-11-18 17:55:18 files.meowcat.site aur-files/ files/ generate_index.py — 2.8 KB, modified 2025-11-10 16:16:38 index.html — 956.0 B, modified 2025-11-16 17:21:45 meowcat-files.iml — 373.0 B, modified 2025-11-14 18:40:11",
-    "scrapedAt": "2025-12-15 19:07:42.38325"
-  },
-  {
     "id": 13,
     "url": "https://en.wikipedia.org/wiki/Python_(programming_language)",
     "title": "Python (programming language) - Wikipedia",
@@ -1391,27 +1412,6 @@ window.searchData = [
     "title": "PostgreSQL - Wikipedia",
     "content": "Jump to content From Wikipedia, the free encyclopedia Free and open-source object relational database management system PostgreSQL The World\u0027s Most Advanced Open Source Relational Database[1] Developer PostgreSQL Global Development Group[2] Initial release 8 July 1996; 29 years ago (1996-07-08)[3] Stable release 18.1[4] / 13 November 2025 Repository git.postgresql.org/gitweb/?p\u003dpostgresql.git Written in C (and C++ for the LLVM dependency) Type RDBMS License PostgreSQL License (free and open-source, permissive)[5][6][7] Website www.postgresql.org PostgreSQL License[5] Publisher PostgreSQL Global Development Group Regents of the University of California Debian FSG compatible Yes[8][9] FSF approved Yes[10] OSI approved Yes[7] GPL compatible Yes Copyleft No Linking from code with a different licence Yes Website postgresql.org/about/licence PostgreSQL (/ˌpoʊstɡrɛskjuˈɛl/ ⓘ POHST-gres-kew-EL)[11][12] also known as Postgres, is a free and open-source relational database management system (RDBMS) emphasizing extensibility and SQL compliance. PostgreSQL features transactions with atomicity, consistency, isolation, durability (ACID) properties, automatically updatable views, materialized views, triggers, foreign keys, and stored procedures.[13] It is supported on all major operating systems, including Windows, Linux, macOS, FreeBSD, and OpenBSD, and handles a range of workloads from single machines to data warehouses, data lakes,[14] or web services with many concurrent users. The PostgreSQL Global Development Group focuses only on developing a database engine and closely related components. This core is, technically, what comprises PostgreSQL itself, but there is an extensive developer community and ecosystem that provides other important feature sets that might, traditionally, be provided by a proprietary software vendor. These include special-purpose database engine features, like those needed to support a geospatial[15] or temporal[16] database or features which emulate other database products.[17][18][19][20] Also available from third parties are a wide variety of user and machine interface features, such as graphical user interfaces[21][22][23] or load balancing and high availability toolsets.[24] The large third-party PostgreSQL support network of people, companies, products, and projects, even though not part of The PostgreSQL Development Group, are essential to the PostgreSQL database engine\u0027s adoption and use and make up the PostgreSQL ecosystem writ large.[25] PostgreSQL was originally named POSTGRES, referring to its origins as a successor to the Ingres database developed at the University of California, Berkeley.[26][27] In 1996, the project was renamed PostgreSQL to reflect its support for SQL. After a review in 2007, the development team decided to keep the name PostgreSQL and the alias Postgres.[28] History [edit] Ingres and University POSTGRES (1982–1994) [edit] PostgreSQL evolved from the Ingres project at the University of California, Berkeley. In 1982, the leader of the Ingres team, Michael Stonebraker, left Berkeley to make a proprietary version of Ingres.[26] He returned to Berkeley in 1985, and began a post-Ingres project to address the problems with contemporary database systems that had become increasingly clear during the early 1980s. He won the Turing Award in 2014 for these and other projects,[29] and techniques pioneered in them. The new project, POSTGRES, aimed to add the fewest features needed to completely support data types.[30] These features included the ability to define types and to fully describe relationships – something used widely, but maintained entirely by the user. In POSTGRES, the database understood relationships, and could retrieve information in related tables in a natural way using rules. POSTGRES used many of the ideas of Ingres, but not its code.[31] Starting in 1986, published papers described the basis of the system, and a prototype version was shown at the 1988 ACM SIGMOD Conference. The team released version 1 to a small number of users in June 1989, followed by version 2 with a re-written rules system in June 1990. Version 3, released in 1991, again re-wrote the rules system, and added support for multiple storage managers[32] and an improved query engine. By 1993, the number of users began to overwhelm the project with requests for support and features. After releasing version 4.2[33] on June 30, 1994 – primarily a cleanup – the project ended. Berkeley released POSTGRES under an MIT License variant, which enabled other developers to use the code for any use. At the time, POSTGRES used an Ingres-influenced POSTQUEL query language interpreter, which could be interactively used with a console application named monitor. Postgres95 (1994–1996) [edit] In 1994, Berkeley graduate students Andrew Yu and Jolly Chen replaced the POSTQUEL query language interpreter with one for the SQL query language, creating Postgres95. The monitor console was also replaced by psql. Yu a",
     "scrapedAt": "2025-12-15 19:07:31.59056"
-  },
-  {
-    "id": 10,
-    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)",
-    "title": "Java (programming language) - Wikipedia",
-    "content": "Jump to content From Wikipedia, the free encyclopedia Object-oriented programming language Not to be confused with JavaScript. \"Openframe\" redirects here. For the ten-pin bowling term, see Open frame. Java Paradigm Multi-paradigm: generic, object-oriented (class-based), functional, imperative, reflective, concurrent Designed by James Gosling Developer Oracle Corporation First appeared May 23, 1995; 30 years ago (1995-05-23)[1] Stable release Java SE 25[2] / 16 September 2025; 2 months ago (16 September 2025) Typing discipline Static, strong, safe, nominative, manifest Memory management Garbage-collected Filename extensions .java, .class, .jar, .jmod, .war Website oracle.com/java/ java.com dev.java Influenced by CLU,[3] Simula67,[3] Lisp,[3] Smalltalk,[3] Ada 83, C++,[4] C#,[5] Eiffel,[6] Mesa,[7] Modula-3,[8] Oberon,[9] Objective-C,[10] UCSD Pascal,[11][12] Object Pascal[13] Influenced Ada 2005, ArkTS, BeanShell, C#, Chapel,[14] Clojure, ECMAScript, Fantom, Gambas,[15] Groovy, Hack,[16] Haxe, J#, JavaScript, JS++, Kotlin, PHP, Python, Scala, Vala Java Programming at Wikibooks Java is a high-level, general-purpose, memory-safe, object-oriented programming language. It is intended to let programmers write once, run anywhere (WORA),[17] meaning that compiled Java code can run on all platforms that support Java without the need to recompile.[18] Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to C and C++, but has fewer low-level facilities than either of them. The Java runtime provides dynamic capabilities (such as reflection and runtime code modification) that are typically not available in traditional compiled languages. Java gained popularity shortly after its release, and has been a popular programming language since then.[19] Java was the third most popular programming language in 2022[update] according to GitHub.[20] Although still widely popular, there has been a gradual decline in use of Java in recent years with other languages using JVM gaining popularity.[21] Java was designed by James Gosling at Sun Microsystems. It was released in May 1995 as a core component of Sun\u0027s Java platform. The original and reference implementation Java compilers, virtual machines, and class libraries were released by Sun under proprietary licenses. As of May 2007, in compliance with the specifications of the Java Community Process, Sun had relicensed most of its Java technologies under the GPL-2.0-only license. Oracle, which bought Sun in 2010, offers its own HotSpot Java Virtual Machine. However, the official reference implementation is the OpenJDK JVM, which is open-source software used by most developers and is the default JVM for almost all Linux distributions. Java 25 is the version current as of September 2025[update]. Java 8, 11, 17, 21, and 25 are long-term support versions still under maintenance. History See also: Java (software platform) § History Duke, the Java mascot James Gosling, the creator of Java, in 2008 James Gosling, Mike Sheridan, and Patrick Naughton initiated the Java language project in June 1991.[22] Java was originally designed for interactive television, but it was too advanced for the digital cable television industry at the time.[23] The language was initially called Oak after an oak tree that stood outside Gosling\u0027s office. Later the project went by the name Green and was finally renamed Java, from Java coffee, a type of coffee from Indonesia.[24] Gosling designed Java with a C/C++-style syntax that system and application programmers would find familiar.[25] Sun Microsystems released the first public implementation as Java 1.0 in 1996.[26] It promised write once, run anywhere (WORA) functionality, providing no-cost run-times on popular platforms. Fairly secure and featuring configurable security, it allowed network- and file-access restrictions. Major web browsers soon incorporated the ability to run Java applets within web pages, and Java quickly became popular. The Java 1.0 compiler was re-written in Java by Arthur van Hoff to comply strictly with the Java 1.0 language specification.[27] With the advent of Java 2 (released initially as J2SE 1.2 in December 1998 – 1999), new versions had multiple configurations built for different types of platforms. J2EE included technologies and APIs for enterprise applications typically run in server environments, while J2ME featured APIs optimized for mobile applications. The desktop version was renamed J2SE. In 2006, for marketing purposes, Sun renamed new J2 versions as Java EE, Java ME, and Java SE, respectively. In 1997, Sun Microsystems approached the ISO/IEC JTC 1 standards body and later the Ecma International to formalize Java, but it soon withdrew from the process.[28][29][30] Java remains a de facto standard, controlled through the Java Community Process.[31] At one time, Sun made most of its Java implementatio",
-    "scrapedAt": "2025-12-15 19:07:26.761507"
-  },
-  {
-    "id": 9,
-    "url": "https://en.wikipedia.org/wiki/Web_server",
-    "title": "Web server - Wikipedia",
-    "content": "Jump to content From Wikipedia, the free encyclopedia Computer software that distributes web pages This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. Find sources: \"Web server\" – news · newspapers · books · scholar · JSTOR (March 2009) (Learn how and when to remove this message) PC clients communicating via the network with a web server serving static content only The inside and front of a Dell PowerEdge server, a computer designed to be mounted in a rack mount environment. Servers similar to this one are often used as web servers. Multiple web servers may be used for a high-traffic website. Server farm with thousands of web servers used for super-high traffic websites ADSL modem running an embedded web server serving dynamic web pages used for modem configuration A web server is computer software and underlying hardware that accepts requests via HTTP (the network protocol created to distribute web content) or its secure variant HTTPS. A user agent, commonly a web browser or web crawler, initiates communication by making a request for a web page or other resource using HTTP, and the server responds with the content of that resource or an error message. A web server can also accept and store resources sent from the user agent if configured to do so.[1][2][3][4][5] The hardware used to run a web server can vary according to the volume of requests that it needs to handle. At the low end of the range are embedded systems, such as a router that runs a small web server as its configuration interface. A high-traffic Internet website might handle requests with hundreds of servers that run on racks of high-speed computers.[6] A resource sent from a web server can be a pre-existing file (static content) available to the web server, or it can be generated at the time of the request (dynamic content) by another program that communicates with the server software. The former usually can be served faster and can be more easily cached for repeated requests, while the latter supports a broader range of applications. Technologies such as REST and SOAP, which use HTTP as a basis for general computer-to-computer communication, as well as support for WebDAV extensions, have extended the application of web servers well beyond their original purpose of serving human-readable pages. History [edit] First web proposal (1989) evaluated as \"vague but exciting...\" The world\u0027s first web server, a NeXT Computer workstation with Ethernet, 1990. The case label reads: \"This machine is a server. DO NOT POWER IT DOWN!!\" See also: History of the web browser, History of the World Wide Web, and History of the Internet This is a very brief history of web server programs, so some information necessarily overlaps with the histories of the web browsers, the World Wide Web and the Internet; therefore, for the sake of clarity and understandability, some key historical information below reported may be similar to that found also in one or more of the above-mentioned history articles.[7] Initial WWW project (1989–1991) [edit] In March 1989, Sir Tim Berners-Lee proposed a new project to his employer CERN, with the goal of easing the exchange of information between scientists by using a hypertext system. The proposal titled \"HyperText and CERN\", asked for comments and it was read by several people. In October 1990 the proposal was reformulated and enriched (having as co-author Robert Cailliau), and finally, it was approved.[8][9][10] Between late 1990 and early 1991 the project resulted in Berners-Lee and his developers writing and testing several software libraries along with three programs, which initially ran on NeXTSTEP OS installed on NeXT workstations:[11][12][10] a graphical web browser, called WorldWideWeb; a portable line mode web browser; a web server, later known as CERN httpd. Those early browsers retrieved web pages written in a simple early form of HTML from web servers using a new basic communication protocol that was named HTTP 0.9. In August 1991 Tim Berners-Lee announced the birth of WWW technology and encouraged scientists to adopt and develop it.[13] Soon after, those programs, along with their source code, were made available to people interested in their usage.[11] Although the source code was not formally licensed or placed in the public domain, CERN informally allowed users and developers to experiment and further develop on top of them. Berners-Lee started promoting the adoption and the usage of those programs along with their porting to other operating systems.[10] Fast and wild development (1991–1995) [edit] In December 1991, the first web server outside Europe was installed at SLAC (U.S.A.).[12] This was a very important event because it started trans-continental web communications between web browsers and web servers. In 1991–1993, CERN web server program continued to be actively developed by the w",
-    "scrapedAt": "2025-12-15 19:07:23.173224"
-  },
-  {
-    "id": 8,
-    "url": "https://en.wikipedia.org/wiki/Windowing_system",
-    "title": "Windowing system - Wikipedia",
-    "content": "Jump to content From Wikipedia, the free encyclopedia This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. Find sources: \"Windowing system\" – news · newspapers · books · scholar · JSTOR (December 2019) (Learn how and when to remove this message) Software that manages separately different parts of display screens Typical elements of a window. The window decoration is either drawn by the window manager or by the client. The drawing of the content is the task of the client. In computing, a windowing system (or window system) is a software suite that manages separately different parts of display screens.[1] It is a type of graphical user interface (GUI) which implements the WIMP (windows, icons, menus, pointer) paradigm for a user interface. Each currently running application is assigned a usually resizable and usually rectangular surface of the display to present its GUI to the user; these windows may overlap each other, as opposed to a tiling interface where they are not allowed to overlap. Usually a window decoration is drawn around each window. The programming of both the window decoration and of available widgets inside of the window, which are graphical elements for direct user interaction, such as sliders, buttons, etc., is eased and simplified through the use of widget toolkits. Technical details [edit] The main component of any windowing system is usually called the display server, although alternative terms such as window server are also in use. Any application that runs and presents its GUI in a window, is a client of the display server. The display server and its clients communicate with each other over an application programming interface (API) or a communications protocol, which is usually called display server protocol, the display server being the mediator between the clients and the user. It receives all the input from the kernel, that the kernel receives from all attached input devices, such as keyboard, pointing devices, or touchscreen and transmits it to the correct client. The display server is also responsible for the output of the clients to the computer monitor. The output of sound is usually not managed by the display server, but the sound volume is usually handled through GUI applets and it is the display server who decides which applications are on top. A windowing system enables the computer user to work with several programs at the same time. Each program presents its GUI in its own window, which is generally a rectangular area of the screen.[citation needed] From a programmer\u0027s point of view, a windowing system implements graphical primitives. For example: rendering fonts or drawing a line on the screen. It provides an abstraction of the graphics hardware for use by higher-level elements of the graphical interface such as a window manager.[citation needed] A display server protocol can be network capable or even network transparent, facilitating the implementation of thin clients.[citation needed] Display server [edit] The basic components of a GUI: The display server implements the windowing system. A simple window manager merely draws the window decorations, but compositing window managers do more. A display server or window server is a program whose primary task is to coordinate the input and output of its clients to and from the rest of the operating system, the hardware, and each other. The display server communicates with its clients over the display server protocol, a communications protocol, which can be network-transparent or simply network-capable. The display server is a key component in any graphical user interface, specifically the windowing system. The server/client relationship of a standalone display server is somewhat counterintuitive in that a \"server\" is usually thought of as a large, remote machine, whereas a standalone \"display server\" is a small local system, with most clients being executed on a larger central machine. The explanation is that a display server provides the services of a display and input devices. Display server communications protocols [edit] X11 [edit] Main articles: X Window System core protocol and X Window System The X.Org Server communicates with X clients (local or remote) and peripherals over the X11 protocol. X Window System logo The X Window System was first released in 1984 and is historically the main windowing system for Unix and Unix-like operating systems. The core protocol has been at version 11 since 1987, hence it commonly being known as \"X11\". The current reference implementation of the X11 protocol is the X.Org Server, which provides the display server and some ancillary components. The X Window System does not define a look and feel; instead, users run a window manager (either standalone or part of a broader desktop environment) and applications designed using a widget toolkit. The X.Org repositor",
-    "scrapedAt": "2025-12-15 19:07:20.445251"
   },
   {
     "id": 498,
@@ -3488,6 +3488,336 @@ window.searchData = [
 ];
 
 window.imageData = [
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/20px-Semi-protection-shackle.svg.png",
+    "alt": "Page semi-protected",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/250px-Java_programming_language_logo.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png",
+    "alt": "Edit this on Wikidata",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/20px-Wikibooks-logo-en-noslogan.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/250px-Duke_%28Java_mascot%29_waving.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/James_Gosling_2008.jpg/250px-James_Gosling_2008.jpg",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/60px-Duke_%28Java_mascot%29_waving.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/JavaUniverse.png/250px-JavaUniverse.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png",
+    "alt": "icon",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png",
+    "alt": "icon",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/40px-Octicons-terminal.svg.png",
+    "alt": "icon",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/0/06/Wiktionary-logo-v2.svg/40px-Wiktionary-logo-v2.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wikiversity_logo_2017.svg/40px-Wikiversity_logo_2017.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/40px-Wikidata-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wikiversity_logo_2017.svg/40px-Wikiversity_logo_2017.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/120px-Duke_%28Java_mascot%29_waving.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/20px-Symbol_category_class.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/40px-Octicons-terminal.svg.png",
+    "alt": "icon",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Sun-Logo.svg/250px-Sun-Logo.svg.png",
+    "alt": "Sun Microsystems logo",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/20px-Symbol_category_class.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/20px-Symbol_list_class.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/20px-Symbol_category_class.svg.png",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png",
+    "alt": "Edit this at Wikidata",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png",
+    "alt": "icon",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Web_server_serving_static_content.png/250px-Web_server_serving_static_content.png",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Inside_and_Rear_of_Webserver.jpg/330px-Inside_and_Rear_of_Webserver.jpg",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Wikimedia_Foundation_Servers-8055_35.jpg/330px-Wikimedia_Foundation_Servers-8055_35.jpg",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Wikimedia_Servers-0051_10.jpg/330px-Wikimedia_Servers-0051_10.jpg",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Acorplan120m.jpg/250px-Acorplan120m.jpg",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Ginevra%2C_centro_visitatori_del_cern%2C_primo_server_della_storia_%281989%29%2C_02.JPG/120px-Ginevra%2C_centro_visitatori_del_cern%2C_primo_server_della_storia_%281989%29%2C_02.JPG",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/First_Web_Server.jpg/250px-First_Web_Server.jpg",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Cobalt_Qube_3_Front.jpg/250px-Cobalt_Qube_3_Front.jpg",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Client-server-model.svg/250px-Client-server-model.svg.png",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Ambox_current_red_Americas.svg/60px-Ambox_current_red_Americas.svg.png",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Web_server_serving_static_content.png/250px-Web_server_serving_static_content.png",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Web_server_serving_static_and_dynamic_content.png/250px-Web_server_serving_static_and_dynamic_content.png",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Web_server_directory_list.png/330px-Web_server_directory_list.png",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Usage_share_of_web_servers_%28Source_Netcraft%29.svg/330px-Usage_share_of_web_servers_%28Source_Netcraft%29.svg.png",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Usage_share_of_web_servers_%28Source_Netcraft%29_1995-2005.svg/330px-Usage_share_of_web_servers_%28Source_Netcraft%29_1995-2005.svg.png",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png",
+    "alt": "Edit this at Wikidata",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Web server - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Web_server"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png",
+    "alt": "icon",
+    "pageTitle": "Windowing system - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Windowing_system"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Window_%28windowing_system%29.svg/330px-Window_%28windowing_system%29.svg.png",
+    "alt": "",
+    "pageTitle": "Windowing system - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Windowing_system"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Schema_of_the_layers_of_the_graphical_user_interface.svg/330px-Schema_of_the_layers_of_the_graphical_user_interface.svg.png",
+    "alt": "",
+    "pageTitle": "Windowing system - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Windowing_system"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/X11_display_server_protocol.svg/500px-X11_display_server_protocol.svg.png",
+    "alt": "",
+    "pageTitle": "Windowing system - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Windowing_system"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/X11.svg/60px-X11.svg.png",
+    "alt": "X Window System logo",
+    "pageTitle": "Windowing system - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Windowing_system"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Wayland_display_server_protocol.svg/330px-Wayland_display_server_protocol.svg.png",
+    "alt": "",
+    "pageTitle": "Windowing system - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Windowing_system"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wayland_Logo.svg/60px-Wayland_Logo.svg.png",
+    "alt": "Wayland logo",
+    "pageTitle": "Windowing system - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Windowing_system"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Windowing system - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Windowing_system"
+  },
+  {
+    "src": "https://git.meowcat.site/assets/img/logo.svg",
+    "alt": "Logo",
+    "pageTitle": "Meowcat\u0027s Git",
+    "pageUrl": "https://git.meowcat.site"
+  },
+  {
+    "src": "https://git.meowcat.site/assets/img/logo.svg",
+    "alt": "",
+    "pageTitle": "Meowcat\u0027s Git",
+    "pageUrl": "https://git.meowcat.site"
+  },
   {
     "src": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Pending-protection-shackle.svg/20px-Pending-protection-shackle.svg.png",
     "alt": "Page protected with pending changes",
