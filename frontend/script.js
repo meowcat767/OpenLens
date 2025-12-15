@@ -140,6 +140,11 @@ function handleSearch() {
 
     hideError();
 
+    // Show tabs on first search
+    if (document.querySelector('.search-tabs')) {
+        document.querySelector('.search-tabs').style.display = 'block';
+    }
+
     if (currentMode === 'web') {
         const results = searchPages(query);
         displayResults(query, results);
