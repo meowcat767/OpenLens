@@ -1,8 +1,26 @@
-// Static search - no backend required
-// Data loaded from search-data.js into window.searchData
-
 // DOM Elements
 const searchForm = document.getElementById('searchForm');
+// ... other elements ...
+const themeToggle = document.getElementById('themeToggle');
+
+// Theme Logic
+const savedTheme = localStorage.getItem('theme');
+const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+    document.body.classList.add('dark-mode');
+    if (themeToggle) themeToggle.textContent = '☀️';
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        themeToggle.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+}
+
 const searchInput = document.getElementById('searchInput');
 const resultsContainer = document.getElementById('resultsContainer');
 const loadingIndicator = document.getElementById('loadingIndicator');
