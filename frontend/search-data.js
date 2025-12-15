@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 25,
+    "url": "https://blog.meowcat.site",
+    "title": "",
+    "content": "meowcat\u0027s blog Welcome welcome to generic blog #8023043. opening – 15 Dec 2025 View all posts",
+    "scrapedAt": "2025-12-15 19:07:52.969492"
+  },
+  {
+    "id": 24,
+    "url": "https://www.dictionary.com/",
+    "title": "Meanings \u0026 Definitions of English Words | Dictionary.com",
+    "content": "clishmaclaver [klish-muh-kley-ver] Get the Word of the Day Featured Articles All articles WORD_ORIGINS How the Month of December Got Its Name Where does the name for the final month of the year come from? Discover December\u0027s origins here. Holidays The History and Traditions That Make Hanukkah Light Up Commonly Confused Titled vs. Entitled: Which Is Correct? Slang How to Know if You\u0027re \"Boomerasking\" Trending Words March Madness 🏀📅 It\u0027s not just basketball — it\u0027s a whole frenzy. shadow docket 👤⚖️ The Supreme Court\u0027s quiet, powerful shortcut. toxic positivity 🌞💣 Can excessive cheer actually be harmful? almond mom 🙅‍♀️🍰 One almond at a time, find out why almond mom went viral.",
+    "scrapedAt": "2025-12-15 19:07:51.132858"
+  },
+  {
+    "id": 15,
+    "url": "https://spacecatgames.site",
+    "title": "Space Cat Games - Home",
+    "content": "Hey there! You need Javascript enabled to view this site! Error Code \u003d 0x00004 Home Games News Source Code Credits Changelog Archive Help Welcome to Space Cat Games 17.1 - Codename 64 Play Now Why Play at Space Cat Games? Free Games All our games are completely free to play, with no hidden costs or subscriptions needed. No Downloads Play directly in your browser - no installations, no waiting, just instant gaming. You will need an OpenGL Driver to play. Variety of Games From classics like Tetris and Snake to modern hits like Geometry Dash and CrazyCattle3D, we have something for everyone. Free and Open Source This website is free and Open Source, so you can always contribute! Featured Games SuperTuxKart Minecraft Crazy Cattle 3D See All Games FPS: -- 🏳️",
+    "scrapedAt": "2025-12-15 19:07:49.639113"
+  },
+  {
+    "id": 14,
+    "url": "https://github.com/meowcat767",
+    "title": "meowcat767 (Ben) · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} meowcat767 Follow More Overview Repositories Projects Packages Stars meowcat767 Follow Ben meowcat767 Follow professional circle clicker 13 followers · 19 following @Starry-Systems 19:07 (UTC) https://meowcat.site https://orcid.org/0009-0005-2648-1898 Achievements Achievements Block or Report Block or report meowcat767 Block user Prevent this user from interacting with your repositories and sending you notifications. Learn more about blocking users. You must be logged in to block users. Add an optional note \n Maximum 250 characters. Please don\u0027t include any personal information such as legal names or email addresses. Markdown supported. This note will be visible to only you. Block user Report abuse Contact GitHub support about this user’s behavior. Learn more about reporting abuse. Report abuse More Overview Repositories Projects Packages Stars meowcat767/README.md Meowcat767 i like java :\u003c Pinned Loading cobolt-mirror cobolt-mirror Public mirror of https://git.meowcat.site/meowcat/cobolt Java josuframework josuframework Public the osu! framework, ported to Java. Java blog.meowcat.site blog.meowcat.site Public Forked from glitchdotcom/11ty-to-compute blog src. HTML spacecatgames spacecatgames Public HTML OpenLens OpenLens Public Java Something went wrong, please refresh the page to try again. If the problem persists, check the GitHub status page or contact support. Uh oh! There was an error while loading. Please reload this page. You can’t perform that action at this time.",
+    "scrapedAt": "2025-12-15 19:07:47.700104"
+  },
+  {
+    "id": 7,
+    "url": "https://git.meowcat.site",
+    "title": "Meowcat\u0027s Git",
+    "content": "This website works better with JavaScript. Explore Help Register Sign In Meowcat\u0027s Git A painless, self-hosted Git service Easy to install Simply run the binary for your platform, ship it with Docker, or get it packaged. Cross-platform Gitea runs anywhere Go can compile for: Windows, macOS, Linux, ARM, etc. Choose the one you love! Lightweight Gitea has low minimal requirements and can run on an inexpensive Raspberry Pi. Save your machine energy! Open Source Go get code.gitea.io/gitea! Join us by contributing to make this project even better. Don\u0027t be shy to be a contributor!",
+    "scrapedAt": "2025-12-15 19:07:45.92285"
+  },
+  {
     "id": 6,
     "url": "https://files.meowcat.site",
     "title": "Index of /",
@@ -54,13 +89,6 @@ window.searchData = [
     "title": "Windowing system - Wikipedia",
     "content": "Jump to content From Wikipedia, the free encyclopedia This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. Find sources: \"Windowing system\" – news · newspapers · books · scholar · JSTOR (December 2019) (Learn how and when to remove this message) Software that manages separately different parts of display screens Typical elements of a window. The window decoration is either drawn by the window manager or by the client. The drawing of the content is the task of the client. In computing, a windowing system (or window system) is a software suite that manages separately different parts of display screens.[1] It is a type of graphical user interface (GUI) which implements the WIMP (windows, icons, menus, pointer) paradigm for a user interface. Each currently running application is assigned a usually resizable and usually rectangular surface of the display to present its GUI to the user; these windows may overlap each other, as opposed to a tiling interface where they are not allowed to overlap. Usually a window decoration is drawn around each window. The programming of both the window decoration and of available widgets inside of the window, which are graphical elements for direct user interaction, such as sliders, buttons, etc., is eased and simplified through the use of widget toolkits. Technical details [edit] The main component of any windowing system is usually called the display server, although alternative terms such as window server are also in use. Any application that runs and presents its GUI in a window, is a client of the display server. The display server and its clients communicate with each other over an application programming interface (API) or a communications protocol, which is usually called display server protocol, the display server being the mediator between the clients and the user. It receives all the input from the kernel, that the kernel receives from all attached input devices, such as keyboard, pointing devices, or touchscreen and transmits it to the correct client. The display server is also responsible for the output of the clients to the computer monitor. The output of sound is usually not managed by the display server, but the sound volume is usually handled through GUI applets and it is the display server who decides which applications are on top. A windowing system enables the computer user to work with several programs at the same time. Each program presents its GUI in its own window, which is generally a rectangular area of the screen.[citation needed] From a programmer\u0027s point of view, a windowing system implements graphical primitives. For example: rendering fonts or drawing a line on the screen. It provides an abstraction of the graphics hardware for use by higher-level elements of the graphical interface such as a window manager.[citation needed] A display server protocol can be network capable or even network transparent, facilitating the implementation of thin clients.[citation needed] Display server [edit] The basic components of a GUI: The display server implements the windowing system. A simple window manager merely draws the window decorations, but compositing window managers do more. A display server or window server is a program whose primary task is to coordinate the input and output of its clients to and from the rest of the operating system, the hardware, and each other. The display server communicates with its clients over the display server protocol, a communications protocol, which can be network-transparent or simply network-capable. The display server is a key component in any graphical user interface, specifically the windowing system. The server/client relationship of a standalone display server is somewhat counterintuitive in that a \"server\" is usually thought of as a large, remote machine, whereas a standalone \"display server\" is a small local system, with most clients being executed on a larger central machine. The explanation is that a display server provides the services of a display and input devices. Display server communications protocols [edit] X11 [edit] Main articles: X Window System core protocol and X Window System The X.Org Server communicates with X clients (local or remote) and peripherals over the X11 protocol. X Window System logo The X Window System was first released in 1984 and is historically the main windowing system for Unix and Unix-like operating systems. The core protocol has been at version 11 since 1987, hence it commonly being known as \"X11\". The current reference implementation of the X11 protocol is the X.Org Server, which provides the display server and some ancillary components. The X Window System does not define a look and feel; instead, users run a window manager (either standalone or part of a broader desktop environment) and applications designed using a widget toolkit. The X.Org repositor",
     "scrapedAt": "2025-12-15 19:07:20.445251"
-  },
-  {
-    "id": 7,
-    "url": "https://git.meowcat.site",
-    "title": "Meowcat\u0027s Git",
-    "content": "This website works better with JavaScript. Explore Help Register Sign In Meowcat\u0027s Git A painless, self-hosted Git service Easy to install Simply run the binary for your platform, ship it with Docker, or get it packaged. Cross-platform Gitea runs anywhere Go can compile for: Windows, macOS, Linux, ARM, etc. Choose the one you love! Lightweight Gitea has low minimal requirements and can run on an inexpensive Raspberry Pi. Save your machine energy! Open Source Go get code.gitea.io/gitea! Join us by contributing to make this project even better. Don\u0027t be shy to be a contributor!",
-    "scrapedAt": "2025-12-15 19:07:18.88207"
   },
   {
     "id": 4,
@@ -3456,34 +3484,6 @@ window.searchData = [
     "title": "OpenJDK",
     "content": "What is this? The place to collaborate on an open-source implementation of the Java Platform, Standard Edition, and related projects. Download and install the latest open-source JDK. Oracle’s free, GPL-licensed, production-ready OpenJDK JDK 25 binaries for Linux, macOS, and Windows are available at jdk.java.net/25; Oracle’s commercially-licensed JDK 25 binaries, based on the same code, are here. Learn about the key active Projects in the Community including Amber (high-productivity language features), Loom (lightweight concurrency), Panama (foreign functions and foreign data), Valhalla (primitive types and specialized generics), and, of course, the next version of Java and the JDK. If you want to learn how to use Java features that are available today, head over to dev.java. Hack on the JDK itself, right here in the OpenJDK Community: Browse the code on the web, clone a repository to make a local copy, and contribute a patch to fix a bug, enhance an existing component, or define a new feature. Installing Contributing Sponsoring Developers\u0027 Guide Vulnerabilities JDK GA/EA Builds Mailing lists Wiki · IRC Mastodon Bluesky Bylaws · Census Legal Workshop JEP Process Source code GitHub Mercurial Tools Git jtreg harness Groups (overview) Adoption Build Client Libraries Compatibility \u0026 Specification Review Compiler Conformance Core Libraries Governing Board HotSpot IDE Tooling \u0026 Support Internationalization JMX Members Networking Porters Quality Security Serviceability Vulnerability Web Projects (overview, archive) Amber Babylon CRaC Code Tools Coin Common VM Interface Developers\u0027 Guide Device I/O Duke Galahad Graal IcedTea JDK 8 Updates JDK 9 JDK (…, 25, 26, 27) JDK Updates JMC Jigsaw Kona Lanai Leyden Lilliput Locale Enhancement Loom Memory Model Update Metropolis Multi-Language VM Nashorn New I/O OpenJFX Panama Penrose Port: AArch32 Port: AArch64 Port: BSD Port: Haiku Port: Mac OS X Port: MIPS Port: Mobile Port: PowerPC/AIX Port: RISC-V Port: s390x SCTP Shenandoah Skara Sumatra Tsan Valhalla Verona VisualVM Wakefield Zero ZGC © 2025 Oracle Corporation and/or its affiliates Terms of Use · License: GPLv2 · Privacy · Trademarks",
     "scrapedAt": "2025-12-15 18:47:17.778378"
-  },
-  {
-    "id": 25,
-    "url": "https://blog.meowcat.site",
-    "title": "",
-    "content": "meowcat\u0027s blog Welcome welcome to generic blog #8023043. opening – 15 Dec 2025 View all posts",
-    "scrapedAt": "2025-12-15 18:47:06.088811"
-  },
-  {
-    "id": 24,
-    "url": "https://www.dictionary.com/",
-    "title": "Meanings \u0026 Definitions of English Words | Dictionary.com",
-    "content": "clishmaclaver [klish-muh-kley-ver] Get the Word of the Day Featured Articles All articles WORD_ORIGINS How the Month of December Got Its Name Where does the name for the final month of the year come from? Discover December\u0027s origins here. Holidays The History and Traditions That Make Hanukkah Light Up Commonly Confused Titled vs. Entitled: Which Is Correct? Slang How to Know if You\u0027re \"Boomerasking\" Trending Words forever chemicals ♾️🧪 The toxins that never leave. Learn more about them. rizz 😎💬 Rizz check time. Are you smooth or mid? Find out now. EBT 🛒💳 Learn how these small cards make a big impact on food access. NaNoWriMo ✍️⏳ Write a novel in 30 days? People really do it.",
-    "scrapedAt": "2025-12-15 18:47:04.521237"
-  },
-  {
-    "id": 15,
-    "url": "https://spacecatgames.site",
-    "title": "Space Cat Games - Home",
-    "content": "Hey there! You need Javascript enabled to view this site! Error Code \u003d 0x00004 Home Games News Source Code Credits Changelog Archive Help Welcome to Space Cat Games 17.1 - Codename 64 Play Now Why Play at Space Cat Games? Free Games All our games are completely free to play, with no hidden costs or subscriptions needed. No Downloads Play directly in your browser - no installations, no waiting, just instant gaming. You will need an OpenGL Driver to play. Variety of Games From classics like Tetris and Snake to modern hits like Geometry Dash and CrazyCattle3D, we have something for everyone. Free and Open Source This website is free and Open Source, so you can always contribute! Featured Games SuperTuxKart Minecraft Crazy Cattle 3D See All Games FPS: -- 🏳️",
-    "scrapedAt": "2025-12-15 18:47:03.295347"
-  },
-  {
-    "id": 14,
-    "url": "https://github.com/meowcat767",
-    "title": "meowcat767 (Ben) · GitHub",
-    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} meowcat767 Follow More Overview Repositories Projects Packages Stars meowcat767 Follow Ben meowcat767 Follow professional circle clicker 13 followers · 19 following @Starry-Systems 18:47 (UTC) https://meowcat.site https://orcid.org/0009-0005-2648-1898 Achievements Achievements Block or Report Block or report meowcat767 Block user Prevent this user from interacting with your repositories and sending you notifications. Learn more about blocking users. You must be logged in to block users. Add an optional note \n Maximum 250 characters. Please don\u0027t include any personal information such as legal names or email addresses. Markdown supported. This note will be visible to only you. Block user Report abuse Contact GitHub support about this user’s behavior. Learn more about reporting abuse. Report abuse More Overview Repositories Projects Packages Stars meowcat767/README.md Meowcat767 i like java :\u003c Pinned Loading cobolt-mirror cobolt-mirror Public mirror of https://git.meowcat.site/meowcat/cobolt Java josuframework josuframework Public the osu! framework, ported to Java. Java blog.meowcat.site blog.meowcat.site Public Forked from glitchdotcom/11ty-to-compute blog src. HTML spacecatgames spacecatgames Public HTML OpenLens OpenLens Public Java Something went wrong, please refresh the page to try again. If the problem persists, check the GitHub status page or contact support. Uh oh! There was an error while loading. Please reload this page. You can’t perform that action at this time.",
-    "scrapedAt": "2025-12-15 18:47:01.875626"
   }
 ];
 
