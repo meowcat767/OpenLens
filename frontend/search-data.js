@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 112,
+    "url": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force",
+    "title": "Central Reserve Police Force - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia Central police force in India For militarized police unit in Sudan, see Central Reserve Forces. Law enforcement agency Central Reserve Police Force Emblem of the Central Reserve Police Force Flag of the Central Reserve Police Force Common name CRP force Abbreviation CRPF Motto \"सेवा और निष्ठा\" Service and Loyalty Agency overview Formed 27 July 1939; 86 years ago (1939-07-27) (as Crown Representative\u0027s Police) 28 December 1949; 75 years ago (1949-12-28) (as Central Reserve Police Force) Employees 313,678 Active personnel Annual budget ₹35,147.17 crore (US$4.2 billion) (2025–26)[1] Jurisdictional structure Operations jurisdiction India Governing body Ministry of Home Affairs Constituting instrument Central Reserve Police Force Act, 1949[2] General nature Gendarmerie Operational structure Headquarters CGO Complex, New Delhi, Delhi Minister responsible Amit Shah, Union Minister of Home Affairs Agency executive Gyanendra Pratap Singh, IPS, Director General Units List Commando Battalion for Resolute Action Rapid Action Force CRPF QAT Special Duty Group VIP Security Group Notables Programmes Operation All Out (J\u0026K) Anti-Naxal Operations (LWE Region) Anniversary Valour Day (9 April) Police Commemoration Day (21 October) Website crpf.gov.in The Central Reserve Police Force (CRPF) is a central armed police force in India, under the Ministry of Home Affairs. The CRPF assists states and Union Territories in maintaining law and order and internal security. It is composed of the Central Reserve Police Force (Regular) and Central Reserve Police Force (Auxiliary). It was established on 27 July 1939 as Crown Representative\u0027s Police with the objective of providing security to the British Crown Representatives in India. The force was later renamed as the Central Reserve Police Force by an Act of Parliament in 1949. The CRPF played a major role in the Parliamentary elections of September 1999.[3] The Central Reserve Police Force (CRPF) is the largest central armed police force in India, comprising 247 battalions and exceeding a total strength of 301,376 personnel, as of 2019.[4] CRPF officers are also deployed in United Nations missions. History [edit] Indian Armed Forces of the Government of India Ministry Ministry of Defence Executive departments Department of Military Affairs Staff Chief of Defence Staff Chief of Integrated Defence Staff Defence Secretary of India Integrated Defence Staff Military departments Department of Defence Department of Military Affairs Department of Defence Production Department of Ex-servicemen Welfare Military services Indian Army Indian Navy Indian Air Force Indian Coast Guard Paramilitary services Paramilitary forces of India Central Armed Police Forces Assam Rifles Border Security Force Central Industrial Security Force Central Reserve Police Force Indo-Tibetan Border Police National Security Guard Sashastra Seema Bal Railway Protection Force Special Frontier Force Special Protection Group Organisations Defence Intelligence Agency Defence Space Agency Defence Cyber Agency DRDO Border Roads Organisation History Military history of India Military history of British India India portal v t e Originally constituted as the Crown Representative Police in 1939, CRP was raised in response to the political unrest and agitations in the then Princely States of India following the Madras Resolution of the All-India Congress Committee in 1936 and the ever-growing desire of the Crown Representative to help the vast majority of the native States preserve law and order as part of imperial policy. After Independence, the force was renamed the Central Reserve Police Force by an Act of Parliament on 28 December 1949. This Act constituted CRPF as an armed force of the Union. Sardar Vallabhbhai Patel, the then Home Minister, visualised a multi-dimensional role for it in tune with the changing needs of a newly independent nation. The force played a significant role during the amalgamation of the princely States into the Indian Union. It helped the Union Government discipline the rebellious princely State of Junagadh and the small principality of Kathiawar in Gujarat which had declined to join the Indian Union. During the early 1950s, the performance of the CRPF detachments in enforcing law and order in Bhuj, the then Patiala and East Punjab States Union and Chambal ravines was appreciated by all quarters. On 21 October 1959, SI Karam Singh and 20 other CRPF personnel were attacked by the Chinese Army at Hot Springs in Ladakh resulting in 10 casualties. The survivors were imprisoned. Since then, 21 October has been observed as Police Commemoration day nationwide, across all states in India.[5] In the late 50s and early 60s, contingents of the CRPF were sent to Kutch, Rajasthan, and Sindh borders to check infiltration and trans-border crimes. They were, subsequently, deployed on the Pakistan border in Jammu and Kashmir following attacks launched by the Pakistani in",
+    "scrapedAt": "2025-12-15 19:23:46.547114"
+  },
+  {
+    "id": 111,
+    "url": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh",
+    "title": "Wikipedia, bách khoa toàn thư mở",
+    "content": "Bước tới nội dung Bách khoa toàn thư mở Wikipedia Wikipedia tiếng Việt Bạn chính là tác giả của Wikipedia 1.296.608 bài viết và 1.022.350 thành viên Tạo bài Sửa bài Tải hình Quy tắc Đặt câu hỏi Bài viết: Tra cứu Bài mới Hỏi đáp Thỉnh cầu Thư viện Trợ giúp: FAQ Giúp đỡ Hướng dẫn Chỗ thử Guestbook Bài viết chọn lọc Maurice Ravel (7 tháng 3 năm 1875 – 28 tháng 12 năm 1937) là một nhà soạn nhạc, nghệ sĩ dương cầm và nhạc trưởng người Pháp. Tên tuổi của ông cùng với người đương thời Claude Debussy thường được gắn liền với trường phái ấn tượng, mặc dù cả hai đều khước từ khái niệm này. Trong thập niên 1920 và 1930, Ravel được công nhận rộng rãi trên toàn thế giới là nhà soạn nhạc Pháp vĩ đại nhất còn sống. Ravel sinh ra trong một gia đình có truyền thống âm nhạc và theo học tại Nhạc viện Paris, trường âm nhạc hàng đầu của Pháp. Ông không được giới bảo thủ xem trọng tại cơ sở đào tạo này và việc họ đối xử bất công đối với ông về sau đã gây ra tai tiếng. Sau khi rời nhạc viện, Ravel tìm thấy con đường riêng của mình với tư cách là một nhà soạn nhạc; ông phát triển một phong cách rất đặc trưng và kết hợp vào âm nhạc của mình các yếu tố của chủ nghĩa hiện đại, baroque, tân cổ điển và trong những nhạc phẩm về sau là jazz. [ Đọc tiếp ] Mới chọn: \"Shake It Off\" · Đa Minh Đặng Văn Cầu · Thiên Tiễn Lưu trữ Thêm bài viết chọn lọc Ứng cử viên Bài viết tốt Dương quang phổ chiếu là một bộ phim chính kịch Đài Loan ra mắt năm 2019 do Chung Mạnh Hoành làm đạo diễn kiêm đồng biên kịch, quy tụ sự tham gia của dàn diễn viên gồm Trần Dĩ Văn, Kha Thục Cần, Vu Kiến Hòa, Hứa Quang Hán (hình) cùng Lưu Quán Đình. Với nội dung xoay quanh những mâu thuẫn, giằng xé và nỗi đau diễn ra trong một gia đình bình thường nơi xứ Đài, cốt truyện của Dương quang phổ chiếu kể về đứa con trai ngỗ nghịch Trần Kiến Hòa (Vu Kiến Hòa thủ diễn) vì lầm lỗi mà phải vào trại giáo dưỡng, cũng như người anh A Hào (Hứa Quang Hán nhập vai) tuy giỏi giang, hiếu thảo và có một tương lai xán lạn trước mắt, nhưng sau cùng lại quyết định chấm dứt cõi đời vì những uất nghẹn đè nặng trên vai. [ Đọc tiếp ] Mới chọn: Vụ 47.800 đồng · Rò rỉ dữ liệu · Úc 31–0 Samoa thuộc Mỹ Lưu trữ Thêm bài viết tốt Ứng cử viên Danh sách chọn lọc Giải Grammy cho Album giọng pop xuất sắc nhất là một giải thưởng được trao trong lễ trao giải Grammy để tôn vinh các album nhạc pop chất lượng, không liên quan đến doanh số bán được hay vị trí trên các bảng xếp hạng. Những đề cử và người thắng giải được lựa chọn bởi Viện hàn lâm Khoa học và Nghệ thuật Thu âm Quốc gia. Giải lần đầu tiên vào năm 1968 với tên gọi \"Album đương đại xuất sắc nhất\" cho album Sgt. Pepper\u0027s Lonely Hearts Club Band của The Beatles. Tuy nhiên giải thưởng này bị gián đoạn và bắt đầu trao lại từ năm 1995 với tên là \"Album nhạc pop xuất sắc nhất\". Cho tới năm 2001, giải thưởng được đặt tên \"Album giọng pop xuất sắc nhất\". [ Đọc tiếp ] Mới chọn: Danh sách phân loài trèo cây Á Âu · Trại tị nạn Hồng Kông · Danh sách loài lợn Lưu trữ Thêm danh sách chọn lọc Ứng cử viên Hình ảnh chọn lọc Bông tuyết được chụp bằng kính hiển vi. Ảnh: Janek Lass Lưu trữ Thêm hình ảnh chọn lọc Cập nhật Bạn có biết …rapper, nhạc sĩ Rhyder đã từng tham dự và giành giải Nhất Liên hoan Tiếng hát Hoa phượng đỏ Thành phố Thanh Hóa vào năm 2011, dù chưa hồi phục hoàn toàn từ căn bệnh viêm màng não? …tháng 7 năm 2019, một bệnh nhân mắc bệnh hồng cầu hình liềm đã trở thành người đầu tiên được điều trị một rối loạn di truyền bằng CRISPR? …giải thưởng hòa bình FIFA lần đầu tiên xuất hiện tại buổi lễ bốc thăm của Giải vô địch bóng đá thế giới 2026? …một phim sản xuất tại Việt Nam được cho là phim ghi cảnh giết người thật với mục đích thương mại đầu tiên trên thế giới? Từ những bài viết mới của Wikipedia Lưu trữ Bắt đầu viết bài mới Cập nhật Ngày này năm xưa 15 tháng 12: Ngày Chè Quốc tế; Ngày Tuyên ngôn nhân quyền tại Hoa Kỳ; ngày Vương quốc tại Hà Lan. 9250 – Hoàng đế Vương Diễn cùng quan lại Tiền Thục đầu hàng Hậu Đường, Tiền Thục bị thôn tính. 1914 – Chiến tranh thế giới thứ nhất: Trong trận Kolubara, quân Áo–Hung triệt thoái khỏi thủ đô Beograd của Serbia. 1939 – Bộ phim Cuốn theo chiều gió lần đầu tiên được công chiếu tại nhà hát Loew\u0027s Grand ở Atlanta, Hoa Kỳ. 1945 – Trong thời kỳ Hoa Kỳ chiếm đóng Nhật Bản, tướng Douglas MacArthur ra lệnh bãi bỏ địa vị quốc giáo của Thần đạo (hình torii) tại Nhật Bản. 1978 – Tổng thống Jimmy Carter tuyên bố rằng Hoa Kỳ sẽ công nhận Cộng hòa Nhân dân Trung Hoa và đoạn tuyệt quan hệ ngoại giao với Trung Hoa Dân Quốc (Đài Loan) từ năm 1979. Lưu trữ Cập nhật Danh sách ngày kỷ niệm lịch sử Các lĩnh vực Khoa học tự nhiên Địa chất học Địa lý học Hóa học Khoa học máy tính Logic Sinh học Thiên văn học Toán học Vật lý học Y học Khoa học xã hội Chính trị học Giáo dục Kinh tế học Lịch sử Luật pháp Ngôn ngữ học Nhân chủng học Tâm lý học Thần học Triết học Xã hội học Kỹ thuật Công nghiệp Cơ học Điện tử học Giao thông Kiến trúc Năng lượng Người máy Nông nghiệp Quân sự Y tế Văn hóa Âm nhạc Chính trị Du lịch Điện ảnh Giải trí Vũ đạo Nghệ thuật",
+    "scrapedAt": "2025-12-15 19:23:44.750584"
+  },
+  {
+    "id": 110,
+    "url": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7",
+    "title": "ويكيپيديا",
+    "content": "انتقل إلى المحتوى من ويكيپيديا لموسوعة لي أي واحد يمكن يساهم فيها. كاينة تال دابا 10,942 مقالة ب دّاريجة. بيولوجيا شيمي ماط طيكنولوجيا لمغريب تاريخ جغرافيا فلسفة أديان ساحة د جّماعة لبرلمان ميزان لكلام معاونة دّوزان على ويكيپيديا حقوق نشر باش نقدر نعاون ليوم: تنين 15 دجنبر 2025، موافق 24 جمادى الثانية 1447ھـ كتاتبي تبديلات صفحات جداد شحال من كاراكطير 1 سنوببي 129 0 92183+ 2 Kurslash 26 0 2685+ 3 Essaidib2 11 2 1363+ 4 AdilElouarti 10 2 13547+ 5 Xqbot 7 0 5- محسوبين غير المساهمات ف 30 يوم اللخرة ديال كتاتبيا ماعندهمش صلاحيات د أمغار لأرتيكل لمزيانة ديال ليوم كورة ؤلا لفوت (بلعربية: كرة القدم، بالنݣليزية: Soccer أولّا Association Football)، كاتكنّى باللعبة الزوينة أولّا رياضة لعالام (بالنݣليزية: World Game) هي رياضة جماعية كيلعبوها جوج ديال لفراقي ضد بعضياتهم. كل فرقة د لكورة تيكونو فيها 11 لعّاب تيلعبو برجليهم بكورة مكوّرة. تاتّعتابر لكورة هي الرياضة اللي شعبية ݣاع فلعالم حيتاش كايقصرها كتر من 250 مليون د بنادم ف 200 بلاد. ← كمل(ي) القراية … مقالات مزيانين خرين: كمال الودغيري • دير تومليلين • تݣلمامين • عنتي • جورج سيرافان كولان • پاكيطا ݣورونيو • أدب تشلحيت • أمامة عواد لحرش • 1984 • بوݣود • لجامعة د مالطا بدل تصويرة لمزيانة ديال ليوم أكايّا نتوا ف لپارك لوطني د سوس-ماسة أكايّا نتوا ف لپارك لوطني د سوس-ماسة بدل ربط سلوݣية سمع (معاونة·معلومات) الساحل لأطلسي ديال لمغريب غادي من \"طنجة ل لݣويرة\" (شوف واش صحيحة) لملوك د لمغريب ف النص اللول ديال لقرن لعشرين كانو كاملين ضد لستيعمار (شوف واش صحيحة) كاينين 9 دلكواكب ف النظام الشمسي (شوف واش صحيحة) محمد لخامس بان ف لقمر (شوف واش صحيحة) لمغريب حكموه كثر من 120 سلطان وملك من لأدارسة ل لعلويين (شوف واش صحيحة) السلطان لمغريبي سماعيل بن شريف ولد كثر من 1000 ولد وعندو كثر من 500 جارية و 5 ديال العيالات (شوف واش صحيحة) بدل واش ف خبارك ؟ 0 بلي أول إنزال عسكري بحري و جوي ف تاريخ كان هو إنزال لحسيمة ف 1925. بلي أول مغريبي ربح ميدالية أولمپية، عبد سلام راضي، تحنسر ف حياتو ل درجة أنو باع ديك لميدالية. بلي لممتلة لمغريبية توريا جبران سميتها لحقيقية سعدية قريطيف؟ بلي أول دار مغريبية دخلات ضو هي دار لوزير لمقري ف 1907؟ بدل ويكيپيديا دارجة سمع (معاونة·معلومات) مشروع تشاركي باش نّتجو إنسيكلوپيديا حورة، فابور، ؤ متكاملة. هادا سيت ختيباري باش نشوفو واش لإنسيكلوپيديا واجدة ؤ لإقبال عليها كاين، دابا وصلنا لـ 10,942 أرتيكل. لهدف ديالنا نوصلو لـ 100.000 أرتيكل باش نزيدو نطوّرو لموسوعة. لمحتوى ديال ويكيپيديا منشور تحت رخصة ڭنو ل لوثائق لحورة، شي لّي كايعني بلي حور باش يتعاود يتستعمل. حوايج وقعو نهار 15 دجنبر 1675: وفاة يوهانيس ڤيرمير 1859: ولادة لودڤيك تسامنهوف 1954: تأسيس ديال هولاندا 1958: ولادة عزيزة جلال بدل أش طاري ؟ خبار قدام - قتارح خبار 31 أكتوبر: مجلس لأمن ديال لأمم لمتحدة صوّت على قرار كيقضي باش جميع لأطراف ف النزاع على الصحرا لمغريبية يتفاوضو على أساس مقترح لحكم الداتي لي دارو لمغريب. 19 أكتوبر: لمنتخب لمغريبي د قل من 20 عام دّا كاس لعالم بعدما غلب لارجونتين ف لفينال ب 2 ل 0. 26 يوليوز: لمنتخب لمغريبي د لعيالات جا التاني ف كاس إفريقيا د لكورة د لعيالات 2024 بعدما خسر ف لفينال ب 2 ل 3 ضد نيجيريا. 13 يونيو: إسرائيل دارت هجمات ضد قواعد نووية ف إيران و قتلات عدد ديال لقيّاد لكبار. 12 ماي: حيزب لعمال لكورديستاني علن بلي غادي يحط السلاح و يفرّق الجوقة. 8 ماي: ليون الربعطاش تّختار باش يولي بابا ديال لڤاتيكان. 2 أبريل: دونالد ترامپ، الرئيس د لميريكان، طلّع الطاريف على لإستيراد للميريكان من بزاف د بلدان خرين، من 2% تال جوايه 25% 28 مارس: زلزال ب قوة 7,7 على سلوم ريشتر ضرب ميانمار و قتل كتر من 5300 واحد حوايج واقعين دابا: لحرب د غزة، لحرب لأهلية د ميانمار، شتيباكات د السودان، جتياح روسي د ؤكرانيا، لحرب ف سوريا كيفاش تزيد سميات هنا - أرشيڤ ناس توفاو: محمد لمعروفي (18 نونبر) • سيون أسيدون (7 نونبر) • دجيمس واطسون (6 نونبر) • محمد رزين (23 أكتوبر) • عبد القادر مطاع (21 أكتوبر) • مصطفى براهمة (13 أكتوبر) • محمد حميدي (6 أكتوبر) • أرييه أزولاي (3 أكتوبر) • سعيد الجديدي (27 شتنبر) • صالح حشاد (14 شتنبر) • تشارلي كيرك (10 شتنبر) • مصطفى الطاهري (11 غشت) • جمال الدين لقادري لبودشيشي (8 غشت) • لحسن وڭاڭ (3 غشت) • صالح الباشا • عبد الله أزماني • أحمد فرس (16 يوليوز) • أمينة بركات (24 يونيو) • عبد الحق لمريني (2 يونيو) • موسى السعدي (30 ماي) • نعيمة بوحمالة (28 ماي) • محمد شوبي (2 ماي) • لبابا فرانسيس (21 أبريل) • محسن بوهلال (5 أبريل) • إبراهيم فضلي (4 أبريل) • سعيد بنجبلي (3 أبريل) • نور الدين الدامون (25 مارس) • عبد اللطيف الإمامي (18 مارس) • حماد القباج (9 مارس) • نعيمة سميح (8 مارس) • محمد بنعيسى (28 فبراير) • أحمد لبوخاري (16 فبراير) • كاطالين بانفي (14 فبراير) • مصطفى عروف (10 فبراير) • ساريتة الفاسي (2 فبراير) بدّل كيفاش تساهم ف ويكيپيديا ؟ أي واحد يقدر يكتب أرتيكل، ولا يوسعها، و يقدر يكتب شوية ولا بزاف. باش تلقى معلومات على كيفاش تقدر تكتب، تبدل، و بزاف د لحوايج خرة زور صفحة لمعاونة. يلا بغيتي تكتب أرتيكل جديدة كتب لعنوان ديالها ف هاد لبلاصة لخاوية و تبع التعليمات. لمشاريع ديال ويكيميديا كومنز ميدياتيك ويكي كتوبا كتوبا ويكيداطا بازدّوني ويكي خبار لخبار ويكي مقولة مقولات ويكي عيون مكتابة ويكي نواع تصنيف د لحيين ويكي جاميعة دروس ؤتمارين ويكي تسافيرة ڭيد ديال سفر ويكي قاموس ديكسيونير ميدياويكي صوفتوير د ويكي ميطاويكي تنسيق د لمشاريع • ليستة ديال ويكيپيديات • إحصائيات د ويكيپيديا ب الداريجة • خوي لكاش د السيرڤور: (رافريشي الصفحة اللولا) مرجّعة من \"https://ary.wikipedia.org/w/index.php?title\u003dالصف",
+    "scrapedAt": "2025-12-15 19:23:43.107586"
+  },
+  {
+    "id": 109,
+    "url": "https://mos.wikipedia.org/wiki/Soraogo",
+    "title": "Wikipidiya",
+    "content": "Yãk-y n kẽng y sẽn tarã nengẽ Soolge Wikipidiya Y paam n kẽnga Wikipidia! Yaa bãngr sebr sẽn yaa zaalem tɩ ned fãa tõe n toeem-a. Kibay 2,091 Sõss nins sẽn be Moore bãngr sebrã pʋgẽ wã. Ãndũni faado teedo m be yel-pakr pʋge — Burkinabé pagb bal-taodba Ghana tẽns — Pagba n tal tekr n wa vɩɩm pʋge Ghana repibliki neba — Yamleo-gesgo m be Burkina Faso Politik neba m be Burkina Faso — SDGs— Yeelgre— Zẽ-vãado— Bõn-beella Tɩ-biise — Rũmsi— Bõn-yũudse— Ragend teedo— Zak-teedo— Zãmsgã - Category:Kibay fãa - Daarã kibay Ruins of Loropéni Ruins of Loropéni (France; Ruines de Loropéni) a ya yʋm tus a nu ne yʋm tus-piig la nu zĩiga n kolg tẽng yʋʋr boond Loropéni m\u0027be Burkina Faso gaobg baobgo. A dag naaga ne UNESCO WORLD Heriage sõdg yʋm 2009. Zĩi-kʋdg n saam kanga la Burkina Faso pipi zĩiga. Ziiga waoglem ya 1.113 hectares (2.75 acres), tɩ a lalga me ne kug n dag ya yʋm tus-a-nu ne yʋm tus-piig la nu wã wakat n dag ya na-zak n tar pãng ne yɛl wʋsgo, tɩ\u0027a ya soma n yiid a taab piig m\u0027be tẽnga pʋge. Zĩisa bilgre wakat nan yi wend yʋm tusri diki kẽng. Neb n dag zĩi woto zĩiga pʋg la Lohron bɩ Kulango neba tɩb dag paam arzɛk ne Sahara wã sãnem leebgo tʋm pʋge(tran-saharan gold trade), tɩ a nan y wen yʋm kobre piig la a naase (14th) la yʋm kobre piig la a yopoe (17th) wakat. Tɩ zĩiga dag saam tɩ b basa yʋm kobre piig la a wae wã sɩngre wakat ...karemd-y n paase. Kibay bãna sẽn looge Kibay sẽn tar yõod wʋsgo Haruna Iddrisu B da doga a Haruna Iddrisu yʋʋmd 1970 Sɛt Kiuug dahem a nii raare, la a yaa Ghana bʋʋda bɩɩ sõangda ne politik soab sẽn yɩɩ Ghana depite ramb soog neda n be parlamenta n yi naan-soaba, a nu soaba, a yoob soaba, a yopoe soabã ne a nii soabã taoor soaba n ko Ghana Tamale South Constituency soolmẽ wã. A yɩɩ NDC taoor soab Ghana tẽnga parlamentẽ yʋʋmd 2017 Yʋʋm-vẽk Kiuugã hal t\u0027a Ato Forson wa reega n dɩ a naamã yuumd 2023 yʋʋm-vẽkr kiuuga puge ......karemd-y n paase Kibay bãna sẽn looge Yãmb mii rẽ bɩ?...? Al-kuraan Kurãna-sõngã fãa bee Moore wikipedia wã pʋgẽ? Ouahigouya ya galen tẽnga.m.be Burkina Faso? Blaise Compaoré dag ya ned ninga n pẽ a Thomas Sankara n dag ya pipi perzidã Burkina wã? Burkina Faso ya tẽng n be nin-sablse zãmaana wĩntoog n lʋɩta? Kibay bãna sẽn looge Rũndã foto-kãsengã Hadja Fatimata Ouattara - Burkina Faso. Kibay bãna sẽn looge Sɩngre D pʋʋsda yãmb barka! Yãmb gomda Mòoré? Dẽnd d rata y sõngre! Bienvenue! Parlez-vous Mòoré? Alors nous avons besoin de votre aide! Welcome! Do you speak Mòoré? Then we need your help! B sagenda Mòoré buud-goamã neb tɩ b gʋls sõss sẽn yaa sõma wʋsgo. Sõngre Nin-kãensã yii yɛ? Troupe de danseurs Mossi Kibay bãna sẽn looge Wikipedia wã tʋʋm-noy a taab Wikipedia gʋlsa ne yamleoog-n-taasa rãmb la a yaa Wikimedia Foundation, siglg sẽn pa baood yõodo, sẽn leb n yaa yamleoog-n-taasa tʋʋm-noya: Commons Free media repository Wiktionary Dictionary and thesaurus Wikidata Free knowledge base Wikiquote Collection of quotations Wikibooks Free textbooks and manuals Wikisource Free-content library Wikispecies Directory of species Wikiversity Free learning materials and activities Meta-Wiki Wikimedia project coordination View total pages Sõng-a t\u0027a tʋm Discussions to improve this project are coordinated on our channels. Les discussions pour améliorer ce projet sont coordonnées sur nos canaux. Email us privately Envoyez-nous un e-mail privé moore.wikimedians@gmail.com You can subscribe to our mailing list: usergroup-moore@lists.wikimedia.org Read about us on: Lisez à propos de nous sur: https://meta.wikimedia.org/wiki/Moore_Wikimedia_Community Ask us to add you to our groups. Demandez-nous de vous ajouter à nos groupes. YouTube: Facebook: Twitter : Linkedin:Instagram: View translation progess Bãn-zẽng seb-vão \"https://mos.wikipedia.org/w/index.php?title\u003dSoraogo\u0026oldid\u003d27728\"\n Sull-sulli: Soraogo 343 buud-goama Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fi",
+    "scrapedAt": "2025-12-15 19:23:41.321595"
+  },
+  {
+    "id": 108,
+    "url": "https://en.wikipedia.org/wiki/Constantine_VIII",
+    "title": "Constantine VIII - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia Byzantine emperor from 962 to 1028 Constantine VIII Emperor and Autocrat of the Romans Contemporary miniature of Constantine VIII, from a Bari Exultet roll[1][2] Byzantine emperor Reign 15 December 1025 – 11 November 1028[n. 1] Coronation 30 March 962 Predecessor Basil II Successor Romanos III Born 960 Died 11/12 November 1028 (aged 67–68) Spouse Helena Issue Eudokia (bg) Zoe Theodora Dynasty Macedonian dynasty Father Romanos II Mother Theophano Constantine VIII (Greek: Κωνσταντῖνος, romanized: Kōnstantīnos;[n. 2] 960 – 11/12 November 1028) was de jure Byzantine emperor from 962 until his death. He was the younger son of Emperor Romanos II and Empress Theophano. He was nominal co-emperor from 962, successively with his father; stepfather, Nikephoros II Phokas; uncle, John I Tzimiskes; and brother, Basil II. Basil\u0027s death in 1025 left Constantine as the sole emperor. He occupied the throne for 66 years in total, making him de jure the longest-reigning amongst all Roman emperors since Augustus. Constantine displayed a lifelong lack of interest in politics, statecraft and the military, and during his brief sole reign the government of the Byzantine Empire suffered from mismanagement and neglect. He had no sons and was instead succeeded by Romanos Argyros, husband of his daughter Zoe. Family [edit] Constantine VIII\u0027s father (left) in the Romanos Ivory Constantine was born in 960, two years after his brother Basil. Their parents were Romanos II, the sixth Byzantine emperor of the Macedonian dynasty, and his second wife Theophano, an innkeeper\u0027s daughter described by contemporaries as ambitious and amoral.[3] Aged eight, Constantine was engaged to a daughter of Emperor Boris II of Bulgaria but in the end, he married a Byzantine aristocrat, Helena, daughter of Alypius. Of their three daughters, Eudokia (bg) became a nun after contracting smallpox, Zoe was empress for 22 years, and Theodora reigned for 18 months as the last monarch of the Macedonian line.[4] Life [edit] Gold solidus of Romanos II\u0027s father Constantine VII (left) and Romanos II (right), with a haloed Christ on reverse Histamenon of Nikephoros II (left) and Basil II (right) Histamenon of John Tzimiskes crowned by the Virgin Mary Childhood [edit] Romanos died suddenly in 963. Although Constantine was only three years old, he had already been crowned co-emperor in the preceding year, probably on 30 March.[1] The widowed Theophano installed herself as regent for her sons and stocked the imperial government with supporters, but she faced competition for power with Joseph Bringas, a former advisor of Romanos. Theophano allied with Nikephoros Phokas, a celebrated general and opponent of Bringas. In return for her hand, the childless Nikephoros gave his sacred pledge to protect her children and their interests. Three months after Romanos\u0027 death, supporters of Nikephoros ousted Bringas from power.[5] Nikephoros was crowned emperor in the presence of his nominal co-emperors, Constantine and Basil. A month later he married their mother.[6] Six years later, Nikephoros was murdered at Theophano\u0027s instigation and her lover and co-conspirator John Tzimiskes was acclaimed emperor. Fearing that the empress\u0027 many enemies would damage his political prospects, Tzimiskes turned against Theophano and sent her into exile. Constantine and Basil stayed in the capital and retained their status as co-emperors.[7][8] Adulthood [edit] Tzimiskes died in January 976, when Constantine was sixteen years old, and Basil and Constantine became the new heads of state. Nominally the brothers were equals, but Basil devoted himself to the responsibilities of his office and emerged as the senior Basileus.[9] Constantine had no comparable interest in state business, and never developed any.[10] Apart from participating in a military campaign in 989, which ended without any combat,[11] he occupied his years as Basil\u0027s colleague with private interests. In his youth Constantine was tall, graceful, and athletic, with an excellent speaking voice and a good grasp of rhetoric. He participated in wrestling competitions—which he brought back into fashion—and in the training and riding of horses. Alongside these active pursuits he was a gourmet and a gourmand,[12] leading in later years to chronic gout which impaired his ability to walk. Emperor [edit] Histamenon of Constantine VIII and Basil II Histamenon of Constantine VIII as sole emperor Basil II had an illustrious reign, pursuing both government reforms and a series of successful wars. He died childless on 15 December 1025 and Constantine, a sixty-five-year-old widower, became the sole emperor as Constantine VIII. During his long term as co-emperor, he had been content to enjoy the privileges of imperial status, without concerning himself with state affairs.[1] Sole rulership did not fundamentally alter this desire \"to pass his life wallowing in extravagant pleasures\".[13] Appointment of Alexi",
+    "scrapedAt": "2025-12-15 19:23:39.630309"
+  },
+  {
     "id": 107,
     "url": "https://ban.wikipedia.org/wiki/Kaca_Utama",
     "title": "Wikipédia",
@@ -1377,41 +1412,6 @@ window.searchData = [
     "title": "വിക്കിപീഡിയ",
     "content": "ഉള്ളടക്കത്തിലേക്ക് പോവുക വിക്കിപീഡിയ, ഒരു സ്വതന്ത്ര വിജ്ഞാനകോശം. സ്വാഗതം ആർക്കും തിരുത്താവുന്ന സ്വതന്ത്ര വിജ്ഞാനകോശമാണ് വിക്കിപീഡിയ. മലയാളം വിക്കിപീഡിയയിൽ നിലവിൽ 87,440 ലേഖനങ്ങളുണ്ട് കല ഗണിതം ചരിത്രം ഭൂമിശാസ്ത്രം ശാസ്ത്രം സാങ്കേതികം സാമൂഹികം കായികം എല്ലാ താളുകളും വിഹഗവീക്ഷണം അംഗത്വം അ ആ ഇ ഈ ഉ ഊ ഋ എ ഏ ഐ ഒ ഓ ഔ അം അഃ ക ഖ ഗ ഘ ങ ച ഛ ജ ഝ ഞ ട ഠ ഡ ഢ ണ ത ഥ ദ ധ ന പ ഫ ബ ഭ മ യ ര ല വ ശ ഷ സ ഹ ള ഴ റ തിരഞ്ഞെടുത്ത ലേഖനം നിക്കോള ടെസ്‌ല സിഗ്നൽ (സോഫ്റ്റ്‍വെയർ) അണ്ണാമലൈയാർ ക്ഷേത്രം സെർബിയൻ-അമേരിക്കക്കാരനായ ഒരു കണ്ടുപിടിത്തക്കാരനും, വൈദ്യുതി എഞ്ചിനീയറും, മെക്കാനിക്കൽ എഞ്ചിനീയറും, ഭാവി‌കാഴ്ചപ്പാടുള്ളയാളും ഇന്നത്തെ വൈദ്യുതിവിതരണസമ്പ്രദായം പ്രത്യാവർത്തിധാരാവൈദ്യുതി (AC) ആയിത്തീരാൻ മുഖ്യപങ്കുവഹിച്ചയാളും ആയിരുന്നു നിക്കോള ടെസ്‌ല (10 ജൂലൈ 1856 – 7 ജനുവരി 1943). വൈദ്യുതിയുടെ വ്യാവസായികോപയോഗത്തിന്‌ പ്രധാനസംഭാവനകൾ നൽകിയ അദ്ദേഹം ഭൂമുഖത്തിൽ വെളിച്ചം വിതറിയ വ്യക്തി എന്നറിയപ്പെടുന്നു. ടെസ്‌ലയുടെ പേറ്റന്റുകളും സൈദ്ധാന്തികഗവേഷണങ്ങളുമാണ്‌ ഇന്നത്തെ പ്രത്യാവർത്തിധാരാവൈദ്യുതോപകരണങ്ങൾക്ക് അടിസ്ഥാനം. അദ്ദേഹത്തിന്റെ എ. സി. മോട്ടോർ കണ്ടുപിടിത്തം രണ്ടാം വ്യാവസായികവിപ്ലവത്തിന്‌ വഴിതെളിച്ചു. കൂടുതൽ വായിക്കുക... തിരഞ്ഞെടുത്ത ലേഖനങ്ങൾ സംശോധനായജ്ഞം തിരഞ്ഞെടുക്കാവുന്ന ലേഖനങ്ങൾ തിരുത്തുക ഇന്റർനെറ്റിലധിഷ്ഠിതമായി പ്രവർത്തിക്കുന്ന ഒരു ആശയവിനിമയസംവിധാനമാണ് സിഗ്നൽ. സിഗ്നൽ ഫൗണ്ടേഷൻ വികസിപ്പിച്ചെടുത്ത ഈ സോഫ്റ്റ്‌വെയർ, അയക്കുന്ന സന്ദേശങ്ങൾ ക്രോസ്-പ്ലാറ്റ്ഫോം എൻ‌ക്രിപ്ഷനോടെയാണ് അയക്കപ്പെടുന്നത്. ഫയലുകൾ, ശബ്ദസന്ദേശങ്ങൾ, ചിത്രങ്ങൾ, വീഡിയോകൾ എന്നിവ ആളുകൾക്ക് നേരിട്ടും ഗ്രൂപ്പ് സന്ദേശങ്ങളായും അയയ്‌ക്കാൻ ഇത് ഉപയോഗിക്കുന്നു. ഇന്റർനെറ്റ് ഉപയോഗിച്ചാണ് സിഗ്നൽ ഈ സേവനം ലഭ്യമാക്കുന്നത്. ആളുകളോട് നേരിട്ട് സംവദിക്കുവാനും, ഗ്രൂപ്പിൽ മുഴുവനായും ശബ്ദ, വീഡിയോ കോളുകൾ ചെയ്യാനും ഇത് ഉപയോഗിക്കാം. സിഗ്നലിന്റെ ആൻഡ്രോയ്ഡ് പതിപ്പിന് ഒരു എസ്എംഎസ് ആപ്ലിക്കേഷനായി പ്രവർത്തിക്കാനും കഴിയും. സാധാരണ മൊബൈൽ ടെലിഫോൺ നമ്പറുകളാണ് സിഗ്നൽ അതിലെ ഉപയോക്താക്കളെ തിരിച്ചറിയാനായി ഉപയോഗിക്കുന്നത്. മറ്റ് സിഗ്നൽ ഉപയോക്താക്കൾക്ക് എല്ലാ ആശയവിനിമയങ്ങളും എൻഡ്-ടു-എൻഡ് എൻക്രിപ്റ്റഡായാണ് ഇത് അയക്കുന്നത്. ഉപയോക്താക്കൾക്ക് അവരുടെ കോൺ‌ടാക്റ്റുകളുടെ ഐഡന്റിറ്റിയും ഡാറ്റാ ചാനലിന്റെ വിശ്വാസ്യതയും സ്വതന്ത്രമായി പരിശോധിക്കാൻ കഴിയുന്ന മെക്കാനിസങ്ങൾ ഈ ആപ്ലിക്കേഷനിൽ ഉൾപ്പെടുത്തിയിരിക്കുന്നു. കൂടുതൽ വായിക്കുക... തിരഞ്ഞെടുത്ത ലേഖനങ്ങൾ സംശോധനായജ്ഞം തിരഞ്ഞെടുക്കാവുന്ന ലേഖനങ്ങൾ തിരുത്തുക ഇന്ത്യയിലെ തമിഴ്നാട് സംസ്ഥാനത്ത് തിരുവണ്ണാമലൈ നഗരത്തിലെ അണ്ണാമലൈ കുന്നുകളുടെ താഴ്വരയിൽ സ്ഥിതി ചെയ്യുന്ന ഒരു ശിവക്ഷേത്രമാണ് അരുണാചലേശ്വര ക്ഷേത്രം എന്നുകൂടി അറിയപ്പെടുന്ന അണ്ണാമലൈയാർ ക്ഷേത്രം (Annamalaiyar Temple). തമിഴ്നാട് സംസ്ഥാനത്തെ ഏറ്റവും ആദരണീയമായി കരുതപ്പെടുന്ന പ്രദേശങ്ങളിലൊന്നാണിത്. \"അപ്രാപ്യമായ മല\" എന്നാണ് അണ്ണാമലൈ എന്ന പദത്തിനർത്ഥം. പ്രത്യേകിച്ച് അഗ്നിയുമായി ബന്ധപ്പെട്ട പഞ്ചഭൂത ക്ഷേത്രങ്ങളിലൊന്നാണിത്. ശിവൻ അണ്ണാമലൈയാർ അഥവാ അരുണാചലേശ്വർ എന്ന പേരിൽ ആരാധിക്കപ്പെടുന്ന ഇവിടത്തെ പ്രതിഷ്ഠ അഗ്നി ലിംഗം എന്ന പേരിലാണ് അറിയപ്പെടുന്നത്. പാർവതിയെ ഇവിടെ ഉണ്ണാമലൈ അമ്മൻ എന്നു വിശേഷിപ്പിക്കുന്നു. ഏഴാം നൂറ്റാണ്ടിൽ തമിഴ് ശൈവർ കൊത്തുപണികൾ ചെയ്തെടുത്തതാണ് ഇവിടുത്തെ പ്രതിഷ്ഠയെന്ന് വിശ്വസിക്കപ്പെടുന്നു. തമിഴ് കവികളായ നായന്മാർ എഴുതിയ തേവാരം എന്ന കവിതയിലെ സ്തുതിക്കപ്പെട്ട സ്ഥലങ്ങളിൽ പ്രതിപാദിക്കപ്പെടുന്ന 276 ക്ഷേത്രങ്ങളിലൊന്നാണ് ഇത്. ഒമ്പതാം നൂറ്റാണ്ടിൽ ജീവിച്ചിരുന്ന ശൈവ സന്യാസിയായ കവി മാണിക്കവാചകർ തന്റെ തിരുവമ്മാനൈ എന്ന കൃതി ചിട്ടപ്പെടുത്തിയതും ഇവിടെ വച്ചായിരുന്നു. കൂടുതൽ വായിക്കുക... തിരഞ്ഞെടുത്ത ലേഖനങ്ങൾ സംശോധനായജ്ഞം തിരഞ്ഞെടുക്കാവുന്ന ലേഖനങ്ങൾ തിരുത്തുക പുതിയ ലേഖനങ്ങളിൽ നിന്ന് അസർബൈജാനിലെ കുർ-അറാസ് താഴ്ന്ന പ്രദേശങ്ങളിൽ സ്ഥിതിചെയ്യുന്ന ഒരു വലിയ ലവണജല തടാകമാണ് അഗ്ഗോൾ തടാകം \u003e\u003e\u003e ഏറ്റവും കൂടുതൽ ക്രോമസോമുള്ള സസ്യം ഓഫിയോഗ്ലോസം റെറ്റിക്കുലേറ്റം ആണെന്നു കണ്ടെത്തിയ കേരളീയനായ സസ്യ ശാസ്ത്രജ്ഞനായിരുന്നു ഡോ. സി.എ. നൈനൈൻ \u003e\u003e\u003e ഹിന്ദു പുരാണങ്ങളിലെ അസുര രാജാവായ മഹാബലിയുടെ ഭാര്യയാണ് വിന്ധ്യാവലി \u003e\u003e\u003e \u003e\u003e\u003e മുൻ ക്രിക്കറ്ററും രാഷ്ട്രീയ ജനതാദൾ പാർട്ടി നേതാവുമാണ് തേജസ്വി യാദവ് \u003e\u003e\u003e രണ്ട് കാലുകളും മുട്ടിന് താഴെയായി മുറിച്ച നിലയിൽ കാനഡയിലെ കടൽത്തീരത്ത് നിന്ന് കണ്ടെത്തിയ അജ്ഞാതനായ വ്യക്തിക്ക് നൽകിയ പേരാണ് സാൻഡി കോവിലെ ജെറോം \u003e\u003e\u003e \u003e\u003e\u003e മധ്യ-തെക്കൻ അമേരിക്കകളിലെ ആറുകളിലും പുഴകളിലും കണ്ടുവരുന്ന ശുദ്ധജലമത്സ്യങ്ങളുടെ കുടുംബമാണ് ഗാസ്‌ട്രോപെലെസിഡേ \u003e\u003e\u003e ഷറഫുദീനും അനുപമ പരമേശ്വരനും പ്രധാനവേഷത്തിൽ അഭിനയിച്ച് 2025-ൽ പുറത്തിറങ്ങിയ ഒരു മലയാളചലച്ചിത്രമാണ് ദി പെറ്റ് ഡിറ്റക്ടീവ് \u003e\u003e\u003e 1978-ൽ സ്വീഡിഷ്-പലസ്തീനിയൻ സംഗീത ബാൻഡ് \u0027കോഫിയ\u0027 പുറത്തിറക്കിയ ഒരു പ്രതിഷേധഗാനമാണ് ലീവെ പലസ്തീന \u003e\u003e\u003e \u003e\u003e\u003e നെയ്‌ഗ്ലെറിയ ഫൗളെറി എന്ന അമീബ മൂലം തലച്ചോറിനെ ബാധിക്കുന്ന ഒരു മാരകമായ അണുബാധയാണ് അമീബിക് മസ്തിഷ്കജ്വരം \u003e\u003e\u003e ദുബായ് മിറക്കിൾ ഗാർഡൻ ലോകത്തിലെ ഏറ്റവും വലിയ പൂന്തോട്ടമാണ്, 15 കോടി പൂക്കളും 25 കോടിയിലധികം ചെടികളുമുള്ള, ദുബായ് മിറക്കിൾ ഗാർഡൻ \u003e\u003e\u003e കൂടുതൽ പുതിയ ലേഖനങ്ങൾക്ക്... തിരുത്തുക തിരഞ്ഞെടുത്ത പട്ടിക തായ്‌വാനിലെ ദേശീയോദ്യാനങ്ങൾ കേരളത്തിലെ തുമ്പികൾ ഗ്രാമി ലെജൻഡ് പുരസ്കാരം തായ്‌വാനിലെ ദേശീയോദ്യാനങ്ങൾ സംരക്ഷിതപ്രദേശങ്ങളാണ്. 7,489.49 ചതുരശ്ര കിലോമീറ്റർ (2,891.71 sq mi) വിസ്തീർണ്ണത്തിൽ വ്യാപിച്ചുകിടക്കുന്ന ഒൻപത് ദേശീയോദ്യാനങ്ങളാണ് ഇവിടെയുള്ളത്. എല്ലാ ദേശീയോദ്യാനങ്ങളും മിനിസ്ട്രി ഓഫ് ദ ഇന്റീരിയർ ഭരണത്തിൻകീഴിലാണ് നിലനിൽക്കുന്നത്. 1937-ൽ തായ്‌വാനിലെ ജാപ്പനീസ് ഭരണത്തിൻ കീഴിലായിരുന്നു ആദ്യത്തെ ദേശീയോദ്യാനം നിലവിൽവന്നത്. രണ്ടാം ലോകമഹായുദ്ധത്തിനുശേഷം സ്വേച്ഛാധിപത്യ ഭരണവും തായ്‌വാനിലെ മാർഷൽ നിയമവും കാരണം പരിസ്ഥിതി സംരക്ഷിക്കുന്നതിനുള്ള ശബ്ദം നിർത്തിവച്ചിരുന്ന",
     "scrapedAt": "2025-12-15 19:11:53.913464"
-  },
-  {
-    "id": 112,
-    "url": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force",
-    "title": "Central Reserve Police Force - Wikipedia",
-    "content": "Jump to content From Wikipedia, the free encyclopedia Central police force in India For militarized police unit in Sudan, see Central Reserve Forces. Law enforcement agency Central Reserve Police Force Emblem of the Central Reserve Police Force Flag of the Central Reserve Police Force Common name CRP force Abbreviation CRPF Motto \"सेवा और निष्ठा\" Service and Loyalty Agency overview Formed 27 July 1939; 86 years ago (1939-07-27) (as Crown Representative\u0027s Police) 28 December 1949; 75 years ago (1949-12-28) (as Central Reserve Police Force) Employees 313,678 Active personnel Annual budget ₹35,147.17 crore (US$4.2 billion) (2025–26)[1] Jurisdictional structure Operations jurisdiction India Governing body Ministry of Home Affairs Constituting instrument Central Reserve Police Force Act, 1949[2] General nature Gendarmerie Operational structure Headquarters CGO Complex, New Delhi, Delhi Minister responsible Amit Shah, Union Minister of Home Affairs Agency executive Gyanendra Pratap Singh, IPS, Director General Units List Commando Battalion for Resolute Action Rapid Action Force CRPF QAT Special Duty Group VIP Security Group Notables Programmes Operation All Out (J\u0026K) Anti-Naxal Operations (LWE Region) Anniversary Valour Day (9 April) Police Commemoration Day (21 October) Website crpf.gov.in The Central Reserve Police Force (CRPF) is a central armed police force in India, under the Ministry of Home Affairs. The CRPF assists states and Union Territories in maintaining law and order and internal security. It is composed of the Central Reserve Police Force (Regular) and Central Reserve Police Force (Auxiliary). It was established on 27 July 1939 as Crown Representative\u0027s Police with the objective of providing security to the British Crown Representatives in India. The force was later renamed as the Central Reserve Police Force by an Act of Parliament in 1949. The CRPF played a major role in the Parliamentary elections of September 1999.[3] The Central Reserve Police Force (CRPF) is the largest central armed police force in India, comprising 247 battalions and exceeding a total strength of 301,376 personnel, as of 2019.[4] CRPF officers are also deployed in United Nations missions. History [edit] Indian Armed Forces of the Government of India Ministry Ministry of Defence Executive departments Department of Military Affairs Staff Chief of Defence Staff Chief of Integrated Defence Staff Defence Secretary of India Integrated Defence Staff Military departments Department of Defence Department of Military Affairs Department of Defence Production Department of Ex-servicemen Welfare Military services Indian Army Indian Navy Indian Air Force Indian Coast Guard Paramilitary services Paramilitary forces of India Central Armed Police Forces Assam Rifles Border Security Force Central Industrial Security Force Central Reserve Police Force Indo-Tibetan Border Police National Security Guard Sashastra Seema Bal Railway Protection Force Special Frontier Force Special Protection Group Organisations Defence Intelligence Agency Defence Space Agency Defence Cyber Agency DRDO Border Roads Organisation History Military history of India Military history of British India India portal v t e Originally constituted as the Crown Representative Police in 1939, CRP was raised in response to the political unrest and agitations in the then Princely States of India following the Madras Resolution of the All-India Congress Committee in 1936 and the ever-growing desire of the Crown Representative to help the vast majority of the native States preserve law and order as part of imperial policy. After Independence, the force was renamed the Central Reserve Police Force by an Act of Parliament on 28 December 1949. This Act constituted CRPF as an armed force of the Union. Sardar Vallabhbhai Patel, the then Home Minister, visualised a multi-dimensional role for it in tune with the changing needs of a newly independent nation. The force played a significant role during the amalgamation of the princely States into the Indian Union. It helped the Union Government discipline the rebellious princely State of Junagadh and the small principality of Kathiawar in Gujarat which had declined to join the Indian Union. During the early 1950s, the performance of the CRPF detachments in enforcing law and order in Bhuj, the then Patiala and East Punjab States Union and Chambal ravines was appreciated by all quarters. On 21 October 1959, SI Karam Singh and 20 other CRPF personnel were attacked by the Chinese Army at Hot Springs in Ladakh resulting in 10 casualties. The survivors were imprisoned. Since then, 21 October has been observed as Police Commemoration day nationwide, across all states in India.[5] In the late 50s and early 60s, contingents of the CRPF were sent to Kutch, Rajasthan, and Sindh borders to check infiltration and trans-border crimes. They were, subsequently, deployed on the Pakistan border in Jammu and Kashmir following attacks launched by the Pakistani in",
-    "scrapedAt": "2025-12-15 19:11:48.403294"
-  },
-  {
-    "id": 111,
-    "url": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh",
-    "title": "Wikipedia, bách khoa toàn thư mở",
-    "content": "Bước tới nội dung Bách khoa toàn thư mở Wikipedia Wikipedia tiếng Việt Bạn chính là tác giả của Wikipedia 1.296.624 bài viết và 1.022.534 thành viên Tạo bài Sửa bài Tải hình Quy tắc Đặt câu hỏi Bài viết: Tra cứu Bài mới Hỏi đáp Thỉnh cầu Thư viện Trợ giúp: FAQ Giúp đỡ Hướng dẫn Chỗ thử Guestbook Bài viết chọn lọc Maurice Ravel (7 tháng 3 năm 1875 – 28 tháng 12 năm 1937) là một nhà soạn nhạc, nghệ sĩ dương cầm và nhạc trưởng người Pháp. Tên tuổi của ông cùng với người đương thời Claude Debussy thường được gắn liền với trường phái ấn tượng, mặc dù cả hai đều khước từ khái niệm này. Trong thập niên 1920 và 1930, Ravel được công nhận rộng rãi trên toàn thế giới là nhà soạn nhạc Pháp vĩ đại nhất còn sống. Ravel sinh ra trong một gia đình có truyền thống âm nhạc và theo học tại Nhạc viện Paris, trường âm nhạc hàng đầu của Pháp. Ông không được giới bảo thủ xem trọng tại cơ sở đào tạo này và việc họ đối xử bất công đối với ông về sau đã gây ra tai tiếng. Sau khi rời nhạc viện, Ravel tìm thấy con đường riêng của mình với tư cách là một nhà soạn nhạc; ông phát triển một phong cách rất đặc trưng và kết hợp vào âm nhạc của mình các yếu tố của chủ nghĩa hiện đại, baroque, tân cổ điển và trong những nhạc phẩm về sau là jazz. [ Đọc tiếp ] Mới chọn: \"Shake It Off\" · Đa Minh Đặng Văn Cầu · Thiên Tiễn Lưu trữ Thêm bài viết chọn lọc Ứng cử viên Bài viết tốt Dương quang phổ chiếu là một bộ phim chính kịch Đài Loan ra mắt năm 2019 do Chung Mạnh Hoành làm đạo diễn kiêm đồng biên kịch, quy tụ sự tham gia của dàn diễn viên gồm Trần Dĩ Văn, Kha Thục Cần, Vu Kiến Hòa, Hứa Quang Hán (hình) cùng Lưu Quán Đình. Với nội dung xoay quanh những mâu thuẫn, giằng xé và nỗi đau diễn ra trong một gia đình bình thường nơi xứ Đài, cốt truyện của Dương quang phổ chiếu kể về đứa con trai ngỗ nghịch Trần Kiến Hòa (Vu Kiến Hòa thủ diễn) vì lầm lỗi mà phải vào trại giáo dưỡng, cũng như người anh A Hào (Hứa Quang Hán nhập vai) tuy giỏi giang, hiếu thảo và có một tương lai xán lạn trước mắt, nhưng sau cùng lại quyết định chấm dứt cõi đời vì những uất nghẹn đè nặng trên vai. [ Đọc tiếp ] Mới chọn: Vụ 47.800 đồng · Rò rỉ dữ liệu · Úc 31–0 Samoa thuộc Mỹ Lưu trữ Thêm bài viết tốt Ứng cử viên Danh sách chọn lọc Giải Grammy cho Album giọng pop xuất sắc nhất là một giải thưởng được trao trong lễ trao giải Grammy để tôn vinh các album nhạc pop chất lượng, không liên quan đến doanh số bán được hay vị trí trên các bảng xếp hạng. Những đề cử và người thắng giải được lựa chọn bởi Viện hàn lâm Khoa học và Nghệ thuật Thu âm Quốc gia. Giải lần đầu tiên vào năm 1968 với tên gọi \"Album đương đại xuất sắc nhất\" cho album Sgt. Pepper\u0027s Lonely Hearts Club Band của The Beatles. Tuy nhiên giải thưởng này bị gián đoạn và bắt đầu trao lại từ năm 1995 với tên là \"Album nhạc pop xuất sắc nhất\". Cho tới năm 2001, giải thưởng được đặt tên \"Album giọng pop xuất sắc nhất\". [ Đọc tiếp ] Mới chọn: Danh sách phân loài trèo cây Á Âu · Trại tị nạn Hồng Kông · Danh sách loài lợn Lưu trữ Thêm danh sách chọn lọc Ứng cử viên Hình ảnh chọn lọc Bông tuyết được chụp bằng kính hiển vi. Ảnh: Janek Lass Lưu trữ Thêm hình ảnh chọn lọc Cập nhật Bạn có biết …rapper, nhạc sĩ Rhyder đã từng tham dự và giành giải Nhất Liên hoan Tiếng hát Hoa phượng đỏ Thành phố Thanh Hóa vào năm 2011, dù chưa hồi phục hoàn toàn từ căn bệnh viêm màng não? …tháng 7 năm 2019, một bệnh nhân mắc bệnh hồng cầu hình liềm đã trở thành người đầu tiên được điều trị một rối loạn di truyền bằng CRISPR? …giải thưởng hòa bình FIFA lần đầu tiên xuất hiện tại buổi lễ bốc thăm của Giải vô địch bóng đá thế giới 2026? …một phim sản xuất tại Việt Nam được cho là phim ghi cảnh giết người thật với mục đích thương mại đầu tiên trên thế giới? Từ những bài viết mới của Wikipedia Lưu trữ Bắt đầu viết bài mới Cập nhật Ngày này năm xưa 15 tháng 12: Ngày Chè Quốc tế; Ngày Tuyên ngôn nhân quyền tại Hoa Kỳ; ngày Vương quốc tại Hà Lan. 1161 – Sau trận Thái Thạch, Hoàng đế Hoàn Nhan Lượng của Kim bị bộ hạ sát hại khi định vượt Trường Giang tấn công Nam Tống. 1914 – Chiến tranh thế giới thứ nhất: Trong trận Kolubara, quân Áo–Hung triệt thoái khỏi thủ đô Beograd của Serbia. 1939 – Bộ phim Cuốn theo chiều gió lần đầu tiên được công chiếu tại nhà hát Loew\u0027s Grand ở Atlanta, Hoa Kỳ. 1945 – Trong thời kỳ Hoa Kỳ chiếm đóng Nhật Bản, tướng Douglas MacArthur ra lệnh bãi bỏ địa vị quốc giáo của Thần đạo (hình torii) tại Nhật Bản. 1978 – Tổng thống Jimmy Carter tuyên bố rằng Hoa Kỳ sẽ công nhận Cộng hòa Nhân dân Trung Hoa và đoạn tuyệt quan hệ ngoại giao với Trung Hoa Dân Quốc (Đài Loan) từ năm 1979. Lưu trữ Cập nhật Danh sách ngày kỷ niệm lịch sử Các lĩnh vực Khoa học tự nhiên Địa chất học Địa lý học Hóa học Khoa học máy tính Logic Sinh học Thiên văn học Toán học Vật lý học Y học Khoa học xã hội Chính trị học Giáo dục Kinh tế học Lịch sử Luật pháp Ngôn ngữ học Nhân chủng học Tâm lý học Thần học Triết học Xã hội học Kỹ thuật Công nghiệp Cơ học Điện tử học Giao thông Kiến trúc Năng lượng Người máy Nông nghiệp Quân sự Y tế Văn hóa Âm nhạc Chính trị Du lịch Điện ả",
-    "scrapedAt": "2025-12-15 19:11:46.397671"
-  },
-  {
-    "id": 110,
-    "url": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7",
-    "title": "ويكيپيديا",
-    "content": "انتقل إلى المحتوى من ويكيپيديا لموسوعة لي أي واحد يمكن يساهم فيها. كاينة تال دابا 10,942 مقالة ب دّاريجة. بيولوجيا شيمي ماط طيكنولوجيا لمغريب تاريخ جغرافيا فلسفة أديان ساحة د جّماعة لبرلمان ميزان لكلام معاونة دّوزان على ويكيپيديا حقوق نشر باش نقدر نعاون ليوم: تنين 15 دجنبر 2025، موافق 24 جمادى الثانية 1447ھـ كتاتبي تبديلات صفحات جداد شحال من كاراكطير 1 سنوببي 129 0 92183+ 2 Kurslash 26 0 2685+ 3 Essaidib2 11 2 1363+ 4 AdilElouarti 10 2 13547+ 5 Xqbot 7 0 5- محسوبين غير المساهمات ف 30 يوم اللخرة ديال كتاتبيا ماعندهمش صلاحيات د أمغار لأرتيكل لمزيانة ديال ليوم كورة ؤلا لفوت (بلعربية: كرة القدم، بالنݣليزية: Soccer أولّا Association Football)، كاتكنّى باللعبة الزوينة أولّا رياضة لعالام (بالنݣليزية: World Game) هي رياضة جماعية كيلعبوها جوج ديال لفراقي ضد بعضياتهم. كل فرقة د لكورة تيكونو فيها 11 لعّاب تيلعبو برجليهم بكورة مكوّرة. تاتّعتابر لكورة هي الرياضة اللي شعبية ݣاع فلعالم حيتاش كايقصرها كتر من 250 مليون د بنادم ف 200 بلاد. ← كمل(ي) القراية … مقالات مزيانين خرين: كمال الودغيري • دير تومليلين • تݣلمامين • عنتي • جورج سيرافان كولان • پاكيطا ݣورونيو • أدب تشلحيت • أمامة عواد لحرش • 1984 • بوݣود • لجامعة د مالطا بدل تصويرة لمزيانة ديال ليوم أكايّا نتوا ف لپارك لوطني د سوس-ماسة أكايّا نتوا ف لپارك لوطني د سوس-ماسة بدل ربط سلوݣية سمع (معاونة·معلومات) الساحل لأطلسي ديال لمغريب غادي من \"طنجة ل لݣويرة\" (شوف واش صحيحة) لملوك د لمغريب ف النص اللول ديال لقرن لعشرين كانو كاملين ضد لستيعمار (شوف واش صحيحة) كاينين 9 دلكواكب ف النظام الشمسي (شوف واش صحيحة) محمد لخامس بان ف لقمر (شوف واش صحيحة) لمغريب حكموه كثر من 120 سلطان وملك من لأدارسة ل لعلويين (شوف واش صحيحة) السلطان لمغريبي سماعيل بن شريف ولد كثر من 1000 ولد وعندو كثر من 500 جارية و 5 ديال العيالات (شوف واش صحيحة) بدل واش ف خبارك ؟ 0 بلي أول إنزال عسكري بحري و جوي ف تاريخ كان هو إنزال لحسيمة ف 1925. بلي أول مغريبي ربح ميدالية أولمپية، عبد سلام راضي، تحنسر ف حياتو ل درجة أنو باع ديك لميدالية. بلي لممتلة لمغريبية توريا جبران سميتها لحقيقية سعدية قريطيف؟ بلي أول دار مغريبية دخلات ضو هي دار لوزير لمقري ف 1907؟ بدل ويكيپيديا دارجة سمع (معاونة·معلومات) مشروع تشاركي باش نّتجو إنسيكلوپيديا حورة، فابور، ؤ متكاملة. هادا سيت ختيباري باش نشوفو واش لإنسيكلوپيديا واجدة ؤ لإقبال عليها كاين، دابا وصلنا لـ 10,942 أرتيكل. لهدف ديالنا نوصلو لـ 100.000 أرتيكل باش نزيدو نطوّرو لموسوعة. لمحتوى ديال ويكيپيديا منشور تحت رخصة ڭنو ل لوثائق لحورة، شي لّي كايعني بلي حور باش يتعاود يتستعمل. حوايج وقعو نهار 15 دجنبر 1675: وفاة يوهانيس ڤيرمير 1859: ولادة لودڤيك تسامنهوف 1954: تأسيس ديال هولاندا 1958: ولادة عزيزة جلال بدل أش طاري ؟ خبار قدام - قتارح خبار 31 أكتوبر: مجلس لأمن ديال لأمم لمتحدة صوّت على قرار كيقضي باش جميع لأطراف ف النزاع على الصحرا لمغريبية يتفاوضو على أساس مقترح لحكم الداتي لي دارو لمغريب. 19 أكتوبر: لمنتخب لمغريبي د قل من 20 عام دّا كاس لعالم بعدما غلب لارجونتين ف لفينال ب 2 ل 0. 26 يوليوز: لمنتخب لمغريبي د لعيالات جا التاني ف كاس إفريقيا د لكورة د لعيالات 2024 بعدما خسر ف لفينال ب 2 ل 3 ضد نيجيريا. 13 يونيو: إسرائيل دارت هجمات ضد قواعد نووية ف إيران و قتلات عدد ديال لقيّاد لكبار. 12 ماي: حيزب لعمال لكورديستاني علن بلي غادي يحط السلاح و يفرّق الجوقة. 8 ماي: ليون الربعطاش تّختار باش يولي بابا ديال لڤاتيكان. 2 أبريل: دونالد ترامپ، الرئيس د لميريكان، طلّع الطاريف على لإستيراد للميريكان من بزاف د بلدان خرين، من 2% تال جوايه 25% 28 مارس: زلزال ب قوة 7,7 على سلوم ريشتر ضرب ميانمار و قتل كتر من 5300 واحد حوايج واقعين دابا: لحرب د غزة، لحرب لأهلية د ميانمار، شتيباكات د السودان، جتياح روسي د ؤكرانيا، لحرب ف سوريا كيفاش تزيد سميات هنا - أرشيڤ ناس توفاو: محمد لمعروفي (18 نونبر) • سيون أسيدون (7 نونبر) • دجيمس واطسون (6 نونبر) • محمد رزين (23 أكتوبر) • عبد القادر مطاع (21 أكتوبر) • مصطفى براهمة (13 أكتوبر) • محمد حميدي (6 أكتوبر) • أرييه أزولاي (3 أكتوبر) • سعيد الجديدي (27 شتنبر) • صالح حشاد (14 شتنبر) • تشارلي كيرك (10 شتنبر) • مصطفى الطاهري (11 غشت) • جمال الدين لقادري لبودشيشي (8 غشت) • لحسن وڭاڭ (3 غشت) • صالح الباشا • عبد الله أزماني • أحمد فرس (16 يوليوز) • أمينة بركات (24 يونيو) • عبد الحق لمريني (2 يونيو) • موسى السعدي (30 ماي) • نعيمة بوحمالة (28 ماي) • محمد شوبي (2 ماي) • لبابا فرانسيس (21 أبريل) • محسن بوهلال (5 أبريل) • إبراهيم فضلي (4 أبريل) • سعيد بنجبلي (3 أبريل) • نور الدين الدامون (25 مارس) • عبد اللطيف الإمامي (18 مارس) • حماد القباج (9 مارس) • نعيمة سميح (8 مارس) • محمد بنعيسى (28 فبراير) • أحمد لبوخاري (16 فبراير) • كاطالين بانفي (14 فبراير) • مصطفى عروف (10 فبراير) • ساريتة الفاسي (2 فبراير) بدّل كيفاش تساهم ف ويكيپيديا ؟ أي واحد يقدر يكتب أرتيكل، ولا يوسعها، و يقدر يكتب شوية ولا بزاف. باش تلقى معلومات على كيفاش تقدر تكتب، تبدل، و بزاف د لحوايج خرة زور صفحة لمعاونة. يلا بغيتي تكتب أرتيكل جديدة كتب لعنوان ديالها ف هاد لبلاصة لخاوية و تبع التعليمات. لمشاريع ديال ويكيميديا كومنز ميدياتيك ويكي كتوبا كتوبا ويكيداطا بازدّوني ويكي خبار لخبار ويكي مقولة مقولات ويكي عيون مكتابة ويكي نواع تصنيف د لحيين ويكي جاميعة دروس ؤتمارين ويكي تسافيرة ڭيد ديال سفر ويكي قاموس ديكسيونير ميدياويكي صوفتوير د ويكي ميطاويكي تنسيق د لمشاريع • ليستة ديال ويكيپيديات • إحصائيات د ويكيپيديا ب الداريجة • خوي لكاش د السيرڤور: (رافريشي الصفحة اللولا) مرجّعة من \"https://ary.wikipedia.org/w/index.php?title\u003dالصف",
-    "scrapedAt": "2025-12-15 19:11:44.427491"
-  },
-  {
-    "id": 109,
-    "url": "https://mos.wikipedia.org/wiki/Soraogo",
-    "title": "Wikipidiya",
-    "content": "Yãk-y n kẽng y sẽn tarã nengẽ Soolge Wikipidiya Y paam n kẽnga Wikipidia! Yaa bãngr sebr sẽn yaa zaalem tɩ ned fãa tõe n toeem-a. Kibay 2,091 Sõss nins sẽn be Moore bãngr sebrã pʋgẽ wã. Ãndũni faado teedo m be yel-pakr pʋge — Burkinabé pagb bal-taodba Ghana tẽns — Pagba n tal tekr n wa vɩɩm pʋge Ghana repibliki neba — Yamleo-gesgo m be Burkina Faso Politik neba m be Burkina Faso — SDGs— Yeelgre— Zẽ-vãado— Bõn-beella Tɩ-biise — Rũmsi— Bõn-yũudse— Ragend teedo— Zak-teedo— Zãmsgã - Category:Kibay fãa - Daarã kibay Ruins of Loropéni Ruins of Loropéni (France; Ruines de Loropéni) a ya yʋm tus a nu ne yʋm tus-piig la nu zĩiga n kolg tẽng yʋʋr boond Loropéni m\u0027be Burkina Faso gaobg baobgo. A dag naaga ne UNESCO WORLD Heriage sõdg yʋm 2009. Zĩi-kʋdg n saam kanga la Burkina Faso pipi zĩiga. Ziiga waoglem ya 1.113 hectares (2.75 acres), tɩ a lalga me ne kug n dag ya yʋm tus-a-nu ne yʋm tus-piig la nu wã wakat n dag ya na-zak n tar pãng ne yɛl wʋsgo, tɩ\u0027a ya soma n yiid a taab piig m\u0027be tẽnga pʋge. Zĩisa bilgre wakat nan yi wend yʋm tusri diki kẽng. Neb n dag zĩi woto zĩiga pʋg la Lohron bɩ Kulango neba tɩb dag paam arzɛk ne Sahara wã sãnem leebgo tʋm pʋge(tran-saharan gold trade), tɩ a nan y wen yʋm kobre piig la a naase (14th) la yʋm kobre piig la a yopoe (17th) wakat. Tɩ zĩiga dag saam tɩ b basa yʋm kobre piig la a wae wã sɩngre wakat ...karemd-y n paase. Kibay bãna sẽn looge Kibay sẽn tar yõod wʋsgo Haruna Iddrisu B da doga a Haruna Iddrisu yʋʋmd 1970 Sɛt Kiuug dahem a nii raare, la a yaa Ghana bʋʋda bɩɩ sõangda ne politik soab sẽn yɩɩ Ghana depite ramb soog neda n be parlamenta n yi naan-soaba, a nu soaba, a yoob soaba, a yopoe soabã ne a nii soabã taoor soaba n ko Ghana Tamale South Constituency soolmẽ wã. A yɩɩ NDC taoor soab Ghana tẽnga parlamentẽ yʋʋmd 2017 Yʋʋm-vẽk Kiuugã hal t\u0027a Ato Forson wa reega n dɩ a naamã yuumd 2023 yʋʋm-vẽkr kiuuga puge ......karemd-y n paase Kibay bãna sẽn looge Yãmb mii rẽ bɩ?...? Al-kuraan Kurãna-sõngã fãa bee Moore wikipedia wã pʋgẽ? Ouahigouya ya galen tẽnga.m.be Burkina Faso? Blaise Compaoré dag ya ned ninga n pẽ a Thomas Sankara n dag ya pipi perzidã Burkina wã? Burkina Faso ya tẽng n be nin-sablse zãmaana wĩntoog n lʋɩta? Kibay bãna sẽn looge Rũndã foto-kãsengã Hadja Fatimata Ouattara - Burkina Faso. Kibay bãna sẽn looge Sɩngre D pʋʋsda yãmb barka! Yãmb gomda Mòoré? Dẽnd d rata y sõngre! Bienvenue! Parlez-vous Mòoré? Alors nous avons besoin de votre aide! Welcome! Do you speak Mòoré? Then we need your help! B sagenda Mòoré buud-goamã neb tɩ b gʋls sõss sẽn yaa sõma wʋsgo. Sõngre Nin-kãensã yii yɛ? Troupe de danseurs Mossi Kibay bãna sẽn looge Wikipedia wã tʋʋm-noy a taab Wikipedia gʋlsa ne yamleoog-n-taasa rãmb la a yaa Wikimedia Foundation, siglg sẽn pa baood yõodo, sẽn leb n yaa yamleoog-n-taasa tʋʋm-noya: Commons Free media repository Wiktionary Dictionary and thesaurus Wikidata Free knowledge base Wikiquote Collection of quotations Wikibooks Free textbooks and manuals Wikisource Free-content library Wikispecies Directory of species Wikiversity Free learning materials and activities Meta-Wiki Wikimedia project coordination View total pages Sõng-a t\u0027a tʋm Discussions to improve this project are coordinated on our channels. Les discussions pour améliorer ce projet sont coordonnées sur nos canaux. Email us privately Envoyez-nous un e-mail privé moore.wikimedians@gmail.com You can subscribe to our mailing list: usergroup-moore@lists.wikimedia.org Read about us on: Lisez à propos de nous sur: https://meta.wikimedia.org/wiki/Moore_Wikimedia_Community Ask us to add you to our groups. Demandez-nous de vous ajouter à nos groupes. YouTube: Facebook: Twitter : Linkedin:Instagram: View translation progess Bãn-zẽng seb-vão \"https://mos.wikipedia.org/w/index.php?title\u003dSoraogo\u0026oldid\u003d27728\"\n Sull-sulli: Soraogo 343 buud-goama Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fi",
-    "scrapedAt": "2025-12-15 19:11:42.723107"
-  },
-  {
-    "id": 108,
-    "url": "https://en.wikipedia.org/wiki/Constantine_VIII",
-    "title": "Constantine VIII - Wikipedia",
-    "content": "Jump to content From Wikipedia, the free encyclopedia Byzantine emperor from 962 to 1028 Constantine VIII Emperor and Autocrat of the Romans Contemporary miniature of Constantine VIII, from a Bari Exultet roll[1][2] Byzantine emperor Reign 15 December 1025 – 11 November 1028[n. 1] Coronation 30 March 962 Predecessor Basil II Successor Romanos III Born 960 Died 11/12 November 1028 (aged 67–68) Spouse Helena Issue Eudokia (bg) Zoe Theodora Dynasty Macedonian dynasty Father Romanos II Mother Theophano Constantine VIII (Greek: Κωνσταντῖνος, romanized: Kōnstantīnos;[n. 2] 960 – 11/12 November 1028) was de jure Byzantine emperor from 962 until his death. He was the younger son of Emperor Romanos II and Empress Theophano. He was nominal co-emperor from 962, successively with his father; stepfather, Nikephoros II Phokas; uncle, John I Tzimiskes; and brother, Basil II. Basil\u0027s death in 1025 left Constantine as the sole emperor. He occupied the throne for 66 years in total, making him de jure the longest-reigning amongst all Roman emperors since Augustus. Constantine displayed a lifelong lack of interest in politics, statecraft and the military, and during his brief sole reign the government of the Byzantine Empire suffered from mismanagement and neglect. He had no sons and was instead succeeded by Romanos Argyros, husband of his daughter Zoe. Family [edit] Constantine VIII\u0027s father (left) in the Romanos Ivory Constantine was born in 960, two years after his brother Basil. Their parents were Romanos II, the sixth Byzantine emperor of the Macedonian dynasty, and his second wife Theophano, an innkeeper\u0027s daughter described by contemporaries as ambitious and amoral.[3] Aged eight, Constantine was engaged to a daughter of Emperor Boris II of Bulgaria but in the end, he married a Byzantine aristocrat, Helena, daughter of Alypius. Of their three daughters, Eudokia (bg) became a nun after contracting smallpox, Zoe was empress for 22 years, and Theodora reigned for 18 months as the last monarch of the Macedonian line.[4] Life [edit] Gold solidus of Romanos II\u0027s father Constantine VII (left) and Romanos II (right), with a haloed Christ on reverse Histamenon of Nikephoros II (left) and Basil II (right) Histamenon of John Tzimiskes crowned by the Virgin Mary Childhood [edit] Romanos died suddenly in 963. Although Constantine was only three years old, he had already been crowned co-emperor in the preceding year, probably on 30 March.[1] The widowed Theophano installed herself as regent for her sons and stocked the imperial government with supporters, but she faced competition for power with Joseph Bringas, a former advisor of Romanos. Theophano allied with Nikephoros Phokas, a celebrated general and opponent of Bringas. In return for her hand, the childless Nikephoros gave his sacred pledge to protect her children and their interests. Three months after Romanos\u0027 death, supporters of Nikephoros ousted Bringas from power.[5] Nikephoros was crowned emperor in the presence of his nominal co-emperors, Constantine and Basil. A month later he married their mother.[6] Six years later, Nikephoros was murdered at Theophano\u0027s instigation and her lover and co-conspirator John Tzimiskes was acclaimed emperor. Fearing that the empress\u0027 many enemies would damage his political prospects, Tzimiskes turned against Theophano and sent her into exile. Constantine and Basil stayed in the capital and retained their status as co-emperors.[7][8] Adulthood [edit] Tzimiskes died in January 976, when Constantine was sixteen years old, and Basil and Constantine became the new heads of state. Nominally the brothers were equals, but Basil devoted himself to the responsibilities of his office and emerged as the senior Basileus.[9] Constantine had no comparable interest in state business, and never developed any.[10] Apart from participating in a military campaign in 989, which ended without any combat,[11] he occupied his years as Basil\u0027s colleague with private interests. In his youth Constantine was tall, graceful, and athletic, with an excellent speaking voice and a good grasp of rhetoric. He participated in wrestling competitions—which he brought back into fashion—and in the training and riding of horses. Alongside these active pursuits he was a gourmet and a gourmand,[12] leading in later years to chronic gout which impaired his ability to walk. Emperor [edit] Histamenon of Constantine VIII and Basil II Histamenon of Constantine VIII as sole emperor Basil II had an illustrious reign, pursuing both government reforms and a series of successful wars. He died childless on 15 December 1025 and Constantine, a sixty-five-year-old widower, became the sole emperor as Constantine VIII. During his long term as co-emperor, he had been content to enjoy the privileges of imperial status, without concerning himself with state affairs.[1] Sole rulership did not fundamentally alter this desire \"to pass his life wallowing in extravagant pleasures\".[13] Appointment of Alexi",
-    "scrapedAt": "2025-12-15 19:11:41.088274"
   },
   {
     "id": 498,
@@ -3488,6 +3488,996 @@ window.searchData = [
 ];
 
 window.imageData = [
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Central_Reserve_Police_Force_emblem.svg/250px-Central_Reserve_Police_Force_emblem.svg.png",
+    "alt": "Emblem of the Central Reserve Police Force",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Flag_of_Central_Reserve_Police_Forces.png/250px-Flag_of_Central_Reserve_Police_Forces.png",
+    "alt": "Flag of the Central Reserve Police Force",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/20px-Emblem_of_India.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/20px-Flag_of_India.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Flag_of_Indian_Armed_Forces.svg/120px-Flag_of_Indian_Armed_Forces.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Flag_of_the_Ministry_of_Defence_of_India.svg/40px-Flag_of_the_Ministry_of_Defence_of_India.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Seal_of_Chief_of_Defence_Staff_%28India%29.png/20px-Seal_of_Chief_of_Defence_Staff_%28India%29.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Seal_of_Chief_of_Defence_Staff_%28India%29.png/20px-Seal_of_Chief_of_Defence_Staff_%28India%29.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Seal_of_Chief_of_Defence_Staff_%28India%29.png/20px-Seal_of_Chief_of_Defence_Staff_%28India%29.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/20px-Emblem_of_India.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Ids_india.png/20px-Ids_india.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Seal_of_Chief_of_Defence_Staff_%28India%29.png/20px-Seal_of_Chief_of_Defence_Staff_%28India%29.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Seal_of_Chief_of_Defence_Staff_%28India%29.png/20px-Seal_of_Chief_of_Defence_Staff_%28India%29.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Seal_of_Chief_of_Defence_Staff_%28India%29.png/20px-Seal_of_Chief_of_Defence_Staff_%28India%29.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/20px-Emblem_of_India.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Indian_Army.svg/40px-Flag_of_Indian_Army.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Naval_Ensign_of_India.svg/40px-Naval_Ensign_of_India.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Air_Force_Ensign_of_India.svg/40px-Air_Force_Ensign_of_India.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Indian_Coast_Guard_flag.svg/40px-Indian_Coast_Guard_flag.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Assam_Rifles_Flag.svg/40px-Assam_Rifles_Flag.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/BSF_Flag.svg/40px-BSF_Flag.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/CISF_Flag.svg/40px-CISF_Flag.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Flag_of_Central_Reserve_Police_Forces.png/40px-Flag_of_Central_Reserve_Police_Forces.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/ITBP_Flag.svg/40px-ITBP_Flag.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/NSG_Flag.svg/40px-NSG_Flag.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Sashastra_Seema_Bal_Flag.svg/40px-Sashastra_Seema_Bal_Flag.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Logo_of_RPF.jpg/20px-Logo_of_RPF.jpg",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/SFF_LOGO.svg/40px-SFF_LOGO.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/SPG_Flag.svg/40px-SPG_Flag.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Integrated_Defence_Staff.svg/40px-Flag_of_Integrated_Defence_Staff.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Defence_Space_Agency_India.png/20px-Defence_Space_Agency_India.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Defence_Cyber_Agency.png/20px-Defence_Cyber_Agency.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/ILA_Berlin_2012_PD_030.JPG/20px-ILA_Berlin_2012_PD_030.JPG",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/BRO_Flag.svg/40px-BRO_Flag.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/40px-Flag_of_India.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/The_CRPF_marching_contingents_passes_through_the_Rajpath_during_the_66th_Republic_Day_Parade_2015%2C_in_New_Delhi_on_January_26%2C_2015.jpg/250px-The_CRPF_marching_contingents_passes_through_the_Rajpath_during_the_66th_Republic_Day_Parade_2015%2C_in_New_Delhi_on_January_26%2C_2015.jpg",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Flag_of_Central_Reserve_Police_Forces.png/40px-Flag_of_Central_Reserve_Police_Forces.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Director-General_of_Police.svg/60px-Director-General_of_Police.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Director-General_of_Police.svg/60px-Director-General_of_Police.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Director-General_of_Police.svg/60px-Director-General_of_Police.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Inspector-General_of_Police.svg/60px-Inspector-General_of_Police.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/CRP_OF-6.svg/60px-CRP_OF-6.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/CRP_OF-5.svg/60px-CRP_OF-5.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/CRP_OF-4.svg/60px-CRP_OF-4.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/CRP_OF-3.svg/60px-CRP_OF-3.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/CRP_OF-2.svg/60px-CRP_OF-2.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Flag_of_Central_Reserve_Police_Forces.png/40px-Flag_of_Central_Reserve_Police_Forces.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/CRP_OR-9.svg/60px-CRP_OR-9.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/CRP_OR-8b.svg/60px-CRP_OR-8b.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/CRP_OR-8a.svg/60px-CRP_OR-8a.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/CRP_OR-7.svg/60px-CRP_OR-7.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Police_Head_Constable.png/60px-Police_Head_Constable.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Medallist2018.jpg/250px-Medallist2018.jpg",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/40px-Flag_of_India.svg.png",
+    "alt": "India",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/60px-Emblem_of_India.svg.png",
+    "alt": "Emblem of India",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Central Reserve Police Force - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Central_Reserve_Police_Force"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Maurice_Ravel_1925.jpg/330px-Maurice_Ravel_1925.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/%E3%80%8A%E4%BB%96%E5%B9%B4%E5%A5%B9%E6%97%A5%E3%80%8B%E8%87%BA%E5%8C%97%E9%A6%96%E6%98%A0%E5%85%B8%E7%A6%AE%EF%BC%8D%E8%A8%B1%E5%85%89%E6%BC%A2_01.png/330px-%E3%80%8A%E4%BB%96%E5%B9%B4%E5%A5%B9%E6%97%A5%E3%80%8B%E8%87%BA%E5%8C%97%E9%A6%96%E6%98%A0%E5%85%B8%E7%A6%AE%EF%BC%8D%E8%A8%B1%E5%85%89%E6%BC%A2_01.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Harry_Styles_-_Love_On_Tour_%40_Jeunesse_Arena_%2852555259636%29_%28cropped%29.jpg/330px-Harry_Styles_-_Love_On_Tour_%40_Jeunesse_Arena_%2852555259636%29_%28cropped%29.jpg",
+    "alt": "Harry Styles, đương kim chủ nhân của giải thưởng",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Snowflake_%28lumehelves%29.jpg/960px-Snowflake_%28lumehelves%29.jpg",
+    "alt": "Bông tuyết được chụp bằng kính hiển vi. Ảnh: Janek Lass",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/RHYDER_3.png/330px-RHYDER_3.png",
+    "alt": "Rhyder",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/ItsukushimaTorii7396.jpg/330px-ItsukushimaTorii7396.jpg",
+    "alt": "Thần đạo",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Notification-icon-Wikipedia-logo.svg/60px-Notification-icon-Wikipedia-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Wikimedia-logo_black.svg/60px-Wikimedia-logo_black.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Notification-icon-Wikibooks-logo.svg/60px-Notification-icon-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Notification-icon-Wikinews-logo.svg/60px-Notification-icon-Wikinews-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Notification-icon-Wikiquote.svg/60px-Notification-icon-Wikiquote.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Notification-icon-Wikisource-logo.svg/60px-Notification-icon-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Notification-icon-Wiktionary-logo.svg/60px-Notification-icon-Wiktionary-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Notification-icon-Wikivoyage-logo.svg/60px-Notification-icon-Wikivoyage-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Notification-icon-Commons-logo.svg/60px-Notification-icon-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Notification-icon-Wikispecies-logo.svg/60px-Notification-icon-Wikispecies-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Notification-icon-Wikiversity-logo.svg/60px-Notification-icon-Wikiversity-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Notification-icon-Wikidata-logo.svg/60px-Notification-icon-Wikidata-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/MediaWiki-2020-small-icon.svg/60px-MediaWiki-2020-small-icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Notification-icon-Meta-logo.svg/60px-Notification-icon-Meta-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://vi.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia, bách khoa toàn thư mở",
+    "pageUrl": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/%D8%AA%D8%B1%D8%AD%D9%8A%D8%A8.svg/960px-%D8%AA%D8%B1%D8%AD%D9%8A%D8%A8.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Tango_style_Wikipedia_Icon.svg/20px-Tango_style_Wikipedia_Icon.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Circle-icons-chat.svg/20px-Circle-icons-chat.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Circle-icons-typography-ar.svg/20px-Circle-icons-typography-ar.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Wikipedia_help_symbol.svg/20px-Wikipedia_help_symbol.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Circle-icons-tools.svg/20px-Circle-icons-tools.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Wikipedia%27s_W.svg/20px-Wikipedia%27s_W.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Stop_hand_rugen.png/20px-Stop_hand_rugen.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Creative-Tail-People-worker.svg/20px-Creative-Tail-People-worker.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Icon_Facebook.svg/20px-Icon_Facebook.svg.png",
+    "alt": "لحساب رسمي فل فيسبوك",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Icon_Twitter.svg/20px-Icon_Twitter.svg.png",
+    "alt": "لحساب رّسمي ف تويتر",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Instagram_circle.svg/20px-Instagram_circle.svg.png",
+    "alt": "لحساب رّسمي ف لإنستڭرام",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/YouTube_social_dark_circle_%282017%29.svg/20px-YouTube_social_dark_circle_%282017%29.svg.png",
+    "alt": "لحساب رّسمي ف ليوتيوب",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/HSutvald2.svg/40px-HSutvald2.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Football_in_Bloomington%2C_Indiana%2C_1995.jpg/250px-Football_in_Bloomington%2C_Indiana%2C_1995.jpg",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/HSBild.svg/40px-HSBild.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Common_Blackbird_%28Turdus_merula_mauritanicus%29_female.jpg/500px-Common_Blackbird_%28Turdus_merula_mauritanicus%29_female.jpg",
+    "alt": "أكايّا نتوا ف لپارك لوطني د سوس-ماسة",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/HS_exclamationmark.svg/40px-HS_exclamationmark.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/20px-Loudspeaker.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/HS_RTL_Exclamation.svg/40px-HS_RTL_Exclamation.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/HSWPedia.svg/40px-HSWPedia.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/20px-Loudspeaker.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Datum15.svg/40px-Datum15.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/HSAktuell.svg/40px-HSAktuell.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/ary/thumb/b/bc/2024_WAFCON_%28logo%29.png/120px-2024_WAFCON_%28logo%29.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/HSEditor.svg/40px-HSEditor.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Wikimedia-logo-circle.svg/40px-Wikimedia-logo-circle.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "Commons",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "ويكي كتوبا",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/60px-Wikidata-logo.svg.png",
+    "alt": "ويكي داتا",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/60px-Wikinews-logo.svg.png",
+    "alt": "ويكي أخبار",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/60px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "ويكي مصدر",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "Vikicur",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/40px-Wikiversity-logo.svg.png",
+    "alt": "ويكي جاميعة",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "ويكي تصافيرة",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/40px-Wiktionary-logo.svg.png",
+    "alt": "ويكي قاموس",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Mediawiki_logo_icon_proposal_%283_colors%29.svg/40px-Mediawiki_logo_icon_proposal_%283_colors%29.svg.png",
+    "alt": "ميدياويكي",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "ميطاويكي",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://ary.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "ويكيپيديا",
+    "pageUrl": "https://ary.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D9%84%D9%88%D9%84%D8%A7"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Wikipedia-logo-v2-mos.svg/250px-Wikipedia-logo-v2-mos.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Bluebg_rounded.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/HSutvald2.svg/40px-HSutvald2.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/2016.05-441-131ap_wall_Lorop%C3%A9ni_Ruins_nr.Lorop%C3%A9ni%28Poni_Prv.%29%2CBF_sun15may2016-1106h.jpg/250px-2016.05-441-131ap_wall_Lorop%C3%A9ni_Ruins_nr.Lorop%C3%A9ni%28Poni_Prv.%29%2CBF_sun15may2016-1106h.jpg",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Bluebg_rounded.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/HSbra2.svg/40px-HSbra2.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/HARUNA_IDDRISU.jpg/250px-HARUNA_IDDRISU.jpg",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Bluebg_rounded.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Book_red%3B_question_marks.svg/40px-Book_red%3B_question_marks.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Qur%27an_and_Rehal.jpg/250px-Qur%27an_and_Rehal.jpg",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Bluebg_rounded.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/PL_Wiki_InM_ikona.svg/40px-PL_Wiki_InM_ikona.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Hadja_Fatimata_Ouattara_%2835118940862%29.jpg/500px-Hadja_Fatimata_Ouattara_%2835118940862%29.jpg",
+    "alt": "Thomas Sankara",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Bluebg_rounded.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/W-circle.svg/40px-W-circle.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Burkina_Faso_regions_map.png/500px-Burkina_Faso_regions_map.png",
+    "alt": "Burkina Faso regions map.png",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Bluebg_rounded.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Book_red%3B_question_marks.svg/40px-Book_red%3B_question_marks.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Troupe_de_danseurs_Mossi.jpg/500px-Troupe_de_danseurs_Mossi.jpg",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Bluebg_rounded.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/RU_Wiki_FLP_icon.svg/40px-RU_Wiki_FLP_icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/60px-Wiktionary-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/60px-Wikidata-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/60px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/60px-Wikiversity-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Bluebg_rounded.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/HSWikimedia.svg/40px-HSWikimedia.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://mos.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipidiya",
+    "pageUrl": "https://mos.wikipedia.org/wiki/Soraogo"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/9/94/Symbol_support_vote.svg/20px-Symbol_support_vote.svg.png",
+    "alt": "This is a good article. Click here for more information.",
+    "pageTitle": "Constantine VIII - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Constantine_VIII"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/88/Constantine_VIII_in_the_Exultet_roll_%282%29.jpg",
+    "alt": "",
+    "pageTitle": "Constantine VIII - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Constantine_VIII"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Romanos_et_Eudoxie.JPG/250px-Romanos_et_Eudoxie.JPG",
+    "alt": "",
+    "pageTitle": "Constantine VIII - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Constantine_VIII"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Constantine_VII_and_Romanos_II_solidus.jpg/250px-Constantine_VII_and_Romanos_II_solidus.jpg",
+    "alt": "",
+    "pageTitle": "Constantine VIII - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Constantine_VIII"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Histamenon_nomisma-Nicephorus_II_and_Basil_II-sb1776.jpg/250px-Histamenon_nomisma-Nicephorus_II_and_Basil_II-sb1776.jpg",
+    "alt": "",
+    "pageTitle": "Constantine VIII - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Constantine_VIII"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Histamenon_nomisma-John_I-sb1776.jpg/250px-Histamenon_nomisma-John_I-sb1776.jpg",
+    "alt": "",
+    "pageTitle": "Constantine VIII - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Constantine_VIII"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Histamenon_of_Basil_II_%26_Constantine_VIII.png/250px-Histamenon_of_Basil_II_%26_Constantine_VIII.png",
+    "alt": "",
+    "pageTitle": "Constantine VIII - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Constantine_VIII"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Histamenon_of_Constantine_VIII.png/250px-Histamenon_of_Constantine_VIII.png",
+    "alt": "",
+    "pageTitle": "Constantine VIII - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Constantine_VIII"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Appointment_of_Alexios_Stoudites_as_patriarch.png/250px-Appointment_of_Alexios_Stoudites_as_patriarch.png",
+    "alt": "",
+    "pageTitle": "Constantine VIII - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Constantine_VIII"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Emperor_Constantine_VIII_orders_the_blinding_of_Nikephoros_Komnenos.png/250px-Emperor_Constantine_VIII_orders_the_blinding_of_Nikephoros_Komnenos.png",
+    "alt": "",
+    "pageTitle": "Constantine VIII - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Constantine_VIII"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Byzantine_imperial_flag%2C_14th_century%2C_square.svg/40px-Byzantine_imperial_flag%2C_14th_century%2C_square.svg.png",
+    "alt": "flag",
+    "pageTitle": "Constantine VIII - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Constantine_VIII"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Constantine VIII - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Constantine_VIII"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png",
+    "alt": "Edit this at Wikidata",
+    "pageTitle": "Constantine VIII - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Constantine_VIII"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Constantine VIII - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Constantine_VIII"
+  },
   {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Wikipedia-logo-blank.svg/500px-Wikipedia-logo-blank.svg.png",
     "alt": "",
