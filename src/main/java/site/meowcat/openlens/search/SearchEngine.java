@@ -1,6 +1,6 @@
-package com.searchengine.search;
+package site.meowcat.openlens.search;
 
-import com.searchengine.config.DatabaseConfig;
+import site.meowcat.openlens.config.DatabaseConfig;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

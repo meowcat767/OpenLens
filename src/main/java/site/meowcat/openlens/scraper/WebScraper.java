@@ -1,13 +1,18 @@
-package com.searchengine.scraper;
+package site.meowcat.openlens.scraper;
 
-import com.searchengine.config.DatabaseConfig;
+import site.meowcat.openlens.config.DatabaseConfig;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Web scraper that fetches pages and stores them in the database
@@ -23,10 +28,10 @@ public class WebScraper {
     }
 
     /**
-     * Scrape a single URL and store it in the database
+     * Scrape a single URL and return the result
      */
-    public boolean scrapeUrl(String url) {
-        System.out.println("Scraping: " + url);
+    public ScrapeResult scrapeUrl(String url) {
+        System.out.println("Crawling: " + url);
 
         try {
             // Fetch the page
@@ -35,28 +40,44 @@ public class WebScraper {
                     .timeout(TIMEOUT_MS)
                     .get();
 
-            // Extract title and content
+            // Extract title, content, and links
             String title = doc.title();
             String content = extractContent(doc);
+            Set<String> links = extractLinks(doc, url);
 
             // Store in database
             storeInDatabase(url, title, content);
 
-            System.out.println("✓ Successfully scraped: " + title);
-            return true;
+            System.out.println("✓ Indexed: " + title + " (" + links.size() + " new links)");
+            return new ScrapeResult(true, links);
 
         } catch (IOException e) {
             System.err.println("✗ Error fetching " + url + ": " + e.getMessage());
-            return false;
+            return new ScrapeResult(false, Collections.emptySet());
         } catch (SQLException e) {
             System.err.println("✗ Database error for " + url + ": " + e.getMessage());
-            return false;
+            return new ScrapeResult(false, Collections.emptySet());
         }
     }
 
-    /**
-     * Extract meaningful text content from the document
-     */
+    private Set<String> extractLinks(Document doc, String baseUrl) {
+        Set<String> links = new HashSet<>();
+        Elements elements = doc.select("a[href]");
+
+        for (Element element : elements) {
+            String link = element.attr("abs:href");
+            // Basic validation to ensure useful http/https links
+            if (isValidLink(link)) {
+                links.add(link);
+            }
+        }
+        return links;
+    }
+
+    private boolean isValidLink(String url) {
+        return url != null && (url.startsWith("http://") || url.startsWith("https://"));
+    }
+
     private String extractContent(Document doc) {
         // Remove script and style elements
         doc.select("script, style, nav, footer, header").remove();
@@ -64,12 +85,22 @@ public class WebScraper {
         // Get text from body
         String content = doc.body().text();
 
-        // Limit content length to avoid huge text blocks
+        // Limit content length
         if (content.length() > 50000) {
             content = content.substring(0, 50000);
         }
 
         return content;
+    }
+
+    public static class ScrapeResult {
+        public final boolean success;
+        public final Set<String> discoveredLinks;
+
+        public ScrapeResult(boolean success, Set<String> discoveredLinks) {
+            this.success = success;
+            this.discoveredLinks = discoveredLinks;
+        }
     }
 
     /**

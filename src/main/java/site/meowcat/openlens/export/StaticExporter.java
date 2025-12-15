@@ -1,8 +1,8 @@
-package com.searchengine.export;
+package site.meowcat.openlens.export;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.searchengine.config.DatabaseConfig;
+import site.meowcat.openlens.config.DatabaseConfig;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -36,9 +36,11 @@ public class StaticExporter {
 
     public static void main(String[] args) {
         String outputFile = args.length > 0 ? args[0] : "frontend/search-data.js";
+        export(outputFile);
+    }
 
-        System.out.println("=== Static Search Data Exporter ===");
-        System.out.println("Exporting database to: " + outputFile);
+    public static void export(String outputFile) {
+        // System.out.println("Exporting database to: " + outputFile);
 
         DatabaseConfig dbConfig = DatabaseConfig.getInstance();
         List<PageData> pages = new ArrayList<>();
@@ -65,16 +67,14 @@ public class StaticExporter {
                 pages.add(page);
             }
 
-            System.out.println("Loaded " + pages.size() + " pages from database");
-
             // Write to JS file
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             try (FileWriter writer = new FileWriter(outputFile)) {
                 writer.write("window.searchData = ");
                 gson.toJson(pages, writer);
                 writer.write(";");
-                System.out.println("✓ Successfully exported to " + outputFile);
-                System.out.println("File size: " + new java.io.File(outputFile).length() / 1024 + " KB");
+                // System.out.println("✓ Updated index: " + outputFile + " (" + pages.size() + "
+                // pages)");
             }
 
         } catch (SQLException | IOException e) {

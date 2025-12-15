@@ -1,4 +1,4 @@
-package com.searchengine.config;
+package site.meowcat.openlens.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

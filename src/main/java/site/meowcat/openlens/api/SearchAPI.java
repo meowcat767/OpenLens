@@ -1,7 +1,7 @@
-package com.searchengine.api;
+package site.meowcat.openlens.api;
 
-import com.searchengine.config.DatabaseConfig;
-import com.searchengine.search.SearchEngine;
+import site.meowcat.openlens.config.DatabaseConfig;
+import site.meowcat.openlens.search.SearchEngine;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
 
