@@ -59,15 +59,6 @@ When you scrape new pages:
 2. Run the exporter again to update `search-data.json`
 3. Refresh the browser page
 
-## Features
-
-✅ **No backend server required** - completely static
-✅ **Client-side search** - fast, instant results
-✅ **Simple Google-like UI** - clean and minimal
-✅ **Relevance ranking** - title matches weighted higher
-✅ **Snippet generation** - shows context around matches
-✅ **Highlighted terms** - query terms are bolded in results
-
 
 ## Search Algorithm
 
@@ -79,23 +70,3 @@ The client-side search:
 5. Sorts by relevance
 6. Generates snippets with highlighted terms
 
-## Advantages of Static Approach
-
-- ✅ No server to run or maintain
-- ✅ Can host on any static file server (GitHub Pages, Netlify, etc.)
-- ✅ Instant search results (no network latency)
-- ✅ Works offline once loaded
-- ✅ Simple deployment
-
-## Limitations
-
-- JSON file size grows with content (consider limiting to ~1000 pages)
-- Less sophisticated search than PostgreSQL full-text search
-- Need to re-export when database changes
-- All data loaded into browser memory
-
-## Tips
-
-- Keep content under 5000 characters per page (done automatically by exporter)
-- Re-export regularly to keep search data fresh
-- For large datasets (>1000 pages), consider keeping the API server approach
