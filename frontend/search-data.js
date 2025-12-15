@@ -4,35 +4,35 @@ window.searchData = [
     "url": "https://meowcat.site",
     "title": "Meowcat767 | Developer \u0026 Creator",
     "content": "Meowcat767 Hello there! 👋 I\u0027m a Java software developer, and my current focus is my implementation of mct (Meowcat\u0027s Text Editor). 💡 Want to download it? Check out the file server About Me I\u0027m a Java software developer passionate about creating useful tools and applications. Currently, I\u0027m focused on developing mct (Meowcat\u0027s Text Editor), a text editor implementation that I\u0027m building from the ground up. I maintain 28+ repositories across GitHub and my self-hosted Gitea instance. Most of my active development work happens on my Gitea server, where I work on various projects ranging from web applications to system utilities. When I\u0027m not coding, I enjoy contributing to open source projects, experimenting with new technologies, and building tools that make development workflows smoother. 🐙 GitHub 🔧 Gitea Main workspace Featured Projects mct (Meowcat\u0027s Text Editor) Java My implementation of a text editor, built with Java. Currently in active development and available for download. Download osu! Taiko MIDI Drums Python A Python tool for connecting MIDI Electronic Drum Kits to osu!(lazer) on Linux. Enables using real drum kits with osu!. View on GitHub Viewed Java Viewed is an MPEG/AAC/Other open format media player. View on GitHub Rolling Girl for micro:bit Embedded Wowaka\u0027s \"Rolling Girl\" implemented for the BBC micro:bit. Plays the song using a connected speaker or buzzer. View on GitHub More Projects Explore Check out all my projects on GitHub and Gitea. Most of my active work is on my self-hosted Gitea instance. GitHub Gitea 🕐 00:00:00 Current Time 💡 Loading... Did You Know? Quick Links 🖼️ Gallery Images of all time 💻 Projects My open source work 📊 Status Service status 🔧 Git Server Code repository 📦 File Server Downloads \u0026 files",
-    "scrapedAt": "2025-12-15 19:16:24.134038"
+    "scrapedAt": "2025-12-15 19:19:01.865062"
   },
   {
     "id": 4,
     "url": "https://en.wikipedia.org/wiki/Linux",
     "title": "Linux - Wikipedia",
     "content": "Jump to content Checked From Wikipedia, the free encyclopedia This is the latest accepted revision, reviewed on 13 December 2025. Family of Unix-like operating systems This article is about the family of operating systems. For the kernel, see Linux kernel. For other uses, see Linux (disambiguation). Operating system Linux Tux the penguin, the mascot of Linux[1] Developer Community contributors, Linus Torvalds Written in C, assembly language OS family Unix-like Working state Current Source model Open-source Initial release September 17, 1991; 34 years ago (1991-09-17)[2] Repository git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/ Marketing target Cloud computing, embedded devices, mainframe computers, mobile devices, personal computers, servers, supercomputers Available in Multilingual Supported platforms Alpha, ARC, ARM, C-Sky, Hexagon, LoongArch, m68k, Microblaze, MIPS, Nios II, OpenRISC, PA-RISC, PowerPC, RISC-V, s390, SuperH, SPARC, x86, Xtensa Kernel type Monolithic Userland util-linux by standard,[a] various alternatives, such as Busybox,[b] GNU,[c] Plan 9 from User Space[d] and Toybox[e] Influenced by Minix, Unix Default user interface Most distributions include a desktop environment (GUI). License GPLv2 (Linux kernel)[14][f] Official website kernel.org Articles in the series Linux kernel Linux distribution Linux (/ˈlɪnʊks/ LIN-uuks)[16] is a family of open source Unix-like operating systems based on the Linux kernel,[17] an operating system kernel first released on September 17, 1991, by Linus Torvalds.[18][19][20] Linux is typically packaged as a Linux distribution (distro), which includes the kernel and supporting system software and libraries—most of which are provided by third parties—to create a complete operating system, designed as a clone of Unix and released under the copyleft GPL license.[21] Thousands of Linux distributions exist, many based directly or indirectly on other distributions;[22][23] popular Linux distributions[24][25][26] include Debian, Fedora Linux, Linux Mint, Arch Linux, and Ubuntu, while commercial distributions include Red Hat Enterprise Linux, SUSE Linux Enterprise, and ChromeOS. Linux distributions are frequently used in server platforms.[27][28] Many Linux distributions use the word \"Linux\" in their name, but the Free Software Foundation uses and recommends the name \"GNU/Linux\" to emphasize the use and importance of GNU software in many distributions, causing some controversy.[29][30] Other than the Linux kernel, key components that make up a distribution may include a display server (windowing system), a package manager, a bootloader and a Unix shell. Linux is one of the most prominent examples of free and open-source software collaboration. While originally developed for x86 based personal computers, it has since been ported to more platforms than any other operating system,[31] and is used on a wide variety of devices including PCs, workstations, mainframes and embedded systems. Linux is the predominant operating system for servers and is also used on all of the world\u0027s 500 fastest supercomputers.[g] When combined with Android, which is Linux-based and designed for smartphones, they have the largest installed base of all general-purpose operating systems. Overview [edit] The Linux kernel was designed by Linus Torvalds, following the lack of a working kernel for GNU, a Unix-compatible operating system made entirely of free software that had been undergoing development since 1983 by Richard Stallman. A working Unix system called Minix was later released but its license was not entirely free at the time[32] and it was made for an educative purpose. The first entirely free Unix for personal computers, 386BSD, did not appear until 1992, by which time Torvalds had already built and publicly released the first version of the Linux kernel on the Internet.[33] Like GNU and 386BSD, Linux did not have any Unix code, being a fresh reimplementation, and therefore avoided the legal issues.[34] Linux distributions became popular in the 1990s and effectively made Unix technologies accessible to home users on personal computers whereas previously it had been confined to sophisticated workstations.[35] Desktop Linux distributions include a windowing system such as X11 or Wayland and a desktop environment such as GNOME, KDE Plasma or Xfce. Distributions intended for servers may not have a graphical user interface at all or include a solution stack such as LAMP. The source code of Linux may be used, modified, and distributed commercially or non-commercially by anyone under the terms of its respective licenses, such as the GNU General Public License (GPL). The license means creating novel distributions is permitted by anyone[36] and is easier than it would be for an operating system such as macOS or Microsoft Windows.[37][38][39] The Linux kernel, for example, is licensed under the GPLv2, with an exception for system calls that allows code that calls the kernel via system ca",
-    "scrapedAt": "2025-12-15 19:16:22.417498"
+    "scrapedAt": "2025-12-15 19:19:00.249474"
   },
   {
     "id": 3,
     "url": "https://en.wikipedia.org/wiki/Stonehenge",
     "title": "Stonehenge - Wikipedia",
     "content": "Jump to content Coordinates: 51°10′44″N 1°49′34″W﻿ / ﻿51.17889°N 1.82611°W﻿ / 51.17889; -1.82611 From Wikipedia, the free encyclopedia Prehistoric monument in England For other uses, see Stonehenge (disambiguation). Stonehenge Stonehenge in July 2007 Stonehenge Map of Wiltshire showing the location of Stonehenge Location Wiltshire, England Region Salisbury Plain Coordinates 51°10′44″N 1°49′34″W﻿ / ﻿51.17889°N 1.82611°W﻿ / 51.17889; -1.82611 Type Monument Height Each standing stone was around 13 ft (4.0 m) high History Material Sarsen, Bluestone Founded Neolithic and Bronze Age Site notes Excavation dates Multiple Ownership The Crown Estate Management English Heritage Website www.english-heritage.org.uk/stonehenge UNESCO World Heritage Site Type Cultural Criteria i, ii, iii Designated 1986 (10th session) Part of Stonehenge, Avebury and Associated Sites Reference no. 373 Region Europe and North America Scheduled monument Official name Stonehenge, the Avenue, and three barrows adjacent to the Avenue forming part of a round barrow cemetery on Countess Farm[1] Designated 18 August 1882; 143 years ago (1882-08-18) Reference no. 1010140[1] Stonehenge is a prehistoric megalithic structure on Salisbury Plain in Wiltshire, England, two miles (3 km) west of Amesbury. It consists of an outer ring of vertical sarsen standing stones, each around 13 feet (4.0 m) high, seven feet (2.1 m) wide, and weighing around 25 tons, topped by connecting horizontal lintel stones which are held in place with mortise and tenon joints—a feature unique among contemporary monuments.[2][3] Inside is a ring of smaller bluestones. Inside, these are free-standing trilithons, two bulkier vertical sarsens joined by a single lintel. The whole monument, now in ruins, is aligned towards the sunrise on the summer solstice and sunset on the winter solstice. The stones are set within earthworks in the middle of the densest complex of Neolithic and Bronze Age monuments in England, including several hundred tumuli (burial mounds).[4] Stonehenge was constructed in several phases beginning about 3100 BC and continuing until about 1600 BC. The famous circle of large sarsen stones was placed between 2600 BC and 2400 BC. The surrounding circular earth bank and ditch, which constitute the earliest phase of the monument, have been dated to about 3100 BC. Radiocarbon dating suggests that the bluestones were given their current positions between 2400 and 2200 BC,[5] although they may have been at the site as early as 3000 BC.[6][7][8] One of the most famous landmarks in the United Kingdom, Stonehenge is regarded as a British cultural icon.[9] It has been a legally protected scheduled monument since the Ancient Monuments Protection Act 1882 was passed.[1] The site and its surroundings were added to UNESCO\u0027s list of World Heritage Sites in 1986. Stonehenge is owned by the Crown Estate and managed by English Heritage; the surrounding land is owned by the National Trust.[10][11] Stonehenge could have been a burial ground from its earliest beginnings.[12] Deposits containing human bone date from as early as 3000 BC, when the ditch and bank were first dug, and continued for at least another 500 years.[13] Etymology Watercolour of Stonehenge by Lucas de Heere, 1574[a] The Oxford English Dictionary cites Ælfric\u0027s 10th-century glossary, in which henge-cliff is given the meaning \u0027precipice\u0027, or stone; thus, the stanenges or Stanheng \"not far from Salisbury\" recorded by 11th-century writers are \"stones supported in the air\". In 1740, William Stukeley notes: \"Pendulous rocks are now called henges in Yorkshire ... I doubt not, Stonehenge in Saxon signifies the hanging stones.\"[16] Christopher Chippindale\u0027s Stonehenge Complete gives the derivation of the name Stonehenge as coming from the Old English words stān \u0027stone\u0027, and either hencg \u0027hinge\u0027 (because the stone lintels hinge on the upright stones) or hen(c)en \u0027to hang\u0027 or \u0027gallows\u0027 or \u0027instrument of torture\u0027 (though elsewhere in his book, Chippindale cites the \u0027suspended stones\u0027 etymology).[17] The \"henge\" portion has given its name to a class of monuments known as henges.[16] Archaeologists define henges as earthworks consisting of a circular banked enclosure with an internal ditch.[18] As often happens in archaeological terminology, this is a holdover from antiquarian use. Early history Plan of Stonehenge in 2004. After Cleal et al. and Pitts. Italicised numbers in the text refer to the labels on this plan. Trilithon lintels omitted for clarity. Holes that no longer, or never, contained stones are shown as open circles. Stones visible today are shown coloured. Mike Parker Pearson, leader of the Stonehenge Riverside Project based around Durrington Walls, noted that Stonehenge appears to have been associated with burial from the earliest period of its existence: Stonehenge was a place of burial from its beginning to its zenith in the mid third [sic] millennium B.C. The cremation burial dating to Stonehenge\u0027s sarsen stones p",
-    "scrapedAt": "2025-12-15 19:16:19.550627"
+    "scrapedAt": "2025-12-15 19:18:57.524277"
   },
   {
     "id": 2,
     "url": "https://en.wikipedia.org/wiki/England",
     "title": "England - Wikipedia",
     "content": "Jump to content Coordinates: 53°08′N 1°23′W﻿ / ﻿53.13°N 1.38°W﻿ / 53.13; -1.38 From Wikipedia, the free encyclopedia Country within the United Kingdom For other uses, see England (disambiguation). Not to be confused with United Kingdom. England Flag Anthem: None officially; Predominantly \"God Save the King\"[a] Location of England (dark green) – in Europe (green \u0026 dark grey) – in the United Kingdom (green) Status Country Capital and largest city London 51°30′N 0°7′W﻿ / ﻿51.500°N 0.117°W﻿ / 51.500; -0.117 National language English, BSL[1] Regional languages Cornish Ethnic groups (2021)[2] 81.0% White 9.6% Asian 4.2% Black 3.0% Mixed 2.2% other Religion (2021)[2] 46.3% Christianity 36.7% no religion 6.7% Islam 1.8% Hinduism 0.9% Sikhism 0.5% Judaism 0.5% Buddhism 0.6% other 6.0% not stated Demonym English[b] Sovereign state Legal jurisdiction United Kingdom England and Wales Government Direct rule by the UK Government within a parliamentary constitutional monarchy • Monarch Charles III Parliament of the United Kingdom • House of Commons 543 MPs (of 650) Establishment • Unification of Angles, Saxons and Danes By 12 July 927 • Union with Scotland 1 May 1707 Area • Total[d] 132,932 km2 (51,325 sq mi)[3] • Land[c] 130,310 km2 (50,310 sq mi)[4] Population • 2024 estimate 58,620,101[4] • 2021 census 56,490,048[2] • Density 450/km2 (1,165.5/sq mi)[4] GVA 2023 estimate • Total £2.113 trillion • Per capita £36,632[5] GDP (nominal) 2023 estimate • Total £2.330 trillion • Per capita £40,382[6] Currency Pound sterling (GBP; £) Time zone UTC+0 (GMT) • Summer (DST) UTC+1 (BST) Date format dd/mm/yyyy (AD) Calling code +44 ISO 3166 code GB-ENG England is a country that is part of the United Kingdom. It is located on the island of Great Britain, of which it covers about 62%, and more than 100 smaller adjacent islands. England shares a land border with Scotland to the north and another land border with Wales to the west, and is otherwise surrounded by the North Sea to the east, the English Channel to the south, the Celtic Sea to the south-west, and the Irish Sea to the west. Continental Europe lies to the south-east, and Ireland to the west. At the 2021 census, the population was 56,490,048. London is both the largest city and the capital. The area now called England was first inhabited by modern humans during the Upper Paleolithic. It takes its name from the Angles, a Germanic tribe who settled during the 5th and 6th centuries. England became a unified state in the 10th century and has had extensive cultural and legal impact on the wider world since the Age of Discovery, which began during the 15th century.[7] The Kingdom of England, which included Wales after 1535, ceased to be a separate sovereign state on 1 May 1707, when the Acts of Union brought into effect a political union with the Kingdom of Scotland that created the Kingdom of Great Britain.[8] England is the origin of the English language, the English legal system (which served as the basis for the common law systems of many other countries), association football, and the Anglican branch of Christianity; its parliamentary system of government has been widely adopted by other nations.[9] The Industrial Revolution began in 18th-century England, transforming its society into the world\u0027s first industrialised nation.[10] England is home to the two oldest universities in the English-speaking world: the University of Oxford, founded in 1096, and the University of Cambridge, founded in 1209. Both universities are ranked amongst the most prestigious in the world.[11][12] England\u0027s terrain chiefly consists of low hills and plains, especially in the centre and south. Upland and mountainous terrain is mostly found in the north and west, including Dartmoor, the Lake District, the Pennines, and the Shropshire Hills. The London metropolitan area has a population of over 15 million as of 2025, representing the United Kingdom\u0027s largest metropolitan area. England\u0027s population of 56.3 million comprises 84% of the population of the United Kingdom, largely concentrated around London, the South East, and conurbations in the Midlands, the North West, the North East, and Yorkshire, which each developed as major industrial regions during the 19th century.[13] Toponymy See also: Toponymy of England The name \"England\" is derived from the Old English name Englaland, which means \"land of the Angles\".[14] The Angles were one of the Germanic tribes that settled in Great Britain during the Early Middle Ages. They came from the Angeln region of what is now the German state of Schleswig-Holstein.[15] The earliest recorded use of the term, as \"Engla londe\", is in the late-ninth-century translation into Old English of Bede\u0027s Ecclesiastical History of the English People. The term was then used to mean \"the land inhabited by the English\", and it included English people in what is now south-east Scotland but was then part of the English kingdom of Northumbria. The Anglo-Saxon Chronicle recorded that the D",
-    "scrapedAt": "2025-12-15 19:16:16.601259"
+    "scrapedAt": "2025-12-15 19:18:54.62173"
   },
   {
     "id": 1,
     "url": "https://en.wikipedia.org/",
     "title": "Wikipedia, the free encyclopedia",
     "content": "Jump to content From Wikipedia, the free encyclopedia Welcome to Wikipedia , the free encyclopedia that anyone can edit. 305,954 active editors 7,106,245 articles in English From today\u0027s featured article Simon Cameron (1799–1889) was an American politician who was elected senator from Pennsylvania four times, and was War Secretary under Lincoln at the start of the Civil War. At first a supporter of James Buchanan, whom he succeeded in the Senate when Buchanan became Secretary of State in 1845, Cameron broke with Buchanan and the Democrats by the 1850s. An opponent of slavery, he briefly joined the Know Nothings before winning another term in the Senate as a Republican in 1857. He helped nominate and elect Lincoln, but rumors of corruption surrounded him; it was with reluctance that Lincoln appointed him to the cabinet. He did not do well in his post, and Lincoln made him minister to Russia in 1862, a post he held briefly. He rebuilt his political machine in Pennsylvania, winning a third term in the Senate in 1867. After ten years he resigned, arranging the election of his son, Don Cameron, in his place. Simon Cameron lived to age 90; his machine dominated local politics until the 1920s. (Full article...) Recently featured: Commander Keen in Invasion of the Vorticons Scott Zolak Theodosius III Archive By email More featured articles About Did you know ... A rocking bed ... that Jessie Wright, director of physical medicine at the D.T. Watson Home for Crippled Children, helped invent the rocking bed (pictured) as a treatment for polio? ... that the Pacific Australia Labour Mobility scheme has been criticised for placing workers at risk of modern slavery? ... that G. Michael Brown said that his 1980 conviction of four mobsters showed that the Mafia wasn\u0027t merely \"a figment of Hollywood\u0027s imagination\"? ... that a Super Bowl-winning defensive tackle went on to become a U.S. Army chaplain? ... that upon receiving her pay from His Master\u0027s Voice, Asiah Aman was taught by an executive how to open a bank account? ... that while the 2024 WDF World Darts Championship final featured a 70-year-old, the 2025 final featured a 15-year-old? ... that Indonesian ambassador Niniek Kun Naryatie initially wanted to resign as a diplomat after giving birth to her first child, but her husband convinced her not to do so? ... that India\u0027s Central Reserve Police Force tested the Trichy assault rifle in mud, rain, and saltwater conditions for reliability and accuracy before ordering the rifle? ... that a restaurant hired Frank Deig to eat its food? Archive Start a new article Nominate an article In the news Rosen Zhelyazkov Sixteen people, including a gunman, are killed in a mass shooting attack on a Hanukkah celebration at Bondi Beach in Sydney. Bulgarian prime minister Rosen Zhelyazkov (pictured) and his government resign after two weeks of protests. Clair Obscur: Expedition 33 wins Game of the Year and eight other awards at the Game Awards. In Australia, a ban on the use of certain social media platforms by under-16s comes into effect. Ongoing: Gaza war timeline genocide Russo-Ukrainian war timeline Sudanese civil war timeline Recent deaths: Ra\u0027ad Sa\u0027ad Jenista Mhagama Harold Wayne Nichols Joanna Trollope Pablo Rodríguez Grez George Mira More current events Nominate an article On this day December 15: First Day of Hanukkah (Judaism, 2025) Constantine VIII 1025 – Constantine VIII (depicted) became the sole Byzantine emperor, 63 years after being crowned co-emperor. 1890 – Sitting Bull, a Hunkpapa Lakota leader, was killed on Standing Rock Sioux Reservation in South Dakota by U.S. Indian agency police. 1939 – The American historical epic film Gone With the Wind, adapted from Margaret Mitchell\u0027s Pulitzer Prize–winning novel of the same name, premiered in Atlanta, Georgia. 1945 – The US-led occupying forces ordered the government of Japan to cease state support for Shinto. 2019 – Citizenship Amendment Act protests: 10 to 15 local women blockaded a major road in Delhi, India, to protest the exclusion of Muslims from the amended Citizenship Act. David Teniers the Younger (bapt. 1610) Sarah Trimmer (d. 1810) Vallabhbhai Patel (d. 1950) Bob Feller (d. 2010) More anniversaries: December 14 December 15 December 16 Archive By email List of days of the year About From today\u0027s featured list The Gold Coast skyline The City of Gold Coast is a local government area (LGA) in the Australian state of Queensland, that is divided into 81 suburbs and localities. With a population of 681,389 people, it is the second largest LGA by population in Australia, behind the City of Brisbane. Established in 1948, it encompasses the Gold Coast and the nearby hinterland. The LGA is bordered by the Scenic Rim Region to the west, the Queensland state border to the south, the Albert and Logan Rivers to the north and the Coral Sea to the east. The largest division by population is the suburb of Southport (36,786 people) and the smallest division is the Southern Moreton B",
-    "scrapedAt": "2025-12-15 19:16:11.319862"
+    "scrapedAt": "2025-12-15 19:18:49.321093"
   },
   {
     "id": 202,
@@ -3487,4 +3487,971 @@ window.searchData = [
   }
 ];
 
-window.imageData = [];
+window.imageData = [
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/Pending-protection-shackle.svg/20px-Pending-protection-shackle.svg.png",
+    "alt": "Page protected with pending changes",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/250px-Tux.svg.png",
+    "alt": "Tux the penguin",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Linus_Torvalds_%28cropped%29.jpg/234px-Linus_Torvalds_%28cropped%29.jpg",
+    "alt": "Linus Torvalds",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Linux_0_12.jpg/250px-Linux_0_12.jpg",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Nexus_5X_%28White%29.jpg/120px-Nexus_5X_%28White%29.jpg",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/ChromebookStaplesStore.jpg/250px-ChromebookStaplesStore.jpg",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/In_flight_system_Linux_bootup_flat.jpg/250px-In_flight_system_Linux_bootup_flat.jpg",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Custom_Miniature_Linux_Server_%282005%29.jpeg/250px-Custom_Miniature_Linux_Server_%282005%29.jpeg",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/GNOME_Shell.png/250px-GNOME_Shell.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/VirtualBox_debian64_XFCE_Hebrew.png/250px-VirtualBox_debian64_XFCE_Hebrew.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Fedora_Linux_40_KDE_Plasma.png/250px-Fedora_Linux_40_KDE_Plasma.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/I3_window_manager_screenshot.png/250px-I3_window_manager_screenshot.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Unix_timeline.en.svg/960px-Unix_timeline.en.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linux_kernel_ubiquity.svg/960px-Linux_kernel_ubiquity.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/LinuxWasch3.jpg/250px-LinuxWasch3.jpg",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Gnulinux.svg/250px-Gnulinux.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/0/06/Wiktionary-logo-v2.svg/40px-Wiktionary-logo-v2.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/40px-Wikinews-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wikiversity_logo_2017.svg/40px-Wikiversity_logo_2017.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/20px-NewTux.svg.png",
+    "alt": "icon",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/20px-Free_and_open-source_software_logo_%282009%29.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/20px-Symbol_category_class.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/20px-NewTux.svg.png",
+    "alt": "icon",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/20px-Symbol_list_class.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6a/Symbol_na_class.svg/20px-Symbol_na_class.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/20px-NewTux.svg.png",
+    "alt": "icon",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/20px-Symbol_category_class.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/20px-Symbol_category_class.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Symbol_portal_class.svg/20px-Symbol_portal_class.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/20px-Symbol_category_class.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/20px-Free_and_open-source_software_logo_%282009%29.svg.png",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/20px-NewTux.svg.png",
+    "alt": "icon",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png",
+    "alt": "Edit this at Wikidata",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Linux - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Linux"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/20px-Semi-protection-shackle.svg.png",
+    "alt": "Page semi-protected",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Stonehenge2007_07_30.jpg/250px-Stonehenge2007_07_30.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Wiltshire_UK_location_map.svg/250px-Wiltshire_UK_location_map.svg.png",
+    "alt": "Stonehenge is located in Wiltshire",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Archaeological_site_icon_%28red%29.svg/20px-Archaeological_site_icon_%28red%29.svg.png",
+    "alt": "Stonehenge",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Stonehenge_Lucas_de_Heere.jpg/330px-Stonehenge_Lucas_de_Heere.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Stonehenge_plan.jpg/250px-Stonehenge_plan.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Stonehenge_phase_one.jpg/250px-Stonehenge_phase_one.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Stonehenge_dagger.jpg/250px-Stonehenge_dagger.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Stonehenge_diagram.svg/250px-Stonehenge_diagram.svg.png",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Stone_Plan.jpg/250px-Stone_Plan.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Stonehenge_sunrise_sunset_azimuth.svg/250px-Stonehenge_sunrise_sunset_azimuth.svg.png",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Expansion_of_farming_in_western_Eurasia%2C_9600%E2%80%934000_BCE.png/250px-Expansion_of_farming_in_western_Eurasia%2C_9600%E2%80%934000_BCE.png",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Stonehenge_-_Wiltonia_sive_Comitatus_Wiltoniensis%3B_Anglice_Wilshire_%28Atlas_van_Loon%29.jpg/250px-Stonehenge_-_Wiltonia_sive_Comitatus_Wiltoniensis%3B_Anglice_Wilshire_%28Atlas_van_Loon%29.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Constable_-_Stonehenge%2C_1629-1888%2C_2006AK8142.jpg/250px-Constable_-_Stonehenge%2C_1629-1888%2C_2006AK8142.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Stonehenge_1877.JPG/250px-Stonehenge_1877.JPG",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Stonehenge_on_27.01.08.jpg/250px-Stonehenge_on_27.01.08.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Stone_Henge_1920_restoration_-_newspaperphoto.jpg/250px-Stone_Henge_1920_restoration_-_newspaperphoto.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Stonehenge_from_the_air_-_Philip_Henry_Sharpe_%28Royal_Engineers%29_-_1906.jpg/250px-Stonehenge_from_the_air_-_Philip_Henry_Sharpe_%28Royal_Engineers%29_-_1906.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Stonehenge_stones_plan_by_Nash_et_al_2021.png/250px-Stonehenge_stones_plan_by_Nash_et_al_2021.png",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Stonehenge_Heel_Stone_-_panoramio_%282%29.jpg/250px-Stonehenge_Heel_Stone_-_panoramio_%282%29.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Sun_behind_the_Heel_Stone.jpg/250px-Sun_behind_the_Heel_Stone.jpg",
+    "alt": "The sun is directly behind the Heel Stone at sunrise on the summer solstice",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/BLEgerton3028Fol30rStonehengeCropped.jpg/330px-BLEgerton3028Fol30rStonehengeCropped.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Stonehenge_and_Aerodrome_1928.jpg/250px-Stonehenge_and_Aerodrome_1928.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Stonehenge_development_plots.png/250px-Stonehenge_development_plots.png",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Summer_Solstice_Sunrise_over_Stonehenge_2005.jpg/250px-Summer_Solstice_Sunrise_over_Stonehenge_2005.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Stonehenge84.jpg/250px-Stonehenge84.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Stonehenge_cloudy_sunset.jpg/250px-Stonehenge_cloudy_sunset.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Stonehenge_visitors_centre.png/330px-Stonehenge_visitors_centre.png",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/40px-Flag_of_the_United_Kingdom.svg.png",
+    "alt": "flag",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/P_history.svg/40px-P_history.svg.png",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/40px-Wikidata-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Stonehenge_Closeup.jpg/120px-Stonehenge_Closeup.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/20px-Symbol_category_class.svg.png",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Stonehenge-Green.jpg/120px-Stonehenge-Green.jpg",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png",
+    "alt": "Edit this at Wikidata",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Stonehenge - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Stonehenge"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Extended-protection-shackle.svg/20px-Extended-protection-shackle.svg.png",
+    "alt": "Page extended-confirmed-protected",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+    "alt": "Flag of England",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/England_in_the_UK_and_Europe.svg/250px-England_in_the_UK_and_Europe.svg.png",
+    "alt": "Location of England (dark green) – in Europe (green \u0026 dark grey) – in the United Kingdom (green)",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Stonehenge%2C_Condado_de_Wiltshire%2C_Inglaterra%2C_2014-08-12%2C_DD_18.JPG/250px-Stonehenge%2C_Condado_de_Wiltshire%2C_Inglaterra%2C_2014-08-12%2C_DD_18.JPG",
+    "alt": "Sun shining through row of upright standing stones with other stones horizontally on the top.",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/London_-_British_Museum_-_2453.jpg/250px-London_-_British_Museum_-_2453.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Housesteads_Roman_Fort_aerial.jpg/250px-Housesteads_Roman_Fort_aerial.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Sutton_Hoo_replica_%28face%29.jpg/250px-Sutton_Hoo_replica_%28face%29.jpg",
+    "alt": "Studded and decorated metallic mask of human face.",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/King_Henry_V_at_the_Battle_of_Agincourt.jpg/250px-King_Henry_V_at_the_Battle_of_Agincourt.jpg",
+    "alt": "King Henry V at the Battle of Agincourt, 1415.",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/After_Hans_Holbein_the_Younger_%281497-8-1543%29_-_Henry_VIII_%281491-1547%29_-_RCIN_404438_-_Royal_Collection.jpg/250px-After_Hans_Holbein_the_Younger_%281497-8-1543%29_-_Henry_VIII_%281491-1547%29_-_RCIN_404438_-_Royal_Collection.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Elizabeth_I_in_Parliament_Robes.jpg/250px-Elizabeth_I_in_Parliament_Robes.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/JamesIEngland_%28cropped%29.jpg/250px-JamesIEngland_%28cropped%29.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Charles_II_of_England.jpeg/250px-Charles_II_of_England.jpeg",
+    "alt": "Painting of seated male figure, with long black hair wearing a white cape and breeches.",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/CanalettoSomersetHouseTerrace.jpg/250px-CanalettoSomersetHouseTerrace.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Turner%2C_The_Battle_of_Trafalgar_%281822%29.jpg/250px-Turner%2C_The_Battle_of_Trafalgar_%281822%29.jpg",
+    "alt": "multi-storey square industrial buildings beyond a river",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Frith_A_Private_View.jpg/250px-Frith_A_Private_View.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Palace_of_Westminster%2C_London_-_Feb_2007.jpg/330px-Palace_of_Westminster%2C_London_-_Feb_2007.jpg",
+    "alt": "Photograph of rectangular floodlight building, reflected in water. The building has multiple towers including one at each end. The tower on the right includes an illuminated clock face.",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Royal_Courts_of_Justice_%286201094569%29.jpg/250px-Royal_Courts_of_Justice_%286201094569%29.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/English_ceremonial_counties_1998.svg/500px-English_ceremonial_counties_1998.svg.png",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Circle-information.svg/20px-Circle-information.svg.png",
+    "alt": "image attribution",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Malvern_Hills_-_England.jpg/250px-Malvern_Hills_-_England.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Glenridding%2C_Cumbria%2C_England_-_June_2009.jpg/250px-Glenridding%2C_Cumbria%2C_England_-_June_2009.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Eurasian_Wren_%28Troglodytes_troglodytes%29%2C_Icklesham%2C_Sussex.jpg/250px-Eurasian_Wren_%28Troglodytes_troglodytes%29%2C_Icklesham%2C_Sussex.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Richmond_Park_-_London_-_England_-_02102005.jpg/250px-Richmond_Park_-_London_-_England_-_02102005.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Canary_Wharf_Wide_View_2%2C_London_-_July_2009-2.jpg/250px-Canary_Wharf_Wide_View_2%2C_London_-_July_2009-2.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Aston_Martin_DB12_Volante_IMG_9323.jpg/250px-Aston_Martin_DB12_Volante_IMG_9323.jpg",
+    "alt": "A grey coloured convertible.",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/GodfreyKneller-IsaacNewton-1689.jpg/250px-GodfreyKneller-IsaacNewton-1689.jpg",
+    "alt": "Torso of man with long white hair and dark coloured jacket",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/St_Pancras_Railway_Station_2012-06-23.jpg/250px-St_Pancras_Railway_Station_2012-06-23.jpg",
+    "alt": "red stone building with tall clock tower in corner",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Den_Brook_Wind_Farm_from_Main_Road.jpg/250px-Den_Brook_Wind_Farm_from_Main_Road.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Sir_W.H._Beveridge%2C_head-and-shoulders_portrait%2C_facing_left.jpg/250px-Sir_W.H._Beveridge%2C_head-and-shoulders_portrait%2C_facing_left.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/England_counties_population_%28crop%29.png/250px-England_counties_population_%28crop%29.png",
+    "alt": "Map of England with regions shaded in different shades of blue.",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/England_and_Wales_population_cartogram_districts.svg/250px-England_and_Wales_population_cartogram_districts.svg.png",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Westminster_Abbey%2C_west_facade%2C_August_2014.jpg/250px-Westminster_Abbey%2C_west_facade%2C_August_2014.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Radcliffe_Camera_by_Fenlio.jpg/250px-Radcliffe_Camera_by_Fenlio.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Bodiam-castle-10My8-1197.jpg/250px-Bodiam-castle-10My8-1197.jpg",
+    "alt": "A castle of square plan surrounded by a water-filled moat. It has round corner towers and a forbidding appearance.",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Stourhead_lake_in_midsummer_-_panoramio.jpg/250px-Stourhead_lake_in_midsummer_-_panoramio.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/The_King_joins_the_hands_of_Robin_Hood_and_Maid_Marian.jpg/250px-The_King_joins_the_hands_of_Robin_Hood_and_Maid_Marian.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/English-cusine-exports.jpg/250px-English-cusine-exports.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/John_Constable_The_Hay_Wain.jpg/250px-John_Constable_The_Hay_Wain.jpg",
+    "alt": "A horse-drawn wagon crossing a river towards a cottage, with trees and fields beyond",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/John_William_Waterhouse_-_The_Lady_of_Shalott_-_Google_Art_Project_edit.jpg/250px-John_William_Waterhouse_-_The_Lady_of_Shalott_-_Google_Art_Project_edit.jpg",
+    "alt": "A painting of a red haired woman, sitting in a boat, surrounded by trees",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Geoffrey_Chaucer_%2817th_century%29.jpg/250px-Geoffrey_Chaucer_%2817th_century%29.jpg",
+    "alt": "A man dressed in grey with a beard, holding a rosary, depicted next to a coat of arms.",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Gnome-mime-sound-openclipart.svg/60px-Gnome-mime-sound-openclipart.svg.png",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/The_Beatles_arrive_at_JFK_Airport.jpg/250px-The_Beatles_arrive_at_JFK_Airport.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Royal_Albert_Hall_Rear%2C_London%2C_England_-_Diliff.jpg/250px-Royal_Albert_Hall_Rear%2C_London%2C_England_-_Diliff.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Peter_O%27Toole_in_Lawrence_of_Arabia.png/250px-Peter_O%27Toole_in_Lawrence_of_Arabia.png",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/London_Natural_History_Museum_Panorama.jpg/500px-London_Natural_History_Museum_Panorama.jpg",
+    "alt": "A museum building entrance.",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Footbridge_to_Media_City%2C_Salford_-_geograph.org.uk_-_6131368.jpg/250px-Footbridge_to_Media_City%2C_Salford_-_geograph.org.uk_-_6131368.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Euro_2022_Final_England_v_Germany_%2852254519898%29.jpg/250px-Euro_2022_Final_England_v_Germany_%2852254519898%29.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Mansell_in_his_Ferrari_641_-_1990_British_GP.jpg/250px-Mansell_in_his_Ferrari_641_-_1990_British_GP.jpg",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Tudor_Rose.svg/250px-Tudor_Rose.svg.png",
+    "alt": "A red and white flower.",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Royal_arms_of_England.svg/250px-Royal_arms_of_England.svg.png",
+    "alt": "A red shield tapers to its bottom end; on it are three stylised golden lions with blue claws.",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/40px-Flag_of_England.svg.png",
+    "alt": "flag",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/0/06/Wiktionary-logo-v2.svg/40px-Wiktionary-logo-v2.svg.png",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/40px-Wikinews-logo.svg.png",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wikiversity_logo_2017.svg/40px-Wikiversity_logo_2017.svg.png",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Openstreetmap_logo.svg/20px-Openstreetmap_logo.svg.png",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/40px-Flag_of_England.svg.png",
+    "alt": "England",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png",
+    "alt": "Edit this at Wikidata",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "England - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/England"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Smn_Cameron-SecofWar_%28cropped%29.jpg/250px-Smn_Cameron-SecofWar_%28cropped%29.jpg",
+    "alt": "Simon Cameron",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Wellcome_Collection_Rocking_Bed.jpg/250px-Wellcome_Collection_Rocking_Bed.jpg",
+    "alt": "A rocking bed",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Rosen_Zhelyazkov_2025_%28cropped%29.jpg/120px-Rosen_Zhelyazkov_2025_%28cropped%29.jpg",
+    "alt": "Rosen Zhelyazkov in January 2025",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Constantine_VIII_in_the_Exultet_roll_%282%29.jpg/194px-Constantine_VIII_in_the_Exultet_roll_%282%29.jpg",
+    "alt": "Constantine VIII",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Gold_Coast_skyline_%28Unsplash%29.jpg/250px-Gold_Coast_skyline_%28Unsplash%29.jpg",
+    "alt": "The Gold Coast skyline",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/McClure_Tunnel_west.jpg/500px-McClure_Tunnel_west.jpg",
+    "alt": "McClure Tunnel",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "Commons logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MediaWiki-2020-icon.svg/40px-MediaWiki-2020-icon.svg.png",
+    "alt": "MediaWiki logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "Meta-Wiki logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "Wikibooks logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/60px-Wikidata-logo.svg.png",
+    "alt": "Wikidata logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/60px-Wikinews-logo.svg.png",
+    "alt": "Wikinews logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "Wikiquote logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "Wikisource logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "Wikispecies logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wikiversity_logo_2017.svg/60px-Wikiversity_logo_2017.svg.png",
+    "alt": "Wikiversity logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "Wikivoyage logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/0/06/Wiktionary-logo-v2.svg/40px-Wiktionary-logo-v2.svg.png",
+    "alt": "Wiktionary logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/60px-Wiktionary-logo.svg.png",
+    "alt": "Wiktionary logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/"
+  }
+];
