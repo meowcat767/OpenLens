@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 52,
+    "url": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid",
+    "title": "Wikipedia",
+    "content": "Zum Inhalt springen Vun Wikipedia Rheifränggisch Pälzisch Hessisch Siedfränggisch Lothringisch Rheifränggischi Wikipedia Die Rheifränggisch Wikipedia is ä Projekt zum Uffbau vun änner Enzyklopädie mid fraie Inhalde in rheifränggische Dialegd: Pälzisch, Hessisch un Lothringisch. In denne Dialegd, konn do än jede ebbes naischraiwe un mid saim Wisse baidrache. Jede Ardiggel ime rheifränggische Dialekt, isch willkumme. Du kannsch do awa ach mitmache, wann Du e sidfränkische Dialegd („Nordbadisch“, „Brigantedaitsch“) redsch. Im Herbschd 2010 isch die Pälzisch Wikipedia gschdadd un im Summa 2013 ischse zur Rheifränggisch Wikipedia worre. Saidm Auguscht 2013 sinn noch die finf Newebrojegd dezukumme. Haid, om 9.12.2025, hods do 2.832 Ardiggel. Des neischde was bassierd isch findschd do. De Adigl vum Monad de Adam Remmele De Adam Remmele (* 26. Dezember 1877 in Altnaidorf, fraireligies; † 9. September 1951 in Fraiburch) isch e daitsche Bolitiker vun de SPD in Bade gwest. Er isch zwäämol Badische Staatsbresidänt gwest: 1922/23 un 1927/28. De Remmele ghert zu de wichtichschte badische SPD-Bolitiker in de Weimarer Zait. Bis 1918 De Adam Remmele isch in Altnaidorf im Ourewald, wo sait 1975 zu Schenau ghert, uf d Welt kumme als Suhn vum Peter Remmele (1850-1891), ämme Miller, un de Katharina geb. Daub (1858-1941). Er hot no drai Brierer ghatt. De Remmele isch in Altnaidorf uf d Volksschul gange, denn het er 1890 im pälzische Ludwichshafe Miller gelehrt. Noch de Gsellebriefung 1893 isch er uf Wannerschaft durch Sieddaitschland gange. Wo er noch e baar Johr uf Ludwichshafe zerickkumme isch, isch er 1894 in d SPD un in d Gwerkschaft aigedrore. Er hot als Miller in Mihle gschafft un an de Sunndach hot er Werwung gmacht fer d Gwerkschaft. Weche dem isch er vum Unternemmerverband bal uf e Schwarze Lischt gsetzt worre un hot ach e baar Mol sai Ärwetsstell verloure. Mit 21 isch er schun im Vorstand vum Berufsverband, vun de Gwerksdchaft un ach vun de Bartei gwest. waidalese ... Voaschläch fär die nägschde Ardiggl vum Monad konn jeda am Schdammdisch mache. Hosch gwisst... ... dass es am Niederrhoi (bei Kalkar) un in Braunschweig (Veldehof) Pälzische Schbroochinsle gibt? ... dass es in Hääschde 1914 verzäh Schuhfawerigge gewwe hot, un 1961 sogaa 36, haid awwer blooß noch ääni? Newebrojegd Wiktionary Werdabuch Wikisource Texde Wikibooks Bischer Wikiquote Schprisch Wikinews Nochrischde Kumm mach mid Om Schdommdisch konschd frooche, Voaschleesch mache un mide Laid babble. Adiggl, wus in jeda Wikipedia gewwe solld. Boadaal finschd doo, s\u0027 Boadaal fa Schbaija un s\u0027 Winza Boadaal. Doo konschd gugge, wasfa Adiggl s\u0027hodd. Doo konschd gugge, wasfa Adiggl s\u0027iwwa die Palz hodd. Wegschd schun wasfan Adiggl schraiwe wilschd, donn gibschd eefach de Nome vum Adiggl do unne oi, drigschd uffde Gnobb un fongschd oa. Naies rund ums Rheifränggische vum Najichkeide-Portal Buchen: Neuer Mundartweg verbindet Stadt mit Stadtteilen (Rhein-Neckar-Zeitung 20.05.) Liegen Heidelberg, Mannheim und Mosbach im falschen Land? (Rhein-Neckar-Zeitung 19.05.) Duden „Pfälzisch. Alla hopp un uffbasse“ (Die Rheinpfalz 06.05.) Mähner Nochrischde uf em Najichkeide-Portal Schweschdarebrojegd Meta-Wiki Koordinazion Commons Medije Wikidata Daadebong\u0027g Wikimedia Incubator Brudkaschde fa naiji Brojegd Wikispecies Aadevazaischnis Wikiversity Fraiji Learmiddl Wiktionary Werdabischer Wikibooks Leabischer Wikiquote Schprisch Wikisource Gwelle Wikinews Nochrischde Wikivoyage Fraiji Raisefiara Hiewees - Bress – Paa Zaale Hinweis Information Explication Uitleg Vun \"https://pfl.wikipedia.org/w/index.php?title\u003dWikipedia:Haubdsaid\u0026oldid\u003d91516\" 21 Sprachen Alemannisch Boarisch Deutsch Dolnoserbski English Français Nordfriisk Frysk Hornjoserbsce Italiano Ripoarisch Lëtzebuergesch Limburgs Plattdüütsch Nedersaksies Nederlands Deitsch Seeltersk West-Vlams Walon Zeêuws Nochgugge Gugg Wikipedia:Haubdsaid 21 Sprachen Abschnidd dzufiesche",
+    "scrapedAt": "2025-12-15 19:21:18.957851"
+  },
+  {
+    "id": 51,
+    "url": "https://it.wikipedia.org/wiki/Pagina_principale",
+    "title": "Wikipedia, l\u0027enciclopedia libera",
+    "content": "Vai al contenuto Da Wikipedia, l\u0027enciclopedia libera. Benvenuti su Wikipedia L\u0027enciclopedia libera e collaborativa Sfoglia l\u0027indice Consulta il sommario Naviga tra i portali tematici 1 948 257 voci in italiano Versione per dispositivi mobili Versione desktop Wikipedia Wikipedia è un\u0027enciclopedia online, libera e collaborativa. Grazie al contributo di volontari da tutto il mondo, Wikipedia è disponibile in oltre 340 lingue. Chiunque può contribuire alle voci esistenti o crearne di nuove, affrontando sia gli argomenti tipici delle enciclopedie tradizionali sia quelli presenti in almanacchi, dizionari geografici e pubblicazioni specialistiche. Tutti i contenuti di Wikipedia sono protetti da una licenza libera, la Creative Commons CC BY-SA, che ne permette il riutilizzo per qualsiasi scopo a condizione di adottare la medesima licenza. Cosa posso fare? Vuoi partecipare? Leggi le regole fondamentali e le altre linee guida, e rispetta la wikiquette; la registrazione è consigliata ma non obbligatoria. Serve aiuto? Consulta le istruzioni e le domande frequenti (FAQ) o leggi dove fare una domanda; se ti sei appena registrato puoi richiedere l\u0027assegnazione di un tutor. Vuoi provare? Modifica la pagina di prova o segui il Tour guidato per imparare come scrivere una voce. Vuoi fare una donazione? Wikipedia è completamente gratuita e priva di pubblicità grazie alle donazioni degli utenti. Aiutaci a migliorarla e a mantenerla libera con una donazione. Cosa pensi di Wikipedia? Scrivi il tuo parere. Chi fa Wikipedia? La comunità di Wikipedia in lingua italiana è composta da 2 795 519 utenti registrati, dei quali 32 371 hanno contribuito con almeno una modifica nell\u0027ultimo mese e 107 hanno funzioni di servizio. Gli utenti costituiscono una comunità collaborativa, in cui tutti i membri, grazie anche ai progetti tematici e ai rispettivi luoghi di discussione, coordinano i propri sforzi nella redazione delle voci. Vetrina Il teatro dell\u0027Artico della seconda guerra mondiale, parte del più vasto teatro scandinavo del secondo conflitto mondiale, vide contrapporsi da una parte le forze della Germania e della Finlandia (quest\u0027ultima fino all\u0027armistizio del 19 settembre 1944), e dall\u0027altra le forze degli Alleati, e in particolar modo quelle di Regno Unito, Unione Sovietica, Norvegia e Stati Uniti d\u0027America; le operazioni militari svoltesi al di sopra del circolo polare artico compresero attività terrestri, navali ed aeree. Le operazioni terrestri videro, nell\u0027aprile del 1940, le forze tedesche impossessarsi con un\u0027operazione anfibia dell\u0027importante porto norvegese di Narvik, affrontando poi con successo il contrattacco di un corpo di spedizione anglo-francese. Successivamente, a seguito dell\u0027avvio dell\u0027operazione Barbarossa nel giugno del 1941, truppe tedesche e finlandesi aprirono un fronte di guerra nel nord della Lapponia, puntando alla conquista dello strategico porto sovietico di Murmansk; dopo l\u0027abbandono dell\u0027alleanza con i tedeschi nel settembre del 1944, i finlandesi cooperarono coi sovietici per cacciare i reparti della Wehrmacht dalla Lapponia e dal nord della Norvegia. Contemporaneamente, unità speciali britanniche, appartenenti al corpo dei British Commandos, condussero una serie di incursioni contro le installazioni tedesche in Norvegia, mentre scontri minori e azioni su piccola scala finirono per interessare anche territori remoti come le isole Svalbard o la costa orientale della Groenlandia. A dispetto del clima ostile, le acque dell\u0027artico videro un\u0027intensa attività aeronavale durante quasi tutto l\u0027arco del conflitto: in particolare, la Kriegsmarine da un lato e la Royal Navy e le marine militari alleate (soprattutto la Flotta del Nord sovietica, la United States Navy e la Royal Canadian Navy) dall\u0027altro, supportate dalle rispettive forze aeree, ingaggiarono una serrata lotta lungo la rotta tra l\u0027Islanda e Murmansk, utilizzata dagli Alleati per far giungere in URSS massicci quantitativi di armi e materiale bellico ceduti ai sovietici nell\u0027ambito degli accordi Lend-Lease; ripetute furono anche le incursioni dei gruppi navali e delle forze aeree anglo-statunitensi contro le basi navali tedesche nel nord della Norvegia, volte alla caccia e alla distruzione delle principali unità da battaglia della Kriegsmarine. Leggi la voce · Tutte le voci in vetrina Voci di qualità La tartaruga del muschio carenata (Sternotherus carinatus Gray, 1855), è una tartaruga carnivora membro della famiglia Kinosternidae. Di piccole dimensioni, il carapace raggiunge solitamente una lunghezza compresa tra i 13 e i 16 cm. Il suo areale è compreso nel centro-sud degli Stati Uniti, dove, nonostante alcune minacce derivate dalle attività antropica, è classificata come una specie a basso rischio. In virtù delle piccole dimensioni, questo rettile è spesso venduto e allevato come animale da compagnia. Questa tartaruga abita tipicamente corsi d\u0027acqua ricchi di vegetazione acquatica e con fondali di sabbia, ghiaia e ciottoli ma è possibile trovarla anch",
+    "scrapedAt": "2025-12-15 19:21:17.022003"
+  },
+  {
+    "id": 50,
+    "url": "https://da.wikipedia.org/wiki/",
+    "title": "Wikipedia, den frie encyklopædi",
+    "content": "Spring til indhold Fra Wikipedia, den frie encyklopædi Velkommen til Wikipedia, den frie encyklopædi som alle kan redigere. Astronomi Botanik Cykling Film Geografi Historie Musik Kristendom Kvinder Zoologi Flere portaler... Der findes nu over 60 millioner artikler på Wikipedia, hvoraf 311.814 er på dansk. Skribentforside • Hjælp • A–Å • Projekter • Bekendtgørelser • Wikipedia Mobil • Kontakt Wikipedia Ugens artikel Rasmus Seebach (født 1980) er en dansk sanger, sangskriver og producer. Han solodebuterede med hitsinglen \"Engel\" i 2009 efter at have fungeret som sangskriver for andre musikere i mere end ti år. I september fulgte hans selvbetitlede debutalbum, der blev en stor succes med over 240.000 solgte eksemplarer, samt rekorden for flest uger på toppen af album-hitlisten. Med udsendelsen af sit andet album, Mer\u0027 end kærlighed, i oktober 2011 blev Seebach den hurtigst sælgende musiker i Danmark nogensinde, da albummet solgte over 42.000 eksemplarer på én uge. Samlet set har Seebach solgt over 600.000 eksemplarer af sine to første album sammen med live-albummet Rasmus Seebach Live (2012). Han har siden udgivet albummene Ingen kan love dig i morgen (2013) og Verden kan vente (2015). Seebachs musik er blevet udgivet i Sverige, Norge og Tyskland. I Sverige og Norge har han haft succes med top fem-hittet \"Natteravn\", der solgte henholdsvis guld og tredobbelt platin. I Danmark har Seebach, sammen med storebroren Nicolai, haft stor succes som sangskriver med støttesangen \"Hvor små vi er\" (2005), der solgte 13 gange platin. Seebachs succes som solomusiker er blevet tilskrevet sangenes enkle, banale tekster om \"kærlighed og byture, der i sin lyrik oftest er tale- eller SMS-sprog\", samt \"at hans livshistorie indeholder ingredienserne til en dansk pop-fortælling af de mere barske\", med henvisning til at Seebach er søn af den populære dansktopsanger Tommy Seebach, der døde af et hjertestop i 2003 efter et årelangt alkoholmisbrug. (Læs mere..) Seneste tre uger: Lars von Trier — Juletraditioner — Jul Mere om Ugens artikel • Arkiv Dagens skandinaviske artikel Gjesvål eller Gisvold er en gård på Fannrem, omtrent 50 km sørvest for Trondheim. Gården har lang historie. Gårdsanlegget ligger omkring 150 meter øst for Orkdal kirke, på samme platå som denne og prestegården, og det kan ha vært bebyggelse og bosetning på platået langt tilbake i førkristen tid. Gjesvål har tilhørt erkebispesetet i Nidaros. Etter reformasjonen ble gården krongods, og fra 1600-tallet har den blant annet vært fogd-, kapellan- og lensmannsgård. Sagbruksdrift har i perioder, fra 1600-tallet og fremover, vært viktig for Gjesvål. Hovedbygningen fra 1773, med det spesielle seteritaket, er fredet. Bygningen har mange trekk til felles med trepaleene og lystgårdene i Trondheim, og det er mulig at både arkitekt og bygningsarbeidere ble hentet derfra. ► Les mer her. Dagens skandinaviske artikel er fra norsk (bokmål) Wikipedia Mere om Dagens skandinaviske artikel • Skanwiki Fremhævede artikler Fremragende artikler De nyeste fremragende artikler Casper \u0026 Mandrilaftalen IC4 Eurovision Song Contest 2014 Middelaldercentret Gode artikler De nyeste gode artikler Linje 250S Ove Sprogøe Geoteknik Shu-bi-dua Lovende artikler De nyeste lovende artikler George H.W. Bush General Motors General Dynamics F-16 Fighting Falcon Geelong Rediger • Mere fremhævet indhold Kategorier Naturvidenskab Naturvidenskab Astronomi Biologi Datalogi Fysik Geografi Geologi Kemi Logik Lægevidenskab Matematik Humaniora Humaniora og samfundsvidenskab Antropologi Arkitektur Filosofi Historie Jura Kommunikation Psykologi Pædagogik Sociologi Sprogforskning Statskundskab Teologi Økonomi Teknik Teknik Elektronik Energi Industri Jordbrug Mekanik Militær Robotter Sundhedsvæsen Transport Kultur Kultur Dans Film Hobby Kunst Litteratur Mad og drikke Mode Musik Mytologi Personer Politik Religion Sport Teater Traditioner Turisme Underholdning Flere kategorier Aktuelle begivenheder Danmarks EU-formandskab • Ruslands invasion af Ukraine Norges kvindelandshold (billedet) vinder VM i håndbold 2025. Den højreorienterede José Antonio Kast vinder præsidentvalget i Chile. 16 mennesker meldes dræbt ved et masseskyderi på Bondi Beach i Australien. Andrej Babiš udnævnes til premierminister i Tjekkiet. Et folketingsflertal aftaler at indføre en medieombudsmand i Danmark. Rediger • Flere aktuelle begivenheder I dag Den 15. december: Zamenhofdag (esperanto: Zamenhofa Tago) mindedag for esperantoskaberen Ludwik Lejzer Zamenhof. 1891 - James Naismith introducerer den første version af basketball (billedet) med 13 regler, en ferskenkurv sømmet fast i hver ende af sin skoles gymnastikhal og to hold med 9 spillere på hver. 1961 - I Jerusalem dømmes Adolf Eichmann til døden efter at være blevet fundet skyldig i 15 anklager bl.a. om forbrydelser mod menneskeheden og forbrydelser mod det jødiske folk. 1995 - EF-domstolen afsiger den såkaldte Bosmandom, der forhindrer fodboldklubber i at kræve vederlag for spillere, hvis kontrakte",
+    "scrapedAt": "2025-12-15 19:21:15.101162"
+  },
+  {
+    "id": 49,
+    "url": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025",
+    "title": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia \u003c Wikipedia:Today\u0027s featured article Shortcut WP:TFAAWP:TFAA Today\u0027s featured article archive 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026 January February March April May June July August September October November December v t e Featured content: Featured articles ← Featured lists Featured pictures Featured topics Featured article candidates (FAC): Featured article criteria Featured article log Featured article statistics Featured article review (FAR): Archived FARs Former featured articles Unreviewed featured articles/2020 Today\u0027s featured article (TFA): This month\u0027s queue About Today\u0027s featured article Recent TFAs and statistics Current TFA requests Potential TFA requests TFA oddities Most viewed TFAs Featured articles yet to appear as TFA Script to track TFA recent changes Featured article tools: Mentoring for FAC Nominators of featured articles promoted Recent changes to featured articles Random featured article \u003c\u003c Today\u0027s featured articles for December 2025 \u003e\u003e Su Mo Tu We Th Fr Sa 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 December 1 Crop from CDC publicity poster Julio and Marisol was a bilingual public-service advertising campaign that ran from 1989 to 2001 in the New York City Subway promoting condom use to prevent AIDS. The well-known catchphrase was a line from the first installment, in which Marisol sobs, \"I love you, but not enough to die for you\". The story follows a young Hispanic couple as they explore human sexuality and the effects of the AIDS epidemic on their relationship. Designed to appeal to a Hispanic audience particularly at risk due to cultural attitudes discouraging condom use, it has been described as \"one part steamy soap opera, one part language instruction, and two parts AIDS education service\". The ads were praised by public health officials for presenting situations which people could relate to, and by AIDS activists for breaking down the social stigma associated with the disease. They drew criticism, however, from family values advocates who objected to the promotion of condoms and the tacit acceptance of homosexuality. (Full article...) Recently featured: Mechanical Turk KEXP-FM Appaloosa Archive By email More featured articles About view talk edit history watch December 2 SMS Pommern was a Deutschland-class pre-dreadnought battleship built for the Imperial German Navy at the AG Vulcan Stettin yard at Stettin, Germany. Named after the Prussian province of Pomerania, she was laid down on 22 March 1904, launched on 2 December 1905, and commissioned into the navy on 6 August 1907. The ship was armed with four 28 cm (11 in) guns and had a top speed of 18 knots (33 km/h; 21 mph). Pommern was assigned to II Battle Squadron of the High Seas Fleet. At the start of World War I, she was stationed at the Elbe to support the defenses of the German Bight. She participated in sorties into the North Sea in attempts to destroy portions of the British Grand Fleet. These offensive operations culminated in the Battle of Jutland, where she was hit by torpedoes, which detonated one of her 17-centimeter (6.7 in) gun magazines. The resulting explosion broke the ship in half and killed the entire crew. (This article is part of a featured topic: Battleships of Germany.) Recently featured: Julio and Marisol Mechanical Turk KEXP-FM Archive By email More featured articles About view talk edit history watch December 3 Ovalipes catharus, commonly known as the paddle crab, swimming crab, or pāpaka in Māori, is a species of crab found in shallow, sandy-bottomed waters around the coasts of New Zealand, the Chatham Islands, and uncommonly in southern Australia. This species is an opportunistic, aggressive, and versatile feeder active mostly at night, preying predominantly on molluscs and crustaceans. It is also highly prone to cannibalism, which accounts for over a quarter of its diet in some locations. The crab\u0027s paddle-shaped rear legs and streamlined carapace allow it to capture prey by swimming rapidly and to escape predation by burrowing in the sand. Its mating season is in winter and spring, after which the female likely moves into deeper waters to incubate and disperse her larvae. Commercial fisheries have harvested paddle crabs since the 1970s, and O. catharus is present in Māori culture as both an artistic motif and as a traditional source of food. (Full article...) Recently featured: SMS Pommern Julio and Marisol Mechanical Turk Archive By email More featured articles About view talk edit history watch December 4 The flag of Hong Kong depicts a white stylised five-petal flower of the Hong Kong orchid tree (Bauhinia × blakeana) in the centre of a field of Chinese red, the same red as on the flag of China. The Hong Kong Basic Law prescribes the design, and it is only to be made according to regulation and in approved sizes. Re",
+    "scrapedAt": "2025-12-15 19:21:13.357342"
+  },
+  {
+    "id": 48,
+    "url": "https://ms.wikipedia.org/wiki/Laman_Utama",
+    "title": "Wikipedia, ensiklopedia bebas",
+    "content": "Pergi ke kandungan Daripada Wikipedia, ensiklopedia bebas. Selamat Datang ke Wikipedia ensiklopedia bebas yang boleh disunting oleh sesiapa jua. سلامت داتڠ کويکيڤيديا Versi Bahasa Melayu telah dimulakan pada (2002-10-26) 26 Oktober 2002 (umur 23). Kini, kami mempunyai 435,092 buah rencana. Tarikh: Ahad, 14 Disember 2025 | Pengumuman · Soalan lazim · Embassy · Pengenalan bahasa Melayu Tutorial · Meja bantuan · Meja rujukan · Indeks A–Z Senarai gerbang · Biografi · Falsafah · Geografi · Sejarah · Matematik · Sains · Sastera · Teknologi · Undang-undang Rencana pilihan Wikipedia:Rencana pilihan/Disember 2025 Tiada rencana pilihan dicalonkan pada bulan Disember 2025. Jika anda mahu mencalonkan rencana untuk bulan ini dan bulan seterusnya. Sila mencalonkannya di Wikipedia:Calon rencana pilihan dan ikut langkah demi langkah yang sudah ditetapkan. Selamat menyumbang! Arkib Pencalonan Lagi rencana pilihan... Berita terkini Rosen Zhelyazkov Satu kejadian tembakan beramai-ramai telah berlaku di Pantai Bondi, Australia. Perdana Menteri Bulgaria, Rosen Zhelyazkov (gambar) dan kerajaannya meletak jawatan selepas protes selama beberapa hari. Di Australia, larangan penggunaan platform media sosial tertentu oleh kanak-kanak bawah 16 tahun berkuat kuasa. Dalam sukan motor, Lando Norris memenangi Kejohanan Pemandu Dunia Formula Satu. Dalam serangan tentera, Majlis Sementara Selatan merampas hampir semua selatan Yaman daripada kerajaan. Sedang berlaku: Perang Gaza garis masa genosid Pencerobohan Rusia ke atas Ukraine garis masa Perang saudara Sudan garis masa Kematian terkini: Ismail Muhammad Bung Moktar Radin Dharma Harun Al Rashid Amirul Azwan Lagi hal semasa... Tahukah anda... Unjuran retroazimut Craig yang berpusatkan kota Makkah \"... bahawa unjuran retroazimut Craig yang dicipta oleh James Ireland Craig pada tahun 1909 kadang-kala juga dikenali sebagai unjuran Makkah?\" \"... bahawa germanena ialah suatu bahan yang diperbuat daripada satu lapis tunggal atom germanium dan diiktiraf sebagai bahan paling bermutu tinggi dalam penggunaan peranti semikonduktor dan penyelidikan sains bahan?\" ... bahawa Ketuanan Melayu adalah ideologi politik haluan kanan di Malaysia yang meletakkan kedudukan orang Melayu sebagai \"tuan\" kepada semua warga penduduk Malaysia lain? ... bahawa kebanyakan pelacur ialah perempuan, namun ada juga pelacur lelaki? \"... bahawa Perisytiharan Hak Asasi Manusia Sejagat timbul daripada kekejaman Jerman Nazi?\" Muat semula info · Cipta rencana baru · Cadangan info · Lagi... Hari ini dalam sejarah 14 Disember: 1896 – Sistem metro bawah tanah yang ketiga tertua di dunia, Kereta Api Bawah Tanah Glasgow memulakan operasi di Glasgow, Scotland. 1911 – Penjelajah Norway Roald Amundsen dan pasukannya menjadi manusia pertama tiba di Kutub Selatan. 1918 – Raja Väinö I dari Finland yang berketurunan Jerman melepaskan takhtanya selepas Empayar Jerman tewas dalam Perang Dunia Pertama. 1994 – Pembinaan Empangan Tiga Gaung (gambar) di Sungai Yangtze, China bermula. 2008 – Ketika sidang akhbar di Baghdad, wartawan Iraq Muntadhar al-Zaidi membaling kasutnya kepada Presiden A.S. George W. Bush. Hari-hari sebelum: 13 Disember – 12 Disember – 11 Disember Arkib · Melalui e-mel · Lagi... Gambar pilihan Plogoff ialah komun di jabatan Finistère di wilayah Brittany, barat-laut Perancis. Di sini terdapat tiga pelabuhan yang sesuai untuk kapal kecil: Pors-Loubous, Feunten-Aod dan Bestrée. Industri tempatan termasuklah pelancongan, biskut tradisional, pertanian dan penangkapan ikan. Gambar pilihan sebelum ini: Penyengat pasir Seri Pagi Padi teres Arkib Pencalonan Selanjutnya... Gotong-royong sunting Kerjasama rencana baharu Cabaran gotong-royong Taman Negara Ulu Temburong (en) Istana Kota Manggalela (en) Benzokaina (en) Pars pro toto (en) Ikan elektrik (en) Totum pro parte (en) Muriel Robin (en) Grande école (en) Permohonan sementara (perjanjian) (en) Akta Wilayah Luar Negeri Britain 2002 (en) Hasil gotong-royong terbaru Taman Eden (novel) (en) Thronecast (en) Jorah Mormont (en) Ariel Henry (en) Aliran puing (en) Anugerah Locus (en) The Twilight Zone (siri televisyen 1985) (en) Undang-undang Arab Saudi (en) Canopus di Argos (en) Kambing hitam (en) Segera Cipta Rencana-rencana di Portal:Hal semasa (en; fr) Rencana mingguan di Penterjemahan minggu ini Khas:Laman dikehendaki (WikiProjek Malaysia • WikiProjek Brunei • WikiProjek Perubatan • 10,000 rencana perlu) Segera Selenggara Rencana-rencana di dalam kategori Kategori:Projek BukanTeamBiasa Perangkaan WBM Kedalaman Rencana Laman Suntingan Pengguna Pentadbir Fail 16.3 435,092 1,169,542 6,708,617 374,920 (2,667 aktif) 13 17,905 Perbaiki kandungan 9,454 rencana dengan pautan luar mati 1 rencana kekurangan sumber yang dipercayai 3,198 rencana dengan kenyataan tidak bersumber 237 rencana dengan topik yang kekurangan kelayakan 35 rencana yang memerlukan perapian 568 rencana dengan bahagian kosong 35 rencana dengan pertikaian pandangan berkecuali 409 rencana yang memerlukan pengemaskinian 208 rencan",
+    "scrapedAt": "2025-12-15 19:21:11.403355"
+  },
+  {
     "id": 47,
     "url": "https://en.wikipedia.org/wiki/File:Wellcome_Collection_Rocking_Bed.jpg",
     "title": "File:Wellcome Collection Rocking Bed.jpg - Wikipedia",
@@ -1377,41 +1412,6 @@ window.searchData = [
     "title": "Wikipédia, l\u0027encyclopédie libre",
     "content": "Aller au contenu Une page de Wikipédia, l\u0027encyclopédie libre. Wikipédia L\u0027encyclopédie libre que vous pouvez améliorer Accueil de la communauté Comment contribuer ? Portails thématiques Principes fondateurs Sommaire de l\u0027aide Poser une question Article labellisé du jour Castillonnais bai bâté à la foire agricole de Tarascon-sur-Ariège, 2025. Le cheval Castillonnais, ou cheval de Castillon, est une race de petits chevaux de selle montagnards et rustiques d\u0027origine française. Connu et décrit au début du XXe siècle, ce petit cheval a failli disparaître en parallèle de l\u0027adoption croissante de la motorisation, entre autres par le croisement avec des chevaux de trait. Il est sauvegardé de justesse par quelques éleveurs durant les années 1980 et 1990. Reconnu par les Haras nationaux en 1996, il reste à faible effectifs. Une association d\u0027éleveurs et le haras national de Tarbes se mobilisent pour sauvegarder et préserver cette race. De robe bai-brun ou bai foncé, il est très proche du Mérens avec lequel il partage de nombreuses caractéristiques, mais nettement moins connu. C\u0027est un bon cheval de loisir qui peut être monté en randonnée et attelé avec succès. Il vit principalement à l\u0027extrémité sud-ouest de l\u0027Ariège, dans les Pyrénées, dans un terroir éponyme caractérisé par la vallée du Lez, près de Saint-Girons. Son élevage s\u0027est étendu à d\u0027autres régions de France, notamment en Haute-Saône. Lire la suite Contenus de qualité Bons contenus Sélection Programme Actualités Portrait officiel de José Antonio Kast en 2025. 14 décembre : au Chili, le candidat d’extrême droite José Antonio Kast (photo) remporte le second tour de l\u0027élection présidentielle avec plus de 58 % des suffrages exprimés. 14 décembre : en Australie, une fusillade fait plusieurs morts et blessés lors d’une célébration de Hanoucca sur une plage de Sydney. 13 décembre : en la cathédrale Notre-Dame de Paris, béatification des cinquante martyrs français de la Seconde Guerre mondiale. 11 décembre : en Bulgarie, démission du gouvernement Jeliazkov. 10 décembre : en Australie, l\u0027interdiction de certains réseaux sociaux aux moins de 16 ans entre en vigueur. Événements en cours : Opération israélienne en Cisjordanie Extension de l\u0027occupation israélienne en Syrie Manifestations en Serbie Crise politique française Guerre de Gaza Guerre civile soudanaise Invasion de l\u0027Ukraine par la Russie Conflit du M23 Guerre civile birmane Guerre des gangs en Haïti Crise anglophone au Cameroun Rob Reiner en 2016. Nécrologie : 15 décembre Josef Horešovský 14 décembre Roger Laboureur Riyad Naasan Agha Rob Reiner (photo) 13 décembre Héctor Alterio Ernesto Figueiredo Yves Fréville Abraham Quintanilla Bobby Rousseau 12 décembre Rolf Becker Arthur Cohn Werner Ferrari Peter Greene Edmond Lauret Marilyn Mazur Shivraj Patil Décembre 2025 Wikinews Modifier Le saviez-vous ? Buste du peintre Ingres, orangerie du jardin du Luxembourg. C’est sur les conseils de son ami le peintre Jean-Auguste-Dominique Ingres (illustration) que Charles Gounod incorpora au quatrième acte de son opéra Faust son chœur des soldats, également connu pour son vers « Gloire immortelle de nos aïeux ». Le Bureau des affaires indiennes a déclaré qu’Anna Mae Aquash était morte d’hypothermie sans voir le trou causé dans sa nuque par une arme à feu. Arduino, une entreprise de matériel et logiciel libre, a été nommée d’après le roi d’Italie du XIe siècle Arduin d’Ivrée. La victoire militaire de la Judée sur les Séleucides est à l’origine de la fête juive d’Hanoucca. L’empereur Frédéric II était vu comme l’Antéchrist par certains et comme Messie par d’autres, au point que sa résurrection fut crainte ou espérée. Selon Sébastien Thoen, l’ancien membre d’Action directe Jean-Marc Rouillan aurait amicalement demandé des royalties à l’équipe d’Action discrète pour s’être inspirée du nom de son groupe. Archives Propositions Programme Modifier Présentation Wikipédia est un projet d’encyclopédie collective en ligne, universelle, multilingue et fonctionnant sur le principe du wiki. Ce projet vise à offrir un contenu librement réutilisable, objectif et vérifiable, que chacun peut modifier et améliorer. Wikipédia est définie par des principes fondateurs. Son contenu est sous licence Creative Commons BY-SA. Il peut être copié et réutilisé sous la même licence, sous réserve d\u0027en respecter les conditions. Wikipédia fournit tous ses contenus gratuitement, sans publicité, et sans recourir à l\u0027exploitation des données personnelles de ses utilisateurs. Les rédacteurs des articles de Wikipédia sont bénévoles. Ils coordonnent leurs efforts au sein d\u0027une communauté collaborative, sans dirigeant. Aujourd\u0027hui, Wikipédia en français compte : 2 725 901 articles 41 206 contributeurs actifs Comment contribuer ? Chacun peut publier immédiatement du contenu en ligne, à condition de respecter les règles essentielles établies par la Fondation Wikimedia et par la communauté ; par exemple, la vérifiabilité du contenu, l\u0027admissibilité des articles et garde",
     "scrapedAt": "2025-12-15 19:09:29.645217"
-  },
-  {
-    "id": 52,
-    "url": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid",
-    "title": "Wikipedia",
-    "content": "Zum Inhalt springen Vun Wikipedia Rheifränggisch Pälzisch Hessisch Siedfränggisch Lothringisch Rheifränggischi Wikipedia Die Rheifränggisch Wikipedia is ä Projekt zum Uffbau vun änner Enzyklopädie mid fraie Inhalde in rheifränggische Dialegd: Pälzisch, Hessisch un Lothringisch. In denne Dialegd, konn do än jede ebbes naischraiwe un mid saim Wisse baidrache. Jede Ardiggel ime rheifränggische Dialekt, isch willkumme. Du kannsch do awa ach mitmache, wann Du e sidfränkische Dialegd („Nordbadisch“, „Brigantedaitsch“) redsch. Im Herbschd 2010 isch die Pälzisch Wikipedia gschdadd un im Summa 2013 ischse zur Rheifränggisch Wikipedia worre. Saidm Auguscht 2013 sinn noch die finf Newebrojegd dezukumme. Haid, om 9.12.2025, hods do 2.832 Ardiggel. Des neischde was bassierd isch findschd do. De Adigl vum Monad de Adam Remmele De Adam Remmele (* 26. Dezember 1877 in Altnaidorf, fraireligies; † 9. September 1951 in Fraiburch) isch e daitsche Bolitiker vun de SPD in Bade gwest. Er isch zwäämol Badische Staatsbresidänt gwest: 1922/23 un 1927/28. De Remmele ghert zu de wichtichschte badische SPD-Bolitiker in de Weimarer Zait. Bis 1918 De Adam Remmele isch in Altnaidorf im Ourewald, wo sait 1975 zu Schenau ghert, uf d Welt kumme als Suhn vum Peter Remmele (1850-1891), ämme Miller, un de Katharina geb. Daub (1858-1941). Er hot no drai Brierer ghatt. De Remmele isch in Altnaidorf uf d Volksschul gange, denn het er 1890 im pälzische Ludwichshafe Miller gelehrt. Noch de Gsellebriefung 1893 isch er uf Wannerschaft durch Sieddaitschland gange. Wo er noch e baar Johr uf Ludwichshafe zerickkumme isch, isch er 1894 in d SPD un in d Gwerkschaft aigedrore. Er hot als Miller in Mihle gschafft un an de Sunndach hot er Werwung gmacht fer d Gwerkschaft. Weche dem isch er vum Unternemmerverband bal uf e Schwarze Lischt gsetzt worre un hot ach e baar Mol sai Ärwetsstell verloure. Mit 21 isch er schun im Vorstand vum Berufsverband, vun de Gwerksdchaft un ach vun de Bartei gwest. waidalese ... Voaschläch fär die nägschde Ardiggl vum Monad konn jeda am Schdammdisch mache. Hosch gwisst... ... dass es am Niederrhoi (bei Kalkar) un in Braunschweig (Veldehof) Pälzische Schbroochinsle gibt? ... dass es in Hääschde 1914 verzäh Schuhfawerigge gewwe hot, un 1961 sogaa 36, haid awwer blooß noch ääni? Newebrojegd Wiktionary Werdabuch Wikisource Texde Wikibooks Bischer Wikiquote Schprisch Wikinews Nochrischde Kumm mach mid Om Schdommdisch konschd frooche, Voaschleesch mache un mide Laid babble. Adiggl, wus in jeda Wikipedia gewwe solld. Boadaal finschd doo, s\u0027 Boadaal fa Schbaija un s\u0027 Winza Boadaal. Doo konschd gugge, wasfa Adiggl s\u0027hodd. Doo konschd gugge, wasfa Adiggl s\u0027iwwa die Palz hodd. Wegschd schun wasfan Adiggl schraiwe wilschd, donn gibschd eefach de Nome vum Adiggl do unne oi, drigschd uffde Gnobb un fongschd oa. Naies rund ums Rheifränggische vum Najichkeide-Portal Buchen: Neuer Mundartweg verbindet Stadt mit Stadtteilen (Rhein-Neckar-Zeitung 20.05.) Liegen Heidelberg, Mannheim und Mosbach im falschen Land? (Rhein-Neckar-Zeitung 19.05.) Duden „Pfälzisch. Alla hopp un uffbasse“ (Die Rheinpfalz 06.05.) Mähner Nochrischde uf em Najichkeide-Portal Schweschdarebrojegd Meta-Wiki Koordinazion Commons Medije Wikidata Daadebong\u0027g Wikimedia Incubator Brudkaschde fa naiji Brojegd Wikispecies Aadevazaischnis Wikiversity Fraiji Learmiddl Wiktionary Werdabischer Wikibooks Leabischer Wikiquote Schprisch Wikisource Gwelle Wikinews Nochrischde Wikivoyage Fraiji Raisefiara Hiewees - Bress – Paa Zaale Hinweis Information Explication Uitleg Vun \"https://pfl.wikipedia.org/w/index.php?title\u003dWikipedia:Haubdsaid\u0026oldid\u003d91516\" 21 Sprachen Alemannisch Boarisch Deutsch Dolnoserbski English Français Nordfriisk Frysk Hornjoserbsce Italiano Ripoarisch Lëtzebuergesch Limburgs Plattdüütsch Nedersaksies Nederlands Deitsch Seeltersk West-Vlams Walon Zeêuws Nochgugge Gugg Wikipedia:Haubdsaid 21 Sprachen Abschnidd dzufiesche",
-    "scrapedAt": "2025-12-15 19:09:25.399077"
-  },
-  {
-    "id": 51,
-    "url": "https://it.wikipedia.org/wiki/Pagina_principale",
-    "title": "Wikipedia, l\u0027enciclopedia libera",
-    "content": "Vai al contenuto Da Wikipedia, l\u0027enciclopedia libera. Benvenuti su Wikipedia L\u0027enciclopedia libera e collaborativa Sfoglia l\u0027indice Consulta il sommario Naviga tra i portali tematici 1 948 257 voci in italiano Versione per dispositivi mobili Versione desktop Wikipedia Wikipedia è un\u0027enciclopedia online, libera e collaborativa. Grazie al contributo di volontari da tutto il mondo, Wikipedia è disponibile in oltre 340 lingue. Chiunque può contribuire alle voci esistenti o crearne di nuove, affrontando sia gli argomenti tipici delle enciclopedie tradizionali sia quelli presenti in almanacchi, dizionari geografici e pubblicazioni specialistiche. Tutti i contenuti di Wikipedia sono protetti da una licenza libera, la Creative Commons CC BY-SA, che ne permette il riutilizzo per qualsiasi scopo a condizione di adottare la medesima licenza. Cosa posso fare? Vuoi partecipare? Leggi le regole fondamentali e le altre linee guida, e rispetta la wikiquette; la registrazione è consigliata ma non obbligatoria. Serve aiuto? Consulta le istruzioni e le domande frequenti (FAQ) o leggi dove fare una domanda; se ti sei appena registrato puoi richiedere l\u0027assegnazione di un tutor. Vuoi provare? Modifica la pagina di prova o segui il Tour guidato per imparare come scrivere una voce. Vuoi fare una donazione? Wikipedia è completamente gratuita e priva di pubblicità grazie alle donazioni degli utenti. Aiutaci a migliorarla e a mantenerla libera con una donazione. Cosa pensi di Wikipedia? Scrivi il tuo parere. Chi fa Wikipedia? La comunità di Wikipedia in lingua italiana è composta da 2 795 519 utenti registrati, dei quali 32 371 hanno contribuito con almeno una modifica nell\u0027ultimo mese e 107 hanno funzioni di servizio. Gli utenti costituiscono una comunità collaborativa, in cui tutti i membri, grazie anche ai progetti tematici e ai rispettivi luoghi di discussione, coordinano i propri sforzi nella redazione delle voci. Vetrina Il teatro dell\u0027Artico della seconda guerra mondiale, parte del più vasto teatro scandinavo del secondo conflitto mondiale, vide contrapporsi da una parte le forze della Germania e della Finlandia (quest\u0027ultima fino all\u0027armistizio del 19 settembre 1944), e dall\u0027altra le forze degli Alleati, e in particolar modo quelle di Regno Unito, Unione Sovietica, Norvegia e Stati Uniti d\u0027America; le operazioni militari svoltesi al di sopra del circolo polare artico compresero attività terrestri, navali ed aeree. Le operazioni terrestri videro, nell\u0027aprile del 1940, le forze tedesche impossessarsi con un\u0027operazione anfibia dell\u0027importante porto norvegese di Narvik, affrontando poi con successo il contrattacco di un corpo di spedizione anglo-francese. Successivamente, a seguito dell\u0027avvio dell\u0027operazione Barbarossa nel giugno del 1941, truppe tedesche e finlandesi aprirono un fronte di guerra nel nord della Lapponia, puntando alla conquista dello strategico porto sovietico di Murmansk; dopo l\u0027abbandono dell\u0027alleanza con i tedeschi nel settembre del 1944, i finlandesi cooperarono coi sovietici per cacciare i reparti della Wehrmacht dalla Lapponia e dal nord della Norvegia. Contemporaneamente, unità speciali britanniche, appartenenti al corpo dei British Commandos, condussero una serie di incursioni contro le installazioni tedesche in Norvegia, mentre scontri minori e azioni su piccola scala finirono per interessare anche territori remoti come le isole Svalbard o la costa orientale della Groenlandia. A dispetto del clima ostile, le acque dell\u0027artico videro un\u0027intensa attività aeronavale durante quasi tutto l\u0027arco del conflitto: in particolare, la Kriegsmarine da un lato e la Royal Navy e le marine militari alleate (soprattutto la Flotta del Nord sovietica, la United States Navy e la Royal Canadian Navy) dall\u0027altro, supportate dalle rispettive forze aeree, ingaggiarono una serrata lotta lungo la rotta tra l\u0027Islanda e Murmansk, utilizzata dagli Alleati per far giungere in URSS massicci quantitativi di armi e materiale bellico ceduti ai sovietici nell\u0027ambito degli accordi Lend-Lease; ripetute furono anche le incursioni dei gruppi navali e delle forze aeree anglo-statunitensi contro le basi navali tedesche nel nord della Norvegia, volte alla caccia e alla distruzione delle principali unità da battaglia della Kriegsmarine. Leggi la voce · Tutte le voci in vetrina Voci di qualità La tartaruga del muschio carenata (Sternotherus carinatus Gray, 1855), è una tartaruga carnivora membro della famiglia Kinosternidae. Di piccole dimensioni, il carapace raggiunge solitamente una lunghezza compresa tra i 13 e i 16 cm. Il suo areale è compreso nel centro-sud degli Stati Uniti, dove, nonostante alcune minacce derivate dalle attività antropica, è classificata come una specie a basso rischio. In virtù delle piccole dimensioni, questo rettile è spesso venduto e allevato come animale da compagnia. Questa tartaruga abita tipicamente corsi d\u0027acqua ricchi di vegetazione acquatica e con fondali di sabbia, ghiaia e ciottoli ma è possibile trovarla anch",
-    "scrapedAt": "2025-12-15 19:09:23.891848"
-  },
-  {
-    "id": 50,
-    "url": "https://da.wikipedia.org/wiki/",
-    "title": "Wikipedia, den frie encyklopædi",
-    "content": "Spring til indhold Fra Wikipedia, den frie encyklopædi Velkommen til Wikipedia, den frie encyklopædi som alle kan redigere. Astronomi Botanik Cykling Film Geografi Historie Musik Kristendom Kvinder Zoologi Flere portaler... Der findes nu over 60 millioner artikler på Wikipedia, hvoraf 311.811 er på dansk. Skribentforside • Hjælp • A–Å • Projekter • Bekendtgørelser • Wikipedia Mobil • Kontakt Wikipedia Ugens artikel Rasmus Seebach (født 1980) er en dansk sanger, sangskriver og producer. Han solodebuterede med hitsinglen \"Engel\" i 2009 efter at have fungeret som sangskriver for andre musikere i mere end ti år. I september fulgte hans selvbetitlede debutalbum, der blev en stor succes med over 240.000 solgte eksemplarer, samt rekorden for flest uger på toppen af album-hitlisten. Med udsendelsen af sit andet album, Mer\u0027 end kærlighed, i oktober 2011 blev Seebach den hurtigst sælgende musiker i Danmark nogensinde, da albummet solgte over 42.000 eksemplarer på én uge. Samlet set har Seebach solgt over 600.000 eksemplarer af sine to første album sammen med live-albummet Rasmus Seebach Live (2012). Han har siden udgivet albummene Ingen kan love dig i morgen (2013) og Verden kan vente (2015). Seebachs musik er blevet udgivet i Sverige, Norge og Tyskland. I Sverige og Norge har han haft succes med top fem-hittet \"Natteravn\", der solgte henholdsvis guld og tredobbelt platin. I Danmark har Seebach, sammen med storebroren Nicolai, haft stor succes som sangskriver med støttesangen \"Hvor små vi er\" (2005), der solgte 13 gange platin. Seebachs succes som solomusiker er blevet tilskrevet sangenes enkle, banale tekster om \"kærlighed og byture, der i sin lyrik oftest er tale- eller SMS-sprog\", samt \"at hans livshistorie indeholder ingredienserne til en dansk pop-fortælling af de mere barske\", med henvisning til at Seebach er søn af den populære dansktopsanger Tommy Seebach, der døde af et hjertestop i 2003 efter et årelangt alkoholmisbrug. (Læs mere..) Seneste tre uger: Lars von Trier — Juletraditioner — Jul Mere om Ugens artikel • Arkiv Dagens skandinaviske artikel Gjesvål eller Gisvold er en gård på Fannrem, omtrent 50 km sørvest for Trondheim. Gården har lang historie. Gårdsanlegget ligger omkring 150 meter øst for Orkdal kirke, på samme platå som denne og prestegården, og det kan ha vært bebyggelse og bosetning på platået langt tilbake i førkristen tid. Gjesvål har tilhørt erkebispesetet i Nidaros. Etter reformasjonen ble gården krongods, og fra 1600-tallet har den blant annet vært fogd-, kapellan- og lensmannsgård. Sagbruksdrift har i perioder, fra 1600-tallet og fremover, vært viktig for Gjesvål. Hovedbygningen fra 1773, med det spesielle seteritaket, er fredet. Bygningen har mange trekk til felles med trepaleene og lystgårdene i Trondheim, og det er mulig at både arkitekt og bygningsarbeidere ble hentet derfra. ► Les mer her. Dagens skandinaviske artikel er fra norsk (bokmål) Wikipedia Mere om Dagens skandinaviske artikel • Skanwiki Fremhævede artikler Fremragende artikler De nyeste fremragende artikler Casper \u0026 Mandrilaftalen IC4 Eurovision Song Contest 2014 Middelaldercentret Gode artikler De nyeste gode artikler Linje 250S Ove Sprogøe Geoteknik Shu-bi-dua Lovende artikler De nyeste lovende artikler George H.W. Bush General Motors General Dynamics F-16 Fighting Falcon Geelong Rediger • Mere fremhævet indhold Kategorier Naturvidenskab Naturvidenskab Astronomi Biologi Datalogi Fysik Geografi Geologi Kemi Logik Lægevidenskab Matematik Humaniora Humaniora og samfundsvidenskab Antropologi Arkitektur Filosofi Historie Jura Kommunikation Psykologi Pædagogik Sociologi Sprogforskning Statskundskab Teologi Økonomi Teknik Teknik Elektronik Energi Industri Jordbrug Mekanik Militær Robotter Sundhedsvæsen Transport Kultur Kultur Dans Film Hobby Kunst Litteratur Mad og drikke Mode Musik Mytologi Personer Politik Religion Sport Teater Traditioner Turisme Underholdning Flere kategorier Aktuelle begivenheder Danmarks EU-formandskab • Ruslands invasion af Ukraine Norges kvindelandshold (billedet) vinder VM i håndbold 2025. Den højreorienterede José Antonio Kast vinder præsidentvalget i Chile. 16 mennesker meldes dræbt ved et masseskyderi på Bondi Beach i Australien. Andrej Babiš udnævnes til premierminister i Tjekkiet. Et folketingsflertal aftaler at indføre en medieombudsmand i Danmark. Rediger • Flere aktuelle begivenheder I dag Den 15. december: Zamenhofdag (esperanto: Zamenhofa Tago) mindedag for esperantoskaberen Ludwik Lejzer Zamenhof. 1891 - James Naismith introducerer den første version af basketball (billedet) med 13 regler, en ferskenkurv sømmet fast i hver ende af sin skoles gymnastikhal og to hold med 9 spillere på hver. 1961 - I Jerusalem dømmes Adolf Eichmann til døden efter at være blevet fundet skyldig i 15 anklager bl.a. om forbrydelser mod menneskeheden og forbrydelser mod det jødiske folk. 1995 - EF-domstolen afsiger den såkaldte Bosmandom, der forhindrer fodboldklubber i at kræve vederlag for spillere, hvis kontrakte",
-    "scrapedAt": "2025-12-15 19:09:22.291808"
-  },
-  {
-    "id": 49,
-    "url": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025",
-    "title": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
-    "content": "Jump to content From Wikipedia, the free encyclopedia \u003c Wikipedia:Today\u0027s featured article Shortcut WP:TFAAWP:TFAA Today\u0027s featured article archive 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026 January February March April May June July August September October November December v t e Featured content: Featured articles ← Featured lists Featured pictures Featured topics Featured article candidates (FAC): Featured article criteria Featured article log Featured article statistics Featured article review (FAR): Archived FARs Former featured articles Unreviewed featured articles/2020 Today\u0027s featured article (TFA): This month\u0027s queue About Today\u0027s featured article Recent TFAs and statistics Current TFA requests Potential TFA requests TFA oddities Most viewed TFAs Featured articles yet to appear as TFA Script to track TFA recent changes Featured article tools: Mentoring for FAC Nominators of featured articles promoted Recent changes to featured articles Random featured article \u003c\u003c Today\u0027s featured articles for December 2025 \u003e\u003e Su Mo Tu We Th Fr Sa 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 December 1 Crop from CDC publicity poster Julio and Marisol was a bilingual public-service advertising campaign that ran from 1989 to 2001 in the New York City Subway promoting condom use to prevent AIDS. The well-known catchphrase was a line from the first installment, in which Marisol sobs, \"I love you, but not enough to die for you\". The story follows a young Hispanic couple as they explore human sexuality and the effects of the AIDS epidemic on their relationship. Designed to appeal to a Hispanic audience particularly at risk due to cultural attitudes discouraging condom use, it has been described as \"one part steamy soap opera, one part language instruction, and two parts AIDS education service\". The ads were praised by public health officials for presenting situations which people could relate to, and by AIDS activists for breaking down the social stigma associated with the disease. They drew criticism, however, from family values advocates who objected to the promotion of condoms and the tacit acceptance of homosexuality. (Full article...) Recently featured: Mechanical Turk KEXP-FM Appaloosa Archive By email More featured articles About view talk edit history watch December 2 SMS Pommern was a Deutschland-class pre-dreadnought battleship built for the Imperial German Navy at the AG Vulcan Stettin yard at Stettin, Germany. Named after the Prussian province of Pomerania, she was laid down on 22 March 1904, launched on 2 December 1905, and commissioned into the navy on 6 August 1907. The ship was armed with four 28 cm (11 in) guns and had a top speed of 18 knots (33 km/h; 21 mph). Pommern was assigned to II Battle Squadron of the High Seas Fleet. At the start of World War I, she was stationed at the Elbe to support the defenses of the German Bight. She participated in sorties into the North Sea in attempts to destroy portions of the British Grand Fleet. These offensive operations culminated in the Battle of Jutland, where she was hit by torpedoes, which detonated one of her 17-centimeter (6.7 in) gun magazines. The resulting explosion broke the ship in half and killed the entire crew. (This article is part of a featured topic: Battleships of Germany.) Recently featured: Julio and Marisol Mechanical Turk KEXP-FM Archive By email More featured articles About view talk edit history watch December 3 Ovalipes catharus, commonly known as the paddle crab, swimming crab, or pāpaka in Māori, is a species of crab found in shallow, sandy-bottomed waters around the coasts of New Zealand, the Chatham Islands, and uncommonly in southern Australia. This species is an opportunistic, aggressive, and versatile feeder active mostly at night, preying predominantly on molluscs and crustaceans. It is also highly prone to cannibalism, which accounts for over a quarter of its diet in some locations. The crab\u0027s paddle-shaped rear legs and streamlined carapace allow it to capture prey by swimming rapidly and to escape predation by burrowing in the sand. Its mating season is in winter and spring, after which the female likely moves into deeper waters to incubate and disperse her larvae. Commercial fisheries have harvested paddle crabs since the 1970s, and O. catharus is present in Māori culture as both an artistic motif and as a traditional source of food. (Full article...) Recently featured: SMS Pommern Julio and Marisol Mechanical Turk Archive By email More featured articles About view talk edit history watch December 4 The flag of Hong Kong depicts a white stylised five-petal flower of the Hong Kong orchid tree (Bauhinia × blakeana) in the centre of a field of Chinese red, the same red as on the flag of China. The Hong Kong Basic Law prescribes the design, and it is only to be made according to regulation and in approved sizes. Re",
-    "scrapedAt": "2025-12-15 19:09:20.473835"
-  },
-  {
-    "id": 48,
-    "url": "https://ms.wikipedia.org/wiki/Laman_Utama",
-    "title": "Wikipedia, ensiklopedia bebas",
-    "content": "Pergi ke kandungan Daripada Wikipedia, ensiklopedia bebas. Selamat Datang ke Wikipedia ensiklopedia bebas yang boleh disunting oleh sesiapa jua. سلامت داتڠ کويکيڤيديا Versi Bahasa Melayu telah dimulakan pada (2002-10-26) 26 Oktober 2002 (umur 23). Kini, kami mempunyai 435,092 buah rencana. Tarikh: Ahad, 14 Disember 2025 | Pengumuman · Soalan lazim · Embassy · Pengenalan bahasa Melayu Tutorial · Meja bantuan · Meja rujukan · Indeks A–Z Senarai gerbang · Biografi · Falsafah · Geografi · Sejarah · Matematik · Sains · Sastera · Teknologi · Undang-undang Rencana pilihan Wikipedia:Rencana pilihan/Disember 2025 Tiada rencana pilihan dicalonkan pada bulan Disember 2025. Jika anda mahu mencalonkan rencana untuk bulan ini dan bulan seterusnya. Sila mencalonkannya di Wikipedia:Calon rencana pilihan dan ikut langkah demi langkah yang sudah ditetapkan. Selamat menyumbang! Arkib Pencalonan Lagi rencana pilihan... Berita terkini Rosen Zhelyazkov Satu kejadian tembakan beramai-ramai telah berlaku di Pantai Bondi, Australia. Perdana Menteri Bulgaria, Rosen Zhelyazkov (gambar) dan kerajaannya meletak jawatan selepas protes selama beberapa hari. Di Australia, larangan penggunaan platform media sosial tertentu oleh kanak-kanak bawah 16 tahun berkuat kuasa. Dalam sukan motor, Lando Norris memenangi Kejohanan Pemandu Dunia Formula Satu. Dalam serangan tentera, Majlis Sementara Selatan merampas hampir semua selatan Yaman daripada kerajaan. Sedang berlaku: Perang Gaza garis masa genosid Pencerobohan Rusia ke atas Ukraine garis masa Perang saudara Sudan garis masa Kematian terkini: Ismail Muhammad Bung Moktar Radin Dharma Harun Al Rashid Amirul Azwan Lagi hal semasa... Tahukah anda... Unjuran retroazimut Craig yang berpusatkan kota Makkah \"... bahawa unjuran retroazimut Craig yang dicipta oleh James Ireland Craig pada tahun 1909 kadang-kala juga dikenali sebagai unjuran Makkah?\" \"... bahawa germanena ialah suatu bahan yang diperbuat daripada satu lapis tunggal atom germanium dan diiktiraf sebagai bahan paling bermutu tinggi dalam penggunaan peranti semikonduktor dan penyelidikan sains bahan?\" ... bahawa Ketuanan Melayu adalah ideologi politik haluan kanan di Malaysia yang meletakkan kedudukan orang Melayu sebagai \"tuan\" kepada semua warga penduduk Malaysia lain? ... bahawa kebanyakan pelacur ialah perempuan, namun ada juga pelacur lelaki? \"... bahawa Perisytiharan Hak Asasi Manusia Sejagat timbul daripada kekejaman Jerman Nazi?\" Muat semula info · Cipta rencana baru · Cadangan info · Lagi... Hari ini dalam sejarah 14 Disember: 1896 – Sistem metro bawah tanah yang ketiga tertua di dunia, Kereta Api Bawah Tanah Glasgow memulakan operasi di Glasgow, Scotland. 1911 – Penjelajah Norway Roald Amundsen dan pasukannya menjadi manusia pertama tiba di Kutub Selatan. 1918 – Raja Väinö I dari Finland yang berketurunan Jerman melepaskan takhtanya selepas Empayar Jerman tewas dalam Perang Dunia Pertama. 1994 – Pembinaan Empangan Tiga Gaung (gambar) di Sungai Yangtze, China bermula. 2008 – Ketika sidang akhbar di Baghdad, wartawan Iraq Muntadhar al-Zaidi membaling kasutnya kepada Presiden A.S. George W. Bush. Hari-hari sebelum: 13 Disember – 12 Disember – 11 Disember Arkib · Melalui e-mel · Lagi... Gambar pilihan Plogoff ialah komun di jabatan Finistère di wilayah Brittany, barat-laut Perancis. Di sini terdapat tiga pelabuhan yang sesuai untuk kapal kecil: Pors-Loubous, Feunten-Aod dan Bestrée. Industri tempatan termasuklah pelancongan, biskut tradisional, pertanian dan penangkapan ikan. Gambar pilihan sebelum ini: Penyengat pasir Seri Pagi Padi teres Arkib Pencalonan Selanjutnya... Gotong-royong sunting Kerjasama rencana baharu Cabaran gotong-royong Taman Negara Ulu Temburong (en) Istana Kota Manggalela (en) Benzokaina (en) Pars pro toto (en) Ikan elektrik (en) Totum pro parte (en) Muriel Robin (en) Grande école (en) Permohonan sementara (perjanjian) (en) Akta Wilayah Luar Negeri Britain 2002 (en) Hasil gotong-royong terbaru Taman Eden (novel) (en) Thronecast (en) Jorah Mormont (en) Ariel Henry (en) Aliran puing (en) Anugerah Locus (en) The Twilight Zone (siri televisyen 1985) (en) Undang-undang Arab Saudi (en) Canopus di Argos (en) Kambing hitam (en) Segera Cipta Rencana-rencana di Portal:Hal semasa (en; fr) Rencana mingguan di Penterjemahan minggu ini Khas:Laman dikehendaki (WikiProjek Malaysia • WikiProjek Brunei • WikiProjek Perubatan • 10,000 rencana perlu) Segera Selenggara Rencana-rencana di dalam kategori Kategori:Projek BukanTeamBiasa Perangkaan WBM Kedalaman Rencana Laman Suntingan Pengguna Pentadbir Fail 16.3 435,092 1,169,542 6,708,617 374,920 (2,667 aktif) 13 17,905 Perbaiki kandungan 9,454 rencana dengan pautan luar mati 1 rencana kekurangan sumber yang dipercayai 3,198 rencana dengan kenyataan tidak bersumber 237 rencana dengan topik yang kekurangan kelayakan 35 rencana yang memerlukan perapian 568 rencana dengan bahagian kosong 35 rencana dengan pertikaian pandangan berkecuali 409 rencana yang memerlukan pengemaskinian 208 rencan",
-    "scrapedAt": "2025-12-15 19:09:18.586311"
   },
   {
     "id": 498,
@@ -3488,6 +3488,1074 @@ window.searchData = [
 ];
 
 window.imageData = [
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Aerial_image_of_Trifels_Castle_%28view_from_the_southeast%29.jpg/250px-Aerial_image_of_Trifels_Castle_%28view_from_the_southeast%29.jpg",
+    "alt": "De Trifels bai Annwailer",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/140519_Dom_Fulda_Frontansicht.jpg/250px-140519_Dom_Fulda_Frontansicht.jpg",
+    "alt": "Dom vo Foll",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/SchlossHeidelberg2.jpg/250px-SchlossHeidelberg2.jpg",
+    "alt": "Heidlberg",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Sarreguemines2011.jpg/250px-Sarreguemines2011.jpg",
+    "alt": "Saargeminn – Saar un Kasino",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Remmele_Adam_1930.JPG",
+    "alt": "de Adam Remmele",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Nuvola_apps_xmag.png/20px-Nuvola_apps_xmag.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Wiktsister_en.png/40px-Wiktsister_en.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/120px-Wikinews-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/20px-Wikimedia-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Wikidata-logo-en.svg/20px-Wikidata-logo-en.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Incubator-logo.svg/20px-Incubator-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/20px-Wikispecies-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/20px-Wikiversity-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Wiktsister_en.png/20px-Wiktsister_en.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/20px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/20px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/20px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/20px-Wikinews-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/20px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/40px-Flag_of_Germany.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/English_language.svg/40px-English_language.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Ensign_of_France.svg/40px-Ensign_of_France.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/40px-Flag_of_the_Netherlands.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://pfl.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/WP25_Lockup_%28cropped%29.svg/40px-WP25_Lockup_%28cropped%29.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Crystal_Clear_app_xmag.svg/20px-Crystal_Clear_app_xmag.svg.png",
+    "alt": "Clicca qui per sfogliare l\u0027indice delle voci!",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/1rightarrow_blue.svg/20px-1rightarrow_blue.svg.png",
+    "alt": "Clicca qui per consultare il sommario dei vari argomenti!",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Nuvola_apps_bookcase_simplified.svg/20px-Nuvola_apps_bookcase_simplified.svg.png",
+    "alt": "Clicca qui per navigare tra i portali tematici!",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/W-circle.svg/40px-W-circle.svg.png",
+    "alt": " ",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/HSTools.svg/40px-HSTools.svg.png",
+    "alt": " ",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Text-x-generic_with_pencil-2.svg/40px-Text-x-generic_with_pencil-2.svg.png",
+    "alt": " ",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/HSUtvald.svg/40px-HSUtvald.svg.png",
+    "alt": " ",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Arctic_circle.png/120px-Arctic_circle.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/HS_VdQ.svg/40px-HS_VdQ.svg.png",
+    "alt": " ",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/RazorBackMuskTurtle.jpg/250px-RazorBackMuskTurtle.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/PL_Wiki_CzyWiesz_ikona.svg/40px-PL_Wiki_CzyWiesz_ikona.svg.png",
+    "alt": " ",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Octopus_tetricus_118664956.jpg/250px-Octopus_tetricus_118664956.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/HSDagensdatum.svg/40px-HSDagensdatum.svg.png",
+    "alt": " ",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/it/thumb/c/c1/Adalberto_di_savoia%2C_duca_di_bergamo.jpg/120px-Adalberto_di_savoia%2C_duca_di_bergamo.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/HS_geo.svg/40px-HS_geo.svg.png",
+    "alt": " ",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Wikimedia-logo-circle.svg/40px-Wikimedia-logo-circle.svg.png",
+    "alt": " ",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/40px-Wiktionary-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/40px-Wikinews-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/40px-Wikiversity-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/40px-Wikidata-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Wikifunctions-logo.svg/40px-Wikifunctions-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/W-circle.svg/40px-W-circle.svg.png",
+    "alt": " ",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/HSTools.svg/40px-HSTools.svg.png",
+    "alt": " ",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Text-x-generic_with_pencil-2.svg/40px-Text-x-generic_with_pencil-2.svg.png",
+    "alt": " ",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/PL_Wiki_Aktualnosci_ikona.svg/40px-PL_Wiki_Aktualnosci_ikona.svg.png",
+    "alt": " ",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/HSContribs.svg/40px-HSContribs.svg.png",
+    "alt": " ",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bluebg_rounded_croped.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/HSWikimedia.svg/40px-HSWikimedia.svg.png",
+    "alt": " ",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Wikimedia-logo-meta.svg/20px-Wikimedia-logo-meta.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/20px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Baby_Hamster_-_2_Weeks_Old.jpg/330px-Baby_Hamster_-_2_Weeks_Old.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/40px-Wikinews-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/20px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Loti_-_Pescatori_d%27Islanda.djvu/page3-170px-Loti_-_Pescatori_d%27Islanda.djvu.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/20px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Wv_Ushuaia_banner.jpg/330px-Wv_Ushuaia_banner.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://it.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia, l\u0027enciclopedia libera",
+    "pageUrl": "https://it.wikipedia.org/wiki/Pagina_principale"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Emblem-star.svg/40px-Emblem-star.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Rasmus_Seebach_2014.jpg/120px-Rasmus_Seebach_2014.jpg",
+    "alt": "Rasmus Seebach, 2014",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Norway-sweden2.svg/40px-Norway-sweden2.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Gjesvold_from_the_South.jpg/120px-Gjesvold_from_the_South.jpg",
+    "alt": "Hovedbygningen på Gjesvål, med det spesielle seteritaket, er fredet.",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Searchtool_right.svg/40px-Searchtool_right.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Symbol_star_gold.svg/40px-Symbol_star_gold.svg.png",
+    "alt": "Fremragende artikler",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Symbol_support_vote.svg/40px-Symbol_support_vote.svg.png",
+    "alt": "Gode artikler",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Art%C3%ADculo_bueno-blue.svg/40px-Art%C3%ADculo_bueno-blue.svg.png",
+    "alt": "Lovende artikler",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Gnome-fs-blockdev.svg/40px-Gnome-fs-blockdev.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Gnome-applications-science.svg/40px-Gnome-applications-science.svg.png",
+    "alt": "Naturvidenskab",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/System-users.svg/40px-System-users.svg.png",
+    "alt": "Humaniora",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Nuvola_apps_kcmsystem.svg/40px-Nuvola_apps_kcmsystem.svg.png",
+    "alt": "Teknik",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Gnome-applications-graphics.svg/40px-Gnome-applications-graphics.svg.png",
+    "alt": "Kultur",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Internet-web-browser.svg/40px-Internet-web-browser.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/20241209_Womens_EHF_Euro_1280.jpg/120px-20241209_Womens_EHF_Euro_1280.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Office-calendar.svg/40px-Office-calendar.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Navy_Midshipmen_women%27s_basketball_shot.jpg/120px-Navy_Midshipmen_women%27s_basketball_shot.jpg",
+    "alt": "Situation fra basketballkamp",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/40px-Help-browser.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Leonardo_da_Vinci%2C_Salvator_Mundi%2C_c.1500%2C_oil_on_walnut%2C_45.4_%C3%97_65.6_cm.jpg/120px-Leonardo_da_Vinci%2C_Salvator_Mundi%2C_c.1500%2C_oil_on_walnut%2C_45.4_%C3%97_65.6_cm.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Gravestone_icon2.svg/40px-Gravestone_icon2.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Marilyn-mazur.jpg/120px-Marilyn-mazur.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Image-x-generic.svg/40px-Image-x-generic.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Baby_Hamster_-_2_Weeks_Old.jpg/330px-Baby_Hamster_-_2_Weeks_Old.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/60px-Wikipedia-logo-v2.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "Meta Wikimedia",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/40px-Wiktionary-logo.svg.png",
+    "alt": "Wiktionary",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "Wikiquote",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "Wikisource",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "Wikibooks",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/40px-Wikiversity-logo.svg.png",
+    "alt": "Wikiversity",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "Wikispecies",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "Wikimedia Commons",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/60px-Wikinews-logo.svg.png",
+    "alt": "Wikinews",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/40px-Wikidata-logo.svg.png",
+    "alt": "Wikidata",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MediaWiki-2020-icon.svg/40px-MediaWiki-2020-icon.svg.png",
+    "alt": "MediaWiki",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "Wikivoyage",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Preferences-desktop-locale.svg/60px-Preferences-desktop-locale.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/60px-Wikimedia-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://da.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia, den frie encyklopædi",
+    "pageUrl": "https://da.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/AIDS_is_a_problem_for_Hispanics%2C_too_%285804664975%29_%28cropped%29.jpg/250px-AIDS_is_a_problem_for_Hispanics%2C_too_%285804664975%29_%28cropped%29.jpg",
+    "alt": "Crop from CDC publicity poster",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Bundesarchiv_DVM_10_Bild-23-61-21%2C_Linienschiff_%22SMS_Pommern%22.jpg/250px-Bundesarchiv_DVM_10_Bild-23-61-21%2C_Linienschiff_%22SMS_Pommern%22.jpg",
+    "alt": "SMS Pommern",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Ovalipes_catharus_dorsal_plate.jpg/250px-Ovalipes_catharus_dorsal_plate.jpg",
+    "alt": "Ovalipes catharus",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/250px-Flag_of_Hong_Kong.svg.png",
+    "alt": "Flag of Hong Kong",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/President-Jefferson-Davis.jpg/250px-President-Jefferson-Davis.jpg",
+    "alt": "Jefferson Davis",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/2011_TEB_Free_361_Tatiana_Volosozhar_Maxim_Trankov.jpg/250px-2011_TEB_Free_361_Tatiana_Volosozhar_Maxim_Trankov.jpg",
+    "alt": "Trankov and Volosozhar, the pairs champions",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Coventry_Ring_Road_%28A4053%29_at_sunset.jpg/250px-Coventry_Ring_Road_%28A4053%29_at_sunset.jpg",
+    "alt": "Part of the Coventry ring road at sunset",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/North_American_Medicinal_Leech_imported_from_iNaturalist_photo_56392667_on_4_December_2022.jpg/250px-North_American_Medicinal_Leech_imported_from_iNaturalist_photo_56392667_on_4_December_2022.jpg",
+    "alt": "Macrobdella decora",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Edmund%2C_son_of_Edmund_Ironside.jpg/229px-Edmund%2C_son_of_Edmund_Ironside.jpg",
+    "alt": "Edmund Ætheling",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/George_Mason.jpg/250px-George_Mason.jpg",
+    "alt": "George Mason",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Coin_of_Theodosius_III.png/250px-Coin_of_Theodosius_III.png",
+    "alt": "Coin of Theodosius III",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Scott_Zolak.jpg/250px-Scott_Zolak.jpg",
+    "alt": "Scott Zolak",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Tom_Hall_Video_Designer.jpg/250px-Tom_Hall_Video_Designer.jpg",
+    "alt": "Tom Hall, game designer",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Smn_Cameron-SecofWar_%28cropped%29.jpg/250px-Smn_Cameron-SecofWar_%28cropped%29.jpg",
+    "alt": "Simon Cameron",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Edith_Swan_and_Rose_Gooding.jpg/250px-Edith_Swan_and_Rose_Gooding.jpg",
+    "alt": "Edith Swan (left) and Rose Gooding (right)",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Fountains_Abbey_view02_2005-08-27.jpg/250px-Fountains_Abbey_view02_2005-08-27.jpg",
+    "alt": "Ruins of Fountains Abbey",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Caesar_cipher_left_shift_of_3.svg/250px-Caesar_cipher_left_shift_of_3.svg.png",
+    "alt": "Caesar cipher with a left shift of 3",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Ali_MacGraw_-_1972.jpg/250px-Ali_MacGraw_-_1972.jpg",
+    "alt": "Ali MacGraw",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Boer_War%3B_the_grave_of_those_killed_at_Bronkhuis_Spruit%2C_wit_Wellcome_V0015632.jpg/250px-Boer_War%3B_the_grave_of_those_killed_at_Bronkhuis_Spruit%2C_wit_Wellcome_V0015632.jpg",
+    "alt": "Grave of the British soldiers killed at Bronkhorstspruit",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Zimbabwe_in_Africa.svg/250px-Zimbabwe_in_Africa.svg.png",
+    "alt": "A map showing Rhodesia\u0027s location in Africa",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Algemeyne_Entsiklopedye_Probheft_cover_1932.jpg/120px-Algemeyne_Entsiklopedye_Probheft_cover_1932.jpg",
+    "alt": "Algemeyne Entsiklopedye Probheft",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Joss_Whedon_by_Gage_Skidmore_7.jpg/250px-Joss_Whedon_by_Gage_Skidmore_7.jpg",
+    "alt": "Joss Whedon, the writer who created Fray",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Tufted_Jay.jpg/250px-Tufted_Jay.jpg",
+    "alt": "Tufted Jay",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Charles_Dickens-A_Christmas_Carol-Title_page-First_edition_1843.jpg/250px-Charles_Dickens-A_Christmas_Carol-Title_page-First_edition_1843.jpg",
+    "alt": "A Christmas Carol",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Elm_Park%2C_the_former_home_of_Reading_FC.jpg/250px-Elm_Park%2C_the_former_home_of_Reading_FC.jpg",
+    "alt": "Elm Park stadium, site of the final Gillingham match of the season",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Trichogenes_claviger.png/250px-Trichogenes_claviger.png",
+    "alt": "Trichogenes claviger, endangered fish",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/SMS_Moltke_LOC_hec_01144.jpg/250px-SMS_Moltke_LOC_hec_01144.jpg",
+    "alt": "Moltke class battlecruiser",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Hearst_Tower_%28August_2024%29.jpg/250px-Hearst_Tower_%28August_2024%29.jpg",
+    "alt": "Hearst Tower",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Caf_anderson.jpg/250px-Caf_anderson.jpg",
+    "alt": "William Anderson",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/M%C3%A9moire_sur_la_polyphagie_I.jpg/120px-M%C3%A9moire_sur_la_polyphagie_I.jpg",
+    "alt": "Medical journal on the condition",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia:Today\u0027s featured article/December 2025 - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Wikipedia:Today%27s_featured_article/December_2025"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Rosen_Zhelyazkov_2025_%28cropped%29.jpg/120px-Rosen_Zhelyazkov_2025_%28cropped%29.jpg",
+    "alt": "Rosen Zhelyazkov pada tahun 2025",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Craig_projection_SW.jpg/120px-Craig_projection_SW.jpg",
+    "alt": "Unjuran retroazimut Craig yang berpusatkan kota Makkah",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/ThreeGorgesDam-China2009.jpg/120px-ThreeGorgesDam-China2009.jpg",
+    "alt": "Empangan Tiga Gaung",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/A_storm_at_Pors-Loubous.jpg/500px-A_storm_at_Pors-Loubous.jpg",
+    "alt": "Ribut di Pors-Loubous, Plogoff",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/OOjs_UI_icon_heart-progressive.svg/20px-OOjs_UI_icon_heart-progressive.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/40px-Wikipedia-logo-v2.svg.png",
+    "alt": "Wikipedia dalam bahasa lain (mengikut susunan jumlah rencana)",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/40px-Wikimedia-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/40px-Wiktionary_small.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/60px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/60px-Wikinews-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/40px-Wikidata-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/40px-Wikiversity-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MediaWiki-2020-icon.svg/40px-MediaWiki-2020-icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
+  {
+    "src": "https://ms.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia, ensiklopedia bebas",
+    "pageUrl": "https://ms.wikipedia.org/wiki/Laman_Utama"
+  },
   {
     "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png",
     "alt": "This is a file from the Wikimedia Commons",
