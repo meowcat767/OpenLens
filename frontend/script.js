@@ -287,15 +287,54 @@ function displayImageResults(query, results) {
     results.forEach(result => {
         const div = document.createElement('div');
         div.className = 'image-item';
+        // Note: Removing the <a> wrapper and handling click via JS for Lightbox
         div.innerHTML = `
-            <a href="${escapeHtml(result.img.pageUrl)}" target="_blank">
-                <img src="${escapeHtml(result.img.src)}" alt="${escapeHtml(result.img.alt)}" loading="lazy">
-                <div class="image-info">${escapeHtml(result.img.alt || result.img.pageTitle)}</div>
-            </a>
+            <img src="${escapeHtml(result.img.src)}" 
+                 alt="${escapeHtml(result.img.alt)}" 
+                 loading="lazy"
+                 data-page-url="${escapeHtml(result.img.pageUrl)}"
+                 data-full-alt="${escapeHtml(result.img.alt || result.img.pageTitle)}">
+            <div class="image-info">${escapeHtml(result.img.alt || result.img.pageTitle)}</div>
         `;
+
+        // Add click listener for lightbox
+        div.querySelector('img').addEventListener('click', (e) => {
+            openLightbox(e.target.src, e.target.getAttribute('data-full-alt'), e.target.getAttribute('data-page-url'));
+        });
+
         imageResultsContainer.appendChild(div);
     });
 }
+
+// Lightbox Logic
+function openLightbox(src, caption, url) {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = src;
+    lightboxCaption.textContent = caption;
+    lightboxLink.href = url;
+}
+
+if (lightboxClose) {
+    lightboxClose.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+}
+
+// Close on background click
+if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+}
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+        lightbox.style.display = 'none';
+    }
+});
 
 function updateStats(count, query) {
     const resultText = count === 1 ? 'result' : 'results';
