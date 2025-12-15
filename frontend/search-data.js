@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 62,
+    "url": "https://co.wikipedia.org/wiki/Pagina_maestra",
+    "title": "Wikipedia",
+    "content": "Vai al contenuto À prupositu di Wikipedia Sartè Corti Salute! Sì benvenutu nantu à a versione di Wikipedia in lingua corsa, l\u0027enciclopedìa lìbera, gratisi è scritta cù a cuuperazione di tutti. U scopu di stu prugettu hè di cuntribuisce à mantene a lingua è a cultura corsa. Oghje, marti 9 di dicembre 2025, Wikipedia tene 8 603 articuli è 63 persone attive Ringraziemu à tutti quelli chì participèghjanu. Indice Arti è cultura Architittura - Arti - Arti di u spittaculu - Disegnu - Sinemà - Cultura pupulari - Baddu - Littiratura - Musica - Pintura - Futugrafia - Scultura Pulitica, drittu è sucità Cummerciu - Difesa è sicurità - Drittu - Educazioni - Ecunumia - Ambienti - Pulitica - Urbanisimu Riligioni è cridenzi Agnusticisimu - Ateisimu - Buddisimu - Cristianisimu - Esuterisimu - Induisimu - Islamu - Ghjudaisimu - Misticisimu - Mitulugia - Riligioni - Scenzi umani Antrupulugia - Archiulugia - Eculugia - Giugrafia - Giupulitica - Storia - Linguistica - Musiculugia - Filusufia - Psiculugia - Suciulugia Scenzi esatti è naturali Astrunumia - Biulugia - Chimica - Giulugia - Logica - Matematica - Medicina - Fisica Tennulugii è scenzi applicati Aerospaziali - Agrunumia - Cumunicazioni - Design - Elettronica - Infurmatica - Inginieria - Management - Farmacia - Rubotica - Telecumunicazioni Vita quutidiana è distrazzioni Automobili - Bricolage - Cucina - Divirtimentu - Giardinu - Ghjocu - Nutrizioni - Saluta - Sissualità - Sport - Televisioni - Turisimu - Trasportu Ricerca è navigazioni Articuli di qualità - Indici alfabeticu - Indici tematicu - Pagini nuvelli Radica di i catigurii Per accede à i mudelli Infobox I mudelli d\u0027infobox sò strumenti essenziali per strutturà è prisentà l\u0027infurmazioni in modu coerente nantu à Wikipedia in corsa. Quessi mudelli vi permettenu di creà infobox eleganti è funziunali per tutti i tipi di cuntenutu. Cliccate quì per a lista Mudificà Aiutate Wikipedia in lingua corsa Per aiutà Wikipedia pudete: fà una parti di u travagliu da fà Scrive un articulu, o ancu sè vo truvete un sbagliu, currighjite lu puru ! Scrivite in corsu cismuntincu, taravese o sartinese, cume vo vulete: diversità face ricchezza. Videte dinù i cunsigli per scrive un articulu. U più simplice per cumincià hè di cumplittà un articulu : videte l\u0027articuli da cumplittà. Si pò dinù traduce un articulu, per esempiu da a wikipedia in francese, talianu, sicilianu... Incaricà imagini o fotugrafii. U megliu hè d\u0027incaricà li annantu à WikiCommons, parchì pudarani serva dopu à tutti i prugetti Wikimedia. T\u0027avemu bisognu d\u0027una fotugrafia d\u0027ogni paesi, ogni paisolu, ogni munimentu di Corsica, ogni fiore, ogni animale, ogni ogettu anticu, è cetera. in ogni circustanza, ci vole à rispettà i dritti d\u0027autore: ùn si ponu cupià quì testi o stratti chì sò prutetti da i dritti d\u0027autore Mudificà Novi articuli Architittura rumànica - Rumànicu pisanu - Architettura rumànica in Sardegna - Architettura barocca - A Citatella di Bastia - Chjesa San Ghjuvà di Bastia - Santa Croce di Bastia - Lista di e pieve di Corsica - Prosper Mérimée - Figuretta - Discriminazione linguistica - Sambucu - Eros Ramazzotti - Charles Aznavour - Ascensione - Stella cadente - Aluetu di Sudafrica - Induisimu - India - Aleria - Scupinu - Tarrori è Fantasia - Ghjumenta di preti - Seppia - Pesciu rondina - Merula (fauna marina) - Ghjaddinedda organu - Ghjuncu marinu - San\u0027Petru di Panicala - Scrizzula - Burra cascistretta - Scali di u rè d\u0027Aragona - Ghjuvan Petru Gaffori - Leonardu Fibonacci - Scurpionu neru - Nannara - Cardalina - Ghjallina (Arisarum vulgare) - Tafonu di u Cumpuleddu - Museu d\u0027Aleria - Vechju marinu - Torra di a Parata - Lepru corsu - Sempre vivu - Curu - Mari Tirrenu - Parcu naziunale di Abruzzu, Laziu è Mulise - Camosciu d\u0027Abruzzu - Passerottu - Ventu in Corsica - Arburi di Ghjuda - Margonu - Munimentu di a Terra Sacra in Vignola - Cignali - Acula marina corsa - Acula marina - Pavonu corsu - Michael J. Fox - Isulottu di Gargalu - Acula codibianca - Filetta sischese - Ditonu (Bonifaziu) - Lavu di Crena - Sprissioni corsi - Ruzunu - Alpana - Carlu Bonaparte - Paulina Bonaparte - Meridiana - Pichjarina - Tiadoru di Neuhoff - Taravu (fiumu) - Ufridi neru - Puppusgiula - Catinacciu di Sartè - Cuppulata d\u0027Hermann - Ferula - Etruschi - Regnu di Napuli - Capraia Isula - Gadduresu - Cuccu - Romulu è Remu - Ponziu Pilatu - Plutarcu - Marcu Biancarelli - Réganu - Finochju - Frìsgiula - Unibessiddài di Sàssari Mudificà Da leghje Uni pochi di testi di a litteratura in lingua corsa (in u duminiu publicu): u Serenatu di Scappinu: Salvatore Viale (1787-1861) i Versi di Sagra: Ugu Peretti (1747-1838) u Viaghju in Ascu: Antone Leonardu Massiani (1816-1888) L’angunia di un paisolu corsu: Antone Bonifacio (1866-1933) U Scupatu: Antone Bonifacio E galline di Zia Mega: Antone Bonifacio È i cummenti di i testi muderni: Un pezzu di petra nera: Anghjulu Canarelli Mudificà Prugettu di u mese Sete tutti invitati à participà à u prugettu di \u0027ssu mese: scrive i toponimi di tutte e cumun",
+    "scrapedAt": "2025-12-15 19:21:44.367409"
+  },
+  {
+    "id": 61,
+    "url": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE",
+    "title": "উইকিপিডিয়া",
+    "content": "বিষয়বস্তুতে চলুন মুক্ত বিশ্বকোষ উইকিপিডিয়াত্ত উইকিপিডিয়া উইকিপিডিয়া-ত সাম্ভাষা বিষ্ণুপ্রিয়া মণিপুরী ঠারর উইকিপিডিয়া এবাকা ২৫,০৯২হান নিবন্ধ অসে। উইকিপিডিয়া এহান ইন্টানেটর উন্মুক্ত বিশ্বকোষহান যেহান ১০০হারউ গজে ঠারলো পানা য়্যাকরের। এহান যেগউ সম্পাদনা করানি পারতারা। পতাসূচী ০-৯ অ আ ই ঈ উ ঊ ঋ এ ঐ ও ঔ ক খ গ ঘ ঙ চ ছ জ ঝ ঞ ট ঠ ড ঢ ণ ত থ দ ধ ন প ফ ব ভ ম য র ল ৱ শ ষ স হ ড় ঢ় য় ৎ হাব্বি লেপনাইসে পতাফিচার নিবন্ধ ১৮শ বারো ১৯শ শতাব্দীর হমবুকে বিষ্ণুপ্রিয়া মণিপুরীর ডাঙর অংশ আহান মণিপুর লাম বেলিয়া অসম, ত্রিপুরা, সিলেট বারো কাছাড় লয়া এতাত গিয়া লাম লয়লাগা মণিপুরর রাজ বেইবুনির কৌলি বারো বার্মার আক্রমন খাংকরে নুৱারিয়া। অহানে স্বভাবতই মণিপুরে থাইলা হুরকা অংশ অহানরতা মৈতৈ ঠারর প্রভাবে ঠারহান জিংতা করিয়া থনা সম্ভব নাইল, অতাইলের গারিয়ৌ ড. গিয়ার্সন গিরকে মারি ১৮৯১ত বিষ্ণুপুর বারো কাদাপারার গাঙ লামাংদং বারো আরাকউ গাঙ কতহাত ঠার এহানর অতাকুরারা মানুকুস উনা ইসে ( LSI, Vol -V, Page 419)। ঠার এহান তাপ্প তাপ্প মণিপুরেত্ত উঠে গেলগা মৈতৈর প্রভাবে বারো কাছাড়, বাংলাদেশেউ তলেদে লামে আহের বাংলা ঠারর প্রভাবে। অতা হাবির বাদেউ মণিপুরর জিরিবাম সাব-ডিভিশনে, আসামর কাছাড় জিলাত, ত্রিপুরা বারো বাংলাদেশর নানান লয়াত ঠার এহান অতারতারা বারো জাত এহানর মানুয়ে ঠার এহানরে তেতনেই হন্নাত জিংতা করিয়া থসি। আরাকউ পাকরিক... পতাপৌ বিষ্ণুপ্রিয়া মণিপুরী উইকিপিডিয়া ১০০০০ নিবন্ধর বডাগ লালুইল গেলগা ডিসেম্বর ২৩ মারি ২০০৭ নিউ ইয়র্ক, তিলপারাষ্ট্রর সেন্ধা ৭:৪৫-এ ১০,০০০ হান নিবন্ধর বডাগ লালুইল। অতার আগে আমার ভারতীয় উপমহাদেশত্ত এতা হাবি ঠারর মা হুদ্দা তেলুগু বারো বাংলা ১০,০০০র বডাগ লালনার সম্মান পেইল। পতাকুন দিন কিহান এপাগাউ না তিলসে পতাহাদি এহানরতা ... গোকুলানন্দ গীতিস্বামী গিরক এগরে বিষ্ণুপ্রিয়া মণিপুরী জাতর জনকগো বুলিয়া মাততারা। গোকুলানন্দ গীতিস্বামী গিরক এগই বিষ্ণুপ্রিয়া মণিপুরী সমাজেত্ত নিরক্ষরতা,অন্ধবিশ্বাস,কু-সংস্কার, ভ্রষ্টাচার, অনাচার বারো অরাজকতা কিতা কিতি সেচানিরকা মহতী সমাজ সংস্কারর লালফাম অকরেসিল। এতাবাদে গিরক এগই বিষ্ণুপ্রিয়া মণিপুরী সমাজ নিয়া নিয়ামপারা সমাজ-সংস্কারমুলক এলা, কবিতা, নাটক বারো আরতাউ নানান রচনা ইকরিয়া বিষ্ণুপ্রিয়া মণিপুরী জাত, সংস্কৃতি বারো ঠাররহানরে গজে কাকরিয়া গেসেগা। সমাজ-সংস্কার বারো জাগরনে নিয়াম ভুমিকা থনায় গিরক এগ গীতিস্বামী উপাধি পাসিল। (আরাকউ পাকরিক...) লগোগ পতাআর ঠারর উইকিপিডিয়া ৫০,০০০-র গজে লেখা আসেতা: বাংলা ·Dansk · Deutsch · English · Español · Esperanto · Français · Italiano · Nederlands · 日本語 · 한국어 · Norsk bokmål · Polski · Português · Русский · Slovenčina · Suomi · Svenska · 中文 ২০,০০০-র গজে লেখা আসেতা: Bahasa Indonesia · Български · Català · Česky · Eesti · עברית · Hrvatski · Lietuvių · Magyar · Română · Slovenščina · Српски · Türkçe · Українська ১০,০০০-র গজে লেখা আসেতা: Simple English · العربية · Bahasa Melayu · Bosanski · Ελληνικά · Euskara · فارسی · Galego · Ido · Íslenska · ქართული · Lëtzebuergesch · Nnapulitano · Norsk nynorsk · ภาษาไทย · తెలుగు · नेपाल भाषा · Tiếng Việt পুরা পারেংহানি.. ___ বিজ্ঞান বারো গণিত বিজ্ঞান · গণিত · চিকিৎসা ___ ভূগোল ভূগোল · দেশ · মহাসাগর ___ প্রযুক্তি কম্পিউটার · প্রকৌশল · টেলিযোগাযোগ ___ কলা বারো সংস্কৃতি এলা · নাচা · চিত্রকলা · সিনেমা ___ লিচেত বারো দর্শন হিন্দু লিচেত · ইসলাম লিচেত · বৌদ্ধ লিচেত · খ্রীষ্টান লিচেত · ইহুদি লিচেত ___ সাহিত্য বারো ঠার ঠার · সাহিত্য · লোক সাহিত্য ___ ইতিহাস বারো জীবনি ইতিহাস · জীবনি · পাঞ্জী ___ সমাজ বারো সমাজর বিজ্ঞান সমাজ · সমাজর বিজ্ঞান · রাজনীতি ছবিগ বিষ্ণুপ্রিয়া মণিপুরী বেলিরাস নুৱাতা নুৱালেখাহানি: থাইল্যান্ডর প্রশাসনিক লয়াগি | শেখ হাসিনা | জর্জ ৱাকার বুশ | প্রতিভা পাতিল | জাতীয় চিনত্হানি | জাতীয় ফিরালহানি | বাংলাদেশর ইউনিয়নগি | পারা | ব্রাজিলর পৌরসভাহানি | নরৱের কাউন্টিহানি আতাকুরা: নুৱা আতাকুরার পারেংহানি চেইক প্রকল্পর সালনি... বিষ্ণুপ্রিয়া মণিপুরী উইকিপিডিয়াহানর যে প্রকল্পহানি আগেদে সাল যারগা অতা ইলতাই: উইকিপিডিয়া:বিষ্ণুপ্রিয়া মণিপুরী উইকিপিডিয়া:বাংলাদেশ উইকিপিডিয়া:ভারত প্রকল্প এহানি লইকরানিত পাংলাক করিক উইকিপিডিয়ার বনক প্রকল্পহানি উইকিপিডিয়া বাদেউ লাভ নাকরের প্রতিষ্ঠানহান উইকিমিডিয়া ফাউন্ডেশন, আরাকউ আক্কুস ঠার বারো উদুম-দুৱা প্রকল্পনো কাম করের: উইকিনারি শব্দকোষ উইকিলেরিক খুলাসা লেরিক বারো পাকরিলতা উইকিউক্তি খুলাসা উক্তি উইকিসোর্স উইকির খুলাসা উৎস উইকিপ্রজাতি জীব প্রজাতিহাবির করপেখহান উইকিপৌ খুলাসা উইকিপৌ উইকিমিডিয়া কমন্স পাতাপলসি মিডিয়ার ভান্ডারগ মেটা উইকি উইকিমিডিয়া হাব্বির সিজিলপা উইকিবিশ্ববিদ্যালয় খুলাসা মনরাকা খুলাসা হিকানি পাংলাক · যোগাযোগ \u0027https://bpy.wikipedia.org/w/index.php?title\u003dপয়লা_পাতা\u0026oldid\u003d896075\u0027-ত্ত আনানি অসে থাক: কামনাকরের ফাইলন আসে পাতাহানি ভাষা যোগ করুন বিসারিয়া চা বিসারিয়া চা পয়লা পাতা ভাষা যোগ করুন বিষয় তিলকর",
+    "scrapedAt": "2025-12-15 19:21:41.47054"
+  },
+  {
+    "id": 60,
+    "url": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa",
+    "title": "Wikipedia",
+    "content": "Ir al contenido Wikipediamanta Urin Qhichwa Wikipiryaman Chayaykamullay Ayak\u0027uchu-Chanka · Qusqu-Qullaw · Santiyaku-Qhatamarka Piruw · Wuliwya · Chilisuyu · Arhintina Qillqasqa p\u0027anqayuqñam: 24 346 Qhichwa qillqaqkuna: 52 Kay killap panq\u0027an: Uyuni Aymar Deutsch English Español Français Avañe\u0027e 日本語 Nāhuatl Português Swahili 中文 Wak Simikuna Kurunawirus lliw unqurichiq Kurunawirus lliw unqurichiq (kastilla simipi: Pandemia de enfermedad por coronavirus) nisqaqa huk wamaq unquymi kay kurunawirus 2019 (COVID-19) sinchi samay ñak’ariy kurunawirus 2 (SARS-CoV-2) nisqamantan paqarimurqan. Wamaqllaraq mirariytam qallarirqa Wuhan, Hubei pruwinsya, Chunwa Runallaqta Ripuwlikapi, qhapaq raymi killa 2019 watapi; 11 ñiqin pawqar waray killapi 2020 watapim chayllaraq Hamp\u0027i Tiqsimuyup Tantanakuyqa hatun unquytaqa riqsirqurqa. 5,070,000 unqukunañam 21 ñiqin aymuray killakamalla kachkan, kanmansi 188 suyu ayllukunapi ima, 332,000 wañusqata hinallataq 1,930,000 qaliyasqata saqispan. Yawar Waqaq Yawar Waqaq Inkakunap qanchis ñiqin qhapaqninsi karqan. 1380 ñiq watakunapi qhapaq inkas karqan. Ñawpaqnin inka qhapaq: Inka Ruq\u0027a. Qhipaqnin inka qhapaq: Wiraqucha Inka }} Limaq Lima icha Limaq icha Rimaq (Lima \u003c Limaq \u003c Rimaq) llaqtaqa Piruw mama llaqtap Lima llaqta suyupas uma llaqtanmi. Chaypiqa qanchis hunu runakunam kawsanku. Francisco Pizarro llaqtataqa 1535 watapim kamarirqan. 1687 watapiqa hatun pacha kuyuymi llaqtataqa waqllichirqan. Akllasqa panq\u0027a Anta-Sitwa Killapi black Piruw Mamallaqtaqa Ispañamanta 1821 wata 28 p\u0027unchaypi qispikusqa. Chaymanta Piruwanu runakunapaq anchata yupaychasqa p\u0027unchaymi kan. Ayriwa Killapi Artemis program: NASAqa SpaceXta, Dyneticsta akllachisqan killa chayananpaq. Hukllachasqa Amirika Suyukunap ch\u0027usaq puriqnin runakunaqa 2024 watapi ripukunqaku. Anta-Sitwa Killapi Asarsuyupa awqaqninkuna, Hayasuyup awqaqninkunawan maqanakusqan, kay maqasqankumanta suqta chunka runakunaqa wañukusqan. Pawqar-Waray Killapi Kurunawirus unquynin: Qullasuyup, Piruwpa, Ikwadurpa umalliqkunaqa runakunanman wasipi waqaychachun mañakusqan, ama kurunawirus unquyta hap’ichinanpaq. Artemis Antakillaqa alistakuchkan purichinanpaq Anta Sitwa · Chakra Yapuy · Tarpuy killa\n Wiñay kawsay Punku p\u0027anqa Yachay Punku p\u0027anqa Allpa llamk\u0027ay Punku p\u0027anqa Kawsay saphi Punku p\u0027anqa Allpa saywachi Punku p\u0027anqa Kawsay yachay Punku p\u0027anqa Kurku kallpanchay Punku p\u0027anqa Taki kapchiy Punku p\u0027anqa Llup\u0027ina Punku p\u0027anqa Hampi yachay Punku p\u0027anqa Pachaykamay Punku p\u0027anqa Kapchiy Punku p\u0027anqa Iñiy Punku p\u0027anqa Simi kapchiy Punku p\u0027anqa Nuna yachay Punku p\u0027anqa Yupana Punku p\u0027anqa Chaqllisinchi Punku p\u0027anqa Quyllur yachay Punku p\u0027anqa Musiku Punku p\u0027anqa Rimay Punku p\u0027anqa Mama Llaqtap San Markus Kuraq Yachay Sunturnin Mama Llaqtap San Markus Kuraq Yachay Sunturnin (kastilla simipi: Universidad Nacional Mayor de San Marcos, UNMSM; latin simimanta: Academia Sancti Marci Urbis Regum in Peruvia) nisqaqa Piruwpi qhapaq Yachay sunturmi, Lima llaqtapi. Aswan chaninchasqa, sut\u0027inchasqa yachay wankurina Piruw mamallaqtapi kan, hinan kaspa Piruwpi, Awya Yalawpi ñawpaq yachay sunturnin kan. 1548 watapi, Santo Domingo kunwintupi pata yachaqkunamanta qallarisqaku. Fray Tomas de San Martín nispa, chiqanchasqa paqarirqaku, hinaqtin 1551 wata ayriwa killa 12 ñiqin Carlos I Ispañamanta Qhapaq kamaqillqanninwan chaynallata kawsarirkaku. Qhichwa simi Qhichwa simi icha Runasimi ñisqaqa Urin Awya Yalapi rimasqan rimaymi. Tawantinsuyup siminsi karqan. Kunanqa yaqa 14.000.000 runam kay simita rimanku, Piruwpi, Buliwyapi, Arhintinapi, Ikwadurpi, Chilipi, Kulumbyapi kaytaqa riman. Lliw Awya Yala rimaykunamanta astawan rimaqniyuqmi. Qhichwa sutita churarqa runasimiman Fray Domingo de Santo Tomás, ñawpaq qillqaq kay simimanta.Simi yachaqkunaqa rimanakun, qhichwa simi hukllachu achkachu rimay. SIL International ñisqa tantanakuy ñinmi, 42 rimaymi, nispa. Qhichwa Simi Hamut\u0027ana Kuraq Sunturtaq ñinmi, huklla simi, Qusqu llaqtap rimayninmi huklla allin qhichwa simi, ñispa. Ichataq Chanka rimaqqa manam Wanka rimayta hap\u0027inchu, Wankataq manam Chanka rimaytachu. Pacha q\u0027uñichiy Pacha q\u0027uñichiy nisqaqa chimlasay, huk pacha q\u0027uñichina nisqa wapsikunarayku wayra pachap q\u0027uñiyninmi. Inti tiksi muyuta achkiy, k\u0027uyu qhipa, huk illanchaykunawan illanchaspa q\u0027uñichiptin, tiksi muyutaq puka ñawpa nisqatam hawa pachaman illanchan. Pacha q\u0027uñichina wapsikuna chay achkiy, k\u0027uyu qhipa illanchaykunata chimpachinmi, manataqmi puka ñawpatachu. Chay puka ñawpa illanchayta allpaman rirpuchaspa wayra pachapipas hark\u0027aspa allpa pachatam wayra pachatapas q\u0027uñichinmi Qiwuña Ñawpa pachas Punapi ancha achka qiwuña-qiwuñas karqan, kunan pachataq chaymanta chunka ch\u0027iqtallamantas aswan pisillas puchuq kachkan. Tawantinsuyu pachapiqa Inkakuna ama sach\u0027a muthuychu ñiqsi karqan. Ispañulkuna hamuptinqa achka sach\u0027akunas michina ruranapaq muthusqa karqan. Kunan pacha mana chayllaña q\u0027iru kaptinmi, runakuna qiwuñakunata yamt\u0027apaq wasichanapaqpas muthunku. Llamakuna qiwuñap raphinkunatam mikhunku. Chaywan musuq",
+    "scrapedAt": "2025-12-15 19:21:39.86852"
+  },
+  {
+    "id": 59,
+    "url": "https://en.wikipedia.org/wiki/List_of_days_of_the_year",
+    "title": "List of days of the year - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia The following pages, corresponding to the Gregorian calendar, list the historical events, births, deaths, and holidays and observances of the specified day of the year: Jan 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Feb 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29[i] Mar 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Apr 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 May 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Jun 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 Jul 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Aug 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Sep 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 Oct 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Nov 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 Dec 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Footnotes ^ February 29 only occurs in leap years. This day is added to the calendar as a corrective measure because the Earth does not orbit the Sun in precisely 365 days. See also Leap year List of calendars List of non-standard dates External links On This Day BBC: On This Day The New York Times: On This Day Library of Congress: Today in History History Channel (US): This Day in History History Channel (UK): This Day in History Retrieved from \"https://en.wikipedia.org/w/index.php?title\u003dList_of_days_of_the_year\u0026oldid\u003d1326484255\" Categories: Days of the year Lists of observances History-related lists Reference material lists Hidden categories: Articles with short description Short description is different from Wikidata Wikipedia indefinitely semi-protected pages Search Search List of days of the year 91 languages Add topic",
+    "scrapedAt": "2025-12-15 19:21:38.161936"
+  },
+  {
+    "id": 58,
+    "url": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal",
+    "title": "Biquipédia",
+    "content": "Ir para o conteúdo Ourige: Biquipédia, la anciclopédia lhibre. Bienbenidos a Biquipédia La anciclopédia lhibre que todos puoden eiditar. 4 284 artigos an mirandés 28 outelizadores atibos Cumo se registrar Upa Cumo puodo dar ua upa Preguntas Abiso legal Taberna Páigina de testes Canal IRC Donaçones Arte Biografies Ciéncia Filosofie Geografie Stória Matemática Relegion Sociadade Tecnologie Artigo an çtaque Apersentaçon Pertual, oufecialmente República Pertuesa (an pertués: Portugal i República Portuguesa), queda ne l sudoeste de la Ouropa, an que l sou território queda na zona oucidental de la Península Eibérica i an arquipélagos ne l Atlántico Norte. Ten ua ária total de 92.391 km², i ye la naçon más oucidental de l cuntinente ouropeu. L território pertués ye delemitado a norte i a este por Spanha i a sul i oeste pul Ouceano Atlántico, i cumprende la parte cuntinental i las regiones outónomas: ls arquipélagos de l Açores i de la Madeira. Durante ls seclos XV i XVI, Pertual fui ua poténcia mundial eiquenómica, social i cultural, custituindo-se l purmeiro i l mais duradouro ampério quelonial de amplitude global. Zde la cunquista de Ceuta an 1415 até a la cessaçon de la admenistraçon de Macau, an 1999. Pertual ye hoije un paíç zambolbido, eiquenomicamente próspero, social i politicamente stable i cun Índece de Zambolbimiento Houmano eilebado. Ancuntra-se antre ls binte paízes de l mundo cun melhor culidade de bida, anque l sou perduto anterno bruto per capita ser l mais pequeinho antre ls paízes de la Ouropa Oucidental. Ye nembro de las Naciones Ounidas i de la Ounion Ouropeia (na altura de la sue adeson an 1986, CEE), i nembro-fundador de la NATO, de la OCDE, de la Zona Ouro (€) i de la CPLP. Partecipa an dibersas missones de manutençon de paç de las Naciones Ounidas. Pertual ye tamien un stado-nembro de l Spácio Schengen. Lher mais... Cumpartir: Artigos an çtaque: catadorie La Biquipédia ye un porjeto de anciclopédia colaboratiba, ounibersal i çponible an bárias lhénguas/lénguas, stablecido na Anternete cunforme l percípio wiki. Ten cumo perpósito çponeblizar un cuntenido lhibre, oujetibo i berificable, que todos puodan eiditar i melhorar. L porjeto ye stablecido puls percípios fundamentales. L cuntenido ye çponeblizado cunforme la licéncia Creative Commons BY-SA i puode ser copiado i reoutelizado cunforme la mesma licéncia – mesmo pa fines comerciales – zde que séian respeitados ls termos i las cundiçones de outelizaçon. Todos ls eiditores de la Biquipédia son beluntairos. Eilhes antegran ũa quemunidade colaboratiba, sien un xefe, adonde ls nembros cordenan ls sous sfuorços ne l ámbito de ls porjetos temáticos i dibersos spácios de cumbersa. Dentre las bárias páiginas de upa a la çposiçon de ls antressados an cuntrebuir, stan las que splícan cumo criar ó eiditar un artigo. An causo de dúbedas, nó eisite an preguntar. Todos puoden publicar cuntenido na Biquipédia zde que sigan las reglas básicas stablecidas pula quemunidade, cumo por eisemplo la berificaçon de la anformaçon ó notoriedade i amportança de l tema. Ls debates i comentairos subre ls artigos son siempre bienbenidos. Las páiginas de cumbersa serben pa centralizar las reflessones i abaluaçones subre cumo melhorar l cuntenido de la Biquipédia. Se falas mirandés i achas bien haber ũa anciclopédia nesta lhéngua, puodes ajudá-la a crecer. Wikipedistas lusófonos, cliquem aqui! Portal de la quemunidade Upa mwl-0? Não fala mirandês? Clique aqui! ¿No habla mirandés? Hagan clic aquí! Don\u0027t speak Mirandese? Click here! You can also visit our guestbook and help page. Se tubires preguntas subre questones lhenguísticas, puoden ser puostas an uso de la lhéngua ó ne ls cachos d’ourtografie, lhéxico i gramática. Bei tamien la portalada de la quemunidade i la taberna para çcutir las cousas cul restro de la quemunidade. Nun sabes por adonde ampeçar? Bei la lhista d\u0027artigos que toda Biquipédia deberie tener, traduç-los i ampeça a eiditar ls artigos nas lhigaçones que stan a burmeilho. Se quieres saber mais, puodes bejitar la páigina d’ajuda. Bejita las portaladas temáticas. Se quejires fazer testes para daprender l funcionamiento de la Biquipédia, puodes fazer na páigina de testes. Se quejires ber las statísticas atualizadas de la Biquipédia, puodes fazer eiqui. Eimaige de l die Sabies que... Modelo:Eimaige - 9 de dezembre Cumpartir: Eimaiges de culidade ne l Commons Modelo:Curjidades - 9 de dezembre Todas las lhénguas Biquipédias noutras lhénguas: Biquipédias cun 1 000 000 artigos Deutsch (alman) — English (anglés) — Español (spanhol) — Français (francés) — Italiano (eitaliano) — Nederlands (houlandés) — 日本語 (japonés) — Polski (polaco) — Português (pertués) — Русский (russo) — Sinugboanong Binisaya (cebuano) — Svenska (sueco) — Tiếng Việt (biatnamita) — Winaray (samarenho) Biquipédias antre 100 000 i 900 000 artigos العربية (árabe) — Asturianu (sturiano) — Azərbaycanca (azerbaijano) — Български (búlgaro) — Bân-lâm-gú / Hō-ló-oē (min de l sul) — Беларуская (Акадэмічная",
+    "scrapedAt": "2025-12-15 19:21:36.595769"
+  },
+  {
     "id": 57,
     "url": "https://awa.wikipedia.org/wiki/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A7%E0%A4%BE%E0%A4%A8_%E0%A4%AA%E0%A4%A8%E0%A5%8D%E0%A4%A8%E0%A4%BE",
     "title": "विकिपीडिया",
@@ -1377,41 +1412,6 @@ window.searchData = [
     "title": "Vikipedeja",
     "content": "Pāriet uz saturu Materials nu Vikipedeja Vasali Vikipedejā, breivajā eņciklopedejā latgaļu volūdā! Niule latgaļu volūdā: 1 113 rakstīņs Registrētīs Smiļkšu skreine Aizsuokt jaunu rakstīni Rakstīņa papiļdeišona Administracejis ībolsuošona Dūmu meits Administraceja Vikipedejis termini Vierteigs rakstīņs Igaunejis karūgs Igaunejis Republika (igauņu: Eesti Vabariik) irā vaļsteiba Pūstumu Europā pi Baļtejis jiurys. Vaļsteiba tur rūbežu ar Latveju dīnavydūs (343 km) i Krīveju reitūs (338 km). Baļtejis jiura skoloj Igaunejis molys vokorūs, pūstumūs Suomu leics, a dīnavydvokorūs — Reigys leics. Vaļsteibys 45 226 km² pluotā dzeivoj tik 1,31 milijoni dzeivuotuoju, ite vīns nu vysuzamuokūs bīzeibys ruodejumu Europā. Igauneja irā demokratiska parlamentariska republika, padaleita pīcpadsmit apleiciņūs. Igaunejis golvysmīsts i leluokais mīsts irā Talins. Igauni vīna nu Baļtejis suomu tautu, kura etniskai radneiga suomu, līvu, votu i cytom tautom. Viesturiskai i kulturiskai igauņu zeme sasīta ar Švedeju, Daneju, Suomeju i Latveju. Igauņu volūda pīdar Suomugru volūdu saimei, jei leidzeiga suomu volūdai i tuoleimai leidzeiga vengru volūdai, tok natur radneibys ar latgaļu ci latvīšu volūdu. Igauņu, suomu, vengru i maltīšu volūdys vīneiguos vaļsteibys volūdys Europys Savīneibā, kurys napīdar pi Indoeuropīšu volūdu saimys. Igauneja paslūdynova sovu napavaļdeibu 1918 gods pebraļa 24 dīnā, tok piec parvareigys daškieršonys PSRS, napavaļdeiba atjaunynuota 1991 gods augusta 20 dīnā. Nu 2004 gods maja 1 dīnys Igauneja irā Europys Savīneibys i nu 2004 gods marta 29 dīnys — NATO dalinīkvaļsteiba. Vaira... Mieneša aizdavums Europys karūgs Viereibys! Itymā mienesī vadynojam vysus papyldinuot rakstīņus ap Europys vaļsteibom. Vadynojam veiduot jaunus rakstīņus, lai latgaļu Vikipedeja dreiži dasnīgtu ļeidz pirmajim 1000 rakstīņim. Kategorejis Doba Geografeja Kultura Latveja Latgola Ļaudeiba Muoksla Nūtikšonys Politika Religeja Tehnologeja Viesture Zineiba Vysi rakstīni pa alfabetam – Pošjaunī rakstīni – Vysis rakstīņu kategorejis Izalaseits atvaigs Nimfenburgys piļs - baroka stila piļs, Vuocejā, Bavārejis nūvodā. arhivs Cyti projekti Vikipedeja irā napeļneiguos organizacejis Vikiviesteitivu Fonds projekts i tys irā sasīts ar nazcik cytu daudzivolūdeigu i breivai dabojamu turīņu projektu: Vikivuordineica Breivuo vuordineica Vikiteka Viesteitivu kūplasejums Vikigruomotys Gruomotys i pavuicīni Vikicitatys Aforizmi i seņtencejis Metaviki Vikimedijis projektu sadarynuošona Vikiviests Aktualumi i pošjaunuos viests Vikiolūti Vysaidi breivai dabojami teksti Vikiškirys Škiru katalogs Vikiškola Vuiceibu materiali Baltu volūdu Vikipedejis Latvīšu Vikipedeja • Lītaunīku Vikipedeja • Žemaišu Vikipedeja Vysys volūdys – Volūdu sadarynuošona Atdabuot nu \"https://ltg.wikipedia.org/w/index.php?title\u003dSuoku_puslopa\u0026oldid\u003d35214\" 343 valodas Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fiji Hindi Hrvatski Hornjoserbsce Kreyòl ayisyen Magyar Հայերեն Արեւմտահայերէն Interlingua Jaku Iban Bahasa Indonesia Interlingue Igbo Igala Iñupiatun Ilokano ГӀалгӀай Ido Íslenska Italiano ᐃᓄᒃᑎᑐᑦ / inuktitut 日本語 Patois La .lojban. Jawa ქართული Qaraqalpaqsha Taqbaylit Адыгэбзэ Kabɩyɛ Tyap Kongo Kumoring Gĩkũyũ Қазақша Kalaallisut ភាសាខ្មែរ ಕನ್ನಡ Yerwa Kanuri 한국어 Перем коми Къарачай-малкъар کٲشُر Ripoarisch Kurdî Kʋsaal Коми Kernowek Кыргызча Latina Ladino Lëtzebuergesch Лакку Лезги Lingua Franca Nova Luganda Limburgs Ligure Ladin Lombard Lingála ລາວ Lietuvių Latviešu Madhurâ मैथिली Basa Banyumasan Мокшень Malagasy Олык марий Māori Minangkabau Македонски മലയാളം Монгол ꯃꯤꯇꯩ ꯂꯣꯟ ဘာသာမန် Moore मराठी Кырык мары Bahasa Melayu Malti Mirandés မြန်မာဘာသာ Эрзянь مازِرونی Nāhuatl Napulitano Plattdüütsch Nedersaksies नेपाली नेपाल भाषा Li Niha Nederlands Norsk nynorsk Norsk bokmål Novial ߒߞߏ IsiNdebele seSewula Nouormand Sesotho sa Leboa Nupe Diné bizaad Chi-Chewa Occitan Liv",
     "scrapedAt": "2025-12-15 19:09:51.676626"
-  },
-  {
-    "id": 62,
-    "url": "https://co.wikipedia.org/wiki/Pagina_maestra",
-    "title": "Wikipedia",
-    "content": "Vai al contenuto À prupositu di Wikipedia Sartè Corti Salute! Sì benvenutu nantu à a versione di Wikipedia in lingua corsa, l\u0027enciclopedìa lìbera, gratisi è scritta cù a cuuperazione di tutti. U scopu di stu prugettu hè di cuntribuisce à mantene a lingua è a cultura corsa. Oghje, marti 9 di dicembre 2025, Wikipedia tene 8 603 articuli è 63 persone attive Ringraziemu à tutti quelli chì participèghjanu. Indice Arti è cultura Architittura - Arti - Arti di u spittaculu - Disegnu - Sinemà - Cultura pupulari - Baddu - Littiratura - Musica - Pintura - Futugrafia - Scultura Pulitica, drittu è sucità Cummerciu - Difesa è sicurità - Drittu - Educazioni - Ecunumia - Ambienti - Pulitica - Urbanisimu Riligioni è cridenzi Agnusticisimu - Ateisimu - Buddisimu - Cristianisimu - Esuterisimu - Induisimu - Islamu - Ghjudaisimu - Misticisimu - Mitulugia - Riligioni - Scenzi umani Antrupulugia - Archiulugia - Eculugia - Giugrafia - Giupulitica - Storia - Linguistica - Musiculugia - Filusufia - Psiculugia - Suciulugia Scenzi esatti è naturali Astrunumia - Biulugia - Chimica - Giulugia - Logica - Matematica - Medicina - Fisica Tennulugii è scenzi applicati Aerospaziali - Agrunumia - Cumunicazioni - Design - Elettronica - Infurmatica - Inginieria - Management - Farmacia - Rubotica - Telecumunicazioni Vita quutidiana è distrazzioni Automobili - Bricolage - Cucina - Divirtimentu - Giardinu - Ghjocu - Nutrizioni - Saluta - Sissualità - Sport - Televisioni - Turisimu - Trasportu Ricerca è navigazioni Articuli di qualità - Indici alfabeticu - Indici tematicu - Pagini nuvelli Radica di i catigurii Per accede à i mudelli Infobox I mudelli d\u0027infobox sò strumenti essenziali per strutturà è prisentà l\u0027infurmazioni in modu coerente nantu à Wikipedia in corsa. Quessi mudelli vi permettenu di creà infobox eleganti è funziunali per tutti i tipi di cuntenutu. Cliccate quì per a lista Mudificà Aiutate Wikipedia in lingua corsa Per aiutà Wikipedia pudete: fà una parti di u travagliu da fà Scrive un articulu, o ancu sè vo truvete un sbagliu, currighjite lu puru ! Scrivite in corsu cismuntincu, taravese o sartinese, cume vo vulete: diversità face ricchezza. Videte dinù i cunsigli per scrive un articulu. U più simplice per cumincià hè di cumplittà un articulu : videte l\u0027articuli da cumplittà. Si pò dinù traduce un articulu, per esempiu da a wikipedia in francese, talianu, sicilianu... Incaricà imagini o fotugrafii. U megliu hè d\u0027incaricà li annantu à WikiCommons, parchì pudarani serva dopu à tutti i prugetti Wikimedia. T\u0027avemu bisognu d\u0027una fotugrafia d\u0027ogni paesi, ogni paisolu, ogni munimentu di Corsica, ogni fiore, ogni animale, ogni ogettu anticu, è cetera. in ogni circustanza, ci vole à rispettà i dritti d\u0027autore: ùn si ponu cupià quì testi o stratti chì sò prutetti da i dritti d\u0027autore Mudificà Novi articuli Architittura rumànica - Rumànicu pisanu - Architettura rumànica in Sardegna - Architettura barocca - A Citatella di Bastia - Chjesa San Ghjuvà di Bastia - Santa Croce di Bastia - Lista di e pieve di Corsica - Prosper Mérimée - Figuretta - Discriminazione linguistica - Sambucu - Eros Ramazzotti - Charles Aznavour - Ascensione - Stella cadente - Aluetu di Sudafrica - Induisimu - India - Aleria - Scupinu - Tarrori è Fantasia - Ghjumenta di preti - Seppia - Pesciu rondina - Merula (fauna marina) - Ghjaddinedda organu - Ghjuncu marinu - San\u0027Petru di Panicala - Scrizzula - Burra cascistretta - Scali di u rè d\u0027Aragona - Ghjuvan Petru Gaffori - Leonardu Fibonacci - Scurpionu neru - Nannara - Cardalina - Ghjallina (Arisarum vulgare) - Tafonu di u Cumpuleddu - Museu d\u0027Aleria - Vechju marinu - Torra di a Parata - Lepru corsu - Sempre vivu - Curu - Mari Tirrenu - Parcu naziunale di Abruzzu, Laziu è Mulise - Camosciu d\u0027Abruzzu - Passerottu - Ventu in Corsica - Arburi di Ghjuda - Margonu - Munimentu di a Terra Sacra in Vignola - Cignali - Acula marina corsa - Acula marina - Pavonu corsu - Michael J. Fox - Isulottu di Gargalu - Acula codibianca - Filetta sischese - Ditonu (Bonifaziu) - Lavu di Crena - Sprissioni corsi - Ruzunu - Alpana - Carlu Bonaparte - Paulina Bonaparte - Meridiana - Pichjarina - Tiadoru di Neuhoff - Taravu (fiumu) - Ufridi neru - Puppusgiula - Catinacciu di Sartè - Cuppulata d\u0027Hermann - Ferula - Etruschi - Regnu di Napuli - Capraia Isula - Gadduresu - Cuccu - Romulu è Remu - Ponziu Pilatu - Plutarcu - Marcu Biancarelli - Réganu - Finochju - Frìsgiula - Unibessiddài di Sàssari Mudificà Da leghje Uni pochi di testi di a litteratura in lingua corsa (in u duminiu publicu): u Serenatu di Scappinu: Salvatore Viale (1787-1861) i Versi di Sagra: Ugu Peretti (1747-1838) u Viaghju in Ascu: Antone Leonardu Massiani (1816-1888) L’angunia di un paisolu corsu: Antone Bonifacio (1866-1933) U Scupatu: Antone Bonifacio E galline di Zia Mega: Antone Bonifacio È i cummenti di i testi muderni: Un pezzu di petra nera: Anghjulu Canarelli Mudificà Prugettu di u mese Sete tutti invitati à participà à u prugettu di \u0027ssu mese: scrive i toponimi di tutte e cumun",
-    "scrapedAt": "2025-12-15 19:09:47.906354"
-  },
-  {
-    "id": 61,
-    "url": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE",
-    "title": "উইকিপিডিয়া",
-    "content": "বিষয়বস্তুতে চলুন মুক্ত বিশ্বকোষ উইকিপিডিয়াত্ত উইকিপিডিয়া উইকিপিডিয়া-ত সাম্ভাষা বিষ্ণুপ্রিয়া মণিপুরী ঠারর উইকিপিডিয়া এবাকা ২৫,০৯২হান নিবন্ধ অসে। উইকিপিডিয়া এহান ইন্টানেটর উন্মুক্ত বিশ্বকোষহান যেহান ১০০হারউ গজে ঠারলো পানা য়্যাকরের। এহান যেগউ সম্পাদনা করানি পারতারা। পতাসূচী ০-৯ অ আ ই ঈ উ ঊ ঋ এ ঐ ও ঔ ক খ গ ঘ ঙ চ ছ জ ঝ ঞ ট ঠ ড ঢ ণ ত থ দ ধ ন প ফ ব ভ ম য র ল ৱ শ ষ স হ ড় ঢ় য় ৎ হাব্বি লেপনাইসে পতাফিচার নিবন্ধ ১৮শ বারো ১৯শ শতাব্দীর হমবুকে বিষ্ণুপ্রিয়া মণিপুরীর ডাঙর অংশ আহান মণিপুর লাম বেলিয়া অসম, ত্রিপুরা, সিলেট বারো কাছাড় লয়া এতাত গিয়া লাম লয়লাগা মণিপুরর রাজ বেইবুনির কৌলি বারো বার্মার আক্রমন খাংকরে নুৱারিয়া। অহানে স্বভাবতই মণিপুরে থাইলা হুরকা অংশ অহানরতা মৈতৈ ঠারর প্রভাবে ঠারহান জিংতা করিয়া থনা সম্ভব নাইল, অতাইলের গারিয়ৌ ড. গিয়ার্সন গিরকে মারি ১৮৯১ত বিষ্ণুপুর বারো কাদাপারার গাঙ লামাংদং বারো আরাকউ গাঙ কতহাত ঠার এহানর অতাকুরারা মানুকুস উনা ইসে ( LSI, Vol -V, Page 419)। ঠার এহান তাপ্প তাপ্প মণিপুরেত্ত উঠে গেলগা মৈতৈর প্রভাবে বারো কাছাড়, বাংলাদেশেউ তলেদে লামে আহের বাংলা ঠারর প্রভাবে। অতা হাবির বাদেউ মণিপুরর জিরিবাম সাব-ডিভিশনে, আসামর কাছাড় জিলাত, ত্রিপুরা বারো বাংলাদেশর নানান লয়াত ঠার এহান অতারতারা বারো জাত এহানর মানুয়ে ঠার এহানরে তেতনেই হন্নাত জিংতা করিয়া থসি। আরাকউ পাকরিক... পতাপৌ বিষ্ণুপ্রিয়া মণিপুরী উইকিপিডিয়া ১০০০০ নিবন্ধর বডাগ লালুইল গেলগা ডিসেম্বর ২৩ মারি ২০০৭ নিউ ইয়র্ক, তিলপারাষ্ট্রর সেন্ধা ৭:৪৫-এ ১০,০০০ হান নিবন্ধর বডাগ লালুইল। অতার আগে আমার ভারতীয় উপমহাদেশত্ত এতা হাবি ঠারর মা হুদ্দা তেলুগু বারো বাংলা ১০,০০০র বডাগ লালনার সম্মান পেইল। পতাকুন দিন কিহান এপাগাউ না তিলসে পতাহাদি এহানরতা ... গোকুলানন্দ গীতিস্বামী গিরক এগরে বিষ্ণুপ্রিয়া মণিপুরী জাতর জনকগো বুলিয়া মাততারা। গোকুলানন্দ গীতিস্বামী গিরক এগই বিষ্ণুপ্রিয়া মণিপুরী সমাজেত্ত নিরক্ষরতা,অন্ধবিশ্বাস,কু-সংস্কার, ভ্রষ্টাচার, অনাচার বারো অরাজকতা কিতা কিতি সেচানিরকা মহতী সমাজ সংস্কারর লালফাম অকরেসিল। এতাবাদে গিরক এগই বিষ্ণুপ্রিয়া মণিপুরী সমাজ নিয়া নিয়ামপারা সমাজ-সংস্কারমুলক এলা, কবিতা, নাটক বারো আরতাউ নানান রচনা ইকরিয়া বিষ্ণুপ্রিয়া মণিপুরী জাত, সংস্কৃতি বারো ঠাররহানরে গজে কাকরিয়া গেসেগা। সমাজ-সংস্কার বারো জাগরনে নিয়াম ভুমিকা থনায় গিরক এগ গীতিস্বামী উপাধি পাসিল। (আরাকউ পাকরিক...) লগোগ পতাআর ঠারর উইকিপিডিয়া ৫০,০০০-র গজে লেখা আসেতা: বাংলা ·Dansk · Deutsch · English · Español · Esperanto · Français · Italiano · Nederlands · 日本語 · 한국어 · Norsk bokmål · Polski · Português · Русский · Slovenčina · Suomi · Svenska · 中文 ২০,০০০-র গজে লেখা আসেতা: Bahasa Indonesia · Български · Català · Česky · Eesti · עברית · Hrvatski · Lietuvių · Magyar · Română · Slovenščina · Српски · Türkçe · Українська ১০,০০০-র গজে লেখা আসেতা: Simple English · العربية · Bahasa Melayu · Bosanski · Ελληνικά · Euskara · فارسی · Galego · Ido · Íslenska · ქართული · Lëtzebuergesch · Nnapulitano · Norsk nynorsk · ภาษาไทย · తెలుగు · नेपाल भाषा · Tiếng Việt পুরা পারেংহানি.. ___ বিজ্ঞান বারো গণিত বিজ্ঞান · গণিত · চিকিৎসা ___ ভূগোল ভূগোল · দেশ · মহাসাগর ___ প্রযুক্তি কম্পিউটার · প্রকৌশল · টেলিযোগাযোগ ___ কলা বারো সংস্কৃতি এলা · নাচা · চিত্রকলা · সিনেমা ___ লিচেত বারো দর্শন হিন্দু লিচেত · ইসলাম লিচেত · বৌদ্ধ লিচেত · খ্রীষ্টান লিচেত · ইহুদি লিচেত ___ সাহিত্য বারো ঠার ঠার · সাহিত্য · লোক সাহিত্য ___ ইতিহাস বারো জীবনি ইতিহাস · জীবনি · পাঞ্জী ___ সমাজ বারো সমাজর বিজ্ঞান সমাজ · সমাজর বিজ্ঞান · রাজনীতি ছবিগ বিষ্ণুপ্রিয়া মণিপুরী বেলিরাস নুৱাতা নুৱালেখাহানি: থাইল্যান্ডর প্রশাসনিক লয়াগি | শেখ হাসিনা | জর্জ ৱাকার বুশ | প্রতিভা পাতিল | জাতীয় চিনত্হানি | জাতীয় ফিরালহানি | বাংলাদেশর ইউনিয়নগি | পারা | ব্রাজিলর পৌরসভাহানি | নরৱের কাউন্টিহানি আতাকুরা: নুৱা আতাকুরার পারেংহানি চেইক প্রকল্পর সালনি... বিষ্ণুপ্রিয়া মণিপুরী উইকিপিডিয়াহানর যে প্রকল্পহানি আগেদে সাল যারগা অতা ইলতাই: উইকিপিডিয়া:বিষ্ণুপ্রিয়া মণিপুরী উইকিপিডিয়া:বাংলাদেশ উইকিপিডিয়া:ভারত প্রকল্প এহানি লইকরানিত পাংলাক করিক উইকিপিডিয়ার বনক প্রকল্পহানি উইকিপিডিয়া বাদেউ লাভ নাকরের প্রতিষ্ঠানহান উইকিমিডিয়া ফাউন্ডেশন, আরাকউ আক্কুস ঠার বারো উদুম-দুৱা প্রকল্পনো কাম করের: উইকিনারি শব্দকোষ উইকিলেরিক খুলাসা লেরিক বারো পাকরিলতা উইকিউক্তি খুলাসা উক্তি উইকিসোর্স উইকির খুলাসা উৎস উইকিপ্রজাতি জীব প্রজাতিহাবির করপেখহান উইকিপৌ খুলাসা উইকিপৌ উইকিমিডিয়া কমন্স পাতাপলসি মিডিয়ার ভান্ডারগ মেটা উইকি উইকিমিডিয়া হাব্বির সিজিলপা উইকিবিশ্ববিদ্যালয় খুলাসা মনরাকা খুলাসা হিকানি পাংলাক · যোগাযোগ \u0027https://bpy.wikipedia.org/w/index.php?title\u003dপয়লা_পাতা\u0026oldid\u003d896075\u0027-ত্ত আনানি অসে থাক: কামনাকরের ফাইলন আসে পাতাহানি ভাষা যোগ করুন বিসারিয়া চা বিসারিয়া চা পয়লা পাতা ভাষা যোগ করুন বিষয় তিলকর",
-    "scrapedAt": "2025-12-15 19:09:45.029976"
-  },
-  {
-    "id": 60,
-    "url": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa",
-    "title": "Wikipedia",
-    "content": "Ir al contenido Wikipediamanta Urin Qhichwa Wikipiryaman Chayaykamullay Ayak\u0027uchu-Chanka · Qusqu-Qullaw · Santiyaku-Qhatamarka Piruw · Wuliwya · Chilisuyu · Arhintina Qillqasqa p\u0027anqayuqñam: 24 346 Qhichwa qillqaqkuna: 52 Kay killap panq\u0027an: Uyuni Aymar Deutsch English Español Français Avañe\u0027e 日本語 Nāhuatl Português Swahili 中文 Wak Simikuna Kurunawirus lliw unqurichiq Kurunawirus lliw unqurichiq (kastilla simipi: Pandemia de enfermedad por coronavirus) nisqaqa huk wamaq unquymi kay kurunawirus 2019 (COVID-19) sinchi samay ñak’ariy kurunawirus 2 (SARS-CoV-2) nisqamantan paqarimurqan. Wamaqllaraq mirariytam qallarirqa Wuhan, Hubei pruwinsya, Chunwa Runallaqta Ripuwlikapi, qhapaq raymi killa 2019 watapi; 11 ñiqin pawqar waray killapi 2020 watapim chayllaraq Hamp\u0027i Tiqsimuyup Tantanakuyqa hatun unquytaqa riqsirqurqa. 5,070,000 unqukunañam 21 ñiqin aymuray killakamalla kachkan, kanmansi 188 suyu ayllukunapi ima, 332,000 wañusqata hinallataq 1,930,000 qaliyasqata saqispan. Yawar Waqaq Yawar Waqaq Inkakunap qanchis ñiqin qhapaqninsi karqan. 1380 ñiq watakunapi qhapaq inkas karqan. Ñawpaqnin inka qhapaq: Inka Ruq\u0027a. Qhipaqnin inka qhapaq: Wiraqucha Inka }} Limaq Lima icha Limaq icha Rimaq (Lima \u003c Limaq \u003c Rimaq) llaqtaqa Piruw mama llaqtap Lima llaqta suyupas uma llaqtanmi. Chaypiqa qanchis hunu runakunam kawsanku. Francisco Pizarro llaqtataqa 1535 watapim kamarirqan. 1687 watapiqa hatun pacha kuyuymi llaqtataqa waqllichirqan. Akllasqa panq\u0027a Anta-Sitwa Killapi black Piruw Mamallaqtaqa Ispañamanta 1821 wata 28 p\u0027unchaypi qispikusqa. Chaymanta Piruwanu runakunapaq anchata yupaychasqa p\u0027unchaymi kan. Ayriwa Killapi Artemis program: NASAqa SpaceXta, Dyneticsta akllachisqan killa chayananpaq. Hukllachasqa Amirika Suyukunap ch\u0027usaq puriqnin runakunaqa 2024 watapi ripukunqaku. Anta-Sitwa Killapi Asarsuyupa awqaqninkuna, Hayasuyup awqaqninkunawan maqanakusqan, kay maqasqankumanta suqta chunka runakunaqa wañukusqan. Pawqar-Waray Killapi Kurunawirus unquynin: Qullasuyup, Piruwpa, Ikwadurpa umalliqkunaqa runakunanman wasipi waqaychachun mañakusqan, ama kurunawirus unquyta hap’ichinanpaq. Artemis Antakillaqa alistakuchkan purichinanpaq Anta Sitwa · Chakra Yapuy · Tarpuy killa\n Wiñay kawsay Punku p\u0027anqa Yachay Punku p\u0027anqa Allpa llamk\u0027ay Punku p\u0027anqa Kawsay saphi Punku p\u0027anqa Allpa saywachi Punku p\u0027anqa Kawsay yachay Punku p\u0027anqa Kurku kallpanchay Punku p\u0027anqa Taki kapchiy Punku p\u0027anqa Llup\u0027ina Punku p\u0027anqa Hampi yachay Punku p\u0027anqa Pachaykamay Punku p\u0027anqa Kapchiy Punku p\u0027anqa Iñiy Punku p\u0027anqa Simi kapchiy Punku p\u0027anqa Nuna yachay Punku p\u0027anqa Yupana Punku p\u0027anqa Chaqllisinchi Punku p\u0027anqa Quyllur yachay Punku p\u0027anqa Musiku Punku p\u0027anqa Rimay Punku p\u0027anqa Mama Llaqtap San Markus Kuraq Yachay Sunturnin Mama Llaqtap San Markus Kuraq Yachay Sunturnin (kastilla simipi: Universidad Nacional Mayor de San Marcos, UNMSM; latin simimanta: Academia Sancti Marci Urbis Regum in Peruvia) nisqaqa Piruwpi qhapaq Yachay sunturmi, Lima llaqtapi. Aswan chaninchasqa, sut\u0027inchasqa yachay wankurina Piruw mamallaqtapi kan, hinan kaspa Piruwpi, Awya Yalawpi ñawpaq yachay sunturnin kan. 1548 watapi, Santo Domingo kunwintupi pata yachaqkunamanta qallarisqaku. Fray Tomas de San Martín nispa, chiqanchasqa paqarirqaku, hinaqtin 1551 wata ayriwa killa 12 ñiqin Carlos I Ispañamanta Qhapaq kamaqillqanninwan chaynallata kawsarirkaku. Qhichwa simi Qhichwa simi icha Runasimi ñisqaqa Urin Awya Yalapi rimasqan rimaymi. Tawantinsuyup siminsi karqan. Kunanqa yaqa 14.000.000 runam kay simita rimanku, Piruwpi, Buliwyapi, Arhintinapi, Ikwadurpi, Chilipi, Kulumbyapi kaytaqa riman. Lliw Awya Yala rimaykunamanta astawan rimaqniyuqmi. Qhichwa sutita churarqa runasimiman Fray Domingo de Santo Tomás, ñawpaq qillqaq kay simimanta.Simi yachaqkunaqa rimanakun, qhichwa simi hukllachu achkachu rimay. SIL International ñisqa tantanakuy ñinmi, 42 rimaymi, nispa. Qhichwa Simi Hamut\u0027ana Kuraq Sunturtaq ñinmi, huklla simi, Qusqu llaqtap rimayninmi huklla allin qhichwa simi, ñispa. Ichataq Chanka rimaqqa manam Wanka rimayta hap\u0027inchu, Wankataq manam Chanka rimaytachu. Pacha q\u0027uñichiy Pacha q\u0027uñichiy nisqaqa chimlasay, huk pacha q\u0027uñichina nisqa wapsikunarayku wayra pachap q\u0027uñiyninmi. Inti tiksi muyuta achkiy, k\u0027uyu qhipa, huk illanchaykunawan illanchaspa q\u0027uñichiptin, tiksi muyutaq puka ñawpa nisqatam hawa pachaman illanchan. Pacha q\u0027uñichina wapsikuna chay achkiy, k\u0027uyu qhipa illanchaykunata chimpachinmi, manataqmi puka ñawpatachu. Chay puka ñawpa illanchayta allpaman rirpuchaspa wayra pachapipas hark\u0027aspa allpa pachatam wayra pachatapas q\u0027uñichinmi Qiwuña Ñawpa pachas Punapi ancha achka qiwuña-qiwuñas karqan, kunan pachataq chaymanta chunka ch\u0027iqtallamantas aswan pisillas puchuq kachkan. Tawantinsuyu pachapiqa Inkakuna ama sach\u0027a muthuychu ñiqsi karqan. Ispañulkuna hamuptinqa achka sach\u0027akunas michina ruranapaq muthusqa karqan. Kunan pacha mana chayllaña q\u0027iru kaptinmi, runakuna qiwuñakunata yamt\u0027apaq wasichanapaqpas muthunku. Llamakuna qiwuñap raphinkunatam mikhunku. Chaywan musuq",
-    "scrapedAt": "2025-12-15 19:09:43.543664"
-  },
-  {
-    "id": 59,
-    "url": "https://en.wikipedia.org/wiki/List_of_days_of_the_year",
-    "title": "List of days of the year - Wikipedia",
-    "content": "Jump to content From Wikipedia, the free encyclopedia The following pages, corresponding to the Gregorian calendar, list the historical events, births, deaths, and holidays and observances of the specified day of the year: Jan 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Feb 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29[i] Mar 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Apr 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 May 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Jun 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 Jul 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Aug 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Sep 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 Oct 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Nov 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 Dec 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Footnotes ^ February 29 only occurs in leap years. This day is added to the calendar as a corrective measure because the Earth does not orbit the Sun in precisely 365 days. See also Leap year List of calendars List of non-standard dates External links On This Day BBC: On This Day The New York Times: On This Day Library of Congress: Today in History History Channel (US): This Day in History History Channel (UK): This Day in History Retrieved from \"https://en.wikipedia.org/w/index.php?title\u003dList_of_days_of_the_year\u0026oldid\u003d1326484255\" Categories: Days of the year Lists of observances History-related lists Reference material lists Hidden categories: Articles with short description Short description is different from Wikidata Wikipedia indefinitely semi-protected pages Search Search List of days of the year 91 languages Add topic",
-    "scrapedAt": "2025-12-15 19:09:41.918812"
-  },
-  {
-    "id": 58,
-    "url": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal",
-    "title": "Biquipédia",
-    "content": "Ir para o conteúdo Ourige: Biquipédia, la anciclopédia lhibre. Bienbenidos a Biquipédia La anciclopédia lhibre que todos puoden eiditar. 4 284 artigos an mirandés 28 outelizadores atibos Cumo se registrar Upa Cumo puodo dar ua upa Preguntas Abiso legal Taberna Páigina de testes Canal IRC Donaçones Arte Biografies Ciéncia Filosofie Geografie Stória Matemática Relegion Sociadade Tecnologie Artigo an çtaque Apersentaçon Pertual, oufecialmente República Pertuesa (an pertués: Portugal i República Portuguesa), queda ne l sudoeste de la Ouropa, an que l sou território queda na zona oucidental de la Península Eibérica i an arquipélagos ne l Atlántico Norte. Ten ua ária total de 92.391 km², i ye la naçon más oucidental de l cuntinente ouropeu. L território pertués ye delemitado a norte i a este por Spanha i a sul i oeste pul Ouceano Atlántico, i cumprende la parte cuntinental i las regiones outónomas: ls arquipélagos de l Açores i de la Madeira. Durante ls seclos XV i XVI, Pertual fui ua poténcia mundial eiquenómica, social i cultural, custituindo-se l purmeiro i l mais duradouro ampério quelonial de amplitude global. Zde la cunquista de Ceuta an 1415 até a la cessaçon de la admenistraçon de Macau, an 1999. Pertual ye hoije un paíç zambolbido, eiquenomicamente próspero, social i politicamente stable i cun Índece de Zambolbimiento Houmano eilebado. Ancuntra-se antre ls binte paízes de l mundo cun melhor culidade de bida, anque l sou perduto anterno bruto per capita ser l mais pequeinho antre ls paízes de la Ouropa Oucidental. Ye nembro de las Naciones Ounidas i de la Ounion Ouropeia (na altura de la sue adeson an 1986, CEE), i nembro-fundador de la NATO, de la OCDE, de la Zona Ouro (€) i de la CPLP. Partecipa an dibersas missones de manutençon de paç de las Naciones Ounidas. Pertual ye tamien un stado-nembro de l Spácio Schengen. Lher mais... Cumpartir: Artigos an çtaque: catadorie La Biquipédia ye un porjeto de anciclopédia colaboratiba, ounibersal i çponible an bárias lhénguas/lénguas, stablecido na Anternete cunforme l percípio wiki. Ten cumo perpósito çponeblizar un cuntenido lhibre, oujetibo i berificable, que todos puodan eiditar i melhorar. L porjeto ye stablecido puls percípios fundamentales. L cuntenido ye çponeblizado cunforme la licéncia Creative Commons BY-SA i puode ser copiado i reoutelizado cunforme la mesma licéncia – mesmo pa fines comerciales – zde que séian respeitados ls termos i las cundiçones de outelizaçon. Todos ls eiditores de la Biquipédia son beluntairos. Eilhes antegran ũa quemunidade colaboratiba, sien un xefe, adonde ls nembros cordenan ls sous sfuorços ne l ámbito de ls porjetos temáticos i dibersos spácios de cumbersa. Dentre las bárias páiginas de upa a la çposiçon de ls antressados an cuntrebuir, stan las que splícan cumo criar ó eiditar un artigo. An causo de dúbedas, nó eisite an preguntar. Todos puoden publicar cuntenido na Biquipédia zde que sigan las reglas básicas stablecidas pula quemunidade, cumo por eisemplo la berificaçon de la anformaçon ó notoriedade i amportança de l tema. Ls debates i comentairos subre ls artigos son siempre bienbenidos. Las páiginas de cumbersa serben pa centralizar las reflessones i abaluaçones subre cumo melhorar l cuntenido de la Biquipédia. Se falas mirandés i achas bien haber ũa anciclopédia nesta lhéngua, puodes ajudá-la a crecer. Wikipedistas lusófonos, cliquem aqui! Portal de la quemunidade Upa mwl-0? Não fala mirandês? Clique aqui! ¿No habla mirandés? Hagan clic aquí! Don\u0027t speak Mirandese? Click here! You can also visit our guestbook and help page. Se tubires preguntas subre questones lhenguísticas, puoden ser puostas an uso de la lhéngua ó ne ls cachos d’ourtografie, lhéxico i gramática. Bei tamien la portalada de la quemunidade i la taberna para çcutir las cousas cul restro de la quemunidade. Nun sabes por adonde ampeçar? Bei la lhista d\u0027artigos que toda Biquipédia deberie tener, traduç-los i ampeça a eiditar ls artigos nas lhigaçones que stan a burmeilho. Se quieres saber mais, puodes bejitar la páigina d’ajuda. Bejita las portaladas temáticas. Se quejires fazer testes para daprender l funcionamiento de la Biquipédia, puodes fazer na páigina de testes. Se quejires ber las statísticas atualizadas de la Biquipédia, puodes fazer eiqui. Eimaige de l die Sabies que... Modelo:Eimaige - 9 de dezembre Cumpartir: Eimaiges de culidade ne l Commons Modelo:Curjidades - 9 de dezembre Todas las lhénguas Biquipédias noutras lhénguas: Biquipédias cun 1 000 000 artigos Deutsch (alman) — English (anglés) — Español (spanhol) — Français (francés) — Italiano (eitaliano) — Nederlands (houlandés) — 日本語 (japonés) — Polski (polaco) — Português (pertués) — Русский (russo) — Sinugboanong Binisaya (cebuano) — Svenska (sueco) — Tiếng Việt (biatnamita) — Winaray (samarenho) Biquipédias antre 100 000 i 900 000 artigos العربية (árabe) — Asturianu (sturiano) — Azərbaycanca (azerbaijano) — Български (búlgaro) — Bân-lâm-gú / Hō-ló-oē (min de l sul) — Беларуская (Акадэмічная",
-    "scrapedAt": "2025-12-15 19:09:40.427571"
   },
   {
     "id": 498,
@@ -3488,6 +3488,942 @@ window.searchData = [
 ];
 
 window.imageData = [
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Sart%C3%A8.jpg/250px-Sart%C3%A8.jpg",
+    "alt": "Sartè",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Flag_of_Corsica.svg/250px-Flag_of_Corsica.svg.png",
+    "alt": "Corti",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Nuvola_apps_kcoloredit.svg/40px-Nuvola_apps_kcoloredit.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Nuvola_apps_edu_languages.svg/40px-Nuvola_apps_edu_languages.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Nuvola_apps_bookcase.svg/40px-Nuvola_apps_bookcase.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Nuvola_apps_kuser.svg/40px-Nuvola_apps_kuser.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Nuvola_apps_kalzium.svg/40px-Nuvola_apps_kalzium.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Nuvola_apps_display.png/40px-Nuvola_apps_display.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Nuvola_apps_atlantik.png/40px-Nuvola_apps_atlantik.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/40px-Searchtool.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/ISO_639_Icon_co.svg/60px-ISO_639_Icon_co.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Lammergeier.jpg/240px-Lammergeier.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/40px-Wikimedia-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/40px-Wikipedia-logo-v2.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/40px-Wiktionary-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Gnome-globe.svg/40px-Gnome-globe.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://co.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://co.wikipedia.org/wiki/Pagina_maestra"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Pix.gif",
+    "alt": "",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Pix.gif",
+    "alt": "",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Pix.gif",
+    "alt": "",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Crystal128-kanagram.svg/40px-Crystal128-kanagram.svg.png",
+    "alt": "লগোগ",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Nuvola_filesystems_services.png/40px-Nuvola_filesystems_services.png",
+    "alt": "লগোগ",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Internet-news-reader.svg/40px-Internet-news-reader.svg.png",
+    "alt": "লগোগ",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Office-calendar.svg/40px-Office-calendar.svg.png",
+    "alt": "লগোগ",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/40px-Help-browser.svg.png",
+    "alt": "লগোগ",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Atom.svg/40px-Atom.svg.png",
+    "alt": "Category:বিজ্ঞান",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Browser.jpg",
+    "alt": "হমিলদুৱার:ভূগোল",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Video-display.svg/40px-Video-display.svg.png",
+    "alt": "Category:প্রযুক্তি",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Crystal_128_krita.png/40px-Crystal_128_krita.png",
+    "alt": "Category:কলা",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/ReligionSymbol.png/40px-ReligionSymbol.png",
+    "alt": "Category:লিচেত",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Applications-office.svg/40px-Applications-office.svg.png",
+    "alt": "Category:সাহিত্য",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/System-users.svg/40px-System-users.svg.png",
+    "alt": "Category:ইতিহাস",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/P_social_sciences-lightblue.png/40px-P_social_sciences-lightblue.png",
+    "alt": "Category:সমাজ",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Beliras.JPG/250px-Beliras.JPG",
+    "alt": "",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Wiktionary-logo-sr.png/40px-Wiktionary-logo-sr.png",
+    "alt": "wikt:",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "b:",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "q:",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "s:",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Wikispecies-logo.png/40px-Wikispecies-logo.png",
+    "alt": "Wikispecies:Main Page",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Wikinews-logo.png/40px-Wikinews-logo.png",
+    "alt": "n:",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "commons:Main Page",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/40px-Wikimedia-logo.svg.png",
+    "alt": "m:Main Page",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Wikiversity-logo-en.svg/40px-Wikiversity-logo-en.svg.png",
+    "alt": "v:Main Page",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://bpy.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "উইকিপিডিয়া",
+    "pageUrl": "https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Peru.svg/20px-Flag_of_Peru.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Bolivia.svg/20px-Flag_of_Bolivia.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/20px-Flag_of_Chile.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/20px-Flag_of_Argentina.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/SARS-CoV-2_scanning_electron_microscope_image.jpg/1500px-SARS-CoV-2_scanning_electron_microscope_image.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/33/Retrato_de_Y%C3%A1huar_Hu%C3%A1cac.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Miraflores-Lima.jpg/1500px-Miraflores-Lima.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Covidlogo.png/250px-Covidlogo.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/NASA_Selects_First_Commercial_Moon_Landing_Services_for_Artemis_Program_%2847974872533%29.jpg/1500px-NASA_Selects_First_Commercial_Moon_Landing_Services_for_Artemis_Program_%2847974872533%29.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/P_history.svg/40px-P_history.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/P_cartesian_graph.svg/40px-P_cartesian_graph.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Botany_P_icon.png/40px-Botany_P_icon.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/P_culture.svg/40px-P_culture.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Purple_geography_icon.svg/40px-Purple_geography_icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/P_biology.svg/40px-P_biology.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/P_sport.svg/40px-P_sport.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/P_music.svg/40px-P_music.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/P_philosophy.svg/40px-P_philosophy.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/P_trade.png/40px-P_trade.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/P_physics.svg/40px-P_physics.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/P_art.png/40px-P_art.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/P_religion_world.svg/40px-P_religion_world.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/P_a_letter.svg/40px-P_a_letter.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/P_vip.svg/40px-P_vip.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/P_mathematics.svg/40px-P_mathematics.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/P_chemistry.svg/40px-P_chemistry.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Q_space.svg/40px-Q_space.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/P_NIS.png/40px-P_NIS.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/P_linguistics.svg/40px-P_linguistics.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Unmsm_monumentofraytomasdesanmartin.JPG",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Quechuan_distribution.svg/1500px-Quechuan_distribution.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/NASA_predictions_of_global_warming_effects_in_2099_-_20140311.jpg/1500px-NASA_predictions_of_global_warming_effects_in_2099_-_20140311.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Polylepis_rugulosa_%28A._Yates%29.jpg/1500px-Polylepis_rugulosa_%28A._Yates%29.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Qichwa-Simikuna.svg/500px-Qichwa-Simikuna.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Wikipedia-logo-v2-qu.png/40px-Wikipedia-logo-v2-qu.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Casi_de_noche_en_la_catedral_Rec.png/120px-Casi_de_noche_en_la_catedral_Rec.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Incubator-text.svg/40px-Incubator-text.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Calles_Centro_Hist%C3%B3rico_de_Cuenca_Rec.png/120px-Calles_Centro_Hist%C3%B3rico_de_Cuenca_Rec.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Incubator-text.svg/40px-Incubator-text.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Cajamarca_thermes_bassins_vapeur_Rec.png/120px-Cajamarca_thermes_bassins_vapeur_Rec.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Incubator-text.svg/40px-Incubator-text.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Cara_norte_del_nevado_Quitaraju_Rec.png/120px-Cara_norte_del_nevado_Quitaraju_Rec.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Incubator-text.svg/40px-Incubator-text.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Santuario_Nacional_Bosque_de_Piedras_de_Huayllay_Rec.png/120px-Santuario_Nacional_Bosque_de_Piedras_de_Huayllay_Rec.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Incubator-text.svg/40px-Incubator-text.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Huaconada-Mito-Per%C3%BA_Rec.png/120px-Huaconada-Mito-Per%C3%BA_Rec.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Incubator-text.svg/40px-Incubator-text.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Distrito_de_Ayaviri_Yauyos_Rec.png/120px-Distrito_de_Ayaviri_Yauyos_Rec.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Grey-bg_rounded_cropped.svg/250px-Grey-bg_rounded_cropped.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/HSTools.svg/40px-HSTools.svg.png",
+    "alt": "trara",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Quechua_Woman_in_Peru.JPG/250px-Quechua_Woman_in_Peru.JPG",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Grey-bg_rounded_cropped.svg/250px-Grey-bg_rounded_cropped.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/PL_Wiki_Aktualnosci_ikona.svg/40px-PL_Wiki_Aktualnosci_ikona.svg.png",
+    "alt": "trara",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Taiwanese_Monk_at_the_Salar_of_Uyuni%2C_Bolivia.jpg/250px-Taiwanese_Monk_at_the_Salar_of_Uyuni%2C_Bolivia.jpg",
+    "alt": "Uyuni.",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Grey-bg_rounded_cropped.svg/250px-Grey-bg_rounded_cropped.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Text-x-generic_with_pencil-2.svg/40px-Text-x-generic_with_pencil-2.svg.png",
+    "alt": "trara",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Before_Machu_Picchu.jpg/250px-Before_Machu_Picchu.jpg",
+    "alt": "Machu Pikchu.",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Grey-bg_rounded_cropped.svg/250px-Grey-bg_rounded_cropped.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Text-x-generic_with_pencil-2.svg/40px-Text-x-generic_with_pencil-2.svg.png",
+    "alt": "trara",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Grey-bg_rounded_cropped.svg/250px-Grey-bg_rounded_cropped.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/HS_geo.svg/40px-HS_geo.svg.png",
+    "alt": "trara",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_map_of_Argentina.svg/40px-Flag_map_of_Argentina.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag-map_of_Brazil.svg/120px-Flag-map_of_Brazil.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Flag-map_of_Chile.svg/40px-Flag-map_of_Chile.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_map_of_China_with_disputed.png/120px-Flag_map_of_China_with_disputed.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/USA_Flag_Map.svg/120px-USA_Flag_Map.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Flag-map_of_Ecuador.svg/120px-Flag-map_of_Ecuador.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag-map_of_Colombia.svg/60px-Flag-map_of_Colombia.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Mexico_Flag_Map.svg/120px-Mexico_Flag_Map.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Flag-map_of_Japan.svg/120px-Flag-map_of_Japan.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Flag-map_of_Peru.svg/60px-Flag-map_of_Peru.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag-map_of_Bolivia.svg/120px-Flag-map_of_Bolivia.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Flag-map_of_France.svg/120px-Flag-map_of_France.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/60px-Wikinews-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Wiktionary-logo-en.svg/60px-Wiktionary-logo-en.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/60px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/60px-Wikiversity-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://qu.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/20px-Semi-protection-shackle.svg.png",
+    "alt": "Page semi-protected",
+    "pageTitle": "List of days of the year - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/List_of_days_of_the_year"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "List of days of the year - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/List_of_days_of_the_year"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Coat_of_arms_of_Portugal.svg/250px-Coat_of_arms_of_Portugal.svg.png",
+    "alt": "",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/250px-Flag_of_Portugal.svg.png",
+    "alt": "",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Icon_Facebook.svg/20px-Icon_Facebook.svg.png",
+    "alt": "Cumpartir pul Facebook",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Icon_Twitter.svg/20px-Icon_Twitter.svg.png",
+    "alt": "Cumpartir pul Twitter",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Icon_Google%2B.svg/20px-Icon_Google%2B.svg.png",
+    "alt": "Cumpartir pul Google+",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Wikipedia-logo-mwl.svg/60px-Wikipedia-logo-mwl.svg.png",
+    "alt": "",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Lang-pt.gif/40px-Lang-pt.gif",
+    "alt": "",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Icon_Facebook.svg/20px-Icon_Facebook.svg.png",
+    "alt": "Cumpartir pul Facebook",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Icon_Twitter.svg/20px-Icon_Twitter.svg.png",
+    "alt": "Cumpartir pul Twitter",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Icon_Google%2B.svg/20px-Icon_Google%2B.svg.png",
+    "alt": "Cumpartir pul Google+",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Wikipedia-logo-mwl.svg/40px-Wikipedia-logo-mwl.svg.png",
+    "alt": "",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "Commons",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Incubator-logo.svg/40px-Incubator-logo.svg.png",
+    "alt": "Incubator",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "Meta-Wiki",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/40px-Wiktionary-logo.svg.png",
+    "alt": "Biquicionairo",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/40px-Wikidata-logo.svg.png",
+    "alt": "Wikidata",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "Biquilhibros",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Wikinews-logo.png/40px-Wikinews-logo.png",
+    "alt": "Biquiamboras",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "Wikiquote",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "Wikisource",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "Biquispeces",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/40px-Wikiversity-logo.svg.png",
+    "alt": "Biquibersidade",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "Wikivoyage",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MediaWiki-2020-icon.svg/40px-MediaWiki-2020-icon.svg.png",
+    "alt": "MediaWiki",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
+  {
+    "src": "https://mwl.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Biquipédia",
+    "pageUrl": "https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal"
+  },
   {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/120px-Wikipedia-logo-v2.svg.png",
     "alt": "",
