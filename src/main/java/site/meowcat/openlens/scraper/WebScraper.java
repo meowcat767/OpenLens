@@ -162,12 +162,9 @@ public class WebScraper {
      */
     private void storeInDatabase(String url, String title, String content) throws SQLException {
         String sql = """
-                INSERT INTO pages (url, title, content, scraped_at)
+                MERGE INTO pages (url, title, content, scraped_at)
+                KEY (url)
                 VALUES (?, ?, ?, CURRENT_TIMESTAMP)
-                ON CONFLICT (url) DO UPDATE
-                SET title = EXCLUDED.title,
-                    content = EXCLUDED.content,
-                    scraped_at = CURRENT_TIMESTAMP
                 """;
 
         try (Connection conn = dbConfig.getConnection();
