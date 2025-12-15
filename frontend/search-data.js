@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 72,
+    "url": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw",
+    "title": "Wikipedia",
+    "content": "Jump to content Ɛfi Wikipedia Akwaaba ba Twi Wikipedia so! Nimdeebuukuu a wontua ka, a obiara tumi de ne nimdeɛ ɛkaho. Mprenpren yɛwɔ atwerɛsɛm bɛyɛ 4,623 ɛwɔ Twi kasa mu. Atwerɛsɛm a yɛn apaw ato hɔ Jane Naana Opoku Agyeman (awoda Obubuo 22, 1951 Oguaa Gaana) yε Gaana Nwomasua Soafoɔ a watwamu na ɔyε Soafoɔ wɔ John Dramani Mahama aban no mu. Wodii saa diberε yi kosii Ɔbenεm 2017 berε a na wato aba ama John Dramani Mahama adi nkoguo wo afe 2012 abatoɔ no mu ama Nana Akufo-Addo aban betenaa Gana baanwa no so. Ansa na ɔbεdi saa diberε yi na ɔno na ɔyε Obenfo a ɔda University of Cape Coast ano. Wɔdɔm Amanyɔkuo National Democratic Congress. Toa so kan wɔ ha... Atwerɛsɛm a adikan aba Atwerɛwsɛm a ɛyɛ Hajia Alima Mahama (wɔwoo no Obubuo da a ɛtɔ 7, afe 1957 wɔ Walewale, Atifi-Apuei manatam mu) yɛ mmaranimfo. Na ɔyɛ mmarahyɛbaguamuni a ogyina hɔ ma Nalerigu/Gambaga mpesua. Ɔyɛ amanyɔkuo New Patriotic Party muni. Alima Mahama nyaa kɔɔ ntoaso sukuu wɔ Wesly Girls Senior High School a ɛwɔ Cape Coast. Ɔtoaa so kɔɔ suapɔn a ɛne University of Ghana. Ɛhɔ no onyaa abodin krataa wɔ mmaranim mu. Ɔsan nso kɔɔ suapɔn a wɔfrɛ no Institute of Social Studies a ɛwo Netherlands na ɛhɔ nso onyaa abodin krataa foforo kaa nea ɔwɔ dedaw no ho. Toa so kan wɔ ha..... Atwerɛsɛm a adikan aba So wonim...? Ghana manpanyin ahyɛnsode Sɛ wɔ Ghana mmra 1960 mu, a ɛyɛ Ghana mmra homa a ɛdi kan wɔ Ghana no, ɔmanpanyin no bɛsi ahenni amanmuo no anan. Mmrahyɛbadwamfo yi ɔmampanyin sɛ ɔnni Ghana so mfe anum. Sɛ obiara nni hɔ sɛ ɔmanpanyin a, wɔpaw nnipa abiesa sɛ wɔn gyina mu sɛ ɔmanpanyin? Sɛ General Ignatius Kutu Acheampong de coup d\u0027état ɛtuu ɔmanpanyin Akufo-Addo ne Prime Minister Abrefa Busia ne n\u0027ban nyinaa? Atwerɛsɛm a adikan aba Mfoni a yapaw ato hɔ Accra - Ghana. Mfoni a adikan aba Nkratafa soronko Kasa kyerɛ adwuma kwankyerɛfo • Sɛ wo pɛ sɛ wo ni adwuma kwankyerɛfo kasa a, kɔ Adwuma akwankyerɛfo kratafa yi so Nkitahode •Di nkɔmɔ wɔ ha Mmoa •Mmoa a wo hia wɔ ha • Wikipedia mmra num • Sɛnea yɛ kyerɛw Twi Atwerɛsɛm • Te atwerɛsɛm foforo • Nkratafa dodow a ɛwɔ ha Wikimedia dwumadi ahorow Commons Free media repository Wiktionary Dictionary and thesaurus Wikidata Free knowledge base Wikiquote Collection of quotations Wikibooks Free textbooks and manuals Wikisource Free-content library Wikispecies Directory of species Wikiversity Free learning materials and activities Meta-Wiki Wikimedia project coordination View total pages Yɛ yi fii \"https://tw.wikipedia.org/w/index.php?title\u003dKratafa_Titiriw\u0026oldid\u003d134407\" 343 kasa ahorow Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fiji Hindi Hrvatski Hornjoserbsce Kreyòl ayisyen Magyar Հայերեն Արեւմտահայերէն Interlingua Jaku Iban Bahasa Indonesia Interlingue Igbo Igala Iñupiatun Ilokano ГӀалгӀай Ido Íslenska Italiano ᐃᓄᒃᑎᑐᑦ / inuktitut 日本語 Patois La .lojban. Jawa ქართული Qaraqalpaqsha Taqbaylit Адыгэбзэ Kabɩyɛ Tyap Kongo Kumoring Gĩkũyũ Қазақша Kalaallisut ភាសាខ្មែរ ಕನ್ನಡ Yerwa Kanuri 한국어 Перем коми Къарачай-малкъар کٲشُر Ripoarisch Kurdî Kʋsaal Коми Kernowek Кыргызча Latina Ladino Lëtzebuergesch Лакку Лезги Lingua Franca Nova Luganda Limburgs Ligure Ladin Lombard Lingála ລາວ Lietuvių Latgaļu Latviešu Madhurâ मैथिली Basa Banyumasan Мокшень Malagasy Олык марий Māori Minangkabau Македонски മലയാളം Монгол ꯃꯤꯇꯩ ꯂꯣꯟ ဘာသာမန် Moore मराठी Кырык мары Bahasa Melayu Malti Mirandés မြန်မာဘာသာ Эрзянь مازِرونی Nāhuatl Napulitano Plattdüütsch Nedersaksies नेपाली नेपाल भाषा Li Niha Nederlands Norsk nynorsk Norsk bokmål Novial ߒߞߏ IsiNdebele seSewula Nouormand Sesotho sa Leboa Nupe Diné bizaad Chi-Chewa Occitan Livvinkarjala Oromoo ଓଡ଼ିଆ Ирон ਪੰਜਾਬੀ Pangasinan Kapampangan Papiamentu Picard Naijá Deitsch Pälzisch पालि Polski Piemontèis پنجابی Ποντιακά پښتو Português Pinayuanan Runa Simi ရခိုင် Rumantsch Romani čhib Ikirundi Română Armãneashti Tarandíne Руски Русский Русиньскый Ikinyarwanda संस्कृतम् Саха тыла ᱥᱟᱱ",
+    "scrapedAt": "2025-12-15 19:22:06.872677"
+  },
+  {
+    "id": 71,
+    "url": "https://de.wikipedia.org/wiki/",
+    "title": "Wikipedia – Die freie Enzyklopädie",
+    "content": "Zum Inhalt springen aus Wikipedia, der freien Enzyklopädie Artikel des Tages Was geschah am …? In den Nachrichten Verstorben Schon gewusst? Schwesterprojekte Willkommen bei Wikipedia Wikipedia ist ein Projekt zum Aufbau einer Enzyklopädie aus freien Inhalten, zu denen du sehr gern beitragen kannst. Seit März 2001 sind 3.077.995 Artikel in deutscher Sprache entstanden. Geographie Geschichte Gesellschaft Kunst und Kultur Religion Sport Technik Wissenschaft Artikel nach Themen Artikel nach Kategorien Gesprochene Wikipedia Archiv der Hauptseite Mitmachen Mentorenprogramm Kontakt Presse Statistik Sprachversionen Artikel des Tages Der Baumpieper (Anthus trivialis) ist eine Vogelart aus der Familie der Stelzen und Pieper (Motacillidae). Er ist mit einer Körperlänge von durchschnittlich 15 Zentimetern etwa so groß wie ein Haussperling, wirkt aber durch seine grazilere und schlankere Gestalt optisch größer als dieser. Der im Sommer in Mitteleuropa früher häufige, optisch unauffällige Vogel ist vor allem an Waldrändern und -lichtungen zu beobachten, da er als Bodenbrüter neben einem Bestand an hohen Bäumen und Sträuchern auch offene, mit hoher Vegetation bestandene Flächen benötigt. Er fällt dort vor allem durch seinen Gesang auf. Der Baumpieper ist ein Weitstreckenzieher, der in der Vegetationszone der Hochgras-Savannen West- und Ostafrikas überwintert. In Deutschland und der Schweiz steht der Baumpieper auf der Liste der bedrohten Singvögel und gilt auch in Kulturlandschaften als vom Aussterben bedroht. – Zum Artikel … Archiv Weitere exzellente und lesenswerte Artikel sowie informative Listen RSS-Feed Was geschah am 15. Dezember? 1025 – Basileios II., seit 976 Kaiser des Byzantinischen Reiches, stirbt. 1675 – Jan Vermeer, dessen Gemälde Das Mädchen mit dem Perlenohrring zu den bekanntesten aus dem Goldenen Zeitalter der Niederlande zählt, wird beigesetzt. 1875 – König Ludwig II. von Bayern gibt die Anlage einer künstlichen unterirdischen Tropfsteinhöhle mit See und Wasserfall, der Venusgrotte, im Park von Schloss Linderhof in Auftrag. 1925 – Reza Khan legt den Treueeid auf die Verfassung ab und wird als Reza Pahlavi Schah von Persien. 1925 – Auf der Strecke Mailand–Nizza verkehrt Kontinentaleuropas erster Pullman-Express-Zug. Weitere Ereignisse RSS-Feed In den Nachrichten Krieg in der Ukraine Krieg in Nahost Matthias Moosdorf Chanukka Im Finale der Handball-WM der Frauen hat Norwegen Co-Gastgeber Deutschland besiegt. Beste Spielerin des Turniers wurde die Norwegerin Henny Reistad (Bild). Bei einem mutmaßlich antisemitisch motivierten Terroranschlag in Sydney sind mindestens 16 Menschen getötet worden, darunter auch einer der Attentäter. In Chile hat José Antonio Kast die Stichwahl für das Präsidentenamt gewonnen. Weitere aktuelle Ereignisse Kürzlich Verstorbene Carl Carlton (72), US-amerikanischer Sänger und Songwriter († ≤14. Dezember) Rob Reiner (78), US-amerikanischer Filmregisseur und Schauspieler († ≤14. Dezember) Anda-Louise Bogza (60), rumänische Opernsängerin († 13. Dezember) Peter Greene (60), US-amerikanischer Schauspieler († ≤12. Dezember) Hartmut Gese (96), deutscher Theologe († 8. Dezember) Weitere kürzlich Verstorbene Schon gewusst? Das Römerlager Colm la Runga gilt als eines der höchstgelegenen Militärlager des römischen Imperiums. Dort wo heute der Theaterplatz in Aschaffenburg ist, haben Neandertaler einst einen Faustkeil verloren. Der Stadtrat von Aberdeen fand es „lächerlich“, dass das Gebäude Porthill Court und Seamount Court unter Denkmalschutz gestellt wurde. Noch heute werden Glasmarken der Glashüttenbetreiberin Johanna Louise Pirl gefunden. Weitere neue Artikel Archiv Schwesterprojekte Commons – Medien Meta-Wiki – Koordination Wikibooks – Lehrbücher Wikidata – Wissensdatenbank Wikifunctions – Funktionsbibliothek Wikinews – Nachrichten Wikiquote – Zitate Wikisource – Quellen Wikispecies – Artenverzeichnis Wikiversity – Lernplattform Wikivoyage – Reiseführer Wiktionary – Wörterbuch Abgerufen von „https://de.wikipedia.org/w/index.php?title\u003dWikipedia:Hauptseite\u0026oldid\u003d247114458“ Kategorie: Wikipedia:Hauptseite Versteckte Kategorien: MediaWiki:Gadget/Hauptseite MediaWiki:Gadget/Suchfokus-Hauptseite 51 Sprachen Alemannisch العربية Boarisch Català Čeština Dansk Dolnoserbski Ελληνικά English Español فارسی Suomi Français Arpetan Nordfriisk Frysk עברית हिन्दी Hrvatski Hornjoserbsce Magyar Bahasa Indonesia Italiano 日本語 한국어 Ripoarisch Latina Lëtzebuergesch Limburgs Lombard Plattdüütsch Nederlands Norsk bokmål Deitsch Polski Português Rumantsch Română Русский Slovenčina Slovenščina Shqip Српски / srpski Seeltersk Svenska ไทย Türkçe Українська Tiếng Việt ייִדיש 中文 Suche Suchen Wikipedia:Hauptseite 51 Sprachen Abschnitt hinzufügen",
+    "scrapedAt": "2025-12-15 19:22:05.356031"
+  },
+  {
+    "id": 70,
+    "url": "https://meta.wikimedia.org/wiki/List_of_Wikipedias",
+    "title": "List of Wikipedias - Meta-Wiki",
+    "content": "Jump to content From Meta, a Wikimedia project coordination wiki Other languages: English · Ænglisc · अंगिका · العربية · Basa Bali · беларуская (тарашкевіца) · български · Banjar · বাংলা · català · کوردی · Zazaki · Ελληνικά · Esperanto · español · euskara · فارسی · suomi · français · galego · ગુજરાતી · עברית · हिन्दी · հայերեն · Bahasa Indonesia · italiano · 日本語 · Jawa · ಕನ್ನಡ · 한국어 · lietuvių · македонски · ဘာသာမန် · मराठी · Bahasa Melayu · Mirandés · မြန်မာဘာသာ · مازِرونی · 閩南語 / Bân-lâm-gí · नेपाली · नेपाल भाषा · occitan · ਪੰਜਾਬੀ · پښتو · português · română · سنڌي · Soomaaliga · தமிழ் · Türkçe · ئۇيغۇرچە / Uyghurche · اردو · vèneto · 中文 Wikimedia projects MediaWiki Meta-Wiki Wikibooks Wikidata Wikifunctions Wikimedia Commons Wikinews Wikiquote Wikipedia Wikisource Wikispecies Wiktionary Wikiversity Wikivoyage Complete list of Wikimedia projects — List of Wikimedia projects by size This page contains information about all 358 languages for which official Wikipedias have been created under the auspices of the Wikimedia Foundation. The table below, however, excludes 16 Wikipedias that were closed and 11 of them were moved to the Wikimedia Incubator for further development, leaving a current total of 342 active Wikipedias. Content in other languages is being developed at the Wikimedia Incubator; languages which meet certain criteria can get their own wikis. The table entries are ordered by current article count. Each entry gives the language name in English (linked to the English Wikipedia article for the language); its \"local name\" (i.e. in the language itself); the language code used in the wiki\u0027s URL address and in interwiki links to it (linked to the local Main Page); and statistics on articles, edits, administrators, users, active users, and images (each linked to an appropriate local special page). To start a Wikipedia in a new language, please see our language proposal policy and the Incubator manual. Note: Just adding a link here does not create a new Wikipedia, nor does it serve to request that one be created. If a wiki becomes active and is not listed here, please post a notice on this article\u0027s talk page, including a link to all the relevant Wikipedia pages, and help promote the effort by announcing it on the Wikipedia-L mailing list, and at Wikimedia News. The tables here are maintained automatically based on statistics collected by a bot four times a day, so it is not necessary to \"manually\" update the table. (The way this is being done makes that impossible, anyway.) If something is wrong with an entry other than simply having slightly outdated statistics, post about it on the talk page. More lists of Wikipedias by various criteria : [ edit ] List of Wikipedias by article count, users, file count and depth and its source (both updated every 6 hours) List of Wikipedias by edits per article and depth (both updated every 6 hours) List of Wikipedias by language group and family (both updated every 6 hours) and language families as a tree (not just Wikipedias) List of Wikipedias by country (updated manually) List of Wikipedias by speakers per article (updated every 6 hours) List of Wikipedias by sample of articles and expanded sample of articles (both updated monthly) List of Wikipedias by featured and good articles (both updated manually) List of Wikipedias by creation date (incomplete) List of Wikipedias in multiple writing systems List of Wikipedias having local media files and zero local media files (both updated manually) List of Wikipedia milestones or en:Wikipedia:Milestone statistics (tracking of major article-count milestones) List of largest wikis (not just Wikimedia wikis) Wikimedia News (announcements and tracking of milestones for all Wikimedia projects) Tell us about your Wikipedia Notes The \"All pages\" column refers to the number of pages in all namespaces, including both articles (the official article count of each wiki) and non-articles (user pages, images, talk pages, \"project\" pages, categories, and templates). \"Active Users\" are registered users who have made at least one edit in the last thirty days. \"Files\" is the number of locally uploaded files. Note that some large Wikipedias do not use local images or other media files and rely on Commons completely, so the value \"0\" is not a glitch (see also List of Wikipedias having zero local media files). All Wikipedias ordered by number of articles The languages listed here are Wikipedias that have been created as separate subdomains of wikipedia.org, ordered by number of articles. The table can also be sorted by other columns. It excludes closed Wikipedias. Historical data of this table dating back to 2007 can be found in the history of this table or, after 15 October 2022, in the history of the current source of the data. These statistics are updated nine times a day. See commons:Data:Wikipedia statistics/data.tab for the date/time of last update. (If reloading this page doesn\u0027t update the numbers to what is seen at Commons, try purg",
+    "scrapedAt": "2025-12-15 19:22:03.83837"
+  },
+  {
+    "id": 69,
+    "url": "https://lfn.wikipedia.org/wiki/Paje_xef",
+    "title": "Vicipedia",
+    "content": "Jump to content De Vicipedia Bonveni a la Vicipedia de elefen (lingua franca nova) la ensiclopedia libre cual cadun pote edita! Aora nos ave 4,500 articles. Categorias major ➙ Arte Arte Siensa umana Siensas umana Matimatix Pasatempo Siensas natural Siensas natural Tecnolojia Tecnolojia Elefen Elefen Un article bon La boca de un enfante ci ave MMPB La pedes de un enfante ci ave MMPB La maladia de mano-pede-boca (\"MMPB\") es un infeta comun causada par un grupo de viruses. Lo comensa tipal con un febre e descomforta jeneral. Esta es segueda en un o du dias par puntos o bultos plana e descolorida cual pote boli, sur la manos, pedes, e boca, a a veses la gluteo e inguin. La sinias e sintomes desapare normal tre a ses dias pos esposa a la virus. La eruta desapare jeneral par se mesma en sirca un semana. la ungias de la manos e pede pote posible es perdeda alga semanas a ante, ma los va recrese ultima. La viruses cual causa MMPB sprede par contata prosima personal, tra la aira par tose, e la feces de un person infetada. Ojetos contaminada pote ance sperde la maladia. Coxsackievirus A16 es la causa la plu comun, e Enterovirus 71 es la causa du plu comun. Otra varias de esta viruses pote ance causa la maladia. Alga persones pote porta e pasa la virus an si los no ave sintomes de la maladia. Otra animales no es envolveda. Diagnose pote comun es fada fundida su sintomes. A veses, un esemplo de la garga o feces pote es probada per la virus. La lava de manos pote preveni la sperde, e los ci es infetada debe no vada a labora, scola, o otra ativias cual inclui contata con otra persones. No medisin o vasina es otenable, ma atentas a developa lo es continuante. La plu de casos no nesesa un trata spesifada. Medisin per dole como ibuprofen o un jel desensosi per la boca pote es usada. A veses, fluides intravenal es donada a enfantes ci no pote bevi sufisinte. Rara, meninjite o ensefalite pote complica la maladia. MMPB aveni en tota areas de la mundo. Lo aveni comun en avenis peti en scolas per enfantes joben. Avenis grande ia aveni en Asia de 1997. Lo aveni la plu comun en la mensas plu calda. Tipal, lo aveni en enfantes ci ave min ca sinco anios, ma a veses lo pote aveni en adultes. MMPB debe no es confusada con la maladia de pede-e-boca o ungula-e-boca cual afeta per la plu parte sola bestias. Per un introdui simple a la crea o edita de pajes sur esta vicipedia vade asi! Articles xef Artes Arciteta | Dansa | Depinta | Desinia | Fotografia | Leteratur | Musica | Sculta | Teatro Siensas umana Antropolojia | Arceolojia | Biografia | Economia | Filosofia | Istoria | Jeografia | Lege | Lingua | Linguistica | Politica | Psicolojia | Relijio Pasatempos Abita | Cosini | Colie | Jardin | Jeneolojia | Jua | Moda | Sinema | Sporte | Televisa | Turisme Siensas natural Astronomia | Biolojia | Cimica | Clima | Ecolojia | Fisica | Jenetica | Jeolojia | Matematica | Medica | Paleontolojia Tecnolojia Armas | Computador | Cultiva | Eletronica | Injenia | Interede | Transporta | Vicitecnolojia Lingua franca nova Istoria de lfn | Transcrive | Nomes personal | Termas tecnical | Tempo en elefen Elefen estra Vicipedia Elefen ave otra locas importante a la rede, estra esta vicipedia: La disionario xercable grande. La paje xef de elefen, con introduis e esemplos en multe linguas; Nosa loca per plu informa sur elefen; La menu per sentos de naras, poesias, e cantas. Per favore, visita los! Retraeda de \"https://lfn.wikipedia.org/w/index.php?title\u003dPaje_xef\u0026oldid\u003d35880\" Categorias: Maladias Problemes cutanea Articles bon per la paje xef Paje xef 343 linguas Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fiji Hindi Hrvatski Hornjoserbsce Kreyòl ayisyen Magyar Հայերեն Արեւմտահայերէն Interlingua Jaku Iban Bahasa Indonesia Interlingue Igbo Igala Iñupiatun Ilokano ГӀалгӀай Ido Íslenska Italiano ᐃᓄᒃᑎᑐᑦ / inuktitut 日本語 Patois La .lojban. Jawa ქარ",
+    "scrapedAt": "2025-12-15 19:22:00.986227"
+  },
+  {
+    "id": 68,
+    "url": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu",
+    "title": "Wikipedia – Encyclopedia Yaulere",
+    "content": "Jump to content Kuchokera ku Wikipedia Mwalandilidwa pa Wikipedia, encyclopedia yaulere imene aliyense angathandizile kukuza! Pakali pano tili ndi nkhani zokwana 1,099 mu chiChewa, chinenero chomwe chimayankhulidwa ku Malawi ndi Zambia. Za Wikipedia Wikipedia ya Chichewa ndi buku laulere. Ndi wiki, mtundu wa webusaiti yomwe anthu ambiri amawalemba. Izi zikutanthawuza kuti aliyense angathe kusintha tsamba lirilonse podalira pa \"kusintha tsamba lino\". Mungathe kuchita izi pa tsamba lirilonse losatetezedwa. Mukhoza kuona ngati tsambalo liri kutetezedwa chifukwa lidzati \"View source\" mmalo mwa \"Sintha\". Pali nkhani 1,099 pa Wikipedia ya Chichewa. Masamba onse ndi omasuka kugwiritsa ntchito. Zonse zafalitsidwa pansi pa Creative Commons Attribution / Share-Alike License 4.0 ndi GNU Free Documentation License. Mungathe kuthandiza pano! Mungasinthe masamba awa ndikupanga masamba atsopano. Werengani masamba othandizira ndi masamba ena abwino kuti mudziwe kulemba masamba apa. Ngati mukufuna thandizo, mukhoza kufunsa mafunso pachithumo cha Community. Mukamalemba nkhani apa Lembani masamba abwino. Masamba abwino kwambiri a encyclopedia ali ndi zothandiza, zolembedwa bwino. Osagwilitsa ntchito makina ngati google translator! Nkhani yolembedwa pogwilitsa ntchito translator wina aliyense siikhala yomveka bwino (Don\u0027t use machine translations!). Nkhani zotelo zizafufutidwa pano mopanda kudziwitsa olembayo komanso kupitiliza kutelo n\u0027kuphwanya malamulo a Wikipediya. Gwiritsani ntchito masambawa kuti muphunzire ndi kuphunzitsa. Masambawa angathandize anthu kuphunzira Chichewa. Mutha kuigwiritsanso ntchito pangani Wikipedia yatsopano kuthandiza anthu ena. Khalani wolimba! Nkhani yanu siyenela kukhala yangwiro, chifukwa olemba ena adzakonza ndikupanga bwino. Ndipo chofunika kwambiri, musaope kuyamba ndi kupanga nkhani bwino. Mu nkhani Ōnosato Daiki Ōnosato Daiki (chithunzi) amakhala sumo\u0027s 75th yokozuna. Mu mpira wachiyanjano, Liverpool idapambana mutu wa Premier League. Pampikisano wamagalimoto, Álex Palou adapambana Indianapolis 500. Mu basketball, EuroLeague imamaliza ndi Fenerbahçe kupambana Final Four Playoff. Kupitilira: Gaza war Kampeni ya M23 Kuukira kwa Russia ku Ukraine nthawi yanthawi Nkhondo yapachiweniweni yaku Sudan nthawi Akufa posachedwa: Tomiko Itooka Loretta Di Franco Jorge Lanata Michael Newberry Chithunzi cha tsikulo      Chithunzi chili osapezeka lero. Wikipedia Muzinenero Zina Wikipedia iyi yalembedwa mu Chichewa. Kuyambira mu 2001, pakali pano muli nkhani 1,099. Ma Wikipedias ambiri amapezeka; ma Wikipediya ena amu Afrika ali pansipa. Afrikaans | Luganda | Gĩkũyũ | Hausa | Igbo | KiKongo | Lingala | Kirundi | Ikinyarwanda | chiShona | Sesotho | Sesotho sa leboa | Kiswahili | SiSwati | Xitsonga | Setswana | chiTumbuka | Tshivenda | isiXhosa | Yorùbá | Lembani mndandanda wa Wikipedias – Zinenero zikugwira ntchito limodzi – Yambani Wikipedia kuti mukhale chinenero chatsopano Ntchito zina za Wikimedia Wikipedia imayang\u0027aniridwa ndi Wikimedia Foundation, bungwe lopanda phindu lomwe limakhalanso ndi mapulojekiti: Commons Malo omwe aliyense angapeze ndikugawana zithunzi, makanema, ndi mawu aulere. Wikifunctions Malo omwe mungapeze ndikugwiritsa ntchito zida zothandiza ndi njira zazifupi pantchito zosiyanasiyana. Wikidata Malo omwe chidziwitso chimakonzedwa ndikusungidwa m\u0027njira yoti aliyense azitha kuzipeza ndikuzigwiritsa ntchito momasuka. Wikispecies Mndandanda wa nyama zosiyanasiyana, zomera, ndi zamoyo zina. Wikipedia Buku lalikulu lapaintaneti lodzaza ndi zambiri zolembedwa mchingerezi zomwe aliyense angaziwerenge ndikuwongolera. Wikiquote Malo omwe mungapezeko mawu otchuka komanso osangalatsa ochokera kwa anthu. Wikinews Nkhani zomwe aliyense angathe kuziwerenga, kugawana, ndi kuthandiza kulemba. Wiktionary Dictionary and thesaurus Wikiversity Zida zaulere monga mabuku, makanema, ndi maupangiri omwe amakuthandizani kuphunzira zinthu zatsopano. Wikibooks Malo omwe mungapeze mabuku ndi malangizo okuthandizani kuphunzira, ndipo ndi omasuka kugwiritsa ntchito. Wikisource Laibulale komwe mungapeze mabuku, zithunzi, ndi zinthu zina zaulere kuti aliyense azigwiritsa ntchito. MediaWiki Malo omwe anthu amagwira ntchito popanga ndi kukonza mapulogalamu omwe amayendetsa Wikipedia ndi mawebusayiti ena a Wiki. Meta-Wiki Malo oti anthu ogwira ntchito pa Wikipedia ndi ma projekiti ena akonzekere, kukonza, ndi kugwirira ntchito limodzi. Wikivoyage Upangiri waulere womwe umakuthandizani kuti muphunzire za malo omwe mungayendere, zinthu zoti muchite, komanso momwe mungayendere. Onaninso masamba a Wikimedia Foundation Governance wiki, nawonso. Purge server cache Kuchotsa https://ny.wikipedia.org/w/index.php?title\u003dTsamba_Lalikulu\u0026oldid\u003d55791 343 languages Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama ",
+    "scrapedAt": "2025-12-15 19:21:59.274652"
+  },
+  {
     "id": 67,
     "url": "https://bn.wikipedia.org/wiki/",
     "title": "উইকিপিডিয়া, একটি মুক্ত বিশ্বকোষ",
@@ -1377,41 +1412,6 @@ window.searchData = [
     "title": "Wikipedia",
     "content": "Jump to content Kufuma Wikipedia Mwapokeleleka pa Wikipediya ya Chitumbuka Nkhokwe ya ulele iyo waliyose wangasazgapo ivyo wakumanya. Mindandanda: 1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Mobile View | Desktop View Pa sono tina vyakulemba 18,796 Tina ŵalembi ŵakukwana 23 Ma admin ghalipo 4 Vyakulemba: Malaŵi · Zambia · Tanzania · Rumphi · Lundazi · Chasefu · Chasefu · Mzimba · Mzalangwe · Mzuzu · Ekwendeni –– Sayansi · Umoyo · AIDS · Lulombo · Covid-19 · Muluzi · Kamuzu · Chihana · Chiuta –– Tumbuka Wiktionary Nkhani ya mwahuno Mutinta Hichilema ni mwanakazi wakwamba wa Zambia, wati watora udindo uwu pamanyuma pakuti mfumu wake Hakainde Hichilema wasankhika kuŵa president wa Zambia mu August 2021. Iyo wakujipeleka pa vya wanangwa wa wanthu ndipo wakuchitako milimo ya chitukuko mu chalo chose cha Zambia. Hichilema wakababikira ku Shibuyunji. Hichilema wali mu tchalitchi la Seventh-day Adventist. Iyo wakuvikilira kuti visopa vyose vileke kwambana mu Zambia. Ntchito yake yikovwira kuti ŵanthu ŵa visopa vyakupambanapambana ŵalutilire kukolerana na kupulikana mu umoza. Hichilema wali mu chipani cha United Party for National Development. (Nkhani yose...) Kasi mukumanya? ... Kasi mukumanya kuti Cape Maclear ni malo ghakutowa chomene agho ghali mu mphepete mwa nyanja? ... Kasi mukumanya kuti pa nyengo iyo ŵakasoranga chikhwangwani cha Take Back, Kumi Koda wakamanyanga yayi icho ŵakasweranga? ... Nyanja ya Malawi ndiyo yikupangiska ŵanthu ŵanandi kuluta ku charu ichi. Cape Maclear ... kuti wailesi ya boma ya Washington ikagadabukila kwa \"ŵakaswili wowowonela bikini\" -wolemba usilikali - kuti vayowoye za nunandi wa ŵanthu vakufumila mu chigaŵa icho? ... kuti Paul Delvaux Museum ikuoneska yayi vyakujambula vya Paul Delvaux vekha, kweneso mndandanda wa masitima zapamtunda? ... dokotala waku China yula Gao Ruona mwana, mpongozi, na ŵasambili ŵose ŵakatumikilapo ngati mba uluski Boma la Nyimbo Bungwe Losintha Vyakulemba Vyachipatala? ... kuti makina gha CCTV ghati ghaikika pa 59th Street–Columbus Circle station, unkhungu ukakula? ... kuti Mlonga wa Nile ndiwo utali comene pa caru cose capasi, nangauli ŵanthu ŵanyake ŵakuti mlonga wa Amazon utali comene? Mlonga uwu ukusolota mu vyaru vinandi vya mu Africa, ndipo ndiwo ukupeleka maji ku vyaru vya Egypt, Sudan, na South Sudan. ... Nyengo zinyake caru ca Africa cikucemeka kuti Ciphukutu ca Ŵanthu cifukwa ca viswaswa vinandi, ivyo vikulongora kuti ŵanthu ŵakwamba ŵakababikira mu caru ici. Ŵanthu aŵa ndiwo ŵakaŵako pambere ŵanthu ŵandalengeke, ndipo ndimo tiliri nase. Mu nkhani Ku South Korea, ŵanthu 40 ŵali kufwa ndipo ŵanyake 6 ŵakusoŵa chifukwa cha kusefukila kwa maji.vinandi... Ku United States, ŵantchito ŵa SAG-AFTRA ŵakamba kugwira nchito, ndipo ŵakakolerana na ŵalembi ŵa Writers Guild of America nakunyanyala kwa kulongolela.vinandi... Kusefukila kwa maji ku Korea Milan Kundera, uyo wakaŵa mulembi wa ku Czech na France, wali kufwa na vilimika 94. Mu Netherlands, boma la boma likamara ndipo nduna yikuru Mark Rutte yikapharazga kuti yikukhumba kufumamo. \u0027 Mbili ya vyakuchitika Mndandanda uwu ngwakukhwaskana na charu cha Lesotho Themba Moshoeshoe Wakwamba 1833-06-28 Ŵamishonale ŵatatu ŵa gulu la Paris Evangelical Missionary Society ŵakapokera kuzomerezgeka kwa Mulara Moshoeshoe (Moshesh) kuti ŵakhazikiske ofesi ya umishonale ku Basutoland (iyo sono ni Lesotho) 1868-03-12 Great Britain yikupoka Basutoland mu Africa (pamanyuma yikazgoka Ufumu wa Lesotho) 1913-07-25 Ŵanthu ŵanandi ŵakufuma ku South Africa, Botswana, Lesotho, na Swaziland ŵakwiza ku ungano uwo ukacitikira ku Johannesburg Mbendela ya Lesotho 1966-10-04 Lesotho (Basutoland) yikupokera wanangwa kufuma ku Britain (National Day) 1986-01-01 Boma la South Africa lajara mphaka zake na Lesotho, na kudumura vyakurya na mafuta, pamasinda pakuti Lesotho lakana kusayinira phangano la kuleka kuwukira. 1986-01-20 Nkhondo ya ku Lesotho iyo yikalongozgeka na Major General Lekhanya na Prime Minister Leabua Jonathan 1938-05-02 Moshoeshoe II, Themba la Lesotho (1966-90), wakubabikira ku Morija, Lesotho (d. 1996) 12001-10-07 Mfumukazi Senate Seeiso, mwana wa Themba Letsie III wa ku Lesotho, wakubabikira ku Maseru, Lesotho 1870-03-11 Moshoeshoe I, Themba la Lesotho (1822-70), wakufwa wali na vilimika pafupifupi 47 1994-08-17 Themba Letsie II la ku Lesotho likufumiska nduna yikuru Ntsu Mokhehle 1994-04-14 Selometsi Baholo, wachiŵiri kwa nduna ya Lesotho, wakakomeka 1996-01-15 Moshoeshoe II, Fumu ya Lesotho (1966-90), wakufwa wali na vilimika 51 Vyaru vyamu Afilika Senegal Algeria ● Angola ● Benin ● Botswana ● Burkina Faso ● Burundi ● Cameroon ● Canary Islands ● Cape Verde ● Central African Republic ● Chad ● Comoros ● Côte d\u0027Ivoire ● Democratic Republic of the Congo ● Djibouti ● Egypt ● Equatorial Guinea ● Eritrea ● Eswatini ● Ethiopia ● Gabon ● Gambia ● Ghana ● Guinea ● Guinea-Bissau ● Kenya ● Lesotho ● Liberia ● Libya ● Madagascar ● Malawi ● Mali ● Mauritania ● Mauritius ● Mayotte ● Morocco ● Mozambique ",
     "scrapedAt": "2025-12-15 19:10:14.484"
-  },
-  {
-    "id": 72,
-    "url": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw",
-    "title": "Wikipedia",
-    "content": "Jump to content Ɛfi Wikipedia Akwaaba ba Twi Wikipedia so! Nimdeebuukuu a wontua ka, a obiara tumi de ne nimdeɛ ɛkaho. Mprenpren yɛwɔ atwerɛsɛm bɛyɛ 4,623 ɛwɔ Twi kasa mu. Atwerɛsɛm a yɛn apaw ato hɔ Jane Naana Opoku Agyeman (awoda Obubuo 22, 1951 Oguaa Gaana) yε Gaana Nwomasua Soafoɔ a watwamu na ɔyε Soafoɔ wɔ John Dramani Mahama aban no mu. Wodii saa diberε yi kosii Ɔbenεm 2017 berε a na wato aba ama John Dramani Mahama adi nkoguo wo afe 2012 abatoɔ no mu ama Nana Akufo-Addo aban betenaa Gana baanwa no so. Ansa na ɔbεdi saa diberε yi na ɔno na ɔyε Obenfo a ɔda University of Cape Coast ano. Wɔdɔm Amanyɔkuo National Democratic Congress. Toa so kan wɔ ha... Atwerɛsɛm a adikan aba Atwerɛwsɛm a ɛyɛ Hajia Alima Mahama (wɔwoo no Obubuo da a ɛtɔ 7, afe 1957 wɔ Walewale, Atifi-Apuei manatam mu) yɛ mmaranimfo. Na ɔyɛ mmarahyɛbaguamuni a ogyina hɔ ma Nalerigu/Gambaga mpesua. Ɔyɛ amanyɔkuo New Patriotic Party muni. Alima Mahama nyaa kɔɔ ntoaso sukuu wɔ Wesly Girls Senior High School a ɛwɔ Cape Coast. Ɔtoaa so kɔɔ suapɔn a ɛne University of Ghana. Ɛhɔ no onyaa abodin krataa wɔ mmaranim mu. Ɔsan nso kɔɔ suapɔn a wɔfrɛ no Institute of Social Studies a ɛwo Netherlands na ɛhɔ nso onyaa abodin krataa foforo kaa nea ɔwɔ dedaw no ho. Toa so kan wɔ ha..... Atwerɛsɛm a adikan aba So wonim...? Ghana manpanyin ahyɛnsode Sɛ wɔ Ghana mmra 1960 mu, a ɛyɛ Ghana mmra homa a ɛdi kan wɔ Ghana no, ɔmanpanyin no bɛsi ahenni amanmuo no anan. Mmrahyɛbadwamfo yi ɔmampanyin sɛ ɔnni Ghana so mfe anum. Sɛ obiara nni hɔ sɛ ɔmanpanyin a, wɔpaw nnipa abiesa sɛ wɔn gyina mu sɛ ɔmanpanyin? Sɛ General Ignatius Kutu Acheampong de coup d\u0027état ɛtuu ɔmanpanyin Akufo-Addo ne Prime Minister Abrefa Busia ne n\u0027ban nyinaa? Atwerɛsɛm a adikan aba Mfoni a yapaw ato hɔ Accra - Ghana. Mfoni a adikan aba Nkratafa soronko Kasa kyerɛ adwuma kwankyerɛfo • Sɛ wo pɛ sɛ wo ni adwuma kwankyerɛfo kasa a, kɔ Adwuma akwankyerɛfo kratafa yi so Nkitahode •Di nkɔmɔ wɔ ha Mmoa •Mmoa a wo hia wɔ ha • Wikipedia mmra num • Sɛnea yɛ kyerɛw Twi Atwerɛsɛm • Te atwerɛsɛm foforo • Nkratafa dodow a ɛwɔ ha Wikimedia dwumadi ahorow Commons Free media repository Wiktionary Dictionary and thesaurus Wikidata Free knowledge base Wikiquote Collection of quotations Wikibooks Free textbooks and manuals Wikisource Free-content library Wikispecies Directory of species Wikiversity Free learning materials and activities Meta-Wiki Wikimedia project coordination View total pages Yɛ yi fii \"https://tw.wikipedia.org/w/index.php?title\u003dKratafa_Titiriw\u0026oldid\u003d134407\" 343 kasa ahorow Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fiji Hindi Hrvatski Hornjoserbsce Kreyòl ayisyen Magyar Հայերեն Արեւմտահայերէն Interlingua Jaku Iban Bahasa Indonesia Interlingue Igbo Igala Iñupiatun Ilokano ГӀалгӀай Ido Íslenska Italiano ᐃᓄᒃᑎᑐᑦ / inuktitut 日本語 Patois La .lojban. Jawa ქართული Qaraqalpaqsha Taqbaylit Адыгэбзэ Kabɩyɛ Tyap Kongo Kumoring Gĩkũyũ Қазақша Kalaallisut ភាសាខ្មែរ ಕನ್ನಡ Yerwa Kanuri 한국어 Перем коми Къарачай-малкъар کٲشُر Ripoarisch Kurdî Kʋsaal Коми Kernowek Кыргызча Latina Ladino Lëtzebuergesch Лакку Лезги Lingua Franca Nova Luganda Limburgs Ligure Ladin Lombard Lingála ລາວ Lietuvių Latgaļu Latviešu Madhurâ मैथिली Basa Banyumasan Мокшень Malagasy Олык марий Māori Minangkabau Македонски മലയാളം Монгол ꯃꯤꯇꯩ ꯂꯣꯟ ဘာသာမန် Moore मराठी Кырык мары Bahasa Melayu Malti Mirandés မြန်မာဘာသာ Эрзянь مازِرونی Nāhuatl Napulitano Plattdüütsch Nedersaksies नेपाली नेपाल भाषा Li Niha Nederlands Norsk nynorsk Norsk bokmål Novial ߒߞߏ IsiNdebele seSewula Nouormand Sesotho sa Leboa Nupe Diné bizaad Chi-Chewa Occitan Livvinkarjala Oromoo ଓଡ଼ିଆ Ирон ਪੰਜਾਬੀ Pangasinan Kapampangan Papiamentu Picard Naijá Deitsch Pälzisch पालि Polski Piemontèis پنجابی Ποντιακά پښتو Português Pinayuanan Runa Simi ရခိုင် Rumantsch Romani čhib Ikirundi Română Armãneashti Tarandíne Руски Русский Русиньскый Ikinyarwanda संस्कृतम् Саха тыла ᱥᱟᱱ",
-    "scrapedAt": "2025-12-15 19:10:09.357944"
-  },
-  {
-    "id": 71,
-    "url": "https://de.wikipedia.org/wiki/",
-    "title": "Wikipedia – Die freie Enzyklopädie",
-    "content": "Zum Inhalt springen aus Wikipedia, der freien Enzyklopädie Artikel des Tages Was geschah am …? In den Nachrichten Verstorben Schon gewusst? Schwesterprojekte Willkommen bei Wikipedia Wikipedia ist ein Projekt zum Aufbau einer Enzyklopädie aus freien Inhalten, zu denen du sehr gern beitragen kannst. Seit März 2001 sind 3.077.995 Artikel in deutscher Sprache entstanden. Geographie Geschichte Gesellschaft Kunst und Kultur Religion Sport Technik Wissenschaft Artikel nach Themen Artikel nach Kategorien Gesprochene Wikipedia Archiv der Hauptseite Mitmachen Mentorenprogramm Kontakt Presse Statistik Sprachversionen Artikel des Tages Der Baumpieper (Anthus trivialis) ist eine Vogelart aus der Familie der Stelzen und Pieper (Motacillidae). Er ist mit einer Körperlänge von durchschnittlich 15 Zentimetern etwa so groß wie ein Haussperling, wirkt aber durch seine grazilere und schlankere Gestalt optisch größer als dieser. Der im Sommer in Mitteleuropa früher häufige, optisch unauffällige Vogel ist vor allem an Waldrändern und -lichtungen zu beobachten, da er als Bodenbrüter neben einem Bestand an hohen Bäumen und Sträuchern auch offene, mit hoher Vegetation bestandene Flächen benötigt. Er fällt dort vor allem durch seinen Gesang auf. Der Baumpieper ist ein Weitstreckenzieher, der in der Vegetationszone der Hochgras-Savannen West- und Ostafrikas überwintert. In Deutschland und der Schweiz steht der Baumpieper auf der Liste der bedrohten Singvögel und gilt auch in Kulturlandschaften als vom Aussterben bedroht. – Zum Artikel … Archiv Weitere exzellente und lesenswerte Artikel sowie informative Listen RSS-Feed Was geschah am 15. Dezember? 1025 – Basileios II., seit 976 Kaiser des Byzantinischen Reiches, stirbt. 1675 – Jan Vermeer, dessen Gemälde Das Mädchen mit dem Perlenohrring zu den bekanntesten aus dem Goldenen Zeitalter der Niederlande zählt, wird beigesetzt. 1875 – König Ludwig II. von Bayern gibt die Anlage einer künstlichen unterirdischen Tropfsteinhöhle mit See und Wasserfall, der Venusgrotte, im Park von Schloss Linderhof in Auftrag. 1925 – Reza Khan legt den Treueeid auf die Verfassung ab und wird als Reza Pahlavi Schah von Persien. 1925 – Auf der Strecke Mailand–Nizza verkehrt Kontinentaleuropas erster Pullman-Express-Zug. Weitere Ereignisse RSS-Feed In den Nachrichten Krieg in der Ukraine Krieg in Nahost Matthias Moosdorf Chanukka Im Finale der Handball-WM der Frauen hat Norwegen Co-Gastgeber Deutschland besiegt. Beste Spielerin des Turniers wurde die Norwegerin Henny Reistad (Bild). Bei einem mutmaßlich antisemitisch motivierten Terroranschlag in Sydney sind mindestens 16 Menschen getötet worden, darunter auch einer der Attentäter. In Chile hat José Antonio Kast die Stichwahl für das Präsidentenamt gewonnen. Weitere aktuelle Ereignisse Kürzlich Verstorbene Carl Carlton (72), US-amerikanischer Sänger und Songwriter († ≤14. Dezember) Rob Reiner (78), US-amerikanischer Filmregisseur und Schauspieler († ≤14. Dezember) Anda-Louise Bogza (60), rumänische Opernsängerin († 13. Dezember) Peter Greene (60), US-amerikanischer Schauspieler († ≤12. Dezember) Hartmut Gese (96), deutscher Theologe († 8. Dezember) Weitere kürzlich Verstorbene Schon gewusst? Das Römerlager Colm la Runga gilt als eines der höchstgelegenen Militärlager des römischen Imperiums. Dort wo heute der Theaterplatz in Aschaffenburg ist, haben Neandertaler einst einen Faustkeil verloren. Der Stadtrat von Aberdeen fand es „lächerlich“, dass das Gebäude Porthill Court und Seamount Court unter Denkmalschutz gestellt wurde. Noch heute werden Glasmarken der Glashüttenbetreiberin Johanna Louise Pirl gefunden. Weitere neue Artikel Archiv Schwesterprojekte Commons – Medien Meta-Wiki – Koordination Wikibooks – Lehrbücher Wikidata – Wissensdatenbank Wikifunctions – Funktionsbibliothek Wikinews – Nachrichten Wikiquote – Zitate Wikisource – Quellen Wikispecies – Artenverzeichnis Wikiversity – Lernplattform Wikivoyage – Reiseführer Wiktionary – Wörterbuch Abgerufen von „https://de.wikipedia.org/w/index.php?title\u003dWikipedia:Hauptseite\u0026oldid\u003d247114458“ Kategorie: Wikipedia:Hauptseite Versteckte Kategorien: MediaWiki:Gadget/Hauptseite MediaWiki:Gadget/Suchfokus-Hauptseite 51 Sprachen Alemannisch العربية Boarisch Català Čeština Dansk Dolnoserbski Ελληνικά English Español فارسی Suomi Français Arpetan Nordfriisk Frysk עברית हिन्दी Hrvatski Hornjoserbsce Magyar Bahasa Indonesia Italiano 日本語 한국어 Ripoarisch Latina Lëtzebuergesch Limburgs Lombard Plattdüütsch Nederlands Norsk bokmål Deitsch Polski Português Rumantsch Română Русский Slovenčina Slovenščina Shqip Српски / srpski Seeltersk Svenska ไทย Türkçe Українська Tiếng Việt ייִדיש 中文 Suche Suchen Wikipedia:Hauptseite 51 Sprachen Abschnitt hinzufügen",
-    "scrapedAt": "2025-12-15 19:10:07.764839"
-  },
-  {
-    "id": 70,
-    "url": "https://meta.wikimedia.org/wiki/List_of_Wikipedias",
-    "title": "List of Wikipedias - Meta-Wiki",
-    "content": "Jump to content From Meta, a Wikimedia project coordination wiki Other languages: English · Ænglisc · अंगिका · العربية · Basa Bali · беларуская (тарашкевіца) · български · Banjar · বাংলা · català · کوردی · Zazaki · Ελληνικά · Esperanto · español · euskara · فارسی · suomi · français · galego · ગુજરાતી · עברית · हिन्दी · հայերեն · Bahasa Indonesia · italiano · 日本語 · Jawa · ಕನ್ನಡ · 한국어 · lietuvių · македонски · ဘာသာမန် · मराठी · Bahasa Melayu · Mirandés · မြန်မာဘာသာ · مازِرونی · 閩南語 / Bân-lâm-gí · नेपाली · नेपाल भाषा · occitan · ਪੰਜਾਬੀ · پښتو · português · română · سنڌي · Soomaaliga · தமிழ் · Türkçe · ئۇيغۇرچە / Uyghurche · اردو · vèneto · 中文 Wikimedia projects MediaWiki Meta-Wiki Wikibooks Wikidata Wikifunctions Wikimedia Commons Wikinews Wikiquote Wikipedia Wikisource Wikispecies Wiktionary Wikiversity Wikivoyage Complete list of Wikimedia projects — List of Wikimedia projects by size This page contains information about all 358 languages for which official Wikipedias have been created under the auspices of the Wikimedia Foundation. The table below, however, excludes 16 Wikipedias that were closed and 11 of them were moved to the Wikimedia Incubator for further development, leaving a current total of 342 active Wikipedias. Content in other languages is being developed at the Wikimedia Incubator; languages which meet certain criteria can get their own wikis. The table entries are ordered by current article count. Each entry gives the language name in English (linked to the English Wikipedia article for the language); its \"local name\" (i.e. in the language itself); the language code used in the wiki\u0027s URL address and in interwiki links to it (linked to the local Main Page); and statistics on articles, edits, administrators, users, active users, and images (each linked to an appropriate local special page). To start a Wikipedia in a new language, please see our language proposal policy and the Incubator manual. Note: Just adding a link here does not create a new Wikipedia, nor does it serve to request that one be created. If a wiki becomes active and is not listed here, please post a notice on this article\u0027s talk page, including a link to all the relevant Wikipedia pages, and help promote the effort by announcing it on the Wikipedia-L mailing list, and at Wikimedia News. The tables here are maintained automatically based on statistics collected by a bot four times a day, so it is not necessary to \"manually\" update the table. (The way this is being done makes that impossible, anyway.) If something is wrong with an entry other than simply having slightly outdated statistics, post about it on the talk page. More lists of Wikipedias by various criteria : [ edit ] List of Wikipedias by article count, users, file count and depth and its source (both updated every 6 hours) List of Wikipedias by edits per article and depth (both updated every 6 hours) List of Wikipedias by language group and family (both updated every 6 hours) and language families as a tree (not just Wikipedias) List of Wikipedias by country (updated manually) List of Wikipedias by speakers per article (updated every 6 hours) List of Wikipedias by sample of articles and expanded sample of articles (both updated monthly) List of Wikipedias by featured and good articles (both updated manually) List of Wikipedias by creation date (incomplete) List of Wikipedias in multiple writing systems List of Wikipedias having local media files and zero local media files (both updated manually) List of Wikipedia milestones or en:Wikipedia:Milestone statistics (tracking of major article-count milestones) List of largest wikis (not just Wikimedia wikis) Wikimedia News (announcements and tracking of milestones for all Wikimedia projects) Tell us about your Wikipedia Notes The \"All pages\" column refers to the number of pages in all namespaces, including both articles (the official article count of each wiki) and non-articles (user pages, images, talk pages, \"project\" pages, categories, and templates). \"Active Users\" are registered users who have made at least one edit in the last thirty days. \"Files\" is the number of locally uploaded files. Note that some large Wikipedias do not use local images or other media files and rely on Commons completely, so the value \"0\" is not a glitch (see also List of Wikipedias having zero local media files). All Wikipedias ordered by number of articles The languages listed here are Wikipedias that have been created as separate subdomains of wikipedia.org, ordered by number of articles. The table can also be sorted by other columns. It excludes closed Wikipedias. Historical data of this table dating back to 2007 can be found in the history of this table or, after 15 October 2022, in the history of the current source of the data. These statistics are updated nine times a day. See commons:Data:Wikipedia statistics/data.tab for the date/time of last update. (If reloading this page doesn\u0027t update the numbers to what is seen at Commons, try purg",
-    "scrapedAt": "2025-12-15 19:10:06.308815"
-  },
-  {
-    "id": 69,
-    "url": "https://lfn.wikipedia.org/wiki/Paje_xef",
-    "title": "Vicipedia",
-    "content": "Jump to content De Vicipedia Bonveni a la Vicipedia de elefen (lingua franca nova) la ensiclopedia libre cual cadun pote edita! Aora nos ave 4,500 articles. Categorias major ➙ Arte Arte Siensa umana Siensas umana Matimatix Pasatempo Siensas natural Siensas natural Tecnolojia Tecnolojia Elefen Elefen Un article bon La boca de un enfante ci ave MMPB La pedes de un enfante ci ave MMPB La maladia de mano-pede-boca (\"MMPB\") es un infeta comun causada par un grupo de viruses. Lo comensa tipal con un febre e descomforta jeneral. Esta es segueda en un o du dias par puntos o bultos plana e descolorida cual pote boli, sur la manos, pedes, e boca, a a veses la gluteo e inguin. La sinias e sintomes desapare normal tre a ses dias pos esposa a la virus. La eruta desapare jeneral par se mesma en sirca un semana. la ungias de la manos e pede pote posible es perdeda alga semanas a ante, ma los va recrese ultima. La viruses cual causa MMPB sprede par contata prosima personal, tra la aira par tose, e la feces de un person infetada. Ojetos contaminada pote ance sperde la maladia. Coxsackievirus A16 es la causa la plu comun, e Enterovirus 71 es la causa du plu comun. Otra varias de esta viruses pote ance causa la maladia. Alga persones pote porta e pasa la virus an si los no ave sintomes de la maladia. Otra animales no es envolveda. Diagnose pote comun es fada fundida su sintomes. A veses, un esemplo de la garga o feces pote es probada per la virus. La lava de manos pote preveni la sperde, e los ci es infetada debe no vada a labora, scola, o otra ativias cual inclui contata con otra persones. No medisin o vasina es otenable, ma atentas a developa lo es continuante. La plu de casos no nesesa un trata spesifada. Medisin per dole como ibuprofen o un jel desensosi per la boca pote es usada. A veses, fluides intravenal es donada a enfantes ci no pote bevi sufisinte. Rara, meninjite o ensefalite pote complica la maladia. MMPB aveni en tota areas de la mundo. Lo aveni comun en avenis peti en scolas per enfantes joben. Avenis grande ia aveni en Asia de 1997. Lo aveni la plu comun en la mensas plu calda. Tipal, lo aveni en enfantes ci ave min ca sinco anios, ma a veses lo pote aveni en adultes. MMPB debe no es confusada con la maladia de pede-e-boca o ungula-e-boca cual afeta per la plu parte sola bestias. Per un introdui simple a la crea o edita de pajes sur esta vicipedia vade asi! Articles xef Artes Arciteta | Dansa | Depinta | Desinia | Fotografia | Leteratur | Musica | Sculta | Teatro Siensas umana Antropolojia | Arceolojia | Biografia | Economia | Filosofia | Istoria | Jeografia | Lege | Lingua | Linguistica | Politica | Psicolojia | Relijio Pasatempos Abita | Cosini | Colie | Jardin | Jeneolojia | Jua | Moda | Sinema | Sporte | Televisa | Turisme Siensas natural Astronomia | Biolojia | Cimica | Clima | Ecolojia | Fisica | Jenetica | Jeolojia | Matematica | Medica | Paleontolojia Tecnolojia Armas | Computador | Cultiva | Eletronica | Injenia | Interede | Transporta | Vicitecnolojia Lingua franca nova Istoria de lfn | Transcrive | Nomes personal | Termas tecnical | Tempo en elefen Elefen estra Vicipedia Elefen ave otra locas importante a la rede, estra esta vicipedia: La disionario xercable grande. La paje xef de elefen, con introduis e esemplos en multe linguas; Nosa loca per plu informa sur elefen; La menu per sentos de naras, poesias, e cantas. Per favore, visita los! Retraeda de \"https://lfn.wikipedia.org/w/index.php?title\u003dPaje_xef\u0026oldid\u003d35880\" Categorias: Maladias Problemes cutanea Articles bon per la paje xef Paje xef 343 linguas Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fiji Hindi Hrvatski Hornjoserbsce Kreyòl ayisyen Magyar Հայերեն Արեւմտահայերէն Interlingua Jaku Iban Bahasa Indonesia Interlingue Igbo Igala Iñupiatun Ilokano ГӀалгӀай Ido Íslenska Italiano ᐃᓄᒃᑎᑐᑦ / inuktitut 日本語 Patois La .lojban. Jawa ქარ",
-    "scrapedAt": "2025-12-15 19:10:03.564907"
-  },
-  {
-    "id": 68,
-    "url": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu",
-    "title": "Wikipedia – Encyclopedia Yaulere",
-    "content": "Jump to content Kuchokera ku Wikipedia Mwalandilidwa pa Wikipedia, encyclopedia yaulere imene aliyense angathandizile kukuza! Pakali pano tili ndi nkhani zokwana 1,099 mu chiChewa, chinenero chomwe chimayankhulidwa ku Malawi ndi Zambia. Za Wikipedia Wikipedia ya Chichewa ndi buku laulere. Ndi wiki, mtundu wa webusaiti yomwe anthu ambiri amawalemba. Izi zikutanthawuza kuti aliyense angathe kusintha tsamba lirilonse podalira pa \"kusintha tsamba lino\". Mungathe kuchita izi pa tsamba lirilonse losatetezedwa. Mukhoza kuona ngati tsambalo liri kutetezedwa chifukwa lidzati \"View source\" mmalo mwa \"Sintha\". Pali nkhani 1,099 pa Wikipedia ya Chichewa. Masamba onse ndi omasuka kugwiritsa ntchito. Zonse zafalitsidwa pansi pa Creative Commons Attribution / Share-Alike License 4.0 ndi GNU Free Documentation License. Mungathe kuthandiza pano! Mungasinthe masamba awa ndikupanga masamba atsopano. Werengani masamba othandizira ndi masamba ena abwino kuti mudziwe kulemba masamba apa. Ngati mukufuna thandizo, mukhoza kufunsa mafunso pachithumo cha Community. Mukamalemba nkhani apa Lembani masamba abwino. Masamba abwino kwambiri a encyclopedia ali ndi zothandiza, zolembedwa bwino. Osagwilitsa ntchito makina ngati google translator! Nkhani yolembedwa pogwilitsa ntchito translator wina aliyense siikhala yomveka bwino (Don\u0027t use machine translations!). Nkhani zotelo zizafufutidwa pano mopanda kudziwitsa olembayo komanso kupitiliza kutelo n\u0027kuphwanya malamulo a Wikipediya. Gwiritsani ntchito masambawa kuti muphunzire ndi kuphunzitsa. Masambawa angathandize anthu kuphunzira Chichewa. Mutha kuigwiritsanso ntchito pangani Wikipedia yatsopano kuthandiza anthu ena. Khalani wolimba! Nkhani yanu siyenela kukhala yangwiro, chifukwa olemba ena adzakonza ndikupanga bwino. Ndipo chofunika kwambiri, musaope kuyamba ndi kupanga nkhani bwino. Mu nkhani Ōnosato Daiki Ōnosato Daiki (chithunzi) amakhala sumo\u0027s 75th yokozuna. Mu mpira wachiyanjano, Liverpool idapambana mutu wa Premier League. Pampikisano wamagalimoto, Álex Palou adapambana Indianapolis 500. Mu basketball, EuroLeague imamaliza ndi Fenerbahçe kupambana Final Four Playoff. Kupitilira: Gaza war Kampeni ya M23 Kuukira kwa Russia ku Ukraine nthawi yanthawi Nkhondo yapachiweniweni yaku Sudan nthawi Akufa posachedwa: Tomiko Itooka Loretta Di Franco Jorge Lanata Michael Newberry Chithunzi cha tsikulo      Chithunzi chili osapezeka lero. Wikipedia Muzinenero Zina Wikipedia iyi yalembedwa mu Chichewa. Kuyambira mu 2001, pakali pano muli nkhani 1,099. Ma Wikipedias ambiri amapezeka; ma Wikipediya ena amu Afrika ali pansipa. Afrikaans | Luganda | Gĩkũyũ | Hausa | Igbo | KiKongo | Lingala | Kirundi | Ikinyarwanda | chiShona | Sesotho | Sesotho sa leboa | Kiswahili | SiSwati | Xitsonga | Setswana | chiTumbuka | Tshivenda | isiXhosa | Yorùbá | Lembani mndandanda wa Wikipedias – Zinenero zikugwira ntchito limodzi – Yambani Wikipedia kuti mukhale chinenero chatsopano Ntchito zina za Wikimedia Wikipedia imayang\u0027aniridwa ndi Wikimedia Foundation, bungwe lopanda phindu lomwe limakhalanso ndi mapulojekiti: Commons Malo omwe aliyense angapeze ndikugawana zithunzi, makanema, ndi mawu aulere. Wikifunctions Malo omwe mungapeze ndikugwiritsa ntchito zida zothandiza ndi njira zazifupi pantchito zosiyanasiyana. Wikidata Malo omwe chidziwitso chimakonzedwa ndikusungidwa m\u0027njira yoti aliyense azitha kuzipeza ndikuzigwiritsa ntchito momasuka. Wikispecies Mndandanda wa nyama zosiyanasiyana, zomera, ndi zamoyo zina. Wikipedia Buku lalikulu lapaintaneti lodzaza ndi zambiri zolembedwa mchingerezi zomwe aliyense angaziwerenge ndikuwongolera. Wikiquote Malo omwe mungapezeko mawu otchuka komanso osangalatsa ochokera kwa anthu. Wikinews Nkhani zomwe aliyense angathe kuziwerenga, kugawana, ndi kuthandiza kulemba. Wiktionary Dictionary and thesaurus Wikiversity Zida zaulere monga mabuku, makanema, ndi maupangiri omwe amakuthandizani kuphunzira zinthu zatsopano. Wikibooks Malo omwe mungapeze mabuku ndi malangizo okuthandizani kuphunzira, ndipo ndi omasuka kugwiritsa ntchito. Wikisource Laibulale komwe mungapeze mabuku, zithunzi, ndi zinthu zina zaulere kuti aliyense azigwiritsa ntchito. MediaWiki Malo omwe anthu amagwira ntchito popanga ndi kukonza mapulogalamu omwe amayendetsa Wikipedia ndi mawebusayiti ena a Wiki. Meta-Wiki Malo oti anthu ogwira ntchito pa Wikipedia ndi ma projekiti ena akonzekere, kukonza, ndi kugwirira ntchito limodzi. Wikivoyage Upangiri waulere womwe umakuthandizani kuti muphunzire za malo omwe mungayendere, zinthu zoti muchite, komanso momwe mungayendere. Onaninso masamba a Wikimedia Foundation Governance wiki, nawonso. Purge server cache Kuchotsa https://ny.wikipedia.org/w/index.php?title\u003dTsamba_Lalikulu\u0026oldid\u003d55791 343 languages Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama ",
-    "scrapedAt": "2025-12-15 19:10:01.935955"
   },
   {
     "id": 498,
@@ -3488,6 +3488,606 @@ window.searchData = [
 ];
 
 window.imageData = [
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Wikipedia-logo-v2-ak.svg/250px-Wikipedia-logo-v2-ak.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Bluebg_rounded.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/HSutvald2.svg/40px-HSutvald2.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Jane_Naana_Opoku-Agyemang.jpg/250px-Jane_Naana_Opoku-Agyemang.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Bluebg_rounded.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/HSbra2.svg/40px-HSbra2.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Her_Excellency_Alima_Mahama_%28Hajia%29.jpg/250px-Her_Excellency_Alima_Mahama_%28Hajia%29.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Bluebg_rounded.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Book_red%3B_question_marks.svg/40px-Book_red%3B_question_marks.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Seal_of_the_Presidency_of_the_Republic_of_Ghana.svg/250px-Seal_of_the_Presidency_of_the_Republic_of_Ghana.svg.png",
+    "alt": "Ghana manpanyin ahyɛnsode",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Bluebg_rounded.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/PL_Wiki_InM_ikona.svg/40px-PL_Wiki_InM_ikona.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/BLACK_STAR_SQUARE.jpg/960px-BLACK_STAR_SQUARE.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Wbar_blue.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Wikipedia_logo_bronze.png/40px-Wikipedia_logo_bronze.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Nuvola_apps_personal.png/60px-Nuvola_apps_personal.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Gnome-help-faq-dark.svg/60px-Gnome-help-faq-dark.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Wikipedia_help_symbol.svg/60px-Wikipedia_help_symbol.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Crystal_Clear_check_boxes.png/60px-Crystal_Clear_check_boxes.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Bluebg_rounded.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/RU_Wiki_FLP_icon.svg/40px-RU_Wiki_FLP_icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Wiktionary-logo-en.svg/60px-Wiktionary-logo-en.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/60px-Wikidata-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/60px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/60px-Wikiversity-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://tw.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tw.wikipedia.org/wiki/Kratafa_Titiriw"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Jump-to-top_icon.svg/20px-Jump-to-top_icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/P_countries-vector.svg/40px-P_countries-vector.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/P_history.svg/40px-P_history.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Social_sciences.svg/40px-Social_sciences.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/P_culture.svg/40px-P_culture.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/P_religion_world.svg/40px-P_religion_world.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/P_sport.svg/40px-P_sport.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/P_train.svg/40px-P_train.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/P_parthenon.svg/40px-P_parthenon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Jump-to-top_icon.svg/20px-Jump-to-top_icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Anthus_trivialis_vogelartinfo_chris_romeiks_CHR4025.jpg/250px-Anthus_trivialis_vogelartinfo_chris_romeiks_CHR4025.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/20px-Feed-icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Jump-to-top_icon.svg/20px-Jump-to-top_icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg/120px-Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg",
+    "alt": "Vermeers „Das Mädchen mit dem Perlenohrring“ von 1665",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/20px-Feed-icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Jump-to-top_icon.svg/20px-Jump-to-top_icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/20241209_Womens_EHF_Euro_1280.jpg/120px-20241209_Womens_EHF_Euro_1280.jpg",
+    "alt": "Henny Reistad (2024)",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Jump-to-top_icon.svg/20px-Jump-to-top_icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Jump-to-top_icon.svg/20px-Jump-to-top_icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Colm_la_Runga_Swisstopo_Lidar_gr%C3%BCn.jpg/120px-Colm_la_Runga_Swisstopo_Lidar_gr%C3%BCn.jpg",
+    "alt": "Lidar-Bild der Wallanlage des Römerlagers",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Jump-to-top_icon.svg/20px-Jump-to-top_icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/20px-Wikimedia_Community_Logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/20px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/40px-Wikidata-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Wikifunctions-logo.svg/20px-Wikifunctions-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/40px-Wikinews-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/20px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/20px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/20px-Wikispecies-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wikiversity_logo_2017.svg/40px-Wikiversity_logo_2017.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/20px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/40px-Wiktionary_small.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://de.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia – Die freie Enzyklopädie",
+    "pageUrl": "https://de.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "List of Wikipedias - Meta-Wiki",
+    "pageUrl": "https://meta.wikimedia.org/wiki/List_of_Wikipedias"
+  },
+  {
+    "src": "https://meta.wikimedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "List of Wikipedias - Meta-Wiki",
+    "pageUrl": "https://meta.wikimedia.org/wiki/List_of_Wikipedias"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/10/Wikipedia-logo-v2-200px-transparent.png",
+    "alt": "",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Crystal_Clear_app_kcoloredit.png/40px-Crystal_Clear_app_kcoloredit.png",
+    "alt": "Arte",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Cravate-normal.png/40px-Cravate-normal.png",
+    "alt": "Siensa umana",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Gnome-input-gaming.svg/40px-Gnome-input-gaming.svg.png",
+    "alt": "Matimatix",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/PrirodneNauke.svg/40px-PrirodneNauke.svg.png",
+    "alt": "Siensas natural",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Nuvola_apps_laptop_pcmcia.png/40px-Nuvola_apps_laptop_pcmcia.png",
+    "alt": "Tecnolojia",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Flag_of_Lingua_Franca_Nova.svg/60px-Flag_of_Lingua_Franca_Nova.svg.png",
+    "alt": "Elefen",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Hand_Foot_Mouth_Disease.png/250px-Hand_Foot_Mouth_Disease.png",
+    "alt": "",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Hand_foot_and_mouth_disease_on_child_feet.jpg/250px-Hand_foot_and_mouth_disease_on_child_feet.jpg",
+    "alt": "",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Crystal_Clear_app_kcoloredit.png/40px-Crystal_Clear_app_kcoloredit.png",
+    "alt": "",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Cravate-normal.png/40px-Cravate-normal.png",
+    "alt": "",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Gnome-input-gaming.svg/40px-Gnome-input-gaming.svg.png",
+    "alt": "",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/PrirodneNauke.svg/40px-PrirodneNauke.svg.png",
+    "alt": "",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Nuvola_apps_laptop_pcmcia.png/40px-Nuvola_apps_laptop_pcmcia.png",
+    "alt": "",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Flag_of_Lingua_Franca_Nova.svg/40px-Flag_of_Lingua_Franca_Nova.svg.png",
+    "alt": "",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Elefenlogo.png",
+    "alt": "",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://lfn.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Vicipedia",
+    "pageUrl": "https://lfn.wikipedia.org/wiki/Paje_xef"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/%C5%8Cnosato_Daiki_%282024%29.jpg/120px-%C5%8Cnosato_Daiki_%282024%29.jpg",
+    "alt": "Ōnosato Daiki",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/HSCommons.svg/40px-HSCommons.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Wikifunctions-logo.svg/40px-Wikifunctions-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Wikidata-HS-icon.svg/40px-Wikidata-HS-icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/HSWSpecies.svg/40px-HSWSpecies.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/40px-Wikipedia-logo-v2.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/HSWQuote.svg/40px-HSWQuote.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/HSWNews.svg/40px-HSWNews.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/WiktionaryEn_-_DP_Derivative.svg/40px-WiktionaryEn_-_DP_Derivative.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/HSWVersity.svg/40px-HSWVersity.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/HSWBooks.svg/40px-HSWBooks.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/HSWSource.svg/40px-HSWSource.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/MediaWiki-2020-small-icon.svg/40px-MediaWiki-2020-small-icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/HSWikimedia.svg/40px-HSWikimedia.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/HSWikivoyage.svg/40px-HSWikivoyage.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
+  {
+    "src": "https://ny.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia – Encyclopedia Yaulere",
+    "pageUrl": "https://ny.wikipedia.org/wiki/Tsamba_Lalikulu"
+  },
   {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/20px-2023_Facebook_icon.svg.png",
     "alt": "ফেসবুকে বাংলা উইকিপিডিয়ার পাতা পছন্দ করুন",
