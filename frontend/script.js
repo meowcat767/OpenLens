@@ -16,10 +16,45 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.searchData) {
         const pageText = window.searchData.length === 1 ? 'page' : 'pages';
         statsElement.textContent = `${window.searchData.length} ${pageText} indexed`;
+
+        // Fetch and display commit count
+        fetchCommitCount();
     } else {
         showError('Could not load search data. Run the exporter: java -cp target/search-engine-1.0-SNAPSHOT-jar-with-dependencies.jar com.searchengine.export.StaticExporter');
     }
 });
+
+// Fetch commit count from GitHub API
+async function fetchCommitCount() {
+    try {
+        // We request 1 item per page to get the last page number from headers
+        const response = await fetch('https://api.github.com/repos/meowcat767/OpenLens/commits?per_page=1');
+
+        if (!response.ok) return;
+
+        // The 'Link' header contains the URL for the last page:
+        // <...page=123>; rel="last"
+        const linkHeader = response.headers.get('Link');
+        let commitCount = '?';
+
+        if (linkHeader) {
+            const match = linkHeader.match(/&page=(\d+)>; rel="last"/);
+            if (match) {
+                commitCount = match[1];
+            }
+        } else {
+            // Fallback if only 1 page (rare for active repo but possible)
+            const data = await response.json();
+            commitCount = data.length;
+        }
+
+        const currentText = statsElement.textContent;
+        statsElement.innerHTML = `${currentText} &nbsp;|&nbsp; <a href="https://github.com/meowcat767/OpenLens/commits/master" target="_blank" style="color: inherit; text-decoration: none;">${commitCount} Commits</a>`;
+
+    } catch (e) {
+        console.error('Failed to fetch commit count:', e);
+    }
+}
 
 // Handle search form submission
 searchForm.addEventListener('submit', (e) => {
