@@ -9565,3 +9565,4 @@ https://blogs.oracle.com/java-platform-group/the-arrival-of-java-15
 https://en.wikipedia.org/wiki/Swing_(Java)
 https://en.wikipedia.org/wiki/Data_structure
 https://en.wikipedia.org/wiki/Visual_Basic
+https://ksh.wikipedia.org/wiki/Wikipedia:Houpsigk
