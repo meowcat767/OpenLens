@@ -18,7 +18,7 @@ public class ScraperMain {
     public static void main(String[] args) {
         String urlFile = args.length > 0 ? args[0] : "urls.txt";
 
-        System.out.println("=== Search Engine Crawler ===");
+        System.out.println("=== crawl-chan >~< ===");
         System.out.println("Reading seed URLs from: " + urlFile);
 
         // Queue for URLs to visit
