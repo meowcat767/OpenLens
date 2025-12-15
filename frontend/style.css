@@ -176,8 +176,7 @@ button:hover {
 .search-tabs {
     border-bottom: 1px solid var(--tab-border);
     margin-bottom: 20px;
-    display: none;
-    /* Hidden by default */
+    display: block; /* Always visible */
 }
 
 /* ... existing tab styles ... */
