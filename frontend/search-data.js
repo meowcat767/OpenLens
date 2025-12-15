@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 42,
+    "url": "https://ann.wikipedia.org/wiki/Uwu",
+    "title": "Wìkìpedia",
+    "content": "Jump to content Ònan̄a me Wìkìpedia Onu me Wìkìpedia Obolo! Ọsọ nsaikilopedia eyi ene geelek môkọtbe igọọk ige. 14:07 (UTC); Usende, 9 Disemba 2025 Me nkwukwuuk: 0 1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O Ọ P Q R S T U V W X Y Z Otu-ifuk atikulu 434 Ido: Malawi • Zambia • Naijiria • Ganà • Etiopia • Bènè • Nijê • Ntitiin̄ Afirika • Afirika agan̄ Inyọn̄ • Ntitiin̄ Yurop • Afirika Osiki Sayensi: Ifuk • AIDS • Ọgbọn̄ Ura • Akum • Iwop-uko • Ọrọsi • Akpalek • Ufuk unye Mfufuk Ugwem: Myles Munroe • Uche Erọn • Jọn Brown • Frederick Douglass • Marian Erọn • Isidọ Ene-Awaji • Kilintin Utọn̄ • Ugbana Oyet Obolo Wiktionary Atikulu òsibi esese chereyi Ebi kè atat Atat ìre mwuwu òkigbaan̄ iluk me ogbọn̄ [colonies]. Me owuwa oniin̄, ebi kè atat ebelek ebi kè akwọọk mè àtaak [wasps]. Atat îwa lek enenen. Otu-ifuk esese esese lek atat ekọtbe iweek imun̄ ìre 12,500 me ibebieen̄ iriaak. (Fuk òjot òjot...) Ìre oriọọn̄ ibe? Tempulet:Ìre oriọọn̄ ibe?/9 Me emen etip-usen Tempulet:Me emen etip-usen/9 Cherekeyi me emen mfufuk Tempulet:Chereyi me emen mfufuk/Disemba 9 Ogugo òsibi esese Tempulet:Ogugo òsibi esese/9 Ido me Afirika Algeria ● Angola ● Benin ● Botswana ● Burkina Faso ● Burundi ● Cameroon ● Canary Islands ● Cape Verde ● Central African Republic ● Chad ● Comoros ● Côte d\u0027Ivoire ● Democratic Republic of the Congo ● Djibouti ● Egypt ● Equatorial Guinea ● Eritrea ● Eswatini ● Ethiopia ● Gabon ● Gambia ● Ghana ● Guinea ● Guinea-Bissau ● Kenya ● Lesotho ● Liberia ● Libya ● Madagascar ● Malawi ● Mali ● Mauritania ● Mauritius ● Mayotte ● Morocco ● Mozambique ● Namibia ● Niger ● Naijiria ● Republic of Congo ● Réunion ● Rwanda ● Saint Helena ● São Tomé and Príncipe ● Senegal ● Seychelles ● Sierra Leone ● Somalia ● South Africa ● Sudan ● South Sudan ● Tanzania ● Togo ● Tunisia ● Uganda ● Western Sahara ● Zambia ● Zimbabwe Wìkìpedia echi usem Afirika Akan • Luganda • Gĩkũyũ • Hausa • Igbo • KiKongo • Lingala • Kirundi • Ikinyarwanda • chiShona • Sesotho • Sesotho sa leboa • Kiswahili • SiSwati • Xitsonga • Setswana • Tshivenda • isiXhosa • Yorùbá • isiZulu • Otutuuk Wìkìpedia òkukup – Wikipedia me esese usem – Ikan òkikpulu usem Wìkìpedia ìre ebi ìmama mè ichieek inyinyi mgbọ kiban̄ ekige, sà ebi Wikimedia Foundation, uwu-ikwaan̄ eyi kpekisa iweek oruru, okibeme. Uwu-ikwaan̄ yi îbeme si owuwa ofifi purọjet kechi: Commons Free media repository MediaWiki Wiki software development Meta-Wiki Wikimedia project coordination Wikibooks Ọsọ ikpa mè ikpa ubọk Wikidata Free knowledge base Wikinews Free-content news Wikiquote Collection of quotations Wikisource Free-content library Wikispecies Directory of species Wikiversity Free learning materials and activities Wikivoyage Free travel guide Wiktionary Òbum-ikọ mè ògwu-usem Ebọkọ me \"https://ann.wikipedia.org/w/index.php?title\u003dUwu\u0026oldid\u003d4670\" Ọgbọn̄: Pages using duplicate arguments in template calls Usem 343 Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fiji Hindi Hrvatski Hornjoserbsce Kreyòl ayisyen Magyar Հայերեն Արեւմտահայերէն Interlingua Jaku Iban Bahasa Indonesia Interlingue Igbo Igala Iñupiatun Ilokano ГӀалгӀай Ido Íslenska Italiano ᐃᓄᒃᑎᑐᑦ / inuktitut 日本語 Patois La .lojban. Jawa ქართული Qaraqalpaqsha Taqbaylit Адыгэбзэ Kabɩyɛ Tyap Kongo Kumoring Gĩkũyũ Қазақша Kalaallisut ភាសាខ្មែរ ಕನ್ನಡ Yerwa Kanuri 한국어 Перем коми Къарачай-малкъар کٲشُر Ripoarisch Kurdî Kʋsaal Коми Kernowek Кыргызча Latina Ladino Lëtzebuergesch Лакку Лезги Lingua Franca Nova Luganda Limburgs Ligure Ladin Lombard Lingála ລາວ Lietuvių Latgaļu Latviešu Madhurâ मैथिली Basa Banyumasan Мокшень Malagasy Олык марий Māori Minangkabau Македонски മലയാളം Монгол ꯃꯤꯇꯩ ꯂꯣꯟ ဘာသာမန် Moore मराठी Кырык мары Bahasa Melayu Malti Mirandés မြန်မာဘာသာ Эрзянь مازِرونی Nāhuatl Napulitano Plattdüütsch Nedersaksies नेपाली नेपाल भाषा Li Niha Nederlands Norsk nynorsk Norsk bokmål Novial ߒߞߏ IsiNdebele seSewula Nouormand Sesotho sa",
+    "scrapedAt": "2025-12-15 19:20:54.98335"
+  },
+  {
+    "id": 41,
+    "url": "https://th.wikipedia.org/wiki/",
+    "title": "วิกิพีเดีย สารานุกรมเสรี",
+    "content": "ข้ามไปเนื้อหา จากวิกิพีเดีย สารานุกรมเสรี ยินดีต้อนรับสู่วิกิพีเดีย สารานุกรมเสรีที่ทุกคนแก้ไขได้ (อธิบาย) วิกิพีเดียภาษาไทยมี 178,174 บทความ ดัชนีคำขึ้นต้น หมวดหมู่ หน้าทั้งหมด บทความแนะนำ ทีมผู้พัฒนาเดอะลาสต์ออฟอัสบางส่วน เดอะลาสต์ออฟอัส เป็นเกมแอ็กชันผจญภัยสยองขวัญเอาชีวิตรอด พัฒนาโดยนอตีด็อก และจัดจำหน่ายโดยโซนี่คอมพิวเตอร์เอ็นเตอร์เทนเมนต์ ผู้เล่นได้ควบคุมโจเอล ผู้ลักลอบขนของที่ได้รับภารกิจในการคุ้มกันเอลลี เด็กสาววัยรุ่น ข้ามประเทศสหรัฐอเมริกาหลังเกิดเหตุการณ์หายนะ เกมดำเนินในมุมมองบุคคลที่สาม โดยใช้ปืน อาวุธดัดแปลง และการลอบเร้น เพื่อรับมือกับมนุษย์ที่เป็นศัตรูและสิ่งมีชีวิตกินเนื้อคนที่ติดเชื้อจากเห็ดรากลายพันธุ์ เกมยังมีโหมดผู้เล่นหลายคนออนไลน์ที่รองรับผู้เล่นสูงสุด 8 คน ในรูปแบบการเล่นร่วมมือหรือแข่งขันกัน เกมเริ่มพัฒนาในปี 2009 หลังวางจำหน่ายอันชาร์ทิด 2: อะมังทีฟส์ ซึ่งเป็นผลงานก่อนหน้าของนอตีด็อก โดยสตูดิโอได้แบ่งทีมออกเป็นสองกลุ่ม ทีมหนึ่งพัฒนาเดอะลาสต์ออฟอัส ขณะที่อีกทีมดูแลอันชาร์ทิด 3: เดรกส์ดีเซปชัน ทรอย เบเกอร์ และแอชลีย์ จอห์นสัน รับบทเป็นโจเอลและเอลลีตามลำดับ ผ่านการพากย์เสียงและเทคโนโลยีจับการเคลื่อนไหว และพัฒนาตัวละครและเนื้อเรื่องร่วมกับนีล ดรักแมนน์ ผู้อำนวยการฝ่ายสร้างสรรค์ แกนหลักเป็นเรื่องความสัมพันธ์ระหว่างโจเอลกับเอลลี ดนตรีประกอบของเกมแต่งและบรรเลงโดยกุสตาโบ ซานตาโอลายา รายชื่อบทความแนะนำ (พ.ศ. 2567 ⋅ พ.ศ. 2568) – โครงการบทความแนะนำ รู้ไหมว่า... เรื่องน่าสนใจจากบทความล่าสุดและเพิ่งปรับปรุงของวิกิพีเดีย : ตำแหน่งและลักษณะของเนื้องอกลำไส้ใหญ่ตัวอย่างสองจุด ...มะเร็งลำไส้ใหญ่ (ในภาพ) เกิดได้จากหลายปัจจัย เช่น รูปแบบการดำเนินชีวิตและอายุที่มากขึ้น รวมทั้งโรคลำไส้อักเสบเรื้อรังและความผิดปกติทางพันธุกรรมด้วย ปัจจัยเสี่ยงรวมถึงอาหารการกิน โรคอ้วน การสูบบุหรี่ และการขาดการออกกำลังกาย อาหารที่เพิ่มความเสี่ยง ได้แก่ เนื้อแดง เนื้อแปรรูป และเครื่องดื่มแอลกอฮอล์ ...การนำเสนอจักรพรรดิเซิร์กซีสที่ 1 ของกรีกและโรมันส่วนใหญ่เป็นไปในเชิงลบ บทละคร \"The Persians\" ที่แสดงในกรุงเอเธนส์เมื่อ 472 ปีก่อน ค.ศ. หลังจากที่พระองค์ทรงบุกรุกรานกรีซเพียงเจ็ดปี นำเสนอเซิร์กซีสในลักษณะเหมือนผู้หญิงที่ท้ายสุดนำไปสู่หายนะ ส่วนที่นำเสนอในผลงาน Histories ของเฮอรอโดทัสอาจถือได้ว่ามีความละเอียดอ่อนและน่าเศร้า เมื่อเทียบกับการถูกใส่ร้ายป้ายสีที่พระองค์ได้รับจากอเล็กซานเดอร์มหาราช ...วินาศกรรม 11 กันยายนส่งผลกระทบหลายประการ รวมถึงการแสดงออกความรักชาติที่เพิ่มขึ้น ทฤษฎีสมคบคิดเรื่อง 9/11 ความวิตกกังวลระดับชาติที่เพิ่มขึ้นเกี่ยวกับการเดินทางด้วยสายการบินเชิงพาณิชย์ และอาชญากรรมจากความเกลียดชังมุสลิมที่เพิ่มขึ้นเกือบสิบเท่าใน ค.ศ. 2001 โดยต่อมายังคง \"สูงกว่าอัตราก่อน 9/11 ประมาณห้าเท่า\" เรื่องที่ผ่านมา – สร้างบทความใหม่ – เสนอบทความ เรื่องจากข่าว อัคคีภัยในที่พักเขตไต้โป้ว อนุทิน ชาญวีรกูล นายกรัฐมนตรีไทย ประกาศยุบสภาผู้แทนราษฎร เพื่อจัดการเลือกตั้งทั่วไป ซีเกมส์เริ่มต้นขึ้นแล้ว ในกรุงเทพมหานคร และจังหวัดชลบุรี ประเทศไทย เพลิงไหม้กลุ่มอาคารชุด (ในภาพ) ในฮ่องกง ส่งผลให้มีผู้เสียชีวิตมากกว่า 100 ราย มีผู้เสียชีวิตมากกว่า 100 รายจากอุทกภัยในภาคใต้ของประเทศไทย ซึ่งส่งผลกระทบหนักที่อำเภอหาดใหญ่ จังหวัดสงขลา เจมส์ ดี. วัตสัน นักชีววิทยาโมเลกุลชาวอเมริกัน ผู้ร่วมค้นพบโครงสร้างของดีเอ็นเอ เสียชีวิตในวัย 97 ปี มีผู้เสียชีวิต 14 รายจากยูพีเอสแอร์ไลน์ เที่ยวบินที่ 2976 ซึ่งตกภายหลังขึ้นบินจากท่าอากาศยานนานาชาติลุยส์วิลล์ มูฮัมหมัด อาลีในรัฐเคนทักกี สหรัฐอเมริกาได้ไม่นาน ดำเนินอยู่: สงครามในกาซา การรุกรานยูเครนของรัสเซีย สงครามในซูดาน บุคคลที่เพิ่งเสียชีวิต – เหตุการณ์ปัจจุบัน วันนี้ในอดีต 16 ธันวาคม: วันชาติในบาห์เรน (พ.ศ. 2514), วันเอกราชในคาซัคสถาน (พ.ศ. 2534) พ.ศ. 2141 (ค.ศ. 1598) – ลี ซุนชินนำกองเรือเกาหลีรบชนะกองเรือญี่ปุ่นในยุทธนาวีที่โนลยาง ยุทธนาการครั้งสุดท้ายของสงครามอิมจิน พ.ศ. 2196 (ค.ศ. 1653) – โอลิเวอร์ ครอมเวลล์ (ในภาพ) ได้เป็นเจ้าผู้อารักขาเครือจักรภพแห่งอังกฤษ พ.ศ. 2316 (ค.ศ. 1773) – ชาวอาณานิคมกลุ่มหนึ่งทำลายชาที่ถูกเก็บภาษีโดยปราศจากความยินยอมของตนตามพระราชบัญญัติชา เพื่อมิให้ถ่ายชานั้นออก พ.ศ. 2436 (ค.ศ. 1893) – ซิมโฟนีหมายเลข 9 ของอันโตญีน ดโวฌาก คีตกวีชาวเช็ก จัดแสดงครั้งแรกในนครนิวยอร์ก สหรัฐ พ.ศ. 2487 (ค.ศ. 1944) – สงครามโลกครั้งที่สอง: กองทัพเยอรมันเริ่มยุทธการตอกลิ่ม ซึ่งเป็นการบุกตีครั้งสุดท้ายบนแนวรบด้านตะวันตก ดูเพิ่ม: 15 ธันวาคม – 16 ธันวาคม – 17 ธันวาคม จดหมายเหตุ – รายชื่อบทความวันนี้ในอดีต สารานุกรม ธรรมชาติ ศิลปะ วิทยาศาสตร์ ภูมิศาสตร์ เทคโนโลยี ความเชื่อ ประวัติศาสตร์ สังคม ประเทศไทย สถานีย่อย ป้ายบอกทาง ศาลาประชาคม – กระดานข่าว โครงการ ทรัพยากรและกิจกรรมซึ่งครอบคลุมวิกิพีเดียอย่างกว้างขวาง แผนกช่วยเหลือ – ถามข้อสงสัยเกี่ยวกับการใช้งานวิกิพีเดีย ปุจฉา-วิสัชนา – ถามข้อสงสัยทั่วไปที่คุณอยากรู้ ข่าวไซต์ – ประกาศ อัปเดต บทความและข้อมูลข่าวเกี่ยวกับวิกิพีเดียและมูลนิธิวิกิมีเดีย สภากาแฟ – สำหรับอภิปรายเกี่ยวกับวิกิพีเดีย รวมถึงรายงานปัญหาเทคนิคและเสนอนโยบาย Local Embassy – For Wikipedia-related discussion in languages other than Thai. สร้างบทความใหม่ – บทช่วยสอนสำหรับเตรียมพร้อมสร้างบทความแรกของคุณ ภาษาอื่น นอกจากภาษาไทยแล้ว วิกิพีเดียยังมีรุ่นภาษาอื่นอีกทั้งหมด 324 ภาษา โดยวิกิพีเดียขนาดใหญ่แสดงรายการด้านล่างนี้ 1,000,000+ บทความ English (อังกฤษ) Sinugboanong Binisaya (เซบู) Svenska (สวีเดน) Deutsch (เยอรมัน) Français (ฝรั่งเศส) Nederlands (ดัตช์) Русский (รัสเซีย) Italiano (อิตาลี) Español (สเปน) Polski (โปแลนด์) Winaray (วาไร-วาไร) Tiếng Việt (เวียดนาม) 日本語 (ญี่ปุ่น) 中文 (จีน) العربية (อาหรับ) Portu",
+    "scrapedAt": "2025-12-15 19:20:53.293873"
+  },
+  {
+    "id": 40,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473",
+    "title": "Wikipedia, the free encyclopedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia This is the current revision of this page, as edited by PrimeHunter (talk | contribs) at 10:53, 5 December 2025 (add option for featured video to switch on date, make it easier to add dates for a featured video or multiple pictures). The present address (URL) is a permanent link to this version.Revision as of 10:53, 5 December 2025 by PrimeHunter (talk | contribs) (add option for featured video to switch on date, make it easier to add dates for a featured video or multiple pictures) (diff) ← Previous revision | Latest revision (diff) | Newer revision → (diff) Welcome to Wikipedia , the free encyclopedia that anyone can edit. 305,954 active editors 7,106,180 articles in English From today\u0027s featured article Simon Cameron (1799–1889) was an American politician who was elected senator from Pennsylvania four times, and was War Secretary under Lincoln at the start of the Civil War. At first a supporter of James Buchanan, whom he succeeded in the Senate when Buchanan became Secretary of State in 1845, Cameron broke with Buchanan and the Democrats by the 1850s. An opponent of slavery, he briefly joined the Know Nothings before winning another term in the Senate as a Republican in 1857. He helped nominate and elect Lincoln, but rumors of corruption surrounded him; it was with reluctance that Lincoln appointed him to the cabinet. He did not do well in his post, and Lincoln made him minister to Russia in 1862, a post he held briefly. He rebuilt his political machine in Pennsylvania, winning a third term in the Senate in 1867. After ten years he resigned, arranging the election of his son, Don Cameron, in his place. Simon Cameron lived to age 90; his machine dominated local politics until the 1920s. (Full article...) Recently featured: Commander Keen in Invasion of the Vorticons Scott Zolak Theodosius III Archive By email More featured articles About Did you know ... A rocking bed ... that Jessie Wright, director of physical medicine at the D.T. Watson Home for Crippled Children, helped invent the rocking bed (pictured) as a treatment for polio? ... that the Pacific Australia Labour Mobility scheme has been criticised for placing workers at risk of modern slavery? ... that G. Michael Brown said that his 1980 conviction of four mobsters showed that the Mafia wasn\u0027t merely \"a figment of Hollywood\u0027s imagination\"? ... that a Super Bowl-winning defensive tackle went on to become a U.S. Army chaplain? ... that upon receiving her pay from His Master\u0027s Voice, Asiah Aman was taught by an executive how to open a bank account? ... that while the 2024 WDF World Darts Championship final featured a 70-year-old, the 2025 final featured a 15-year-old? ... that Indonesian ambassador Niniek Kun Naryatie initially wanted to resign as a diplomat after giving birth to her first child, but her husband convinced her not to do so? ... that India\u0027s Central Reserve Police Force tested the Trichy assault rifle in mud, rain, and saltwater conditions for reliability and accuracy before ordering the rifle? ... that a restaurant hired Frank Deig to eat its food? Archive Start a new article Nominate an article In the news Rosen Zhelyazkov Sixteen people, including a gunman, are killed in a mass shooting attack on a Hanukkah celebration at Bondi Beach in Sydney. Bulgarian prime minister Rosen Zhelyazkov (pictured) and his government resign after two weeks of protests. Clair Obscur: Expedition 33 wins Game of the Year and eight other awards at the Game Awards. In Australia, a ban on the use of certain social media platforms by under-16s comes into effect. Ongoing: Gaza war timeline genocide Russo-Ukrainian war timeline Sudanese civil war timeline Recent deaths: Jenista Mhagama Harold Wayne Nichols Joanna Trollope Pablo Rodríguez Grez George Mira Martin Parr More current events Nominate an article On this day December 15: First Day of Hanukkah (Judaism, 2025) Constantine VIII 1025 – Constantine VIII (depicted) became the sole Byzantine emperor, 63 years after being crowned co-emperor. 1890 – Sitting Bull, a Hunkpapa Lakota leader, was killed on Standing Rock Sioux Reservation in South Dakota by U.S. Indian agency police. 1939 – The American historical epic film Gone With the Wind, adapted from Margaret Mitchell\u0027s Pulitzer Prize–winning novel of the same name, premiered in Atlanta, Georgia. 1945 – The US-led occupying forces ordered the government of Japan to cease state support for Shinto. 2019 – Citizenship Amendment Act protests: 10 to 15 local women blockaded a major road in Delhi, India, to protest the exclusion of Muslims from the amended Citizenship Act. David Teniers the Younger (bapt. 1610) Sarah Trimmer (d. 1810) Vallabhbhai Patel (d. 1950) Bob Feller (d. 2010) More anniversaries: December 14 December 15 December 16 Archive By email List of days of the year About From today\u0027s featured list The Gold Coast skyline The City of Gold Coast is a local government area (LGA) in the Australian state",
+    "scrapedAt": "2025-12-15 19:20:51.673484"
+  },
+  {
+    "id": 39,
+    "url": "https://pcm.wikipedia.org/wiki/Main_Pej",
+    "title": "Wikipedia",
+    "content": "Jump to content From Wikipedia Welkom to Naijá Wikipedia December 9, 2025 – Na 1,529 pej-dem dey for Nigerian pidgin Tori abaut pipul life Skul Kontri Kolsho Langwej Histri Atikul for dis wik Mejai Bola Mike Avoseh na profeso for one yunivasti wey dem dey kol University of Dakota. Di tins wey im dey tich na abaut skul wey pipul wey no bi smol pikin dey go, how difren pipul dey du dia difren difren kolsho for di wold an abaut som patikula ples-dem. Avoseh folo for di join-bodi for di grup wey dem kol American Association for Adult and Continuing Education (AAACE) sins 2016 an e stil folo dey for International Society for Comparative Adult (ISCAE) from 2020 go rich 2023 an na im bi di oga kpata-kpata for di Commission for International Adult Education (CIAE) for inside AAACE...Read-am dey go... You sabi am? * Alvan Azinna Ikoku (August 1, 1900 – November 18, 1971) na Naija pesin wey bi politishan, pesin wey dey stand gidigba for pipul an pesin wey dey sopot edukeshon mata...Read-am dey go... * Abba Musa Rimi, CON (dem bon am for 28 February 1940) na one man from Naija wey pipul chuz-am mek e bi di pesin wey go rul dem for Kaduna Stet for 1979 wen Naija dey for dia Sekond Ripoblik, dis wan kon mek am bi di pesin wey go dey du like govno for dat time wey dem komot Govno Abdulkadir Balarabe Musa as di govno for 23 June 1981...Read-am dey go... Atikul for todey Gun langwej (Gun: gungbe) na langwej wey Ogu pipul wey dey for Benin Replublic an Naija dey tok. Gun langwej dey among di langwej grup wey dem dey kol Gbe. Di langwej near oda langwej like Fon, Agbome, Kpase, Maxi and Weme (Ouémé). Na dis langwej dem dey tok pas for Benin an dem dey yuz am tich for some skul-dem for Ouémé Department for Benin...Read-am dey go... Pisho for todey Naija futbol team Oda projet like Wikipedia Wikisource Wiktionary Wikiquote Wikinews Wikidata Wikibooks Wikispecies Wikiversity Wikivoyage MediaWiki Commons Meta-Wiki Get-am bak from \"https://pcm.wikipedia.org/w/index.php?title\u003dMain_Pej\u0026oldid\u003d17442\" 343 langwej-dem Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fiji Hindi Hrvatski Hornjoserbsce Kreyòl ayisyen Magyar Հայերեն Արեւմտահայերէն Interlingua Jaku Iban Bahasa Indonesia Interlingue Igbo Igala Iñupiatun Ilokano ГӀалгӀай Ido Íslenska Italiano ᐃᓄᒃᑎᑐᑦ / inuktitut 日本語 Patois La .lojban. Jawa ქართული Qaraqalpaqsha Taqbaylit Адыгэбзэ Kabɩyɛ Tyap Kongo Kumoring Gĩkũyũ Қазақша Kalaallisut ភាសាខ្មែរ ಕನ್ನಡ Yerwa Kanuri 한국어 Перем коми Къарачай-малкъар کٲشُر Ripoarisch Kurdî Kʋsaal Коми Kernowek Кыргызча Latina Ladino Lëtzebuergesch Лакку Лезги Lingua Franca Nova Luganda Limburgs Ligure Ladin Lombard Lingála ລາວ Lietuvių Latgaļu Latviešu Madhurâ मैथिली Basa Banyumasan Мокшень Malagasy Олык марий Māori Minangkabau Македонски മലയാളം Монгол ꯃꯤꯇꯩ ꯂꯣꯟ ဘာသာမန် Moore मराठी Кырык мары Bahasa Melayu Malti Mirandés မြန်မာဘာသာ Эрзянь مازِرونی Nāhuatl Napulitano Plattdüütsch Nedersaksies नेपाली नेपाल भाषा Li Niha Nederlands Norsk nynorsk Norsk bokmål Novial ߒߞߏ IsiNdebele seSewula Nouormand Sesotho sa Leboa Nupe Diné bizaad Chi-Chewa Occitan Livvinkarjala Oromoo ଓଡ଼ିଆ Ирон ਪੰਜਾਬੀ Pangasinan Kapampangan Papiamentu Picard Deitsch Pälzisch पालि Polski Piemontèis پنجابی Ποντιακά پښتو Português Pinayuanan Runa Simi ရခိုင် Rumantsch Romani čhib Ikirundi Română Armãneashti Tarandíne Руски Русский Русиньскый Ikinyarwanda संस्कृतम् Саха тыла ᱥᱟᱱᱛᱟᱲᱤ Sardu Sicilianu Scots سنڌي Davvisámegiella Sängö Srpskohrvatski / српскохрватски Taclḥit တႆး සිංහල Simple English Slovenčina سرائیکی Slovenščina Gagana Samoa Anarâškielâ ChiShona Soomaaliga Shqip Српски / srpski Sranantongo SiSwati Sesotho Seeltersk Sunda Svenska Kiswahili ꠍꠤꠟꠐꠤ Ślůnski Sakizaya தமிழ் Tayal ತುಳು ᥖᥭᥰ ᥖᥬᥲ ᥑᥨᥒᥰ తెలుగు Tetun Тоҷикӣ ไทย ትግርኛ ትግሬ Türkmençe Tagalog Tolışi Setswana Lea faka-Tonga Toki pona Tok Pisin Türkçe Seediq Xitsonga Татарча / tatarça ChiTumbuka Twi Reo tahiti Тыва дыл ",
+    "scrapedAt": "2025-12-15 19:20:49.993503"
+  },
+  {
+    "id": 38,
+    "url": "https://io.wikipedia.org/wiki/Frontispico",
+    "title": "Wikipedio",
+    "content": "Irez a kontenajo De Wikipedio Bonveno a Wikipedio L\u0027enciklopedio libera e gratuita, redaktata da lua lektanti Hodie (mardio, 9 di decembro 2025), ni havas 60 248 artikli tote en Ido Versiono por smartfono Arto • Cienco • Naturo • Socio • Pensado ☹ \"Ido\" ? ➔ ☺ ➔ Deutsch / English / Español / Français / Italiano / Русский / 中文 (China) / عربي (Araba) / + … Bonveno a Wikipedio, l\u0027enciklopedio libera e gratuita, redaktata da la propra lektanti per Ido, Esperanto reformita e selektita kom l\u0027internaciona helpanta linguo ye 1907. Vu povas obtenar l\u0027informo quan vu serchas sequante la ligili od uzante la sercho-buxo ye la supra dextra parto dil fenestro. Anke vu povas kunlaborar editante l\u0027artikli qui ja publikigesis por plubonigor li o kreante nova artikli pri temi quin vu bone konocas. Memorez ke la reda ligili havas nula artiklo asociata e ke se vu volas skribor pri nova temo qua ne havas ula ligilo kreata, unesme vu mustas serchar existanta artiklo relatanta por krear ligilo a vua nova skribajo ibe. Vu povas krear necesa ligilo ank en Probeyo. Ne timez pro ne skribor vua artikli per perfekta Ido. Plu experta idisti revizos e korektigos ol pose. Simple atachez la ligilo {{Revizo}} a vua artiklo ed olu aparos en la fako Pagini revizinda por ke altra idisti revizez ol. Novajeti +/- kun o sen nombri Dum 20 yari la quanto di plastikala sordidaji duopleskis en mondo. Dum un yaro produktesas plastikala sordidaji 353.000.000 tuni en mondo. De la plastikala sordidaji mondala 9 % reciklesas, 19 % kombustesas, 49 % duktesas a reziduala amasegi, 22 % eskartesas a naturo. Dum un yaro 6.000.000 tuni de plastiko eskartesas a la riveri e lagi. De ca sordidajo 2.000.000 tuni trovas sua voyo a la mari ed oceani. (Fonto: OECD – Global Plastics Outlook (ye 2022).) Kategorii Skribez Chefa kategorii hike. Arto e kulturo Arkitekturo - Cinemo - Fotografo - Literaturo - Muziko - Pikturo - Skult-arto Naturala cienci Astronomio - Biologio - Fiziko - Geologio - Kemio - Matematiko Mondumo Jurnali - Ociado - Radio - Socio - Spektakli - Sporti - Televiziono Ido Idisti - Historio di Ido - Ido-Kulturo - Ido-Literaturo Sociala cienci Antropologio - Ekologio - Ekonomiko - Filozofio - Geografio - Historio - Linguistiko - Politiko - Psikologio - Religio - Sociologio - Yuro Aplikita cienci Agrokultivo - Komerco - Saneso - Teknologio Indexo A Á B C D E É F G H I Í J K L M N O Ó Ö P Q R S Ś T U V W X Y Z 0 1 2 3 4 5 6 7 8 9 Eventi +/- en historio dum decembro: 50, 100 e 250 yari ante nun … 26 di decembro 1975. La Tupolev Tu-144, aeroplano di USSR, komencis komercala servado, inter Moskva ad Alma-Ata, portante postajo e kargajo. Komercala flugi por pasajeri komencis en novembro 1977. L\u0027aeroplano esis desegnata da la desegno-kontoro di Alexei Tupolev, por eventuala utiligo da la kompanio Aeroflot. La prototipo unesmafoye flugis ye 31 di decembro 1968. Ye 5 di junio 1969 ol unesmafoye flugis plu rapide kam sono; ol flugis ye duople di la rapideso di sono ye 26 di mayo 1970. Developado esis tardigata pro acidento ye l\u0027aero-expozo di Paris en 1973. 3 di decembro 1925. En New York, la piano-koncerto-peco da George Gershwin esis unesmafoye pleata. La kompozuro esis komisata da la direktisto e kompozisto Walter Damrosch, qua audabis la unesma pleado di Rhapsody in Blue en februaro 1924; il demandis ke la kompozuro esus en tri movimenti, quale kustumala klasika koncerto-peci, ed instrumentizita da la kompozisto ipsa. Gershwin komencis skisuri en mayo 1925, e komencis kompozado por du piani en julio. Ye 10 di novembro la instrumentizuro esis kompleta, e la nova verko probesis plu tarde en ta monato da orkestro engajita da Gershwin. La Simfoni-Orkestro di New York, direktata da Damrosch, e kun Gershwin ye la piano, donis la unesma publika pleado. Ol bone recevesis da la audantaro, e la orkestro balde donis plusa pleadi, en New York ed altra-loke. 16 di decembro 1775. En Steventon en Hampshire, Anglia, la skriptisto Jane Austen naskis, filiino di paroko. Elua unesma publikigita romano esis Sense and Sensibility, qua aparis en 1811. Plusa romani esis Pride and Prejudice (1813), Mansfield Park (1814), ed Emma (1815). Elua lasta kompletigita romano esis Persuasion, qua aparis en decembro 1817, kelka monati pos elua morto, kun elua unesma romano Northanger Abbey, kompletigita por publikigo en 1803 ma ne lore publikigata; oli esis kune imprimata en un tomo. Entote imprimesis 1750 kopiuri, qui rapide vendesis. Pri Wikipedio Quo esas Wikipedio · Quale komencar · Quale krear pagino · Editante pagini · Adjuntar kategorii · Adjuntar imaji · Statistiki I Statistiki II · Wikipediisti · Probeyo · Generala debato pri Wikipedio · Diskutinda pagini · Revizinda pagini · Efacinda pagini Moyeni por Ido Kompleta Gramatiko Detaloza · U.L.I. Necesa vorti Wikivortaro · Vortari · Sugestata vorti Kunlaborez! +/- Benjamin Franklin Benjamin Franklin, n. ye la 17ma di januaro 1706 til la 17ma di aprilo 1790, esis Usana politikisto ed inventisto. Ilu inventis parafulmino en 1749. Il pruvis p",
+    "scrapedAt": "2025-12-15 19:20:48.371701"
+  },
+  {
     "id": 37,
     "url": "https://gor.wikipedia.org/wiki/Halaman_Bungaliyo",
     "title": "Wikipedia",
@@ -1377,41 +1412,6 @@ window.searchData = [
     "title": "Wikipedia:Recent additions - Wikipedia",
     "content": "Jump to content From Wikipedia, the free encyclopedia Archive page of the Main Page Did you know section \"WP:DYKA\" redirects here. For the list of approved Did you know nominations, see WP:DYKNA. Shortcut WP:DYKAWP:DYKA This is a record of material that was recently featured on the Main Page as part of Did you know (DYK). Recently created new articles, greatly expanded former stub articles and recently promoted good articles are eligible; you can submit them for consideration. Archives are generally grouped by month of Main Page appearance. (Currently, DYK hooks are archived according to the date and time that they were taken off the Main Page.) To find which archive contains the fact that appeared on Did you know, go to the article\u0027s talk page and follow the archive link in the DYK talk page message box or the Article Milestones box. Current archive 2025 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2024 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2023 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2022 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2021 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2020 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2019 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2018 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2017 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2016 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2015 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2014 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2013 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2012 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2011 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2010 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2009 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2008 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2007 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2006 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2005 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 2004 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Edit the DYK archive navigation template Did you know? Introduction and rules Introduction WP:DYK General discussion WT:DYK Guidelines WP:DYKCRIT Reviewer instructions WP:DYKRI Nominations Nominate an article WP:DYKCNN Awaiting approval WP:DYKN Approved WP:DYKNA April 1 hooks WP:DYKAPRIL Holding area WP:SOHA Preparation Preps and queues TM:DYK/Q Prepper instructions WP:DYKPBI Admin instructions WP:DYKAI Main Page errors WP:ERRORS History Statistics WP:DYKSTATS Archived sets WP:DYKA Just for fun Monthly wraps WP:DYKW Awards WP:DYKAWARDS Userboxes WP:DYKUBX Hall of Fame WP:DYK/HoF List of users ... ... by nominations WP:DYKNC ... by promotions WP:DYKPC Administrative Scripts and bots WP:DYKSB On the Main Page TM:DYK Main Page errors WP:ERRORS To ping the DYK admins {{DYK admins}} v t e Did you know... 15 December 2025 00:00, 15 December 2025 (UTC) Lorens von der Linde ... that Swedish general Lorens von der Linde (pictured) once shocked an English diplomat with his stories of King Charles X Gustav\u0027s German liaisons? ... that scholars have described the 1946 book The Failure of Technology as a precursor to the environmental movement? ... that Romanian far-right journalist Ilariu Dobridor died after being beaten and locked in his own home? ... that the Dutch-built and Turkish-operated Birinci İnönü-class submarines were used to discreetly develop German U-boats? ... that Dredge is a Lovecraftian horror and fishing video game? ... that the killing of an official by seven women was held up as an example of filial piety? ... that, when Mariame Clément directed Mozart\u0027s Così fan tutte, she froze a wedding tableau during the overture and restarted it in the finale? ... that Turkey is facing its worst drought in the last 50 years? ... that Nobuhiko Jimbo saved future Philippine president Manuel Roxas from execution during World War II, and Roxas did the same for Jimbo four years later? 14 December 2025 00:00, 14 December 2025 (UTC) Dammusi on Pantelleria ... that traditional stone houses on the island of Pantelleria (examples pictured) passively maintain an internal temperature up to 8 °C (14 °F) cooler than the ambient air temperature in summer? ... that Kenssy Dwi Ekaningsih used her skills in traditional Javanese dance at diplomatic receptions during an assignment in Rome? ... that Yonki-no-kai Productions was founded by Akira Kurosawa, Masaki Kobayashi, Kon Ichikawa and Keisuke Kinoshita with the aim of reviving the struggling Japanese film industry? ... that, after Uruapan mayor Carlos Manzo was assassinated, his wife Grecia Quiroz was chosen to complete his term in office? ... that A. A. Gill saw \"poseurs, pimps, phoney counts, lounge lizards, poodle fakers, ageing gigolos and remittance men\" at San Lorenzo? ... that Catalan artist Josefa Tolrà created paintings and embroideries while in a trance? ... that 10 Things I Want to Do Before I Turn 40 was originally conceived as a science-fiction story about an older male succu",
     "scrapedAt": "2025-12-15 19:09:07.14927"
-  },
-  {
-    "id": 42,
-    "url": "https://ann.wikipedia.org/wiki/Uwu",
-    "title": "Wìkìpedia",
-    "content": "Jump to content Ònan̄a me Wìkìpedia Onu me Wìkìpedia Obolo! Ọsọ nsaikilopedia eyi ene geelek môkọtbe igọọk ige. 14:07 (UTC); Usende, 9 Disemba 2025 Me nkwukwuuk: 0 1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O Ọ P Q R S T U V W X Y Z Otu-ifuk atikulu 434 Ido: Malawi • Zambia • Naijiria • Ganà • Etiopia • Bènè • Nijê • Ntitiin̄ Afirika • Afirika agan̄ Inyọn̄ • Ntitiin̄ Yurop • Afirika Osiki Sayensi: Ifuk • AIDS • Ọgbọn̄ Ura • Akum • Iwop-uko • Ọrọsi • Akpalek • Ufuk unye Mfufuk Ugwem: Myles Munroe • Uche Erọn • Jọn Brown • Frederick Douglass • Marian Erọn • Isidọ Ene-Awaji • Kilintin Utọn̄ • Ugbana Oyet Obolo Wiktionary Atikulu òsibi esese chereyi Ebi kè atat Atat ìre mwuwu òkigbaan̄ iluk me ogbọn̄ [colonies]. Me owuwa oniin̄, ebi kè atat ebelek ebi kè akwọọk mè àtaak [wasps]. Atat îwa lek enenen. Otu-ifuk esese esese lek atat ekọtbe iweek imun̄ ìre 12,500 me ibebieen̄ iriaak. (Fuk òjot òjot...) Ìre oriọọn̄ ibe? Tempulet:Ìre oriọọn̄ ibe?/9 Me emen etip-usen Tempulet:Me emen etip-usen/9 Cherekeyi me emen mfufuk Tempulet:Chereyi me emen mfufuk/Disemba 9 Ogugo òsibi esese Tempulet:Ogugo òsibi esese/9 Ido me Afirika Algeria ● Angola ● Benin ● Botswana ● Burkina Faso ● Burundi ● Cameroon ● Canary Islands ● Cape Verde ● Central African Republic ● Chad ● Comoros ● Côte d\u0027Ivoire ● Democratic Republic of the Congo ● Djibouti ● Egypt ● Equatorial Guinea ● Eritrea ● Eswatini ● Ethiopia ● Gabon ● Gambia ● Ghana ● Guinea ● Guinea-Bissau ● Kenya ● Lesotho ● Liberia ● Libya ● Madagascar ● Malawi ● Mali ● Mauritania ● Mauritius ● Mayotte ● Morocco ● Mozambique ● Namibia ● Niger ● Naijiria ● Republic of Congo ● Réunion ● Rwanda ● Saint Helena ● São Tomé and Príncipe ● Senegal ● Seychelles ● Sierra Leone ● Somalia ● South Africa ● Sudan ● South Sudan ● Tanzania ● Togo ● Tunisia ● Uganda ● Western Sahara ● Zambia ● Zimbabwe Wìkìpedia echi usem Afirika Akan • Luganda • Gĩkũyũ • Hausa • Igbo • KiKongo • Lingala • Kirundi • Ikinyarwanda • chiShona • Sesotho • Sesotho sa leboa • Kiswahili • SiSwati • Xitsonga • Setswana • Tshivenda • isiXhosa • Yorùbá • isiZulu • Otutuuk Wìkìpedia òkukup – Wikipedia me esese usem – Ikan òkikpulu usem Wìkìpedia ìre ebi ìmama mè ichieek inyinyi mgbọ kiban̄ ekige, sà ebi Wikimedia Foundation, uwu-ikwaan̄ eyi kpekisa iweek oruru, okibeme. Uwu-ikwaan̄ yi îbeme si owuwa ofifi purọjet kechi: Commons Free media repository MediaWiki Wiki software development Meta-Wiki Wikimedia project coordination Wikibooks Ọsọ ikpa mè ikpa ubọk Wikidata Free knowledge base Wikinews Free-content news Wikiquote Collection of quotations Wikisource Free-content library Wikispecies Directory of species Wikiversity Free learning materials and activities Wikivoyage Free travel guide Wiktionary Òbum-ikọ mè ògwu-usem Ebọkọ me \"https://ann.wikipedia.org/w/index.php?title\u003dUwu\u0026oldid\u003d4670\" Ọgbọn̄: Pages using duplicate arguments in template calls Usem 343 Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fiji Hindi Hrvatski Hornjoserbsce Kreyòl ayisyen Magyar Հայերեն Արեւմտահայերէն Interlingua Jaku Iban Bahasa Indonesia Interlingue Igbo Igala Iñupiatun Ilokano ГӀалгӀай Ido Íslenska Italiano ᐃᓄᒃᑎᑐᑦ / inuktitut 日本語 Patois La .lojban. Jawa ქართული Qaraqalpaqsha Taqbaylit Адыгэбзэ Kabɩyɛ Tyap Kongo Kumoring Gĩkũyũ Қазақша Kalaallisut ភាសាខ្មែរ ಕನ್ನಡ Yerwa Kanuri 한국어 Перем коми Къарачай-малкъар کٲشُر Ripoarisch Kurdî Kʋsaal Коми Kernowek Кыргызча Latina Ladino Lëtzebuergesch Лакку Лезги Lingua Franca Nova Luganda Limburgs Ligure Ladin Lombard Lingála ລາວ Lietuvių Latgaļu Latviešu Madhurâ मैथिली Basa Banyumasan Мокшень Malagasy Олык марий Māori Minangkabau Македонски മലയാളം Монгол ꯃꯤꯇꯩ ꯂꯣꯟ ဘာသာမန် Moore मराठी Кырык мары Bahasa Melayu Malti Mirandés မြန်မာဘာသာ Эрзянь مازِرونی Nāhuatl Napulitano Plattdüütsch Nedersaksies नेपाली नेपाल भाषा Li Niha Nederlands Norsk nynorsk Norsk bokmål Novial ߒߞߏ IsiNdebele seSewula Nouormand Sesotho sa",
-    "scrapedAt": "2025-12-15 19:09:01.431707"
-  },
-  {
-    "id": 41,
-    "url": "https://th.wikipedia.org/wiki/",
-    "title": "วิกิพีเดีย สารานุกรมเสรี",
-    "content": "ข้ามไปเนื้อหา จากวิกิพีเดีย สารานุกรมเสรี ยินดีต้อนรับสู่วิกิพีเดีย สารานุกรมเสรีที่ทุกคนแก้ไขได้ (อธิบาย) วิกิพีเดียภาษาไทยมี 178,174 บทความ ดัชนีคำขึ้นต้น หมวดหมู่ หน้าทั้งหมด บทความแนะนำ ทีมผู้พัฒนาเดอะลาสต์ออฟอัสบางส่วน เดอะลาสต์ออฟอัส เป็นเกมแอ็กชันผจญภัยสยองขวัญเอาชีวิตรอด พัฒนาโดยนอตีด็อก และจัดจำหน่ายโดยโซนี่คอมพิวเตอร์เอ็นเตอร์เทนเมนต์ ผู้เล่นได้ควบคุมโจเอล ผู้ลักลอบขนของที่ได้รับภารกิจในการคุ้มกันเอลลี เด็กสาววัยรุ่น ข้ามประเทศสหรัฐอเมริกาหลังเกิดเหตุการณ์หายนะ เกมดำเนินในมุมมองบุคคลที่สาม โดยใช้ปืน อาวุธดัดแปลง และการลอบเร้น เพื่อรับมือกับมนุษย์ที่เป็นศัตรูและสิ่งมีชีวิตกินเนื้อคนที่ติดเชื้อจากเห็ดรากลายพันธุ์ เกมยังมีโหมดผู้เล่นหลายคนออนไลน์ที่รองรับผู้เล่นสูงสุด 8 คน ในรูปแบบการเล่นร่วมมือหรือแข่งขันกัน เกมเริ่มพัฒนาในปี 2009 หลังวางจำหน่ายอันชาร์ทิด 2: อะมังทีฟส์ ซึ่งเป็นผลงานก่อนหน้าของนอตีด็อก โดยสตูดิโอได้แบ่งทีมออกเป็นสองกลุ่ม ทีมหนึ่งพัฒนาเดอะลาสต์ออฟอัส ขณะที่อีกทีมดูแลอันชาร์ทิด 3: เดรกส์ดีเซปชัน ทรอย เบเกอร์ และแอชลีย์ จอห์นสัน รับบทเป็นโจเอลและเอลลีตามลำดับ ผ่านการพากย์เสียงและเทคโนโลยีจับการเคลื่อนไหว และพัฒนาตัวละครและเนื้อเรื่องร่วมกับนีล ดรักแมนน์ ผู้อำนวยการฝ่ายสร้างสรรค์ แกนหลักเป็นเรื่องความสัมพันธ์ระหว่างโจเอลกับเอลลี ดนตรีประกอบของเกมแต่งและบรรเลงโดยกุสตาโบ ซานตาโอลายา รายชื่อบทความแนะนำ (พ.ศ. 2567 ⋅ พ.ศ. 2568) – โครงการบทความแนะนำ รู้ไหมว่า... เรื่องน่าสนใจจากบทความล่าสุดและเพิ่งปรับปรุงของวิกิพีเดีย : ตำแหน่งและลักษณะของเนื้องอกลำไส้ใหญ่ตัวอย่างสองจุด ...มะเร็งลำไส้ใหญ่ (ในภาพ) เกิดได้จากหลายปัจจัย เช่น รูปแบบการดำเนินชีวิตและอายุที่มากขึ้น รวมทั้งโรคลำไส้อักเสบเรื้อรังและความผิดปกติทางพันธุกรรมด้วย ปัจจัยเสี่ยงรวมถึงอาหารการกิน โรคอ้วน การสูบบุหรี่ และการขาดการออกกำลังกาย อาหารที่เพิ่มความเสี่ยง ได้แก่ เนื้อแดง เนื้อแปรรูป และเครื่องดื่มแอลกอฮอล์ ...การนำเสนอจักรพรรดิเซิร์กซีสที่ 1 ของกรีกและโรมันส่วนใหญ่เป็นไปในเชิงลบ บทละคร \"The Persians\" ที่แสดงในกรุงเอเธนส์เมื่อ 472 ปีก่อน ค.ศ. หลังจากที่พระองค์ทรงบุกรุกรานกรีซเพียงเจ็ดปี นำเสนอเซิร์กซีสในลักษณะเหมือนผู้หญิงที่ท้ายสุดนำไปสู่หายนะ ส่วนที่นำเสนอในผลงาน Histories ของเฮอรอโดทัสอาจถือได้ว่ามีความละเอียดอ่อนและน่าเศร้า เมื่อเทียบกับการถูกใส่ร้ายป้ายสีที่พระองค์ได้รับจากอเล็กซานเดอร์มหาราช ...วินาศกรรม 11 กันยายนส่งผลกระทบหลายประการ รวมถึงการแสดงออกความรักชาติที่เพิ่มขึ้น ทฤษฎีสมคบคิดเรื่อง 9/11 ความวิตกกังวลระดับชาติที่เพิ่มขึ้นเกี่ยวกับการเดินทางด้วยสายการบินเชิงพาณิชย์ และอาชญากรรมจากความเกลียดชังมุสลิมที่เพิ่มขึ้นเกือบสิบเท่าใน ค.ศ. 2001 โดยต่อมายังคง \"สูงกว่าอัตราก่อน 9/11 ประมาณห้าเท่า\" เรื่องที่ผ่านมา – สร้างบทความใหม่ – เสนอบทความ เรื่องจากข่าว อัคคีภัยในที่พักเขตไต้โป้ว อนุทิน ชาญวีรกูล นายกรัฐมนตรีไทย ประกาศยุบสภาผู้แทนราษฎร เพื่อจัดการเลือกตั้งทั่วไป ซีเกมส์เริ่มต้นขึ้นแล้ว ในกรุงเทพมหานคร และจังหวัดชลบุรี ประเทศไทย เพลิงไหม้กลุ่มอาคารชุด (ในภาพ) ในฮ่องกง ส่งผลให้มีผู้เสียชีวิตมากกว่า 100 ราย มีผู้เสียชีวิตมากกว่า 100 รายจากอุทกภัยในภาคใต้ของประเทศไทย ซึ่งส่งผลกระทบหนักที่อำเภอหาดใหญ่ จังหวัดสงขลา เจมส์ ดี. วัตสัน นักชีววิทยาโมเลกุลชาวอเมริกัน ผู้ร่วมค้นพบโครงสร้างของดีเอ็นเอ เสียชีวิตในวัย 97 ปี มีผู้เสียชีวิต 14 รายจากยูพีเอสแอร์ไลน์ เที่ยวบินที่ 2976 ซึ่งตกภายหลังขึ้นบินจากท่าอากาศยานนานาชาติลุยส์วิลล์ มูฮัมหมัด อาลีในรัฐเคนทักกี สหรัฐอเมริกาได้ไม่นาน ดำเนินอยู่: สงครามในกาซา การรุกรานยูเครนของรัสเซีย สงครามในซูดาน บุคคลที่เพิ่งเสียชีวิต – เหตุการณ์ปัจจุบัน วันนี้ในอดีต 16 ธันวาคม: วันชาติในบาห์เรน (พ.ศ. 2514), วันเอกราชในคาซัคสถาน (พ.ศ. 2534) พ.ศ. 2141 (ค.ศ. 1598) – ลี ซุนชินนำกองเรือเกาหลีรบชนะกองเรือญี่ปุ่นในยุทธนาวีที่โนลยาง ยุทธนาการครั้งสุดท้ายของสงครามอิมจิน พ.ศ. 2196 (ค.ศ. 1653) – โอลิเวอร์ ครอมเวลล์ (ในภาพ) ได้เป็นเจ้าผู้อารักขาเครือจักรภพแห่งอังกฤษ พ.ศ. 2316 (ค.ศ. 1773) – ชาวอาณานิคมกลุ่มหนึ่งทำลายชาที่ถูกเก็บภาษีโดยปราศจากความยินยอมของตนตามพระราชบัญญัติชา เพื่อมิให้ถ่ายชานั้นออก พ.ศ. 2436 (ค.ศ. 1893) – ซิมโฟนีหมายเลข 9 ของอันโตญีน ดโวฌาก คีตกวีชาวเช็ก จัดแสดงครั้งแรกในนครนิวยอร์ก สหรัฐ พ.ศ. 2487 (ค.ศ. 1944) – สงครามโลกครั้งที่สอง: กองทัพเยอรมันเริ่มยุทธการตอกลิ่ม ซึ่งเป็นการบุกตีครั้งสุดท้ายบนแนวรบด้านตะวันตก ดูเพิ่ม: 15 ธันวาคม – 16 ธันวาคม – 17 ธันวาคม จดหมายเหตุ – รายชื่อบทความวันนี้ในอดีต สารานุกรม ธรรมชาติ ศิลปะ วิทยาศาสตร์ ภูมิศาสตร์ เทคโนโลยี ความเชื่อ ประวัติศาสตร์ สังคม ประเทศไทย สถานีย่อย ป้ายบอกทาง ศาลาประชาคม – กระดานข่าว โครงการ ทรัพยากรและกิจกรรมซึ่งครอบคลุมวิกิพีเดียอย่างกว้างขวาง แผนกช่วยเหลือ – ถามข้อสงสัยเกี่ยวกับการใช้งานวิกิพีเดีย ปุจฉา-วิสัชนา – ถามข้อสงสัยทั่วไปที่คุณอยากรู้ ข่าวไซต์ – ประกาศ อัปเดต บทความและข้อมูลข่าวเกี่ยวกับวิกิพีเดียและมูลนิธิวิกิมีเดีย สภากาแฟ – สำหรับอภิปรายเกี่ยวกับวิกิพีเดีย รวมถึงรายงานปัญหาเทคนิคและเสนอนโยบาย Local Embassy – For Wikipedia-related discussion in languages other than Thai. สร้างบทความใหม่ – บทช่วยสอนสำหรับเตรียมพร้อมสร้างบทความแรกของคุณ ภาษาอื่น นอกจากภาษาไทยแล้ว วิกิพีเดียยังมีรุ่นภาษาอื่นอีกทั้งหมด 324 ภาษา โดยวิกิพีเดียขนาดใหญ่แสดงรายการด้านล่างนี้ 1,000,000+ บทความ English (อังกฤษ) Sinugboanong Binisaya (เซบู) Svenska (สวีเดน) Deutsch (เยอรมัน) Français (ฝรั่งเศส) Nederlands (ดัตช์) Русский (รัสเซีย) Italiano (อิตาลี) Español (สเปน) Polski (โปแลนด์) Winaray (วาไร-วาไร) Tiếng Việt (เวียดนาม) 日本語 (ญี่ปุ่น) 中文 (จีน) العربية (อาหรับ) Portu",
-    "scrapedAt": "2025-12-15 19:08:59.814391"
-  },
-  {
-    "id": 40,
-    "url": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473",
-    "title": "Wikipedia, the free encyclopedia",
-    "content": "Jump to content From Wikipedia, the free encyclopedia This is the current revision of this page, as edited by PrimeHunter (talk | contribs) at 10:53, 5 December 2025 (add option for featured video to switch on date, make it easier to add dates for a featured video or multiple pictures). The present address (URL) is a permanent link to this version.Revision as of 10:53, 5 December 2025 by PrimeHunter (talk | contribs) (add option for featured video to switch on date, make it easier to add dates for a featured video or multiple pictures) (diff) ← Previous revision | Latest revision (diff) | Newer revision → (diff) Welcome to Wikipedia , the free encyclopedia that anyone can edit. 305,954 active editors 7,106,180 articles in English From today\u0027s featured article Simon Cameron (1799–1889) was an American politician who was elected senator from Pennsylvania four times, and was War Secretary under Lincoln at the start of the Civil War. At first a supporter of James Buchanan, whom he succeeded in the Senate when Buchanan became Secretary of State in 1845, Cameron broke with Buchanan and the Democrats by the 1850s. An opponent of slavery, he briefly joined the Know Nothings before winning another term in the Senate as a Republican in 1857. He helped nominate and elect Lincoln, but rumors of corruption surrounded him; it was with reluctance that Lincoln appointed him to the cabinet. He did not do well in his post, and Lincoln made him minister to Russia in 1862, a post he held briefly. He rebuilt his political machine in Pennsylvania, winning a third term in the Senate in 1867. After ten years he resigned, arranging the election of his son, Don Cameron, in his place. Simon Cameron lived to age 90; his machine dominated local politics until the 1920s. (Full article...) Recently featured: Commander Keen in Invasion of the Vorticons Scott Zolak Theodosius III Archive By email More featured articles About Did you know ... A rocking bed ... that Jessie Wright, director of physical medicine at the D.T. Watson Home for Crippled Children, helped invent the rocking bed (pictured) as a treatment for polio? ... that the Pacific Australia Labour Mobility scheme has been criticised for placing workers at risk of modern slavery? ... that G. Michael Brown said that his 1980 conviction of four mobsters showed that the Mafia wasn\u0027t merely \"a figment of Hollywood\u0027s imagination\"? ... that a Super Bowl-winning defensive tackle went on to become a U.S. Army chaplain? ... that upon receiving her pay from His Master\u0027s Voice, Asiah Aman was taught by an executive how to open a bank account? ... that while the 2024 WDF World Darts Championship final featured a 70-year-old, the 2025 final featured a 15-year-old? ... that Indonesian ambassador Niniek Kun Naryatie initially wanted to resign as a diplomat after giving birth to her first child, but her husband convinced her not to do so? ... that India\u0027s Central Reserve Police Force tested the Trichy assault rifle in mud, rain, and saltwater conditions for reliability and accuracy before ordering the rifle? ... that a restaurant hired Frank Deig to eat its food? Archive Start a new article Nominate an article In the news Rosen Zhelyazkov Sixteen people, including a gunman, are killed in a mass shooting attack on a Hanukkah celebration at Bondi Beach in Sydney. Bulgarian prime minister Rosen Zhelyazkov (pictured) and his government resign after two weeks of protests. Clair Obscur: Expedition 33 wins Game of the Year and eight other awards at the Game Awards. In Australia, a ban on the use of certain social media platforms by under-16s comes into effect. Ongoing: Gaza war timeline genocide Russo-Ukrainian war timeline Sudanese civil war timeline Recent deaths: Jenista Mhagama Harold Wayne Nichols Joanna Trollope Pablo Rodríguez Grez George Mira Martin Parr More current events Nominate an article On this day December 15: First Day of Hanukkah (Judaism, 2025) Constantine VIII 1025 – Constantine VIII (depicted) became the sole Byzantine emperor, 63 years after being crowned co-emperor. 1890 – Sitting Bull, a Hunkpapa Lakota leader, was killed on Standing Rock Sioux Reservation in South Dakota by U.S. Indian agency police. 1939 – The American historical epic film Gone With the Wind, adapted from Margaret Mitchell\u0027s Pulitzer Prize–winning novel of the same name, premiered in Atlanta, Georgia. 1945 – The US-led occupying forces ordered the government of Japan to cease state support for Shinto. 2019 – Citizenship Amendment Act protests: 10 to 15 local women blockaded a major road in Delhi, India, to protest the exclusion of Muslims from the amended Citizenship Act. David Teniers the Younger (bapt. 1610) Sarah Trimmer (d. 1810) Vallabhbhai Patel (d. 1950) Bob Feller (d. 2010) More anniversaries: December 14 December 15 December 16 Archive By email List of days of the year About From today\u0027s featured list The Gold Coast skyline The City of Gold Coast is a local government area (LGA) in the Australian state",
-    "scrapedAt": "2025-12-15 19:08:58.131584"
-  },
-  {
-    "id": 39,
-    "url": "https://pcm.wikipedia.org/wiki/Main_Pej",
-    "title": "Wikipedia",
-    "content": "Jump to content From Wikipedia Welkom to Naijá Wikipedia December 9, 2025 – Na 1,529 pej-dem dey for Nigerian pidgin Tori abaut pipul life Skul Kontri Kolsho Langwej Histri Atikul for dis wik Mejai Bola Mike Avoseh na profeso for one yunivasti wey dem dey kol University of Dakota. Di tins wey im dey tich na abaut skul wey pipul wey no bi smol pikin dey go, how difren pipul dey du dia difren difren kolsho for di wold an abaut som patikula ples-dem. Avoseh folo for di join-bodi for di grup wey dem kol American Association for Adult and Continuing Education (AAACE) sins 2016 an e stil folo dey for International Society for Comparative Adult (ISCAE) from 2020 go rich 2023 an na im bi di oga kpata-kpata for di Commission for International Adult Education (CIAE) for inside AAACE...Read-am dey go... You sabi am? * Alvan Azinna Ikoku (August 1, 1900 – November 18, 1971) na Naija pesin wey bi politishan, pesin wey dey stand gidigba for pipul an pesin wey dey sopot edukeshon mata...Read-am dey go... * Abba Musa Rimi, CON (dem bon am for 28 February 1940) na one man from Naija wey pipul chuz-am mek e bi di pesin wey go rul dem for Kaduna Stet for 1979 wen Naija dey for dia Sekond Ripoblik, dis wan kon mek am bi di pesin wey go dey du like govno for dat time wey dem komot Govno Abdulkadir Balarabe Musa as di govno for 23 June 1981...Read-am dey go... Atikul for todey Gun langwej (Gun: gungbe) na langwej wey Ogu pipul wey dey for Benin Replublic an Naija dey tok. Gun langwej dey among di langwej grup wey dem dey kol Gbe. Di langwej near oda langwej like Fon, Agbome, Kpase, Maxi and Weme (Ouémé). Na dis langwej dem dey tok pas for Benin an dem dey yuz am tich for some skul-dem for Ouémé Department for Benin...Read-am dey go... Pisho for todey Naija futbol team Oda projet like Wikipedia Wikisource Wiktionary Wikiquote Wikinews Wikidata Wikibooks Wikispecies Wikiversity Wikivoyage MediaWiki Commons Meta-Wiki Get-am bak from \"https://pcm.wikipedia.org/w/index.php?title\u003dMain_Pej\u0026oldid\u003d17442\" 343 langwej-dem Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fiji Hindi Hrvatski Hornjoserbsce Kreyòl ayisyen Magyar Հայերեն Արեւմտահայերէն Interlingua Jaku Iban Bahasa Indonesia Interlingue Igbo Igala Iñupiatun Ilokano ГӀалгӀай Ido Íslenska Italiano ᐃᓄᒃᑎᑐᑦ / inuktitut 日本語 Patois La .lojban. Jawa ქართული Qaraqalpaqsha Taqbaylit Адыгэбзэ Kabɩyɛ Tyap Kongo Kumoring Gĩkũyũ Қазақша Kalaallisut ភាសាខ្មែរ ಕನ್ನಡ Yerwa Kanuri 한국어 Перем коми Къарачай-малкъар کٲشُر Ripoarisch Kurdî Kʋsaal Коми Kernowek Кыргызча Latina Ladino Lëtzebuergesch Лакку Лезги Lingua Franca Nova Luganda Limburgs Ligure Ladin Lombard Lingála ລາວ Lietuvių Latgaļu Latviešu Madhurâ मैथिली Basa Banyumasan Мокшень Malagasy Олык марий Māori Minangkabau Македонски മലയാളം Монгол ꯃꯤꯇꯩ ꯂꯣꯟ ဘာသာမန် Moore मराठी Кырык мары Bahasa Melayu Malti Mirandés မြန်မာဘာသာ Эрзянь مازِرونی Nāhuatl Napulitano Plattdüütsch Nedersaksies नेपाली नेपाल भाषा Li Niha Nederlands Norsk nynorsk Norsk bokmål Novial ߒߞߏ IsiNdebele seSewula Nouormand Sesotho sa Leboa Nupe Diné bizaad Chi-Chewa Occitan Livvinkarjala Oromoo ଓଡ଼ିଆ Ирон ਪੰਜਾਬੀ Pangasinan Kapampangan Papiamentu Picard Deitsch Pälzisch पालि Polski Piemontèis پنجابی Ποντιακά پښتو Português Pinayuanan Runa Simi ရခိုင် Rumantsch Romani čhib Ikirundi Română Armãneashti Tarandíne Руски Русский Русиньскый Ikinyarwanda संस्कृतम् Саха тыла ᱥᱟᱱᱛᱟᱲᱤ Sardu Sicilianu Scots سنڌي Davvisámegiella Sängö Srpskohrvatski / српскохрватски Taclḥit တႆး සිංහල Simple English Slovenčina سرائیکی Slovenščina Gagana Samoa Anarâškielâ ChiShona Soomaaliga Shqip Српски / srpski Sranantongo SiSwati Sesotho Seeltersk Sunda Svenska Kiswahili ꠍꠤꠟꠐꠤ Ślůnski Sakizaya தமிழ் Tayal ತುಳು ᥖᥭᥰ ᥖᥬᥲ ᥑᥨᥒᥰ తెలుగు Tetun Тоҷикӣ ไทย ትግርኛ ትግሬ Türkmençe Tagalog Tolışi Setswana Lea faka-Tonga Toki pona Tok Pisin Türkçe Seediq Xitsonga Татарча / tatarça ChiTumbuka Twi Reo tahiti Тыва дыл ",
-    "scrapedAt": "2025-12-15 19:08:56.442384"
-  },
-  {
-    "id": 38,
-    "url": "https://io.wikipedia.org/wiki/Frontispico",
-    "title": "Wikipedio",
-    "content": "Irez a kontenajo De Wikipedio Bonveno a Wikipedio L\u0027enciklopedio libera e gratuita, redaktata da lua lektanti Hodie (mardio, 9 di decembro 2025), ni havas 60 248 artikli tote en Ido Versiono por smartfono Arto • Cienco • Naturo • Socio • Pensado ☹ \"Ido\" ? ➔ ☺ ➔ Deutsch / English / Español / Français / Italiano / Русский / 中文 (China) / عربي (Araba) / + … Bonveno a Wikipedio, l\u0027enciklopedio libera e gratuita, redaktata da la propra lektanti per Ido, Esperanto reformita e selektita kom l\u0027internaciona helpanta linguo ye 1907. Vu povas obtenar l\u0027informo quan vu serchas sequante la ligili od uzante la sercho-buxo ye la supra dextra parto dil fenestro. Anke vu povas kunlaborar editante l\u0027artikli qui ja publikigesis por plubonigor li o kreante nova artikli pri temi quin vu bone konocas. Memorez ke la reda ligili havas nula artiklo asociata e ke se vu volas skribor pri nova temo qua ne havas ula ligilo kreata, unesme vu mustas serchar existanta artiklo relatanta por krear ligilo a vua nova skribajo ibe. Vu povas krear necesa ligilo ank en Probeyo. Ne timez pro ne skribor vua artikli per perfekta Ido. Plu experta idisti revizos e korektigos ol pose. Simple atachez la ligilo {{Revizo}} a vua artiklo ed olu aparos en la fako Pagini revizinda por ke altra idisti revizez ol. Novajeti +/- kun o sen nombri Dum 20 yari la quanto di plastikala sordidaji duopleskis en mondo. Dum un yaro produktesas plastikala sordidaji 353.000.000 tuni en mondo. De la plastikala sordidaji mondala 9 % reciklesas, 19 % kombustesas, 49 % duktesas a reziduala amasegi, 22 % eskartesas a naturo. Dum un yaro 6.000.000 tuni de plastiko eskartesas a la riveri e lagi. De ca sordidajo 2.000.000 tuni trovas sua voyo a la mari ed oceani. (Fonto: OECD – Global Plastics Outlook (ye 2022).) Kategorii Skribez Chefa kategorii hike. Arto e kulturo Arkitekturo - Cinemo - Fotografo - Literaturo - Muziko - Pikturo - Skult-arto Naturala cienci Astronomio - Biologio - Fiziko - Geologio - Kemio - Matematiko Mondumo Jurnali - Ociado - Radio - Socio - Spektakli - Sporti - Televiziono Ido Idisti - Historio di Ido - Ido-Kulturo - Ido-Literaturo Sociala cienci Antropologio - Ekologio - Ekonomiko - Filozofio - Geografio - Historio - Linguistiko - Politiko - Psikologio - Religio - Sociologio - Yuro Aplikita cienci Agrokultivo - Komerco - Saneso - Teknologio Indexo A Á B C D E É F G H I Í J K L M N O Ó Ö P Q R S Ś T U V W X Y Z 0 1 2 3 4 5 6 7 8 9 Eventi +/- en historio dum decembro: 50, 100 e 250 yari ante nun … 26 di decembro 1975. La Tupolev Tu-144, aeroplano di USSR, komencis komercala servado, inter Moskva ad Alma-Ata, portante postajo e kargajo. Komercala flugi por pasajeri komencis en novembro 1977. L\u0027aeroplano esis desegnata da la desegno-kontoro di Alexei Tupolev, por eventuala utiligo da la kompanio Aeroflot. La prototipo unesmafoye flugis ye 31 di decembro 1968. Ye 5 di junio 1969 ol unesmafoye flugis plu rapide kam sono; ol flugis ye duople di la rapideso di sono ye 26 di mayo 1970. Developado esis tardigata pro acidento ye l\u0027aero-expozo di Paris en 1973. 3 di decembro 1925. En New York, la piano-koncerto-peco da George Gershwin esis unesmafoye pleata. La kompozuro esis komisata da la direktisto e kompozisto Walter Damrosch, qua audabis la unesma pleado di Rhapsody in Blue en februaro 1924; il demandis ke la kompozuro esus en tri movimenti, quale kustumala klasika koncerto-peci, ed instrumentizita da la kompozisto ipsa. Gershwin komencis skisuri en mayo 1925, e komencis kompozado por du piani en julio. Ye 10 di novembro la instrumentizuro esis kompleta, e la nova verko probesis plu tarde en ta monato da orkestro engajita da Gershwin. La Simfoni-Orkestro di New York, direktata da Damrosch, e kun Gershwin ye la piano, donis la unesma publika pleado. Ol bone recevesis da la audantaro, e la orkestro balde donis plusa pleadi, en New York ed altra-loke. 16 di decembro 1775. En Steventon en Hampshire, Anglia, la skriptisto Jane Austen naskis, filiino di paroko. Elua unesma publikigita romano esis Sense and Sensibility, qua aparis en 1811. Plusa romani esis Pride and Prejudice (1813), Mansfield Park (1814), ed Emma (1815). Elua lasta kompletigita romano esis Persuasion, qua aparis en decembro 1817, kelka monati pos elua morto, kun elua unesma romano Northanger Abbey, kompletigita por publikigo en 1803 ma ne lore publikigata; oli esis kune imprimata en un tomo. Entote imprimesis 1750 kopiuri, qui rapide vendesis. Pri Wikipedio Quo esas Wikipedio · Quale komencar · Quale krear pagino · Editante pagini · Adjuntar kategorii · Adjuntar imaji · Statistiki I Statistiki II · Wikipediisti · Probeyo · Generala debato pri Wikipedio · Diskutinda pagini · Revizinda pagini · Efacinda pagini Moyeni por Ido Kompleta Gramatiko Detaloza · U.L.I. Necesa vorti Wikivortaro · Vortari · Sugestata vorti Kunlaborez! +/- Benjamin Franklin Benjamin Franklin, n. ye la 17ma di januaro 1706 til la 17ma di aprilo 1790, esis Usana politikisto ed inventisto. Ilu inventis parafulmino en 1749. Il pruvis p",
-    "scrapedAt": "2025-12-15 19:08:54.881646"
   },
   {
     "id": 498,
@@ -3488,6 +3488,1080 @@ window.searchData = [
 ];
 
 window.imageData = [
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/10/Wikipedia-logo-v2-200px-transparent.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Fire_ants_01.jpg/250px-Fire_ants_01.jpg",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/40px-Flag_of_Algeria.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Angola.svg/40px-Flag_of_Angola.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Benin.svg/40px-Flag_of_Benin.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_Botswana.svg/40px-Flag_of_Botswana.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Burkina_Faso.svg/40px-Flag_of_Burkina_Faso.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Flag_of_Burundi.svg/40px-Flag_of_Burundi.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Flag_of_Cameroon.svg/40px-Flag_of_Cameroon.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Flag_of_the_Canary_Islands.svg/40px-Flag_of_the_Canary_Islands.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/40px-Flag_of_Cape_Verde.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Central_African_Republic.svg/40px-Flag_of_the_Central_African_Republic.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Flag_of_Chad.svg/40px-Flag_of_Chad.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Flag_of_the_Comoros.svg/40px-Flag_of_the_Comoros.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_C%C3%B4te_d%27Ivoire.svg/40px-Flag_of_C%C3%B4te_d%27Ivoire.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg/20px-Flag_of_the_Democratic_Republic_of_the_Congo.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_Djibouti.svg/40px-Flag_of_Djibouti.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/40px-Flag_of_Egypt.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Equatorial_Guinea.svg/40px-Flag_of_Equatorial_Guinea.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Flag_of_Eritrea.svg/40px-Flag_of_Eritrea.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Flag_of_Eswatini.svg/40px-Flag_of_Eswatini.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_Ethiopia.svg/40px-Flag_of_Ethiopia.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Flag_of_Gabon.svg/20px-Flag_of_Gabon.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_The_Gambia.svg/40px-Flag_of_The_Gambia.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/40px-Flag_of_Ghana.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_Guinea.svg/40px-Flag_of_Guinea.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Guinea-Bissau.svg/40px-Flag_of_Guinea-Bissau.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Kenya.svg/40px-Flag_of_Kenya.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Flag_of_Lesotho.svg/40px-Flag_of_Lesotho.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Flag_of_Liberia.svg/40px-Flag_of_Liberia.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Libya.svg/40px-Flag_of_Libya.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Madagascar.svg/40px-Flag_of_Madagascar.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Flag_of_Malawi.svg/40px-Flag_of_Malawi.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Mali.svg/40px-Flag_of_Mali.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Flag_of_Mauritania.svg/40px-Flag_of_Mauritania.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Mauritius.svg/40px-Flag_of_Mauritius.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/40px-Flag_of_France.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/40px-Flag_of_Morocco.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/40px-Flag_of_Mozambique.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Namibia.svg/40px-Flag_of_Namibia.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Flag_of_Niger.svg/20px-Flag_of_Niger.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/40px-Flag_of_Nigeria.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_the_Republic_of_the_Congo.svg/40px-Flag_of_the_Republic_of_the_Congo.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/40px-Flag_of_France.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Rwanda.svg/40px-Flag_of_Rwanda.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Saint_Helena.svg/40px-Flag_of_Saint_Helena.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg/40px-Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/40px-Flag_of_Senegal.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Seychelles.svg/40px-Flag_of_Seychelles.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Sierra_Leone.svg/40px-Flag_of_Sierra_Leone.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Flag_of_Somalia.svg/40px-Flag_of_Somalia.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/40px-Flag_of_South_Africa.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Sudan.svg/40px-Flag_of_Sudan.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Flag_of_South_Sudan.svg/40px-Flag_of_South_Sudan.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tanzania.svg/40px-Flag_of_Tanzania.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Flag_of_Togo.svg/40px-Flag_of_Togo.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/40px-Flag_of_Tunisia.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Flag_of_Uganda.svg/40px-Flag_of_Uganda.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Flag_of_the_Sahrawi_Arab_Democratic_Republic.svg/40px-Flag_of_the_Sahrawi_Arab_Democratic_Republic.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Zambia.svg/40px-Flag_of_Zambia.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/40px-Flag_of_Zimbabwe.svg.png",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "Commons",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MediaWiki-2020-icon.svg/40px-MediaWiki-2020-icon.svg.png",
+    "alt": "MediaWiki",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "Meta-Wiki",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "Wikibooks",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/60px-Wikidata-logo.svg.png",
+    "alt": "Wikidata",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/60px-Wikinews-logo.svg.png",
+    "alt": "Wikinews",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "Wikiquote",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "Wikisource",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "Wikispecies",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/60px-Wikiversity-logo.svg.png",
+    "alt": "Wikiversity",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "Wikivoyage",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/40px-Wiktionary-logo.svg.png",
+    "alt": "Wiktionary",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://ann.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wìkìpedia",
+    "pageUrl": "https://ann.wikipedia.org/wiki/Uwu"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Wikibar2.png",
+    "alt": "",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/The_Last_of_Us_development_team%2C_GDCA_2014_%28cropped%29.jpg/250px-The_Last_of_Us_development_team%2C_GDCA_2014_%28cropped%29.jpg",
+    "alt": "ทีมผู้พัฒนาเดอะลาสต์ออฟอัสบางส่วน",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Wikibar2.png",
+    "alt": "",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Blausen_0246_ColorectalCancer.png/250px-Blausen_0246_ColorectalCancer.png",
+    "alt": "ตำแหน่งและลักษณะของเนื้องอกลำไส้ใหญ่ตัวอย่างสองจุด",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Wikibar2.png",
+    "alt": "",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Buildings_of_Taipo_apartment_fires.jpg/250px-Buildings_of_Taipo_apartment_fires.jpg",
+    "alt": "อัคคีภัยในที่พักเขตไต้โป้ว",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Wikibar2.png",
+    "alt": "",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Oliver_CromwellUT.jpg/250px-Oliver_CromwellUT.jpg",
+    "alt": "",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Wikibar2.png",
+    "alt": "",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Crystal_Project_Babelfish.png/120px-Crystal_Project_Babelfish.png",
+    "alt": "หมวดหมู่:ธรรมชาติ",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Crystal_Clear_app_gimp.png/120px-Crystal_Clear_app_gimp.png",
+    "alt": "หมวดหมู่:ศิลปะ",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Crystal_Clear_app_katomic.png/120px-Crystal_Clear_app_katomic.png",
+    "alt": "หมวดหมู่:วิทยาศาสตร์",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Crystal_Clear_app_internet.png/120px-Crystal_Clear_app_internet.png",
+    "alt": "หมวดหมู่:ภูมิศาสตร์",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Crystal_Clear_app_kcmmemory.png/120px-Crystal_Clear_app_kcmmemory.png",
+    "alt": "หมวดหมู่:เทคโนโลยี",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Religious_syms.png/120px-Religious_syms.png",
+    "alt": "หมวดหมู่:ความเชื่อ",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Crystal_Clear_app_kalarm.png/120px-Crystal_Clear_app_kalarm.png",
+    "alt": "หมวดหมู่:ประวัติศาสตร์",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Crystal_Clear_app_Login_Manager.svg/120px-Crystal_Clear_app_Login_Manager.svg.png",
+    "alt": "หมวดหมู่:สังคม",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Emblem_of_Thailand.svg/120px-Emblem_of_Thailand.svg.png",
+    "alt": "หมวดหมู่:ประเทศไทย",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Portal.svg/120px-Portal.svg.png",
+    "alt": "วิกิพีเดีย:สถานีย่อย",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Wikimedia-logo_black.svg/60px-Wikimedia-logo_black.svg.png",
+    "alt": "",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "คอมมอนส์",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MediaWiki-2020-icon.svg/40px-MediaWiki-2020-icon.svg.png",
+    "alt": "มีเดียวิกิ",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "เมทาวิกิ",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "วิกิตำรา",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/60px-Wikidata-logo.svg.png",
+    "alt": "วิกิสนเทศ",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "วิกิคำคม",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "วิกิซอร์ซ",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/60px-Wikispecies-logo.svg.png",
+    "alt": "วิกิสปีชีส์",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/60px-Wiktionary-logo.svg.png",
+    "alt": "วิกิพจนานุกรม",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "วิกิท่องเที่ยว",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://th.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "วิกิพีเดีย สารานุกรมเสรี",
+    "pageUrl": "https://th.wikipedia.org/wiki/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Smn_Cameron-SecofWar_%28cropped%29.jpg/250px-Smn_Cameron-SecofWar_%28cropped%29.jpg",
+    "alt": "Simon Cameron",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Wellcome_Collection_Rocking_Bed.jpg/250px-Wellcome_Collection_Rocking_Bed.jpg",
+    "alt": "A rocking bed",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Rosen_Zhelyazkov_2025_%28cropped%29.jpg/120px-Rosen_Zhelyazkov_2025_%28cropped%29.jpg",
+    "alt": "Rosen Zhelyazkov in January 2025",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Constantine_VIII_in_the_Exultet_roll_%282%29.jpg/194px-Constantine_VIII_in_the_Exultet_roll_%282%29.jpg",
+    "alt": "Constantine VIII",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Gold_Coast_skyline_%28Unsplash%29.jpg/250px-Gold_Coast_skyline_%28Unsplash%29.jpg",
+    "alt": "The Gold Coast skyline",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/McClure_Tunnel_west.jpg/500px-McClure_Tunnel_west.jpg",
+    "alt": "McClure Tunnel",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "Commons logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MediaWiki-2020-icon.svg/40px-MediaWiki-2020-icon.svg.png",
+    "alt": "MediaWiki logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "Meta-Wiki logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "Wikibooks logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/60px-Wikidata-logo.svg.png",
+    "alt": "Wikidata logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/60px-Wikinews-logo.svg.png",
+    "alt": "Wikinews logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "Wikiquote logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "Wikisource logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "Wikispecies logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wikiversity_logo_2017.svg/60px-Wikiversity_logo_2017.svg.png",
+    "alt": "Wikiversity logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "Wikivoyage logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/0/06/Wiktionary-logo-v2.svg/40px-Wiktionary-logo-v2.svg.png",
+    "alt": "Wiktionary logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/60px-Wiktionary-logo.svg.png",
+    "alt": "Wiktionary logo",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia, the free encyclopedia",
+    "pageUrl": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026oldid\u003d1325821473"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikipedia-logo-v2-pcm.svg/120px-Wikipedia-logo-v2-pcm.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/P_vip.svg/20px-P_vip.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/P_mathematics.svg/20px-P_mathematics.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/P_countries.png/20px-P_countries.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/P_culture_violet.png/20px-P_culture_violet.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/P_sociology.svg/20px-P_sociology.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/P_history_violet.png/20px-P_history_violet.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Blue-bg_rounded_right.svg/500px-Blue-bg_rounded_right.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/HSutvald2.svg/40px-HSutvald2.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Blue-bg_rounded_right.svg/500px-Blue-bg_rounded_right.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Text-x-generic_with_pencil-2.svg/40px-Text-x-generic_with_pencil-2.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Blue-bg_rounded_right.svg/500px-Blue-bg_rounded_right.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/HSDagensdatum.svg/40px-HSDagensdatum.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Blue-bg_rounded_right.svg/500px-Blue-bg_rounded_right.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/HSBild.svg/40px-HSBild.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/NIG-ARG_%282%29.jpg/330px-NIG-ARG_%282%29.jpg",
+    "alt": "NIG-ARG_(2)",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Blue-bg_rounded_right.svg/500px-Blue-bg_rounded_right.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Wikimedia-logo-circle.svg/40px-Wikimedia-logo-circle.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/20px-Wikisource-logo.svg.png",
+    "alt": "Wikisource",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Wiktionary-logo-en.svg/20px-Wiktionary-logo-en.svg.png",
+    "alt": "Wiktionary",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/20px-Wikiquote-logo.svg.png",
+    "alt": "Wikiquote",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/20px-Wikinews-logo.svg.png",
+    "alt": "Wikinews",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/40px-Wikidata-logo.svg.png",
+    "alt": "ویکیدراوە",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/20px-Wikibooks-logo.svg.png",
+    "alt": "Wikibooks",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/20px-Wikispecies-logo.svg.png",
+    "alt": "Wikispecies",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/20px-Wikiversity-logo.svg.png",
+    "alt": "Wikiversity",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/20px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "Wikivoyage",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MediaWiki-2020-icon.svg/20px-MediaWiki-2020-icon.svg.png",
+    "alt": "MediaWiki",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Commons-logo.png/20px-Commons-logo.png",
+    "alt": "Commons",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/20px-Wikimedia_Community_Logo.svg.png",
+    "alt": "Meta-Wiki",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://pcm.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://pcm.wikipedia.org/wiki/Main_Pej"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Nuvola_apps_kcoloredit.png/20px-Nuvola_apps_kcoloredit.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Nuvola_apps_kalzium.png/20px-Nuvola_apps_kalzium.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Nuvola_apps_khangman.png/20px-Nuvola_apps_khangman.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Nuvola_apps_browser.png/20px-Nuvola_apps_browser.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Nuvola_apps_kpdf.png/20px-Nuvola_apps_kpdf.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Nuvola_apps_kcoloredit.png/20px-Nuvola_apps_kcoloredit.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Nuvola_apps_kalzium.png/20px-Nuvola_apps_kalzium.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Nuvola_apps_browser.png/20px-Nuvola_apps_browser.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Flag_of_Ido.svg/20px-Flag_of_Ido.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Nuvola_apps_kdmconfig.png/20px-Nuvola_apps_kdmconfig.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Nuvola_apps_display.png/20px-Nuvola_apps_display.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg/250px-Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Delaware_River_DWG_USA.jpg/330px-Delaware_River_DWG_USA.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Prairie_grass.JPG/330px-Prairie_grass.JPG",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Wiktionary-logo-51px.gif",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Wikinews-logo.png/40px-Wikinews-logo.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/40px-Wikimedia-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
+  {
+    "src": "https://io.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedio",
+    "pageUrl": "https://io.wikipedia.org/wiki/Frontispico"
+  },
   {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Wikimedia-logo2.svg/40px-Wikimedia-logo2.svg.png",
     "alt": "Wikimédia Indonesia",
