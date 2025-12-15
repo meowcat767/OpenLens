@@ -19,3 +19,6 @@ https://files.meowcat.site
 https://git.meowcat.site
 https://github.com/meowcat767
 https://spacecatgames.site
+https://openjdk.org
+https://java.net
+https://www.oracle.com/java/technologies/java-se-glance.html
