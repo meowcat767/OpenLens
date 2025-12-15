@@ -9,20 +9,62 @@ const loadingIndicator = document.getElementById('loadingIndicator');
 const errorMessage = document.getElementById('errorMessage');
 const errorText = document.getElementById('errorText');
 const statsElement = document.getElementById('stats');
+const tabWeb = document.getElementById('tabWeb');
+const tabImages = document.getElementById('tabImages');
+const imageResultsContainer = document.getElementById('imageResultsContainer');
+
+let currentMode = 'web'; // Default mode
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('OpenLens Script Loaded');
+
     // Check if data loaded correctly
     if (window.searchData) {
         const pageText = window.searchData.length === 1 ? 'page' : 'pages';
-        statsElement.textContent = `${window.searchData.length} ${pageText} indexed`;
+        const imageCount = window.imageData ? window.imageData.length : 0;
+        if (statsElement) {
+            statsElement.textContent = `${window.searchData.length} ${pageText} indexed | ${imageCount} images`;
+        }
 
         // Fetch and display commit count
         fetchCommitCount();
     } else {
+        console.warn('window.searchData is missing');
         showError('Could not load search data. Run the exporter: java -cp target/search-engine-1.0-SNAPSHOT-jar-with-dependencies.jar com.searchengine.export.StaticExporter');
     }
 });
+
+// Tab Handling
+if (tabWeb && tabImages) {
+    tabWeb.addEventListener('click', () => switchTab('web'));
+    tabImages.addEventListener('click', () => switchTab('images'));
+} else {
+    console.error('Tab elements not found in DOM');
+}
+
+function switchTab(mode) {
+    console.log('Switching tab to:', mode);
+    currentMode = mode;
+
+    // UI Updates
+    if (mode === 'web') {
+        if (tabWeb) tabWeb.classList.add('active');
+        if (tabImages) tabImages.classList.remove('active');
+        if (resultsContainer) resultsContainer.style.display = 'block';
+        if (imageResultsContainer) imageResultsContainer.style.display = 'none';
+    } else {
+        if (tabWeb) tabWeb.classList.remove('active');
+        if (tabImages) tabImages.classList.add('active');
+        if (resultsContainer) resultsContainer.style.display = 'none';
+        if (imageResultsContainer) imageResultsContainer.style.display = 'grid'; // Grid for images
+    }
+
+    // Re-run search if query exists
+    if (searchInput && searchInput.value.trim()) {
+        handleSearch();
+    }
+}
 
 // Fetch commit count from GitHub API
 async function fetchCommitCount() {
@@ -48,8 +90,10 @@ async function fetchCommitCount() {
             commitCount = data.length;
         }
 
-        const currentText = statsElement.textContent;
-        statsElement.innerHTML = `${currentText} &nbsp;|&nbsp; <a href="https://github.com/meowcat767/OpenLens/commits/master" target="_blank" style="color: inherit; text-decoration: none;">${commitCount} Commits</a>`;
+        if (statsElement) {
+            const currentText = statsElement.textContent;
+            statsElement.innerHTML = `${currentText} &nbsp;|&nbsp; <a href="https://github.com/meowcat767/OpenLens/commits/master" target="_blank" style="color: inherit; text-decoration: none;">${commitCount} Commits</a>`;
+        }
 
     } catch (e) {
         console.error('Failed to fetch commit count:', e);
@@ -57,10 +101,14 @@ async function fetchCommitCount() {
 }
 
 // Handle search form submission
-searchForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    handleSearch();
-});
+if (searchForm) {
+    searchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        handleSearch();
+    });
+} else {
+    console.error('Search form not found');
+}
 
 
 // Main search handler
