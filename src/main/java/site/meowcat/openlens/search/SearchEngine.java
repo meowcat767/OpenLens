@@ -26,70 +26,41 @@ public class SearchEngine {
         if (query == null || query.trim().isEmpty()) {
             return new ArrayList<>();
         }
-
-        // Convert query to tsquery format
-        String tsQuery = convertToTsQuery(query);
-
+        List<SearchResult> results = new ArrayList<>();
+        // Simple search for H2 (PostgreSQL FTS features removed)
         String sql = """
-                SELECT
-                    id,
-                    url,
-                    title,
-                    ts_rank(search_vector, to_tsquery('english', ?)) as rank,
-                    ts_headline('english', content, to_tsquery('english', ?),
-                        'MaxWords=30, MinWords=15, MaxFragments=1') as snippet
+                SELECT url, title, content
                 FROM pages
-                WHERE search_vector @@ to_tsquery('english', ?)
-                ORDER BY rank DESC
+                WHERE LOWER(title) LIKE LOWER(?) OR LOWER(content) LIKE LOWER(?)
                 LIMIT ?
                 """;
-
-        List<SearchResult> results = new ArrayList<>();
 
         try (Connection conn = dbConfig.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            stmt.setString(1, tsQuery);
-            stmt.setString(2, tsQuery);
-            stmt.setString(3, tsQuery);
-            stmt.setInt(4, limit);
+            String likeQuery = "%" + query + "%";
+            stmt.setString(1, likeQuery);
+            stmt.setString(2, likeQuery);
+            stmt.setInt(3, limit);
 
             try (ResultSet rs = stmt.executeQuery()) {
                 while (rs.next()) {
-                    SearchResult result = new SearchResult(
-                            rs.getInt("id"),
-                            rs.getString("url"),
-                            rs.getString("title"),
-                            rs.getString("snippet"),
-                            rs.getDouble("rank"));
-                    results.add(result);
+                    String url = rs.getString("url");
+                    String title = rs.getString("title");
+                    String content = rs.getString("content");
+                    // Simple snippet generation
+                    String snippet = content != null && content.length() > 200
+                            ? content.substring(0, 200) + "..."
+                            : content;
+
+                    results.add(new SearchResult(url, title, snippet, 0)); // Rank 0 for simple search
                 }
             }
         } catch (SQLException e) {
-            System.err.println("Search error: " + e.getMessage());
+            e.printStackTrace();
         }
 
         return results;
-    }
-
-    /**
-     * Convert user query to PostgreSQL tsquery format
-     */
-    private String convertToTsQuery(String query) {
-        // Split query into words and join with & (AND operator)
-        String[] words = query.trim().split("\\s+");
-        StringBuilder tsQuery = new StringBuilder();
-
-        for (int i = 0; i < words.length; i++) {
-            if (i > 0) {
-                tsQuery.append(" & ");
-            }
-            // Escape single quotes and add prefix matching
-            String word = words[i].replace("'", "''");
-            tsQuery.append(word).append(":*");
-        }
-
-        return tsQuery.toString();
     }
 
     /**
@@ -135,6 +106,11 @@ public class SearchEngine {
             this.title = title;
             this.snippet = snippet;
             this.rank = rank;
+        }
+
+        // Constructor for simple search (no ID needed)
+        public SearchResult(String url, String title, String snippet, double rank) {
+            this(0, url, title, snippet, rank);
         }
     }
 

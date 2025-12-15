@@ -20,11 +20,11 @@
     </properties>
 
     <dependencies>
-        <!-- PostgreSQL JDBC Driver -->
+        <!-- H2 Database (Local, file-based, no limits) -->
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.7.1</version>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.2.224</version>
         </dependency>
 
         <!-- Jsoup for HTML parsing -->

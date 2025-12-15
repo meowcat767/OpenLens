@@ -18,7 +18,7 @@ import java.util.Set;
  * Web scraper that fetches pages and stores them in the database
  */
 public class WebScraper {
-    private static final int TIMEOUT_MS = 10000;
+    private static final int TIMEOUT_MS = 60000; // 60 seconds
     private static final String USER_AGENT = "Mozilla/5.0 (compatible; SearchEngineBot/1.0)";
     private Set<String> blacklist = new HashSet<>();
 

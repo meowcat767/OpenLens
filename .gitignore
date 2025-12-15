@@ -19,3 +19,4 @@ config.properties
 # Ignore OS files
 .DS_Store
 Thumbs.db
+scraper_db.mv.db

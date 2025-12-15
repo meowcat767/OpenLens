@@ -22,8 +22,8 @@ public class SearchAPI {
     }
 
     public void start() {
-        int port = Integer.parseInt(dbConfig.getProperty("api.port"));
-        String host = dbConfig.getProperty("api.host");
+        int port = 7000;
+        String host = "localhost";
 
         Javalin app = Javalin.create(config -> {
             // Enable CORS for frontend

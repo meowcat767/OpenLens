@@ -3,23 +3,19 @@ package site.meowcat.openlens.config;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Properties;
 
 /**
- * Database configuration and connection pool management
+ * Database configuration using H2 (Local File Database)
+ * No limits, no cloud configuration needed.
  */
 public class DatabaseConfig {
     private static DatabaseConfig instance;
     private HikariDataSource dataSource;
-    private Properties config;
 
     private DatabaseConfig() {
-        loadConfig();
         initializeDataSource();
         initializeSchema();
     }
@@ -31,43 +27,23 @@ public class DatabaseConfig {
         return instance;
     }
 
-    private void loadConfig() {
-        config = new Properties();
-        try {
-            config.load(new FileInputStream("config.properties"));
-        } catch (IOException e) {
-            System.err.println("Error loading config.properties: " + e.getMessage());
-            System.err.println("Please copy config.properties.template to config.properties and configure it.");
-            System.exit(1);
-        }
-    }
-
     private void initializeDataSource() {
-        // Explicitly load PostgreSQL driver
+        // Explicitly load H2 driver
         try {
-            Class.forName("org.postgresql.Driver");
+            Class.forName("org.h2.Driver");
         } catch (ClassNotFoundException e) {
-            System.err.println("PostgreSQL JDBC Driver not found: " + e.getMessage());
-            throw new RuntimeException(e);
+            throw new RuntimeException("H2 JDBC Driver not found", e);
         }
 
         HikariConfig hikariConfig = new HikariConfig();
-        hikariConfig.setDriverClassName("org.postgresql.Driver");
-        hikariConfig.setJdbcUrl(config.getProperty("db.url"));
+        // Use a local file database named 'scraper_db' in the current directory
+        hikariConfig.setJdbcUrl("jdbc:h2:./scraper_db;MODE=PostgreSQL");
+        hikariConfig.setUsername("sa");
+        hikariConfig.setPassword("");
 
-        // Set credentials if they exist in config
-        if (config.containsKey("db.username")) {
-            hikariConfig.setUsername(config.getProperty("db.username"));
-        }
-        if (config.containsKey("db.password")) {
-            hikariConfig.setPassword(config.getProperty("db.password"));
-        }
+        hikariConfig.setMaximumPoolSize(10);
 
-        hikariConfig.setMaximumPoolSize(Integer.parseInt(config.getProperty("db.pool.maxSize", "10")));
-        hikariConfig.setMinimumIdle(Integer.parseInt(config.getProperty("db.pool.minIdle", "2")));
-        hikariConfig.setConnectionTimeout(Long.parseLong(config.getProperty("db.pool.connectionTimeout", "30000")));
-
-        // PostgreSQL optimizations
+        // Optimize for local file access
         hikariConfig.addDataSourceProperty("cachePrepStmts", "true");
         hikariConfig.addDataSourceProperty("prepStmtCacheSize", "250");
         hikariConfig.addDataSourceProperty("prepStmtCacheSqlLimit", "2048");
@@ -76,6 +52,8 @@ public class DatabaseConfig {
     }
 
     private void initializeSchema() {
+        // Simplified schema for H2
+        // Removed tsvector/full-text search triggers as we are doing Client-Side Search
         String createPagesTable = """
                 CREATE TABLE IF NOT EXISTS pages (
                     id SERIAL PRIMARY KEY,
@@ -83,32 +61,11 @@ public class DatabaseConfig {
                     title TEXT,
                     content TEXT,
                     scraped_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-                )
+                );
                 """;
 
         String createIndexes = """
                 CREATE INDEX IF NOT EXISTS idx_pages_url ON pages(url);
-                CREATE INDEX IF NOT EXISTS idx_pages_scraped_at ON pages(scraped_at);
-                """;
-
-        String createFullTextSearch = """
-                ALTER TABLE pages ADD COLUMN IF NOT EXISTS search_vector tsvector;
-
-                CREATE INDEX IF NOT EXISTS idx_search_vector ON pages USING GIN(search_vector);
-
-                CREATE OR REPLACE FUNCTION update_search_vector() RETURNS trigger AS $$
-                BEGIN
-                    NEW.search_vector :=
-                        setweight(to_tsvector('english', COALESCE(NEW.title, '')), 'A') ||
-                        setweight(to_tsvector('english', COALESCE(NEW.content, '')), 'B');
-                    RETURN NEW;
-                END;
-                $$ LANGUAGE plpgsql;
-
-                DROP TRIGGER IF EXISTS trigger_update_search_vector ON pages;
-                CREATE TRIGGER trigger_update_search_vector
-                    BEFORE INSERT OR UPDATE ON pages
-                    FOR EACH ROW EXECUTE FUNCTION update_search_vector();
                 """;
 
         try (Connection conn = getConnection();
@@ -116,9 +73,8 @@ public class DatabaseConfig {
 
             stmt.execute(createPagesTable);
             stmt.execute(createIndexes);
-            stmt.execute(createFullTextSearch);
 
-            System.out.println("Database schema initialized successfully");
+            System.out.println("Database schema initialized successfully (H2 Local DB)");
         } catch (SQLException e) {
             System.err.println("Error initializing database schema: " + e.getMessage());
             throw new RuntimeException(e);
@@ -127,10 +83,6 @@ public class DatabaseConfig {
 
     public Connection getConnection() throws SQLException {
         return dataSource.getConnection();
-    }
-
-    public String getProperty(String key) {
-        return config.getProperty(key);
     }
 
     public void close() {
