@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 107,
+    "url": "https://ban.wikipedia.org/wiki/Kaca_Utama",
+    "title": "Wikipédia",
+    "content": "Cebur nuju daging Saking Wikipédia Wikipédia Basa Bali Énsiklopédi bébas sané nganggén basa Bali 34.927 suratan 123 Sang anganggé aktip Kolaborasi Suratan acak Saniscara, 13 Désémber 2025 · 20.06 WITA · babad· bali biyograpi budaya gĕhograpi kala ᵒolahraga sains· sastra sĕni wisata kacakusus· Suratan rahina mangkin Jayapangus Jayapangus (aksara Bali: jayapaṅus·) utawi Jaya Pangus (madeg ratu saking warsa 1178–1181 M) inggih punika Raja Bali saking trah lelintihan Warmadewa. Ida kauningin saking prasasti-prasastinya, sané marupa pajak. Ida warih saking murdaning jagat sané sampun kasub Airlangga. - Cingak informasi indik gambar Jayapangus Jayapangus (aksara Bali: jayapaṅus·) utawi Jaya Pangus (madeg ratu saking warsa 1178–1181 M) inggih punika Raja Bali saking trah lelintihan Warmadewa. Ida kauningin saking prasasti-prasastinya, sané marupa pajak. Ida warih saking murdaning jagat sané sampun kasub Airlangga. Gambar rahina mangkin Mapeed Tradisi Mapeed ring Alas Kedaton - Cingak informasi indik gambar Gambar rahina mangkin Tradisi Mapeed ring Alas Kedaton ProyékWiki WikiLontar WikiLontar Basa Bali inggih punika program mupulang metadata miwah makarya katalogisasi naskah lontar bali ring Bali mangda kawewehin referensi sane lianan antuk Wikipedia, khususnyane Wikidata. Katalog metadata antuk naskah-naskah punika pacang ngranjingang parameter naskah napi manten antuk parameter tambahan sane pacang kapupulang ring situs, sakadi: dimensi, tanggal kakaryanin, tanggal kakaryanin malih, para pangawi/panyurat, akeh halaman, asal-usul, koordinat, sang sane madue, genre, lisensi, lan kahanannyane. ProyékWiki: WikiLontar WikiLontar Basa Bali inggih punika program mupulang metadata miwah makarya katalogisasi naskah lontar bali ring Bali mangda kawewehin referensi sane lianan antuk Wikipedia, khususnyane Wikidata. Katalog metadata antuk naskah-naskah punika pacang ngranjingang parameter naskah napi manten antuk parameter tambahan sane pacang kapupulang ring situs, sakadi: dimensi, tanggal kakaryanin, tanggal kakaryanin malih, para pangawi/panyurat, akeh halaman, asal-usul, koordinat, sang sane madue, genre, lisensi, lan kahanannyane. Suratan rahina mangkin Jayapangus Jayapangus (aksara Bali: jayapaṅus·) utawi Jaya Pangus (madeg ratu saking warsa 1178–1181 M) inggih punika Raja Bali saking trah lelintihan Warmadewa. Ida kauningin saking prasasti-prasastinya, sané marupa pajak. Ida warih saking murdaning jagat sané sampun kasub Airlangga. - Cingak informasi indik gambar Jayapangus Jayapangus (aksara Bali: jayapaṅus·) utawi Jaya Pangus (madeg ratu saking warsa 1178–1181 M) inggih punika Raja Bali saking trah lelintihan Warmadewa. Ida kauningin saking prasasti-prasastinya, sané marupa pajak. Ida warih saking murdaning jagat sané sampun kasub Airlangga. Gambar rahina mangkin Mapeed Tradisi Mapeed ring Alas Kedaton - Cingak informasi indik gambar Gambar rahina mangkin Tradisi Mapeed ring Alas Kedaton ProyékWiki WikiLontar WikiLontar Basa Bali inggih punika program mupulang metadata miwah makarya katalogisasi naskah lontar bali ring Bali mangda kawewehin referensi sane lianan antuk Wikipedia, khususnyane Wikidata. Katalog metadata antuk naskah-naskah punika pacang ngranjingang parameter naskah napi manten antuk parameter tambahan sane pacang kapupulang ring situs, sakadi: dimensi, tanggal kakaryanin, tanggal kakaryanin malih, para pangawi/panyurat, akeh halaman, asal-usul, koordinat, sang sane madue, genre, lisensi, lan kahanannyane. ProyékWiki: WikiLontar WikiLontar Basa Bali inggih punika program mupulang metadata miwah makarya katalogisasi naskah lontar bali ring Bali mangda kawewehin referensi sane lianan antuk Wikipedia, khususnyane Wikidata. Katalog metadata antuk naskah-naskah punika pacang ngranjingang parameter naskah napi manten antuk parameter tambahan sane pacang kapupulang ring situs, sakadi: dimensi, tanggal kakaryanin, tanggal kakaryanin malih, para pangawi/panyurat, akeh halaman, asal-usul, koordinat, sang sane madue, genre, lisensi, lan kahanannyane. Napi nika Wikipédia? napinikawikipediya Wikipédia puniki wantah silih tunggil proyék mitra kriya sané ageng, santukan makasami daging sané wentén ring énsiklopédi puniki kasurat nganggén sakancan basa miwah kauah olih parajanané makasami. Nika mawinan sameton prasida ngalimbakang kaweruhan sané kadruwénang. Situs puniki kasayagayang olih Wikimédia Foundation tur bebas cingakin olih parajanané makasami. Wikimédia Foundation utawi ring Indonésia, Yayasan Wikimédia Indonésia inggih punika silih situnggil organisasi nirlaba sané ngamargiang makudang-kudang proyék sané nganggén sakancan basa sané wentén ring guminé. Nyuratang suratan anyar ñurataŋsuratanhañaŕ. Ragané prasida mabasa Bali? Ngiring sarengin proyék wikipédia. Proyék puniki kasayagayang ring sajeroning makudang-kudang basa ring guminé. Ring galahé puniki, sampun wénten wikipédia sané mabasa Bali. Tinutin uger-uger utawi pedoman sané mamargi iriki, nanging sampunang marasa méweh ring sajeroning uger-uger utawi",
+    "scrapedAt": "2025-12-15 19:23:35.592956"
+  },
+  {
+    "id": 106,
+    "url": "https://iba.wikipedia.org/wiki/Lambar_Keterubah",
+    "title": "Wikipedia",
+    "content": "Pegi ngagai isi Ari Wikipedia Selamat Datai ngagai Wikipedia durung penemu bibas ti ulih diubah sapa-sapa. Versyen Jaku Iban udah bepun maya (2024-10-14) Oktober 14, 2024 (umur 13 bulan) Diatu, kami ngembuan 1,864 iti lambar. Haribulan: Hari Dua, 9 Disember 2025 Pemadah · Kedai Kupi · Tanya ke suah · Duta · Pengelala jaku Iban Artikel dipilih Kuching tauka Nengeri Kuching (Urup Jawi: كوچيڠ‎) ianya, indu nengeri sereta nengeri ti pemadu besai ba Sarawak ti bepalan ba Malaysia Timur. Nengeri tu mega nyadi indu Bagi Menua Kuching. Nengeri tu bepalan ba Sungai Sarawak ba ujung barat daya negeri Sarawak ba pulau Borneo ti nyengkaum pemesai 431 kilometer persegi (166 bt) enggau pemayuh orang urung 631,000. Kuching nyadi indu nengeri Sarawak ketiga maya taun 1827 iya nya jeman perintah Empayar Brunei. Dalam taun 1841, Kuching nyadi indu Perintah Sarawak sepengudah kandang menua ba kandang menua nya diserahka ngagai James Brooke ketegal ti udah mantu empayar Brunei dalam ngemuntanka sebengkah penyarut kelebih agi ari raban bansa Bidayuh ti diau di pedalaman Borneo ti udah nya nyadi nembiak taluk iya sepengudah mayuh sida diampun iya lalu enggau ba piak iya. Berita kemaya tu Sébastien Ogier Dalam lumba motor, Sébastien Ogier (gambar) enggau Vincent Landais menang Pekit World Rally. Bah enggau tanah tusur ketegal Ribut Tropika Ditwah ngujungka enda kurang ari 469 iku orang parai ba serata Sri Lanka enggau India. Penusah angus ke nyadi ba kompleks apartmen di Hong Kong ngujungka enda kurang ari 156 iku orang parai. Ba Guinea-Bissau, ba raban soldadu ngambi alih kuasa dalam siti rampas kuasa soldadu, nan Presiden Umaro Sissoco Embaló lalu nyiri Horta Inta-A Na Man nyadi kepala perintah alih. Benung Nyadi: Perang Gaza Perang saudara Myanmar Perang saudara Sudan Pemati baru-baru tu: Tofail Ahmed Pannir Selvam Pranthaman Wanda Perdelwitz Alan Hawley Mike Greenwell Theo Jörgensmann Mayuh pasal pekara kemaya tu... Nemu nuan... ... Gerija Sante Benoit ba Istanbul nya gerija Roman Katolik ti pemadu tuai ba mengeri nya ke mengkang dikena? ... Ratna Asmara nya pengarah filem indu keterubah dalam sejarah Indonesia? ... ba taun 1960-an, polisi perintah Singapura bisi nagang lelaki ngembuan buk panjai lalu tagang nya pengujung iya dikinsil dalam taun 1990-an? Hari tu dalam sejarah 9 Disember: Hari Soldadu di Peru (1824); Hari Meredeka di Tanzania (1961). 1897 – Pelakun panggau, jurnalis enggau pengelaban hak bepilih ungkup indu tebilang Marguerite Durand numbuhka surat berita feminisme La Fronde. 1941 – MS Awazisan Maru ti karam semak pantai Kelantan ba pantai timur Malaysia nyadi kapal Jipun keterubah ti karam lebuh Perang Dunya Kedua 1946 – Pechara ungkup lutur ke bekaul dalam uji pansik mensia Nazi lebuh Perang Dunya Kedua berengkah di Nuremberg, Jerman. 1979 – Siti komisyen Gerempung Pengerai Sedunya ngesahka pemunas global penyakit puru (gambar virus). 1990 – Lech Wałęsa nyadi Presiden Poland keterubah dichiri nengah pengawa bepilih presiden terus. Hari-hari sebedau: 8 Disember – 7 Disember – 6 Disember Arkib · Nengah e-mel · Silik agi... Projek Wikimedia bukai Wikipedia nya projek Yayasan Wikimedia, siti gerempung ti nadai nguntungka orang ti mega bejalaika beberapa projek mayuh macham jaku ke bukai. Wikikamus Kamus bibas Wikibup Bup teks enggau manual bibas Wikibunsu Librari bibas Wikiberita Pun berita bibas Wikiquote Koleksyen jaku ambi Wikivoyage Pengiring pejalai bibas Commons Koleksyen multimedia bibas Meta-Wiki Standardisasyen projek Wikimedia Wikidata Pengkalan penemu bibas Wikiversiti Perengka pelajar bibas Wikispesies Pengiring spesies MediaWiki Pemansang isi bebas Wikipedia dalam jaku bukai Lebih 5,000,000 artikel: English (Jaku Inggeris) • Cebuano (Jaku Cebu) Lebih 2,000,000 artikel: Deutsch (Jaku Jereman) • français (Jaku Peranchis) • svenska (Jaku Sweden) • Nederlands (Jaku Belanda) • pyccкий (Jaku Rusia) • español (Jaku Sepanyol) Lebih 1,000,000 artikel: italiano (Jaku Itali) • polski (Jaku Poland) • مصرى (Jaku Arab Ejip) • 中文 (Jaku China) • 日本語 (Jaku Jipun) • Українська (Jaku Ukraine) • Tiếng Việt (Jaku Vietnam) • Winaray (Jaku Waray) • العربية (Jaku Arab) • português (Jaku Portugis) • فارسی (Jaku Parsi) Lebih 500,000 artikel: Català (Jaku Catalonia) • Indonesia (Jaku Indonesia) • српски/srpski (Jaku Serbia) • 한국어 (Jaku Korea) • norsk (bokmål) (Jaku Norway (Bokmål)) • Türkçe (Jaku Turki) • Нохчийн (Jaku Chechen) • suomi (Jaku Finland) • čeština (Jaku Czech) • magyar (Jaku Hungary) • română (Jaku Romania) • Tatarça / Татарча (Jaku Tatar) Lebih 250,000 artikel: Srpskohrvatski/Српскохрватски (Jaku Serbo-Croatia) • euskara (Jaku Basque) • Bân-lâm-gú/閩南語 (Jaku Hokkien) • Melayu (Jaku Melayu) • עברית (Jaku Hebrew) • Esperanto (Jaku Esperanto) • Հայերեն (Jaku Armenia) • dansk (Jaku Denmark) • Български (Jaku Bulgaria) • O‘zbek (Jaku Uzbek) • Cymraeg (Jaku Wales) • Simple English (Jaku Inggeris Mudah) • slovenčina (Jaku Slovak) • Беларуская (Jaku Belarus) • eesti (Jaku Estonia) • Ελληνικά (Jaku Gerika) Lebih 100,000 a",
+    "scrapedAt": "2025-12-15 19:23:33.82082"
+  },
+  {
+    "id": 105,
+    "url": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina",
+    "title": "Wikipedia",
+    "content": "Jump to content Gikan sa Bikol Sentral na Wikipedia, an talingkas na ensiklopedya Dagos tabì sa Wikipedyang Bikol Sentral, an talingkas na ensiklopedya na maliliwat nin siisay man. Igwa nang 21,241 na artikulo sa Bikol Sentral. Martes, Disyembre 9, 2025, 22:06 (PHT) bàgo Napiling artikulo An Pili (Canarium ovatum, Lat.) sarong tanom na nagkakahoy. An bunga kaini ginigibong iba-ibang klaseng dulse, asin an tagok na inaapod salong na naturo kun linulugad an kahoy niya, ginagamit pulot, asin kwenta pang-ilaw sangle sa lana o gas kan mga enot na mga panahon. An pili igwang 600 na species sa pamilyang Burseraceae. Ini tal na tubo sa Filipinas (Merill, 1923) asin dagya\u0027 na gayo sa Habagatan Luzon, orog na sa rehiyon Bikol. Igwa man kaini sa ibang parte kan Visayas asin Mindanao alagad an mga paratanom sa mga lugar na ini, susog sa impormasyon kan mga taga Departamento nin Agrikultura sa probinsya nin Camarines Sur, nagkukua nin semilya sainda pa sa pagtubod na mas maray an kalidad kan tinanom na pili sa Bikol. Iba pang mga artikulo: Lea Salonga Hidilyn Diaz Bob Marley Quince Martires Mikroorganismo Tomas Arejola Bagyo Protina Bulkan Mayon Manuel Quezon Corazon Aquino Emilio Aguinaldo Dolores Sison Maria Orosa Lea Salonga Jose Maria Panganiban Jorge Barlin Gregorio Aglipay Syudad nin Naga Jesse Robredo Mi Ultimo Adios asin iba pa. Napiling mga ladawan Boac Cathedral An Boac sarong primera klaseng banwaan na namumugtak sa probinsya nin Marinduque, Filipinas. Igwa ining sukol na 212.70 kilometro kwadrado na kadagaan asin namumugtak sa solong distrito. An designadong zip code kaini iyo 4900. Digdi manunumpongan an Katedral nin Boac. Dakol pang ladawan hali sa mga partisipante kan Wiki Loves Monuments Philippines 2022. Sawa An sawa sarong klase nin mga halas na igwa nin haralaba, daing tabay, mga reptilyang nagkakakan nin karne kan suborder na Serpentes. Arog kan gabos na iba pang isquamates, an halas ectothermic, amniote vertebrates napapatos sa suruon na mga kiskis. Dakol pang ladawan hali sa mga partisipante kan Wiki Loves Earth Philippines 2023. Aram daw nindo... Gikan sa mga pinakabàgong artikulo kan Wikipedia: ... na an inot na Filipino na nakakua nin Bulawan na Medalya sa Olimpiko iyo si Hidilyn Diaz? ... na pigtutubudan na piggamit bilang sarong pangkalkula kan mga simpleng operasyon sa matematika an Tulang nin Ishango? ...na sa Alpabetong kan Hapon, dakuten an apod sa markang ( ゛) na mahihiling sa ibabaw, arog kan び, samantalang handakuten an apod sa markang ( ゜) na mahihiling sa ibabaw, arog kan ぴ? ...na an Product Exhibition Hall kan Hiroshima na pigdisenyo ni Jan Letzel (yaon sa ladawan), an solo-solong establishimentong nakatindog pagkatapos kan pagsabog kan bombang atomiko sa Hiroshima na haraní sa Hypocenter o pinagsabugan kaini? ... na inot na ginibo an Better Living Through Xeroxography sa syudad nin Naga kan Hulyo 30, 2016? ... na gikan sa antigong kawat na pirilawan an terminong \"napilawan\"? ... na ipapasali sa Cultural Center of the Philippines para sa Virgin Labfest 2016 an isinurat na dula ni Maki de la Rosa? ...na an Taumatawhakatangihangakoauauotamatea turipukakapikimaungahoronukupokaiwhenuakitanatahu, an pinakahalabang pangaran kan lugar sa New Zealand na ipinangaran sa saróng burol? ... na lukot iyo an apod sa alimbubuyog na dai nin pantudok? ... na Leila Norma Eulalia Josefa Magistrado de Lima an bilog na ngaran ni Senadora Leila de Lima? ... na an paradalagan gikan Sur na Aprika na si Oscar Pistorius putol an duwang tabay? Mga naaaging pigpili - Magpoon nin bàgong artikulo Mga portal asin kategorya Kabikolan Arte Biyograpiya Kinaban Edukasyon Historya Literatura Matematika Siyensya Sosyedad Tataramon Teknolohiya Gabos na artikulo Dakol pa na mga kategorya... Mga katakod na proyekto Mga katakod na proyekto Tataramon sa Filipinas: Cebuano · Tagalog · Ilokano · Waray-Waray · Kapampangan · Pangasinense · Chavacano Zamboangeño · Hiligaynon (inkubator) · Rinconada Rinconada (inkubator) · Capiznon (inkubator) Mga tataramon kan kinaban: Ingles · Aleman · Espanyol · Pranses · Italyano · 日本語 (Niponggo) · Nederlands (Dutch) · Polski (Polish) · Português (Portuges) · Svenska (Swedish) Kompletong Lista kan Wikipedia · Multilingwal na Koordinasyon · Pàno Magpoon nin Bàgong Wikipedia An Wikimedia Foundation minaoperar nin mangiriba-iba pang multilingual asin mga bukas na proyekto: Wikipedya An Talingkas na Wikipedya Wiksyunaryo Diksyunaryo asin thesaurus Wikilibro Libreng mga Librong-teksto asin mga manuwal Wikibareta Libreng nilalaman nin bareta Wikigunuan Libreng nilalaman nin libraryo Wikiquote Mga Koleksyon kan quotation Wikispecies Direktoryo kan species Commons Pigheheras na repositoryong medya Meta-Wiki Wikimedia project coordination Wikibersidad Libreng mga materyales nin pagkanood asin mga aktibidades Sa aldaw na ini Plantilya:KanEnotNaPanahon/12-9 Sinupan – Sa e-liham – Listahan kan mga makasaysayang anibersaryo An Petsa ngunyan: Disyembre 9, 2025 (UTC) – Purgahon an pahiná Mga proyektong Wikime",
+    "scrapedAt": "2025-12-15 19:23:31.959322"
+  },
+  {
+    "id": 104,
+    "url": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk",
+    "title": "Wikipedia",
+    "content": "Ir para o conteúdo Husi Wikipédia, ensiklopédia livre Wikipédia Tama liu mai hare Wikipédia, ida-ne\u0027e ensiklopédia ida livre i (no) gratis, ne\u0027ebé ema bain-bain hanesan ita maka halo, agora daudaun iha ona lian atus tolu resin. Naran ema ida bele hahú, aumenta ka muda artigu ruma iha ensiklopédia ida-ne\u0027e. Ida ne\u0027e versaun iha lia-tetun nian, lian ofisiál ba Repúblika Demokrátika Timór-Leste no lian rejionál ba Repúblika Indonézia nian. Tuir mai ne\u0027e, lista husi artigu sira ne\u0027ebé Wikipédia hotu-hotu bele iha 1 379 Kategoria sira Matemátika, Siénsia Naturál Sira no Teknolojia Agrikultura • Arkitetura • Astronomia • Biolojia • Enjeñaria • Estatístika • Fízika • Informátika • Jeolojia • Kímika • Medisina • Oseanografia • Zoolojia: Akarolojia • Araknolojia • Entomolojia • Etolojia • Herpetolojia • Iktiolojia • Malakolojia • Mamolojia • Ornitolojia • Paleozoolojia • Setolojia Arte no Kultura Deklarasaun Universál Direitus Umanus Nian • Jogo do Pau • Kapoeira • Leandro i Leonardo • Lia-alemaun • Lia-polaku • Lia-portugés • Literatura • Mitolojia • Múzika • José Carlos Schwarz • Manuel Alegre • José Afonso • Pepetela • Relijiaun • Sinema • Teatru Filozofia no Siénsia Sosiál Sira Arkeolojia • ASEAN • CPLP • Direitu • Edukasaun ho ensino • Ekonomia • Istória • Jeografia • Linguístika • Nasaun sira-nia Naran no Kapitál sira • Siénsia polítika • Psikolojia • Revolusaun Kravu nian • Sosiolojia • Uniaun Europeia Timór Lorosa\u0027e Banku Sentrál • Munisípiu Timór Lorosa\u0027e nian: Aileu • Ainaru • Baukau • Bobonaru • Dili • Ermera • Kovalima • Lautein • Likisá • Manatutu • Manufahi • Oe-Kusi • Vikeke • Lista administrativu Timór Lorosa\u0027e nian • Doit Timór-Leste nian • Kultura timór • Lian timór • Lia-tetun • Literatura timór • Mari Alkatiri • Múzika timór • Pátria • Jah-Era • Sensu 2004 • Sensu 2010 • Sidade Dili • Sidade Baukau • Xanana Gusmão • Eleisaun parlamentar (2012) • Parlamentu Nasionál • Governu • FALINTIL • F-FDTL • PNTL • Igreja Katólika Índise no Informasaun Sira Administradór sira • Artigu foun sira • Artigu sira iha mukit • Avizu legál • Estatístika • Índise alfabétiku • Kona-ba Wikipédia • Lista ema sé uza nian • Lista wiki sira Wikimédia nian • Lista husi artigu sira ne\u0027ebé Wikipédia hotu-hotu bele iha Iha tetun: Ida ne\u0027e Wikipédia iha tetun, lian nasionál no idioma ofisiál Timór Lorosa\u0027e nian. Em português: Esta é a Wikipédia em tétum, principal língua nacional e idioma oficial de Timor-Leste. Dalam bahasa Indonesia: Ini adalah Wikipedia dalam bahasa Tetun, bahasa ibu sekaligus bahasa resmi Timor Leste (ex. Timor Timur). In English: This is the Wikipedia in Tetum, the main national tongue and official language of East Timor. In Deutsch: Dies ist die Wikipedia in Tetum, der meistgesprochenen Sprache und Amtssprache von Osttimor. Imajen selesionada Image 1 Feto, Uabubo Kréditu: Juliao Fernandes, Presidência da República Democrática de Timor-Leste More selected pictures Image 2 Ikan Kréditu: Nhobgood - Nick Hobgood More selected pictures Image 3 Mutissala], Viqueque More selected pictures Image 4 Ai Pelo Kréditu: Isabel Nolasco More selected pictures Image 5 Baha Liurai Kréditu: More selected pictures Image 6 {{{title}}} Kréditu: Isabel Nolasco More selected pictures Image 7 Dili Kréditu: More selected pictures Image 8 Lospalos Kréditu: J. Patrick Fischer More selected pictures Image 9 Natar hosi, Vemasse Kréditu: Isabel Nolasco More selected pictures Image 10 Fatuk sipu, Baucau Kréditu: J. Patrick Fischer More selected pictures Image 11 Uma lulik, Vessoru Kréditu: Isabel Nolasco More selected pictures Image 12 Rama-inan, Ili-Mano Kréditu: More selected pictures Image 13 Bee tiris, Loi-Huno Kréditu: More selected pictures Image 14 Buruma, Baucau Kréditu: Colin Trainor More selected pictures Image 15 Jaco Kréditu: Andidut, Leisure, Phone Camera More selected pictures Projetu seluseluk sira Wikipedia Wiktionary Wikiquote Wikinews Wikimedia Commons Wikisource Wikibooks Meta-Wiki Wikipedia iha lia seluk sira + 1.000.000 artigu العربية – Deutsch – English – Español – Français + 100.000 artigu فارسی – Hrvatski – Bahasa Indonesia – Bahasa Melayu – Italiano – 日本語 – Nederlands – Polski – Português – Русский – Svenska + 10.000 Artigu Български – Català – Česká – Dansk – Eesti – Ελληνικά – Esperanto – Galego – Ido – Íslenska – עברית – 한국어 – Lietuvių – Magyar – Norsk – Nynorsk – Română – Slovenčina – Slovenščina – Српски – Suomi – Türkçe – Українська – 繁體中文 – 简体中文 Husi \"https://tet.wikipedia.org/w/index.php?title\u003dPájina_Mahuluk\u0026oldid\u003d68351\" 343 idiomas Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano ",
+    "scrapedAt": "2025-12-15 19:23:29.195447"
+  },
+  {
+    "id": 103,
+    "url": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA",
+    "title": "Википедия",
+    "content": "Прейдз на змист Материял зоз Википедиї Витайце на Википедиї, шлєбодней енциклопедиї, хтору кажде може ушорйовац То Википедия на Панонским руским язику. У тей хвильки єст 1.006 статї написани на руским язику. Линґвистика Литература Наука Култура Жеми Руски/Русински Биолоґия История Уметносц Инжинєринґ Спорт Визначена статя Прекладательна служба Автономней покраїни Войводини Зоз Статутом АП Войводини 1948. року националним меншином у АП Войводини, медзи другима правами, ґарантована шлєбода хаснованя їх язика, а з Дїловнїком Народней скупштини АП Войводини истого року каждому посланїкови дате право бешедовац на своїм мацеринским язику. Зоз Статутом 1953. року блїжей утвердзени права националних меншинох, а децению познєйше – з новим Статутом 1963. року, оможлївене националним меншином обявйовац важнєйши покраїнски одлуки и общи акти, як и закони и други предписаня зоз хторима ше ушорює права и длужносци гражданох, у прекладзе зоз сербского на язики националних меншинох.....Читай о тим вецей..... О Википедиї Же би ше креировало статю на Википедиї на Панонским руским язику, оддуркайце наслов статї и кликнїце на \"Креируй нову статю\". Дзекуєме вам на вашим доприношеню у Википедиї на руским язику! Слика дня Руснаци Чи сце знали же? Прешов треци по велькосци варош у Словацкей и управне стредзиско Прешовского краю. Прешов познати як центер православя у Словацкей. Саскачеванске дружтво рускей култури \"Русин\" основане у Саскатунє, Саскачеван, Канада 2006. року. Снователє о. Янко Колошняї и Любомир Медєши. Дружтво орґанизує рочни Руски пикник и Дзециньски камп Studia Ruthenica то науково-фахови часопис (рочнїк) хтори видава Дружтво за руски язик, литературу и културу зоз шедзиском у Новим Садзе. Часопис почал виходзиц 1975. року под першобутну назву Творчосц. У часопису ше обявює науково роботи и фахово прилоги з обласци русинистики. Опатри комплетни список википедийох Превьате зоз \"https://rsk.wikipedia.org/w/index.php?title\u003dГлавни_бок\u0026oldid\u003d13590\" 343 язики Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fiji Hindi Hrvatski Hornjoserbsce Kreyòl ayisyen Magyar Հայերեն Արեւմտահայերէն Interlingua Jaku Iban Bahasa Indonesia Interlingue Igbo Igala Iñupiatun Ilokano ГӀалгӀай Ido Íslenska Italiano ᐃᓄᒃᑎᑐᑦ / inuktitut 日本語 Patois La .lojban. Jawa ქართული Qaraqalpaqsha Taqbaylit Адыгэбзэ Kabɩyɛ Tyap Kongo Kumoring Gĩkũyũ Қазақша Kalaallisut ភាសាខ្មែរ ಕನ್ನಡ Yerwa Kanuri 한국어 Перем коми Къарачай-малкъар کٲشُر Ripoarisch Kurdî Kʋsaal Коми Kernowek Кыргызча Latina Ladino Lëtzebuergesch Лакку Лезги Lingua Franca Nova Luganda Limburgs Ligure Ladin Lombard Lingála ລາວ Lietuvių Latgaļu Latviešu Madhurâ मैथिली Basa Banyumasan Мокшень Malagasy Олык марий Māori Minangkabau Македонски മലയാളം Монгол ꯃꯤꯇꯩ ꯂꯣꯟ ဘာသာမန် Moore मराठी Кырык мары Bahasa Melayu Malti Mirandés မြန်မာဘာသာ Эрзянь مازِرونی Nāhuatl Napulitano Plattdüütsch Nedersaksies नेपाली नेपाल भाषा Li Niha Nederlands Norsk nynorsk Norsk bokmål Novial ߒߞߏ IsiNdebele seSewula Nouormand Sesotho sa Leboa Nupe Diné bizaad Chi-Chewa Occitan Livvinkarjala Oromoo ଓଡ଼ିଆ Ирон ਪੰਜਾਬੀ Pangasinan Kapampangan Papiamentu Picard Naijá Deitsch Pälzisch पालि Polski Piemontèis پنجابی Ποντιακά پښتو Português Pinayuanan Runa Simi ရခိုင် Rumantsch Romani čhib Ikirundi Română Armãneashti Tarandíne Русский Русиньскый Ikinyarwanda संस्कृतम् Саха тыла ᱥᱟᱱᱛᱟᱲᱤ Sardu Sicilianu Scots سنڌي Davvisámegiella Sängö Srpskohrvatski / српскохрватски Taclḥit တႆး සිංහල Simple English Slovenčina سرائیکی Slovenščina Gagana Samoa Anarâškielâ ChiShona Soomaaliga Shqip Српски / srpski Sranantongo SiSwati Sesotho Seeltersk Sunda Svenska Kiswahili ꠍꠤꠟꠐꠤ Ślůnski Sakizaya தமிழ் Tayal ತುಳು ᥖᥭᥰ ᥖᥬᥲ ᥑᥨᥒᥰ తెలుగు Tetun Тоҷикӣ ไทย ትግርኛ ትግሬ Türkmençe Tagalog Tolışi Setswana Lea faka-Tonga Toki pona Tok Pisin Türkçe Seediq Xitsonga Татарча / tatarça ChiTumbuka Twi Reo tahiti Тыва дыл Удмурт ئۇيغۇرچە / Uyghurche Українська اردو ",
+    "scrapedAt": "2025-12-15 19:23:27.477622"
+  },
+  {
     "id": 102,
     "url": "https://om.wikipedia.org/wiki/Fuula_Dura",
     "title": "Wikipedia",
@@ -1377,41 +1412,6 @@ window.searchData = [
     "title": "Constantine VIII - Wikipedia",
     "content": "Jump to content From Wikipedia, the free encyclopedia Byzantine emperor from 962 to 1028 Constantine VIII Emperor and Autocrat of the Romans Contemporary miniature of Constantine VIII, from a Bari Exultet roll[1][2] Byzantine emperor Reign 15 December 1025 – 11 November 1028[n. 1] Coronation 30 March 962 Predecessor Basil II Successor Romanos III Born 960 Died 11/12 November 1028 (aged 67–68) Spouse Helena Issue Eudokia (bg) Zoe Theodora Dynasty Macedonian dynasty Father Romanos II Mother Theophano Constantine VIII (Greek: Κωνσταντῖνος, romanized: Kōnstantīnos;[n. 2] 960 – 11/12 November 1028) was de jure Byzantine emperor from 962 until his death. He was the younger son of Emperor Romanos II and Empress Theophano. He was nominal co-emperor from 962, successively with his father; stepfather, Nikephoros II Phokas; uncle, John I Tzimiskes; and brother, Basil II. Basil\u0027s death in 1025 left Constantine as the sole emperor. He occupied the throne for 66 years in total, making him de jure the longest-reigning amongst all Roman emperors since Augustus. Constantine displayed a lifelong lack of interest in politics, statecraft and the military, and during his brief sole reign the government of the Byzantine Empire suffered from mismanagement and neglect. He had no sons and was instead succeeded by Romanos Argyros, husband of his daughter Zoe. Family [edit] Constantine VIII\u0027s father (left) in the Romanos Ivory Constantine was born in 960, two years after his brother Basil. Their parents were Romanos II, the sixth Byzantine emperor of the Macedonian dynasty, and his second wife Theophano, an innkeeper\u0027s daughter described by contemporaries as ambitious and amoral.[3] Aged eight, Constantine was engaged to a daughter of Emperor Boris II of Bulgaria but in the end, he married a Byzantine aristocrat, Helena, daughter of Alypius. Of their three daughters, Eudokia (bg) became a nun after contracting smallpox, Zoe was empress for 22 years, and Theodora reigned for 18 months as the last monarch of the Macedonian line.[4] Life [edit] Gold solidus of Romanos II\u0027s father Constantine VII (left) and Romanos II (right), with a haloed Christ on reverse Histamenon of Nikephoros II (left) and Basil II (right) Histamenon of John Tzimiskes crowned by the Virgin Mary Childhood [edit] Romanos died suddenly in 963. Although Constantine was only three years old, he had already been crowned co-emperor in the preceding year, probably on 30 March.[1] The widowed Theophano installed herself as regent for her sons and stocked the imperial government with supporters, but she faced competition for power with Joseph Bringas, a former advisor of Romanos. Theophano allied with Nikephoros Phokas, a celebrated general and opponent of Bringas. In return for her hand, the childless Nikephoros gave his sacred pledge to protect her children and their interests. Three months after Romanos\u0027 death, supporters of Nikephoros ousted Bringas from power.[5] Nikephoros was crowned emperor in the presence of his nominal co-emperors, Constantine and Basil. A month later he married their mother.[6] Six years later, Nikephoros was murdered at Theophano\u0027s instigation and her lover and co-conspirator John Tzimiskes was acclaimed emperor. Fearing that the empress\u0027 many enemies would damage his political prospects, Tzimiskes turned against Theophano and sent her into exile. Constantine and Basil stayed in the capital and retained their status as co-emperors.[7][8] Adulthood [edit] Tzimiskes died in January 976, when Constantine was sixteen years old, and Basil and Constantine became the new heads of state. Nominally the brothers were equals, but Basil devoted himself to the responsibilities of his office and emerged as the senior Basileus.[9] Constantine had no comparable interest in state business, and never developed any.[10] Apart from participating in a military campaign in 989, which ended without any combat,[11] he occupied his years as Basil\u0027s colleague with private interests. In his youth Constantine was tall, graceful, and athletic, with an excellent speaking voice and a good grasp of rhetoric. He participated in wrestling competitions—which he brought back into fashion—and in the training and riding of horses. Alongside these active pursuits he was a gourmet and a gourmand,[12] leading in later years to chronic gout which impaired his ability to walk. Emperor [edit] Histamenon of Constantine VIII and Basil II Histamenon of Constantine VIII as sole emperor Basil II had an illustrious reign, pursuing both government reforms and a series of successful wars. He died childless on 15 December 1025 and Constantine, a sixty-five-year-old widower, became the sole emperor as Constantine VIII. During his long term as co-emperor, he had been content to enjoy the privileges of imperial status, without concerning himself with state affairs.[1] Sole rulership did not fundamentally alter this desire \"to pass his life wallowing in extravagant pleasures\".[13] Appointment of Alexi",
     "scrapedAt": "2025-12-15 19:11:41.088274"
-  },
-  {
-    "id": 107,
-    "url": "https://ban.wikipedia.org/wiki/Kaca_Utama",
-    "title": "Wikipédia",
-    "content": "Cebur nuju daging Saking Wikipédia Wikipédia Basa Bali Énsiklopédi bébas sané nganggén basa Bali 34.927 suratan 123 Sang anganggé aktip Kolaborasi Suratan acak Saniscara, 13 Désémber 2025 · 20.06 WITA · babad· bali biyograpi budaya gĕhograpi kala ᵒolahraga sains· sastra sĕni wisata kacakusus· Suratan rahina mangkin Jayapangus Jayapangus (aksara Bali: jayapaṅus·) utawi Jaya Pangus (madeg ratu saking warsa 1178–1181 M) inggih punika Raja Bali saking trah lelintihan Warmadewa. Ida kauningin saking prasasti-prasastinya, sané marupa pajak. Ida warih saking murdaning jagat sané sampun kasub Airlangga. - Cingak informasi indik gambar Jayapangus Jayapangus (aksara Bali: jayapaṅus·) utawi Jaya Pangus (madeg ratu saking warsa 1178–1181 M) inggih punika Raja Bali saking trah lelintihan Warmadewa. Ida kauningin saking prasasti-prasastinya, sané marupa pajak. Ida warih saking murdaning jagat sané sampun kasub Airlangga. Gambar rahina mangkin Mapeed Tradisi Mapeed ring Alas Kedaton - Cingak informasi indik gambar Gambar rahina mangkin Tradisi Mapeed ring Alas Kedaton ProyékWiki WikiLontar WikiLontar Basa Bali inggih punika program mupulang metadata miwah makarya katalogisasi naskah lontar bali ring Bali mangda kawewehin referensi sane lianan antuk Wikipedia, khususnyane Wikidata. Katalog metadata antuk naskah-naskah punika pacang ngranjingang parameter naskah napi manten antuk parameter tambahan sane pacang kapupulang ring situs, sakadi: dimensi, tanggal kakaryanin, tanggal kakaryanin malih, para pangawi/panyurat, akeh halaman, asal-usul, koordinat, sang sane madue, genre, lisensi, lan kahanannyane. ProyékWiki: WikiLontar WikiLontar Basa Bali inggih punika program mupulang metadata miwah makarya katalogisasi naskah lontar bali ring Bali mangda kawewehin referensi sane lianan antuk Wikipedia, khususnyane Wikidata. Katalog metadata antuk naskah-naskah punika pacang ngranjingang parameter naskah napi manten antuk parameter tambahan sane pacang kapupulang ring situs, sakadi: dimensi, tanggal kakaryanin, tanggal kakaryanin malih, para pangawi/panyurat, akeh halaman, asal-usul, koordinat, sang sane madue, genre, lisensi, lan kahanannyane. Suratan rahina mangkin Jayapangus Jayapangus (aksara Bali: jayapaṅus·) utawi Jaya Pangus (madeg ratu saking warsa 1178–1181 M) inggih punika Raja Bali saking trah lelintihan Warmadewa. Ida kauningin saking prasasti-prasastinya, sané marupa pajak. Ida warih saking murdaning jagat sané sampun kasub Airlangga. - Cingak informasi indik gambar Jayapangus Jayapangus (aksara Bali: jayapaṅus·) utawi Jaya Pangus (madeg ratu saking warsa 1178–1181 M) inggih punika Raja Bali saking trah lelintihan Warmadewa. Ida kauningin saking prasasti-prasastinya, sané marupa pajak. Ida warih saking murdaning jagat sané sampun kasub Airlangga. Gambar rahina mangkin Mapeed Tradisi Mapeed ring Alas Kedaton - Cingak informasi indik gambar Gambar rahina mangkin Tradisi Mapeed ring Alas Kedaton ProyékWiki WikiLontar WikiLontar Basa Bali inggih punika program mupulang metadata miwah makarya katalogisasi naskah lontar bali ring Bali mangda kawewehin referensi sane lianan antuk Wikipedia, khususnyane Wikidata. Katalog metadata antuk naskah-naskah punika pacang ngranjingang parameter naskah napi manten antuk parameter tambahan sane pacang kapupulang ring situs, sakadi: dimensi, tanggal kakaryanin, tanggal kakaryanin malih, para pangawi/panyurat, akeh halaman, asal-usul, koordinat, sang sane madue, genre, lisensi, lan kahanannyane. ProyékWiki: WikiLontar WikiLontar Basa Bali inggih punika program mupulang metadata miwah makarya katalogisasi naskah lontar bali ring Bali mangda kawewehin referensi sane lianan antuk Wikipedia, khususnyane Wikidata. Katalog metadata antuk naskah-naskah punika pacang ngranjingang parameter naskah napi manten antuk parameter tambahan sane pacang kapupulang ring situs, sakadi: dimensi, tanggal kakaryanin, tanggal kakaryanin malih, para pangawi/panyurat, akeh halaman, asal-usul, koordinat, sang sane madue, genre, lisensi, lan kahanannyane. Napi nika Wikipédia? napinikawikipediya Wikipédia puniki wantah silih tunggil proyék mitra kriya sané ageng, santukan makasami daging sané wentén ring énsiklopédi puniki kasurat nganggén sakancan basa miwah kauah olih parajanané makasami. Nika mawinan sameton prasida ngalimbakang kaweruhan sané kadruwénang. Situs puniki kasayagayang olih Wikimédia Foundation tur bebas cingakin olih parajanané makasami. Wikimédia Foundation utawi ring Indonésia, Yayasan Wikimédia Indonésia inggih punika silih situnggil organisasi nirlaba sané ngamargiang makudang-kudang proyék sané nganggén sakancan basa sané wentén ring guminé. Nyuratang suratan anyar ñurataŋsuratanhañaŕ. Ragané prasida mabasa Bali? Ngiring sarengin proyék wikipédia. Proyék puniki kasayagayang ring sajeroning makudang-kudang basa ring guminé. Ring galahé puniki, sampun wénten wikipédia sané mabasa Bali. Tinutin uger-uger utawi pedoman sané mamargi iriki, nanging sampunang marasa méweh ring sajeroning uger-uger utawi",
-    "scrapedAt": "2025-12-15 19:11:37.189645"
-  },
-  {
-    "id": 106,
-    "url": "https://iba.wikipedia.org/wiki/Lambar_Keterubah",
-    "title": "Wikipedia",
-    "content": "Pegi ngagai isi Ari Wikipedia Selamat Datai ngagai Wikipedia durung penemu bibas ti ulih diubah sapa-sapa. Versyen Jaku Iban udah bepun maya (2024-10-14) Oktober 14, 2024 (umur 13 bulan) Diatu, kami ngembuan 1,864 iti lambar. Haribulan: Hari Dua, 9 Disember 2025 Pemadah · Kedai Kupi · Tanya ke suah · Duta · Pengelala jaku Iban Artikel dipilih Kuching tauka Nengeri Kuching (Urup Jawi: كوچيڠ‎) ianya, indu nengeri sereta nengeri ti pemadu besai ba Sarawak ti bepalan ba Malaysia Timur. Nengeri tu mega nyadi indu Bagi Menua Kuching. Nengeri tu bepalan ba Sungai Sarawak ba ujung barat daya negeri Sarawak ba pulau Borneo ti nyengkaum pemesai 431 kilometer persegi (166 bt) enggau pemayuh orang urung 631,000. Kuching nyadi indu nengeri Sarawak ketiga maya taun 1827 iya nya jeman perintah Empayar Brunei. Dalam taun 1841, Kuching nyadi indu Perintah Sarawak sepengudah kandang menua ba kandang menua nya diserahka ngagai James Brooke ketegal ti udah mantu empayar Brunei dalam ngemuntanka sebengkah penyarut kelebih agi ari raban bansa Bidayuh ti diau di pedalaman Borneo ti udah nya nyadi nembiak taluk iya sepengudah mayuh sida diampun iya lalu enggau ba piak iya. Berita kemaya tu Sébastien Ogier Dalam lumba motor, Sébastien Ogier (gambar) enggau Vincent Landais menang Pekit World Rally. Bah enggau tanah tusur ketegal Ribut Tropika Ditwah ngujungka enda kurang ari 469 iku orang parai ba serata Sri Lanka enggau India. Penusah angus ke nyadi ba kompleks apartmen di Hong Kong ngujungka enda kurang ari 156 iku orang parai. Ba Guinea-Bissau, ba raban soldadu ngambi alih kuasa dalam siti rampas kuasa soldadu, nan Presiden Umaro Sissoco Embaló lalu nyiri Horta Inta-A Na Man nyadi kepala perintah alih. Benung Nyadi: Perang Gaza Perang saudara Myanmar Perang saudara Sudan Pemati baru-baru tu: Tofail Ahmed Pannir Selvam Pranthaman Wanda Perdelwitz Alan Hawley Mike Greenwell Theo Jörgensmann Mayuh pasal pekara kemaya tu... Nemu nuan... ... Gerija Sante Benoit ba Istanbul nya gerija Roman Katolik ti pemadu tuai ba mengeri nya ke mengkang dikena? ... Ratna Asmara nya pengarah filem indu keterubah dalam sejarah Indonesia? ... ba taun 1960-an, polisi perintah Singapura bisi nagang lelaki ngembuan buk panjai lalu tagang nya pengujung iya dikinsil dalam taun 1990-an? Hari tu dalam sejarah 9 Disember: Hari Soldadu di Peru (1824); Hari Meredeka di Tanzania (1961). 1897 – Pelakun panggau, jurnalis enggau pengelaban hak bepilih ungkup indu tebilang Marguerite Durand numbuhka surat berita feminisme La Fronde. 1941 – MS Awazisan Maru ti karam semak pantai Kelantan ba pantai timur Malaysia nyadi kapal Jipun keterubah ti karam lebuh Perang Dunya Kedua 1946 – Pechara ungkup lutur ke bekaul dalam uji pansik mensia Nazi lebuh Perang Dunya Kedua berengkah di Nuremberg, Jerman. 1979 – Siti komisyen Gerempung Pengerai Sedunya ngesahka pemunas global penyakit puru (gambar virus). 1990 – Lech Wałęsa nyadi Presiden Poland keterubah dichiri nengah pengawa bepilih presiden terus. Hari-hari sebedau: 8 Disember – 7 Disember – 6 Disember Arkib · Nengah e-mel · Silik agi... Projek Wikimedia bukai Wikipedia nya projek Yayasan Wikimedia, siti gerempung ti nadai nguntungka orang ti mega bejalaika beberapa projek mayuh macham jaku ke bukai. Wikikamus Kamus bibas Wikibup Bup teks enggau manual bibas Wikibunsu Librari bibas Wikiberita Pun berita bibas Wikiquote Koleksyen jaku ambi Wikivoyage Pengiring pejalai bibas Commons Koleksyen multimedia bibas Meta-Wiki Standardisasyen projek Wikimedia Wikidata Pengkalan penemu bibas Wikiversiti Perengka pelajar bibas Wikispesies Pengiring spesies MediaWiki Pemansang isi bebas Wikipedia dalam jaku bukai Lebih 5,000,000 artikel: English (Jaku Inggeris) • Cebuano (Jaku Cebu) Lebih 2,000,000 artikel: Deutsch (Jaku Jereman) • français (Jaku Peranchis) • svenska (Jaku Sweden) • Nederlands (Jaku Belanda) • pyccкий (Jaku Rusia) • español (Jaku Sepanyol) Lebih 1,000,000 artikel: italiano (Jaku Itali) • polski (Jaku Poland) • مصرى (Jaku Arab Ejip) • 中文 (Jaku China) • 日本語 (Jaku Jipun) • Українська (Jaku Ukraine) • Tiếng Việt (Jaku Vietnam) • Winaray (Jaku Waray) • العربية (Jaku Arab) • português (Jaku Portugis) • فارسی (Jaku Parsi) Lebih 500,000 artikel: Català (Jaku Catalonia) • Indonesia (Jaku Indonesia) • српски/srpski (Jaku Serbia) • 한국어 (Jaku Korea) • norsk (bokmål) (Jaku Norway (Bokmål)) • Türkçe (Jaku Turki) • Нохчийн (Jaku Chechen) • suomi (Jaku Finland) • čeština (Jaku Czech) • magyar (Jaku Hungary) • română (Jaku Romania) • Tatarça / Татарча (Jaku Tatar) Lebih 250,000 artikel: Srpskohrvatski/Српскохрватски (Jaku Serbo-Croatia) • euskara (Jaku Basque) • Bân-lâm-gú/閩南語 (Jaku Hokkien) • Melayu (Jaku Melayu) • עברית (Jaku Hebrew) • Esperanto (Jaku Esperanto) • Հայերեն (Jaku Armenia) • dansk (Jaku Denmark) • Български (Jaku Bulgaria) • O‘zbek (Jaku Uzbek) • Cymraeg (Jaku Wales) • Simple English (Jaku Inggeris Mudah) • slovenčina (Jaku Slovak) • Беларуская (Jaku Belarus) • eesti (Jaku Estonia) • Ελληνικά (Jaku Gerika) Lebih 100,000 a",
-    "scrapedAt": "2025-12-15 19:11:35.483266"
-  },
-  {
-    "id": 105,
-    "url": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina",
-    "title": "Wikipedia",
-    "content": "Jump to content Gikan sa Bikol Sentral na Wikipedia, an talingkas na ensiklopedya Dagos tabì sa Wikipedyang Bikol Sentral, an talingkas na ensiklopedya na maliliwat nin siisay man. Igwa nang 21,241 na artikulo sa Bikol Sentral. Martes, Disyembre 9, 2025, 22:06 (PHT) bàgo Napiling artikulo An Pili (Canarium ovatum, Lat.) sarong tanom na nagkakahoy. An bunga kaini ginigibong iba-ibang klaseng dulse, asin an tagok na inaapod salong na naturo kun linulugad an kahoy niya, ginagamit pulot, asin kwenta pang-ilaw sangle sa lana o gas kan mga enot na mga panahon. An pili igwang 600 na species sa pamilyang Burseraceae. Ini tal na tubo sa Filipinas (Merill, 1923) asin dagya\u0027 na gayo sa Habagatan Luzon, orog na sa rehiyon Bikol. Igwa man kaini sa ibang parte kan Visayas asin Mindanao alagad an mga paratanom sa mga lugar na ini, susog sa impormasyon kan mga taga Departamento nin Agrikultura sa probinsya nin Camarines Sur, nagkukua nin semilya sainda pa sa pagtubod na mas maray an kalidad kan tinanom na pili sa Bikol. Iba pang mga artikulo: Lea Salonga Hidilyn Diaz Bob Marley Quince Martires Mikroorganismo Tomas Arejola Bagyo Protina Bulkan Mayon Manuel Quezon Corazon Aquino Emilio Aguinaldo Dolores Sison Maria Orosa Lea Salonga Jose Maria Panganiban Jorge Barlin Gregorio Aglipay Syudad nin Naga Jesse Robredo Mi Ultimo Adios asin iba pa. Napiling mga ladawan Boac Cathedral An Boac sarong primera klaseng banwaan na namumugtak sa probinsya nin Marinduque, Filipinas. Igwa ining sukol na 212.70 kilometro kwadrado na kadagaan asin namumugtak sa solong distrito. An designadong zip code kaini iyo 4900. Digdi manunumpongan an Katedral nin Boac. Dakol pang ladawan hali sa mga partisipante kan Wiki Loves Monuments Philippines 2022. Sawa An sawa sarong klase nin mga halas na igwa nin haralaba, daing tabay, mga reptilyang nagkakakan nin karne kan suborder na Serpentes. Arog kan gabos na iba pang isquamates, an halas ectothermic, amniote vertebrates napapatos sa suruon na mga kiskis. Dakol pang ladawan hali sa mga partisipante kan Wiki Loves Earth Philippines 2023. Aram daw nindo... Gikan sa mga pinakabàgong artikulo kan Wikipedia: ... na an inot na Filipino na nakakua nin Bulawan na Medalya sa Olimpiko iyo si Hidilyn Diaz? ... na pigtutubudan na piggamit bilang sarong pangkalkula kan mga simpleng operasyon sa matematika an Tulang nin Ishango? ...na sa Alpabetong kan Hapon, dakuten an apod sa markang ( ゛) na mahihiling sa ibabaw, arog kan び, samantalang handakuten an apod sa markang ( ゜) na mahihiling sa ibabaw, arog kan ぴ? ...na an Product Exhibition Hall kan Hiroshima na pigdisenyo ni Jan Letzel (yaon sa ladawan), an solo-solong establishimentong nakatindog pagkatapos kan pagsabog kan bombang atomiko sa Hiroshima na haraní sa Hypocenter o pinagsabugan kaini? ... na inot na ginibo an Better Living Through Xeroxography sa syudad nin Naga kan Hulyo 30, 2016? ... na gikan sa antigong kawat na pirilawan an terminong \"napilawan\"? ... na ipapasali sa Cultural Center of the Philippines para sa Virgin Labfest 2016 an isinurat na dula ni Maki de la Rosa? ...na an Taumatawhakatangihangakoauauotamatea turipukakapikimaungahoronukupokaiwhenuakitanatahu, an pinakahalabang pangaran kan lugar sa New Zealand na ipinangaran sa saróng burol? ... na lukot iyo an apod sa alimbubuyog na dai nin pantudok? ... na Leila Norma Eulalia Josefa Magistrado de Lima an bilog na ngaran ni Senadora Leila de Lima? ... na an paradalagan gikan Sur na Aprika na si Oscar Pistorius putol an duwang tabay? Mga naaaging pigpili - Magpoon nin bàgong artikulo Mga portal asin kategorya Kabikolan Arte Biyograpiya Kinaban Edukasyon Historya Literatura Matematika Siyensya Sosyedad Tataramon Teknolohiya Gabos na artikulo Dakol pa na mga kategorya... Mga katakod na proyekto Mga katakod na proyekto Tataramon sa Filipinas: Cebuano · Tagalog · Ilokano · Waray-Waray · Kapampangan · Pangasinense · Chavacano Zamboangeño · Hiligaynon (inkubator) · Rinconada Rinconada (inkubator) · Capiznon (inkubator) Mga tataramon kan kinaban: Ingles · Aleman · Espanyol · Pranses · Italyano · 日本語 (Niponggo) · Nederlands (Dutch) · Polski (Polish) · Português (Portuges) · Svenska (Swedish) Kompletong Lista kan Wikipedia · Multilingwal na Koordinasyon · Pàno Magpoon nin Bàgong Wikipedia An Wikimedia Foundation minaoperar nin mangiriba-iba pang multilingual asin mga bukas na proyekto: Wikipedya An Talingkas na Wikipedya Wiksyunaryo Diksyunaryo asin thesaurus Wikilibro Libreng mga Librong-teksto asin mga manuwal Wikibareta Libreng nilalaman nin bareta Wikigunuan Libreng nilalaman nin libraryo Wikiquote Mga Koleksyon kan quotation Wikispecies Direktoryo kan species Commons Pigheheras na repositoryong medya Meta-Wiki Wikimedia project coordination Wikibersidad Libreng mga materyales nin pagkanood asin mga aktibidades Sa aldaw na ini Plantilya:KanEnotNaPanahon/12-9 Sinupan – Sa e-liham – Listahan kan mga makasaysayang anibersaryo An Petsa ngunyan: Disyembre 9, 2025 (UTC) – Purgahon an pahiná Mga proyektong Wikime",
-    "scrapedAt": "2025-12-15 19:11:33.735746"
-  },
-  {
-    "id": 104,
-    "url": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk",
-    "title": "Wikipedia",
-    "content": "Ir para o conteúdo Husi Wikipédia, ensiklopédia livre Wikipédia Tama liu mai hare Wikipédia, ida-ne\u0027e ensiklopédia ida livre i (no) gratis, ne\u0027ebé ema bain-bain hanesan ita maka halo, agora daudaun iha ona lian atus tolu resin. Naran ema ida bele hahú, aumenta ka muda artigu ruma iha ensiklopédia ida-ne\u0027e. Ida ne\u0027e versaun iha lia-tetun nian, lian ofisiál ba Repúblika Demokrátika Timór-Leste no lian rejionál ba Repúblika Indonézia nian. Tuir mai ne\u0027e, lista husi artigu sira ne\u0027ebé Wikipédia hotu-hotu bele iha 1 379 Kategoria sira Matemátika, Siénsia Naturál Sira no Teknolojia Agrikultura • Arkitetura • Astronomia • Biolojia • Enjeñaria • Estatístika • Fízika • Informátika • Jeolojia • Kímika • Medisina • Oseanografia • Zoolojia: Akarolojia • Araknolojia • Entomolojia • Etolojia • Herpetolojia • Iktiolojia • Malakolojia • Mamolojia • Ornitolojia • Paleozoolojia • Setolojia Arte no Kultura Deklarasaun Universál Direitus Umanus Nian • Jogo do Pau • Kapoeira • Leandro i Leonardo • Lia-alemaun • Lia-polaku • Lia-portugés • Literatura • Mitolojia • Múzika • José Carlos Schwarz • Manuel Alegre • José Afonso • Pepetela • Relijiaun • Sinema • Teatru Filozofia no Siénsia Sosiál Sira Arkeolojia • ASEAN • CPLP • Direitu • Edukasaun ho ensino • Ekonomia • Istória • Jeografia • Linguístika • Nasaun sira-nia Naran no Kapitál sira • Siénsia polítika • Psikolojia • Revolusaun Kravu nian • Sosiolojia • Uniaun Europeia Timór Lorosa\u0027e Banku Sentrál • Munisípiu Timór Lorosa\u0027e nian: Aileu • Ainaru • Baukau • Bobonaru • Dili • Ermera • Kovalima • Lautein • Likisá • Manatutu • Manufahi • Oe-Kusi • Vikeke • Lista administrativu Timór Lorosa\u0027e nian • Doit Timór-Leste nian • Kultura timór • Lian timór • Lia-tetun • Literatura timór • Mari Alkatiri • Múzika timór • Pátria • Jah-Era • Sensu 2004 • Sensu 2010 • Sidade Dili • Sidade Baukau • Xanana Gusmão • Eleisaun parlamentar (2012) • Parlamentu Nasionál • Governu • FALINTIL • F-FDTL • PNTL • Igreja Katólika Índise no Informasaun Sira Administradór sira • Artigu foun sira • Artigu sira iha mukit • Avizu legál • Estatístika • Índise alfabétiku • Kona-ba Wikipédia • Lista ema sé uza nian • Lista wiki sira Wikimédia nian • Lista husi artigu sira ne\u0027ebé Wikipédia hotu-hotu bele iha Iha tetun: Ida ne\u0027e Wikipédia iha tetun, lian nasionál no idioma ofisiál Timór Lorosa\u0027e nian. Em português: Esta é a Wikipédia em tétum, principal língua nacional e idioma oficial de Timor-Leste. Dalam bahasa Indonesia: Ini adalah Wikipedia dalam bahasa Tetun, bahasa ibu sekaligus bahasa resmi Timor Leste (ex. Timor Timur). In English: This is the Wikipedia in Tetum, the main national tongue and official language of East Timor. In Deutsch: Dies ist die Wikipedia in Tetum, der meistgesprochenen Sprache und Amtssprache von Osttimor. Imajen selesionada Image 1 Feto, Uabubo Kréditu: Juliao Fernandes, Presidência da República Democrática de Timor-Leste More selected pictures Image 2 Ikan Kréditu: Nhobgood - Nick Hobgood More selected pictures Image 3 Mutissala], Viqueque More selected pictures Image 4 Ai Pelo Kréditu: Isabel Nolasco More selected pictures Image 5 Baha Liurai Kréditu: More selected pictures Image 6 {{{title}}} Kréditu: Isabel Nolasco More selected pictures Image 7 Dili Kréditu: More selected pictures Image 8 Lospalos Kréditu: J. Patrick Fischer More selected pictures Image 9 Natar hosi, Vemasse Kréditu: Isabel Nolasco More selected pictures Image 10 Fatuk sipu, Baucau Kréditu: J. Patrick Fischer More selected pictures Image 11 Uma lulik, Vessoru Kréditu: Isabel Nolasco More selected pictures Image 12 Rama-inan, Ili-Mano Kréditu: More selected pictures Image 13 Bee tiris, Loi-Huno Kréditu: More selected pictures Image 14 Buruma, Baucau Kréditu: Colin Trainor More selected pictures Image 15 Jaco Kréditu: Andidut, Leisure, Phone Camera More selected pictures Projetu seluseluk sira Wikipedia Wiktionary Wikiquote Wikinews Wikimedia Commons Wikisource Wikibooks Meta-Wiki Wikipedia iha lia seluk sira + 1.000.000 artigu العربية – Deutsch – English – Español – Français + 100.000 artigu فارسی – Hrvatski – Bahasa Indonesia – Bahasa Melayu – Italiano – 日本語 – Nederlands – Polski – Português – Русский – Svenska + 10.000 Artigu Български – Català – Česká – Dansk – Eesti – Ελληνικά – Esperanto – Galego – Ido – Íslenska – עברית – 한국어 – Lietuvių – Magyar – Norsk – Nynorsk – Română – Slovenčina – Slovenščina – Српски – Suomi – Türkçe – Українська – 繁體中文 – 简体中文 Husi \"https://tet.wikipedia.org/w/index.php?title\u003dPájina_Mahuluk\u0026oldid\u003d68351\" 343 idiomas Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano ",
-    "scrapedAt": "2025-12-15 19:11:31.002874"
-  },
-  {
-    "id": 103,
-    "url": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA",
-    "title": "Википедия",
-    "content": "Прейдз на змист Материял зоз Википедиї Витайце на Википедиї, шлєбодней енциклопедиї, хтору кажде може ушорйовац То Википедия на Панонским руским язику. У тей хвильки єст 1.006 статї написани на руским язику. Линґвистика Литература Наука Култура Жеми Руски/Русински Биолоґия История Уметносц Инжинєринґ Спорт Визначена статя Прекладательна служба Автономней покраїни Войводини Зоз Статутом АП Войводини 1948. року националним меншином у АП Войводини, медзи другима правами, ґарантована шлєбода хаснованя їх язика, а з Дїловнїком Народней скупштини АП Войводини истого року каждому посланїкови дате право бешедовац на своїм мацеринским язику. Зоз Статутом 1953. року блїжей утвердзени права националних меншинох, а децению познєйше – з новим Статутом 1963. року, оможлївене националним меншином обявйовац важнєйши покраїнски одлуки и общи акти, як и закони и други предписаня зоз хторима ше ушорює права и длужносци гражданох, у прекладзе зоз сербского на язики националних меншинох.....Читай о тим вецей..... О Википедиї Же би ше креировало статю на Википедиї на Панонским руским язику, оддуркайце наслов статї и кликнїце на \"Креируй нову статю\". Дзекуєме вам на вашим доприношеню у Википедиї на руским язику! Слика дня Руснаци Чи сце знали же? Прешов треци по велькосци варош у Словацкей и управне стредзиско Прешовского краю. Прешов познати як центер православя у Словацкей. Саскачеванске дружтво рускей култури \"Русин\" основане у Саскатунє, Саскачеван, Канада 2006. року. Снователє о. Янко Колошняї и Любомир Медєши. Дружтво орґанизує рочни Руски пикник и Дзециньски камп Studia Ruthenica то науково-фахови часопис (рочнїк) хтори видава Дружтво за руски язик, литературу и културу зоз шедзиском у Новим Садзе. Часопис почал виходзиц 1975. року под першобутну назву Творчосц. У часопису ше обявює науково роботи и фахово прилоги з обласци русинистики. Опатри комплетни список википедийох Превьате зоз \"https://rsk.wikipedia.org/w/index.php?title\u003dГлавни_бок\u0026oldid\u003d13590\" 343 язики Аԥсшәа Acèh Адыгабзэ Afrikaans Alemannisch Алтай тил አማርኛ Pangcah Aragonés Ænglisc Obolo अंगिका العربية ܐܪܡܝܐ الدارجة مصرى অসমীয়া Asturianu Atikamekw Авар Kotava अवधी Aymar aru Azərbaycanca تۆرکجه Башҡортса Basa Bali Boarisch Žemaitėška Batak Toba Bikol Central Bajau Sama Беларуская Беларуская (тарашкевіца) Betawi Български भोजपुरी Bislama Banjar ပအိုဝ်ႏဘာႏသာႏ Bamanankan বাংলা བོད་ཡིག বিষ্ণুপ্রিয়া মণিপুরী Brezhoneg Bosanski Batak Mandailing Basa Ugi Буряад Català Chavacano de Zamboanga 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Нохчийн Cebuano Chamoru ᏣᎳᎩ Tsetsêhestâhese کوردی Corsu Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ Qırımtatarca Čeština Kaszëbsczi Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ Чӑвашла Cymraeg Dansk Dagbanli Deutsch Dagaare Thuɔŋjäŋ Zazaki Dolnoserbski Kadazandusun डोटेली ދިވެހިބަސް ཇོང་ཁ Eʋegbe Ελληνικά Emiliàn e rumagnòl English Esperanto Español Eesti Euskara Estremeñu فارسی Mfantse Fulfulde Suomi Võro Na Vosa Vakaviti Føroyskt Fɔ̀ngbè Français Arpetan Nordfriisk Furlan Frysk Gaeilge Gagauz 贛語 Kriyòl gwiyannen Gàidhlig Galego گیلکی Avañe\u0027ẽ गोंयची कोंकणी / Gõychi Konknni Bahasa Hulontalo 𐌲𐌿𐍄𐌹𐍃𐌺 Ghanaian Pidgin ગુજરાતી Wayuunaiki Farefare Gungbe Gaelg Hausa 客家語 / Hak-kâ-ngî Hawaiʻi עברית हिन्दी Fiji Hindi Hrvatski Hornjoserbsce Kreyòl ayisyen Magyar Հայերեն Արեւմտահայերէն Interlingua Jaku Iban Bahasa Indonesia Interlingue Igbo Igala Iñupiatun Ilokano ГӀалгӀай Ido Íslenska Italiano ᐃᓄᒃᑎᑐᑦ / inuktitut 日本語 Patois La .lojban. Jawa ქართული Qaraqalpaqsha Taqbaylit Адыгэбзэ Kabɩyɛ Tyap Kongo Kumoring Gĩkũyũ Қазақша Kalaallisut ភាសាខ្មែរ ಕನ್ನಡ Yerwa Kanuri 한국어 Перем коми Къарачай-малкъар کٲشُر Ripoarisch Kurdî Kʋsaal Коми Kernowek Кыргызча Latina Ladino Lëtzebuergesch Лакку Лезги Lingua Franca Nova Luganda Limburgs Ligure Ladin Lombard Lingála ລາວ Lietuvių Latgaļu Latviešu Madhurâ मैथिली Basa Banyumasan Мокшень Malagasy Олык марий Māori Minangkabau Македонски മലയാളം Монгол ꯃꯤꯇꯩ ꯂꯣꯟ ဘာသာမန် Moore मराठी Кырык мары Bahasa Melayu Malti Mirandés မြန်မာဘာသာ Эрзянь مازِرونی Nāhuatl Napulitano Plattdüütsch Nedersaksies नेपाली नेपाल भाषा Li Niha Nederlands Norsk nynorsk Norsk bokmål Novial ߒߞߏ IsiNdebele seSewula Nouormand Sesotho sa Leboa Nupe Diné bizaad Chi-Chewa Occitan Livvinkarjala Oromoo ଓଡ଼ିଆ Ирон ਪੰਜਾਬੀ Pangasinan Kapampangan Papiamentu Picard Naijá Deitsch Pälzisch पालि Polski Piemontèis پنجابی Ποντιακά پښتو Português Pinayuanan Runa Simi ရခိုင် Rumantsch Romani čhib Ikirundi Română Armãneashti Tarandíne Русский Русиньскый Ikinyarwanda संस्कृतम् Саха тыла ᱥᱟᱱᱛᱟᱲᱤ Sardu Sicilianu Scots سنڌي Davvisámegiella Sängö Srpskohrvatski / српскохрватски Taclḥit တႆး සිංහල Simple English Slovenčina سرائیکی Slovenščina Gagana Samoa Anarâškielâ ChiShona Soomaaliga Shqip Српски / srpski Sranantongo SiSwati Sesotho Seeltersk Sunda Svenska Kiswahili ꠍꠤꠟꠐꠤ Ślůnski Sakizaya தமிழ் Tayal ತುಳು ᥖᥭᥰ ᥖᥬᥲ ᥑᥨᥒᥰ తెలుగు Tetun Тоҷикӣ ไทย ትግርኛ ትግሬ Türkmençe Tagalog Tolışi Setswana Lea faka-Tonga Toki pona Tok Pisin Türkçe Seediq Xitsonga Татарча / tatarça ChiTumbuka Twi Reo tahiti Тыва дыл Удмурт ئۇيغۇرچە / Uyghurche Українська اردو ",
-    "scrapedAt": "2025-12-15 19:11:29.361614"
   },
   {
     "id": 498,
@@ -3488,6 +3488,876 @@ window.searchData = [
 ];
 
 window.imageData = [
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Wikipedia-logo-blank.svg/500px-Wikipedia-logo-blank.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/40px-Facebook_f_logo_%282019%29.svg.png",
+    "alt": "Facebook",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Twitter_Logo.png/40px-Twitter_Logo.png",
+    "alt": "Twitter",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/40px-Instagram_logo_2016.svg.png",
+    "alt": "Instagram",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Copper_plate_inscriptions_of_king_Jayapangus_regarding_the_village_border_in_Kintamani_Bangli_Bali_12th_century.jpg/500px-Copper_plate_inscriptions_of_king_Jayapangus_regarding_the_village_border_in_Kintamani_Bangli_Bali_12th_century.jpg",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Copper_plate_inscriptions_of_king_Jayapangus_regarding_the_village_border_in_Kintamani_Bangli_Bali_12th_century.jpg/120px-Copper_plate_inscriptions_of_king_Jayapangus_regarding_the_village_border_in_Kintamani_Bangli_Bali_12th_century.jpg",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Tradisi_Mepeed_di_Alas_Kedaton.jpg/500px-Tradisi_Mepeed_di_Alas_Kedaton.jpg",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Tradisi_Mepeed_di_Alas_Kedaton.jpg/250px-Tradisi_Mepeed_di_Alas_Kedaton.jpg",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bali-lontar-Wanagiri-Usada_Rare_4E.jpg/960px-Bali-lontar-Wanagiri-Usada_Rare_4E.jpg",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bali-lontar-Wanagiri-Usada_Rare_4E.jpg/250px-Bali-lontar-Wanagiri-Usada_Rare_4E.jpg",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Copper_plate_inscriptions_of_king_Jayapangus_regarding_the_village_border_in_Kintamani_Bangli_Bali_12th_century.jpg/500px-Copper_plate_inscriptions_of_king_Jayapangus_regarding_the_village_border_in_Kintamani_Bangli_Bali_12th_century.jpg",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Copper_plate_inscriptions_of_king_Jayapangus_regarding_the_village_border_in_Kintamani_Bangli_Bali_12th_century.jpg/120px-Copper_plate_inscriptions_of_king_Jayapangus_regarding_the_village_border_in_Kintamani_Bangli_Bali_12th_century.jpg",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Tradisi_Mepeed_di_Alas_Kedaton.jpg/500px-Tradisi_Mepeed_di_Alas_Kedaton.jpg",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Tradisi_Mepeed_di_Alas_Kedaton.jpg/250px-Tradisi_Mepeed_di_Alas_Kedaton.jpg",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bali-lontar-Wanagiri-Usada_Rare_4E.jpg/960px-Bali-lontar-Wanagiri-Usada_Rare_4E.jpg",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bali-lontar-Wanagiri-Usada_Rare_4E.jpg/250px-Bali-lontar-Wanagiri-Usada_Rare_4E.jpg",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/SanglahER.jpg/500px-SanglahER.jpg",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/60px-Wikimedia-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/60px-Wikimedia-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Wikisource-logo.png/40px-Wikisource-logo.png",
+    "alt": "Logo WikiPustaka",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/40px-Wiktionary-logo.svg.png",
+    "alt": "Logo Wiktionary",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/40px-Wikidata-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "commons:",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "Logo Wikibooks",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "Logo Wikiquote",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "Logo of Wikispecies",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/40px-Wikinews-logo.svg.png",
+    "alt": "Logo Wikinews",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/40px-Wikiversity-logo.svg.png",
+    "alt": "Logo Wikiversitas",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "voy",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "Logo komunitas Wikimédia",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Incubator-logo.svg/40px-Incubator-logo.svg.png",
+    "alt": "m:incubator:",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://ban.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipédia",
+    "pageUrl": "https://ban.wikipedia.org/wiki/Kaca_Utama"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bungai_terung.png/120px-Bungai_terung.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/New_Sarawak_State_Legislative_Assembly_Building_from_Darul_Hana_Bridge%2C_Kuching%2C_Sarawak.jpg/120px-New_Sarawak_State_Legislative_Assembly_Building_from_Darul_Hana_Bridge%2C_Kuching%2C_Sarawak.jpg",
+    "alt": "{{{2}}}",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/2023_Central_European_Rally_-_Ogier_01_%28cropped%29.jpg/120px-2023_Central_European_Rally_-_Ogier_01_%28cropped%29.jpg",
+    "alt": "Sébastien Ogier maya Oktober 2023",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Smallpox_virus_virions_TEM_PHIL_1849.JPG/120px-Smallpox_virus_virions_TEM_PHIL_1849.JPG",
+    "alt": "Virus puru",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/40px-Wikipedia-logo-v2.svg.png",
+    "alt": "Projek Wikimedia bukai",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/40px-Wiktionary_small.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/60px-Wikinews-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/60px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikivoyage-Logo-v3-icon.svg/40px-Wikivoyage-Logo-v3-icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/40px-Wikidata-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/40px-Wikiversity-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MediaWiki-2020-icon.svg/40px-MediaWiki-2020-icon.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/40px-Wikipedia-logo-v2.svg.png",
+    "alt": "Wikipedia dalam bahasa lain (mengikut susunan jumlah rencana)",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://iba.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://iba.wikipedia.org/wiki/Lambar_Keterubah"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Basahan_Dagos_Tabi_sa_Bikol_Wikipedia.png/500px-Basahan_Dagos_Tabi_sa_Bikol_Wikipedia.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Bluebg_rounded2.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/HSutvald2.svg/40px-HSutvald2.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Lagting_pili.jpg/250px-Lagting_pili.jpg",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Bluebg_rounded2.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/HSBild.svg/40px-HSBild.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/The_Hilltop_Fortress.jpg/500px-The_Hilltop_Fortress.jpg",
+    "alt": "Boac Cathedral",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/RETICULATED_PYTHON.jpg/500px-RETICULATED_PYTHON.jpg",
+    "alt": "Sawa",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Bluebg_rounded2.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/PL_Wiki_CzyWiesz_ikona.svg/40px-PL_Wiki_CzyWiesz_ikona.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Hiroshima_Dome_1945.gif/120px-Hiroshima_Dome_1945.gif",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Bluebg_rounded2.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/HSCategory.svg/40px-HSCategory.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/HSSamarbetecolor.svg/40px-HSSamarbetecolor.svg.png",
+    "alt": "Kabikolan",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HSArt.svg/40px-HSArt.svg.png",
+    "alt": "Arte",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/bcl/thumb/6/61/38px-HSBild.svg.png/38px-38px-HSBild.svg.png",
+    "alt": "Kababaihan",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/HSEarth.svg/40px-HSEarth.svg.png",
+    "alt": "Kinaban",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Sciences_humaines.svg/40px-Sciences_humaines.svg.png",
+    "alt": "Edukasyon",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/HSHistory.svg/40px-HSHistory.svg.png",
+    "alt": "Uusipon",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/HSBook.svg/40px-HSBook.svg.png",
+    "alt": "Literatura",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/HSFunction.png/40px-HSFunction.png",
+    "alt": "Matematika",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Stylised_atom_with_three_Bohr_model_orbits_and_stylised_nucleus_%28encircled%29.svg/40px-Stylised_atom_with_three_Bohr_model_orbits_and_stylised_nucleus_%28encircled%29.svg.png",
+    "alt": "Siyensya",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/HSPolitic.svg/40px-HSPolitic.svg.png",
+    "alt": "Siyensya Sosyal",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/HSSamarbete.svg/40px-HSSamarbete.svg.png",
+    "alt": "Teknolohiya",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/HSTools.svg/40px-HSTools.svg.png",
+    "alt": "Teknolohiya",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/HSContribs.svg/40px-HSContribs.svg.png",
+    "alt": "Mga laog",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Bluebg_rounded2.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Wikimedia-logo-circle.svg/40px-Wikimedia-logo-circle.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/40px-Wikipedia-logo-v2.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Wiktionary-logo-en.svg/40px-Wiktionary-logo-en.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/40px-Wikinews-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/40px-Wikispecies-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/40px-Wikimedia-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/40px-Wikiversity-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Bluebg_rounded2.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/HSBild.svg/40px-HSBild.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://bcl.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://bcl.wikipedia.org/wiki/Panginot_na_Pahina"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Flag_of_East_Timor.svg/250px-Flag_of_East_Timor.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Flag_of_East_Nusa_Tenggara.svg/250px-Flag_of_East_Nusa_Tenggara.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Nuvola_filesystems_folder_home.png/40px-Nuvola_filesystems_folder_home.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Nuvola_apps_kdmconfig.png/40px-Nuvola_apps_kdmconfig.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Nuvola_apps_display.png/40px-Nuvola_apps_display.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Nuvola_apps_edu_science.png/40px-Nuvola_apps_edu_science.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Flag_of_East_Timor.svg/60px-Flag_of_East_Timor.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Nuvola_filesystems_folder_home.png/40px-Nuvola_filesystems_folder_home.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/2020-08-06_Uabubo_3.jpg/120px-2020-08-06_Uabubo_3.jpg",
+    "alt": "Image 1Feto, UabuboKréditu: Juliao Fernandes, Presidência da República Democrática de Timor-LesteMore selected pictures",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Anemone_purple_anemonefish.jpg/120px-Anemone_purple_anemonefish.jpg",
+    "alt": "Image 2IkanKréditu: Nhobgood - Nick HobgoodMore selected pictures",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Halskette_von_T%C3%A4nzerinnen_in_Viqueque.jpg/120px-Halskette_von_T%C3%A4nzerinnen_in_Viqueque.jpg",
+    "alt": "Image 3Mutissala], ViquequeMore selected pictures",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Ai_Pelo11.jpg/120px-Ai_Pelo11.jpg",
+    "alt": "Image 4Ai PeloKréditu: Isabel NolascoMore selected pictures",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/2015_Baha_Liurai_1.JPG/120px-2015_Baha_Liurai_1.JPG",
+    "alt": "Image 5Baha LiuraiKréditu:More selected pictures",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Flag_of_Timor-Leste.jpg/120px-Flag_of_Timor-Leste.jpg",
+    "alt": "Image 6{{{title}}}Kréditu: Isabel NolascoMore selected pictures",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Moonlight_over_Dili.jpg/120px-Moonlight_over_Dili.jpg",
+    "alt": "Image 7DiliKréditu:More selected pictures",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Lospalos_klein.jpg/120px-Lospalos_klein.jpg",
+    "alt": "Image 8LospalosKréditu: J. Patrick FischerMore selected pictures",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Rice_fields_and_buffalos_in_Vemasse.jpg/120px-Rice_fields_and_buffalos_in_Vemasse.jpg",
+    "alt": "Image 9Natar hosi, VemasseKréditu: Isabel NolascoMore selected pictures",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Fossile_Muschel_-_Osttimor.JPG/120px-Fossile_Muschel_-_Osttimor.JPG",
+    "alt": "Image 10Fatuk sipu, BaucauKréditu: J. Patrick FischerMore selected pictures",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Uma_lulik_in_Vessoru.jpg/120px-Uma_lulik_in_Vessoru.jpg",
+    "alt": "Image 11Uma lulik, VessoruKréditu: Isabel NolascoMore selected pictures",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Bogensch%C3%BCtzen_in_Ili-Mano_2.jpg/120px-Bogensch%C3%BCtzen_in_Ili-Mano_2.jpg",
+    "alt": "Image 12Rama-inan, Ili-ManoKréditu:More selected pictures",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Loi-Huno_waterfalls.jpg/120px-Loi-Huno_waterfalls.jpg",
+    "alt": "Image 13Bee tiris, Loi-HunoKréditu:More selected pictures",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Prepare_for_landing%2C_a_group_of_White-faced_Herons_squabble_as_they_approach_a_perch.jpg/120px-Prepare_for_landing%2C_a_group_of_White-faced_Herons_squabble_as_they_approach_a_perch.jpg",
+    "alt": "Image 14Buruma, BaucauKréditu: Colin TrainorMore selected pictures",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Jaco_Beach_East_Timor_2012.jpg/120px-Jaco_Beach_East_Timor_2012.jpg",
+    "alt": "Image 15JacoKréditu: Andidut, Leisure, Phone CameraMore selected pictures",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/40px-Wikipedia-logo-v2.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Du%C5%BCe_logo_Wikis%C5%82ownika.png/40px-Du%C5%BCe_logo_Wikis%C5%82ownika.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Wikinews-logo.png/60px-Wikinews-logo.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/40px-Commons-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/40px-Wikimedia_Community_Logo.svg.png",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://tet.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Wikipedia",
+    "pageUrl": "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Wikipedia-logo-transparent-cropped.png/300px-Wikipedia-logo-transparent-cropped.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/P_linguistics.svg/40px-P_linguistics.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/P_author.svg/40px-P_author.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/P_religion_world.svg/40px-P_religion_world.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/P_culture.svg/40px-P_culture.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/P_globe.svg/40px-P_globe.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/P_sociology.svg/40px-P_sociology.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/P_biology.svg/40px-P_biology.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/P_history.svg/40px-P_history.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/P_wolf.svg/40px-P_wolf.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/P_bridge.svg/40px-P_bridge.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/P_medicine.svg/40px-P_medicine.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Emoji_u2b50.svg/40px-Emoji_u2b50.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Emoji_u1f524.svg/40px-Emoji_u1f524.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/2009-07-20_wpy_07.JPG/250px-2009-07-20_wpy_07.JPG",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Emoji_u1f4f7.svg/40px-Emoji_u1f4f7.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Narodna_nosnja_petrovci.jpg/500px-Narodna_nosnja_petrovci.jpg",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Emoji_u23f0.svg/40px-Emoji_u23f0.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Nabrezie_Torysy_Presov.jpg/250px-Nabrezie_Torysy_Presov.jpg",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Emoji_u1f30d.svg/40px-Emoji_u1f30d.svg.png",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
+  {
+    "src": "https://rsk.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Википедия",
+    "pageUrl": "https://rsk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B8_%D0%B1%D0%BE%D0%BA"
+  },
   {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/ISO_639_Icon_om.svg/120px-ISO_639_Icon_om.svg.png",
     "alt": "",
