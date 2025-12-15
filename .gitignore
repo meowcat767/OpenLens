@@ -1,0 +1,21 @@
+# Ignore compiled Java classes
+target/
+*.class
+
+# Ignore IDE files
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# Ignore sensitive configuration
+config.properties
+
+# Ignore logs
+*.log
+
+# Ignore OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Search</h1>
+        </header>
+
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search" autocomplete="off" autofocus>
+            <button type="submit" id="searchButton">Search</button>
+        </form>
+
+        <div id="stats"></div>
+
+        <div id="loadingIndicator" style="display: none;">
+            <p>Loading...</p>
+        </div>
+
+        <div id="errorMessage" style="display: none;">
+            <p id="errorText"></p>
+        </div>
+
+        <div id="resultsContainer"></div>
+    </div>
+
+    <script src="search-data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

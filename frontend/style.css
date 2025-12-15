@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin: 100px 0 30px 0;
+}
+
+h1 {
+    font-size: 48px;
+    color: #4285f4;
+    margin: 0;
+    font-weight: normal;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 500px;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 24px;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #4285f4;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: #dadce0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+#stats {
+    color: #70757a;
+    font-size: 14px;
+    margin: 10px 0 20px 0;
+}
+
+#loadingIndicator {
+    text-align: center;
+    color: #70757a;
+    margin: 20px 0;
+}
+
+#errorMessage {
+    background: #fce8e6;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.result-item {
+    margin-bottom: 30px;
+}
+
+.result-title {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.result-title a {
+    color: #1a0dab;
+    text-decoration: none;
+}
+
+.result-title a:visited {
+    color: #609;
+}
+
+.result-title a:hover {
+    text-decoration: underline;
+}
+
+.result-url {
+    color: #006621;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.result-snippet {
+    color: #545454;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.no-results {
+    text-align: center;
+    color: #70757a;
+    margin: 40px 0;
+}

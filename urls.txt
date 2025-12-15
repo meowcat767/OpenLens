@@ -1,0 +1,9 @@
+# Sample URLs to scrape
+# Add one URL per line
+# Lines starting with # are ignored
+
+https://en.wikipedia.org/wiki/Search_engine
+https://en.wikipedia.org/wiki/Web_scraping
+https://en.wikipedia.org/wiki/Database
+https://en.wikipedia.org/wiki/Java_(programming_language)
+https://en.wikipedia.org/wiki/PostgreSQL
