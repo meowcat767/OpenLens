@@ -47,18 +47,6 @@ public class WebScraper {
      * Scrape a single URL and return the result
      */
     public ScrapeResult scrapeUrl(String url) {
-        System.out.println("Checking: " + url);
-
-        // Check if we need to scrape this URL (re-crawl logic)
-        if (!shouldScrape(url)) {
-            // It's a known URL and was scraped recently.
-            // We still return 'true' for success so the crawler continues,
-            // but we return empty links so we don't re-queue everything immediately.
-            // OR: we might want to return links if we want to deep crawl known paths?
-            // For now, let's treat it as "Skipped" but valid.
-            return new ScrapeResult(true, Collections.emptySet());
-        }
-
         System.out.println("Crawling: " + url);
 
         String urlMatch = getBlacklistedTerm(url);
@@ -232,35 +220,6 @@ public class WebScraper {
         } catch (Exception e) {
             System.err.println("Error storing images for " + pageUrl + ": " + e.getMessage());
         }
-    }
-
-    private boolean shouldScrape(String url) {
-        String sql = "SELECT scraped_at FROM pages WHERE url = ?";
-
-        try (Connection conn = dbConfig.getConnection();
-                PreparedStatement stmt = conn.prepareStatement(sql)) {
-
-            stmt.setString(1, url);
-            try (java.sql.ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    java.sql.Timestamp scrapedAt = rs.getTimestamp("scraped_at");
-                    if (scrapedAt != null) {
-                        long sevenDaysInMillis = 7L * 24 * 60 * 60 * 1000;
-                        long timeSinceScrape = System.currentTimeMillis() - scrapedAt.getTime();
-
-                        if (timeSinceScrape < sevenDaysInMillis) {
-                            System.out.println("   > Skipped (Recently scraped: " + scrapedAt + ")");
-                            return false;
-                        }
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            System.err.println("Warning: Could not check crawl status for " + url + ": " + e.getMessage());
-            // If DB check fails, default to scraping it to be safe (or safe-fail?)
-            // Let's safe-fail to scraping it.
-        }
-        return true;
     }
 
     private boolean isValidImage(String src) {
