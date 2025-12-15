@@ -37504,3 +37504,6 @@ https://ms.wikipedia.org/wiki/Fail:Mediterranean-jellyfish-af.jpg
 https://ms.wikipedia.org/wiki/Pengaliasan
 https://ms.wikipedia.org/w/index.php?title=Bayangan&action=edit&redlink=1
 https://ms.wikipedia.org/wiki/Pesawat_pejuang
+https://fi.wikipedia.org/wiki/Rob_Reiner
+https://fi.wikipedia.org/wiki/Yhdysvallat
+https://fi.wikipedia.org/wiki/Tiedosto:Rob_Reiner_MFF_2016.jpg
