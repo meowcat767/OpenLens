@@ -150,13 +150,75 @@ public class WebScraper {
         return content;
     }
 
+    /**
+     * Get the next URL that needs to be scraped.
+     * Priorities:
+     * 1. Never scraped (scraped_at IS NULL)
+     * 2. Scraped > 7 days ago
+     */
+    public String getNextUrlToScrape() {
+        String sql = """
+                SELECT url FROM pages
+                WHERE scraped_at IS NULL
+                   OR scraped_at < CURRENT_TIMESTAMP - INTERVAL '7' DAY
+                ORDER BY scraped_at ASC NULLS FIRST
+                LIMIT 1
+                """;
+
+        try (Connection conn = dbConfig.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(sql);
+                var rs = stmt.executeQuery()) {
+
+            if (rs.next()) {
+                return rs.getString("url");
+            }
+        } catch (SQLException e) {
+            System.err.println("Error getting next URL: " + e.getMessage());
+        }
+        return null;
+    }
+
+    /**
+     * Add a URL to the queue (if not already present).
+     * If present, does nothing (preserves existing scrape timestamp).
+     */
+    public void queueUrl(String url) {
+        if (!isValidLink(url) || getBlacklistedTerm(url) != null) {
+            return;
+        }
+
+        // Use INSERT and ignore unique constraint violation
+        String sql = "INSERT INTO pages (url, scraped_at) VALUES (?, NULL)";
+
+        try (Connection conn = dbConfig.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, url);
+            stmt.executeUpdate();
+
+        } catch (SQLException e) {
+            // Check for unique constraint violation (H2 error codes 23505)
+            if (!e.getSQLState().startsWith("23")) {
+                System.err.println("Error queuing URL " + url + ": " + e.getMessage());
+            }
+            // If it's a duplicate, we just ignore it (do nothing), preserving the old
+            // scrape time.
+        }
+    }
+
     public static class ScrapeResult {
         public final boolean success;
         public final Set<String> discoveredLinks;
+        public final String failureReason;
 
         public ScrapeResult(boolean success, Set<String> discoveredLinks) {
+            this(success, discoveredLinks, null);
+        }
+
+        public ScrapeResult(boolean success, Set<String> discoveredLinks, String failureReason) {
             this.success = success;
             this.discoveredLinks = discoveredLinks;
+            this.failureReason = failureReason;
         }
     }
 
@@ -164,6 +226,7 @@ public class WebScraper {
      * Store the scraped page in the database
      */
     private void storeInDatabase(String url, String title, String content) throws SQLException {
+        // Use MERGE to Insert or Update
         String sql = """
                 MERGE INTO pages (url, title, content, scraped_at)
                 KEY (url)

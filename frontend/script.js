@@ -163,24 +163,26 @@ function searchPages(query) {
 
     for (const page of window.searchData) {
         const titleLower = (page.title || '').toLowerCase();
-        const contentLower = (page.content || '').toLowerCase();
+        // Check URL for keywords too
+        const urlLower = (page.url || '').toLowerCase();
 
         // Calculate relevance score
         let score = 0;
         let matchedTerms = 0;
 
         for (const term of queryTerms) {
-            // Title matches are worth more
-            const titleMatches = (titleLower.match(new RegExp(term, 'g')) || []).length;
-            const contentMatches = (contentLower.match(new RegExp(term, 'g')) || []).length;
+            const escapedTerm = escapeRegex(term);
+            const titleMatches = (titleLower.match(new RegExp(escapedTerm, 'g')) || []).length;
+            const urlMatches = (urlLower.match(new RegExp(escapedTerm, 'g')) || []).length;
 
-            if (titleMatches > 0 || contentMatches > 0) {
+            if (titleMatches > 0 || urlMatches > 0) {
                 matchedTerms++;
-                score += titleMatches * 10 + contentMatches;
+                // Title matches are worth more
+                score += titleMatches * 10 + urlMatches * 5;
             }
         }
 
-        // Only include if all terms matched
+        // Only include if all terms matched in Title or URL
         if (matchedTerms === queryTerms.length && score > 0) {
             results.push({
                 page: page,
@@ -205,21 +207,24 @@ function searchImages(query) {
 
     for (const img of window.imageData) {
         const altLower = (img.alt || '').toLowerCase();
-        const titleLower = (img.pageTitle || '').toLowerCase();
+        // Also check filename/src as it might contain keywords (e.g. cat.jpg)
+        const srcLower = (img.src || '').toLowerCase();
 
         let score = 0;
         let matchedTerms = 0;
 
         for (const term of queryTerms) {
-            const altMatches = (altLower.match(new RegExp(term, 'g')) || []).length;
-            const titleMatches = (titleLower.match(new RegExp(term, 'g')) || []).length;
+            const altMatches = (altLower.match(new RegExp(escapeRegex(term), 'g')) || []).length;
+            const srcMatches = (srcLower.match(new RegExp(escapeRegex(term), 'g')) || []).length;
 
-            if (altMatches > 0 || titleMatches > 0) {
+            if (altMatches > 0 || srcMatches > 0) {
                 matchedTerms++;
-                score += altMatches * 10 + titleMatches;
+                // Alt matches are worth more than src matches
+                score += altMatches * 10 + srcMatches * 2;
             }
         }
 
+        // Strict matching: must match all terms found in query
         if (matchedTerms === queryTerms.length && score > 0) {
             results.push({
                 img: img,

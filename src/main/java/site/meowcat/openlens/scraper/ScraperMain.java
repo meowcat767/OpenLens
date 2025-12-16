@@ -19,28 +19,35 @@ public class ScraperMain {
         String urlFile = args.length > 0 ? args[0] : "urls.txt";
 
         System.out.println("=== crawl-chan >~< ===");
-        System.out.println("Reading seed URLs from: " + urlFile);
-
-        // Queue for URLs to visit
-        Queue<String> urlQueue = new LinkedList<>(loadUrls(urlFile));
-
-        // Track visited URLs to avoid loops
-        Set<String> visited = new HashSet<>(urlQueue);
-
-        if (urlQueue.isEmpty()) {
-            System.err.println("No URLs found in " + urlFile);
-            System.exit(1);
-        }
-
-        System.out.println("Starting crawl with " + urlQueue.size() + " seed URLs");
-        System.out.println("Press Ctrl+C to stop...\n");
+        System.out.println("Initializing queue from seed file: " + urlFile);
 
         WebScraper scraper = new WebScraper();
         int pagesScraped = 0;
 
+        // 1. Seed the database queue
+        List<String> seedUrls = loadUrls(urlFile);
+        for (String url : seedUrls) {
+            scraper.queueUrl(url);
+        }
+        System.out.println("Seeded " + seedUrls.size() + " URLs into the database queue.");
+
+        System.out.println("Starting crawl...");
+        System.out.println("Press Ctrl+C to stop...\n");
+
         // Continuous crawl loop
-        while (!urlQueue.isEmpty()) {
-            String url = urlQueue.poll();
+        while (true) {
+            String url = scraper.getNextUrlToScrape();
+
+            if (url == null) {
+                System.out.println("Queue empty or all pages scraped recently. Waiting 60s...");
+                try {
+                    Thread.sleep(60000);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    break;
+                }
+                continue;
+            }
 
             WebScraper.ScrapeResult result = scraper.scrapeUrl(url);
 
@@ -49,12 +56,9 @@ public class ScraperMain {
 
                 // Add new links to queue
                 for (String newLink : result.discoveredLinks) {
-                    if (!visited.contains(newLink)) {
-                        visited.add(newLink);
-                        urlQueue.add(newLink);
-                        // Persist new URL to file
-                        saveUrl(urlFile, newLink);
-                    }
+                    scraper.queueUrl(newLink);
+                    // Also save to text file for backup/seed
+                    saveUrl(urlFile, newLink);
                 }
 
                 // Update search index immediately
@@ -67,9 +71,10 @@ public class ScraperMain {
             }
 
             // Print progress every 10 pages
-            if (pagesScraped % 10 == 0) {
-                System.out.println("--- Stats: Scraped " + pagesScraped + " | Queue " + urlQueue.size() + " | Visited "
-                        + visited.size() + " ---");
+            if (pagesScraped % 10 == 0 && pagesScraped > 0) {
+                System.out.println("\n--- Stats: Scraped " + pagesScraped + " in this session ---");
+                scraper.printStats();
+                System.out.println("----------------------------------------------\n");
             }
 
             // Be polite - add delay
@@ -82,7 +87,7 @@ public class ScraperMain {
         }
 
         System.out.println("\n=== Crawl Complete ===");
-        System.out.println("Total pages scraped: " + pagesScraped);
+        System.out.println("Total pages scraped in this session: " + pagesScraped);
         scraper.printStats();
     }
 
@@ -127,6 +132,13 @@ public class ScraperMain {
     }
 
     private static void saveUrl(String filename, String url) {
+        // We only append if it's not already in the file... but checking file is
+        // expensive.
+        // The original code just appended everywhere.
+        // We can optimize this by maintaining a small cache or just letting it grow and
+        // deduping later.
+        // For now, let's keep original behavior but maybe check recent memory?
+        // Actually, db is source of truth now, urls.txt is just a seed backup.
         try (java.io.FileWriter writer = new java.io.FileWriter(filename, true)) {
             writer.write(url + "\n");
         } catch (IOException e) {
