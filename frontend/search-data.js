@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1250,
+    "url": "https://github.com/python/cpython/issues/122854",
+    "title": "[C API] Add Py_HashBuffer() function · Issue #122854 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k [C API] Add Py_HashBuffer() function #122854 New issue Copy link New issue Copy link Closed Closed [C API] Add Py_HashBuffer() function#122854 Copy link Labels topic-C-API Description vstinner opened on Aug 9, 2024 Issue body actions Implementation of the the C API Working Group decision: capi-workgroup/decisions#13. Linked PRs gh-122854: Add Py_HashBuffer() function #122855 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels topic-C-API Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:12:13.095669"
+  },
+  {
+    "id": 1249,
+    "url": "https://github.com/python/cpython/issues/130482",
+    "title": "add ability to specify name for `tk.OptionMenu` and `ttk.OptionMenu` · Issue #130482 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k add ability to specify name for tk.OptionMenu and ttk.OptionMenu #130482 New issue Copy link New issue Copy link Closed Closed add ability to specify name for tk.OptionMenu and ttk.OptionMenu#130482 Copy link Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-tkintertype-featureA feature request or enhancementA feature request or enhancement Description kurawlefaraaz opened on Feb 23, 2025 Issue body actions Feature or enhancement Proposal: In current implementation of tk.OptionMenu and ttk.OptionMenu, we can not specify name to them since adding additional kwargs raises unknown option error Since after initialization of widget name cannot be changed, hence we cannot specify custom name such as games_option_menu etc to the OptionMenu. Ability to specify name to a widget is very handy, since it helps programmer to easily gain access to widget between diffrent scopes and this ability is lacking in OptionMenu widget. Has this already been discussed elsewhere? No response given Links to previous discussion of this feature: No response Linked PRs gh-130482: Add ability to specify name for tkinter.OptionMenu and tkinter.ttk.OptionMenu #130502 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-tkintertype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:12:10.831996"
+  },
+  {
+    "id": 1248,
+    "url": "https://github.com/python/cpython/issues/132661",
+    "title": "Implement PEP 750 – Template Strings · Issue #132661 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Implement PEP 750 – Template Strings #132661 New issue Copy link New issue Copy link Closed Closed Implement PEP 750 – Template Strings#132661 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description lysnikolaou opened on Apr 17, 2025 Issue body actions See PEP 750 for more details. Linked PRs gh-132661: Implement PEP 750 #132662 GH-132661: Add string.templatelib.convert() #135217 GH-132661: Document t-strings and templatelib #135218 gh-132661: Document t-strings and templatelib #135229 gh-132661: Disallow Template/str concatenation after PEP 750 spec update #135996 gh-132661: Add default value (of \"\") for Interpolation.expression #136441 [3.14] gh-132661: Add default value (of \"\") for Interpolation.expression (GH-136441) #136511 [3.14] GH-132661: Add string.templatelib.convert() (GH-135217) #136671 [3.14] gh-132661: Disallow Template/str concatenation after PEP 750 spec update (#135996) #136901 [3.14] gh-132661: Document t-strings and templatelib (GH-135229) #136974 gh-132661: PEP 750 documentation: second pass #137020 gh-132661: docs: add a t-string tutorial #137213 gh-132661: docs: update PEP 750 section of What\u0027s New in 3.14 #137289 [3.14] gh-132661: PEP 750 documentation: second pass (GH-137020) #137392 Reactions are currently unavailable Metadata Metadata Assignees lysnikolaou Labels 3.14bugs and security fixesbugs and security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:12:08.605962"
+  },
+  {
+    "id": 1247,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-proxy-objects",
+    "title": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » multiprocessing — Process-based parallelism | Theme Auto Light Dark | multiprocessing — Process-based parallelism¶ Source code: Lib/multiprocessing/ Availability: not Android, not iOS, not WASI. This module is not supported on mobile platforms or WebAssembly platforms. Introduction¶ multiprocessing is a package that supports spawning processes using an API similar to the threading module. The multiprocessing package offers both local and remote concurrency, effectively side-stepping the Global Interpreter Lock by using subprocesses instead of threads. Due to this, the multiprocessing module allows the programmer to fully leverage multiple processors on a given machine. It runs on both POSIX and Windows. The multiprocessing module also introduces the Pool object which offers a convenient means of parallelizing the execution of a function across multiple input values, distributing the input data across processes (data parallelism). The following example demonstrates the common practice of defining such functions in a module so that child processes can successfully import that module. This basic example of data parallelism using Pool, from multiprocessing import Pool\n\ndef f(x):\n    return x*x\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    with Pool(5) as p:\n        print(p.map(f, [1, 2, 3]))\n will print to standard output [1, 4, 9]\n The multiprocessing module also introduces APIs which do not have analogs in the threading module, like the ability to terminate, interrupt or kill a running process. See also concurrent.futures.ProcessPoolExecutor offers a higher level interface to push tasks to a background process without blocking execution of the calling process. Compared to using the Pool interface directly, the concurrent.futures API more readily allows the submission of work to the underlying process pool to be separated from waiting for the results. The Process class¶ In multiprocessing, processes are spawned by creating a Process object and then calling its start() method. Process follows the API of threading.Thread. A trivial example of a multiprocess program is from multiprocessing import Process\n\ndef f(name):\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n To show the individual process IDs involved, here is an expanded example: from multiprocessing import Process\nimport os\n\ndef info(title):\n    print(title)\n    print(\u0027module name:\u0027, __name__)\n    print(\u0027parent process:\u0027, os.getppid())\n    print(\u0027process id:\u0027, os.getpid())\n\ndef f(name):\n    info(\u0027function f\u0027)\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    info(\u0027main line\u0027)\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n For an explanation of why the if __name__ \u003d\u003d \u0027__main__\u0027 part is necessary, see Programming guidelines. The arguments to Process usually need to be unpickleable from within the child process. If you tried typing the above example directly into a REPL it could lead to an AttributeError in the child process trying to locate the f function in the __main__ module. Contexts and start methods¶ Depending on the platform, multiprocessing supports three ways to start a process. These start methods are spawn The parent process starts a fresh Python interpreter process. The child process will only inherit those resources necessary to run the process object’s run() method. In particular, unnecessary file descriptors and handles from the parent process will not be inherited. Starting a process using this method is rather slow compared to using fork or forkserver. Available on POSIX and Windows platforms. The default on Windows and macOS. fork The parent process uses os.fork() to fork the Python interpreter. The child process, when it begins, is effectively identical to the parent process. All resources of the parent are inherited by the child process. Note that safely forking a multithreaded process is problematic. Available on POSIX systems. Changed in version 3.14: This is no longer the default start method on any platform. Code that requires fork must explicitly specify that via get_context() or set_start_method(). Changed in version 3.12: If Python is able to detect that your process has multiple threads, the os.fork() function that this start method calls internally will raise a DeprecationWarning. Use a different start method. See the os.fork() documentation for further explanation. forkserver When the program starts and selects the forkserver start method, a server process is spawned. From then on, whenever a new process is needed, the parent process connects to the server and requests that it fork a new process. The fork server process is single threaded unless system libraries or preloaded imports spawn threads as a side-effect so it is generally safe for it to use os.fork(). No unnecessary resources are inherited. Availabl",
+    "scrapedAt": "2026-05-09 01:12:06.097393"
+  },
+  {
+    "id": 1246,
+    "url": "https://docs.python.org/3/library/json.html#module-json",
+    "title": "json — JSON encoder and decoder — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Data Handling » json — JSON encoder and decoder | Theme Auto Light Dark | json — JSON encoder and decoder¶ Source code: Lib/json/__init__.py JSON (JavaScript Object Notation), specified by RFC 7159 (which obsoletes RFC 4627) and by ECMA-404, is a lightweight data interchange format inspired by JavaScript object literal syntax (although it is not a strict subset of JavaScript [1] ). Note The term “object” in the context of JSON processing in Python can be ambiguous. All values in Python are objects. In JSON, an object refers to any data wrapped in curly braces, similar to a Python dictionary. Warning Be cautious when parsing JSON data from untrusted sources. A malicious JSON string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended. This module exposes an API familiar to users of the standard library marshal and pickle modules. Encoding basic Python object hierarchies: \u003e\u003e\u003e import json\n\u003e\u003e\u003e json.dumps([\u0027foo\u0027, {\u0027bar\u0027: (\u0027baz\u0027, None, 1.0, 2)}])\n\u0027[\"foo\", {\"bar\": [\"baz\", null, 1.0, 2]}]\u0027\n\u003e\u003e\u003e print(json.dumps(\"\\\"foo\\bar\"))\n\"\\\"foo\\bar\"\n\u003e\u003e\u003e print(json.dumps(\u0027\\u1234\u0027))\n\"\\u1234\"\n\u003e\u003e\u003e print(json.dumps(\u0027\\\\\u0027))\n\"\\\\\"\n\u003e\u003e\u003e print(json.dumps({\"c\": 0, \"b\": 0, \"a\": 0}, sort_keys\u003dTrue))\n{\"a\": 0, \"b\": 0, \"c\": 0}\n\u003e\u003e\u003e from io import StringIO\n\u003e\u003e\u003e io \u003d StringIO()\n\u003e\u003e\u003e json.dump([\u0027streaming API\u0027], io)\n\u003e\u003e\u003e io.getvalue()\n\u0027[\"streaming API\"]\u0027\n Compact encoding: \u003e\u003e\u003e import json\n\u003e\u003e\u003e json.dumps([1, 2, 3, {\u00274\u0027: 5, \u00276\u0027: 7}], separators\u003d(\u0027,\u0027, \u0027:\u0027))\n\u0027[1,2,3,{\"4\":5,\"6\":7}]\u0027\n Pretty printing: \u003e\u003e\u003e import json\n\u003e\u003e\u003e print(json.dumps({\u00276\u0027: 7, \u00274\u0027: 5}, sort_keys\u003dTrue, indent\u003d4))\n{\n    \"4\": 5,\n    \"6\": 7\n}\n Customizing JSON object encoding: \u003e\u003e\u003e import json\n\u003e\u003e\u003e def custom_json(obj):\n...     if isinstance(obj, complex):\n...         return {\u0027__complex__\u0027: True, \u0027real\u0027: obj.real, \u0027imag\u0027: obj.imag}\n...     raise TypeError(f\u0027Cannot serialize object of {type(obj)}\u0027)\n...\n\u003e\u003e\u003e json.dumps(1 + 2j, default\u003dcustom_json)\n\u0027{\"__complex__\": true, \"real\": 1.0, \"imag\": 2.0}\u0027\n Decoding JSON: \u003e\u003e\u003e import json\n\u003e\u003e\u003e json.loads(\u0027[\"foo\", {\"bar\":[\"baz\", null, 1.0, 2]}]\u0027)\n[\u0027foo\u0027, {\u0027bar\u0027: [\u0027baz\u0027, None, 1.0, 2]}]\n\u003e\u003e\u003e json.loads(\u0027\"\\\\\"foo\\\\bar\"\u0027)\n\u0027\"foo\\x08ar\u0027\n\u003e\u003e\u003e from io import StringIO\n\u003e\u003e\u003e io \u003d StringIO(\u0027[\"streaming API\"]\u0027)\n\u003e\u003e\u003e json.load(io)\n[\u0027streaming API\u0027]\n Customizing JSON object decoding: \u003e\u003e\u003e import json\n\u003e\u003e\u003e def as_complex(dct):\n...     if \u0027__complex__\u0027 in dct:\n...         return complex(dct[\u0027real\u0027], dct[\u0027imag\u0027])\n...     return dct\n...\n\u003e\u003e\u003e json.loads(\u0027{\"__complex__\": true, \"real\": 1, \"imag\": 2}\u0027,\n...     object_hook\u003das_complex)\n(1+2j)\n\u003e\u003e\u003e import decimal\n\u003e\u003e\u003e json.loads(\u00271.1\u0027, parse_float\u003ddecimal.Decimal)\nDecimal(\u00271.1\u0027)\n Extending JSONEncoder: \u003e\u003e\u003e import json\n\u003e\u003e\u003e class ComplexEncoder(json.JSONEncoder):\n...     def default(self, obj):\n...         if isinstance(obj, complex):\n...             return [obj.real, obj.imag]\n...         # Let the base class default method raise the TypeError\n...         return super().default(obj)\n...\n\u003e\u003e\u003e json.dumps(2 + 1j, cls\u003dComplexEncoder)\n\u0027[2.0, 1.0]\u0027\n\u003e\u003e\u003e ComplexEncoder().encode(2 + 1j)\n\u0027[2.0, 1.0]\u0027\n\u003e\u003e\u003e list(ComplexEncoder().iterencode(2 + 1j))\n[\u0027[2.0\u0027, \u0027, 1.0\u0027, \u0027]\u0027]\n Using json from the shell to validate and pretty-print: $ echo \u0027{\"json\":\"obj\"}\u0027 | python -m json\n{\n    \"json\": \"obj\"\n}\n$ echo \u0027{1.2:3.4}\u0027 | python -m json\nExpecting property name enclosed in double quotes: line 1 column 2 (char 1)\n See Command-line interface for detailed documentation. Note JSON is a subset of YAML 1.2. The JSON produced by this module’s default settings (in particular, the default separators value) is also a subset of YAML 1.0 and 1.1. This module can thus also be used as a YAML serializer. Note This module’s encoders and decoders preserve input and output order by default. Order is only lost if the underlying containers are unordered. Basic Usage¶ json.dump(obj, fp, *, skipkeys\u003dFalse, ensure_ascii\u003dTrue, check_circular\u003dTrue, allow_nan\u003dTrue, cls\u003dNone, indent\u003dNone, separators\u003dNone, default\u003dNone, sort_keys\u003dFalse, **kw)¶ Serialize obj as a JSON formatted stream to fp (a .write()-supporting file-like object) using this Python-to-JSON conversion table. Note Unlike pickle and marshal, JSON is not a framed protocol, so trying to serialize multiple objects with repeated calls to dump() using the same fp will result in an invalid JSON file. Parameters: obj (object) – The Python object to be serialized. fp (file-like object) – The file-like object obj will be serialized to. The json module always produces str objects, not bytes objects, therefore fp.write() must support str input. skipkeys (bool) – If True, keys that are not of a basic type (str, int, float, bool, None) will be skipped instead of raising a TypeError. Default False. ensure_ascii (bool) – If True (the default), the output is guaranteed to have all incoming non-ASCII and non-printable characters escaped. If False, all characters will",
+    "scrapedAt": "2026-05-09 01:12:04.860609"
+  },
+  {
     "id": 1245,
     "url": "https://docs.python.org/3/library/shutil.html#shutil.rmtree",
     "title": "shutil — High-level file operations — Python 3.14.5rc1 documentation",
@@ -8363,26 +8398,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1246,
-    "url": "https://docs.python.org/3/library/json.html#module-json"
-  },
-  {
-    "id": 1247,
-    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-proxy-objects"
-  },
-  {
-    "id": 1248,
-    "url": "https://github.com/python/cpython/issues/132661"
-  },
-  {
-    "id": 1249,
-    "url": "https://github.com/python/cpython/issues/130482"
-  },
-  {
-    "id": 1250,
-    "url": "https://github.com/python/cpython/issues/122854"
   },
   {
     "id": 1251,
@@ -219345,10 +219360,222 @@ window.searchData = [
     "id": 242673,
     "url": "https://github.com/python/cpython/issues/128150#start-of-content",
     "parentUrl": "https://github.com/python/cpython/issues/128150"
+  },
+  {
+    "id": 244969,
+    "url": "https://github.com/python/cpython/pull/135996",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244970,
+    "url": "https://github.com/python/cpython/pull/132662",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244972,
+    "url": "https://github.com/python/cpython/pull/135217",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244973,
+    "url": "https://github.com/python/cpython/pull/135218",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244974,
+    "url": "https://github.com/python/cpython/pull/136901",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244976,
+    "url": "https://github.com/python/cpython/pull/137213",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244977,
+    "url": "https://github.com/python/cpython/pull/136441",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244978,
+    "url": "https://github.com/python/cpython/pull/137392",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244979,
+    "url": "https://github.com/lysnikolaou",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244980,
+    "url": "https://github.com/python/cpython/issues/132661#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244982,
+    "url": "https://github.com/python/cpython/issues/132661#top",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244983,
+    "url": "https://github.com/python/cpython/pull/135229",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244985,
+    "url": "https://github.com/python/cpython/pull/136511",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244986,
+    "url": "https://github.com/python/cpython/pull/136974",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244988,
+    "url": "https://github.com/python/cpython/pull/136671",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244989,
+    "url": "https://github.com/python/cpython/pull/137289",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244990,
+    "url": "https://github.com/python/cpython/pull/137020",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244991,
+    "url": "https://github.com/python/cpython/issues/132661#issue-3003432842",
+    "parentUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 244996,
+    "url": "https://github.com/python/cpython/pull/130502",
+    "parentUrl": "https://github.com/python/cpython/issues/130482"
+  },
+  {
+    "id": 245001,
+    "url": "https://github.com/kurawlefaraaz",
+    "parentUrl": "https://github.com/python/cpython/issues/130482"
+  },
+  {
+    "id": 245002,
+    "url": "https://github.com/python/cpython/issues/130482#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130482"
+  },
+  {
+    "id": 245004,
+    "url": "https://github.com/python/cpython/issues/130482#issue-2873149423",
+    "parentUrl": "https://github.com/python/cpython/issues/130482"
+  },
+  {
+    "id": 245006,
+    "url": "https://github.com/python/cpython/issues/130482#top",
+    "parentUrl": "https://github.com/python/cpython/issues/130482"
+  },
+  {
+    "id": 245007,
+    "url": "https://github.com/python/cpython/issues/122854#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/122854"
+  },
+  {
+    "id": 245010,
+    "url": "https://github.com/python/cpython/issues/122854#top",
+    "parentUrl": "https://github.com/python/cpython/issues/122854"
+  },
+  {
+    "id": 245011,
+    "url": "https://github.com/python/cpython/issues/122854#issue-2457686493",
+    "parentUrl": "https://github.com/python/cpython/issues/122854"
+  },
+  {
+    "id": 245012,
+    "url": "https://github.com/python/cpython/pull/122855",
+    "parentUrl": "https://github.com/python/cpython/issues/122854"
+  },
+  {
+    "id": 245013,
+    "url": "https://github.com/capi-workgroup/decisions/issues/13",
+    "parentUrl": "https://github.com/python/cpython/issues/122854"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Add Py_HashBuffer() function · Issue #122854 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122854"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Add Py_HashBuffer() function · Issue #122854 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122854"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/70267324?v\u003d4\u0026size\u003d80",
+    "alt": "@kurawlefaraaz",
+    "pageTitle": "add ability to specify name for `tk.OptionMenu` and `ttk.OptionMenu` · Issue #130482 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130482"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/70267324?v\u003d4\u0026size\u003d48",
+    "alt": "@kurawlefaraaz",
+    "pageTitle": "add ability to specify name for `tk.OptionMenu` and `ttk.OptionMenu` · Issue #130482 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130482"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/20306270?s\u003d64\u0026u\u003d235cdf82e88f76ba2f5f4c2d33fa392319c60ad1\u0026v\u003d4",
+    "alt": "lysnikolaou",
+    "pageTitle": "Implement PEP 750 – Template Strings · Issue #132661 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/20306270?u\u003d235cdf82e88f76ba2f5f4c2d33fa392319c60ad1\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@lysnikolaou",
+    "pageTitle": "Implement PEP 750 – Template Strings · Issue #132661 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/20306270?u\u003d235cdf82e88f76ba2f5f4c2d33fa392319c60ad1\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@lysnikolaou",
+    "pageTitle": "Implement PEP 750 – Template Strings · Issue #132661 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/20306270?s\u003d64\u0026u\u003d235cdf82e88f76ba2f5f4c2d33fa392319c60ad1\u0026v\u003d4",
+    "alt": "@lysnikolaou",
+    "pageTitle": "Implement PEP 750 – Template Strings · Issue #132661 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-proxy-objects"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-proxy-objects"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "json — JSON encoder and decoder — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/json.html#module-json"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "json — JSON encoder and decoder — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/json.html#module-json"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
