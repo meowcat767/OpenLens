@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 887,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.set_start_method",
+    "title": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » multiprocessing — Process-based parallelism | Theme Auto Light Dark | multiprocessing — Process-based parallelism¶ Source code: Lib/multiprocessing/ Availability: not Android, not iOS, not WASI. This module is not supported on mobile platforms or WebAssembly platforms. Introduction¶ multiprocessing is a package that supports spawning processes using an API similar to the threading module. The multiprocessing package offers both local and remote concurrency, effectively side-stepping the Global Interpreter Lock by using subprocesses instead of threads. Due to this, the multiprocessing module allows the programmer to fully leverage multiple processors on a given machine. It runs on both POSIX and Windows. The multiprocessing module also introduces the Pool object which offers a convenient means of parallelizing the execution of a function across multiple input values, distributing the input data across processes (data parallelism). The following example demonstrates the common practice of defining such functions in a module so that child processes can successfully import that module. This basic example of data parallelism using Pool, from multiprocessing import Pool\n\ndef f(x):\n    return x*x\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    with Pool(5) as p:\n        print(p.map(f, [1, 2, 3]))\n will print to standard output [1, 4, 9]\n The multiprocessing module also introduces APIs which do not have analogs in the threading module, like the ability to terminate, interrupt or kill a running process. See also concurrent.futures.ProcessPoolExecutor offers a higher level interface to push tasks to a background process without blocking execution of the calling process. Compared to using the Pool interface directly, the concurrent.futures API more readily allows the submission of work to the underlying process pool to be separated from waiting for the results. The Process class¶ In multiprocessing, processes are spawned by creating a Process object and then calling its start() method. Process follows the API of threading.Thread. A trivial example of a multiprocess program is from multiprocessing import Process\n\ndef f(name):\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n To show the individual process IDs involved, here is an expanded example: from multiprocessing import Process\nimport os\n\ndef info(title):\n    print(title)\n    print(\u0027module name:\u0027, __name__)\n    print(\u0027parent process:\u0027, os.getppid())\n    print(\u0027process id:\u0027, os.getpid())\n\ndef f(name):\n    info(\u0027function f\u0027)\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    info(\u0027main line\u0027)\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n For an explanation of why the if __name__ \u003d\u003d \u0027__main__\u0027 part is necessary, see Programming guidelines. The arguments to Process usually need to be unpickleable from within the child process. If you tried typing the above example directly into a REPL it could lead to an AttributeError in the child process trying to locate the f function in the __main__ module. Contexts and start methods¶ Depending on the platform, multiprocessing supports three ways to start a process. These start methods are spawn The parent process starts a fresh Python interpreter process. The child process will only inherit those resources necessary to run the process object’s run() method. In particular, unnecessary file descriptors and handles from the parent process will not be inherited. Starting a process using this method is rather slow compared to using fork or forkserver. Available on POSIX and Windows platforms. The default on Windows and macOS. fork The parent process uses os.fork() to fork the Python interpreter. The child process, when it begins, is effectively identical to the parent process. All resources of the parent are inherited by the child process. Note that safely forking a multithreaded process is problematic. Available on POSIX systems. Changed in version 3.14: This is no longer the default start method on any platform. Code that requires fork must explicitly specify that via get_context() or set_start_method(). Changed in version 3.12: If Python is able to detect that your process has multiple threads, the os.fork() function that this start method calls internally will raise a DeprecationWarning. Use a different start method. See the os.fork() documentation for further explanation. forkserver When the program starts and selects the forkserver start method, a server process is spawned. From then on, whenever a new process is needed, the parent process connects to the server and requests that it fork a new process. The fork server process is single threaded unless system libraries or preloaded imports spawn threads as a side-effect so it is generally safe for it to use os.fork(). No unnecessary resources are inherited. Availabl",
+    "scrapedAt": "2026-05-09 00:57:33.322515"
+  },
+  {
+    "id": 886,
+    "url": "https://www.python.org/downloads/android/",
+    "title": "Python Releases for Android | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Downloads\u003e\u003e\u003e Android Latest Python 3 Release - Python 3.14.4 Rather than using these packages directly, in most cases you should use one of the tools recommended in the Python documentation. Stable Releases Python 3.14.4 - April 7, 2026 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Python 3.14.3 - Feb. 3, 2026 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Python 3.14.2 - Dec. 5, 2025 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Python 3.14.1 - Dec. 2, 2025 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Python 3.14.0 - Oct. 7, 2025 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Pre-releases Python 3.15.0b1 - May 7, 2026 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Python 3.14.5rc1 - May 4, 2026 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Python 3.15.0a8 - April 7, 2026 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Python 3.15.0a7 - March 10, 2026 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Python 3.15.0a6 - Feb. 11, 2026 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Python 3.15.0a5 - Jan. 14, 2026 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Python 3.15.0a4 - Jan. 13, 2026 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Python 3.15.0a3 - Dec. 16, 2025 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Python 3.15.0a2 - Nov. 19, 2025 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Python 3.15.0a1 - Oct. 14, 2025 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Python 3.14.0rc3 - Sept. 18, 2025 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64) Python 3.14.0rc2 - Aug. 14, 2025 Download Android embeddable package (aarch64) Download Android embeddable package (x86_64)",
+    "scrapedAt": "2026-05-09 00:57:32.135961"
+  },
+  {
+    "id": 885,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_FreeStrList",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 00:57:30.946734"
+  },
+  {
+    "id": 884,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack",
+    "title": "Slice Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Slice Objects | Theme Auto Light Dark | Slice Objects¶ PyTypeObject PySlice_Type¶ Part of the Stable ABI. The type object for slice objects. This is the same as slice in the Python layer. int PySlice_Check(PyObject *ob)¶ Return true if ob is a slice object; ob must not be NULL. This function always succeeds. PyObject *PySlice_New(PyObject *start, PyObject *stop, PyObject *step)¶ Return value: New reference. Part of the Stable ABI. Return a new slice object with the given values. The start, stop, and step parameters are used as the values of the slice object attributes of the same names. Any of the values may be NULL, in which case the None will be used for the corresponding attribute. Return NULL with an exception set if the new object could not be allocated. int PySlice_GetIndices(PyObject *slice, Py_ssize_t length, Py_ssize_t *start, Py_ssize_t *stop, Py_ssize_t *step)¶ Part of the Stable ABI. Retrieve the start, stop and step indices from the slice object slice, assuming a sequence of length length. Treats indices greater than length as errors. Returns 0 on success and -1 on error with no exception set (unless one of the indices was not None and failed to be converted to an integer, in which case -1 is returned with an exception set). You probably do not want to use this function. Changed in version 3.2: The parameter type for the slice parameter was PySliceObject* before. int PySlice_GetIndicesEx(PyObject *slice, Py_ssize_t length, Py_ssize_t *start, Py_ssize_t *stop, Py_ssize_t *step, Py_ssize_t *slicelength)¶ Part of the Stable ABI. Usable replacement for PySlice_GetIndices(). Retrieve the start, stop, and step indices from the slice object slice assuming a sequence of length length, and store the length of the slice in slicelength. Out of bounds indices are clipped in a manner consistent with the handling of normal slices. Return 0 on success and -1 on error with an exception set. Note This function is considered not safe for resizable sequences. Its invocation should be replaced by a combination of PySlice_Unpack() and PySlice_AdjustIndices() where if (PySlice_GetIndicesEx(slice, length, \u0026start, \u0026stop, \u0026step, \u0026slicelength) \u003c 0) {\n    // return error\n}\n is replaced by if (PySlice_Unpack(slice, \u0026start, \u0026stop, \u0026step) \u003c 0) {\n    // return error\n}\nslicelength \u003d PySlice_AdjustIndices(length, \u0026start, \u0026stop, step);\n Changed in version 3.2: The parameter type for the slice parameter was PySliceObject* before. Changed in version 3.6.1: If Py_LIMITED_API is not set or set to the value between 0x03050400 and 0x03060000 (not including) or 0x03060100 or higher PySlice_GetIndicesEx() is implemented as a macro using PySlice_Unpack() and PySlice_AdjustIndices(). Arguments start, stop and step are evaluated more than once. Deprecated since version 3.6.1: If Py_LIMITED_API is set to the value less than 0x03050400 or between 0x03060000 and 0x03060100 (not including) PySlice_GetIndicesEx() is a deprecated function. int PySlice_Unpack(PyObject *slice, Py_ssize_t *start, Py_ssize_t *stop, Py_ssize_t *step)¶ Part of the Stable ABI since version 3.7. Extract the start, stop and step data members from a slice object as C integers. Silently reduce values larger than PY_SSIZE_T_MAX to PY_SSIZE_T_MAX, silently boost the start and stop values less than PY_SSIZE_T_MIN to PY_SSIZE_T_MIN, and silently boost the step values less than -PY_SSIZE_T_MAX to -PY_SSIZE_T_MAX. Return -1 with an exception set on error, 0 on success. Added in version 3.6.1. Py_ssize_t PySlice_AdjustIndices(Py_ssize_t length, Py_ssize_t *start, Py_ssize_t *stop, Py_ssize_t step)¶ Part of the Stable ABI since version 3.7. Adjust start/end slice indices assuming a sequence of the specified length. Out of bounds indices are clipped in a manner consistent with the handling of normal slices. Return the length of the slice. Always successful. Doesn’t call Python code. Added in version 3.6.1. Ellipsis Object¶ PyTypeObject PyEllipsis_Type¶ Part of the Stable ABI. The type of Python Ellipsis object. Same as types.EllipsisType in the Python layer. PyObject *Py_Ellipsis¶ The Python Ellipsis object. This object has no methods. Like Py_None, it is an immortal singleton object. Changed in version 3.12: Py_Ellipsis is immortal. Table of Contents Slice Objects Ellipsis Object Previous topic Descriptor Objects Next topic MemoryView objects This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Slice Objects | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more informat",
+    "scrapedAt": "2026-05-09 00:57:29.762258"
+  },
+  {
+    "id": 883,
+    "url": "https://github.com/python/cpython/issues/116560",
+    "title": "Consider adding public PyLong_GetSign() function · Issue #116560 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Consider adding public PyLong_GetSign() function #116560 New issue Copy link New issue Copy link Closed Closed Consider adding public PyLong_GetSign() function#116560 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description skirpichev opened on Mar 10, 2024 Issue body actions Feature or enhancement Proposal: Currently there is no way to determine the sign of the PyLongObject value and CPython extensions use private macroses like _PyLong_IsNegative(): https://github.com/aleaxit/gmpy/blob/eb8dfcbd84abcfcb36b4adcb0d5c6d050731dd75/src/gmpy2_convert_gmp.c#L56 PyLong_Sign() will offer GMP-like API to do this. This was suggested before: #102471 (comment) Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-116560: Add PyLong_GetSign() public function #116561 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:57:28.582763"
+  },
+  {
     "id": 882,
     "url": "https://docs.python.org/3/library/pty.html#pty.openpty",
     "title": "pty — Pseudo-terminal utilities — Python 3.14.5rc1 documentation",
@@ -5878,26 +5913,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 883,
-    "url": "https://github.com/python/cpython/issues/116560"
-  },
-  {
-    "id": 884,
-    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
-  },
-  {
-    "id": 885,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_FreeStrList"
-  },
-  {
-    "id": 886,
-    "url": "https://www.python.org/downloads/android/"
-  },
-  {
-    "id": 887,
-    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.set_start_method"
   },
   {
     "id": 888,
@@ -150325,10 +150340,378 @@ window.searchData = [
     "id": 126986,
     "url": "https://docs.python.org/3/library/os.html#os.waitstatus_to_exitcode",
     "parentUrl": "https://docs.python.org/3/library/pty.html#pty.openpty"
+  },
+  {
+    "id": 126991,
+    "url": "https://github.com/python/cpython/issues/116560#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "id": 126994,
+    "url": "https://github.com/python/cpython/pull/116561",
+    "parentUrl": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "id": 126996,
+    "url": "https://github.com/aleaxit/gmpy/blob/eb8dfcbd84abcfcb36b4adcb0d5c6d050731dd75/src/gmpy2_convert_gmp.c#L56",
+    "parentUrl": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "id": 126998,
+    "url": "https://github.com/python/cpython/issues/116560#top",
+    "parentUrl": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "id": 126999,
+    "url": "https://github.com/python/cpython/issues/102471#issuecomment-1620284985",
+    "parentUrl": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "id": 127001,
+    "url": "https://github.com/python/cpython/issues/116560#issue-2177679096",
+    "parentUrl": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "id": 127002,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_GetIndices",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 127006,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/slice.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 127008,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 127017,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PyEllipsis_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 127019,
+    "url": "https://docs.python.org/3/c-api/none.html#c.Py_None",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 127020,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 127022,
+    "url": "https://docs.python.org/3/c-api/slice.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 127031,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.Py_Ellipsis",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 127032,
+    "url": "https://docs.python.org/3/c-api/slice.html#slice-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 127033,
+    "url": "https://docs.python.org/3/c-api/descriptor.html",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 127035,
+    "url": "https://docs.python.org/3/c-api/slice.html#ellipsis-object",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 127036,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_New",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 127039,
+    "url": "https://docs.python.org/3/c-api/memoryview.html",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 127350,
+    "url": "https://www.python.org/downloads/release/python-3140/",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127351,
+    "url": "https://www.python.org/ftp/python/3.14.0/python-3.14.0rc3-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127354,
+    "url": "https://www.python.org/downloads/release/python-3150a8/",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127355,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a4-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127356,
+    "url": "https://www.python.org/downloads/release/python-3150a4/",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127357,
+    "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127358,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a7-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127359,
+    "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127360,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a7-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127361,
+    "url": "https://www.python.org/downloads/release/python-3143/",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127362,
+    "url": "https://www.python.org/downloads/release/python-3150a1/",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127363,
+    "url": "https://www.python.org/downloads/release/python-3140rc2/",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127364,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a2-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127365,
+    "url": "https://www.python.org/downloads/release/python-3150a5/",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127366,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a2-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127367,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0b1-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127368,
+    "url": "https://www.python.org/ftp/python/3.14.0/python-3.14.0rc2-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127369,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a5-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127370,
+    "url": "https://www.python.org/ftp/python/3.14.2/python-3.14.2-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127371,
+    "url": "https://www.python.org/ftp/python/3.14.0/python-3.14.0rc2-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127372,
+    "url": "https://www.python.org/downloads/release/python-3142/",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127373,
+    "url": "https://www.python.org/downloads/release/python-3140rc3/",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127374,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a5-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127376,
+    "url": "https://www.python.org/ftp/python/3.14.2/python-3.14.2-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127377,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a8-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127378,
+    "url": "https://www.python.org/downloads/release/python-3150a6/",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127380,
+    "url": "https://www.python.org/downloads/release/python-3150a2/",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127381,
+    "url": "https://www.python.org/ftp/python/3.14.0/python-3.14.0-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127382,
+    "url": "https://docs.python.org/3/using/android.html",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127383,
+    "url": "https://www.python.org/ftp/python/3.14.1/python-3.14.1-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127384,
+    "url": "https://www.python.org/ftp/python/3.14.0/python-3.14.0-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127385,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a4-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127386,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0b1-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127387,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a3-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127389,
+    "url": "https://www.python.org/downloads/release/python-3141/",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127391,
+    "url": "https://www.python.org/downloads/release/python-3150a7/",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127392,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a3-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127394,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a6-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127396,
+    "url": "https://www.python.org/downloads/release/python-3150a3/",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127397,
+    "url": "https://www.python.org/ftp/python/3.14.0/python-3.14.0rc3-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127398,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a8-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127399,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a6-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127400,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a1-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127401,
+    "url": "https://www.python.org/ftp/python/3.14.1/python-3.14.1-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 127402,
+    "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a1-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/android/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.set_start_method"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.set_start_method"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_FreeStrList"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_FreeStrList"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Slice Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Slice Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@skirpichev",
+    "pageTitle": "Consider adding public PyLong_GetSign() function · Issue #116560 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@skirpichev",
+    "pageTitle": "Consider adding public PyLong_GetSign() function · Issue #116560 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/116560"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
