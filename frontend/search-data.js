@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 25,
+    "url": "https://www.bbc.co.uk/news/articles/cvgz155y9exo",
+    "title": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "content": "England council results Number of councillors 105 of 136 councils Counting under way Reform UK REF 1,122 1,120 (Reform UK 1,122 councillors 1,120 councillors gained) Labour LAB 709 967 (Labour 709 councillors 967 councillors lost) Liberal Democrat LD 693 87 (Liberal Democrat 693 councillors 87 councillors gained) Conservative CON 618 467 (Conservative 618 councillors 467 councillors lost) Green GRN 360 259 (Green 360 councillors 259 councillors gained) Independent IND 117 16 (Independent 117 councillors 16 councillors lost) Change How this election works Local elections in England cover more than 5,000 seats across 136 local authorities and six mayoral races. The banner shows each party’s seat total as results come in. Results from all counts are expected by Saturday. Live. updates Get the full results Image source, PA Media ByPaul Seddon, Political reporter and Becky Morton, Political reporter Published 8 May 2026, 04:59 BST Updated 55 minutes ago Reform UK has made significant gains at the expense of Labour and the Conservatives in council election results in England so far. Results are also coming in from parliamentary elections in Wales and Scotland, with Labour admitting defeat in Wales and the SNP claiming victory in Scotland. The polls across Scotland, Wales and 136 English local authorities are the biggest set of elections since the 2024 election, and widely seen as a crucial test of Sir Keir Starmer\u0027s premiership. Here are the key developments so far - and what\u0027s still to come. Follow live updates and reaction What\u0027s the result in my area? Published 1 hour ago Reform UK wins big (again) Image source, Getty Images Reform UK has picked up hundreds of council seats, continuing its success after its breakthrough in town halls last year. Nigel Farage\u0027s party has won big in former Labour heartlands, including in Sunderland, where it has taken control of the city council after more than 50 years of Labour leadership. Reform has also made gains at the expense of the Conservatives, seizing control of Newcastle-under-Lyme, Suffolk, and Essex, which hosts the parliamentary seats of half a dozen shadow ministers. Reform also won control of Havering, which borders Essex, delivering the party its first-ever win in a London borough. The party was in its infancy the last time these councils were up for election, meaning it is only possible for the party to win majority control in areas where all seats are being contested. Labour wiped out in Wales Labour is on course for a historic defeat in the Senedd election, with around half of seats declared so far. It would bring to an end a century of political pre-eminence for the party in Wales, with even Eluned Morgan, Labour first minister since 2024, losing her seat. The BBC is forecasting that Plaid Cymru will win between 41 and 46 seats, just short of a majority in the newly-expanded 96-seat Senedd. Reform is set for second place, whilst the Greens have won their first Senedd seat, and the Liberal Democrats are aiming to increase their number from a single seat. While Wales is not traditionally an area of strength for the Conservatives, the party looks set for considerable losses. And sees painful losses in England Labour has lost hundreds of seats across the country, although its losses have been less bad in London. Reform\u0027s surge has seen Labour lose majority control in areas including Redditch, Hartlepool, Tameside, Hyndburn, and Cannock Chase. It also lost control of Cambridge City Council, where the Greens made gains. SNP to be largest party in Scotland The BBC is forecasting that the SNP will win between 59 to 63 seats in the Scottish Parliament, short of an overall majority. SNP minister Angus Robertson lost his Edinburgh seat to the Scottish Greens, among results declared so far. Scottish Labour has taken Na h-Eileanan an Iar and Edinburgh Southern from the SNP, but leader Anas Sarwar says his party has lost the \"argument for change\" amid a \"national wave\" of disappointment for Labour. Reform UK - which currently has no representation in Holyrood - is yet to win a constituency seat among those that have declared, but is hoping to do well in seats allocated from the regional list. The Scottish Conservatives admit they will not retain second party spot, whilst both the Greens and the Liberal Democrats are hoping to make gains, as the dominance of main parties fragments. Click to expand A modern browser with JavaScript and a stable internet connection is required to view this interactive. More information about forthcoming elections (Opens in a new browser tab) Who won in my area? Enter your postcode or electoral area to find out No internet connection There is currently a problem with the service. Please try later. England Scotland Wales District council Mayor County council Constituency Region + - Reset Changed hands Key Show map key Map key Hide map key Please select an area on the map or try another postcode search. To make sure you get the correct informati",
+    "scrapedAt": "2026-05-09 00:28:18.05303"
+  },
+  {
+    "id": 24,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv",
+    "title": "Him \u0026 Her - BBC iPlayer",
+    "content": "Close menu Home Him \u0026 Her Comedy Him \u0026 Her An intimate anti-romantic comedy about real-life love in its lazy, messy, everyday glory. Series 1: 1. The Toast (28 mins) Start watching 1. The Toast Steve and Becky\u0027s plans to stay in bed are scuppered when her sister Laura arrives. 28 mins 2. The Birthday It\u0027s Steve\u0027s birthday, and everyone wants to go out and get plastered - except Steve. 28 mins 3. The Fancy Dress Party Paul\u0027s son Luke is having a fancy dress party, and Steve and Becky are supposed to attend. 28 mins 4. The Football Everyone tries to watch the match between two local teams - except Steve, Laura and Paul. 28 mins 5. The Parents Becky\u0027s parents are coming round to fix the fridge and Steve is terrified of meeting them. 28 mins 6. The Argument Steve and Becky have a drunken argument, and Becky gets locked in the bathroom. 29 mins Explore the BBC",
+    "scrapedAt": "2026-05-09 00:28:17.003236"
+  },
+  {
+    "id": 23,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t",
+    "title": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "content": "Live. 15,887 viewing15887 viewing Live pageUpdated 12 minutes ago Plaid Cymru becomes largest party in Wales as Labour vote collapses Radio Wales Election 2026 BBC Radio Wales Close To play this video you need to enable JavaScript in your browser. This video can not be played Radio Wales Election 2026 BBC Radio Wales Listen live Summary Plaid Cymru becomes the largest party in Wales, with 43 seats in the 96-seat Senedd - Reform is second on 34 Plaid leader Rhun ap Iorwerth said it is clear that Wales has demanded a \"change of leadership\" and that his party is \"ready to serve\" Labour suffered a historic collapse, winning just nine seats, with Eluned Morgan stepping down as leader of Welsh Labour after losing her seat She said she takes responsibility for her party\u0027s result, and that the people of Wales \"rejected Welsh Labour\" The Conservatives won seven seats, followed by the Greens with two and the Liberal Democrats with one Early indications show that turnout figures will rise above 50% for the first time in a devolved election in Wales Elections are also taking place in England and Scotland. You can keep across the wider UK picture through our live coverage You can watch and listen to coverage of the election results by clicking play at the top of this page Scroll to previous item Scroll to next item 1:27Plaid the biggest party as Labour collapses. 00:01:27, play videoPlaid the biggest party as Labour collapses 1:20First minister loses seat and resigns as Welsh Labour leader. 00:01:20, play videoFirst minister loses seat and resigns as Welsh Labour leader 0:40Rhun ap Iorwerth: \u0027Wales has demanded new leadership\u0027 00:00:40, play videoRhun ap Iorwerth: \u0027Wales has demanded new leadership\u0027 0:27Green Party\u0027s first MS: \u0027A historic breakthrough\u0027 00:00:27, play videoGreen Party\u0027s first MS: \u0027A historic breakthrough\u0027 0:24The first ever result in the new-look Senedd. 00:00:24, play videoThe first ever result in the new-look Senedd 0:54Reform Wales leader\u0027s speech after winning seat. 00:00:54, play videoReform Wales leader\u0027s speech after winning seat 0:32Labour won\u0027t form next Welsh government, says deputy FM. 00:00:32, play videoLabour won\u0027t form next Welsh government, says deputy FM 0:46First result of Senedd election declared. 00:00:46, play videoFirst result of Senedd election declared 0:51It\u0027s election day: What are you hoping for? 00:00:51, play videoIt\u0027s election day: What are you hoping for? 1:01A quick look at the new Senedd voting system. 00:01:01, play videoA quick look at the new Senedd voting system 1:27Can you pronounce your constituency? 00:01:27, play videoCan you pronounce your constituency? 0:57The 6,000 votes that changed Wales forever 00:00:57, play videoThe 6,000 votes that changed Wales forever Live Reporting Edited by Oliver Slow and Adam Hale Gwynedd Maldwyn has declared 36,087 votes for Plaid Cymru, while Reform wins 22,667 votes. Siân Gwenllian and Mabon ap Gwynfor return to the Senedd for Plaid. Share close panel Share page Copy link About sharing The dramatic Welsh election has come to an end with Gwynedd Maldwyn, where Plaid Cymru has won four seats. Plaid Cymru is now the largest party in Wales\u0027 parliament - the Senedd - in a historic election that has seen Labour\u0027s century-long dominance over the nation\u0027s politics come to an end. Share close panel Share page Copy link About sharing We\u0027re about to hear who\u0027s won in Gwynedd Maldwyn, the final constituency Share close panel Share page Copy link About sharing If you\u0027d like to follow all the reaction to today\u0027s historic results in Welsh, you can keep up to date here. You can listen to a results programme in Welsh on BBC Radio Cymru or BBC Sounds, or you can watch a Welsh results programme on S4C, which is also available on the iPlayer or S4C Clic. Share close panel Share page Copy link About sharing Over in Fflint Wrecsam, there were 25,349 votes for Reform, 18,440 votes for Plaid Cymru, 9,017 votes for Conservatives and 8,555 votes for Labour. Transport secretary Ken Skates will return to the Senedd after securing Labour\u0027s only seat for the constituency, while his colleague Jack Sargeant misses out. The Tories\u0027 finance spokesperson Sam Rowlands also wins. There\u0027s just one more constituency left now. Share close panel Share page Copy link About sharing Heading back now to Brycheiniog Tawe Nedd constituency where Jane Dodds has been speaking. The Welsh Lib Dem leader says it is a great honour to be back in the Senedd and \"to keep that Liberal Democrat flame alive\" - she\u0027s the only one from her party to win so far in Wales. Reform won three seats here while Plaid Cymru won two. Share close panel Share page Copy link About sharing It\u0027s now clear Plaid Cymru will be the largest party in the Senedd after a historic election that has seen Welsh Labour pushed into third place, behind Reform UK. Plaid are ahead of Reform by seven seats, with just one constituency with six spots in the Senedd left to declare, Plaid has 39 Members of the Senedd (MSs), ",
+    "scrapedAt": "2026-05-09 00:28:15.644673"
+  },
+  {
+    "id": 22,
+    "url": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments",
+    "title": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "content": "England council results Number of councillors 105 of 136 councils Counting under way Reform UK REF 1,122 1,120 (Reform UK 1,122 councillors 1,120 councillors gained) Labour LAB 709 967 (Labour 709 councillors 967 councillors lost) Liberal Democrat LD 693 87 (Liberal Democrat 693 councillors 87 councillors gained) Conservative CON 618 467 (Conservative 618 councillors 467 councillors lost) Green GRN 360 259 (Green 360 councillors 259 councillors gained) Independent IND 117 16 (Independent 117 councillors 16 councillors lost) Change How this election works Local elections in England cover more than 5,000 seats across 136 local authorities and six mayoral races. The banner shows each party’s seat total as results come in. Results from all counts are expected by Saturday. Live. updates Get the full results Image source, PA Media ByPaul Seddon, Political reporter and Becky Morton, Political reporter Published 8 May 2026, 04:59 BST Updated 55 minutes ago Reform UK has made significant gains at the expense of Labour and the Conservatives in council election results in England so far. Results are also coming in from parliamentary elections in Wales and Scotland, with Labour admitting defeat in Wales and the SNP claiming victory in Scotland. The polls across Scotland, Wales and 136 English local authorities are the biggest set of elections since the 2024 election, and widely seen as a crucial test of Sir Keir Starmer\u0027s premiership. Here are the key developments so far - and what\u0027s still to come. Follow live updates and reaction What\u0027s the result in my area? Published 1 hour ago Reform UK wins big (again) Image source, Getty Images Reform UK has picked up hundreds of council seats, continuing its success after its breakthrough in town halls last year. Nigel Farage\u0027s party has won big in former Labour heartlands, including in Sunderland, where it has taken control of the city council after more than 50 years of Labour leadership. Reform has also made gains at the expense of the Conservatives, seizing control of Newcastle-under-Lyme, Suffolk, and Essex, which hosts the parliamentary seats of half a dozen shadow ministers. Reform also won control of Havering, which borders Essex, delivering the party its first-ever win in a London borough. The party was in its infancy the last time these councils were up for election, meaning it is only possible for the party to win majority control in areas where all seats are being contested. Labour wiped out in Wales Labour is on course for a historic defeat in the Senedd election, with around half of seats declared so far. It would bring to an end a century of political pre-eminence for the party in Wales, with even Eluned Morgan, Labour first minister since 2024, losing her seat. The BBC is forecasting that Plaid Cymru will win between 41 and 46 seats, just short of a majority in the newly-expanded 96-seat Senedd. Reform is set for second place, whilst the Greens have won their first Senedd seat, and the Liberal Democrats are aiming to increase their number from a single seat. While Wales is not traditionally an area of strength for the Conservatives, the party looks set for considerable losses. And sees painful losses in England Labour has lost hundreds of seats across the country, although its losses have been less bad in London. Reform\u0027s surge has seen Labour lose majority control in areas including Redditch, Hartlepool, Tameside, Hyndburn, and Cannock Chase. It also lost control of Cambridge City Council, where the Greens made gains. SNP to be largest party in Scotland The BBC is forecasting that the SNP will win between 59 to 63 seats in the Scottish Parliament, short of an overall majority. SNP minister Angus Robertson lost his Edinburgh seat to the Scottish Greens, among results declared so far. Scottish Labour has taken Na h-Eileanan an Iar and Edinburgh Southern from the SNP, but leader Anas Sarwar says his party has lost the \"argument for change\" amid a \"national wave\" of disappointment for Labour. Reform UK - which currently has no representation in Holyrood - is yet to win a constituency seat among those that have declared, but is hoping to do well in seats allocated from the regional list. The Scottish Conservatives admit they will not retain second party spot, whilst both the Greens and the Liberal Democrats are hoping to make gains, as the dominance of main parties fragments. Click to expand A modern browser with JavaScript and a stable internet connection is required to view this interactive. More information about forthcoming elections (Opens in a new browser tab) Who won in my area? Enter your postcode or electoral area to find out No internet connection There is currently a problem with the service. Please try later. England Scotland Wales District council Mayor County council Constituency Region + - Reset Changed hands Key Show map key Map key Hide map key Please select an area on the map or try another postcode search. To make sure you get the correct informati",
+    "scrapedAt": "2026-05-09 00:28:14.562096"
+  },
+  {
+    "id": 21,
+    "url": "https://meowcat.site/posts",
+    "title": "",
+    "content": "Posts Write something about your posts. Or don\u0027t! 30 Apr 2026 — Why Wordpress didn\u0027t work. 16 Dec 2025 — How I accidentally deleted my bin folder 15 Dec 2025 — opening",
+    "scrapedAt": "2026-05-09 00:28:13.463408"
+  },
+  {
     "id": 20,
     "url": "https://meowcat.site/posts/How I accidentally deleted my bin folder/",
     "title": "",
@@ -138,26 +173,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 21,
-    "url": "https://meowcat.site/posts"
-  },
-  {
-    "id": 22,
-    "url": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
-  },
-  {
-    "id": 23,
-    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
-  },
-  {
-    "id": 24,
-    "url": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
-  },
-  {
-    "id": 25,
-    "url": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
   },
   {
     "id": 26,
@@ -17848,10 +17863,625 @@ window.searchData = [
     "id": 8895,
     "url": "https://en.wikipedia.org/wiki/Finalizer",
     "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8903,
+    "url": "https://www.bbc.co.uk/news/articles/ckg1y72091no",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8904,
+    "url": "https://www.bbc.co.uk/news/articles/clyp4kp687go",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8905,
+    "url": "https://www.bbc.co.uk/news/articles/cqlpyvy7925o",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8907,
+    "url": "https://www.bbc.co.uk/news/articles/c4g09pdx82go",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8908,
+    "url": "https://www.bbc.co.uk/sounds/play/p0nh7wc4?at_mid\u003dK6YnOB7Lho\u0026at_campaign\u003dGangster_Presents_The_Story_of_Ronnie_Biggs\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_nation\u003dNET\u0026at_audience_id\u003dSS\u0026at_product\u003dsounds\u0026at_brand\u003dp09dj358\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dGangster_Presents_The_Story_of_Ronnie_Biggs\u0026at_bbc_team\u003dBBC",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8910,
+    "url": "https://www.bbc.co.uk/news/topics/cr45k7vqw1pt",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8914,
+    "url": "https://www.bbc.co.uk/newsletters/z7hc239",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8916,
+    "url": "https://www.bbc.co.uk/news/articles/c62nq678nyzo",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8917,
+    "url": "https://www.bbc.co.uk/sounds/play/m002w5m1?at_mid\u003dDDrHqFHbLS\u0026at_campaign\u003dThe_Martin_Lewis_Podcast_7_May_2026\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_nation\u003dNET\u0026at_audience_id\u003dSS\u0026at_product\u003dsounds\u0026at_brand\u003dp02pc9xt\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dThe_Martin_Lewis_Podcast_7_May_2026\u0026at_bbc_team\u003dBBC",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8918,
+    "url": "https://www.bbc.co.uk/news/articles/ceqpr9x4nwjo",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8923,
+    "url": "https://www.bbc.co.uk/news/articles/cd6j8e38p79o",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8924,
+    "url": "https://www.bbc.co.uk/news/articles/czj2e18z2vjo",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8926,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002qkrz?at_mid\u003dzHeQVrIBtI\u0026at_campaign\u003dAmandaland_S2\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_nation\u003dNET\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0024pyy\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dAmandaland_S2\u0026at_bbc_team\u003dBBC",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8927,
+    "url": "https://www.bbc.co.uk/news/articles/c98r199e195o",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8928,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002t58s?at_mid\u003dHCrcMkiipa\u0026at_campaign\u003dBeyond_Paradise_S4_E1\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_nation\u003dNET\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm001jg5h\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dBeyond_Paradise_S4_E1\u0026at_bbc_team\u003dBBC",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8929,
+    "url": "https://www.bbc.co.uk/news/articles/cy02yyl1e7xo",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8931,
+    "url": "https://www.bbc.co.uk/news/articles/cwy2e2w7y46o",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8932,
+    "url": "https://www.bbc.co.uk/news/topics/c14mlzpdgjnt",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8933,
+    "url": "https://www.bbc.co.uk/send/u237190912",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8934,
+    "url": "https://www.electoralcommission.org.uk/i-am-a/voter/your-election-information",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 8937,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3Ae90d2efd-d249-4fcb-a7a5-2424dc576ab8#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 8938,
+    "url": "https://www.bbc.co.uk/usingthebbc/terms/can-i-share-things-from-the-bbc",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 8940,
+    "url": "https://www.bbc.co.uk/cymrufyw/byw/c1krkx0mmx0t",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 8941,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3A132dd20f-9d4a-47b9-b73e-84f2016d4f5e#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 8943,
+    "url": "https://www.bbc.co.uk/sounds/play/live/bbc_radio_cymru",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 8944,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b00v4lml/him-her-series-1-5-the-parents",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "id": 8945,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b00tqr6j/him-her-series-1-2-the-birthday",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "id": 8946,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv/him-her#",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "id": 8947,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b00tp680/him-her-series-1-1-the-toast",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "id": 8948,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b00twwyj/him-her-series-1-3-the-fancy-dress-party",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "id": 8949,
+    "url": "https://www.bbc.co.uk/iplayer",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "id": 8950,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b00tz284/him-her-series-1-4-the-football",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "id": 8951,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b00v8xck/him-her-series-1-6-the-argument",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://static.files.bbci.co.uk/elections/images/uk2026/election-logo-cutout-en.svg",
+    "alt": "Election",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/2f4e/live/b2f259a0-4a8c-11f1-8cc6-3107ba12e291.jpg",
+    "alt": "People sitting across a long table count ballot papers in Westminster, central London.\n",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1280/cpsprodpb/e17d/live/98ea43f0-4ae2-11f1-8c8d-458160734f59.png",
+    "alt": "Nigel Farage celebrates with Reform UK activists in Havering ",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://news.files.bbci.co.uk/include/newsspec/41045-uk-local-elections-2026/assets/app-project-assets/img/warning.svg",
+    "alt": "",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://news.files.bbci.co.uk/include/newsspec/41045-uk-local-elections-2026/assets/app-project-assets/img/warning.svg",
+    "alt": "",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/1577/live/dd40d040-4ae3-11f1-8c8d-458160734f59.png",
+    "alt": "Green leader Zack Polanski celebrates with Zoë Garbett in Hackney",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/81fc/live/7b12bde0-4ac3-11f1-bd52-e755d604ece4.png",
+    "alt": "Banner with the words: More on election 2026",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/6133/live/2bce6ee0-0b00-11f0-97d3-37df2b293ed1.png",
+    "alt": "Thin, red banner promoting the Politics Essential newsletter with text saying, “Top political analysis in your inbox every day”. There is also an image of the Houses of Parliament.",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/db69/live/015d7fe0-4aef-11f1-ac78-2112837ce2aa.png",
+    "alt": "Nigel Farage ",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/60a2/live/7bfa1c10-cadc-11f0-a892-01d657345866.jpg",
+    "alt": "Sir David Attenborough being filmed in front of the sea and mountains for Life on Earth in 1979",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/af4f/live/8c892de0-4ac1-11f1-b55d-0f258dce1735.png",
+    "alt": "A composite image of 5 people  in flamboyant costumes at the Met gala. In the centre in a largest part of the image is a women in white  wearing a mask over her face",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b327/live/76b6ee00-4a38-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A person in protective clothing walks next to an ambulance during an evacuation operation of suspected hantavirus patients, following an outbreak on the cruise ship MV Hondius, in Praia, Cape Verde, May 6, 2026",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/2d4c/live/d268f6b0-4a1c-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "Two ladies are sat beside each other. The one on the left is wearing a mustard cardigan and has white wavy hair. The one on the right is wearing a pink collarless shirt and has blonde and brown hair. ",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/dd4d/live/992a5b50-494f-11f1-bd44-e578c5bd51ff.png",
+    "alt": "A pregnant woman stands in a garden with her hand on her belly. She has long, straight, dark hair and is wearing a matching top and trousers which are white with some patches of black. She also has a light brown hoodie on. ",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dbbc_three::iplayer.tv.tleo.him_her.p00kqnzv.page\u0026x1\u003d[page]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[list-tleo]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[iplayer]\u0026x12\u003d[bbc_three]",
+    "alt": "",
+    "pageTitle": "Him \u0026 Her - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "src": "http://b.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Him \u0026 Her - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/0ed6/live/2596c5f0-4aff-11f1-bd52-e755d604ece4.jpg",
+    "alt": "rhun ap iorwerth and wife",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/eee5/live/582e4080-4b02-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Teleri Glyn Jones in front of the Senedd",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk63q2.jpg",
+    "alt": "Eluned",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk5p8k.jpg",
+    "alt": "Rhun ap Iorwerth says Wales has demanded new leadership in a speech after winning seat",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk5jhc.jpg",
+    "alt": "Anthony Slaughter",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk4xmd.jpg",
+    "alt": "Reporter",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/fbbe/live/5c394370-4aec-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Dan Thomas in a suit and a rosette",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/9f62/live/50d9b350-4ad5-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Huw Irranca-Davies",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk4t6d.jpg",
+    "alt": "Reform and Plaid Cymru win two seats apiece in the first result of the Senedd election",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/f2be/live/5f177ed0-4ad9-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "A woman with glasses and braces in a grey cardigan",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/e98b/live/0b018330-27ad-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "A designed image of a young woman walking her dog next to a polling station sign in English and Welsh.",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/4e8b/live/93bddc20-46be-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Teleri Glyn-Jones in a red and white striped shirt looking at the camera. She has brown hair cut into a bob, and she holds her hands in front of her.",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/896e/live/31c540f0-4496-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "girl smiling outside the Senedd building, wearing a plaid blue jacket.\n",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/49164f68-4be9-45f8-9e8c-c178f4de1dc4.png.webp",
+    "alt": "Bar chart showing the results of the Gwynedd Maldwyn seat in the Welsh Parliament with vote share for candidates with more than 1% of the vote: Plaid Cymru 44.2% and 0 seats, Reform UK 27.7% and 0 seats, Conservative 6.9% and 0 seats, Lib Dem 5.6% and 0 s",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/c336bff6-20df-47f9-92a3-3b21d9637d5f.png.webp",
+    "alt": "Card showing the result for the constituency election for Gwynedd Maldwyn. The six seats were won as follows: Plaid Cymru 4, Reform UK 2",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/c7f65cf1-cf4a-42ec-9123-207b66f548c9.png.webp",
+    "alt": "Bar chart showing the results of the Fflint Wrecsam seat in the Welsh Parliament with vote share for candidates with more than 1% of the vote: Reform UK 36.2% and 2 seats, Plaid Cymru 26.3% and 2 seats, Conservative 12.9% and 1 seats, Labour 12.2% and 1 s",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/b5102117-1581-4249-ab98-c760e2e86887.jpg.webp",
+    "alt": "Jane Dodds at the podium",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/70e67102-31d9-4acb-b131-60b5678ddd70.jpg.webp",
+    "alt": "Three Plaid Cymru candidates are smiling and clapping with eachother",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/1047379e-914b-4db3-ba34-318c556993de.jpg.webp",
+    "alt": "Anthony Slaughter is walking with his hands out, smiling.",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/04f687ba-86a5-4828-a241-3b68bb05ba80.jpg.webp",
+    "alt": "Huw Thomas is wearing a suit with a red lapel attached to it.",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/188813d3-5e53-431d-be72-d697364ac48a.png.webp",
+    "alt": "Card showing the result for the constituency election for Fflint Wrecsam. The six seats were won as follows:  Plaid Cymru     2,     Reform UK     2,  Conservative     1,        Labour     1",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/4af8bea3-31c1-4c06-ad0f-47c9b3248343.png.webp",
+    "alt": "Bar chart showing the results of the Gŵyr Abertawe seat in the Welsh Parliament with vote share for candidates with more than 1% of the vote: Plaid Cymru 31.9% and 3 seats, Reform UK 27.5% and 2 seats, Labour 14.2% and 1 seats, Conservative 9.6% and 0 sea",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/d7d9aa90-aeca-4933-873d-c28a2ffb2b74.png.webp",
+    "alt": "Bar chart showing the results of the Brycheiniog Tawe Nedd seat in the Welsh Parliament with vote share for candidates with more than 1% of the vote: Reform UK 33.2% and 3 seats, Plaid Cymru 28.7% and 2 seats, Lib Dem 11.8% and 1 seats, Labour 8.7% and 0 ",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/068b2a33-5bd5-44d5-b50e-41d622b83e52.jpg.webp",
+    "alt": "Sir Keir Starmer",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/204e2b56-a28c-4c76-b54e-ebf04559423a.png.webp",
+    "alt": "Card showing the result for the constituency election for Gŵyr Abertawe. The six seats were won as follows: Plaid Cymru     3,    Reform UK     2,       Labour     1",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/660687ae-88dc-4e46-867a-4b54dab7d7e4.png.webp",
+    "alt": "Bar chart showing the results of the Clwyd seat in the Welsh Parliament with vote share for candidates with more than 1% of the vote: Reform UK 32.3% and 3 seats, Plaid Cymru 28.3% and 2 seats, Conservative 20.3% and 1 seats, Labour 10.4% and 0 seats, Gre",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/5ea2a21b-f662-428c-8a04-3ff70320b727.png.webp",
+    "alt": "Card showing the result for the constituency election for Clwyd. The six seats were won as follows:    Reform UK     3,   Plaid Cymru     2,  Conservative     1",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/2c4afc10-0675-410b-a1fc-830d2437ea28.png.webp",
+    "alt": "Card showing the result for the constituency election for Brycheiniog Tawe Nedd. The six seats were won as follows:   Reform UK     3,  Plaid Cymru     2,      Lib Dem     1",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Wales election results 2026: Plaid Cymru becomes largest party as Labour vote collapses - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://static.files.bbci.co.uk/elections/images/uk2026/election-logo-cutout-en.svg",
+    "alt": "Election",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/2f4e/live/b2f259a0-4a8c-11f1-8cc6-3107ba12e291.jpg",
+    "alt": "People sitting across a long table count ballot papers in Westminster, central London.\n",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1280/cpsprodpb/e17d/live/98ea43f0-4ae2-11f1-8c8d-458160734f59.png",
+    "alt": "Nigel Farage celebrates with Reform UK activists in Havering ",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://news.files.bbci.co.uk/include/newsspec/41045-uk-local-elections-2026/assets/app-project-assets/img/warning.svg",
+    "alt": "",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://news.files.bbci.co.uk/include/newsspec/41045-uk-local-elections-2026/assets/app-project-assets/img/warning.svg",
+    "alt": "",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/1577/live/dd40d040-4ae3-11f1-8c8d-458160734f59.png",
+    "alt": "Green leader Zack Polanski celebrates with Zoë Garbett in Hackney",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/81fc/live/7b12bde0-4ac3-11f1-bd52-e755d604ece4.png",
+    "alt": "Banner with the words: More on election 2026",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/6133/live/2bce6ee0-0b00-11f0-97d3-37df2b293ed1.png",
+    "alt": "Thin, red banner promoting the Politics Essential newsletter with text saying, “Top political analysis in your inbox every day”. There is also an image of the Houses of Parliament.",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/db69/live/015d7fe0-4aef-11f1-ac78-2112837ce2aa.png",
+    "alt": "Nigel Farage ",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/60a2/live/7bfa1c10-cadc-11f0-a892-01d657345866.jpg",
+    "alt": "Sir David Attenborough being filmed in front of the sea and mountains for Life on Earth in 1979",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/af4f/live/8c892de0-4ac1-11f1-b55d-0f258dce1735.png",
+    "alt": "A composite image of 5 people  in flamboyant costumes at the Met gala. In the centre in a largest part of the image is a women in white  wearing a mask over her face",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b327/live/76b6ee00-4a38-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A person in protective clothing walks next to an ambulance during an evacuation operation of suspected hantavirus patients, following an outbreak on the cruise ship MV Hondius, in Praia, Cape Verde, May 6, 2026",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/2d4c/live/d268f6b0-4a1c-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "Two ladies are sat beside each other. The one on the left is wearing a mustard cardigan and has white wavy hair. The one on the right is wearing a pink collarless shirt and has blonde and brown hair. ",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/dd4d/live/992a5b50-494f-11f1-bd44-e578c5bd51ff.png",
+    "alt": "A pregnant woman stands in a garden with her hand on her belly. She has long, straight, dark hair and is wearing a matching top and trousers which are white with some patches of black. She also has a light brown hoodie on. ",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Election results so far at a glance - and what\u0027s still to come - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
   {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/UML_abstract_methods.svg/330px-UML_abstract_methods.svg.png",
     "alt": "",
