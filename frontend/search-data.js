@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 150,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt",
+    "title": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "content": "Live. 7,504 viewing7504 viewing Live pageUpdated 7 minutes ago Historic wins for Greens as party gains first council and two mayors Listen to the latest updates BBC Radio London Close To play this video you need to enable JavaScript in your browser. This video can not be played Live Reporting (active) Watch \u0026 listen Summary More than 1,800 councillors are being elected to London\u0027s councils With 11 councils declared, Labour, Conservatives and Liberal Democrats all have taken control of three councils Reform UK has gained its first London council having picked up Havering The Greens win Hackney and Lewisham mayoral votes while Labour take Newham The Conservatives win Westminster back from Labour, hold Kensington and Chelsea and Hillingdon, and become the biggest party in Wandsworth, which moves to no overall control The Lib Dems hold Richmond-upon-Thames, Sutton and Kingston but fail to win Merton from Labour. Labour holds on to Hammersmith and Fulham and Ealing Until this vote, Labour had 21 boroughs, the Conservatives had five, the Lib Dems had three, the Aspire Party had one and two were no overall control While we will focus on London, you can also keep across what is happening across the UK here and find results in your area here Scroll to previous item Scroll to next item 0:46London election expert: ‘The results so far are fascinating’ 00:00:46, play videoLondon election expert: ‘The results so far are fascinating’ 0:31Labour hold Merton \u0027against the odds\u0027 00:00:31, play videoLabour hold Merton \u0027against the odds\u0027 0:35Tories regain control of Westminster City Council. 00:00:35, play videoTories regain control of Westminster City Council 0:49Farage: Havering \u0027under new management\u0027 00:00:49, play videoFarage: Havering \u0027under new management\u0027 0:18\u0027Nail-biting night\u0027 in Wandsworth ends with no overall control. 00:00:18, play video\u0027Nail-biting night\u0027 in Wandsworth ends with no overall control Live Reporting Edited by Rebecca Cafe, with BBC reporters at counts across London Share close panel Share page Copy link About sharing The Green Party has been elected to run Waltham Forest Council. The party, which has never had a seat in this borough before today, now have 32 seats. Labour took 14 seats, a loss of 33 seats compared to the last election, while the Conservatives won 14 seats, a gain of one. Share close panel Share page Copy link About sharing Share close panel Share page Copy link About sharing All mayoral results for today have been declared, with the exception of Tower Hamlets, which is due to declare its new mayor on Saturday. The Green Party has won its first ever mayoralties, winning Hackney and Lewisham, while Labour held Newham and the Conservatives held Croydon. Share close panel Share page Copy link About sharing Election results are coming in thick and fast now, so here\u0027s a rundown of the 12 councils declared. Conservatives: Bromley, Hillingdon, Kensington and Chelsea, and Westminster Labour: Ealing, Hammersmith and Fulham, and Merton Lib Dems: Kingston-upon-Thames, Richmond-upon-Thames, Sutton Reform UK: Havering Wandsworth Council has moved into no overall control, with the Conservatives holding the most seats. Share close panel Share page Copy link About sharing The Conservatives have retained Bromley Council with 35 seats, down by one on the last election. Labour won eight seats, down by four on the last election, and the Lib Dems and Reform UK both won six seats. Share close panel Share page Copy link About sharing Share close panel Share page Copy link About sharing The Liberal Democrats have held Kingston-upon-Thames Council, with 44 seats. A residents\u0027 association gained two seats, up by one on the last election, while the Conservatives took two seats, a loss of one on the last election. Share close panel Share page Copy link About sharing Share close panel Share page Copy link About sharing Croydon has re-elected its Conservative mayor, Jason Perry. Perry won with 35,871 votes, up on 33,413 in the previous election. Labour received 34,758 votes and the Greens had 14,404 votes. Share close panel Share page Copy link About sharing Share close panel Share page Copy link About sharing Luxmy Gopal At the Hillingdon count In Hillingdon, the Conservatives have retained control of the council. It had been expected that they’d be under threat from Reform UK. Earlier today, one Conservative councillor told me they were not feeling too worried by Reform, and suggested that it was actually Labour - rather than the Tories - who were seeing their voters switch to Reform in Hillingdon. The Conservatives took 30 seats, gaining two on the last election, Labour took 16 seats, a loss of seven from the last election, and Reform UK gained four seats. Share close panel Share page Copy link About sharing Lewisham voters have elected Liam Shrivastava as Green mayor, with 35,265 votes. Labour came in with 30,374 votes and Reform UK took 7,288 votes. Share close panel Share page Copy link About sharing Share clo",
+    "scrapedAt": "2026-05-09 00:32:00.371632"
+  },
+  {
+    "id": 149,
+    "url": "https://www.bbc.co.uk/news/health",
+    "title": "Health | Latest News \u0026 Updates | BBC News",
+    "content": "Health Follow Health Follow Following Following Unfollow Unfollow close panel You are now following Health Updates from your News topics will appear in My News and in a collection on the News homepage. Latest News 15:47 BSTWorldwide race to trace passengers from hantavirus-hit cruise ship, published at 15:47 BSTWorldwide race to trace passengers from hantavirus-hit cruise ship Attribution Health 13:00 BSTWoman works at mental health trust that saved her, published at 13:00 BSTWoman works at mental health trust that saved her Attribution Essex 08:49 BSTCare home in special measures after inspection, published at 08:49 BSTCare home in special measures after inspection Attribution West Yorkshire 07:48 BSTEthiopian woman\u0027s joy at rare quintuplets after 12 years trying for a baby, published at 07:48 BSTEthiopian woman\u0027s joy at rare quintuplets after 12 years trying for a baby Attribution Africa 06:27 BSTHospital staff working in a \u0027culture of fear\u0027, published at 06:27 BSTHospital staff working in a \u0027culture of fear\u0027 Attribution Sussex 06:22 BSTFree fitness sessions a \u0027lifeline\u0027 for residents, published at 06:22 BSTFree fitness sessions a \u0027lifeline\u0027 for residents Attribution Berkshire 06:18 BSTBand to prove \u0027disabled people can be rockstars\u0027, published at 06:18 BSTBand to prove \u0027disabled people can be rockstars\u0027 Attribution Bristol 06:02 BSTMums call for more understanding of \u0027dangerous\u0027 pregnancy condition, published at 06:02 BSTMums call for more understanding of \u0027dangerous\u0027 pregnancy condition Attribution Lancashire 05:36 BSTUniversity explores endometriosis and cancer link, published at 05:36 BSTUniversity explores endometriosis and cancer link Attribution Northamptonshire 05:32 BSTNew centre could mean same-day cancer diagnosis, published at 05:32 BSTNew centre could mean same-day cancer diagnosis Attribution Essex 21:01 BST 7 MayHow operation to disembark passengers on virus-hit cruise will work. Video, 00:01:53, published at 21:01 BST 7 May How operation to disembark passengers on virus-hit cruise will work Attribution Europe 1:53 19:03 BST 7 MayHantavirus: Your questions answered. Video, 00:01:40, published at 19:03 BST 7 May Hantavirus: Your questions answered Attribution Health 1:40 18:25 BST 7 MayBritons on hantavirus cruise ship face 45 days of self-isolation, published at 18:25 BST 7 MayBritons on hantavirus cruise ship face 45 days of self-isolation Attribution UK 17:45 BST 7 MayThat friend who\u0027s \u0027training\u0027 for a challenge. Video, 00:01:27, published at 17:45 BST 7 May That friend who\u0027s \u0027training\u0027 for a challenge 1:27 17:02 BST 7 MayPriest\u0027s death was preventable, inquest finds, published at 17:02 BST 7 MayPriest\u0027s death was preventable, inquest finds Attribution Northern Ireland 16:01 BST 7 MayHow worried should we be about hantavirus?, published at 16:01 BST 7 MayHow worried should we be about hantavirus? Attribution Health 15:46 BST 7 MayHantavirus: WHO chief says public health risk is low. Video, 00:00:26, published at 15:46 BST 7 May Hantavirus: WHO chief says public health risk is low Attribution Health 0:26 15:24 BST 7 MayBipolar patient who died was \u0027not triaged well\u0027, published at 15:24 BST 7 MayBipolar patient who died was \u0027not triaged well\u0027 Attribution Kent 14:57 BST 7 MayHantavirus survivor says sickness was like \u0027hell on earth\u0027, published at 14:57 BST 7 MayHantavirus survivor says sickness was like \u0027hell on earth\u0027 Attribution Health 14:40 BST 7 MayWhen does snoring become a problem? Video, 00:01:26, published at 14:40 BST 7 May When does snoring become a problem? Attribution Health 1:26 13:24 BST 7 MayWatch: Passengers told virus-hit ship \u0027not infectious\u0027 after first death. Video, 00:01:23, published at 13:24 BST 7 May Watch: Passengers told virus-hit ship \u0027not infectious\u0027 after first death Attribution Africa 1:23 13:04 BST 7 MayReferendum on assisted dying \u0027right way to go\u0027, published at 13:04 BST 7 MayReferendum on assisted dying \u0027right way to go\u0027 Attribution Isle of Man 13:00 BST 7 May\u0027I\u0027ve loved helping people keep fit for 40 years\u0027, published at 13:00 BST 7 May\u0027I\u0027ve loved helping people keep fit for 40 years\u0027 Attribution Hereford \u0026 Worcester 12:44 BST 7 MayScientists working to create hantavirus vaccine , published at 12:44 BST 7 MayScientists working to create hantavirus vaccine Attribution Somerset Instagram TikTok Facebook X Report an issue Send a story Why you can trust BBC News",
+    "scrapedAt": "2026-05-09 00:31:59.314957"
+  },
+  {
+    "id": 148,
+    "url": "https://www.bbc.co.uk/news/wales",
+    "title": "Wales | Latest News \u0026 Updates | BBC News",
+    "content": "Wales Follow Wales Follow Following Following Unfollow Unfollow close panel You are now following Wales Updates from your News topics will appear in My News and in a collection on the News homepage. Welsh Parliament results 49 seats for majority 60 of 96 seats Plaid Cymru PC 27 13 (Plaid Cymru 27 seats 13 seats gained) Reform UK REF 20 20 (Reform UK 20 seats 20 seats gained) Labour LAB 7 23 (Labour 7 seats 23 seats lost) Conservative CON 4 12 (Conservative 4 seats 12 seats lost) Green GRN 2 2 (Green 2 seats 2 seats gained) Liberal Democrat LD 0 - (Liberal Democrat 0 seats No change) Change since 2021 How this election works Wales is split into 16 new constituencies, each electing six members, known as MSs. Voters choose one party or independent candidate. The 96 seats are allocated by share of the votes and a party needs 49 for a majority. Counting will begin on Friday morning. Live. updates Get the full results Live. Plaid Cymru on track to be largest party in Wales, as Labour faces historic defeat Polling expert Sir John Curtice is projecting that Rhun ap Iorwerth\u0027s party will get between 41 and 46 seats. Attribution Wales Plaid Cymru forecast to win historic Senedd election Attribution Wales Posted 1 minute ago1min Nationwide cashier who stole from vulnerable customers caught out by holiday photos Attribution Wales Posted 2 hours ago2h Celebrities send well wishes to Bonnie Tyler as singer in induced coma after surgery Attribution Wales Posted 8 hours ago8h Donkeys banned from beach ending 100-year tradition Attribution Wales Posted 21 hours ago21h \u0027Degrading\u0027 council plan to build woman\u0027s toilet in her living room Attribution Wales Posted 6 hours ago6h Boy, 15, denies attempted murder of teacher after stabbing Attribution Wales Posted 2 hours ago2h Gareth Lewis: \u0027Can anything describe the scale of Labour\u0027s defeat?\u0027 Attribution Wales Posted 54 minutes ago54min The WW2 spy killed in mystery crash days after the war ended Attribution Wales Posted 10 hours ago10h Morrisons supermarket fined £750k for dirty bakery Attribution Wales Posted 20 hours ago20h Woman and teen arrested for murder after two die in BMW and motorbike crash Attribution Wales Posted 1 day ago1d Nurse who fraudulently earned £51k from NHS to pay back £278 Attribution Wales Posted 22 hours ago22h Senedd election 2026 What does the Senedd do? Attribution Wales Posted 29 March29 Mar Compare the parties on every big issue Attribution Wales Posted 23 April23 Apr A simple guide to every new constituency - and all the election candidates Attribution Wales Posted 15 April15 Apr What\u0027s changing with Senedd constituencies? Attribution Wales Posted 15 April15 Apr What latest election results show us in maps and charts Attribution Politics Posted 9 minutes ago9min View more The video playlist Scroll to previous item Scroll to next item 0:24The first ever result in the new-look Senedd. 00:00:24, play videoThe first ever result in the new-look Senedd 0:54Reform Wales leader\u0027s speech after winning seat. 00:00:54, play videoReform Wales leader\u0027s speech after winning seat 0:46First result of Senedd election declared. 00:00:46, play videoFirst result of Senedd election declared 0:51It\u0027s election day: What are you hoping for? 00:00:51, play videoIt\u0027s election day: What are you hoping for? 0:32Labour won\u0027t form next Welsh government, says deputy FM. 00:00:32, play videoLabour won\u0027t form next Welsh government, says deputy FM 1:15Pet photographer gets dog pics at the polls. 00:01:15, play videoPet photographer gets dog pics at the polls 0:53Six-year-old draws 100 animals for Attenborough. 00:00:53, play videoSix-year-old draws 100 animals for Attenborough 0:42Woman tells police \u0027no comment\u0027 after hit and run 00:00:42, play videoWoman tells police \u0027no comment\u0027 after hit and run 0:55Newport hero Kamwa lost for words. 00:00:55, play videoNewport hero Kamwa lost for words 0:54Land speed record car \u0027Babs\u0027 returns after 100 years. 00:00:54, play videoLand speed record car \u0027Babs\u0027 returns after 100 years 0:31Driver\u0027s road rage caught on own dashcam. 00:00:31, play videoDriver\u0027s road rage caught on own dashcam 1:07Disney dream for girl left blind by brain tumour. 00:01:07, play videoDisney dream for girl left blind by brain tumour 0:58A future spot for Mac and Reynolds? 00:00:58, play videoA future spot for Mac and Reynolds? 1:00Statue of Monty Python\u0027s Terry Jones revealed. 00:01:00, play videoStatue of Monty Python\u0027s Terry Jones revealed 0:56What\u0027s an axolotl and where do they come from? 00:00:56, play videoWhat\u0027s an axolotl and where do they come from? 0:22Regé-Jean Page flexes his Welsh skills. 00:00:22, play videoRegé-Jean Page flexes his Welsh skills 0:56How dad made toddler Indie\u0027s viral bike video. 00:00:56, play videoHow dad made toddler Indie\u0027s viral bike video 0:13Rare Mexican axolotl found in Wales. 00:00:13, play videoRare Mexican axolotl found in Wales 0:31Pensioner assaults traffic warden over parking ticket. 00:00:31, play videoPensioner assaults traffi",
+    "scrapedAt": "2026-05-09 00:31:58.25777"
+  },
+  {
+    "id": 147,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zn7hd6f",
+    "title": "Take our hideously hard GCSE quiz - BBC Bitesize",
+    "content": "You know what it\u0027s like: every year, when exam season approaches and students set down to their revision, somebody somewhere will say they\u0027re not as hard as they used to be. With the extra years of wisdom and experience, you would pass with flying colours… right? Well it\u0027s time to take off those rose-tinted spectacles. Take our quiz and find out if you’re still GCSE smart. Note: If you\u0027re a current GCSE student, you can test your knowledge of specific GCSE subjects as a part of your learning and exam revision with our interactive exam-style and quick-fire GCSE quizzes. The pedantic punctuation quiz. quizThe pedantic punctuation quiz You\u0027ve tested your spelling, now it\u0027s time for your punctuation. Science fiction or science fact? It\u0027s a Bitesize quiz, Captain, but not as we know it... Writing and analysing poetry Tips and advice to help you with your GCSE English Literature.",
+    "scrapedAt": "2026-05-09 00:31:57.191928"
+  },
+  {
+    "id": 146,
+    "url": "https://www.bbc.co.uk/news/england/oxford",
+    "title": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "content": "Oxfordshire Follow Oxfordshire Follow Following Following Unfollow Unfollow close panel You are now following Oxfordshire Updates from your News topics will appear in My News and in a collection on the News homepage. \u0027Ups and downs\u0027 as no majorities won in Oxfordshire Three of Oxfordshire\u0027s councils remain without overall control, following Thursday\u0027s local elections. Attribution Oxfordshire Posted 1 hour ago1h Live. Local Election results for the South of England 2026 Attribution England Duke fined and banned for speeding 30mph over limit Attribution England Posted 1 hour ago1h \u0027Working with Sir David Attenborough was just magic\u0027 Attribution England Posted 3 hours ago3h \u0027Urgent answers needed\u0027 to forever chemical concern Attribution Oxfordshire Posted 12 hours ago12h Major rail disruption across south of England after radio fault Attribution Business Posted 23 hours ago23h Air ambulances in South hit by rising fuel costs Attribution England Posted 1 day ago1d Dogs support their voting owners at poll stations Attribution England Posted 1 day ago1d Polls open in Oxfordshire local elections Attribution Oxfordshire Posted 1 day ago1d Oxfordshire playlist The top videos from Oxfordshire Scroll to previous item Scroll to next item 1:08Firms to be charged for works on busiest roads. 00:01:08, play videoFirms to be charged for works on busiest roads 0:45How to pick who to vote for in the local elections. 00:00:45, play videoHow to pick who to vote for in the local elections 1:03Oxfordshire: local elections explained in 60 seconds. 00:01:03, play videoOxfordshire: local elections explained in 60 seconds 1:04Mowing patterns into Radcliffe Camera lawn. 00:01:04, play videoMowing patterns into Radcliffe Camera lawn 0:57\u0027Every mile I tick off is one year that they\u0027d be alive\u0027 00:00:57, play video\u0027Every mile I tick off is one year that they\u0027d be alive\u0027 0:34\u0027The world has lost a hero\u0027 00:00:34, play video\u0027The world has lost a hero\u0027 1:08Marathon in firefighter kit will \u0027honour memories\u0027 00:01:08, play videoMarathon in firefighter kit will \u0027honour memories\u0027 1:08The care home keeping it in the family. 00:01:08, play videoThe care home keeping it in the family 0:54Children celebrated in songs for bereaved families. 00:00:54, play videoChildren celebrated in songs for bereaved families 1:01Work begins to remove Kidlington\u0027s giant illegal waste tip. 00:01:01, play videoWork begins to remove Kidlington\u0027s giant illegal waste tip 1:0711-year-old Aila just landed her first major film role. 00:01:07, play video11-year-old Aila just landed her first major film role 1:05Moving on from Breakfast. 00:01:05, play videoMoving on from Breakfast 1:32\u0027Wearing a wig has changed my life\u0027 00:01:32, play video\u0027Wearing a wig has changed my life\u0027 0:52What\u0027s on your mind this election season? 00:00:52, play videoWhat\u0027s on your mind this election season? 1:06Running a half marathon dressed as a giant pair of ovaries. 00:01:06, play videoRunning a half marathon dressed as a giant pair of ovaries 1:29\u0027My daughter should be here\u0027 00:01:29, play video\u0027My daughter should be here\u0027 0:57River Thames sees biggest boat clean-up in years. 00:00:57, play videoRiver Thames sees biggest boat clean-up in years 1:20Meet Oxford University\u0027s library cat! 00:01:20, play videoMeet Oxford University\u0027s library cat! 1:28Meet Oxfordshire\u0027s volunteer Neuter Rangers. 00:01:28, play videoMeet Oxfordshire\u0027s volunteer Neuter Rangers 1:18The family donating kidneys to their siblings. 00:01:18, play videoThe family donating kidneys to their siblings More news from Oxfordshire Village pond gets top up after wildlife threatened Attribution Oxfordshire Posted 1 day ago1d Interactive mural marks 30 years of river trail Attribution England Posted 1 day ago1d What if no-one wins control of South councils? Attribution England Posted 2 days ago2d Firms to be charged for works on busiest roads Attribution Oxfordshire Posted 2 days ago2d How one woman\u0027s solar vision is now powering 6,000 homes Attribution Oxfordshire Posted 2 days ago2d Local Elections Local Elections Where are elections taking place in the South? Here is everything you need to know about what is happening in the local elections in the south. Attribution England More on this West Oxfordshire parties debate district\u0027s future Attribution Oxfordshire Oxfordshire: local elections explained in 60 seconds. Video, 00:01:03Oxfordshire: local elections explained in 60 seconds Attribution Oxfordshire Parties vie for support from Cherwell voters Attribution Oxfordshire What latest election results show us in maps and charts Attribution Politics Oxford City Council parties jockey for support Attribution Oxfordshire Weather for Oxford Tonight, Partly Cloudy, Low Low of 6° Saturday 9 May,Sat 9th Sunny Intervals, High of 20° Low of 8° Sunday 10 May,Sun 10th Light Cloud, High of 14° Low of 1° Monday 11 May,Mon 11th Light Cloud, High of 14° Low of 3° Tuesday 12 May,Tue 12th Light Cloud, High of 17° Low of 6° Sport \u0027I absolutely loved play",
+    "scrapedAt": "2026-05-09 00:31:55.997451"
+  },
+  {
     "id": 145,
     "url": "https://www.bbc.co.uk/sport/football/european",
     "title": "European Football - News \u0026 results - BBC Sport",
@@ -1013,26 +1048,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 146,
-    "url": "https://www.bbc.co.uk/news/england/oxford"
-  },
-  {
-    "id": 147,
-    "url": "https://www.bbc.co.uk/bitesize/articles/zn7hd6f"
-  },
-  {
-    "id": 148,
-    "url": "https://www.bbc.co.uk/news/wales"
-  },
-  {
-    "id": 149,
-    "url": "https://www.bbc.co.uk/news/health"
-  },
-  {
-    "id": 150,
-    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
   },
   {
     "id": 151,
@@ -28913,10 +28928,2090 @@ window.searchData = [
     "id": 13955,
     "url": "https://www.bbc.co.uk/sport/football/articles/cly6993wn64o",
     "parentUrl": "https://www.bbc.co.uk/sport/football/european"
+  },
+  {
+    "id": 13958,
+    "url": "https://www.bbc.co.uk/news/articles/cqjplnjkd0no",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13959,
+    "url": "https://www.bbc.co.uk/news/articles/c0rjwr8xqrxo",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13960,
+    "url": "https://x.com/bbcoxford",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13962,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/b006pfl4",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13964,
+    "url": "https://www.bbc.co.uk/sport/football/live/c1l25gljl9vt",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13966,
+    "url": "https://www.bbc.co.uk/news/videos/cjep2d19qvno",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13967,
+    "url": "https://www.bbc.co.uk/news/articles/clyp8ng05ejo",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13968,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/m000dk0w",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13969,
+    "url": "https://www.bbc.co.uk/news/articles/c5ye07k7ep1o",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13970,
+    "url": "https://www.bbc.co.uk/news/articles/c4g4053x0n2o",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13971,
+    "url": "https://www.bbc.co.uk/news/articles/cp8pqej954no",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13972,
+    "url": "https://www.bbc.co.uk/sounds/play/p0njxcwn",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13973,
+    "url": "https://www.bbc.co.uk/news/articles/cx215pk1pgjo",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13974,
+    "url": "https://www.bbc.co.uk/sport/football/articles/crrp5je9z4do",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13975,
+    "url": "https://www.bbc.co.uk/sounds/play/p0n94f0x",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13977,
+    "url": "https://www.bbc.co.uk/send/u183126982",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13981,
+    "url": "https://www.bbc.co.uk/news/articles/c8d8957y4ypo",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13982,
+    "url": "https://wa.me/message/EJ5ZD4R6BN2BC1",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13984,
+    "url": "https://www.bbc.co.uk/news/articles/cpdpq28e0dno",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13985,
+    "url": "https://www.bbc.co.uk/sport/football/articles/crmpnm134yro",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13986,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cgjpl53xww6o",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13987,
+    "url": "https://www.bbc.co.uk/news/articles/cgrzzejg42zo",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13988,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cn9pxnwdgz9o",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13991,
+    "url": "https://www.bbc.co.uk/news/articles/cd9pd00yl29o",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13993,
+    "url": "https://www.bbc.co.uk/news/articles/c1k2mww9mg2o",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13994,
+    "url": "https://www.bbc.co.uk/weather/2640729",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13996,
+    "url": "https://www.bbc.co.uk/news/articles/clyp24j7nqdo",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13997,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c042zlrw590o",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 13999,
+    "url": "https://www.bbc.co.uk/sounds/play/p0nj8lkf",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14000,
+    "url": "https://www.instagram.com/bbcoxford/",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14002,
+    "url": "https://www.bbc.co.uk/news/live/c042pp15vkkt",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14004,
+    "url": "https://www.bbc.co.uk/news/articles/c62xk3delvdo",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14005,
+    "url": "https://www.bbc.co.uk/news/articles/cly6yvv7lngo",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14007,
+    "url": "https://www.bbc.co.uk/sport/football/teams/oxford-united",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14009,
+    "url": "https://www.bbc.co.uk/news/articles/cz92p2w0q8ko",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14010,
+    "url": "https://www.bbc.co.uk/sounds/play/live:bbc_radio_oxford",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14013,
+    "url": "https://www.bbc.co.uk/news/articles/cewpln9d28ko",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14016,
+    "url": "https://www.bbc.co.uk/weather/2640729/day4",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14017,
+    "url": "https://www.bbc.co.uk/weather/2640729/day1",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14018,
+    "url": "https://www.facebook.com/bbcoxford",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14019,
+    "url": "https://www.bbc.co.uk/weather/2640729/day3",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14021,
+    "url": "https://www.bbc.co.uk/weather/2640729/day2",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14023,
+    "url": "https://www.bbc.co.uk/sounds/play/p0njmjzr",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14024,
+    "url": "https://www.bbc.co.uk/news/articles/c05de87ge38o",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14029,
+    "url": "https://www.bbc.co.uk/news/videos/cjrpy4pe9r1o",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14030,
+    "url": "https://www.bbc.co.uk/news/articles/c5yv7l2zv77o",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14032,
+    "url": "https://www.bbc.co.uk/news/articles/c9v3y3mk7dro",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14033,
+    "url": "https://www.bbc.co.uk/news/articles/c4g90lg79njo",
+    "parentUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "id": 14039,
+    "url": "https://www.bbc.co.uk/bitesize/topics/ztbsp39",
+    "parentUrl": "https://www.bbc.co.uk/bitesize/articles/zn7hd6f"
+  },
+  {
+    "id": 14040,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zds2vk7",
+    "parentUrl": "https://www.bbc.co.uk/bitesize/articles/zn7hd6f"
+  },
+  {
+    "id": 14042,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zvj7vk7",
+    "parentUrl": "https://www.bbc.co.uk/bitesize/articles/zn7hd6f"
+  },
+  {
+    "id": 14043,
+    "url": "https://www.bbc.co.uk/news/articles/c2d2e4zzle1o",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14044,
+    "url": "https://www.bbc.co.uk/news/videos/cdjpykr8jezo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14050,
+    "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cewpkpp12d9o",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14051,
+    "url": "https://www.bbc.co.uk/news/articles/c33246gxdxmo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14055,
+    "url": "https://www.bbc.co.uk/cymrufyw/erthyglau/cm2p4nedr2lo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14056,
+    "url": "https://www.bbc.co.uk/news/articles/cvg0j6pw1l3o",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14059,
+    "url": "https://www.bbc.co.uk/news/articles/cwy2570lg6zo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14060,
+    "url": "https://www.bbc.co.uk/news/articles/cwy2g4kqx7ko",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14068,
+    "url": "https://www.bbc.co.uk/news/articles/cpqp2pzywylo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14069,
+    "url": "https://www.bbc.co.uk/cymrufyw/erthyglau/c5y0g2yv82qo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14071,
+    "url": "https://www.bbc.co.uk/news/articles/c8eje2p7028o",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14072,
+    "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cm2px3nelljo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14074,
+    "url": "https://www.bbc.co.uk/news/articles/c626z4n835qo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14076,
+    "url": "https://www.bbc.co.uk/news/articles/cx27x7v4lwvo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14078,
+    "url": "https://www.bbc.co.uk/cymrufyw/pynciau/c0w0kqwk5q3t",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14079,
+    "url": "https://www.bbc.co.uk/news/articles/cvgzpz30ppzo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14081,
+    "url": "https://www.bbc.co.uk/news/articles/cx2w19xpjw2o",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14082,
+    "url": "https://www.bbc.co.uk/news/videos/cr7p82lle79o",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14091,
+    "url": "https://www.bbc.co.uk/news/articles/cgj005nddpyo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14092,
+    "url": "https://www.bbc.co.uk/news/articles/cnv821g13reo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14093,
+    "url": "https://www.bbc.co.uk/news/articles/c9wqvlprljlo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14096,
+    "url": "https://www.bbc.co.uk/news/articles/cql7wn1k0kgo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14098,
+    "url": "https://www.bbc.co.uk/news/articles/c62dr1ny0y1o",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14100,
+    "url": "https://www.bbc.co.uk/news/articles/c793ved00j3o",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14102,
+    "url": "https://www.bbc.co.uk/news/articles/c2k88kpwxg1o",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14104,
+    "url": "https://www.bbc.co.uk/news/videos/czx27r120vgo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14106,
+    "url": "https://www.bbc.co.uk/news/articles/cwy1ed2301yo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14109,
+    "url": "https://www.bbc.co.uk/sport/rugby-union/teams/ng-dragons",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14112,
+    "url": "https://www.bbc.co.uk/news/articles/c62r5rk4e8eo",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14113,
+    "url": "https://www.bbc.co.uk/news/articles/c4g48kdx36go",
+    "parentUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "id": 14115,
+    "url": "https://www.bbc.co.uk/news/articles/cy72xmk1114o",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14116,
+    "url": "https://www.bbc.co.uk/news/articles/cy52ng5wkdyo",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14117,
+    "url": "https://www.bbc.co.uk/news/articles/c202kgxwzr1o",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14119,
+    "url": "https://www.bbc.co.uk/news/videos/cpqp23re7z2o",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14120,
+    "url": "https://www.bbc.co.uk/news/articles/c8e87j254jdo",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14124,
+    "url": "https://www.bbc.co.uk/news/articles/cpwpdpel2gxo",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14126,
+    "url": "https://www.bbc.co.uk/news/articles/cqlpy44p7rgo",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14131,
+    "url": "https://www.bbc.co.uk/news/articles/c5y03jpy8jqo",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14134,
+    "url": "https://www.bbc.co.uk/news/articles/c4gvpn70jd5o",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14137,
+    "url": "https://www.bbc.co.uk/news/videos/c4g0908drwpo",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14139,
+    "url": "https://www.bbc.co.uk/news/articles/c1m2n2rg0xlo",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14149,
+    "url": "https://www.bbc.co.uk/news/articles/cjdp3rldg04o",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14150,
+    "url": "https://www.bbc.co.uk/news/videos/c74rk7l1z3wo",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14153,
+    "url": "https://www.bbc.co.uk/news/articles/c4g0dp0gkzlo",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14156,
+    "url": "https://www.bbc.co.uk/news/articles/c893y3n24p5o",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14157,
+    "url": "https://www.bbc.co.uk/news/world/europe/isle_of_man",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14162,
+    "url": "https://www.bbc.co.uk/news/articles/cr5p27vvr83o",
+    "parentUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "id": 14163,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt?post\u003dasset%3A694e1caa-a484-4b08-a20f-918bebb204ca#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14164,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt?post\u003dasset%3A01c2e20b-4871-4fc4-b3fb-e89bc6b0013d#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14165,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt?post\u003dasset%3Ae2498635-82ec-4146-8e1c-a536f3b9f84e#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14166,
+    "url": "https://www.bbc.co.uk/news/articles/cz90g4d4kxko",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14167,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt?post\u003dasset%3Ae0460cdd-7d4a-4520-82a8-5fc225882a41#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14168,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt?post\u003dasset%3A7bec43a5-be97-4acb-8761-0bd2e0e91309#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14169,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt?post\u003dasset%3Aef739d27-2836-4e91-b63e-1d5ccee60b09#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14170,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt?post\u003dasset%3A2c600b35-25b4-49e9-bd4d-077f868f14e9#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14172,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt?post\u003dasset%3A734670db-bc2f-4882-9285-a9b807f2f07d#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14173,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt?post\u003dasset%3A2efcd1f4-257e-48c3-8859-bb36d5d9c9dd#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14175,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt?post\u003dasset%3Afc9d3d51-e306-480e-b0d5-959af43ac2f7#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14176,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt#Watch\u0026listen",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14177,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt?post\u003dasset%3A27d6c4da-db4f-4dc3-91ea-6c12e07c6625#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14178,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt#player",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14179,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt?post\u003dasset%3A07de9c2f-7e73-4910-8702-c800386790be#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14180,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt?post\u003dasset%3A28188cb2-1620-45eb-9eca-a883dfc391ff#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14182,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt#LiveReporting",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "id": 14183,
+    "url": "https://www.bbc.co.uk/news/live/c62rmlprxlpt?post\u003dasset%3A75050670-e449-46b7-ae51-a458f906546c#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/f3b3/live/cf1ca110-4afc-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A group of people stand with Zack Polanski, leader of the Green Party",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk34ry.jpg",
+    "alt": "Keyframe #8",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk1r7z.jpg",
+    "alt": "Keyframe #2",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/fa62/live/d337d6a0-4aa4-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Reporter wearing suit and tie talks into camera.",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk2jhq.jpg",
+    "alt": "Farage: Havering \u0027under new management\u0027",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk1wx3.jpg",
+    "alt": "Nail-biting night in Wandsworth ends with no overall control",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/1f413aa9-a12c-4ca7-85c0-94a9eaa8da81.png.webp",
+    "alt": "Card showing result of election for Islington. Labour hold",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/7547a8ca-e28a-4af0-b24e-ca69569e5193.png.webp",
+    "alt": "Bar chart showing the results for the council election in Waltham Forest, After 60 of 60 seats declared. Seats needed for majority: 31. Green won 32 seats, a gain of 32; Conservative won 14 seats, a gain of 1; Labour won 14 seats, a loss of 33.",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/cb95a602-0e46-4970-a5b6-14a1d74e873f.png.webp",
+    "alt": "Card showing result of election for Waltham Forest. Green gain from Labour",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/9bf2772f-16b1-4759-8450-5ac23b3c9e03.png.webp",
+    "alt": "Bar chart showing the results for the council election in Bromley, After 29 of 58 seats declared. Seats needed for majority: 30. Conservative won 18 seats, a loss of 2; Reform UK won 6 seats, a gain of 6; Lib Dem won 3, same as previous election; Labour w",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/79dd43d2-fd53-485f-8cde-c8efffa60f7e.png.webp",
+    "alt": "Card showing result of election for Bromley. Conservative hold",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/fe29f838-bce1-45a8-a770-3bead058de33.png.webp",
+    "alt": "Bar chart showing the results for the council election in Kingston-upon-Thames, After 48 of 48 seats declared. Seats needed for majority: 25. Lib Dem won 44, same as previous election; Conservative won 2 seats, a loss of 1; Residents\u0027 Association won 2 se",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/49668f33-348b-47c2-8fd0-5b87956f7f2c.png.webp",
+    "alt": "Card showing result of election for Kingston-upon-Thames. Liberal Democrat hold",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/10d9172a-8416-4a1c-aa57-e70c9df3af47.png.webp",
+    "alt": "Bar chart showing the results of the Croydon mayoral election with vote share for candidates with more than 1% of the vote: Conservative 30.7, Labour 29.7, Green 16.6, Reform UK 12.4, Liberal Democrat 6.7, Taking the Initiative Party 2.2, Independent 1.3",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/8217f8ff-af45-45d6-8907-5369bddd6f8d.png.webp",
+    "alt": "Card showing result of election for Mayor of Croydon. Conservative hold (Jason Perry).",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/37ee67df-fbe8-433d-91e6-d27ce5f19f42.jpg.webp",
+    "alt": "Campaigners stand in a hall",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/9805c554-17f7-49a8-b8f6-1f11a00f097f.png.webp",
+    "alt": "Bar chart showing the results of the Lewisham mayoral election with vote share for candidates with more than 1% of the vote: Green 40.4, Labour 34.8, Reform UK 8.4, Liberal Democrat 7.3, Conservative 5.3, Independent 2.5",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/bd035915-39fd-4655-9fd1-6808e741567b.png.webp",
+    "alt": "Card showing result of election for Mayor of Lewisham. Green gain from Labour (Liam Shrivastava).",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2020/10/21/4c28dfef-fa92-4960-ab88-11095386df30.jpg.webp",
+    "alt": "",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/55239932-22cb-49c0-a235-018e53718b03.jpg.webp",
+    "alt": "A group of men sit on seats looking a mixture of bored and calm.",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2026/2/16/ae054073-4bfb-41e0-a7e2-800508434190.jpg.webp",
+    "alt": "",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2026/2/16/ae054073-4bfb-41e0-a7e2-800508434190.jpg.webp",
+    "alt": "",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/ec2e994b-e081-4bae-8a56-2af77e2e00e2.jpg.webp",
+    "alt": "A view of three floors in Camden Council",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2025/7/5/9c8a731b-d74f-4d16-b95f-962bebc36164.jpg.webp",
+    "alt": "",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/2c070076-2416-4c9d-9a50-4645dc12740d.jpg.webp",
+    "alt": "Votes are counted for the 2026 London Borough of Hackney council election",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2015/7/13/a7d56fed-d33e-4014-a2dd-3d0d4fe70887.jpg.webp",
+    "alt": "",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0d9qlnc.jpg",
+    "alt": "Listen to the latest updates",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "London election results: Historic wins for Greens as party gains first council and two mayors - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c62rmlprxlpt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/da4f/live/28d9a370-4ad4-11f1-941e-d3689d7c57f6.jpg",
+    "alt": "People wearing personal protective clothing disembark a plane. ",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f84d/live/acb181d0-453a-11f1-a613-4794dd5170f2.jpg",
+    "alt": "Holly Hawken has purple hair, nose and lip piercings and is wearing glasses. This is a selfie of her taken in front of a large blue sign that says \"The St Aubyn Centre\".",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/d4f7/live/3154d630-4a18-11f1-a7ce-b934bcb15ff4.png",
+    "alt": "A house at the end of a long driveway. There are trees on one side and a green on the other.",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/901d/live/9a4ff710-4a35-11f1-a70d-c72ff4101914.jpg",
+    "alt": "Five babies close up in hospital, placed on green sheets. They are still covered in residue from their births.",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/9758/live/9b754bc0-4a0a-11f1-b84b-1fec0953dd1e.jpg",
+    "alt": "An ambulance drives past the Royal Sussex County Hospital in Brighton.",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/5914/live/18d191d0-4968-11f1-a87a-55dfd3c7a311.jpg",
+    "alt": "Amandeep is wearing a dark blue t-shirt, smiling at the front of a church",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/9b47/live/b6759810-488b-11f1-bcab-efc229dd9518.jpg",
+    "alt": "Jess Douek is the lead vocalist in the Bristol band Mallavora. The image is a head and shoulders shot of her. She has curly brown hair and is wearing a sleeveless black top and a gold necklace. She is standing in front of a dark grey studio backdrop.\n",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/74a3/live/9a2efa40-4974-11f1-b9d6-9f6a897bd1ff.jpg",
+    "alt": "New mum Chloe with shoulder length brown hair wearing a black t-shirt with her sleeping baby wearing a white and pink sleep suit resting on her shoulder. Chloe is sitting on a grey sofa.",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/6e10/live/aab292a0-4a1e-11f1-97c6-d32d5f1a58f0.jpg",
+    "alt": "A closeup  of a woman with brown hair smiling at the camera. ",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/0e8c/live/512482c0-4a37-11f1-a70d-c72ff4101914.jpg",
+    "alt": "A woman - Dr Monica Bose - smiling straight at the camera. She is standing in front of a hospital building and is wearing a pink jacket.",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/d849/live/350d88e0-4a4e-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Guy Hedgecoe on the left and MV Hondius on the right",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/14a1/live/fac2fcb0-4a39-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Lucy Woodham looks at the camera while holding a small white mic. She is wearing a blue and brown striped jumper.",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/9cde/live/99845960-49d7-11f1-9acb-332348f2c41f.png",
+    "alt": "Man standing on snow in black outfit with snow-covered water in background behind him",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ccbe/live/685d0670-4a1d-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Lucy Punch as Amanda is wearing a black gym top and spraying a bottle of makeup setting spray on her face.",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4380/live/48accd70-9145-11ef-b4ff-9d87c6202a99.jpg",
+    "alt": "Fr Paddy O\u0027Kane, wearing a black jacket, and with silver hair and long sideburns, stands in front of a church badly damaged in a fire in 2019",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/b327/live/76b6ee00-4a38-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A person in protective clothing walks next to an ambulance during an evacuation operation of suspected hantavirus patients, following an outbreak on the cruise ship MV Hondius, in Praia, Cape Verde, May 6, 2026",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/5f66/live/7eb9b800-4a22-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Tedros Ghebreyesus looks at the camera as he speaks at a press conference. He wears a navy blazer, white shirt and red tie.",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ac46/live/3abc5090-4a13-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "A white sign on a brick building that reads Kent and Medway Coroner Service.",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/9e38/live/2dd6cba0-4a1b-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "A mid shot of Lorne Warburton smiling while looking at the camera. He is wearing a grey shirt with a black bear bearing the words \u0027hug\u0027, with short brown and grey hair and sunglasses on his head. He is standing in front of an out of focus green wooded are",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/e80e/live/55181d30-4a0d-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "A man with short, grey hair wearing a blue t-shirt sits in front of a microphone",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2ebf/live/fd9ee560-49ea-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Split screen of captain speaking into a microphone and a cruise ship",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/3e17/live/eb40f990-4a02-11f1-9595-b54f38a93bc1.jpg",
+    "alt": "Melanie Harris has light brown hair tied up and has sunglasses on. She is wearing a grey fleece jumper and is smiling. She\u0027s standing on a concrete walkway with a stone wall behind her, with terraced buildings and parked cars beyond that, on a sunny day.",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/86e0/live/55ad7d60-47b2-11f1-a815-8703cc282724.jpg",
+    "alt": "Lynne Thompson poses with her head resting on her arm. She is wearing a dark pink top and has grey and pink short hair.",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/aa98/live/ef474b20-49f8-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Asel Sartbaeva sits in a lab and looks through a microscope. She has short brown hair with highlights. She wears a white lab coat and has rimless glasses resting above her eyes.",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/6498/live/d0c4fee0-b526-11ee-8f07-bbfdfa890097.png",
+    "alt": "Instagram logo",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/25eb/live/dd54a200-b526-11ee-beb5-e1400df560f2.png",
+    "alt": "TikTok logo",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/8fe4/live/b9b2c6b0-b526-11ee-bc2f-cb5579b90709.png",
+    "alt": "Facebook logo",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/d869/live/ec988fb0-b526-11ee-beb5-e1400df560f2.png",
+    "alt": "X logo",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Health | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/health"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/228/cpsprodpb/6d48/live/521e76e0-cbb6-11f0-8c06-f5d460985095.png",
+    "alt": "",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://static.files.bbci.co.uk/elections/images/uk2026/election-logo-cutout-en.svg",
+    "alt": "Election",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c9de/live/ae6dc800-4af1-11f1-b55d-0f258dce1735.jpg",
+    "alt": "rhun",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/1005/live/3efb8530-4af5-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Rhun ap Iorwerth gives his victory speech after winning his seat",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/bb32/live/50872bb0-4ac3-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Kelly Kershaw is kneeling down in a white dress holding the hand of an orangutan, which is looking at the camera. Behind them is a forest environment.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/18f5/live/0260d1d0-4abd-11f1-ac78-2112837ce2aa.png",
+    "alt": "Bonnie Tyler is wearing a jacket and a black t shirt, while holding a microphone and singing.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c5c9/live/40c889a0-4a1c-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "A man leads a pair of donkeys along a sandy beach as two kids sit on each of them. They are people sat on the beach with colourful buildings in the background.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/0e52/live/3c32faf0-4a27-11f1-bfb3-af42b3144659.jpg",
+    "alt": "Sandra Robinson is wearing a pink shirt and is holding the handle of a mug which has a brown drink in it. On her dining room table is a fruit stand which has oranges inside.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/1e83/live/ed80f940-4ad8-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "A brown school wall with a silver railing above and a police van parked outside. In the background is a blue school sign.\n",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/503f/live/de3289a0-4aeb-11f1-95d5-c35bb50319f8.jpg",
+    "alt": "Chris Carter, Labour Candidate in the Casnewydd Islwyn Senedd constituency before the start of the count at the Geraint Thomas National Velodrome, Newport, where the Senedd vote count is due to start this morning, May 8, 2026 in Newport, Wales. Reform UK ",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/289/cpsprodpb/7aa9/live/708c1150-4a9b-11f1-938c-4f4b937c8b6b.jpg",
+    "alt": "A head and shoulders shot  of a clean-shaven man wearing military uniform, taken from his personnel file",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/12cf/live/63f9e3e0-4aa0-11f1-ad34-01f832f4c917.jpg",
+    "alt": "Morrisons logo",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/9d0c/live/17b08e00-4a03-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Emergency services staff and vehicles on Aberthaw Road.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/9845/live/d6e30090-4a31-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Tanya Nasir, who is wearing a black coat and top",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/de84/live/f8cb01d0-3e47-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "The Senedd building in Cardiff Bay, at night, against a red graphic background",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/e298/live/8eb18460-3e45-11f1-bd52-e755d604ece4.png",
+    "alt": "Graphic with the words “Wales Policy Guide” in bold white text on a dark purple background. To the right, a stack of paper is shown with the Welsh flag shown on the top piece.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/1c6e/live/b39ca790-396e-11f1-879d-1b2f5c3919b8.jpg",
+    "alt": "Graphic image location spot",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/625a/live/c498cc60-2a4a-11f0-8c66-ebf25fc2cfef.jpg",
+    "alt": "The map of Wales, featuring a red dragon, set upon a purple background",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f9c3/live/09a5fee0-4aac-11f1-b55d-0f258dce1735.png",
+    "alt": "Graphic showing a map of the UK in a multicoloured triangle",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/d390/live/5e8e4510-4aee-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Emilia Belli in a velodrome ",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/5b49/live/ca54d310-4aec-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Dan Thomas in a suit and wearing a rosette ",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/3d54/live/f098c5f0-4aeb-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "A woman speaking into a microphone",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/f2be/live/5f177ed0-4ad9-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "A woman with glasses and braces in a grey cardigan",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/93d2/live/82ad9720-4ad5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Huw Irranca Davies",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/1aec/live/177211b0-4a40-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A dog",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/de5d/live/0d96b290-4a13-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A six-year-old boy holding up a drawing of a platypus",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/4d27/live/f068d410-448f-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Two women are sat down in a room on wooden chairs. The woman on the right of the image has her face blurred and is wearing a grey cardigan with a white stripe on the sleeves and mid-section. The woman on the left is wearing a grey jumper and glasses. The ",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nj3nhl.jpg",
+    "alt": "Newport County\u0027s Bobby Kamwa celebrates",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/c079/live/48d54a00-4348-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Babs the car",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/1aa6/live/c0139790-42fb-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A man captured on a dashcam with his arm up over his shoulder",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/13a3/live/7c098c50-42f4-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A girl in a pink headscarf smiling ",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nh0v3s.jpg",
+    "alt": "Rob Mac",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/880a/live/8340df60-4172-11f1-bd52-e755d604ece4.png",
+    "alt": "Smoke around a tent in the middle of a crowd as Terry Jones\u0027 statue is unveiled",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/7d3a/live/185e0ad0-40e9-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Tink Llewellyn who has long brown hair holding up a minecraft axolotl",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/7989/live/56e2a170-3ff0-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Rege-Jean Page in a green, white and black chequered cardigan",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/a436/live/3cd49b40-40e9-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A dad and daughter on a bike in helmets",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/7209/live/7cffc190-3f22-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A pink axolotl in a tank",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/15f1/live/c0ee4ce0-3e29-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A bald man in glasses pointing in front of a blue car",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/68eb/live/5e521b80-3e6e-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Aerial image of River Elwy, with a changed direction",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/492c/live/3dad3b90-3823-11f1-8606-05fe34b06e1b.jpg",
+    "alt": "The Welsh Liberal Democrat Senedd election manifesto being held in someone\u0027s hand. The main title on the orange document is: \"A stronger Wales in a stronger UK\".  The image on the document includes party leader Jane Dodds surrounded by party activists hol",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cfdb/live/e94f8c70-3d62-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A woman in a yellow jacket holding a copy of the Plaid Cymru manifesto, which reads \"for Wales\" in capital letters and \"2026 manifesto\". The cover of the manifesto shows Rhun ap Iorwerth looking off into the distance.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ac3d/live/bfaeda00-3d63-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "A brochure that says \"Fix Wales - Welsh Conservatives\".",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/49d6/live/6282c530-3d63-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A set of manifestos laid out of a surface with Eluned Morgan\u0027s face on the booklets. The manifestos says \"Pennod Newydd i Gymru\" and \"A New Chapter for Wales\".",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2b54/live/565079c0-3d62-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Reform\u0027s manifesto booklet",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ebd4/live/91b8a590-3d63-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Close up of the cover of Wales Green Party\u0027s manifesto book next to a green backdrop.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/37a0/live/0cb10a70-4887-11f1-bcab-efc229dd9518.jpg",
+    "alt": "Litter on roadside",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/3351/live/8fc19c90-4850-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Naomi reclines on cushioned fabric, propped on one elbow, facing the camera. She wears a blue denim jumpsuit layered over a white blouse with a wide, lace‑trimmed collar and lace cuffs. The background is a softly draped, pale pink fabric.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/a2dc/live/6da8dd30-43b9-11f1-91c7-bdb5c71b7453.jpg",
+    "alt": "Professional wrestler Man Like DeReiss poses in the middle with his arms around Susie and Lynn.  Susie, has short white hair and wears a blue flowery top,   DeReiss is topless with a silver chain, and Lynn wears a red and white top. All three are smiling ",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/8142/live/5b873bf0-3b5e-11f1-8606-05fe34b06e1b.png",
+    "alt": "Peter and Penney stand in front of solar panels in their garden in front of a stone house. She has should lenght blonde hair and a yellow sweather, while he has  grey beard and dark cap with a black shirt openand showing a t shirt wi the muppet character ",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f90a/live/bcf8fde0-46dc-11f1-bfea-256a0d3b8301.jpg",
+    "alt": "Rihanna at the Big Weekend",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/c07a/live/b9ecd7b0-493f-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Mared Parry in a white cardigan with her arms outstretched in front of a pale pink background",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/9a5a/live/423cc710-4940-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Sage Todz in glasses and a black T-shirt in front of a pale orange background",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/555d/live/6a9e42c0-493f-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Mared Parry",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/9949/live/72971fb0-493f-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Sage Todz",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/d2fa/live/fd0cd540-493f-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Mared Parry who is blonde and has a nose ring in a knitted cardigan in front of a pale blue background",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/4e8b/live/93bddc20-46be-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Teleri Glyn-Jones in a red and white striped shirt looking at the camera. She has brown hair cut into a bob, and she holds her hands in front of her.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/896e/live/31c540f0-4496-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "girl smiling outside the Senedd building, wearing a plaid blue jacket.\n",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2f32/live/364bba80-4867-11f1-804a-9d85b054b34f.jpg",
+    "alt": "Nathan Trott in black Cardiff goalkeeper shirt, with his raised right hand partially over the club badge as figures including players behind him applaud",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ab0e/live/eeefb100-4ac3-11f1-9325-ade34e8d64d0.jpg",
+    "alt": "Wales coach Dan Lydiate in training",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7f6d/live/a6badf70-4aca-11f1-9a78-91accbab2de0.jpg",
+    "alt": "Morgan Morris and Jarrod Taylor grapple in Ospreys derby win at Scarlets",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/1f2d/live/c4aef890-4ac5-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Mason Crane with arms in the air",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/3143/live/8f45b940-4a26-11f1-bfb3-af42b3144659.jpg",
+    "alt": "Rio Dyer runs with the ball for Dragons against Stade Francais",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2e81/live/b4334f60-4adf-11f1-9eb0-1940b1e77213.jpg",
+    "alt": "Arweinydd Plaid Cymru, Rhun ap Iorwerth, yn y cyfri\u0027 yn Venue Cymru, Llandudno",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/dc12/live/f595d060-4add-11f1-9eb0-1940b1e77213.jpg",
+    "alt": "Cafodd yr heddlu eu galw i Ysgol Gyfun Aberdaugleddau ar 5 Chwefror",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c762/live/a2e35b40-3ccc-11f1-8076-af27da54a8f3.jpg",
+    "alt": "Mae Kelly Kershaw yn penlinio yn gwisgo ffrog wen ac yn gafael llaw orangutan, sy\u0027n edrych ar y camera.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/a573/live/b934e980-4ad8-11f1-b55d-0f258dce1735.png",
+    "alt": "Ian Watkins",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/0407/live/cb110ba0-4608-11f0-835b-310c7b938e84.jpg",
+    "alt": "Dysgu Cymraeg",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/1005/live/3efb8530-4af5-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Rhun ap Iorwerth gives his victory speech after winning his seat",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/8b79/live/26b1e2a0-4aee-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Emilia Belli",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/503f/live/de3289a0-4aeb-11f1-95d5-c35bb50319f8.jpg",
+    "alt": "Chris Carter, Labour Candidate in the Casnewydd Islwyn Senedd constituency before the start of the count at the Geraint Thomas National Velodrome, Newport, where the Senedd vote count is due to start this morning, May 8, 2026 in Newport, Wales. Reform UK ",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4a0d/live/748095b0-4aeb-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Dan Thomas, leader of Reform UK Wales",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4ee8/live/49780b50-4aeb-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Two win in black and white holding sheets of paper. ",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/bb32/live/50872bb0-4ac3-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Kelly Kershaw is kneeling down in a white dress holding the hand of an orangutan, which is looking at the camera. Behind them is a forest environment.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/1e83/live/ed80f940-4ad8-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "A brown school wall with a silver railing above and a police van parked outside. In the background is a blue school sign.\n",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/b91c/live/9a88e450-4ad8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A woman with wide rimmed glasses, black hair and a grey knitted cardigan is looking to the left of the camera. In the background are trees and shops. ",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/e618/live/947c4e60-4ad5-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Huw Irranca-Davies ",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/0e52/live/3c32faf0-4a27-11f1-bfb3-af42b3144659.jpg",
+    "alt": "Sandra Robinson is wearing a pink shirt and is holding the handle of a mug which has a brown drink in it. On her dining room table is a fruit stand which has oranges inside.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/18f5/live/0260d1d0-4abd-11f1-ac78-2112837ce2aa.png",
+    "alt": "Bonnie Tyler is wearing a jacket and a black t shirt, while holding a microphone and singing.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/a314/live/ddf28490-4a55-11f1-bd52-e755d604ece4.jpg",
+    "alt": "South Wales Echo and South Wales Evening Post front pages",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/289/cpsprodpb/7aa9/live/708c1150-4a9b-11f1-938c-4f4b937c8b6b.jpg",
+    "alt": "A head and shoulders shot  of a clean-shaven man wearing military uniform, taken from his personnel file",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/12cf/live/63f9e3e0-4aa0-11f1-ad34-01f832f4c917.jpg",
+    "alt": "Morrisons logo",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c5c9/live/40c889a0-4a1c-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "A man leads a pair of donkeys along a sandy beach as two kids sit on each of them. They are people sat on the beach with colourful buildings in the background.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/3272/live/2d85b180-4a33-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A dog is sat in a field with multicolored flowers. The dog has cream coloured fur, a black nose and brown eyes.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2f7b/live/788f5350-4a3f-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Ellen Cooper",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/9845/live/d6e30090-4a31-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Tanya Nasir, who is wearing a black coat and top",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/dd93/live/cff02cb0-a6c4-11f0-92db-77261a15b9d2.jpg",
+    "alt": "Ian Watkins mugshot",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/1276/live/b417c970-4a21-11f1-b55d-0f258dce1735.png",
+    "alt": "A mugshot of Anthony Pierce who has white hair and is wearing a striped blue shirt and blue sweatshirt and is looking directly at the camera with a neutral expression",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/9d0c/live/17b08e00-4a03-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Emergency services staff and vehicles on Aberthaw Road.",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/58af/live/8ece9900-4a1c-11f1-b55d-0f258dce1735.png",
+    "alt": "A sign which says polling station, hanging from a black gate outside a church",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/14d8/live/7900c8b0-4a11-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A young boy smiling, holding a hand drawn picture of a lizard",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c698/live/19770d60-4867-11f1-804a-9d85b054b34f.jpg",
+    "alt": "Max Evans-Browning holds up a white piece of paper with a drawing of a flat lizard on it. ",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/6498/live/d0c4fee0-b526-11ee-8f07-bbfdfa890097.png",
+    "alt": "Instagram logo",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/25eb/live/dd54a200-b526-11ee-beb5-e1400df560f2.png",
+    "alt": "TikTok logo",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/8fe4/live/b9b2c6b0-b526-11ee-bc2f-cb5579b90709.png",
+    "alt": "Facebook logo",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/d869/live/ec988fb0-b526-11ee-beb5-e1400df560f2.png",
+    "alt": "X logo",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Wales | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/wales"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p06tjx3q.jpg",
+    "alt": "The pedantic punctuation quiz",
+    "pageTitle": "Take our hideously hard GCSE quiz - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/zn7hd6f"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p06n99nk.jpg",
+    "alt": "Science fiction or science fact?",
+    "pageTitle": "Take our hideously hard GCSE quiz - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/zn7hd6f"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0743fxq.png",
+    "alt": "Writing and analysing poetry",
+    "pageTitle": "Take our hideously hard GCSE quiz - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/zn7hd6f"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/228/cpsprodpb/55bc/live/18481930-cbb6-11f0-a892-01d657345866.png",
+    "alt": "",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/d039/live/bf381620-4ac6-11f1-9325-ade34e8d64d0.jpg",
+    "alt": "Oxford City Council election count in Oxford Town Hall. There are tables full of ballot papers that people are counting through.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/93e0/live/a27a0240-4a9a-11f1-938c-4f4b937c8b6b.jpg",
+    "alt": "A group of Liberal Democrats celebrating with bright yellow signs",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/6a53/live/0179e4b0-4af3-11f1-9c75-d37955007435.jpg",
+    "alt": "File photo dated 09/06/15 of the Duke of Marlborough, Charles James Spencer-Churchill, makes a speech before the unveiling of a bust of Sir Winston Churchill in the grounds of Blenheim Palace.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/95de/live/c15dfe30-4ad8-11f1-941e-d3689d7c57f6.jpg",
+    "alt": "Martin Williams and David Attenborough sat next to on another on rocks next to the ocean.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/78e5/live/330241c0-8a2e-11f0-b917-03bcebef22ec.jpg",
+    "alt": "A CGI mock-up of the Heyford Park development, which is surrounded by countryside.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2f25/live/25c08330-4a3d-11f1-bd52-e755d604ece4.jpg",
+    "alt": "The concourse at London Waterloo pictured from above. It is full of passengers standing in queues and in groups, stretching away to the edge of the frame. Many are looking up at the electronic departures boards. ",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ccef/live/bf212450-4969-11f1-a87a-55dfd3c7a311.jpg",
+    "alt": "A yellow and green helicopter is pictured from the side, with its nose facing the left. It is in flight and a rooftop and the upper branches of a bare tree can be seen in the background. ",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/452c/live/72453e00-4a22-11f1-97c6-d32d5f1a58f0.jpg",
+    "alt": "A small brown dog in front of the polling station in Petersfield. It is standing on the grass, in front of a car park, where a few cars can be seen.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cc06/live/e0e86230-25f0-11f0-a2c2-9525794a9c0a.jpg",
+    "alt": "A sign is displayed in front of a polling station in the village of Spelsbury.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/6d67/live/e4d10f30-4955-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "A \u0027road ahead closed\u0027 sign, on a road",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/0836/live/42d247d0-4865-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Woman wearing pink and wearing a pink flower. ",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/0d4b/live/99af62c0-430d-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "A woman with blonde hair holding a bin bag ",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/d50f/live/d7e3a2c0-4251-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "The Radcliffe Camera in Oxford",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/9f8c/live/313e6de0-3f29-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "A man running in a blue tshirt, below him is a family portrait.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/92ac/live/be3a1680-3fe3-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A memorial to PC Andrew Harper",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/dda5/live/87534440-3f0a-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A man wearing a firefighters yellow helmet and uniform.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/d942/live/5c181060-3994-11f1-9d5c-8ba507d7dbde.jpg",
+    "alt": "A row of people.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/211a/live/fe98c9c0-3bc8-11f1-879d-1b2f5c3919b8.jpg",
+    "alt": "Michaela Middleton",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/206a/live/71340bd0-38ad-11f1-879d-1b2f5c3919b8.jpg",
+    "alt": "Two rows of trees with a large illegal waste dump inbetween.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/3038/live/32770bf0-3357-11f1-8606-05fe34b06e1b.jpg",
+    "alt": "A young girl with blonde hair, wearing a white jumper.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/9b02/live/5796d390-3279-11f1-934f-036468834728.jpg",
+    "alt": "A woman with blonde hair wearing a green top",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/8b2e/live/0eb7a770-2e7e-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Two women sitting beside each other laughing.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/f261/live/1028f580-2de0-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "A view of shoppers walking down the High Street",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/d9f5/live/f17ea4a0-2384-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Lis Hale has medium length dark hair and glasses. She is wearing a costume that looks like a pair of ovaries, and has \u0027Target Ovarian Cancer\u0027 written on the front. Behind her is a purple wall with \u0027BBC Radio Oxford\u0027 on it in white writing.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/7334/live/33cef320-23a6-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "A woman in a flower dress holds a picture of her babies hands.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/9321/live/e3edbe50-23a9-11f1-934f-036468834728.jpg",
+    "alt": "A rusty narrow boat on the River Thames",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/6d71/live/979f32f0-1e17-11f1-9120-a910fc22c6ac.jpg",
+    "alt": "A cat on a persons shoulder",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/a51c/live/a331d110-1e1a-11f1-801d-ed3cff6bf876.jpg",
+    "alt": "Two women wearing purple tops with The Neuter Rangers written on them.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/9cfd/live/0ed24a30-1dfd-11f1-b048-c9424b2cf5fd.jpg",
+    "alt": "Three children in a black and white photo.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/bd1e/live/35155620-4953-11f1-9048-857f9c3e24e6.jpg",
+    "alt": "A man in a yellow high vis jacket on the right of the picture holding a black hose shooting a jet of water into a large pond ",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/8c92/live/63b5c7c0-4968-11f1-a87a-55dfd3c7a311.jpg",
+    "alt": "Vickie Amiralis wearing all black and stood smiling at the camera with a section of the mural in the background over her shoulder.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2fff/live/92a9e1d0-4934-11f1-a36a-6bbcbd5b2296.jpg",
+    "alt": "Picture shows a gate with a polling station sign",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/58c6/live/265d9c90-4887-11f1-bcab-efc229dd9518.jpg",
+    "alt": "A generic shot of a red road sign reading \"road ahead closed\" in white lettering. It includes an arrow pointing to the left. It is surrounded by several orange traffic cones. ",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7ff8/live/83b10b80-48b3-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A woman is wearing a high-vis jacket and white hard hat, standing in front of a long row of solar panels. ",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/1601/live/fab0bf60-4245-11f1-85a4-6fbea57c2af5.jpg",
+    "alt": "Four people sat on sofas in front of microphones. The presenter is sat on a chair. Behind him is purple BBC election branding.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/67e0/live/91194980-430f-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "A woman with blonde hair holding a bin bag ",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/74ae/live/f7972540-42f3-11f1-9516-81393c122a1a.jpg",
+    "alt": "Three politicians sat in a radio studio opposite the presenter.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f9c3/live/09a5fee0-4aac-11f1-b55d-0f258dce1735.png",
+    "alt": "Graphic showing a map of the UK in a multicoloured triangle",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/3095/live/1057db40-43b9-11f1-91c7-bdb5c71b7453.jpg",
+    "alt": "Four people sat on sofas in front of microphones. The presenter is sat on a chair. Behind him is purple BBC election branding.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4376/live/974043d0-4aea-11f1-b8d1-0fcd60d6dd09.jpg",
+    "alt": "Will Lankshear celebrates after Oxford score a goal",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/aeb3/live/e2ea98c0-4951-11f1-9048-857f9c3e24e6.jpg",
+    "alt": "A general view of Oxford United\u0027s Kassam Stadium",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cb5c/live/93fc2bb0-47d1-11f1-906e-5bd3c4d4c16e.jpg",
+    "alt": "Cameron Brannagan in action for Oxford United",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/5f47/live/5ed45eb0-4620-11f1-b0bc-1f5a59b5b6a6.jpg",
+    "alt": "Femi Azeez celebrates scoring for Millwall",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/fb51/live/3e0ef050-4468-11f1-97e2-ede52d59c1ad.jpg",
+    "alt": "Matt Bloomfield looks on from the sidelines",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4376/live/974043d0-4aea-11f1-b8d1-0fcd60d6dd09.jpg",
+    "alt": "Will Lankshear celebrates after Oxford score a goal",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4a8e/live/f5b00d50-4636-11f1-9cdd-6d38890cd031.jpg",
+    "alt": "Ipswich players celebrate promotion",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/aeb3/live/e2ea98c0-4951-11f1-9048-857f9c3e24e6.jpg",
+    "alt": "A general view of Oxford United\u0027s Kassam Stadium",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cb5c/live/93fc2bb0-47d1-11f1-906e-5bd3c4d4c16e.jpg",
+    "alt": "Cameron Brannagan in action for Oxford United",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/b071/live/9261ac20-463d-11f1-aa14-ad910202f501.jpg",
+    "alt": "Oxford United boss Matt Bloomfield has been unable to keep his side in the Championship.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0njxdg0.jpg",
+    "alt": "",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0njmr13.jpg",
+    "alt": "",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0mkfjpb.jpg",
+    "alt": "",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0n94g96.jpg",
+    "alt": "",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/0812/live/8a0c6ea0-3055-11f1-908b-93cc749a44cd.jpg",
+    "alt": "A young man in a red hat with white spots winces in pain as he bites down on a bunch of nettles. ",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/79e1/live/eb7b9b60-189b-11f1-a247-59d304ef583d.jpg",
+    "alt": "Nick Thomas, wearing a blue jumper and grey trousers, has short brown hair. He is sitting on a bright red bench.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/a280/live/1524f550-0650-11f1-aea3-ab6941d946c2.jpg",
+    "alt": "A medium over-the-shoulder shot of a group of teenage students, dressed in matching school uniforms consisting of white shirts and striped ties, are seated around a long lab table in a bright and modern science classroom. The students appear engaged and c",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0dkt9zh.jpg",
+    "alt": "",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ee6b/live/e30bf570-74d2-11ee-b315-7d1db3f558c6.jpg",
+    "alt": "Radio Oxford",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0mtlj3r.jpg",
+    "alt": "",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/1b07/live/2eb41770-5f0e-11ef-8c32-f3c2bc7494c6.png",
+    "alt": "Rectangular speech bubble on a red background",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/8fe4/live/b9b2c6b0-b526-11ee-bc2f-cb5579b90709.png",
+    "alt": "Facebook logo",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/6498/live/d0c4fee0-b526-11ee-8f07-bbfdfa890097.png",
+    "alt": "Instagram logo",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/827d/live/50bcc770-5321-11ef-aebc-6de4d31bf5cd.png",
+    "alt": "WhatsApp logo",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/d869/live/ec988fb0-b526-11ee-beb5-e1400df560f2.png",
+    "alt": "X logo",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/93e0/live/a27a0240-4a9a-11f1-938c-4f4b937c8b6b.jpg",
+    "alt": "A group of Liberal Democrats celebrating with bright yellow signs",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/d039/live/bf381620-4ac6-11f1-9325-ade34e8d64d0.jpg",
+    "alt": "Oxford City Council election count in Oxford Town Hall. There are tables full of ballot papers that people are counting through.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/3292/live/06366080-4ae1-11f1-8c8d-458160734f59.jpg",
+    "alt": "A green train at a platform, with colourful houses slightly out of focus in the background.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/6a53/live/0179e4b0-4af3-11f1-9c75-d37955007435.jpg",
+    "alt": "File photo dated 09/06/15 of the Duke of Marlborough, Charles James Spencer-Churchill, makes a speech before the unveiling of a bust of Sir Winston Churchill in the grounds of Blenheim Palace.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4376/live/974043d0-4aea-11f1-b8d1-0fcd60d6dd09.jpg",
+    "alt": "Will Lankshear celebrates after Oxford score a goal",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/95de/live/c15dfe30-4ad8-11f1-941e-d3689d7c57f6.jpg",
+    "alt": "Martin Williams and David Attenborough sat next to on another on rocks next to the ocean.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/78e5/live/330241c0-8a2e-11f0-b917-03bcebef22ec.jpg",
+    "alt": "A CGI mock-up of the Heyford Park development, which is surrounded by countryside.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/452c/live/72453e00-4a22-11f1-97c6-d32d5f1a58f0.jpg",
+    "alt": "A small brown dog in front of the polling station in Petersfield. It is standing on the grass, in front of a car park, where a few cars can be seen.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cc06/live/e0e86230-25f0-11f0-a2c2-9525794a9c0a.jpg",
+    "alt": "A sign is displayed in front of a polling station in the village of Spelsbury.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/bd1e/live/35155620-4953-11f1-9048-857f9c3e24e6.jpg",
+    "alt": "A man in a yellow high vis jacket on the right of the picture holding a black hose shooting a jet of water into a large pond ",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/8c92/live/63b5c7c0-4968-11f1-a87a-55dfd3c7a311.jpg",
+    "alt": "Vickie Amiralis wearing all black and stood smiling at the camera with a section of the mural in the background over her shoulder.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ccef/live/bf212450-4969-11f1-a87a-55dfd3c7a311.jpg",
+    "alt": "A yellow and green helicopter is pictured from the side, with its nose facing the left. It is in flight and a rooftop and the upper branches of a bare tree can be seen in the background. ",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/aeb3/live/e2ea98c0-4951-11f1-9048-857f9c3e24e6.jpg",
+    "alt": "A general view of Oxford United\u0027s Kassam Stadium",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/6d67/live/e4d10f30-4955-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "A \u0027road ahead closed\u0027 sign, on a road",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2fff/live/92a9e1d0-4934-11f1-a36a-6bbcbd5b2296.jpg",
+    "alt": "Picture shows a gate with a polling station sign",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/3fc0/live/cdf64510-4931-11f1-a36a-6bbcbd5b2296.png",
+    "alt": "Marlborough House in Swindon. It is a brick building with a car park and a gated entrance.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7ff8/live/83b10b80-48b3-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A woman is wearing a high-vis jacket and white hard hat, standing in front of a long row of solar panels. ",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/58c6/live/265d9c90-4887-11f1-bcab-efc229dd9518.jpg",
+    "alt": "A generic shot of a red road sign reading \"road ahead closed\" in white lettering. It includes an arrow pointing to the left. It is surrounded by several orange traffic cones. ",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/1160/live/e74f42a0-4544-11f1-8ea3-630273c214ab.jpg",
+    "alt": "Sylvia, 88, and her 92-year-old husband Fred. She has wispy short grey hair and is wearing a yellow cardigan. She has her arm around Fred, who has short grey hair and is wearing a maroon jumper.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/9e63/live/e6daf680-dd70-11ef-badc-3b0da2437492.jpg",
+    "alt": "A crowd sat watching a large Viking-based show at a Puy du Fou park. The scene is centred on a large Viking longboat which appears to be on fire.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/af30/live/37e2c1c0-4594-11f1-a9a8-25cedec53657.png",
+    "alt": "A man kneeling down, shining a light further down the tunnel.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cb5c/live/93fc2bb0-47d1-11f1-906e-5bd3c4d4c16e.jpg",
+    "alt": "Cameron Brannagan in action for Oxford United",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/47df/live/929eef30-456c-11f1-978c-1335807b5925.jpg",
+    "alt": "An aerial shot of a runway with green fields and low level buildings to the left.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/3cdb/live/bcd95330-44b3-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A yellow sign, high in the sky. It says \"From 29 Oct 2025, Oxford Congestion Charge\" alongside a white C in a red circle.",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/6498/live/d0c4fee0-b526-11ee-8f07-bbfdfa890097.png",
+    "alt": "Instagram logo",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/25eb/live/dd54a200-b526-11ee-beb5-e1400df560f2.png",
+    "alt": "TikTok logo",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/8fe4/live/b9b2c6b0-b526-11ee-bc2f-cb5579b90709.png",
+    "alt": "Facebook logo",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/d869/live/ec988fb0-b526-11ee-beb5-e1400df560f2.png",
+    "alt": "X logo",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Oxfordshire | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/oxford"
+  },
   {
     "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ddb1/live/016a1000-4a60-11f1-b55d-0f258dce1735.png",
     "alt": "Arsenal, Aston Villa and Crystal Palace players celebrate reaching European finals",
