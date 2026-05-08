@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1660,
+    "url": "https://github.com/python/cpython/issues/132106",
+    "title": "Allow logging.handlers.QueueListener to be used as a context manager · Issue #132106 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Allow logging.handlers.QueueListener to be used as a context manager #132106 New issue Copy link New issue Copy link Closed Closed Allow logging.handlers.QueueListener to be used as a context manager#132106 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description csm10495 opened on Apr 5, 2025 Issue body actions Feature or enhancement Proposal: This is a simple change that would allow:          with QueueListener(queue, handler1) as listener:\n             # the listener has started\n             ...\n         # the listener has stopped It\u0027s a welcomed alternative to needing to call start/stop manually. Has this already been discussed elsewhere? I have already discussed this feature proposal on Discourse Links to previous discussion of this feature: https://discuss.python.org/t/allow-logging-handlers-queuelistener-to-be-used-as-a-context-manager/87124 Linked PRs gh-132106: Allow logging.handlers.QueueListener to be used as a context manager #132107 gh-132106: Ensure that running logging.handlers.QueueListener cannot be started again #132444 [3.13] gh-132106: Ensure that running `logging.handlers.QueueListener… #132471 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects Logging issues 🪵 Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:28:43.801834"
+  },
+  {
+    "id": 1659,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.write",
+    "title": "configparser — Configuration file parser — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » File Formats » configparser — Configuration file parser | Theme Auto Light Dark | configparser — Configuration file parser¶ Source code: Lib/configparser.py This module provides the ConfigParser class which implements a basic configuration language which provides a structure similar to what’s found in Microsoft Windows INI files. You can use this to write Python programs which can be customized by end users easily. Note This library does not interpret or write the value-type prefixes used in the Windows Registry extended version of INI syntax. See also Module tomllib TOML is a well-specified format for application configuration files. It is specifically designed to be an improved version of INI. Module shlex Support for creating Unix shell-like mini-languages which can also be used for application configuration files. Module json The json module implements a subset of JavaScript syntax which is sometimes used for configuration, but does not support comments. Quick Start¶ Let’s take a very basic configuration file that looks like this: [DEFAULT]\nServerAliveInterval \u003d 45\nCompression \u003d yes\nCompressionLevel \u003d 9\nForwardX11 \u003d yes\n\n[forge.example]\nUser \u003d hg\n\n[topsecret.server.example]\nPort \u003d 50022\nForwardX11 \u003d no\n The structure of INI files is described in the following section. Essentially, the file consists of sections, each of which contains keys with values. configparser classes can read and write such files. Let’s start by creating the above configuration file programmatically. \u003e\u003e\u003e import configparser\n\u003e\u003e\u003e config \u003d configparser.ConfigParser()\n\u003e\u003e\u003e config[\u0027DEFAULT\u0027] \u003d {\u0027ServerAliveInterval\u0027: \u002745\u0027,\n...                      \u0027Compression\u0027: \u0027yes\u0027,\n...                      \u0027CompressionLevel\u0027: \u00279\u0027}\n\u003e\u003e\u003e config[\u0027forge.example\u0027] \u003d {}\n\u003e\u003e\u003e config[\u0027forge.example\u0027][\u0027User\u0027] \u003d \u0027hg\u0027\n\u003e\u003e\u003e config[\u0027topsecret.server.example\u0027] \u003d {}\n\u003e\u003e\u003e topsecret \u003d config[\u0027topsecret.server.example\u0027]\n\u003e\u003e\u003e topsecret[\u0027Port\u0027] \u003d \u002750022\u0027     # mutates the parser\n\u003e\u003e\u003e topsecret[\u0027ForwardX11\u0027] \u003d \u0027no\u0027  # same here\n\u003e\u003e\u003e config[\u0027DEFAULT\u0027][\u0027ForwardX11\u0027] \u003d \u0027yes\u0027\n\u003e\u003e\u003e with open(\u0027example.ini\u0027, \u0027w\u0027) as configfile:\n...   config.write(configfile)\n...\n As you can see, we can treat a config parser much like a dictionary. There are differences, outlined later, but the behavior is very close to what you would expect from a dictionary. Now that we have created and saved a configuration file, let’s read it back and explore the data it holds. \u003e\u003e\u003e config \u003d configparser.ConfigParser()\n\u003e\u003e\u003e config.sections()\n[]\n\u003e\u003e\u003e config.read(\u0027example.ini\u0027)\n[\u0027example.ini\u0027]\n\u003e\u003e\u003e config.sections()\n[\u0027forge.example\u0027, \u0027topsecret.server.example\u0027]\n\u003e\u003e\u003e \u0027forge.example\u0027 in config\nTrue\n\u003e\u003e\u003e \u0027python.org\u0027 in config\nFalse\n\u003e\u003e\u003e config[\u0027forge.example\u0027][\u0027User\u0027]\n\u0027hg\u0027\n\u003e\u003e\u003e config[\u0027DEFAULT\u0027][\u0027Compression\u0027]\n\u0027yes\u0027\n\u003e\u003e\u003e topsecret \u003d config[\u0027topsecret.server.example\u0027]\n\u003e\u003e\u003e topsecret[\u0027ForwardX11\u0027]\n\u0027no\u0027\n\u003e\u003e\u003e topsecret[\u0027Port\u0027]\n\u002750022\u0027\n\u003e\u003e\u003e for key in config[\u0027forge.example\u0027]:\n...     print(key)\nuser\ncompressionlevel\nserveraliveinterval\ncompression\nforwardx11\n\u003e\u003e\u003e config[\u0027forge.example\u0027][\u0027ForwardX11\u0027]\n\u0027yes\u0027\n As we can see above, the API is pretty straightforward. The only bit of magic involves the DEFAULT section which provides default values for all other sections [1]. Note also that keys in sections are case-insensitive and stored in lowercase [1]. It is possible to read several configurations into a single ConfigParser, where the most recently added configuration has the highest priority. Any conflicting keys are taken from the more recent configuration while the previously existing keys are retained. The example below reads in an override.ini file, which will override any conflicting keys from the example.ini file. [DEFAULT]\nServerAliveInterval \u003d -1\n \u003e\u003e\u003e config_override \u003d configparser.ConfigParser()\n\u003e\u003e\u003e config_override[\u0027DEFAULT\u0027] \u003d {\u0027ServerAliveInterval\u0027: \u0027-1\u0027}\n\u003e\u003e\u003e with open(\u0027override.ini\u0027, \u0027w\u0027) as configfile:\n...     config_override.write(configfile)\n...\n\u003e\u003e\u003e config_override \u003d configparser.ConfigParser()\n\u003e\u003e\u003e config_override.read([\u0027example.ini\u0027, \u0027override.ini\u0027])\n[\u0027example.ini\u0027, \u0027override.ini\u0027]\n\u003e\u003e\u003e print(config_override.get(\u0027DEFAULT\u0027, \u0027ServerAliveInterval\u0027))\n-1\n This behaviour is equivalent to a ConfigParser.read() call with several files passed to the filenames parameter. Supported Datatypes¶ Config parsers do not guess datatypes of values in configuration files, always storing them internally as strings. This means that if you need other datatypes, you should convert on your own: \u003e\u003e\u003e int(topsecret[\u0027Port\u0027])\n50022\n\u003e\u003e\u003e float(topsecret[\u0027CompressionLevel\u0027])\n9.0\n Since this task is so common, config parsers provide a range of handy getter methods to handle integers, floats and booleans. The last one is the most interesting because simply passing the value to bool() would do no good since bool(\u0027False\u0027) is still True. This is why config parsers also provide getboolean(). This method is case-insensitive and recognizes Boolean values fr",
+    "scrapedAt": "2026-05-09 01:28:41.467237"
+  },
+  {
+    "id": 1658,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent",
+    "title": "textwrap — Text wrapping and filling — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Text Processing Services » textwrap — Text wrapping and filling | Theme Auto Light Dark | textwrap — Text wrapping and filling¶ Source code: Lib/textwrap.py The textwrap module provides some convenience functions, as well as TextWrapper, the class that does all the work. If you’re just wrapping or filling one or two text strings, the convenience functions should be good enough; otherwise, you should use an instance of TextWrapper for efficiency. textwrap.wrap(text, width\u003d70, *, initial_indent\u003d\u0027\u0027, subsequent_indent\u003d\u0027\u0027, expand_tabs\u003dTrue, replace_whitespace\u003dTrue, fix_sentence_endings\u003dFalse, break_long_words\u003dTrue, drop_whitespace\u003dTrue, break_on_hyphens\u003dTrue, tabsize\u003d8, max_lines\u003dNone, placeholder\u003d\u0027 [...]\u0027)¶ Wraps the single paragraph in text (a string) so every line is at most width characters long. Returns a list of output lines, without final newlines. Optional keyword arguments correspond to the instance attributes of TextWrapper, documented below. See the TextWrapper.wrap() method for additional details on how wrap() behaves. textwrap.fill(text, width\u003d70, *, initial_indent\u003d\u0027\u0027, subsequent_indent\u003d\u0027\u0027, expand_tabs\u003dTrue, replace_whitespace\u003dTrue, fix_sentence_endings\u003dFalse, break_long_words\u003dTrue, drop_whitespace\u003dTrue, break_on_hyphens\u003dTrue, tabsize\u003d8, max_lines\u003dNone, placeholder\u003d\u0027 [...]\u0027)¶ Wraps the single paragraph in text, and returns a single string containing the wrapped paragraph. fill() is shorthand for \"\\n\".join(wrap(text, ...))\n In particular, fill() accepts exactly the same keyword arguments as wrap(). textwrap.shorten(text, width, *, fix_sentence_endings\u003dFalse, break_long_words\u003dTrue, break_on_hyphens\u003dTrue, placeholder\u003d\u0027 [...]\u0027)¶ Collapse and truncate the given text to fit in the given width. First the whitespace in text is collapsed (all whitespace is replaced by single spaces). If the result fits in the width, it is returned. Otherwise, enough words are dropped from the end so that the remaining words plus the placeholder fit within width: \u003e\u003e\u003e textwrap.shorten(\"Hello  world!\", width\u003d12)\n\u0027Hello world!\u0027\n\u003e\u003e\u003e textwrap.shorten(\"Hello  world!\", width\u003d11)\n\u0027Hello [...]\u0027\n\u003e\u003e\u003e textwrap.shorten(\"Hello world\", width\u003d10, placeholder\u003d\"...\")\n\u0027Hello...\u0027\n Optional keyword arguments correspond to the instance attributes of TextWrapper, documented below. Note that the whitespace is collapsed before the text is passed to the TextWrapper fill() function, so changing the value of tabsize, expand_tabs, drop_whitespace, and replace_whitespace will have no effect. Added in version 3.4. textwrap.dedent(text)¶ Remove any common leading whitespace from every line in text. This can be used to make triple-quoted strings line up with the left edge of the display, while still presenting them in the source code in indented form. Note that tabs and spaces are both treated as whitespace, but they are not equal: the lines \" hello\" and \"\\thello\" are considered to have no common leading whitespace. Lines containing only whitespace are ignored in the input and normalized to a single newline character in the output. For example: def test():\n    # end first line with \\ to avoid the empty line!\n    s \u003d \u0027\u0027\u0027\\\n    hello\n      world\n    \u0027\u0027\u0027\n    print(repr(s))          # prints \u0027    hello\\n      world\\n    \u0027\n    print(repr(dedent(s)))  # prints \u0027hello\\n  world\\n\u0027\n Changed in version 3.14: The dedent() function now correctly normalizes blank lines containing only whitespace characters. Previously, the implementation only normalized blank lines containing tabs and spaces. textwrap.indent(text, prefix, predicate\u003dNone)¶ Add prefix to the beginning of selected lines in text. Lines are separated by calling text.splitlines(True). By default, prefix is added to all lines that do not consist solely of whitespace (including any line endings). For example: \u003e\u003e\u003e s \u003d \u0027hello\\n\\n \\nworld\u0027\n\u003e\u003e\u003e indent(s, \u0027  \u0027)\n\u0027  hello\\n\\n \\n  world\u0027\n The optional predicate argument can be used to control which lines are indented. For example, it is easy to add prefix to even empty and whitespace-only lines: \u003e\u003e\u003e print(indent(s, \u0027+ \u0027, lambda line: True))\n+ hello\n+\n+\n+ world\n Added in version 3.3. wrap(), fill() and shorten() work by creating a TextWrapper instance and calling a single method on it. That instance is not reused, so for applications that process many text strings using wrap() and/or fill(), it may be more efficient to create your own TextWrapper object. Text is preferably wrapped on whitespaces and right after the hyphens in hyphenated words; only then will long words be broken if necessary, unless TextWrapper.break_long_words is set to false. class textwrap.TextWrapper(**kwargs)¶ The TextWrapper constructor accepts a number of optional keyword arguments. Each keyword argument corresponds to an instance attribute, so for example wrapper \u003d TextWrapper(initial_indent\u003d\"* \")\n is the same as wrapper \u003d TextWrapper()\nwrapper.initial_indent \u003d \"* \"\n You can reuse the same",
+    "scrapedAt": "2026-05-09 01:28:40.207714"
+  },
+  {
+    "id": 1657,
+    "url": "https://docs.python.org/3/c-api/buffer.html#bufferobjects",
+    "title": "Buffer Protocol — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Abstract Objects Layer » Buffer Protocol | Theme Auto Light Dark | Buffer Protocol¶ Certain objects available in Python wrap access to an underlying memory array or buffer. Such objects include the built-in bytes and bytearray, and some extension types like array.array. Third-party libraries may define their own types for special purposes, such as image processing or numeric analysis. While each of these types have their own semantics, they share the common characteristic of being backed by a possibly large memory buffer. It is then desirable, in some situations, to access that buffer directly and without intermediate copying. Python provides such a facility at the C and Python level in the form of the buffer protocol. This protocol has two sides: on the producer side, a type can export a “buffer interface” which allows objects of that type to expose information about their underlying buffer. This interface is described in the section Buffer Object Structures; for Python see Emulating buffer types. on the consumer side, several means are available to obtain a pointer to the raw underlying data of an object (for example a method parameter). For Python see memoryview. Simple objects such as bytes and bytearray expose their underlying buffer in byte-oriented form. Other forms are possible; for example, the elements exposed by an array.array can be multi-byte values. An example consumer of the buffer interface is the write() method of file objects: any object that can export a series of bytes through the buffer interface can be written to a file. While write() only needs read-only access to the internal contents of the object passed to it, other methods such as readinto() need write access to the contents of their argument. The buffer interface allows objects to selectively allow or reject exporting of read-write and read-only buffers. There are two ways for a consumer of the buffer interface to acquire a buffer over a target object: call PyObject_GetBuffer() with the right parameters; call PyArg_ParseTuple() (or one of its siblings) with one of the y*, w* or s* format codes. In both cases, PyBuffer_Release() must be called when the buffer isn’t needed anymore. Failure to do so could lead to various issues such as resource leaks. Added in version 3.12: The buffer protocol is now accessible in Python, see Emulating buffer types and memoryview. Buffer structure¶ Buffer structures (or simply “buffers”) are useful as a way to expose the binary data from another object to the Python programmer. They can also be used as a zero-copy slicing mechanism. Using their ability to reference a block of memory, it is possible to expose any data to the Python programmer quite easily. The memory could be a large, constant array in a C extension, it could be a raw block of memory for manipulation before passing to an operating system library, or it could be used to pass around structured data in its native, in-memory format. Contrary to most data types exposed by the Python interpreter, buffers are not PyObject pointers but rather simple C structures. This allows them to be created and copied very simply. When a generic wrapper around a buffer is needed, a memoryview object can be created. For short instructions how to write an exporting object, see Buffer Object Structures. For obtaining a buffer, see PyObject_GetBuffer(). type Py_buffer¶ Part of the Stable ABI (including all members) since version 3.11. void *buf¶ A pointer to the start of the logical structure described by the buffer fields. This can be any location within the underlying physical memory block of the exporter. For example, with negative strides the value may point to the end of the memory block. For contiguous arrays, the value points to the beginning of the memory block. PyObject *obj¶ A new reference to the exporting object. The reference is owned by the consumer and automatically released (i.e. reference count decremented) and set to NULL by PyBuffer_Release(). The field is the equivalent of the return value of any standard C-API function. As a special case, for temporary buffers that are wrapped by PyMemoryView_FromBuffer() or PyBuffer_FillInfo() this field is NULL. In general, exporting objects MUST NOT use this scheme. Py_ssize_t len¶ product(shape) * itemsize. For contiguous arrays, this is the length of the underlying memory block. For non-contiguous arrays, it is the length that the logical structure would have if it were copied to a contiguous representation. Accessing ((char *)buf)[0] up to ((char *)buf)[len-1] is only valid if the buffer has been obtained by a request that guarantees contiguity. In most cases such a request will be PyBUF_SIMPLE or PyBUF_WRITABLE. int readonly¶ An indicator of whether the buffer is read-only. This field is controlled by the PyBUF_WRITABLE flag. Py_ssize_t itemsize¶ Item size in bytes of a single element. Sa",
+    "scrapedAt": "2026-05-09 01:28:38.943954"
+  },
+  {
+    "id": 1656,
+    "url": "https://github.com/python/cpython/issues/122548",
+    "title": "Add BRANCH_TAKEN and BRANCH_NOT_TAKEN events to sys.monitoring · Issue #122548 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add BRANCH_TAKEN and BRANCH_NOT_TAKEN events to sys.monitoring #122548 New issue Copy link New issue Copy link Closed Closed Add BRANCH_TAKEN and BRANCH_NOT_TAKEN events to sys.monitoring#122548 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description markshannon opened on Aug 1, 2024 Issue body actions Feature or enhancement Proposal: Proposal: Add BRANCH_TAKEN and BRANCH_NOT_TAKEN events to sys.monitoring Deprecate the old BRANCH event (as it will be redundant) Monitoring BRANCH events implicitly monitors both the BRANCH_TAKEN and BRANCH_NOT_TAKEN events Disabling a BRANCH_TAKEN event will implicitly disable the matching BRANCH event, but only for the taken branch Disabling a BRANCH_NOT_TAKEN event will implicitly disable the matching BRANCH event, but only for the not-taken branch Disabling a BRANCH event will implicitly disable the both the matching BRANCH_TAKEN and BRANCH_NOT_TAKEN events This is fully backwards compatible. Has this already been discussed elsewhere? I have already discussed this feature proposal on Discourse Links to previous discussion of this feature: Discussion which also links to prior discussions. Linked PRs GH-122548: Implement branch taken and not taken events for sys.monitoring #122564 GH-122548: Correct magic number comment #128115 ### Tasks\n- [ ] https://github.com/python/cpython/issues/123044\n- [ ] https://github.com/python/cpython/issues/123048\n- [ ] https://github.com/python/cpython/issues/123050\n- [ ] https://github.com/python/cpython/issues/128375\n- [ ] https://github.com/python/cpython/issues/128533\n- [ ] https://github.com/python/cpython/issues/128534\n Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:28:37.564396"
+  },
+  {
     "id": 1655,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-free-threaded-cpython",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -11163,26 +11198,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1656,
-    "url": "https://github.com/python/cpython/issues/122548"
-  },
-  {
-    "id": 1657,
-    "url": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
-  },
-  {
-    "id": 1658,
-    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
-  },
-  {
-    "id": 1659,
-    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.write"
-  },
-  {
-    "id": 1660,
-    "url": "https://github.com/python/cpython/issues/132106"
   },
   {
     "id": 1661,
@@ -243045,10 +243060,425 @@ window.searchData = [
     "id": 361021,
     "url": "https://github.com/python/cpython/issues/122525",
     "parentUrl": "https://github.com/python/cpython/issues/122549"
+  },
+  {
+    "id": 362259,
+    "url": "https://github.com/python/cpython/pull/128115",
+    "parentUrl": "https://github.com/python/cpython/issues/122548"
+  },
+  {
+    "id": 362261,
+    "url": "https://github.com/python/cpython/issues/122548#issue-2441924480",
+    "parentUrl": "https://github.com/python/cpython/issues/122548"
+  },
+  {
+    "id": 362265,
+    "url": "https://github.com/python/cpython/issues/122548#top",
+    "parentUrl": "https://github.com/python/cpython/issues/122548"
+  },
+  {
+    "id": 362268,
+    "url": "https://discuss.python.org/t/updating-sys-monitoring-how-branch-events-are-disabled/59527",
+    "parentUrl": "https://github.com/python/cpython/issues/122548"
+  },
+  {
+    "id": 362269,
+    "url": "https://github.com/python/cpython/issues/122548#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/122548"
+  },
+  {
+    "id": 362271,
+    "url": "https://github.com/python/cpython/pull/122564",
+    "parentUrl": "https://github.com/python/cpython/issues/122548"
+  },
+  {
+    "id": 362275,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBuffer_GetPointer",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362277,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_RECORDS",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362280,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/buffer.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362282,
+    "url": "https://docs.python.org/3/c-api/buffer.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362286,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBuffer_IsContiguous",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362292,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.Py_buffer.ndim",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362295,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_F_CONTIGUOUS",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362296,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBuffer_ToContiguous",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362297,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_C_CONTIGUOUS",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362299,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_WRITEABLE",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362300,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_STRIDED_RO",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362303,
+    "url": "https://docs.python.org/3/c-api/memoryview.html#memoryview-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362305,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_INDIRECT",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362307,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBuffer_FillContiguousStrides",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362309,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.Py_buffer.itemsize",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362311,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_FULL",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362312,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_SIMPLE",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362316,
+    "url": "https://docs.python.org/3/c-api/memoryview.html#c.PyMemoryView_FromBuffer",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362317,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_FORMAT",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362318,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_FULL_RO",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362326,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.Py_buffer.len",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362332,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_ANY_CONTIGUOUS",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362333,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_CONTIG",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362340,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_STRIDES",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362341,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBuffer_FromContiguous",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362351,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.Py_buffer.obj",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362352,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_RECORDS_RO",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362353,
+    "url": "https://docs.python.org/3/c-api/buffer.html#buffer-protocol",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362355,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_ND",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362356,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_STRIDED",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362357,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.Py_buffer.buf",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362359,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.Py_buffer.readonly",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362360,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_WRITABLE",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362361,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_MAX_NDIM",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362363,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBUF_CONTIG_RO",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362364,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBuffer_SizeFromFormat",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362365,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyObject_CopyData",
+    "parentUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 362367,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.break_long_words",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362368,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/textwrap.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362369,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.expand_tabs",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362371,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.tabsize",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362373,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/textwrap.py",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362374,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362375,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.wrap",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362376,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.break_on_hyphens",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362378,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.initial_indent",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362380,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.drop_whitespace",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362382,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.width",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362383,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.max_lines",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362384,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.wrap",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362387,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.fill",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362389,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.shorten",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362390,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.replace_whitespace",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362392,
+    "url": "https://docs.python.org/3/library/textwrap.html#module-textwrap",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362395,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.subsequent_indent",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362399,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.fill",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362402,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.fix_sentence_endings",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362405,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.placeholder",
+    "parentUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 362510,
+    "url": "https://github.com/python/cpython/issues/132106#top",
+    "parentUrl": "https://github.com/python/cpython/issues/132106"
+  },
+  {
+    "id": 362513,
+    "url": "https://github.com/python/cpython/pull/132107",
+    "parentUrl": "https://github.com/python/cpython/issues/132106"
+  },
+  {
+    "id": 362514,
+    "url": "https://github.com/python/cpython/issues/132106#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/132106"
+  },
+  {
+    "id": 362515,
+    "url": "https://discuss.python.org/t/allow-logging-handlers-queuelistener-to-be-used-as-a-context-manager/87124",
+    "parentUrl": "https://github.com/python/cpython/issues/132106"
+  },
+  {
+    "id": 362519,
+    "url": "https://github.com/python/cpython/pull/132444",
+    "parentUrl": "https://github.com/python/cpython/issues/132106"
+  },
+  {
+    "id": 362523,
+    "url": "https://github.com/python/cpython/pull/132471",
+    "parentUrl": "https://github.com/python/cpython/issues/132106"
+  },
+  {
+    "id": 362524,
+    "url": "https://github.com/python/cpython/issues/132106#issue-2973759144",
+    "parentUrl": "https://github.com/python/cpython/issues/132106"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/5749838?v\u003d4\u0026size\u003d80",
+    "alt": "@csm10495",
+    "pageTitle": "Allow logging.handlers.QueueListener to be used as a context manager · Issue #132106 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132106"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5749838?v\u003d4\u0026size\u003d48",
+    "alt": "@csm10495",
+    "pageTitle": "Allow logging.handlers.QueueListener to be used as a context manager · Issue #132106 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132106"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "configparser — Configuration file parser — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.write"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "configparser — Configuration file parser — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.write"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "textwrap — Text wrapping and filling — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "textwrap — Text wrapping and filling — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Buffer Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Buffer Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d80",
+    "alt": "@markshannon",
+    "pageTitle": "Add BRANCH_TAKEN and BRANCH_NOT_TAKEN events to sys.monitoring · Issue #122548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d48",
+    "alt": "@markshannon",
+    "pageTitle": "Add BRANCH_TAKEN and BRANCH_NOT_TAKEN events to sys.monitoring · Issue #122548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122548"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
