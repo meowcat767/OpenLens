@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1645,
+    "url": "https://github.com/python/cpython/issues/132576",
+    "title": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member gaogaotiantian commented Apr 16, 2025 • edited by github-actions Bot Loading Uh oh! There was an error while loading. Please reload this page. I finally figured out how to support await in pdb without too much hack - we can make the breakpoint itself an awaitable, and everything is simply integrated into the system! This PR introduced a new function pdb.set_trace_async which the users should await, and with that function, the users can do their awaits in th debugger! Issue: Make pdb asyncio aware #121468 📚 Documentation preview 📚: https://cpython-previews--132576.org.readthedocs.build/ Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👍 3 Zheaoli, shengbo-ma, and Felix3322 reacted with thumbs up emoji All reactions 👍 3 reactions gaogaotiantian added 3 commits April 13, 2025 13:34 Add set_trace_async for async support 1b77cdb Merge branch \u0027main\u0027 into support-async-breakpoint 285efe2 Update docs 677c952 bedevere-app Bot mentioned this pull request Apr 16, 2025 Make pdb asyncio aware #121468 Open blurb-it Bot and others added 6 commits April 16, 2025 01:41 📜🤖 Added by blurb_it. 15290d5 reorder the if checks a3401e9 Add breakpoint tests 50c3c9c Merge branch \u0027main\u0027 into support-async-breakpoint a6c580d Update test 090715b Add whatsnew entry ebdc161 gaogaotiantian marked this pull request as ready for review April 16, 2025 23:44 bedevere-app Bot added the awaiting core review label Apr 16, 2025 gaogaotiantian requested review from iritkatriel and kumaraditya303 April 16, 2025 23:44 Copy link Copy Markdown Member Author gaogaotiantian commented Apr 21, 2025 Hi @iritkatriel , do you think this needs to be reviewed by asyncio expert? All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member iritkatriel commented Apr 21, 2025 Yes, ideally. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member Author gaogaotiantian commented Apr 22, 2025 @kumaraditya303 I hope I can have this in 3.14 because it\u0027s a demanding feature. Could you take a look at it and see if it\u0027s a reasonable approach? Thanks! All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. kumaraditya303 reviewed Apr 22, 2025 View reviewed changes Comment thread Lib/test/test_pdb.py Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. graingert-coef reviewed Apr 22, 2025 View reviewed changes Comment thread Lib/pdb.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. graingert reviewed Apr 22, 2025 View reviewed changes Comment thread Lib/pdb.py Outdated and e.msg \u003d\u003d \"\u0027await\u0027 outside function\" ): try: self._exec_await(buffer, globals, locals) Copy link Copy Markdown Contributor graingert Apr 22, 2025 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment I think this should be run without the exception from line 891 in the context Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Member Author gaogaotiantian Apr 22, 2025 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment I restructured the code as we know whether it is an await code during compile. The nice side effect is that we don\u0027t need to execute the code under the exception context. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Restructure default function 109d8b1 Copy link Copy Markdown Contributor taegyunkim commented Apr 22, 2025 How about adding these direct links to what you added in the docs https://cpython-previews--132576.org.readthedocs.build/en/132576/library/pdb.html#pdb.set_trace_async https://cpython-previews--132576.org.readthedocs.build/en/132576/whatsnew/3.14.html#pdb All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member Author gaogaoti",
+    "scrapedAt": "2026-05-09 01:28:08.006581"
+  },
+  {
+    "id": 1644,
+    "url": "https://github.com/python/cpython/issues/121450",
+    "title": "Inline breakpoints should use the most recent pdb isntance, instead of creating a new one · Issue #121450 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Inline breakpoints should use the most recent pdb isntance, instead of creating a new one #121450 New issue Copy link New issue Copy link Closed Closed Inline breakpoints should use the most recent pdb isntance, instead of creating a new one#121450 Copy link Labels type-featureA feature request or enhancementA feature request or enhancement Description gaogaotiantian opened on Jul 6, 2024 Issue body actions Feature or enhancement Proposal: Currently, the inline breakpoints (breakpoint() or pdb.set_trace()) will create a new pdb instance, which breaks all the instance-specific feature for pdb. For example, all the displays will be discarded. The last_cmd will be lost so \u003cEnter\u003e will not repeat the last command you type. Breakpoints will be preserved but the corresponding commands won\u0027t exist anymore. Everything stored in the pdb instance will not work anymore. We should make inline breakpoints work as the real breakpoints set in the debugger - just break there and keep everything. My approach is to store the last pdb instance created and use that in pdb.set_trace(). This solves all the issues above and I think it\u0027s the right way to go. It will also make features the rely on data on instance possible with inline breakpoints. Very few existing code will be impacted. Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-121450: Make inline breakpoints use the most recent pdb instance #121451 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:28:04.753263"
+  },
+  {
+    "id": 1643,
+    "url": "https://docs.python.org/3/library/exceptions.html#TypeError",
+    "title": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Exceptions | Theme Auto Light Dark | Built-in Exceptions¶ In Python, all exceptions must be instances of a class that derives from BaseException. In a try statement with an except clause that mentions a particular class, that clause also handles any exception classes derived from that class (but not exception classes from which it is derived). Two exception classes that are not related via subclassing are never equivalent, even if they have the same name. The built-in exceptions listed in this chapter can be generated by the interpreter or built-in functions. Except where mentioned, they have an “associated value” indicating the detailed cause of the error. This may be a string or a tuple of several items of information (e.g., an error code and a string explaining the code). The associated value is usually passed as arguments to the exception class’s constructor. User code can raise built-in exceptions. This can be used to test an exception handler or to report an error condition “just like” the situation in which the interpreter raises the same exception; but beware that there is nothing to prevent user code from raising an inappropriate error. The built-in exception classes can be subclassed to define new exceptions; programmers are encouraged to derive new exceptions from the Exception class or one of its subclasses, and not from BaseException. More information on defining exceptions is available in the Python Tutorial under User-defined Exceptions. Exception context¶ Three attributes on exception objects provide information about the context in which the exception was raised: BaseException.__context__¶ BaseException.__cause__¶ BaseException.__suppress_context__¶ When raising a new exception while another exception is already being handled, the new exception’s __context__ attribute is automatically set to the handled exception. An exception may be handled when an except or finally clause, or a with statement, is used. This implicit exception context can be supplemented with an explicit cause by using from with raise: raise new_exc from original_exc\n The expression following from must be an exception or None. It will be set as __cause__ on the raised exception. Setting __cause__ also implicitly sets the __suppress_context__ attribute to True, so that using raise new_exc from None effectively replaces the old exception with the new one for display purposes (e.g. converting KeyError to AttributeError), while leaving the old exception available in __context__ for introspection when debugging. The default traceback display code shows these chained exceptions in addition to the traceback for the exception itself. An explicitly chained exception in __cause__ is always shown when present. An implicitly chained exception in __context__ is shown only if __cause__ is None and __suppress_context__ is false. In either case, the exception itself is always shown after any chained exceptions so that the final line of the traceback always shows the last exception that was raised. Inheriting from built-in exceptions¶ User code can create subclasses that inherit from an exception type. It’s recommended to only subclass one exception type at a time to avoid any possible conflicts between how the bases handle the args attribute, as well as due to possible memory layout incompatibilities. CPython implementation detail: Most built-in exceptions are implemented in C for efficiency, see: Objects/exceptions.c. Some have custom memory layouts which makes it impossible to create a subclass that inherits from multiple exception types. The memory layout of a type is an implementation detail and might change between Python versions, leading to new conflicts in the future. Therefore, it’s recommended to avoid subclassing multiple exception types altogether. Base classes¶ The following exceptions are used mostly as base classes for other exceptions. exception BaseException¶ The base class for all built-in exceptions. It is not meant to be directly inherited by user-defined classes (for that, use Exception). If str() is called on an instance of this class, the representation of the argument(s) to the instance are returned, or the empty string when there were no arguments. args¶ The tuple of arguments given to the exception constructor. Some built-in exceptions (like OSError) expect a certain number of arguments and assign a special meaning to the elements of this tuple, while others are usually called only with a single string giving an error message. with_traceback(tb)¶ This method sets tb as the new traceback for the exception and returns the exception object. It was more commonly used before the exception chaining features of PEP 3134 became available. The following example shows how we can convert an instance of SomeException into an instance of OtherException while preserving the traceback. Once raised, the current ",
+    "scrapedAt": "2026-05-09 01:28:02.410683"
+  },
+  {
+    "id": 1642,
+    "url": "https://docs.python.org/3/library/zlib.html#module-zlib",
+    "title": "zlib — Compression compatible with gzip — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Compression and Archiving » zlib — Compression compatible with gzip | Theme Auto Light Dark | zlib — Compression compatible with gzip¶ For applications that require data compression, the functions in this module allow compression and decompression, using the zlib library. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. zlib’s functions have many options and often need to be used in a particular order. This documentation doesn’t attempt to cover all of the permutations; consult the zlib manual for authoritative information. For reading and writing .gz files see the gzip module. The available exception and functions in this module are: exception zlib.error¶ Exception raised on compression and decompression errors. zlib.adler32(data[, value])¶ Computes an Adler-32 checksum of data. (An Adler-32 checksum is almost as reliable as a CRC32 but can be computed much more quickly.) The result is an unsigned 32-bit integer. If value is present, it is used as the starting value of the checksum; otherwise, a default value of 1 is used. Passing in value allows computing a running checksum over the concatenation of several inputs. The algorithm is not cryptographically strong, and should not be used for authentication or digital signatures. Since the algorithm is designed for use as a checksum algorithm, it is not suitable for use as a general hash algorithm. Changed in version 3.0: The result is always unsigned. zlib.compress(data, /, level\u003dZ_DEFAULT_COMPRESSION, wbits\u003dMAX_WBITS)¶ Compresses the bytes in data, returning a bytes object containing compressed data. level is an integer from 0 to 9 or -1 controlling the level of compression; See Z_BEST_SPEED (1), Z_BEST_COMPRESSION (9), Z_NO_COMPRESSION (0), and the default, Z_DEFAULT_COMPRESSION (-1) for more information about these values. The wbits argument controls the size of the history buffer (or the “window size”) used when compressing data, and whether a header and trailer is included in the output. It can take several ranges of values, defaulting to 15 (MAX_WBITS): +9 to +15: The base-two logarithm of the window size, which therefore ranges between 512 and 32768. Larger values produce better compression at the expense of greater memory usage. The resulting output will include a zlib-specific header and trailer. −9 to −15: Uses the absolute value of wbits as the window size logarithm, while producing a raw output stream with no header or trailing checksum. +25 to +31 \u003d 16 + (9 to 15): Uses the low 4 bits of the value as the window size logarithm, while including a basic gzip header and trailing checksum in the output. Raises the error exception if any error occurs. Changed in version 3.6: level can now be used as a keyword parameter. Changed in version 3.11: The wbits parameter is now available to set window bits and compression type. zlib.compressobj(level\u003dZ_DEFAULT_COMPRESSION, method\u003dDEFLATED, wbits\u003dMAX_WBITS, memLevel\u003dDEF_MEM_LEVEL, strategy\u003dZ_DEFAULT_STRATEGY[, zdict])¶ Returns a compression object, to be used for compressing data streams that won’t fit into memory at once. level is the compression level – an integer from 0 to 9 or -1. See Z_BEST_SPEED (1), Z_BEST_COMPRESSION (9), Z_NO_COMPRESSION (0), and the default, Z_DEFAULT_COMPRESSION (-1) for more information about these values. method is the compression algorithm. Currently, the only supported value is DEFLATED. The wbits parameter controls the size of the history buffer (or the “window size”), and what header and trailer format will be used. It has the same meaning as described for compress(). The memLevel argument controls the amount of memory used for the internal compression state. Valid values range from 1 to 9. Higher values use more memory, but are faster and produce smaller output. strategy is used to tune the compression algorithm. Possible values are Z_DEFAULT_STRATEGY, Z_FILTERED, Z_HUFFMAN_ONLY, Z_RLE and Z_FIXED. zdict is a predefined compression dictionary. This is a sequence of bytes (such as a bytes object) containing subsequences that are expected to occur frequently in the data that is to be compressed. Those subsequences that are expected to be most common should come at the end of the dictionary. Changed in version 3.3: Added the zdict parameter and keyword argument support. zlib.crc32(data[, value])¶ Computes a CRC (Cyclic Redundancy Check) checksum of data. The result is an unsigned 32-bit integer. If value is present, it is used as the starting value of the checksum; otherwise, a default value of 0 is used. Passing in value allows computing a running checksum over the concatenation of several inputs. The algorithm is not cryptographically strong, and should not be used for authentication or di",
+    "scrapedAt": "2026-05-09 01:28:01.171275"
+  },
+  {
+    "id": 1641,
+    "url": "https://github.com/python/cpython/issues/50333",
+    "title": "Reference counting bug in PyArg_ParseTuple and PyArg_ParseTupleAndKeywords · Issue #50333 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Reference counting bug in PyArg_ParseTuple and PyArg_ParseTupleAndKeywords #50333 New issue Copy link New issue Copy link Closed Closed Reference counting bug in PyArg_ParseTuple and PyArg_ParseTupleAndKeywords#50333 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-C-APItype-crashA hard crash of the interpreter, possibly with a core dumpA hard crash of the interpreter, possibly with a core dump Description billm mannequin opened on May 22, 2009 Issue body actions BPO 6083 Nosy @loewis, @birkenfeld, @gpshead, @abalkin, @taleinat, @serhiy-storchaka, @imz, @ananthan-123 Dependencies bpo-20191: resource.prlimit(int, int, str) crashs Files python-bug-01.patch: Patch to fix the problem test-resource.py: Test for Modules/resource.c test-ctypes.py: Test for Modules/_ctypes/_ctypes.c test-functools.py: Test for Modules/_functoolsmodule.c (py3k only) issue6083.diff PyArg_ParseTuple_refcount.patch Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2009-05-22.08:18:54.577\u003e\nlabels \u003d [\u0027interpreter-core\u0027, \u0027type-crash\u0027]\ntitle \u003d \u0027Reference counting bug in PyArg_ParseTuple and PyArg_ParseTupleAndKeywords\u0027\nupdated_at \u003d \u003cDate 2020-02-20.07:51:55.428\u003e\nuser \u003d \u0027https://bugs.python.org/billm\u0027 bugs.python.org fields: activity \u003d \u003cDate 2020-02-20.07:51:55.428\u003e\nactor \u003d \u0027taleinat\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Interpreter Core\u0027]\ncreation \u003d \u003cDate 2009-05-22.08:18:54.577\u003e\ncreator \u003d \u0027billm\u0027\ndependencies \u003d [\u002720191\u0027]\nfiles \u003d [\u002714040\u0027, \u002719616\u0027, \u002719617\u0027, \u002719618\u0027, \u002720400\u0027, \u002727567\u0027]\nhgrepos \u003d []\nissue_num \u003d 6083\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 25.0\nmessages \u003d [\u002788181\u0027, \u002788204\u0027, \u002788215\u0027, \u0027121285\u0027, \u0027126226\u0027, \u0027126234\u0027, \u0027172912\u0027, \u0027181297\u0027, \u0027181316\u0027, \u0027181327\u0027, \u0027181592\u0027, \u0027181600\u0027, \u0027182108\u0027, \u0027182110\u0027, \u0027201454\u0027, \u0027314264\u0027, \u0027314268\u0027, \u0027314273\u0027, \u0027314285\u0027, \u0027314286\u0027, \u0027314287\u0027, \u0027314289\u0027, \u0027322381\u0027, \u0027362299\u0027, \u0027362302\u0027]\nnosy_count \u003d 11.0\nnosy_names \u003d [\u0027loewis\u0027, \u0027georg.brandl\u0027, \u0027gregory.p.smith\u0027, \u0027belopolsky\u0027, \u0027taleinat\u0027, \u0027billm\u0027, \u0027abacabadabacaba\u0027, \u0027python-dev\u0027, \u0027serhiy.storchaka\u0027, \u0027imz\u0027, \u0027Ananthakrishnan\u0027]\npr_nums \u003d []\npriority \u003d \u0027high\u0027\nresolution \u003d None\nstage \u003d \u0027needs patch\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027crash\u0027\nurl \u003d \u0027https://bugs.python.org/issue6083\u0027\nversions \u003d [\u0027Python 2.7\u0027, \u0027Python 3.3\u0027, \u0027Python 3.4\u0027] Linked PRs gh-50333: Deprecate support of non-tuple sequences in PyArg_ParseTuple() #128374 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-C-APItype-crashA hard crash of the interpreter, possibly with a core dumpA hard crash of the interpreter, possibly with a core dump Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:27:59.821518"
+  },
+  {
     "id": 1640,
     "url": "https://github.com/python/cpython/issues/119562",
     "title": "Remove AST nodes deprecated since Python 3.8, with warnings since Python 3.12 · Issue #119562 · python/cpython · GitHub",
@@ -11058,26 +11093,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1641,
-    "url": "https://github.com/python/cpython/issues/50333"
-  },
-  {
-    "id": 1642,
-    "url": "https://docs.python.org/3/library/zlib.html#module-zlib"
-  },
-  {
-    "id": 1643,
-    "url": "https://docs.python.org/3/library/exceptions.html#TypeError"
-  },
-  {
-    "id": 1644,
-    "url": "https://github.com/python/cpython/issues/121450"
-  },
-  {
-    "id": 1645,
-    "url": "https://github.com/python/cpython/issues/132576"
   },
   {
     "id": 1646,
@@ -242105,10 +242120,966 @@ window.searchData = [
     "id": 358133,
     "url": "https://github.com/python/cpython/pull/104199",
     "parentUrl": "https://github.com/python/cpython/issues/119562"
+  },
+  {
+    "id": 358134,
+    "url": "https://bugs.python.org/file19616/test-resource.py",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358135,
+    "url": "https://bugs.python.org/file20400/issue6083.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358137,
+    "url": "https://bugs.python.org/issue6083",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358141,
+    "url": "https://bugs.python.org/file14040/python-bug-01.patch",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358142,
+    "url": "https://bugs.python.org/file27567/PyArg_ParseTuple_refcount.patch",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358143,
+    "url": "https://bugs.python.org/file19618/test-functools.py",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358146,
+    "url": "https://github.com/ananthan-123",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358147,
+    "url": "https://github.com/birkenfeld",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358148,
+    "url": "https://github.com/python/cpython/issues/50333#issue-1198844625",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358150,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d20191",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358151,
+    "url": "https://github.com/python/cpython/issues/50333#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358153,
+    "url": "https://github.com/python/cpython/pull/128374",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358154,
+    "url": "https://github.com/abalkin",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358155,
+    "url": "https://github.com/python/cpython/issues/50333#top",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358157,
+    "url": "https://bugs.python.org/file19617/test-ctypes.py",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358158,
+    "url": "https://github.com/imz",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358160,
+    "url": "https://github.com/taleinat",
+    "parentUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 358162,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Compress.flush",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358164,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.decompressobj",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358165,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_HUFFMAN_ONLY",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358168,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_PARTIAL_FLUSH",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358170,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.DEF_MEM_LEVEL",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358175,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.crc32",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358176,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Decompress.unconsumed_tail",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358178,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.ZLIB_RUNTIME_VERSION",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358179,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_FINISH",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358180,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.adler32",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358181,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.ZLIBNG_VERSION",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358182,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_FILTERED",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358183,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_DEFAULT_COMPRESSION",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358187,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_BEST_COMPRESSION",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358189,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Decompress.decompress",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358191,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Decompress.eof",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358192,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_DEFAULT_STRATEGY",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358194,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.DEFLATED",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358195,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.DEF_BUF_SIZE",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358197,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_SYNC_FLUSH",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358198,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_NO_COMPRESSION",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358200,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_RLE",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358203,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Decompress.unused_data",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358206,
+    "url": "https://docs.python.org/3/library/zlib.html#decompress-wbits",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358207,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Compress.copy",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358208,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.MAX_WBITS",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358209,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/zlib.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358210,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Compress.compress",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358212,
+    "url": "https://www.zlib.net/manual.html",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358213,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.ZLIB_VERSION",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358214,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_BLOCK",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358215,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_FULL_FLUSH",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358217,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_BEST_SPEED",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358222,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_TREES",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358223,
+    "url": "https://docs.python.org/3/library/zlib.html#compress-wbits",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358225,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_NO_FLUSH",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358226,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Decompress.flush",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358227,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Z_FIXED",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358228,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.Decompress.copy",
+    "parentUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 358454,
+    "url": "https://github.com/python/cpython/issues/121450#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/121450"
+  },
+  {
+    "id": 358458,
+    "url": "https://github.com/python/cpython/issues/121450#top",
+    "parentUrl": "https://github.com/python/cpython/issues/121450"
+  },
+  {
+    "id": 358460,
+    "url": "https://github.com/python/cpython/pull/121451",
+    "parentUrl": "https://github.com/python/cpython/issues/121450"
+  },
+  {
+    "id": 358461,
+    "url": "https://github.com/python/cpython/issues/121450#issue-2393784264",
+    "parentUrl": "https://github.com/python/cpython/issues/121450"
+  },
+  {
+    "id": 358464,
+    "url": "https://github.com/python/cpython/pull/132576/commits/109d8b1632c1ac25961fbd8d5384fd2acf10a260",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358465,
+    "url": "https://github.com/python/cpython/pull/132576#event-17410259313",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358466,
+    "url": "https://github.com/python/cpython/pull/132576/files/ebdc161d207e142494779318051772ffad62f49f#diff-62d496a5c437924e8e749b16d45e0b928917c424ba7deb45112f5a7a9450c6f5",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358468,
+    "url": "https://cpython-previews--132576.org.readthedocs.build/",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358470,
+    "url": "https://github.com/python/cpython/pull/132576/commits/1b77cdbde71c0c3925def1d71602cda2070c1341",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358471,
+    "url": "https://github.com/python/cpython/pull/132576#ref-issue-2394261685",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358472,
+    "url": "https://github.com/python/cpython/pull/132576/files/e95353206ed297269f700cfa6a7972704a9d85fa",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358473,
+    "url": "https://github.com/python/cpython/pull/132576#pullrequestreview-2797969957",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358474,
+    "url": "https://github.com/python/cpython/pull/132576#issuecomment-2839502709",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358475,
+    "url": "https://github.com/python/cpython/pull/132576/commits/e95353206ed297269f700cfa6a7972704a9d85fa",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358476,
+    "url": "https://github.com/python/cpython/pull/132576#pullrequestreview-2794894394",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358477,
+    "url": "https://github.com/python/cpython/pull/132576#issuecomment-2818942698",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358478,
+    "url": "https://github.com/python/cpython/pull/132576#issuecomment-2822350246",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358479,
+    "url": "https://github.com/python/cpython/pull/132576#pullrequestreview-2784477056",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358481,
+    "url": "https://github.com/python/cpython/pull/132576/commits/285efe2081e5aaa141b44159db25bbceaa44125c",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358483,
+    "url": "https://github.com/python/cpython/pull/132576/commits/968472d244c71f9fe5dc69832b884856c3794ebe",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358484,
+    "url": "https://github.com/python/cpython/pull/132576/files/ebdc161d207e142494779318051772ffad62f49f",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358486,
+    "url": "https://github.com/python/cpython/pull/132576/commits/15290d51a44e966eb479117eebcc4c7dac05d39e",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358488,
+    "url": "https://github.com/python/cpython/pull/132576#issuecomment-2819849909",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358489,
+    "url": "https://github.com/python/cpython/pull/132576#ref-issue-1198987826",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358490,
+    "url": "https://github.com/python/cpython/pull/132576#issuecomment-2831111520",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358491,
+    "url": "https://github.com/python/cpython/commit/caee16f05229de5bc5ed2743c531f1696641888a",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358492,
+    "url": "https://github.com/python/cpython/pull/132576#event-17459054618",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358493,
+    "url": "https://github.com/python/cpython/pull/132576/commits/677c95205619359eb04aea93ffbdb864a4bce054",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358494,
+    "url": "https://github.com/5j9",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358495,
+    "url": "https://cpython-previews--132576.org.readthedocs.build/en/132576/whatsnew/3.14.html#pdb",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358496,
+    "url": "https://github.com/python/cpython/pull/132576#discussion_r2054335162",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358497,
+    "url": "https://github.com/python/cpython/pull/132576#event-17297519627",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358498,
+    "url": "https://github.com/python/cpython/pull/132576#event-17297519868",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358499,
+    "url": "https://github.com/python/cpython/pull/132576/files/ebdc161d207e142494779318051772ffad62f49f#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358500,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F132576",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358501,
+    "url": "https://github.com/python/cpython/pull/132576#event-17297520250",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358502,
+    "url": "https://github.com/python/cpython/pull/132576/files/ff09ab25edf086912c9fbe603e536cacbd3ba448",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358503,
+    "url": "https://github.com/python/cpython/pull/132576/commits/090715bdaa7005e757262f8efbf14c29480e0d84",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358504,
+    "url": "https://github.com/python/cpython/pull/132576#pullrequestreview-2784314026",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358506,
+    "url": "https://cpython-previews--132576.org.readthedocs.build/en/132576/library/pdb.html#pdb.set_trace_async",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358507,
+    "url": "https://github.com/python/cpython/pull/132576#event-17459054496",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358508,
+    "url": "https://github.com/python/cpython/pull/132576/commits/a3401e92754c148abd956f619d9829bc98a5c748",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358510,
+    "url": "https://github.com/graingert-coef",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358513,
+    "url": "https://github.com/python/cpython/pull/132576#commits-pushed-15290d5",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358514,
+    "url": "https://github.com/python/cpython/pull/132576#issue-2998084110",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358515,
+    "url": "https://github.com/python/cpython/pull/132576/commits/50c3c9c5117309209a40c9d4ef313b257c0875f4",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358516,
+    "url": "https://github.com/python/cpython/pull/132576#issuecomment-2839205699",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358517,
+    "url": "https://github.com/python/cpython/pull/132576#event-17459053837",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358518,
+    "url": "https://github.com/python/cpython/issues/77081",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358521,
+    "url": "https://github.com/python/cpython/pull/132576/commits/ff09ab25edf086912c9fbe603e536cacbd3ba448",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358523,
+    "url": "https://github.com/python/cpython/pull/132576#issuecomment-2822375420",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358525,
+    "url": "https://github.com/python/cpython/pull/132576/commits/a6c580d69096a40093e48ba3c5f0d16d46b27cd0",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358527,
+    "url": "https://github.com/python/cpython/pull/132576/files/e95353206ed297269f700cfa6a7972704a9d85fa#diff-62d496a5c437924e8e749b16d45e0b928917c424ba7deb45112f5a7a9450c6f5",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358528,
+    "url": "https://github.com/python/cpython/pull/132576",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358529,
+    "url": "https://github.com/python/cpython/pull/132576#commits-pushed-968472d",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358530,
+    "url": "https://github.com/python/cpython/pull/132576#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358531,
+    "url": "https://github.com/python/cpython/pull/132576#commits-pushed-1b77cdb",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358533,
+    "url": "https://github.com/python/cpython/pull/132576/commits/ebdc161d207e142494779318051772ffad62f49f",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358534,
+    "url": "https://github.com/python/cpython/pull/132576#issuecomment-2819678515",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358535,
+    "url": "https://github.com/python/cpython/pull/132576#pullrequestreview-2794849897",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358536,
+    "url": "https://github.com/python/cpython/pull/132576#pullrequestreview-2784471648",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 358537,
+    "url": "https://github.com/python/cpython/pull/132576#discussion_r2054410615",
+    "parentUrl": "https://github.com/python/cpython/issues/132576"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d80\u0026u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d60\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/151018808?s\u003d60\u0026v\u003d4",
+    "alt": "graingert-coef",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/413772?s\u003d60\u0026v\u003d4",
+    "alt": "graingert",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/413772?s\u003d48\u0026v\u003d4",
+    "alt": "@graingert",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6655247?s\u003d80\u0026u\u003de629f387316e2db72a7517fca7399fd98a15f45e\u0026v\u003d4",
+    "alt": "@taegyunkim",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d60\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d60\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6212603?s\u003d60\u0026v\u003d4",
+    "alt": "auvipy",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6212603?s\u003d48\u0026v\u003d4",
+    "alt": "@auvipy",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d80\u0026u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055747?s\u003d40\u0026v\u003d4",
+    "alt": "@5j9",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/413772?s\u003d40\u0026v\u003d4",
+    "alt": "@graingert",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d40\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/151018808?s\u003d40\u0026v\u003d4",
+    "alt": "@graingert-coef",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6212603?s\u003d40\u0026v\u003d4",
+    "alt": "@auvipy",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d52\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d52\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6655247?s\u003d52\u0026v\u003d4",
+    "alt": "@taegyunkim",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/413772?s\u003d52\u0026v\u003d4",
+    "alt": "@graingert",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6212603?s\u003d52\u0026v\u003d4",
+    "alt": "@auvipy",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d52\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/151018808?s\u003d52\u0026v\u003d4",
+    "alt": "@graingert-coef",
+    "pageTitle": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?v\u003d4\u0026size\u003d80",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Inline breakpoints should use the most recent pdb isntance, instead of creating a new one · Issue #121450 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121450"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?v\u003d4\u0026size\u003d48",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Inline breakpoints should use the most recent pdb isntance, instead of creating a new one · Issue #121450 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121450"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#TypeError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#TypeError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zlib — Compression compatible with gzip — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zlib — Compression compatible with gzip — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/101767804?v\u003d4\u0026size\u003d80",
+    "alt": "@billm",
+    "pageTitle": "Reference counting bug in PyArg_ParseTuple and PyArg_ParseTupleAndKeywords · Issue #50333 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/101767804?v\u003d4\u0026size\u003d48",
+    "alt": "@billm",
+    "pageTitle": "Reference counting bug in PyArg_ParseTuple and PyArg_ParseTupleAndKeywords · Issue #50333 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/50333"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d64\u0026u\u003dfc4602f3e8770bf2b4ce2b2f244159c10b1174d3\u0026v\u003d4",
     "alt": "AlexWaygood",
