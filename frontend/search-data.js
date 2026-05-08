@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 180,
+    "url": "https://scipy.org/",
+    "title": "SciPy",
+    "content": "SciPy Fundamental algorithms for scientific computing in Python Get started SciPy 1.17.1 released! 2026-02-22 Fundamental algorithms SciPy provides algorithms for optimization, integration, interpolation, eigenvalue problems, algebraic equations, differential equations, statistics and many other classes of problems. Broadly applicable The algorithms and data structures provided by SciPy are broadly applicable across domains. Foundational Extends NumPy providing additional tools for array computing and provides specialized data structures, such as sparse matrices and k-dimensional trees. Performant SciPy wraps highly-optimized implementations written in low-level languages like Fortran, C, and C++. Enjoy the flexibility of Python with the speed of compiled code. Easy to use SciPy’s high level syntax makes it accessible and productive for programmers from any background or experience level. Open source Distributed under a liberal BSD license, SciPy is developed and maintained publicly on GitHub by a vibrant, responsive, and diverse community.",
+    "scrapedAt": "2026-05-09 00:32:57.105516"
+  },
+  {
+    "id": 179,
+    "url": "https://riverbankcomputing.com/software/pyqt/intro",
+    "title": "Riverbank Computing | Introduction",
+    "content": "What is PyQt? PyQt is a set of Python bindings for The Qt Company\u0027s Qt application framework. The bindings are implemented as a set of Python modules and contain over 1,000 classes. PyQt6 supports Qt6 and runs on Windows (Intel and ARM), macOS (Intel and Apple Silicon) and Linux (Intel and ARM). PyQt5 supports Qt5 and runs on Windows (Intel), macOS (Intel and Apple Silicon), Android, iOS and Linux (Intel). PyQt4 supports Qt v4 but both are no longer supported and no new releases will be made. License PyQt is dual licensed on all supported platforms under the GNU GPL v3 and the Riverbank Commercial License. Unlike Qt, PyQt is not available under the LGPL. You can purchase the commercial version of PyQt here. More information about licensing can be found in the License FAQ. PyQt does not include a copy of Qt. You must obtain a correctly licensed copy of Qt yourself. However, binary wheels of the GPL version of PyQt6 and PyQt5 are provided and these include a copy of the corresponding LGPL version of Qt. PyQt Components A description of the components of PyQt5 can be found in the PyQt5 Reference Guide. A description of the components of PyQt4 can be found in the PyQt4 Reference Guide. Why PyQt? PyQt brings together the Qt C++ cross-platform application framework and the cross-platform interpreted language Python. Qt is more than a GUI toolkit. It includes abstractions of network sockets, threads, Unicode, regular expressions, SQL databases, SVG, OpenGL, XML, a fully functional web browser, a help system, a multimedia framework, as well as a rich collection of GUI widgets. Qt classes employ a signal/slot mechanism for communicating between objects that is type safe but loosely coupled making it easy to create re-usable software components. Qt also includes Qt Designer, a graphical user interface designer. PyQt is able to generate Python code from Qt Designer. It is also possible to add new GUI controls written in Python to Qt Designer. Python is a simple but powerful object-orientated language. Its simplicity makes it easy to learn, but its power means that large and complex applications can be created. Its interpreted nature means that Python programmers are very productive because there is no edit/compile/link/run development cycle. Much of Python\u0027s power comes from its comprehensive set of extension modules providing a wide variety of functions including HTTP servers, XML parsers, database access, data compression tools and, of course, graphical user interfaces. Extension modules are usually implemented in either Python, C or C++. Using tools such as SIP it is relatively straight forward to create an extension module that encapsulates an existing C or C++ library. Used in this way, Python can then become the glue to create new applications from established libraries. PyQt combines all the advantages of Qt and Python. A programmer has all the power of Qt, but is able to exploit it with the simplicity of Python. Recent News PyQt v6.11.0 Released SIP v6.15.3 Released SIP v6.15.2 Released PyQt v6.10.2 Released SIP v6.15.1 Released Downloads PyQt PyQt-3D PyQt-Charts PyQt-DataVisualization PyQt-Graphs PyQt-NetworkAuth PyQt-Purchasing PyQt-WebEngine SIP MetaSIP PyQt-builder pyqtdeploy QScintilla Documentation PyQt6 PyQt5 SIP MetaSIP PyQt-builder pyqtdeploy QScintilla PyQt4",
+    "scrapedAt": "2026-05-09 00:32:55.988243"
+  },
+  {
+    "id": 178,
+    "url": "https://buildbot.net/",
+    "title": "Buildbot",
+    "content": "Fork me on GitHub! Buildbot Basics Buildbot is an open-source framework for automating software build, test, and release processes. Learn more Automated Build, Test, and Release Buildbot can automate all aspects of the software development cycle: Continuous Integration, Continuous Deployment, Release Management ..and any other process you can imagine. Learn more A Framework with Batteries Included Buildbot is a framework in which you implement a system that matches your workflow and grows with your organization. Learn more Discord We have started a new Discord server for users and developers: Invite Link. Buildbot Basics Buildbot supports distributed, parallel execution of jobs across multiple platforms, flexible integration with version-control systems, extensive status reporting, and more. Buildbot in Action At its core, Buildbot is a job scheduling system: it queues jobs, executes the jobs when the required resources are available, and reports the results. Your Buildbot installation has one or more masters and a collection of workers. The masters monitor source-code repositories for changes, coordinate the activities of the workers, and report results to users and developers. Workers run on a variety of operating systems. You configure Buildbot by providing a Python configuration script to the master. This script can be very simple, configuring built-in components, but the full expressive power of Python is available. This allows dynamic generation of configuration, customized components, and anything else you can devise. The framework itself is implemented in Twisted Python, and compatible with all major operating systems. Learn More See the Buildbot Tutorial for a gentle introduction to running and configuring Buildbot. Automated Build, Test, and Release Buildbot supports not just continuous-integration testing, but automation of complex build systems, application deployment, and management of sophisticated software-release processes. Benefits of Automation When software development processes are automated, they are repeatable, reliable and can be run as frequently as available computing resources allow. Automating the build and test process gives developers immediate feedback on their work. Tests can run on multiple platforms, ensuring that code changes made on one platform do not cause failures on other platforms. Once a project is ready for use by users, it is either deployed (for hosted applications, such as web sites) or released (for packaged software such as desktop applications). Automating deployment makes the process predictable and lowers the risk involved with each push. Changes can be deployed to a staging environment first, then deployed to production using exactly the same procedure, eliminating failures due to human error. Deployments can occur many times every day, with only small changes between each deployment. Releasing packaged software, too, benefits from automation. The process can involve compiling and packaging on multiple platforms, signing builds, localizing strings, quality-assurance checks, and so on. When automated with a tool like Buildbot, all of this occurs repeatably and efficiently. A Framework with Batteries Included Just as web frameworks such as Django or Rails provide the structure and components to build websites, Buildbot provides the structure and components to automate your build, test, and release processes. Many CI tools, such as CruiseControl or Jenkins, are structured as ready-to-use applications. Users fill in specific details, such as version control information and build process, but the fundamental design is fixed and options are limited to those envisioned by the authors. This arrangement suits the common cases quite well: there are cookie-cutter tools to automatically build and test Java applications, Ruby gems, and so on. Such tools embody assumptions about the structure of the project and its processes. They are not well-suited to more complex cases, such as mixed-language applications or complex release tasks, where those assumptions are violated. Buildbot\u0027s design allows your installation to grow with your requirements, beginning with simple processes and growing to meet your unique needs. This flexibility has led to its use in a number of high-profile open-source projects, including WebKit, Python, and Twisted.",
+    "scrapedAt": "2026-05-09 00:32:54.696291"
+  },
+  {
+    "id": 177,
+    "url": "https://www.python.org/events/python-events/2036/",
+    "title": "PyCon Italia 2026 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PyCon Italia 2026 Bologna, Italy From 27 May through 30 May, 2026 PyCon Italia 2026 ← Previous PyCon US 2026 in Long Beach, CA, USA Next → PyCon DE 2027 in Heidelberg, Germany Explore events -- Change your date range The next 7 days The next 30 days The next 90 days The next year More events at Bologna, Italy PyCon Italia 2026 PyCon Italia 2025",
+    "scrapedAt": "2026-05-09 00:32:52.77363"
+  },
+  {
+    "id": 176,
+    "url": "https://www.python.org/about/apps",
+    "title": "Applications for Python | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e About\u003e\u003e\u003e Applications Python is used in many application domains. Here\u0027s a sampling. The Python Package Index lists thousands of third party modules for Python. Web and Internet Development Python offers many choices for web development: Frameworks such as Django and Pyramid. Micro-frameworks such as Flask and Bottle. Advanced content management systems such as Plone and django CMS. Python\u0027s standard library supports many Internet protocols: HTML and XML JSON E-mail processing. Support for FTP, IMAP, and other Internet protocols. Easy-to-use socket interface. And the Package Index has yet more libraries: Requests, a powerful HTTP client library. Beautiful Soup, an HTML parser that can handle all sorts of oddball HTML. Feedparser for parsing RSS/Atom feeds. Paramiko, implementing the SSH2 protocol. Twisted Python, a framework for asynchronous network programming. Scientific and Numeric Python is widely used in scientific and numeric computing: SciPy is a collection of packages for mathematics, science, and engineering. Pandas is a data analysis and modeling library. IPython is a powerful interactive shell that features easy editing and recording of a work session, and supports visualizations and parallel computing. The Software Carpentry Course teaches basic skills for scientific computing, running bootcamps and providing open-access teaching materials. Education Python is a superb language for teaching programming, both at the introductory level and in more advanced courses. Books such as How to Think Like a Computer Scientist, Python Programming: An Introduction to Computer Science, and Practical Programming. The Education Special Interest Group is a good place to discuss teaching issues. Desktop GUIs The Tk GUI library is included with most binary distributions of Python. Some toolkits that are usable on several platforms are available separately: wxWidgets Kivy, for writing multitouch applications. Qt via pyqt or pyside Platform-specific toolkits are also available: GTK+ Microsoft Foundation Classes through the win32 extensions Software Development Python is often used as a support language for software developers, for build control and management, testing, and in many other ways. SCons for build control. Buildbot and Apache Gump for automated continuous compilation and testing. Roundup or Trac for bug tracking and project management. Business Applications Python is also used to build ERP and e-commerce systems: Odoo is an all-in-one management software that offers a range of business applications that form a complete suite of enterprise management applications. Tryton is a three-tier high-level general purpose application platform. The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-09 00:32:51.711567"
+  },
+  {
     "id": 175,
     "url": "https://www.python.org/events/python-user-group/2104/",
     "title": "Python Meeting Düsseldorf | Python.org",
@@ -1223,26 +1258,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 176,
-    "url": "https://www.python.org/about/apps"
-  },
-  {
-    "id": 177,
-    "url": "https://www.python.org/events/python-events/2036/"
-  },
-  {
-    "id": 178,
-    "url": "https://buildbot.net/"
-  },
-  {
-    "id": 179,
-    "url": "https://riverbankcomputing.com/software/pyqt/intro"
-  },
-  {
-    "id": 180,
-    "url": "https://scipy.org/"
   },
   {
     "id": 181,
@@ -32228,10 +32243,292 @@ window.searchData = [
     "id": 15096,
     "url": "https://github.com/wxWidgets/Phoenix/issues",
     "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15180,
+    "url": "https://github.com/buildbot/buildbot",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 15181,
+    "url": "https://wiki.jenkins-ci.org/display/JENKINS/Meet+Jenkins",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 15182,
+    "url": "https://buildbot.net/#automation",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 15183,
+    "url": "https://discord.gg/AMXBDUBTZV",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 15184,
+    "url": "https://docs.buildbot.net/current/tutorial/",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 15185,
+    "url": "https://buildbot.net/#framework",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 15186,
+    "url": "https://buildbot.net/#basics",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 15187,
+    "url": "https://cruisecontrol.sourceforge.net/gettingstarted.html",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 15188,
+    "url": "https://github.com/buildbot/buildbot/wiki/SuccessStories",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 15189,
+    "url": "https://metasip.readthedocs.io/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15190,
+    "url": "https://riverbankcomputing.com/software/pyqtchart/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15191,
+    "url": "https://pypi.org/project/pyqtdeploy/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15192,
+    "url": "https://www.python.org",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15193,
+    "url": "https://riverbankcomputing.com/software/pyqtnetworkauth/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15194,
+    "url": "https://riverbankcomputing.com/software/pyqtpurchasing/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15195,
+    "url": "https://riverbankcomputing.com/software/qscintilla/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15196,
+    "url": "https://riverbankcomputing.com/news/PyQt_v6.11.0_Released",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15197,
+    "url": "https://python-sip.readthedocs.io/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15198,
+    "url": "https://riverbankcomputing.com/news/SIP_v6.15.1_Released",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15199,
+    "url": "https://pypi.org/project/sip/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15200,
+    "url": "https://riverbankcomputing.com/news/PyQt_v6.10.2_Released",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15201,
+    "url": "https://www.riverbankcomputing.com/static/Docs/PyQt4/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15202,
+    "url": "https://www.riverbankcomputing.com/static/Docs/PyQt6/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15203,
+    "url": "https://www.riverbankcomputing.com/static/Docs/PyQt5/introduction.html#pyqt5-components",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15204,
+    "url": "https://www.riverbankcomputing.com/static/Docs/pyqtdeploy/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15205,
+    "url": "https://www.riverbankcomputing.com/static/Docs/QScintilla/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15206,
+    "url": "https://riverbankcomputing.com/news/SIP_v6.15.3_Released",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15207,
+    "url": "https://riverbankcomputing.com/software/pyqt3d/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15208,
+    "url": "https://www.qt.io",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15209,
+    "url": "https://pypi.org/project/PyQt-builder/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15210,
+    "url": "https://riverbankcomputing.com/commercial/license-faq",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15211,
+    "url": "https://riverbankcomputing.com/software/pyqtdatavisualization/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15212,
+    "url": "https://www.riverbankcomputing.com/static/Docs/PyQt4/introduction.html#pyqt4-components",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15213,
+    "url": "https://riverbankcomputing.com/software/pyqtgraphs/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15214,
+    "url": "https://riverbankcomputing.com/software/pyqt/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15215,
+    "url": "https://github.com/Python-SIP/sip",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15216,
+    "url": "https://riverbankcomputing.com/news/SIP_v6.15.2_Released",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15217,
+    "url": "https://www.riverbankcomputing.com/static/Docs/PyQt5/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15218,
+    "url": "https://riverbankcomputing.com/commercial/buy",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15219,
+    "url": "https://PyQt-builder.readthedocs.io/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15220,
+    "url": "https://riverbankcomputing.com/software/pyqtwebengine/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15221,
+    "url": "https://pypi.org/project/metasip/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 15222,
+    "url": "https://github.com/scipy/scipy",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 15223,
+    "url": "https://scipy.org/install",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 15224,
+    "url": "https://scipy.org/news",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 15225,
+    "url": "https://scipy.org/community/",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 15226,
+    "url": "https://github.com/scipy/scipy/blob/main/LICENSE.txt",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 15227,
+    "url": "https://scipy.org/#",
+    "parentUrl": "https://scipy.org/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://scipy.org/images/logo.svg",
+    "alt": "SciPy logo. A blue circle with a snake in the shape of the letter \u0027S\u0027.",
+    "pageTitle": "SciPy",
+    "pageUrl": "https://scipy.org/"
+  },
+  {
+    "src": "https://buildbot.net/img/screenshoot1.png",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
+  {
+    "src": "https://buildbot.net/img/screenshoot2.png",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
+  {
+    "src": "https://buildbot.net/img/screenshoot3.png",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
+  {
+    "src": "https://buildbot.net/img/overview.png",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
+  {
+    "src": "https://buildbot.net/img/arrows_3_circular_interlocking.svg",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
+  {
+    "src": "https://buildbot.net/img/nut.svg",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
   {
     "src": "https://hugovk.dev/python-3.14.png",
     "alt": "Two snakes enjoying a pie with 3.14 on the top and π crimping",
