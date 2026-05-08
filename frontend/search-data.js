@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 166,
+    "url": "https://dev.java/learn/new-features/virtual-threads",
+    "title": "Virtual Threads - Dev.java",
+    "content": "Tutorials Watch \u0026 Listen FAQ Oracle University Home \u003e Tutorials \u003e Virtual Threads Virtual Threads This page was contributed by Cay Horstmann under the UPL Why Virtual Threads? When Java 1.0 was released in 1995, its API had about a hundred classes, among them java.lang.Thread. Java was the first mainstream programming language that directly supported concurrent programming. Since Java 1.2, each Java thread runs on a platform thread supplied by the underlying operating system. (Up to Java 1.1, on some platforms, all Java threads were executed by a single platform thread.) Platform threads have nontrivial costs. They require a few thousand CPU instructions to start, and they consume a few megabytes of memory. Server applications can serve so many concurrent requests that it becomes infeasible to have each of them execute on a separate platform thread. In a typical server application, these requests spend much of their time blocking, waiting for a result from a database or another service. The classic remedy for increasing throughput is a non-blocking API. Instead of waiting for a result, the programmer indicates which method should be called when the result has become available, and perhaps another method that is called in case of failure. This gets unpleasant quickly, as the callbacks nest ever more deeply. JEP 425 introduced virtual threads in Java 19. Many virtual threads run on a platform thread. Whenever a virtual thread blocks, it is unmounted, and the platform thread runs another virtual thread. (The name “virtual thread” is supposed to be reminiscent of virtual memory that is mapped to actual RAM.) Virtual threads became a preview feature in Java 20 (JEP 436) and are final in Java 21. With virtual threads, blocking is cheap. When a result is not immediately available, you simply block in a virtual thread. You use familiar programming structures—branches, loops, try blocks—instead of a pipeline of callbacks. Virtual threads are useful when the number of concurrent tasks is large, and the tasks mostly block on network I/O. They offer no benefit for CPU-intensive tasks. For such tasks, consider parallel streams or recursive fork-join tasks. Creating Virtual Threads The factory method Executors.newVirtualThreadPerTaskExecutor() yields an ExecutorService that runs each task in a separate virtual thread. For example: By the way, the code uses LockSupport.parkNanos instead of Thread.sleep so that we don\u0027t have to catch the pesky InterruptedException. Perhaps you are using a lower-level API that asks for a thread factory. To obtain a factory for virtual threads, use the new Thread.Builder class: Now, calling factory.newThread(myRunnable) creates a new (unstarted) virtual thread. The name method configures the builder to set thread names request-1, request-2, and so on. You can also use a builder to create a single virtual thread: Alternatively, if you want to start the thread right away: Finally, for a quick demo, there is a convenience method: Note that only the first approach, with an executor service, works with result-bearing tasks (callables). Thread API Changes After a series of experiments with different APIs, the designers of Java virtual threads decided to simply reuse the familiar Thread API. A virtual thread is an instance of Thread. Cancellation works the same way as for platform threads, by calling interrupt. As always, the thread code must check the “interrupted” flag or call a method that does. (Most blocking methods do.) There are a few differences. In particular, all virtual threads: Are in a single thread group Have priority NORM_PRIORITY Are daemon threads There is no API for constructing a virtual thread with another thread group. Trying to call setPriority or setDaemon on a virtual thread has no effect. The static Thread::getAllStackTraces method returns a map of stack traces of all platform threads. Virtual threads are not included. A new Thread::isVirtual instance method tells whether a thread is virtual. Note that there is no way to find the platform thread on which a virtual thread executes. Java 19 has a couple of changes to the Thread API that have nothing to do with virtual threads: There are now instance methods join(Duration) and sleep(Duration). The non-final getId method is deprecated since someone might override it to return something other than the thread ID. Call the final threadId method instead. As of Java 20, the stop, suspend, and resume methods throw an UnsupportedOperationException for both platform and virtual threads. These methods have been deprecated since Java 1.2 and deprecated for removal since Java 18. Capturing Task Results You often want to combine the results of multiple concurrent tasks: Before virtual threads, you might have felt bad about the blocking get calls. But now blocking is cheap. Here is a sample program with a more concrete example: If you have a list of tasks with the same result type, you can use the invokeAll method and then call get on each ",
+    "scrapedAt": "2026-05-08 23:05:16.915604"
+  },
+  {
+    "id": 165,
+    "url": "https://dev.java/learn/api/streams/gatherers",
+    "title": "The Gatherer API - Dev.java",
+    "content": "Tutorials Watch \u0026 Listen FAQ Oracle University Home \u003e Tutorials \u003e The Stream API \u003e The Gatherer API Previous in the Series Parallelizing Streams ➜ Current Tutorial The Gatherer API ➜ That\u0027s the end of the series! Previous in the Series: Parallelizing Streams The Gatherer API Introducing Gatherers Starting with the JDK 24 you can use a specific API to model your intermediate operations in the Stream API, called the Gatherers API. Design-wise it is similar to the Collector API for terminal Stream operations. Why did the Stream API need such a feature? The Stream API is a very rich API, that gives you many ways of processing in-memory data, following the map-filter-reduce pattern. The Stream API builds on the Spliterator API, to model parallelizability of operations. The versatility of these two patterns gives many possibilities, if not every possibility. The only drawback is that the Spliterator API is not easy to use and does not lead to simple and readable code. Plus, if you need to leverage parallel streams, it may become very tricky to use. Organization of the Gatherer API The Gatherer API brings simpler patterns than the Spliterator API, with excellent support for parallelism. In fact, you can use a gatherer that does not support parallelism, in a parallel stream, and still benefit from the performance parallel streams brings you. If your Gatherer is sequential, it will of course limit the parallelizability of the resulting stream evaluation, but not suppress it. This is something that the Spliterator API does not give you. The Gatherer API is built on two main elements: a Gatherer interface and a Gatherers factory class. There are also a number of interfaces used to interact with gatherers, as well as classes to implement these. A Gatherer is an object that you can pass to a method of the Stream interface: gather(). This gather() method is an intermediate operation of the Stream API, and this object models what this intermediate operation is doing. When to Use Gatherers? The Gatherer API is not a simple API, and you should not use it unless you have good reasons to do so. Even if it can model the simplest Stream operations, like map, filter, or flat-map, building a gatherer for that would be complex, and would lead to hard to understand code. Your good old map() method does a mapping in a simple way, so this is what you should choose for your application. The Gatherer API is there to create complex operations, that are not already available in the Stream API. Here are some examples. Create a stream made of fixed sized lists of consecutive elements from that stream. Create a distinct-like operation, with a custom way of comparing elements. Create a complex map-filter operation, maybe involving some flat-mapping and some optional handling, that you want to fuse in a single operation, properly named, to make your code more readable. There are a number of things that the Gatherer API can do, that you are going to discover one by one in this section. Let us start with how you can integrate elements to a downstream, given what you get from a upstream. Integrating Elements in a Downstream Learning how the Gatherer API is working is probably a frustrating process, as you need to go through a series of simple examples that you should not use in your application. The first examples that this section covers are about mapping, filtering, or flat-mapping streams, operations that you can conduct with the classical Stream.map(), Stream.filter(), or Stream.flatMap() methods. These examples have no other goals than to show you the different elements that compose a gatherer in a simple way, and learn how you can use them. Fixing Some Vocabulary Let us fix some vocabulary first. A gatherer models an intermediate operations on a stream. As such it operates on a stream, consumes the elements this stream produces, do something with them, and pushes (or not) elements to a downstream. Let us call the first stream the elements are coming from the upstream, and the stream this gatherer pushes elements to the downstream. Using an Integrator to Map a Stream Let us start with a simple first example: the mapping of a stream of strings of characters. Writing a gatherer is about implementing the Gatherer interface, which turns out to be a functional interface. You can implement it with a lambda, and you will see how to do it in a few minutes. But you can also create a gatherer with one of the few factory methods available on this interface. For a simple gatherer you can use the Gatherer.of() method, that takes an Integrator as a parameter. This method has overloads that are covered later in this part. So to write the gatherer you need, you first need to write this integrator. The role of an integrator is to consume elements from the upstream, and to push elements to the downstream. These elements could be the same, of the same type, or not. At this point, you can see that an integrator needs two elements to work with: an element from ",
+    "scrapedAt": "2026-05-08 23:05:15.622544"
+  },
+  {
+    "id": 164,
+    "url": "https://inside.java/2026/04/30/newscast-111/",
+    "title": "Make Java Safer with Flexible Constructor Bodies - Inside Java Newscast Episode #111 – Inside.java",
+    "content": "Newscast | Podcast | JEP Café | Sip of Java dev.java | Newsletter | About Sort by: Date | Author | Tag Make Java Safer with Flexible Constructor Bodies - Inside Java Newscast Episode #111 Billy Korando on April 30, 2026 Flexible constructor bodies were added to Java 25 with JEP 513. In this episode of the Inside Java Newscast Billy Korando will review the issues with how constructors used to work before Java 25, either forcing developers to write convoluted code, or in some cases undermining the safety and integrity of child classes. Billy will then cover how flexible constructor bodies address these issues and how Java developers can use them to write safer code and better designed applications. Make sure to check the show-notes.",
+    "scrapedAt": "2026-05-08 23:05:14.282448"
+  },
+  {
+    "id": 163,
+    "url": "https://slovenia.jcon.one/",
+    "title": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "content": "One conference. Two Events. AI-first software topics. 27–29 May 2026 · Portorož, Slovenia TRACK · JAVA \u0026 OPEN SOURCE AI INSIDE Deep-dive into AI powered Java JVM, Spring, cloud-native Java, microservices, performance, testing — and the AI tooling that’s changing how we build and ship software. AI-assisted development (IDE copilots, testing, refactoring) LLM integration patterns, agents \u0026 RAG Secure-by-design Java in an AI era TRACK · ORACLE TECHNOLOGY AI + DATA Build with Oracle technologies. Oracle Database, APEX, PL/SQL, Cloud — plus AI-driven workflows and real-world automation from practitioners and partners. Oracle + AI use cases \u0026 reference architectures Data platforms for LLMs (governance, security, latency) Automation across apps, ops, and analytics AI Themes Agents · RAG · Copilots · Automation For teams Practical sessions, real-world patterns, community REGISTER ↓ Explore what\u0027s on 3 Days World-Class Speakers 90+ Sessions Hands-on Labs Evening Socials Supercharge Your Skillset with AI Learn how AI augments modern development, architecture and delivery. From AI-assisted coding and testing to intelligent systems design, explore practical approaches you can apply immediately. Connect with Peers \u0026 AI-Native Thinkers Meet developers, architects, and tech leaders shaping the future with AI. Exchange real-world experiences on adopting AI responsibly in teams, products, and organizations. Get Yourself AI-Future-Ready AI is changing how software is built, operated, and evolved. Learn which skills matter next, how roles are shifting, and how to stay relevant as AI becomes a first-class team member. SPEAKING TOPICS AI, Oracle, Java, and Developer Productivity Talks at the intersection of AI systems, modern Java, Oracle APEX, database engineering, and developer productivity. AI \u0026 Agent Systems TODAY LLMs, MCP, agent workflows, vector search, and practical enterprise AI integrations. NEXT How AI copilots and autonomous systems reshape developer productivity. Oracle Development TODAY Building enterprise apps with APEX, security, observability, and scalable architectures. NEXT Integrating AI assistants, automation, and modern developer workflows. Database Systems TODAY SQL performance, upgrades, reliability, and real-world DBA practices. NEXT Databases evolving into AI-ready platforms with vector search and automation. Modern Java TODAY Java, Quarkus, Spring, Jakarta EE, JVM internals, and enterprise development. NEXT Java powering AI services and high-performance distributed systems. Software Architecture TODAY Monoliths, microservices, modernization, and architecture that works in production. NEXT Designing systems that combine distributed services, AI agents, and real-time data. Developer Productivity TODAY Git workflows, CI/CD, testing, observability, and AI-assisted development. NEXT Engineering teams working alongside AI copilots to ship faster and safer. View all speaking topics → Ticket 1 day 350€ 1 day Access to one conference day Q\u0026A with speakers Coffee, Drinks, Snacks, Lunch Conference T-Shirt Register Ticket 2 days 570€ 2 days Access to two conference days Q\u0026A with speakers Coffee, Drinks, Snacks, Lunch Conference T-Shirt Register Ticket 3 days 750€ 3 days Access to all three conference days Q\u0026A with speakers Coffee, Drinks, Snacks, Lunch Conference T-Shirt Register *22% VAT excluded. Both of these events are in-person and will be hosted at the Convention Centre Portus in Portorož, Slovenia. Admission fee is valid for both events. Timeline 23 Jan Call-for-Papers CLOSES 11 Feb Early Bird Registration OPEN! 3 Mar Sessions Announcement 30 Apr Early Bird Registration CLOSES 27 May Conference Workshops 28-29 May Main Conference Sessions Location Convention centre Portus, Hotel Slovenia Mind Hotel Slovenia, Obala 33, Portorož MakeIT 2026 and JCON Slovenia 2026 will take place from 27th - 29th May in Portorož, Slovenia. The weather in May already allows for unique experiences in coastal tourist resort on northern coast of the Gulf of Piran. Distance from major cities and airports: Venice airport(190 km) Ljubljana airport (140 km) Ljubljana (120 km) Maribor (250 km) Trieste (35 km) HOW TO GET HERE HERE Welcome to MakeIT \u0026 JCON OpenBlend Slovenia 2026! Talks were well organized and there were no conflicting topics. Great speaker lineup! I really like the general vibe of the conference. Very relaxed and open. Good location and good food. Sponsors General Sponsor Gold Sponsor Silver Sponsor Bronze Sponsor Media Sponsor Would you like to enjoy the benefits of a sponsor? Become a sponsor at the MakeIT 2026 / JCON Slovenia 2026 conference and assist us in creating a general overview on the current trends in development and implementation of IT solutions related to Oracle technology on premises and in the cloud. We offer various predefined collaboration packages, however we can also create an offer which suits your needs. Feel free to reach us via email: elizabeta.gruden@makeit.si. Your sponsorship enables us to k",
+    "scrapedAt": "2026-05-08 23:05:12.753371"
+  },
+  {
+    "id": 162,
+    "url": "https://dev.java/download",
+    "title": "Downloading Java - Dev.java",
+    "content": "Download Java Java Release History Downloading Java Java for Most Use Cases Downloading Java is simple and straightforward. Oracle offers a simple download with a permissive license at its official download page. Click the button below to be taken to this page. Download Java at Oracle.com Early-Access Builds For developers that want to try out early-access builds, or builds by projects like Loom, Valhalla, and Panama, then you can find builds of these at jdk.java.net. Install Java via Oracle Java Platform Extension for Visual Studio Code Already a Visual Studio Code user wanting to start development with Java? Look no further! The Oracle Java Platform extension helps you develop your Java project, and it is available via Visual Studio Code Marketplace. If no JDK is present in your system then the extension can set it up for you via its built-in JDK Downloader: You can also access the JDK Downloader through the Visual Studio Code menu: View \u003e Command Palette \u003e Download, install, and Use JDK option in the command palette. This setup provides options for Oracle JDK, OpenJDK, but also allows you to choose from any locally installed JDKs. If you already have JDK binaries downloaded in your system, you can point the JDK Downloader to their specific path. Click Install and start setup button and enjoy coding with Java!",
+    "scrapedAt": "2026-05-08 23:05:11.350849"
+  },
+  {
     "id": 161,
     "url": "https://dev.java/learn/getting-started",
     "title": "Getting Started with Java - Dev.java",
@@ -1125,26 +1160,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-08 22:14:32.985064"
-  },
-  {
-    "id": 162,
-    "url": "https://dev.java/download"
-  },
-  {
-    "id": 163,
-    "url": "https://slovenia.jcon.one/"
-  },
-  {
-    "id": 164,
-    "url": "https://inside.java/2026/04/30/newscast-111/"
-  },
-  {
-    "id": 165,
-    "url": "https://dev.java/learn/api/streams/gatherers"
-  },
-  {
-    "id": 166,
-    "url": "https://dev.java/learn/new-features/virtual-threads"
   },
   {
     "id": 167,
@@ -15921,10 +15936,540 @@ window.searchData = [
   {
     "id": 55828,
     "url": "https://dev.java/learn/getting-started/#compiling-running"
+  },
+  {
+    "id": 55829,
+    "url": "https://www.oracle.com/java/technologies/javase-downloads.html"
+  },
+  {
+    "id": 55830,
+    "url": "https://dev.java/download/releases/"
+  },
+  {
+    "id": 55831,
+    "url": "https://dev.java/download/"
+  },
+  {
+    "id": 55832,
+    "url": "https://jdk.java.net"
+  },
+  {
+    "id": 55833,
+    "url": "https://dev.java/assets/images/download/jdk-downloader.png"
+  },
+  {
+    "id": 55834,
+    "url": "https://marketplace.visualstudio.com/items?itemName\u003dOracle.oracle-java"
+  },
+  {
+    "id": 55835,
+    "url": "https://makeit.si/sponsors#Endava"
+  },
+  {
+    "id": 55836,
+    "url": "https://makeit.si/sponsors#Kontron%20d.o.o."
+  },
+  {
+    "id": 55837,
+    "url": "https://makeit.si/sponsors#SmartQ"
+  },
+  {
+    "id": 55838,
+    "url": "https://makeit.si/img/MakeIT_2026_Sponsorship_packages.pdf"
+  },
+  {
+    "id": 55839,
+    "url": "https://makeit.si/#location"
+  },
+  {
+    "id": 55840,
+    "url": "https://makeit.si/sponsors#WEB%203.0%20d.o.o."
+  },
+  {
+    "id": 55841,
+    "url": "https://makeit.si/#about"
+  },
+  {
+    "id": 55842,
+    "url": "https://makeit.si/#price"
+  },
+  {
+    "id": 55843,
+    "url": "https://makeit.si/form"
+  },
+  {
+    "id": 55844,
+    "url": "https://makeit.si/howto"
+  },
+  {
+    "id": 55845,
+    "url": "https://www.google.si/maps/place/Mind+Hotel+Slovenija/@45.514234,13.5866921,17z/data\u003d!3m1!4b1!4m9!3m8!1s0x477b652bc5487143:0xf62bcd55b28849cc!5m2!4m1!1i2!8m2!3d45.514234!4d13.589267!16s%2Fg%2F1jkwb164z?entry\u003dttu"
+  },
+  {
+    "id": 55846,
+    "url": "https://makeit.si/sponsors#Abakus%20Plus%20d.o.o."
+  },
+  {
+    "id": 55847,
+    "url": "https://makeit.si/sessions"
+  },
+  {
+    "id": 55848,
+    "url": "https://makeit.si/sponsors#Ogrodje"
+  },
+  {
+    "id": 55849,
+    "url": "https://makeit.si/sponsors#Open%20Line%20Vitaly"
+  },
+  {
+    "id": 55850,
+    "url": "https://makeit.si/sponsors#Ra%c4%8dunalni%c5%a1ke%20novice"
+  },
+  {
+    "id": 55851,
+    "url": "https://makeit.si/sponsors#Flox"
+  },
+  {
+    "id": 55852,
+    "url": "https://2025.makeit.si"
+  },
+  {
+    "id": 55853,
+    "url": "https://2024.makeit.si"
+  },
+  {
+    "id": 55854,
+    "url": "https://jcon.makeit.si"
+  },
+  {
+    "id": 55855,
+    "url": "https://makeit.si/sponsors#Oracle"
+  },
+  {
+    "id": 55856,
+    "url": "https://makeit.si/sponsors#Paurus"
+  },
+  {
+    "id": 55858,
+    "url": "https://inside.java/u"
+  },
+  {
+    "id": 55862,
+    "url": "https://inside.java/about"
+  },
+  {
+    "id": 55863,
+    "url": "https://inside.java/tags"
+  },
+  {
+    "id": 55864,
+    "url": "https://inside.java/u/BillyKorando"
+  },
+  {
+    "id": 55865,
+    "url": "https://inside.java/newsletter"
+  },
+  {
+    "id": 55867,
+    "url": "https://inside.java/sip"
+  },
+  {
+    "id": 55868,
+    "url": "https://inside.java/podcast"
+  },
+  {
+    "id": 55869,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Stream.html#takeWhile(java.util.function.Predicate)"
+  },
+  {
+    "id": 55870,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/nio/file/Files.html#lines(java.nio.file.Path)"
+  },
+  {
+    "id": 55871,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Stream.html#gather(java.util.stream.Gatherer)"
+  },
+  {
+    "id": 55874,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Stream.html#close()"
+  },
+  {
+    "id": 55875,
+    "url": "https://dev.java/learn/api/streams/gatherers/#chaining"
+  },
+  {
+    "id": 55876,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherer.Integrator.Greedy.html"
+  },
+  {
+    "id": 55877,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/function/Function.html"
+  },
+  {
+    "id": 55879,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherers.html#ofSequential(java.util.function.Supplier,java.util.stream.Gatherer.Integrator)"
+  },
+  {
+    "id": 55882,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/lang/NullPointerException.html"
+  },
+  {
+    "id": 55883,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherer.Downstream.html#isRejecting()"
+  },
+  {
+    "id": 55884,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/function/BinaryOperator.html"
+  },
+  {
+    "id": 55885,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Stream.html"
+  },
+  {
+    "id": 55886,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/Set.html#add(E)"
+  },
+  {
+    "id": 55887,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherers.html#windowFixed(int)"
+  },
+  {
+    "id": 55888,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherer.html"
+  },
+  {
+    "id": 55889,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Stream.html#distinct()"
+  },
+  {
+    "id": 55890,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/lang/AutoCloseable.html"
+  },
+  {
+    "id": 55891,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Stream.html#dropWhile(java.util.function.Predicate)"
+  },
+  {
+    "id": 55892,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Stream.html#filter(java.util.function.Predicate)"
+  },
+  {
+    "id": 55893,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherers.html#ofSequential(java.util.stream.Gatherer.Integrator)"
+  },
+  {
+    "id": 55894,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherers.html#mapConcurrent(mapConcurrent,java.util.function.Function)"
+  },
+  {
+    "id": 55895,
+    "url": "https://dev.java/learn/api/streams/gatherers/#interrupt"
+  },
+  {
+    "id": 55896,
+    "url": "https://dev.java/learn/exceptions/catching-handling/#try-with-resources"
+  },
+  {
+    "id": 55897,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherer.Integrator.html#ofGreedy(java.util.stream.Gatherer.Integrator.Greedy)"
+  },
+  {
+    "id": 55898,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/https://docs.oracle.com/en/java/javase/@@CURRENT_RELEASE@@/docs/specs/man/javadoc.html"
+  },
+  {
+    "id": 55899,
+    "url": "https://dev.java/learn/api/streams/gatherers/#gatherers"
+  },
+  {
+    "id": 55900,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Stream.html#sorted()"
+  },
+  {
+    "id": 55901,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherer.Downstream.html"
+  },
+  {
+    "id": 55902,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/HashSet.html"
+  },
+  {
+    "id": 55903,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherers.html#ofSequential(java.util.function.Supplier,java.util.stream.Gatherer.Integrator,java.util.function.BiConsumer)"
+  },
+  {
+    "id": 55904,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherers.html#fold(java.util.function.Supplier,java.util.function.BiFunction)"
+  },
+  {
+    "id": 55905,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherer.Integrator.html"
+  },
+  {
+    "id": 55906,
+    "url": "https://dev.java/learn/api/streams/gatherers/#finisher"
+  },
+  {
+    "id": 55907,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherer.html#of(java.util.stream.Gatherer.Integrator)"
+  },
+  {
+    "id": 55908,
+    "url": "https://dev.java/learn/api/streams/parallel-streams/"
+  },
+  {
+    "id": 55910,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Stream.html#flatMap(java.util.function.Function)"
+  },
+  {
+    "id": 55911,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Stream.html#map(java.util.function.Function)"
+  },
+  {
+    "id": 55912,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/lang/Void.html"
+  },
+  {
+    "id": 55913,
+    "url": "https://dev.java/learn/api/streams/gatherers/#integrating-to-downstream"
+  },
+  {
+    "id": 55914,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/function/Supplier.html"
+  },
+  {
+    "id": 55915,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Stream.html#parallel()"
+  },
+  {
+    "id": 55916,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherer.html#andThen(java.util.stream.Gatherer)"
+  },
+  {
+    "id": 55917,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherer.Downstream.html#push(T)"
+  },
+  {
+    "id": 55918,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/function/BiFunction.html"
+  },
+  {
+    "id": 55919,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherers.html#scan(java.util.function.Supplier,java.util.function.BiFunction)"
+  },
+  {
+    "id": 55920,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherers.html"
+  },
+  {
+    "id": 55921,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherers.html#ofSequential(java.util.stream.Gatherer.Integrator,java.util.function.BiConsumer)"
+  },
+  {
+    "id": 55922,
+    "url": "https://dev.java/learn/api/streams/"
+  },
+  {
+    "id": 55923,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherer.Integrator.html#of(java.util.stream.Gatherer.Integrator)"
+  },
+  {
+    "id": 55924,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Stream.html#reduce(java.util.function.BinaryOperator)"
+  },
+  {
+    "id": 55925,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Gatherer.html#of(java.util.stream.Gatherer.Integrator,java.util.function.BiConsumer)"
+  },
+  {
+    "id": 55926,
+    "url": "https://dev.java/learn/api/streams/gatherers/#parallel"
+  },
+  {
+    "id": 55927,
+    "url": "https://dev.java/learn/api/streams/gatherers/#mutable-state"
+  },
+  {
+    "id": 55928,
+    "url": "https://dev.java/learn/api/streams/gatherers/#intro"
+  },
+  {
+    "id": 55929,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/function/BiConsumer.html"
+  },
+  {
+    "id": 55930,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/stream/Stream.html#limit(long)"
+  },
+  {
+    "id": 55931,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/TreeSet.html"
+  },
+  {
+    "id": 55932,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/ArrayList.html"
+  },
+  {
+    "id": 55933,
+    "url": "https://dev.java/learn/new-features/virtual-threads/#api-changes"
+  },
+  {
+    "id": 55934,
+    "url": "https://dev.java/learn/new-features/virtual-threads/#creating"
+  },
+  {
+    "id": 55936,
+    "url": "https://oss.oracle.com/licenses/upl/"
+  },
+  {
+    "id": 55939,
+    "url": "https://dev.java/learn/new-features/virtual-threads/#rate-limiting"
+  },
+  {
+    "id": 55941,
+    "url": "https://dev.java/author/CayHorstmann"
+  },
+  {
+    "id": 55944,
+    "url": "https://dev.java/learn/new-features/virtual-threads/#why"
+  },
+  {
+    "id": 55946,
+    "url": "https://dev.java/learn/new-features/virtual-threads/#pinning"
+  },
+  {
+    "id": 55947,
+    "url": "https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/RecursiveTask.html"
+  },
+  {
+    "id": 55948,
+    "url": "https://dev.java/learn/new-features/virtual-threads/#task-results"
+  },
+  {
+    "id": 55949,
+    "url": "https://dev.java/learn/new-features/virtual-threads/#thread-locals"
+  },
+  {
+    "id": 55950,
+    "url": "https://dev.java/learn/new-features/virtual-threads/#conclusion"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://makeit.si/img/logoJCON.png",
+    "alt": "JCON Slovenia 2026 logo",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/logoMakeIT.png",
+    "alt": "MakeIT 2026 logo",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/misc/feature1.png",
+    "alt": "Supercharge your skillset",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/misc/feature2.png",
+    "alt": "Connect with peers and community",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/misc/feature3.png",
+    "alt": "Get yourself future-ready",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/hotel-slovenija.jpg",
+    "alt": "Hotel Slovenija venue in Portoroz",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/sponsors/Oracle_logo.svg.png",
+    "alt": "Oracle logo",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/sponsors/endava_logo_pos_RGB.png",
+    "alt": "Endava logo",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/sponsors/openline-vitaly-logo.svg",
+    "alt": "Open Line Vitaly logo",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/sponsors/Abakus.png",
+    "alt": "Abakus Plus d.o.o. logo",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/sponsors/Logo_black.png",
+    "alt": "Flox logo",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/sponsors/SmartQ.png",
+    "alt": "SmartQ logo",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/sponsors/Kontron.png",
+    "alt": "Kontron d.o.o. logo",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/sponsors/paurus_logo-icon.png",
+    "alt": "Paurus logo",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/sponsors/logo_dper.png",
+    "alt": "WEB 3.0 d.o.o. logo",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/sponsors/ogrodje-logo-base.png",
+    "alt": "Ogrodje logo",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://makeit.si/img/sponsors/Logotip-RN_BB.png",
+    "alt": "Računalniške novice logo",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://px.ads.linkedin.com/collect/?pid\u003d4010458\u0026fmt\u003dgif",
+    "alt": "",
+    "pageTitle": "MakeIT 2026 \u0026 JCON Slovenia 2026",
+    "pageUrl": "https://slovenia.jcon.one/"
+  },
+  {
+    "src": "https://dev.java/assets/images/download/jdk-downloader.png",
+    "alt": "JDK Downloader",
+    "pageTitle": "Downloading Java - Dev.java",
+    "pageUrl": "https://dev.java/download"
+  },
   {
     "src": "https://dev.java/assets/images/watchlisten/podcast-3.jpg",
     "alt": "Podcast Image",
