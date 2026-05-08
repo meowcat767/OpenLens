@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 944,
+    "url": "https://github.com/python/cpython/issues/124127",
+    "title": "[C API] Make Py_REFCNT() opaque in limited C API 3.14 · Issue #124127 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k [C API] Make Py_REFCNT() opaque in limited C API 3.14 #124127 New issue Copy link New issue Copy link Closed Closed [C API] Make Py_REFCNT() opaque in limited C API 3.14#124127 Copy link Labels topic-C-API Description vstinner opened on Sep 16, 2024 Issue body actions In the limited C API 3.14 and newer, I propose to change Py_REFCNT() implementation to an opaque function call to hide implementation details. I made a similar change for Py_INCREF() and Py_DECREF() in Python 3.12. The problem is that with Free Threading (PEP 703), the implementation of this functions becomes less trivial than just getting the object member PyObject.ob_refcnt: static inline Py_ssize_t _Py_REFCNT(PyObject *ob) {\n    uint32_t local \u003d _Py_atomic_load_uint32_relaxed(\u0026ob-\u003eob_ref_local);\n    if (local \u003d\u003d _Py_IMMORTAL_REFCNT_LOCAL) {\n        return _Py_IMMORTAL_REFCNT;\n    }\n    Py_ssize_t shared \u003d _Py_atomic_load_ssize_relaxed(\u0026ob-\u003eob_ref_shared);\n    return _Py_STATIC_CAST(Py_ssize_t, local) +\n           Py_ARITHMETIC_RIGHT_SHIFT(Py_ssize_t, shared, _Py_REF_SHARED_SHIFT);\n} _Py_atomic_load_uint32_relaxed() and _Py_atomic_load_ssize_relaxed() must now be called. But I would prefer to not \"leak\" such implementation detail into the limited C API. cc @colesbury @Fidget-Spinner @encukou Linked PRs gh-124127: Make Py_REFCNT() opaque in limited C API 3.14 #124128 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels topic-C-API Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:59:45.493612"
+  },
+  {
+    "id": 943,
+    "url": "https://github.com/python/cpython/issues/124369",
+    "title": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member gaogaotiantian commented Sep 23, 2024 This is just a cleanup for the workaround solution for frame locals. Before PEP 667, accessing frame.f_locals will clear the changes pdb made to frame.f_locals so we had to copy it to a new dict and work on that. However, it still has its caveats like #102864. Now f_locals has a clear meaning and behavior, we should try to use it as much as possible. This change has no user observable behavior change. Theoretically it\u0027s a little bit different than before because each call to frame.f_locals creates a new proxy, but in practice we should see no difference. @ncoghlan could you take a look at the PR? You are familiar with the concept of PEP 667 so I think your review would be helpful. Also it\u0027s the sprint and I don\u0027t want to throw everything on Irit :) Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Cleanup unnecessary curframe_locals usage 458c219 gaogaotiantian added skip issue skip news labels Sep 23, 2024 gaogaotiantian requested a review from ncoghlan September 23, 2024 19:20 bedevere-app Bot added the awaiting core review label Sep 23, 2024 ncoghlan approved these changes Sep 26, 2024 View reviewed changes Copy link Copy Markdown Contributor ncoghlan left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment The code simplification LGTM. While I\u0027m normally paranoid about treating any attribute without a leading underscore as implicitly public (regardless of documentation status), the fact we don\u0027t document any public attributes on pdb instances (only methods) makes me more comfortable with it here. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions bedevere-app Bot added awaiting merge and removed awaiting core review labels Sep 26, 2024 Copy link Copy Markdown Member Author gaogaotiantian commented Sep 26, 2024 Thanks! In general attributes of pdb.Pdb is a bit safer than the other libraries as it\u0027s normally used as a tool. Also because it\u0027s really old, there\u0027s no really \"private attribute\" until recent changes. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. gaogaotiantian merged commit 986a4e1 into python:main Sep 26, 2024 bedevere-app Bot removed the awaiting merge label Sep 26, 2024 gaogaotiantian deleted the pdb-cleanup-framelocals branch September 26, 2024 16:35 gaogaotiantian mentioned this pull request Oct 25, 2024 Provide curframe_locals for backward compatibility but deprecate it #125951 Merged gabifalk mentioned this pull request Dec 17, 2024 Fix pdb issues in Python 3.13.1 ipython/ipython#14598 Merged Carreau mentioned this pull request Dec 17, 2024 Investigate better fix for pdb issue in 3.13 ipython/ipython#14620 Open gabifalk added a commit to gabifalk/gentoo that referenced this pull request Dec 17, 2024 dev-python/ipython: Backport upstream fix for python 3.13 regression … 72ba3ef The regression was detected by ipython\u0027s own testsuite.\n\nThis part of the IPython code is expected to break again with python 3.14,\nbecause the curframe_locals attribute was removed in the PR cpython#124369.\nHowever, there are plans to restore this attribute for backward compatibility in\nPR cpython#125951 before the CPython 3.14 release.\n\nUrl: ipython/ipython#14598\nUrl: ipython/ipython@c1e945b\nUrl: python/cpython#124369\nUrl: python/cpython#125951\nUrl: ipython/ipython#14620\nCloses: https://bugs.gentoo.org/946568\nSigned-off-by: Gabi Falk \u003cgabifalk@gmx.com\u003e gabifalk added a commit to gabifalk/gentoo that referenced this pull request Dec 17, 2024 dev-python/ipython: Backport upstream fix for python 3.13 regression … 662c4ea The regression was detected by ipython\u0027s own testsuite.\n\nThis part of the IPython code is expected to break again with python 3.14,\nbecause the curframe_locals attribute was removed in the PR cpython#124369.\nHowever, there are plans to restore this attribute for backward compatibility in\nPR cpython#125951 before the CPython 3.14 release.\n\nUrl: ipython/ipython#14598\nUrl: ipython/ipython@c1e945b\nUrl: python/cpython#124369\nUrl: python/cpython#125951\nUrl: ipython/ipython#14620\nCloses: https://bugs.gentoo.org/946568\nSigned-off-by: Gabi Falk \u003cgabifalk@gmx.com\u003e gentoo-bot pushed a commit to gentoo/gentoo",
+    "scrapedAt": "2026-05-09 00:59:43.354891"
+  },
+  {
+    "id": 942,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappop_max",
+    "title": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » heapq — Heap queue algorithm | Theme Auto Light Dark | heapq — Heap queue algorithm¶ Source code: Lib/heapq.py This module provides an implementation of the heap queue algorithm, also known as the priority queue algorithm. Min-heaps are binary trees for which every parent node has a value less than or equal to any of its children. We refer to this condition as the heap invariant. For min-heaps, this implementation uses lists for which heap[k] \u003c\u003d heap[2*k+1] and heap[k] \u003c\u003d heap[2*k+2] for all k for which the compared elements exist. Elements are counted from zero. The interesting property of a min-heap is that its smallest element is always the root, heap[0]. Max-heaps satisfy the reverse invariant: every parent node has a value greater than any of its children. These are implemented as lists for which maxheap[2*k+1] \u003c\u003d maxheap[k] and maxheap[2*k+2] \u003c\u003d maxheap[k] for all k for which the compared elements exist. The root, maxheap[0], contains the largest element; heap.sort(reverse\u003dTrue) maintains the max-heap invariant. The heapq API differs from textbook heap algorithms in two aspects: (a) We use zero-based indexing. This makes the relationship between the index for a node and the indexes for its children slightly less obvious, but is more suitable since Python uses zero-based indexing. (b) Textbooks often focus on max-heaps, due to their suitability for in-place sorting. Our implementation favors min-heaps as they better correspond to Python lists. These two aspects make it possible to view the heap as a regular Python list without surprises: heap[0] is the smallest item, and heap.sort() maintains the heap invariant! Like list.sort(), this implementation uses only the \u003c operator for comparisons, for both min-heaps and max-heaps. In the API below, and in this documentation, the unqualified term heap generally refers to a min-heap. The API for max-heaps is named using a _max suffix. To create a heap, use a list initialized as [], or transform an existing list into a min-heap or max-heap using the heapify() or heapify_max() functions, respectively. The following functions are provided for min-heaps: heapq.heapify(x)¶ Transform list x into a min-heap, in-place, in linear time. heapq.heappush(heap, item)¶ Push the value item onto the heap, maintaining the min-heap invariant. heapq.heappop(heap)¶ Pop and return the smallest item from the heap, maintaining the min-heap invariant. If the heap is empty, IndexError is raised. To access the smallest item without popping it, use heap[0]. heapq.heappushpop(heap, item)¶ Push item on the heap, then pop and return the smallest item from the heap. The combined action runs more efficiently than heappush() followed by a separate call to heappop(). heapq.heapreplace(heap, item)¶ Pop and return the smallest item from the heap, and also push the new item. The heap size doesn’t change. If the heap is empty, IndexError is raised. This one step operation is more efficient than a heappop() followed by heappush() and can be more appropriate when using a fixed-size heap. The pop/push combination always returns an element from the heap and replaces it with item. The value returned may be larger than the item added. If that isn’t desired, consider using heappushpop() instead. Its push/pop combination returns the smaller of the two values, leaving the larger value on the heap. For max-heaps, the following functions are provided: heapq.heapify_max(x)¶ Transform list x into a max-heap, in-place, in linear time. Added in version 3.14. heapq.heappush_max(heap, item)¶ Push the value item onto the max-heap heap, maintaining the max-heap invariant. Added in version 3.14. heapq.heappop_max(heap)¶ Pop and return the largest item from the max-heap heap, maintaining the max-heap invariant. If the max-heap is empty, IndexError is raised. To access the largest item without popping it, use maxheap[0]. Added in version 3.14. heapq.heappushpop_max(heap, item)¶ Push item on the max-heap heap, then pop and return the largest item from heap. The combined action runs more efficiently than heappush_max() followed by a separate call to heappop_max(). Added in version 3.14. heapq.heapreplace_max(heap, item)¶ Pop and return the largest item from the max-heap heap and also push the new item. The max-heap size doesn’t change. If the max-heap is empty, IndexError is raised. The value returned may be smaller than the item added. Refer to the analogous function heapreplace() for detailed usage notes. Added in version 3.14. The module also offers three general purpose functions based on heaps. heapq.merge(*iterables, key\u003dNone, reverse\u003dFalse)¶ Merge multiple sorted inputs into a single sorted output (for example, merge timestamped entries from multiple log files). Returns an iterator over the sorted values. Similar to sorted(itertools.chain(*iterables)) but returns an iterable, does not pull the d",
+    "scrapedAt": "2026-05-09 00:59:40.637201"
+  },
+  {
+    "id": 941,
+    "url": "https://docs.python.org/3/library/functions.html#zip",
+    "title": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Functions | Theme Auto Light Dark | Built-in Functions¶ The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order. Built-in Functions A abs() aiter() all() anext() any() ascii() B bin() bool() breakpoint() bytearray() bytes() C callable() chr() classmethod() compile() complex() D delattr() dict() dir() divmod() E enumerate() eval() exec() F filter() float() format() frozenset() G getattr() globals() H hasattr() hash() help() hex() I id() input() int() isinstance() issubclass() iter() L len() list() locals() M map() max() memoryview() min() N next() O object() oct() open() ord() P pow() print() property() R range() repr() reversed() round() S set() setattr() slice() sorted() staticmethod() str() sum() super() T tuple() type() V vars() Z zip() _ __import__() abs(number, /)¶ Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__(). If the argument is a complex number, its magnitude is returned. aiter(async_iterable, /)¶ Return an asynchronous iterator for an asynchronous iterable. Equivalent to calling x.__aiter__(). Note: Unlike iter(), aiter() has no 2-argument variant. Added in version 3.10. all(iterable, /)¶ Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to: def all(iterable):\n    for element in iterable:\n        if not element:\n            return False\n    return True\n awaitable anext(async_iterator, /)¶ awaitable anext(async_iterator, default, /) When awaited, return the next item from the given asynchronous iterator, or default if given and the iterator is exhausted. This is the async variant of the next() builtin, and behaves similarly. This calls the __anext__() method of async_iterator, returning an awaitable. Awaiting this returns the next value of the iterator. If default is given, it is returned if the iterator is exhausted, otherwise StopAsyncIteration is raised. Added in version 3.10. any(iterable, /)¶ Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to: def any(iterable):\n    for element in iterable:\n        if element:\n            return True\n    return False\n ascii(object, /)¶ As repr(), return a string containing a printable representation of an object, but escape the non-ASCII characters in the string returned by repr() using \\x, \\u, or \\U escapes. This generates a string similar to that returned by repr() in Python 2. bin(integer, /)¶ Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If integer is not a Python int object, it has to define an __index__() method that returns an integer. Some examples: \u003e\u003e\u003e bin(3)\n\u00270b11\u0027\n\u003e\u003e\u003e bin(-10)\n\u0027-0b1010\u0027\n If the prefix “0b” is desired or not, you can use either of the following ways. \u003e\u003e\u003e format(14, \u0027#b\u0027), format(14, \u0027b\u0027)\n(\u00270b1110\u0027, \u00271110\u0027)\n\u003e\u003e\u003e f\u0027{14:#b}\u0027, f\u0027{14:b}\u0027\n(\u00270b1110\u0027, \u00271110\u0027)\n See also enum.bin() to represent negative values as twos-complement. See also format() for more information. class bool(object\u003dFalse, /)¶ Return a Boolean value, i.e. one of True or False. The argument is converted using the standard truth testing procedure. If the argument is false or omitted, this returns False; otherwise, it returns True. The bool class is a subclass of int (see Numeric Types — int, float, complex). It cannot be subclassed further. Its only instances are False and True (see Boolean Type - bool). Changed in version 3.7: The parameter is now positional-only. breakpoint(*args, **kws)¶ This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or type as much code to enter the debugger. However, sys.breakpointhook() can be set to some other function and breakpoint() will automatically call that, allowing you to drop into the debugger of choice. If sys.breakpointhook() is not accessible, this function will raise RuntimeError. By default, the behavior of breakpoint() can be changed with the PYTHONBREAKPOINT environment variable. See sys.breakpointhook() for usage details. Note that this is not guaranteed if sys.breakpointhook() has been replaced. Raises an auditing event builtins.breakpoint with argument breakpointhook. Added in version 3.7. class bytearray(source\u003db\u0027\u0027) class bytearray(source, encoding, errors\u003d\u0027strict\u0027) Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 \u003c\u003d x \u003c 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and ",
+    "scrapedAt": "2026-05-09 00:59:39.469028"
+  },
+  {
+    "id": 939,
+    "url": "https://github.com/python/cpython/issues/70145",
+    "title": "sockaddr_hci lacks hci_channel (AF_BLUETOOTH sockets) · Issue #70145 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k sockaddr_hci lacks hci_channel (AF_BLUETOOTH sockets) #70145 New issue Copy link New issue Copy link Closed Closed sockaddr_hci lacks hci_channel (AF_BLUETOOTH sockets)#70145 Copy link Assignees Labels extension-modulesC modules in the Modules dirC modules in the Modules dirstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description mikeryan mannequin opened on Dec 26, 2015 Issue body actions BPO 25957 Nosy @vstinner Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2015-12-26.19:35:41.319\u003e\nlabels \u003d [\u0027extension-modules\u0027, \u0027type-bug\u0027, \u0027library\u0027]\ntitle \u003d \u0027sockaddr_l2 lacks CID, address type (AF_BLUETOOTH sockets)\u0027\nupdated_at \u003d \u003cDate 2021-06-01.09:20:35.829\u003e\nuser \u003d \u0027https://bugs.python.org/mikeryan\u0027 bugs.python.org fields: activity \u003d \u003cDate 2021-06-01.09:20:35.829\u003e\nactor \u003d \u0027steve.dower\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Extension Modules\u0027, \u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2015-12-26.19:35:41.319\u003e\ncreator \u003d \u0027mikeryan\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 25957\nkeywords \u003d []\nmessage_count \u003d 2.0\nmessages \u003d [\u0027257043\u0027, \u0027257120\u0027]\nnosy_count \u003d 2.0\nnosy_names \u003d [\u0027vstinner\u0027, \u0027mikeryan\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027behavior\u0027\nurl \u003d \u0027https://bugs.python.org/issue25957\u0027\nversions \u003d [\u0027Python 2.7\u0027] Linked PRs gh-70145: Add support for channels in Bluetooth HCI protocol #132481 Reactions are currently unavailable Metadata Metadata Assignees serhiy-storchaka Labels extension-modulesC modules in the Modules dirC modules in the Modules dirstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:59:38.21285"
+  },
+  {
     "id": 938,
     "url": "https://docs.python.org/3/library/sysconfig.html#module-sysconfig",
     "title": "sysconfig — Provide access to Python’s configuration information — Python 3.14.5rc1 documentation",
@@ -6263,26 +6298,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 939,
-    "url": "https://github.com/python/cpython/issues/70145"
-  },
-  {
-    "id": 941,
-    "url": "https://docs.python.org/3/library/functions.html#zip"
-  },
-  {
-    "id": 942,
-    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappop_max"
-  },
-  {
-    "id": 943,
-    "url": "https://github.com/python/cpython/issues/124369"
-  },
-  {
-    "id": 944,
-    "url": "https://github.com/python/cpython/issues/124127"
   },
   {
     "id": 945,
@@ -159690,10 +159705,565 @@ window.searchData = [
     "id": 139405,
     "url": "https://github.com/python/cpython/issues/128715#issue-2780697483",
     "parentUrl": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "id": 139465,
+    "url": "https://github.com/python/cpython/issues/70145#issue-1198945735",
+    "parentUrl": "https://github.com/python/cpython/issues/70145"
+  },
+  {
+    "id": 139473,
+    "url": "https://bugs.python.org/issue25957",
+    "parentUrl": "https://github.com/python/cpython/issues/70145"
+  },
+  {
+    "id": 139474,
+    "url": "https://github.com/python/cpython/pull/132481",
+    "parentUrl": "https://github.com/python/cpython/issues/70145"
+  },
+  {
+    "id": 139475,
+    "url": "https://github.com/python/cpython/issues/70145#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/70145"
+  },
+  {
+    "id": 139476,
+    "url": "https://github.com/python/cpython/issues/70145#top",
+    "parentUrl": "https://github.com/python/cpython/issues/70145"
+  },
+  {
+    "id": 139834,
+    "url": "https://github.com/python/cpython/pull/124369#ref-commit-72ba3ef",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139835,
+    "url": "https://github.com/gentoo/gentoo/pull/39746",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139837,
+    "url": "https://github.com/python/cpython/pull/124369#ref-pullrequest-2612881760",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139838,
+    "url": "https://bugs.gentoo.org/946568",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139839,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22skip%20issue%22",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139841,
+    "url": "https://github.com/gentoo/gentoo/commit/404bee8d79dc272a718132e5c138a8be2bab968d",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139842,
+    "url": "https://github.com/gabifalk",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139843,
+    "url": "https://github.com/Carreau",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139844,
+    "url": "https://github.com/python/cpython/pull/124369#event-14419633995",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139845,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22skip%20news%22",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139846,
+    "url": "https://github.com/python/cpython/pull/124369#ref-commit-4317cef",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139847,
+    "url": "https://github.com/bretello/pdbpp/commit/6725fb2e40a2bb9b0896b5b551d4942ea757eb3b",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139848,
+    "url": "https://github.com/python/cpython/pull/125951",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139849,
+    "url": "https://github.com/python/cpython/pull/124369#event-14369231890",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139850,
+    "url": "https://github.com/python/cpython/pull/124369/files/458c219660b3ebc296669d05ca55ea95f900a244",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139851,
+    "url": "https://github.com/python/cpython/pull/124369#ref-pullrequest-3004557277",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139852,
+    "url": "https://github.com/python/cpython/pull/124369#ref-issue-2744572254",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139853,
+    "url": "https://github.com/bretello/pdbpp/commit/4317cef27b009c2f11deb733ef220bc5b80dda5b",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139854,
+    "url": "https://github.com/python/cpython/pull/124369#event-14369232623",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139855,
+    "url": "https://github.com/gentoo-bot",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139856,
+    "url": "https://github.com/python/cpython/commit/986a4e1b6fcae7fe7a1d0a26aea446107dd58dd2",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139857,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F124369",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139858,
+    "url": "https://github.com/python/cpython/pull/124369#ref-commit-404bee8",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139859,
+    "url": "https://github.com/python/cpython/issues/102864",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139861,
+    "url": "https://github.com/python/cpython/pull/124369#event-14419634012",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139862,
+    "url": "https://github.com/python/cpython/pull/124369#ref-pullrequest-2725108483",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139863,
+    "url": "https://github.com/python/cpython/pull/124369#ref-commit-28c8d78",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139865,
+    "url": "https://github.com/bretello",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139866,
+    "url": "https://github.com/python/cpython/pull/124369/commits/458c219660b3ebc296669d05ca55ea95f900a244",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139867,
+    "url": "https://github.com/python/cpython/pull/124369#ref-commit-3d12b00",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139868,
+    "url": "https://github.com/python/cpython/pull/124369#ref-commit-6725fb2",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139869,
+    "url": "https://github.com/bretello/pdbpp/pull/40",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139870,
+    "url": "https://github.com/python/cpython/pull/124369#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139871,
+    "url": "https://github.com/python/cpython/pull/124369#ref-commit-662c4ea",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139872,
+    "url": "https://github.com/python/cpython/pull/124369#issuecomment-2377438495",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139873,
+    "url": "https://github.com/ipython/ipython/pull/14598",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139874,
+    "url": "https://github.com/python/cpython/pull/124369#event-14369231867",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139876,
+    "url": "https://github.com/thesamesam",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139878,
+    "url": "https://github.com/python/cpython/pull/124369#event-14419633379",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139879,
+    "url": "https://github.com/bretello/pdbpp/commit/3d12b005c23e3ace4627be8ea026cf527f5bfb28",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139880,
+    "url": "https://github.com/bretello/pdbpp/commit/e4d8273608a624d1f660478d4f4c4b6f4d871841",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139881,
+    "url": "https://github.com/python/cpython/pull/124369#pullrequestreview-2330973872",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139882,
+    "url": "https://github.com/bretello/pdbpp/commit/28c8d7893f63c1078c1cc358d425345a8a784de4",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139884,
+    "url": "https://github.com/python/cpython/pull/124369",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139886,
+    "url": "https://github.com/gabifalk/gentoo/commit/72ba3efba5f2571742fc19e432cefe2a89bbc7cd",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139887,
+    "url": "https://github.com/bretello/pdbpp/commit/5a5eb261d888696ab84b137f00587cb45898992e",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139888,
+    "url": "https://github.com/ipython/ipython/commit/c1e945b5bc8fb673109cf32c4f238f6d5e0f5149",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139889,
+    "url": "https://github.com/python/cpython/pull/124369#ref-commit-5a5eb26",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139890,
+    "url": "https://github.com/python/cpython/pull/124369#ref-commit-e4d8273",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139893,
+    "url": "https://github.com/gaogaotiantian",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139895,
+    "url": "https://github.com/python/cpython/pull/124369#issue-2543460957",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139896,
+    "url": "https://github.com/gabifalk/gentoo/commit/662c4ea967e6cbd6969719db2ec8f085d406566c",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139897,
+    "url": "https://github.com/python/cpython/pull/124369#event-14415073138",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139898,
+    "url": "https://github.com/ipython/ipython/issues/14620",
+    "parentUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 139902,
+    "url": "https://github.com/python/cpython/issues/124127#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124127"
+  },
+  {
+    "id": 139904,
+    "url": "https://github.com/python/cpython/issues/124127#issue-2528611728",
+    "parentUrl": "https://github.com/python/cpython/issues/124127"
+  },
+  {
+    "id": 139909,
+    "url": "https://github.com/python/cpython/pull/124128",
+    "parentUrl": "https://github.com/python/cpython/issues/124127"
+  },
+  {
+    "id": 139910,
+    "url": "https://github.com/python/cpython/issues/124127#top",
+    "parentUrl": "https://github.com/python/cpython/issues/124127"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Make Py_REFCNT() opaque in limited C API 3.14 · Issue #124127 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124127"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Make Py_REFCNT() opaque in limited C API 3.14 · Issue #124127 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124127"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d60\u0026v\u003d4",
+    "alt": "ncoghlan",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d48\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/151769504?s\u003d40\u0026v\u003d4",
+    "alt": "@gabifalk",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/335567?s\u003d40\u0026v\u003d4",
+    "alt": "@Carreau",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/151769504?s\u003d40\u0026v\u003d4",
+    "alt": "@gabifalk",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/151769504?s\u003d40\u0026v\u003d4",
+    "alt": "@gabifalk",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/151769504?s\u003d40\u0026v\u003d4",
+    "alt": "@gabifalk",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11667869?s\u003d40\u0026v\u003d4",
+    "alt": "@thesamesam",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8560118?s\u003d40\u0026u\u003ddf2b7ab6dfa49edf82557e9c6722f37226d0409d\u0026v\u003d4",
+    "alt": "@bretello",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8560118?s\u003d40\u0026u\u003ddf2b7ab6dfa49edf82557e9c6722f37226d0409d\u0026v\u003d4",
+    "alt": "@bretello",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8560118?s\u003d40\u0026u\u003ddf2b7ab6dfa49edf82557e9c6722f37226d0409d\u0026v\u003d4",
+    "alt": "@bretello",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8560118?s\u003d40\u0026u\u003ddf2b7ab6dfa49edf82557e9c6722f37226d0409d\u0026v\u003d4",
+    "alt": "@bretello",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8560118?s\u003d40\u0026u\u003ddf2b7ab6dfa49edf82557e9c6722f37226d0409d\u0026v\u003d4",
+    "alt": "@bretello",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8560118?s\u003d40\u0026u\u003ddf2b7ab6dfa49edf82557e9c6722f37226d0409d\u0026v\u003d4",
+    "alt": "@bretello",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8560118?s\u003d40\u0026u\u003ddf2b7ab6dfa49edf82557e9c6722f37226d0409d\u0026v\u003d4",
+    "alt": "@bretello",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d40\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d52\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d52\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "Cleanup unnecessary curframe_locals usage by gaogaotiantian · Pull Request #124369 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/heapq.html#heapq.heappop_max"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/heapq.html#heapq.heappop_max"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#zip"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#zip"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "sockaddr_hci lacks hci_channel (AF_BLUETOOTH sockets) · Issue #70145 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/70145"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/101762657?v\u003d4\u0026size\u003d80",
+    "alt": "@mikeryan",
+    "pageTitle": "sockaddr_hci lacks hci_channel (AF_BLUETOOTH sockets) · Issue #70145 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/70145"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/101762657?v\u003d4\u0026size\u003d48",
+    "alt": "@mikeryan",
+    "pageTitle": "sockaddr_hci lacks hci_channel (AF_BLUETOOTH sockets) · Issue #70145 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/70145"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "sockaddr_hci lacks hci_channel (AF_BLUETOOTH sockets) · Issue #70145 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/70145"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
