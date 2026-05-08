@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 775,
+    "url": "https://github.com/python/cpython/issues/125286",
+    "title": "test_audit_subinterpreter crashes with tracerefs enabled · Issue #125286 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k test_audit_subinterpreter crashes with tracerefs enabled #125286 New issue Copy link New issue Copy link Closed Closed test_audit_subinterpreter crashes with tracerefs enabled#125286 Copy link Labels topic-subinterpreterstype-crashA hard crash of the interpreter, possibly with a core dumpA hard crash of the interpreter, possibly with a core dump Description nascheme opened on Oct 10, 2024 Issue body actions Crash report What happened? To run test: Programs/_testembed test_audit_subinterpreter. The program crashes with an assert failure: _testembed: ../Objects/object.c:196: _PyRefchain_Remove: Assertion `value \u003d\u003d REFCHAIN_VALUE\u0027 failed.\n Stack trace: #5  0x00007fbd32045eb2 in __GI___assert_fail (\n    assertion\u003dassertion@entry\u003d0x55f8c78ecded \"value \u003d\u003d REFCHAIN_VALUE\", \n    file\u003dfile@entry\u003d0x55f8c78ecd93 \"../Objects/object.c\", line\u003dline@entry\u003d196, \n    function\u003dfunction@entry\u003d0x55f8c78edba0 \u003c__PRETTY_FUNCTION__.13\u003e \"_PyRefchain_Remove\")\n    at ./assert/assert.c:101\n#6  0x000055f8c76c9999 in _PyRefchain_Remove (interp\u003d\u003coptimized out\u003e, obj\u003dobj@entry\u003d0x7fbd3183d710)\n    at ../Objects/object.c:196\n#7  0x000055f8c76cb6c3 in _Py_ForgetReference (op\u003dop@entry\u003d0x7fbd3183d710) at ../Objects/object.c:2548\n#8  0x000055f8c76ca91d in _Py_Dealloc (op\u003dop@entry\u003d0x7fbd3183d710) at ../Objects/object.c:2923\n#9  0x000055f8c76b2ad4 in Py_DECREF (filename\u003dfilename@entry\u003d0x55f8c78b4f72 \"../Include/refcount.h\", \n    lineno\u003dlineno@entry\u003d476, op\u003d0x7fbd3183d710) at ../Include/refcount.h:367\n#10 0x000055f8c76b2af3 in Py_XDECREF (op\u003d\u003coptimized out\u003e) at ../Include/refcount.h:476\n#11 0x000055f8c76b2c0f in dictkeys_decref (interp\u003dinterp@entry\u003d0x7fbd31f6e020, \n    dk\u003ddk@entry\u003d0x55f8c9b29030, use_qsbr\u003duse_qsbr@entry\u003dfalse) at ../Objects/dictobject.c:459\n#12 0x000055f8c76bca24 in dict_dealloc (self\u003d0x7fbd31765070) at ../Objects/dictobject.c:3187\n#13 0x000055f8c76ca923 in _Py_Dealloc (op\u003dop@entry\u003d0x7fbd31765070) at ../Objects/object.c:2925\n#14 0x000055f8c76c67ab in Py_DECREF (\n    filename\u003dfilename@entry\u003d0x55f8c78ec613 \"../Objects/moduleobject.c\", lineno\u003dlineno@entry\u003d1118, \n    op\u003d0x7fbd31765070) at ../Include/refcount.h:367\n#15 0x000055f8c76c6bdb in module_clear (self\u003d0x7fbd31764110) at ../Objects/moduleobject.c:1118\n#16 0x000055f8c77e604a in delete_garbage (tstate\u003dtstate@entry\u003d0x7fbd31fa4d18, \n    gcstate\u003dgcstate@entry\u003d0x7fbd31f6fd08, collectable\u003dcollectable@entry\u003d0x7ffd93cac500, \n    old\u003dold@entry\u003d0x7fbd31f6fd50) at ../Python/gc.c:1126\n#17 0x000055f8c77e62f7 in gc_collect_region (tstate\u003dtstate@entry\u003d0x7fbd31fa4d18, \n    from\u003dfrom@entry\u003d0x7fbd31f6fd50, to\u003dto@entry\u003d0x7fbd31f6fd50, untrack\u003duntrack@entry\u003d3, \n    stats\u003dstats@entry\u003d0x7ffd93cac5e0) at ../Python/gc.c:1585\n#18 0x000055f8c77e6790 in gc_collect_full (tstate\u003dtstate@entry\u003d0x7fbd31fa4d18, \n    stats\u003dstats@entry\u003d0x7ffd93cac5e0) at ../Python/gc.c:1498\n#19 0x000055f8c77e7070 in _PyGC_Collect (tstate\u003d0x7fbd31fa4d18, generation\u003dgeneration@entry\u003d2, \n    reason\u003dreason@entry\u003d_Py_GC_REASON_SHUTDOWN) at ../Python/gc.c:1862\n#20 0x000055f8c77e70ce in _PyGC_CollectNoFail (tstate\u003dtstate@entry\u003d0x7fbd31fa4d18)\n    at ../Python/gc.c:1903\n#21 0x000055f8c7818408 in finalize_modules (tstate\u003dtstate@entry\u003d0x7fbd31fa4d18)\n    at ../Python/pylifecycle.c:1716\n#22 0x000055f8c781e9f4 in Py_EndInterpreter (tstate\u003dtstate@entry\u003d0x7fbd31fa4d18)\n    at ../Python/pylifecycle.c:2409\n#23 0x000055f8c781ec3a in finalize_subinterpreters () at ../Python/pylifecycle.c:2484\n#24 0x000055f8c781edc3 in _Py_Finalize (runtime\u003druntime@entry\u003d0x55f8c7b1e000 \u003c_PyRuntime\u003e)\n    at ../Python/pylifecycle.c:2088\n#25 0x000055f8c781ef34 in Py_Finalize () at ../Python/pylifecycle.c:2216\n#26 0x000055f8c75e90ec in test_audit_subinterpreter () at ../Programs/_testembed.c:1431\n#27 0x000055f8c75ece41 in main (argc\u003d\u003coptimized out\u003e, argv\u003d0x7ffd93cac888)\n    at ../Programs/_testembed.c:2520\n The object is a string that has been interned but not immortalized. Likely it is shared between sub-interpreters, using basic single-phase init and is therefore shared between multiple sub-interpreters. (rr) p *op\n$3 \u003d {{ob_refcnt \u003d 0, ob_refcnt_split \u003d {0, 0}}, ob_type \u003d 0x55f8c7b00c40 \u003cPyUnicode_Type\u003e}\n(rr) p op\n$4 \u003d \u0027time_ns\u0027\n The value of _PyRefchain_IsTraced() is false since it is ref-traced in a different interpreter. Quick and dirty fix for the crash: --- a/Objects/object.c\n+++ b/Objects/object.c\n@@ -2537,6 +2537,13 @@ _Py_ForgetReference(PyObject *op)\n \n     PyInterpreterState *interp \u003d _PyInterpreterState_GET();\n \n+    if (!_PyRefchain_IsTraced(interp, op) \u0026\u0026\n+        PyUnicode_Check(op) \u0026\u0026\n+        PyUnicode_CHECK_I",
+    "scrapedAt": "2026-05-09 00:53:06.964928"
+  },
+  {
+    "id": 774,
+    "url": "https://github.com/python/cpython/issues/128317",
+    "title": "Highlight today in colour in calendar\u0027s CLI output · Issue #128317 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Highlight today in colour in calendar\u0027s CLI output #128317 New issue Copy link New issue Copy link Closed Closed Highlight today in colour in calendar\u0027s CLI output#128317 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description hugovk opened on Dec 28, 2024 Issue body actions Feature or enhancement In Python 3.13 we added colour output to the new REPL, tracebacks and doctest, and in 3.14 to unittest and test.regrtest, which can also be controlled with the PYTHON_COLORS, NO_COLOR and FORCE_COLOR environment variables: https://docs.python.org/3.14/whatsnew/3.14.html#unittest https://docs.python.org/3.14/using/cmdline.html#using-on-controlling-color On macOS, the cal utility does something similar, but highlights today. The calendar module has a CLI to print out a calendar to the terminal, but with no highlighting. Let\u0027s add it. Linked PRs gh-128317: Highlight today in colour in calendar CLI output #128318 gh-128317: Document calendar.TextCalendar.formatweek #128353 [3.13] gh-128317: Document calendar.TextCalendar.formatweek (GH-128353) #128357 [3.12] gh-128317: Document calendar.TextCalendar.formatweek (GH-128353) #128358 gh-128317: Move CLI calendar highlighting to private class #129625 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:53:04.690705"
+  },
+  {
+    "id": 773,
+    "url": "https://github.com/python/cpython/issues/129889",
+    "title": "Support context manager protocol by contextvars.Token · Issue #129889 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Support context manager protocol by contextvars.Token #129889 New issue Copy link New issue Copy link Closed #129888 Closed Support context manager protocol by contextvars.Token#129889 #129888 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description asvetlov opened on Feb 9, 2025 Issue body actions Feature or enhancement Proposal: Sometimes, mostly in tests, I write something like from contextvars import ContextVar\nvar \u003d ContextVar(\u0027var\u0027)\n\ndef test_a():\n    token \u003d var.set(\u0027new val\u0027)\n    do_stuff()\n    var.reset(token) It looks a little cumbersome, the support for with var: would be awesome: def test_b():\n    with var.set(\u0027new val\u0027):\n        do_stuff()\n Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-129889: Support context manager protocol by contextvars.Token #129888 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:53:02.431083"
+  },
+  {
+    "id": 772,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#calendar",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 00:53:00.29453"
+  },
+  {
+    "id": 771,
+    "url": "https://docs.python.org/3/library/termios.html#module-termios",
+    "title": "termios — POSIX style tty control — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Unix-specific services » termios — POSIX style tty control | Theme Auto Light Dark | termios — POSIX style tty control¶ This module provides an interface to the POSIX calls for tty I/O control. For a complete description of these calls, see termios(3) Unix manual page. It is only available for those Unix versions that support POSIX termios style tty I/O control configured during installation. Availability: Unix. All functions in this module take a file descriptor fd as their first argument. This can be an integer file descriptor, such as returned by sys.stdin.fileno(), or a file object, such as sys.stdin itself. This module also defines all the constants needed to work with the functions provided here; these have the same name as their counterparts in C. Please refer to your system documentation for more information on using these terminal control interfaces. The module defines the following functions: termios.tcgetattr(fd)¶ Return a list containing the tty attributes for file descriptor fd, as follows: [iflag, oflag, cflag, lflag, ispeed, ospeed, cc] where cc is a list of the tty special characters (each a string of length 1, except the items with indices VMIN and VTIME, which are integers when these fields are defined). The interpretation of the flags and the speeds as well as the indexing in the cc array must be done using the symbolic constants defined in the termios module. termios.tcsetattr(fd, when, attributes)¶ Set the tty attributes for file descriptor fd from the attributes, which is a list like the one returned by tcgetattr(). The when argument determines when the attributes are changed: termios.TCSANOW¶ Change attributes immediately. termios.TCSADRAIN¶ Change attributes after transmitting all queued output. termios.TCSAFLUSH¶ Change attributes after transmitting all queued output and discarding all queued input. termios.tcsendbreak(fd, duration)¶ Send a break on file descriptor fd. A zero duration sends a break for 0.25–0.5 seconds; a nonzero duration has a system dependent meaning. termios.tcdrain(fd)¶ Wait until all output written to file descriptor fd has been transmitted. termios.tcflush(fd, queue)¶ Discard queued data on file descriptor fd. The queue selector specifies which queue: TCIFLUSH for the input queue, TCOFLUSH for the output queue, or TCIOFLUSH for both queues. termios.tcflow(fd, action)¶ Suspend or resume input or output on file descriptor fd. The action argument can be TCOOFF to suspend output, TCOON to restart output, TCIOFF to suspend input, or TCION to restart input. termios.tcgetwinsize(fd)¶ Return a tuple (ws_row, ws_col) containing the tty window size for file descriptor fd. Requires termios.TIOCGWINSZ or termios.TIOCGSIZE. Added in version 3.11. termios.tcsetwinsize(fd, winsize)¶ Set the tty window size for file descriptor fd from winsize, which is a two-item tuple (ws_row, ws_col) like the one returned by tcgetwinsize(). Requires at least one of the pairs (termios.TIOCGWINSZ, termios.TIOCSWINSZ); (termios.TIOCGSIZE, termios.TIOCSSIZE) to be defined. Added in version 3.11. See also Module tty Convenience functions for common terminal control operations. Example¶ Here’s a function that prompts for a password with echoing turned off. Note the technique using a separate tcgetattr() call and a try … finally statement to ensure that the old tty attributes are restored exactly no matter what happens: def getpass(prompt\u003d\"Password: \"):\n    import termios, sys\n    fd \u003d sys.stdin.fileno()\n    old \u003d termios.tcgetattr(fd)\n    new \u003d termios.tcgetattr(fd)\n    new[3] \u003d new[3] \u0026 ~termios.ECHO          # lflags\n    try:\n        termios.tcsetattr(fd, termios.TCSADRAIN, new)\n        passwd \u003d input(prompt)\n    finally:\n        termios.tcsetattr(fd, termios.TCSADRAIN, old)\n    return passwd\n Table of Contents termios — POSIX style tty control Example Previous topic grp — The group database Next topic tty — Terminal control functions This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Unix-specific services » termios — POSIX style tty control | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 00:52:59.099875"
+  },
+  {
     "id": 770,
     "url": "https://docs.python.org/3/library/importlib.html#module-importlib",
     "title": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
@@ -5103,26 +5138,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 771,
-    "url": "https://docs.python.org/3/library/termios.html#module-termios"
-  },
-  {
-    "id": 772,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#calendar"
-  },
-  {
-    "id": 773,
-    "url": "https://github.com/python/cpython/issues/129889"
-  },
-  {
-    "id": 774,
-    "url": "https://github.com/python/cpython/issues/128317"
-  },
-  {
-    "id": 775,
-    "url": "https://github.com/python/cpython/issues/125286"
   },
   {
     "id": 776,
@@ -131759,10 +131774,265 @@ window.searchData = [
     "id": 94175,
     "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore.acquire",
     "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94809,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcsetwinsize",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 94810,
+    "url": "https://docs.python.org/3/library/termios.html#termios.TCSANOW",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 94814,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/termios.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 94816,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcgetwinsize",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 94822,
+    "url": "https://docs.python.org/3/library/termios.html#termios.TCSAFLUSH",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 94823,
+    "url": "https://docs.python.org/3/library/termios.html#",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 94824,
+    "url": "https://docs.python.org/3/library/tty.html#module-tty",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 94825,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcsendbreak",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 94827,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcflush",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 94828,
+    "url": "https://docs.python.org/3/library/termios.html#termios.TCSADRAIN",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 94832,
+    "url": "https://manpages.debian.org/termios(3)",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 94833,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcsetattr",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 94836,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcflow",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 94838,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcdrain",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 94841,
+    "url": "https://docs.python.org/3/library/termios.html#example",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 94842,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcgetattr",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 96078,
+    "url": "https://github.com/python/cpython/issues/129889#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/129889"
+  },
+  {
+    "id": 96083,
+    "url": "https://github.com/python/cpython/issues/129889#issue-2840597352",
+    "parentUrl": "https://github.com/python/cpython/issues/129889"
+  },
+  {
+    "id": 96085,
+    "url": "https://github.com/python/cpython/issues/129889#top",
+    "parentUrl": "https://github.com/python/cpython/issues/129889"
+  },
+  {
+    "id": 96088,
+    "url": "https://github.com/python/cpython/pull/129888",
+    "parentUrl": "https://github.com/python/cpython/issues/129889"
+  },
+  {
+    "id": 96089,
+    "url": "https://github.com/python/cpython/pull/128357",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 96092,
+    "url": "https://github.com/python/cpython/pull/128353",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 96093,
+    "url": "https://github.com/python/cpython/issues/128317#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 96099,
+    "url": "https://docs.python.org/3.14/whatsnew/3.14.html#unittest",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 96100,
+    "url": "https://github.com/python/cpython/issues/128317#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 96101,
+    "url": "https://github.com/python/cpython/issues/128317#issue-2762004198",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 96102,
+    "url": "https://github.com/python/cpython/pull/128318",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 96103,
+    "url": "https://github.com/python/cpython/pull/129625",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 96104,
+    "url": "https://docs.python.org/3.14/using/cmdline.html#using-on-controlling-color",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 96105,
+    "url": "https://github.com/python/cpython/pull/128358",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 96106,
+    "url": "https://github.com/nascheme",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 96107,
+    "url": "https://github.com/python/cpython/issues/125286#issue-2579941882",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 96110,
+    "url": "https://github.com/python/cpython/issues/125286#top",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 96113,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-subinterpreters%22",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 96114,
+    "url": "https://github.com/python/cpython/pull/125709",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 96115,
+    "url": "https://github.com/orgs/python/projects/3",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 96116,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22type-crash%22",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 96117,
+    "url": "https://github.com/python/cpython/issues/125286#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 96118,
+    "url": "https://github.com/python/cpython/pull/125314",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?u\u003de678e0834db5c4fd7dcb9f3b37055641c26edc3b\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@nascheme",
+    "pageTitle": "test_audit_subinterpreter crashes with tracerefs enabled · Issue #125286 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?u\u003de678e0834db5c4fd7dcb9f3b37055641c26edc3b\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@nascheme",
+    "pageTitle": "test_audit_subinterpreter crashes with tracerefs enabled · Issue #125286 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@hugovk",
+    "pageTitle": "Highlight today in colour in calendar\u0027s CLI output · Issue #128317 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@hugovk",
+    "pageTitle": "Highlight today in colour in calendar\u0027s CLI output · Issue #128317 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/356399?u\u003d125a08b2fa30b0f4629efa1e16b7cc9ca02c285e\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@asvetlov",
+    "pageTitle": "Support context manager protocol by contextvars.Token · Issue #129889 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129889"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/356399?u\u003d125a08b2fa30b0f4629efa1e16b7cc9ca02c285e\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@asvetlov",
+    "pageTitle": "Support context manager protocol by contextvars.Token · Issue #129889 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129889"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#calendar"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#calendar"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "termios — POSIX style tty control — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "termios — POSIX style tty control — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
