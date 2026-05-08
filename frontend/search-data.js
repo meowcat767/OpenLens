@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1502,
+    "url": "https://github.com/python/cpython/issues/129902",
+    "title": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Contributor swfarnsworth commented Feb 9, 2025 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. Previously, having an elif block after an else block would raise a standard syntax error. This PR implements a special syntax error saying \"elif not allowed after else\". I compiled cpython with this version of the parser and confirmed that it doesn\u0027t conflict with other special syntax or indentation errors. Issue: Special syntax error for elif after else #129858 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Special syntax error for elif block after else … 883ada9 Previously, having an elif block after an else block would raise a standard syntax error. swfarnsworth requested review from lysnikolaou and pablogsal as code owners February 9, 2025 15:01 bedevere-app Bot added the awaiting review label Feb 9, 2025 bedevere-app Bot mentioned this pull request Feb 9, 2025 Special syntax error for elif after else #129858 Closed Copy link Copy Markdown Contributor Author swfarnsworth commented Feb 9, 2025 @pablogsal I see that you\u0027ve been tagged for review. Please see the associated issue for discussion about whether an even more sophisticated error message is possible. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. picnixz reviewed Feb 9, 2025 View reviewed changes Comment thread Grammar/python.gram Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member picnixz commented Feb 9, 2025 I compiled cpython with this version of the parser and confirmed that it doesn\u0027t conflict with other special syntax or indentation errors. Please add a test. There should be tests in some test_syntax.py file or test_parser.py files (I don\u0027t remember where we put them). Just Ctrl+F some error message to find the file. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor Author swfarnsworth commented Feb 9, 2025 @picnixz No problem--will do. 🚀 1 picnixz reacted with rocket emoji All reactions 🚀 1 reaction Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor Author swfarnsworth commented Feb 10, 2025 I\u0027ve implemented a test as requested, though I\u0027ll hold off on committing or pushing it until we decide on the exact wording of the error message. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown ghost commented Feb 11, 2025 • edited by ghost Loading Uh oh! There was an error while loading. Please reload this page. All commit authors signed the Contributor License Agreement. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor Author swfarnsworth commented Feb 11, 2025 Those last two commits should appear as being from this GitHub account. Let me see if I can delete them and try again. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member picnixz commented Feb 11, 2025 In general, we avoid force-pushing, but you can do it in this case and amend the commit author and put the correct email address. (Not sure if it could help in this though) All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. swfarnsworth force-pushed the elif-error-message branch from 62996a0 to 883ada9 Compare February 11, 2025 23:54 swfarnsworth added 2 commits February 11, 2025 19:04 Change elif-after-else error wording to mirror patma errors fe17ada Test for special syntax error for elif following else 345964a Copy link Copy Markdown Contributor Author swfarnsworth commented Feb 12, 2025 The force push seems to have fixed the problem without any issues. The usernames for my work and personal email differ by one letter, which is occasionally inconvenient. 👍 1 picnixz reacted with thumbs up emoji All reactions 👍 1 reaction Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member picnixz commented Feb 12, 2025 For the detection issue, you should just merge main into that branch with the Update branch bu",
+    "scrapedAt": "2026-05-09 01:22:28.761895"
+  },
+  {
+    "id": 1501,
+    "url": "https://github.com/python/cpython/issues/97514",
+    "title": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 #97514 New issue Copy link New issue Copy link Closed Closed Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919#97514 Copy link Assignees Labels 3.10only security fixesonly security fixes3.11only security fixesonly security fixes3.12only security fixesonly security fixes3.9 (EOL)end of lifeend of liferelease-blockerstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or errortype-securityA security issueA security issue Description gpshead opened on Sep 23, 2022 Issue body actions TL;DR Python 3.9, 3.10, and 3.11.0rc2 on Linux may allow for a local privilege escalation attack in a non-default configuration when code uses the multiprocessing module and configures multiprocessing to use the forkserver start method. Details The Python multiprocessing library, when used with the forkserver start method on Linux, allows Python pickles to be deserialized from any user in the same machine local network namespace, which in many system configurations means any user on the same machine. Pickles can execute arbitrary code. Thus, this allows for local user privilege escalation to the user that any Python multiprocessing forkserver process is running as. The forkserver start method for multiprocessing is not the default start method. This issue is Linux specific because only Linux supports abstract namespace sockets. CPython before 3.9 does not make use of Linux abstract namespace sockets by default. This issue has been assigned CVE-2022-42919. Credit: This issue was discovered by Devin Jeanpierre (@ssbr) of Google. Are Python 3.7 and 3.8 affected? Not by default. Support for users manually specifying an abstract namespace AF_UNIX socket was added as a bugfix in 3.7.8 and 3.8.3, but users would need to make specific uncommon multiprocessing API calls specifying their own forkserver control socket path in order to do that in CPython before 3.9. What about code that explicitly asks for an abstract socket? Applications found to be making the uncommon multiprocessing API calls to explicitly use Linux abstract namespace sockets with a forkserver are believed to be rare and should have their own specific security issues filed. Workarounds From Python application or library code: import multiprocessing.util\nmultiprocessing.util.abstract_sockets_supported \u003d False This disables their use by default. You must execute that before anything else in your process has started making use of multiprocessing. If you can patch your CPython runtime itself: Remove these two lines from CPython\u0027s Lib/multiprocessing/connection.py: -        if util.abstract_sockets_supported:\n-            return f\"\\0listener-{os.getpid()}-{next(_mmap_counter)}\" (that is what our security bug fix commits do). Or, similar to the application level fix, edit Lib/multiprocessing/util.py to always set: - abstract_sockets_supported \u003d _platform_supports_abstract_sockets()\n+ abstract_sockets_supported \u003d False Alternatives to avoid the problem If your Linux Python application can be switched from multiprocessing\u0027s .set_start_method(\"forkserver\") to a start method such as \"spawn\" that will also avoid this issue. Scope of the bug fixes We are changing the default in Python 3.9 and higher to not use the Linux abstract namespace sockets by default. It would be ideal to add authentication to the forkserver control socket so that it isn\u0027t even relying on filesystem permissions. This is a more complicated change and is expected to be done as a feature in 3.12. Tasks Cherry pick the 3.11 commit to the 3.11.0 release. 4686d77 Merge the 3.9 PR. [3.9] gh-97514: Don\u0027t use Linux abstract sockets for multiprocessing (GH-98501) #98504 After 3.11.0 is out, make sure 3.11.1 won\u0027t have a duplicate news entry about this due to the branch vs 3.11.0 release branch Push @gpshead \u0027s PR(s) for proper forkserver socket authentication in 3.12. Linked PRs PR: gh-97514: Authenticate the forkserver control socket. #99309 Reactions are currently unavailable Metadata Metadata Assignees ambv gpshead pablogsal Labels 3.10only security fixesonly security fixes3.11only security fixesonly security fixes3.12only security fixesonly security fixes3.9 (EOL)end of lifeend of liferelease-blockerstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python mod",
+    "scrapedAt": "2026-05-09 01:22:23.987304"
+  },
+  {
+    "id": 1500,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_Create",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:22:21.688982"
+  },
+  {
+    "id": 1499,
+    "url": "https://docs.python.org/3/library/pdb.html#cmdoption-pdb-p",
+    "title": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Debugging and Profiling » pdb — The Python Debugger | Theme Auto Light Dark | pdb — The Python Debugger¶ Source code: Lib/pdb.py The module pdb defines an interactive source code debugger for Python programs. It supports setting (conditional) breakpoints and single stepping at the source line level, inspection of stack frames, source code listing, and evaluation of arbitrary Python code in the context of any stack frame. It also supports post-mortem debugging and can be called under program control. The debugger is extensible – it is actually defined as the class Pdb. This is currently undocumented but easily understood by reading the source. The extension interface uses the modules bdb and cmd. See also Module faulthandler Used to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal. Module traceback Standard interface to extract, format and print stack traces of Python programs. The typical usage to break into the debugger is to insert: import pdb; pdb.set_trace()\n Or: breakpoint()\n at the location you want to break into the debugger, and then run the program. You can then step through the code following this statement, and continue running without the debugger using the continue command. Changed in version 3.7: The built-in breakpoint(), when called with defaults, can be used instead of import pdb; pdb.set_trace(). def double(x):\n   breakpoint()\n   return x * 2\nval \u003d 3\nprint(f\"{val} * 2 is {double(val)}\")\n The debugger’s prompt is (Pdb), which is the indicator that you are in debug mode: \u003e ...(2)double()\n-\u003e breakpoint()\n(Pdb) p x\n3\n(Pdb) continue\n3 * 2 is 6\n Changed in version 3.3: Tab-completion via the readline module is available for commands and command arguments, e.g. the current global and local names are offered as arguments of the p command. Command-line interface¶ You can also invoke pdb from the command line to debug other scripts. For example: python -m pdb [-c command] (-m module | -p pid | pyfile) [args ...]\n When invoked as a module, pdb will automatically enter post-mortem debugging if the program being debugged exits abnormally. After post-mortem debugging (or after normal exit of the program), pdb will restart the program. Automatic restarting preserves pdb’s state (such as breakpoints) and in most cases is more useful than quitting the debugger upon program’s exit. -c, --command \u003ccommand\u003e¶ To execute commands as if given in a .pdbrc file; see Debugger commands. Changed in version 3.2: Added the -c option. -m \u003cmodule\u003e¶ To execute modules similar to the way python -m does. As with a script, the debugger will pause execution just before the first line of the module. Changed in version 3.7: Added the -m option. -p, --pid \u003cpid\u003e¶ Attach to the process with the specified PID. Added in version 3.14. To attach to a running Python process for remote debugging, use the -p or --pid option with the target process’s PID: python -m pdb -p 1234\n Note Attaching to a process that is blocked in a system call or waiting for I/O will only work once the next bytecode instruction is executed or when the process receives a signal. Typical usage to execute a statement under control of the debugger is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n\u003e\u003e\u003e pdb.run(\"f(2)\")\n\u003e \u003cstring\u003e(1)\u003cmodule\u003e()\n(Pdb) continue\n0.5\n\u003e\u003e\u003e\n The typical usage to inspect a crashed program is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n...\n\u003e\u003e\u003e f(0)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"\u003cstdin\u003e\", line 2, in f\nZeroDivisionError: division by zero\n\u003e\u003e\u003e pdb.pm()\n\u003e \u003cstdin\u003e(2)f()\n(Pdb) p x\n0\n(Pdb)\n Changed in version 3.13: The implementation of PEP 667 means that name assignments made via pdb will immediately affect the active scope, even when running inside an optimized scope. The module defines the following functions; each enters the debugger in a slightly different way: pdb.run(statement, globals\u003dNone, locals\u003dNone)¶ Execute the statement (given as a string or a code object) under debugger control. The debugger prompt appears before any code is executed; you can set breakpoints and type continue, or you can step through the statement using step or next (all these commands are explained below). The optional globals and locals arguments specify the environment in which the code is executed; by default the dictionary of the module __main__ is used. (See the explanation of the built-in exec() or eval() functions.) pdb.runeval(expression, globals\u003dNone, locals\u003dNone)¶ Evaluate the expression (given as a string or a code object) under debugger control. When runeval() returns, it returns the value of the expression. Otherwise this function is similar to run(). pdb.runcall(function, *args, **kwds)¶ Call the function (a function or method object, not a string) with the given arguments. When runcall() returns, it returns whatever the function call returned. The debug",
+    "scrapedAt": "2026-05-09 01:22:20.43133"
+  },
+  {
+    "id": 1498,
+    "url": "https://github.com/python/cpython/issues/133164",
+    "title": "Add a C API function to detect temporaries · Issue #133164 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add a C API function to detect temporaries #133164 New issue Copy link New issue Copy link Closed Closed Add a C API function to detect temporaries#133164 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description ngoldbaum opened on Apr 29, 2025 Issue body actions Feature or enhancement Proposal: NumPy has an optimization to detect temporaries created via the NumPy C API (e.g. in NumPy internals) and elide them. This can lead to a significant performance improvement for some operations. In numpy/numpy#28681, @colesbury proposed adding some code to handle the change to use stackrefs internally in CPython, which broke the NumPy temporary elision heuristics in 3.14. We later added that code more or less verbatim to the NumPy main branch: https://github.com/numpy/numpy/blob/d692fbccd98cb880812b32936e5f94fcfe55053f/numpy/_core/src/multiarray/temp_elide.c#L119-L152 This unblocks testing NumPy on the 3.14 beta but we should really have at least an unstable C API function we can call here rather than relying on CPython internals. Has this already been discussed elsewhere? No response given Links to previous discussion of this feature: #133140 (comment) Linked PRs gh-133164: Add PyUnstable_Object_IsUniqueReferencedTemporary C API #133170 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:22:19.16685"
+  },
+  {
     "id": 1497,
     "url": "https://datatracker.ietf.org/doc/html/rfc2177.html",
     "title": "RFC 2177 - IMAP4 IDLE command",
@@ -10078,26 +10113,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1498,
-    "url": "https://github.com/python/cpython/issues/133164"
-  },
-  {
-    "id": 1499,
-    "url": "https://docs.python.org/3/library/pdb.html#cmdoption-pdb-p"
-  },
-  {
-    "id": 1500,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_Create"
-  },
-  {
-    "id": 1501,
-    "url": "https://github.com/python/cpython/issues/97514"
-  },
-  {
-    "id": 1502,
-    "url": "https://github.com/python/cpython/issues/129902"
   },
   {
     "id": 1503,
@@ -236355,10 +236370,1047 @@ window.searchData = [
     "id": 313738,
     "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#section-7",
     "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313740,
+    "url": "https://github.com/python/cpython/issues/133164#issue-3029123302",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 313742,
+    "url": "https://github.com/numpy/numpy/issues/28681",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 313744,
+    "url": "https://github.com/python/cpython/issues/133140#issuecomment-2839652603",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 313745,
+    "url": "https://github.com/ngoldbaum",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 313748,
+    "url": "https://github.com/python/cpython/issues/133164#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 313751,
+    "url": "https://github.com/python/cpython/pull/133170",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 313752,
+    "url": "https://github.com/python/cpython/issues/133164#top",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 313753,
+    "url": "https://github.com/numpy/numpy/issues/28681#issuecomment-2810661401",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 313754,
+    "url": "https://github.com/numpy/numpy/blob/d692fbccd98cb880812b32936e5f94fcfe55053f/numpy/_core/src/multiarray/temp_elide.c#L119-L152",
+    "parentUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 314174,
+    "url": "https://github.com/python/cpython/blob/1699128c4891da3bbe23553d709261d88855b93f/Lib/multiprocessing/util.py#L126",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 314175,
+    "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name\u003dCVE-2022-42919",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 314176,
+    "url": "https://github.com/python/cpython/commit/4686d77a04570a663164c03193d9def23c89b122",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 314181,
+    "url": "https://github.com/python/cpython/pull/99309",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 314182,
+    "url": "https://github.com/python/cpython/issues/97514#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 314185,
+    "url": "https://github.com/python/cpython/issues/97514#top",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 314190,
+    "url": "https://github.com/python/cpython/issues/84031",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 314192,
+    "url": "https://github.com/ssbr",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 314195,
+    "url": "https://github.com/python/cpython/issues/97514#issue-1384215836",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 314196,
+    "url": "https://github.com/python/cpython/pull/98504",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 314197,
+    "url": "https://github.com/python/cpython/blob/1699128c4891da3bbe23553d709261d88855b93f/Lib/multiprocessing/connection.py#L79-L80",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 314199,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22release-blocker%22",
+    "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 314200,
+    "url": "https://github.com/python/cpython/pull/129902#pullrequestreview-2619367751",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314201,
+    "url": "https://github.com/python/cpython/pull/129902/files/883ada95e129bec660f55da7b1422deec3871979",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314202,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652308773",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314203,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F129902",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314204,
+    "url": "https://github.com/python/cpython/pull/129902/files/e1333c160e2fdb970d7bfb90c1fb795f872b1c96#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314207,
+    "url": "https://github.com/python/cpython/pull/129902/commits/384c876df4ebb7254fd13e6927c47d3c52da5626",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314208,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652425328",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314209,
+    "url": "https://github.com/python/cpython/commit/99b71efe8e9d59ce04b6d59ed166b57dff3e84d8",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314210,
+    "url": "https://github.com/python/cpython/pull/129902#pullrequestreview-2604325660",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314211,
+    "url": "https://github.com/python/cpython/pull/129902#event-16238497340",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314212,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2826151158",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314213,
+    "url": "https://github.com/python/cpython/pull/129902/commits/fe17ada5f72d9c98d2aeb6d8e61e969cae80a361",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314214,
+    "url": "https://github.com/python/cpython/pull/129902/files/090f7e1699c559449276bf9af7a70939f19177a2#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314215,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2646346603",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314216,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652413968",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314217,
+    "url": "https://github.com/python/cpython/pull/129902/files/bf777a2b189d1edd16de72998d987f0b5a8b42ab",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314218,
+    "url": "https://github.com/python/cpython/pull/129902#pullrequestreview-2611583292",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314220,
+    "url": "https://github.com/python/cpython/pull/129902#event-16238497190",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314221,
+    "url": "https://github.com/python/cpython/pull/129902#discussion_r1957170225",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314223,
+    "url": "https://github.com/python/cpython/pull/129902/commits/6ca3def7650d883581ba6f012bffd5435b65a306",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314224,
+    "url": "https://github.com/python/cpython/compare/62996a0b75088fcd78ffbe475721a7e8dc3705bb..883ada95e129bec660f55da7b1422deec3871979",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314226,
+    "url": "https://github.com/python/cpython/pull/129902#discussion_r1957079410",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314228,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2691718212",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314229,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652423683",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314232,
+    "url": "https://github.com/python/cpython/commit/62996a0b75088fcd78ffbe475721a7e8dc3705bb",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314233,
+    "url": "https://github.com/python/cpython/pull/129902/commits/e1333c160e2fdb970d7bfb90c1fb795f872b1c96",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314236,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652338613",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314237,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652421821",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314238,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2816731607",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314239,
+    "url": "https://github.com/python/cpython/blob/f7c7decc4c7c10084ab3c1473e1a590666d3ea17/.github/CODEOWNERS#L171",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314240,
+    "url": "https://www.youtube.com/watch?v\u003d_Q1U1bDM13Y",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314241,
+    "url": "https://github.com/python/cpython/pull/129902/commits/dee5f1e4c1cf6c1d8db30b755f03580597b3dc3a",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314242,
+    "url": "https://github.com/python/cpython/pull/129902/commits/345964a7687cb5ed8b7de512fb7249571bc0a9a1",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314246,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652436404",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314247,
+    "url": "https://github.com/python/cpython/pull/129902#discussion_r1957079245",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314248,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2646440109",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314249,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2829176949",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314250,
+    "url": "https://github.com/python/cpython/pull/129902#event-17399112652",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314251,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652444650",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314252,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652403868",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314253,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2816863911",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314255,
+    "url": "https://github.com/python/cpython/pull/129902/files/bf777a2b189d1edd16de72998d987f0b5a8b42ab#diff-f73e16df2e80f34839f002f3afdf82c3ebd9a41ef44a4bff51f085d709cef4da",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314256,
+    "url": "https://github.com/python/cpython/pull/129902/files/e1333c160e2fdb970d7bfb90c1fb795f872b1c96",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314257,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2815320252",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314258,
+    "url": "https://github.com/python/cpython/pull/129902#commits-pushed-49b41b7",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314259,
+    "url": "https://github.com/python/cpython/pull/129902/commits/bf777a2b189d1edd16de72998d987f0b5a8b42ab",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314261,
+    "url": "https://github.com/python/cpython/pull/129902/files/090f7e1699c559449276bf9af7a70939f19177a2",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314262,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2691717382",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314263,
+    "url": "https://github.com/python/cpython/pull/129902#commits-pushed-116d785",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314264,
+    "url": "https://github.com/python/cpython/pull/129902#pullrequestreview-2792805521",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314265,
+    "url": "https://github.com/python/cpython/pull/129902#event-17399113253",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314267,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652407019",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314269,
+    "url": "https://github.com/python/cpython/pull/129902/commits/883ada95e129bec660f55da7b1422deec3871979",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314270,
+    "url": "https://github.com/python/cpython/pull/129902#pullrequestreview-2614578311",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314271,
+    "url": "https://github.com/python/cpython/pull/129902#ref-issue-2840178324",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314272,
+    "url": "https://github.com/python/cpython/pull/129902/files/384c876df4ebb7254fd13e6927c47d3c52da5626",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314273,
+    "url": "https://github.com/python/cpython/pull/129902#event-17399113675",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314274,
+    "url": "https://github.com/python/cpython/pull/129902/commits/49b41b738db43c7f4f65ede0fd613dd0ab820a52",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314275,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2691684257",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314276,
+    "url": "https://github.com/python/cpython/pull/129902#event-17328828210",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314277,
+    "url": "https://github.com/python/cpython/pull/129902",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314278,
+    "url": "https://github.com/python/cpython/pull/129902/commits/ab2224cfe06e2c058dd8c9991d4f27559d20359a",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314279,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2815073798",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314280,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2646771880",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314281,
+    "url": "https://github.com/swfarnsworth",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314282,
+    "url": "https://github.com/python/cpython/commit/883ada95e129bec660f55da7b1422deec3871979",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314283,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2661035742",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314285,
+    "url": "https://github.com/python/cpython/pull/129902/files/883ada95e129bec660f55da7b1422deec3871979#diff-2973ca53337859793077e9bdc1a1623063379f0fdfcb788836fd82ebb66b763b",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314286,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2691724340",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314288,
+    "url": "https://github.com/python/cpython/pull/129902#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314289,
+    "url": "https://github.com/python/cpython/pull/129902#commits-pushed-fe17ada",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314290,
+    "url": "https://github.com/python/cpython/pull/129902#event-16272773427",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314291,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2646440657",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314294,
+    "url": "https://github.com/python/cpython/pull/129902/files/090f7e1699c559449276bf9af7a70939f19177a2#diff-f73e16df2e80f34839f002f3afdf82c3ebd9a41ef44a4bff51f085d709cef4da",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314295,
+    "url": "https://github.com/python/cpython/pull/129902#event-17399113891",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314296,
+    "url": "https://github.com/python/cpython/pull/129902#issue-2840739338",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314297,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652315260",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314298,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2661034121",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314299,
+    "url": "https://github.com/python/cpython/pull/129902/files/e1333c160e2fdb970d7bfb90c1fb795f872b1c96#diff-f73e16df2e80f34839f002f3afdf82c3ebd9a41ef44a4bff51f085d709cef4da",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314300,
+    "url": "https://github.com/python/cpython/pull/129902/commits/090f7e1699c559449276bf9af7a70939f19177a2",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314302,
+    "url": "https://github.com/python/cpython/pull/129902/commits/116d78573a6423d8f94de5d9163c7afa2f00020c",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314303,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652311900",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d48\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10137?s\u003d80\u0026v\u003d4",
+    "alt": "@ghost",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/68870d968496bce047e3fa048dd4dcea846616f952ec14481efffa6e1ba845e6/68747470733a2f2f63707974686f6e2d636c61626f742e6865726f6b756170702e636f6d2f636c612d7369676e65642e737667",
+    "alt": "CLA signed",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d60\u0026v\u003d4",
+    "alt": "hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d48\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/1203010?s\u003d80\u0026v\u003d4",
+    "alt": "@python-cla-bot",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/1c7e7ec4141b7323ee376d8a3a48e6acfaa33577216949150bd85c32e231b8db/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f434c412532305369676e65642d4641453038353f7374796c653d666c61742d737175617265266c6f676f3d507974686f6e",
+    "alt": "CLA signed",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d80\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d80\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d60\u0026v\u003d4",
+    "alt": "pablogsal",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d40\u0026u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4",
+    "alt": "@pablogsal",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d40\u0026u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4",
+    "alt": "@pablogsal",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d80\u0026u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4",
+    "alt": "@pablogsal",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d40\u0026v\u003d4",
+    "alt": "@pablogsal",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/20306270?s\u003d40\u0026v\u003d4",
+    "alt": "@lysnikolaou",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d52\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d52\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d52\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d52\u0026v\u003d4",
+    "alt": "@pablogsal",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d64\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "ambv",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d64\u0026v\u003d4",
+    "alt": "gpshead",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d64\u0026u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4",
+    "alt": "pablogsal",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?v\u003d4\u0026size\u003d80",
+    "alt": "@gpshead",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?v\u003d4\u0026size\u003d48",
+    "alt": "@gpshead",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d64\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d64\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d64\u0026u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4",
+    "alt": "@pablogsal",
+    "pageTitle": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_Create"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_Create"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#cmdoption-pdb-p"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#cmdoption-pdb-p"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3126246?u\u003da3c7cd970c0e4cbc4498febe0de777a263c522c5\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@ngoldbaum",
+    "pageTitle": "Add a C API function to detect temporaries · Issue #133164 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3126246?u\u003da3c7cd970c0e4cbc4498febe0de777a263c522c5\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@ngoldbaum",
+    "pageTitle": "Add a C API function to detect temporaries · Issue #133164 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133164"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
