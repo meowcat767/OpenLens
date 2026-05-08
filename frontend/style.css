@@ -432,3 +432,62 @@ button:hover {
     fill: var(--text-color);
     font-size: 11px;
 }
+
+/* UML Styles */
+.uml-node {
+    fill: #f9f9f9;
+    stroke: #333;
+    stroke-width: 1px;
+}
+
+.uml-header {
+    fill: #e8f0fe;
+    stroke: #333;
+    stroke-width: 1px;
+}
+
+.uml-title {
+    font-weight: bold;
+    fill: #1a73e8;
+    font-size: 11px;
+}
+
+.uml-url {
+    fill: #5f6368;
+    font-size: 9px;
+    font-style: italic;
+}
+
+.uml-separator {
+    stroke: #ccc;
+    stroke-width: 1px;
+}
+
+.uml-link {
+    fill: none;
+    stroke: #666;
+    stroke-width: 1px;
+    marker-end: url(#arrowhead);
+}
+
+body.dark-mode .uml-node {
+    fill: #303134;
+    stroke: #5f6368;
+}
+
+body.dark-mode .uml-header {
+    fill: #3c4043;
+    stroke: #5f6368;
+}
+
+body.dark-mode .uml-title {
+    fill: #8ab4f8;
+}
+
+body.dark-mode .uml-url {
+    fill: #9aa0a6;
+}
+
+body.dark-mode .uml-link {
+    stroke: #9aa0a6;
+}

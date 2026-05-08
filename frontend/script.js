@@ -452,21 +452,20 @@ function escapeRegex(text) {
 
 function renderSitemap() {
     if (!window.searchData || !sitemapEl) return;
-    
+
     // Clear previous
     sitemapEl.innerHTML = '';
-    
+
     const data = window.searchData;
     const width = sitemapEl.clientWidth || 600;
     const height = 500;
-    
+
     // 1. Convert flat data to hierarchy
-    // We group by parentUrl
     const urlMap = {};
     data.forEach(p => {
         urlMap[p.url] = { ...p, children: [] };
     });
-    
+
     const roots = [];
     data.forEach(p => {
         const node = urlMap[p.url];
@@ -476,82 +475,128 @@ function renderSitemap() {
             roots.push(node);
         }
     });
-    
-    // Create a single virtual root if multiple actual roots exist
+
     let hierarchyData;
     if (roots.length === 1) {
         hierarchyData = roots[0];
     } else {
         hierarchyData = {
-            title: "Roots",
+            title: "Seed URLS",
             url: "seeds",
             children: roots
         };
     }
-    
+
     const root = d3.hierarchy(hierarchyData);
-    
+
     // 2. SVG Creation
     const svg = d3.select("#sitemap")
         .append("svg")
         .attr("width", width)
         .attr("height", height);
-        
+
+    // Define Arrowhead
+    svg.append("defs").append("marker")
+        .attr("id", "arrowhead")
+        .attr("viewBox", "-0 -5 10 10")
+        .attr("refX", 10)
+        .attr("refY", 0)
+        .attr("orient", "auto")
+        .attr("markerWidth", 6)
+        .attr("markerHeight", 6)
+        .attr("xoverflow", "visible")
+        .append("svg:path")
+        .attr("d", "M 0,-5 L 10 ,0 L 0,5")
+        .attr("fill", "#666")
+        .style("stroke", "none");
+
     const g = svg.append("g");
-    
-    // Zoom behavior
+
     const zoom = d3.zoom()
-        .scaleExtent([0.1, 3])
+        .scaleExtent([0.05, 5])
         .on("zoom", (event) => {
             g.attr("transform", event.transform);
         });
-        
+
     svg.call(zoom);
-    
-    // 3. Layout
-    const treeLayout = d3.tree().size([width - 100, height - 150]);
+
+    // 3. Layout (UML nodes need more horizontal space)
+    const nodeWidth = 140;
+    const nodeHeight = 45;
+    const treeLayout = d3.tree().nodeSize([nodeWidth + 20, nodeHeight + 80]);
     treeLayout(root);
-    
-    // 4. Draw Links
-    g.selectAll(".link")
+
+    // 4. Draw Links (Orthogonal-ish)
+    g.selectAll(".uml-link")
         .data(root.links())
         .enter()
         .append("path")
-        .attr("class", "link")
+        .attr("class", "uml-link")
         .attr("d", d3.linkVertical()
             .x(d => d.x)
             .y(d => d.y));
-            
-    // 5. Draw Nodes
+
+    // 5. Draw UML Nodes
     const node = g.selectAll(".node")
         .data(root.descendants())
         .enter()
         .append("g")
         .attr("class", "node")
-        .attr("transform", d => `translate(${d.x},${d.y})`)
+        .attr("transform", d => `translate(${d.x - nodeWidth / 2},${d.y - nodeHeight / 2})`)
         .on("click", (event, d) => {
             if (d.data.url && d.data.url !== "seeds") {
                 window.open(d.data.url, '_blank');
             }
         })
         .style("cursor", d => d.data.url === "seeds" ? "default" : "pointer");
-        
-    node.append("circle")
-        .attr("r", 5);
-        
+
+    // Node Body
+    node.append("rect")
+        .attr("class", "uml-node")
+        .attr("width", nodeWidth)
+        .attr("height", nodeHeight)
+        .attr("rx", 2);
+
+    // Node Header
+    node.append("rect")
+        .attr("class", "uml-header")
+        .attr("width", nodeWidth)
+        .attr("height", 18)
+        .attr("rx", 2);
+
+    // Title Text
     node.append("text")
-        .attr("dy", ".35em")
-        .attr("y", d => d.children ? -15 : 15)
-        .style("text-anchor", "middle")
+        .attr("class", "uml-title")
+        .attr("x", 5)
+        .attr("y", 12)
         .text(d => {
             let t = d.data.title || d.data.url || "Untitled";
-            if (t.length > 20) t = t.substring(0, 17) + "...";
+            if (t.length > 20) t = t.substring(0, 18) + "...";
             return t;
         });
 
+    // Separator line
+    node.append("line")
+        .attr("class", "uml-separator")
+        .attr("x1", 0)
+        .attr("y1", 18)
+        .attr("x2", nodeWidth)
+        .attr("y2", 18);
+
+    // URL Text
+    node.append("text")
+        .attr("class", "uml-url")
+        .attr("x", 5)
+        .attr("y", 32)
+        .text(d => {
+            let u = d.data.url || "";
+            if (u.length > 25) u = u.substring(0, 22) + "...";
+            return u;
+        });
+
     // Initial center
-    const initialScale = 0.8;
-    const initialTranslateX = width / 10;
+    const initialScale = 0.6;
+    const initialTranslateX = width / 2;
     const initialTranslateY = 50;
     svg.call(zoom.transform, d3.zoomIdentity.translate(initialTranslateX, initialTranslateY).scale(initialScale));
 }
