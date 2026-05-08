@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 969,
+    "url": "https://docs.python.org/3/library/io.html#io.Reader",
+    "title": "io — Core tools for working with streams — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » io — Core tools for working with streams | Theme Auto Light Dark | io — Core tools for working with streams¶ Source code: Lib/io.py Overview¶ The io module provides Python’s main facilities for dealing with various types of I/O. There are three main types of I/O: text I/O, binary I/O and raw I/O. These are generic categories, and various backing stores can be used for each of them. A concrete object belonging to any of these categories is called a file object. Other common terms are stream and file-like object. Independent of its category, each concrete stream object will also have various capabilities: it can be read-only, write-only, or read-write. It can also allow arbitrary random access (seeking forwards or backwards to any location), or only sequential access (for example in the case of a socket or pipe). All streams are careful about the type of data you give to them. For example giving a str object to the write() method of a binary stream will raise a TypeError. So will giving a bytes object to the write() method of a text stream. Changed in version 3.3: Operations that used to raise IOError now raise OSError, since IOError is now an alias of OSError. Text I/O¶ Text I/O expects and produces str objects. This means that whenever the backing store is natively made of bytes (such as in the case of a file), encoding and decoding of data is made transparently as well as optional translation of platform-specific newline characters. The easiest way to create a text stream is with open(), optionally specifying an encoding: f \u003d open(\"myfile.txt\", \"r\", encoding\u003d\"utf-8\")\n In-memory text streams are also available as StringIO objects: f \u003d io.StringIO(\"some initial text data\")\n Note When working with a non-blocking stream, be aware that read operations on text I/O objects might raise a BlockingIOError if the stream cannot perform the operation immediately. The text stream API is described in detail in the documentation of TextIOBase. Binary I/O¶ Binary I/O (also called buffered I/O) expects bytes-like objects and produces bytes objects. No encoding, decoding, or newline translation is performed. This category of streams can be used for all kinds of non-text data, and also when manual control over the handling of text data is desired. The easiest way to create a binary stream is with open() with \u0027b\u0027 in the mode string: f \u003d open(\"myfile.jpg\", \"rb\")\n In-memory binary streams are also available as BytesIO objects: f \u003d io.BytesIO(b\"some initial binary data: \\x00\\x01\")\n The binary stream API is described in detail in the docs of BufferedIOBase. Other library modules may provide additional ways to create text or binary streams. See socket.socket.makefile() for example. Raw I/O¶ Raw I/O (also called unbuffered I/O) is generally used as a low-level building-block for binary and text streams; it is rarely useful to directly manipulate a raw stream from user code. Nevertheless, you can create a raw stream by opening a file in binary mode with buffering disabled: f \u003d open(\"myfile.jpg\", \"rb\", buffering\u003d0)\n The raw stream API is described in detail in the docs of RawIOBase. Text Encoding¶ The default encoding of TextIOWrapper and open() is locale-specific (locale.getencoding()). However, many developers forget to specify the encoding when opening text files encoded in UTF-8 (e.g. JSON, TOML, Markdown, etc…) since most Unix platforms use UTF-8 locale by default. This causes bugs because the locale encoding is not UTF-8 for most Windows users. For example: # May not work on Windows when non-ASCII characters in the file.\nwith open(\"README.md\") as f:\n    long_description \u003d f.read()\n Accordingly, it is highly recommended that you specify the encoding explicitly when opening text files. If you want to use UTF-8, pass encoding\u003d\"utf-8\". To use the current locale encoding, encoding\u003d\"locale\" is supported since Python 3.10. See also Python UTF-8 Mode Python UTF-8 Mode can be used to change the default encoding to UTF-8 from locale-specific encoding. PEP 686 Python 3.15 will make Python UTF-8 Mode default. Opt-in EncodingWarning¶ Added in version 3.10: See PEP 597 for more details. To find where the default locale encoding is used, you can enable the -X warn_default_encoding command line option or set the PYTHONWARNDEFAULTENCODING environment variable, which will emit an EncodingWarning when the default encoding is used. If you are providing an API that uses open() or TextIOWrapper and passes encoding\u003dNone as a parameter, you can use text_encoding() so that callers of the API will emit an EncodingWarning if they don’t pass an encoding. However, please consider using UTF-8 by default (i.e. encoding\u003d\"utf-8\") for new APIs. High-level Module Interface¶ io.DEFAULT_BUFFER_SIZE¶ An int containing the default buffer size used by the module’s buffered I/O classes. open() uses the file’s blksize (as obta",
+    "scrapedAt": "2026-05-09 01:00:47.780412"
+  },
+  {
+    "id": 968,
+    "url": "https://github.com/python/cpython/issues/129270",
+    "title": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Contributor lincolnj1 commented Jan 24, 2025 • edited Loading Uh oh! There was an error while loading. Please reload this page. Prevents configparser from writing keys containing delimiters and keys beginning with the section header pattern to a file. Both of those scenarios create .ini files the parser cannot accurately read back. Keys beginning with the section header pattern parse back as new sections. Keys containing delimiters parse back only the first portion as a key and the remainder as a value (i.e. key: \u0027one\u003dtwo\u0027, value:\u0027three\u0027 writes as \u0027one\u003dtwo\u003dthree\u0027 and parses back as key: \u0027one\u0027, value: \u0027two\u003dthree\u0027). Unsure on whether to handle newlines in key/section/values by rejecting them when writing, rejecting them when set, or escaping them when writing. Issue: configparser accepts invalid keys and sections when writing #65697 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👍 1 marc-h38 reacted with thumbs up emoji All reactions 👍 1 reaction lincolnj1 and others added 10 commits January 16, 2025 08:54 Added check for delimiters in cfgparser keys to _validate_value_types 454f026 Deleted some trailing whitespace 20b24b1 Merge branch \u0027python:main\u0027 into fix-issue-128843 5b730b6 Added check for section pattern in key and moved … 9cc3506 invalid key checks to seperate function Clarified _validate_key_contents() doc comment 3638e67 Merge branch \u0027python:main\u0027 into fix-issue-128843 b161cea Merge branch \u0027python:main\u0027 into fix-issue-128843 f73d17a Clarified new error name/doc comment and improved … 5a47f44 validating check readability Clarified InvalidWriteError doc comment e12b696 Merge branch \u0027fix-issue-128843\u0027 of https://github.com/lincolnj1/cpython… … f5f1cbb … into fix-issue-128843 lincolnj1 requested a review from jaraco as a code owner January 24, 2025 21:49 Copy link Copy Markdown ghost commented Jan 24, 2025 • edited by ghost Loading Uh oh! There was an error while loading. Please reload this page. All commit authors signed the Contributor License Agreement. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot added the awaiting review label Jan 24, 2025 Copy link Copy Markdown bedevere-app Bot commented Jan 24, 2025 Most changes to Python require a NEWS entry. Add one using the blurb_it web app or the blurb command-line tool. If this change has little impact on Python users, wait for a maintainer to apply the skip news label instead. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot mentioned this pull request Jan 24, 2025 configparser accepts invalid keys and sections when writing #65697 Open Merge branch \u0027main\u0027 into validate-config-writes 3d84347 Copy link Copy Markdown bedevere-app Bot commented Jan 24, 2025 Most changes to Python require a NEWS entry. Add one using the blurb_it web app or the blurb command-line tool. If this change has little impact on Python users, wait for a maintainer to apply the skip news label instead. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. lincolnj1 changed the title gh-65697 gh-65697: Prevent configparser from writing keys it cannot properly read Jan 24, 2025 lincolnj1 marked this pull request as draft January 24, 2025 22:11 bedevere-app Bot removed the awaiting review label Jan 24, 2025 jaraco requested changes Jan 26, 2025 View reviewed changes Copy link Copy Markdown Member jaraco left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment The implementation looks sound and the tests seem to capture the essence of the change. I like it. The only thing I\u0027d like to see before accepting this - is there any lingering controversy? Who might oppose this change and can we get their consent? If we can get consent from one or two of the most vocal detractors in the linked issues, then I\u0027d say we could proceed. Otherwise, I\u0027d like to hear their argument for what they recommend instead. Can you help gather that consensus? Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown bedevere-app Bot commented Jan 26, 2025 A Python core developer has requested some changes b",
+    "scrapedAt": "2026-05-09 01:00:46.567354"
+  },
+  {
+    "id": 967,
+    "url": "https://github.com/python/cpython/issues/87999",
+    "title": "Unexpected Parsing of Numeric Literals Concatenated with Boolean Operators · Issue #87999 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Unexpected Parsing of Numeric Literals Concatenated with Boolean Operators #87999 New issue Copy link New issue Copy link Closed Closed Unexpected Parsing of Numeric Literals Concatenated with Boolean Operators#87999 Copy link Labels 3.10only security fixesonly security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description sco1 mannequin opened on Apr 13, 2021 Issue body actions BPO 43833 Nosy @gvanrossum, @rhettinger, @cfbolz, @nedbat, @serhiy-storchaka, @zooba, @gvanrossum, @asottile, @pablogsal, @miss-islington, @sco1, @pxeger, @shreyanavigyan, @alimuldal PRs bpo-43833: Emit warnings for numeric literals followed by keyword #25466 [3.10] bpo-43833: Emit warnings for numeric literals followed by keyword (GH-25466) #26614 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d \u003cDate 2021-06-09.00:25:00.346\u003e\ncreated_at \u003d \u003cDate 2021-04-13.18:27:19.816\u003e\nlabels \u003d [\u0027interpreter-core\u0027, \u0027type-bug\u0027, \u00273.10\u0027]\ntitle \u003d \u0027Unexpected Parsing of Numeric Literals Concatenated with Boolean Operators\u0027\nupdated_at \u003d \u003cDate 2021-11-08.13:52:29.794\u003e\nuser \u003d \u0027https://github.com/sco1\u0027 bugs.python.org fields: activity \u003d \u003cDate 2021-11-08.13:52:29.794\u003e\nactor \u003d \u0027pablogsal\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d True\nclosed_date \u003d \u003cDate 2021-06-09.00:25:00.346\u003e\ncloser \u003d \u0027pablogsal\u0027\ncomponents \u003d [\u0027Interpreter Core\u0027]\ncreation \u003d \u003cDate 2021-04-13.18:27:19.816\u003e\ncreator \u003d \u0027sco1\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 43833\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 27.0\nmessages \u003d [\u0027390981\u0027, \u0027390984\u0027, \u0027390988\u0027, \u0027390991\u0027, \u0027390993\u0027, \u0027390995\u0027, \u0027390996\u0027, \u0027390997\u0027, \u0027390998\u0027, \u0027390999\u0027, \u0027391001\u0027, \u0027391002\u0027, \u0027391003\u0027, \u0027391042\u0027, \u0027391050\u0027, \u0027391051\u0027, \u0027391335\u0027, \u0027391336\u0027, \u0027391340\u0027, \u0027391341\u0027, \u0027391351\u0027, \u0027391354\u0027, \u0027395367\u0027, \u0027395368\u0027, \u0027396498\u0027, \u0027405939\u0027, \u0027405949\u0027]\nnosy_count \u003d 16.0\nnosy_names \u003d [\u0027gvanrossum\u0027, \u0027rhettinger\u0027, \u0027Carl.Friedrich.Bolz\u0027, \u0027nedbat\u0027, \u0027Joshua.Landau\u0027, \u0027serhiy.storchaka\u0027, \u0027steve.dower\u0027, \u0027Guido.van.Rossum\u0027, \u0027Anthony Sottile\u0027, \u0027pablogsal\u0027, \u0027miss-islington\u0027, \u0027sco1\u0027, \u0027pxeger\u0027, \u0027shreyanavigyan\u0027, \u0027alimuldal\u0027, \u0027rrauenza\u0027]\npr_nums \u003d [\u002725466\u0027, \u002726614\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d \u0027fixed\u0027\nstage \u003d \u0027resolved\u0027\nstatus \u003d \u0027closed\u0027\nsuperseder \u003d None\ntype \u003d \u0027behavior\u0027\nurl \u003d \u0027https://bugs.python.org/issue43833\u0027\nversions \u003d [\u0027Python 3.10\u0027] Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.10only security fixesonly security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:00:43.60895"
+  },
+  {
+    "id": 966,
+    "url": "https://github.com/python/cpython/issues/124130",
+    "title": "Regex \\B doesn\u0027t match empty string · Issue #124130 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Regex \\B doesn\u0027t match empty string #124130 New issue Copy link New issue Copy link Closed Closed Regex \\B doesn\u0027t match empty string#124130 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixestopic-regextype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description Alcaro opened on Sep 16, 2024 Issue body actions Bug report Bug description: \u003e\u003e\u003e import re\n\u003e\u003e\u003e list(re.finditer(r\u0027\\b\u0027, \u0027e\u0027))\n[\u003cre.Match object; span\u003d(0, 0), match\u003d\u0027\u0027\u003e, \u003cre.Match object; span\u003d(1, 1), match\u003d\u0027\u0027\u003e]\n\u003e\u003e\u003e list(re.finditer(r\u0027\\B\u0027, \u0027e\u0027))\n[]\n\u003e\u003e\u003e list(re.finditer(r\u0027\\b\u0027, \u0027%\u0027))\n[]\n\u003e\u003e\u003e list(re.finditer(r\u0027\\B\u0027, \u0027%\u0027))\n[\u003cre.Match object; span\u003d(0, 0), match\u003d\u0027\u0027\u003e, \u003cre.Match object; span\u003d(1, 1), match\u003d\u0027\u0027\u003e]\n\u003e\u003e\u003e list(re.finditer(r\u0027\\b\u0027, \u0027\u0027))\n[]\n\u003e\u003e\u003e list(re.finditer(r\u0027\\B\u0027, \u0027\u0027))\n[] Apparently the empty string neither is nor isn\u0027t a word boundary. Is that supposed to happen? \\B matches the empty string in every other language I can think of. Online reproducer: https://godbolt.org/z/8q6fehss7 CPython versions tested on: 3.11, 3.12 Operating systems tested on: Linux Linked PRs gh-124130: Notes on empty string corner case of category \\B #124133 [3.13] gh-124130: Notes on empty string corner case of category \\B (GH-124133) #124328 [3.12] gh-124130: Notes on empty string corner case of category \\B (GH-124133) #124329 gh-124130: Increase test coverage for \\b and \\B in regular expressions #124330 [3.13] gh-124130: Increase test coverage for \\b and \\B in regular expressions (GH-124330) #124413 [3.12] gh-124130: Increase test coverage for \\b and \\B in regular expressions (GH-124330) #124414 gh-124130: Fix a bug in matching regular expression \\B in empty string #127007 Reactions are currently unavailable Metadata Metadata Assignees serhiy-storchaka Labels 3.14bugs and security fixesbugs and security fixestopic-regextype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:00:41.581327"
+  },
+  {
+    "id": 965,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_AddWatcher",
+    "title": "Dictionary Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Dictionary Objects | Theme Auto Light Dark | Dictionary Objects¶ type PyDictObject¶ This subtype of PyObject represents a Python dictionary object. PyTypeObject PyDict_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python dictionary type. This is the same object as dict in the Python layer. int PyDict_Check(PyObject *p)¶ Thread safety: Atomic. Return true if p is a dict object or an instance of a subtype of the dict type. This function always succeeds. int PyDict_CheckExact(PyObject *p)¶ Thread safety: Atomic. Return true if p is a dict object, but not an instance of a subtype of the dict type. This function always succeeds. PyObject *PyDict_New()¶ Return value: New reference. Part of the Stable ABI. Thread safety: Atomic. Return a new empty dictionary, or NULL on failure. PyObject *PyDictProxy_New(PyObject *mapping)¶ Return value: New reference. Part of the Stable ABI. Return a types.MappingProxyType object for a mapping which enforces read-only behavior. This is normally used to create a view to prevent modification of the dictionary for non-dynamic class types. PyTypeObject PyDictProxy_Type¶ Part of the Stable ABI. The type object for mapping proxy objects created by PyDictProxy_New() and for the read-only __dict__ attribute of many built-in types. A PyDictProxy_Type instance provides a dynamic, read-only view of an underlying dictionary: changes to the underlying dictionary are reflected in the proxy, but the proxy itself does not support mutation operations. This corresponds to types.MappingProxyType in Python. void PyDict_Clear(PyObject *p)¶ Part of the Stable ABI. Thread safety: Atomic. Empty an existing dictionary of all key-value pairs. int PyDict_Contains(PyObject *p, PyObject *key)¶ Part of the Stable ABI. Thread safety: Safe for concurrent use on the same object. Determine if dictionary p contains key. If an item in p matches key, return 1, otherwise return 0. On error, return -1. This is equivalent to the Python expression key in p. Note The operation is atomic on free threading when key is str, int, float, bool or bytes. int PyDict_ContainsString(PyObject *p, const char *key)¶ Thread safety: Atomic. This is the same as PyDict_Contains(), but key is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. Added in version 3.13. PyObject *PyDict_Copy(PyObject *p)¶ Return value: New reference. Part of the Stable ABI. Thread safety: Atomic. Return a new dictionary that contains the same key-value pairs as p. int PyDict_SetItem(PyObject *p, PyObject *key, PyObject *val)¶ Part of the Stable ABI. Thread safety: Safe for concurrent use on the same object. Insert val into the dictionary p with a key of key. key must be hashable; if it isn’t, TypeError will be raised. Return 0 on success or -1 on failure. This function does not steal a reference to val. Note The operation is atomic on free threading when key is str, int, float, bool or bytes. int PyDict_SetItemString(PyObject *p, const char *key, PyObject *val)¶ Part of the Stable ABI. Thread safety: Atomic. This is the same as PyDict_SetItem(), but key is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. int PyDict_DelItem(PyObject *p, PyObject *key)¶ Part of the Stable ABI. Thread safety: Safe for concurrent use on the same object. Remove the entry in dictionary p with key key. key must be hashable; if it isn’t, TypeError is raised. If key is not in the dictionary, KeyError is raised. Return 0 on success or -1 on failure. Note The operation is atomic on free threading when key is str, int, float, bool or bytes. int PyDict_DelItemString(PyObject *p, const char *key)¶ Part of the Stable ABI. Thread safety: Atomic. This is the same as PyDict_DelItem(), but key is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. int PyDict_GetItemRef(PyObject *p, PyObject *key, PyObject **result)¶ Part of the Stable ABI since version 3.13. Thread safety: Safe for concurrent use on the same object. Return a new strong reference to the object from dictionary p which has a key key: If the key is present, set *result to a new strong reference to the value and return 1. If the key is missing, set *result to NULL and return 0. On error, raise an exception, set *result to NULL and return -1. Note The operation is atomic on free threading when key is str, int, float, bool or bytes. Added in version 3.13. See also the PyObject_GetItem() function. PyObject *PyDict_GetItem(PyObject *p, PyObject *key)¶ Return value: Borrowed reference. Part of the Stable ABI. Thread safety: Safe to call from multiple threads with external synchronization only. Return a borrowed reference to the object from dictionary p which has a key key. Return NULL if the key key is missing without setting an exception. Note Exceptions that occur while this calls __hash",
+    "scrapedAt": "2026-05-09 01:00:39.034491"
+  },
+  {
     "id": 964,
     "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ModuleSpec.parent",
     "title": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
@@ -6438,26 +6473,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 965,
-    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_AddWatcher"
-  },
-  {
-    "id": 966,
-    "url": "https://github.com/python/cpython/issues/124130"
-  },
-  {
-    "id": 967,
-    "url": "https://github.com/python/cpython/issues/87999"
-  },
-  {
-    "id": 968,
-    "url": "https://github.com/python/cpython/issues/129270"
-  },
-  {
-    "id": 969,
-    "url": "https://docs.python.org/3/library/io.html#io.Reader"
   },
   {
     "id": 970,
@@ -162720,10 +162735,934 @@ window.searchData = [
     "id": 144077,
     "url": "https://docs.python.org/3/c-api/module.html#c.Py_MOD_GIL_USED",
     "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144723,
+    "url": "https://github.com/Alcaro",
+    "parentUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "id": 144725,
+    "url": "https://github.com/python/cpython/pull/124133",
+    "parentUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "id": 144727,
+    "url": "https://github.com/python/cpython/pull/124330",
+    "parentUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "id": 144728,
+    "url": "https://github.com/python/cpython/issues/124130#issue-2528653921",
+    "parentUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "id": 144730,
+    "url": "https://godbolt.org/z/8q6fehss7",
+    "parentUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "id": 144734,
+    "url": "https://github.com/python/cpython/issues/124130#top",
+    "parentUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "id": 144735,
+    "url": "https://github.com/python/cpython/pull/124329",
+    "parentUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "id": 144736,
+    "url": "https://github.com/python/cpython/pull/124414",
+    "parentUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "id": 144737,
+    "url": "https://github.com/python/cpython/pull/124413",
+    "parentUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "id": 144738,
+    "url": "https://github.com/python/cpython/pull/124328",
+    "parentUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "id": 144739,
+    "url": "https://github.com/python/cpython/issues/124130#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "id": 144740,
+    "url": "https://github.com/python/cpython/pull/127007",
+    "parentUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "id": 144742,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-regex%22",
+    "parentUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "id": 144748,
+    "url": "https://bugs.python.org/issue43833",
+    "parentUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "id": 144749,
+    "url": "https://github.com/python/cpython/issues/87999#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "id": 144750,
+    "url": "https://github.com/shreyanavigyan",
+    "parentUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "id": 144752,
+    "url": "https://github.com/alimuldal",
+    "parentUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "id": 144753,
+    "url": "https://github.com/python/cpython/pull/25466",
+    "parentUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "id": 144755,
+    "url": "https://github.com/python/cpython/issues/87999#top",
+    "parentUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "id": 144756,
+    "url": "https://github.com/python/cpython/pull/26614",
+    "parentUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "id": 144757,
+    "url": "https://github.com/python/cpython/issues/87999#issue-1199056614",
+    "parentUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "id": 144759,
+    "url": "https://github.com/nedbat",
+    "parentUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "id": 144760,
+    "url": "https://github.com/asottile",
+    "parentUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "id": 144761,
+    "url": "https://github.com/sco1",
+    "parentUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "id": 144764,
+    "url": "https://github.com/miss-islington",
+    "parentUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "id": 144765,
+    "url": "https://github.com/pxeger",
+    "parentUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "id": 144766,
+    "url": "https://github.com/zooba",
+    "parentUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "id": 144770,
+    "url": "https://github.com/python/cpython/pull/129270/commits/e12b696ac6350083ce49520df7a413bebfc2f24e",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144771,
+    "url": "https://github.com/ambv",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144772,
+    "url": "https://github.com/python/cpython/pull/129270",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144773,
+    "url": "https://github.com/python/cpython/pull/129270/commits/0e278fd3cbeb9db1f1cca0a4f4d918cacd1b35de",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144774,
+    "url": "https://github.com/python/cpython/pull/129270/commits/b161ceaee9be6a05fe87324d4c124914ee1861ed",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144776,
+    "url": "https://github.com/python/cpython/pull/129270#event-16064757291",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144777,
+    "url": "https://github.com/hroncok",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144778,
+    "url": "https://cpython-clabot.herokuapp.com/signed-contributor-license-agreement?version\u003d96a49432-b8b1-11ec-9bf5-bfe9ad6c72c4",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144779,
+    "url": "https://github.com/lincolnj1/cpython",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144780,
+    "url": "https://github.com/python/cpython/pull/129270#issuecomment-2626285569",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144782,
+    "url": "https://github.com/python/cpython/pull/129270/commits/a3e8848e2fa47b4df0d459a28b7b29145a230be0",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144783,
+    "url": "https://github.com/python/cpython/pull/129270/commits/b001df66492f9cc7df6dab31f2e17006da6ea971",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144784,
+    "url": "https://github.com/python/cpython/pull/129270/commits/3d84347ba62d5a5608af535c24129dc3b61971d3",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144785,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F129270",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144786,
+    "url": "https://github.com/zephyrproject-rtos/west/issues/779",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144787,
+    "url": "https://github.com/python/cpython/pull/129270/commits/3638e67973b2f380c23d35b3aa5aa0282a65ad5d",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144788,
+    "url": "https://github.com/python/cpython/pull/129270#issue-2810436319",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144789,
+    "url": "https://github.com/python/cpython/pull/129270#issuecomment-2616801232",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144790,
+    "url": "https://github.com/python/cpython/pull/129270#event-16420809389",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144791,
+    "url": "https://github.com/python/cpython/pull/129270#pullrequestreview-2635660108",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144792,
+    "url": "https://github.com/python/cpython/pull/129270#issuecomment-2675431332",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144793,
+    "url": "https://github.com/python/cpython/pull/129270/commits/ccf715e17af9becbb212c839b25229b5fb4a8f44",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144794,
+    "url": "https://github.com/python/cpython/pull/129270#commits-pushed-3da65ae",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144796,
+    "url": "https://github.com/python/cpython/pull/129270#issuecomment-2675419545",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144797,
+    "url": "https://github.com/python/cpython/pull/129270#event-16420806837",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144798,
+    "url": "https://github.com/python/cpython/pull/129270#ref-issue-3138229642",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144800,
+    "url": "https://github.com/python/cpython/pull/129270#issuecomment-2660635050",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144801,
+    "url": "https://github.com/python/cpython/pull/129270#issuecomment-2629495843",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144802,
+    "url": "https://github.com/python/cpython/pull/129270#event-16064778126",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144804,
+    "url": "https://github.com/python/cpython/pull/129270#issuecomment-2613438710",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144805,
+    "url": "https://github.com/python/cpython/pull/129270#event-16071161513",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144806,
+    "url": "https://github.com/python/cpython/pull/129270#issuecomment-2613438796",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144807,
+    "url": "https://pypi.org/project/blurb/",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144808,
+    "url": "https://github.com/python/cpython/pull/129270/commits/9cc3506b9ef43a8f21300f5ef82e572312ea70ad",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144809,
+    "url": "https://github.com/python/cpython/pull/129270#event-16407643490",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144810,
+    "url": "https://github.com/python/cpython/pull/129270#event-16420809233",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144811,
+    "url": "https://github.com/python/cpython/pull/129270#issuecomment-2616815704",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144813,
+    "url": "https://github.com/python/cpython/pull/129270/commits/454f026b93543b92e15e7bc64387c26fd208be19",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144815,
+    "url": "https://github.com/python/cpython/pull/129270/commits/97c8e935c32ce1f054bbf22094a8c9e2d2ab2f4b",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144816,
+    "url": "https://github.com/python/cpython/pull/129270/commits/3da65ae00e7bce5dfd19e316cf39e0ccea20ddf7",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144817,
+    "url": "https://github.com/python/cpython/pull/129270/commits/353eaf17e6b02a0de8be5f9ca6f1d386b24305da",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144818,
+    "url": "https://github.com/jaraco",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144819,
+    "url": "https://github.com/python/cpython/pull/129270/files/3d84347ba62d5a5608af535c24129dc3b61971d3",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144820,
+    "url": "https://github.com/python/cpython/pull/129270#event-16064560034",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144822,
+    "url": "https://github.com/python/cpython/pull/129270#pullrequestreview-2574402369",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144823,
+    "url": "https://github.com/python/cpython/commit/25a7ddf2efeaf77bcf94dbfca28ba3a6fe9ab57e",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144824,
+    "url": "https://github.com/python/cpython/pull/129270/commits/20b24b1c8b92d8631c3ad0d41c9aa0930a28de30",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144826,
+    "url": "https://github.com/python/cpython/pull/129270#issuecomment-2613439854",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144828,
+    "url": "https://github.com/python/cpython/pull/129270/commits/7ca33c7130b26c701a6e286edcb4c844b88bc265",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144829,
+    "url": "https://github.com/lincolnj1",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144830,
+    "url": "https://devguide.python.org/core-developers/committing/#updating-news-and-what-s-new-in-python",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144831,
+    "url": "https://github.com/python/cpython/pull/129270#commits-pushed-7ca33c7",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144832,
+    "url": "https://github.com/python/cpython/pull/129270#issuecomment-2614604928",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144835,
+    "url": "https://github.com/marc-hb",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144836,
+    "url": "https://github.com/python/cpython/pull/129270/commits/f5f1cbb8773f9f98f3225cb4802590b0397e738c",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144838,
+    "url": "https://github.com/python/cpython/pull/129270/commits/5a47f448f0abcd3b389ea234ee0d65cf6fc2ab08",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144840,
+    "url": "https://github.com/python/cpython/pull/129270/commits/f73d17a03e6a5ab9239980982850ea537b5757a6",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144841,
+    "url": "https://github.com/python/cpython/pull/129270#commits-pushed-454f026",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144842,
+    "url": "https://github.com/python/cpython/pull/129270#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144843,
+    "url": "https://github.com/python/cpython/pull/129270#ref-issue-1198920937",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144844,
+    "url": "https://github.com/osbuild/osbuild/issues/2109",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144845,
+    "url": "https://github.com/python/cpython/pull/129270#issuecomment-2675396802",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144846,
+    "url": "https://blurb-it.herokuapp.com",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144847,
+    "url": "https://github.com/python/cpython/pull/129270#issuecomment-2675427103",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144849,
+    "url": "https://github.com/python/cpython/pull/129270#issuecomment-2626668012",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144850,
+    "url": "https://github.com/terryjreedy",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144851,
+    "url": "https://github.com/python/cpython/pull/129270/commits/ea137d0817e1f3de73ce0d06edbcf3a2e72426d8",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144852,
+    "url": "https://github.com/python/cpython/pull/129270#ref-issue-2785685840",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144853,
+    "url": "https://github.com/python/cpython/pull/129270/files/b001df66492f9cc7df6dab31f2e17006da6ea971",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144854,
+    "url": "https://github.com/python/cpython/pull/129270#event-16407643899",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144855,
+    "url": "https://github.com/python/cpython/pull/129270/commits/5b730b630c55b556ebbe1933ab387c6200b339f6",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144856,
+    "url": "https://github.com/python/cpython/blob/3a3a6b86f4069a5a3561c65692937eb798053ae5/.github/CODEOWNERS#L300",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144857,
+    "url": "https://github.com/python/cpython/pull/129270/commits/aa9c92aa52d649eb289bdc8f8c6d28ef16776c6a",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144858,
+    "url": "https://github.com/python/cpython/pull/129270#event-16064560481",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 144859,
+    "url": "https://github.com/python/cpython/pull/129270#event-16064777859",
+    "parentUrl": "https://github.com/python/cpython/issues/129270"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "io — Core tools for working with streams — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/io.html#io.Reader"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "io — Core tools for working with streams — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/io.html#io.Reader"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d80\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d48\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10137?s\u003d80\u0026v\u003d4",
+    "alt": "@ghost",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/68870d968496bce047e3fa048dd4dcea846616f952ec14481efffa6e1ba845e6/68747470733a2f2f63707974686f6e2d636c61626f742e6865726f6b756170702e636f6d2f636c612d7369676e65642e737667",
+    "alt": "CLA signed",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/308610?s\u003d60\u0026v\u003d4",
+    "alt": "jaraco",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/308610?s\u003d48\u0026v\u003d4",
+    "alt": "@jaraco",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d80\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d80\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d80\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/308610?s\u003d80\u0026u\u003d5b3fdef94d1b0ac7392d17643eaba029f5f13bea\u0026v\u003d4",
+    "alt": "@jaraco",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d40\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/308610?s\u003d60\u0026v\u003d4",
+    "alt": "jaraco",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/308610?s\u003d40\u0026u\u003d5b3fdef94d1b0ac7392d17643eaba029f5f13bea\u0026v\u003d4",
+    "alt": "@jaraco",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2401856?s\u003d40\u0026v\u003d4",
+    "alt": "@hroncok",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/46978960?s\u003d40\u0026v\u003d4",
+    "alt": "@marc-hb",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/308610?s\u003d40\u0026v\u003d4",
+    "alt": "@jaraco",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d52\u0026v\u003d4",
+    "alt": "@lincolnj1",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d52\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/308610?s\u003d52\u0026v\u003d4",
+    "alt": "@jaraco",
+    "pageTitle": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93802184?v\u003d4\u0026size\u003d80",
+    "alt": "@sco1",
+    "pageTitle": "Unexpected Parsing of Numeric Literals Concatenated with Boolean Operators · Issue #87999 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93802184?v\u003d4\u0026size\u003d48",
+    "alt": "@sco1",
+    "pageTitle": "Unexpected Parsing of Numeric Literals Concatenated with Boolean Operators · Issue #87999 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "Regex \\B doesn\u0027t match empty string · Issue #124130 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5085186?u\u003d049fc3ac0a642c053c93b90d315d9d65142c3067\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@Alcaro",
+    "pageTitle": "Regex \\B doesn\u0027t match empty string · Issue #124130 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5085186?u\u003d049fc3ac0a642c053c93b90d315d9d65142c3067\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@Alcaro",
+    "pageTitle": "Regex \\B doesn\u0027t match empty string · Issue #124130 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Regex \\B doesn\u0027t match empty string · Issue #124130 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Dictionary Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_AddWatcher"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Dictionary Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_AddWatcher"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
