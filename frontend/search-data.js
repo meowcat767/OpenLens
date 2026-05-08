@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 913,
+    "url": "https://github.com/python/cpython/issues/84559",
+    "title": "multiprocessing\u0027s default posix start method of `\u0027fork\u0027` is broken: change to ``\u0027forkserver\u0027 || \u0027spawn\u0027` · Issue #84559 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k multiprocessing\u0027s default posix start method of \u0027fork\u0027 is broken: change to `\u0027forkserver\u0027 || \u0027spawn\u0027 #84559 New issue Copy link New issue Copy link Closed Closed multiprocessing\u0027s default posix start method of \u0027fork\u0027 is broken: change to `\u0027forkserver\u0027 || \u0027spawn\u0027#84559 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixestopic-multiprocessingtype-featureA feature request or enhancementA feature request or enhancement Description itamarst mannequin opened on Apr 24, 2020 Issue body actions BPO 40379 Nosy @pitrou, @mgorny, @Julian, @wimglenn, @applio, @itamarst Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2020-04-24.18:22:23.389\u003e\nlabels \u003d [\u00273.8\u0027, \u0027type-bug\u0027, \u00273.7\u0027, \u00273.9\u0027]\ntitle \u003d \"multiprocessing\u0027s default start method of fork()-without-exec() is broken\"\nupdated_at \u003d \u003cDate 2022-02-11.16:13:53.872\u003e\nuser \u003d \u0027https://bugs.python.org/itamarst\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-02-11.16:13:53.872\u003e\nactor \u003d \u0027mgorny\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d []\ncreation \u003d \u003cDate 2020-04-24.18:22:23.389\u003e\ncreator \u003d \u0027itamarst\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 40379\nkeywords \u003d []\nmessage_count \u003d 11.0\nmessages \u003d [\u0027367210\u0027, \u0027367211\u0027, \u0027368173\u0027, \u0027380478\u0027, \u0027392358\u0027, \u0027392501\u0027, \u0027392503\u0027, \u0027392506\u0027, \u0027392507\u0027, \u0027392508\u0027, \u0027413081\u0027]\nnosy_count \u003d 8.0\nnosy_names \u003d [\u0027pitrou\u0027, \u0027mgorny\u0027, \u0027Julian\u0027, \u0027wim.glenn\u0027, \u0027itamarst\u0027, \u0027davin\u0027, \u0027itamarst2\u0027, \u0027aduncan\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027behavior\u0027\nurl \u003d \u0027https://bugs.python.org/issue40379\u0027\nversions \u003d [\u0027Python 3.5\u0027, \u0027Python 3.6\u0027, \u0027Python 3.7\u0027, \u0027Python 3.8\u0027, \u0027Python 3.9\u0027] Linked PRs GH-84559: Deprecate fork being the multiprocessing default. #100618 gh-84559: skip the test when no multiprocessing (wasm, etc) #101530 gh-84559: Remove the new multiprocessing warning, too disruptive. #101551 gh-84559: Change the multiprocessing start method default to forkserver #101556 gh-84559: gh-103134: Whats new 3.14 entries for multiprocessing. #126697 gh-84559: multiprocessing: detect if forkserver cannot work due to missing hmac-sha256 #127467 gh-84559: improve What\u0027s New entry for multiprocessing start method changes #128173 [3.13] gh-84559: improve What\u0027s New entry for multiprocessing startmethod changes (GH-128173) #137156 Reactions are currently unavailable Metadata Metadata Assignees gpshead Labels 3.14bugs and security fixesbugs and security fixestopic-multiprocessingtype-featureA feature request or enhancementA feature request or enhancement Projects Multiprocessing issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:58:34.145646"
+  },
+  {
+    "id": 912,
+    "url": "https://docs.python.org/3/library/io.html#io.Writer",
+    "title": "io — Core tools for working with streams — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » io — Core tools for working with streams | Theme Auto Light Dark | io — Core tools for working with streams¶ Source code: Lib/io.py Overview¶ The io module provides Python’s main facilities for dealing with various types of I/O. There are three main types of I/O: text I/O, binary I/O and raw I/O. These are generic categories, and various backing stores can be used for each of them. A concrete object belonging to any of these categories is called a file object. Other common terms are stream and file-like object. Independent of its category, each concrete stream object will also have various capabilities: it can be read-only, write-only, or read-write. It can also allow arbitrary random access (seeking forwards or backwards to any location), or only sequential access (for example in the case of a socket or pipe). All streams are careful about the type of data you give to them. For example giving a str object to the write() method of a binary stream will raise a TypeError. So will giving a bytes object to the write() method of a text stream. Changed in version 3.3: Operations that used to raise IOError now raise OSError, since IOError is now an alias of OSError. Text I/O¶ Text I/O expects and produces str objects. This means that whenever the backing store is natively made of bytes (such as in the case of a file), encoding and decoding of data is made transparently as well as optional translation of platform-specific newline characters. The easiest way to create a text stream is with open(), optionally specifying an encoding: f \u003d open(\"myfile.txt\", \"r\", encoding\u003d\"utf-8\")\n In-memory text streams are also available as StringIO objects: f \u003d io.StringIO(\"some initial text data\")\n Note When working with a non-blocking stream, be aware that read operations on text I/O objects might raise a BlockingIOError if the stream cannot perform the operation immediately. The text stream API is described in detail in the documentation of TextIOBase. Binary I/O¶ Binary I/O (also called buffered I/O) expects bytes-like objects and produces bytes objects. No encoding, decoding, or newline translation is performed. This category of streams can be used for all kinds of non-text data, and also when manual control over the handling of text data is desired. The easiest way to create a binary stream is with open() with \u0027b\u0027 in the mode string: f \u003d open(\"myfile.jpg\", \"rb\")\n In-memory binary streams are also available as BytesIO objects: f \u003d io.BytesIO(b\"some initial binary data: \\x00\\x01\")\n The binary stream API is described in detail in the docs of BufferedIOBase. Other library modules may provide additional ways to create text or binary streams. See socket.socket.makefile() for example. Raw I/O¶ Raw I/O (also called unbuffered I/O) is generally used as a low-level building-block for binary and text streams; it is rarely useful to directly manipulate a raw stream from user code. Nevertheless, you can create a raw stream by opening a file in binary mode with buffering disabled: f \u003d open(\"myfile.jpg\", \"rb\", buffering\u003d0)\n The raw stream API is described in detail in the docs of RawIOBase. Text Encoding¶ The default encoding of TextIOWrapper and open() is locale-specific (locale.getencoding()). However, many developers forget to specify the encoding when opening text files encoded in UTF-8 (e.g. JSON, TOML, Markdown, etc…) since most Unix platforms use UTF-8 locale by default. This causes bugs because the locale encoding is not UTF-8 for most Windows users. For example: # May not work on Windows when non-ASCII characters in the file.\nwith open(\"README.md\") as f:\n    long_description \u003d f.read()\n Accordingly, it is highly recommended that you specify the encoding explicitly when opening text files. If you want to use UTF-8, pass encoding\u003d\"utf-8\". To use the current locale encoding, encoding\u003d\"locale\" is supported since Python 3.10. See also Python UTF-8 Mode Python UTF-8 Mode can be used to change the default encoding to UTF-8 from locale-specific encoding. PEP 686 Python 3.15 will make Python UTF-8 Mode default. Opt-in EncodingWarning¶ Added in version 3.10: See PEP 597 for more details. To find where the default locale encoding is used, you can enable the -X warn_default_encoding command line option or set the PYTHONWARNDEFAULTENCODING environment variable, which will emit an EncodingWarning when the default encoding is used. If you are providing an API that uses open() or TextIOWrapper and passes encoding\u003dNone as a parameter, you can use text_encoding() so that callers of the API will emit an EncodingWarning if they don’t pass an encoding. However, please consider using UTF-8 by default (i.e. encoding\u003d\"utf-8\") for new APIs. High-level Module Interface¶ io.DEFAULT_BUFFER_SIZE¶ An int containing the default buffer size used by the module’s buffered I/O classes. open() uses the file’s blksize (as obta",
+    "scrapedAt": "2026-05-09 00:58:31.680198"
+  },
+  {
+    "id": 911,
+    "url": "https://docs.python.org/3/library/exceptions.html#UnicodeError",
+    "title": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Exceptions | Theme Auto Light Dark | Built-in Exceptions¶ In Python, all exceptions must be instances of a class that derives from BaseException. In a try statement with an except clause that mentions a particular class, that clause also handles any exception classes derived from that class (but not exception classes from which it is derived). Two exception classes that are not related via subclassing are never equivalent, even if they have the same name. The built-in exceptions listed in this chapter can be generated by the interpreter or built-in functions. Except where mentioned, they have an “associated value” indicating the detailed cause of the error. This may be a string or a tuple of several items of information (e.g., an error code and a string explaining the code). The associated value is usually passed as arguments to the exception class’s constructor. User code can raise built-in exceptions. This can be used to test an exception handler or to report an error condition “just like” the situation in which the interpreter raises the same exception; but beware that there is nothing to prevent user code from raising an inappropriate error. The built-in exception classes can be subclassed to define new exceptions; programmers are encouraged to derive new exceptions from the Exception class or one of its subclasses, and not from BaseException. More information on defining exceptions is available in the Python Tutorial under User-defined Exceptions. Exception context¶ Three attributes on exception objects provide information about the context in which the exception was raised: BaseException.__context__¶ BaseException.__cause__¶ BaseException.__suppress_context__¶ When raising a new exception while another exception is already being handled, the new exception’s __context__ attribute is automatically set to the handled exception. An exception may be handled when an except or finally clause, or a with statement, is used. This implicit exception context can be supplemented with an explicit cause by using from with raise: raise new_exc from original_exc\n The expression following from must be an exception or None. It will be set as __cause__ on the raised exception. Setting __cause__ also implicitly sets the __suppress_context__ attribute to True, so that using raise new_exc from None effectively replaces the old exception with the new one for display purposes (e.g. converting KeyError to AttributeError), while leaving the old exception available in __context__ for introspection when debugging. The default traceback display code shows these chained exceptions in addition to the traceback for the exception itself. An explicitly chained exception in __cause__ is always shown when present. An implicitly chained exception in __context__ is shown only if __cause__ is None and __suppress_context__ is false. In either case, the exception itself is always shown after any chained exceptions so that the final line of the traceback always shows the last exception that was raised. Inheriting from built-in exceptions¶ User code can create subclasses that inherit from an exception type. It’s recommended to only subclass one exception type at a time to avoid any possible conflicts between how the bases handle the args attribute, as well as due to possible memory layout incompatibilities. CPython implementation detail: Most built-in exceptions are implemented in C for efficiency, see: Objects/exceptions.c. Some have custom memory layouts which makes it impossible to create a subclass that inherits from multiple exception types. The memory layout of a type is an implementation detail and might change between Python versions, leading to new conflicts in the future. Therefore, it’s recommended to avoid subclassing multiple exception types altogether. Base classes¶ The following exceptions are used mostly as base classes for other exceptions. exception BaseException¶ The base class for all built-in exceptions. It is not meant to be directly inherited by user-defined classes (for that, use Exception). If str() is called on an instance of this class, the representation of the argument(s) to the instance are returned, or the empty string when there were no arguments. args¶ The tuple of arguments given to the exception constructor. Some built-in exceptions (like OSError) expect a certain number of arguments and assign a special meaning to the elements of this tuple, while others are usually called only with a single string giving an error message. with_traceback(tb)¶ This method sets tb as the new traceback for the exception and returns the exception object. It was more commonly used before the exception chaining features of PEP 3134 became available. The following example shows how we can convert an instance of SomeException into an instance of OtherException while preserving the traceback. Once raised, the current ",
+    "scrapedAt": "2026-05-09 00:58:30.438987"
+  },
+  {
+    "id": 910,
+    "url": "https://peps.python.org/pep-0587/",
+    "title": "PEP 587 – Python Initialization Configuration | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 587 – Python Initialization Configuration PEP 587 – Python Initialization Configuration Author: Victor Stinner \u003cvstinner at python.org\u003e, Alyssa Coghlan \u003cncoghlan at gmail.com\u003e BDFL-Delegate: Thomas Wouters \u003cthomas at python.org\u003e Discussions-To: Python-Dev list Status: Final Type: Standards Track Created: 27-Mar-2019 Python-Version: 3.8 Table of Contents Abstract Rationale Python Initialization C API PyWideStringList PyStatus Preinitialization with PyPreConfig Initialization with PyConfig Isolated Configuration Python Configuration Path Configuration Py_BytesMain() Py_RunMain() Multi-Phase Initialization Private Provisional API Backwards Compatibility Annexes Comparison of Python and Isolated Configurations Priority and Rules Configuration Files Global Configuration Variables Command Line Arguments -X Options Environment Variables Default Python Configuration Default Isolated Configuration Python 3.7 API Python Issues Discussions Version History Acceptance Copyright Abstract Add a new C API to configure the Python Initialization providing finer control on the whole configuration and better error reporting. It becomes possible to read the configuration and then override some computed parameters before it is applied. It also becomes possible to completely override how Python computes the module search paths (sys.path). The new Isolated Configuration provides sane default values to isolate Python from the system. For example, to embed Python into an application. Using the environment are now opt-in options, rather than an opt-out options. For example, environment variables, command line arguments and global configuration variables are ignored by default. Building a customized Python which behaves as the regular Python becomes easier using the new Py_RunMain() function. Moreover, using the Python Configuration, PyConfig.argv arguments are now parsed the same way the regular Python parses command line arguments, and PyConfig.xoptions are handled as -X opt command line options. This extracts a subset of the API design from the PEP 432 development and refactoring work that is now considered sufficiently stable to make public (allowing 3rd party embedding applications access to the same configuration APIs that the native CPython CLI is now using). Rationale Python is highly configurable but its configuration evolved organically. The initialization configuration is scattered all around the code using different ways to set them: global configuration variables (ex: Py_IsolatedFlag), environment variables (ex: PYTHONPATH), command line arguments (ex: -b), configuration files (ex: pyvenv.cfg), function calls (ex: Py_SetProgramName()). A straightforward and reliable way to configure Python is needed. Some configuration parameters are not accessible from the C API, or not easily. For example, there is no API to override the default values of sys.executable. Some options like PYTHONPATH can only be set using an environment variable which has a side effect on Python child processes if not unset properly. Some options also depends on other options: see Priority and Rules. Python 3.7 API does not provide a consistent view of the overall configuration. The C API of Python 3.7 Initialization takes wchar_t* strings as input whereas the Python filesystem encoding is set during the initialization which can lead to mojibake. Python 3.7 APIs like Py_Initialize() aborts the process on memory allocation failure which is not convenient when Python is embedded. Moreover, Py_Main() could exit directly the process rather than returning an exit code. Proposed new API reports the error or exit code to the caller which can decide how to handle it. Implementing the PEP 540 (UTF-8 Mode) and the new -X dev correctly was almost impossible in Python 3.6. The code base has been deeply reworked in Python 3.7 and then in Python 3.8 to read the configuration into a structure with no side effect. It becomes possible to clear the configuration (release memory) and read again the configuration if the encoding changed . It is required to implement properly the UTF-8 which changes the encoding using -X utf8 command line option. Internally, bytes argv strings are decoded from the filesystem encoding. The -X dev changes the memory allocator (behaves as PYTHONMALLOC\u003ddebug), whereas it was not possible to change the memory allocation while parsing the command line arguments. The new design of the internal implementation not only allowed to implement properly -X utf8 and -X dev, it also allows to change the Python behavior way more easily, especially for corner cases like that, and ensure that the configuration remains consistent: see Priority and Rules. This PEP is a partial implementation of PEP 432 which is the overall design. New fields can be added later to PyConfig structure to finish the implementation of the PEP 432 (e.g. by adding a new partial initialization AP",
+    "scrapedAt": "2026-05-09 00:58:29.194483"
+  },
+  {
+    "id": 909,
+    "url": "https://peps.python.org/pep-0563/",
+    "title": "PEP 563 – Postponed Evaluation of Annotations | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 563 – Postponed Evaluation of Annotations PEP 563 – Postponed Evaluation of Annotations Author: Łukasz Langa \u003clukasz at python.org\u003e Discussions-To: Python-Dev list Status: Superseded Type: Standards Track Topic: Typing Created: 08-Sep-2017 Python-Version: 3.7 Post-History: 01-Nov-2017, 21-Nov-2017 Superseded-By: 649, 749 Resolution: Python-Dev message Table of Contents Resolution Abstract Rationale and Goals Non-goals Non-typing usage of annotations Implementation Enabling the future behavior in Python 3.7 Resolving Type Hints at Runtime Runtime annotation resolution and class decorators Runtime annotation resolution and TYPE_CHECKING Backwards Compatibility Deprecation policy Forward References Rejected Ideas Keeping the ability to use function local state when defining annotations Disallowing local state usage for classes, too Introducing a new dictionary for the string literal form instead Dropping annotations with -O Passing string literals in annotations verbatim to __annotations__ Making the name of the future import more verbose Prior discussion In PEP 484 python/typing#400 First draft discussion on python-ideas Second draft discussion on python-dev Acknowledgements Copyright Resolution The features proposed in this PEP never became the default behaviour, and have been replaced with deferred evaluation of annotations, as proposed by PEP 649 and PEP 749. Abstract PEP 3107 introduced syntax for function annotations, but the semantics were deliberately left undefined. PEP 484 introduced a standard meaning to annotations: type hints. PEP 526 defined variable annotations, explicitly tying them with the type hinting use case. This PEP proposes changing function annotations and variable annotations so that they are no longer evaluated at function definition time. Instead, they are preserved in __annotations__ in string form. This change is being introduced gradually, starting with a __future__ import in Python 3.7. Rationale and Goals PEP 3107 added support for arbitrary annotations on parts of a function definition. Just like default values, annotations are evaluated at function definition time. This creates a number of issues for the type hinting use case: forward references: when a type hint contains names that have not been defined yet, that definition needs to be expressed as a string literal; type hints are executed at module import time, which is not computationally free. Postponing the evaluation of annotations solves both problems. NOTE: PEP 649 proposes an alternative solution to the above issues, putting this PEP in danger of being superseded. Non-goals Just like in PEP 484 and PEP 526, it should be emphasized that Python will remain a dynamically typed language, and the authors have no desire to ever make type hints mandatory, even by convention. This PEP is meant to solve the problem of forward references in type annotations. There are still cases outside of annotations where forward references will require usage of string literals. Those are listed in a later section of this document. Annotations without forced evaluation enable opportunities to improve the syntax of type hints. This idea will require its own separate PEP and is not discussed further in this document. Non-typing usage of annotations While annotations are still available for arbitrary use besides type checking, it is worth mentioning that the design of this PEP, as well as its precursors (PEP 484 and PEP 526), is predominantly motivated by the type hinting use case. In Python 3.8 PEP 484 will graduate from provisional status. Other enhancements to the Python programming language like PEP 544, PEP 557, or PEP 560, are already being built on this basis as they depend on type annotations and the typing module as defined by PEP 484. In fact, the reason PEP 484 is staying provisional in Python 3.7 is to enable rapid evolution for another release cycle that some of the aforementioned enhancements require. With this in mind, uses for annotations incompatible with the aforementioned PEPs should be considered deprecated. Implementation With this PEP, function and variable annotations will no longer be evaluated at definition time. Instead, a string form will be preserved in the respective __annotations__ dictionary. Static type checkers will see no difference in behavior, whereas tools using annotations at runtime will have to perform postponed evaluation. The string form is obtained from the AST during the compilation step, which means that the string form might not preserve the exact formatting of the source. Note: if an annotation was a string literal already, it will still be wrapped in a string. Annotations need to be syntactically valid Python expressions, also when passed as literal strings (i.e. compile(literal, \u0027\u0027, \u0027eval\u0027)). Annotations can only use names present in the module scope as postponed evaluation using local names is not reliab",
+    "scrapedAt": "2026-05-09 00:58:27.919423"
+  },
+  {
     "id": 908,
     "url": "https://docs.python.org/3/library/ctypes.html#ctypes.util.dllist",
     "title": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
@@ -6053,26 +6088,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 909,
-    "url": "https://peps.python.org/pep-0563/"
-  },
-  {
-    "id": 910,
-    "url": "https://peps.python.org/pep-0587/"
-  },
-  {
-    "id": 911,
-    "url": "https://docs.python.org/3/library/exceptions.html#UnicodeError"
-  },
-  {
-    "id": 912,
-    "url": "https://docs.python.org/3/library/io.html#io.Writer"
-  },
-  {
-    "id": 913,
-    "url": "https://github.com/python/cpython/issues/84559"
   },
   {
     "id": 914,
@@ -154725,10 +154740,1178 @@ window.searchData = [
     "id": 131671,
     "url": "https://github.com/python/cpython/pull/122165",
     "parentUrl": "https://github.com/python/cpython/issues/122163"
+  },
+  {
+    "id": 131915,
+    "url": "https://peps.python.org/pep-0563/#non-goals",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131916,
+    "url": "https://peps.python.org/topic/typing/",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131917,
+    "url": "https://mail.python.org/pipermail/python-dev/2017-December/151042.html",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131920,
+    "url": "https://peps.python.org/pep-0563/#disallowing-local-state-usage-for-classes-too",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131921,
+    "url": "https://mail.python.org/pipermail/python-dev/2017-November/150062.html",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131922,
+    "url": "https://peps.python.org/pep-0563/#runtime-annotation-resolution-and-class-decorators",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131924,
+    "url": "https://github.com/python/cpython/pull/4390",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131926,
+    "url": "https://peps.python.org/pep-0563/#resolution",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131927,
+    "url": "https://peps.python.org/pep-0563/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131928,
+    "url": "https://peps.python.org/pep-0557/",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131929,
+    "url": "https://peps.python.org/pep-0563/#passing-string-literals-in-annotations-verbatim-to-annotations",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131930,
+    "url": "https://peps.python.org/pep-0563/#python-typing-400",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131931,
+    "url": "https://mail.python.org/pipermail/python-ideas/2017-September/thread.html#47031",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131932,
+    "url": "https://peps.python.org/pep-0563/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131933,
+    "url": "https://peps.python.org/pep-0563/#in-pep-484",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131934,
+    "url": "https://github.com/python/typing/issues/400",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131936,
+    "url": "https://peps.python.org/pep-0563/#enabling-the-future-behavior-in-python-3-7",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131937,
+    "url": "https://mail.python.org/pipermail/python-ideas/2017-September/thread.html#47108",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131938,
+    "url": "https://peps.python.org/pep-0563/#runtime-annotation-resolution-and-type-checking",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131939,
+    "url": "https://peps.python.org/pep-0563/#dropping-annotations-with-o",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131940,
+    "url": "https://mail.python.org/pipermail/python-dev/2017-November/150141.html",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131941,
+    "url": "https://peps.python.org/pep-0563/#keeping-the-ability-to-use-function-local-state-when-defining-annotations",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131942,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0563.rst",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131943,
+    "url": "https://peps.python.org/pep-0563/#deprecation-policy",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131944,
+    "url": "https://peps.python.org/pep-0563/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131945,
+    "url": "https://mail.python.org/pipermail/python-dev/2017-November/150637.html",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131946,
+    "url": "https://peps.python.org/pep-0563/#resolving-type-hints-at-runtime",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131947,
+    "url": "https://peps.python.org/pep-0563/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131948,
+    "url": "https://peps.python.org/pep-0563/#making-the-name-of-the-future-import-more-verbose",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131949,
+    "url": "https://peps.python.org/pep-0563/#implementation",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131951,
+    "url": "https://mail.python.org/archives/list/python-dev@python.org/",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131952,
+    "url": "https://peps.python.org/pep-0563/#prior-discussion",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131953,
+    "url": "https://peps.python.org/pep-0563/#second-draft-discussion-on-python-dev",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131954,
+    "url": "https://peps.python.org/pep-0563/#rationale-and-goals",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131955,
+    "url": "https://peps.python.org/pep-0563/#first-draft-discussion-on-python-ideas",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131956,
+    "url": "https://peps.python.org/pep-0563/#non-typing-usage-of-annotations",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131957,
+    "url": "https://peps.python.org/pep-0563/#acknowledgements",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131958,
+    "url": "https://peps.python.org/pep-0563/#introducing-a-new-dictionary-for-the-string-literal-form-instead",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131959,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0563.rst",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131960,
+    "url": "https://peps.python.org/pep-0563/#forward-references",
+    "parentUrl": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 131963,
+    "url": "https://peps.python.org/pep-0587/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131964,
+    "url": "https://peps.python.org/pep-0587/#multi-phase-initialization-private-provisional-api",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131965,
+    "url": "https://bugs.python.org/issue34639",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131966,
+    "url": "https://discuss.python.org/t/adding-char-based-apis-for-unix/916",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131967,
+    "url": "https://bugs.python.org/issue31845",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131968,
+    "url": "https://peps.python.org/pep-0587/#python-3-7-api",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131969,
+    "url": "https://bugs.python.org/issue13533",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131970,
+    "url": "https://bugs.python.org/issue32573",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131971,
+    "url": "https://bugs.python.org/issue16961",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131972,
+    "url": "https://bugs.python.org/issue16202",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131973,
+    "url": "https://bugs.python.org/issue36775",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131974,
+    "url": "https://mail.python.org/pipermail/python-dev/2018-August/154896.html",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131975,
+    "url": "https://bugs.python.org/issue22213",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131976,
+    "url": "https://bugs.python.org/issue22257",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131978,
+    "url": "https://mail.python.org/pipermail/python-dev/2019-May/157435.html",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131979,
+    "url": "https://peps.python.org/pep-0587/#default-isolated-configuration",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131980,
+    "url": "https://peps.python.org/pep-0587/#x-options",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131981,
+    "url": "https://mail.python.org/pipermail/python-dev/2019-May/157290.html",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131982,
+    "url": "https://mail.python.org/pipermail/python-dev/2019-May/157721.html",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131983,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0587.rst",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131984,
+    "url": "https://mail.python.org/pipermail/python-dev/2019-March/156892.html",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131985,
+    "url": "https://mail.python.org/pipermail/python-dev/2019-March/156884.html",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131986,
+    "url": "https://peps.python.org/pep-0587/#py-runmain",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131987,
+    "url": "https://bugs.python.org/issue34008",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131988,
+    "url": "https://bugs.python.org/issue36900",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131989,
+    "url": "https://peps.python.org/pep-0587/#annexes",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131990,
+    "url": "https://peps.python.org/pep-0587/#pywidestringlist",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131991,
+    "url": "https://peps.python.org/pep-0587/#initialization-with-pyconfig",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131992,
+    "url": "https://peps.python.org/pep-0587/#configuration-files",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131993,
+    "url": "https://peps.python.org/pep-0587/#preinitialization-with-pypreconfig",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131994,
+    "url": "https://bugs.python.org/issue34725",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131995,
+    "url": "https://bugs.python.org/issue12598",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131996,
+    "url": "https://peps.python.org/pep-0587/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131997,
+    "url": "https://bugs.python.org/issue36142",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131998,
+    "url": "https://peps.python.org/pep-0587/#priority-and-rules",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 131999,
+    "url": "https://bugs.python.org/issue36301",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132000,
+    "url": "https://bugs.python.org/issue31210",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132001,
+    "url": "https://bugs.python.org/issue30560",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132002,
+    "url": "https://peps.python.org/pep-0587/#python-issues",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132005,
+    "url": "https://peps.python.org/pep-0587/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132006,
+    "url": "https://bugs.python.org/issue29818",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132007,
+    "url": "https://bugs.python.org/issue35173",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132008,
+    "url": "https://peps.python.org/pep-0587/#path-configuration",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132009,
+    "url": "https://peps.python.org/pep-0587/#comparison-of-python-and-isolated-configurations",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132010,
+    "url": "https://bugs.python.org/issue29778",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132011,
+    "url": "https://peps.python.org/pep-0587/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132012,
+    "url": "https://bugs.python.org/issue20361",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132013,
+    "url": "https://peps.python.org/pep-0587/#python-configuration",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132014,
+    "url": "https://bugs.python.org/issue31745",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132015,
+    "url": "https://bugs.python.org/issue31349",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132016,
+    "url": "https://bugs.python.org/issue33042",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132018,
+    "url": "https://bugs.python.org/issue15577",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132019,
+    "url": "https://peps.python.org/pep-0587/#global-configuration-variables",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132020,
+    "url": "https://bugs.python.org/issue32030",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132021,
+    "url": "https://bugs.python.org/issue1195571",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132022,
+    "url": "https://bugs.python.org/issue19983",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132024,
+    "url": "https://bugs.python.org/issue36471",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132025,
+    "url": "https://bugs.python.org/issue34170",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132026,
+    "url": "https://peps.python.org/pep-0587/#pystatus",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132027,
+    "url": "https://mail.python.org/pipermail/python-dev/2019-May/157385.html",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132028,
+    "url": "https://peps.python.org/pep-0587/#acceptance",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132029,
+    "url": "https://bugs.python.org/issue33919",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132030,
+    "url": "https://peps.python.org/pep-0587/#discussions",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132031,
+    "url": "https://bugs.python.org/issue32124",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132032,
+    "url": "https://peps.python.org/pep-0587/#default-python-configuration",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132033,
+    "url": "https://bugs.python.org/issue34589",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132034,
+    "url": "https://bugs.python.org/issue14956",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132035,
+    "url": "https://peps.python.org/pep-0587/#isolated-configuration",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132036,
+    "url": "https://peps.python.org/pep-0587/#version-history",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132037,
+    "url": "https://docs.python.org/dev/c-api/init.html",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132038,
+    "url": "https://bugs.python.org/issue33932",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132039,
+    "url": "https://peps.python.org/pep-0587/#command-line-arguments",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132040,
+    "url": "https://bugs.python.org/issue11320",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132041,
+    "url": "https://mail.python.org/pipermail/python-dev/2019-May/157492.html",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132042,
+    "url": "https://bugs.python.org/issue36204",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132043,
+    "url": "https://bugs.python.org/issue33135",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132044,
+    "url": "https://bugs.python.org/issue36202",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132045,
+    "url": "https://bugs.python.org/issue36444",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132046,
+    "url": "https://bugs.python.org/issue36763",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132047,
+    "url": "https://bugs.python.org/issue36443",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132048,
+    "url": "https://mail.python.org/pipermail/python-dev/2018-July/154882.html",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132049,
+    "url": "https://peps.python.org/pep-0587/#python-initialization-c-api",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132050,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0587.rst",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132052,
+    "url": "https://peps.python.org/pep-0587/#environment-variables",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132053,
+    "url": "https://bugs.python.org/issue25631",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132054,
+    "url": "https://bugs.python.org/issue18309",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132055,
+    "url": "https://bugs.python.org/issue26007",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132056,
+    "url": "https://peps.python.org/pep-0587/#py-bytesmain",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132057,
+    "url": "https://bugs.python.org/issue26122",
+    "parentUrl": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 132287,
+    "url": "https://docs.python.org/3/library/io.html#raw-file-i-o",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132288,
+    "url": "https://docs.python.org/3/library/io.html#io.BytesIO.getvalue",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132290,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.writable",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132291,
+    "url": "https://docs.python.org/3/library/os.html#os.read",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132292,
+    "url": "https://docs.python.org/3/library/io.html#io-text-encoding",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132293,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedReader.read1",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132294,
+    "url": "https://docs.python.org/3/library/io.html#io.IncrementalNewlineDecoder",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132295,
+    "url": "https://docs.python.org/3/library/io.html#performance",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132297,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.flush",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132299,
+    "url": "https://docs.python.org/3/library/io.html#io.Reader.read",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132303,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedIOBase.readinto",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132306,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOBase.detach",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132311,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.closed",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132314,
+    "url": "https://docs.python.org/3/library/io.html#io.BlockingIOError",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132316,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132317,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.readable",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132320,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOBase.seek",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132322,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOBase.newlines",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132323,
+    "url": "https://docs.python.org/3/library/io.html#overview",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132324,
+    "url": "https://docs.python.org/3/library/os.html#os.SEEK_HOLE",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132326,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOWrapper.tell",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132327,
+    "url": "https://docs.python.org/3/c-api/file.html#c.PyFile_SetOpenCodeHook",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132329,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOWrapper.write_through",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132330,
+    "url": "https://docs.python.org/3/library/io.html#io.UnsupportedOperation",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132333,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedIOBase.readinto1",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132334,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedIOBase.detach",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132335,
+    "url": "https://docs.python.org/3/library/io.html#io.BytesIO.read1",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132336,
+    "url": "https://docs.python.org/3/library/io.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132337,
+    "url": "https://docs.python.org/3/library/io.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132338,
+    "url": "https://docs.python.org/3/library/io.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132347,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedIOBase.raw",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132348,
+    "url": "https://peps.python.org/pep-0686/",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132350,
+    "url": "https://docs.python.org/3/library/io.html#io.RawIOBase.readinto",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132352,
+    "url": "https://docs.python.org/3/library/io.html#high-level-module-interface",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132353,
+    "url": "https://docs.python.org/3/library/io.html#io.Writer.write",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132357,
+    "url": "https://manpages.debian.org/read(2)",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132359,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOBase.encoding",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132360,
+    "url": "https://docs.python.org/3/library/io.html#text-encoding",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132361,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOBase.tell",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132362,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOBase.errors",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132363,
+    "url": "https://docs.python.org/3/library/io.html#",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132364,
+    "url": "https://docs.python.org/3/library/io.html#i-o-base-classes",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132367,
+    "url": "https://docs.python.org/3/library/io.html#multi-threading",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132370,
+    "url": "https://docs.python.org/3/library/io.html#class-hierarchy",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132371,
+    "url": "https://docs.python.org/3/library/io.html#io.text_encoding",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132372,
+    "url": "https://docs.python.org/3/library/io.html#io.open",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132377,
+    "url": "https://docs.python.org/3/library/io.html#buffered-streams",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132382,
+    "url": "https://docs.python.org/3/library/io.html#opt-in-encodingwarning",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132388,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/io.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132389,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedWriter.flush",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132392,
+    "url": "https://docs.python.org/3/library/io.html#text-i-o",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132393,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/io.py",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132395,
+    "url": "https://docs.python.org/3/library/io.html#io.RawIOBase.readall",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132398,
+    "url": "https://docs.python.org/3/library/io.html#io.BytesIO.getbuffer",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132399,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.seekable",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132400,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.writelines",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132402,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.__del__",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132403,
+    "url": "https://docs.python.org/3/library/io.html#io.BytesIO.readinto1",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132406,
+    "url": "https://docs.python.org/3/library/io.html#io.FileIO.mode",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132407,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.truncate",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132409,
+    "url": "https://docs.python.org/3/library/io.html#raw-i-o",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132410,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedIOBase.read1",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132411,
+    "url": "https://docs.python.org/3/library/io.html#io.StringIO.getvalue",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132413,
+    "url": "https://docs.python.org/3/library/io.html#reentrancy",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132417,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOWrapper.line_buffering",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132418,
+    "url": "https://docs.python.org/3/library/typing.html#typing-io",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132420,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedWriter.write",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132422,
+    "url": "https://peps.python.org/pep-0597/",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132425,
+    "url": "https://docs.python.org/3/library/os.html#os.SEEK_DATA",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132430,
+    "url": "https://docs.python.org/3/library/io.html#static-typing",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132433,
+    "url": "https://docs.python.org/3/library/io.html#binary-i-o",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132436,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOWrapper.seek",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132440,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedRWPair",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132441,
+    "url": "https://docs.python.org/3/library/io.html#io.DEFAULT_BUFFER_SIZE",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132445,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedReader.peek",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132446,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOBase.readline",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132447,
+    "url": "https://docs.python.org/3/library/io.html#io.open_code",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132448,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOBase.write",
+    "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132451,
+    "url": "https://github.com/Julian",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132452,
+    "url": "https://github.com/python/cpython/issues/84559#top",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132453,
+    "url": "https://github.com/applio",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132454,
+    "url": "https://github.com/python/cpython/pull/100618",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132455,
+    "url": "https://github.com/python/cpython/pull/137156",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132456,
+    "url": "https://github.com/python/cpython/issues/84559#issue-1199034942",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132457,
+    "url": "https://github.com/mgorny",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132459,
+    "url": "https://github.com/python/cpython/issues/84559#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132464,
+    "url": "https://github.com/python/cpython/pull/128173",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132468,
+    "url": "https://github.com/wimglenn",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132469,
+    "url": "https://github.com/itamarst",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132470,
+    "url": "https://bugs.python.org/issue40379",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132471,
+    "url": "https://github.com/python/cpython/pull/101556",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132472,
+    "url": "https://github.com/python/cpython/pull/101530",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132473,
+    "url": "https://github.com/python/cpython/pull/126697",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132474,
+    "url": "https://github.com/python/cpython/pull/127467",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132475,
+    "url": "https://github.com/python/cpython/pull/101551",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d64\u0026v\u003d4",
+    "alt": "gpshead",
+    "pageTitle": "multiprocessing\u0027s default posix start method of `\u0027fork\u0027` is broken: change to ``\u0027forkserver\u0027 || \u0027spawn\u0027` · Issue #84559 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93802660?v\u003d4\u0026size\u003d80",
+    "alt": "@itamarst",
+    "pageTitle": "multiprocessing\u0027s default posix start method of `\u0027fork\u0027` is broken: change to ``\u0027forkserver\u0027 || \u0027spawn\u0027` · Issue #84559 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93802660?v\u003d4\u0026size\u003d48",
+    "alt": "@itamarst",
+    "pageTitle": "multiprocessing\u0027s default posix start method of `\u0027fork\u0027` is broken: change to ``\u0027forkserver\u0027 || \u0027spawn\u0027` · Issue #84559 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d64\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "multiprocessing\u0027s default posix start method of `\u0027fork\u0027` is broken: change to ``\u0027forkserver\u0027 || \u0027spawn\u0027` · Issue #84559 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "io — Core tools for working with streams — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "io — Core tools for working with streams — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#UnicodeError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#UnicodeError"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
