@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1507,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.DefaultEventLoopPolicy",
+    "title": "Policies — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | Policies¶ Warning Policies are deprecated and will be removed in Python 3.16. Users are encouraged to use the asyncio.run() function or the asyncio.Runner with loop_factory to use the desired loop implementation. An event loop policy is a global object used to get and set the current event loop, as well as create new event loops. The default policy can be replaced with built-in alternatives to use different event loop implementations, or substituted by a custom policy that can override these behaviors. The policy object gets and sets a separate event loop per context. This is per-thread by default, though custom policies could define context differently. Custom event loop policies can control the behavior of get_event_loop(), set_event_loop(), and new_event_loop(). Policy objects should implement the APIs defined in the AbstractEventLoopPolicy abstract base class. Getting and Setting the Policy¶ The following functions can be used to get and set the policy for the current process: asyncio.get_event_loop_policy()¶ Return the current process-wide policy. Deprecated since version 3.14: The get_event_loop_policy() function is deprecated and will be removed in Python 3.16. asyncio.set_event_loop_policy(policy)¶ Set the current process-wide policy to policy. If policy is set to None, the default policy is restored. Deprecated since version 3.14: The set_event_loop_policy() function is deprecated and will be removed in Python 3.16. Policy Objects¶ The abstract event loop policy base class is defined as follows: class asyncio.AbstractEventLoopPolicy¶ An abstract base class for asyncio policies. get_event_loop()¶ Get the event loop for the current context. Return an event loop object implementing the AbstractEventLoop interface. This method should never return None. Changed in version 3.6. set_event_loop(loop)¶ Set the event loop for the current context to loop. new_event_loop()¶ Create and return a new event loop object. This method should never return None. Deprecated since version 3.14: The AbstractEventLoopPolicy class is deprecated and will be removed in Python 3.16. asyncio ships with the following built-in policies: class asyncio.DefaultEventLoopPolicy¶ The default asyncio policy. Uses SelectorEventLoop on Unix and ProactorEventLoop on Windows. There is no need to install the default policy manually. asyncio is configured to use the default policy automatically. Changed in version 3.8: On Windows, ProactorEventLoop is now used by default. Changed in version 3.14: The get_event_loop() method of the default asyncio policy now raises a RuntimeError if there is no set event loop. Deprecated since version 3.14: The DefaultEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsSelectorEventLoopPolicy¶ An alternative event loop policy that uses the SelectorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsSelectorEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsProactorEventLoopPolicy¶ An alternative event loop policy that uses the ProactorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsProactorEventLoopPolicy class is deprecated and will be removed in Python 3.16. Custom Policies¶ To implement a new event loop policy, it is recommended to subclass DefaultEventLoopPolicy and override the methods for which custom behavior is wanted, e.g.: class MyEventLoopPolicy(asyncio.DefaultEventLoopPolicy):\n\n    def get_event_loop(self):\n        \"\"\"Get the event loop.\n\n        This may be None or an instance of EventLoop.\n        \"\"\"\n        loop \u003d super().get_event_loop()\n        # Do something with loop ...\n        return loop\n\nasyncio.set_event_loop_policy(MyEventLoopPolicy())\n Table of Contents Policies Getting and Setting the Policy Policy Objects Custom Policies Previous topic Transports and Protocols Next topic Platform Support This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 01:22:41.059763"
+  },
+  {
+    "id": 1506,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id2",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:22:39.824653"
+  },
+  {
+    "id": 1505,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-improved-error-messages",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:22:38.53956"
+  },
+  {
+    "id": 1504,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id3",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:22:37.234392"
+  },
+  {
+    "id": 1503,
+    "url": "https://github.com/python/cpython/issues/124456",
+    "title": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member savannahostrowski commented Sep 24, 2024 • edited by github-actions Bot Loading Uh oh! There was an error while loading. Please reload this page. This PR carries #99773 forward with the original author\u0027s go-ahead (thanks @abdulrafey38!). This adds the ability for ArgumentParser to offer suggestions for mistyped argument choices or subparser names. This PR adds this as an optional feature via the suggest_on_error param (default: False). I have opted to not make this configurable at the subparser or argument level and instead at the parser level to keep this simple. We could consider additional granularity but I\u0027m not convinced that this is required at this time. Issue: Add “maybe you meant” in argparse choices argument #99749 📚 Documentation preview 📚: https://cpython-previews--124456.org.readthedocs.build/ Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👀 1 danielhollas reacted with eyes emoji All reactions 👀 1 reaction abdulrafey38 and others added 28 commits November 25, 2022 17:07 Add closet choice if exists in argparser if wrong choice picked ef8e4fc 📜🤖 Added by blurb_it. 7e8dcf8 Fix documentation 8c754cd Added EOL 🔨 4fb8ce6 Test cases updated for argparser 2f197b3 Fixed typo errors 🔨 940a66e Test case fix 🔨 badc5ed Fixed test cse error msg 🔨 2588ef1 Fixed error test case assert msg 🔨 ee05c1e assertion fix 🔨 4a36406 assertion test case fix fe169bc Test Case fix 9fe0d95 Reveet to assertRegex from assertEqual d12e1c4 Remove unused imports 🔨 35f0961 assertion msg fixed 🔨 087895c test cases fixed 🔨 6eeae5c assert fix 9965694 assertion fix 4ef218a revert testing e63a01c test: hammer: bfc9262 fixed b3b4a9e PR review changes 🔨 b8bc465 test case fix 🔨 ade070f test case fixation assertIn 3753a0d Merge branch \u0027main\u0027 into pythongh-99773 2b802ec Rework to add tests and make optional f516bb4 Add to docs c9b40f5 Add implicit test case 981bacd savannahostrowski added stdlib Standard Library Python modules in the Lib/ directory 3.14 bugs and security fixes labels Sep 24, 2024 40 hidden items Load more… add pr comment 8e4793c serhiy-storchaka approved these changes Sep 26, 2024 View reviewed changes Copy link Copy Markdown Member serhiy-storchaka left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment LGTM. This PR slightly conflicts with #117766. After merging one of them, the other one should be updated. I am not sure what of them should be merged first. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Contributor rindeal commented Sep 26, 2024 This PR slightly conflicts with #117766. After merging one of them, the other one should be updated. I am not sure what of them should be merged first. A fix should definitely precede a new feature. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. savannahostrowski added 5 commits October 11, 2024 16:41 merge main b782fbc fix merge conflict 73c4bd3 Merge branch \u0027main\u0027 into pythongh-99773 d2c665d Appease linter d1daff1 Merge branch \u0027pythongh-99773\u0027 of https://github.com/savannahostrowski… … f57b4dc …/cpython into pythongh-99773 savannahostrowski added the type-feature A feature request or enhancement label Oct 12, 2024 Merge branch \u0027main\u0027 into pythongh-99773 f2f67e7 serhiy-storchaka reviewed Oct 16, 2024 View reviewed changes Comment thread Lib/test/test_argparse.py Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. serhiy-storchaka reviewed Oct 16, 2024 View reviewed changes Comment thread Misc/NEWS.d/next/Library/2024-09-24-18-49-16.gh-issue-99749.gBDJX7.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. savannahostrowski and others added 5 commits October 16, 2024 20:03 Update Misc/NEWS.d/next/Library/2024-09-24-18-49-16.gh-issue-99749.gB… … 3d9bbb4 …DJX7.rst\n\nCo-authored-by: Serhiy Storchaka \u003cstorchaka@gmail.com\u003e Merge branch \u0027main\u0027 into pythongh-99773 c494469 Test whole line 05dc55c Merge branch \u0027pythongh-99773\u0027 of https://github.com/savannahostrowski… … 68b9383 …/cpython into pythongh-99773 Fix line length f2781cc serhiy-storchaka approved these changes Oct 17, 2024 View reviewed cha",
+    "scrapedAt": "2026-05-09 01:22:35.90245"
+  },
+  {
     "id": 1502,
     "url": "https://github.com/python/cpython/issues/129902",
     "title": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
@@ -10113,26 +10148,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1503,
-    "url": "https://github.com/python/cpython/issues/124456"
-  },
-  {
-    "id": 1504,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#id3"
-  },
-  {
-    "id": 1505,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-improved-error-messages"
-  },
-  {
-    "id": 1506,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#id2"
-  },
-  {
-    "id": 1507,
-    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.DefaultEventLoopPolicy"
   },
   {
     "id": 1508,
@@ -236885,10 +236900,992 @@ window.searchData = [
     "id": 314303,
     "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652311900",
     "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 314304,
+    "url": "https://github.com/python/cpython/pull/124456/commits/7e8dcf87908e012a64cc56ff3275893d87cf9307",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314305,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F124456",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314306,
+    "url": "https://github.com/python/cpython/pull/124456#event-14693952550",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314308,
+    "url": "https://github.com/ebonnal/cpython/commit/7fb9a9042b9df901afb99413c3c42730fc4d2790",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314309,
+    "url": "https://github.com/python/cpython/pull/124456/commits/3d9bbb4c5f45296b6c3b1f443a58ed004a4cefa6",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314310,
+    "url": "https://github.com/python/cpython/pull/124456/commits/087895c645157587d53f1069fa9658008f65af3a",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314312,
+    "url": "https://github.com/python/cpython/pull/124456/files/f2f67e702be3e2d09feddb47287cf2f3388845d3",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314313,
+    "url": "https://github.com/python/cpython/pull/124456#commits-pushed-3d9bbb4",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314315,
+    "url": "https://github.com/abdulrafey38",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314316,
+    "url": "https://github.com/python/cpython/pull/124456/commits/68b9383a7c50a6ee6873016f49a5d4c13899ba89",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314317,
+    "url": "https://github.com/python/cpython/pull/124456#ref-issue-2681696371",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314318,
+    "url": "https://github.com/python/cpython/issues/127134",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314319,
+    "url": "https://cpython-previews--124456.org.readthedocs.build/",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314320,
+    "url": "https://github.com/python/cpython/pull/124456#ref-commit-7fb9a90",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314321,
+    "url": "https://github.com/python/cpython/pull/124456/commits/ade070fc575613d6d2a9eb7a7b75f954026c0800",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314322,
+    "url": "https://github.com/ebonnal/cpython/commit/925417c3dab8f1a138cec112d99bf4c798f1a9b9",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314323,
+    "url": "https://github.com/python/cpython/pull/124456/commits/b8bc465b07d5bce0361c6d62dd427e07fce7ab22",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314325,
+    "url": "https://github.com/python/cpython/pull/124456#ref-pullrequest-3041253992",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314326,
+    "url": "https://github.com/python/cpython/pull/124456/files/f2f67e702be3e2d09feddb47287cf2f3388845d3#diff-c7651634d84a017884451f95f6535a1d2efbeacee1cca7cc1e27fdc748804aa1",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314328,
+    "url": "https://github.com/mmingyu/typeshed/commit/fc6a13f78d7a6b5311f9eb95fa6e954c97427d56",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314330,
+    "url": "https://github.com/python/cpython/pull/124456/commits/c9b40f57d3cc9f177247a8202c3a8fad6966c2e2",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314332,
+    "url": "https://github.com/python/cpython/pull/124456#pullrequestreview-2365673742",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314333,
+    "url": "https://github.com/python/cpython/pull/124456#pullrequestreview-2332029484",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314334,
+    "url": "https://github.com/python/cpython/pull/124456#ref-commit-fc6a13f",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314335,
+    "url": "https://github.com/python/cpython/pull/124456/commits/f2f67e702be3e2d09feddb47287cf2f3388845d3",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314336,
+    "url": "https://github.com/python/cpython/pull/124456/commits/981bacdc72c4d4da4636b09a4c60268ad0507e65",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314337,
+    "url": "https://github.com/python/cpython/pull/124456/commits/05dc55c2149c1599e84ae8b01a7f3e87974980db",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314338,
+    "url": "https://github.com/python/cpython/pull/124456#ref-commit-84074a4",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314339,
+    "url": "https://github.com/python/cpython/pull/124456/commits/73c4bd31027f8cec011ce594821c16c4d6f0e6a0",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314340,
+    "url": "https://github.com/python/cpython/pull/124456#ref-commit-925417c",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314344,
+    "url": "https://github.com/python/cpython/pull/124456/commits/9965694e969de8fbf9fe1279ddf5fed2207170a7",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314347,
+    "url": "https://github.com/python/cpython/pull/124456/commits/8c754cd701eadd65ac7a92d4d917644acd42563d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314348,
+    "url": "https://github.com/python/cpython/pull/124456/commits/2f197b37c5b57942a78fa74eb1c659d11b7b9974",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314349,
+    "url": "https://github.com/python/cpython/pull/124456/commits/e63a01c1fe01813770119ad826f44d8579805ddf",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314350,
+    "url": "https://github.com/python/cpython/pull/124456/files/8e4793c3c0b73de105b109775e08238e2b17b13c",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314351,
+    "url": "https://github.com/python/cpython/pull/124456#pullrequestreview-2373319623",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314352,
+    "url": "https://github.com/hingebase/mahoraga/issues/1",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314353,
+    "url": "https://github.com/python/cpython/pull/99773",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314354,
+    "url": "https://github.com/hingebase",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314355,
+    "url": "https://github.com/python/cpython/pull/124456/commits/badc5ed65e5d2aac27676968f54efa53c32c26db",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314356,
+    "url": "https://github.com/python/cpython/pull/124456/commits/35f09613333de90602eb1e91034a2ef5799bfa4d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314357,
+    "url": "https://github.com/python/cpython/pull/124456/commits/f2781cce05d2d89f4f0d28d921ce00a426e7190d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314358,
+    "url": "https://github.com/python/cpython/pull/124456/commits/d2c665d8f812400bac933c2ca3f432a34f6c633d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314359,
+    "url": "https://github.com/python/cpython/pull/144985",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314362,
+    "url": "https://github.com/python/cpython/pull/124456/commits/9fe0d95ff5014ed84cdf354a5367f5b3fd23b2c1",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314363,
+    "url": "https://github.com/python/cpython/pull/125671",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314364,
+    "url": "https://github.com/python/cpython/pull/124456#commits-pushed-b782fbc",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314366,
+    "url": "https://github.com/python/cpython/pull/124456/commits/4a364068c21f84e4629b24b65a0e0f2163d27f5f",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314367,
+    "url": "https://github.com/python/typeshed/pull/13947",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314368,
+    "url": "https://github.com/python/cpython/pull/124456#issuecomment-2378103501",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314369,
+    "url": "https://github.com/python/cpython/pull/124456/commits/ef8e4fc483f28890bbc52235c5b08499bee93d39",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314370,
+    "url": "https://github.com/python/cpython/pull/124456/commits/d12e1c4fe64d3ea2ebb2b32a14652b78de4f8edd",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314371,
+    "url": "https://github.com/python/cpython/pull/124456#ref-commit-3f8a48f",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314372,
+    "url": "https://github.com/python/cpython/pull/124456/commits/b782fbccb91e89be5a94f9c2a084ed95366c35d0",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314373,
+    "url": "https://github.com/python/cpython/pull/124456/commits/4fb8ce670e23962abf459dbfef554ee2aa3d7460",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314374,
+    "url": "https://github.com/python/cpython/pull/124456/commits/8e4793c3c0b73de105b109775e08238e2b17b13c",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314377,
+    "url": "https://github.com/python/cpython/pull/124456/commits/4ef218a17fd0c6614be04735235195cb3a9697ce",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314378,
+    "url": "https://github.com/python/cpython/pull/124456/commits/f57b4dc84ff3918b591fadbda9d43d9d58c77c0d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314379,
+    "url": "https://github.com/python/cpython/pull/124456#ref-issue-3048455043",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314380,
+    "url": "https://github.com/python/cpython/pull/124456/commits/c49446929ba1935251e693d2e64e8f54462caecf",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314381,
+    "url": "https://github.com/python/cpython/pull/124456/files/f2781cce05d2d89f4f0d28d921ce00a426e7190d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314382,
+    "url": "https://github.com/python/cpython/pull/124456/commits/2b802eca6e3d24133ff1adb2de086e5c7c4cc0a9",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314383,
+    "url": "https://github.com/python/typeshed/commit/3f8a48f6cc8c8b2a85f7e4a2a87e20f7d15e51ef",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314384,
+    "url": "https://github.com/python/cpython/commit/84074a4fd810948350cec5500e77dc974cb5433d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314385,
+    "url": "https://github.com/python/cpython/pull/124456#ref-issue-2921677483",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314387,
+    "url": "https://github.com/savannahostrowski",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314388,
+    "url": "https://github.com/python/cpython/pull/124456/commits/6eeae5cd964da52025e0ad95c726c9a60bef67bb",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314389,
+    "url": "https://github.com/python/cpython/pull/117766",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314390,
+    "url": "https://github.com/python/cpython/pull/124456/files/2c3986645cafbaf8db2244ee0f90c3f93f3da33d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314391,
+    "url": "https://github.com/python/cpython/pull/124456#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314392,
+    "url": "https://github.com/python/cpython/pull/124456",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314393,
+    "url": "https://github.com/python/cpython/commit/624be8699aec22bef137041478078c6fafaf032e",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314394,
+    "url": "https://github.com/python/cpython/pull/124456/commits/bfc926239a0d48999bbbf2a0fc5d1df128366d9d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314396,
+    "url": "https://github.com/python/cpython/pull/124456/files/f2f67e702be3e2d09feddb47287cf2f3388845d3#diff-ae287815c86ff59083609ee2809fcf31d35117025b4c4f255a57e01bfc07d60a",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314397,
+    "url": "https://github.com/python/cpython/pull/124456/commits/940a66ed25b22cec7a281e86e09a7690fc7d60bd",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314400,
+    "url": "https://github.com/python/cpython/pull/124456#commits-pushed-ef8e4fc",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314401,
+    "url": "https://github.com/python/cpython/pull/124456/commits/3753a0d524e951a7bb30d25f8599698ae176c46d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314402,
+    "url": "https://github.com/python/cpython/pull/124456#pullrequestreview-2374340198",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314403,
+    "url": "https://github.com/python/cpython/pull/124456#event-14693951889",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314404,
+    "url": "https://github.com/python/cpython/pull/124456/commits/f516bb499272cf6a8951d2881ea469ca3e70f184",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314405,
+    "url": "https://github.com/python/cpython/pull/124456/commits/ee05c1eae9b20b99a6d3940aee932f25b0c778b5",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314407,
+    "url": "https://github.com/python/cpython/pull/124456/commits/d1daff155d72c0106526d1a6da9df7ca147ba17a",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314408,
+    "url": "https://github.com/python/cpython/pull/124456#issue-2546111203",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314409,
+    "url": "https://github.com/savannahostrowski/cpython",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314410,
+    "url": "https://github.com/python/cpython/pull/124456#event-14386384825",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314413,
+    "url": "https://github.com/python/cpython/pull/124456/commits/fe169bc396481ac318d40b2d95fa0e7b4108e577",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314414,
+    "url": "https://github.com/python/cpython/pull/124456/commits/b3b4a9eb460160d262517d967e6d3e7c5734910c",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314415,
+    "url": "https://github.com/python/cpython/pull/124456#ref-pullrequest-3961013690",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314417,
+    "url": "https://github.com/python/cpython/pull/124456/commits/2588ef10fc193f28b19b584e011daaefc92203ab",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314418,
+    "url": "https://github.com/python/cpython/pull/133302",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314419,
+    "url": "https://github.com/python/cpython/pull/124456#event-14617804276",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 314420,
+    "url": "https://github.com/rindeal",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.DefaultEventLoopPolicy"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.DefaultEventLoopPolicy"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id2"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id2"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-improved-error-messages"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-improved-error-messages"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id3"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id3"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d80\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d48\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d48\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5360877?s\u003d80\u0026u\u003d3c78c7be3dad2767e2d72b2f9534e7a976da26d1\u0026v\u003d4",
+    "alt": "@rindeal",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d48\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32455369?s\u003d40\u0026v\u003d4",
+    "alt": "@ebonnal",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32455369?s\u003d40\u0026v\u003d4",
+    "alt": "@ebonnal",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16805946?s\u003d40\u0026v\u003d4",
+    "alt": "@edgarrmondragon",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16805946?s\u003d40\u0026u\u003ddde7567f343903d9994a7ae6a4f3e4032f9fd0f5\u0026v\u003d4",
+    "alt": "@edgarrmondragon",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d40\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16805946?s\u003d40\u0026u\u003ddde7567f343903d9994a7ae6a4f3e4032f9fd0f5\u0026v\u003d4",
+    "alt": "@edgarrmondragon",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d40\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/200205501?s\u003d40\u0026v\u003d4",
+    "alt": "@hingebase",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?s\u003d40\u0026v\u003d4",
+    "alt": "@rhettinger",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?s\u003d40\u0026v\u003d4",
+    "alt": "@rhettinger",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d52\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9539441?s\u003d52\u0026v\u003d4",
+    "alt": "@danielhollas",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5360877?s\u003d52\u0026v\u003d4",
+    "alt": "@rindeal",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?s\u003d52\u0026v\u003d4",
+    "alt": "@rhettinger",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d52\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d52\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026v\u003d4",
     "alt": "@swfarnsworth",
