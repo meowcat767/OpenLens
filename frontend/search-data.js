@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1133,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_SMALL_INT",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code o",
+    "scrapedAt": "2026-05-09 01:07:24.853376"
+  },
+  {
+    "id": 1132,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html",
+    "title": "RFC 4337 - MIME Type Registration for MPEG-4",
+    "content": "Light Dark Auto Network Working Group                                             Y. Lim\nRequest for Comments: 4337                                   net\u0026tv Inc.\nCategory: Standards Track                                      D. Singer\n                                                          Apple Computer\n                                                              March 2006\n\n\n                   MIME Type Registration for MPEG-4\n\nStatus of This Memo\n\n   This document specifies an Internet standards track protocol for the\n   Internet community, and requests discussion and suggestions for\n   improvements.  Please refer to the current edition of the \"Internet\n   Official Protocol Standards\" (STD 1) for the standardization state\n   and status of this protocol.  Distribution of this memo is unlimited.\n\nCopyright Notice\n\n   Copyright (C) The Internet Society (2006).\n\nAbstract\n\n   This document defines the standard MIME types associated with MP4\n   files.  It also recommends use of registered MIME types according to\n   the type of contents.\n\nTable of Contents\n\n   1. Introduction ....................................................2\n   2. Selection of MIME Types for MP4 Files ...........................3\n   3. IANA Considerations .............................................3\n      3.1. MP4 File ...................................................4\n      3.2. MP4 File with Audio but without Visual Presentation ........5\n      3.3. MP4 File with MPEG-4 System Stream and neither\n           Visual nor Audio Presentation ..............................6\n      3.4. Initial Object Descriptor (IOD) in Binary Format ...........7\n      3.5. Initial Object Descriptor (IOD) in Textual Format ..........8\n   4. Security Considerations .........................................9\n   5. Acknowledgements ................................................9\n   6. Normative References ............................................9\n\n\n\n\n\n\n\n\n\n\nLim \u0026 Singer                Standards Track                     [Page 1] \nRFC 4337                   MPEG-4 MIME Types                  March 2006\n\n\n1.  Introduction\n\n   This document describes a standard definition of MIME types\n   associated with MP4 files and the guidelines for using them.\n\n   MPEG-4 (ISO/IEC 14496) is a standard designed for the representation\n   and delivery of multimedia information over a variety of transport\n   protocols [1].  It includes interactive scene management and visual\n   and audio representations, as well as system functionality like\n   multiplexing, synchronization, and an object descriptor framework\n   [2].\n\n   The historical approach for MPEG data has been to declare it under\n   \"video\", and this approach is followed for ISO/IEC 14496.  In\n   addition, some MIME types are defined under \"audio\" and \"application\"\n   for the streams not containing visual presentation.\n\n   Amendment 1 of the ISO/IEC 14496 standard (also known as version 2)\n   introduced a standard file type, called MP4 files, for encapsulating\n   ISO/IEC 14496 data.  This is now separately specified as the MP4 file\n   format [4], which in turn is based on the ISO base media file format\n   [3].  A separate specification [5] covers the storage of Advanced\n   Video Coding (AVC) (also known as H.264) [6] material in files based\n   on the ISO base media file format.  The MP4 file type can be used in\n   a number of ways; perhaps the most important of these is its use as\n   an interchange format for ISO/IEC 14496 data, as a content-download\n   format, and as the format read by streaming media servers.\n\n   These first two uses will be greatly facilitated if there is a\n   standard MIME type for serving these files (e.g., over HTTP).\n\n   The ISO/IEC 14496 standard is broad, and therefore the type of data\n   that may be in such a file can vary.  In brief, simple compressed\n   video and audio (using a number of different compression algorithms)\n   can be included; interactive scene information; meta-data about the\n   presentation; references to ISO/IEC 14496 media streams outside the\n   file and so on.  Different top-level MIME types are used to identify\n   the type of the contents in the file.\n\n\n\n\n\n\n\n\n\n\n\n\n\nLim \u0026 Singer                Standards Track                     [Page 2] \nRFC 4337                   MPEG-4 MIME Types                  March 2006\n\n\n2.  Selection of MIME Types for MP4 Files\n\n   The MIME types to be assigned to MP4 files are selected according to\n   the contents.  Basic guidelines for selecting MIME types are as\n   follows:\n\n   a) if the file contains neither visual nor audio presentations, but\n      only, for example, MPEG-J or MPEG-7, use application/mp4;\n\n   b) for all other files, including those that have MPEG-J, etc., in\n      addition to video or audio streams, video/mp4 should be used;\n      however:\n\n   c) for files with audio but no visual aspect, including those that\n      have MPEG-J, etc., in addition to audio streams, audio/mp4 may be\n      used.\n\n   In any case, these indicate f",
+    "scrapedAt": "2026-05-09 01:07:23.646058"
+  },
+  {
+    "id": 1131,
+    "url": "https://docs.python.org/3/library/importlib.html#module-importlib.util",
+    "title": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Importing Modules » importlib — The implementation of import | Theme Auto Light Dark | importlib — The implementation of import¶ Added in version 3.1. Source code: Lib/importlib/__init__.py Introduction¶ The purpose of the importlib package is three-fold. One is to provide the implementation of the import statement (and thus, by extension, the __import__() function) in Python source code. This provides an implementation of import which is portable to any Python interpreter. This also provides an implementation which is easier to comprehend than one implemented in a programming language other than Python. Two, the components to implement import are exposed in this package, making it easier for users to create their own custom objects (known generically as an importer) to participate in the import process. Three, the package contains modules exposing additional functionality for managing aspects of Python packages: importlib.metadata presents access to metadata from third-party distributions. importlib.resources provides routines for accessing non-code “resources” from Python packages. See also The import statement The language reference for the import statement. Packages specification Original specification of packages. Some semantics have changed since the writing of this document (e.g. redirecting based on None in sys.modules). The __import__() function The import statement is syntactic sugar for this function. The initialization of the sys.path module search path The initialization of sys.path. PEP 235 Import on Case-Insensitive Platforms PEP 263 Defining Python Source Code Encodings PEP 302 New Import Hooks PEP 328 Imports: Multi-Line and Absolute/Relative PEP 366 Main module explicit relative imports PEP 420 Implicit namespace packages PEP 451 A ModuleSpec Type for the Import System PEP 488 Elimination of PYO files PEP 489 Multi-phase extension module initialization PEP 552 Deterministic pycs PEP 3120 Using UTF-8 as the Default Source Encoding PEP 3147 PYC Repository Directories Functions¶ importlib.__import__(name, globals\u003dNone, locals\u003dNone, fromlist\u003d(), level\u003d0)¶ An implementation of the built-in __import__() function. Note Programmatic importing of modules should use import_module() instead of this function. importlib.import_module(name, package\u003dNone)¶ Import a module. The name argument specifies what module to import in absolute or relative terms (e.g. either pkg.mod or ..mod). If the name is specified in relative terms, then the package argument must be set to the name of the package which is to act as the anchor for resolving the package name (e.g. import_module(\u0027..mod\u0027, \u0027pkg.subpkg\u0027) will import pkg.mod). The import_module() function acts as a simplifying wrapper around importlib.__import__(). This means all semantics of the function are derived from importlib.__import__(). The most important difference between these two functions is that import_module() returns the specified package or module (e.g. pkg.mod), while __import__() returns the top-level package or module (e.g. pkg). If you are dynamically importing a module that was created since the interpreter began execution (e.g., created a Python source file), you may need to call invalidate_caches() in order for the new module to be noticed by the import system. Changed in version 3.3: Parent packages are automatically imported. importlib.invalidate_caches()¶ Invalidate the internal caches of finders stored at sys.meta_path. If a finder implements invalidate_caches() then it will be called to perform the invalidation. This function should be called if any modules are created/installed while your program is running to guarantee all finders will notice the new module’s existence. Added in version 3.3. Changed in version 3.10: Namespace packages created/installed in a different sys.path location after the same namespace was already imported are noticed. importlib.reload(module)¶ Reload a previously imported module. The argument must be a module object, so it must have been successfully imported before. This is useful if you have edited the module source file using an external editor and want to try out the new version without leaving the Python interpreter. The return value is the module object (which can be different if re-importing causes a different object to be placed in sys.modules). When reload() is executed: Python module’s code is recompiled and the module-level code re-executed, defining a new set of objects which are bound to names in the module’s dictionary by reusing the loader which originally loaded the module. The init function of extension modules is not called a second time. As with all other objects in Python the old objects are only reclaimed after their reference counts drop to zero. The names in the module namespace are updated to point to any new or changed objects. Other references to the old objects (such as names e",
+    "scrapedAt": "2026-05-09 01:07:22.149305"
+  },
+  {
+    "id": 1130,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.Runner",
+    "title": "Runners — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Runners | Theme Auto Light Dark | Runners¶ Source code: Lib/asyncio/runners.py This section outlines high-level asyncio primitives to run asyncio code. They are built on top of an event loop with the aim to simplify async code usage for common wide-spread scenarios. Running an asyncio Program¶ asyncio.run(coro, *, debug\u003dNone, loop_factory\u003dNone)¶ Execute coro in an asyncio event loop and return the result. The argument can be any awaitable object. This function runs the awaitable, taking care of managing the asyncio event loop, finalizing asynchronous generators, and closing the executor. This function cannot be called when another asyncio event loop is running in the same thread. If debug is True, the event loop will be run in debug mode. False disables debug mode explicitly. None is used to respect the global Debug Mode settings. If loop_factory is not None, it is used to create a new event loop; otherwise asyncio.new_event_loop() is used. The loop is closed at the end. This function should be used as a main entry point for asyncio programs, and should ideally only be called once. It is recommended to use loop_factory to configure the event loop instead of policies. Passing asyncio.EventLoop allows running asyncio without the policy system. The executor is given a timeout duration of 5 minutes to shutdown. If the executor hasn’t finished within that duration, a warning is emitted and the executor is closed. Example: async def main():\n    await asyncio.sleep(1)\n    print(\u0027hello\u0027)\n\nasyncio.run(main())\n Added in version 3.7. Changed in version 3.9: Updated to use loop.shutdown_default_executor(). Changed in version 3.10: debug is None by default to respect the global debug mode settings. Changed in version 3.12: Added loop_factory parameter. Changed in version 3.14: coro can be any awaitable object. Note The asyncio policy system is deprecated and will be removed in Python 3.16; from there on, an explicit loop_factory is needed to configure the event loop. Runner context manager¶ class asyncio.Runner(*, debug\u003dNone, loop_factory\u003dNone)¶ A context manager that simplifies multiple async function calls in the same context. Sometimes several top-level async functions should be called in the same event loop and contextvars.Context. If debug is True, the event loop will be run in debug mode. False disables debug mode explicitly. None is used to respect the global Debug Mode settings. loop_factory could be used for overriding the loop creation. It is the responsibility of the loop_factory to set the created loop as the current one. By default asyncio.new_event_loop() is used and set as current event loop with asyncio.set_event_loop() if loop_factory is None. Basically, asyncio.run() example can be rewritten with the runner usage: async def main():\n    await asyncio.sleep(1)\n    print(\u0027hello\u0027)\n\nwith asyncio.Runner() as runner:\n    runner.run(main())\n Added in version 3.11. run(coro, *, context\u003dNone)¶ Execute coro in the embedded event loop. The argument can be any awaitable object. If the argument is a coroutine, it is wrapped in a Task. An optional keyword-only context argument allows specifying a custom contextvars.Context for the code to run in. The runner’s default context is used if context is None. Returns the awaitable’s result or raises an exception. This function cannot be called when another asyncio event loop is running in the same thread. Changed in version 3.14: coro can be any awaitable object. close()¶ Close the runner. Finalize asynchronous generators, shutdown default executor, close the event loop and release embedded contextvars.Context. get_loop()¶ Return the event loop associated with the runner instance. Note Runner uses the lazy initialization strategy, its constructor doesn’t initialize underlying low-level structures. Embedded loop and context are created at the with body entering or the first call of run() or get_loop(). Handling Keyboard Interruption¶ Added in version 3.11. When signal.SIGINT is raised by Ctrl-C, KeyboardInterrupt exception is raised in the main thread by default. However this doesn’t work with asyncio because it can interrupt asyncio internals and can hang the program from exiting. To mitigate this issue, asyncio handles signal.SIGINT as follows: asyncio.Runner.run() installs a custom signal.SIGINT handler before any user code is executed and removes it when exiting from the function. The Runner creates the main task for the passed coroutine for its execution. When signal.SIGINT is raised by Ctrl-C, the custom signal handler cancels the main task by calling asyncio.Task.cancel() which raises asyncio.CancelledError inside the main task. This causes the Python stack to unwind, try/except and try/finally blocks can be used for resource cleanup. After the main task is cancelled, asyncio.Runner.run()",
+    "scrapedAt": "2026-05-09 01:07:20.929084"
+  },
+  {
+    "id": 1129,
+    "url": "https://github.com/python/cpython/issues/120057",
+    "title": "Add os.reload_environ() function · Issue #120057 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add os.reload_environ() function #120057 New issue Copy link New issue Copy link Closed Closed Add os.reload_environ() function#120057 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description vstinner opened on Jun 4, 2024 Issue body actions Feature or enhancement When the environment is modified outside Python, os.environ is not updated. I propose adding a new os.environ.refresh() method to manually update os.environ. Discussion: https://discuss.python.org/t/method-to-refresh-os-environ/54774 Linked PRs gh-120057: Add os.environ.refresh() method #120059 gh-120057: Add os.get_user_default_environ() function #120494 Revert \"gh-120057: Add os.environ.refresh() method (#120059)\" #120789 Revert \"gh-120057: Add os.environ.refresh() method (#120059)\" #120790 gh-120057: Rename os.environ.refresh() to invalidate_cache() #120808 gh-120057: Add os.reload_environ() function #126268 gh-120057: add os.reload_environ to __all__ #140763 [3.14] gh-120057: add os.reload_environ to __all__ (GH-140763) #140773 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:07:19.538425"
+  },
+  {
     "id": 1128,
     "url": "https://github.com/hacl-star/hacl-star/",
     "title": "GitHub - hacl-star/hacl-star: HACL*, a formally verified cryptographic library written in F* · GitHub",
@@ -7558,26 +7593,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1129,
-    "url": "https://github.com/python/cpython/issues/120057"
-  },
-  {
-    "id": 1130,
-    "url": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.Runner"
-  },
-  {
-    "id": 1131,
-    "url": "https://docs.python.org/3/library/importlib.html#module-importlib.util"
-  },
-  {
-    "id": 1132,
-    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html"
-  },
-  {
-    "id": 1133,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_SMALL_INT"
   },
   {
     "id": 1134,
@@ -194030,10 +194045,330 @@ window.searchData = [
     "id": 198317,
     "url": "https://github.com/topics/high-performance",
     "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198318,
+    "url": "https://github.com/python/cpython/issues/120057#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 198321,
+    "url": "https://github.com/python/cpython/pull/120808",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 198322,
+    "url": "https://github.com/python/cpython/issues/120057#issue-2333968700",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 198324,
+    "url": "https://github.com/python/cpython/issues/120057#top",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 198328,
+    "url": "https://github.com/python/cpython/pull/140773",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 198329,
+    "url": "https://github.com/python/cpython/pull/120789",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 198330,
+    "url": "https://discuss.python.org/t/method-to-refresh-os-environ/54774",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 198332,
+    "url": "https://github.com/python/cpython/pull/120494",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 198333,
+    "url": "https://github.com/python/cpython/pull/120790",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 198334,
+    "url": "https://github.com/python/cpython/pull/120059",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 198335,
+    "url": "https://github.com/python/cpython/pull/126268",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 198336,
+    "url": "https://github.com/python/cpython/pull/140763",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 198590,
+    "url": "https://datatracker.ietf.org/doc/rfc4337/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198591,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198592,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3550",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198593,
+    "url": "https://www.rfc-editor.org/errata_search.php?rfc\u003d4337",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198594,
+    "url": "https://www.rfc-editor.org/rfc/rfc4337.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198596,
+    "url": "https://www.rfc-editor.org/rfc/pdfrfc/rfc4337.txt.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198597,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6381",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198598,
+    "url": "https://www.rfc-editor.org/rfc/rfc4337.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198599,
+    "url": "https://datatracker.ietf.org/doc/html/draft-lim-mpeg4-mime-03",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198601,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198602,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198603,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198604,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198605,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198606,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198607,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198608,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-3.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198609,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198610,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198611,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-3.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198612,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-8",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198613,
+    "url": "https://datatracker.ietf.org/doc/rfc4337/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198614,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198615,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198616,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-3.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198617,
+    "url": "https://datatracker.ietf.org/person/yfl@qsun.ho.att.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198618,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-3.4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198619,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198620,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-3.5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198621,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-9",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198622,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198623,
+    "url": "https://datatracker.ietf.org/person/singer@apple.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198625,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#ref-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198626,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#ref-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198627,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#ref-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198628,
+    "url": "https://datatracker.ietf.org/doc/draft-lim-mpeg4-mime/03/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198630,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#ref-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198631,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#ref-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198632,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#ref-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 198633,
+    "url": "http://pitch.nist.gov/nics/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-LOAD_SMALL_INT"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-LOAD_SMALL_INT"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.64.0/ietf/images/ietf-logo-nor-white.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 4337 - MIME Type Registration for MPEG-4",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.64.0/ietf/images/ietf-logo-nor.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 4337 - MIME Type Registration for MPEG-4",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.html#module-importlib.util"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.html#module-importlib.util"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Runners — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.Runner"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Runners — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.Runner"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@vstinner",
+    "pageTitle": "Add os.reload_environ() function · Issue #120057 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "Add os.reload_environ() function · Issue #120057 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120057"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
     "alt": "JelleZijlstra",
