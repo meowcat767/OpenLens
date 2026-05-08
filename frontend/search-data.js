@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1265,
+    "url": "https://docs.python.org/3/reference/expressions.html#if-expr",
+    "title": "6. Expressions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 6. Expressions | Theme Auto Light Dark | 6. Expressions¶ This chapter explains the meaning of the elements of expressions in Python. Syntax Notes: In this and the following chapters, grammar notation will be used to describe syntax, not lexical analysis. When (one alternative of) a syntax rule has the form: name: othername\n and no semantics are given, the semantics of this form of name are the same as for othername. 6.1. Arithmetic conversions¶ When a description of an arithmetic operator below uses the phrase “the numeric arguments are converted to a common real type”, this means that the operator implementation for built-in numeric types works as described in the Numeric Types section of the standard library documentation. Some additional rules apply for certain operators and non-numeric operands (for example, a string as a left argument to the % operator). Extensions must define their own conversion behavior. 6.2. Atoms¶ Atoms are the most basic elements of expressions. The simplest atoms are names or literals. Forms enclosed in parentheses, brackets or braces are also categorized syntactically as atoms. Formally, the syntax for atoms is: atom:\n   | \u0027True\u0027\n   | \u0027False\u0027\n   | \u0027None\u0027\n   | \u0027...\u0027\n   | identifier\n   | literal\n   | enclosure\nenclosure:\n   | parenth_form\n   | list_display\n   | dict_display\n   | set_display\n   | generator_expression\n   | yield_atom\n 6.2.1. Built-in constants¶ The keywords True, False, and None name built-in constants. The token ... names the Ellipsis constant. Evaluation of these atoms yields the corresponding value. Note Several more built-in constants are available as global variables, but only the ones mentioned here are keywords. In particular, these names cannot be reassigned or used as attributes: \u003e\u003e\u003e False \u003d 123\n  File \"\u003cinput\u003e\", line 1\n   False \u003d 123\n   ^^^^^\nSyntaxError: cannot assign to False\n 6.2.2. Identifiers (Names)¶ An identifier occurring as an atom is a name. See section Names (identifiers and keywords) for lexical definition and section Naming and binding for documentation of naming and binding. When the name is bound to an object, evaluation of the atom yields that object. When a name is not bound, an attempt to evaluate it raises a NameError exception. 6.2.2.1. Private name mangling¶ When an identifier that textually occurs in a class definition begins with two or more underscore characters and does not end in two or more underscores, it is considered a private name of that class. See also The class specifications. More precisely, private names are transformed to a longer form before code is generated for them. If the transformed name is longer than 255 characters, implementation-defined truncation may happen. The transformation is independent of the syntactical context in which the identifier is used but only the following private identifiers are mangled: Any name used as the name of a variable that is assigned or read or any name of an attribute being accessed. The __name__ attribute of nested functions, classes, and type aliases is however not mangled. The name of imported modules, e.g., __spam in import __spam. If the module is part of a package (i.e., its name contains a dot), the name is not mangled, e.g., the __foo in import __foo.bar is not mangled. The name of an imported member, e.g., __f in from spam import __f. The transformation rule is defined as follows: The class name, with leading underscores removed and a single leading underscore inserted, is inserted in front of the identifier, e.g., the identifier __spam occurring in a class named Foo, _Foo or __Foo is transformed to _Foo__spam. If the class name consists only of underscores, the transformation is the identity, e.g., the identifier __spam occurring in a class named _ or __ is left as is. 6.2.3. Literals¶ A literal is a textual representation of a value. Python supports numeric, string and bytes literals. Format strings and template strings are treated as string literals. Numeric literals consist of a single NUMBER token, which names an integer, floating-point number, or an imaginary number. See the Numeric literals section in Lexical analysis documentation for details. String and bytes literals may consist of several tokens. See section String literal concatenation for details. Note that negative and complex numbers, like -3 or 3+4.2j, are syntactically not literals, but unary or binary arithmetic operations involving the - or + operator. Evaluation of a literal yields an object of the given type (int, float, complex, str, bytes, or Template) with the given value. The value may be approximated in the case of floating-point and imaginary literals. The formal grammar for literals is: literal: strings | NUMBER\n 6.2.3.1. Literals and object identity¶ All literals correspond to immutable data types, and hence the object’s identity is less important than its value. Multiple evaluations",
+    "scrapedAt": "2026-05-09 01:12:48.765355"
+  },
+  {
+    "id": 1264,
+    "url": "https://peps.python.org/pep-0749/",
+    "title": "PEP 749 – Implementing PEP 649 | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 749 – Implementing PEP 649 PEP 749 – Implementing PEP 649 Author: Jelle Zijlstra \u003cjelle.zijlstra at gmail.com\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Topic: Typing Requires: 649 Created: 28-May-2024 Python-Version: 3.14 Post-History: 04-Jun-2024 Resolution: 05-May-2025 Table of Contents Abstract Motivation The future of from __future__ import annotations Specification Rejected alternatives New annotationlib module Rationale Specification Rejected alternatives Behavior of the REPL Specification Wrappers that provide __annotations__ Specification Annotations and metaclasses Pre-existing bugs Metaclass behavior with PEP 649 Specification Rejected alternatives Adding the VALUE_WITH_FAKE_GLOBALS format Specification Effect of deleting __annotations__ Specification Deferred evaluation of PEP 695 and 696 objects Specification Behavior of dataclass field types Renaming SOURCE to STRING Specification Conditionally defined annotations Specification Caching of annotations on partially executed modules Specification Miscellaneous implementation details Supported operations on ForwardRef objects Signature of __annotate__ functions Backwards Compatibility Security Implications How to Teach This Reference Implementation Acknowledgments Appendix Which expressions can be stringified? Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at Annotations and annotationlib. × See PEP 1 for how to propose changes. Abstract This PEP supplements PEP 649 by providing various tweaks and additions to its specification: from __future__ import annotations (PEP 563) will continue to exist with its current behavior at least until Python 3.13 reaches its end-of-life. Subsequently, it will be deprecated and eventually removed. A new standard library module, annotationlib, is added to provide tooling for annotations. It will include the get_annotations() function, an enum for annotation formats, a ForwardRef class, and a helper function for calling __annotate__ functions. Annotations in the REPL are lazily evaluated, just like other module-level annotations. We specify the behavior of wrapper objects that provide annotations, such as classmethod() and code that uses functools.wraps(). There will not be a code flag for marking __annotate__ functions that can be run in a “fake globals” environment. Instead, we add a fourth format, VALUE_WITH_FAKE_GLOBALS, to allow third-party implementors of annotate functions to indicate what formats they support. Deleting the __annotations__ attribute directly will also clear __annotate__. We add functionality to allow evaluating type alias values and type parameter bounds and defaults (which were added by PEP 695 and PEP 696) using PEP 649-like semantics. The SOURCE format is renamed to STRING to improve clarity and reduce the risk of user confusion. Conditionally defined class and module annotations are handled correctly. If annotations are accessed on a partially executed module, the annotations executed so far are returned, but not cached. Motivation PEP 649 provides an excellent framework for creating better semantics for annotations in Python. It solves a common pain point for users of annotations, including those using static type hints as well as those using runtime typing, and it makes the language more elegant and powerful. The PEP was originally proposed in 2021 for Python 3.10, and it was accepted in 2023. However, the implementation took longer than anticipated, and now the PEP is expected to be implemented in Python 3.14. I have started working on the implementation of the PEP in CPython. I found that the PEP leaves some areas underspecified, and some of its decisions in corner cases are questionable. This new PEP proposes several changes and additions to the specification to address these issues. This PEP supplements rather than supersedes PEP 649. The changes proposed here should make the overall user experience better, but they do not change the general framework of the earlier PEP. The future of from __future__ import annotations PEP 563 previously introduced the future import from __future__ import annotations, which changes all annotations to strings. PEP 649 proposes an alternative approach that does not require this future import, and states: If this PEP is accepted, PEP 563 will be deprecated and eventually removed. However, the PEP does not provide a detailed plan for this deprecation. There is some previous discussion of this topic on Discourse (note that in the linked post I proposed something different from what is proposed here). Specification We suggest the following deprecation plan: In Python 3.14, from __future__ import annotations will continue to work as it did before, converting annotations into strings. If the future import is active, the __annotate__ function of objects with annotations will re",
+    "scrapedAt": "2026-05-09 01:12:47.531786"
+  },
+  {
+    "id": 1263,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetError",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:12:46.156937"
+  },
+  {
+    "id": 1262,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-futures-interp-pool",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:12:44.9031"
+  },
+  {
+    "id": 1261,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_IsImmortal",
+    "title": "Object Protocol — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Abstract Objects Layer » Object Protocol | Theme Auto Light Dark | Object Protocol¶ PyObject *Py_GetConstant(unsigned int constant_id)¶ Part of the Stable ABI since version 3.13. Get a strong reference to a constant. Set an exception and return NULL if constant_id is invalid. constant_id must be one of these constant identifiers: Constant Identifier Value Returned object Py_CONSTANT_NONE¶ 0 None Py_CONSTANT_FALSE¶ 1 False Py_CONSTANT_TRUE¶ 2 True Py_CONSTANT_ELLIPSIS¶ 3 Ellipsis Py_CONSTANT_NOT_IMPLEMENTED¶ 4 NotImplemented Py_CONSTANT_ZERO¶ 5 0 Py_CONSTANT_ONE¶ 6 1 Py_CONSTANT_EMPTY_STR¶ 7 \u0027\u0027 Py_CONSTANT_EMPTY_BYTES¶ 8 b\u0027\u0027 Py_CONSTANT_EMPTY_TUPLE¶ 9 () Numeric values are only given for projects which cannot use the constant identifiers. Added in version 3.13. CPython implementation detail: In CPython, all of these constants are immortal. PyObject *Py_GetConstantBorrowed(unsigned int constant_id)¶ Part of the Stable ABI since version 3.13. Similar to Py_GetConstant(), but return a borrowed reference. This function is primarily intended for backwards compatibility: using Py_GetConstant() is recommended for new code. The reference is borrowed from the interpreter, and is valid until the interpreter finalization. Added in version 3.13. PyObject *Py_NotImplemented¶ The NotImplemented singleton, used to signal that an operation is not implemented for the given type combination. Py_RETURN_NOTIMPLEMENTED¶ Properly handle returning Py_NotImplemented from within a C function (that is, create a new strong reference to NotImplemented and return it). Py_PRINT_RAW¶ Flag to be used with multiple functions that print the object (like PyObject_Print() and PyFile_WriteObject()). If passed, these functions use the str() of the object instead of the repr(). int PyObject_Print(PyObject *o, FILE *fp, int flags)¶ Print an object o, on file fp. Returns -1 on error. The flags argument is used to enable certain printing options. The only option currently supported is Py_PRINT_RAW; if given, the str() of the object is written instead of the repr(). int PyObject_HasAttrWithError(PyObject *o, PyObject *attr_name)¶ Part of the Stable ABI since version 3.13. Returns 1 if o has the attribute attr_name, and 0 otherwise. This is equivalent to the Python expression hasattr(o, attr_name). On failure, return -1. Added in version 3.13. int PyObject_HasAttrStringWithError(PyObject *o, const char *attr_name)¶ Part of the Stable ABI since version 3.13. This is the same as PyObject_HasAttrWithError(), but attr_name is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. Added in version 3.13. int PyObject_HasAttr(PyObject *o, PyObject *attr_name)¶ Part of the Stable ABI. Returns 1 if o has the attribute attr_name, and 0 otherwise. This function always succeeds. Note Exceptions that occur when this calls __getattr__() and __getattribute__() methods aren’t propagated, but instead given to sys.unraisablehook(). For proper error handling, use PyObject_HasAttrWithError(), PyObject_GetOptionalAttr() or PyObject_GetAttr() instead. int PyObject_HasAttrString(PyObject *o, const char *attr_name)¶ Part of the Stable ABI. This is the same as PyObject_HasAttr(), but attr_name is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. Note Exceptions that occur when this calls __getattr__() and __getattribute__() methods or while creating the temporary str object are silently ignored. For proper error handling, use PyObject_HasAttrStringWithError(), PyObject_GetOptionalAttrString() or PyObject_GetAttrString() instead. PyObject *PyObject_GetAttr(PyObject *o, PyObject *attr_name)¶ Return value: New reference. Part of the Stable ABI. Retrieve an attribute named attr_name from object o. Returns the attribute value on success, or NULL on failure. This is the equivalent of the Python expression o.attr_name. If the missing attribute should not be treated as a failure, you can use PyObject_GetOptionalAttr() instead. PyObject *PyObject_GetAttrString(PyObject *o, const char *attr_name)¶ Return value: New reference. Part of the Stable ABI. This is the same as PyObject_GetAttr(), but attr_name is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. If the missing attribute should not be treated as a failure, you can use PyObject_GetOptionalAttrString() instead. int PyObject_GetOptionalAttr(PyObject *obj, PyObject *attr_name, PyObject **result);¶ Part of the Stable ABI since version 3.13. Variant of PyObject_GetAttr() which doesn’t raise AttributeError if the attribute is not found. If the attribute is found, return 1 and set *result to a new strong reference to the attribute. If the attribute is not found, return 0 and set *result to NULL; the AttributeError is silenced. If an error other than AttributeError is raised, return -1 and set *result to NULL. Added in version 3.13. int PyObje",
+    "scrapedAt": "2026-05-09 01:12:43.559944"
+  },
+  {
     "id": 1260,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#zlib",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -8468,26 +8503,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1261,
-    "url": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_IsImmortal"
-  },
-  {
-    "id": 1262,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-futures-interp-pool"
-  },
-  {
-    "id": 1263,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetError"
-  },
-  {
-    "id": 1264,
-    "url": "https://peps.python.org/pep-0749/"
-  },
-  {
-    "id": 1265,
-    "url": "https://docs.python.org/3/reference/expressions.html#if-expr"
   },
   {
     "id": 1266,
@@ -221550,10 +221565,378 @@ window.searchData = [
     "id": 247924,
     "url": "https://docs.python.org/3/library/operator.html#operator.le",
     "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 252702,
+    "url": "https://peps.python.org/pep-0749/#deferred-evaluation-of-pep-695-and-696-objects",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252705,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.make_dataclass",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252706,
+    "url": "https://peps.python.org/pep-0749/#adding-the-value-with-fake-globals-format",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252707,
+    "url": "https://peps.python.org/pep-0749/#which-expressions-can-be-stringified",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252708,
+    "url": "https://pypi.org/project/annotation/",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252709,
+    "url": "https://github.com/python/cpython/pull/122074",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252710,
+    "url": "https://peps.python.org/pep-0749/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252711,
+    "url": "https://peps.python.org/pep-0749/#annotations-and-metaclasses",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252712,
+    "url": "https://github.com/python/cpython/pull/130935",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252713,
+    "url": "https://peps.python.org/pep-0749/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252715,
+    "url": "https://discuss.python.org/t/pep-649-behavior-of-the-repl/54109",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252719,
+    "url": "https://peps.python.org/pep-0749/#renaming-source-to-string",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252720,
+    "url": "https://peps.python.org/pep-0749/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252725,
+    "url": "https://peps.python.org/pep-0749/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252726,
+    "url": "https://github.com/python/cpython/pull/120719",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252727,
+    "url": "https://peps.python.org/pep-0749/#behavior-of-dataclass-field-types",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252730,
+    "url": "https://discuss.python.org/t/pep-749-implementing-pep-649/54974",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252731,
+    "url": "https://discuss.python.org/t/pep-749-implementing-pep-649/54974/66",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252732,
+    "url": "https://peps.python.org/pep-0749/#appendix",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252735,
+    "url": "https://pypi.org/project/annotations/",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252736,
+    "url": "https://peps.python.org/pep-0749/#supported-operations-on-forwardref-objects",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252737,
+    "url": "https://peps.python.org/pep-0749/#effect-of-deleting-annotations",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252739,
+    "url": "https://peps.python.org/pep-0749/#acknowledgments",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252743,
+    "url": "https://github.com/agronholm/typeguard/blob/016f8139f5a0a63147d68df9558cc5584cd2c49a/src/typeguard/_utils.py#L44",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252744,
+    "url": "https://peps.python.org/pep-0749/#new-annotationlib-module",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252745,
+    "url": "https://peps.python.org/pep-0749/#id11",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252746,
+    "url": "https://peps.python.org/pep-0749/#id10",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252747,
+    "url": "https://peps.python.org/pep-0749/#id13",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252748,
+    "url": "https://pypi.org/project/annotationtools/",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252749,
+    "url": "https://github.com/python/cpython/pull/131550",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252752,
+    "url": "https://peps.python.org/pep-0749/#conditionally-defined-annotations",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252756,
+    "url": "https://discuss.python.org/t/pep-649-deferred-evaluation-of-annotations-tentatively-accepted/21331/44",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252757,
+    "url": "https://github.com/pydantic/pydantic/blob/00ff77ed37589d924d3c10e0d5a48a7ef679a0d7/pydantic/v1/typing.py#L66",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252760,
+    "url": "https://peps.python.org/pep-0749/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252761,
+    "url": "https://github.com/quora/pyanalyze/blob/9e401724f9d035cf138b72612834b6d5a00eb8e8/pyanalyze/annotations.py#L509",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252764,
+    "url": "https://peps.python.org/pep-0749/#metaclass-behavior-with-pep-649",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252765,
+    "url": "https://peps.python.org/pep-0749/#miscellaneous-implementation-details",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252767,
+    "url": "https://peps.python.org/pep-0749/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252768,
+    "url": "https://github.com/python/cpython/pull/120816",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252770,
+    "url": "https://peps.python.org/pep-0749/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252772,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0749.rst",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252773,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0749.rst",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252774,
+    "url": "https://github.com/python/cpython/issues/130881",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252775,
+    "url": "https://github.com/python/cpython/issues/88067",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252776,
+    "url": "https://github.com/python/cpython/pull/132345",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252777,
+    "url": "https://peps.python.org/pep-0749/#wrappers-that-provide-annotations",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252780,
+    "url": "https://peps.python.org/pep-0749/#specification",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252782,
+    "url": "https://peps.python.org/pep-0749/#the-future-of-from-future-import-annotations",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252784,
+    "url": "https://github.com/beartype/beartype/blob/0b4453f83c7ed4be054d8733aab8075e1478e166/beartype/_util/hint/pep/proposal/pep484585/utilpep484585ref.py#L210",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252786,
+    "url": "https://peps.python.org/pep-0749/#behavior-of-the-repl",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252787,
+    "url": "https://peps.python.org/pep-0749/#security-implications",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252788,
+    "url": "https://peps.python.org/pep-0749/#caching-of-annotations-on-partially-executed-modules",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252790,
+    "url": "https://peps.python.org/pep-0749/#id1",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252791,
+    "url": "https://peps.python.org/pep-0749/#id2",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252792,
+    "url": "https://peps.python.org/pep-0749/#id3",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252793,
+    "url": "https://peps.python.org/pep-0749/#id4",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252794,
+    "url": "https://peps.python.org/pep-0749/#id5",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252796,
+    "url": "https://peps.python.org/pep-0749/#id6",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252797,
+    "url": "https://peps.python.org/pep-0749/#signature-of-annotate-functions",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252798,
+    "url": "https://peps.python.org/pep-0749/#id7",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252799,
+    "url": "https://peps.python.org/pep-0749/#id8",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252800,
+    "url": "https://peps.python.org/pep-0749/#id9",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252801,
+    "url": "https://peps.python.org/pep-0749/#rejected-alternatives",
+    "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 252802,
+    "url": "https://peps.python.org/pep-0749/#pre-existing-bugs",
+    "parentUrl": "https://peps.python.org/pep-0749/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#if-expr"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#if-expr"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-futures-interp-pool"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-futures-interp-pool"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Object Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_IsImmortal"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Object Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_IsImmortal"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
