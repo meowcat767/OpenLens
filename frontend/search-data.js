@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1019,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.urlopen",
+    "title": "urllib.request — Extensible library for opening URLs — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Protocols and Support » urllib.request — Extensible library for opening URLs | Theme Auto Light Dark | urllib.request — Extensible library for opening URLs¶ Source code: Lib/urllib/request.py The urllib.request module defines functions and classes which help in opening URLs (mostly HTTP) in a complex world — basic and digest authentication, redirections, cookies and more. See also The Requests package is recommended for a higher-level HTTP client interface. Warning On macOS it is unsafe to use this module in programs using os.fork() because the getproxies() implementation for macOS uses a higher-level system API. Set the environment variable no_proxy to * to avoid this problem (e.g. os.environ[\"no_proxy\"] \u003d \"*\"). Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. The urllib.request module defines the following functions: urllib.request.urlopen(url, data\u003dNone, [timeout, ]*, context\u003dNone)¶ Open url, which can be either a string containing a valid, properly encoded URL, or a Request object. data must be an object specifying additional data to be sent to the server, or None if no such data is needed. See Request for details. urllib.request module uses HTTP/1.1 and includes Connection:close header in its HTTP requests. The optional timeout parameter specifies a timeout in seconds for blocking operations like the connection attempt (if not specified, the global default timeout setting will be used). This actually only works for HTTP, HTTPS and FTP connections. If context is specified, it must be a ssl.SSLContext instance describing the various SSL options. See HTTPSConnection for more details. This function always returns an object which can work as a context manager and has the properties url, headers, and status. See urllib.response.addinfourl for more detail on these properties. For HTTP and HTTPS URLs, this function returns a http.client.HTTPResponse object slightly modified. In addition to the three new methods above, the msg attribute contains the same information as the reason attribute — the reason phrase returned by server — instead of the response headers as it is specified in the documentation for HTTPResponse. For FTP, file, and data URLs, this function returns a urllib.response.addinfourl object. Raises URLError on protocol errors. Note that None may be returned if no handler handles the request (though the default installed global OpenerDirector uses UnknownHandler to ensure this never happens). In addition, if proxy settings are detected (for example, when a *_proxy environment variable like http_proxy is set), ProxyHandler is default installed and makes sure the requests are handled through the proxy. The legacy urllib.urlopen function from Python 2.6 and earlier has been discontinued; urllib.request.urlopen() corresponds to the old urllib2.urlopen. Proxy handling, which was done by passing a dictionary parameter to urllib.urlopen, can be obtained by using ProxyHandler objects. The default opener raises an auditing event urllib.Request with arguments fullurl, data, headers, method taken from the request object. Changed in version 3.2: cafile and capath were added. HTTPS virtual hosts are now supported if possible (that is, if ssl.HAS_SNI is true). data can be an iterable object. Changed in version 3.3: cadefault was added. Changed in version 3.4.3: context was added. Changed in version 3.10: HTTPS connection now send an ALPN extension with protocol indicator http/1.1 when no context is given. Custom context should set ALPN protocols with set_alpn_protocols(). Changed in version 3.13: Remove cafile, capath and cadefault parameters: use the context parameter instead. urllib.request.install_opener(opener)¶ Install an OpenerDirector instance as the default global opener. Installing an opener is only necessary if you want urlopen to use that opener; otherwise, simply call OpenerDirector.open() instead of urlopen(). The code does not check for a real OpenerDirector, and any class with the appropriate interface will work. urllib.request.build_opener([handler, ...])¶ Return an OpenerDirector instance, which chains the handlers in the order given. handlers can be either instances of BaseHandler, or subclasses of BaseHandler (in which case it must be possible to call the constructor without any parameters). Instances of the following classes will be in front of the handlers, unless the handlers contain them, instances of them or subclasses of them: ProxyHandler (if proxy settings are detected), UnknownHandler, HTTPHandler, HTTPDefaultErrorHandler, HTTPRedirectHandler, FTPHandler, FileHandler, HTTPErrorProcessor. If the Python installation has SSL support (i.e., if the ssl module can be imported), HTTPSHandler will also be added. A BaseHandler subclass may also change its handler_order attribute to modify its ",
+    "scrapedAt": "2026-05-09 01:02:51.568606"
+  },
+  {
+    "id": 1018,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_comp_cell",
+    "title": "symtable — Access to the compiler’s symbol tables — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » symtable — Access to the compiler’s symbol tables | Theme Auto Light Dark | symtable — Access to the compiler’s symbol tables¶ Source code: Lib/symtable.py Symbol tables are generated by the compiler from AST just before bytecode is generated. The symbol table is responsible for calculating the scope of every identifier in the code. symtable provides an interface to examine these tables. Generating Symbol Tables¶ symtable.symtable(code, filename, compile_type)¶ Return the toplevel SymbolTable for the Python source code. filename is the name of the file containing the code. compile_type is like the mode argument to compile(). Examining Symbol Tables¶ class symtable.SymbolTableType¶ An enumeration indicating the type of a SymbolTable object. MODULE \u003d \"module\"¶ Used for the symbol table of a module. FUNCTION \u003d \"function\"¶ Used for the symbol table of a function. CLASS \u003d \"class\"¶ Used for the symbol table of a class. The following members refer to different flavors of annotation scopes. ANNOTATION \u003d \"annotation\"¶ Used for annotations if from __future__ import annotations is active. TYPE_ALIAS \u003d \"type alias\"¶ Used for the symbol table of type constructions. TYPE_PARAMETERS \u003d \"type parameters\"¶ Used for the symbol table of generic functions or generic classes. TYPE_VARIABLE \u003d \"type variable\"¶ Used for the symbol table of the bound, the constraint tuple or the default value of a single type variable in the formal sense, i.e., a TypeVar, a TypeVarTuple or a ParamSpec object (the latter two do not support a bound or a constraint tuple). Added in version 3.13. class symtable.SymbolTable¶ A namespace table for a block. The constructor is not public. get_type()¶ Return the type of the symbol table. Possible values are members of the SymbolTableType enumeration. Changed in version 3.12: Added \u0027annotation\u0027, \u0027TypeVar bound\u0027, \u0027type alias\u0027, and \u0027type parameter\u0027 as possible return values. Changed in version 3.13: Return values are members of the SymbolTableType enumeration. The exact values of the returned string may change in the future, and thus, it is recommended to use SymbolTableType members instead of hard-coded strings. get_id()¶ Return the table’s identifier. get_name()¶ Return the table’s name. This is the name of the class if the table is for a class, the name of the function if the table is for a function, or \u0027top\u0027 if the table is global (get_type() returns \u0027module\u0027). For type parameter scopes (which are used for generic classes, functions, and type aliases), it is the name of the underlying class, function, or type alias. For type alias scopes, it is the name of the type alias. For TypeVar bound scopes, it is the name of the TypeVar. get_lineno()¶ Return the number of the first line in the block this table represents. is_optimized()¶ Return True if the locals in this table can be optimized. is_nested()¶ Return True if the block is a nested class or function. has_children()¶ Return True if the block has nested namespaces within it. These can be obtained with get_children(). get_identifiers()¶ Return a view object containing the names of symbols in the table. See the documentation of view objects. lookup(name)¶ Lookup name in the table and return a Symbol instance. get_symbols()¶ Return a list of Symbol instances for names in the table. get_children()¶ Return a list of the nested symbol tables. class symtable.Function¶ A namespace for a function or method. This class inherits from SymbolTable. get_parameters()¶ Return a tuple containing names of parameters to this function. get_locals()¶ Return a tuple containing names of locals in this function. get_globals()¶ Return a tuple containing names of globals in this function. get_nonlocals()¶ Return a tuple containing names of explicitly declared nonlocals in this function. get_frees()¶ Return a tuple containing names of free (closure) variables in this function. class symtable.Class¶ A namespace of a class. This class inherits from SymbolTable. get_methods()¶ Return a tuple containing the names of method-like functions declared in the class. Here, the term ‘method’ designates any function defined in the class body via def or async def. Functions defined in a deeper scope (e.g., in an inner class) are not picked up by get_methods(). For example: \u003e\u003e\u003e import symtable\n\u003e\u003e\u003e st \u003d symtable.symtable(\u0027\u0027\u0027\n... def outer(): pass\n...\n... class A:\n...    def f():\n...        def w(): pass\n...\n...    def g(self): pass\n...\n...    @classmethod\n...    async def h(cls): pass\n...\n...    global outer\n...    def outer(self): pass\n... \u0027\u0027\u0027, \u0027test\u0027, \u0027exec\u0027)\n\u003e\u003e\u003e class_A \u003d st.get_children()[2]\n\u003e\u003e\u003e class_A.get_methods()\n(\u0027f\u0027, \u0027g\u0027, \u0027h\u0027)\n Although A().f() raises TypeError at runtime, A.f is still considered as a method-like function. Deprecated since version 3.14, will be removed in version 3.16. class symtable.Symbol¶ An entry in a SymbolTable corresponding to an i",
+    "scrapedAt": "2026-05-09 01:02:50.369185"
+  },
+  {
+    "id": 1017,
+    "url": "https://docs.python.org/3/library/functions.html#complex",
+    "title": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Functions | Theme Auto Light Dark | Built-in Functions¶ The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order. Built-in Functions A abs() aiter() all() anext() any() ascii() B bin() bool() breakpoint() bytearray() bytes() C callable() chr() classmethod() compile() complex() D delattr() dict() dir() divmod() E enumerate() eval() exec() F filter() float() format() frozenset() G getattr() globals() H hasattr() hash() help() hex() I id() input() int() isinstance() issubclass() iter() L len() list() locals() M map() max() memoryview() min() N next() O object() oct() open() ord() P pow() print() property() R range() repr() reversed() round() S set() setattr() slice() sorted() staticmethod() str() sum() super() T tuple() type() V vars() Z zip() _ __import__() abs(number, /)¶ Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__(). If the argument is a complex number, its magnitude is returned. aiter(async_iterable, /)¶ Return an asynchronous iterator for an asynchronous iterable. Equivalent to calling x.__aiter__(). Note: Unlike iter(), aiter() has no 2-argument variant. Added in version 3.10. all(iterable, /)¶ Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to: def all(iterable):\n    for element in iterable:\n        if not element:\n            return False\n    return True\n awaitable anext(async_iterator, /)¶ awaitable anext(async_iterator, default, /) When awaited, return the next item from the given asynchronous iterator, or default if given and the iterator is exhausted. This is the async variant of the next() builtin, and behaves similarly. This calls the __anext__() method of async_iterator, returning an awaitable. Awaiting this returns the next value of the iterator. If default is given, it is returned if the iterator is exhausted, otherwise StopAsyncIteration is raised. Added in version 3.10. any(iterable, /)¶ Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to: def any(iterable):\n    for element in iterable:\n        if element:\n            return True\n    return False\n ascii(object, /)¶ As repr(), return a string containing a printable representation of an object, but escape the non-ASCII characters in the string returned by repr() using \\x, \\u, or \\U escapes. This generates a string similar to that returned by repr() in Python 2. bin(integer, /)¶ Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If integer is not a Python int object, it has to define an __index__() method that returns an integer. Some examples: \u003e\u003e\u003e bin(3)\n\u00270b11\u0027\n\u003e\u003e\u003e bin(-10)\n\u0027-0b1010\u0027\n If the prefix “0b” is desired or not, you can use either of the following ways. \u003e\u003e\u003e format(14, \u0027#b\u0027), format(14, \u0027b\u0027)\n(\u00270b1110\u0027, \u00271110\u0027)\n\u003e\u003e\u003e f\u0027{14:#b}\u0027, f\u0027{14:b}\u0027\n(\u00270b1110\u0027, \u00271110\u0027)\n See also enum.bin() to represent negative values as twos-complement. See also format() for more information. class bool(object\u003dFalse, /)¶ Return a Boolean value, i.e. one of True or False. The argument is converted using the standard truth testing procedure. If the argument is false or omitted, this returns False; otherwise, it returns True. The bool class is a subclass of int (see Numeric Types — int, float, complex). It cannot be subclassed further. Its only instances are False and True (see Boolean Type - bool). Changed in version 3.7: The parameter is now positional-only. breakpoint(*args, **kws)¶ This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or type as much code to enter the debugger. However, sys.breakpointhook() can be set to some other function and breakpoint() will automatically call that, allowing you to drop into the debugger of choice. If sys.breakpointhook() is not accessible, this function will raise RuntimeError. By default, the behavior of breakpoint() can be changed with the PYTHONBREAKPOINT environment variable. See sys.breakpointhook() for usage details. Note that this is not guaranteed if sys.breakpointhook() has been replaced. Raises an auditing event builtins.breakpoint with argument breakpointhook. Added in version 3.7. class bytearray(source\u003db\u0027\u0027) class bytearray(source, encoding, errors\u003d\u0027strict\u0027) Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 \u003c\u003d x \u003c 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and ",
+    "scrapedAt": "2026-05-09 01:02:49.19134"
+  },
+  {
+    "id": 1016,
+    "url": "https://docs.python.org/3/contents.html",
+    "title": "Python Documentation contents — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | Python » 3.14.5rc1 Documentation » Python Documentation contents | Theme Auto Light Dark | Python Documentation contents¶ What’s New in Python What’s new in Python 3.14 Summary – Release highlights New features PEP 649 \u0026 PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template string literals PEP 768: Safe external debugger interface A new type of interpreter Free-threaded mode improvements Improved error messages PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Other language changes Built-ins Command line and environment PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks Garbage collection Default interactive shell New modules Improved modules argparse ast asyncio calendar concurrent.futures configparser contextvars ctypes curses datetime decimal difflib dis errno faulthandler fnmatch fractions functools getopt getpass graphlib heapq hmac http imaplib inspect io json linecache logging.handlers math mimetypes multiprocessing operator os os.path pathlib pdb pickle platform pydoc re socket ssl struct symtable sys sys.monitoring sysconfig tarfile threading tkinter turtle types typing unicodedata unittest urllib uuid webbrowser zipfile Optimizations asyncio base64 bdb difflib gc io pathlib pdb textwrap uuid zlib Removed argparse ast asyncio email importlib.abc itertools pathlib pkgutil pty sqlite3 urllib Deprecated New deprecations Pending removal in Python 3.15 Pending removal in Python 3.16 Pending removal in Python 3.17 Pending removal in Python 3.18 Pending removal in Python 3.19 Pending removal in future versions CPython bytecode changes Pseudo-instructions C API changes Python configuration C API New features in the C API Limited C API changes Removed C APIs Deprecated C APIs Pending removal in Python 3.15 Pending removal in Python 3.16 Pending removal in Python 3.18 Pending removal in future versions Build changes build-details.json Discontinuation of PGP signatures Free-threaded Python is officially supported Binary releases for the experimental just-in-time compiler Porting to Python 3.14 Changes in the Python API Changes in annotations (PEP 649 and PEP 749) Implications for annotated code Implications for readers of __annotations__ Related changes from __future__ import annotations Changes in the C API Notable changes in 3.14.1 Notable changes in 3.14.5 gc What’s New In Python 3.13 Summary – Release Highlights New Features A better interactive interpreter Improved error messages Free-threaded CPython An experimental just-in-time (JIT) compiler Defined mutation semantics for locals() Support for mobile platforms Other Language Changes New Modules Improved Modules argparse array ast asyncio base64 compileall concurrent.futures configparser copy ctypes dbm dis doctest email enum fractions glob importlib io ipaddress itertools marshal math mimetypes mmap multiprocessing os os.path pathlib pdb queue random re shutil site sqlite3 ssl statistics subprocess sys tempfile time tkinter traceback types typing unicodedata venv warnings xml zipimport Optimizations Removed Modules And APIs PEP 594: Remove “dead batteries” from the standard library 2to3 builtins configparser importlib.metadata locale opcode optparse pathlib re tkinter.tix turtle typing unittest urllib webbrowser New Deprecations Pending removal in Python 3.14 Pending removal in Python 3.15 Pending removal in Python 3.16 Pending removal in Python 3.17 Pending removal in Python 3.18 Pending removal in Python 3.19 Pending removal in future versions CPython Bytecode Changes C API Changes New Features Changed C APIs Limited C API Changes Removed C APIs Deprecated C APIs Pending removal in Python 3.14 Pending removal in Python 3.15 Pending removal in Python 3.16 Pending removal in Python 3.18 Pending removal in future versions Build Changes Porting to Python 3.13 Changes in the Python API Changes in the C API Regression Test Changes What’s New In Python 3.12 Summary – Release highlights New Features PEP 695: Type Parameter Syntax PEP 701: Syntactic formalization of f-strings PEP 684: A Per-Interpreter GIL PEP 669: Low impact monitoring for CPython PEP 688: Making the buffer protocol accessible in Python PEP 709: Comprehension inlining Improved Error Messages New Features Related to Type Hints PEP 692: Using TypedDict for more precise **kwargs typing PEP 698: Override Decorator for Static Typing Other Language Changes New Modules Improved Modules array asyncio calendar csv dis fractions importlib.resources inspect itertools math os os.path pathlib platform pdb random shutil sqlite3 statistics sys tempfile threading tkinter tokenize types typing unicodedata unittest uuid Optimizations CPython bytecode changes Demos and Tools Deprecated Pending removal in Python 3.13 Pending removal in Python 3.14 Pending removal in Python 3.15 Pending removal in",
+    "scrapedAt": "2026-05-09 01:02:47.961009"
+  },
+  {
+    "id": 1015,
+    "url": "https://github.com/python/cpython/issues/128193",
+    "title": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Contributor calvinbui commented Dec 23, 2024 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. as mentioned in the issue, other authentication exist, but i don\u0027t see them supported out of the box in hashlib. this all depends if python wishes to support rfc7616 Issue: Support HTTP digest authentication algorithm SHA-256 as per RFC-7617 #128192 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions support sha-256 digest authentication eb7fe23 Copy link Copy Markdown ghost commented Dec 23, 2024 • edited by ghost Loading Uh oh! There was an error while loading. Please reload this page. All commit authors signed the Contributor License Agreement. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot mentioned this pull request Dec 23, 2024 Support HTTP digest authentication algorithm SHA-256 as per RFC-7617 #128192 Closed Copy link Copy Markdown bedevere-app Bot commented Dec 23, 2024 Most changes to Python require a NEWS entry. Add one using the blurb_it web app or the blurb command-line tool. If this change has little impact on Python users, wait for a maintainer to apply the skip news label instead. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot added the awaiting review label Dec 23, 2024 📜🤖 Added by blurb_it. 06cd409 ZeroIntensity reviewed Dec 23, 2024 View reviewed changes Comment thread Misc/NEWS.d/next/Core_and_Builtins/2024-12-23-11-14-07.gh-issue-128192.02mEhD.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member ZeroIntensity commented Dec 23, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page. cc @picnixz (cryptography expert) All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Update Misc/NEWS.d/next/Core_and_Builtins/2024-12-23-11-14-07.gh-issu… … 1d9d1af …e-128192.02mEhD.rst\n\nCo-authored-by: Peter Bierma \u003czintensitydev@gmail.com\u003e rruuaanng reviewed Dec 24, 2024 View reviewed changes Comment thread Lib/urllib/request.py Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. picnixz reviewed Dec 24, 2024 View reviewed changes Copy link Copy Markdown Member picnixz left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment A preliminary round of comments. You can also update \"RFC 2617\" to \"RFC 2617/7616\" in the AbstractDigestAuthHandler comment. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Comment thread Lib/urllib/request.py Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/urllib/request.py Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Misc/NEWS.d/next/Core_and_Builtins/2024-12-23-11-14-07.gh-issue-128192.02mEhD.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. gpshead self-requested a review December 24, 2024 19:02 calvinbui added 5 commits December 28, 2024 02:30 comments regarding rfc7616 aea1b4e move md5-sess comment 5c21402 tests 10b25ad fix lint fa80be1 Add name in ACKS 3c2ac12 picnixz self-requested a review December 28, 2024 09:36 picnixz reviewed Dec 28, 2024 View reviewed changes Comment thread Lib/test/test_urllib2.py Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/test/test_urllib2.py handler \u003d AbstractDigestAuthHandler() class TestDigestAlgorithms(unittest.TestCase): def setUp(self): self.handler \u003d AbstractDigestAuthHandler() Copy link Copy Markdown Member picnixz Dec 28, 2024 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment In a follow-up PR (or this one), if you want/can, we can add tests for a full communication round where we request",
+    "scrapedAt": "2026-05-09 01:02:46.530886"
+  },
+  {
     "id": 1014,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#os",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -6788,26 +6823,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1015,
-    "url": "https://github.com/python/cpython/issues/128193"
-  },
-  {
-    "id": 1016,
-    "url": "https://docs.python.org/3/contents.html"
-  },
-  {
-    "id": 1017,
-    "url": "https://docs.python.org/3/library/functions.html#complex"
-  },
-  {
-    "id": 1018,
-    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_comp_cell"
-  },
-  {
-    "id": 1019,
-    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.urlopen"
   },
   {
     "id": 1020,
@@ -167825,10 +167840,20214 @@ window.searchData = [
     "id": 155694,
     "url": "https://docs.python.org/3/library/contextvars.html#contextvars.ContextVar.set",
     "parentUrl": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 157117,
+    "url": "https://github.com/python/cpython/pull/128193#pullrequestreview-2524695452",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157119,
+    "url": "https://github.com/python/cpython/pull/128193#pullrequestreview-2522058720",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157120,
+    "url": "https://github.com/python/cpython/pull/128193/commits/7f9dc2fd4012bf0530d421685fffcc76ef929b02",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157121,
+    "url": "https://github.com/python/cpython/pull/128193#event-15778546983",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157122,
+    "url": "https://github.com/python/cpython/pull/128193/commits/aea1b4ec777ddde9cc8ecfdc99e4f3762313c08d",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157123,
+    "url": "https://github.com/python/cpython/pull/128193#event-15778547038",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157124,
+    "url": "https://github.com/python/cpython/pull/128193#issuecomment-2564489573",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157125,
+    "url": "https://github.com/python/cpython/pull/128193#issuecomment-2564553027",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157126,
+    "url": "https://github.com/python/cpython/pull/128193#pullrequestreview-2520610920",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157128,
+    "url": "https://github.com/python/cpython/pull/128193/files/1d9d1afb98c23266faf9e8896cf233611a0cd75f#diff-1b72fd8dc0aaa51a5ba3af938d3e3bdea8ab5635c0c2d9e098f9825f5b47b03f",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157129,
+    "url": "https://github.com/python/cpython/pull/128193#issuecomment-2564289232",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157131,
+    "url": "https://github.com/python/cpython/pull/128193#issuecomment-2564487515",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157132,
+    "url": "https://github.com/python/cpython/pull/128193#issuecomment-2564520177",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157133,
+    "url": "https://github.com/python/cpython/pull/128193#issuecomment-2564476333",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157134,
+    "url": "https://github.com/python/cpython/pull/128193/files/1d9d1afb98c23266faf9e8896cf233611a0cd75f",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157135,
+    "url": "https://github.com/python/cpython/pull/128193#event-15777852561",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157136,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3Atype-feature",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157137,
+    "url": "https://github.com/python/cpython/pull/128193/files/3c2ac12f57b1406769570f928c8f7c5798bc5d54#diff-5dcb1946f2eee26a435ec5f5e005ce2f656c6d375b8cd2c4fa789ebb09e75403",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157138,
+    "url": "https://github.com/python/cpython/pull/128193#event-15778458356",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157139,
+    "url": "https://github.com/python/cpython/pull/128193#pullrequestreview-2521696263",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157140,
+    "url": "https://github.com/python/cpython/pull/128193#issuecomment-2564367923",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157141,
+    "url": "https://github.com/python/cpython/pull/128193#pullrequestreview-2524690390",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157142,
+    "url": "https://github.com/python/cpython/pull/128193#event-15778440501",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157144,
+    "url": "https://github.com/python/cpython/pull/128193#discussion_r1898883529",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157145,
+    "url": "https://github.com/python/cpython/pull/128193/files/06cd409a2b3164f917365213233f3995c7a5fadb#diff-81ba180beacb8a17ccce9863cb4642cd4ea050646f465a4a2c0df4820792bc50",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157146,
+    "url": "https://github.com/python/cpython/pull/128193/commits/5c214022d6aff41069b65a587cd2632777e158cd",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157147,
+    "url": "https://github.com/python/cpython/pull/128193/commits/3c2ac12f57b1406769570f928c8f7c5798bc5d54",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157148,
+    "url": "https://github.com/python/cpython/pull/128193#issuecomment-2559476809",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157150,
+    "url": "https://github.com/python/cpython/pull/128193/files/1d9d1afb98c23266faf9e8896cf233611a0cd75f#diff-81ba180beacb8a17ccce9863cb4642cd4ea050646f465a4a2c0df4820792bc50",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157153,
+    "url": "https://github.com/python/cpython/pull/128193/commits/1d9d1afb98c23266faf9e8896cf233611a0cd75f",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157154,
+    "url": "https://github.com/python/cpython/pull/128193#commits-pushed-7f9dc2f",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157155,
+    "url": "https://github.com/python/cpython/pull/128193#event-15747097411",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157156,
+    "url": "https://github.com/python/cpython/pull/128193#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157157,
+    "url": "https://github.com/python/cpython/pull/128193/commits/eb7fe230528e4eb0ee0a057b7199926531291caa",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157158,
+    "url": "https://github.com/python/cpython/pull/128193/commits/2e2367deed24b9517b13160c83813f8d70b16d5a",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157161,
+    "url": "https://buildbot.python.org/#/builders/469/builds/9772",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157163,
+    "url": "https://github.com/python/cpython/pull/128193#issue-2755815683",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157166,
+    "url": "https://github.com/python/cpython/pull/128193/files/28866f9c8e93288b5d96d0a11894740799b8c796",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157168,
+    "url": "https://github.com/python/cpython/pull/128193/commits/10b25ade5e402c4a6e816d0f9c9c1677b712408e",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157170,
+    "url": "https://github.com/python/cpython/pull/128193#commits-pushed-47c0148",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157171,
+    "url": "https://github.com/python/cpython/pull/128193/commits/9292180e11b97d7ee0418b48ecab88c701d43e83",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157172,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A3.14",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157174,
+    "url": "https://github.com/python/cpython/pull/128193#commits-pushed-aea1b4e",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157175,
+    "url": "https://github.com/python/cpython/pull/128193/commits/47c0148be1aa05620002a5bfce171f8d5fa4b2df",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157176,
+    "url": "https://github.com/python/cpython/pull/128193/files/06cd409a2b3164f917365213233f3995c7a5fadb",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157177,
+    "url": "https://github.com/python/cpython/pull/128193#event-15758305558",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157180,
+    "url": "https://github.com/python/cpython/pull/128193#event-15778459705",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157181,
+    "url": "https://github.com/python/cpython/pull/128193/files/2e2367deed24b9517b13160c83813f8d70b16d5a#diff-1b72fd8dc0aaa51a5ba3af938d3e3bdea8ab5635c0c2d9e098f9825f5b47b03f",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157182,
+    "url": "https://github.com/python/cpython/pull/128193#issuecomment-2559476893",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157183,
+    "url": "https://github.com/srinivasreddy/cpython/commit/0abd6f0cf659b47682280c8c982d724e3585cc36",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157184,
+    "url": "https://github.com/python/cpython/pull/128193#discussion_r1898881848",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157187,
+    "url": "https://github.com/python/cpython/pull/128193/files/2e2367deed24b9517b13160c83813f8d70b16d5a",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157190,
+    "url": "https://github.com/python/cpython/commit/f9a5a3a3ef34e63dc197156e9a5f57842859ca04",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157191,
+    "url": "https://github.com/python/cpython/pull/128193/commits/28866f9c8e93288b5d96d0a11894740799b8c796",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157193,
+    "url": "https://github.com/python/cpython/pull/128193#issuecomment-2559726208",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157194,
+    "url": "https://github.com/python/cpython/pull/128193/commits/d9e3c44607f687c3c7b18527cd9bc75d608876e1",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157195,
+    "url": "https://github.com/python/cpython/pull/128193#event-15778466333",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157196,
+    "url": "https://github.com/python/cpython/pull/128193",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157198,
+    "url": "https://github.com/python/cpython/pull/128193/commits/5381ff4407e45dd0e713819ccb809dbebda20800",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157199,
+    "url": "https://github.com/python/cpython/pull/128193#event-15777219387",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157202,
+    "url": "https://github.com/python/cpython/pull/128193#pullrequestreview-2524794985",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157203,
+    "url": "https://github.com/python/cpython/pull/128193/commits/fa80be1b851d30415d5a2a0fac08cbc336561a85",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157204,
+    "url": "https://github.com/python/cpython/pull/128193/files/3c2ac12f57b1406769570f928c8f7c5798bc5d54",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157205,
+    "url": "https://github.com/python/cpython/pull/128193/files/28866f9c8e93288b5d96d0a11894740799b8c796#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157206,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F128193",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157207,
+    "url": "https://github.com/python/cpython/pull/128193#issuecomment-2564285142",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157208,
+    "url": "https://github.com/calvinbui",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157209,
+    "url": "https://github.com/python/cpython/pull/128193#issuecomment-2564364713",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157210,
+    "url": "https://github.com/python/cpython/pull/128193#ref-commit-0abd6f0",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157211,
+    "url": "https://github.com/python/cpython/pull/128193#ref-issue-2755809594",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157212,
+    "url": "https://github.com/python/cpython/pull/128193/commits/06cd409a2b3164f917365213233f3995c7a5fadb",
+    "parentUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 157213,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-2-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157215,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#comments",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157217,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#unicodedata",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157218,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157219,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#inspect",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157220,
+    "url": "https://docs.python.org/3/library/doctest.html#doctestparser-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157222,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pep-698-override-decorator-for-static-typing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157224,
+    "url": "https://docs.python.org/3/reference/introduction.html#lexical-and-syntactic-definitions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157225,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-1-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157226,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#memory-bio-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157227,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#non-ascii-characters-in-names",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157229,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#cpython-bytecode-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157230,
+    "url": "https://docs.python.org/3/library/asyncio-queue.html#priority-queue",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157233,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#codecs",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157234,
+    "url": "https://docs.python.org/3/library/logging.config.html#configuration-file-format",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157235,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#new-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157236,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#codecs",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157237,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#where-to-patch",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157239,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#traceback",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157240,
+    "url": "https://docs.python.org/3/extending/embedding.html#very-high-level-embedding",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157241,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#pep-273-importing-modules-from-zip-archives",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157242,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#xml",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157243,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#urllib-parse",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157245,
+    "url": "https://docs.python.org/3/library/csv.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157246,
+    "url": "https://docs.python.org/3/howto/argparse.html#combining-positional-and-optional-arguments",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157247,
+    "url": "https://docs.python.org/3/c-api/intro.html#outdated-macros",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157253,
+    "url": "https://docs.python.org/3/library/struct.html#applications",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157254,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#domainfilter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157255,
+    "url": "https://docs.python.org/3/extending/index.html#recommended-third-party-tools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157257,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#platform-specific-notes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157258,
+    "url": "https://docs.python.org/3/library/argparse.html#deprecated",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157261,
+    "url": "https://docs.python.org/3/library/idle.html#help-and-preferences",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157264,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#new-syntax",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157265,
+    "url": "https://docs.python.org/3/library/asyncio-dev.html#close-asynchronous-generators-explicitly",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157266,
+    "url": "https://docs.python.org/3/library/configparser.html#quick-start",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157269,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pickle",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157270,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#sys",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157271,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#improved-error-messages",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157272,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#the-patchers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157273,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#concurrent-futures",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157274,
+    "url": "https://docs.python.org/3/library/hashlib.html#keyed-hashing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157277,
+    "url": "https://docs.python.org/3/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157280,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#changes-in-the-c-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157281,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#callback-handles",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157283,
+    "url": "https://docs.python.org/3/library/platform.html#unix-platforms",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157286,
+    "url": "https://docs.python.org/3/library/optparse.html#the-store-action",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157287,
+    "url": "https://docs.python.org/3/library/devmode.html#effects-of-the-python-development-mode",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157288,
+    "url": "https://docs.python.org/3/faq/design.html#how-are-lists-implemented-in-cpython",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157290,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html#register-an-open-socket-to-wait-for-data-using-streams",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157294,
+    "url": "https://docs.python.org/3/library/optparse.html#what-are-positional-arguments-for",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157295,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#re",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157296,
+    "url": "https://docs.python.org/3/reference/import.html#the-meta-path",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157298,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#dictionary-merge-update-operators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157300,
+    "url": "https://docs.python.org/3/library/optparse.html#creating-the-parser",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157303,
+    "url": "https://docs.python.org/3/library/tkinter.html#a-hello-world-program",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157304,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id637",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157305,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id638",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157306,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id635",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157307,
+    "url": "https://docs.python.org/3/library/hashlib.html#simple-hashing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157308,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id636",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157311,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id639",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157313,
+    "url": "https://docs.python.org/3/library/collections.html#ordereddict-examples-and-recipes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157314,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#mimetypes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157315,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id630",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157316,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#tkinter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157317,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#sealing-mocks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157318,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id633",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157319,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id634",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157320,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id631",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157321,
+    "url": "https://docs.python.org/3/library/optparse.html#callback-example-6-variable-arguments",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157322,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#summary-release-highlights",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157323,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id632",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157324,
+    "url": "https://docs.python.org/3/library/zipapp.html#the-python-zip-application-archive-format",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157325,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#pep-293-codec-error-handling-callbacks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157327,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id626",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157329,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id627",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157332,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id624",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157333,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id625",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157334,
+    "url": "https://docs.python.org/3/extending/extending.html#building-arbitrary-values",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157335,
+    "url": "https://docs.python.org/3/c-api/iter.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157339,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id628",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157340,
+    "url": "https://docs.python.org/3/library/hashlib.html#using-different-digest-sizes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157341,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id629",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157343,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#notable-changes-in-python-3-8-10",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157344,
+    "url": "https://docs.python.org/3/library/logging.html#logger-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157345,
+    "url": "https://docs.python.org/3/library/optparse.html#callback-example-3-check-option-order-generalized",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157346,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#build-and-c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157347,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id622",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157348,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#pep-436-argument-clinic",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157349,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id623",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157350,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#email",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157351,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html#pep-205-weak-references",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157352,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id620",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157354,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#traceback",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157355,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id621",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157356,
+    "url": "https://docs.python.org/3/library/random.html#functions-for-sequences",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157357,
+    "url": "https://docs.python.org/3/library/argparse.html#the-parse-args-method",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157358,
+    "url": "https://docs.python.org/3/library/logging.config.html#incremental-configuration",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157360,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#array",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157361,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id615",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157362,
+    "url": "https://docs.python.org/3/installing/index.html#basic-usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157363,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id616",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157364,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id613",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157365,
+    "url": "https://docs.python.org/3/faq/design.html#can-t-you-emulate-threads-in-the-interpreter-instead-of-relying-on-an-os-specific-thread-implementation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157366,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#uu",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157367,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id614",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157368,
+    "url": "https://docs.python.org/3/library/ensurepip.html#module-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157369,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#build-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157370,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id619",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157371,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id617",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157372,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id618",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157373,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#api-and-feature-removals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157375,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id611",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157376,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id612",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157378,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id610",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157379,
+    "url": "https://docs.python.org/3/c-api/intro.html#general-utility-macros",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157383,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#documentation-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157384,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id604",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157385,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id605",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157386,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id602",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157387,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id603",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157389,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id608",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157391,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id609",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157392,
+    "url": "https://docs.python.org/3/c-api/stable.html#limited-api-scope-and-performance",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157393,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id606",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157395,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id607",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157397,
+    "url": "https://docs.python.org/3/library/configparser.html#interpolation-of-values",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157398,
+    "url": "https://docs.python.org/3/library/shelve.html#example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157400,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id600",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157401,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#whatsnew311-c-api-deprecated",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157402,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id601",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157403,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html#get-http-headers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157404,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id680",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157407,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id681",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157409,
+    "url": "https://docs.python.org/3/library/logging.config.html#object-connections",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157410,
+    "url": "https://docs.python.org/3/library/code.html#interactive-interpreter-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157411,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#select",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157412,
+    "url": "https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157413,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#ssl",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157414,
+    "url": "https://docs.python.org/3/using/cmdline.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157416,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id679",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157417,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#pep-282-the-logging-package",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157418,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#configparser",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157419,
+    "url": "https://docs.python.org/3/faq/windows.html#how-do-i-keep-editors-from-inserting-tabs-into-my-python-source",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157420,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id673",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157422,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id674",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157424,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157425,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id671",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157427,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id672",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157428,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id677",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157430,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id678",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157431,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id675",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157432,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id676",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157436,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id670",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157438,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#pep-678-exceptions-can-be-enriched-with-notes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157439,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#pep-448-additional-unpacking-generalizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157441,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#unrecognized-escape-sequences",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157443,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#asynchat-and-asyncore",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157444,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id668",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157445,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id669",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157448,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id662",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157449,
+    "url": "https://docs.python.org/3/library/gzip.html#examples-of-usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157450,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id663",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157451,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id660",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157453,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id661",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157454,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#inspect",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157455,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id666",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157456,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id667",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157457,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id664",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157459,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id665",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157464,
+    "url": "https://docs.python.org/3/library/logging.config.html#access-to-internal-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157465,
+    "url": "https://docs.python.org/3/howto/argparse.html#conclusion",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157467,
+    "url": "https://docs.python.org/3/c-api/tuple.html#struct-sequence-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157468,
+    "url": "https://docs.python.org/3/faq/programming.html#sequences-tuples-lists",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157469,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#pprint",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157470,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id659",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157471,
+    "url": "https://docs.python.org/3/library/test.html#module-test.regrtest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157473,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id657",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157474,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id658",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157479,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id651",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157480,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id652",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157481,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#attaching-mocks-as-attributes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157483,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#queue",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157484,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id650",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157485,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id655",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157486,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id656",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157487,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id653",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157488,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id654",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157489,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-1-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157493,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#heapq",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157494,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#ftp",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157496,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#acknowledgements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157497,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id648",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157498,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#faulthandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157499,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#integers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157500,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id649",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157501,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id646",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157502,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#collections",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157503,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id647",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157504,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-3-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157506,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id640",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157507,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id641",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157509,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#ftplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157510,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id644",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157511,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id645",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157512,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id642",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157513,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id643",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157516,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#explicit-line-joining",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157517,
+    "url": "https://docs.python.org/3/c-api/code.html#code-object-flags",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157521,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#platform-support-removals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157522,
+    "url": "https://docs.python.org/3/library/zipapp.html#specifying-the-interpreter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157524,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#pty",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157527,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pep-495-local-time-disambiguation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157529,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pydoc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157530,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#email",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157531,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#random",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157534,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#pprint",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157536,
+    "url": "https://docs.python.org/3/library/asyncio-queue.html#queue",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157537,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#pep-461-percent-formatting-support-for-bytes-and-bytearray",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157538,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#pep-476-enabling-certificate-verification-by-default-for-stdlib-http-clients",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157539,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#other-changes-and-fixes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157544,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#mock-for-method-calls-on-an-object",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157545,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#debug-build-uses-the-same-abi-as-release-build",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157548,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#asyncio",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157549,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#optional-encodingwarning-and-encoding-locale-option",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157551,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#zipfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157553,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#venv",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157554,
+    "url": "https://docs.python.org/3/using/ios.html#compiler-stub-binaries",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157555,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id695",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157556,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id696",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157557,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id693",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157559,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id694",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157560,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id699",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157561,
+    "url": "https://docs.python.org/3/library/configparser.html#supported-ini-file-structure",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157563,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#random",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157565,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id697",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157566,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id698",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157567,
+    "url": "https://docs.python.org/3/library/configparser.html#supported-datatypes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157568,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#socket",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157569,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#graphlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157571,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id691",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157572,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id692",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157573,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#the-json-module-javascript-object-notation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157574,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id690",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157575,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#socket",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157577,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#deprecated-python-modules-functions-and-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157582,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#support-for-mobile-platforms",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157583,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#new-string-methods-to-remove-prefixes-and-suffixes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157584,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id684",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157585,
+    "url": "https://docs.python.org/3/library/time.html#clock-id-constants",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157586,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id685",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157587,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id682",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157588,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id683",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157589,
+    "url": "https://docs.python.org/3/library/doctest.html#testresults-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157590,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id688",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157591,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id689",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157592,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id686",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157594,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id687",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157596,
+    "url": "https://docs.python.org/3/library/contextlib.html#examples-and-recipes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157601,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#the-contextlib-module",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157603,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#idlelib-and-idle",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157604,
+    "url": "https://docs.python.org/3/c-api/intro.html#recommended-third-party-tools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157608,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157610,
+    "url": "https://docs.python.org/3/c-api/buffer.html#pil-style-shape-strides-and-suboffsets",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157611,
+    "url": "https://docs.python.org/3/library/traceback.html#examples-of-using-the-module-level-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157616,
+    "url": "https://docs.python.org/3/library/cmath.html#hyperbolic-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157617,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#ast",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157618,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#sizegrip",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157620,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#scrollable-widget-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157622,
+    "url": "https://docs.python.org/3/c-api/synchronization.html#legacy-locking-apis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157624,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#thread",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157625,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#whatsnew37-asyncio-deprecated",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157628,
+    "url": "https://docs.python.org/3/c-api/arg.html#parsing-arguments",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157629,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#decimal",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157630,
+    "url": "https://docs.python.org/3/library/mailbox.html#babylmessage-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157631,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#hashlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157632,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#inspect",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157633,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#logging",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157639,
+    "url": "https://docs.python.org/3/c-api/complex.html#complex-numbers-as-python-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157640,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pdb",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157641,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#new-make-regen-all-build-target",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157642,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157644,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#pep-218-a-standard-set-datatype",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157646,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#patch",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157648,
+    "url": "https://docs.python.org/3/library/contextlib.html#using-a-context-manager-as-a-function-decorator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157650,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#zlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157651,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157653,
+    "url": "https://docs.python.org/3/howto/argparse.html#custom-type-converters",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157656,
+    "url": "https://docs.python.org/3/library/winreg.html#access-rights",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157657,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157658,
+    "url": "https://docs.python.org/3/library/difflib.html#ndiff-example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157660,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#contextlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157661,
+    "url": "https://docs.python.org/3/library/weakref.html#comparing-finalizers-with-del-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157662,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#provisional-policy-with-new-header-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157668,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#build-and-c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157671,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#mocking-a-dictionary-with-magicmock",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157674,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#functools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157675,
+    "url": "https://docs.python.org/3/library/idle.html#startup-failure",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157678,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pathlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157680,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#ttk-treeview",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157681,
+    "url": "https://docs.python.org/3/c-api/memory.html#deprecated-aliases",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157682,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#functionality",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157683,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#filter-dir",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157687,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pep-393-flexible-string-representation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157690,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#removed-modules-and-apis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157694,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#pep-328-absolute-and-relative-imports",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157695,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#idle",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157696,
+    "url": "https://docs.python.org/3/faq/design.html#why-must-dictionary-keys-be-immutable",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157697,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#xml-etree-elementtree",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157700,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#importlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157701,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#pep-318-decorators-for-functions-and-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157703,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#pep-564-new-time-functions-with-nanosecond-resolution",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157704,
+    "url": "https://docs.python.org/3/faq/design.html#why-are-colons-required-for-the-if-while-def-class-statements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157705,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#changes-in-the-python-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157709,
+    "url": "https://docs.python.org/3/library/asyncio-exceptions.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157710,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#smtplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157711,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#id8",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157712,
+    "url": "https://docs.python.org/3/library/hashlib.html#shake-variable-length-digests",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157713,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#id6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157714,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#id7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157715,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#id4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157717,
+    "url": "https://docs.python.org/3/library/intro.html#mobile-platforms",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157718,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#id5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157719,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#id2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157720,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#id3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157721,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#id1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157724,
+    "url": "https://docs.python.org/3/library/hashlib.html#constants",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157725,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#tkinter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157726,
+    "url": "https://docs.python.org/3/library/shlex.html#parsing-rules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157727,
+    "url": "https://docs.python.org/3/c-api/extension-modules.html#legacy-single-phase-initialization",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157730,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#ssl",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157733,
+    "url": "https://docs.python.org/3/library/struct.html#byte-order-size-and-alignment",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157734,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#porting-python-code",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157735,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#error-handling-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157737,
+    "url": "https://docs.python.org/3/library/datetime.html#examples-of-usage-datetime",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157738,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#summary-release-highlights",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157739,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pep-3151-reworking-the-os-and-io-exception-hierarchy",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157741,
+    "url": "https://docs.python.org/3/library/dataclasses.html#default-factory-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157743,
+    "url": "https://docs.python.org/3/using/mac.html#other-resources",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157745,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#operating-systems-no-longer-supported",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157746,
+    "url": "https://docs.python.org/3/howto/argparse.html#how-to-translate-the-argparse-output",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157747,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#poplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157748,
+    "url": "https://docs.python.org/3/library/logging.config.html#import-resolution-and-custom-importers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157749,
+    "url": "https://docs.python.org/3/library/random.html#notes-on-reproducibility",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157750,
+    "url": "https://docs.python.org/3/library/argparse.html#printing-help",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157751,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#pending-removal-in-python-3-12",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157753,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#deprecated-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157754,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#pep-3137-the-memoryview-object",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157755,
+    "url": "https://docs.python.org/3/library/asyncio-llapi-index.html#protocols",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157760,
+    "url": "https://docs.python.org/3/library/math.html#special-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157762,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#struct",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157763,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#new-features-added-to-python-2-7-maintenance-releases",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157764,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#datagram-protocols",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157765,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#email",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157766,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#sqlite3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157767,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#port-specific-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157769,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#port-specific-changes-windows",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157770,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157771,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#shlex",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157772,
+    "url": "https://docs.python.org/3/library/pickletools.html#command-line-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157773,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#argparse",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157775,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#language-builtins",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157776,
+    "url": "https://docs.python.org/3/library/operator.html#in-place-operators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157777,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157778,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#reference",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157779,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#whatsnew311-idle",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157780,
+    "url": "https://docs.python.org/3/library/logging.html#loggeradapter-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157781,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#importlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157783,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#importlib-resources",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157785,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#marshal",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157786,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#distutils",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157787,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157788,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#implicit-line-joining",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157791,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#pep-314-metadata-for-python-software-packages-v1-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157792,
+    "url": "https://docs.python.org/3/library/argparse.html#const",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157795,
+    "url": "https://docs.python.org/3/using/unix.html#installing-idle",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157797,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#string-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157798,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#dns",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157800,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#array",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157802,
+    "url": "https://docs.python.org/3/library/optparse.html#standard-option-types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157803,
+    "url": "https://docs.python.org/3/faq/design.html#why-doesn-t-cpython-use-a-more-traditional-garbage-collection-scheme",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157804,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#notable-changes-in-python-3-8-12",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157805,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#dtrace-and-systemtap-probing-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157807,
+    "url": "https://docs.python.org/3/library/math.html#constants",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157808,
+    "url": "https://docs.python.org/3/faq/programming.html#core-language",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157809,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#deprecated",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157810,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#the-fractions-module",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157812,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#pep-238-changing-the-division-operator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157813,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#creating-futures-and-tasks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157814,
+    "url": "https://docs.python.org/3/library/asyncio-dev.html#asynchronous-generators-best-practices",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157815,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#socketserver",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157816,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#typing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157817,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#the-future-builtins-module",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157823,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#pep-477-backport-ensurepip-pep-453-to-python-2-7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157824,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#zipapp",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157829,
+    "url": "https://docs.python.org/3/library/math.html#summation-and-product-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157830,
+    "url": "https://docs.python.org/3/library/math.html#trigonometric-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157835,
+    "url": "https://docs.python.org/3/library/idle.html#completions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157836,
+    "url": "https://docs.python.org/3/library/compression.zstd.html#advanced-parameter-control",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157839,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#importlib-resources",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157844,
+    "url": "https://docs.python.org/3/library/dialog.html#native-load-save-dialogs",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157848,
+    "url": "https://docs.python.org/3/c-api/call.html#call-support-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157850,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pep-362-function-signature-object",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157851,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#pep-634-structural-pattern-matching",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157853,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#distutils",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157854,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#pep-446-newly-created-file-descriptors-are-non-inheritable",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157856,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#new-keywords",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157859,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#unicodedata",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157860,
+    "url": "https://docs.python.org/3/faq/extending.html#how-do-i-debug-an-extension",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157863,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#py-compile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157866,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#site",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157870,
+    "url": "https://docs.python.org/3/library/zoneinfo.html#compile-time-configuration",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157871,
+    "url": "https://docs.python.org/3/library/math.html#number-theoretic-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157876,
+    "url": "https://docs.python.org/3/library/enum.html#notes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157877,
+    "url": "https://docs.python.org/3/c-api/intro.html#embedding-python",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157878,
+    "url": "https://docs.python.org/3/library/collections.html#deque-recipes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157880,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#copy",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157881,
+    "url": "https://docs.python.org/3/faq/extending.html#how-can-i-execute-arbitrary-python-statements-from-c",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157882,
+    "url": "https://docs.python.org/3/library/readline.html#line-buffer",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157884,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#running-and-stopping-the-loop",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157887,
+    "url": "https://docs.python.org/3/library/csv.html#reader-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157889,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157890,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#textwrap",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157891,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#library",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157893,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#watchedfilehandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157894,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#changes-to-built-in-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157901,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#deprecated-functions-and-types-of-the-c-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157902,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#unittest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157903,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#timedrotatingfilehandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157905,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#sqlite3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157906,
+    "url": "https://docs.python.org/3/faq/installed.html#can-i-delete-python",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157907,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#curses",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157908,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157913,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id73",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157914,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#macos-11-0-big-sur-and-apple-silicon-mac-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157915,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id74",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157916,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id75",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157917,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id76",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157918,
+    "url": "https://docs.python.org/3/faq/design.html#why-isn-t-all-memory-freed-when-cpython-exits",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157919,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id70",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157920,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id71",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157921,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id72",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157922,
+    "url": "https://docs.python.org/3/library/asyncio-platforms.html#all-platforms",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157923,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#interactive-interpreter-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157924,
+    "url": "https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157925,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#smtplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157926,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#removed",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157931,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#string-prefixes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157932,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#collections",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157933,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#os-path",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157935,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id77",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157937,
+    "url": "https://docs.python.org/3/library/idle.html#help-menu-shell-and-editor",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157938,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id78",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157940,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id79",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157941,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pdb",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157942,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id84",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157943,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id85",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157944,
+    "url": "https://docs.python.org/3/library/dataclasses.html#frozen-instances",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157945,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id86",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157946,
+    "url": "https://docs.python.org/3/library/optparse.html#terminology",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157947,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id87",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157949,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id80",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157950,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id81",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157951,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id82",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157952,
+    "url": "https://docs.python.org/3/reference/executionmodel.html#python-runtime-model",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157953,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id83",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157954,
+    "url": "https://docs.python.org/3/library/zipapp.html#python-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157956,
+    "url": "https://docs.python.org/3/library/reprlib.html#subclassing-repr-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157958,
+    "url": "https://docs.python.org/3/c-api/structures.html#implementing-functions-and-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157960,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#idlelib-and-idle",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157962,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157963,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#pep-3149-abi-version-tagged-so-files",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157965,
+    "url": "https://docs.python.org/3/library/doctest.html#simple-usage-checking-examples-in-docstrings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157966,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#pydoc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157967,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id88",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157968,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id89",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157969,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-1-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157972,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id95",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157973,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id96",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157975,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id97",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157976,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html#tcp-echo-client-using-streams",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157977,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id98",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157978,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id91",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157979,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id92",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157981,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id93",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157982,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id94",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157984,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#mocking-asynchronous-iterators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157986,
+    "url": "https://docs.python.org/3/library/random.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157987,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id90",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157988,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#removed",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157989,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#pep-545-python-documentation-translations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157991,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#gzip",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157992,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157993,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id99",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157994,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#unicode",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157996,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-6-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157998,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#other-cpython-implementation-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 157999,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#popen",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158001,
+    "url": "https://docs.python.org/3/library/queue.html#simplequeue-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158006,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#sqlite3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158007,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#c-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158008,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#attribute-access",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158009,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#mock-subclasses-and-their-attributes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158011,
+    "url": "https://docs.python.org/3/c-api/dict.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158013,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#demos-and-tools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158014,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#ast",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158016,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#time",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158017,
+    "url": "https://docs.python.org/3/library/math.html#floating-point-arithmetic",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158018,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#base64",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158019,
+    "url": "https://docs.python.org/3/c-api/subinterpreters.html#advanced-debugger-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158020,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#raising-exceptions-with-mocks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158021,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#changes-to-the-development-process",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158023,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id516",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158025,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id517",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158026,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id514",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158027,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id515",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158028,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#new-improved-and-removed-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158029,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id518",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158030,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id519",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158031,
+    "url": "https://docs.python.org/3/library/idle.html#context-menus",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158033,
+    "url": "https://docs.python.org/3/c-api/memory.html#debug-hooks-on-the-python-memory-allocators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158034,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id512",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158035,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id513",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158038,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#pep-227-nested-scopes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158039,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id510",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158040,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#macpath",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158041,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id511",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158042,
+    "url": "https://docs.python.org/3/library/configparser.html#legacy-api-examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158043,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#typing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158044,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-next",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158045,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#new-opcodes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158047,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#porting-to-python-3-13",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158048,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#assignment-expressions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158050,
+    "url": "https://docs.python.org/3/library/random.html#real-valued-distributions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158051,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id505",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158052,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id506",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158053,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#other-improvements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158054,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id503",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158056,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id504",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158057,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id509",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158058,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-5-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158060,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id507",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158061,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id508",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158062,
+    "url": "https://docs.python.org/3/library/platform.html#macos-platform",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158065,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id501",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158066,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id502",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158067,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#logging",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158068,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#the-decimal-type",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158069,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#limited-c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158070,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id500",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158072,
+    "url": "https://docs.python.org/3/library/statistics.html#statistics-for-relations-between-two-inputs",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158073,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#tracemalloc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158074,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#pep-3101-a-new-approach-to-string-formatting",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158075,
+    "url": "https://docs.python.org/3/library/doctest.html#doctestfinder-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158077,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#smtplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158078,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#inlined-python-function-calls",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158080,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#summary-release-highlights",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158081,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#windows-py-exe-launcher-improvements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158082,
+    "url": "https://docs.python.org/3/library/asyncio-dev.html#concurrency-and-multithreading",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158083,
+    "url": "https://docs.python.org/3/library/math.html#hyperbolic-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158084,
+    "url": "https://docs.python.org/3/library/__main__.html#main-py-in-python-packages",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158086,
+    "url": "https://docs.python.org/3/using/ios.html#ios-version-compatibility",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158088,
+    "url": "https://docs.python.org/3/library/dbm.html#module-dbm.dumb",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158089,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#writing-context-managers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158090,
+    "url": "https://docs.python.org/3/library/logging.config.html#handler-configuration-order",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158099,
+    "url": "https://docs.python.org/3/faq/design.html#why-am-i-getting-strange-results-with-simple-arithmetic-operations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158100,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#new-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158101,
+    "url": "https://docs.python.org/3/c-api/lifecycle.html#functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158102,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#array",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158104,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#changes-in-the-python-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158106,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#pep-442-safe-object-finalization",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158107,
+    "url": "https://docs.python.org/3/library/argparse.html#invalid-arguments",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158108,
+    "url": "https://docs.python.org/3/c-api/complex.html#complex-numbers-as-c-structures",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158109,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#deprecated-c-apis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158110,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#behavior-without-the-wildcard",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158111,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#reserved-classes-of-identifiers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158113,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#pep-237-unifying-long-integers-and-integers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158119,
+    "url": "https://docs.python.org/3/library/optparse.html#grouping-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158121,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#xmlrpc-server",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158122,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id560",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158123,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#sys",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158124,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#tarfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158125,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#coping-with-mutable-arguments",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158127,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id558",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158128,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#hmac",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158129,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id559",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158131,
+    "url": "https://docs.python.org/3/library/dialog.html#module-tkinter.filedialog",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158132,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id552",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158133,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#pep-647-user-defined-type-guards",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158134,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#build",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158135,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id553",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158137,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id550",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158138,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id551",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158139,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id556",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158140,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id557",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158142,
+    "url": "https://docs.python.org/3/whatsnew/3.1.html#porting-to-python-3-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158143,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id554",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158144,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id555",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158147,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pep-695-type-parameter-syntax",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158148,
+    "url": "https://docs.python.org/3/library/idle.html#setting-preferences",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158149,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#pep-305-comma-separated-files",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158151,
+    "url": "https://docs.python.org/3/library/doctest.html#basic-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158153,
+    "url": "https://docs.python.org/3/reference/import.html#namespace-packages",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158154,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id549",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158156,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id547",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158157,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#sax2-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158158,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id548",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158161,
+    "url": "https://docs.python.org/3/library/mailbox.html#babyl-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158162,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id541",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158163,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#cpython-bytecode-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158164,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id542",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158166,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id540",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158169,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id545",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158170,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id546",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158172,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id543",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158173,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id544",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158174,
+    "url": "https://docs.python.org/3/library/zoneinfo.html#the-zoneinfo-class",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158175,
+    "url": "https://docs.python.org/3/c-api/perfmaps.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158176,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#glob",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158177,
+    "url": "https://docs.python.org/3/library/platform.html#command-line-usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158178,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#pending-removal-in-python-3-14",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158179,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#pending-removal-in-python-3-16",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158180,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#pending-removal-in-python-3-15",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158182,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#wsgiref",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158183,
+    "url": "https://docs.python.org/3/library/collections.html#userlist-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158184,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id538",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158185,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#acknowledgements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158186,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id539",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158187,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id536",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158188,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id537",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158190,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id19",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158192,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#pending-removal-in-python-3-18",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158193,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id15",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158194,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id530",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158196,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#pending-removal-in-python-3-17",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158197,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id16",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158198,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id531",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158199,
+    "url": "https://docs.python.org/3/library/collections.html#chainmap-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158200,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id17",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158201,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#pending-removal-in-python-3-19",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158202,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id18",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158203,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id11",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158204,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id534",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158205,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#typing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158206,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id12",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158207,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id535",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158208,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id13",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158209,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id532",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158210,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id14",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158211,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id533",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158212,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pydoc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158214,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id20",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158215,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id21",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158216,
+    "url": "https://docs.python.org/3/library/devmode.html#bad-file-descriptor-error-example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158217,
+    "url": "https://docs.python.org/3/c-api/subinterpreters.html#bugs-and-caveats",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158218,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#physical-lines",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158221,
+    "url": "https://docs.python.org/3/extending/newtypes.html#more-suggestions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158222,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id527",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158224,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id528",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158225,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id525",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158226,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#multiple-inheritance-the-diamond-rule",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158227,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id526",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158230,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id529",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158232,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id26",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158234,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id27",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158235,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id520",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158237,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id28",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158239,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id29",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158241,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id22",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158242,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id523",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158243,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id23",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158244,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id524",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158247,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id24",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158248,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id521",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158250,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id25",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158251,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id522",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158254,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#notable-changes-in-python-3-6-14",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158255,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#notable-changes-in-python-3-6-13",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158256,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id30",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158257,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id31",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158258,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id32",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158262,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#mmap",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158264,
+    "url": "https://docs.python.org/3/c-api/bytearray.html#macros",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158265,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#hexadecimal-unicode-characters",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158266,
+    "url": "https://docs.python.org/3/library/compression.zstd.html#zstandard-dictionaries",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158269,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#multiprocessing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158271,
+    "url": "https://docs.python.org/3/using/ios.html#incompatible-code-in-the-standard-library",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158272,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id37",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158273,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id596",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158274,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#improved-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158275,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id38",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158276,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id597",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158278,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id39",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158279,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id594",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158280,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id595",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158283,
+    "url": "https://docs.python.org/3/library/optparse.html#what-are-options-for",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158284,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id33",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158285,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#tracking-all-calls",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158286,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id34",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158288,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id35",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158289,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id598",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158290,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id36",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158291,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id599",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158292,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id40",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158293,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id41",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158294,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id42",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158296,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id43",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158297,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id592",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158298,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id593",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158299,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id590",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158302,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id591",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158304,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#typing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158307,
+    "url": "https://docs.python.org/3/extending/newtypes_tutorial.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158310,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id48",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158311,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id585",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158312,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id49",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158313,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id586",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158314,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#json-tool",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158315,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id583",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158316,
+    "url": "https://docs.python.org/3/c-api/codec.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158317,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id584",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158319,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id44",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158320,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id589",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158321,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id45",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158322,
+    "url": "https://docs.python.org/3/library/gettext.html#the-catalog-constructor",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158323,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id46",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158324,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id587",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158326,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id47",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158327,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id588",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158329,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#os-path",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158330,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id51",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158331,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id52",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158333,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id53",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158334,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id54",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158335,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id581",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158337,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id582",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158339,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158340,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id50",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158341,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id580",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158343,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#enum",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158347,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#deprecated",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158349,
+    "url": "https://docs.python.org/3/library/argparse.html#exit-on-error",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158350,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#elementtree",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158352,
+    "url": "https://docs.python.org/3/library/argparse.html#the-add-argument-method",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158353,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#changes-in-the-c-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158355,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id59",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158356,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id574",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158357,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id575",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158358,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-2-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158360,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id572",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158361,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id573",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158362,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#unicodedata",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158363,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id55",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158364,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id578",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158365,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#standard-library",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158366,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#changes-in-the-python-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158367,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id56",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158368,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id579",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158369,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#new-apis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158370,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id57",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158371,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id576",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158372,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#pep-308-conditional-expressions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158373,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id58",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158374,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id577",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158375,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id62",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158377,
+    "url": "https://docs.python.org/3/c-api/stable.html#contents-of-limited-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158378,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id63",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158379,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id64",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158380,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id65",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158381,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id570",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158382,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id571",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158384,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id60",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158385,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id61",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158390,
+    "url": "https://docs.python.org/3/library/filecmp.html#the-dircmp-class",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158391,
+    "url": "https://docs.python.org/3/using/ios.html#python-at-runtime-on-ios",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158392,
+    "url": "https://docs.python.org/3/library/optparse.html#printing-a-version-string",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158393,
+    "url": "https://docs.python.org/3/library/contextlib.html#cleaning-up-in-an-enter-implementation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158395,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id569",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158396,
+    "url": "https://docs.python.org/3/library/asyncio-subprocess.html#constants",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158398,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#type-hinting-generics-in-standard-collections",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158401,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id563",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158403,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id564",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158404,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id561",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158405,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id562",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158406,
+    "url": "https://docs.python.org/3/library/tkinter.html#understanding-how-tkinter-wraps-tcl-tk",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158407,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#notable-changes-in-python-3-6-10",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158408,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#pep-263-source-code-encodings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158409,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id66",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158410,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id567",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158412,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#the-mock-class",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158413,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#idle-and-idlelib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158414,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id67",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158415,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id568",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158416,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id68",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158417,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id565",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158418,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id69",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158419,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id566",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158420,
+    "url": "https://docs.python.org/3/library/pyclbr.html#class-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158421,
+    "url": "https://docs.python.org/3/reference/import.html#the-module-cache",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158422,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#subprocess-protocols",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158424,
+    "url": "https://docs.python.org/3/library/argparse.html#intermixed-parsing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158425,
+    "url": "https://docs.python.org/3/c-api/call.html#recursion-control",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158426,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pickletools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158427,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#notable-changes-in-3-10-12",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158428,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#creating-a-mock-from-an-existing-object",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158430,
+    "url": "https://docs.python.org/3/c-api/time.html#types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158431,
+    "url": "https://docs.python.org/3/using/ios.html#testing-a-python-package",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158438,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#filehandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158440,
+    "url": "https://docs.python.org/3/library/timeit.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158441,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tab-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158443,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#id7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158444,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#pep-485-a-function-for-testing-approximate-equality",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158445,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#new-module-importlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158446,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#datetime",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158447,
+    "url": "https://docs.python.org/3/installing/index.html#how-do-i",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158448,
+    "url": "https://docs.python.org/3/library/idle.html#idle-on-macos",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158449,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#xml-etree",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158451,
+    "url": "https://docs.python.org/3/library/optparse.html#adding-new-types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158453,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#hashlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158454,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#ignored-end-of-line",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158455,
+    "url": "https://docs.python.org/3/extending/newtypes_tutorial.html#adding-data-and-methods-to-the-basic-example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158457,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#visible-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158458,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#webbrowser",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158459,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#pep-3112-byte-literals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158463,
+    "url": "https://docs.python.org/3/library/gettext.html#internationalizing-your-programs-and-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158464,
+    "url": "https://docs.python.org/3/c-api/intro.html#numeric-utilities",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158465,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#enum",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158466,
+    "url": "https://docs.python.org/3/library/contextlib.html#single-use-reusable-and-reentrant-context-managers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158474,
+    "url": "https://docs.python.org/3/library/signal.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158480,
+    "url": "https://docs.python.org/3/library/dataclasses.html#class-variables",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158481,
+    "url": "https://docs.python.org/3/library/threadsafety.html#incompatible",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158482,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#contextlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158484,
+    "url": "https://docs.python.org/3/library/optparse.html#defining-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158485,
+    "url": "https://docs.python.org/3/library/tkinter.html#important-tk-concepts",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158490,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#patch-methods-start-and-stop",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158491,
+    "url": "https://docs.python.org/3/library/code.html#interactive-console-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158492,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-0-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158493,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#sqlite3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158494,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-0-release-candidate-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158495,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-0-release-candidate-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158500,
+    "url": "https://docs.python.org/3/installing/index.html#key-terms",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158501,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#notable-security-feature-in-3-8-14",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158502,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#port-specific-changes-mac-os-x",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158503,
+    "url": "https://docs.python.org/3/library/devmode.html#resourcewarning-example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158504,
+    "url": "https://docs.python.org/3/library/collections.html#defaultdict-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158505,
+    "url": "https://docs.python.org/3/library/logging.html#filter-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158506,
+    "url": "https://docs.python.org/3/extending/newtypes_tutorial.html#providing-finer-control-over-data-attributes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158507,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#asyncio",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158508,
+    "url": "https://docs.python.org/3/extending/embedding.html#pure-embedding",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158513,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#tkinter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158514,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#unicodedata",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158520,
+    "url": "https://docs.python.org/3/library/argparse.html#formatter-class",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158524,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158526,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158528,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158529,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#xml-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158531,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#summary-release-highlights",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158534,
+    "url": "https://docs.python.org/3/library/logging.html#module-level-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158536,
+    "url": "https://docs.python.org/3/extending/embedding.html#beyond-very-high-level-embedding-an-overview",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158538,
+    "url": "https://docs.python.org/3/library/bisect.html#performance-notes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158539,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#argparse",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158540,
+    "url": "https://docs.python.org/3/library/csv.html#module-contents",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158542,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#build-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158543,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#asynchat-asyncore-smtpd",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158544,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#notable-changes-in-3-8-17",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158545,
+    "url": "https://docs.python.org/3/library/shelve.html#restrictions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158547,
+    "url": "https://docs.python.org/3/library/random.html#command-line-example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158548,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#how-should-i-write-my-code-to-utilize-these-speedups",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158549,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#building-c-extensions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158550,
+    "url": "https://docs.python.org/3/c-api/extension-modules.html#initialization-function",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158552,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#email",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158554,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#regression-test-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158555,
+    "url": "https://docs.python.org/3/library/sys_path_init.html#embedded-python",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158559,
+    "url": "https://docs.python.org/3/c-api/float.html#pack-and-unpack-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158560,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#the-optparse-module",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158561,
+    "url": "https://docs.python.org/3/library/msvcrt.html#other-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158562,
+    "url": "https://docs.python.org/3/library/importlib.resources.html#functional-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158563,
+    "url": "https://docs.python.org/3/extending/extending.html#intermezzo-errors-and-exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158564,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#porting-to-python-2-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158566,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#mmap",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158568,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158570,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#select",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158574,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#layouts",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158575,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#new-features-related-to-type-hints",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158576,
+    "url": "https://docs.python.org/3/library/idle.html#edit-menu-shell-and-editor",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158577,
+    "url": "https://docs.python.org/3/library/idle.html#text-colors",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158578,
+    "url": "https://docs.python.org/3/library/shlex.html#improved-compatibility-with-shells",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158580,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#other-cpython-implementation-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158585,
+    "url": "https://docs.python.org/3/library/__future__.html#module-contents",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158587,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#improved-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158588,
+    "url": "https://docs.python.org/3/faq/programming.html#numbers-and-strings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158589,
+    "url": "https://docs.python.org/3/library/argparse.html#suggest-on-error",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158590,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#readline",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158592,
+    "url": "https://docs.python.org/3/library/wave.html#wave-read-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158593,
+    "url": "https://docs.python.org/3/library/doctest.html#unittest-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158594,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#faulthandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158595,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#the-wsgiref-package",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158596,
+    "url": "https://docs.python.org/3/c-api/intro.html#debugging-builds",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158597,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#build-and-c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158598,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#pep-590-vectorcall-a-fast-calling-protocol-for-cpython",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158599,
+    "url": "https://docs.python.org/3/faq/extending.html#how-do-i-tell-incomplete-input-from-invalid-input",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158601,
+    "url": "https://docs.python.org/3/library/winreg.html#functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158602,
+    "url": "https://docs.python.org/3/library/doctest.html#advanced-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158603,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#new-make-regen-all-build-target",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158608,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#interpreter-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158610,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#calendar",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158611,
+    "url": "https://docs.python.org/3/faq/extending.html#how-do-i-interface-to-c-objects-from-python",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158612,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#distutils-making-modules-easy-to-install",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158613,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#pathlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158614,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#port-specific-changes-windows",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158617,
+    "url": "https://docs.python.org/3/library/hashlib.html#key-derivation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158620,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#porting-to-python-3-5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158621,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#pep-322-reverse-iteration",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158622,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#pep-234-iterators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158624,
+    "url": "https://docs.python.org/3/faq/design.html#can-python-be-compiled-to-machine-code-c-or-some-other-language",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158625,
+    "url": "https://docs.python.org/3/c-api/concrete.html#fundamental-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158626,
+    "url": "https://docs.python.org/3/c-api/gen.html#asynchronous-generator-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158630,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#linecache",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158632,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#new-improved-and-deprecated-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158634,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#pep-353-using-ssize-t-as-the-index-type",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158635,
+    "url": "https://docs.python.org/3/library/configparser.html#unnamed-sections",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158636,
+    "url": "https://docs.python.org/3/library/tkinter.html#the-window-manager",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158637,
+    "url": "https://docs.python.org/3/c-api/intro.html#reference-counts",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158640,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#pep-453-explicit-bootstrapping-of-pip-in-python-installations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158641,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#unicodedata",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158642,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#pep-3141-a-type-hierarchy-for-numbers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158644,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#subprocess-transports",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158647,
+    "url": "https://docs.python.org/3/library/platform.html#cross-platform",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158649,
+    "url": "https://docs.python.org/3/c-api/descriptor.html#built-in-descriptors",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158652,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#other-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158653,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#improved-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158654,
+    "url": "https://docs.python.org/3/library/mimetypes.html#command-line-usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158655,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#low-level-utility-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158658,
+    "url": "https://docs.python.org/3/library/dataclasses.html#re-ordering-of-keyword-only-parameters-in-init",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158661,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#signal",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158662,
+    "url": "https://docs.python.org/3/library/trace.html#main-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158663,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#acknowledgements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158664,
+    "url": "https://docs.python.org/3/library/zoneinfo.html#configuring-the-data-sources",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158665,
+    "url": "https://docs.python.org/3/library/cmath.html#conversions-to-and-from-polar-coordinates",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158673,
+    "url": "https://docs.python.org/3/howto/argparse.html#introducing-positional-arguments",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158678,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#tracemalloc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158680,
+    "url": "https://docs.python.org/3/library/contextlib.html#reusable-context-managers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158681,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#pdb",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158682,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#porting-to-python-2-7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158683,
+    "url": "https://docs.python.org/3/c-api/contextvars.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158684,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#datetime",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158686,
+    "url": "https://docs.python.org/3/library/asyncio-subprocess.html#subprocess-and-threads",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158688,
+    "url": "https://docs.python.org/3/library/optparse.html#tutorial",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158689,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#label-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158690,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#new-features-related-to-type-hints",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158691,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#write-only-transports",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158693,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#queuelistener",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158695,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#udp-echo-server",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158697,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#certificates",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158698,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#time",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158699,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#wave",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158702,
+    "url": "https://docs.python.org/3/library/asyncio-queue.html#lifo-queue",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158703,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#id1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158704,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#id2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158706,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#id4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158708,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#id3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158709,
+    "url": "https://docs.python.org/3/c-api/buffer.html#numpy-style-shape-and-strides",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158710,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#id6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158712,
+    "url": "https://docs.python.org/3/c-api/hash.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158713,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#id5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158714,
+    "url": "https://docs.python.org/3/library/doctest.html#doctest-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158715,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#id2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158719,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pep-414-explicit-unicode-literals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158720,
+    "url": "https://docs.python.org/3/faq/library.html#general-library-questions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158721,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#subprocess",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158722,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#collections-abc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158724,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#statistics",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158726,
+    "url": "https://docs.python.org/3/library/mmap.html#madv-constants",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158727,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#any",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158729,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pep-405-virtual-environments",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158732,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pep-3155-qualified-name-for-classes-and-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158733,
+    "url": "https://docs.python.org/3/library/collections.html#defaultdict-examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158734,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#cpython-bytecode-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158736,
+    "url": "https://docs.python.org/3/c-api/buffer.html#complex-arrays",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158737,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#magicmock-and-magic-method-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158739,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#new-and-improved-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158743,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#unsupported-operating-systems",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158744,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-2-release-candidate-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158745,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-2-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158747,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id835",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158748,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id836",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158749,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id833",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158752,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id834",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158753,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id839",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158754,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id837",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158755,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id838",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158758,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id831",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158760,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id832",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158764,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id830",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158765,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#traceback",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158766,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#nteventloghandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158771,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#dbm",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158772,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#documentation-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158773,
+    "url": "https://docs.python.org/3/library/idle.html#developing-tkinter-applications",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158774,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id824",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158775,
+    "url": "https://docs.python.org/3/library/tokenize.html#tokenizing-input",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158776,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id825",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158777,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#hashlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158778,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id822",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158779,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id823",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158780,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id828",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158781,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id829",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158784,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id826",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158785,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id827",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158787,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html#pep-229-new-build-system",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158788,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id820",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158789,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id821",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158790,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#pickle",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158791,
+    "url": "https://docs.python.org/3/library/doctest.html#how-are-docstring-examples-recognized",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158792,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#grp",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158794,
+    "url": "https://docs.python.org/3/library/hashlib.html#blake2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158795,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#complex-patterns-and-the-wildcard",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158796,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id819",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158797,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#helpers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158799,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id813",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158800,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id814",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158802,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#notable-changes-in-python-3-8-8",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158803,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id811",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158804,
+    "url": "https://docs.python.org/3/library/dataclasses.html#module-contents",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158805,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#notable-changes-in-python-3-8-9",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158806,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id812",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158807,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id817",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158808,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id818",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158809,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id815",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158810,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#pydoc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158811,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id816",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158812,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#notable-changes-in-python-3-8-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158813,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#notable-changes-in-python-3-8-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158815,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#notable-changes-in-python-3-8-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158816,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#changes-in-the-c-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158817,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pickle",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158819,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#tkinter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158820,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#subprocess",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158821,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id810",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158823,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pdb",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158824,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#new-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158825,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#pep-342-new-generator-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158829,
+    "url": "https://docs.python.org/3/faq/library.html#input-and-output",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158830,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#removed-c-apis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158832,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#ast",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158833,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id808",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158834,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#the-future-for-python-2-x",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158835,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id809",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158838,
+    "url": "https://docs.python.org/3/library/statistics.html#measures-of-spread",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158839,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id802",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158840,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id803",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158841,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id800",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158842,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id801",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158843,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id806",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158845,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id807",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158846,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id804",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158848,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#helper-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158850,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id805",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158853,
+    "url": "https://docs.python.org/3/library/collections.html#userdict-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158854,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#sunau",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158855,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#transports",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158856,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pep-523-adding-a-frame-evaluation-api-to-cpython",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158857,
+    "url": "https://docs.python.org/3/library/asyncio-api-index.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158858,
+    "url": "https://docs.python.org/3/library/platform.html#android-platform",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158859,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#enum",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158861,
+    "url": "https://docs.python.org/3/library/optparse.html#callback-example-4-check-arbitrary-condition",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158862,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158864,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id879",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158866,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#dis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158867,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id877",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158868,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id878",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158871,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id871",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158872,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#patch-object",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158873,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id872",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158874,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#tempfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158875,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id870",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158876,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#gzip",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158877,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id875",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158878,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id876",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158879,
+    "url": "https://docs.python.org/3/faq/extending.html#how-do-i-extract-c-values-from-a-python-object",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158880,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id873",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158881,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id874",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158885,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#nesting-patches",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158888,
+    "url": "https://docs.python.org/3/library/trace.html#filters",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158889,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#random",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158891,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#memoryhandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158892,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#sys",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158894,
+    "url": "https://docs.python.org/3/library/argparse.html#required",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158898,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#hashlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158899,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id868",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158900,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#random",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158901,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id869",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158902,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158903,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id866",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158904,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id867",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158905,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id860",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158906,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id861",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158907,
+    "url": "https://docs.python.org/3/c-api/conversion.html#character-classification-and-conversion",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158909,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id864",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158910,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#inspect",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158911,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id865",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158912,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id862",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158913,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id863",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158914,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#virtual-events",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158915,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pep-709-comprehension-inlining",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158916,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#http-client",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158917,
+    "url": "https://docs.python.org/3/library/readline.html#startup-hooks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158919,
+    "url": "https://docs.python.org/3/library/secrets.html#random-numbers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158921,
+    "url": "https://docs.python.org/3/library/posix.html#notable-module-contents",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158922,
+    "url": "https://docs.python.org/3/reference/import.html#import-hooks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158923,
+    "url": "https://docs.python.org/3/faq/extending.html#can-i-create-an-object-class-with-some-methods-implemented-in-c-and-others-in-python-e-g-through-inheritance",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158924,
+    "url": "https://docs.python.org/3/howto/argparse.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158925,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#unicode-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158926,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id857",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158927,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#build-and-c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158928,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id858",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158929,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id855",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158930,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id856",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158931,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id859",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158932,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-0-beta-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158933,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id850",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158934,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-0-beta-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158935,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-0-beta-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158936,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id853",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158938,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id854",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158939,
+    "url": "https://docs.python.org/3/reference/import.html#module-reprs",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158940,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id851",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158941,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id852",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158942,
+    "url": "https://docs.python.org/3/library/difflib.html#sequencematcher-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158945,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#peps-252-and-253-type-and-class-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158947,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-0-beta-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158949,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#socket",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158951,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#socket",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158952,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id846",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158953,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id847",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158954,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id844",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158955,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id845",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158957,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id848",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158958,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id849",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158959,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#snapshot",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158960,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#porting-to-python-3-12",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158961,
+    "url": "https://docs.python.org/3/faq/design.html#why-can-t-raw-strings-r-strings-end-with-a-backslash",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158962,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id842",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158963,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id843",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158964,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-2-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158965,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id840",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158966,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#future-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158967,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id841",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158969,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#separator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158974,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#select",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158976,
+    "url": "https://docs.python.org/3/library/weakref.html#finalizer-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158977,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#streamhandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158978,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#socket",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158980,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#security",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158981,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#improvements-to-codec-handling",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158982,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158986,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#changes-in-python-behavior",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158987,
+    "url": "https://docs.python.org/3/library/csv.html#writer-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158989,
+    "url": "https://docs.python.org/3/library/threadsafety.html#safe-on-shared-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158990,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#pep-218-built-in-set-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158992,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#writing-context-managers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158993,
+    "url": "https://docs.python.org/3/library/secrets.html#generating-tokens",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158994,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#imaplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158995,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#inspect",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158996,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#using-importlib-as-the-implementation-of-import",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158998,
+    "url": "https://docs.python.org/3/c-api/unicode.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 158999,
+    "url": "https://docs.python.org/3/library/sched.html#scheduler-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159000,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#datetime",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159003,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#ttk-spinbox",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159005,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#gc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159008,
+    "url": "https://docs.python.org/3/library/datetime.html#examples-of-usage-timedelta",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159011,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id899",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159014,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id893",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159016,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id894",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159018,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id891",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159019,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id892",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159020,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#watch-a-file-descriptor-for-read-events",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159021,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id897",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159022,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#transferring-files",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159023,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id898",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159024,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#queuehandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159025,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#timeit",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159026,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id895",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159027,
+    "url": "https://docs.python.org/3/library/zoneinfo.html#globals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159028,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id896",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159030,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#plistlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159031,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id890",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159032,
+    "url": "https://docs.python.org/3/library/collections.html#userstring-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159034,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#test-prefix",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159035,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#pep-655-marking-individual-typeddict-items-as-required-or-not-required",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159036,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id888",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159037,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id889",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159040,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#calling",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159041,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id882",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159042,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id883",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159043,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id880",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159046,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id881",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159047,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id886",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159048,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#webbrowser",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159049,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id887",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159050,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id884",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159051,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id885",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159053,
+    "url": "https://docs.python.org/3/using/android.html#building-a-python-package-for-android",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159054,
+    "url": "https://docs.python.org/3/c-api/iterator.html#builtin-iterator-types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159056,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#re",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159057,
+    "url": "https://docs.python.org/3/library/argparse.html#beyond-sys-argv",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159058,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#augmented-assignment",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159060,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#get-the-traceback-of-a-memory-block",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159062,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#urllib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159063,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#deprecated-python-behavior",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159066,
+    "url": "https://docs.python.org/3/faq/windows.html#how-do-i-check-for-a-keypress-without-blocking",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159067,
+    "url": "https://docs.python.org/3/library/optparse.html#populating-the-parser",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159068,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#zipfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159069,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pep-487-descriptor-protocol-enhancements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159072,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-1-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159073,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#urllib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159074,
+    "url": "https://docs.python.org/3/c-api/threads.html#legacy-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159081,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#xml",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159083,
+    "url": "https://docs.python.org/3/c-api/memory.html#overview",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159084,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#deprecated",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159085,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#notable-changes-in-3-11-5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159087,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#notable-changes-in-3-11-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159088,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#string",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159090,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#itertools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159092,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#hexadecimal-character",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159094,
+    "url": "https://docs.python.org/3/library/timeit.html#basic-examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159096,
+    "url": "https://docs.python.org/3/library/ensurepip.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159098,
+    "url": "https://docs.python.org/3/extending/newtypes_tutorial.html#the-basics",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159099,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#abc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159100,
+    "url": "https://docs.python.org/3/library/math.html#floating-point-manipulation-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159102,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#pep-565-show-deprecationwarning-in-main",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159103,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#glob",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159104,
+    "url": "https://docs.python.org/3/library/compileall.html#command-line-use",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159105,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#pep-366-explicit-relative-imports-from-a-main-module",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159106,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#partial-mocking",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159107,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#formal-grammar-for-f-strings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159108,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#signal",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159109,
+    "url": "https://docs.python.org/3/library/argparse.html#type",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159111,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#notable-changes-in-python-3-9-5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159112,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#imaginary-literals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159115,
+    "url": "https://docs.python.org/3/faq/windows.html#how-do-i-solve-the-missing-api-ms-win-crt-runtime-l1-1-0-dll-error",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159116,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#poplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159117,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#notable-changes-in-python-3-9-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159119,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#notable-changes-in-python-3-9-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159120,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#tarfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159122,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#notable-changes-in-python-3-9-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159123,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#array",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159124,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#os",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159125,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-3-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159127,
+    "url": "https://docs.python.org/3/c-api/set.html#deprecated-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159128,
+    "url": "https://docs.python.org/3/library/argparse.html#help",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159130,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#pep-389-the-argparse-module-for-parsing-command-lines",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159134,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159135,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159136,
+    "url": "https://docs.python.org/3/library/datetime.html#available-types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159139,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pep-669-low-impact-monitoring-for-cpython",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159141,
+    "url": "https://docs.python.org/3/faq/design.html#why-doesn-t-list-sort-return-the-sorted-list",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159142,
+    "url": "https://docs.python.org/3/c-api/lifecycle.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159143,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#collections-abc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159146,
+    "url": "https://docs.python.org/3/library/statistics.html#function-details",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159149,
+    "url": "https://docs.python.org/3/extending/newtypes_tutorial.html#subclassing-other-types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159155,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#unittest-mock",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159156,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pep-525-asynchronous-generators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159160,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html#streamreader",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159162,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#pep-3106-dictionary-views",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159164,
+    "url": "https://docs.python.org/3/library/idle.html#startup-and-code-execution",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159165,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#fileinput",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159166,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#pyclbr",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159168,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#misc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159169,
+    "url": "https://docs.python.org/3/library/statistics.html#naive-bayesian-classifier",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159170,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159171,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#updated-module-unittest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159172,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#deprecations-and-removals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159177,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#bdb",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159178,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#the-ctypes-package",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159179,
+    "url": "https://docs.python.org/3/library/select.html#polling-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159185,
+    "url": "https://docs.python.org/3/library/asyncio-subprocess.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159187,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#other-improvements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159188,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#statistics",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159189,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#shutil",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159190,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#contextlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159191,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#new-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159193,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#id10",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159194,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#id12",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159195,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#id13",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159197,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#ctypes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159198,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#treeview",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159200,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#notable-changes-in-3-9-17",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159201,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159204,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-3-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159205,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#asyncio",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159208,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#unittest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159210,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#os",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159213,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#importlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159214,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#connecting-existing-sockets",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159215,
+    "url": "https://docs.python.org/3/library/configparser.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159216,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#pep-553-built-in-breakpoint",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159217,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#deprecated",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159218,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#id4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159219,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#id3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159221,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#id6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159222,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#id5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159223,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#id8",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159224,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#logging",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159225,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#id7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159226,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#id9",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159227,
+    "url": "https://docs.python.org/3/library/enum.html#module-contents",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159228,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#curses",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159229,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#unix-signals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159231,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#lzma",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159232,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pep-684-a-per-interpreter-gil",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159233,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#interpreter-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159234,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-5-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159236,
+    "url": "https://docs.python.org/3/library/compression.zstd.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159239,
+    "url": "https://docs.python.org/3/library/trace.html#programmatic-interface",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159243,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#unittest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159244,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#pep-378-format-specifier-for-thousands-separator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159245,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#changes-to-exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159248,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#changes-in-the-python-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159249,
+    "url": "https://docs.python.org/3/c-api/threads.html#gil-state-apis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159251,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#mocking-asynchronous-context-manager",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159252,
+    "url": "https://docs.python.org/3/library/zoneinfo.html#data-sources",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159253,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#io",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159261,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#math",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159262,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#ftplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159263,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#streaming-protocols",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159267,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159268,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-4-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159270,
+    "url": "https://docs.python.org/3/faq/library.html#common-tasks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159271,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#id12",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159272,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#itertools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159274,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#id11",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159275,
+    "url": "https://docs.python.org/3/library/cmath.html#trigonometric-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159276,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#id10",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159277,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#extending-embedding-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159278,
+    "url": "https://docs.python.org/3/library/datetime.html#technical-detail",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159279,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#tarfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159280,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159281,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#compute-differences",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159282,
+    "url": "https://docs.python.org/3/library/selectors.html#classes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159284,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#cpython-bytecode-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159286,
+    "url": "https://docs.python.org/3/library/collections.html#chainmap-examples-and-recipes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159287,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159289,
+    "url": "https://docs.python.org/3/library/asyncio-api-index.html#tasks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159290,
+    "url": "https://docs.python.org/3/library/signal.html#signals-and-threads",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159291,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#tools-demos",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159292,
+    "url": "https://docs.python.org/3/library/zoneinfo.html#string-representations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159293,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#improved-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159294,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#shutil",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159295,
+    "url": "https://docs.python.org/3/library/zipapp.html#creating-standalone-applications-with-zipapp",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159298,
+    "url": "https://docs.python.org/3/library/argparse.html#argument-abbreviations-prefix-matching",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159299,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#logging",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159300,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#text-vs-data-instead-of-unicode-vs-8-bit",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159302,
+    "url": "https://docs.python.org/3/library/lzma.html#reading-and-writing-compressed-files",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159303,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#summary-release-highlights",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159304,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-0-alpha-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159306,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-0-alpha-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159307,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-0-alpha-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159309,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-0-alpha-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159310,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#itertools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159317,
+    "url": "https://docs.python.org/3/library/zoneinfo.html#functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159319,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-0-release-candidate-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159320,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-0-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159321,
+    "url": "https://docs.python.org/3/library/datetime.html#timezone-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159324,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-0-release-candidate-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159326,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-0-release-candidate-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159327,
+    "url": "https://docs.python.org/3/library/statistics.html#examples-and-recipes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159332,
+    "url": "https://docs.python.org/3/library/argparse.html#color",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159336,
+    "url": "https://docs.python.org/3/c-api/file.html#soft-deprecated-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159338,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159339,
+    "url": "https://docs.python.org/3/c-api/float.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159340,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#zlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159344,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#dis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159345,
+    "url": "https://docs.python.org/3/library/syslog.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159346,
+    "url": "https://docs.python.org/3/library/lzma.html#miscellaneous",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159347,
+    "url": "https://docs.python.org/3/faq/extending.html#how-do-i-use-py-buildvalue-to-create-a-tuple-of-arbitrary-length",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159349,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-7-0-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159350,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html#acknowledgements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159355,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#pep-372-adding-an-ordered-dictionary-to-collections",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159357,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#overview-of-syntax-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159358,
+    "url": "https://docs.python.org/3/library/__main__.html#id1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159361,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#build-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159363,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#naming-your-mocks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159364,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-0-alpha-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159365,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-0-alpha-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159367,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-0-alpha-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159368,
+    "url": "https://docs.python.org/3/c-api/intro.html#type-size-utilities",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159369,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159371,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-0-alpha-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159372,
+    "url": "https://docs.python.org/3/library/doctest.html#simple-usage-checking-examples-in-a-text-file",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159373,
+    "url": "https://docs.python.org/3/library/asyncio-dev.html#logging",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159374,
+    "url": "https://docs.python.org/3/c-api/structures.html#member-flags",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159375,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#changes-already-present-in-python-2-6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159376,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#binascii",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159380,
+    "url": "https://docs.python.org/3/c-api/synchronization.html#python-critical-section-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159381,
+    "url": "https://docs.python.org/3/library/tomllib.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159382,
+    "url": "https://docs.python.org/3/c-api/complex.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159383,
+    "url": "https://docs.python.org/3/library/contextlib.html#supporting-a-variable-number-of-context-managers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159384,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#new-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159385,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159386,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id918",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159387,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-12-0-alpha-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159388,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id919",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159390,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#shlex",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159391,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-12-0-alpha-6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159392,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id912",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159393,
+    "url": "https://docs.python.org/3/c-api/intro.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159394,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-12-0-alpha-7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159395,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id913",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159396,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#ssl",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159397,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id910",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159398,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id911",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159399,
+    "url": "https://docs.python.org/3/library/py_compile.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159400,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-12-0-alpha-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159401,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id916",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159402,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#syntax-and-operations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159403,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-12-0-alpha-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159404,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id917",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159405,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#bootstrapping-pip-by-default",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159406,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-12-0-alpha-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159407,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id914",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159408,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-12-0-alpha-5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159409,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id915",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159411,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#signal",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159414,
+    "url": "https://docs.python.org/3/c-api/intro.html#objects-types-and-reference-counts",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159415,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#urllib-parse",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159417,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id909",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159418,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id907",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159419,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id908",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159420,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#traceback",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159421,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id901",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159422,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id902",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159424,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id900",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159425,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id905",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159426,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id906",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159427,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id903",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159428,
+    "url": "https://docs.python.org/3/library/contextlib.html#reentrant-context-managers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159429,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id904",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159430,
+    "url": "https://docs.python.org/3/library/timeit.html#python-interface",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159431,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#imaplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159432,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#deprecated-python-behavior",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159433,
+    "url": "https://docs.python.org/3/library/mailbox.html#message-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159435,
+    "url": "https://docs.python.org/3/whatsnew/3.1.html#pep-378-format-specifier-for-thousands-separator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159436,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#marshal",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159437,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#widget",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159438,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#pep-445-customization-of-cpython-memory-allocators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159439,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#reprlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159440,
+    "url": "https://docs.python.org/3/library/doctest.html#which-docstrings-are-examined",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159441,
+    "url": "https://docs.python.org/3/library/tkinter.html#tk-option-data-types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159442,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pep-421-adding-sys-implementation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159446,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#improved-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159449,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#you-should-check-for-deprecationwarning-in-your-code",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159451,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#math",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159456,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#http",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159458,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159459,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#aifc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159461,
+    "url": "https://docs.python.org/3/library/pyclbr.html#function-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159463,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#collections",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159464,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-13-0-alpha-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159465,
+    "url": "https://docs.python.org/3/library/optparse.html#option-callbacks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159466,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-13-0-alpha-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159467,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-13-0-alpha-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159468,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-13-0-alpha-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159469,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-13-0-alpha-6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159471,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-13-0-alpha-5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159474,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#http-client",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159475,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#new-development-process",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159476,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1029",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159477,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1028",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159478,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1027",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159480,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter-life-preserver",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159481,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#whatsnew311-c-api-porting",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159482,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1026",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159483,
+    "url": "https://docs.python.org/3/c-api/time.html#clock-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159484,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1025",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159485,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1024",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159487,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1023",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159488,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id714",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159489,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1022",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159490,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id715",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159491,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1021",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159492,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id712",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159493,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1020",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159494,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id713",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159495,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id718",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159496,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id719",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159497,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#updated-module-elementtree-1-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159498,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id716",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159499,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id717",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159500,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#math",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159501,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#ttk-combobox",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159502,
+    "url": "https://docs.python.org/3/c-api/long.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159503,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#importlib-metadata",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159504,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id710",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159505,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id711",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159506,
+    "url": "https://docs.python.org/3/faq/design.html#why-must-self-be-used-explicitly-in-method-definitions-and-calls",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159507,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#pep-3148-the-concurrent-futures-module",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159508,
+    "url": "https://docs.python.org/3/library/secrets.html#other-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159509,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#ipaddress",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159515,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-10-0-beta-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159517,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id709",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159518,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1039",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159519,
+    "url": "https://docs.python.org/3/library/winreg.html#hkey-constants",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159520,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#enum",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159521,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159522,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1038",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159523,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1037",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159524,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1036",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159525,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1035",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159526,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1034",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159528,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id703",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159529,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1033",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159530,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id704",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159531,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1032",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159532,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id701",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159533,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1031",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159535,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id702",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159536,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1030",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159537,
+    "url": "https://docs.python.org/3/library/asyncio-api-index.html#subprocesses",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159540,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id707",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159543,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#doctest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159544,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id708",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159545,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#locale",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159546,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id705",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159547,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id706",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159550,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id700",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159552,
+    "url": "https://docs.python.org/3/using/unix.html#miscellaneous",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159553,
+    "url": "https://docs.python.org/3/library/optparse.html#option-attributes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159557,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#mmap",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159558,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1009",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159560,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1008",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159561,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1007",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159562,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1006",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159563,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#removed",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159564,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#py-compile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159565,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1005",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159566,
+    "url": "https://docs.python.org/3/library/datetime.html#determining-if-an-object-is-aware-or-naive",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159567,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1004",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159568,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1003",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159569,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1002",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159570,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1001",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159572,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1000",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159573,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#frame",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159574,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#pep-3129-class-decorators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159575,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#tempfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159576,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#event-loop-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159577,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1019",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159579,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1018",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159580,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1017",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159581,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#the-sqlite3-package",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159582,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1016",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159583,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#math",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159584,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1015",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159585,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1014",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159586,
+    "url": "https://docs.python.org/3/c-api/memory.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159587,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#pathlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159588,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1013",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159589,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1012",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159592,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1011",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159593,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1010",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159594,
+    "url": "https://docs.python.org/3/c-api/bytearray.html#direct-api-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159596,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#patterns-with-positional-parameters",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159597,
+    "url": "https://docs.python.org/3/library/threadsafety.html#safe-on-distinct-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159599,
+    "url": "https://docs.python.org/3/library/cmath.html#constants",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159600,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#venv",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159601,
+    "url": "https://docs.python.org/3/library/statistics.html#classic-probability-problems",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159603,
+    "url": "https://docs.python.org/3/library/logging.config.html#access-to-external-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159604,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#pep-626-precise-line-numbers-for-debugging-and-other-tools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159607,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#base64",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159608,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id758",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159609,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id759",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159610,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#configparser",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159611,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id756",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159612,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id757",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159613,
+    "url": "https://docs.python.org/3/howto/argparse.html#getting-a-little-more-advanced",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159614,
+    "url": "https://docs.python.org/3/c-api/concrete.html#container-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159615,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id750",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159616,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id751",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159617,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id754",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159618,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id755",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159619,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html#pep-241-metadata-in-python-packages",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159620,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id752",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159623,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id753",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159624,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#glob",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159626,
+    "url": "https://docs.python.org/3/library/tkinter.html#bindings-and-events",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159628,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#sys",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159630,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#typing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159631,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#operators-and-special-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159632,
+    "url": "https://docs.python.org/3/library/random.html#bookkeeping-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159633,
+    "url": "https://docs.python.org/3/faq/library.html#mathematics-and-numerics",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159634,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id747",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159635,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id748",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159636,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#os",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159637,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id745",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159639,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id746",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159640,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id749",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159642,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#pydoc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159643,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#shlex",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159644,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#using-ttk",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159645,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id740",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159647,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id743",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159648,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pep-688-making-the-buffer-protocol-accessible-in-python",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159649,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id744",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159650,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id741",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159652,
+    "url": "https://docs.python.org/3/library/optparse.html#understanding-option-actions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159654,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id742",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159656,
+    "url": "https://docs.python.org/3/extending/extending.html#extracting-parameters-in-extension-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159661,
+    "url": "https://docs.python.org/3/library/argparse.html#other-utilities",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159662,
+    "url": "https://docs.python.org/3/c-api/subinterpreters.html#low-level-apis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159663,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id736",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159665,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#wave",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159666,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id737",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159667,
+    "url": "https://docs.python.org/3/c-api/method.html#method-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159668,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#traceback",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159669,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id734",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159670,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#hmac",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159671,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id735",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159672,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#base-protocols",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159674,
+    "url": "https://docs.python.org/3/library/tkinter.html#the-packer",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159675,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id738",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159676,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id739",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159677,
+    "url": "https://docs.python.org/3/library/zipimport.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159678,
+    "url": "https://docs.python.org/3/faq/design.html#why-can-t-i-use-an-assignment-in-an-expression",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159679,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id732",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159680,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#new-and-improved-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159681,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id733",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159682,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id730",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159683,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id731",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159685,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#tls-upgrade",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159687,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#minor-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159689,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#changes-in-the-python-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159691,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#os",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159694,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#time",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159695,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id725",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159697,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id726",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159698,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id723",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159699,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id724",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159700,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id729",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159701,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id727",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159702,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id728",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159704,
+    "url": "https://docs.python.org/3/library/mailbox.html#mmdfmessage-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159707,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id721",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159710,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id722",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159711,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id720",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159714,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#calendar",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159716,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#csv",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159717,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#common-stumbling-blocks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159719,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#subprocess",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159723,
+    "url": "https://docs.python.org/3/using/mac.html#alternative-distributions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159724,
+    "url": "https://docs.python.org/3/c-api/structures.html#accessing-attributes-of-extension-types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159725,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id794",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159726,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pep-468-preserving-keyword-argument-order",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159727,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id795",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159728,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id792",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159729,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id793",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159730,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id798",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159731,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id799",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159732,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id796",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159733,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id797",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159736,
+    "url": "https://docs.python.org/3/c-api/buffer.html#buffer-related-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159737,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id790",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159738,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id791",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159740,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#re",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159741,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#sysconfig",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159743,
+    "url": "https://docs.python.org/3/library/struct.html#standard-formats",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159744,
+    "url": "https://docs.python.org/3/faq/gui.html#tkinter-questions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159745,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#decimal",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159746,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#cpython-bytecode-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159747,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id789",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159750,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id783",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159751,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id784",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159752,
+    "url": "https://docs.python.org/3/library/optparse.html#other-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159753,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#mailbox",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159754,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id781",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159755,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id782",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159756,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id787",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159757,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id788",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159758,
+    "url": "https://docs.python.org/3/c-api/buffer.html#contiguity-requests",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159759,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id785",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159761,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id786",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159764,
+    "url": "https://docs.python.org/3/library/dataclasses.html#mutable-default-values",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159765,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pep-3118-new-memoryview-implementation-and-buffer-protocol-documentation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159767,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#improved-ssl-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159768,
+    "url": "https://docs.python.org/3/extending/index.html#creating-extensions-without-third-party-tools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159769,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id780",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159770,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#tempfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159774,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#nameerrors",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159775,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1088",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159776,
+    "url": "https://docs.python.org/3/c-api/allocation.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159777,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1087",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159778,
+    "url": "https://docs.python.org/3/library/modulefinder.html#example-usage-of-modulefinder",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159779,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#unittest-mock",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159780,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id778",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159781,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1086",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159782,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id779",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159783,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1085",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159784,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1084",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159785,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1083",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159786,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1082",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159787,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1081",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159788,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id772",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159789,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1080",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159790,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#ipaddress",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159791,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id773",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159793,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id770",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159794,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id771",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159795,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id776",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159796,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#typing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159797,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id777",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159798,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id774",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159799,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id775",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159800,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#removal-of-make-touch-build-target",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159801,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#summary-release-highlights",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159802,
+    "url": "https://docs.python.org/3/c-api/slice.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159803,
+    "url": "https://docs.python.org/3/using/editors.html#other-editors-and-ides",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159804,
+    "url": "https://docs.python.org/3/library/compression.zstd.html#miscellaneous",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159807,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#sys",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159808,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#selectors",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159811,
+    "url": "https://docs.python.org/3/library/doctest.html#outputchecker-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159812,
+    "url": "https://docs.python.org/3/using/unix.html#python-related-paths-and-files",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159813,
+    "url": "https://docs.python.org/3/howto/argparse-optparse.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159814,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#sqlite3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159815,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id769",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159819,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id767",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159820,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id768",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159821,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#ipaddress",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159822,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#pep-456-secure-and-interchangeable-hash-algorithm",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159823,
+    "url": "https://docs.python.org/3/library/gettext.html#localizing-your-application",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159824,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#itertools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159825,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id761",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159826,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#why-is-decimal-needed",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159827,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id762",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159828,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id760",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159829,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimporter-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159830,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id765",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159831,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id766",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159832,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id763",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159833,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#notable-security-feature-in-3-7-14",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159834,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id764",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159835,
+    "url": "https://docs.python.org/3/library/queue.html#queue-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159837,
+    "url": "https://docs.python.org/3/library/doctest.html#debugging",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159838,
+    "url": "https://docs.python.org/3/c-api/gcsupport.html#controlling-the-garbage-collector-state",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159839,
+    "url": "https://docs.python.org/3/library/queue.html#waiting-for-task-completion",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159841,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#new-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159842,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#venv",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159843,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#pep-3101-advanced-string-formatting",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159844,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#compatibility-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159845,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1069",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159847,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1068",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159849,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#porting-to-python-3-0",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159850,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1067",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159851,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1066",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159852,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1065",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159854,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1064",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159857,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1063",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159858,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1062",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159859,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1061",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159860,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1060",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159864,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#xml-etree-elementtree",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159865,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pending-removal-in-python-3-13",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159866,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pending-removal-in-python-3-16",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159868,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pending-removal-in-python-3-17",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159869,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pending-removal-in-python-3-14",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159870,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1079",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159873,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pending-removal-in-python-3-15",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159874,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#new-make-regen-all-build-target",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159875,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1078",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159876,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1077",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159878,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1076",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159879,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1075",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159880,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1074",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159881,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1073",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159882,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1072",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159884,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1071",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159885,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1070",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159886,
+    "url": "https://docs.python.org/3/howto/argparse.html#conflicting-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159891,
+    "url": "https://docs.python.org/3/faq/extending.html#how-do-i-catch-the-output-from-pyerr-print-or-anything-that-prints-to-stdout-stderr",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159894,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159895,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1049",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159897,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1048",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159898,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1047",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159899,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1046",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159900,
+    "url": "https://docs.python.org/3/extending/embedding.html#embedding-python-in-c",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159901,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1045",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159902,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1044",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159904,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html#other-changes-and-fixes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159905,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1043",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159907,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1042",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159909,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1041",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159910,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1040",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159911,
+    "url": "https://docs.python.org/3/library/configparser.html#fallback-values",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159914,
+    "url": "https://docs.python.org/3/using/unix.html#custom-openssl",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159915,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#scheduling-callbacks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159918,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#summary-release-highlights",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159920,
+    "url": "https://docs.python.org/3/faq/programming.html#objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159921,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1059",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159922,
+    "url": "https://docs.python.org/3/library/idle.html#format-block",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159923,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1058",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159924,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1057",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159925,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1056",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159927,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1055",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159928,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1054",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159929,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#sqlite3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159930,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1053",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159931,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1052",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159932,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#io",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159933,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1051",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159934,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id1050",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159935,
+    "url": "https://docs.python.org/3/library/threadsafety.html#compatible",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159936,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#ttk-progressbar",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159939,
+    "url": "https://docs.python.org/3/library/trace.html#modifiers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159941,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#tests",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159942,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159943,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#display-the-current-date-with-call-later",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159950,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#extended-slices",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159951,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#csv",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159953,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#positional-only-parameters",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159954,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159956,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#unittest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159957,
+    "url": "https://docs.python.org/3/c-api/lifecycle.html#cyclic-isolate-destruction",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159958,
+    "url": "https://docs.python.org/3/reference/executionmodel.html#interaction-with-dynamic-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159959,
+    "url": "https://docs.python.org/3/whatsnew/3.1.html#idle",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159962,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#declarative-approach",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159965,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#ipaddress",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159966,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#notable-changes-in-python-3-7-10",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159968,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#porting-to-python-3-10",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159969,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#pep-277-unicode-file-name-support-for-windows-nt",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159971,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#notable-changes-in-python-3-7-11",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159972,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#acknowledgements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159973,
+    "url": "https://docs.python.org/3/c-api/call.html#the-vectorcall-protocol",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159975,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#unicodedata",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159976,
+    "url": "https://docs.python.org/3/library/optparse.html#choosing-an-argument-parsing-library",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159978,
+    "url": "https://docs.python.org/3/extending/windows.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159979,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#attributeerrors",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159980,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#abc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159981,
+    "url": "https://docs.python.org/3/library/datetime.html#examples-of-usage-time",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159982,
+    "url": "https://docs.python.org/3/extending/extending.html#compilation-and-linkage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159983,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-0-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159985,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#the-plistlib-module-a-property-list-parser",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159987,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-0-release-candidate-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159990,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#descriptors",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159992,
+    "url": "https://docs.python.org/3/library/readline.html#example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159993,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#pathlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159994,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#garbage-collection-of-cycles",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159995,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#watching-file-descriptors",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159996,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#importlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159998,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#udp-echo-client",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 159999,
+    "url": "https://docs.python.org/3/faq/extending.html#how-do-i-find-undefined-g-symbols-builtin-new-or-pure-virtual",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160001,
+    "url": "https://docs.python.org/3/library/time.html#timezone-constants",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160002,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#module-removals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160004,
+    "url": "https://docs.python.org/3/c-api/module.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160011,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#indentationerrors",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160012,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#threading",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160013,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#standard-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160015,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#collections-abc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160016,
+    "url": "https://docs.python.org/3/library/gettext.html#solaris-message-catalog-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160020,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#escaped-characters",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160021,
+    "url": "https://docs.python.org/3/c-api/memory.html#the-mimalloc-allocator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160022,
+    "url": "https://docs.python.org/3/c-api/sys.html#system-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160023,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#zipfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160024,
+    "url": "https://docs.python.org/3/faq/windows.html#how-do-i-make-python-scripts-executable",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160026,
+    "url": "https://docs.python.org/3/library/logging.config.html#user-defined-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160027,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#pep-343-the-with-statement",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160028,
+    "url": "https://docs.python.org/3/library/enum.html#data-types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160030,
+    "url": "https://docs.python.org/3/library/hashlib.html#hash-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160031,
+    "url": "https://docs.python.org/3/library/traceback.html#module-level-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160033,
+    "url": "https://docs.python.org/3/whatsnew/3.1.html#new-improved-and-deprecated-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160034,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html#pep-236-future-directives",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160036,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#gc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160037,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#call",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160038,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#importlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160039,
+    "url": "https://docs.python.org/3/library/asyncio-llapi-index.html#transports",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160040,
+    "url": "https://docs.python.org/3/extending/newtypes.html#finalization-and-de-allocation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160043,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#gzip",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160044,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html#introduction",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160045,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#functools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160047,
+    "url": "https://docs.python.org/3/library/netrc.html#netrc-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160048,
+    "url": "https://docs.python.org/3/library/argparse.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160049,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#collections",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160050,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#the-ast-module",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160055,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#pep-493-https-verification-migration-tools-for-python-2-7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160056,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#io",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160057,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#decimal",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160059,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#ensurepip",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160060,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#using-side-effect-to-return-per-file-content",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160061,
+    "url": "https://docs.python.org/3/extending/building.html#building-c-and-c-extensions-with-setuptools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160062,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#porting-to-python-3-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160068,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#pep-3118-revised-buffer-protocol",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160070,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160071,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#enum",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160076,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#ipaddress",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160079,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#floating-point-literals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160081,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#imp",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160083,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#poplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160084,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#multiprocessing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160086,
+    "url": "https://docs.python.org/3/library/idle.html#file-menu-shell-and-editor",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160088,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#magic-mock",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160089,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#unittest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160090,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#pep-285-a-boolean-type",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160093,
+    "url": "https://docs.python.org/3/c-api/structures.html#defining-getters-and-setters",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160095,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#smtpd",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160097,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#uuid",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160101,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160103,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#audioop",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160104,
+    "url": "https://docs.python.org/3/extending/embedding.html#compiling-and-linking-under-unix-like-systems",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160105,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#sunau",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160106,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#importlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160107,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#fcntl",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160108,
+    "url": "https://docs.python.org/3/whatsnew/3.1.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160112,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#new-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160113,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#build-and-c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160115,
+    "url": "https://github.com/python/cpython/blob/main/Doc/contents.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160116,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#importlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160117,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pep-528-change-windows-console-encoding-to-utf-8",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160118,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#builtins",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160119,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#pydoc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160120,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#changed-c-apis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160121,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#improved-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160123,
+    "url": "https://docs.python.org/3/library/logging.html#formatter-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160124,
+    "url": "https://docs.python.org/3/c-api/intro.html#assertion-utilities",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160128,
+    "url": "https://docs.python.org/3/library/selectors.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160129,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#time",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160130,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#slots",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160131,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160133,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#read-only-transports",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160135,
+    "url": "https://docs.python.org/3/extending/newtypes.html#object-presentation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160137,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#ttk-themed-widgets-for-tk",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160138,
+    "url": "https://docs.python.org/3/library/collections.html#namedtuple-factory-function-for-tuples-with-named-fields",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160139,
+    "url": "https://docs.python.org/3/faq/windows.html#is-a-pyd-file-the-same-as-a-dll",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160141,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#build-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160142,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#porting-to-python-2-6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160143,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#ssl",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160145,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#notebook",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160146,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#pep-489-multi-phase-extension-module-initialization",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160149,
+    "url": "https://docs.python.org/3/c-api/threads.html#high-level-apis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160151,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#threading",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160154,
+    "url": "https://docs.python.org/3/installing/index.html#pip-not-installed",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160155,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#io",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160157,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#encodings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160158,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160159,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#crypt",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160162,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#widget-states",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160163,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#pdb",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160164,
+    "url": "https://docs.python.org/3/howto/argparse.html#concepts",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160166,
+    "url": "https://docs.python.org/3/library/logging.config.html#configuring-queuehandler-and-queuelistener",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160168,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#cpython-bytecode-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160169,
+    "url": "https://docs.python.org/3/library/winreg.html#bit-specific",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160170,
+    "url": "https://docs.python.org/3/library/optparse.html#other-actions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160171,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#triple-quoted-strings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160174,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#opcode",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160176,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#unittest-mock",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160178,
+    "url": "https://docs.python.org/3/library/hashlib.html#attributes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160179,
+    "url": "https://docs.python.org/3/library/configparser.html#mapping-protocol-access",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160180,
+    "url": "https://docs.python.org/3/c-api/curses.html#internal-data",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160182,
+    "url": "https://docs.python.org/3/library/argparse.html#choices",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160183,
+    "url": "https://docs.python.org/3/library/numbers.html#adding-more-numeric-abcs",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160185,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#build-and-c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160187,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#httphandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160189,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#typing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160193,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#sys",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160196,
+    "url": "https://docs.python.org/3/c-api/memory.html#customize-pymalloc-arena-allocator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160197,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#id2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160198,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#id3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160200,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#id4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160201,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#id5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160203,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#id6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160204,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#id7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160205,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#id8",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160206,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#id9",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160207,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#os",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160208,
+    "url": "https://docs.python.org/3/faq/gui.html#general-gui-questions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160209,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#dbm",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160210,
+    "url": "https://docs.python.org/3/faq/design.html#why-is-there-no-goto",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160211,
+    "url": "https://docs.python.org/3/library/resource.html#resource-limits",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160213,
+    "url": "https://docs.python.org/3/c-api/intro.html#reference-count-details",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160214,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#textwrap",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160215,
+    "url": "https://docs.python.org/3/library/mmap.html#map-constants",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160217,
+    "url": "https://docs.python.org/3/library/hashlib.html#usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160218,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#patterns-with-a-literal-and-variable",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160219,
+    "url": "https://docs.python.org/3/c-api/arg.html#numbers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160222,
+    "url": "https://docs.python.org/3/extending/index.html#embedding-the-cpython-runtime-in-a-larger-application",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160225,
+    "url": "https://docs.python.org/3/library/graphlib.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160227,
+    "url": "https://docs.python.org/3/library/gettext.html#acknowledgements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160229,
+    "url": "https://docs.python.org/3/library/base64.html#security-considerations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160230,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#documentation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160231,
+    "url": "https://docs.python.org/3/using/ios.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160233,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#asyncio",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160234,
+    "url": "https://docs.python.org/3/library/difflib.html#a-command-line-interface-to-difflib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160238,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#removed",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160239,
+    "url": "https://docs.python.org/3/library/posix.html#large-file-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160243,
+    "url": "https://docs.python.org/3/c-api/call.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160244,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#smtplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160245,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#porting-to-python-3-8",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160247,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#threading",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160248,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#datetime",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160249,
+    "url": "https://docs.python.org/3/c-api/memory.html#the-pymalloc-allocator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160251,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#deprecated-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160253,
+    "url": "https://docs.python.org/3/reference/import.html#regular-packages",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160254,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#id4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160255,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#miscellaneous-other-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160256,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#removal-of-make-touch-build-target",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160258,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#id1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160260,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#distutils",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160261,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#id3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160262,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#unicode",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160263,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#id2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160265,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#site",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160268,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#warnings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160269,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#tkinter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160270,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#datetime",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160272,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#time",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160274,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160275,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#venv",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160276,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#pending-removal-in-future-versions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160277,
+    "url": "https://docs.python.org/3/library/argparse.html#argumentparser-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160279,
+    "url": "https://docs.python.org/3/library/asyncio-llapi-index.html#obtaining-the-event-loop",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160280,
+    "url": "https://docs.python.org/3/library/pickletools.html#command-line-usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160285,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#pickle",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160286,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#pickle",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160287,
+    "url": "https://docs.python.org/3/using/ios.html#binary-extension-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160289,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#compileall",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160290,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#pep-657-fine-grained-error-locations-in-tracebacks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160291,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160292,
+    "url": "https://docs.python.org/3/library/dataclasses.html#post-init-processing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160297,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#bz2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160300,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#octal-character",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160305,
+    "url": "https://docs.python.org/3/library/struct.html#classes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160311,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160312,
+    "url": "https://docs.python.org/3/library/statistics.html#approximating-binomial-distributions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160313,
+    "url": "https://docs.python.org/3/library/readline.html#completion",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160314,
+    "url": "https://docs.python.org/3/library/traceback.html#framesummary-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160317,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#zoneinfo",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160319,
+    "url": "https://docs.python.org/3/extending/newtypes.html#weak-reference-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160320,
+    "url": "https://docs.python.org/3/library/hashlib.html#personalization",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160321,
+    "url": "https://docs.python.org/3/c-api/intro.html#declaration-utilities",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160323,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#decimal-and-fractions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160325,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#acknowledgements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160326,
+    "url": "https://docs.python.org/3/extending/newtypes.html#attribute-management",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160329,
+    "url": "https://docs.python.org/3/library/argparse.html#action",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160334,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160335,
+    "url": "https://docs.python.org/3/library/hashlib.html#tree-mode",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160336,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#deprecated",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160338,
+    "url": "https://docs.python.org/3/library/argparse.html#subcommands",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160339,
+    "url": "https://docs.python.org/3/library/secrets.html#recipes-and-best-practices",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160341,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160342,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#json",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160344,
+    "url": "https://docs.python.org/3/c-api/typehints.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160346,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#faster-startup",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160348,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#imaplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160351,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#turtle",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160352,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#re",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160353,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#urllib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160355,
+    "url": "https://docs.python.org/3/library/traceback.html#tracebackexception-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160356,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#formatted-string-literals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160358,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#smtpd",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160359,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#patching-descriptors-and-proxy-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160361,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#hashlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160362,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#inspect",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160363,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#using-mock",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160366,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160368,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-7-0-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160369,
+    "url": "https://docs.python.org/3/c-api/veryhigh.html#stack-effects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160371,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#deprecated-functions-and-types-of-the-c-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160372,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#dataclasses",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160373,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#zipfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160375,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#frozen-imports-static-code-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160376,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#fcntl",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160378,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#zipimport",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160379,
+    "url": "https://docs.python.org/3/library/logging.config.html#dictionary-schema-details",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160380,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#pep-466-network-security-enhancements-for-python-2-7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160381,
+    "url": "https://docs.python.org/3/library/optparse.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160382,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#about",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160383,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#asyncio",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160385,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#multiprocessing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160386,
+    "url": "https://docs.python.org/3/library/trace.html#command-line-usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160387,
+    "url": "https://docs.python.org/3/c-api/memory.html#raw-memory-interface",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160388,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#pep-3147-pyc-repository-directories",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160389,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#porting-to-python-3-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160393,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#executing-code-in-thread-or-process-pools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160394,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#aifc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160395,
+    "url": "https://docs.python.org/3/library/select.html#kqueue-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160396,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#gzip",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160397,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#statistics",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160398,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#operator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160401,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#mmap",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160403,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#patch-multiple",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160404,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#build-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160405,
+    "url": "https://docs.python.org/3/library/logging.config.html#configuration-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160406,
+    "url": "https://docs.python.org/3/extending/extending.html#ownership-rules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160407,
+    "url": "https://docs.python.org/3/library/datetime.html#examples-of-usage-date",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160408,
+    "url": "https://docs.python.org/3/library/platform.html#linux-platforms",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160410,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#porting-to-2-0",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160411,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#contextlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160412,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pep-526-syntax-for-variable-annotations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160413,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#port-specific-changes-freebsd",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160414,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#date-time-type",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160415,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#bugs",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160416,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#http-client",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160417,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-1-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160418,
+    "url": "https://docs.python.org/3/library/datetime.html#tzinfo-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160422,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-4-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160423,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#progressbar",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160424,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#functools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160427,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-0-beta-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160428,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-0-beta-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160430,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#pep-659-specializing-adaptive-interpreter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160431,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-0-beta-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160433,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#timeit",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160435,
+    "url": "https://docs.python.org/3/library/configparser.html#customizing-parser-behaviour",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160439,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#changes-in-the-c-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160440,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-0-beta-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160441,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#filecmp",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160443,
+    "url": "https://docs.python.org/3/c-api/buffer.html#compound-requests",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160444,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#sys",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160447,
+    "url": "https://docs.python.org/3/library/sys_path_init.html#pth-files",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160448,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#urllib-request",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160449,
+    "url": "https://docs.python.org/3/faq/library.html#threads",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160450,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#fractions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160451,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#os",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160452,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#formal-grammar",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160455,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160458,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160459,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#dbm",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160461,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#pep-563-may-not-be-the-future",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160463,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#zipapp",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160466,
+    "url": "https://docs.python.org/3/library/argparse.html#conflict-handler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160467,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#curses",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160468,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#gettext",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160469,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#whatsnew36-venv",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160470,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id240",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160471,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#changes-in-the-c-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160472,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id241",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160473,
+    "url": "https://docs.python.org/3/howto/argparse.html#specifying-ambiguous-arguments",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160475,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#summary-release-highlights",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160477,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#new-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160478,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#xmlrpc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160480,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id239",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160481,
+    "url": "https://docs.python.org/3/library/enum.html#utilities-and-decorators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160484,
+    "url": "https://docs.python.org/3/c-api/intro.html#types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160485,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id233",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160486,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#policy-framework",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160487,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id234",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160488,
+    "url": "https://docs.python.org/3/library/argparse.html#parents",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160489,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id231",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160490,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id232",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160491,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id237",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160492,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id238",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160493,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id235",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160494,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#builtin-functions-and-types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160495,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id236",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160496,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#pep-604-new-type-union-operator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160497,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id230",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160498,
+    "url": "https://docs.python.org/3/c-api/float.html#unpack-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160499,
+    "url": "https://docs.python.org/3/library/msvcrt.html#console-i-o",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160500,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#http",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160501,
+    "url": "https://docs.python.org/3/library/winreg.html#value-types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160502,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id228",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160503,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id229",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160504,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#gzip-and-zipfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160505,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id222",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160509,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id223",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160510,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id220",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160511,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id221",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160513,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id226",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160514,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id227",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160515,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id224",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160517,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id225",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160520,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160521,
+    "url": "https://docs.python.org/3/library/platform.html#ios-platform",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160523,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#weakref",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160524,
+    "url": "https://docs.python.org/3/library/weakref.html#weak-reference-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160525,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#spinbox",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160526,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#introduction",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160528,
+    "url": "https://docs.python.org/3/c-api/weakref.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160532,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#unsupported-operating-systems",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160533,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#pep-434-idle-enhancement-exception-for-all-branches",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160536,
+    "url": "https://docs.python.org/3/c-api/concrete.html#other-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160537,
+    "url": "https://docs.python.org/3/c-api/threads.html#non-python-created-threads",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160538,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id219",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160539,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-7-0-beta-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160541,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id217",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160542,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-7-0-beta-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160543,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id218",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160544,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-7-0-beta-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160546,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pending-removal-in-future-versions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160547,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#warnings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160548,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id211",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160550,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#better-error-messages",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160551,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id212",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160552,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#selectors",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160553,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#pep-352-exceptions-as-new-style-classes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160555,
+    "url": "https://docs.python.org/3/c-api/intro.html#language-version-compatibility",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160556,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id210",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160557,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id215",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160558,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id216",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160559,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id213",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160560,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id214",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160561,
+    "url": "https://docs.python.org/3/library/doctest.html#soapbox",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160563,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#removed",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160569,
+    "url": "https://docs.python.org/3/c-api/intro.html#include-files",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160570,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#macos-11-0-big-sur-and-apple-silicon-mac-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160571,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-7-0-beta-5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160572,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-7-0-beta-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160573,
+    "url": "https://docs.python.org/3/c-api/memory.html#memory-interface",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160574,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#socketserver",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160575,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id208",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160576,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#distutils",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160577,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id209",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160578,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id206",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160579,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id207",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160580,
+    "url": "https://docs.python.org/3/using/unix.html#building-python",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160581,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#side-effect-functions-and-iterables",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160582,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id200",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160583,
+    "url": "https://docs.python.org/3/library/queue.html#terminating-queues",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160584,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id201",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160585,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id204",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160586,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id205",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160587,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id202",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160588,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id203",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160589,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id280",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160590,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id281",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160591,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id284",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160592,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#new-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160593,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id285",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160594,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#pathlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160595,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id282",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160596,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id283",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160597,
+    "url": "https://docs.python.org/3/library/argparse.html#fromfile-prefix-chars",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160598,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160600,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#tokenize",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160601,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#changes-in-python-command-behavior",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160603,
+    "url": "https://docs.python.org/3/c-api/call.html#object-calling-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160607,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#ssl",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160609,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#ssl",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160611,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id277",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160613,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id278",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160614,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id275",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160615,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id276",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160616,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id279",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160617,
+    "url": "https://docs.python.org/3/library/optparse.html#conflicts-between-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160618,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id270",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160621,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#collections",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160622,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id273",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160624,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id274",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160625,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id271",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160626,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id272",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160627,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#deprecated-functions-and-types-of-the-c-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160628,
+    "url": "https://docs.python.org/3/using/mac.html#advanced-topics",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160630,
+    "url": "https://docs.python.org/3/installing/index.html#install-packages-just-for-the-current-user",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160631,
+    "url": "https://docs.python.org/3/library/asyncio-platforms.html#subprocess-support-on-windows",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160633,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#port-specific-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160637,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#basic-usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160638,
+    "url": "https://docs.python.org/3/library/datetime.html#constants",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160641,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-3-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160642,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id266",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160643,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id267",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160644,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id264",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160645,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id265",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160646,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#pep-652-maintaining-the-stable-abi",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160647,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#re",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160649,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id268",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160650,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id269",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160653,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#pep-488-elimination-of-pyo-files",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160655,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id262",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160656,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id263",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160657,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id260",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160658,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id261",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160659,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#os",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160660,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#dis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160661,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#build-and-c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160662,
+    "url": "https://docs.python.org/3/library/contextlib.html#replacing-any-use-of-try-finally-and-flag-variables",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160663,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#http",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160664,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#gc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160666,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#threading",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160667,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id255",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160668,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id256",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160669,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id253",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160670,
+    "url": "https://docs.python.org/3/library/idle.html#module-idlelib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160671,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id254",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160672,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id259",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160673,
+    "url": "https://docs.python.org/3/library/argparse.html#customizing-file-parsing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160674,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id257",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160675,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#shutil",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160676,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id258",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160677,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#core-and-builtins",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160679,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#tarfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160680,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#email",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160681,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#windows-only-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160683,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id251",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160684,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id252",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160685,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id250",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160687,
+    "url": "https://docs.python.org/3/faq/design.html#why-isn-t-there-a-switch-or-case-statement-in-python",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160689,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#bytes-literals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160690,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id244",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160691,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#stat",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160692,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id245",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160693,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id242",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160694,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id243",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160696,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id248",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160697,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id249",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160699,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id246",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160700,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id247",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160701,
+    "url": "https://docs.python.org/3/library/glob.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160709,
+    "url": "https://docs.python.org/3/using/ios.html#platform-identification",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160710,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#macos",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160712,
+    "url": "https://docs.python.org/3/c-api/veryhigh.html#available-start-symbols",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160715,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#new-parser",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160716,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#new-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160718,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#argparse",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160721,
+    "url": "https://docs.python.org/3/c-api/threads.html#operating-system-thread-apis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160722,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#new-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160725,
+    "url": "https://docs.python.org/3/library/optparse.html#querying-and-manipulating-your-option-parser",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160726,
+    "url": "https://docs.python.org/3/library/asyncio-dev.html#debug-mode",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160727,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160728,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-8-0-beta-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160730,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#pep-391-dictionary-based-configuration-for-logging",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160731,
+    "url": "https://docs.python.org/3/library/argparse.html#partial-parsing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160732,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#statistic",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160733,
+    "url": "https://docs.python.org/3/c-api/sys.html#process-control",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160734,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pep-701-syntactic-formalization-of-f-strings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160735,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#inspect",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160737,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pep-380-syntax-for-delegating-to-a-subgenerator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160739,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#linecache",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160740,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-5-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160745,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#pdb",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160749,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#porting-to-python-3-11",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160751,
+    "url": "https://docs.python.org/3/library/collections.html#ordereddict-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160755,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id299",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160756,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id297",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160757,
+    "url": "https://docs.python.org/3/library/base64.html#base85-encodings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160758,
+    "url": "https://docs.python.org/3/c-api/gcsupport.html#querying-garbage-collector-state",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160759,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id298",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160760,
+    "url": "https://docs.python.org/3/library/doctest.html#how-it-works",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160761,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#xml-etree",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160763,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id291",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160764,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id292",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160765,
+    "url": "https://docs.python.org/3/library/numbers.html#the-numeric-tower",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160766,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id290",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160767,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id295",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160769,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id296",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160770,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id293",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160771,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id294",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160772,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-3-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160774,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-10-0-alpha-7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160775,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-10-0-alpha-6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160776,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-10-0-alpha-5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160777,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-10-0-alpha-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160779,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#new-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160780,
+    "url": "https://docs.python.org/3/library/asyncio-api-index.html#queues",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160785,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-10-0-alpha-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160786,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-10-0-alpha-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160787,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-10-0-alpha-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160788,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id288",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160789,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id289",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160791,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#new-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160792,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id286",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160793,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id287",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160794,
+    "url": "https://docs.python.org/3/library/optparse.html#adding-new-actions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160796,
+    "url": "https://docs.python.org/3/library/dataclasses.html#init-only-variables",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160798,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#new-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160799,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#pathlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160800,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#socket",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160801,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#math",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160802,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#code-cleanups",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160803,
+    "url": "https://docs.python.org/3/using/mac.html#how-to-run-a-python-script",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160805,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#socket",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160806,
+    "url": "https://docs.python.org/3/library/argparse.html#the-namespace-object",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160807,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#cmath",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160808,
+    "url": "https://docs.python.org/3/library/tkinter.html#file-handlers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160809,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#xml",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160810,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#changes-in-the-python-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160812,
+    "url": "https://docs.python.org/3/reference/executionmodel.html#resolution-of-names",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160813,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#idle-improvements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160816,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#ensurepip",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160818,
+    "url": "https://docs.python.org/3/library/tkinter.html#threading-model",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160821,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#server-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160822,
+    "url": "https://docs.python.org/3/extending/extending.html#providing-a-c-api-for-an-extension-module",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160828,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#a-finer-grained-import-lock",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160831,
+    "url": "https://docs.python.org/3/using/mac.html#installing-using-the-command-line",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160833,
+    "url": "https://docs.python.org/3/library/asyncio-llapi-index.html#event-loop-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160835,
+    "url": "https://docs.python.org/3/faq/extending.html#how-do-i-access-a-module-written-in-python-from-c",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160837,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-11-0-alpha-7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160838,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-11-0-alpha-6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160839,
+    "url": "https://docs.python.org/3/library/tkinter.html#coupling-widget-variables",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160840,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-11-0-alpha-5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160841,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-11-0-alpha-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160843,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-11-0-alpha-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160844,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#ftplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160845,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-11-0-alpha-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160847,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#deprecations-in-the-python-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160848,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-11-0-alpha-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160849,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#pep-492-coroutines-with-async-and-await-syntax",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160852,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160853,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#datetime",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160855,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#tarfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160856,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#patterns-and-classes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160862,
+    "url": "https://docs.python.org/3/library/argparse.html#mutual-exclusion",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160863,
+    "url": "https://docs.python.org/3/extending/extending.html#a-simple-example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160866,
+    "url": "https://docs.python.org/3/library/zipapp.html#caveats",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160870,
+    "url": "https://docs.python.org/3/library/datetime.html#timedelta-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160871,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#mock-names-and-the-name-attribute",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160872,
+    "url": "https://docs.python.org/3/library/tokenize.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160873,
+    "url": "https://docs.python.org/3/extending/extending.html#calling-python-functions-from-c",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160874,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#openssl",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160875,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160876,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#pep-675-arbitrary-literal-string-type",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160877,
+    "url": "https://docs.python.org/3/faq/windows.html#how-do-i-make-an-executable-from-a-python-script",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160878,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#base64",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160880,
+    "url": "https://docs.python.org/3/library/bisect.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160881,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#asyncore",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160884,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#optparse",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160885,
+    "url": "https://docs.python.org/3/c-api/code.html#extra-information",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160886,
+    "url": "https://docs.python.org/3/faq/design.html#why-are-floating-point-calculations-so-inaccurate",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160887,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-13-0-beta-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160888,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#raw-string-literals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160889,
+    "url": "https://docs.python.org/3/c-api/threads.html#cautions-about-fork",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160890,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#threading",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160891,
+    "url": "https://docs.python.org/3/faq/extending.html#how-can-i-evaluate-an-arbitrary-python-expression-from-c",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160893,
+    "url": "https://docs.python.org/3/extending/extending.html#writing-extensions-in-c",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160895,
+    "url": "https://docs.python.org/3/library/argparse.html#metavar",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160897,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#pretty-top",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160899,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#socketserver",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160900,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html#tcp-echo-server-using-streams",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160901,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#item-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160905,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pythonmalloc-environment-variable",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160906,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#changed-in-3-4-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160908,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#dataclasses",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160910,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#module-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160913,
+    "url": "https://docs.python.org/3/reference/executionmodel.html#general-computing-model",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160914,
+    "url": "https://docs.python.org/3/extending/extending.html#back-to-the-example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160915,
+    "url": "https://docs.python.org/3/library/compileall.html#public-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160919,
+    "url": "https://docs.python.org/3/contents.html#python-documentation-contents",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160921,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#tkinter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160922,
+    "url": "https://docs.python.org/3/howto/argparse.html#the-basics",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160923,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#keyword-only-fields",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160924,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#math",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160925,
+    "url": "https://docs.python.org/3/faq/design.html#why-is-join-a-string-method-instead-of-a-list-or-tuple-method",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160927,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#stat",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160932,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#python-3-0",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160933,
+    "url": "https://docs.python.org/3/library/lzma.html#compressing-and-decompressing-data-in-memory",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160934,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#new-improved-and-deprecated-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160935,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html#pep-232-function-attributes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160936,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#http-client",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160940,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#readline",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160941,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#concurrent-futures",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160942,
+    "url": "https://docs.python.org/3/howto/argparse.html#introducing-optional-arguments",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160943,
+    "url": "https://docs.python.org/3/library/optparse.html#introduction",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160945,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-0-beta-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160947,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-0-beta-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160949,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#urllib-parse",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160950,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html#pep-230-warning-framework",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160951,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#pep-255-simple-generators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160952,
+    "url": "https://docs.python.org/3/faq/extending.html#can-i-create-my-own-functions-in-c",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160955,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#gc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160956,
+    "url": "https://docs.python.org/3/library/mailbox.html#mhmessage-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160957,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id956",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160958,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#new-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160959,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id957",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160960,
+    "url": "https://docs.python.org/3/library/collections.html#deque-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160961,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id954",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160963,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id955",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160965,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id958",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160966,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id959",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160968,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id952",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160969,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id953",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160970,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id950",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160973,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id951",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160975,
+    "url": "https://docs.python.org/3/library/enum.html#supported-dunder-names",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160976,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#idle",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160978,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#new-improved-and-deprecated-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160979,
+    "url": "https://docs.python.org/3/library/idle.html#menus",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160980,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#deleting-attributes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160981,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id945",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160982,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id946",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160983,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id943",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160984,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id944",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160986,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id949",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160987,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id947",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160989,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id948",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160991,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#pep-539-new-c-api-for-thread-local-storage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160992,
+    "url": "https://docs.python.org/3/library/difflib.html#differ-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160993,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id941",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160994,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id942",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160996,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id940",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160997,
+    "url": "https://docs.python.org/3/faq/windows.html#how-do-i-run-a-python-program-under-windows",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160998,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#guard",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 160999,
+    "url": "https://docs.python.org/3/library/site.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161000,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#argparse",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161003,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#locale",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161004,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#id3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161005,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id934",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161006,
+    "url": "https://docs.python.org/3/library/random.html#command-line-usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161007,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#id2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161008,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id935",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161009,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#id5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161010,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id932",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161011,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#id4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161012,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#urllib-parse",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161013,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id933",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161015,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id938",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161017,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id939",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161018,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id936",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161019,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id937",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161020,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#new-dict-implementation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161021,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#pep-475-retry-system-calls-failing-with-eintr",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161022,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id930",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161023,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id931",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161024,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#id1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161027,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#pep-451-a-modulespec-type-for-the-import-system",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161028,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#pep-343-the-with-statement",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161030,
+    "url": "https://docs.python.org/3/library/__main__.html#idiomatic-usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161031,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id929",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161033,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#pep-3333-python-web-server-gateway-interface-v1-0-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161034,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#abc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161035,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#interpreter-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161037,
+    "url": "https://docs.python.org/3/library/tkinter.html#architecture",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161038,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#tracking-order-of-calls-and-less-verbose-call-assertions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161039,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#whatsnew311-c-api-new-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161040,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id923",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161041,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id924",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161043,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id921",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161044,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#zipimport",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161045,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id922",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161048,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id927",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161049,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id928",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161050,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#running-in-an-interpreter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161051,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#binascii",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161052,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id925",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161054,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id926",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161055,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#combobox",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161057,
+    "url": "https://docs.python.org/3/faq/library.html#network-internet-programming",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161058,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-0-beta-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161059,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id920",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161060,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-0-beta-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161061,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#mimetypes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161062,
+    "url": "https://docs.python.org/3/library/zoneinfo.html#environment-configuration",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161064,
+    "url": "https://docs.python.org/3/library/difflib.html#differ-example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161065,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161066,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#http-server",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161067,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#cpython-bytecode-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161069,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#sysloghandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161071,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id998",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161072,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#pep-328-multi-line-imports",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161073,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id999",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161074,
+    "url": "https://docs.python.org/3/library/doctest.html#directives",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161076,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#tokenize",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161077,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id992",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161079,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id993",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161080,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id990",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161081,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id991",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161084,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161085,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id996",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161087,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#build-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161088,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id997",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161089,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id994",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161090,
+    "url": "https://docs.python.org/3/library/random.html#functions-for-integers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161091,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id995",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161093,
+    "url": "https://docs.python.org/3/library/platform.html#windows-platform",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161097,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#python-3-1-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161098,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#pep-278-universal-newline-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161099,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#default",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161100,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#performance-and-resource-usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161101,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#deleted-and-deprecated-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161103,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#pep-302-new-import-hooks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161104,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id989",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161105,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id987",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161106,
+    "url": "https://docs.python.org/3/library/idle.html#user-output-in-shell",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161107,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id988",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161108,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#contextlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161109,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#opening-network-connections",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161110,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id981",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161111,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id982",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161113,
+    "url": "https://docs.python.org/3/c-api/intro.html#docstring-macros",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161114,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id980",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161115,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#code",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161116,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id985",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161117,
+    "url": "https://docs.python.org/3/c-api/structures.html#base-object-types-and-macros",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161118,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id986",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161119,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id983",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161121,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id984",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161123,
+    "url": "https://docs.python.org/3/faq/design.html#why-doesn-t-python-have-a-with-statement-for-attribute-assignments",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161126,
+    "url": "https://docs.python.org/3/library/idle.html#running-user-code",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161127,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161128,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#ssl",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161130,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tag-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161131,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#xml",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161132,
+    "url": "https://docs.python.org/3/library/idle.html#command-line-usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161133,
+    "url": "https://docs.python.org/3/library/timeit.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161135,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id978",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161136,
+    "url": "https://docs.python.org/3/library/asyncio-api-index.html#synchronization",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161137,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id979",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161138,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#site",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161139,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id976",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161141,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id977",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161142,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id970",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161144,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id971",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161145,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#pep-301-package-index-and-metadata-for-distutils",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161146,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id974",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161147,
+    "url": "https://docs.python.org/3/c-api/buffer.html#readonly-format",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161148,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id975",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161149,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id972",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161151,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#acknowledgements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161152,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id973",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161153,
+    "url": "https://docs.python.org/3/library/asyncio-extending.html#future-and-task-private-constructors",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161154,
+    "url": "https://docs.python.org/3/reference/import.html#cached-bytecode-invalidation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161155,
+    "url": "https://docs.python.org/3/library/asyncio-llapi-index.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161156,
+    "url": "https://docs.python.org/3/faq/general.html#general-information",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161159,
+    "url": "https://docs.python.org/3/c-api/time.html#raw-clock-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161162,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id967",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161163,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id968",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161164,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id965",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161167,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#concurrent-futures",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161168,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id966",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161169,
+    "url": "https://docs.python.org/3/c-api/concrete.html#function-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161170,
+    "url": "https://docs.python.org/3/faq/design.html#why-are-python-strings-immutable",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161171,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id969",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161172,
+    "url": "https://docs.python.org/3/library/calendar.html#command-line-usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161173,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id960",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161175,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id963",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161176,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id964",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161177,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#contextvars",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161178,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id961",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161179,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id962",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161181,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#i-don-t-see-any-speedups-in-my-workload-why",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161183,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#subprocess",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161184,
+    "url": "https://docs.python.org/3/c-api/stable.html#limited-api-caveats",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161185,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#logical-lines",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161186,
+    "url": "https://docs.python.org/3/library/reprlib.html#repr-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161187,
+    "url": "https://docs.python.org/3/library/doctest.html#what-about-exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161188,
+    "url": "https://docs.python.org/3/library/tkinter.html#how-do-i-what-option-does",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161189,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#smtpd",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161190,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161191,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#struct",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161192,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#pep-324-new-subprocess-module",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161193,
+    "url": "https://docs.python.org/3/extending/newtypes.html#object-comparison",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161194,
+    "url": "https://docs.python.org/3/faq/library.html#databases",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161195,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#dbm",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161196,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#struct",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161198,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#print-is-a-function",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161201,
+    "url": "https://docs.python.org/3/reference/import.html#path-entry-finders",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161203,
+    "url": "https://docs.python.org/3/library/statistics.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161204,
+    "url": "https://docs.python.org/3/library/optparse.html#background",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161206,
+    "url": "https://docs.python.org/3/extending/newtypes.html#abstract-protocol-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161207,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#other-module-level-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161208,
+    "url": "https://docs.python.org/3/library/datetime.html#aware-and-naive-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161210,
+    "url": "https://docs.python.org/3/library/operator.html#mapping-operators-to-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161211,
+    "url": "https://docs.python.org/3/library/signal.html#general-rules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161212,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#os",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161214,
+    "url": "https://docs.python.org/3/library/gettext.html#class-based-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161221,
+    "url": "https://docs.python.org/3/library/mimetypes.html#command-line-example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161222,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#mocking-unbound-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161223,
+    "url": "https://docs.python.org/3/faq/extending.html#id1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161224,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#functools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161225,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#ctypes-enhancements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161226,
+    "url": "https://docs.python.org/3/library/asyncio-dev.html#detect-never-awaited-coroutines",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161227,
+    "url": "https://docs.python.org/3/library/asyncio-dev.html#avoid-concurrent-iteration-and-closure-of-the-same-generator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161228,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#replaced-opcodes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161231,
+    "url": "https://docs.python.org/3/library/idle.html#running-without-a-subprocess",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161232,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#pep-681-data-class-transforms",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161233,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#f-strings-support-for-self-documenting-expressions-and-debugging",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161235,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#rlcompleter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161236,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-5-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161242,
+    "url": "https://docs.python.org/3/library/hashlib.html#creating-hash-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161245,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#nntplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161246,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#improved-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161250,
+    "url": "https://docs.python.org/3/extending/newtypes.html#generic-attribute-management",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161251,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161253,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#pep-237-unifying-long-integers-and-integers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161255,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#changes-in-the-python-syntax",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161256,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pep-498-formatted-string-literals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161257,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#id10",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161258,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#id11",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161259,
+    "url": "https://docs.python.org/3/library/struct.html#native-formats",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161260,
+    "url": "https://docs.python.org/3/c-api/iterator.html#other-iterator-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161263,
+    "url": "https://docs.python.org/3/library/optparse.html#handling-boolean-flag-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161264,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pep-519-adding-a-file-system-path-protocol",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161265,
+    "url": "https://docs.python.org/3/c-api/call.html#the-tp-call-protocol",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161266,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id120",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161269,
+    "url": "https://docs.python.org/3/library/mailbox.html#maildirmessage-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161270,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-0-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161273,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#sys",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161274,
+    "url": "https://docs.python.org/3/c-api/arg.html#building-values",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161275,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#http",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161276,
+    "url": "https://docs.python.org/3/extending/extending.html#reference-counting-in-python",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161278,
+    "url": "https://docs.python.org/3/library/argparse.html#argument-groups",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161279,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id118",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161280,
+    "url": "https://docs.python.org/3/c-api/bytes.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161281,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id119",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161283,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pep-420-implicit-namespace-packages",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161284,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id112",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161285,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id113",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161287,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id110",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161288,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id111",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161290,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id116",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161291,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id117",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161292,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id114",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161293,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id115",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161296,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#pep-471-os-scandir-function-a-better-and-faster-directory-iterator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161297,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#doctest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161299,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id109",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161301,
+    "url": "https://docs.python.org/3/library/asyncio-extending.html#writing-a-custom-event-loop",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161302,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id107",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161303,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id108",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161304,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161306,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id101",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161308,
+    "url": "https://docs.python.org/3/library/collections.html#counter-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161309,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id102",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161310,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#logging",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161311,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#python-development-mode-x-dev",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161312,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#json",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161313,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id100",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161314,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id105",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161315,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id106",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161316,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id103",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161317,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id104",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161319,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#locale",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161320,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#pep-331-locale-independent-float-string-conversions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161322,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#difflib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161323,
+    "url": "https://docs.python.org/3/c-api/subinterpreters.html#high-level-apis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161326,
+    "url": "https://docs.python.org/3/library/argparse.html#prefix-chars",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161327,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#pep-371-the-multiprocessing-package",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161328,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#list-comprehensions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161330,
+    "url": "https://docs.python.org/3/library/traceback.html#examples-of-using-tracebackexception",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161331,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pep-412-key-sharing-dictionary",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161332,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161333,
+    "url": "https://docs.python.org/3/library/secrets.html#how-many-bytes-should-tokens-use",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161334,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-9-0-alpha-6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161337,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-9-0-alpha-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161339,
+    "url": "https://docs.python.org/3/extending/extending.html#the-module-s-method-table-and-initialization-function",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161340,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-9-0-alpha-5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161341,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-9-0-alpha-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161342,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-9-0-alpha-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161343,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-9-0-alpha-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161345,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#compileall",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161346,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#fractions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161348,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#re",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161349,
+    "url": "https://docs.python.org/3/library/gettext.html#the-gnutranslations-class",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161351,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#port-specific-changes-irix",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161352,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#changed-syntax",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161353,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#shutil",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161354,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161355,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pep-487-simpler-customization-of-class-creation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161356,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#changes-in-the-python-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161357,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161358,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#defined-mutation-semantics-for-locals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161359,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#new-issue-tracker-roundup",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161360,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#time",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161361,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id160",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161362,
+    "url": "https://docs.python.org/3/c-api/tls.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161365,
+    "url": "https://docs.python.org/3/reference/import.html#path-attributes-on-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161367,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id163",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161368,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id164",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161370,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id161",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161371,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id162",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161373,
+    "url": "https://docs.python.org/3/c-api/arg.html#strings-and-buffers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161374,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161377,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#gc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161378,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#deprecated-python-modules-functions-and-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161379,
+    "url": "https://docs.python.org/3/c-api/frame.html#frame-locals-proxies",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161382,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pep-530-asynchronous-comprehensions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161383,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#new-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161384,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id156",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161386,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id157",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161387,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#os",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161388,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id154",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161389,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id155",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161390,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#running-subprocesses",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161394,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id158",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161395,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id159",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161397,
+    "url": "https://docs.python.org/3/library/contextlib.html#utilities",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161398,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id152",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161399,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id153",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161400,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id150",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161401,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id151",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161404,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#pep-578-python-runtime-audit-hooks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161405,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#pickle-protocol-5-with-out-of-band-data-buffers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161406,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#the-context-type",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161407,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id145",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161408,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id146",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161409,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id143",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161410,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id144",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161411,
+    "url": "https://docs.python.org/3/c-api/concrete.html#numeric-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161412,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id149",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161414,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id147",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161415,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id148",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161416,
+    "url": "https://docs.python.org/3/library/collections.abc.html#examples-and-recipes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161418,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id141",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161419,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id142",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161421,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id140",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161422,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#time",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161424,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrency-and-parallelism",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161426,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#pep-338-executing-modules-as-scripts",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161427,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-4-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161430,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id134",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161431,
+    "url": "https://docs.python.org/3/faq/design.html#why-does-python-use-methods-for-some-functionality-e-g-list-index-but-functions-for-other-e-g-len-list",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161432,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id135",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161433,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id132",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161435,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id133",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161436,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id138",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161437,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id139",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161438,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id136",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161439,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id137",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161440,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#sched",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161443,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id130",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161444,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id131",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161447,
+    "url": "https://docs.python.org/3/library/logging.config.html#security-considerations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161448,
+    "url": "https://docs.python.org/3/library/optparse.html#generating-help",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161449,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#bisect",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161450,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#new-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161451,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#ctypes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161452,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#hmac",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161453,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#related-links",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161456,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id129",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161459,
+    "url": "https://docs.python.org/3/library/curses.panel.html#functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161461,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#setting-return-values-and-attributes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161462,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id123",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161464,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id124",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161465,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id121",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161466,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#fractions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161467,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id122",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161468,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id127",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161470,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id128",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161471,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#tcp-echo-server",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161472,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id125",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161473,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#nullhandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161474,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#deprecated",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161475,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id126",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161478,
+    "url": "https://docs.python.org/3/faq/design.html#why-don-t-generators-support-the-with-statement",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161479,
+    "url": "https://docs.python.org/3/library/argparse.html#nargs",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161481,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#ast",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161483,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#builtins",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161485,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#porting-to-python-2-5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161487,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#an-experimental-just-in-time-jit-compiler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161488,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id198",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161490,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#ast",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161491,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id199",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161492,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#ctypes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161493,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id192",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161495,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id193",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161496,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id190",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161498,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#tracemalloc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161499,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id191",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161500,
+    "url": "https://docs.python.org/3/library/lzma.html#specifying-custom-filter-chains",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161501,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id196",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161502,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id197",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161504,
+    "url": "https://docs.python.org/3/library/hashlib.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161506,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#removal-of-make-touch-build-target",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161507,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id194",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161508,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id195",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161509,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#key-details",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161513,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#views-and-iterators-instead-of-lists",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161514,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#inspect",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161517,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#working-with-socket-objects-directly",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161518,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#pep-613-typealias",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161519,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#concurrent-futures",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161520,
+    "url": "https://docs.python.org/3/c-api/call.html#vectorcall-support-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161522,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id189",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161523,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#logging",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161524,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id187",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161525,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id188",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161526,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-9-0-beta-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161527,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections-abstract-base-classes-detailed-descriptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161528,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#ttk-notebook",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161529,
+    "url": "https://docs.python.org/3/whatsnew/3.1.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161531,
+    "url": "https://docs.python.org/3/library/datetime.html#time-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161532,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id181",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161533,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id182",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161536,
+    "url": "https://docs.python.org/3/c-api/bytearray.html#type-check-macros",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161537,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id180",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161538,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id185",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161540,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id186",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161541,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#unittest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161542,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id183",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161543,
+    "url": "https://docs.python.org/3/library/statistics.html#monte-carlo-inputs-for-simulations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161544,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id184",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161547,
+    "url": "https://docs.python.org/3/c-api/intro.html#coding-standards",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161549,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161552,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id178",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161553,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id179",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161555,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id176",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161556,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id177",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161557,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pep-397-python-launcher-for-windows",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161558,
+    "url": "https://docs.python.org/3/library/idle.html#calltips",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161559,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id170",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161560,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id171",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161561,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#io",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161562,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id174",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161563,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id175",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161565,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id172",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161566,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id173",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161567,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#pep-654-exception-groups-and-except",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161568,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#asyncio",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161570,
+    "url": "https://docs.python.org/3/using/mac.html#installing-additional-python-packages",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161573,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#sqlite3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161575,
+    "url": "https://docs.python.org/3/library/dataclasses.html#descriptor-typed-fields",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161581,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id167",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161582,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id168",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161583,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id165",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161584,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id166",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161586,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#trace",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161587,
+    "url": "https://docs.python.org/3/c-api/code.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161588,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#pep-612-parameter-specification-variables",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161589,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id169",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161591,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#removed-syntax",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161593,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#other-changes-and-fixes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161594,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#os",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161596,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#mocking-classes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161597,
+    "url": "https://docs.python.org/3/library/idle.html#help-sources",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161598,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#deprecated-python-modules-functions-and-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161599,
+    "url": "https://docs.python.org/3/library/site.html#readline-configuration",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161601,
+    "url": "https://docs.python.org/3/faq/windows.html#how-can-i-embed-python-into-a-windows-application",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161602,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#cpython-implementation-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161605,
+    "url": "https://docs.python.org/3/library/gettext.html#deferred-translations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161608,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#other-build-and-c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161609,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#idlelib-and-idle",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161610,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#new-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161612,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#ttk-widget",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161613,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#windows",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161615,
+    "url": "https://docs.python.org/3/library/lzma.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161617,
+    "url": "https://docs.python.org/3/c-api/allocation.html#soft-deprecated-aliases",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161619,
+    "url": "https://docs.python.org/3/c-api/method.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161620,
+    "url": "https://docs.python.org/3/c-api/frame.html#internal-frames",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161621,
+    "url": "https://docs.python.org/3/reference/import.html#loaders",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161622,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#ssl",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161623,
+    "url": "https://docs.python.org/3/library/base64.html#rfc-4648-encodings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161624,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#shelve",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161628,
+    "url": "https://docs.python.org/3/extending/newtypes_tutorial.html#supporting-cyclic-garbage-collection",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161630,
+    "url": "https://docs.python.org/3/library/asyncio-dev.html#detect-never-retrieved-exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161631,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#pep-3110-exception-handling-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161632,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#pep-563-postponed-evaluation-of-annotations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161635,
+    "url": "https://docs.python.org/3/c-api/extension-modules.html#multiple-module-instances",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161638,
+    "url": "https://docs.python.org/3/c-api/curses.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161639,
+    "url": "https://docs.python.org/3/c-api/buffer.html#shape-strides-suboffsets",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161640,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#creating-network-servers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161641,
+    "url": "https://docs.python.org/3/extending/extending.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161643,
+    "url": "https://docs.python.org/3/library/gzip.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161645,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#tkinter-tix",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161647,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#deprecated-python-behavior",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161651,
+    "url": "https://docs.python.org/3/extending/extending.html#thin-ice",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161652,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#sharing-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161655,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#changes-in-the-c-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161657,
+    "url": "https://docs.python.org/3/library/math.html#power-exponential-and-logarithmic-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161658,
+    "url": "https://docs.python.org/3/library/argparse.html#add-help",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161659,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#unittest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161660,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#pep-341-unified-try-except-finally",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161661,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#tempfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161665,
+    "url": "https://docs.python.org/3/library/logging.html#thread-safety",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161666,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#concurrent-futures",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161667,
+    "url": "https://docs.python.org/3/library/struct.html#format-strings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161668,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#porting-to-python-3-9",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161669,
+    "url": "https://docs.python.org/3/library/argparse.html#arguments-containing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161672,
+    "url": "https://docs.python.org/3/library/asyncio-api-index.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161673,
+    "url": "https://docs.python.org/3/library/__main__.html#import-main",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161674,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#other-key-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161675,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161676,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#sysconfig",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161679,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#named-unicode-character",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161681,
+    "url": "https://docs.python.org/3/faq/design.html#why-can-t-lambda-expressions-contain-statements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161685,
+    "url": "https://docs.python.org/3/faq/programming.html#performance",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161686,
+    "url": "https://docs.python.org/3/library/mailbox.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161689,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#distutils",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161690,
+    "url": "https://docs.python.org/3/library/idle.html#shell-window",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161691,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#porting-to-python-3-7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161692,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#build-and-c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161693,
+    "url": "https://docs.python.org/3/installing/index.html#install-scientific-python-packages",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161694,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#changes-in-python-behavior",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161695,
+    "url": "https://docs.python.org/3/extending/newtypes.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161699,
+    "url": "https://docs.python.org/3/using/mac.html#installation-steps",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161700,
+    "url": "https://docs.python.org/3/library/optparse.html#putting-it-all-together",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161701,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#faster-runtime",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161702,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#summary-release-highlights",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161703,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#mocking-chained-calls",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161705,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#new-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161706,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#weakref",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161707,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#hmac",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161709,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#venv",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161711,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#builtins",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161712,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#pprint",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161713,
+    "url": "https://docs.python.org/3/library/asyncio-api-index.html#streams",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161715,
+    "url": "https://docs.python.org/3/library/cmath.html#classification-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161716,
+    "url": "https://docs.python.org/3/library/platform.html#java-platform",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161717,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#pep-587-python-initialization-configuration",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161718,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#communication-between-interpreters",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161721,
+    "url": "https://docs.python.org/3/library/tkinter.html#images",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161722,
+    "url": "https://docs.python.org/3/library/select.html#dev-poll-polling-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161723,
+    "url": "https://docs.python.org/3/library/statistics.html#averages-and-measures-of-central-location",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161724,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#zipimport",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161725,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#cmath",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161727,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#interpreter-changes-and-fixes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161728,
+    "url": "https://docs.python.org/3/library/atexit.html#atexit-example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161730,
+    "url": "https://docs.python.org/3/library/argparse.html#allow-abbrev",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161731,
+    "url": "https://docs.python.org/3/library/readline.html#history-list",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161732,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#changes-in-the-c-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161733,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#tarfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161735,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161736,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#binascii",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161737,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#socket",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161738,
+    "url": "https://docs.python.org/3/library/idle.html#search-and-replace",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161739,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#pdb",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161740,
+    "url": "https://docs.python.org/3/library/optparse.html#reference-guide",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161741,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pathlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161742,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#platform",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161743,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#ordering-comparisons",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161745,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pep-409-suppressing-exception-context",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161746,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#mocking-a-generator-method",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161747,
+    "url": "https://docs.python.org/3/library/hashlib.html#randomized-hashing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161752,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161754,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#sys",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161755,
+    "url": "https://docs.python.org/3/library/idle.html#run-menu-editor-window-only",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161756,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#porting-to-python-2-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161757,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pep-529-change-windows-filesystem-encoding-to-utf-8",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161758,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#new-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161759,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#indentation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161760,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161761,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#zipfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161763,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#doctest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161764,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#base-protocol",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161767,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#codecs",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161768,
+    "url": "https://docs.python.org/3/c-api/threads.html#apis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161778,
+    "url": "https://docs.python.org/3/library/argparse.html#option-value-syntax",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161779,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161780,
+    "url": "https://docs.python.org/3/library/tkinter.html#packer-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161782,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#crypt",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161785,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#cheaper-lazy-python-frames",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161786,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#ttk-widgets",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161789,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#math",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161790,
+    "url": "https://docs.python.org/3/library/weakref.html#example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161791,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#checking-multiple-calls-with-mock",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161792,
+    "url": "https://docs.python.org/3/library/argparse.html#dest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161796,
+    "url": "https://docs.python.org/3/library/resource.html#resource-usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161798,
+    "url": "https://docs.python.org/3/library/logging.html#logging-levels",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161801,
+    "url": "https://docs.python.org/3/library/idle.html#options-menu-shell-and-editor",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161805,
+    "url": "https://docs.python.org/3/c-api/stable.html#stable-abi",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161806,
+    "url": "https://docs.python.org/3/library/compression.zstd.html#compressing-and-decompressing-data-in-memory",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161807,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html#pep-217-interactive-display-hook",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161809,
+    "url": "https://docs.python.org/3/library/argparse.html#parser-defaults",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161810,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#notable-security-feature-in-3-10-8",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161811,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#notable-security-feature-in-3-10-7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161815,
+    "url": "https://docs.python.org/3/library/argparse.html#usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161817,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#notable-security-feature-in-3-9-14",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161820,
+    "url": "https://docs.python.org/3/library/idle.html#shell-menu-shell-window-only",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161822,
+    "url": "https://docs.python.org/3/library/asyncio-extending.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161825,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#api-and-feature-removals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161827,
+    "url": "https://docs.python.org/3/library/idle.html#editor-windows",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161828,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#multiprocessing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161829,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#deprecated",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161830,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#pep-309-partial-function-application",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161832,
+    "url": "https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161834,
+    "url": "https://docs.python.org/3/library/optparse.html#callback-example-1-trivial-callback",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161835,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#port-specific-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161836,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#loop-subprocess-exec-and-subprocessprotocol",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161838,
+    "url": "https://docs.python.org/3/c-api/time.html#conversion-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161839,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html#streamwriter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161841,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-2-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161842,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161843,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#math",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161845,
+    "url": "https://docs.python.org/3/library/optparse.html#extending-optparse",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161846,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#pep-465-a-dedicated-infix-operator-for-matrix-multiplication",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161848,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#dataclasses",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161851,
+    "url": "https://docs.python.org/3/library/mailbox.html#mbox-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161853,
+    "url": "https://docs.python.org/3/library/gettext.html#changing-languages-on-the-fly",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161854,
+    "url": "https://docs.python.org/3/c-api/threads.html#detaching-the-thread-state-from-extension-code",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161855,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#itertools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161858,
+    "url": "https://docs.python.org/3/library/zoneinfo.html#pickle-serialization",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161860,
+    "url": "https://docs.python.org/3/reference/executionmodel.html#builtins-and-restricted-execution",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161861,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#syntaxerrors",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161862,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-11-0-beta-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161863,
+    "url": "https://docs.python.org/3/library/mailbox.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161866,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#free-threaded-cpython",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161869,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#random",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161870,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#pep-562-customization-of-access-to-module-attributes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161871,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#inspect",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161872,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#display-the-top-10",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161875,
+    "url": "https://docs.python.org/3/library/winreg.html#constants",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161878,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#plistlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161880,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#pep-646-variadic-generics",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161886,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#pymalloc-a-specialized-object-allocator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161887,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#socket",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161892,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#set-signal-handlers-for-sigint-and-sigterm",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161893,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161894,
+    "url": "https://docs.python.org/3/library/logging.html#module-level-attributes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161895,
+    "url": "https://docs.python.org/3/library/threadsafety.html#atomic",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161896,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#id1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161897,
+    "url": "https://docs.python.org/3/c-api/cell.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161898,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#id2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161899,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#id3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161901,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#socket",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161902,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#pep-486-make-the-python-launcher-aware-of-virtual-environments",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161904,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#ipaddress",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161907,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#faulthandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161908,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#collections",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161909,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#asyncio",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161910,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#patch-dict",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161911,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id439",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161912,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id437",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161913,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id438",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161916,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id431",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161917,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id432",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161919,
+    "url": "https://docs.python.org/3/library/base64.html#legacy-interface",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161920,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id430",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161921,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#contextlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161922,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id435",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161923,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id436",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161924,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id433",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161927,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id434",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161928,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#filter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161929,
+    "url": "https://docs.python.org/3/using/unix.html#on-linux",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161930,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-7-0-alpha-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161931,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-7-0-alpha-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161933,
+    "url": "https://docs.python.org/3/c-api/memory.html#customize-memory-allocators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161934,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-7-0-alpha-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161936,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-7-0-alpha-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161937,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id428",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161939,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id429",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161941,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#summary-release-highlights",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161942,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id426",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161943,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#winsound",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161944,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id427",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161946,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#pep-3127-integer-literal-support-and-syntax",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161947,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id420",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161948,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161949,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id421",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161950,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#hello-world-with-call-soon",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161951,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#multiprocessing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161952,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id424",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161953,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id425",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161954,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id422",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161955,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id423",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161956,
+    "url": "https://docs.python.org/3/library/optparse.html#how-callbacks-are-called",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161957,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#gettext",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161958,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#notable-changes-in-python-3-7-6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161959,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#threading",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161960,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#notable-changes-in-python-3-7-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161961,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#notable-changes-in-python-3-7-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161966,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#traceback",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161969,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id417",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161971,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id418",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161972,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id415",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161973,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id416",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161974,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#other-changes-and-fixes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161976,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id419",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161978,
+    "url": "https://docs.python.org/3/howto/argparse.html#short-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161979,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id410",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161980,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id413",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161981,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id414",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161982,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id411",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161983,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id412",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161984,
+    "url": "https://docs.python.org/3/whatsnew/3.1.html#pep-372-ordered-dictionaries",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161986,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#dom-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161989,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161990,
+    "url": "https://docs.python.org/3/library/math.html#angular-conversion",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161991,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#sysconfig",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161992,
+    "url": "https://docs.python.org/3/library/argparse.html#description",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161995,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#xmlrpc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161996,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id406",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161997,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id404",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 161999,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id405",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162001,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#new-and-improved-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162002,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id408",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162004,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162005,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id409",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162007,
+    "url": "https://docs.python.org/3/library/argparse.html#argument-default",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162008,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162010,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id402",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162012,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id403",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162013,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id400",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162015,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id401",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162017,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id482",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162019,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id483",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162020,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id480",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162021,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#pep-540-forced-utf-8-runtime-mode",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162022,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id481",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162025,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#signal",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162026,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#ssl",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162027,
+    "url": "https://docs.python.org/3/library/asyncio-dev.html#running-blocking-code",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162028,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id475",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162030,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id476",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162031,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id473",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162032,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id474",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162033,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id479",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162034,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id477",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162035,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id478",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162038,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#mocking-imports-with-patch-dict",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162039,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id471",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162040,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#imaplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162041,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id472",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162042,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id470",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162043,
+    "url": "https://docs.python.org/3/library/logging.config.html#configuration-dictionary-schema",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162044,
+    "url": "https://docs.python.org/3/library/gettext.html#localizing-your-module",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162048,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#importlib-metadata",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162050,
+    "url": "https://docs.python.org/3/using/editors.html#idle-python-editor-and-shell",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162052,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162053,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#library-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162055,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id464",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162056,
+    "url": "https://docs.python.org/3/library/readline.html#init-file",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162057,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id465",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162058,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id462",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162059,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id463",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162060,
+    "url": "https://docs.python.org/3/library/random.html#functions-for-bytes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162061,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id468",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162062,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id469",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162063,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id466",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162064,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#dis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162065,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#the-contextlib-module",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162066,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id467",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162067,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id460",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162068,
+    "url": "https://docs.python.org/3/library/optparse.html#standard-option-actions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162069,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id461",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162071,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#nested-patterns",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162073,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#whatsnew311-c-api-removed",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162074,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#string",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162075,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id459",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162078,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id453",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162079,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id454",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162080,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id451",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162081,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id452",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162082,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#whatsnew311-c-api-pending-removal",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162083,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id457",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162084,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id458",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162087,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id455",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162088,
+    "url": "https://docs.python.org/3/c-api/frame.html#legacy-local-variable-apis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162089,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#nntp",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162090,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id456",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162092,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#working-with-pipes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162093,
+    "url": "https://docs.python.org/3/library/zoneinfo.html#using-zoneinfo",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162094,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id450",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162095,
+    "url": "https://docs.python.org/3/library/hashlib.html#hash-algorithms",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162096,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html#pep-235-importing-modules-on-case-insensitive-platforms",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162099,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#relationship-to-pyxml",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162101,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#fileinput",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162103,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#email",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162104,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id448",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162105,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#record-the-current-and-peak-size-of-all-traced-memory-blocks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162106,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id449",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162107,
+    "url": "https://docs.python.org/3/extending/extending.html#keyword-parameters-for-extension-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162108,
+    "url": "https://docs.python.org/3/faq/design.html#how-are-dictionaries-implemented-in-cpython",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162109,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id442",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162111,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id443",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162113,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id440",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162115,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id441",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162116,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id446",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162117,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#improved-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162118,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-5-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162119,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id447",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162120,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id444",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162121,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#enum",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162122,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id445",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162124,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#command-line-switch-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162125,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#pep-3105-print-as-a-function",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162127,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#enum",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162130,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#threading",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162131,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#demos-and-tools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162133,
+    "url": "https://docs.python.org/3/faq/design.html#why-are-there-separate-tuple-and-list-data-types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162134,
+    "url": "https://docs.python.org/3/library/select.html#kevent-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162135,
+    "url": "https://docs.python.org/3/library/test.html#writing-unit-tests-for-the-test-package",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162138,
+    "url": "https://docs.python.org/3/c-api/gen.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162139,
+    "url": "https://docs.python.org/3/library/syslog.html#simple-example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162140,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162143,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#pep-357-the-index-method",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162147,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#api-and-feature-removals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162150,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#inspect",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162151,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162153,
+    "url": "https://docs.python.org/3/c-api/object.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162156,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#pathlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162157,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#warnings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162158,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#threading",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162160,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#array",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162162,
+    "url": "https://docs.python.org/3/c-api/arg.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162164,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-0-alpha-5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162165,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id497",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162166,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-0-alpha-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162167,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id498",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162168,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-0-alpha-7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162169,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id495",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162170,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-0-alpha-6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162171,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id496",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162172,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-0-alpha-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162174,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-0-alpha-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162175,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id499",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162177,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-0-alpha-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162178,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id490",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162179,
+    "url": "https://docs.python.org/3/c-api/function.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162180,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id493",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162182,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id494",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162183,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#statistics",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162184,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#new-documentation-format-restructuredtext-using-sphinx",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162185,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id491",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162186,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#functools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162187,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id492",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162191,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#old-and-new-classes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162192,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#removed",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162193,
+    "url": "https://docs.python.org/3/c-api/stable.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162194,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#parenthesized-context-managers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162195,
+    "url": "https://docs.python.org/3/c-api/frame.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162198,
+    "url": "https://docs.python.org/3/reference/import.html#submodules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162199,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pep-520-preserving-class-attribute-definition-order",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162200,
+    "url": "https://docs.python.org/3/reference/import.html#path-entry-finder-protocol",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162201,
+    "url": "https://docs.python.org/3/library/tomllib.html#conversion-table",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162203,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#two-new-environment-variables-for-debug-mode",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162204,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id486",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162207,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id487",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162208,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id484",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162209,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id485",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162210,
+    "url": "https://docs.python.org/3/c-api/intro.html#useful-macros",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162212,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id488",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162213,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id489",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162214,
+    "url": "https://docs.python.org/3/library/zipapp.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162215,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#changed-removed-opcodes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162217,
+    "url": "https://docs.python.org/3/library/gettext.html#the-nulltranslations-class",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162219,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#build-and-c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162220,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#new-deprecations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162222,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#other-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162223,
+    "url": "https://docs.python.org/3/library/mailbox.html#mboxmessage-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162224,
+    "url": "https://docs.python.org/3/library/idle.html#extensions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162226,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#pep-384-defining-a-stable-abi",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162228,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#functools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162229,
+    "url": "https://docs.python.org/3/c-api/sequence.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162231,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#compileall",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162233,
+    "url": "https://docs.python.org/3/extending/extending.html#null-pointers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162234,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#improved-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162236,
+    "url": "https://docs.python.org/3/installing/index.html#work-with-multiple-versions-of-python-installed-in-parallel",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162237,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#pep-538-legacy-c-locale-coercion",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162241,
+    "url": "https://docs.python.org/3/c-api/subinterpreters.html#a-per-interpreter-gil",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162242,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#doctest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162243,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#resource",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162244,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#more-complex-argument-matching",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162245,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#turtledemo",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162246,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#pprint",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162248,
+    "url": "https://docs.python.org/3/library/zoneinfo.html#exceptions-and-warnings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162249,
+    "url": "https://docs.python.org/3/faq/extending.html#writing-c-is-hard-are-there-any-alternatives",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162250,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#buffered-streaming-protocols",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162252,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#pep-515-underscores-in-numeric-literals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162253,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#column-identifiers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162254,
+    "url": "https://docs.python.org/3/c-api/iterator.html#range-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162256,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#functools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162257,
+    "url": "https://docs.python.org/3/library/asyncio-llapi-index.html#event-loop-policies",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162258,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#webbrowser",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162260,
+    "url": "https://docs.python.org/3/library/doctest.html#example-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162262,
+    "url": "https://docs.python.org/3/library/curses.panel.html#panel-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162263,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#multi-threading",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162264,
+    "url": "https://docs.python.org/3/c-api/float.html#pack-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162265,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#sys",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162266,
+    "url": "https://docs.python.org/3/library/__main__.html#what-is-the-top-level-code-environment",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162267,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#cpython-bytecode-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162268,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#distutils",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162269,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#bz2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162270,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#improved-error-messages",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162271,
+    "url": "https://docs.python.org/3/c-api/profiling.html#reference-tracing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162279,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#notable-changes-in-python-3-6-5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162280,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#notable-changes-in-python-3-6-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162281,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#notable-changes-in-python-3-6-7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162282,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162283,
+    "url": "https://docs.python.org/3/library/dataclasses.html#inheritance",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162284,
+    "url": "https://docs.python.org/3/library/zipapp.html#basic-example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162285,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#notable-changes-in-python-3-6-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162286,
+    "url": "https://docs.python.org/3/library/asyncio-subprocess.html#interacting-with-subprocesses",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162287,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#site",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162288,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#cprofile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162290,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#unittest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162292,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#contextlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162295,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162296,
+    "url": "https://docs.python.org/3/c-api/lifecycle.html#life-events",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162297,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#cgi",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162303,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#re",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162304,
+    "url": "https://docs.python.org/3/library/datetime.html#common-properties",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162305,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#the-hashlib-package",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162306,
+    "url": "https://docs.python.org/3/library/optparse.html#default-values",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162307,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#pep-279-enumerate",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162311,
+    "url": "https://docs.python.org/3/library/intro.html#webassembly-platforms",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162314,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#autospeccing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162318,
+    "url": "https://docs.python.org/3/library/select.html#edge-and-level-trigger-polling-epoll-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162319,
+    "url": "https://docs.python.org/3/c-api/threads.html#low-level-apis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162321,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#notable-changes-in-python-3-5-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162323,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#hashlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162329,
+    "url": "https://docs.python.org/3/library/signal.html#note-on-signal-handlers-and-exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162330,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#csv",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162331,
+    "url": "https://docs.python.org/3/using/ios.html#installing-python-on-ios",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162332,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#pep-594-remove-dead-batteries-from-the-standard-library",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162333,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#deprecated-build-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162334,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#pep-484-type-hints",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162335,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#lzma",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162336,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#datagram-transports",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162337,
+    "url": "https://docs.python.org/3/library/idle.html#key-bindings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162339,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#changes-in-python-command-behavior",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162343,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#unicodedata",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162344,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#typing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162345,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#capsules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162349,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#asyncore",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162352,
+    "url": "https://docs.python.org/3/library/argparse.html#registering-custom-types-or-actions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162356,
+    "url": "https://docs.python.org/3/library/mailbox.html#maildir-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162357,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#asyncio",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162358,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#datetime-and-time",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162360,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#removed",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162361,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#asyncio",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162362,
+    "url": "https://docs.python.org/3/library/contextlib.html#catching-exceptions-from-enter-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162365,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#pep-327-decimal-data-type",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162367,
+    "url": "https://docs.python.org/3/library/asyncio-queue.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162368,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#math",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162369,
+    "url": "https://docs.python.org/3/c-api/datetime.html#internal-data",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162373,
+    "url": "https://docs.python.org/3/faq/design.html#how-does-python-manage-memory",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162376,
+    "url": "https://docs.python.org/3/using/mac.html#installing-free-threaded-binaries",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162379,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#msilib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162380,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#sndhdr",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162384,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#pep-479-change-stopiteration-handling-inside-generators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162385,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#tempfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162387,
+    "url": "https://docs.python.org/3/using/ios.html#privacy-manifests",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162388,
+    "url": "https://docs.python.org/3/c-api/stable.html#platform-considerations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162390,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#baserotatinghandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162399,
+    "url": "https://docs.python.org/3/library/tempfile.html#deprecated-functions-and-variables",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162401,
+    "url": "https://docs.python.org/3/library/doctest.html#command-line-usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162402,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#new-keywords",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162404,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162406,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#new-features",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162407,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#idle-and-idlelib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162408,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#others",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162410,
+    "url": "https://docs.python.org/3/library/argparse.html#exiting-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162412,
+    "url": "https://docs.python.org/3/installing/index.html#installing-into-the-system-python-on-linux",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162413,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#multiprocessing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162414,
+    "url": "https://docs.python.org/3/library/asyncio-platforms.html#windows",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162417,
+    "url": "https://docs.python.org/3/library/optparse.html#callback-example-2-check-option-order",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162419,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#operator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162422,
+    "url": "https://docs.python.org/3/library/optparse.html#callback-example-5-fixed-arguments",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162423,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#unittest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162425,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#tracemalloc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162426,
+    "url": "https://docs.python.org/3/library/logging.html#logrecord-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162428,
+    "url": "https://docs.python.org/3/library/asyncio-dev.html#create-asynchronous-generators-only-when-the-event-loop-is-running",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162431,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#poplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162433,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#subprocess",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162434,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#whitespace-between-tokens",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162437,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#application-layer-protocol-negotiation-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162438,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#build-and-c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162439,
+    "url": "https://docs.python.org/3/reference/import.html#main-spec",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162441,
+    "url": "https://docs.python.org/3/library/copyreg.html#example",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162442,
+    "url": "https://docs.python.org/3/library/traceback.html#stacksummary-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162443,
+    "url": "https://docs.python.org/3/library/readline.html#history-file",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162445,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#other-language-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162446,
+    "url": "https://docs.python.org/3/c-api/buffer.html#request-independent-fields",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162447,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#colorsys",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162448,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html#pep-207-rich-comparisons",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162449,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html#pep-208-new-coercion-model",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162450,
+    "url": "https://docs.python.org/3/library/tkinter.html#setting-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162451,
+    "url": "https://docs.python.org/3/c-api/coro.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162452,
+    "url": "https://docs.python.org/3/using/ios.html#adding-python-to-an-ios-project",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162453,
+    "url": "https://docs.python.org/3/faq/programming.html#modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162456,
+    "url": "https://docs.python.org/3/whatsnew/3.0.html#performance",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162457,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#pep-692-using-typeddict-for-more-precise-kwargs-typing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162458,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#new-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162459,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#io",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162460,
+    "url": "https://docs.python.org/3/reference/executionmodel.html#binding-of-names",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162461,
+    "url": "https://docs.python.org/3/library/dbm.html#module-dbm.sqlite3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162462,
+    "url": "https://docs.python.org/3/library/csv.html#dialects-and-formatting-parameters",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162464,
+    "url": "https://docs.python.org/3/library/signal.html#execution-of-python-signal-handlers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162465,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#api-and-feature-removals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162466,
+    "url": "https://docs.python.org/3/library/idle.html#editing-and-navigation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162467,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html#new-and-improved-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162468,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#itertools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162469,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162472,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#encodings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162477,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#string-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162478,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#locale",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162479,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162480,
+    "url": "https://docs.python.org/3/library/bisect.html#searching-sorted-lists",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162482,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#mock-patching-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162483,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#porting-to-python-3-6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162486,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#enabling-debug-mode",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162488,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#os-path",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162490,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#base-transport",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162492,
+    "url": "https://docs.python.org/3/faq/extending.html#i-added-a-module-using-the-setup-file-and-the-make-fails-why",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162493,
+    "url": "https://docs.python.org/3/c-api/arg.html#api-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162494,
+    "url": "https://docs.python.org/3/library/configparser.html#rawconfigparser-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162495,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#pathlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162496,
+    "url": "https://docs.python.org/3/using/unix.html#on-freebsd-and-openbsd",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162497,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#statisticdiff",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162499,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#quick-guide",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162500,
+    "url": "https://docs.python.org/3/whatsnew/2.5.html#the-elementtree-package",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162501,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#introduction",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162503,
+    "url": "https://docs.python.org/3/library/optparse.html#raising-errors-in-a-callback",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162512,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#communicating-between-interpreters",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162513,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id8",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162515,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162517,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162518,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#improved-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162519,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162520,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162521,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162522,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162524,
+    "url": "https://docs.python.org/3/library/tkinter.html#the-index-parameter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162525,
+    "url": "https://docs.python.org/3/library/tkinter.html#navigating-the-tcl-tk-reference-manual",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162526,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#ttk-styling",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162527,
+    "url": "https://docs.python.org/3/library/idle.html#debug-menu-shell-window-only",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162529,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#dis",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162531,
+    "url": "https://docs.python.org/3/library/argparse.html#name-or-flags",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162532,
+    "url": "https://docs.python.org/3/library/dialog.html#module-tkinter.commondialog",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162533,
+    "url": "https://docs.python.org/3/library/mailbox.html#mh-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162535,
+    "url": "https://docs.python.org/3/using/ios.html#standard-library-availability",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162538,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-6-6-release-candidate-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162540,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#contextlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162542,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#os-path",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162550,
+    "url": "https://docs.python.org/3/library/tkinter.html#handy-reference",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162552,
+    "url": "https://docs.python.org/3/library/struct.html#functions-and-exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162553,
+    "url": "https://docs.python.org/3/library/compression.zstd.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162558,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#build-and-c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162561,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#changes-in-the-python-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162562,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#tarfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162563,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#simplenamespace",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162564,
+    "url": "https://docs.python.org/3/using/mac.html#using-python-for-macos-from-python-org",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162565,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-4-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162570,
+    "url": "https://docs.python.org/3/library/optparse.html#defining-a-callback-option",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162571,
+    "url": "https://docs.python.org/3/library/numbers.html#notes-for-type-implementers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162572,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#os",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162573,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#deprecated",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162574,
+    "url": "https://docs.python.org/3/library/random.html#discrete-distributions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162575,
+    "url": "https://docs.python.org/3/using/mac.html#gui-programming",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162576,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#math",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162577,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#parallel-filesystem-cache-for-compiled-bytecode-files",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162579,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#pathlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162580,
+    "url": "https://docs.python.org/3/library/compression.zstd.html#reading-and-writing-compressed-files",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162581,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#bootstrapping-pip-by-default",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162582,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#pdb",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162583,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#sqlite3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162584,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#simple-pattern-match-to-a-literal",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162588,
+    "url": "https://docs.python.org/3/library/winreg.html#registry-handle-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162590,
+    "url": "https://docs.python.org/3/faq/windows.html#why-does-python-sometimes-take-so-long-to-start",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162591,
+    "url": "https://docs.python.org/3/whatsnew/2.1.html#pep-227-nested-scopes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162593,
+    "url": "https://docs.python.org/3/library/statistics.html#normaldist-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162594,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#sentinel",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162595,
+    "url": "https://docs.python.org/3/library/logging.html#handler-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162597,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#configparser",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162599,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#imghdr",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162600,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id318",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162601,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id319",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162602,
+    "url": "https://docs.python.org/3/library/tokenize.html#command-line-usage",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162603,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id316",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162604,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#multiple-interpreters-and-isolation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162605,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id317",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162606,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#template-string-literals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162608,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id310",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162609,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id311",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162610,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#multiprocessing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162611,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#pep-3119-abstract-base-classes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162612,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id314",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162613,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id315",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162614,
+    "url": "https://docs.python.org/3/library/selectors.html#introduction",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162615,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id312",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162616,
+    "url": "https://docs.python.org/3/installing/index.html#installing-binary-extensions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162617,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id313",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162618,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#glob",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162619,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162620,
+    "url": "https://docs.python.org/3/library/sys_path_init.html#virtual-environments",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162621,
+    "url": "https://docs.python.org/3/library/pickletools.html#programmatic-interface",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162622,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id307",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162623,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id308",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162624,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id305",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162625,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#unicodedata",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162626,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id306",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162627,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#protocols",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162628,
+    "url": "https://docs.python.org/3/library/asyncio-queue.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162629,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id309",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162630,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#faulthandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162632,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#statistics",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162633,
+    "url": "https://docs.python.org/3/whatsnew/3.1.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162634,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id300",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162635,
+    "url": "https://docs.python.org/3/library/asyncio-queue.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162637,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#doctest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162638,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id303",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162639,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id304",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162640,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id301",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162641,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id302",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162642,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-8-0-alpha-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162644,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-8-0-alpha-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162645,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-8-0-alpha-4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162647,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-8-0-alpha-3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162649,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#documentation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162650,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#rotatingfilehandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162651,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#pep-552-hash-based-pyc-files",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162652,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#code-repository",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162653,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-5-0-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162654,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#changes-in-python-behavior",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162656,
+    "url": "https://docs.python.org/3/library/doctest.html#doctestrunner-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162657,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#id8",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162658,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#id9",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162659,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-4-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162660,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#pep-560-core-support-for-typing-module-and-generic-types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162663,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#integer-literals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162664,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#id6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162665,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#id7",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162666,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#id4",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162668,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#id5",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162669,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#id3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162670,
+    "url": "https://docs.python.org/3/c-api/init_config.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162675,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#sqlite3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162676,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#pep-289-generator-expressions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162677,
+    "url": "https://docs.python.org/3/library/signal.html#note-on-sigpipe",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162678,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162680,
+    "url": "https://docs.python.org/3/faq/extending.html#how-do-i-call-an-object-s-method-from-c",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162682,
+    "url": "https://docs.python.org/3/library/idle.html#automatic-indentation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162684,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id361",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162685,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#api-and-feature-removals",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162686,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id362",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162687,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id360",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162688,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#csv",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162689,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#threading",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162690,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#base64",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162692,
+    "url": "https://docs.python.org/3/library/hashlib.html#file-hashing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162697,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#tcp-echo-client",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162698,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id354",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162699,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id355",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162700,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id352",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162701,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id353",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162702,
+    "url": "https://docs.python.org/3/c-api/intro.html#macro-definition-utilities",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162703,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id358",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162704,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id359",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162705,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id356",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162706,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id357",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162708,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#smtpd",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162709,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id350",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162710,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id351",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162711,
+    "url": "https://docs.python.org/3/faq/programming.html#general-questions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162712,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#enum",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162717,
+    "url": "https://docs.python.org/3/library/gettext.html#gnu-gettext-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162718,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#end-marker",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162719,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id349",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162721,
+    "url": "https://docs.python.org/3/library/site.html#module-sitecustomize",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162724,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#dbm",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162725,
+    "url": "https://docs.python.org/3/library/difflib.html#sequencematcher-examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162727,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id343",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162728,
+    "url": "https://docs.python.org/3/library/logging.html#integration-with-the-warnings-module",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162729,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id344",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162730,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#traceback",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162731,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id341",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162732,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id342",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162734,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id347",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162735,
+    "url": "https://docs.python.org/3/library/optparse.html#parsing-arguments",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162736,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id348",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162737,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id345",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162739,
+    "url": "https://docs.python.org/3/c-api/structures.html#member-types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162740,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id346",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162745,
+    "url": "https://docs.python.org/3/c-api/import.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162746,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id340",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162747,
+    "url": "https://docs.python.org/3/c-api/memory.html#object-allocators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162753,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id338",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162754,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#shelve",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162755,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id339",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162760,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id332",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162761,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id333",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162762,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id330",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162763,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id331",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162764,
+    "url": "https://docs.python.org/3/library/doctest.html#warnings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162765,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id337",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162766,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id334",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162767,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#mocking-magic-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162768,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id335",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162770,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#acknowledgements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162771,
+    "url": "https://docs.python.org/3/library/site.html#module-usercustomize",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162773,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#shutil",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162776,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#gc",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162777,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#scheduling-delayed-callbacks",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162780,
+    "url": "https://docs.python.org/3/library/dialog.html#module-tkinter.simpledialog",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162781,
+    "url": "https://docs.python.org/3/c-api/type.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162782,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#changes-in-the-python-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162783,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id329",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162786,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#xml",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162787,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id327",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162788,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id328",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162790,
+    "url": "https://docs.python.org/3/using/mac.html#app-store-compliance",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162791,
+    "url": "https://docs.python.org/3/library/plistlib.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162792,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#asyncio",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162793,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id321",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162796,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#pep-255-simple-generators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162797,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id322",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162798,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#future-object",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162799,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id320",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162800,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id325",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162801,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#faster-cpython",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162802,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id326",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162803,
+    "url": "https://docs.python.org/3/library/zipapp.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162804,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-14-0-final",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162805,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id323",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162806,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id324",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162807,
+    "url": "https://docs.python.org/3/c-api/memory.html#tracemalloc-c-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162808,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#types",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162810,
+    "url": "https://docs.python.org/3/c-api/concrete.html#sequence-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162813,
+    "url": "https://docs.python.org/3/library/idle.html#format-menu-editor-window-only",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162814,
+    "url": "https://docs.python.org/3/library/logging.html#logrecord-attributes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162816,
+    "url": "https://docs.python.org/3/library/hashlib.html#credits",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162820,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id398",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162821,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id399",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162822,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id396",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162823,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id397",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162825,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id390",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162826,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id391",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162829,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id394",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162830,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#other-core-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162831,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id395",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162832,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id392",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162833,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id393",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162834,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#pep-389-argparse-command-line-parsing-module",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162835,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#patch-builtins",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162836,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#os",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162838,
+    "url": "https://docs.python.org/3/library/zoneinfo.html#runtime-configuration",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162839,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#a-better-interactive-interpreter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162842,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#applying-the-same-patch-to-every-test-method",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162845,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id387",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162847,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id388",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162848,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id385",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162850,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#winreg",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162851,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id386",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162852,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id389",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162853,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#logging",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162855,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id380",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162856,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id383",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162857,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id384",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162858,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id381",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162859,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id382",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162860,
+    "url": "https://docs.python.org/3/library/argparse.html#action-classes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162861,
+    "url": "https://docs.python.org/3/library/tempfile.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162865,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#statistics",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162866,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#smtphandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162867,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#cookielib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162868,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id376",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162870,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#further-examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162871,
+    "url": "https://docs.python.org/3/extending/embedding.html#extending-embedded-python",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162872,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id377",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162873,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id374",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162874,
+    "url": "https://docs.python.org/3/about.html#contributors-to-the-python-documentation",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162875,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#shutil",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162876,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#xmlrpc-client",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162877,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id375",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162879,
+    "url": "https://docs.python.org/3/library/datetime.html#date-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162880,
+    "url": "https://docs.python.org/3/faq/design.html#why-does-python-use-indentation-for-grouping-of-statements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162881,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id378",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162882,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id379",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162884,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#nntplib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162885,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#significant-optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162886,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#tarfile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162888,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id372",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162889,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id373",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162890,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id370",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162891,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#xml",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162892,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id371",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162894,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#improved-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162896,
+    "url": "https://docs.python.org/3/using/ios.html#app-store-compliance",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162898,
+    "url": "https://docs.python.org/3/faq/installed.html#what-is-python",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162899,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#python-3-12-0-beta-1",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162900,
+    "url": "https://docs.python.org/3/faq/design.html#how-do-you-specify-and-enforce-an-interface-spec-in-python",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162901,
+    "url": "https://docs.python.org/3/library/mailbox.html#mmdf-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162904,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id365",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162905,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id366",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162906,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id363",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162907,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#new-module-sysconfig",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162908,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id364",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162909,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#deprecated",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162910,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#sys",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162911,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id369",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162912,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id367",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162914,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#id368",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162916,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162917,
+    "url": "https://docs.python.org/3/library/argparse.html#filetype-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162918,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#event-loop-implementations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162919,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#curses",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162923,
+    "url": "https://docs.python.org/3/c-api/threads.html#asynchronous-notifications",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162924,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#optimizations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162925,
+    "url": "https://docs.python.org/3/library/doctest.html#what-s-the-execution-context",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162926,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#curses",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162930,
+    "url": "https://docs.python.org/3/whatsnew/2.2.html#introduction",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162931,
+    "url": "https://docs.python.org/3/library/argparse.html#default",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162933,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#collections",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162935,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#venv",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162937,
+    "url": "https://docs.python.org/3/faq/general.html#python-in-the-real-world",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162938,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#faq",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162940,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#secrets",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162942,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#warnings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162944,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#porting-to-python-3-2",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162949,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#deprecated-python-modules-functions-and-methods",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162951,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#sockethandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162952,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#hashlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162953,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tab-identifiers",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162954,
+    "url": "https://docs.python.org/3/whatsnew/2.3.html#pep-307-pickle-enhancements",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162955,
+    "url": "https://docs.python.org/3/extending/newtypes.html#type-specific-attribute-management",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162957,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#uuid",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162959,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#changes-in-the-c-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162960,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#order-of-precedence-of-side-effect-return-value-and-wraps",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162962,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#queue",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162964,
+    "url": "https://docs.python.org/3/library/site.html#module-contents",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162965,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#porting-c-code",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162966,
+    "url": "https://docs.python.org/3/whatsnew/3.1.html#build-and-c-api-changes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162967,
+    "url": "https://docs.python.org/3/using/android.html#adding-python-to-an-android-app",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162969,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162972,
+    "url": "https://docs.python.org/3/c-api/intro.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162973,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#cprofile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162977,
+    "url": "https://docs.python.org/3/library/random.html#alternative-generator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162978,
+    "url": "https://docs.python.org/3/faq/extending.html#i-want-to-compile-a-python-module-on-my-linux-system-but-some-files-are-missing-why",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162979,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#io",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162980,
+    "url": "https://docs.python.org/3/library/random.html#recipes",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162983,
+    "url": "https://docs.python.org/3/library/hashlib.html#constructors",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162984,
+    "url": "https://docs.python.org/3/library/idle.html#window-menu-shell-and-editor",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162986,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#urllib-parse",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162988,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#shutil",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162989,
+    "url": "https://docs.python.org/3/library/time.html#functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162991,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#idlelib-and-idle",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162994,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#pep-476-enabling-certificate-verification-by-default-for-stdlib-http-clients",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162996,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#is-there-a-jit-compiler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162998,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#py-compile",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 162999,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#tkinter",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163000,
+    "url": "https://docs.python.org/3/library/enum.html#supported-sunder-names",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163003,
+    "url": "https://docs.python.org/3/whatsnew/3.10.html#itertools",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163005,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#compileall",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163006,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#asynchat",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163007,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#to3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163009,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#pep-673-self-type",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163010,
+    "url": "https://docs.python.org/3/using/ios.html#tools-for-building-ios-apps",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163015,
+    "url": "https://docs.python.org/3/library/gzip.html#command-line-options",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163019,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#mock-open",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163020,
+    "url": "https://docs.python.org/3/extending/extending.html#reference-counts",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163023,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#nesting-patch-decorators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163025,
+    "url": "https://docs.python.org/3/library/signal.html#module-contents",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163027,
+    "url": "https://docs.python.org/3/faq/installed.html#why-is-python-installed-on-my-machine",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163028,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#logging",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163031,
+    "url": "https://docs.python.org/3/library/unittest.mock.html#create-autospec",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163032,
+    "url": "https://docs.python.org/3/library/idle.html#code-context",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163033,
+    "url": "https://docs.python.org/3/library/wave.html#wave-write-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163036,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#changes-to-the-handling-of-deprecation-warnings",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163037,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#configparser",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163038,
+    "url": "https://docs.python.org/3/c-api/concrete.html#c-api-for-extension-modules",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163039,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#pep-3116-new-i-o-library",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163043,
+    "url": "https://docs.python.org/3/library/msvcrt.html#file-operations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163044,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html#pep-370-per-user-site-packages-directory",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163053,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#blank-lines",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163057,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#multiprocessing",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163058,
+    "url": "https://docs.python.org/3/installing/index.html#common-installation-issues",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163059,
+    "url": "https://docs.python.org/3/library/asyncio-extending.html#task-lifetime-support",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163063,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#argparse",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163065,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163066,
+    "url": "https://docs.python.org/3/library/asyncio-platforms.html#macos",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163071,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#time",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163073,
+    "url": "https://docs.python.org/3/faq/gui.html#what-gui-toolkits-exist-for-python",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163075,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#xml-sax",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163076,
+    "url": "https://docs.python.org/3/c-api/arg.html#other-objects",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163077,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#telnetlib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163078,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#urllib-robotparser",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163079,
+    "url": "https://docs.python.org/3/whatsnew/2.0.html#what-about-python-1-6",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163081,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#new-features-related-to-type-hints",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163082,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#port-specific-changes-mac-os-x",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163084,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#platform",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163085,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#operator",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163087,
+    "url": "https://docs.python.org/3/whatsnew/3.9.html#idle-and-idlelib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163088,
+    "url": "https://docs.python.org/3/whatsnew/2.6.html",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163091,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#urllib",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163092,
+    "url": "https://docs.python.org/3/library/cmath.html#power-and-logarithmic-functions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163093,
+    "url": "https://docs.python.org/3/whatsnew/3.4.html#unittest",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163094,
+    "url": "https://docs.python.org/3/library/optparse.html#how-optparse-handles-errors",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163095,
+    "url": "https://docs.python.org/3/library/__main__.html#packaging-considerations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163096,
+    "url": "https://docs.python.org/3/whatsnew/2.7.html#pep-391-dictionary-based-configuration-for-logging",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163097,
+    "url": "https://docs.python.org/3/using/mac.html#distributing-python-applications",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163099,
+    "url": "https://docs.python.org/3/whatsnew/3.6.html#ssl",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163101,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html#patch-decorators",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163102,
+    "url": "https://docs.python.org/3/c-api/gen.html#deprecated-api",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163104,
+    "url": "https://docs.python.org/3/whatsnew/3.7.html#locale",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163105,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#datagramhandler",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163106,
+    "url": "https://docs.python.org/3/library/doctest.html#option-flags",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163107,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#sqlite3",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163108,
+    "url": "https://docs.python.org/3/library/optparse.html#cleanup",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163109,
+    "url": "https://docs.python.org/3/library/__main__.html#name-main",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163110,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#will-cpython-3-11-use-more-memory",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163114,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#encoding-declarations",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163115,
+    "url": "https://docs.python.org/3/whatsnew/2.4.html#pep-292-simpler-string-substitutions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163116,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#transports-hierarchy",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163118,
+    "url": "https://docs.python.org/3/library/struct.html#examples",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163121,
+    "url": "https://docs.python.org/3/whatsnew/3.2.html#shutil",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163122,
+    "url": "https://docs.python.org/3/library/argparse.html#epilog",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163123,
+    "url": "https://docs.python.org/3/library/asyncio-subprocess.html#creating-subprocesses",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163124,
+    "url": "https://docs.python.org/3/faq/design.html#how-fast-are-exceptions",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163128,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#subprocess",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163129,
+    "url": "https://docs.python.org/3/whatsnew/3.5.html#dbm",
+    "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 163134,
+    "url": "https://docs.python.org/3/c-api/memory.html#allocator-domains",
+    "parentUrl": "https://docs.python.org/3/contents.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.request — Extensible library for opening URLs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.urlopen"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.request — Extensible library for opening URLs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.urlopen"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "symtable — Access to the compiler’s symbol tables — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_comp_cell"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "symtable — Access to the compiler’s symbol tables — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_comp_cell"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#complex"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#complex"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Documentation contents — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Documentation contents — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d80\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d48\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d40\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10137?s\u003d80\u0026v\u003d4",
+    "alt": "@ghost",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/68870d968496bce047e3fa048dd4dcea846616f952ec14481efffa6e1ba845e6/68747470733a2f2f63707974686f6e2d636c61626f742e6865726f6b756170702e636f6d2f636c612d7369676e65642e737667",
+    "alt": "CLA signed",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d60\u0026v\u003d4",
+    "alt": "ZeroIntensity",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d80\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d40\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d40\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/108215543?s\u003d60\u0026v\u003d4",
+    "alt": "rruuaanng",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d40\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d40\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d40\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d40\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d40\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d48\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d40\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d40\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d40\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d80\u0026u\u003dd9754c6666608bed51c80dd4c7b07af50e12fb79\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d40\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d40\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d40\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d80\u0026u\u003dd9754c6666608bed51c80dd4c7b07af50e12fb79\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d60\u0026v\u003d4",
+    "alt": "gpshead",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d80\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d80\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d40\u0026u\u003dd9754c6666608bed51c80dd4c7b07af50e12fb79\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d40\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/198396?s\u003d40\u0026v\u003d4",
+    "alt": "@srinivasreddy",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d40\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/108215543?s\u003d40\u0026v\u003d4",
+    "alt": "@rruuaanng",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3604363?s\u003d52\u0026v\u003d4",
+    "alt": "@calvinbui",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d52\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d52\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d52\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d52\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/108215543?s\u003d52\u0026v\u003d4",
+    "alt": "@rruuaanng",
+    "pageTitle": "gh-128192: support HTTP sha-256 digest authentication as per RFC-7617 by calvinbui · Pull Request #128193 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128193"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
