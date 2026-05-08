@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 923,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-warnings-control",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 00:58:56.59859"
+  },
+  {
+    "id": 922,
+    "url": "https://docs.python.org/3/library/locale.html#locale.getdefaultlocale",
+    "title": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internationalization » locale — Internationalization services | Theme Auto Light Dark | locale — Internationalization services¶ Source code: Lib/locale.py The locale module opens access to the POSIX locale database and functionality. The POSIX locale mechanism allows programmers to deal with certain cultural issues in an application, without requiring the programmer to know all the specifics of each country where the software is executed. The locale module is implemented on top of the _locale module, which in turn uses an ANSI C locale implementation if available. The locale module defines the following exception and functions: exception locale.Error¶ Exception raised when the locale passed to setlocale() is not recognized. locale.setlocale(category, locale\u003dNone)¶ If locale is given and not None, setlocale() modifies the locale setting for the category. The available categories are listed in the data description below. locale may be a string, or a pair, language code and encoding. An empty string specifies the user’s default settings. If the modification of the locale fails, the exception Error is raised. If successful, the new locale setting is returned. If locale is a pair, it is converted to a locale name using the locale aliasing engine. The language code has the same format as a locale name, but without encoding and @-modifier. The language code and encoding can be None. If locale is omitted or None, the current setting for category is returned. Example: \u003e\u003e\u003e import locale\n\u003e\u003e\u003e loc \u003d locale.setlocale(locale.LC_ALL)  # get current locale\n# use German locale; name and availability varies with platform\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027de_DE.UTF-8\u0027)\n\u003e\u003e\u003e locale.strcoll(\u0027f\\xe4n\u0027, \u0027foo\u0027)  # compare a string containing an umlaut\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027\u0027)   # use user\u0027s preferred locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027C\u0027)  # use default (C) locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, loc)  # restore saved locale\n setlocale() is not thread-safe on most systems. Applications typically start with a call of: import locale\nlocale.setlocale(locale.LC_ALL, \u0027\u0027)\n This sets the locale for all categories to the user’s default setting (typically specified in the LANG environment variable). If the locale is not changed thereafter, using multithreading should not cause problems. locale.localeconv()¶ Returns the database of the local conventions as a dictionary. This dictionary has the following strings as keys: Category Key Meaning LC_NUMERIC \u0027decimal_point\u0027 Decimal point character. \u0027grouping\u0027 Sequence of numbers specifying which relative positions the \u0027thousands_sep\u0027 is expected. If the sequence is terminated with CHAR_MAX, no further grouping is performed. If the sequence terminates with a 0, the last group size is repeatedly used. \u0027thousands_sep\u0027 Character used between groups. LC_MONETARY \u0027int_curr_symbol\u0027 International currency symbol. \u0027currency_symbol\u0027 Local currency symbol. \u0027p_cs_precedes/n_cs_precedes\u0027 Whether the currency symbol precedes the value (for positive resp. negative values). \u0027p_sep_by_space/n_sep_by_space\u0027 Whether the currency symbol is separated from the value by a space (for positive resp. negative values). \u0027mon_decimal_point\u0027 Decimal point used for monetary values. \u0027frac_digits\u0027 Number of fractional digits used in local formatting of monetary values. \u0027int_frac_digits\u0027 Number of fractional digits used in international formatting of monetary values. \u0027mon_thousands_sep\u0027 Group separator used for monetary values. \u0027mon_grouping\u0027 Equivalent to \u0027grouping\u0027, used for monetary values. \u0027positive_sign\u0027 Symbol used to annotate a positive monetary value. \u0027negative_sign\u0027 Symbol used to annotate a negative monetary value. \u0027p_sign_posn/n_sign_posn\u0027 The position of the sign (for positive resp. negative values), see below. All numeric values can be set to CHAR_MAX to indicate that there is no value specified in this locale. The possible values for \u0027p_sign_posn\u0027 and \u0027n_sign_posn\u0027 are given below. Value Explanation 0 Currency and value are surrounded by parentheses. 1 The sign should precede the value and currency symbol. 2 The sign should follow the value and currency symbol. 3 The sign should immediately precede the value. 4 The sign should immediately follow the value. CHAR_MAX Nothing is specified in this locale. The function temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale or the LC_MONETARY locale if locales are different and numeric or monetary strings are non-ASCII. This temporary change affects other threads. Changed in version 3.7: The function now temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale in some cases. locale.nl_langinfo(option)¶ Return some locale-specific information as a string. This function is not available on all systems, and the set of possible options might also vary across platforms. The possible argument values are numbers, for which symbolic c",
+    "scrapedAt": "2026-05-09 00:58:55.383822"
+  },
+  {
+    "id": 921,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.pathconfig_warnings",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 00:58:54.134177"
+  },
+  {
+    "id": 920,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef",
+    "title": "Weak Reference Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Weak Reference Objects | Theme Auto Light Dark | Weak Reference Objects¶ Python supports weak references as first-class objects. There are two specific object types which directly implement weak references. The first is a simple reference object, and the second acts as a proxy for the original object as much as it can. int PyWeakref_Check(PyObject *ob)¶ Return non-zero if ob is either a reference or proxy object. This function always succeeds. int PyWeakref_CheckRef(PyObject *ob)¶ Return non-zero if ob is a reference object or a subclass of the reference type. This function always succeeds. int PyWeakref_CheckRefExact(PyObject *ob)¶ Return non-zero if ob is a reference object, but not a subclass of the reference type. This function always succeeds. int PyWeakref_CheckProxy(PyObject *ob)¶ Return non-zero if ob is a proxy object. This function always succeeds. PyObject *PyWeakref_NewRef(PyObject *ob, PyObject *callback)¶ Return value: New reference. Part of the Stable ABI. Return a weak reference object for the object ob. This will always return a new reference, but is not guaranteed to create a new object; an existing reference object may be returned. The second parameter, callback, can be a callable object that receives notification when ob is garbage collected; it should accept a single parameter, which will be the weak reference object itself. callback may also be None or NULL. If ob is not a weakly referenceable object, or if callback is not callable, None, or NULL, this will return NULL and raise TypeError. See also PyType_SUPPORTS_WEAKREFS() for checking if ob is weakly referenceable. PyObject *PyWeakref_NewProxy(PyObject *ob, PyObject *callback)¶ Return value: New reference. Part of the Stable ABI. Return a weak reference proxy object for the object ob. This will always return a new reference, but is not guaranteed to create a new object; an existing proxy object may be returned. The second parameter, callback, can be a callable object that receives notification when ob is garbage collected; it should accept a single parameter, which will be the weak reference object itself. callback may also be None or NULL. If ob is not a weakly referenceable object, or if callback is not callable, None, or NULL, this will return NULL and raise TypeError. See also PyType_SUPPORTS_WEAKREFS() for checking if ob is weakly referenceable. int PyWeakref_GetRef(PyObject *ref, PyObject **pobj)¶ Part of the Stable ABI since version 3.13. Get a strong reference to the referenced object from a weak reference, ref, into *pobj. On success, set *pobj to a new strong reference to the referenced object and return 1. If the reference is dead, set *pobj to NULL and return 0. On error, raise an exception and return -1. Added in version 3.13. PyObject *PyWeakref_GetObject(PyObject *ref)¶ Return value: Borrowed reference. Part of the Stable ABI. Return a borrowed reference to the referenced object from a weak reference, ref. If the referent is no longer live, returns Py_None. Note This function returns a borrowed reference to the referenced object. This means that you should always call Py_INCREF() on the object except when it cannot be destroyed before the last usage of the borrowed reference. Deprecated since version 3.13, will be removed in version 3.15: Use PyWeakref_GetRef() instead. PyObject *PyWeakref_GET_OBJECT(PyObject *ref)¶ Return value: Borrowed reference. Similar to PyWeakref_GetObject(), but does no error checking. Deprecated since version 3.13, will be removed in version 3.15: Use PyWeakref_GetRef() instead. int PyWeakref_IsDead(PyObject *ref)¶ Test if the weak reference ref is dead. Returns 1 if the reference is dead, 0 if it is alive, and -1 with an error set if ref is not a weak reference object. Added in version 3.14. void PyObject_ClearWeakRefs(PyObject *object)¶ Part of the Stable ABI. This function is called by the tp_dealloc handler to clear weak references. This iterates through the weak references for object and calls callbacks for those references which have one. It returns when all callbacks have been attempted. void PyUnstable_Object_ClearWeakRefsNoCallbacks(PyObject *object)¶ This is Unstable API. It may change without warning in minor releases. Clears the weakrefs for object without calling the callbacks. This function is called by the tp_dealloc handler for types with finalizers (i.e., __del__()). The handler for those objects first calls PyObject_ClearWeakRefs() to clear weakrefs and call their callbacks, then the finalizer, and finally this function to clear any weakrefs that may have been created by the finalizer. In most circumstances, it’s more appropriate to use PyObject_ClearWeakRefs() to clear weakrefs instead of this function. Added in version 3.13. Previous topic Pickle buffer objects Next topic Capsules This page Report a bug Improve this page Show source « Nav",
+    "scrapedAt": "2026-05-09 00:58:52.947946"
+  },
+  {
+    "id": 919,
+    "url": "https://docs.python.org/3/library/threading.html#threading.current_thread",
+    "title": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » threading — Thread-based parallelism | Theme Auto Light Dark | threading — Thread-based parallelism¶ Source code: Lib/threading.py This module constructs higher-level threading interfaces on top of the lower level _thread module. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Introduction¶ The threading module provides a way to run multiple threads (smaller units of a process) concurrently within a single process. It allows for the creation and management of threads, making it possible to execute tasks in parallel, sharing memory space. Threads are particularly useful when tasks are I/O bound, such as file operations or making network requests, where much of the time is spent waiting for external resources. A typical use case for threading includes managing a pool of worker threads that can process multiple tasks concurrently. Here’s a basic example of creating and starting threads using Thread: import threading\nimport time\n\ndef crawl(link, delay\u003d3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks \u003d [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads \u003d []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t \u003d threading.Thread(target\u003dcrawl, args\u003d(link,), kwargs\u003d{\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()\n Changed in version 3.7: This module used to be optional, it is now always available. See also concurrent.futures.ThreadPoolExecutor offers a higher level interface to push tasks to a background thread without blocking execution of the calling thread, while still being able to retrieve their results when needed. queue provides a thread-safe interface for exchanging data between running threads. asyncio offers an alternative approach to achieving task level concurrency without requiring the use of multiple operating system threads. Note In the Python 2.x series, this module contained camelCase names for some methods and functions. These are deprecated as of Python 3.10, but they are still supported for compatibility with Python 2.5 and lower. CPython implementation detail: In CPython, due to the Global Interpreter Lock, only one thread can execute Python code at once (even though certain performance-oriented libraries might overcome this limitation). If you want your application to make better use of the computational resources of multi-core machines, you are advised to use multiprocessing or concurrent.futures.ProcessPoolExecutor. However, threading is still an appropriate model if you want to run multiple I/O-bound tasks simultaneously. GIL and performance considerations¶ Unlike the multiprocessing module, which uses separate processes to bypass the global interpreter lock (GIL), the threading module operates within a single process, meaning that all threads share the same memory space. However, the GIL limits the performance gains of threading when it comes to CPU-bound tasks, as only one thread can execute Python bytecode at a time. Despite this, threads remain a useful tool for achieving concurrency in many scenarios. As of Python 3.13, free-threaded builds can disable the GIL, enabling true parallel execution of threads, but this feature is not available by default (see PEP 703). Reference¶ This module defines the following functions: threading.active_count()¶ Return the number of Thread objects currently alive. The returned count is equal to the length of the list returned by enumerate(). The function activeCount is a deprecated alias for this function. threading.current_thread()¶ Return the current Thread object, corresponding to the caller’s thread of control. If the caller’s thread of control was not created through the threading module, a dummy thread object with limited functionality is returned. The function currentThread is a deprecated alias for this function. threading.excepthook(args, /)¶ Handle uncaught exception raised by Thread.run(). The args argument has the following attributes: exc_type: Exception type. exc_value: Exception value, can be None. exc_traceback: Exception traceback, can be None. thread: Thread which raised the exception, can be None. If exc_type is SystemExit, the exception is silently ignored. Otherwise, the exception is printed out on sys.stderr. If this function raises an exception, sys.excepthook() is called to handle it. threading.excepthook() can be overridden to control how uncaught exceptions raised by Thread.run() are handled. Storing exc_value using a custom hook can create a reference cycle. It should be ",
+    "scrapedAt": "2026-05-09 00:58:51.707962"
+  },
+  {
     "id": 918,
     "url": "https://docs.python.org/3/library/pickle.html#pickle-protocols",
     "title": "pickle — Python object serialization — Python 3.14.5rc1 documentation",
@@ -6123,26 +6158,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 919,
-    "url": "https://docs.python.org/3/library/threading.html#threading.current_thread"
-  },
-  {
-    "id": 920,
-    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
-  },
-  {
-    "id": 921,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.pathconfig_warnings"
-  },
-  {
-    "id": 922,
-    "url": "https://docs.python.org/3/library/locale.html#locale.getdefaultlocale"
-  },
-  {
-    "id": 923,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-warnings-control"
   },
   {
     "id": 924,
@@ -156295,10 +156310,135 @@ window.searchData = [
     "id": 133274,
     "url": "https://docs.python.org/3/library/pickle.html#comparison-with-json",
     "parentUrl": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 133406,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_CheckRefExact",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133407,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_NewProxy",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133411,
+    "url": "https://docs.python.org/3/c-api/capsule.html",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133414,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyUnstable_Object_ClearWeakRefsNoCallbacks",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133418,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_IsDead",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133421,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/weakref.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133424,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133425,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_NewRef",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133426,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_CheckRef",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133428,
+    "url": "https://docs.python.org/3/c-api/picklebuffer.html",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133440,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_CheckProxy",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133441,
+    "url": "https://docs.python.org/3/c-api/weakref.html#weak-reference-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 133442,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyObject_ClearWeakRefs",
+    "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-warnings-control"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-warnings-control"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.getdefaultlocale"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.getdefaultlocale"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.pathconfig_warnings"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.pathconfig_warnings"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Weak Reference Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Weak Reference Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.current_thread"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.current_thread"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
