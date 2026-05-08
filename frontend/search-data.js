@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1737,
+    "url": "https://github.com/python/cpython/issues/124533",
+    "title": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member gaogaotiantian commented Sep 25, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page. This is the most conservative attempt ever to utilize sys.monitoring in bdb and pdb. Highlights: Full backward compatibility - no changes to test_pdb and test_bdb at all with the new backend bdb will still default to sys.settrace, which keeps all the old behavior. Users can opt-in to the new sys.monitoring backend, and the interface is still the same, even for trace_dispatch (that\u0027s how test_bdb passes). New additional and optional interfaces in bdb where user can disable certain events to improve the peformance. pdb.Pdb will use sys.settrace by default too, and is configurable with pdb.Pdb.DEFAULT_BACKEND pdb CLI and breakpoint() uses the monitoring backend and no noticable difference I can observe at this point. Solution: Basically, I mimicked the behavior of sys.settrace with sys.monitoring to keep the old behavior as much as possible. But I had the chance to use the new API of sys.monitoring to disable certain events. Performance: It\u0027s not as impressive as the original proposal, but for the following code: import time\ndef f(x):\n    # Set breakpoint here\n    x *\u003d 2\n    return x + 1\n\ndef test():\n    start_time \u003d time.time()\n    for i in range(1000):\n        for j in range(1000):\n            j + i\n    cost \u003d time.time() - start_time\n    print(cost)\n    f(0)\n\ntest() On my laptop, without debugger, it takes 0.025s. With the new pdb attached (b f then c), it takes the same amount of time, and with Python 3.12 pdb, it takes 1.04s(4100%+ overhead). The performance improvement is significant to say at least. And as you can tell from the diff, the actual changes to pdb is minimal - just change sys.settrace(tracefunc) to self.start_trace(tracefunc) and sys.settrace(None) to self.stop_trace(). That\u0027s what the debugger developers need to do to onboard. Issue: Make it possible to use sys.monitoring for pdb/bdb #120144 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👍 1 jdtsmith reacted with thumbs up emoji 🎉 1 ambv reacted with hooray emoji ❤️ 1 ambv reacted with heart emoji All reactions 👍 1 reaction 🎉 1 reaction ❤️ 1 reaction bedevere-app Bot added the awaiting core review label Sep 25, 2024 bedevere-app Bot mentioned this pull request Sep 25, 2024 Make it possible to use sys.monitoring for pdb/bdb #120144 Closed gaogaotiantian requested review from Yhg1s, brandtbucher, iritkatriel and markshannon September 25, 2024 18:43 Copy link Copy Markdown Member Author gaogaotiantian commented Sep 25, 2024 And of course we need documentation updates, I will do it later when the feature is accepted and the interface is decided. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. gaogaotiantian mentioned this pull request Sep 28, 2024 gh-124552 : Improve the accuracy of possible breakpoint check in bdb #124553 Merged Copy link Copy Markdown Member terryjreedy commented Sep 28, 2024 Its after midnight so will test much later today. If all ok using default, will patch IDLE to pass \u0027monitoring\u0027. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member terryjreedy commented Sep 29, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page. Ran fine with default backend. Not fine with backend\u003d\u0027monitoring\u0027. Usually, when I start debugger, stack should one line with bdb.run(). Running a file should top line under that. I think showing bdb.run is an error, but this is what to compare to. With monitoring, there is initially nothing in stack window. Running a file results in 17 lines from threading, idlelib, and bdb. I have to hit \u0027go\u0027 to get to bdb.run + first line. After that, over and step seem to work, but \u0027go\u0027 freezes debugger. EDIT: The remote execution process crashes because of an unrecoverable exception in the rpc code. Monitoring does not seem to work across the socket connection. Some of the debugger code likely needs a change (as pdb does). (But IDLE does not have to use \u0027monitoring\u0027. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member Author gaogaotiantian commented Sep 29, 2024 Right - the most important thing is IDLE can simply keep working as it is, but it\u0027s also a very important example to test the new mechanism. ",
+    "scrapedAt": "2026-05-09 01:31:40.238157"
+  },
+  {
+    "id": 1736,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_set",
+    "title": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Thread-local storage support | Theme Auto Light Dark | Thread-local storage support¶ The Python interpreter provides low-level support for thread-local storage (TLS) which wraps the underlying native TLS implementation to support the Python-level thread-local storage API (threading.local). The CPython C level APIs are similar to those offered by pthreads and Windows: use a thread key and functions to associate a void* value per thread. A thread state does not need to be attached when calling these functions; they supply their own locking. Note that Python.h does not include the declaration of the TLS APIs, you need to include pythread.h to use thread-local storage. Note None of these API functions handle memory management on behalf of the void* values. You need to allocate and deallocate them yourself. If the void* values happen to be PyObject*, these functions don’t do refcount operations on them either. Thread-specific storage API¶ The thread-specific storage (TSS) API was introduced to supersede the use of the existing TLS API within the CPython interpreter. This API uses a new type Py_tss_t instead of int to represent thread keys. Added in version 3.7. See also “A New C-API for Thread-Local Storage in CPython” (PEP 539) type Py_tss_t¶ This data structure represents the state of a thread key, the definition of which may depend on the underlying TLS implementation, and it has an internal field representing the key’s initialization state. There are no public members in this structure. When Py_LIMITED_API is not defined, static allocation of this type by Py_tss_NEEDS_INIT is allowed. Py_tss_NEEDS_INIT¶ This macro expands to the initializer for Py_tss_t variables. Note that this macro won’t be defined with Py_LIMITED_API. Dynamic allocation¶ Dynamic allocation of the Py_tss_t, required in extension modules built with Py_LIMITED_API, where static allocation of this type is not possible due to its implementation being opaque at build time. Py_tss_t *PyThread_tss_alloc()¶ Part of the Stable ABI since version 3.7. Return a value which is the same state as a value initialized with Py_tss_NEEDS_INIT, or NULL in the case of dynamic allocation failure. void PyThread_tss_free(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Free the given key allocated by PyThread_tss_alloc(), after first calling PyThread_tss_delete() to ensure any associated thread locals have been unassigned. This is a no-op if the key argument is NULL. Note A freed key becomes a dangling pointer. You should reset the key to NULL. Methods¶ The parameter key of these functions must not be NULL. Moreover, the behaviors of PyThread_tss_set() and PyThread_tss_get() are undefined if the given Py_tss_t has not been initialized by PyThread_tss_create(). int PyThread_tss_is_created(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a non-zero value if the given Py_tss_t has been initialized by PyThread_tss_create(). int PyThread_tss_create(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a zero value on successful initialization of a TSS key. The behavior is undefined if the value pointed to by the key argument is not initialized by Py_tss_NEEDS_INIT. This function can be called repeatedly on the same key – calling it on an already initialized key is a no-op and immediately returns success. void PyThread_tss_delete(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Destroy a TSS key to forget the values associated with the key across all threads, and change the key’s initialization state to uninitialized. A destroyed key is able to be initialized again by PyThread_tss_create(). This function can be called repeatedly on the same key – calling it on an already destroyed key is a no-op. int PyThread_tss_set(Py_tss_t *key, void *value)¶ Part of the Stable ABI since version 3.7. Return a zero value to indicate successfully associating a void* value with a TSS key in the current thread. Each thread has a distinct mapping of the key to a void* value. void *PyThread_tss_get(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return the void* value associated with a TSS key in the current thread. This returns NULL if no value is associated with the key in the current thread. Legacy APIs¶ Deprecated since version 3.7: This API is superseded by the thread-specific storage (TSS) API. Note This version of the API does not support platforms where the native TLS key is defined in a way that cannot be safely cast to int. On such platforms, PyThread_create_key() will return immediately with a failure status, and the other TLS functions will all be no-ops on such platforms. Due to the compatibility problem noted above, this version of the API should not be used in new code. int PyThread_create_key()¶ Part of the Stable ABI. void PyThread_delete_key(int key)¶ Part of the Stable ABI. int PyThread_set_key_value(int ",
+    "scrapedAt": "2026-05-09 01:31:36.845738"
+  },
+  {
+    "id": 1735,
+    "url": "https://github.com/python/cpython/issues/123440",
+    "title": "Improve error message for `except a as b.c:` case · Issue #123440 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Improve error message for except a as b.c: case #123440 New issue Copy link New issue Copy link Closed Closed Improve error message for except a as b.c: case#123440 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-parsertype-featureA feature request or enhancementA feature request or enhancement Description sobolevn opened on Aug 28, 2024 Issue body actions Feature or enhancement Right now the syntax error is not very clear: I propose to instead use something like: @JelleZijlstra suggested to use similar error messages to :\u003d case, where we also only expect a name: \u003e\u003e\u003e (a.b :\u003d 3)\n  File \"\u003cunknown\u003e\", line 1\n    (a.b :\u003d 3)\n     ^^^\nSyntaxError: cannot use assignment expressions with attribute\n\u003e\u003e\u003e (a[0] :\u003d 3)\n  File \"\u003cunknown\u003e\", line 1\n    (a[0] :\u003d 3)\n     ^^^^\nSyntaxError: cannot use assignment expressions with subscript\n\u003e\u003e\u003e ((a, b) :\u003d 3)\n  File \"\u003cunknown\u003e\", line 1\n    ((a, b) :\u003d 3)\n     ^^^^^^\nSyntaxError: cannot use assignment expressions with tuple I am working on this right now :) Linked PRs gh-123440: Improve error message for except as used with not a name #123442 Reactions are currently unavailable Metadata Metadata Assignees sobolevn Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-parsertype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:31:35.582077"
+  },
+  {
+    "id": 1734,
+    "url": "https://docs.python.org/3/library/copy.html#copy.replace",
+    "title": "copy — Shallow and deep copy operations — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » copy — Shallow and deep copy operations | Theme Auto Light Dark | copy — Shallow and deep copy operations¶ Source code: Lib/copy.py Assignment statements in Python do not copy objects, they create bindings between a target and an object. For collections that are mutable or contain mutable items, a copy is sometimes needed so one can change one copy without changing the other. This module provides generic shallow and deep copy operations (explained below). Interface summary: copy.copy(obj)¶ Return a shallow copy of obj. copy.deepcopy(obj[, memo])¶ Return a deep copy of obj. copy.replace(obj, /, **changes)¶ Creates a new object of the same type as obj, replacing fields with values from changes. Added in version 3.13. exception copy.Error¶ Raised for module specific errors. The difference between shallow and deep copying is only relevant for compound objects (objects that contain other objects, like lists or class instances): A shallow copy constructs a new compound object and then (to the extent possible) inserts references into it to the objects found in the original. A deep copy constructs a new compound object and then, recursively, inserts copies into it of the objects found in the original. Two problems often exist with deep copy operations that don’t exist with shallow copy operations: Recursive objects (compound objects that, directly or indirectly, contain a reference to themselves) may cause a recursive loop. Because deep copy copies everything it may copy too much, such as data which is intended to be shared between copies. The deepcopy() function avoids these problems by: keeping a memo dictionary of objects already copied during the current copying pass; and letting user-defined classes override the copying operation or the set of components copied. This module does not copy types like module, method, stack trace, stack frame, file, socket, window, or any similar types. It does “copy” functions and classes (shallow and deeply), by returning the original object unchanged; this is compatible with the way these are treated by the pickle module. Shallow copies of dictionaries can be made using dict.copy(), and of lists by assigning a slice of the entire list, for example, copied_list \u003d original_list[:]. Classes can use the same interfaces to control copying that they use to control pickling. See the description of module pickle for information on these methods. In fact, the copy module uses the registered pickle functions from the copyreg module. In order for a class to define its own copy implementation, it can define special methods __copy__() and __deepcopy__(). object.__copy__(self)¶ Called to implement the shallow copy operation; no additional arguments are passed. object.__deepcopy__(self, memo)¶ Called to implement the deep copy operation; it is passed one argument, the memo dictionary. If the __deepcopy__ implementation needs to make a deep copy of a component, it should call the deepcopy() function with the component as first argument and the memo dictionary as second argument. The memo dictionary should be treated as an opaque object. Function copy.replace() is more limited than copy() and deepcopy(), and only supports named tuples created by namedtuple(), dataclasses, and other classes which define method __replace__(). object.__replace__(self, /, **changes)¶ This method should create a new object of the same type, replacing fields with values from changes. Added in version 3.13. See also Module pickle Discussion of the special methods used to support object state retrieval and restoration. Previous topic types — Dynamic type creation and names for built-in types Next topic pprint — Data pretty printer This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » copy — Shallow and deep copy operations | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 01:31:33.394731"
+  },
+  {
+    "id": 1733,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qs",
+    "title": "urllib.parse — Parse URLs into components — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Protocols and Support » urllib.parse — Parse URLs into components | Theme Auto Light Dark | urllib.parse — Parse URLs into components¶ Source code: Lib/urllib/parse.py This module defines a standard interface to break Uniform Resource Locator (URL) strings up in components (addressing scheme, network location, path etc.), to combine the components back into a URL string, and to convert a “relative URL” to an absolute URL given a “base URL.” The module has been designed to match the internet RFC on Relative Uniform Resource Locators. It supports the following URL schemes: file, ftp, gopher, hdl, http, https, imap, itms-services, mailto, mms, news, nntp, prospero, rsync, rtsp, rtsps, rtspu, sftp, shttp, sip, sips, snews, svn, svn+ssh, telnet, wais, ws, wss. CPython implementation detail: The inclusion of the itms-services URL scheme can prevent an app from passing Apple’s App Store review process for the macOS and iOS App Stores. Handling for the itms-services scheme is always removed on iOS; on macOS, it may be removed if CPython has been built with the --with-app-store-compliance option. The urllib.parse module defines functions that fall into two broad categories: URL parsing and URL quoting. These are covered in detail in the following sections. This module’s functions use the deprecated term netloc (or net_loc), which was introduced in RFC 1808. However, this term has been obsoleted by RFC 3986, which introduced the term authority as its replacement. The use of netloc is continued for backward compatibility. URL Parsing¶ The URL parsing functions focus on splitting a URL string into its components, or on combining URL components into a URL string. urllib.parse.urlsplit(urlstring, scheme\u003dNone, allow_fragments\u003dTrue)¶ Parse a URL into five components, returning a 5-item named tuple SplitResult or SplitResultBytes. This corresponds to the general structure of a URL: scheme://netloc/path?query#fragment. Each tuple item is a string, possibly empty. The components are not broken up into smaller parts (for example, the network location is a single string), and % escapes are not expanded. The delimiters as shown above are not part of the result, except for a leading slash in the path component, which is retained if present. For example: \u003e\u003e\u003e from urllib.parse import urlsplit\n\u003e\u003e\u003e urlsplit(\"scheme://netloc/path?query#fragment\")\nSplitResult(scheme\u003d\u0027scheme\u0027, netloc\u003d\u0027netloc\u0027, path\u003d\u0027/path\u0027,\n            query\u003d\u0027query\u0027, fragment\u003d\u0027fragment\u0027)\n\u003e\u003e\u003e o \u003d urlsplit(\"http://docs.python.org:80/3/library/urllib.parse.html?\"\n...              \"highlight\u003dparams#url-parsing\")\n\u003e\u003e\u003e o\nSplitResult(scheme\u003d\u0027http\u0027, netloc\u003d\u0027docs.python.org:80\u0027,\n            path\u003d\u0027/3/library/urllib.parse.html\u0027,\n            query\u003d\u0027highlight\u003dparams\u0027, fragment\u003d\u0027url-parsing\u0027)\n\u003e\u003e\u003e o.scheme\n\u0027http\u0027\n\u003e\u003e\u003e o.netloc\n\u0027docs.python.org:80\u0027\n\u003e\u003e\u003e o.hostname\n\u0027docs.python.org\u0027\n\u003e\u003e\u003e o.port\n80\n\u003e\u003e\u003e o._replace(fragment\u003d\"\").geturl()\n\u0027http://docs.python.org:80/3/library/urllib.parse.html?highlight\u003dparams\u0027\n Following the syntax specifications in RFC 1808, urlsplit() recognizes a netloc only if it is properly introduced by ‘//’. Otherwise the input is presumed to be a relative URL and thus to start with a path component. \u003e\u003e\u003e from urllib.parse import urlsplit\n\u003e\u003e\u003e urlsplit(\u0027//www.cwi.nl:80/%7Eguido/Python.html\u0027)\nSplitResult(scheme\u003d\u0027\u0027, netloc\u003d\u0027www.cwi.nl:80\u0027, path\u003d\u0027/%7Eguido/Python.html\u0027,\n            query\u003d\u0027\u0027, fragment\u003d\u0027\u0027)\n\u003e\u003e\u003e urlsplit(\u0027www.cwi.nl/%7Eguido/Python.html\u0027)\nSplitResult(scheme\u003d\u0027\u0027, netloc\u003d\u0027\u0027, path\u003d\u0027www.cwi.nl/%7Eguido/Python.html\u0027,\n            query\u003d\u0027\u0027, fragment\u003d\u0027\u0027)\n\u003e\u003e\u003e urlsplit(\u0027help/Python.html\u0027)\nSplitResult(scheme\u003d\u0027\u0027, netloc\u003d\u0027\u0027, path\u003d\u0027help/Python.html\u0027,\n            query\u003d\u0027\u0027, fragment\u003d\u0027\u0027)\n The scheme argument gives the default addressing scheme, to be used only if the URL does not specify one. It should be the same type (text or bytes) as urlstring, except that the default value \u0027\u0027 is always allowed, and is automatically converted to b\u0027\u0027 if appropriate. If the allow_fragments argument is false, fragment identifiers are not recognized. Instead, they are parsed as part of the path, parameters or query component, and fragment is set to the empty string in the return value. The return value is a named tuple, which means that its items can be accessed by index or as named attributes, which are: Attribute Index Value Value if not present scheme 0 URL scheme specifier scheme parameter netloc 1 Network location part empty string path 2 Hierarchical path empty string query 3 Query component empty string fragment 4 Fragment identifier empty string username User name None password Password None hostname Host name (lower case) None port Port number as integer, if present None Reading the port attribute will raise a ValueError if an invalid port is specified in the URL. See section Structured Parse Results for more information on the result object. Unmatched square brackets in t",
+    "scrapedAt": "2026-05-09 01:31:32.13539"
+  },
+  {
     "id": 1732,
     "url": "https://docs.python.org/3/genindex.html",
     "title": "Index — Python 3.14.5rc1 documentation",
@@ -11688,26 +11723,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1733,
-    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qs"
-  },
-  {
-    "id": 1734,
-    "url": "https://docs.python.org/3/library/copy.html#copy.replace"
-  },
-  {
-    "id": 1735,
-    "url": "https://github.com/python/cpython/issues/123440"
-  },
-  {
-    "id": 1736,
-    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_set"
-  },
-  {
-    "id": 1737,
-    "url": "https://github.com/python/cpython/issues/124533"
   },
   {
     "id": 1738,
@@ -247105,10 +247120,926 @@ window.searchData = [
     "id": 377808,
     "url": "https://docs.python.org/3/genindex-O.html",
     "parentUrl": "https://docs.python.org/3/genindex.html"
+  },
+  {
+    "id": 377914,
+    "url": "https://github.com/python/cpython/issues/123440#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/123440"
+  },
+  {
+    "id": 377917,
+    "url": "https://github.com/python/cpython/issues/123440#top",
+    "parentUrl": "https://github.com/python/cpython/issues/123440"
+  },
+  {
+    "id": 377919,
+    "url": "https://private-user-images.githubusercontent.com/4660275/362419800-047ac672-e82d-4d13-9b66-16caa1daede2.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjUzOTUsIm5iZiI6MTc3ODI2NTA5NSwicGF0aCI6Ii80NjYwMjc1LzM2MjQxOTgwMC0wNDdhYzY3Mi1lODJkLTRkMTMtOWI2Ni0xNmNhYTFkYWVkZTIucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTgzMTM1WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ODFjNGFhZTUzYzhjYWI5M2ZkOGIwMDg0MDJjMmU2MTZlNjk5NDg4NDdmMzljYjY3MGE1MjI2NzFiNDg4MThjMSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.rk9l3CM9C2Y8Ms2GjD7Mg6_RVZXZtkYLv6NiusmUtPY",
+    "parentUrl": "https://github.com/python/cpython/issues/123440"
+  },
+  {
+    "id": 377923,
+    "url": "https://github.com/python/cpython/pull/123442",
+    "parentUrl": "https://github.com/python/cpython/issues/123440"
+  },
+  {
+    "id": 377924,
+    "url": "https://github.com/python/cpython/issues/123440#issue-2492812572",
+    "parentUrl": "https://github.com/python/cpython/issues/123440"
+  },
+  {
+    "id": 377925,
+    "url": "https://private-user-images.githubusercontent.com/4660275/362419680-5d8a6a90-2151-4969-831b-f7af39692f70.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjUzOTUsIm5iZiI6MTc3ODI2NTA5NSwicGF0aCI6Ii80NjYwMjc1LzM2MjQxOTY4MC01ZDhhNmE5MC0yMTUxLTQ5NjktODMxYi1mN2FmMzk2OTJmNzAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTgzMTM1WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MDI5NDM0YTVmMjIyOGM0OTc4ZDMzMDY2ZGZkZWZhMzQ4N2I0MDljZjU5OWI0NTNjNmNiNzVlYWQzYmMyYWU4NCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.bBv4SqDuP_psqyAnbMjTCcj_r1ErHkbu4ec7TKui9vI",
+    "parentUrl": "https://github.com/python/cpython/issues/123440"
+  },
+  {
+    "id": 377969,
+    "url": "https://github.com/python/cpython/pull/124533/commits/b59568262f593730f3e445015f244e931dc57d54",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377971,
+    "url": "https://github.com/python/cpython/pull/124533/commits/a9b53ed07fef9af658ba1b26928b4d5b40fd5ebd",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377972,
+    "url": "https://github.com/python/cpython/commit/b59568262f593730f3e445015f244e931dc57d54",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377973,
+    "url": "https://github.com/wshanks",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377974,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2688610108",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377975,
+    "url": "https://github.com/python/cpython/pull/124533#ref-issue-2901620339",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377976,
+    "url": "https://github.com/python/cpython/pull/124533#event-16404254388",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377977,
+    "url": "https://github.com/python/cpython/pull/124533#issue-2548731344",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377978,
+    "url": "https://github.com/python/cpython/pull/124533#pullrequestreview-2633733453",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377979,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2669919956",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377980,
+    "url": "https://github.com/python/cpython/pull/124533/commits/97900852e11f65043a8c0d57fa57c5d7d83a575f",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377981,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2598758916",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377982,
+    "url": "https://github.com/python/cpython/pull/124533/commits/ea811f22427fdef48741d2ef63c094719788f971",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377983,
+    "url": "https://github.com/python/cpython/pull/124533#event-15980129412",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377984,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2418137097",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377985,
+    "url": "https://github.com/python/cpython/pull/124533#commits-pushed-ad2179e",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377988,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2728529647",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377989,
+    "url": "https://github.com/python/cpython/pull/124533/commits/d2c1f2ea7287f94d82f1e6624cb05ba12e671c2b",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377990,
+    "url": "https://github.com/python/cpython/pull/124533",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377991,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2598981493",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377992,
+    "url": "https://github.com/python/cpython/pull/124533#commits-pushed-d2c1f2e",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377993,
+    "url": "https://github.com/python/cpython/pull/124533/commits/8955d78969ceacddfbb76ea8046d7f2b9fc8da50",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377994,
+    "url": "https://github.com/python/cpython/pull/124533#event-16815546532",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377995,
+    "url": "https://github.com/python/cpython/compare/950e032613f8d1beb447333d09bfdd0ed04e07a0..b59568262f593730f3e445015f244e931dc57d54",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377997,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2598793412",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377998,
+    "url": "https://github.com/python/cpython/pull/124533#commits-pushed-69a5030",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 377999,
+    "url": "https://github.com/python/cpython/pull/124533/commits/18e6e9ceca88f6f3946ab06fe12b8562246562af",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378001,
+    "url": "https://github.com/pyscripter",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378002,
+    "url": "https://github.com/python/cpython/commit/a936af924efc6e2fb59e27990dcd905b7819470a",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378006,
+    "url": "https://github.com/python/cpython/pull/124533#commits-pushed-e6bc287",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378007,
+    "url": "https://github.com/user-attachments/files/18457347/fastbdb.zip",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378008,
+    "url": "https://github.com/python/cpython/commit/950e032613f8d1beb447333d09bfdd0ed04e07a0",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378010,
+    "url": "https://github.com/python/cpython/pull/124533#event-15980577845",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378011,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2704961232",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378012,
+    "url": "https://github.com/python/cpython/pull/124533#event-16815546524",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378013,
+    "url": "https://github.com/python/cpython/pull/124533/commits/b29aff5a2df49c3a816fead9d323f555bb01e476",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378014,
+    "url": "https://github.com/python/cpython/pull/124533/commits/ad2179e7597a176b0edd3ef0a66eab4668ae2912",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378015,
+    "url": "https://github.com/lmbelo/pyscripter/issues/1373",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378017,
+    "url": "https://github.com/python/cpython/pull/124533/commits/23601f37f3150694238bf1140822e9bc4b5b1ab1",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378018,
+    "url": "https://github.com/inducer/pudb/issues/683",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378021,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F124533",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378022,
+    "url": "https://github.com/python/cpython/pull/124533#event-15980128376",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378023,
+    "url": "https://github.com/python/cpython/pull/124533/commits/6afc2e7af15d8cfbc9de859ae35b789f7d6d1d2b",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378024,
+    "url": "https://github.com/python/cpython/pull/124533#event-14403946882",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378025,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2598814290",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378026,
+    "url": "https://github.com/python/cpython/pull/124533#ref-issue-2337304065",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378027,
+    "url": "https://github.com/python/cpython/pull/124533#event-14403949874",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378029,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2705354119",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378030,
+    "url": "https://github.com/python/cpython/pull/124533/files/ea811f22427fdef48741d2ef63c094719788f971",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378031,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2418184168",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378032,
+    "url": "https://github.com/python/cpython/pull/124533/commits/69a5030888be1ad0f165d9cba87991bec2df9c38",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378033,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2598254281",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378034,
+    "url": "https://github.com/python/cpython/pull/124533/commits/e6bc28774f31c39d5141f901ed97c787bd1cf867",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378035,
+    "url": "https://github.com/python/cpython/commit/99ea70c2189201b6a49dc8f9673032f062c9272b",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378036,
+    "url": "https://github.com/python/cpython/pull/124533#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378037,
+    "url": "https://github.com/python/cpython/pull/124533#ref-pullrequest-2549076059",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378038,
+    "url": "https://github.com/pyscripter/pyscripter",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378039,
+    "url": "https://github.com/python/cpython/pull/124533/commits/e9252ec8ddf08c354ad0300f583703fe3e293d3b",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378040,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2380428282",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378041,
+    "url": "https://github.com/python/cpython/pull/124533#event-16815546142",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378042,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2381604109",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378043,
+    "url": "https://github.com/python/cpython/pull/124533/commits/f0c1306461a4ad8ec7b914e5129593ccbbc2b339",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378044,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2711085135",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378045,
+    "url": "https://github.com/python/cpython/pull/124533#event-16404233308",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378047,
+    "url": "https://github.com/user-attachments/files/18458518/testfastdbd.zip",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378048,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2598876568",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378049,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2731098800",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378050,
+    "url": "https://github.com/python/cpython/pull/124533#ref-commit-45f432a",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378051,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2668055551",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378052,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2598618900",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378053,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2374896768",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378054,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2381135288",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378055,
+    "url": "https://github.com/colesbury/cpython/commit/45f432a00419cdc85cece74fe7223f1ea5d3b53b",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378060,
+    "url": "https://github.com/python/cpython/pull/124533/commits/05cc3b0b674240eb6d0bb85c925b63838f551294",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378062,
+    "url": "https://github.com/python/cpython/pull/124533/commits/c9a92f601b4c8388d166eb940a8e43d724fce5dc",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378064,
+    "url": "https://github.com/python/cpython/pull/124533#commits-pushed-18e6e9c",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378065,
+    "url": "https://github.com/python/cpython/pull/124533/commits/e4ccd8a6bc324fda246cc5c99a447bf8f449a20f",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378066,
+    "url": "https://github.com/python/cpython/pull/124533#ref-issue-3052839375",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378067,
+    "url": "https://github.com/python/cpython/pull/124533#issuecomment-2727892975",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 378068,
+    "url": "https://github.com/python/cpython/pull/124553",
+    "parentUrl": "https://github.com/python/cpython/issues/124533"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/19036496?s\u003d80\u0026u\u003d5b85eb12bbbcd749c14714bce38eb4e441cd4403\u0026v\u003d4",
+    "alt": "@terryjreedy",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/19036496?s\u003d80\u0026u\u003d5b85eb12bbbcd749c14714bce38eb4e441cd4403\u0026v\u003d4",
+    "alt": "@terryjreedy",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1311616?s\u003d80\u0026u\u003d63631227b3ac4f88b51b8116cbba4cc5c02664e3\u0026v\u003d4",
+    "alt": "@pyscripter",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1311616?s\u003d80\u0026u\u003d63631227b3ac4f88b51b8116cbba4cc5c02664e3\u0026v\u003d4",
+    "alt": "@pyscripter",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1311616?s\u003d80\u0026u\u003d63631227b3ac4f88b51b8116cbba4cc5c02664e3\u0026v\u003d4",
+    "alt": "@pyscripter",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1311616?s\u003d80\u0026u\u003d63631227b3ac4f88b51b8116cbba4cc5c02664e3\u0026v\u003d4",
+    "alt": "@pyscripter",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?s\u003d80\u0026v\u003d4",
+    "alt": "@markshannon",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?s\u003d40\u0026v\u003d4",
+    "alt": "@markshannon",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?s\u003d60\u0026v\u003d4",
+    "alt": "markshannon",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?s\u003d48\u0026v\u003d4",
+    "alt": "@markshannon",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1311616?s\u003d80\u0026u\u003d63631227b3ac4f88b51b8116cbba4cc5c02664e3\u0026v\u003d4",
+    "alt": "@pyscripter",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1311616?s\u003d40\u0026u\u003d63631227b3ac4f88b51b8116cbba4cc5c02664e3\u0026v\u003d4",
+    "alt": "@pyscripter",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/19036496?s\u003d80\u0026u\u003d5b85eb12bbbcd749c14714bce38eb4e441cd4403\u0026v\u003d4",
+    "alt": "@terryjreedy",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/655866?s\u003d40\u0026v\u003d4",
+    "alt": "@colesbury",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1178780?s\u003d40\u0026v\u003d4",
+    "alt": "@wshanks",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?s\u003d40\u0026v\u003d4",
+    "alt": "@markshannon",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/40968415?s\u003d40\u0026v\u003d4",
+    "alt": "@brandtbucher",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3949752?s\u003d40\u0026v\u003d4",
+    "alt": "@Yhg1s",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d52\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/19036496?s\u003d52\u0026v\u003d4",
+    "alt": "@terryjreedy",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1311616?s\u003d52\u0026v\u003d4",
+    "alt": "@pyscripter",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?s\u003d52\u0026v\u003d4",
+    "alt": "@markshannon",
+    "pageTitle": "gh-120144: Make it possible to use `sys.monitoring` for bdb and make it default for pdb by gaogaotiantian · Pull Request #124533 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_set"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_set"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "sobolevn",
+    "pageTitle": "Improve error message for `except a as b.c:` case · Issue #123440 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123440"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@sobolevn",
+    "pageTitle": "Improve error message for `except a as b.c:` case · Issue #123440 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123440"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@sobolevn",
+    "pageTitle": "Improve error message for `except a as b.c:` case · Issue #123440 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123440"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/4660275/362419680-5d8a6a90-2151-4969-831b-f7af39692f70.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjUzOTUsIm5iZiI6MTc3ODI2NTA5NSwicGF0aCI6Ii80NjYwMjc1LzM2MjQxOTY4MC01ZDhhNmE5MC0yMTUxLTQ5NjktODMxYi1mN2FmMzk2OTJmNzAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTgzMTM1WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MDI5NDM0YTVmMjIyOGM0OTc4ZDMzMDY2ZGZkZWZhMzQ4N2I0MDljZjU5OWI0NTNjNmNiNzVlYWQzYmMyYWU4NCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.bBv4SqDuP_psqyAnbMjTCcj_r1ErHkbu4ec7TKui9vI",
+    "alt": "Снимок экрана 2024-08-28 в 21 00 51",
+    "pageTitle": "Improve error message for `except a as b.c:` case · Issue #123440 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123440"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/4660275/362419800-047ac672-e82d-4d13-9b66-16caa1daede2.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjUzOTUsIm5iZiI6MTc3ODI2NTA5NSwicGF0aCI6Ii80NjYwMjc1LzM2MjQxOTgwMC0wNDdhYzY3Mi1lODJkLTRkMTMtOWI2Ni0xNmNhYTFkYWVkZTIucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTgzMTM1WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ODFjNGFhZTUzYzhjYWI5M2ZkOGIwMDg0MDJjMmU2MTZlNjk5NDg4NDdmMzljYjY3MGE1MjI2NzFiNDg4MThjMSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.rk9l3CM9C2Y8Ms2GjD7Mg6_RVZXZtkYLv6NiusmUtPY",
+    "alt": "Снимок экрана 2024-08-28 в 20 59 42",
+    "pageTitle": "Improve error message for `except a as b.c:` case · Issue #123440 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123440"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "Improve error message for `except a as b.c:` case · Issue #123440 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123440"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "copy — Shallow and deep copy operations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/copy.html#copy.replace"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "copy — Shallow and deep copy operations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/copy.html#copy.replace"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.parse — Parse URLs into components — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qs"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.parse — Parse URLs into components — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qs"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
