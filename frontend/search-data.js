@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1665,
+    "url": "https://docs.python.org/3/library/os.html#os.readinto",
+    "title": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » os — Miscellaneous operating system interfaces | Theme Auto Light Dark | os — Miscellaneous operating system interfaces¶ Source code: Lib/os.py This module provides a portable way of using operating system dependent functionality. If you just want to read or write a file see open(), if you want to manipulate paths, see the os.path module, and if you want to read all the lines in all the files on the command line see the fileinput module. For creating temporary files and directories see the tempfile module, and for high-level file and directory handling see the shutil module. Notes on the availability of these functions: The design of all built-in operating system dependent modules of Python is such that as long as the same functionality is available, it uses the same interface; for example, the function os.stat(path) returns stat information about path in the same format (which happens to have originated with the POSIX interface). Extensions peculiar to a particular operating system are also available through the os module, but using them is of course a threat to portability. All functions accepting path or file names accept both bytes and string objects, and result in an object of the same type, if a path or file name is returned. On VxWorks, os.popen, os.fork, os.execv and os.spawn*p* are not supported. On WebAssembly platforms, Android and iOS, large parts of the os module are not available or behave differently. APIs related to processes (e.g. fork(), execve()) and resources (e.g. nice()) are not available. Others like getuid() and getpid() are emulated or stubs. WebAssembly platforms also lack support for signals (e.g. kill(), wait()). Note All functions in this module raise OSError (or subclasses thereof) in the case of invalid or inaccessible file names and paths, or other arguments that have the correct type, but are not accepted by the operating system. exception os.error¶ An alias for the built-in OSError exception. os.name¶ The name of the operating system dependent module imported. The following names have currently been registered: \u0027posix\u0027, \u0027nt\u0027, \u0027java\u0027. See also sys.platform has a finer granularity. os.uname() gives system-dependent version information. The platform module provides detailed checks for the system’s identity. File Names, Command Line Arguments, and Environment Variables¶ In Python, file names, command line arguments, and environment variables are represented using the string type. On some systems, decoding these strings to and from bytes is necessary before passing them to the operating system. Python uses the filesystem encoding and error handler to perform this conversion (see sys.getfilesystemencoding()). The filesystem encoding and error handler are configured at Python startup by the PyConfig_Read() function: see filesystem_encoding and filesystem_errors members of PyConfig. Changed in version 3.1: On some systems, conversion using the file system encoding may fail. In this case, Python uses the surrogateescape encoding error handler, which means that undecodable bytes are replaced by a Unicode character U+DCxx on decoding, and these are again translated to the original byte on encoding. The file system encoding must guarantee to successfully decode all bytes below 128. If the file system encoding fails to provide this guarantee, API functions can raise UnicodeError. See also the locale encoding. Python UTF-8 Mode¶ Added in version 3.7: See PEP 540 for more details. The Python UTF-8 Mode ignores the locale encoding and forces the usage of the UTF-8 encoding: Use UTF-8 as the filesystem encoding. sys.getfilesystemencoding() returns \u0027utf-8\u0027. locale.getpreferredencoding() returns \u0027utf-8\u0027 (the do_setlocale argument has no effect). sys.stdin, sys.stdout, and sys.stderr all use UTF-8 as their text encoding, with the surrogateescape error handler being enabled for sys.stdin and sys.stdout (sys.stderr continues to use backslashreplace as it does in the default locale-aware mode) On Unix, os.device_encoding() returns \u0027utf-8\u0027 rather than the device encoding. Note that the standard stream settings in UTF-8 mode can be overridden by PYTHONIOENCODING (just as they can be in the default locale-aware mode). As a consequence of the changes in those lower level APIs, other higher level APIs also exhibit different default behaviours: Command line arguments, environment variables and filenames are decoded to text using the UTF-8 encoding. os.fsdecode() and os.fsencode() use the UTF-8 encoding. open(), io.open(), and codecs.open() use the UTF-8 encoding by default. However, they still use the strict error handler by default so that attempting to open a binary file in text mode is likely to raise an exception rather than producing nonsense data. The Python UTF-8 Mode is enabled if the LC_CTYPE locale is C or POSIX at Python startup (see the PyConfig_R",
+    "scrapedAt": "2026-05-09 01:28:55.278518"
+  },
+  {
+    "id": 1664,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__package__",
+    "title": "3. Data model — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 3. Data model | Theme Auto Light Dark | 3. Data model¶ 3.1. Objects, values and types¶ Objects are Python’s abstraction for data. All data in a Python program is represented by objects or by relations between objects. Even code is represented by objects. Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory. The is operator compares the identity of two objects; the id() function returns an integer representing its identity. CPython implementation detail: For CPython, id(x) is the memory address where x is stored. An object’s type determines the operations that the object supports (e.g., “does it have a length?”) and also defines the possible values for objects of that type. The type() function returns an object’s type (which is an object itself). Like its identity, an object’s type is also unchangeable. [1] The value of some objects can change. Objects whose value can change are said to be mutable; objects whose value is unchangeable once they are created are called immutable. (The value of an immutable container object that contains a reference to a mutable object can change when the latter’s value is changed; however the container is still considered immutable, because the collection of objects it contains cannot be changed. So, immutability is not strictly the same as having an unchangeable value, it is more subtle.) An object’s mutability is determined by its type; for instance, numbers, strings and tuples are immutable, while dictionaries and lists are mutable. Objects are never explicitly destroyed; however, when they become unreachable they may be garbage-collected. An implementation is allowed to postpone garbage collection or omit it altogether — it is a matter of implementation quality how garbage collection is implemented, as long as no objects are collected that are still reachable. CPython implementation detail: CPython currently uses a reference-counting scheme with (optional) delayed detection of cyclically linked garbage, which collects most objects as soon as they become unreachable, but is not guaranteed to collect garbage containing circular references. See the documentation of the gc module for information on controlling the collection of cyclic garbage. Other implementations act differently and CPython may change. Do not depend on immediate finalization of objects when they become unreachable (so you should always close files explicitly). Note that the use of the implementation’s tracing or debugging facilities may keep objects alive that would normally be collectable. Also note that catching an exception with a try…except statement may keep objects alive. Some objects contain references to “external” resources such as open files or windows. It is understood that these resources are freed when the object is garbage-collected, but since garbage collection is not guaranteed to happen, such objects also provide an explicit way to release the external resource, usually a close() method. Programs are strongly recommended to explicitly close such objects. The try…finally statement and the with statement provide convenient ways to do this. Some objects contain references to other objects; these are called containers. Examples of containers are tuples, lists and dictionaries. The references are part of a container’s value. In most cases, when we talk about the value of a container, we imply the values, not the identities of the contained objects; however, when we talk about the mutability of a container, only the identities of the immediately contained objects are implied. So, if an immutable container (like a tuple) contains a reference to a mutable object, its value changes if that mutable object is changed. Types affect almost all aspects of object behavior. Even the importance of object identity is affected in some sense: for immutable types, operations that compute new values may actually return a reference to any existing object with the same type and value, while for mutable objects this is not allowed. For example, after a \u003d 1; b \u003d 1, a and b may or may not refer to the same object with the value one, depending on the implementation. This is because int is an immutable type, so the reference to 1 can be reused. This behaviour depends on the implementation used, so should not be relied upon, but is something to be aware of when making use of object identity tests. However, after c \u003d []; d \u003d [], c and d are guaranteed to refer to two different, unique, newly created empty lists. (Note that e \u003d f \u003d [] assigns the same object to both e and f.) 3.2. The standard type hierarchy¶ Below is a list of the types that are built into Python. Extension modules (written in C, Java, or other languages, depending on the implementation) can define additional types. Future versions of P",
+    "scrapedAt": "2026-05-09 01:28:53.975604"
+  },
+  {
+    "id": 1663,
+    "url": "https://github.com/python/cpython/issues/130167",
+    "title": "Improve speed of stdlib functions by replacing `re` uses · Issue #130167 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Improve speed of stdlib functions by replacing re uses #130167 New issue Copy link New issue Copy link Open Open Improve speed of stdlib functions by replacing re uses#130167 Copy link Labels performancePerformance or resource usagePerformance or resource usagestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description donbarbos opened on Feb 16, 2025 Issue body actions We can often find the module re in the standard library modules but it can be replaced (if it is possible). I don\u0027t suggest removing it everywhere, there are places where its use is appropriate, but there are also places where it is an unnecessary solution and leads to unpleasant consequences (they can be found below) Cons of regular expressions and reasons to replace regular expressions with functions and methods: We spend time to compile re pattern (one time, but anyway we spend it) In most cases simple string methods are faster (according to my benchmarks about 2x) We can remove import re which will affect import time Additionally: I think for those who don\u0027t know regular expressions, the code is more difficult to read and therefore difficult to maintain. Important For those who want to work on the issue, please: Read https://devguide.python.org/getting-started/pull-request-lifecycle/ before anything else. Select one function to improve. It\u0027s easier to review and possibly backport. Always report benchmarks using pyperf, hyperfine, and tuna together with -X importtime to compare import times and execution time. Open a pull request with the following title: gh-130167: Improve speed of `module.function` by replacing `re` Linked PRs gh-130167: Improve speed of difflib.IS_LINE_JUNK by replacing re #130170 gh-130167: Improve speed of inspect.formatannotation by replacing re #130242 gh-130167: Improve speed of ftplib.parse150 by replacing re #130243 gh-130167: Optimise textwrap.dedent() #131919 gh-130167: Minor textwrap.dedent() optimization #131925 gh-130167: Add a What\u0027s New entry for changes to textwrap.{de,in}dent #131924 gh-130167: Improve speed of _pydecimal._all_zeros and _pydecimal._exact_half by replacing re #132065 gh-130167: Improve the error case for textwrap.dedent #132666 [3.14] gh-130167: Add a What\u0027s New entry for changes to textwrap.{de,in}dent (GH-131924) #143292 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels performancePerformance or resource usagePerformance or resource usagestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:28:52.690492"
+  },
+  {
+    "id": 1662,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeAliasType",
+    "title": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Development Tools » typing — Support for type hints | Theme Auto Light Dark | typing — Support for type hints¶ Added in version 3.5. Source code: Lib/typing.py Note The Python runtime does not enforce function and variable type annotations. They can be used by third party tools such as type checkers, IDEs, linters, etc. This module provides runtime support for type hints. Consider the function below: def surface_area_of_cube(edge_length: float) -\u003e str:\n    return f\"The surface area of the cube is {6 * edge_length ** 2}.\"\n The function surface_area_of_cube takes an argument expected to be an instance of float, as indicated by the type hint edge_length: float. The function is expected to return an instance of str, as indicated by the -\u003e str hint. While type hints can be simple classes like float or str, they can also be more complex. The typing module provides a vocabulary of more advanced type hints. New features are frequently added to the typing module. The typing_extensions package provides backports of these new features to older versions of Python. See also Typing cheat sheet A quick overview of type hints (hosted at the mypy docs) Type System Reference section of the mypy docs The Python typing system is standardised via PEPs, so this reference should broadly apply to most Python type checkers. (Some parts may still be specific to mypy.) Static Typing with Python Type-checker-agnostic documentation written by the community detailing type system features, useful typing related tools and typing best practices. Specification for the Python Type System¶ The canonical, up-to-date specification of the Python type system can be found at Specification for the Python type system. Type aliases¶ A type alias is defined using the type statement, which creates an instance of TypeAliasType. In this example, Vector and list[float] will be treated equivalently by static type checkers: type Vector \u003d list[float]\n\ndef scale(scalar: float, vector: Vector) -\u003e Vector:\n    return [scalar * num for num in vector]\n\n# passes type checking; a list of floats qualifies as a Vector.\nnew_vector \u003d scale(2.0, [1.0, -4.2, 5.4])\n Type aliases are useful for simplifying complex type signatures. For example: from collections.abc import Sequence\n\ntype ConnectionOptions \u003d dict[str, str]\ntype Address \u003d tuple[str, int]\ntype Server \u003d tuple[Address, ConnectionOptions]\n\ndef broadcast_message(message: str, servers: Sequence[Server]) -\u003e None:\n    ...\n\n# The static type checker will treat the previous type signature as\n# being exactly equivalent to this one.\ndef broadcast_message(\n    message: str,\n    servers: Sequence[tuple[tuple[str, int], dict[str, str]]]\n) -\u003e None:\n    ...\n The type statement is new in Python 3.12. For backwards compatibility, type aliases can also be created through simple assignment: Vector \u003d list[float]\n Or marked with TypeAlias to make it explicit that this is a type alias, not a normal variable assignment: from typing import TypeAlias\n\nVector: TypeAlias \u003d list[float]\n NewType¶ Use the NewType helper to create distinct types: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\nsome_id \u003d UserId(524313)\n The static type checker will treat the new type as if it were a subclass of the original type. This is useful in helping catch logical errors: def get_user_name(user_id: UserId) -\u003e str:\n    ...\n\n# passes type checking\nuser_a \u003d get_user_name(UserId(42351))\n\n# fails type checking; an int is not a UserId\nuser_b \u003d get_user_name(-1)\n You may still perform all int operations on a variable of type UserId, but the result will always be of type int. This lets you pass in a UserId wherever an int might be expected, but will prevent you from accidentally creating a UserId in an invalid way: # \u0027output\u0027 is of type \u0027int\u0027, not \u0027UserId\u0027\noutput \u003d UserId(23413) + UserId(54341)\n Note that these checks are enforced only by the static type checker. At runtime, the statement Derived \u003d NewType(\u0027Derived\u0027, Base) will make Derived a callable that immediately returns whatever parameter you pass it. That means the expression Derived(some_value) does not create a new class or introduce much overhead beyond that of a regular function call. More precisely, the expression some_value is Derived(some_value) is always true at runtime. It is invalid to create a subtype of Derived: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\n# Fails at runtime and does not pass type checking\nclass AdminUserId(UserId): pass\n However, it is possible to create a NewType based on a ‘derived’ NewType: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\nProUserId \u003d NewType(\u0027ProUserId\u0027, UserId)\n and typechecking for ProUserId will work as expected. See PEP 484 for more details. Note Recall that the use of a type alias declares two types to be equivalent to one another. Doing type Alias \u003d Original will make the static type checker treat Alias a",
+    "scrapedAt": "2026-05-09 01:28:50.272522"
+  },
+  {
+    "id": 1661,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Restore",
+    "title": "Exception Handling — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Exception Handling | Theme Auto Light Dark | Exception Handling¶ The functions described in this chapter will let you handle and raise Python exceptions. It is important to understand some of the basics of Python exception handling. It works somewhat like the POSIX errno variable: there is a global indicator (per thread) of the last error that occurred. Most C API functions don’t clear this on success, but will set it to indicate the cause of the error on failure. Most C API functions also return an error indicator, usually NULL if they are supposed to return a pointer, or -1 if they return an integer (exception: the PyArg_* functions return 1 for success and 0 for failure). Concretely, the error indicator consists of three object pointers: the exception’s type, the exception’s value, and the traceback object. Any of those pointers can be NULL if non-set (although some combinations are forbidden, for example you can’t have a non-NULL traceback if the exception type is NULL). When a function must fail because some function it called failed, it generally doesn’t set the error indicator; the function it called already set it. It is responsible for either handling the error and clearing the exception or returning after cleaning up any resources it holds (such as object references or memory allocations); it should not continue normally if it is not prepared to handle the error. If returning due to an error, it is important to indicate to the caller that an error has been set. If the error is not handled or carefully propagated, additional calls into the Python/C API may not behave as intended and may fail in mysterious ways. Note The error indicator is not the result of sys.exc_info(). The former corresponds to an exception that is not yet caught (and is therefore still propagating), while the latter returns an exception after it is caught (and has therefore stopped propagating). Printing and clearing¶ void PyErr_Clear()¶ Part of the Stable ABI. Clear the error indicator. If the error indicator is not set, there is no effect. void PyErr_PrintEx(int set_sys_last_vars)¶ Part of the Stable ABI. Print a standard traceback to sys.stderr and clear the error indicator. Unless the error is a SystemExit, in that case no traceback is printed and the Python process will exit with the error code specified by the SystemExit instance. Call this function only when the error indicator is set. Otherwise it will cause a fatal error! If set_sys_last_vars is nonzero, the variable sys.last_exc is set to the printed exception. For backwards compatibility, the deprecated variables sys.last_type, sys.last_value and sys.last_traceback are also set to the type, value and traceback of this exception, respectively. Changed in version 3.12: The setting of sys.last_exc was added. void PyErr_Print()¶ Part of the Stable ABI. Alias for PyErr_PrintEx(1). void PyErr_WriteUnraisable(PyObject *obj)¶ Part of the Stable ABI. Call sys.unraisablehook() using the current exception and obj argument. This utility function prints a warning message to sys.stderr when an exception has been set but it is impossible for the interpreter to actually raise the exception. It is used, for example, when an exception occurs in an __del__() method. The function is called with a single argument obj that identifies the context in which the unraisable exception occurred. If possible, the repr of obj will be printed in the warning message. If obj is NULL, only the traceback is printed. An exception must be set when calling this function. Changed in version 3.4: Print a traceback. Print only traceback if obj is NULL. Changed in version 3.8: Use sys.unraisablehook(). void PyErr_FormatUnraisable(const char *format, ...)¶ Similar to PyErr_WriteUnraisable(), but the format and subsequent parameters help format the warning message; they have the same meaning and values as in PyUnicode_FromFormat(). PyErr_WriteUnraisable(obj) is roughly equivalent to PyErr_FormatUnraisable(\"Exception ignored in: %R\", obj). If format is NULL, only the traceback is printed. Added in version 3.13. void PyErr_DisplayException(PyObject *exc)¶ Part of the Stable ABI since version 3.12. Print the standard traceback display of exc to sys.stderr, including chained exceptions and notes. Added in version 3.12. Raising exceptions¶ These functions help you set the current thread’s error indicator. For convenience, some of these functions will always return a NULL pointer for use in a return statement. void PyErr_SetString(PyObject *type, const char *message)¶ Part of the Stable ABI. This is the most common way to set the error indicator. The first argument specifies the exception type; it is normally one of the standard exceptions, e.g. PyExc_RuntimeError. You need not create a new strong reference to it (e.g. with Py_INCREF()). The second argument is an error message; it is decoded from \u0027utf-8\u0027. v",
+    "scrapedAt": "2026-05-09 01:28:49.006593"
+  },
+  {
     "id": 1660,
     "url": "https://github.com/python/cpython/issues/132106",
     "title": "Allow logging.handlers.QueueListener to be used as a context manager · Issue #132106 · python/cpython · GitHub",
@@ -11198,26 +11233,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1661,
-    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Restore"
-  },
-  {
-    "id": 1662,
-    "url": "https://docs.python.org/3/library/typing.html#typing.TypeAliasType"
-  },
-  {
-    "id": 1663,
-    "url": "https://github.com/python/cpython/issues/130167"
-  },
-  {
-    "id": 1664,
-    "url": "https://docs.python.org/3/reference/datamodel.html#module.__package__"
-  },
-  {
-    "id": 1665,
-    "url": "https://docs.python.org/3/library/os.html#os.readinto"
   },
   {
     "id": 1666,
@@ -243415,10 +243430,135 @@ window.searchData = [
     "id": 362524,
     "url": "https://github.com/python/cpython/issues/132106#issue-2973759144",
     "parentUrl": "https://github.com/python/cpython/issues/132106"
+  },
+  {
+    "id": 363205,
+    "url": "https://github.com/python/cpython/pull/131925",
+    "parentUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "id": 363206,
+    "url": "https://github.com/python/cpython/pull/143292",
+    "parentUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "id": 363207,
+    "url": "https://devguide.python.org/getting-started/pull-request-lifecycle/",
+    "parentUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "id": 363208,
+    "url": "https://github.com/python/cpython/pull/131924",
+    "parentUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "id": 363209,
+    "url": "https://github.com/python/cpython/pull/130242",
+    "parentUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "id": 363210,
+    "url": "https://github.com/python/cpython/pull/132065",
+    "parentUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "id": 363213,
+    "url": "https://github.com/python/cpython/pull/130243",
+    "parentUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "id": 363214,
+    "url": "https://github.com/python/cpython/pull/132666",
+    "parentUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "id": 363215,
+    "url": "https://github.com/python/cpython/issues/130167#top",
+    "parentUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "id": 363218,
+    "url": "https://github.com/python/cpython/pull/130170",
+    "parentUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "id": 363219,
+    "url": "https://github.com/python/cpython/issues/130167#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "id": 363221,
+    "url": "https://github.com/python/cpython/issues/130167#issue-2855818065",
+    "parentUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "id": 363222,
+    "url": "https://github.com/python/cpython/pull/131919",
+    "parentUrl": "https://github.com/python/cpython/issues/130167"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.readinto"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.readinto"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Data model — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/datamodel.html#module.__package__"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Data model — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/datamodel.html#module.__package__"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/47272787?u\u003d36477ac6e3201363227b586203419ed7458d13c4\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@donbarbos",
+    "pageTitle": "Improve speed of stdlib functions by replacing `re` uses · Issue #130167 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/47272787?u\u003d36477ac6e3201363227b586203419ed7458d13c4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@donbarbos",
+    "pageTitle": "Improve speed of stdlib functions by replacing `re` uses · Issue #130167 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.TypeAliasType"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.TypeAliasType"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Exception Handling — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Restore"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Exception Handling — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Restore"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/5749838?v\u003d4\u0026size\u003d80",
     "alt": "@csm10495",
