@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 800,
+    "url": "https://docs.python.org/3/library/typing.html#typing.no_type_check_decorator",
+    "title": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Development Tools » typing — Support for type hints | Theme Auto Light Dark | typing — Support for type hints¶ Added in version 3.5. Source code: Lib/typing.py Note The Python runtime does not enforce function and variable type annotations. They can be used by third party tools such as type checkers, IDEs, linters, etc. This module provides runtime support for type hints. Consider the function below: def surface_area_of_cube(edge_length: float) -\u003e str:\n    return f\"The surface area of the cube is {6 * edge_length ** 2}.\"\n The function surface_area_of_cube takes an argument expected to be an instance of float, as indicated by the type hint edge_length: float. The function is expected to return an instance of str, as indicated by the -\u003e str hint. While type hints can be simple classes like float or str, they can also be more complex. The typing module provides a vocabulary of more advanced type hints. New features are frequently added to the typing module. The typing_extensions package provides backports of these new features to older versions of Python. See also Typing cheat sheet A quick overview of type hints (hosted at the mypy docs) Type System Reference section of the mypy docs The Python typing system is standardised via PEPs, so this reference should broadly apply to most Python type checkers. (Some parts may still be specific to mypy.) Static Typing with Python Type-checker-agnostic documentation written by the community detailing type system features, useful typing related tools and typing best practices. Specification for the Python Type System¶ The canonical, up-to-date specification of the Python type system can be found at Specification for the Python type system. Type aliases¶ A type alias is defined using the type statement, which creates an instance of TypeAliasType. In this example, Vector and list[float] will be treated equivalently by static type checkers: type Vector \u003d list[float]\n\ndef scale(scalar: float, vector: Vector) -\u003e Vector:\n    return [scalar * num for num in vector]\n\n# passes type checking; a list of floats qualifies as a Vector.\nnew_vector \u003d scale(2.0, [1.0, -4.2, 5.4])\n Type aliases are useful for simplifying complex type signatures. For example: from collections.abc import Sequence\n\ntype ConnectionOptions \u003d dict[str, str]\ntype Address \u003d tuple[str, int]\ntype Server \u003d tuple[Address, ConnectionOptions]\n\ndef broadcast_message(message: str, servers: Sequence[Server]) -\u003e None:\n    ...\n\n# The static type checker will treat the previous type signature as\n# being exactly equivalent to this one.\ndef broadcast_message(\n    message: str,\n    servers: Sequence[tuple[tuple[str, int], dict[str, str]]]\n) -\u003e None:\n    ...\n The type statement is new in Python 3.12. For backwards compatibility, type aliases can also be created through simple assignment: Vector \u003d list[float]\n Or marked with TypeAlias to make it explicit that this is a type alias, not a normal variable assignment: from typing import TypeAlias\n\nVector: TypeAlias \u003d list[float]\n NewType¶ Use the NewType helper to create distinct types: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\nsome_id \u003d UserId(524313)\n The static type checker will treat the new type as if it were a subclass of the original type. This is useful in helping catch logical errors: def get_user_name(user_id: UserId) -\u003e str:\n    ...\n\n# passes type checking\nuser_a \u003d get_user_name(UserId(42351))\n\n# fails type checking; an int is not a UserId\nuser_b \u003d get_user_name(-1)\n You may still perform all int operations on a variable of type UserId, but the result will always be of type int. This lets you pass in a UserId wherever an int might be expected, but will prevent you from accidentally creating a UserId in an invalid way: # \u0027output\u0027 is of type \u0027int\u0027, not \u0027UserId\u0027\noutput \u003d UserId(23413) + UserId(54341)\n Note that these checks are enforced only by the static type checker. At runtime, the statement Derived \u003d NewType(\u0027Derived\u0027, Base) will make Derived a callable that immediately returns whatever parameter you pass it. That means the expression Derived(some_value) does not create a new class or introduce much overhead beyond that of a regular function call. More precisely, the expression some_value is Derived(some_value) is always true at runtime. It is invalid to create a subtype of Derived: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\n# Fails at runtime and does not pass type checking\nclass AdminUserId(UserId): pass\n However, it is possible to create a NewType based on a ‘derived’ NewType: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\nProUserId \u003d NewType(\u0027ProUserId\u0027, UserId)\n and typechecking for ProUserId will work as expected. See PEP 484 for more details. Note Recall that the use of a type alias declares two types to be equivalent to one another. Doing type Alias \u003d Original will make the static type checker treat Alias a",
+    "scrapedAt": "2026-05-09 00:54:07.703998"
+  },
+  {
+    "id": 799,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325",
+    "title": "Allow \"p\" in Py_BuildValue · Issue #89488 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Allow \"p\" in Py_BuildValue #89488 New issue Copy link New issue Copy link Closed Closed Allow \"p\" in Py_BuildValue#89488 Copy link Labels deferred-blockerinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs) Description pablogsal opened on Sep 29, 2021 Issue body actions BPO 45325 Nosy @vstinner, @serhiy-storchaka, @JelleZijlstra, @pablogsal, @godlygeek PRs bpo-45325: Add a new \u0027p\u0027 parameter to Py_BuildValue to convert an integer into a Python bool #28634 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2021-09-29.18:08:04.356\u003e\nlabels \u003d []\ntitle \u003d \u0027Allow \"p\" in Py_BuildValue\u0027\nupdated_at \u003d \u003cDate 2022-02-01.03:59:42.971\u003e\nuser \u003d \u0027https://github.com/pablogsal\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-02-01.03:59:42.971\u003e\nactor \u003d \u0027JelleZijlstra\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d []\ncreation \u003d \u003cDate 2021-09-29.18:08:04.356\u003e\ncreator \u003d \u0027pablogsal\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 45325\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 18.0\nmessages \u003d [\u0027402897\u0027, \u0027402899\u0027, \u0027402900\u0027, \u0027402901\u0027, \u0027402902\u0027, \u0027402904\u0027, \u0027402910\u0027, \u0027402915\u0027, \u0027402917\u0027, \u0027402918\u0027, \u0027402921\u0027, \u0027402923\u0027, \u0027402924\u0027, \u0027402938\u0027, \u0027402941\u0027, \u0027402951\u0027, \u0027402965\u0027, \u0027412234\u0027]\nnosy_count \u003d 5.0\nnosy_names \u003d [\u0027vstinner\u0027, \u0027serhiy.storchaka\u0027, \u0027JelleZijlstra\u0027, \u0027pablogsal\u0027, \u0027godlygeek\u0027]\npr_nums \u003d [\u002728634\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d None\nurl \u003d \u0027https://bugs.python.org/issue45325\u0027\nversions \u003d [] Linked PRs gh-89488: Add warning about Py_BuildValue(\"p\") needing exact int #135610 [3.14] gh-89488: Add warning about Py_BuildValue(\"p\") needing exact int (GH-135610) #135843 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels deferred-blockerinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs) Projects Release and Deferred blockers 🚫 Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:54:06.298409"
+  },
+  {
+    "id": 798,
+    "url": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors",
+    "title": "curses — Terminal handling for character-cell displays — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Command-line interface libraries » curses — Terminal handling for character-cell displays | Theme Auto Light Dark | curses — Terminal handling for character-cell displays¶ Source code: Lib/curses The curses module provides an interface to the curses library, the de-facto standard for portable advanced terminal handling. While curses is most widely used in the Unix environment, versions are available for Windows, DOS, and possibly other systems as well. This extension module is designed to match the API of ncurses, an open-source curses library hosted on Linux and the BSD variants of Unix. Availability: not Android, not iOS, not WASI. This module is not supported on mobile platforms or WebAssembly platforms. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. Availability: Unix. Note Whenever the documentation mentions a character it can be specified as an integer, a one-character Unicode string or a one-byte byte string. Whenever the documentation mentions a character string it can be specified as a Unicode string or a byte string. See also Module curses.ascii Utilities for working with ASCII characters, regardless of your locale settings. Module curses.panel A panel stack extension that adds depth to curses windows. Module curses.textpad Editable text widget for curses supporting Emacs-like bindings. Curses Programming with Python Tutorial material on using curses with Python, by Andrew Kuchling and Eric Raymond. Functions¶ The module curses defines the following exception: exception curses.error¶ Exception raised when a curses library function returns an error. Note Whenever x or y arguments to a function or a method are optional, they default to the current cursor location. Whenever attr is optional, it defaults to A_NORMAL. The module curses defines the following functions: curses.assume_default_colors(fg, bg, /)¶ Allow use of default values for colors on terminals supporting this feature. Use this to support transparency in your application. Assign terminal default foreground/background colors to color number -1. So init_pair(x, COLOR_RED, -1) will initialize pair x as red on default background and init_pair(x, -1, COLOR_BLUE) will initialize pair x as default foreground on blue. Change the definition of the color-pair 0 to (fg, bg). Added in version 3.14. curses.baudrate()¶ Return the output speed of the terminal in bits per second. On software terminal emulators it will have a fixed high value. Included for historical reasons; in former times, it was used to write output loops for time delays and occasionally to change interfaces depending on the line speed. curses.beep()¶ Emit a short attention sound. curses.can_change_color()¶ Return True or False, depending on whether the programmer can change the colors displayed by the terminal. curses.cbreak()¶ Enter cbreak mode. In cbreak mode (sometimes called “rare” mode) normal tty line buffering is turned off and characters are available to be read one by one. However, unlike raw mode, special characters (interrupt, quit, suspend, and flow control) retain their effects on the tty driver and calling program. Calling first raw() then cbreak() leaves the terminal in cbreak mode. curses.color_content(color_number)¶ Return the intensity of the red, green, and blue (RGB) components in the color color_number, which must be between 0 and COLORS - 1. Return a 3-tuple, containing the R,G,B values for the given color, which will be between 0 (no component) and 1000 (maximum amount of component). curses.color_pair(pair_number)¶ Return the attribute value for displaying text in the specified color pair. Only the first 256 color pairs are supported. This attribute value can be combined with A_STANDOUT, A_REVERSE, and the other A_* attributes. pair_number() is the counterpart to this function. curses.curs_set(visibility)¶ Set the cursor state. visibility can be set to 0, 1, or 2, for invisible, normal, or very visible. If the terminal supports the visibility requested, return the previous cursor state; otherwise raise an exception. On many terminals, the “visible” mode is an underline cursor and the “very visible” mode is a block cursor. curses.def_prog_mode()¶ Save the current terminal mode as the “program” mode, the mode when the running program is using curses. (Its counterpart is the “shell” mode, for when the program is not in curses.) Subsequent calls to reset_prog_mode() will restore this mode. curses.def_shell_mode()¶ Save the current terminal mode as the “shell” mode, the mode when the running program is not using curses. (Its counterpart is the “program” mode, when the program is using curses capabilities.) Subsequent calls to reset_shell_mode() will restore this mode. curses.delay",
+    "scrapedAt": "2026-05-09 00:54:03.073072"
+  },
+  {
+    "id": 797,
+    "url": "https://docs.python.org/3/library/codecs.html#module-codecs",
+    "title": "codecs — Codec registry and base classes — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Binary Data Services » codecs — Codec registry and base classes | Theme Auto Light Dark | codecs — Codec registry and base classes¶ Source code: Lib/codecs.py This module defines base classes for standard Python codecs (encoders and decoders) and provides access to the internal Python codec registry, which manages the codec and error handling lookup process. Most standard codecs are text encodings, which encode text to bytes (and decode bytes to text), but there are also codecs provided that encode text to text, and bytes to bytes. Custom codecs may encode and decode between arbitrary types, but some module features are restricted to be used specifically with text encodings or with codecs that encode to bytes. The module defines the following functions for encoding and decoding with any codec: codecs.encode(obj, encoding\u003d\u0027utf-8\u0027, errors\u003d\u0027strict\u0027)¶ Encodes obj using the codec registered for encoding. Errors may be given to set the desired error handling scheme. The default error handler is \u0027strict\u0027 meaning that encoding errors raise ValueError (or a more codec specific subclass, such as UnicodeEncodeError). Refer to Codec Base Classes for more information on codec error handling. codecs.decode(obj, encoding\u003d\u0027utf-8\u0027, errors\u003d\u0027strict\u0027)¶ Decodes obj using the codec registered for encoding. Errors may be given to set the desired error handling scheme. The default error handler is \u0027strict\u0027 meaning that decoding errors raise ValueError (or a more codec specific subclass, such as UnicodeDecodeError). Refer to Codec Base Classes for more information on codec error handling. codecs.charmap_build(string)¶ Return a mapping suitable for encoding with a custom single-byte encoding. Given a str string of up to 256 characters representing a decoding table, returns either a compact internal mapping object EncodingMap or a dictionary mapping character ordinals to byte values. Raises a TypeError on invalid input. The full details for each codec can also be looked up directly: codecs.lookup(encoding, /)¶ Looks up the codec info in the Python codec registry and returns a CodecInfo object as defined below. Encodings are first looked up in the registry’s cache. If not found, the list of registered search functions is scanned. If no CodecInfo object is found, a LookupError is raised. Otherwise, the CodecInfo object is stored in the cache and returned to the caller. class codecs.CodecInfo(encode, decode, streamreader\u003dNone, streamwriter\u003dNone, incrementalencoder\u003dNone, incrementaldecoder\u003dNone, name\u003dNone)¶ Codec details when looking up the codec registry. The constructor arguments are stored in attributes of the same name: name¶ The name of the encoding. encode¶ decode¶ The stateless encoding and decoding functions. These must be functions or methods which have the same interface as the encode() and decode() methods of Codec instances (see Codec Interface). The functions or methods are expected to work in a stateless mode. incrementalencoder¶ incrementaldecoder¶ Incremental encoder and decoder classes or factory functions. These have to provide the interface defined by the base classes IncrementalEncoder and IncrementalDecoder, respectively. Incremental codecs can maintain state. streamwriter¶ streamreader¶ Stream writer and reader classes or factory functions. These have to provide the interface defined by the base classes StreamWriter and StreamReader, respectively. Stream codecs can maintain state. To simplify access to the various codec components, the module provides these additional functions which use lookup() for the codec lookup: codecs.getencoder(encoding)¶ Look up the codec for the given encoding and return its encoder function. Raises a LookupError in case the encoding cannot be found. codecs.getdecoder(encoding)¶ Look up the codec for the given encoding and return its decoder function. Raises a LookupError in case the encoding cannot be found. codecs.getincrementalencoder(encoding)¶ Look up the codec for the given encoding and return its incremental encoder class or factory function. Raises a LookupError in case the encoding cannot be found or the codec doesn’t support an incremental encoder. codecs.getincrementaldecoder(encoding)¶ Look up the codec for the given encoding and return its incremental decoder class or factory function. Raises a LookupError in case the encoding cannot be found or the codec doesn’t support an incremental decoder. codecs.getreader(encoding)¶ Look up the codec for the given encoding and return its StreamReader class or factory function. Raises a LookupError in case the encoding cannot be found. codecs.getwriter(encoding)¶ Look up the codec for the given encoding and return its StreamWriter class or factory function. Raises a LookupError in case the encoding cannot be found. Custom codecs are made available by registering a suitable codec search function: codecs.register(search_function, /)",
+    "scrapedAt": "2026-05-09 00:54:01.347287"
+  },
+  {
+    "id": 796,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_LegacyWindowsFSEncodingFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-09 00:53:59.716912"
+  },
+  {
     "id": 795,
     "url": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable",
     "title": "faulthandler — Dump the Python traceback — Python 3.14.5rc1 documentation",
@@ -5278,26 +5313,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 796,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_LegacyWindowsFSEncodingFlag"
-  },
-  {
-    "id": 797,
-    "url": "https://docs.python.org/3/library/codecs.html#module-codecs"
-  },
-  {
-    "id": 798,
-    "url": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
-  },
-  {
-    "id": 799,
-    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
-  },
-  {
-    "id": 800,
-    "url": "https://docs.python.org/3/library/typing.html#typing.no_type_check_decorator"
   },
   {
     "id": 801,
@@ -134879,10 +134894,2475 @@ window.searchData = [
     "id": 101911,
     "url": "https://github.com/python/cpython/blob/main/Doc/library/faulthandler.rst?plain\u003d1",
     "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 102101,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_LE",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102102,
+    "url": "https://docs.python.org/3/library/codecs.html#python-specific-encodings",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102104,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.getincrementalencoder",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102105,
+    "url": "https://docs.python.org/3/library/codecs.html#standalone-codec-functions",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102106,
+    "url": "https://docs.python.org/3/library/codecs.html#stateless-encoding-and-decoding",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102108,
+    "url": "https://docs.python.org/3/library/codecs.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102111,
+    "url": "https://docs.python.org/3/library/codecs.html#incrementalencoder-objects",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102112,
+    "url": "https://docs.python.org/3/library/codecs.html#streamreader-objects",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102114,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3490.html",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102115,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo.incrementalencoder",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102117,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_UTF16",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102118,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.lookup_error",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102119,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_UTF16_LE",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102121,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.charmap_build",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102123,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalDecoder.decode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102125,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo.decode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102126,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamReader.readline",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102128,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.backslashreplace_errors",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102130,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamWriter.reset",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102131,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalDecoder.setstate",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102132,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamWriter.write",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102133,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo.encode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102134,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalDecoder.getstate",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102135,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.decode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102136,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102138,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_UTF32_BE",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102139,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalDecoder.reset",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102140,
+    "url": "https://docs.python.org/3/library/codecs.html#b64",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102141,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5895.html",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102142,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_BE",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102143,
+    "url": "https://docs.python.org/3/library/base64.html#base64.decodebytes",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102144,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.Codec",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102145,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3492.html",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102147,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalEncoder.getstate",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102149,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.getdecoder",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102150,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamReader.readlines",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102152,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.getwriter",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102155,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/encodings/aliases.py",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102156,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings.search_function",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102157,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.Codec.decode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102158,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.register",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102160,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.xmlcharrefreplace_errors",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102161,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.codecs.escape_encode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102162,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.getreader",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102164,
+    "url": "https://docs.python.org/3/library/codecs.html#streamrecoder-objects",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102165,
+    "url": "https://docs.python.org/3/library/codecs.html#text-transforms",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102167,
+    "url": "https://docs.python.org/3/library/codecs.html#",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102169,
+    "url": "https://docs.python.org/3/library/codecs.html#streamwriter-objects",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102171,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3490.html#section-3.1",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102172,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalEncoder.reset",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102173,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings.CodecRegistryError",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102175,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamWriter.writelines",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102179,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.readbuffer_encode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102181,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamReader.reset",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102182,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/codecs.py",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102183,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamReader.read",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102184,
+    "url": "https://docs.python.org/3/library/binascii.html#binascii.b2a_hex",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102185,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings.normalize_encoding",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102190,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.unregister",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102192,
+    "url": "https://pypi.org/project/idna/",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102193,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings.idna.ToASCII",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102194,
+    "url": "https://docs.python.org/3/library/codecs.html#codec-base-classes",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102195,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.ignore_errors",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102196,
+    "url": "https://docs.python.org/3/library/quopri.html#quopri.decode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102197,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings.win32_code_page_search_function",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102198,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.strict_errors",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102199,
+    "url": "https://docs.python.org/3/library/codecs.html#binary-transforms",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102200,
+    "url": "https://docs.python.org/3/library/codecs.html#module-encodings.utf_8_sig",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102204,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamReaderWriter",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102205,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.replace_errors",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102206,
+    "url": "https://docs.python.org/3/library/binascii.html#binascii.a2b_hex",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102207,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings.idna.ToUnicode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102208,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.compress",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102209,
+    "url": "https://docs.python.org/3/library/codecs.html#incremental-encoding-and-decoding",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102210,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo.incrementaldecoder",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102211,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_UTF8",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102212,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.getencoder",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102214,
+    "url": "https://docs.python.org/3/library/codecs.html#module-encodings",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102216,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.getincrementaldecoder",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102217,
+    "url": "https://docs.python.org/3/library/codecs.html#text-encodings",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102218,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.compress",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102219,
+    "url": "https://docs.python.org/3/library/quopri.html#quopri.encode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102221,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.decompress",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102222,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo.name",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102223,
+    "url": "https://docs.python.org/3/library/codecs.html#module-encodings.mbcs",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102225,
+    "url": "https://docs.python.org/3/library/http.client.html#module-http.client",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102226,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalEncoder.setstate",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102227,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamRecoder",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102228,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_UTF16_BE",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102229,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.codecs.escape_decode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102230,
+    "url": "https://docs.python.org/3/library/stringprep.html#module-stringprep",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102232,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo.streamreader",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102233,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings-and-unicode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102235,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.iterdecode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102237,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.iterencode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102239,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.decompress",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102241,
+    "url": "https://docs.python.org/3/library/codecs.html#streamreaderwriter-objects",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102242,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/codecs.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102243,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalEncoder.encode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102245,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_UTF32",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102247,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.namereplace_errors",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102248,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.encode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102249,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings.idna.nameprep",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102250,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.Codec.encode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102251,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.EncodedFile",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102253,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102254,
+    "url": "https://docs.python.org/3/library/base64.html#base64.encodebytes",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102256,
+    "url": "https://docs.python.org/3/library/codecs.html#codec-objects",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102258,
+    "url": "https://docs.python.org/3/library/codecs.html#incrementaldecoder-objects",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102260,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5891.html",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102261,
+    "url": "https://docs.python.org/3/library/codecs.html#stream-encoding-and-decoding",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102262,
+    "url": "https://docs.python.org/3/library/codecs.html#module-encodings.idna",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102263,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo.streamwriter",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102265,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_UTF32_LE",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 102267,
+    "url": "https://docs.python.org/3/library/curses.ascii.html#module-curses.ascii",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102268,
+    "url": "https://docs.python.org/3/library/curses.html#curses.flash",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102269,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.addch",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102270,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_NEXT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102272,
+    "url": "https://docs.python.org/3/library/curses.html#curses.has_ic",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102273,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_NPAGE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102274,
+    "url": "https://bugs.python.org/issue35924",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102276,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/curses.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102277,
+    "url": "https://docs.python.org/3/library/curses.html#curses.setupterm",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102278,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_BEG",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102279,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_BULLET",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102280,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.enclose",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102281,
+    "url": "https://docs.python.org/3/library/curses.html#curses.COLOR_CYAN",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102282,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.inch",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102283,
+    "url": "https://docs.python.org/3/library/curses.html#curses.textpad.Textbox",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102284,
+    "url": "https://docs.python.org/3/library/curses.html#curses.longname",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102285,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_RIGHT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102286,
+    "url": "https://docs.python.org/3/library/curses.html#curses.cbreak",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102288,
+    "url": "https://docs.python.org/3/library/curses.html#curses.BUTTON_CTRL",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102289,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_PI",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102290,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_BOARD",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102292,
+    "url": "https://docs.python.org/3/library/curses.html#curses.error",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102293,
+    "url": "https://docs.python.org/3/library/curses.html#curses.pair_content",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102294,
+    "url": "https://docs.python.org/3/library/curses.html#curses.textpad.rectangle",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102295,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_MARK",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102296,
+    "url": "https://docs.python.org/3/library/curses.html#constants",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102297,
+    "url": "https://docs.python.org/3/library/curses.html#curses.update_lines_cols",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102299,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SCOPY",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102300,
+    "url": "https://docs.python.org/3/library/curses.html#curses.reset_shell_mode",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102301,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_REFERENCE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102302,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_UNDO",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102303,
+    "url": "https://docs.python.org/3/library/curses.html#curses.COLS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102304,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_HOME",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102305,
+    "url": "https://docs.python.org/3/library/curses.html#curses.getmouse",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102306,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_REFRESH",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102307,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_TTEE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102308,
+    "url": "https://docs.python.org/3/library/curses.html#curses.has_il",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102309,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ungetmouse",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102310,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_UNDERLINE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102312,
+    "url": "https://docs.python.org/3/library/curses.html#curses.keyname",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102313,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SSAVE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102314,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_DIAMOND",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102315,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.touchline",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102316,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_BLOCK",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102317,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_LANTERN",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102318,
+    "url": "https://docs.python.org/3/library/curses.html#curses.resizeterm",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102319,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ERR",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102320,
+    "url": "https://docs.python.org/3/library/curses.html#curses.nonl",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102321,
+    "url": "https://docs.python.org/3/library/curses.html#curses.pair_number",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102322,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_CREATE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102323,
+    "url": "https://docs.python.org/3/library/curses.html#curses.def_shell_mode",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102324,
+    "url": "https://docs.python.org/3/library/curses.html#curses.putp",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102326,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.overwrite",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102327,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_S7",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102328,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SIC",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102329,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_HELP",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102330,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_S9",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102331,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SBEG",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102332,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_SSSS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102333,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_S3",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102334,
+    "url": "https://docs.python.org/3/library/curses.html#curses.savetty",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102335,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_S1",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102336,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.instr",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102337,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SRSUME",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102338,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_END",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102339,
+    "url": "https://docs.python.org/3/library/curses.html#curses.COLOR_WHITE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102340,
+    "url": "https://docs.python.org/3/library/curses.html#",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102341,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.getyx",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102342,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.keypad",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102343,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_SBSS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102344,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.putwin",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102346,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ungetch",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102347,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_PLMINUS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102348,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SFIND",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102349,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_ATTRIBUTES",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102350,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.echochar",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102351,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.insch",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102352,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.subpad",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102353,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_SBSB",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102354,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.mvwin",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102355,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_SBBS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102356,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.addstr",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102357,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_EXIT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102358,
+    "url": "https://docs.python.org/3/library/curses.html#curses.COLOR_GREEN",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102359,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_C3",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102360,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_COPY",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102361,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SF",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102362,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SAVE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102363,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_EOL",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102365,
+    "url": "https://docs.python.org/3/library/curses.html#curses.BUTTONn_TRIPLE_CLICKED",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102366,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_C1",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102367,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SMOVE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102368,
+    "url": "https://docs.python.org/3/library/curses.html#curses.baudrate",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102369,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_EOS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102370,
+    "url": "https://docs.python.org/3/library/curses.html#curses.mousemask",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102371,
+    "url": "https://docs.python.org/3/library/curses.html#curses.set_tabsize",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102372,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SR",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102373,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.move",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102374,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_GEQUAL",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102375,
+    "url": "https://docs.python.org/3/library/curses.html#curses.resetty",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102376,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.is_wintouched",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102377,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_CLOSE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102378,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_INVIS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102379,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.deleteln",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102380,
+    "url": "https://docs.python.org/3/library/curses.html#curses.init_pair",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102381,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_BOLD",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102382,
+    "url": "https://docs.python.org/3/library/curses.html#curses.COLOR_YELLOW",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102383,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.attroff",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102384,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SREDO",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102385,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_DC",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102386,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SRESET",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102387,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_PREVIOUS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102388,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_ULCORNER",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102389,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.scrollok",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102390,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.refresh",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102391,
+    "url": "https://docs.python.org/3/library/curses.html#curses.def_prog_mode",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102392,
+    "url": "https://docs.python.org/3/library/curses.html#curses.newpad",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102393,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_PLUS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102394,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SCANCEL",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102395,
+    "url": "https://docs.python.org/3/library/curses.html#curses.unctrl",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102396,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_A3",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102397,
+    "url": "https://docs.python.org/3/library/curses.html#curses.COLORS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102398,
+    "url": "https://docs.python.org/3/library/curses.html#curses.tigetflag",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102399,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.box",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102400,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_A1",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102401,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SLEFT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102402,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.delch",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102403,
+    "url": "https://docs.python.org/3/library/curses.html#curses.textpad.Textbox.edit",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102404,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.encoding",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102406,
+    "url": "https://docs.python.org/3/library/curses.html#curses.version",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102407,
+    "url": "https://docs.python.org/3/library/curses.html#curses.textpad.Textbox.gather",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102408,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_RIGHT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102410,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_VERTICAL",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102411,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.syncup",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102412,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_CHARTEXT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102413,
+    "url": "https://docs.python.org/3/library/curses.html#curses.typeahead",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102414,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_TOP",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102415,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_FIND",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102416,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SEOL",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102417,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_LARROW",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102418,
+    "url": "https://docs.python.org/3/library/curses.html#curses.BUTTONn_CLICKED",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102419,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_LOW",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102420,
+    "url": "https://docs.python.org/3/library/curses.html#curses.getwin",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102421,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_HORIZONTAL",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102422,
+    "url": "https://docs.python.org/3/library/curses.html#curses.noqiflush",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102423,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_RESET",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102424,
+    "url": "https://docs.python.org/3/library/curses.html#curses.tigetstr",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102425,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_B2",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102426,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_RARROW",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102427,
+    "url": "https://docs.python.org/3/library/curses.html#curses-window-objects",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102428,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.attron",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102429,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_MAX",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102430,
+    "url": "https://docs.python.org/3/library/curses.html#curses.wrapper",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102432,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SMESSAGE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102433,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.border",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102434,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.overlay",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102435,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SEND",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102436,
+    "url": "https://docs.python.org/3/library/curses.html#curses.COLOR_RED",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102437,
+    "url": "https://docs.python.org/3/howto/curses.html#curses-howto",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102438,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_NORMAL",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102439,
+    "url": "https://docs.python.org/3/library/curses.html#curses.has_colors",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102440,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.cursyncup",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102441,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SPREVIOUS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102442,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.noutrefresh",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102443,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_BTAB",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102444,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_REDO",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102445,
+    "url": "https://docs.python.org/3/library/curses.html#curses.BUTTONn_PRESSED",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102446,
+    "url": "https://docs.python.org/3/library/curses.html#curses.erasechar",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102447,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.getbkgd",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102448,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_OPTIONS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102449,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.insstr",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102450,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_RESIZE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102451,
+    "url": "https://docs.python.org/3/library/curses.html#curses.meta",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102452,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102453,
+    "url": "https://docs.python.org/3/library/curses.html#curses.COLOR_PAIRS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102455,
+    "url": "https://docs.python.org/3/library/curses.html#curses.killchar",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102456,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.notimeout",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102457,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_NEQUAL",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102458,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SOPTIONS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102459,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.getbegyx",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102460,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.standend",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102462,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_PPAGE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102463,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_LEFT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102464,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_MESSAGE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102465,
+    "url": "https://docs.python.org/3/library/curses.html#curses.textpad.Textbox.do_command",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102466,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_REVERSE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102467,
+    "url": "https://docs.python.org/3/library/curses.html#curses.unget_wch",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102468,
+    "url": "https://docs.python.org/3/library/curses.html#curses.COLOR_BLACK",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102469,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_CATAB",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102470,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_PROTECT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102471,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_MOVE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102472,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.clearok",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102473,
+    "url": "https://docs.python.org/3/library/curses.html#curses.napms",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102474,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_Fn",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102475,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.getch",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102476,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_CLEAR",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102477,
+    "url": "https://docs.python.org/3/library/curses.html#module-curses",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102478,
+    "url": "https://docs.python.org/3/library/curses.html#curses.nl",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102479,
+    "url": "https://docs.python.org/3/library/curses.html#curses.use_env",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102480,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_LTEE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102481,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.touchwin",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102482,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.timeout",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102483,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_LLCORNER",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102484,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_HLINE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102485,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_STERLING",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102486,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.clrtoeol",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102487,
+    "url": "https://docs.python.org/3/library/curses.html#curses.beep",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102489,
+    "url": "https://docs.python.org/3/library/curses.html#window-objects",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102490,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_BACKSPACE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102491,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_STAB",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102492,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_DL",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102493,
+    "url": "https://docs.python.org/3/library/curses.html#curses.isendwin",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102494,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_COLOR",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102495,
+    "url": "https://docs.python.org/3/library/curses.html#curses.flushinp",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102496,
+    "url": "https://docs.python.org/3/library/curses.html#curses.OK",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102497,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.getmaxyx",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102498,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.addnstr",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102499,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.resize",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102500,
+    "url": "https://docs.python.org/3/library/curses.html#curses.COLOR_BLUE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102501,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_DEGREE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102502,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_UP",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102503,
+    "url": "https://docs.python.org/3/library/curses.html#curses.get_escdelay",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102505,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_LRCORNER",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102506,
+    "url": "https://docs.python.org/3/library/curses.html#curses.newwin",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102507,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/curses",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102508,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.getparyx",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102509,
+    "url": "https://docs.python.org/3/library/curses.html#curses.init_color",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102510,
+    "url": "https://docs.python.org/3/library/curses.html#curses.initscr",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102511,
+    "url": "https://docs.python.org/3/library/curses.html#curses.set_escdelay",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102513,
+    "url": "https://docs.python.org/3/library/curses.html#curses.raw",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102514,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_F0",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102515,
+    "url": "https://docs.python.org/3/library/curses.html#curses.get_tabsize",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102516,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_LEFT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102517,
+    "url": "https://docs.python.org/3/library/curses.html#curses.echo",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102518,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_BLINK",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102519,
+    "url": "https://docs.python.org/3/library/curses.html#curses.endwin",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102520,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.leaveok",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102521,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_DARROW",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102522,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_LEQUAL",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102523,
+    "url": "https://docs.python.org/3/library/curses.html#curses.halfdelay",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102524,
+    "url": "https://docs.python.org/3/library/curses.html#curses.can_change_color",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102525,
+    "url": "https://docs.python.org/3/library/curses.html#curses.textpad.Textbox.stripspaces",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102527,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.untouchwin",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102528,
+    "url": "https://docs.python.org/3/library/curses.html#curses.is_term_resized",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102529,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_RESTART",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102530,
+    "url": "https://docs.python.org/3/library/curses.html#curses.noecho",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102531,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SUSPEND",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102532,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_RESUME",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102533,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.redrawwin",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102534,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.vline",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102535,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SCOMMAND",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102536,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SRIGHT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102537,
+    "url": "https://docs.python.org/3/library/curses.html#curses.color_content",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102538,
+    "url": "https://docs.python.org/3/library/curses.html#curses.BUTTONn_DOUBLE_CLICKED",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102539,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.clrtobot",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102540,
+    "url": "https://docs.python.org/3/library/curses.html#curses.filter",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102541,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SSUSPEND",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102542,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.syncok",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102543,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.get_wch",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102544,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_DIM",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102545,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SUNDO",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102547,
+    "url": "https://docs.python.org/3/library/curses.html#curses.resize_term",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102548,
+    "url": "https://docs.python.org/3/library/curses.html#functions",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102549,
+    "url": "https://docs.python.org/3/library/curses.html#curses.BUTTON_ALT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102550,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_COMMAND",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102551,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SHOME",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102552,
+    "url": "https://docs.python.org/3/library/curses.html#curses.LINES",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102553,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_CTAB",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102554,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.erase",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102555,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_SSBS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102556,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.mvderwin",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102557,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SELECT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102558,
+    "url": "https://docs.python.org/3/library/curses.html#curses.BUTTON_SHIFT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102561,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_PRINT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102562,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_SSSB",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102563,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.clear",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102564,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SNEXT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102565,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_OPEN",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102567,
+    "url": "https://docs.python.org/3/library/curses.html#curses.has_key",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102568,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.standout",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102569,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_ALTCHARSET",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102570,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.insdelln",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102571,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.immedok",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102572,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.insnstr",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102573,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.chgat",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102574,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_LL",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102575,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_BBSS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102576,
+    "url": "https://docs.python.org/3/library/curses.html#curses.termname",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102577,
+    "url": "https://docs.python.org/3/library/curses.html#curses.tigetnum",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102578,
+    "url": "https://docs.python.org/3/library/intro.html#mobile-availability",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102579,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SDC",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102580,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.redrawln",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102581,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.attrset",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102582,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_SSBB",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102583,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_CANCEL",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102584,
+    "url": "https://docs.python.org/3/library/curses.html#curses.nocbreak",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102585,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_VLINE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102586,
+    "url": "https://docs.python.org/3/library/curses.html#curses.color_pair",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102587,
+    "url": "https://docs.python.org/3/library/curses.html#curses.BUTTONn_RELEASED",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102588,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SDL",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102589,
+    "url": "https://docs.python.org/3/library/curses.html#curses.termattrs",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102590,
+    "url": "https://docs.python.org/3/library/curses.html#curses.mouseinterval",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102591,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_EIC",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102592,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SREPLACE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102593,
+    "url": "https://docs.python.org/3/library/curses.html#curses.qiflush",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102595,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.idcok",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102596,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.derwin",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102597,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SCREATE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102598,
+    "url": "https://docs.python.org/3/library/curses.html#curses.curs_set",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102599,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.subwin",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102600,
+    "url": "https://docs.python.org/3/library/curses.html#textbox-objects",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102601,
+    "url": "https://docs.python.org/3/library/curses.html#curses.getsyx",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102602,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_URCORNER",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102603,
+    "url": "https://docs.python.org/3/library/curses.html#curses.delay_output",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102604,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.getkey",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102605,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.bkgd",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102606,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_IL",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102607,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_MIN",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102608,
+    "url": "https://docs.python.org/3/library/curses.html#curses.tparm",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102609,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_IC",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102610,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SEXIT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102611,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_MOUSE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102612,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.insertln",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102613,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_BREAK",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102614,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_ENTER",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102615,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_REPLACE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102616,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.syncdown",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102617,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_UARROW",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102618,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SPRINT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102619,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.nodelay",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102620,
+    "url": "https://docs.python.org/3/library/curses.html#curses.reset_prog_mode",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102621,
+    "url": "https://docs.python.org/3/library/curses.html#curses.noraw",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102623,
+    "url": "https://docs.python.org/3/library/curses.html#curses.start_color",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102624,
+    "url": "https://docs.python.org/3/library/curses.html#curses.COLOR_MAGENTA",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102625,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.scroll",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102626,
+    "url": "https://docs.python.org/3/library/curses.html#curses.has_extended_color_support",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102627,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_BSSS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102628,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_BTEE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102629,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_STANDOUT",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102630,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.is_linetouched",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102631,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.setscrreg",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102632,
+    "url": "https://docs.python.org/3/library/curses.html#curses.A_ITALIC",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102633,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_DOWN",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102634,
+    "url": "https://docs.python.org/3/library/curses.html#curses.setsyx",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102635,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.bkgdset",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102636,
+    "url": "https://docs.python.org/3/library/curses.panel.html#module-curses.panel",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102637,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_BSSB",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102638,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_CKBOARD",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102639,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_RTEE",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102640,
+    "url": "https://docs.python.org/3/library/curses.html#curses.KEY_SHELP",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102641,
+    "url": "https://docs.python.org/3/library/curses.html#curses.doupdate",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102642,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ncurses_version",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102643,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.getstr",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102644,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.idlok",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102645,
+    "url": "https://docs.python.org/3/library/curses.html#curses.ACS_BSBS",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102646,
+    "url": "https://docs.python.org/3/library/curses.html#curses.window.hline",
+    "parentUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 102647,
+    "url": "https://github.com/python/cpython/issues/89488#issue-1199066046",
+    "parentUrl": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
+  },
+  {
+    "id": 102650,
+    "url": "https://github.com/godlygeek",
+    "parentUrl": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
+  },
+  {
+    "id": 102651,
+    "url": "https://github.com/python/cpython/pull/28634",
+    "parentUrl": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
+  },
+  {
+    "id": 102652,
+    "url": "https://github.com/python/cpython/issues/89488",
+    "parentUrl": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
+  },
+  {
+    "id": 102653,
+    "url": "https://github.com/python/cpython/pull/135843",
+    "parentUrl": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
+  },
+  {
+    "id": 102657,
+    "url": "https://github.com/python/cpython/issues/89488#start-of-content",
+    "parentUrl": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
+  },
+  {
+    "id": 102658,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22deferred-blocker%22",
+    "parentUrl": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
+  },
+  {
+    "id": 102660,
+    "url": "https://github.com/python/cpython/pull/135610",
+    "parentUrl": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
+  },
+  {
+    "id": 102661,
+    "url": "https://bugs.python.org/issue45325",
+    "parentUrl": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
+  },
+  {
+    "id": 102663,
+    "url": "https://github.com/python/cpython/issues/89488#top",
+    "parentUrl": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
+  },
+  {
+    "id": 102665,
+    "url": "https://github.com/pablogsal",
+    "parentUrl": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.no_type_check_decorator"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.no_type_check_decorator"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@pablogsal",
+    "pageTitle": "Allow \"p\" in Py_BuildValue · Issue #89488 · python/cpython · GitHub",
+    "pageUrl": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@pablogsal",
+    "pageTitle": "Allow \"p\" in Py_BuildValue · Issue #89488 · python/cpython · GitHub",
+    "pageUrl": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "curses — Terminal handling for character-cell displays — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "curses — Terminal handling for character-cell displays — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "codecs — Codec registry and base classes — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "codecs — Codec registry and base classes — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_LegacyWindowsFSEncodingFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_LegacyWindowsFSEncodingFlag"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
