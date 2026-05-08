@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1230,
+    "url": "https://github.com/python/cpython/issues/130471",
+    "title": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member gaogaotiantian commented Feb 22, 2025 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. We supported multi-line input in pdb in 3.13, but the tab indentation does not work in its best shape. It inserts a \\t character, which means the first \u003ctab\u003e will introduce a 2-space (at least looks like it) indentation, and the next ones will introduce a 8-space one. This PR made it a bit smarter. Now a \u003ctab\u003e at the beginning of the line (before any non-space text) will auto-fill a 4-space indentation. For example, \\t and \\t will both create a 4-space indentation. This is not the smartest feature, it\u0027s not as good as pyrepl where the indentation is inserted when a new line is created. However, I think it\u0027s much better than what we have now. The ultimate goal is to use pyrepl for pdb, so I don\u0027t think duplication too much code to make pdb work slightly better now is that rewarding. Issue: Use 4 spaces for indentation in PDB #125377 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Improve tab indentation for pdb multi-line input 36723c7 bedevere-app Bot added the awaiting core review label Feb 22, 2025 bedevere-app Bot mentioned this pull request Feb 22, 2025 Use 4 spaces for indentation in PDB #125377 Closed 📜🤖 Added by blurb_it. cfda7ba gaogaotiantian requested a review from iritkatriel February 22, 2025 19:44 Fix lint issue 9293b21 tomasr8 reviewed Feb 22, 2025 View reviewed changes Comment thread Lib/test/test_pdb.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Use a single multi-line string input 41e37ec tomasr8 approved these changes Feb 23, 2025 View reviewed changes iritkatriel reviewed Mar 3, 2025 View reviewed changes Comment thread Misc/NEWS.d/next/Library/2025-02-22-19-44-00.gh-issue-125377.LFTK0H.rst @@ -0,0 +1 @@ ``\u003ctab\u003e`` at the beginning of the line in :mod:`pdb` multi-line input will fill in a 4-space indentation now, instead of inserting a ``\\t`` character. Copy link Copy Markdown Member iritkatriel Mar 3, 2025 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment I\u0027d add this to what\u0027s new in 3.14. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Member Author gaogaotiantian Mar 4, 2025 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Done. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions gaogaotiantian added 2 commits March 4, 2025 11:43 Merge branch \u0027main\u0027 into multiline-completion eaa8bd9 Add whatsnew entry 64965f3 iritkatriel approved these changes Mar 4, 2025 View reviewed changes bedevere-app Bot added awaiting merge and removed awaiting core review labels Mar 4, 2025 gaogaotiantian merged commit b6769e9 into python:main Mar 4, 2025 bedevere-app Bot removed the awaiting merge label Mar 4, 2025 gaogaotiantian deleted the multiline-completion branch March 5, 2025 01:29 This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters. Learn more about bidirectional Unicode characters Show hidden characters Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Reviewers iritkatriel iritkatriel approved these changes tomasr8 tomasr8 approved these changes Assignees No one assigned Labels None yet Projects None yet Milestone No milestone Development Successfully merging this pull request may close these issues. Uh oh! There was an error while loading. Please reload this page. 3 participants Add this suggestion to a batch that can be applied as a single commit.This suggestion is invalid because no changes were made to the code.Suggestions cannot be applied while the pull request is closed.Suggestions cannot be applied while viewing a subset of changes.Only one suggestion per line can be applied in a batch.Add this suggestion to a batch that ",
+    "scrapedAt": "2026-05-09 01:11:15.81915"
+  },
+  {
+    "id": 1229,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork_Child",
+    "title": "Operating System Utilities — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Utilities » Operating System Utilities | Theme Auto Light Dark | Operating System Utilities¶ PyObject *PyOS_FSPath(PyObject *path)¶ Return value: New reference. Part of the Stable ABI since version 3.6. Return the file system representation for path. If the object is a str or bytes object, then a new strong reference is returned. If the object implements the os.PathLike interface, then __fspath__() is returned as long as it is a str or bytes object. Otherwise TypeError is raised and NULL is returned. Added in version 3.6. int Py_FdIsInteractive(FILE *fp, const char *filename)¶ Return true (nonzero) if the standard I/O file fp with name filename is deemed interactive. This is the case for files for which isatty(fileno(fp)) is true. If the PyConfig.interactive is non-zero, this function also returns true if the filename pointer is NULL or if the name is equal to one of the strings \u0027\u003cstdin\u003e\u0027 or \u0027???\u0027. This function must not be called before Python is initialized. void PyOS_BeforeFork()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to prepare some internal state before a process fork. This should be called before calling fork() or any similar function that clones the current process. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_BeforeFork(). Added in version 3.7. void PyOS_AfterFork_Parent()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to update some internal state after a process fork. This should be called from the parent process after calling fork() or any similar function that clones the current process, regardless of whether process cloning was successful. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_AfterFork_Parent(). Added in version 3.7. void PyOS_AfterFork_Child()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to update internal interpreter state after a process fork. This must be called from the child process after calling fork(), or any similar function that clones the current process, if there is any chance the process will call back into the Python interpreter. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_AfterFork_Child(). Added in version 3.7. See also os.register_at_fork() allows registering custom Python functions to be called by PyOS_BeforeFork(), PyOS_AfterFork_Parent() and PyOS_AfterFork_Child(). void PyOS_AfterFork()¶ Part of the Stable ABI on platforms with fork(). Function to update some internal state after a process fork; this should be called in the new process if the Python interpreter will continue to be used. If a new executable is loaded into the new process, this function does not need to be called. Deprecated since version 3.7: This function is superseded by PyOS_AfterFork_Child(). int PyOS_CheckStack()¶ Part of the Stable ABI on platforms with USE_STACKCHECK since version 3.7. Return true when the interpreter runs out of stack space. This is a reliable check, but is only available when USE_STACKCHECK is defined (currently on certain versions of Windows using the Microsoft Visual C++ compiler). USE_STACKCHECK will be defined automatically; you should never change the definition in your own code. typedef void (*PyOS_sighandler_t)(int)¶ Part of the Stable ABI. PyOS_sighandler_t PyOS_getsig(int i)¶ Part of the Stable ABI. Return the current signal handler for signal i. This is a thin wrapper around either sigaction() or signal(). Do not call those functions directly! PyOS_sighandler_t PyOS_setsig(int i, PyOS_sighandler_t h)¶ Part of the Stable ABI. Set the signal handler for signal i to be h; return the old signal handler. This is a thin wrapper around either sigaction() or signal(). Do not call those functions directly! int PyOS_InterruptOccurred(void)¶ Part of the Stable ABI. Check if a SIGINT signal has been received. Returns 1 if a SIGINT has occurred and clears the signal flag, or 0 otherwise. In most cases, you should prefer PyErr_CheckSignals() over this function. PyErr_CheckSignals() invokes the appropriate signal handlers for all pending signals, allowing Python code to handle the signal properly. This function only detects SIGINT and does not invoke any Python signal handlers. This function is async-signal-safe and this function cannot fail. The caller must hold an attached thread state. wchar_t *Py_DecodeLocale(const char *arg, size_t *size)¶ Part of the Stable ABI since version 3.7. Warning This function should not be called directly: use the PyConfig API with the PyConfig_SetBytesStrin",
+    "scrapedAt": "2026-05-09 01:11:12.423971"
+  },
+  {
+    "id": 1228,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#turtle",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:11:11.114517"
+  },
+  {
+    "id": 1227,
+    "url": "https://docs.python.org/3/library/exceptions.html#NotImplementedError",
+    "title": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Exceptions | Theme Auto Light Dark | Built-in Exceptions¶ In Python, all exceptions must be instances of a class that derives from BaseException. In a try statement with an except clause that mentions a particular class, that clause also handles any exception classes derived from that class (but not exception classes from which it is derived). Two exception classes that are not related via subclassing are never equivalent, even if they have the same name. The built-in exceptions listed in this chapter can be generated by the interpreter or built-in functions. Except where mentioned, they have an “associated value” indicating the detailed cause of the error. This may be a string or a tuple of several items of information (e.g., an error code and a string explaining the code). The associated value is usually passed as arguments to the exception class’s constructor. User code can raise built-in exceptions. This can be used to test an exception handler or to report an error condition “just like” the situation in which the interpreter raises the same exception; but beware that there is nothing to prevent user code from raising an inappropriate error. The built-in exception classes can be subclassed to define new exceptions; programmers are encouraged to derive new exceptions from the Exception class or one of its subclasses, and not from BaseException. More information on defining exceptions is available in the Python Tutorial under User-defined Exceptions. Exception context¶ Three attributes on exception objects provide information about the context in which the exception was raised: BaseException.__context__¶ BaseException.__cause__¶ BaseException.__suppress_context__¶ When raising a new exception while another exception is already being handled, the new exception’s __context__ attribute is automatically set to the handled exception. An exception may be handled when an except or finally clause, or a with statement, is used. This implicit exception context can be supplemented with an explicit cause by using from with raise: raise new_exc from original_exc\n The expression following from must be an exception or None. It will be set as __cause__ on the raised exception. Setting __cause__ also implicitly sets the __suppress_context__ attribute to True, so that using raise new_exc from None effectively replaces the old exception with the new one for display purposes (e.g. converting KeyError to AttributeError), while leaving the old exception available in __context__ for introspection when debugging. The default traceback display code shows these chained exceptions in addition to the traceback for the exception itself. An explicitly chained exception in __cause__ is always shown when present. An implicitly chained exception in __context__ is shown only if __cause__ is None and __suppress_context__ is false. In either case, the exception itself is always shown after any chained exceptions so that the final line of the traceback always shows the last exception that was raised. Inheriting from built-in exceptions¶ User code can create subclasses that inherit from an exception type. It’s recommended to only subclass one exception type at a time to avoid any possible conflicts between how the bases handle the args attribute, as well as due to possible memory layout incompatibilities. CPython implementation detail: Most built-in exceptions are implemented in C for efficiency, see: Objects/exceptions.c. Some have custom memory layouts which makes it impossible to create a subclass that inherits from multiple exception types. The memory layout of a type is an implementation detail and might change between Python versions, leading to new conflicts in the future. Therefore, it’s recommended to avoid subclassing multiple exception types altogether. Base classes¶ The following exceptions are used mostly as base classes for other exceptions. exception BaseException¶ The base class for all built-in exceptions. It is not meant to be directly inherited by user-defined classes (for that, use Exception). If str() is called on an instance of this class, the representation of the argument(s) to the instance are returned, or the empty string when there were no arguments. args¶ The tuple of arguments given to the exception constructor. Some built-in exceptions (like OSError) expect a certain number of arguments and assign a special meaning to the elements of this tuple, while others are usually called only with a single string giving an error message. with_traceback(tb)¶ This method sets tb as the new traceback for the exception and returns the exception object. It was more commonly used before the exception chaining features of PEP 3134 became available. The following example shows how we can convert an instance of SomeException into an instance of OtherException while preserving the traceback. Once raised, the current ",
+    "scrapedAt": "2026-05-09 01:11:09.831598"
+  },
+  {
+    "id": 1226,
+    "url": "https://peps.python.org/pep-0703/",
+    "title": "PEP 703 – Making the Global Interpreter Lock Optional in CPython | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 703 – Making the Global Interpreter Lock Optional in CPython PEP 703 – Making the Global Interpreter Lock Optional in CPython Author: Sam Gross \u003ccolesbury at gmail.com\u003e Sponsor: Łukasz Langa \u003clukasz at python.org\u003e Discussions-To: Discourse thread Status: Accepted Type: Standards Track Created: 09-Jan-2023 Python-Version: 3.13 Post-History: 09-Jan-2023, 04-May-2023 Resolution: 24-Oct-2023 Table of Contents Abstract Motivation The GIL Makes Many Types of Parallelism Difficult to Express The GIL Affects Python Library Usability GPU-Heavy Workloads Require Multi-Core Processing The GIL Makes Deploying Python AI Models Difficult Motivation Summary Specification Build Configuration Changes Overview of CPython Changes Reference Counting Immortalization Biased Reference Counting Default (0b00) Weakrefs (0b01) Queued (0b10) Merged (0b11) Reference counting pseudo-code Deferred Reference Counting Garbage Collector Modifications for Deferred Reference Counting Reference Counting Type Objects Memory Management CPython Free Lists Garbage Collection (Cycle Collection) Stop-the-World Thread States Generations Integration With Deferred and Biased Reference Counting Container Thread-Safety Borrowed References Python Critical Sections Optimistically Avoiding Locking Mimalloc Changes for Optimistic list and dict Access Mimalloc Page Reuse Optimistic dict and list Access Summary Specializing Interpreter Py_mod_gil Slot PYTHONGIL Environment Variable Rationale Non-Generational Garbage Collection Optimistic Avoiding Locking in dict and list Accesses Backwards Compatibility Distribution Performance Build Bots How to Teach This Reference Implementation Alternatives Multiprocessing Releasing the GIL in C-API Extensions Internal Parallelization Related Work Per-Interpreter GIL Gilectomy PyParallel python-safethread Greg Stein’s Free-Threading Patch Jython and IronPython PyPy-STM Rejected Ideas Why Not Use a Concurrent Garbage Collector? Why Not Deprecate PyDict_GetItem in Favor of PyDict_FetchItem? Why Not Use PEP 683 Immortalization? Open Issues Improved Specialization Python Build Modes Integration Mitigations for Single-Threaded Performance References Acknowledgments Copyright Note The Steering Council accepts PEP 703, but with clear proviso: that the rollout be gradual and break as little as possible, and that we can roll back any changes that turn out to be too disruptive – which includes potentially rolling back all of PEP 703 entirely if necessary (however unlikely or undesirable we expect that to be). Abstract CPython’s global interpreter lock (“GIL”) prevents multiple threads from executing Python code at the same time. The GIL is an obstacle to using multi-core CPUs from Python efficiently. This PEP proposes adding a build configuration (--disable-gil) to CPython to let it run Python code without the global interpreter lock and with the necessary changes needed to make the interpreter thread-safe. Motivation The GIL is a major obstacle to concurrency. For scientific computing tasks, this lack of concurrency is often a bigger issue than speed of executing Python code, since most of the processor cycles are spent in optimized CPU or GPU kernels. The GIL introduces a global bottleneck that can prevent other threads from making progress if they call any Python code. There are existing ways to enable parallelism in CPython today, but those techniques come with significant limitations (see Alternatives). This section focuses on the GIL’s impact on scientific computing, particular AI/ML workloads because that is the area with which this author has the most experience, but the GIL also affects other users of Python. The GIL Makes Many Types of Parallelism Difficult to Express Neural network-based AI models expose multiple opportunities for parallelism. For example, individual operations may be parallelized internally (“intra-operator”), multiple operations may be executed simultaneously (“inter-operator”), and requests (spanning multiple operations) may also be parallelized. Efficient execution requires exploiting multiple types of parallelism [1]. The GIL makes it difficult to express inter-operator parallelism, as well as some forms of request parallelism, efficiently in Python. In other programming languages, a system might use threads to run different parts of a neural network on separate CPU cores, but this is inefficient in Python due to the GIL. Similarly, latency-sensitive inference workloads frequently use threads to parallelize across requests, but face the same scaling bottlenecks in Python. The challenges the GIL poses to exploiting parallelism in Python frequently come up in reinforcement learning. Heinrich Kuttler, author of the NetHack Learning Environment and Member of Technical Staff at Inflection AI, writes: Recent breakthroughs in reinforcement learning, such as on Dota 2, StarCraft, and NetHack rely on running multiple e",
+    "scrapedAt": "2026-05-09 01:11:08.564042"
+  },
+  {
     "id": 1225,
     "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleNoBlock",
     "title": "Importing Modules — Python 3.14.5rc1 documentation",
@@ -8223,26 +8258,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1226,
-    "url": "https://peps.python.org/pep-0703/"
-  },
-  {
-    "id": 1227,
-    "url": "https://docs.python.org/3/library/exceptions.html#NotImplementedError"
-  },
-  {
-    "id": 1228,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#turtle"
-  },
-  {
-    "id": 1229,
-    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork_Child"
-  },
-  {
-    "id": 1230,
-    "url": "https://github.com/python/cpython/issues/130471"
   },
   {
     "id": 1231,
@@ -217695,10 +217710,1162 @@ window.searchData = [
     "id": 239418,
     "url": "https://github.com/python/cpython/blob/main/Doc/library/collections.abc.rst?plain\u003d1",
     "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239510,
+    "url": "https://peps.python.org/pep-0703/#improved-specialization",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239511,
+    "url": "https://people.kernel.org/joelfernandes/gus-vs-rcu",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239512,
+    "url": "https://launchpad.net/python-safethread",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239513,
+    "url": "https://peps.python.org/pep-0703/#overview-of-cpython-changes",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239514,
+    "url": "https://peps.python.org/pep-0703/#integration-with-deferred-and-biased-reference-counting",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239515,
+    "url": "https://peps.python.org/pep-0703/#gsteinpatch",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239516,
+    "url": "https://peps.python.org/pep-0703/#greg-stein-s-free-threading-patch",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239517,
+    "url": "https://peps.python.org/pep-0703/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239518,
+    "url": "https://openresearch-repository.anu.edu.au/bitstream/1885/33723/2/01_Blackburn_The_DaCapo_Benchmarks:_Java_2006.pdf",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239519,
+    "url": "https://peps.python.org/pep-0703/#specializing-interpreter",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239520,
+    "url": "https://discuss.python.org/t/22606",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239521,
+    "url": "https://go.dev/blog/ismmkeynote",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239522,
+    "url": "https://peps.python.org/pep-0703/#the-gil-makes-deploying-python-ai-models-difficult",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239523,
+    "url": "https://peps.python.org/pep-0703/#build-bots",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239524,
+    "url": "https://peps.python.org/pep-0703/#motivation-summary",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239525,
+    "url": "https://peps.python.org/pep-0703/#related-work",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239526,
+    "url": "https://peps.python.org/pep-0703/#mitigations-for-single-threaded-performance",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239527,
+    "url": "https://peps.python.org/pep-0703/#jython-and-ironpython",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239528,
+    "url": "https://peps.python.org/pep-0703/#reference-counting-type-objects",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239529,
+    "url": "https://peps.python.org/pep-0703/#distribution",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239530,
+    "url": "https://mirrors.edge.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.html",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239531,
+    "url": "https://peps.python.org/pep-0703/#pythongil-environment-variable",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239532,
+    "url": "https://peps.python.org/pep-0703/#alternatives",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239533,
+    "url": "https://peps.python.org/pep-0703/#specification",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239534,
+    "url": "https://peps.python.org/pep-0703/#exploitingmemoryjava",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239535,
+    "url": "https://peps.python.org/pep-0703/#integration",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239536,
+    "url": "https://discuss.python.org/t/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/37075",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239537,
+    "url": "https://peps.python.org/pep-0703/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239538,
+    "url": "https://peps.python.org/pep-0703/#torchdeploy",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239539,
+    "url": "https://peps.python.org/pep-0703/#ironpython",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239540,
+    "url": "https://peps.python.org/pep-0703/#why-not-use-pep-683-immortalization",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239541,
+    "url": "https://peps.python.org/pep-0703/#the-gil-affects-python-library-usability",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239542,
+    "url": "https://lwn.net/Articles/262464/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239543,
+    "url": "http://hmmer.org/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239544,
+    "url": "https://peps.python.org/pep-0703/#gpu-heavy-workloads-require-multi-core-processing",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239545,
+    "url": "https://peps.python.org/pep-0703/#reference-counting-pseudo-code",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239546,
+    "url": "https://peps.python.org/pep-0703/#why-not-use-a-concurrent-garbage-collector",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239547,
+    "url": "https://peps.python.org/pep-0703/#stop-the-world",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239548,
+    "url": "https://peps.python.org/pep-0703/#heaps",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239550,
+    "url": "https://peps.python.org/pep-0703/#internal-parallelization",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239551,
+    "url": "https://peps.python.org/pep-0703/#decapo",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239552,
+    "url": "https://peps.python.org/pep-0703/#pep659",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239553,
+    "url": "https://peps.python.org/pep-0703/#mimalloc-page-reuse",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239554,
+    "url": "https://pillow.readthedocs.io/en/stable/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239556,
+    "url": "https://github.com/python/cpython/pull/19474",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239557,
+    "url": "https://peps.python.org/pep-0703/#typesafe-rcu",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239558,
+    "url": "https://peps.python.org/pep-0703/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239559,
+    "url": "https://www.deepmind.com/blog/alphastar-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforcement-learning",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239560,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0703.rst",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239561,
+    "url": "https://peps.python.org/pep-0703/#py-mod-gil-slot",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239562,
+    "url": "https://peps.python.org/pep-0703/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239563,
+    "url": "https://github.com/colesbury/nogil-3.12",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239564,
+    "url": "https://ironpython.net/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239565,
+    "url": "https://peps.python.org/pep-0703/#the-gil-makes-many-types-of-parallelism-difficult-to-express",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239566,
+    "url": "https://pytorch.org/docs/stable/jit.html",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239567,
+    "url": "https://peps.python.org/pep-0703/#cpythongc",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239568,
+    "url": "https://peps.python.org/pep-0703/#tid",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239569,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0703.rst",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239570,
+    "url": "https://peps.python.org/pep-0703/#optimistic-avoiding-locking-in-dict-and-list-accesses",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239571,
+    "url": "https://peps.python.org/pep-0703/#nogil312",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239572,
+    "url": "https://peps.python.org/pep-0703/#non-generational-garbage-collection",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239573,
+    "url": "https://peps.python.org/pep-0703/#pypy-stm",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239574,
+    "url": "https://peps.python.org/pep-0703/#thread-states",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239575,
+    "url": "https://peps.python.org/pep-0703/#python-build-modes",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239576,
+    "url": "https://peps.python.org/pep-0703/#pythonsafethread",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239577,
+    "url": "https://peps.python.org/pep-0703/#pypystm",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239578,
+    "url": "https://github.com/python/cpython/blob/cd6655a8589e99ae4088b3bed4a692a19ed48779/Modules/gcmodule.c#L1106",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239579,
+    "url": "https://peps.python.org/pep-0703/#releasing-the-gil-in-c-api-extensions",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239580,
+    "url": "https://peps.python.org/pep-0703/#garbage-collection-cycle-collection",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239581,
+    "url": "https://github.com/freebsd/freebsd-src/blob/9408f36627b74a472dc82f7a43320235c0c9055a/sys/kern/subr_smr.c#L44",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239582,
+    "url": "https://peps.python.org/pep-0703/#generations",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239583,
+    "url": "https://peps.python.org/pep-0703/#default-0b00",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239584,
+    "url": "https://peps.python.org/pep-0703/#id20",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239585,
+    "url": "https://peps.python.org/pep-0703/#yuemmwang2019",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239586,
+    "url": "https://www.kernel.org/doc/html/latest/RCU/whatisRCU.html#analogy-with-reference-counting",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239587,
+    "url": "https://peps.python.org/pep-0703/#perfbook",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239588,
+    "url": "https://peps.python.org/pep-0703/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239589,
+    "url": "https://github.com/colesbury/nogil/blob/f7e45d6bfbbd48c8d5cf851c116b73b85add9fc6/Include/object.h#L428-L455",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239590,
+    "url": "https://peps.python.org/pep-0703/#howto",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239591,
+    "url": "https://peps.python.org/pep-0703/#container-thread-safety",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239592,
+    "url": "https://peps.python.org/pep-0703/#python-safethread",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239593,
+    "url": "https://peps.python.org/pep-0703/#id19",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239594,
+    "url": "https://peps.python.org/pep-0703/#performance",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239595,
+    "url": "https://peps.python.org/pep-0703/#id18",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239597,
+    "url": "https://peps.python.org/pep-0703/#id9",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239598,
+    "url": "https://dl.acm.org/doi/abs/10.1145/1852761.1852768",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239599,
+    "url": "https://peps.python.org/pep-0703/#queued-0b10",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239600,
+    "url": "https://github.com/uploadcare/pillow-simd",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239601,
+    "url": "https://pytorch.org/docs/stable/package.html",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239602,
+    "url": "https://peps.python.org/pep-0703/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239603,
+    "url": "https://peps.python.org/pep-0703/#build-configuration-changes",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239604,
+    "url": "https://ai.facebook.com/blog/nethack-learning-environment-to-advance-deep-reinforcement-learning/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239605,
+    "url": "https://peps.python.org/pep-0703/#id3",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239606,
+    "url": "https://peps.python.org/pep-0703/#id11",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239607,
+    "url": "https://peps.python.org/pep-0703/#id4",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239608,
+    "url": "https://peps.python.org/pep-0703/#id10",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239609,
+    "url": "https://peps.python.org/pep-0703/#gilectomy",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239610,
+    "url": "https://peps.python.org/pep-0703/#acknowledgments",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239611,
+    "url": "https://peps.python.org/pep-0703/#id1",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239612,
+    "url": "https://peps.python.org/pep-0703/#id13",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239613,
+    "url": "https://peps.python.org/pep-0703/#cpython-free-lists",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239614,
+    "url": "https://peps.python.org/pep-0703/#id2",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239615,
+    "url": "https://peps.python.org/pep-0703/#id12",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239616,
+    "url": "https://peps.python.org/pep-0703/#id15",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239617,
+    "url": "https://peps.python.org/pep-0703/#id7",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239618,
+    "url": "https://peps.python.org/pep-0703/#id8",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239619,
+    "url": "https://peps.python.org/pep-0703/#id14",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239620,
+    "url": "https://peps.python.org/pep-0703/#biased-reference-counting",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239621,
+    "url": "https://peps.python.org/pep-0703/#id5",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239622,
+    "url": "https://peps.python.org/pep-0703/#id17",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239623,
+    "url": "https://peps.python.org/pep-0703/#id6",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239624,
+    "url": "https://peps.python.org/pep-0703/#id16",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239625,
+    "url": "https://peps.python.org/pep-0703/#open-issues",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239626,
+    "url": "https://peps.python.org/pep-0703/#jython",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239627,
+    "url": "https://discuss.python.org/t/26503",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239628,
+    "url": "https://peps.python.org/pep-0703/#garbage-collector-modifications-for-deferred-reference-counting",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239629,
+    "url": "https://peps.python.org/pep-0703/#optimistically-avoiding-locking",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239630,
+    "url": "https://peps.python.org/pep-0703/#memory-management",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239631,
+    "url": "https://peps.python.org/pep-0703/#deferred-reference-counting",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239632,
+    "url": "https://peps.python.org/pep-0703/#golangc",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239633,
+    "url": "https://peps.python.org/pep-0703/#rcu",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239634,
+    "url": "https://arxiv.org/abs/2104.00254",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239635,
+    "url": "https://peps.python.org/pep-0703/#id22",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239636,
+    "url": "https://peps.python.org/pep-0703/#id21",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239637,
+    "url": "https://peps.python.org/pep-0703/#pyparallel",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239638,
+    "url": "https://cellprofiler.org/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239639,
+    "url": "https://peps.python.org/pep-0703/#id24",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239640,
+    "url": "https://peps.python.org/pep-0703/#multiprocessing",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239641,
+    "url": "https://peps.python.org/pep-0703/#id23",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239642,
+    "url": "https://peps.python.org/pep-0703/#id26",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239643,
+    "url": "https://peps.python.org/pep-0703/#merged-0b11",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239644,
+    "url": "https://peps.python.org/pep-0703/#python-critical-sections",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239645,
+    "url": "https://arxiv.org/abs/1908.04705",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239646,
+    "url": "https://peps.python.org/pep-0703/#id25",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239647,
+    "url": "https://peps.python.org/pep-0703/#weakrefs-0b01",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239648,
+    "url": "https://peps.python.org/pep-0703/#id28",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239649,
+    "url": "https://peps.python.org/pep-0703/#id27",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239650,
+    "url": "https://peps.python.org/pep-0703/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239651,
+    "url": "https://dl.acm.org/doi/abs/10.1145/3243176.3243195",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239652,
+    "url": "https://peps.python.org/pep-0703/#dabeaz",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239653,
+    "url": "https://dose3d.fis.agh.edu.pl/en/projekt-dose-3d-z-programu-team-net-fnp-eng/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239654,
+    "url": "https://peps.python.org/pep-0703/#hotspotgc",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239655,
+    "url": "https://peps.python.org/pep-0703/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239656,
+    "url": "https://peps.python.org/pep-0703/#gus",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239657,
+    "url": "https://peps.python.org/pep-0703/#reference-counting",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239658,
+    "url": "https://peps.python.org/pep-0703/#optimistic-dict-and-list-access-summary",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239659,
+    "url": "https://peps.python.org/pep-0703/#why-not-deprecate-pydict-getitem-in-favor-of-pydict-fetchitem",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239660,
+    "url": "https://peps.python.org/pep-0703/#immortalization",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239661,
+    "url": "https://openai.com/five/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239662,
+    "url": "https://doc.pypy.org/en/latest/stm.html",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239663,
+    "url": "https://peps.python.org/pep-0703/#references",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239664,
+    "url": "https://peps.python.org/pep-0703/#brc",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239665,
+    "url": "https://dabeaz.blogspot.com/2011/08/inside-look-at-gil-removal-patch-of.html",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239666,
+    "url": "https://github.com/colesbury/nogil",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239669,
+    "url": "https://www.python.org/ftp/python/contrib-09-Dec-1999/System/threading.tar.gz",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239670,
+    "url": "https://peps.python.org/pep-0703/#borrowed-references",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239672,
+    "url": "http://pyparallel.org/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239673,
+    "url": "https://peps.python.org/pep-0703/#per-interpreter-gil",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239674,
+    "url": "https://docs.oracle.com/en/java/javase/12/gctuning/hotspot-virtual-machine-garbage-collection-tuning-guide.pdf",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239675,
+    "url": "https://peps.python.org/pep-0703/#mimalloc-changes-for-optimistic-list-and-dict-access",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 239676,
+    "url": "https://github.com/larryhastings/gilectomy/tree/gilectomy",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 241236,
+    "url": "https://github.com/python/cpython/pull/130471#event-16575137231",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241239,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F130471",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241240,
+    "url": "https://github.com/python/cpython/pull/130471#event-16584105072",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241241,
+    "url": "https://github.com/python/cpython/pull/130471#event-16575137714",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241244,
+    "url": "https://github.com/python/cpython/pull/130471#event-16415355246",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241247,
+    "url": "https://github.com/python/cpython/pull/130471/files/9293b21363e63900c523042fae57c513022e0ee7#diff-62d496a5c437924e8e749b16d45e0b928917c424ba7deb45112f5a7a9450c6f5",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241248,
+    "url": "https://github.com/python/cpython/pull/130471/files/41e37ecaecf21a02f7ba2bd19630ce787143736a#diff-f1f7ed10a79afaf933b99823b28258dd171958f7e0b6f4299fe2f37b3d95426e",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241250,
+    "url": "https://github.com/python/cpython/pull/130471/files/64965f30c67b55098ec471096ebd979d79bbf848",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241252,
+    "url": "https://github.com/python/cpython/pull/130471#pullrequestreview-2655182847",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241253,
+    "url": "https://github.com/python/cpython/pull/130471/commits/9293b21363e63900c523042fae57c513022e0ee7",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241254,
+    "url": "https://github.com/python/cpython/pull/130471#commits-pushed-eaa8bd9",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241255,
+    "url": "https://github.com/python/cpython/pull/130471#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241256,
+    "url": "https://github.com/python/cpython/pull/130471/files/eaa8bd9473f4529bffb83b29ca154cc25415e4c2",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241257,
+    "url": "https://github.com/python/cpython/pull/130471#ref-issue-2583463219",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241258,
+    "url": "https://github.com/python/cpython/pull/130471/commits/41e37ecaecf21a02f7ba2bd19630ce787143736a",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241261,
+    "url": "https://github.com/python/cpython/pull/130471#discussion_r1978128307",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241262,
+    "url": "https://github.com/python/cpython/pull/130471#discussion_r1979846177",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241264,
+    "url": "https://github.com/python/cpython/pull/130471",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241265,
+    "url": "https://github.com/python/cpython/pull/130471#issue-2871247655",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241266,
+    "url": "https://github.com/python/cpython/pull/130471/files/41e37ecaecf21a02f7ba2bd19630ce787143736a",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241267,
+    "url": "https://github.com/python/cpython/pull/130471#pullrequestreview-2635336010",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241268,
+    "url": "https://github.com/python/cpython/pull/130471#pullrequestreview-2658917451",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241270,
+    "url": "https://github.com/python/cpython/pull/130471#pullrequestreview-2635487072",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241271,
+    "url": "https://github.com/python/cpython/pull/130471/files/9293b21363e63900c523042fae57c513022e0ee7",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241272,
+    "url": "https://github.com/python/cpython/pull/130471/commits/eaa8bd9473f4529bffb83b29ca154cc25415e4c2",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241273,
+    "url": "https://github.com/python/cpython/commit/b6769e9404646e38d9c786984ef308c8e9747b91",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241276,
+    "url": "https://github.com/python/cpython/pull/130471/commits/64965f30c67b55098ec471096ebd979d79bbf848",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241277,
+    "url": "https://github.com/python/cpython/pull/130471/commits/cfda7ba886982133454291e724f1557def5ee5dd",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241278,
+    "url": "https://github.com/python/cpython/pull/130471#event-16415364994",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241279,
+    "url": "https://github.com/python/cpython/pull/130471#event-16574970760",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 241280,
+    "url": "https://github.com/python/cpython/pull/130471/commits/36723c72e335c98c0419d5a62182b82301c2772a",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d60\u0026v\u003d4",
+    "alt": "tomasr8",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d60\u0026v\u003d4",
+    "alt": "tomasr8",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d48\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d40\u0026v\u003d4",
+    "alt": "@tomasr8",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d52\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d52\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d52\u0026v\u003d4",
+    "alt": "@tomasr8",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Operating System Utilities — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork_Child"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Operating System Utilities — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork_Child"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#turtle"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#turtle"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#NotImplementedError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#NotImplementedError"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
