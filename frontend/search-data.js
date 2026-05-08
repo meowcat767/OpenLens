@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 231,
+    "url": "https://android.com/ai/more/",
+    "title": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "content": "AI op je apparaten Je dagelijkse leven, nu nog makkelijker. Van je telefoon tot je smartwatch en smartbril: AI van Google helpt je om creatief te zijn, productiever te werken en makkelijker en veiliger te communiceren. Creativiteit Bewerkingen van professionele kwaliteit\u2028die magisch voelen. AI van Google transformeert je afbeeldingen en video\u0027s van goed naar geweldig. Zo kun je jouw beelden van momenten en herinneringen precies vastleggen zoals jij ze wilt onthouden. Magische gum voor audio Vermindert storende videogeluiden zoals auto\u0027s en wind. Magische gum voor audio uitproberen Google Foto\u0027s openen Google Foto\u0027s openen Google Foto\u0027s openen Achtergrond genereren Nieuwe manieren om jezelf uit te drukken. Vind je eigen stem met berichtentools waarmee je concepten kunt opstellen, onderweg kunt reageren en je gesprekken kunt personaliseren met aangepaste emoji\u0027s. Magisch opstellen Vind de juiste woorden. Herschrijf je berichten in verschillende stijlen. Google Berichten openen Fotomoji Van filmrol naar aangepaste emoji: maak een nieuwe emoji van je eigen foto\u0027s. Fotomoji maken Slimme antwoorden in Auto Android Beantwoord met één tik om het gesprek veilig aan de gang te houden. Google Foto\u0027s openen Overzichten voor Android Auto Krijg samenvattingen van lange groepschats en laat berichten hardop voorlezen. Nu proberen Beveiliging AI-gestuurde bescherming. Android gebruikt de beste AI van Google (en expertise op het gebied van machine learning) om je te beschermen tegen spammers, fraudeurs en dieven. Diefstalbeveiliging Bescherm je telefoon tegen dieven. Kijken hoe het werkt Scam- en spamdetectie Vermijd scammers en spammers. Kijken hoe het werkt Vind de antwoorden die je nodig hebt. Hoe gebruik ik de Google Assistent op Android Auto? Stap 1: Als Android Auto actief is, kun je de Google Assistent activeren door \u0027Hey Google\u0027 te zeggen, op het microfoontje op het display van de auto te tikken, of door op het stuur de knop \u0027drukken om te praten\u0027 in te drukken (indien beschikbaar). Stap 2: Stel of geef daarna je vraag of opdracht zoals \u0027breng me naar de dichtstbijzijnde koffiebar\u0027 of \u0027speel wat jazz af\u0027. Hoe zorg ik dat Android Auto op het display van mijn auto komt te staan? Bij de meeste geschikte auto\u0027s of aftermarket-stereosets kun je je telefoon aansluiten via een USB-kabel. Als het display van je auto geschikt is voor draadloze verbindingen, koppel je je telefoon via bluetooth met je auto. Afhankelijk van je auto maakt je telefoon na het koppelen automatisch verbinding of vind je het app-icoon van Android Auto op het display van je auto. Hoe schrijf ik een bericht met Magisch opstellen? Stap 1: Open Google Berichten op je Android-telefoon en begin een gesprek. Tip: Zorg ervoor dat de opstelregel van het bericht ook het woord \u0027bericht\u0027 bevat. Stap 2: Selecteer het icoon Magisch opstellen om de mogelijke schrijfstijlen weer te geven. Stap 3: Selecteer de suggestie die je wilt gebruiken. Je kunt kiezen uit Remix (opnieuw verwoorden), Shakespeare, Relaxed, Enthousiast, Poëtisch en Formeel. Stap 4: Als je klaar bent om het bericht te sturen, tik je op Sturen. Wat zijn slimme acties? Slimme acties in Android Auto bestaan uit AI-gestuurde samenvattingen van groepsberichten of lange berichten die worden voorgelezen. Daarnaast genereren slimme antwoorden automatische antwoorden die contextueel relevante reacties kunnen zijn op de ontvangen berichten. Je kunt ook andere suggesties krijgen, zoals aanbevolen playlists of navigatie met één tik naar specifieke bestemmingen zoals Thuis of Werk. Hoe werkt de Magische editor? Je kunt de Magische editor gebruiken om je foto\u0027s op je Pixel-apparaat om te toveren. Je kunt delen van je foto\u0027s verplaatsen, wissen of de compositie ervan aanpassen en voorinstellingen voor contextuele of speciale effecten erop toepassen, zoals Lucht of Gouden uur. Belangrijk: Je apparaat moet een 64-bits chipset met minstens 4 GB RAM hebben en Android 8.0 of hoger. Deze functie is experimenteel en werkt misschien niet altijd zoals verwacht. Hoe gebruik ik Fotomoji? Stap 1: Open Google Berichten en begin een gesprek. Stap 2: Houd je vinger op een bericht. Stap 3: Selecteer Maken. Stap 4: Selecteer een foto in je afbeeldingengalerij. AI maakt een uitsnede van een gezicht of voorwerp en maakt hier een emoji van. Als de foto meerdere onderwerpen bevat, tik je op het onderwerp dat je wilt sturen. Stap 5: Tik op Sturen. Je emoji wordt opgeslagen in je emoji-overzicht voor toekomstig gebruik. Ontdek meer over AI van Google op Android. Jouw AI-assistent van Google. Maak kennis met Gemini, je persoonlijke AI-assistent die altijd klaarstaat om je te helpen met schrijven, creëren, plannen, leren en nog veel meer. Gemini ontdekken Zoek meteen naar van alles Krijg informatie over wat er op het scherm van je telefoon staat, zonder van app te wisselen. Ontdek Circle to Search Thanks for visiting. We’d like to ask you a few questions about your experience to help us improve our website. It should take about a minute. ",
+    "scrapedAt": "2026-05-09 00:34:36.4646"
+  },
+  {
+    "id": 230,
+    "url": "https://www.android.com/",
+    "title": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "content": "Beleef de toekomst als eerste op Android. De innovatie van Android bepaalt de standaard. Dat betekent nuttige AI, meer nieuwe functies, regelmatige upgrades en allerlei manieren om je telefoon te personaliseren zodat die bij je stijl past. Gemini proberen Telefoons kopen Play Pause Play Pause Het beste van Google op Android. Gemini Live De AI-assistent die je helpt te maken, te leren en meer te doen. Gemini proberen Meer informatie Circle to Search Zoek naar wat je maar wilt op je telefoon. Tik, krabbel of markeer gewoon. Slimmer zoeken Je beste foto\u0027s en video\u0027s tot nu toe. Schoon de achtergrond op, verbeter de belichting en bewerk de audio met AI. AI van Google ontdekken Play Pause Play Pause Quick Share Deel foto\u0027s en video\u0027s in hoge resolutie meteen met apparaten in de buurt.1 Meer informatie Vind-plek Vind verloren items en leg snel en beveiligd contact met vrienden. Vind-plek gebruiken Meer informatie over Vind-plek Play Pause Meer keuze. Meer van jou. \u2028 Meer gebruiksplezier. Telefoons kopen Play Pause Meer keuze. Meer van jou. Meer gebruiksplezier. Telefoons kopen Haal alles uit je Android-apparaat. Verbonden apparaten Je favoriete apparaten, naadloos verbonden. Verbinding maken Proactieve beveiliging Krachtige beveiliging die altijd aanstaat. Verkennen Privacy op jouw voorwaarden Ontdek manieren om controle te houden over je privacy Meer informatie 1 / Haal alles uit je Android-apparaat. Verbonden apparaten Je favoriete apparaten, naadloos verbonden. Verbinding maken Proactieve beveiliging Krachtige beveiliging die altijd aanstaat. Verkennen Privacy op jouw voorwaarden Ontdek manieren om controle te houden over je privacy Meer informatie Android wordt steeds beter. Android 16 ontdekken Nieuwste functies bekijken Play Pause Play Pause 1Apparaten moeten dichtbij genoeg zijn voor delen via bluetooth en wifi moet aanstaan. Werkt met compatibele apparaten. De beschikbaarheid, functies en specificaties van producten variëren per regio, provider en apparaat. Niet alle apparaten of functies op deze pagina zijn in alle markten beschikbaar. Neem contact op met je lokale verkoper of mobiele provider voor de huidige beschikbaarheid en compatibiliteit in jouw regio. Android is een handelsmerk van Google LLC. Alle andere handelsmerken zijn eigendom van de respectieve eigenaren. Play Pause",
+    "scrapedAt": "2026-05-09 00:34:35.309177"
+  },
+  {
+    "id": 229,
+    "url": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini",
+    "title": "Before you continue",
+    "content": "EN EnglishUnited States Deutsch English Español Français Italiano Nederlands All languages Afrikaans azərbaycan bosanski català Čeština Cymraeg Dansk Deutsch eesti EnglishUnited Kingdom EspañolEspaña EspañolLatinoamérica euskara Filipino FrançaisCanada FrançaisFrance Gaeilge galego Hrvatski Indonesia isiZulu íslenska Italiano Kiswahili latviešu lietuvių magyar Melayu Nederlands norsk o‘zbek polski PortuguêsBrasil PortuguêsPortugal română shqip Slovenčina slovenščina srpski (latinica) Suomi Svenska Tiếng Việt Türkçe Ελληνικά беларуская български кыргызча қазақ тілі македонски монгол Русский српски Українська ქართული հայերեն עברית اردو العربية فارسی አማርኛ नेपाली मराठी हिन्दी অসমীয়া বাংলা ਪੰਜਾਬੀ ગુજરાતી ଓଡ଼ିଆ தமிழ் తెలుగు ಕನ್ನಡ മലയാളം සිංහල ไทย ລາວ မြန်မာ ខ្មែរ 한국어 日本語 简体中文 繁體中文 繁體中文香港 Sign in EN EnglishUnited States Deutsch English Español Français Italiano Nederlands All languages Afrikaans azərbaycan bosanski català Čeština Cymraeg Dansk Deutsch eesti EnglishUnited Kingdom EspañolEspaña EspañolLatinoamérica euskara Filipino FrançaisCanada FrançaisFrance Gaeilge galego Hrvatski Indonesia isiZulu íslenska Italiano Kiswahili latviešu lietuvių magyar Melayu Nederlands norsk o‘zbek polski PortuguêsBrasil PortuguêsPortugal română shqip Slovenčina slovenščina srpski (latinica) Suomi Svenska Tiếng Việt Türkçe Ελληνικά беларуская български кыргызча қазақ тілі македонски монгол Русский српски Українська ქართული հայերեն עברית اردو العربية فارسی አማርኛ नेपाली मराठी हिन्दी অসমীয়া বাংলা ਪੰਜਾਬੀ ગુજરાતી ଓଡ଼ିଆ தமிழ் తెలుగు ಕನ್ನಡ മലയാളം සිංහල ไทย ລາວ မြန်မာ ខ្មែរ 한국어 日本語 简体中文 繁體中文 繁體中文香港 Sign in Before you continue to Google We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to “Accept all,” we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to “Reject all,” we will not use cookies for these additional purposes. Non-personalized content is influenced by things like the content you’re currently viewing, activity in your active Search session, and your location. Non-personalized ads are influenced by the content you’re currently viewing and your general location. Personalized content and ads can also include more relevant results, recommendations, and tailored ads based on past activity from this browser, like previous Google searches. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select “More options” to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all Accept all Reject all More options Privacy Terms Privacy Policy Terms of Service",
+    "scrapedAt": "2026-05-09 00:34:34.214003"
+  },
+  {
+    "id": 228,
+    "url": "https://android.com/ai/",
+    "title": "AI op Android: functies, apps en je AI-assistent | Android",
+    "content": "Maak dagelijkse taken makkelijker. Of je nu decoratieadvies wilt voor het thema van een evenement of hulp nodig hebt om een recept na te maken, AI-ondersteuning is nu veelzijdiger dan ooit. Gemini ontdekken Zoek meteen alles op. Van shoppen tot vertalen: de nieuwe zoekfunctie werkt sneller en intuïtiever.1 Nu proberen Meer functies, meer mogelijkheden. Creëer, verbind en druk je uit als nooit tevoren met onze AI-gestuurde functies. Meer AI-functies ontdekken Shop de nieuwste Android-telefoons. We verleggen de grenzen van hardware met superdunne apparaten, \u2028 zoals opvouwbare apparaten van de nieuwste generatie. ... ..... .... .... ... ..... .... .... ... ..... .... .... ... ..... .... .... ... ..... .... .... ... ..... .... .... ..... ...... ... ..... ...... ... ..... ...... ... ..... ...... ... ..... ...... ... ..... ...... ... Telefoons kopen Telefoons kopen Circle to Search* Omcirkel het. Zoek het. Altijd en overal. Zonder tussen apps te wisselen. Vind het allerbeste. Laat je door niemand tegenhouden en koop precies wat je wilt. Wil je iets uitproberen? Omcirkel het, zoek het op en ga ervoor. Vertaal van alles op je telefoon zonder van app te wisselen. Beschikbaar op bepaalde Galaxy- en Pixel-apparaten. Galaxy S24 Ultra Nu kopen Pixel 9 Pro Fold Nu kopen Pixel 9 Pro Nu kopen Pixel Fold Galaxy Z Flip5 Galaxy Z Fold5 Galaxy S23 Ultra Pixel 9 Nu kopen Beschikbaar op bepaalde apparaten. Een internetverbinding is vereist. Werkt op compatibele apps en platforms. De resultaten kunnen verschillen afhankelijk van visuele overeenkomsten en zijn alleen ter illustratie. Reeksen zijn ingekort. Fotomoji* De perfecte emoji bestaat niet Van filmrol naar aangepaste emoji. Omdat elk moment een persoonlijke reactie verdient. Beschikbaar op de Galaxy S24- serie en de Google Pixel 9 Telefoons kopen De beschikbaarheid van functies kan per markt en apparaat verschillen. Je moet je misschien aanmelden voor bètatests en een data-abonnement hebben. Magisch opstellen* Maak de uitnodiging net zo gedenkwaardig als de afspraak Ontdek je innerlijke Shakespeare en laat een blijvende indruk achter. Als je een frisse blik nodig hebt, of gewoon wat opties om uit te kiezen. Beschikbaar op de Galaxy S24- serie en de Google Pixel 9 Telefoons kopen De beschikbaarheid van functies kan per markt en apparaat verschillen. Je moet je misschien aanmelden voor bètatests en een data-abonnement hebben. Ontdek het beste op Android Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Samsung Galaxy S24-serie Van een unieke klasse. Google Pixel 9 Ontdek het beste met Google en Android. Alleen op Android Ontdek het beste op Android Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Samsung Galaxy S24-serie Van een unieke klasse. Google Pixel 9 Ontdek het beste met Google en Android. Alleen op Android Ontdek het beste op Android Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Samsung Galaxy S24-serie Van een unieke klasse. Google Pixel 9 Ontdek het beste met Google en Android. Alleen op Android Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Pixel Fold Nu kopen Galaxy S23 Ultra Nu kopen Galaxy Z Fold5 Nu kopen Galaxy Z Flip5 Nu kopen Assistent met Auto Houd je ogen op de weg en je oren in de groepschat Volg veiliger lange groepschats met snelle samenvattingen. Met slimme antwoorden zet je het gesprek met één tik voort. Compatibiliteit checken Sommige functies zijn misschien niet beschikbaar in alle landen en kunnen per auto- en/of apparaatfabrikant verschillen. Je hebt misschien een internetverbinding nodig. Gebruik de functies alleen als dit veilig kan. Reeksen zijn misschien ingekort of gesimuleerd. ......... Nu kopen Thanks for visiting. We\u0027d like to ask you a few questions about your experience to help us improve our website. It should take about a minute. Questionof Which of the following smartphones are you excited about? Android Phones (Samsung, Pixel) Apple Phones (iPhone) None of the above Questionof Which of the following smartphones would you consider buying? Android Phones (Samsung, Pixel) Apple Phones (iPhone) None of the above Questionof Which of the following smartphones would you be proud to own? Android Phones (Samsung, Pixel) Apple Phones (iPhone) None of the above Thanks for your feedback. Done Please select an answer.",
+    "scrapedAt": "2026-05-09 00:34:32.849042"
+  },
+  {
+    "id": 227,
+    "url": "https://android.com/ai/gemini/",
+    "title": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "content": "Gemini Jouw AI-assistent van Google. Maak kennis met Gemini, je persoonlijke AI-assistent die altijd klaarstaat om je te helpen met schrijven, creëren, plannen, leren en nog veel meer.1 Gemini proberen Ontdek een wereld aan mogelijkheden met de nieuwe functies voor camera en scherm delen in Gemini Live-gesprekken.2 Nu proberen Google AI Pro Doe meer in minder tijd. Nu proberen Video\u0027s genereren Krijg prioriteitstoegang tot ons krachtigste model voor videogeneratie tot nu toe. Lang contextvenster Duik in hele boeken, lange rapporten en 30.000 regels aan coderepository\u0027s. Houd het simpel Vereenvoudig je taken met toegang tot Gemini in Gmail, Documenten en andere producten. Gemini in actie. Laat je inspireren door leuke en handige manieren om Gemini te gebruiken. Wil je realtime aanbevelingen en antwoorden van Gemini Live? \u2028Richt gewoon je camera en chat. Vind de antwoorden die je nodig hebt. Hoe gebruik ik Gemini op Android? Op sommige Android-apparaten wordt Gemini als de primaire assistent geleverd. Als je Gemini op deze apparaten wilt gaan gebruiken, open je de Gemini-app of activeer je Gemini via aanraking (bijvoorbeeld door de aan/uit-knop lang in te drukken). Op andere Android-apparaten kun je ook de Gemini-app downloaden via de Google Play Store of ervoor kiezen om over te stappen naar Gemini als je primaire assistent op je mobiel. Hoe verwerkt de Gemini-app mijn gegevens? Als Gemini Apps-activiteit aanstaat, slaat Google je Gemini Apps-activiteit (zoals je prompts, reacties en feedback) op in je Google-account. Ook als de Gemini Apps-activiteit uitstaat, worden je gesprekken maximaal 72 uur opgeslagen in je account, zodat Google de service kan leveren en feedback kan verwerken. Heeft Gemini gebruikslimieten? Gemini heeft gebruikslimieten, ontwikkeld voor een optimale functionaliteit voor iedereen. Dit betekent dat we het aantal prompts dat je binnen een bepaald tijdsbestek kunt invoeren mogelijk beperken. Hetzelfde geldt voor het aantal gesprekken dat je kunt voeren. Je limiet wordt regelmatig vernieuwd, zodat je weer snel kunt chatten met Gemini. Hoeveel prompts je kunt gebruiken voordat je de limiet bereikt, hangt af van verschillende factoren, zoals de lengte en complexiteit van je prompts, de grootte en het aantal bestanden die je uploadt, en de duur van je gesprekken met Gemini. We sturen je ook een waarschuwing wanneer je bijna je chatcapaciteit hebt bereikt voor een bepaalde periode. Ontdek meer over AI van Google op Android. Zoek meteen alles op. Van shoppen tot vertalen: de nieuwe zoekfunctie werkt sneller en intuïtiever. Ontdek Circle to Search Meer functies, meer mogelijkheden. Creëer, verbind en druk je uit als nooit tevoren met onze AI-gestuurde functies. Meer AI-functies ontdekken Thanks for visiting. We’d like to ask you a few questions about your experience to help us improve our website. It should take about a minute. Questionof What is your primary reason for visiting Android.com? Learn about Android Safety Learn how to switch to Android Get help finding a new smartphone Get help finding a new tablet Learn about a new Operating System release Learn about Google Apps and Android features Get help with using Android Learn about multi-device experiences Other Questionof Which of the following best describes where you are in the shopping process for a new smartphone? Initial gathering of information about what smartphones are available Narrowing down to a short list of smartphones Decided on the smartphone and ready to purchase Not currently shopping for a new smartphone Questionof How safe and secure do you think Android is? Extremely safe and secure Very safe and secure Somewhat safe and secure Not so safe and secure Not at all safe and secure Questionof How easy or hard was it to find what you were looking for on Android.com? Extremely easy Somewhat easy Neither easy nor hard Somewhat hard Extremely hard Questionof Overall, how satisfied are you with Android.com? Very Satisfied Somewhat Satisfied Neutral Somewhat Dissatisfied Very Dissatisfied Questionof How easy do you believe it will be to switch (e.g. transfer photos, contacts, apps, etc) your primary device to Android? Very easy Somewhat easy Neither easy nor hard Somewhat hard Very hard Questionof To what extent did Android.com impact your likelihood to consider purchasing an Android device for your next smartphone? Very Significantly Significantly Moderately A little bit Not at all Questionof To what extent do you agree or disagree that Android has innovative products and features? Strongly agree Somewhat agree Neither agree nor disagree Somewhat disagree Strongly disagree Thanks for your feedback. Done Please select an answer. Thanks for visiting. We\u0027d like to ask you a few questions about your experience to help us improve our website. It should take about a minute. Questionof What is your primary reason for visiting Android.com? Learn how to switch to a new Android device Learn how to keep your Android device safe Get help fi",
+    "scrapedAt": "2026-05-09 00:34:31.695454"
+  },
+  {
     "id": 226,
     "url": "https://www.android.com/better-together/",
     "title": "Ontdek hoe je met Android je apparaten koppelt | Android",
@@ -1578,26 +1613,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 227,
-    "url": "https://android.com/ai/gemini/"
-  },
-  {
-    "id": 228,
-    "url": "https://android.com/ai/"
-  },
-  {
-    "id": 229,
-    "url": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
-  },
-  {
-    "id": 230,
-    "url": "https://www.android.com/"
-  },
-  {
-    "id": 231,
-    "url": "https://android.com/ai/more/"
   },
   {
     "id": 232,
@@ -41774,10 +41789,536 @@ window.searchData = [
     "id": 17824,
     "url": "https://support.google.com/android/answer/12060041",
     "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17825,
+    "url": "https://www.android.com/intl/nl_nl/ai/circle-to-search/",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 17826,
+    "url": "https://gemini.google/advanced/",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 17827,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.apps.bard",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 17828,
+    "url": "https://support.google.com/gemini/answer/14554984?sjid\u003d7227518821100474866-NA#back_to_gemini",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 17830,
+    "url": "https://www.android.com/intl/nl_nl/ai/more/",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 17833,
+    "url": "https://www.android.com/auto/compatibility/",
+    "parentUrl": "https://android.com/ai/"
+  },
+  {
+    "id": 17834,
+    "url": "https://www.android.com/intl/nl_nl/ai/gemini/",
+    "parentUrl": "https://android.com/ai/"
+  },
+  {
+    "id": 17836,
+    "url": "https://policies.google.com/technologies/cookies?hl\u003den-US\u0026utm_source\u003ducb",
+    "parentUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
+  },
+  {
+    "id": 17837,
+    "url": "https://policies.google.com/terms?hl\u003den-US\u0026utm_source\u003ducb",
+    "parentUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
+  },
+  {
+    "id": 17838,
+    "url": "https://consent.google.com/d?continue\u003dhttps://gemini.google.com/?android-min-version%3D301356232%26amp;ios-min-version%3D322.0%26amp;is_sa%3D1%26amp;campaign_id%3Dandroid_web_gemini%26amp;utm_medium%3Dxpa%26amp;utm_source%3Dandroid_web%26amp;utm_campaign%3Dandroid_web_gemini%26amp;pt%3D9008%26amp;mt%3D8%26amp;ct%3Dandroid_web_gemini\u0026gl\u003dNL\u0026hl\u003den-US\u0026cm\u003d2\u0026pc\u003dbard\u0026src\u003d1\u0026escs\u003dAZ8E49ADnuL6qKIHYmZedqh9a49ow5R_DJYjQlOjsFMHOfRX6KnnBUM15I3skiWU3yDXWNBFW-63KrBKchPc0PJBsyYkE8LyP81W",
+    "parentUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
+  },
+  {
+    "id": 17839,
+    "url": "https://policies.google.com/privacy?hl\u003den-US\u0026utm_source\u003ducb",
+    "parentUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
+  },
+  {
+    "id": 17840,
+    "url": "https://accounts.google.com/ServiceLogin?hl\u003den-US\u0026continue\u003dhttps://gemini.google.com/?android-min-version%3D301356232%26amp;ios-min-version%3D322.0%26amp;is_sa%3D1%26amp;campaign_id%3Dandroid_web_gemini%26amp;utm_medium%3Dxpa%26amp;utm_source%3Dandroid_web%26amp;utm_campaign%3Dandroid_web_gemini%26amp;pt%3D9008%26amp;mt%3D8%26amp;ct%3Dandroid_web_gemini\u0026gae\u003dcb-",
+    "parentUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
+  },
+  {
+    "id": 17854,
+    "url": "https://support.google.com/messages/answer/14295463",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17856,
+    "url": "https://pixel.withgoogle.com/Pixel_8a/edit-videos-audio-magic-eraser",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17857,
+    "url": "https://www.android.com/intl/nl_nl/google-messages/",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17858,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.apps.photos",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17859,
+    "url": "https://www.android.com/intl/nl_nl/safety/security/#safety-security-spam-phishing-protection",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17861,
+    "url": "https://support.google.com/pixelphone/answer/14853283",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17862,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.projection.gearhead",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17863,
+    "url": "https://www.android.com/intl/nl_nl/safety/security/#safety-theft-protection-module",
+    "parentUrl": "https://android.com/ai/more/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://lh3.googleusercontent.com/sVS9xZ2ojVWsMKWTqKfBWHVK0jF9fUJG6BF5Cw4F4hq8jTvUOeXB2XGDaZGxhbtP0oU6vQO3qy5Ji2WZD8vB_VhT5NrUDlb7PMlQ9nESCmK2PRo6xss",
+    "alt": "Een telefoon met daarop bloemen tegen een blauwe achtergrond wordt gebruikt als voorbeeld om te tonen hoe de functie voor AI-gegenereerde achtergronden werkt.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/1AxGW-0fKSDhz9bw3y--IvDntOpmRD6TQNOKwHlTdbhXQWC0CpElIajLalTLCStLp041fr0OXpXUxY6uutFY68wvCabWHfFLmlVKEm9931rGyRZi0w",
+    "alt": "Verschillende emoji\u0027s met stergezichten zweven rond de omtrek van een telefoon om te tonen hoe Magisch opstellen werkt.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/x69t0Aw7rRyDv2KnNog7qVS2X9ZQklcnJi-RXTqEzt28vK7FMNQC_FGdi0H_On3JPDh8NvRvwqj21ic0nqBnSVPODmz67SR1CaM1I--NzxfEF6P7FPo",
+    "alt": "Een foto van een teckel die op het gras ligt, wordt gebruikt als voorbeeld om te tonen hoe de functie Fotomoji werkt.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/r_G32j1ttxtpL_Hjy6A-pVDIzhlAlbcymcI5f-KaEnLifoop6j5FR8eP2fFmoeIOcW3Eox_590S8m8FFxiZAqWq75vMuwf39ZMNsVKcCUwh0hSu_rqw",
+    "alt": "Een Smart Reply-melding toont hoe slimme antwoorden werken in Android Auto.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/n71sNDsk82dVapeFVFoFDDBYGBtGxAjC-SOYuh_TgCkbgkFPfyWQfI4UWFJ5knMXb5ZaMb77JGf6nG5pnLuigq-rXEyRmoP-hm5MqePIDE2E3ibpRdM",
+    "alt": "Een voorbeeld van hoe Overzichten voor Auto verschijnt boven een dashboard van een witte auto.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/iSqKdI6IEEEXUGfGU2GBLzJGJ4iySQHBGvBm2uAL7Kmxj8v-hobgB4jB7CBaoapkBPN8wFW3JX9lLl8k6_Zp4jUjH6UKdrS7ynXDo91aCyfufB46lQTA",
+    "alt": "Een illustratie van een hand die een telefoon vasthoudt met een blauw hangsloticoon en schild tegen een zwarte achtergrond.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/tu_Nirq28X0n_vdOZSBuKYH1ZWZf873L9cBGe-Fa0_NztwoNKrbhwuIu0AuHgwfGgZQY-hGcfG-sbFU1IWYdYprvkzyEQjO1rbgERYhe0Zrejfq22w",
+    "alt": "Een voorbeeld van een spammelding staat voor een zwarte telefoon op een blauwe achtergrond.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/JnUQcfmhOzobC4GcxF75JkGMg-B46WnjiWI_U_OsCpDg1GKgBMLXKDlQf5EY--1Izg1bmA0iM3k37fhCWy3DAqc2sHjl6S4pt0gEKUppXRs3C9Jz5A",
+    "alt": "Een zacht oplichtende lichtstraal omlijnt een telefoon, met daarop een voorbeeld van een Gemini-melding.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/6Q0UpmklaRHhEEoa0i3cm97ibIyeqX_LrTfxkfxIJ5B3Zfj0-4YxD_mU24NLn7ja0bb5ICX0zdX1gmKc5rB6v9cyV6I6rp9klDJaRPD2exnyQZC4llg",
+    "alt": "Een rode tas wordt gebruikt als voorbeeld om te tonen hoe Circle to Search werkt.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/79/52/3ef8ede54f08873de279c16bb598/row-asset-desktop-samsung.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/29/a8/63842edd4cbdb3ab1fbbeb85702d/row-asset-mobile-samsung.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/22/63/f25fc2a746fa9f79d2c80acc8449/features-gemini-2x.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "The phone screen shows an image of an espresso machine to use as an example of how Gemini Live\u0027s newest feature works highlighting information you need on your phone screen.",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/f9/24/c139be3447278c2a7189c7209646/features-cts-2x.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A luxury purse on an Android phone screen is being circled to show how the Circle to Search feature works. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/84/9f/a84f692c4a428194a945b7c9d619/00-features-googleai-xl.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/89/53/b1bd392e452bbee16d10ccc03dd0/03-features-googleai-s.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/5e/d3/a0a6d005483991c968422c40fd7f/features-quickshare-2x.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A Quick Share window on an Android phone screen shows a picture of a bouquet of flowers surrounded by kitchen items on a wooden table. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/b2/42/d2f004824075bd66252b49f82565/features-findhub-2x.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "ROW - Features - Find Hub",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/fe/46/1829faba41e2ba7b409904fa95fd/phones-xl-4x.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/99/6a/17e6f8a34ed3835498ac61bc43fc/wayfinder-mobile-2x.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/c3/d7/71d634dd481ba89150df442afc43/b214fec71154aa607416689e3af9906e75d234da.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing an Iris Pixel Watch 4 is tapping their Iris Pixel Buds that’s in their ear. A devices icon is right below the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/b0/8b/b87b73dd41ad8f7889a0df8db155/4482e21a15601af0f6b4f123aeb593815fb9ce64.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing an orange beanie is happily talking on their moonstone Pixel 10 phone outside a train station.  A green security shield icon is right above the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/62/42/1ecf7ab44fc6b021f898ce02d5c9/f5ccfd8227d7981b3f69143b6edcbe157978c5c3.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing a light blue peacoat is inside a car talking on their Pixel phone. A lock icon is right below the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/c3/d7/71d634dd481ba89150df442afc43/b214fec71154aa607416689e3af9906e75d234da.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing an Iris Pixel Watch 4 is tapping their Iris Pixel Buds that’s in their ear. A devices icon is right below the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/b0/8b/b87b73dd41ad8f7889a0df8db155/4482e21a15601af0f6b4f123aeb593815fb9ce64.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing an orange beanie is happily talking on their moonstone Pixel 10 phone outside a train station.  A green security shield icon is right above the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/62/42/1ecf7ab44fc6b021f898ce02d5c9/f5ccfd8227d7981b3f69143b6edcbe157978c5c3.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing a light blue peacoat is inside a car talking on their Pixel phone. A lock icon is right below the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/c2/90/ef1311e149848f45ef52c4970055/spotlight-xl-4x.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/5b/ef/8a8efe5c4f2ab54569f90a2ea340/row-module-asset-mobile.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_160x56px.svg",
+    "alt": "Google",
+    "pageTitle": "Before you continue",
+    "pageUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pKgRV36gWXIFgFibX8NFqDzAjzmHdTSvq-pRcwIgoQjVtVPxjU4xkryQejkUPmfAd0WRTNUXcSfu5zDvfWNYogAXmKuP4fuzb2DXC9HO0W5tNmWjGw",
+    "alt": "Google Pixel 9 Pro Fold",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/nh3xrkYCZQOkOX7MybEgOANu8_2XgsQmO9nuYzAYZDqPPiash-XrEVY_EBcSwOd1bOgIfZilMYU6aPFqwHwv9IX7oufDmenJRmUKANbtJ7YA2J9jWT8s",
+    "alt": "Google Pixel 9 Pro",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/eJYQ2UvtFv7IYgwsvbiAHI1qlip8XwZgyi_0oDwxBSfDgVlUCe5bYjH62jqZdtN_ib4wnZUgre51WR9RJCw7zHnXBwO-AxVd-pgi_wQKzEOY0j5bhP0",
+    "alt": "Google Pixel Fold",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/p2ztmI4FRm-VOv2R9ZzKrSE1uf-5zhpfjihlggXXGrCbxkHDmmvI7RA6kWS89JflwQusRaWk6wYbOQXs94AGMOBMfeJ54AhEVv021_-UWxcOG7CrMQk",
+    "alt": "Samsung Galaxy Z Flip5",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/JdV0OtOBIycAWaj57-SFnmorA7yZjN-SDr-4aEUKWkE5F_ffyXOI32-y-KOBk5VxWFfdBpXkkAvoJBGgH94UVKGNqWqgbRZ4WcdTXJ_zrvG3vKtA4MM",
+    "alt": "Samsung Galaxy Z Fold5",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/CcyifUM5W2xM_VrU42oq0Hic2wpgBHAgCEwZ2i7nMCYBxJ7dRJbph8qNhekakpbpWv5E6OT6yJC7dtaFiYp5UtPBKeaL_VC-d6YBcfOHT4gnB8_k5Q",
+    "alt": "Samsung Galaxy S23 Ultra-apparaat",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/yVueoz3rM339cNnz1l6XQV8DfwdPwcPYSAfVmyHzXN6W03pbxnpvpUA3MIw4OW5kOygpvqypwECVz4_CPcvzRGQBhr_bhNSWPQwQszzqZO6KObb8HiM",
+    "alt": "Google Pixel 9",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/SVcRDl98876b6fB4vgGrniRsL23iZVEvoFEl1RYpPwf2JCum-DdVD8LeXcHcx4ZNxh4m_zO-k3jFhYn_Pz2TyUY6YUyK6VIIm0vu0h8IbgmXknYkQG4",
+    "alt": "",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/vrHvIHmzjOuOENGb4zb7eT9W72NtPPW4XUoXrFaYdxxBhmOknxjtqLEjG2VpclczPVSMSierLF6cATNMTvFOYbSzV-jxvLl-YF8jpfB_CFGGpPRyw6w",
+    "alt": "De achterkant van de Samsung Galaxy S24+ in het kobaltpaars tegen een lichtpaarse achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/b0rkBWx-NeYIpHUqqeDnK5tXmD-WB06B_8t5lCKDMVw2VoeK5PBA39NGWjnUMYw0kXoiwQlivn_p3uZcG0Qov4NiYnEOHSwBbtQQyHlOqpw90YRIcGY",
+    "alt": "De achterkant van de Samsung Galaxy S24 in het ambergeel tegen een lichtgele achtergrond. De camera\u0027s zijn de belangrijkste functie die wordt uitgelicht. Deze telefoon kan nu besteld worden.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/SVcRDl98876b6fB4vgGrniRsL23iZVEvoFEl1RYpPwf2JCum-DdVD8LeXcHcx4ZNxh4m_zO-k3jFhYn_Pz2TyUY6YUyK6VIIm0vu0h8IbgmXknYkQG4",
+    "alt": "",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/vrHvIHmzjOuOENGb4zb7eT9W72NtPPW4XUoXrFaYdxxBhmOknxjtqLEjG2VpclczPVSMSierLF6cATNMTvFOYbSzV-jxvLl-YF8jpfB_CFGGpPRyw6w",
+    "alt": "De achterkant van de Samsung Galaxy S24+ in het kobaltpaars tegen een lichtpaarse achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/b0rkBWx-NeYIpHUqqeDnK5tXmD-WB06B_8t5lCKDMVw2VoeK5PBA39NGWjnUMYw0kXoiwQlivn_p3uZcG0Qov4NiYnEOHSwBbtQQyHlOqpw90YRIcGY",
+    "alt": "De achterkant van de Samsung Galaxy S24 in het ambergeel tegen een lichtgele achtergrond. De camera\u0027s zijn de belangrijkste functie die wordt uitgelicht. Deze telefoon kan nu besteld worden.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/SVcRDl98876b6fB4vgGrniRsL23iZVEvoFEl1RYpPwf2JCum-DdVD8LeXcHcx4ZNxh4m_zO-k3jFhYn_Pz2TyUY6YUyK6VIIm0vu0h8IbgmXknYkQG4",
+    "alt": "",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/vrHvIHmzjOuOENGb4zb7eT9W72NtPPW4XUoXrFaYdxxBhmOknxjtqLEjG2VpclczPVSMSierLF6cATNMTvFOYbSzV-jxvLl-YF8jpfB_CFGGpPRyw6w",
+    "alt": "De achterkant van de Samsung Galaxy S24+ in het kobaltpaars tegen een lichtpaarse achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/b0rkBWx-NeYIpHUqqeDnK5tXmD-WB06B_8t5lCKDMVw2VoeK5PBA39NGWjnUMYw0kXoiwQlivn_p3uZcG0Qov4NiYnEOHSwBbtQQyHlOqpw90YRIcGY",
+    "alt": "De achterkant van de Samsung Galaxy S24 in het ambergeel tegen een lichtgele achtergrond. De camera\u0027s zijn de belangrijkste functie die wordt uitgelicht. Deze telefoon kan nu besteld worden.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/z0giIx5WB0IwZ3756-9N5e1muR-YsYurcYNJFh6EaHRb-tHpHyl09B_qkfAJDhoCH3BiFLToKjVdSKZ1bMzDwyv9VFNArmy0Lz-fokVAMKeYKko7QXCV",
+    "alt": "Een half omlaag geklapte Samsung Galaxy Z Flip5 met een levendig scherm.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/L8MoImv47B8ALxLSDtiIhTK8RCfBvLxvRWB2G5gf4zGv8aEJ18CoLL5yXCeggYT_sUrVDi4y9Q92j6RL7aNEBLqeFoSWHwrauxDOjL2LCB-YYVnhRgo",
+    "alt": "Een kustlandschap met de oceaan en rotsachtige kliffen. Het Gemini-videoicoon staat erboven en onder de afbeelding staan pilvormige lijnen.",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/1x1YbGTTzmvR38DFY2s0RJaIzfW4V_R-yNESeNHhVC3GuH-hbpa6pXNqOUCfr3uiQtfrnpmEetnTKGy8z6fExv_swNQQBT5m_zhz-BF2_yT3vYKwet94",
+    "alt": "Een Gemini-promptbalk in de vorm van een pil met een rand in blauwe en paarse tinten. Daarachter staan een paar staafjes in de vorm van een pil.",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/TUOgmeq4xtM2gwuhq7Voq_1shJ0x7qbPMQJaptkv2s_wZ421RzWvSQ8MRV6PCJBaFqjNxhME0yDE6ESvBt_e8wkP2OtU6ecyl2_ejgBt35zBoJIiqpQ",
+    "alt": "Het Gemini-sterlogo wordt omringd door de iconen van Google Documenten, Gmail en Presentaties.",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/-HjIm9cgyKxAVZbkicRQKGc4QStur7rikYKdLtjED7KwLvQWVnFH4EIUYx3DXMiCHchTsVMqQU02FcjBFuNaNjmmheP5GSvg8Z7bX3sECfQKkvvcISZH",
+    "alt": "Een afbeelding van een rode tas wordt gebruikt als voorbeeld voor hoe Circle to Search werkt.",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/A2KjvRazk95pA3i7lTQ8VK4-ky6FDYEK-9On2kbgruJT_YVNzRGhSstaAXsLSuNRLKMPQ9OvetWAdUIcubADchLd0lBKjvZgNAP5sxIEAwDIdkKV9Q8",
+    "alt": "Een vinger drukt op het icoon van Magische editor.",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
   {
     "src": "https://lh3.googleusercontent.com/jBjDIjc-v2MghNQ3csBR7fsU5whtoPUt3GA_xsqBA3xq_vEiy5-SkW-vPqTvXA8_BiJ9FyESsPqXQyy6pdg1nF02Y57o1EUckBGBINuBCHjBLElPfQ",
     "alt": "Android-telefooninstellingen met bedieningselementen voor hoortoestellen, waaronder aanpasbare voorinstellingen voor buitensituaties en het laadniveau van het linker- en rechtertoestel.",
