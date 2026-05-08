@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 735,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.user_site_directory",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 00:51:26.344334"
+  },
+  {
+    "id": 734,
+    "url": "https://peps.python.org/pep-0744/",
+    "title": "PEP 744 – JIT Compilation | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 744 – JIT Compilation PEP 744 – JIT Compilation Author: Brandt Bucher \u003cbrandt at python.org\u003e, Savannah Ostrowski \u003csavannah at python.org\u003e Discussions-To: Discourse thread Status: Draft Type: Informational Created: 11-Apr-2024 Python-Version: 3.13 Post-History: 11-Apr-2024 Table of Contents Abstract Motivation Rationale Specification Support Backwards Compatibility Debugging Security Implications Apple Silicon How to Teach This Reference Implementation Rejected Ideas Maintain it outside of CPython Turn it on by default Support multiple compiler toolchains Compile the base interpreter’s bytecode Add GPU support Open Issues Speed Memory Dependencies Footnotes Copyright Abstract Earlier this year, an experimental “just-in-time” compiler was merged into CPython’s main development branch. While recent CPython releases have included other substantial internal changes, this addition represents a particularly significant departure from the way CPython has traditionally executed Python code. As such, it deserves wider discussion. This PEP aims to summarize the design decisions behind this addition, the current state of the implementation, and future plans for making the JIT a permanent, non-experimental part of CPython. It does not seek to provide a comprehensive overview of how the JIT works, instead focusing on the particular advantages and disadvantages of the chosen approach, as well as answering many questions that have been asked about the JIT since its introduction. Readers interested in learning more about the new JIT are encouraged to consult the following resources: The presentation which first introduced the JIT at the 2023 CPython Core Developer Sprint. It includes relevant background, a light technical introduction to the “copy-and-patch” technique used, and an open discussion of its design amongst the core developers present. Slides for this talk can be found on GitHub. The open access paper originally describing copy-and-patch. The blog post by the paper’s author detailing the implementation of a copy-and-patch JIT compiler for Lua. While this is a great low-level explanation of the approach, note that it also incorporates other techniques and makes implementation decisions that are not particularly relevant to CPython’s JIT. The implementation itself. Motivation Until this point, CPython has always executed Python code by compiling it to bytecode, which is interpreted at runtime. This bytecode is a more-or-less direct translation of the source code: it is untyped, and largely unoptimized. Since the Python 3.11 release, CPython has used a “specializing adaptive interpreter” (PEP 659), which rewrites these bytecode instructions in-place with type-specialized versions as they run. This new interpreter delivers significant performance improvements, despite the fact that its optimization potential is limited by the boundaries of individual bytecode instructions. It also collects a wealth of new profiling information: the types flowing though a program, the memory layout of particular objects, and what paths through the program are being executed the most. In other words, what to optimize, and how to optimize it. Since the Python 3.12 release, CPython has generated this interpreter from a C-like domain-specific language (DSL). In addition to taming some of the complexity of the new adaptive interpreter, the DSL also allows CPython’s maintainers to avoid hand-writing tedious boilerplate code in many parts of the interpreter, compiler, and standard library that must be kept in sync with the instruction definitions. This ability to generate large amounts of runtime infrastructure from a single source of truth is not only convenient for maintenance; it also unlocks many possibilities for expanding CPython’s execution in new ways. For instance, it makes it feasible to automatically generate tables for translating a sequence of instructions into an equivalent sequence of smaller “micro-ops”, generate an optimizer for sequences of these micro-ops, and even generate an entire second interpreter for executing them. In fact, since early in the Python 3.13 release cycle, all CPython builds have included this exact micro-op translation, optimization, and execution machinery. However, it is disabled by default; the overhead of interpreting even optimized traces of micro-ops is just too large for most code. Heavier optimization probably won’t improve the situation much either, since any efficiency gains made by new optimizations will likely be offset by the interpretive overhead of even smaller, more complex micro-ops. The most obvious strategy to overcome this new bottleneck is to statically compile these optimized traces. This presents opportunities to avoid several sources of indirection and overhead introduced by interpretation. In particular, it allows the removal of dispatch overhead between micro-ops (by replacing a generic",
+    "scrapedAt": "2026-05-09 00:51:25.184992"
+  },
+  {
+    "id": 733,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException",
+    "title": "Exception Handling — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Exception Handling | Theme Auto Light Dark | Exception Handling¶ The functions described in this chapter will let you handle and raise Python exceptions. It is important to understand some of the basics of Python exception handling. It works somewhat like the POSIX errno variable: there is a global indicator (per thread) of the last error that occurred. Most C API functions don’t clear this on success, but will set it to indicate the cause of the error on failure. Most C API functions also return an error indicator, usually NULL if they are supposed to return a pointer, or -1 if they return an integer (exception: the PyArg_* functions return 1 for success and 0 for failure). Concretely, the error indicator consists of three object pointers: the exception’s type, the exception’s value, and the traceback object. Any of those pointers can be NULL if non-set (although some combinations are forbidden, for example you can’t have a non-NULL traceback if the exception type is NULL). When a function must fail because some function it called failed, it generally doesn’t set the error indicator; the function it called already set it. It is responsible for either handling the error and clearing the exception or returning after cleaning up any resources it holds (such as object references or memory allocations); it should not continue normally if it is not prepared to handle the error. If returning due to an error, it is important to indicate to the caller that an error has been set. If the error is not handled or carefully propagated, additional calls into the Python/C API may not behave as intended and may fail in mysterious ways. Note The error indicator is not the result of sys.exc_info(). The former corresponds to an exception that is not yet caught (and is therefore still propagating), while the latter returns an exception after it is caught (and has therefore stopped propagating). Printing and clearing¶ void PyErr_Clear()¶ Part of the Stable ABI. Clear the error indicator. If the error indicator is not set, there is no effect. void PyErr_PrintEx(int set_sys_last_vars)¶ Part of the Stable ABI. Print a standard traceback to sys.stderr and clear the error indicator. Unless the error is a SystemExit, in that case no traceback is printed and the Python process will exit with the error code specified by the SystemExit instance. Call this function only when the error indicator is set. Otherwise it will cause a fatal error! If set_sys_last_vars is nonzero, the variable sys.last_exc is set to the printed exception. For backwards compatibility, the deprecated variables sys.last_type, sys.last_value and sys.last_traceback are also set to the type, value and traceback of this exception, respectively. Changed in version 3.12: The setting of sys.last_exc was added. void PyErr_Print()¶ Part of the Stable ABI. Alias for PyErr_PrintEx(1). void PyErr_WriteUnraisable(PyObject *obj)¶ Part of the Stable ABI. Call sys.unraisablehook() using the current exception and obj argument. This utility function prints a warning message to sys.stderr when an exception has been set but it is impossible for the interpreter to actually raise the exception. It is used, for example, when an exception occurs in an __del__() method. The function is called with a single argument obj that identifies the context in which the unraisable exception occurred. If possible, the repr of obj will be printed in the warning message. If obj is NULL, only the traceback is printed. An exception must be set when calling this function. Changed in version 3.4: Print a traceback. Print only traceback if obj is NULL. Changed in version 3.8: Use sys.unraisablehook(). void PyErr_FormatUnraisable(const char *format, ...)¶ Similar to PyErr_WriteUnraisable(), but the format and subsequent parameters help format the warning message; they have the same meaning and values as in PyUnicode_FromFormat(). PyErr_WriteUnraisable(obj) is roughly equivalent to PyErr_FormatUnraisable(\"Exception ignored in: %R\", obj). If format is NULL, only the traceback is printed. Added in version 3.13. void PyErr_DisplayException(PyObject *exc)¶ Part of the Stable ABI since version 3.12. Print the standard traceback display of exc to sys.stderr, including chained exceptions and notes. Added in version 3.12. Raising exceptions¶ These functions help you set the current thread’s error indicator. For convenience, some of these functions will always return a NULL pointer for use in a return statement. void PyErr_SetString(PyObject *type, const char *message)¶ Part of the Stable ABI. This is the most common way to set the error indicator. The first argument specifies the exception type; it is normally one of the standard exceptions, e.g. PyExc_RuntimeError. You need not create a new strong reference to it (e.g. with Py_INCREF()). The second argument is an error message; it is decoded from \u0027utf-8\u0027. v",
+    "scrapedAt": "2026-05-09 00:51:23.878058"
+  },
+  {
+    "id": 732,
+    "url": "https://github.com/python/cpython/issues/127688",
+    "title": "Add `SCHED_DEADLINE` and `SCHED_NORMAL` constants to `os` module · Issue #127688 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add SCHED_DEADLINE and SCHED_NORMAL constants to os module #127688 New issue Copy link New issue Copy link Closed Closed Add SCHED_DEADLINE and SCHED_NORMAL constants to os module#127688 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Description rruuaanng opened on Dec 6, 2024 Issue body actions Feature or enhancement Proposal: This issue suggests adding new os constants. os.SCHED_DEADLINE # deadline scheduling\n# Set the current schedule to real-time schedule, To be precise, it\n# is not real-time scheduling, but it is relatively real-time.\nprio \u003d os.sched_param(sched_priority\u003d10)\nos.sched_setscheduler(0, os.SCHED_DEADLINE, prio)\n SCHED_NORMAL is the same as SCHED_OTHER. But to run in the old linux, we can\u0027t remove SCHED_OTHER, even if it no longer exists in the current main branch. But we still need to add SCHED_NORMAL, because SCHED_OTHER only exists in the old distribution. Has this already been discussed elsewhere? No response given Links to previous discussion of this feature: No response Linked PRs gh-127688: Add SCHED_DEADLINE and SCHED_NORMAL constants to os module #127689 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:51:22.643314"
+  },
+  {
+    "id": 731,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#email",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 00:51:20.509649"
+  },
+  {
     "id": 730,
     "url": "https://github.com/python/cpython/issues/126353",
     "title": "Remove implicit creation of event loop from `asyncio.get_event_loop` · Issue #126353 · python/cpython · GitHub",
@@ -4823,26 +4858,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 731,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#email"
-  },
-  {
-    "id": 732,
-    "url": "https://github.com/python/cpython/issues/127688"
-  },
-  {
-    "id": 733,
-    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
-  },
-  {
-    "id": 734,
-    "url": "https://peps.python.org/pep-0744/"
-  },
-  {
-    "id": 735,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.user_site_directory"
   },
   {
     "id": 736,
@@ -123149,10 +123164,1523 @@ window.searchData = [
     "id": 87902,
     "url": "https://github.com/python/cpython/issues/126353#start-of-content",
     "parentUrl": "https://github.com/python/cpython/issues/126353"
+  },
+  {
+    "id": 89140,
+    "url": "https://github.com/python/cpython/issues/127688#top",
+    "parentUrl": "https://github.com/python/cpython/issues/127688"
+  },
+  {
+    "id": 89142,
+    "url": "https://github.com/python/cpython/issues/127688#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127688"
+  },
+  {
+    "id": 89145,
+    "url": "https://github.com/python/cpython/pull/127689",
+    "parentUrl": "https://github.com/python/cpython/issues/127688"
+  },
+  {
+    "id": 89146,
+    "url": "https://github.com/python/cpython/issues/127688#issue-2723010006",
+    "parentUrl": "https://github.com/python/cpython/issues/127688"
+  },
+  {
+    "id": 89148,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetFromWindowsErr",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89151,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_WarnExplicit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89152,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_WarnExplicitObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89154,
+    "url": "https://docs.python.org/3/library/exceptions.html#ReferenceError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89155,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#printing-and-clearing",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89156,
+    "url": "https://docs.python.org/3/library/exceptions.html#BaseException",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89157,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeTranslateError_GetEnd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89159,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_WarnFormat",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89160,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#unicode-exception-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89162,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#signal-handling",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89163,
+    "url": "https://docs.python.org/3/library/exceptions.html#BufferError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89164,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PySignal_SetWakeupFd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89165,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_SetCause",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89166,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_GetTraceback",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89167,
+    "url": "https://docs.python.org/3/library/exceptions.html#UserWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89169,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_WindowsError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89170,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_IOError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89171,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetString",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89172,
+    "url": "https://docs.python.org/3/library/exceptions.html#SystemExit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89173,
+    "url": "https://docs.python.org/3/library/exceptions.html#BaseException.__context__",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89174,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeTranslateError_GetObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89175,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIG_IGN",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89176,
+    "url": "https://docs.python.org/3/library/exceptions.html#UnicodeWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89177,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetInterruptEx",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89178,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_NewExceptionWithDoc",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89179,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_GeneratorExit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89180,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetHandledException",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89181,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_ProgramTextObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89182,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_FileExistsError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89184,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_NoMemory",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89185,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_AttributeError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89190,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyTraceBack_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89191,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExceptionInstance_Class",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89192,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GivenExceptionMatches",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89193,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_GetCause",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89194,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_GetReason",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89195,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_RecursionError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89196,
+    "url": "https://docs.python.org/3/library/exceptions.html#OSError.winerror",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89197,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ChildProcessError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89198,
+    "url": "https://docs.python.org/3/library/exceptions.html#ResourceWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89201,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_FormatV",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89202,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_RuntimeWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89203,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_BlockingIOError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89204,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#exception-types",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89205,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_SetEnd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89206,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_DeprecationWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89207,
+    "url": "https://docs.python.org/3/library/exceptions.html#Exception",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89208,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_FileNotFoundError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89209,
+    "url": "https://docs.python.org/3/library/exceptions.html#UnicodeEncodeError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89210,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_BadArgument",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89211,
+    "url": "https://docs.python.org/3/library/exceptions.html#FutureWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89212,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/exceptions.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89213,
+    "url": "https://docs.python.org/3/library/exceptions.html#PythonFinalizationError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89215,
+    "url": "https://docs.python.org/3/library/exceptions.html#OSError.strerror",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89216,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_PythonFinalizationError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89218,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_UnicodeEncodeError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89221,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#querying-the-error-indicator",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89222,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_NewException",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89223,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#standardwarningcategories",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89224,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_AssertionError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89226,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#raising-exceptions",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89230,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetExcFromWindowsErrWithFilename",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89231,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_FloatingPointError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89233,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_KeyboardInterrupt",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89237,
+    "url": "https://docs.python.org/3/library/exceptions.html#IndentationError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89238,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_RuntimeError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89242,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#exception-and-warning-types",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89244,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_GetEnd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89246,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_SetContext",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89248,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SyntaxLocation",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89249,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_SetEnd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89251,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_BytesWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89252,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ConnectionError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89253,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ResourceWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89254,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeTranslateError_SetStart",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89255,
+    "url": "https://peps.python.org/pep-3151/",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89257,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_SetStart",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89259,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetFromErrno",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89260,
+    "url": "https://docs.python.org/3/library/exceptions.html#BaseException.args",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89261,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetHandledException",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89262,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_SystemExit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89263,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_BufferError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89264,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89266,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.Py_ReprLeave",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89267,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.Py_ReprEnter",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89268,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_MemoryError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89269,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_BadInternalCall",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89271,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.Py_LeaveRecursiveCall",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89274,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#exception-classes",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89275,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_ExceptionMatches",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89277,
+    "url": "https://docs.python.org/3/library/exceptions.html#ArithmeticError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89278,
+    "url": "https://docs.python.org/3/library/warnings.html#warnings.warn_explicit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89280,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetExcFromWindowsErr",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89281,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_ResourceWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89282,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_UnicodeError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89283,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetFromErrnoWithFilename",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89284,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeTranslateError_GetReason",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89286,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_IndentationError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89287,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_SyntaxWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89288,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetImportErrorSubclass",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89290,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnstable_Exc_PrepReraiseStar",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89291,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_SyntaxError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89294,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_PrintEx",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89295,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ConnectionRefusedError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89297,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_OSError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89298,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ImportWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89299,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyTraceBack_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89300,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_FormatUnraisable",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89301,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ConnectionResetError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89303,
+    "url": "https://docs.python.org/3/library/exceptions.html#BaseExceptionGroup",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89304,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_CheckSignals",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89305,
+    "url": "https://docs.python.org/3/c-api/call.html#call",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89306,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetFromErrnoWithFilenameObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89308,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExceptionClass_Name",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89309,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_IndexError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89310,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetNone",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89311,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#oserror-aliases",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89312,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_BrokenPipeError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89314,
+    "url": "https://docs.python.org/3/library/sys.html#sys.last_type",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89315,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_GetStart",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89319,
+    "url": "https://docs.python.org/3/c-api/extension-modules.html",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89320,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIG_DFL",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89321,
+    "url": "https://docs.python.org/3/library/exceptions.html#UnicodeError.object",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89322,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_NotADirectoryError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89323,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_SetReason",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89324,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ConnectionAbortedError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89326,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_TabError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89329,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_StopIteration",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89330,
+    "url": "https://docs.python.org/3/library/sys.html#sys.unraisablehook",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89331,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_UnboundLocalError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89334,
+    "url": "https://docs.python.org/3/library/exceptions.html#PendingDeprecationWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89337,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_UnicodeDecodeError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89338,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_InterruptedError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89339,
+    "url": "https://docs.python.org/3/howto/remote_debugging.html#remote-debugging",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89340,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeTranslateError_SetEnd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89341,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ZeroDivisionError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89344,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#recursion-control",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89345,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_GetArgs",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89346,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#win",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89347,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetImportError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89348,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_GetEnd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89349,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#warning-types",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89350,
+    "url": "https://docs.python.org/3/library/exceptions.html#UnicodeError.start",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89351,
+    "url": "https://docs.python.org/3/library/sys.html#sys.setrecursionlimit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89354,
+    "url": "https://docs.python.org/3/c-api/frame.html#c.PyFrameObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89355,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getrecursionlimit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89356,
+    "url": "https://docs.python.org/3/library/signal.html#signal.set_wakeup_fd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89357,
+    "url": "https://docs.python.org/3/library/exceptions.html#UnicodeTranslateError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89359,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Clear",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89360,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_TimeoutError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89362,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ReferenceError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89363,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeTranslateError_SetReason",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89364,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetInterrupt",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89366,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetExcInfo",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89367,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_UserWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89368,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyTraceBack_Print",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89369,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_SetArgs",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89370,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_NotImplementedError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89371,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_UnicodeWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89372,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89373,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetExcInfo",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89374,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_SetReason",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89376,
+    "url": "https://docs.python.org/3/library/exceptions.html#Warning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89377,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SyntaxLocationEx",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89378,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_WarnExplicitFormat",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89379,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_Warning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89380,
+    "url": "https://docs.python.org/3/library/exceptions.html#TabError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89381,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_SetStart",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89382,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#issuing-warnings",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89383,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Print",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89385,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_ProgramText",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89387,
+    "url": "https://docs.python.org/3/library/sys.html#sys.last_value",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89388,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_KeyError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89390,
+    "url": "https://docs.python.org/3/library/exceptions.html#KeyboardInterrupt",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89391,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_EnvironmentError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89393,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_GetEncoding",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89394,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyTraceBack_Here",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89395,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ValueError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89396,
+    "url": "https://docs.python.org/3/library/exceptions.html#FloatingPointError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89397,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_PendingDeprecationWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89398,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_StopAsyncIteration",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89400,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_FutureWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89401,
+    "url": "https://docs.python.org/3/library/exceptions.html#BaseException.__suppress_context__",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89402,
+    "url": "https://docs.python.org/3/library/exceptions.html#ModuleNotFoundError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89403,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExceptionClass_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89404,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ArithmeticError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89406,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_UnicodeTranslateError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89407,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_GetEncoding",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89408,
+    "url": "https://docs.python.org/3/library/exceptions.html#RuntimeWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89411,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#id1",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89414,
+    "url": "https://docs.python.org/3/library/exceptions.html#BaseException.__cause__",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89416,
+    "url": "https://docs.python.org/3/library/exceptions.html#ConnectionError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89417,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ImportError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89418,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_GetContext",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89419,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_GetObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89420,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_WarnEx",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89422,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_SystemError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89423,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_OverflowError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89425,
+    "url": "https://docs.python.org/3/library/reprlib.html#reprlib.recursive_repr",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89428,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_repr",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89431,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetExcFromWindowsErrWithFilenameObjects",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89432,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_Exception",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89433,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetFromErrnoWithFilenameObjects",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89434,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_LookupError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89435,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_GetStart",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89436,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeTranslateError_GetStart",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89439,
+    "url": "https://docs.python.org/3/c-api/refcounting.html",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89440,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#exception-handling",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89441,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_EncodingWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89442,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#exception-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89443,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_IsADirectoryError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89444,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.Py_SetRecursionLimit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89445,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_SetTraceback",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89446,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ProcessLookupError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89447,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ModuleNotFoundError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89450,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_EOFError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89452,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_RangedSyntaxLocationObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89453,
+    "url": "https://docs.python.org/3/library/sys.html#sys.exception",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89454,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_BaseException",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89455,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SyntaxLocationObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89456,
+    "url": "https://docs.python.org/3/library/signal.html#module-signal",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89457,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_PermissionError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89459,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExceptionInstance_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89460,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#tracebacks",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89461,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_BaseExceptionGroup",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89462,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_GetReason",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89463,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_TypeError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89464,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.Py_GetRecursionLimit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89467,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetExcFromWindowsErrWithFilenameObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89471,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetFromWindowsErrWithFilename",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89473,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_Create",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89474,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_GetObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89475,
+    "url": "https://docs.python.org/3/library/exceptions.html#UnicodeError.end",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89477,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Format",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89478,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_NameError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89480,
+    "url": "https://peps.python.org/pep-0744/#footnotes",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89481,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0744.rst",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89482,
+    "url": "https://github.com/faster-cpython/benchmarking-public/blob/main/memory_configs.svg",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89483,
+    "url": "https://github.com/python/cpython/blob/main/Tools/jit/_targets.py",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89484,
+    "url": "https://peps.python.org/pep-0744/#debugging",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89485,
+    "url": "https://peps.python.org/pep-0744/#add-gpu-support",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89486,
+    "url": "https://gist.github.com/brandtbucher/9d3cc396dcb15d13f7e971175e987f3a",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89487,
+    "url": "https://developer.apple.com/documentation/apple-silicon/porting-just-in-time-compilers-to-apple-silicon#Enable-the-JIT-Entitlement-for-the-Hardened-Runtime",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89488,
+    "url": "https://peps.python.org/pep-0744/#untested",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89489,
+    "url": "https://peps.python.org/pep-0744/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89490,
+    "url": "https://peps.python.org/pep-0744/#compile-the-base-interpreter-s-bytecode",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89491,
+    "url": "https://youtu.be/HxSHIpEQRjs",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89492,
+    "url": "https://github.com/python/cpython/blob/main/.github/workflows/jit.yml",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89493,
+    "url": "https://peps.python.org/pep-0744/#id3",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89494,
+    "url": "https://peps.python.org/pep-0744/#id2",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89495,
+    "url": "https://peps.python.org/pep-0744/#id1",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89496,
+    "url": "https://github.com/python/cpython/blob/main/Python/jit.c",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89497,
+    "url": "https://peps.python.org/pep-0744/#security-implications",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89498,
+    "url": "https://peps.python.org/pep-0744/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89500,
+    "url": "https://peps.python.org/pep-0744/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89501,
+    "url": "https://peps.python.org/pep-0744/#support-multiple-compiler-toolchains",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89502,
+    "url": "https://peps.python.org/pep-0744/#maintain-it-outside-of-cpython",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89503,
+    "url": "https://peps.python.org/pep-0744/#open-issues",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89504,
+    "url": "https://github.com/brandtbucher/brandtbucher/blob/master/2023/10/10/a_jit_compiler_for_cpython.pdf",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89506,
+    "url": "https://en.wikipedia.org/wiki/Continuation-passing_style#Tail_calls",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89508,
+    "url": "https://en.wikipedia.org/wiki/W%5EX",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89509,
+    "url": "https://discuss.python.org/t/pep-744-jit-compilation/50756",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89511,
+    "url": "https://github.com/python/cpython/pull/113465",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89512,
+    "url": "https://peps.python.org/pep-0387/",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89513,
+    "url": "https://sillycross.github.io/2023/05/12/2023-05-12",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89514,
+    "url": "https://github.com/python/cpython/blob/main/Tools/jit/README.md",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89515,
+    "url": "https://github.com/python/cpython/blob/main/Tools/jit/template.c",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89516,
+    "url": "https://dl.acm.org/doi/10.1145/3485513",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89517,
+    "url": "https://github.com/python/cpython/blob/main/Python/bytecodes.c",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89518,
+    "url": "https://peps.python.org/pep-0744/#turn-it-on-by-default",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89519,
+    "url": "https://peps.python.org/pep-0744/#emulated",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89520,
+    "url": "https://peps.python.org/pep-0744/#dependencies",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89521,
+    "url": "https://github.com/faster-cpython/benchmarking-public/blob/main/configs.svg",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89522,
+    "url": "https://numba.pydata.org/numba-doc/latest/cuda/overview.html",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89523,
+    "url": "https://peps.python.org/pep-0744/#apple-silicon",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89524,
+    "url": "https://youtu.be/shQtrn1v7sQ",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89525,
+    "url": "https://www.pypy.org",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89526,
+    "url": "https://peps.python.org/pep-0744/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89527,
+    "url": "https://peps.python.org/pep-0744/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89528,
+    "url": "https://peps.python.org/pep-0744/#specification",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89529,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0744.rst",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89530,
+    "url": "https://peps.python.org/pep-0744/#speed",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89531,
+    "url": "https://peps.python.org/pep-0744/#memory",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89532,
+    "url": "https://en.wikipedia.org/wiki/Just-in-time_compilation#Security",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89533,
+    "url": "https://peps.python.org/pep-0744/#support",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89534,
+    "url": "https://clang.llvm.org/docs/AttributeReference.html#musttail",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89535,
+    "url": "https://peps.python.org/pep-0744/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89536,
+    "url": "https://peps.python.org/pep-0744/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89538,
+    "url": "https://peps.python.org/pep-0744/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0744/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.user_site_directory"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.user_site_directory"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Exception Handling — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Exception Handling — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/108215543?u\u003dc2ea60ea592b31d1b09ef3029652463815fce09b\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@rruuaanng",
+    "pageTitle": "Add `SCHED_DEADLINE` and `SCHED_NORMAL` constants to `os` module · Issue #127688 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127688"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/108215543?u\u003dc2ea60ea592b31d1b09ef3029652463815fce09b\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@rruuaanng",
+    "pageTitle": "Add `SCHED_DEADLINE` and `SCHED_NORMAL` constants to `os` module · Issue #127688 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127688"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#email"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#email"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
