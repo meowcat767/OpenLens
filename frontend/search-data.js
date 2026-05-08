@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 170,
+    "url": "https://www.java.com/en/download/help/index.html",
+    "title": "Java Help Center",
+    "content": "Help Resources Installing Java Remove older versions Disable Java Using Java General questions Security Support options Support Handbook Java Help Center Welcome to the Java.com Help Center where we describe solutions for issues you might encounter when downloading and using Java on your computer. We track the most frequently reported issues and error codes and provide answers for them in this section. Top Developer - Java Security Manifest Changes in the Browser Why is the Add button on the Exception Site List grayed out? Error message: Java Platform SE Binary has stopped working Java Plug-in in IE mode on Microsoft Edge Browser Why am I asked to install Java even after installing the latest Java version, after upgrading OS X version? Why do I see the Java Update Needed message: Java is out of date? Troubleshooting tips for running Java Download errors: Corrupt MSI, File corrupt, Error 1606 Running Java on macOS Sierra 10.12 Why should I uninstall older versions of Java from my system? Which Java download should I choose for my 64-bit Windows operating system? Tips for using Java on Windows 8 Installing and using Oracle Java on macOS Why are Java applications blocked by your security settings? How do I disable Java in my web browser? » View all Terminology: Java is the general term used to denote the software and its components, which include \u0027Java Runtime Environment\u0027 (JRE), \u0027Java Virtual Machine\u0027 (JVM) and also \u0027Plug-in\u0027. When error messages specifically include terms such as JRE, JVM and Plug-in, we retain them. Versions: Version refers to the Java family and the Update number. Examples: On the website or under Windows programs, version appears as Java 8 Update 25. The Help section contains information on the following versions of Java. Current Version Name Replaces Old Name Other Legacy Formats Java 8 Java 8 Update x JRE 8.0 JRE 1.8 1.8.0_0x",
+    "scrapedAt": "2026-05-09 00:32:37.76521"
+  },
+  {
+    "id": 169,
+    "url": "https://www.java.com/en/download/help/whatis_java.html",
+    "title": "What is Java and why do I need it?",
+    "content": "Help Resources Installing Java Remove older versions Disable Java Using Java General questions Security Support options Support Handbook What is Java technology and why do I need it? Java is a programming language and computing platform first released by Sun Microsystems in 1995. It has evolved from humble beginnings to power a large share of today’s digital world, by providing the reliable platform upon which many services and applications are built. New, innovative products and digital services designed for the future continue to rely on Java, as well. While most modern Java applications combine the Java runtime and application together, there are still many applications and even some websites that will not function unless you have a desktop Java installed. Java.com, this website, is intended for consumers who may still require Java for their desktop applications – specifically applications targeting Java 8. Developers as well as users that would like to learn Java programming should visit the dev.java website instead and business users should visit oracle.com/java for more information. Is Java free to download? Yes, Java is free to download for personal use. Java is also free for development: developers can find all the development kits and other useful tools at https://www.oracle.com/javadownload/. Why should I upgrade to the latest Java patch each quarter when prompted? The latest Java patches contain important enhancements to improve performance, stability and security of the Java applications that run on your machine. Installing these updates will ensure that your Java applications continue to run with the most up-to-date version. MORE TECHNICAL INFORMATION What will I get when I download Java software from java.com? The Java Runtime Environment (JRE) version 8 is what you get when you download Java software from java.com. The JRE consists of the Java Virtual Machine (JVM), Java platform core classes, and supporting Java platform libraries. The JRE is the runtime portion of Java software, which is all you need to run Java WebStart applications from a supported web browser. It doesn’t come with development tools, though – these tools are part of the Java Development Kit (JDK). What is Java Plug-in software? The Java Plug-in software is a component of the Java Runtime Environment (JRE). The JRE allows some applications written in the Java programming language to launch via some browsers. The Java Plug-in software is not a standalone program and cannot be installed separately. I have heard the terms Java Virtual Machine and JVM. Is this Java software? The Java Virtual Machine is only one part of Java software that is involved in running an application. The Java Virtual Machine is built right into your Java software download, part of the JRE and helps run Java applications.",
+    "scrapedAt": "2026-05-09 00:32:36.651143"
+  },
+  {
+    "id": 168,
+    "url": "https://www.java.com/download/",
+    "title": "Download Java",
+    "content": "Download Java Help Resources » Why is Java 8 recommended » What is Java » Remove older versions » Windows FAQ » Security » Support » Other help This download is for end users who need Java for running applications on desktops or laptops. Java 8 integrates with your operating system to run separately installed Java applications. If you were asked to install Java to run a desktop application, it\u0027s most likely you need this version. Developers are encouraged to download the latest Java Development Kit from OTN downloads. Enterprise users with access to My Oracle Support or Oracle Software Delivery Cloud should download through those services. Version 8 Update 491 Release date: April 21, 2026 filesize: 69.00 MB Download Java for Desktops By downloading Java you acknowledge that you have read and accepted the terms of the Oracle Technology Network License Agreement for Oracle Java SE. Important Oracle Java License Information. Important Oracle Java License Information The Oracle Java License changed for releases starting April 16, 2019. The Oracle Technology Network License Agreement for Oracle Java SE is substantially different from prior Oracle Java licenses. This license permits certain uses, such as personal use and development use, at no cost -- but other uses authorized under prior Oracle Java licenses may no longer be available. Please review the terms carefully before downloading and using this product. An FAQ is available here. Commercial license and support is available with a low cost Java SE Subscription. When your Java installation completes, if you are using webstart, you may need to restart your browser (close all browser windows and re-open). » FAQ about 64-bit Java for Windows » System Requirements Not the right operating system? See all Java 8 Downloads for Desktop users.",
+    "scrapedAt": "2026-05-09 00:32:35.575761"
+  },
+  {
+    "id": 167,
+    "url": "https://dev.java/",
+    "title": "Dev.java: The Destination for Java Developers",
+    "content": "JavaOne Was A Blast! JavaOne came back to California on March 17th to 19th. It\u0027s the premier Java event where you could meet the platform architects, be a part of the Java 26 launch live stream, see tons of great sessions, attend parties, engage the community, and more! Rewatch the Live Streams The Destination for Java Developers Hundreds of tutorials, news and videos from the experts, all right here. Get Started Getting Started with Java Java Language Basics Lambda Expressions Downloading Java Go Deeper The Collections Framework The Stream API The Gatherer API Virtual Threads Resources Java News Official Java Podcast and More The Official Java YouTube Channel Announcing JavaOne 2026 Latest News \u0026 Events Stay Informed with the latest Java News and Events News JEP targeted to JDK 27: 532: Primitive Types in Patterns, instanceof, and switch (5th Preview) Angelos Bimpoudis on May 8, 2026 Episode 57 “Make Java Safer with Flexible Constructor Bodies” Billy Korando on May 5, 2026 The JDK Client Desktop : 2026 and Still Swinging Phil Race on May 3, 2026 Make Java Safer with Flexible Constructor Bodies - Inside Java Newscast Episode #111 Billy Korando on April 30, 2026 More news on inside.java Upcoming Events GeeCon May 14, 2026 in Krakow, Poland Jnation May 26, 2026 in Coimbra, Portugal JCON Slovenia May 27, 2026 in Portorož JJUG CCC Spring May 30, 2026 in Tokyo, Japan More upcoming events Recent Java Videos Recently Updated Articles Been here before? Looking for something new to learn? Try these! Getting Started with Java Certification Overview of the Java Certification and how to study Last update: March 3, 2026 Building a Java application in IntelliJ IDEA Learn how to code, run, test, debug and document a Java application in IntelliJ IDEA. Last update: February 2, 2026 Launching Simple Source-Code Programs Launching simple source-code Java programs with the Java launcher. Last update: December 23, 2025 The Future of Java Learn about the future of the Java Platform Where Is the Java Language Going? Join Brian Goetz (Java Language Architect) on a whirlwind tour of recent enhancements and future directions for the Java language with a special emphasis on Project Amber and Project Valhalla. From Cowboy Mode to Careful Stewardship Java is a 30-year success story, made possible because its development consistently aligned with users\u0027 needs. In its early days, the platform required new features quickly, but over time, minimizing code breakage while carefully evolving the platform became essential. Critical junctures along that path included the introduction of modules and the current strive toward integrity by default. Java for AI Many Java features, existing and future, can meet the demands of AI. Existing features include the Foreign Function and Memory API and the Vector API. Future features include those proposed by Project Valhalla and Project Babylon. This video discusses these features and how they might be used by Java libraries and applications to build competitive AI solutions. Integrity by Default To assist performance, portability, and security, the Java Platform is progressing toward a state where its abstractions, as well as programmer-defined abstractions, can be made robust and invariants can be locally guaranteed. Libraries may violate some invariants but only if selectively allowed by the application. This session covers the why and how of the vision of \"Integrity by Default\".",
+    "scrapedAt": "2026-05-09 00:32:33.449439"
+  },
+  {
+    "id": 166,
+    "url": "https://jdk.java.net/",
+    "title": "JDK Builds from Oracle",
+    "content": "Production and Early-Access OpenJDK Builds, from Oracle Ready for use: JDK 26, JavaFX 26, JMC 9.1.2 Early access: JDK 27, JavaFX 27, JavaFX Direct3D 12, Jextract, Leyden, Loom, \u0026 Valhalla Looking to learn more about Java? Visit dev.java for the latest Java developer news and resources. Looking for Oracle JDK builds and information about Oracle’s enterprise Java products and services? Visit the Oracle JDK Download page. GA Releases JDK 26 JavaFX 26 JMC 9.1.2 Early-Access Releases JDK 27 JavaFX 27 JavaFX Direct3D 12 Jextract Leyden Loom Valhalla Reference Implementations Java SE 26 Java SE 25 Java SE 24 Java SE 23 Java SE 22 Java SE 21 Java SE 20 Java SE 19 Java SE 18 Java SE 17 Java SE 16 Java SE 15 Java SE 14 Java SE 13 Java SE 12 Java SE 11 Java SE 10 Java SE 9 Java SE 8 Java SE 7 Feedback Report a bug Archive © 2026 Oracle Corporation and/or its affiliates Terms of Use · Privacy · Trademarks",
+    "scrapedAt": "2026-05-09 00:32:31.926093"
+  },
+  {
     "id": 165,
     "url": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o#comments",
     "title": "Archaeologists uncover ancient island mystery on Isle of Lewis - BBC Newsround",
@@ -1153,26 +1188,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 166,
-    "url": "https://jdk.java.net/"
-  },
-  {
-    "id": 167,
-    "url": "https://dev.java/"
-  },
-  {
-    "id": 168,
-    "url": "https://www.java.com/download/"
-  },
-  {
-    "id": 169,
-    "url": "https://www.java.com/en/download/help/whatis_java.html"
-  },
-  {
-    "id": 170,
-    "url": "https://www.java.com/en/download/help/index.html"
   },
   {
     "id": 171,
@@ -30448,10 +30463,572 @@ window.searchData = [
     "id": 14624,
     "url": "https://dustygemsinteriors.co.uk/",
     "parentUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "id": 14638,
+    "url": "https://jdk.java.net/loom/",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14639,
+    "url": "https://jdk.java.net/27/",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14641,
+    "url": "https://jdk.java.net/java-se-ri/11-MR3",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14642,
+    "url": "https://jdk.java.net/java-se-ri/14",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14643,
+    "url": "https://jdk.java.net/java-se-ri/13",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14644,
+    "url": "http://bugreport.java.com",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14645,
+    "url": "https://jdk.java.net/java-se-ri/16",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14646,
+    "url": "https://jdk.java.net/java-se-ri/15",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14647,
+    "url": "https://jdk.java.net/java-se-ri/18",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14648,
+    "url": "https://jdk.java.net/java-se-ri/19",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14649,
+    "url": "https://jdk.java.net/javafx26/",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14650,
+    "url": "https://www.oracle.com/legal/privacy/",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14651,
+    "url": "https://jdk.java.net/java-se-ri/10",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14652,
+    "url": "https://jdk.java.net/java-se-ri/9",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14653,
+    "url": "https://openjdk.org/legal/openjdk-trademark-notice.html",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14654,
+    "url": "https://jdk.java.net/java-se-ri/12",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14655,
+    "url": "https://jdk.java.net/java-se-ri/7",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14656,
+    "url": "https://dev.java",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14657,
+    "url": "https://jdk.java.net/jmc/9",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14658,
+    "url": "https://jdk.java.net/jmc/9/",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14659,
+    "url": "https://jdk.java.net/archive/",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14660,
+    "url": "https://jdk.java.net/26/",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14661,
+    "url": "https://jdk.java.net/valhalla/",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14662,
+    "url": "https://jdk.java.net/java-se-ri/25",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14663,
+    "url": "https://jdk.java.net/java-se-ri/24",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14664,
+    "url": "https://jdk.java.net/java-se-ri/26",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14665,
+    "url": "https://jdk.java.net/leyden/",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14666,
+    "url": "https://jdk.java.net/java-se-ri/17-MR1",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14667,
+    "url": "https://jdk.java.net/javafxdirect3d12/",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14668,
+    "url": "https://jdk.java.net/java-se-ri/8-MR6",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14669,
+    "url": "https://jdk.java.net/jextract/",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14670,
+    "url": "https://jdk.java.net/javafx27/",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14671,
+    "url": "https://jdk.java.net/java-se-ri/21",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14672,
+    "url": "https://oracle.com",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14673,
+    "url": "https://jdk.java.net/tou",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14674,
+    "url": "https://jdk.java.net/java-se-ri/20",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14675,
+    "url": "https://jdk.java.net/java-se-ri/23",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14676,
+    "url": "https://jdk.java.net/java-se-ri/22",
+    "parentUrl": "https://jdk.java.net/"
+  },
+  {
+    "id": 14677,
+    "url": "https://dev.java/learn/watchlisten/",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14678,
+    "url": "https://www.youtube.com/watch?v\u003dux1IpWo3oXA",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14679,
+    "url": "https://dev.java/learn/getting-started",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14680,
+    "url": "https://www.youtube.com/watch?v\u003dmng0DTspxpQ",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14681,
+    "url": "https://dev.java/download",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14682,
+    "url": "https://slovenia.jcon.one/",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14683,
+    "url": "https://inside.java/2026/04/30/newscast-111/",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14684,
+    "url": "https://dev.java/learn/api/streams/gatherers",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14685,
+    "url": "https://dev.java/learn/new-features/virtual-threads",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14686,
+    "url": "https://dev.java/learn/intellij-idea/",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14687,
+    "url": "https://dev.java/learn/api/collections-framework",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14688,
+    "url": "https://oracle.com/javaone",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14689,
+    "url": "https://dev.java/news/",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14690,
+    "url": "https://geecon.org/",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14691,
+    "url": "https://www.youtube.com/watch?v\u003d-wmUt__lxPY",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14692,
+    "url": "https://dev.java/community/events",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14693,
+    "url": "https://inside.java/2026/05/03/jdk-client-desktop/",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14694,
+    "url": "https://inside.java",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14695,
+    "url": "https://inside.java/2026/05/05/podcast-057/",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14696,
+    "url": "https://www.java-users.jp/",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14697,
+    "url": "https://dev.java/learn/java-cert-overview/",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14698,
+    "url": "https://dev.java/community/javaone-2026/",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14699,
+    "url": "https://dev.java/learn/lambdas",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14700,
+    "url": "https://jnation.pt/",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14701,
+    "url": "https://inside.java/2026/05/08/jep532-target-jdk27/",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14702,
+    "url": "https://youtube.com/java/",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14703,
+    "url": "https://dev.java/learn/launch-simple-source-code-programs/",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14704,
+    "url": "https://dev.java/learn/language-basics",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14705,
+    "url": "https://dev.java/learn/api/streams",
+    "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 14706,
+    "url": "https://www.java.com/otnlicense/",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14707,
+    "url": "https://www.java.com/en/download/manual.jsp",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14708,
+    "url": "https://www.oracle.com/java/java-se-subscription.html",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14709,
+    "url": "https://www.java.com/en/download/help/",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14710,
+    "url": "https://support.oracle.com/",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14711,
+    "url": "https://www.java.com/en/download/support.jsp",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14712,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk-faqs.html",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14713,
+    "url": "https://www.java.com/en/download/help/java_win64bit.html",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14715,
+    "url": "https://www.java.com/en/download/help/remove_olderversions.html",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14718,
+    "url": "https://edelivery.oracle.com/",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14719,
+    "url": "https://www.java.com/en/download/why-java-8-recommended.html",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14720,
+    "url": "https://www.java.com/en/security/",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14721,
+    "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId\u003d253195_f7fe8e644f724108bdb54139381e29a7",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14722,
+    "url": "https://www.java.com/en/download/help/java_windows.html",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14723,
+    "url": "https://www.java.com/en/download/#lightboxContent",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14724,
+    "url": "https://www.java.com/en/download/win_sysreq-sm.jsp",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 14725,
+    "url": "https://www.java.com/en/download/help/remove_olderversions.xml",
+    "parentUrl": "https://www.java.com/en/download/help/whatis_java.html"
+  },
+  {
+    "id": 14727,
+    "url": "https://www.oracle.com/javadownload/",
+    "parentUrl": "https://www.java.com/en/download/help/whatis_java.html"
+  },
+  {
+    "id": 14728,
+    "url": "https://www.java.com/en/download/faq/index_general.xml",
+    "parentUrl": "https://www.java.com/en/download/help/whatis_java.html"
+  },
+  {
+    "id": 14729,
+    "url": "https://ops.java/supporthandbook/",
+    "parentUrl": "https://www.java.com/en/download/help/whatis_java.html"
+  },
+  {
+    "id": 14730,
+    "url": "https://www.java.com/en/download/help/index_installing.xml",
+    "parentUrl": "https://www.java.com/en/download/help/whatis_java.html"
+  },
+  {
+    "id": 14731,
+    "url": "https://www.java.com/en/download/help/disable_browser.xml",
+    "parentUrl": "https://www.java.com/en/download/help/whatis_java.html"
+  },
+  {
+    "id": 14734,
+    "url": "https://www.java.com/en/download/help/index_using.xml",
+    "parentUrl": "https://www.java.com/en/download/help/whatis_java.html"
+  },
+  {
+    "id": 14736,
+    "url": "https://www.java.com/en/download/help/sierra_java.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 14737,
+    "url": "https://www.java.com/en/download/help/java_plugin_ie_mode.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 14738,
+    "url": "https://www.java.com/en/download/help/java_blocked.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 14743,
+    "url": "https://www.java.com/en/download/help/java_crash_video_driver.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 14745,
+    "url": "https://www.java.com/en/download/help/error_installshield.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 14746,
+    "url": "https://www.java.com/en/download/help/disable_browser.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 14748,
+    "url": "https://www.java.com/en/download/help/win8_faq.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 14750,
+    "url": "https://www.java.com/en/download/help/signed_code.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 14751,
+    "url": "https://www.java.com/en/download/faq/top_issues.xml",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 14753,
+    "url": "https://www.java.com/en/download/help/expire_date.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 14755,
+    "url": "https://www.java.com/en/download/help/java_mac.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 14756,
+    "url": "https://www.java.com/en/download/help/yosemite_java.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 14758,
+    "url": "https://www.java.com/en/download/help/troubleshoot_java.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 14759,
+    "url": "https://www.java.com/en/download/help/sitelist_disabled.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://dev.java/assets/images/javaone/cbgmd-javaone26-hero.webp",
+    "alt": "JavaOne logo",
+    "pageTitle": "Dev.java: The Destination for Java Developers",
+    "pageUrl": "https://dev.java/"
+  },
+  {
+    "src": "https://img.youtube.com/vi/mng0DTspxpQ/maxresdefault.jpg",
+    "alt": "",
+    "pageTitle": "Dev.java: The Destination for Java Developers",
+    "pageUrl": "https://dev.java/"
+  },
+  {
+    "src": "https://img.youtube.com/vi/ux1IpWo3oXA/maxresdefault.jpg",
+    "alt": "",
+    "pageTitle": "Dev.java: The Destination for Java Developers",
+    "pageUrl": "https://dev.java/"
+  },
+  {
+    "src": "https://img.youtube.com/vi/-wmUt__lxPY/maxresdefault.jpg",
+    "alt": "",
+    "pageTitle": "Dev.java: The Destination for Java Developers",
+    "pageUrl": "https://dev.java/"
+  },
+  {
+    "src": "https://jdk.java.net/images/jdk.java.net2.svg",
+    "alt": "jdk.java.net logo",
+    "pageTitle": "JDK Builds from Oracle",
+    "pageUrl": "https://jdk.java.net/"
+  },
+  {
+    "src": "https://jdk.java.net/images/jdk.java.net2.svg",
+    "alt": "jdk.java.net logo",
+    "pageTitle": "JDK Builds from Oracle",
+    "pageUrl": "https://jdk.java.net/"
+  },
+  {
+    "src": "https://jdk.java.net/images/oracle.svg",
+    "alt": "Oracle logo",
+    "pageTitle": "JDK Builds from Oracle",
+    "pageUrl": "https://jdk.java.net/"
+  },
   {
     "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/0ec2/live/1ada6260-4871-11f1-b010-8f8612d9ae2e.jpg",
     "alt": "An artificial island built from large white stones in a Scottish loch - captured from above.",
