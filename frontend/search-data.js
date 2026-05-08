@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 994,
+    "url": "https://docs.python.org/3/library/locale.html#locale.setlocale",
+    "title": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internationalization » locale — Internationalization services | Theme Auto Light Dark | locale — Internationalization services¶ Source code: Lib/locale.py The locale module opens access to the POSIX locale database and functionality. The POSIX locale mechanism allows programmers to deal with certain cultural issues in an application, without requiring the programmer to know all the specifics of each country where the software is executed. The locale module is implemented on top of the _locale module, which in turn uses an ANSI C locale implementation if available. The locale module defines the following exception and functions: exception locale.Error¶ Exception raised when the locale passed to setlocale() is not recognized. locale.setlocale(category, locale\u003dNone)¶ If locale is given and not None, setlocale() modifies the locale setting for the category. The available categories are listed in the data description below. locale may be a string, or a pair, language code and encoding. An empty string specifies the user’s default settings. If the modification of the locale fails, the exception Error is raised. If successful, the new locale setting is returned. If locale is a pair, it is converted to a locale name using the locale aliasing engine. The language code has the same format as a locale name, but without encoding and @-modifier. The language code and encoding can be None. If locale is omitted or None, the current setting for category is returned. Example: \u003e\u003e\u003e import locale\n\u003e\u003e\u003e loc \u003d locale.setlocale(locale.LC_ALL)  # get current locale\n# use German locale; name and availability varies with platform\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027de_DE.UTF-8\u0027)\n\u003e\u003e\u003e locale.strcoll(\u0027f\\xe4n\u0027, \u0027foo\u0027)  # compare a string containing an umlaut\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027\u0027)   # use user\u0027s preferred locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027C\u0027)  # use default (C) locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, loc)  # restore saved locale\n setlocale() is not thread-safe on most systems. Applications typically start with a call of: import locale\nlocale.setlocale(locale.LC_ALL, \u0027\u0027)\n This sets the locale for all categories to the user’s default setting (typically specified in the LANG environment variable). If the locale is not changed thereafter, using multithreading should not cause problems. locale.localeconv()¶ Returns the database of the local conventions as a dictionary. This dictionary has the following strings as keys: Category Key Meaning LC_NUMERIC \u0027decimal_point\u0027 Decimal point character. \u0027grouping\u0027 Sequence of numbers specifying which relative positions the \u0027thousands_sep\u0027 is expected. If the sequence is terminated with CHAR_MAX, no further grouping is performed. If the sequence terminates with a 0, the last group size is repeatedly used. \u0027thousands_sep\u0027 Character used between groups. LC_MONETARY \u0027int_curr_symbol\u0027 International currency symbol. \u0027currency_symbol\u0027 Local currency symbol. \u0027p_cs_precedes/n_cs_precedes\u0027 Whether the currency symbol precedes the value (for positive resp. negative values). \u0027p_sep_by_space/n_sep_by_space\u0027 Whether the currency symbol is separated from the value by a space (for positive resp. negative values). \u0027mon_decimal_point\u0027 Decimal point used for monetary values. \u0027frac_digits\u0027 Number of fractional digits used in local formatting of monetary values. \u0027int_frac_digits\u0027 Number of fractional digits used in international formatting of monetary values. \u0027mon_thousands_sep\u0027 Group separator used for monetary values. \u0027mon_grouping\u0027 Equivalent to \u0027grouping\u0027, used for monetary values. \u0027positive_sign\u0027 Symbol used to annotate a positive monetary value. \u0027negative_sign\u0027 Symbol used to annotate a negative monetary value. \u0027p_sign_posn/n_sign_posn\u0027 The position of the sign (for positive resp. negative values), see below. All numeric values can be set to CHAR_MAX to indicate that there is no value specified in this locale. The possible values for \u0027p_sign_posn\u0027 and \u0027n_sign_posn\u0027 are given below. Value Explanation 0 Currency and value are surrounded by parentheses. 1 The sign should precede the value and currency symbol. 2 The sign should follow the value and currency symbol. 3 The sign should immediately precede the value. 4 The sign should immediately follow the value. CHAR_MAX Nothing is specified in this locale. The function temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale or the LC_MONETARY locale if locales are different and numeric or monetary strings are non-ASCII. This temporary change affects other threads. Changed in version 3.7: The function now temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale in some cases. locale.nl_langinfo(option)¶ Return some locale-specific information as a string. This function is not available on all systems, and the set of possible options might also vary across platforms. The possible argument values are numbers, for which symbolic c",
+    "scrapedAt": "2026-05-09 01:01:48.889256"
+  },
+  {
+    "id": 993,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.VALUE",
+    "title": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » annotationlib — Functionality for introspecting annotations | Theme Auto Light Dark | annotationlib — Functionality for introspecting annotations¶ Added in version 3.14. Source code: Lib/annotationlib.py The annotationlib module provides tools for introspecting annotations on modules, classes, and functions. Annotations are lazily evaluated and often contain forward references to objects that are not yet defined when the annotation is created. This module provides a set of low-level tools that can be used to retrieve annotations in a reliable way, even in the presence of forward references and other edge cases. This module supports retrieving annotations in three main formats (see Format), each of which works best for different use cases: VALUE evaluates the annotations and returns their value. This is most straightforward to work with, but it may raise errors, for example if the annotations contain references to undefined names. FORWARDREF returns ForwardRef objects for annotations that cannot be resolved, allowing you to inspect the annotations without evaluating them. This is useful when you need to work with annotations that may contain unresolved forward references. STRING returns the annotations as a string, similar to how it would appear in the source file. This is useful for documentation generators that want to display annotations in a readable way. The get_annotations() function is the main entry point for retrieving annotations. Given a function, class, or module, it returns an annotations dictionary in the requested format. This module also provides functionality for working directly with the annotate function that is used to evaluate annotations, such as get_annotate_from_class_namespace() and call_annotate_function(), as well as the call_evaluate_function() function for working with evaluate functions. Caution Most functionality in this module can execute arbitrary code; see the security section for more information. See also PEP 649 proposed the current model for how annotations work in Python. PEP 749 expanded on various aspects of PEP 649 and introduced the annotationlib module. Annotations Best Practices provides best practices for working with annotations. typing-extensions provides a backport of get_annotations() that works on earlier versions of Python. Annotation semantics¶ The way annotations are evaluated has changed over the history of Python 3, and currently still depends on a future import. There have been execution models for annotations: Stock semantics (default in Python 3.0 through 3.13; see PEP 3107 and PEP 526): Annotations are evaluated eagerly, as they are encountered in the source code. Stringified annotations (used with from __future__ import annotations in Python 3.7 and newer; see PEP 563): Annotations are stored as strings only. Deferred evaluation (default in Python 3.14 and newer; see PEP 649 and PEP 749): Annotations are evaluated lazily, only when they are accessed. As an example, consider the following program: def func(a: Cls) -\u003e None:\n    print(a)\n\nclass Cls: pass\n\nprint(func.__annotations__)\n This will behave as follows: Under stock semantics (Python 3.13 and earlier), it will throw a NameError at the line where func is defined, because Cls is an undefined name at that point. Under stringified annotations (if from __future__ import annotations is used), it will print {\u0027a\u0027: \u0027Cls\u0027, \u0027return\u0027: \u0027None\u0027}. Under deferred evaluation (Python 3.14 and later), it will print {\u0027a\u0027: \u003cclass \u0027Cls\u0027\u003e, \u0027return\u0027: None}. Stock semantics were used when function annotations were first introduced in Python 3.0 (by PEP 3107) because this was the simplest, most obvious way to implement annotations. The same execution model was used when variable annotations were introduced in Python 3.6 (by PEP 526). However, stock semantics caused problems when using annotations as type hints, such as a need to refer to names that are not yet defined when the annotation is encountered. In addition, there were performance problems with executing annotations at module import time. Therefore, in Python 3.7, PEP 563 introduced the ability to store annotations as strings using the from __future__ import annotations syntax. The plan at the time was to eventually make this behavior the default, but a problem appeared: stringified annotations are more difficult to process for those who introspect annotations at runtime. An alternative proposal, PEP 649, introduced the third execution model, deferred evaluation, and was implemented in Python 3.14. Stringified annotations are still used if from __future__ import annotations is present, but this behavior will eventually be removed. Classes¶ class annotationlib.Format¶ An IntEnum describing the formats in which annotations can be returned. Members of the enum, or their equivalent integer values, can be passed to get_annotations() ",
+    "scrapedAt": "2026-05-09 01:01:47.700847"
+  },
+  {
+    "id": 992,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent",
+    "title": "Monitoring C API — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Monitoring C API | Theme Auto Light Dark | Monitoring C API¶ Added in version 3.13. An extension may need to interact with the event monitoring system. Subscribing to events and registering callbacks can be done via the Python API exposed in sys.monitoring. Generating Execution Events¶ The functions below make it possible for an extension to fire monitoring events as it emulates the execution of Python code. Each of these functions accepts a PyMonitoringState struct which contains concise information about the activation state of events, as well as the event arguments, which include a PyObject* representing the code object, the instruction offset and sometimes additional, event-specific arguments (see sys.monitoring for details about the signatures of the different event callbacks). The codelike argument should be an instance of types.CodeType or of a type that emulates it. The VM disables tracing when firing an event, so there is no need for user code to do that. Monitoring functions should not be called with an exception set, except those listed below as working with the current exception. type PyMonitoringState¶ Representation of the state of an event type. It is allocated by the user while its contents are maintained by the monitoring API functions described below. All of the functions below return 0 on success and -1 (with an exception set) on error. See sys.monitoring for descriptions of the events. int PyMonitoring_FirePyStartEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire a PY_START event. int PyMonitoring_FirePyResumeEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire a PY_RESUME event. int PyMonitoring_FirePyReturnEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *retval)¶ Fire a PY_RETURN event. int PyMonitoring_FirePyYieldEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *retval)¶ Fire a PY_YIELD event. int PyMonitoring_FireCallEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *callable, PyObject *arg0)¶ Fire a CALL event. int PyMonitoring_FireLineEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, int lineno)¶ Fire a LINE event. int PyMonitoring_FireJumpEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *target_offset)¶ Fire a JUMP event. int PyMonitoring_FireBranchLeftEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *target_offset)¶ Fire a BRANCH_LEFT event. int PyMonitoring_FireBranchRightEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *target_offset)¶ Fire a BRANCH_RIGHT event. int PyMonitoring_FireCReturnEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *retval)¶ Fire a C_RETURN event. int PyMonitoring_FirePyThrowEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire a PY_THROW event with the current exception (as returned by PyErr_GetRaisedException()). int PyMonitoring_FireRaiseEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire a RAISE event with the current exception (as returned by PyErr_GetRaisedException()). int PyMonitoring_FireCRaiseEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire a C_RAISE event with the current exception (as returned by PyErr_GetRaisedException()). int PyMonitoring_FireReraiseEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire a RERAISE event with the current exception (as returned by PyErr_GetRaisedException()). int PyMonitoring_FireExceptionHandledEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire an EXCEPTION_HANDLED event with the current exception (as returned by PyErr_GetRaisedException()). int PyMonitoring_FirePyUnwindEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset)¶ Fire a PY_UNWIND event with the current exception (as returned by PyErr_GetRaisedException()). int PyMonitoring_FireStopIterationEvent(PyMonitoringState *state, PyObject *codelike, int32_t offset, PyObject *value)¶ Fire a STOP_ITERATION event. If value is an instance of StopIteration, it is used. Otherwise, a new StopIteration instance is created with value as its argument. Managing the Monitoring State¶ Monitoring states can be managed with the help of monitoring scopes. A scope would typically correspond to a Python function. int PyMonitoring_EnterScope(PyMonitoringState *state_array, uint64_t *version, const uint8_t *event_types, Py_ssize_t length)¶ Enter a monitored scope. event_types is an array of the event IDs for events that may be fired from the scope. For example, the ID of a PY_START event is the value PY_MONITORING_EVENT_PY_START, which is numerically equal to the base-2 logarithm of sys.monitoring.events.PY_START. state_array is an array with a monitoring state entry for each event in event_ty",
+    "scrapedAt": "2026-05-09 01:01:46.530422"
+  },
+  {
+    "id": 991,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-programming-forkserver",
+    "title": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » multiprocessing — Process-based parallelism | Theme Auto Light Dark | multiprocessing — Process-based parallelism¶ Source code: Lib/multiprocessing/ Availability: not Android, not iOS, not WASI. This module is not supported on mobile platforms or WebAssembly platforms. Introduction¶ multiprocessing is a package that supports spawning processes using an API similar to the threading module. The multiprocessing package offers both local and remote concurrency, effectively side-stepping the Global Interpreter Lock by using subprocesses instead of threads. Due to this, the multiprocessing module allows the programmer to fully leverage multiple processors on a given machine. It runs on both POSIX and Windows. The multiprocessing module also introduces the Pool object which offers a convenient means of parallelizing the execution of a function across multiple input values, distributing the input data across processes (data parallelism). The following example demonstrates the common practice of defining such functions in a module so that child processes can successfully import that module. This basic example of data parallelism using Pool, from multiprocessing import Pool\n\ndef f(x):\n    return x*x\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    with Pool(5) as p:\n        print(p.map(f, [1, 2, 3]))\n will print to standard output [1, 4, 9]\n The multiprocessing module also introduces APIs which do not have analogs in the threading module, like the ability to terminate, interrupt or kill a running process. See also concurrent.futures.ProcessPoolExecutor offers a higher level interface to push tasks to a background process without blocking execution of the calling process. Compared to using the Pool interface directly, the concurrent.futures API more readily allows the submission of work to the underlying process pool to be separated from waiting for the results. The Process class¶ In multiprocessing, processes are spawned by creating a Process object and then calling its start() method. Process follows the API of threading.Thread. A trivial example of a multiprocess program is from multiprocessing import Process\n\ndef f(name):\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n To show the individual process IDs involved, here is an expanded example: from multiprocessing import Process\nimport os\n\ndef info(title):\n    print(title)\n    print(\u0027module name:\u0027, __name__)\n    print(\u0027parent process:\u0027, os.getppid())\n    print(\u0027process id:\u0027, os.getpid())\n\ndef f(name):\n    info(\u0027function f\u0027)\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    info(\u0027main line\u0027)\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n For an explanation of why the if __name__ \u003d\u003d \u0027__main__\u0027 part is necessary, see Programming guidelines. The arguments to Process usually need to be unpickleable from within the child process. If you tried typing the above example directly into a REPL it could lead to an AttributeError in the child process trying to locate the f function in the __main__ module. Contexts and start methods¶ Depending on the platform, multiprocessing supports three ways to start a process. These start methods are spawn The parent process starts a fresh Python interpreter process. The child process will only inherit those resources necessary to run the process object’s run() method. In particular, unnecessary file descriptors and handles from the parent process will not be inherited. Starting a process using this method is rather slow compared to using fork or forkserver. Available on POSIX and Windows platforms. The default on Windows and macOS. fork The parent process uses os.fork() to fork the Python interpreter. The child process, when it begins, is effectively identical to the parent process. All resources of the parent are inherited by the child process. Note that safely forking a multithreaded process is problematic. Available on POSIX systems. Changed in version 3.14: This is no longer the default start method on any platform. Code that requires fork must explicitly specify that via get_context() or set_start_method(). Changed in version 3.12: If Python is able to detect that your process has multiple threads, the os.fork() function that this start method calls internally will raise a DeprecationWarning. Use a different start method. See the os.fork() documentation for further explanation. forkserver When the program starts and selects the forkserver start method, a server process is spawned. From then on, whenever a new process is needed, the parent process connects to the server and requests that it fork a new process. The fork server process is single threaded unless system libraries or preloaded imports spawn threads as a side-effect so it is generally safe for it to use os.fork(). No unnecessary resources are inherited. Availabl",
+    "scrapedAt": "2026-05-09 01:01:45.263923"
+  },
+  {
+    "id": 990,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process",
+    "title": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » multiprocessing — Process-based parallelism | Theme Auto Light Dark | multiprocessing — Process-based parallelism¶ Source code: Lib/multiprocessing/ Availability: not Android, not iOS, not WASI. This module is not supported on mobile platforms or WebAssembly platforms. Introduction¶ multiprocessing is a package that supports spawning processes using an API similar to the threading module. The multiprocessing package offers both local and remote concurrency, effectively side-stepping the Global Interpreter Lock by using subprocesses instead of threads. Due to this, the multiprocessing module allows the programmer to fully leverage multiple processors on a given machine. It runs on both POSIX and Windows. The multiprocessing module also introduces the Pool object which offers a convenient means of parallelizing the execution of a function across multiple input values, distributing the input data across processes (data parallelism). The following example demonstrates the common practice of defining such functions in a module so that child processes can successfully import that module. This basic example of data parallelism using Pool, from multiprocessing import Pool\n\ndef f(x):\n    return x*x\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    with Pool(5) as p:\n        print(p.map(f, [1, 2, 3]))\n will print to standard output [1, 4, 9]\n The multiprocessing module also introduces APIs which do not have analogs in the threading module, like the ability to terminate, interrupt or kill a running process. See also concurrent.futures.ProcessPoolExecutor offers a higher level interface to push tasks to a background process without blocking execution of the calling process. Compared to using the Pool interface directly, the concurrent.futures API more readily allows the submission of work to the underlying process pool to be separated from waiting for the results. The Process class¶ In multiprocessing, processes are spawned by creating a Process object and then calling its start() method. Process follows the API of threading.Thread. A trivial example of a multiprocess program is from multiprocessing import Process\n\ndef f(name):\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n To show the individual process IDs involved, here is an expanded example: from multiprocessing import Process\nimport os\n\ndef info(title):\n    print(title)\n    print(\u0027module name:\u0027, __name__)\n    print(\u0027parent process:\u0027, os.getppid())\n    print(\u0027process id:\u0027, os.getpid())\n\ndef f(name):\n    info(\u0027function f\u0027)\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    info(\u0027main line\u0027)\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n For an explanation of why the if __name__ \u003d\u003d \u0027__main__\u0027 part is necessary, see Programming guidelines. The arguments to Process usually need to be unpickleable from within the child process. If you tried typing the above example directly into a REPL it could lead to an AttributeError in the child process trying to locate the f function in the __main__ module. Contexts and start methods¶ Depending on the platform, multiprocessing supports three ways to start a process. These start methods are spawn The parent process starts a fresh Python interpreter process. The child process will only inherit those resources necessary to run the process object’s run() method. In particular, unnecessary file descriptors and handles from the parent process will not be inherited. Starting a process using this method is rather slow compared to using fork or forkserver. Available on POSIX and Windows platforms. The default on Windows and macOS. fork The parent process uses os.fork() to fork the Python interpreter. The child process, when it begins, is effectively identical to the parent process. All resources of the parent are inherited by the child process. Note that safely forking a multithreaded process is problematic. Available on POSIX systems. Changed in version 3.14: This is no longer the default start method on any platform. Code that requires fork must explicitly specify that via get_context() or set_start_method(). Changed in version 3.12: If Python is able to detect that your process has multiple threads, the os.fork() function that this start method calls internally will raise a DeprecationWarning. Use a different start method. See the os.fork() documentation for further explanation. forkserver When the program starts and selects the forkserver start method, a server process is spawned. From then on, whenever a new process is needed, the parent process connects to the server and requests that it fork a new process. The fork server process is single threaded unless system libraries or preloaded imports spawn threads as a side-effect so it is generally safe for it to use os.fork(). No unnecessary resources are inherited. Availabl",
+    "scrapedAt": "2026-05-09 01:01:44.080137"
+  },
+  {
     "id": 989,
     "url": "https://github.com/python/cpython/issues/129033",
     "title": "Remove _Py_InitializeMain() private function · Issue #129033 · python/cpython · GitHub",
@@ -6613,26 +6648,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 990,
-    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process"
-  },
-  {
-    "id": 991,
-    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-programming-forkserver"
-  },
-  {
-    "id": 992,
-    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
-  },
-  {
-    "id": 993,
-    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.VALUE"
-  },
-  {
-    "id": 994,
-    "url": "https://docs.python.org/3/library/locale.html#locale.setlocale"
   },
   {
     "id": 995,
@@ -164475,10 +164490,285 @@ window.searchData = [
     "id": 151059,
     "url": "https://github.com/python/cpython/pull/137382",
     "parentUrl": "https://github.com/python/cpython/issues/129033"
+  },
+  {
+    "id": 151675,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_PY_RESUME",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151676,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_PY_RETURN",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151678,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_JUMP",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151682,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_C_RAISE",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151686,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_RAISE",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151687,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_EXCEPTION_HANDLED",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151689,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#generating-execution-events",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151695,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireExceptionHandledEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151696,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_EnterScope",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151698,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#managing-the-monitoring-state",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151699,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_PY_START",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151700,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_PY_THROW",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151701,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireStopIterationEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151703,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_BRANCH_RIGHT",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151706,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_PY_UNWIND",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151707,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_RERAISE",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151708,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FirePyYieldEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151713,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireCReturnEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151714,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_C_RETURN",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151716,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FirePyThrowEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151717,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_PY_YIELD",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151721,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#monitoring-c-api",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151722,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FirePyStartEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151725,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireLineEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151726,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_LINE",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151727,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_IS_INSTRUMENTED_EVENT",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151730,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151731,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireJumpEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151732,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireCRaiseEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151733,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_INSTRUCTION",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151734,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireReraiseEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151735,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_BRANCH_LEFT",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151738,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoringState",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151742,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/monitoring.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151743,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FirePyUnwindEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151745,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireRaiseEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151747,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151748,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FirePyResumeEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151749,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FirePyReturnEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151752,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_CALL",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151754,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireCallEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151757,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PY_MONITORING_EVENT_STOP_ITERATION",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 151758,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_ExitScope",
+    "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.setlocale"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.setlocale"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.VALUE"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.VALUE"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Monitoring C API — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Monitoring C API — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-programming-forkserver"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-programming-forkserver"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d80",
     "alt": "@vstinner",
