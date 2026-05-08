@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1767,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig.legacy_windows_fs_encoding",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:32:54.525806"
+  },
+  {
+    "id": 1766,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Buffer",
+    "title": "collections.abc — Abstract Base Classes for Containers — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » collections.abc — Abstract Base Classes for Containers | Theme Auto Light Dark | collections.abc — Abstract Base Classes for Containers¶ Added in version 3.3: Formerly, this module was part of the collections module. Source code: Lib/_collections_abc.py This module provides abstract base classes that can be used to test whether a class provides a particular interface; for example, whether it is hashable or whether it is a mapping. An issubclass() or isinstance() test for an interface works in one of three ways. A newly written class can inherit directly from one of the abstract base classes. The class must supply the required abstract methods. The remaining mixin methods come from inheritance and can be overridden if desired. Other methods may be added as needed: class C(Sequence):                      # Direct inheritance\n    def __init__(self): ...             # Extra method not required by the ABC\n    def __getitem__(self, index):  ...  # Required abstract method\n    def __len__(self):  ...             # Required abstract method\n    def count(self, value): ...         # Optionally override a mixin method\n \u003e\u003e\u003e issubclass(C, Sequence)\nTrue\n\u003e\u003e\u003e isinstance(C(), Sequence)\nTrue\n Existing classes and built-in classes can be registered as “virtual subclasses” of the ABCs. Those classes should define the full API including all of the abstract methods and all of the mixin methods. This lets users rely on issubclass() or isinstance() tests to determine whether the full interface is supported. The exception to this rule is for methods that are automatically inferred from the rest of the API: class D:                                 # No inheritance\n    def __init__(self): ...              # Extra method not required by the ABC\n    def __getitem__(self, index):  ...   # Abstract method\n    def __len__(self):  ...              # Abstract method\n    def count(self, value): ...          # Mixin method\n    def index(self, value): ...          # Mixin method\n\nSequence.register(D)                     # Register instead of inherit\n \u003e\u003e\u003e issubclass(D, Sequence)\nTrue\n\u003e\u003e\u003e isinstance(D(), Sequence)\nTrue\n In this example, class D does not need to define __contains__, __iter__, and __reversed__ because the in-operator, the iteration logic, and the reversed() function automatically fall back to using __getitem__ and __len__. Some simple interfaces are directly recognizable by the presence of the required methods (unless those methods have been set to None): class E:\n    def __iter__(self): ...\n    def __next__(self): ...\n \u003e\u003e\u003e issubclass(E, Iterable)\nTrue\n\u003e\u003e\u003e isinstance(E(), Iterable)\nTrue\n Complex interfaces do not support this last technique because an interface is more than just the presence of method names. Interfaces specify semantics and relationships between methods that cannot be inferred solely from the presence of specific method names. For example, knowing that a class supplies __getitem__, __len__, and __iter__ is insufficient for distinguishing a Sequence from a Mapping. Added in version 3.9: These abstract classes now support []. See Generic Alias Type and PEP 585. Collections Abstract Base Classes¶ The collections module offers the following ABCs: ABC Inherits from Abstract Methods Mixin Methods Container [1] __contains__ Hashable [1] __hash__ Iterable [1] [2] __iter__ Iterator [1] Iterable __next__ __iter__ Reversible [1] Iterable __reversed__ Generator [1] Iterator send, throw close, __iter__, __next__ Sized [1] __len__ Callable [1] __call__ Collection [1] Sized, Iterable, Container __contains__, __iter__, __len__ Sequence Reversible, Collection __getitem__, __len__ __contains__, __iter__, __reversed__, index, and count MutableSequence Sequence __getitem__, __setitem__, __delitem__, __len__, insert Inherited Sequence methods and append, clear, reverse, extend, pop, remove, and __iadd__ ByteString Sequence __getitem__, __len__ Inherited Sequence methods Set Collection __contains__, __iter__, __len__ __le__, __lt__, __eq__, __ne__, __gt__, __ge__, __and__, __or__, __sub__, __rsub__, __xor__, __rxor__ and isdisjoint MutableSet Set __contains__, __iter__, __len__, add, discard Inherited Set methods and clear, pop, remove, __ior__, __iand__, __ixor__, and __isub__ Mapping Collection __getitem__, __iter__, __len__ __contains__, keys, items, values, get, __eq__, and __ne__ MutableMapping Mapping __getitem__, __setitem__, __delitem__, __iter__, __len__ Inherited Mapping methods and pop, popitem, clear, update, and setdefault MappingView Sized __init__, __len__ and __repr__ ItemsView MappingView, Set __contains__, __iter__ KeysView MappingView, Set __contains__, __iter__ ValuesView MappingView, Collection __contains__, __iter__ Awaitable [1] __await__ Coroutine [1] Awaitable send, throw close AsyncIterable [1] __aiter__ AsyncIterator [1] AsyncIterable __anext__ __aiter__ AsyncGenerator [1] AsyncIterator ",
+    "scrapedAt": "2026-05-09 01:32:53.268357"
+  },
+  {
+    "id": 1765,
+    "url": "https://github.com/python/cpython/issues/142516",
+    "title": "Observed memory leak in ssl library: Python 3.14 GC issue · Issue #142516 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Observed memory leak in ssl library: Python 3.14 GC issue #142516 New issue Copy link New issue Copy link Open Open Observed memory leak in ssl library: Python 3.14 GC issue#142516 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-SSLtype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description HenriBlacksmith opened on Dec 10, 2025 Issue body actions Bug report Bug description: I already opened a bug on urllib3 for this issue, it looks that may application using MSAL for Python library (which relies on requests , which relies on urllib3, which relies on ssl) is leaking memory when being upgraded from Python 3.13 to Python 3.14 (I tested 3.14.{0, 1, 2}) The details are explained in the urllib3 ticket including outputs from memray and it points to ssl package (precisely ssl.SSLContext.load_verify_locations), see: urllib3/urllib3#3738 CPython versions tested on: 3.14 Operating systems tested on: Linux Linked PRs gh-142516: Memory leak in SSLContext #143585 gh-142516: fix reference leaks in ssl.SSLContext objects #143685 [3.14] gh-142516: fix reference leaks in ssl.SSLContext objects (GH-143685) #145075 [3.13] gh-142516: fix reference leaks in ssl.SSLContext objects (GH-143685) (GH-145075) #148371 gh-142516: Forward-port generational GC #148687 [3.14] Forward-port generational GC (GH-142516) #148694 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-SSLtype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:32:51.892424"
+  },
+  {
+    "id": 1764,
+    "url": "https://github.com/python/cpython/issues/120507",
+    "title": "Lower `BEFORE_WITH` and `BEFORE_ASYNC_WITH` to attribute lookups and calls. · Issue #120507 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Lower BEFORE_WITH and BEFORE_ASYNC_WITH to attribute lookups and calls. #120507 New issue Copy link New issue Copy link Closed Closed Lower BEFORE_WITH and BEFORE_ASYNC_WITH to attribute lookups and calls.#120507 Copy link Description markshannon opened on Jun 14, 2024 Issue body actions With the JIT and better tier 2 optimizations, effective specialization is becoming more important that plain speed in tier 1. BEFORE_WITH and BEFORE_ASYNC_WITH could be specialized, but they are bulky and won\u0027t optimize well in tier 2. Instead, we should lower them to attribute lookups and calls which can then be optimized. We should add a LOAD_SPECIAL instruction for loading dunder methods and replace BEFORE_WITH as follows:     COPY 1\n    LOAD_SPECIAL __enter__ + NULL|self\n    SWAP 3\n    LOAD_SPECIAL __exit__\n    SWAP 3\n    CALL 0\n Likewise for BEFORE_ASYNC_WITH. Even without any specialization of LOAD_SPECIAL, the CALL will be specialized and the JIT can eliminate the COPY and SWAPs. Linked PRs GH-120507: Lower the BEFORE_WITH and BEFORE_ASYNC_WITH instructions. #120640 gh-120507: Double WASI memory #120648 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels No labels No labels Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:32:49.239256"
+  },
+  {
+    "id": 1763,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.errorlevel",
+    "title": "tarfile — Read and write tar archive files — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Compression and Archiving » tarfile — Read and write tar archive files | Theme Auto Light Dark | tarfile — Read and write tar archive files¶ Source code: Lib/tarfile.py The tarfile module makes it possible to read and write tar archives, including those using gzip, bz2 and lzma compression. Use the zipfile module to read or write .zip files, or the higher-level functions in shutil. Some facts and figures: reads and writes gzip, bz2, compression.zstd, and lzma compressed archives if the respective modules are available. If any of these optional modules are missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. read/write support for the POSIX.1-1988 (ustar) format. read/write support for the GNU tar format including longname and longlink extensions, read-only support for all variants of the sparse extension including restoration of sparse files. read/write support for the POSIX.1-2001 (pax) format. handles directories, regular files, hardlinks, symbolic links, fifos, character devices and block devices and is able to acquire and restore file information like timestamp, access permissions and owner. Changed in version 3.3: Added support for lzma compression. Changed in version 3.12: Archives are extracted using a filter, which makes it possible to either limit surprising/dangerous features, or to acknowledge that they are expected and the archive is fully trusted. Changed in version 3.14: Set the default extraction filter to data, which disallows some dangerous features such as links to absolute paths or paths outside of the destination. Previously, the filter strategy was equivalent to fully_trusted. Changed in version 3.14: Added support for Zstandard compression using compression.zstd. tarfile.open(name\u003dNone, mode\u003d\u0027r\u0027, fileobj\u003dNone, bufsize\u003d10240, **kwargs)¶ Return a TarFile object for the pathname name. For detailed information on TarFile objects and the keyword arguments that are allowed, see TarFile Objects. mode has to be a string of the form \u0027filemode[:compression]\u0027, it defaults to \u0027r\u0027. Here is a full list of mode combinations: mode action \u0027r\u0027 or \u0027r:*\u0027 Open for reading with transparent compression (recommended). \u0027r:\u0027 Open for reading exclusively without compression. \u0027r:gz\u0027 Open for reading with gzip compression. \u0027r:bz2\u0027 Open for reading with bzip2 compression. \u0027r:xz\u0027 Open for reading with lzma compression. \u0027r:zst\u0027 Open for reading with Zstandard compression. \u0027x\u0027 or \u0027x:\u0027 Create a tarfile exclusively without compression. Raise a FileExistsError exception if it already exists. \u0027x:gz\u0027 Create a tarfile with gzip compression. Raise a FileExistsError exception if it already exists. \u0027x:bz2\u0027 Create a tarfile with bzip2 compression. Raise a FileExistsError exception if it already exists. \u0027x:xz\u0027 Create a tarfile with lzma compression. Raise a FileExistsError exception if it already exists. \u0027x:zst\u0027 Create a tarfile with Zstandard compression. Raise a FileExistsError exception if it already exists. \u0027a\u0027 or \u0027a:\u0027 Open for appending with no compression. The file is created if it does not exist. \u0027w\u0027 or \u0027w:\u0027 Open for uncompressed writing. \u0027w:gz\u0027 Open for gzip compressed writing. \u0027w:bz2\u0027 Open for bzip2 compressed writing. \u0027w:xz\u0027 Open for lzma compressed writing. \u0027w:zst\u0027 Open for Zstandard compressed writing. Note that \u0027a:gz\u0027, \u0027a:bz2\u0027 or \u0027a:xz\u0027 is not possible. If mode is not suitable to open a certain (compressed) file for reading, ReadError is raised. Use mode \u0027r\u0027 to avoid this. If a compression method is not supported, CompressionError is raised. If fileobj is specified, it is used as an alternative to a file object opened in binary mode for name. It is supposed to be at position 0. For modes \u0027w:gz\u0027, \u0027x:gz\u0027, \u0027w|gz\u0027, \u0027w:bz2\u0027, \u0027x:bz2\u0027, \u0027w|bz2\u0027, tarfile.open() accepts the keyword argument compresslevel (default 9) to specify the compression level of the file. For modes \u0027w:xz\u0027, \u0027x:xz\u0027 and \u0027w|xz\u0027, tarfile.open() accepts the keyword argument preset to specify the compression level of the file. For modes \u0027w:zst\u0027, \u0027x:zst\u0027 and \u0027w|zst\u0027, tarfile.open() accepts the keyword argument level to specify the compression level of the file. The keyword argument options may also be passed, providing advanced Zstandard compression parameters described by CompressionParameter. The keyword argument zstd_dict can be passed to provide a ZstdDict, a Zstandard dictionary used to improve compression of smaller amounts of data. For special purposes, there is a second format for mode: \u0027filemode|[compression]\u0027. tarfile.open() will return a TarFile object that processes its data as a stream of blocks. No random seeking will be done on the file. If given, fileobj may be any object that has a read() or write() method (depending on the mode) that works with bytes. bufsize specifies the blocksize and defaults ",
+    "scrapedAt": "2026-05-09 01:32:46.402293"
+  },
+  {
     "id": 1762,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#unicodedata",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -11898,26 +11933,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1763,
-    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.errorlevel"
-  },
-  {
-    "id": 1764,
-    "url": "https://github.com/python/cpython/issues/120507"
-  },
-  {
-    "id": 1765,
-    "url": "https://github.com/python/cpython/issues/142516"
-  },
-  {
-    "id": 1766,
-    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Buffer"
-  },
-  {
-    "id": 1767,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig.legacy_windows_fs_encoding"
   },
   {
     "id": 1768,
@@ -248415,10 +248430,150 @@ window.searchData = [
     "id": 380984,
     "url": "https://github.com/python/cpython/pull/122253",
     "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 386864,
+    "url": "https://github.com/python/cpython/pull/120648",
+    "parentUrl": "https://github.com/python/cpython/issues/120507"
+  },
+  {
+    "id": 386865,
+    "url": "https://github.com/python/cpython/issues/120507#issue-2353503584",
+    "parentUrl": "https://github.com/python/cpython/issues/120507"
+  },
+  {
+    "id": 386867,
+    "url": "https://github.com/python/cpython/issues/120507#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/120507"
+  },
+  {
+    "id": 386868,
+    "url": "https://github.com/python/cpython/issues/120507#top",
+    "parentUrl": "https://github.com/python/cpython/issues/120507"
+  },
+  {
+    "id": 386869,
+    "url": "https://github.com/python/cpython/pull/120640",
+    "parentUrl": "https://github.com/python/cpython/issues/120507"
+  },
+  {
+    "id": 386873,
+    "url": "https://github.com/python/cpython/pull/148371",
+    "parentUrl": "https://github.com/python/cpython/issues/142516"
+  },
+  {
+    "id": 386876,
+    "url": "https://github.com/python/cpython/pull/148694",
+    "parentUrl": "https://github.com/python/cpython/issues/142516"
+  },
+  {
+    "id": 386877,
+    "url": "https://github.com/python/cpython/pull/145075",
+    "parentUrl": "https://github.com/python/cpython/issues/142516"
+  },
+  {
+    "id": 386878,
+    "url": "https://github.com/urllib3/urllib3/issues/3738",
+    "parentUrl": "https://github.com/python/cpython/issues/142516"
+  },
+  {
+    "id": 386882,
+    "url": "https://github.com/python/cpython/issues/142516#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/142516"
+  },
+  {
+    "id": 386883,
+    "url": "https://github.com/python/cpython/pull/143585",
+    "parentUrl": "https://github.com/python/cpython/issues/142516"
+  },
+  {
+    "id": 386884,
+    "url": "https://github.com/python/cpython/pull/148687",
+    "parentUrl": "https://github.com/python/cpython/issues/142516"
+  },
+  {
+    "id": 386885,
+    "url": "https://github.com/HenriBlacksmith",
+    "parentUrl": "https://github.com/python/cpython/issues/142516"
+  },
+  {
+    "id": 386886,
+    "url": "https://github.com/python/cpython/pull/143685",
+    "parentUrl": "https://github.com/python/cpython/issues/142516"
+  },
+  {
+    "id": 386887,
+    "url": "https://github.com/python/cpython/issues/142516#top",
+    "parentUrl": "https://github.com/python/cpython/issues/142516"
+  },
+  {
+    "id": 386888,
+    "url": "https://github.com/python/cpython/issues/142516#issue-3715500921",
+    "parentUrl": "https://github.com/python/cpython/issues/142516"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig.legacy_windows_fs_encoding"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig.legacy_windows_fs_encoding"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "collections.abc — Abstract Base Classes for Containers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Buffer"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "collections.abc — Abstract Base Classes for Containers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Buffer"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28116335?u\u003da58a413b5521b6d242c9fc30ea90198dec152ce8\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@HenriBlacksmith",
+    "pageTitle": "Observed memory leak in ssl library: Python 3.14 GC issue · Issue #142516 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/142516"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28116335?u\u003da58a413b5521b6d242c9fc30ea90198dec152ce8\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@HenriBlacksmith",
+    "pageTitle": "Observed memory leak in ssl library: Python 3.14 GC issue · Issue #142516 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/142516"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d80",
+    "alt": "@markshannon",
+    "pageTitle": "Lower `BEFORE_WITH` and `BEFORE_ASYNC_WITH` to attribute lookups and calls. · Issue #120507 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120507"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d48",
+    "alt": "@markshannon",
+    "pageTitle": "Lower `BEFORE_WITH` and `BEFORE_ASYNC_WITH` to attribute lookups and calls. · Issue #120507 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120507"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tarfile — Read and write tar archive files — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.errorlevel"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tarfile — Read and write tar archive files — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.errorlevel"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
