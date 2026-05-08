@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 326,
+    "url": "https://www.autoscout24.nl/informeren/autotests/",
+    "title": "Autotests en beoordelingen - AutoScout24",
+    "content": "Ga naar hoofdinhoud Autotests Zoek een autotest Merk ▼ Model ▼ 305 Rapporten Autotests: de nieuwste artikelen Lynk \u0026 Co 08 (2026) in de test: bijna een elektrische SUV Armin Hoyer · 05-05-2026 · 6 min. Leestijd Lees meer Lynk \u0026 Co 08 (2026) in de test: bijna een elektrische SUV VW ID. Polo (2026): Nieuwe elektrische Volkswagen Thomas Vogelhuber · 30-04-2026 · 6 min. Leestijd Lees meer VW ID. Polo (2026): Nieuwe elektrische Volkswagen Audi Q4 e-tron Facelift (2026): Eerste indruk, meer actieradius en nieuwe Digital Stage Thomas Vogelhuber · 30-04-2026 · 8 min. Leestijd Lees meer Audi Q4 e-tron Facelift (2026): Eerste indruk, meer actieradius en nieuwe Digital Stage Nieuwe BMW 7 Serie (2026): De monoliet uit Dingolfing De BMW 7 Serie G70 krijgt in 2026 een grondige facelift. Nieuw Neue Klasse-design, nieuwe benzinemotoren en een sterk verbeterde i7 met meer actieradius en sneller laden. Frisse concurrent voor de Mercedes-Benz S-Klasse. Alle info, prijzen en een eerste live check. Thomas Vogelhuber · 27-04-2026 · 10 min. Leestijd Lees meer Nieuwe BMW 7 Serie (2026): De monoliet uit Dingolfing Mercedes C-Klasse EQ getest: tot 762 km actieradius en alternatief voor BMW i3 Mercedes-Benz daagt BMW uit: de elektrische C-Klasse EQ biedt tot 762 km actieradius, Hyperscreen en nieuwe assistentiesystemen. Eerste zitervaring laat zien hoe sterk de concurrent van de BMW i3 Neue Klasse is, inclusief techcheck en prijsverwachting. Rudolf Bögel · 22-04-2026 · 7 min. Leestijd Lees meer Mercedes C-Klasse EQ getest: tot 762 km actieradius en alternatief voor BMW i3 VW ID.3 Neo (2026) eerste indruk: nu écht goed! De VW ID.3 Neo brengt terug wat veel mensen misten: echte knoppen in plaats van touch, een vernieuwde cockpit en efficiëntere aandrijflijnen. Met betere bediening, retro-modus en tot 630 km actieradius komt hij dichter bij de Golf. Thomas Vogelhuber · 17-04-2026 · 5 min. Leestijd Lees meer VW ID.3 Neo (2026) eerste indruk: nu écht goed! Cupra Raval (2026): Veel spektakel voor 25.990 euro Startschot voor de nieuwe elektrische stadsauto’s van de VW-groep. Als eerste model laat de Cupra Raval zich zien. Nog vóór de première konden we tijdens een preview al plaatsnemen en het eerste wat opvalt: de nieuwe Raval is een auto met veel spektakel. En nog veel meer. Rudolf Bögel · 14-04-2026 · 6 min. Leestijd Lees meer Cupra Raval (2026): Veel spektakel voor 25.990 euro Review – Ford Ranger PHEV: de definitie van een alleskunner De Ford Ranger PHEV is de eerste pick-up met plug-in hybride aandrijving. Het model is bijzonder veelzijdig en capabel, bedoeld voor het zware werk in elke situatie. De Ranger PHEV is bovendien een rijdende energiebron om zware elektrische apparaten te voeden op plekken zonder stroomvoorziening. AutoScout24 · 19-12-2025 · 9 min. Leestijd Lees meer Review – Ford Ranger PHEV: de definitie van een alleskunner Review – Suzuki e-Vitara: eerste elektrische SUV van Suzuki bewijst zich De Suzuki e-Vitara is de eerste volledig elektrische SUV van Suzuki. Hij is compact, veelzijdig en betaalbaar, maar vooral verrassend leuk om mee te rijden. Maar de e-Vitara heeft in dit segment te maken met heel veel sterke concurrenten. Maakt de Suzuki voldoende indruk voor een vliegende start? AutoScout24 · 19-12-2025 · 7 min. Leestijd Lees meer Review – Suzuki e-Vitara: eerste elektrische SUV van Suzuki bewijst zich Review – Opel Grandland Electric AWD: ruime no-nonsense SUV met slimme tech De Opel Grandland Electric AWD combineert ruimte, comfort en moderne technologie met de zekerheid van inschakelbare vierwielaandrijving. Daarmee is hij extra praktisch en capabel. Is dit de ideale elektrische SUV voor gezinnen die veelzijdigheid zoeken? AutoScout24 · 19-12-2025 · 8 min. Leestijd Lees meer Review – Opel Grandland Electric AWD: ruime no-nonsense SUV met slimme tech Autotests van de populairste merken Toyota 18 autotests Volkswagen 26 autotests Honda 7 autotests Hyundai 12 autotests Ford 18 autotests BYD 7 autotests Tesla 1 autotests BMW 14 autotests Mercedes-Benz 10 autotests Nissan 10 autotests Suzuki 2 autotests Opel 8 autotests Alle merken Abarth - 2 Tests Aiways - 1 Test Alfa Romeo - 4 Tests Alpine - 2 Tests Audi - 9 Tests BMW - 14 Tests BYD - 7 Tests Citroen - 5 Tests CUPRA - 9 Tests Dacia - 4 Tests DS Automobiles - 5 Tests Ferrari - 1 Test Fiat - 6 Tests Ford - 18 Tests Honda - 7 Tests Vergelijk autotests - 29 Tests Hyundai - 12 Tests Jaecoo - 1 Test Jeep - 1 Test KGM - 2 Tests Kia - 16 Tests Lamborghini - 1 Test Lancia - 1 Test Land Rover - 7 Tests Leapmotor - 3 Tests Lexus - 2 Tests Lotus - 3 Tests Lynk \u0026 Co - 2 Tests Maserati - 1 Test Mazda - 12 Tests McLaren - 1 Test Mercedes-Benz - 10 Tests MG - 6 Tests MINI - 1 Test Mitsubishi - 1 Test Morgan - 1 Test NIO - 2 Tests Nissan - 10 Tests Omoda - 1 Test Opel - 8 Tests Peugeot - 7 Tests Polestar - 5 Tests Porsche - 5 Tests Renault - 14 Tests SEAT - 3 Tests Seres - 1 Test Skoda - 10 Tests smart - 2 Tests SsangYong - 2 Tests Subaru - 1 Test Suzuki - 2 Tests Tesla - 1 Test T",
+    "scrapedAt": "2026-05-09 00:37:54.041409"
+  },
+  {
+    "id": 325,
+    "url": "https://www.autoscout24.nl/#main-target",
+    "title": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "content": "Ga naar hoofdinhoud Het grootste online autoplatform van Europa. {\"cockpit\":\"F\"} MerkAudiBMWFordMercedes-BenzOpelPeugeotPorscheToyotaVolkswagenVolvo9ffAbarthACACMAcuraAerfalAiwaysAixamAlba MobilityAlfa RomeoAlpinaAlpineAmphicarAngelelli AutomobiliARIAriel MotorArtegaAsparkAspidAston MartinAudiAurusAustinAustin-HealeyAutobianchiBAICBAWBedfordBellierBentleyBertoneBestuneBMWBoldmenBolloréBorgwardBrillianceBristolBruteBugattiBuickBYDCadillacCaravans-WohnmCarverCasaliniCaterhamCenntroChamonixChanganChangheChatenetCheryChevroletChryslerCirelliCitroenCityELCorvetteCUPRADaciaDaewooDAFDaihatsuDaimlerDallaraDangelDe la ChapelleDe TomasoDeloreanDenzaDevinci CarsDFMDFSKDodgeDongfengDonkervoortDR AutomobilesDS AutomobilesDuttone.GOEbroEconeloEdranElarisEmbuggyEMCEstrimaEvettaEVOFarizonFerrariFiatfireflyFiskerFordForthingFotonGac GonowGalloperGappyGAZGeelyGEMGEMBALLAGenesisGianaGilletGiotti VictoriaGMCGoupilGreat WallGrecavGTAGWMHaimaHamannHavalHiphiHoldenHondaHongqiHUMMERHurtanHyundaiICH-XIneosInfinitiInnocentiInvictaIso RivoltaIsuzuIvecoIZHJACJaecooJaguarJeepJensenKarmaKGMKiaKoenigseggKTMLadaLamborghiniLanciaLand RoverLDVLeapmotorLee GroupLEVCLexusLiLifanLigierLincolnLinzdaLivanLorinserLotusLucidLynk \u0026 CoM-EroMahindraMANMansoryMartinMartin MotorsMaseratiMatraMaxusMaybachMazdaMcLarenMegaMelexMercedes-BenzMercuryMGMicroMicrocarMilitemMinariMinautoMINIMitsubishiMitsuokaMobilizeMorganMoskvichMP LaferMPM MotorsNIONissanNSUOldsmobileOldtimerOmodaOpelOraPaganiPanther WestwindsPeugeotPGOPiaggioPlymouthPolestarPontiacPorscheProtonPuchRAMRegisReliantRenaultRimacRivianRolls-RoyceRoverRufSaabSantanaSEATSegwaySelvoSeresSevicSGSShelbyShuanghuanSilenceSimpliciSingerSkodaSkywellsmartSpeedArtSportequipeSpykerSsangYongStormbornStreetScooterStudebakerSubaruSuzukiSWMTalbotTassoTataTazzari EVTECHARTTeslaTigerToggTown LifeToyotaTrabantTrailer-AnhängerTriumphTrucks-LkwTVRTYN-eUAZVanden PlasVanderhallVAZVEMVinFastVolkswagenVolvoVoyahWartburgWeltmeisterWencksternWestfieldWeyWiesmannXBusXEVXiaomiXpengZastavaZAZZeekrZhidouZotyeOverig Model 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation Uitgebreid zoeken Ontdek occasions en nieuwe voertuigen SUV \u0026 Pick-up Sedan Stationwagen Hatchback MPV Coupé Cabrio Bedrijfswagen Populaire merken Volkswagen BMW Mercedes Audi Toyota Ford Volvo Porsche Jouw auto verkopen? € Bod€23.900 € Bod€25.500 € Bod€27.100 Jouw auto verkopen? Direct verkopen aan één van onze partners Snelste optie Gratis Een bod binnen 24 uur Snelle uitbetaling Minimale inspanning Direct verkopen Particuliere advertentie plaatsen – Privé verkopen Gratis adverteren Groot bereik Beste prijs Veilig betalen Advertentie maken Direct verkopen aan één van onze partners Snelste optie Gratis Een bod binnen 24 uur Snelle uitbetaling Minimale inspanning Direct verkopen Particuliere advertentie plaatsen – Privé verkopen Gratis adverteren Groot bereik Beste prijs Veilig betalen Advertentie maken Meest gezocht MINI John Cooper WorksMini 1.5 Cooper € 25.9451 03/2021 61.345 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2671 DBNAALDWIJK MINI Cooper SE CountrymanCooper S E Hybrid ALL4 Classic Trim € 23.9491 02/2022 28.673 km Elektro/Benzine 1,9 l/100 km (gem.) 2,8 Autobedrijf NL 1101 CLAMSTERDAM Audi Q21.4 TFSI CoD Sport Pro Line Cruise | Airco | € 18.950 06/2017 85.791 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1601 MJENKHUIZEN CUPRA Formentor1.4 e-Hybrid 245 pk VZ Performance Copper Edition € 27.9441 07/2022 85.157 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 5706 LDHELMOND DS Automobiles DS 41.2 PureTech Performance Line * CARPLAY * NAVI * A € 25.7951 06/2024 21.308 km Benzine - (l/100 km) 2,8 Autobedrijf NL 6883 HLVELP GLD Ford Fiesta1.0 Hybrid ST-Line 1e Eigenaar | Volledig Onderh | € 15.5501 07/2023 75.782 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 6662 PTELST Volkswagen Golf GTE1.4 eHybrid |PANO|STOELVW|ADAPTIEF|STUURVW|CARPLAY € 26.7001 06/2021 74.965 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 2952 AXALBLASSERDAM Nissan X-Trail1.3 DIG-T Automaat Cruise Clima Trekhaak Panorama € 21.700 08/2020 94.015 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 6088 EBROGGEL Toon meer Afgeprijsde voertuigen Ontdek auto’s bij autobedrijven met minimaal € 500 korting. Audi A63.0 TDI Quattro. ProL. PLUS, Xenon, Leder, AUT € 6.450 € 6.950,- 10/2011 307.504 km Diesel 5,9 l/100 km (gem.) 2,8 Prijsdaling Autobedrijf NL 7678 RLGEESTEREN Opel Corsa1.4-16V OPC-line Cosmo Pano Clima Navi Stoelverwar € 6.940 € 7.940,- 06/2015 122.084 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 3641 SBMIJDRECHT BMW 7457-serie 745e High Executive - NL AUTO - M PAKKET - € 46.990 € 49.890,- 04/2019 94.049 km Elektro/Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 1704 RNHeerhugowaard Opel Crossland X1.2 Turbo 120 Jaar Edition 2e Eigenaar | Dealer On € 14.500 € 15.250,- 01/2020 73.999 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 6662 PTELST Volkswagen Golf1.0 TSI Highline NAVI | PDC | NETTE STAAT € 11.999 € 14.999,- 05/2018 64.96",
+    "scrapedAt": "2026-05-09 00:37:52.7046"
+  },
+  {
+    "id": 324,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/",
+    "title": "Tweedehands caravans te koop - caravans occasion kopen",
+    "content": "Ga naar hoofdinhoud Homepage Tweedehands caravans te koop - caravans occasion kopen Caravans Tweedehands caravans te koop Toon meer Actueel aanbod van Caravans Volkswagen California Ocean eHybrid 4Motion / 245pk / T € 82.500,- BTW verrekenbaar 10.025 km 05/2025 180 kW (245 PK) Gebruikt 4 bedden Automatisch Elektro/Benzine - (l/100 km) - (g/km) Bedrijf, NL-3421 GV OUDEWATER Mercedes-Benz B-ML I-790*Solar*TV*WIFI*Lithium*ohne Hubbett* € 172.970,- BTW verrekenbaar - km - (Bouwjaar) 125 kW (170 PK) Nieuw 2 bedden Automatisch Diesel - (l/100 km) - (g/km) Bedrijf, DE-38350 Helmstedt Bürstner Copa C 500 L1 Navi Kamera AHK Markise SHZ € 70.980,- BTW verrekenbaar 10 km - (Bouwjaar) 125 kW (170 PK) Nieuw - (Aantal bedden) Automatisch Diesel 7,1 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl 179 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, DE-93333 Neustadt a. d. Donau Overig Expedition Truck Fuso F 262 € 170.000,- BTW verrekenbaar 26 km 06/2024 129 kW (175 PK) Gebruikt - (Aantal bedden) Handgeschakeld Diesel - (l/100 km) - (g/km) Bedrijf, DE-38640 Goslar Pössl Peugeot 807 2.2 HDiF Buscamper **VAST BED - W € 16.950,- 148.076 km 03/2002 94 kW (128 PK) Gebruikt 1 bed Handgeschakeld Diesel - (l/100 km) 195 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-7327 JZ APELDOORN Niesmann+Bischoff Arto 83B 180Pk Automaat | Bovenkastjes | Barz € 129.950,- 66.108 km 08/2017 130 kW (177 PK) Gebruikt 2 bedden Automatisch Diesel - (l/100 km) 177 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-7951 TA STAPHORST Concorde Centurion 910 MI, Vollausstattung Navi Vollleder € 312.000,- 25.000 km 07/2020 155 kW (211 PK) Gebruikt - (Aantal bedden) Automatisch Diesel - (l/100 km) - (g/km) Bedrijf, DE-28865 Lilienthal bei Bremen Adria Matrix Adria Axess M590 SG Multijet 130 € 41.769,- 144.000 km 02/2016 96 kW (131 PK) Gebruikt - (Aantal bedden) Handgeschakeld Diesel - (l/100 km) - (g/km) Bedrijf, DE-92224 Amberg Volkswagen California Ocean 1.5 EHYBRID DSG 4MOTION 245P € 87.950,- BTW verrekenbaar 5.000 km 05/2025 180 kW (245 PK) Gebruikt 4 bedden Automatisch Elektro/Benzine - (l/100 km) - (g/km) Bedrijf, NL-1411 AT NAARDEN Volkswagen California Ocean eHybrid 4Motion / 245pk / T € 82.500,- BTW verrekenbaar 10.025 km 05/2025 180 kW (245 PK) Gebruikt 4 bedden Automatisch Elektro/Benzine - (l/100 km) - (g/km) Bedrijf, NL-3421 GV OUDEWATER Mercedes-Benz B-ML I-790*Solar*TV*WIFI*Lithium*ohne Hubbett* € 172.970,- BTW verrekenbaar - km - (Bouwjaar) 125 kW (170 PK) Nieuw 2 bedden Automatisch Diesel - (l/100 km) - (g/km) Bedrijf, DE-38350 Helmstedt Bürstner Copa C 500 L1 Navi Kamera AHK Markise SHZ € 70.980,- BTW verrekenbaar 10 km - (Bouwjaar) 125 kW (170 PK) Nieuw - (Aantal bedden) Automatisch Diesel 7,1 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl 179 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, DE-93333 Neustadt a. d. Donau Overig Expedition Truck Fuso F 262 € 170.000,- BTW verrekenbaar 26 km 06/2024 129 kW (175 PK) Gebruikt - (Aantal bedden) Handgeschakeld Diesel - (l/100 km) - (g/km) Bedrijf, DE-38640 Goslar Pössl Peugeot 807 2.2 HDiF Buscamper **VAST BED - W € 16.950,- 148.076 km 03/2002 94 kW (128 PK) Gebruikt 1 bed Handgeschakeld Diesel - (l/100 km) 195 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-7327 JZ APELDOORN Niesmann+Bischoff Arto 83B 180Pk Automaat | Bovenkastjes | Barz € 129.950,- 66.108 km 08/2017 130 kW (177 PK) Gebruikt 2 bedden Automatisch Diesel - (l/100 km) 177 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-7951 TA STAPHORST Concorde Centurion 910 MI, Vollausstattung Navi Vollleder € 312.000,- 25.000 km 07/2020 155 kW (211 PK) Gebruikt - (Aantal bedden) Automatisch Diesel - (l/100 km) - (g/km) Bedrijf, DE-28865 Lilienthal bei Bremen Adria Matrix Adria Axess M590 SG Multijet 130 € 41.769,- 144.000 km 02/2016 96 kW (131 PK) Gebruikt - (Aantal bedden) Handgeschakeld Diesel - (l/100 km) - (g/km) Bedrijf, DE-92224 Amberg Volkswagen California Ocean 1.5 EHYBRID DSG 4MOTION 245P € 87.950,- BTW verrekenbaar 5.000 km 05/2",
+    "scrapedAt": "2026-05-09 00:37:51.501986"
+  },
+  {
+    "id": 323,
+    "url": "https://www.autoscout24.nl/auto/kia/",
+    "title": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "content": "Ga naar hoofdinhoud Homepage Auto Kia Kia Toon aanbod 1 / 11 btnLabelPrevbtnLabelNext Toon aanbod Toon aanbod Kia is een Zuid-Koreaanse autofabrikant die werd opgericht in 1944. Het bedrijf staat bekend om de productie van betaalbare en betrouwbare voertuigen, die ook vanwege de lange garantietermijn van 7 jaar populair zijn. Kia maakt deel uit van de Hyundai Motor Group, één van \u0027s werelds grootste autofabrikanten. Lees verder Meer tonen Kia Vind het model dat bij je past Sedan Cabrio Kia Carens Kia Carnival Kia Ceed Kia Ceed Sportswagon Kia Cerato Kia EV3 Kia EV6 Kia Joice Alles weergeven Kia aanbiedingen Kia Rio1.2 CVVT Super Pack Climate/Cruise/Keyless/Pdc/El. € 6.499 04/2012 132.942 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2288 JARijswijk Kia EV6Plus 77.4 kWh | SOH 100% | Warmtepomp | Leder | Ap € 27.9451 12/2021 124.395 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 2761 BNZevenhuizen Kia Sportage1.6 GDI DynamicLine Trekhaak | Cruise | Camera € 14.950 01/2017 134.509 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5443 MAHaps Kia Rio1.2 CVVT PLUS PACK I 5-DEURS I TREKHAAK I AIRCONDI € 4.945 01/2012 175.006 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3443 TJWoerden Kia Rio1.4 CVVT DynamicLine € 8.399 12/2016 112.000 km Benzine - (l/100 km) 2,8 Autobedrijf NL 6603 BSWijchen Kia Sportage2.0i CVVT X-ception Trekhaak Side bars Bullbar Gar € 4.744 05/2008 175.739 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2803 PAGouda Kia Stonic1.0 T-GDi 100pk DynamicLine € 15.835 08/2020 45.348 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 6343 AEKlimmen Kia Niro1.6 GDi PHEV ExecutiveLine / Stoel/stuurverwr. / A € 23.745 07/2020 65.687 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 5348 PVOss Kia Sportage1.6 T-GDi 177pk ECOdynamics DynamicLine € 18.950 10/2019 62.932 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 4382 NAVlissingen Kia Venga1.4 CVVT Seven panodak airco/ecc navigatie/camera € 3.950 02/2011 169.714 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 2022 EAHaarlem Kia Ceed SW / cee\u0027d SWSportswagon 1.0 T-GDi DynamicLine | ACC | Camera | € 19.950 € 20.950,- 01/2024 27.775 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 4191 PCGeldermalsen Kia Ceed / cee\u0027d1.0 T-GDi GT-PlusLine | LED | Camera | CarPlay | N € 11.385 03/2021 163.259 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7711 EPNieuwleusen Kia Picanto1.0 DPi DynamicLine | CarPlay | Camera | Airco | C € 8.745 04/2021 120.176 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7711 EPNieuwleusen Kia Sportage2.0 CVVT X-ecutive CLIMA TREKHAAK PDC RIJDT GOED N € 2.695 05/2008 202.377 km Benzine 8,0 l/100 km (gem.) 2,8 Autobedrijf NL 3076 JARotterdam Kia Ceed SW / cee\u0027d SWSportswagon 1.5 T-GDi DynamicPlusLine CAMERA CARPL € 25.0001 06/2024 45.154 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7876 AWValthermond Kia Rio1.0 TGDI Airco Apple Carplay Android Auto Navi Cam € 6.4501 09/2019 233.469 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5738 AKMariahout Kia EV6GT AWD 77.4 kWh | Panoramadak | Sportstoelen | 98, € 39.950 07/2023 24.300 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 8242 BALelystad Kia Ceed / cee\u0027d1.6 GDI BusinessLine | Automaat | Clima | Cruise | € 13.950 01/2015 81.301 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7206 AZZutphen Kia Sportage1.6 T-GDi Plug-in Hybrid AWD DynamicLine € 29.9501 04/2023 26.753 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 1704 RMHeerhugowaard Kia Sorento1.6 T-GDI Hybrid ExecutiveLine 7p. | Pano | Sfeer € 34.500 03/2021 109.076 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 9502 ECStadskanaal Bekijk alle Kia aanbiedingen Bijzonderheden van het automerk Kia Stijlvolle en betaalbare auto’s Nieuwe Kia’s worden standaard geleverd met uitzonderlijk lange garantie van 7 jaar Standaard voorzien van uitgebreide waaier aan veiligheidsvoorzieningen Historie Kia De geschiedenis van Kia begint in 1944 toen het werd opgericht in Seoul, Zuid-Korea. In eerste instantie startte Kia met de productie van fietsen en lichte motorfietsen voor de thuismarkt. Vanaf de jaren zeventig verschoof die focus steeds meer richting auto’s. In de jaren tachtig en negentig kwamen de eerste auto’s op de markt. Nog geen eigen modellen maar op basis van modellen van Ford en Mazda, zoals de Kia Sephia en Kia Pride. De laatste was een evenknie van de Mazda 121 uit die tijd. Het ging goed met Kia en daarom besloot het merk flink te investeren in nieuwe fabrieken om de productie op te kunnen schroeven. Maar helaas bleven verkopen uit en het bedrijf kon amper het hoofd boven water houden. Jarenlang leed Kia verlies, waarna het in 1997 bijna failliet werd verklaard. De Zuid-Koreaanse overheid vond het zonde om Kia dood te laten bloeden en organiseerde een veiling om het bedrijf een doorstart te kunnen laten maken. Niet de minste bedrijven toonden interesse, zoals Samsung en Ford. Uiteindelijk was het concullega, de Koreaanse autobouwer Hyundai, die het winnende bod deed. Sindsdien is Kia onderdeel van de Hyundai Motor Group. Door de krachten te bundelen konden Hyu",
+    "scrapedAt": "2026-05-09 00:37:50.224045"
+  },
+  {
+    "id": 322,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/",
+    "title": "Beste hybride auto - AutoScout24",
+    "content": "Ga naar hoofdinhoud Beste hybride auto AutoScout24 · 26-07-2024 · 6 min. Leestijd Niet iedereen is al toe aan een volledig elektrische auto. Een hybride auto vormt een perfecte tussenoplossing om toch al een bijdrage te leveren aan reductie van de CO2-uitstoot en om alvast te wennen aan deels elektrisch rijden. Maar wat is nu de beste hybride auto? Bekijk het beste hybride aanbod Inhoud Welke hybride aandrijfvormen zijn er? Parallel-hybride of serie-hybride? 4 voordelen van een hybride auto De beste hybride auto Waar moet je op letten als je een hybride auto koopt? Toekomst hybride auto Welke hybride aandrijfvormen zijn er? Het is onjuist om te stellen dat een hybride auto altijd over een soortgelijke aandrijflijn beschikt. In de wereld van de hybride auto bestaan grote verschillen. Er is sprake van mild-hybrid, hybride en plug-in hybride. Elke vorm heeft zijn eigen kenmerken. We zetten de belangrijkste verschillen in een notendop even op een rij. Mild-Hybrid - (Mild Hybrid Electric Vehicle - MHEV) Een mild-hybrid maakt gebruik van een verbrandingsmotor ondersteund door een kleine elektromotor. De elektromotor kan de verbrandingsmotor niet zelfstandig aandrijven, maar helpt bij het ondersteunen tijdens acceleratie en kan energie terugwinnen tijdens het remmen. Dit systeem gebruikt doorgaans een 48-volt elektrisch systeem en een kleine batterij. 3 voordelen: Verbeterde brandstofefficiëntie. Lagere CO2-uitstoot. Ondersteuning van de verbrandingsmotor Full-Hybrid - (Full Hybrid Electric Vehicle - FHEV) Een full-hybrid heeft zowel een verbrandingsmotor als een krachtige elektromotor. Deze voertuigen kunnen korte afstanden puur elektrisch rijden. Het hybridesysteem schakelt automatisch tussen de verbrandingsmotor en de elektromotor, of gebruikt beide tegelijk voor optimale efficiëntie en prestaties. 3 voordelen: Kan korte afstanden volledig elektrisch rijden. Goede balans tussen brandstofefficiëntie en prestaties. Energie terugwinning tijdens remmen. Plug-in Hybride (Plug-in Hybrid Electric Vehicle - PHEV) Plug-in hybrides hebben grotere batterijen dan volledige full-hybrides en kunnen via een stopcontact of laadpaal worden opgeladen. Ze kunnen langere afstanden puur elektrisch rijden voordat de verbrandingsmotor in werking treedt. Nadat de batterij leeg is, functioneert de PHEV als een reguliere hybride. 3 voordelen: Langere tijd 100% elektrisch rijden. Oplaadmogelijkheid via extern stopcontact of laadpaal. Lagere brandstofkosten bij regelmatig opladen. Parallel-hybride of serie-hybride? We gaan nog een stapje verder. Want er is ook nog iets als parallel-hybride en serie-hybride. Bij een serie-hybride drijft de verbrandingsmotor de wielen niet direct aan. In plaats daarvan genereert de verbrandingsmotor elektriciteit die de elektromotor aandrijft, of laadt de batterij op. De elektromotor is de enige die de wielen aandrijft. Je hebt ook nog een parallel-hybride. Bij deze aandrijfvorm kunnen zowel de verbrandingsmotor als de elektromotor afzonderlijk of samen de wielen aandrijven. Dit systeem is efficiënter bij hogere snelheden waar de verbrandingsmotor het meest efficiënt werkt. 4 voordelen van een hybride auto Een hybride auto heeft verschillende voordelen. We zetten er vier op een rij. Hybride auto\u0027s verbruiken minder brandstof doordat de elektromotor de verbrandingsmotor ondersteunt. Dit betekent minder tanken en lagere brandstofkosten. Hybride auto\u0027s stoten minder CO2 en andere schadelijke stoffen uit, wat beter is voor het milieu. In Nederland resulteert een lagere uitstoot automatisch in een lager BPM-bedrag. De elektromotor zorgt voor een stille rijervaring, vooral bij lage snelheden en in stadsverkeer. De elektromotor vermindert de belasting op de verbrandingsmotor, wat kan leiden tot minder slijtage en lagere onderhoudskosten. De beste hybride auto Maar wat is nu de beste hybride auto? Dat is een lastige vraag, omdat het antwoord ook sterk afhankelijk is van je eigen behoeftes. Misschien wil je wel een plug-in hybride, dan geven we een compleet ander antwoord dan wanneer je liever een full-hybrid voor de deur hebt staan. Uiteraard kunnen we een aantal hybride modellen noemen die uitblinken in souplesse en kwaliteit. Toyota Prius De Toyota Prius is wellicht de bekendste hybride auto ter wereld. Hij staat bekend om zijn betrouwbaarheid, efficiëntie en ruime interieur. De Prius biedt een soepele rijervaring en uitstekende brandstofbesparing, waardoor het een favoriet is onder milieubewuste bestuurders. Honda CR-V Hybrid De Honda CR-V Hybrid combineert de voordelen van een hybride aandrijflijn met de ruimte en veelzijdigheid van een SUV. Het model biedt een comfortabel interieur, een soepele rijervaring en uitstekende brandstofefficiëntie voor een voertuig van zijn formaat. Hyundai IONIQ Hybrid De Hyundai IONIQ Hybrid is een veelzijdige en betaalbare optie. Hij biedt een moderne stijl, geavanceerde technologie en een uitstekende brandstofefficiëntie. De IONIQ is verkrijgbaar in hybride, plug-in hybride en a",
+    "scrapedAt": "2026-05-09 00:37:48.850895"
+  },
+  {
     "id": 321,
     "url": "https://www.autoscout24.nl/auto/carrosserie/limousine/",
     "title": "Alle informatie over de limousine bij AutoScout24",
@@ -2243,26 +2278,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 322,
-    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
-  },
-  {
-    "id": 323,
-    "url": "https://www.autoscout24.nl/auto/kia/"
-  },
-  {
-    "id": 324,
-    "url": "https://www.autoscout24.nl/caravans-campers/caravans/"
-  },
-  {
-    "id": 325,
-    "url": "https://www.autoscout24.nl/#main-target"
-  },
-  {
-    "id": 326,
-    "url": "https://www.autoscout24.nl/informeren/autotests/"
   },
   {
     "id": 327,
@@ -51319,10 +51334,1621 @@ window.searchData = [
     "id": 20239,
     "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-phaeton/",
     "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/limousine/"
+  },
+  {
+    "id": 20240,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "id": 20242,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/#3m1kcJD5ZHmYEFf3GzJpsD",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "id": 20244,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/#1HayIZtx7yVFgcLjAJerLm",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "id": 20245,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/#5VZswFB1XRsC6ym3IqbJz3",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "id": 20249,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/#7Bux7JjW7GbqWjeRYyEwSx",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "id": 20252,
+    "url": "https://www.autoscout24.nl/auto/toyota/toyota-prius/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "id": 20254,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/#5oZdXocVcZMwArW0HCRNpW",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "id": 20255,
+    "url": "https://www.autoscout24.nl/auto/honda/honda-cr-v/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "id": 20256,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/#46ioeEPudnNWh3bTDARyKR",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "id": 20257,
+    "url": "https://www.autoscout24.nl/auto/lexus/lexus-ux/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "id": 20261,
+    "url": "https://www.autoscout24.nl/lst?_gl\u003d1%2Amd2b94%2A_up%2AMQ..%2A_ga%2AMTc3NDM1NzMzLjE3MjI2OTI5NzU.%2A_ga_BGSHTTTQ7W%2AMTcyMjY5Mjk3NC4xLjAuMTcyMjY5Mjk3NC4wLjAuMA..%2A_ga_TX2QRVWP93%2AMTcyMjY5Mjk3NC4xLjAuMTcyMjY5Mjk3NC4wLjAuMTc1NjIyODc2MA..\u0026atype\u003dC\u0026cy\u003dNL\u0026damaged_listing\u003dexclude\u0026desc\u003d0\u0026mmmv\u003d70%7C16516%7C%7C%2C31%7C1777%7C%7C%2C33%7C74331%7C%7C\u0026model_groups\u003d%7C%7C\u0026powertype\u003dkw\u0026search_id\u003d26hbpn9vi7z\u0026sort\u003dstandard\u0026source\u003ddetailsearch\u0026ustate\u003dN%2CU",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "id": 20262,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-kuga/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "id": 20263,
+    "url": "https://www.autoscout24.nl/auto/hyundai/hyundai-ioniq/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "id": 20264,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-sportage/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20266,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-magentis/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20267,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-carens/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20268,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-soul/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20269,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-ceed/kia-ceed-sportswagon/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20270,
+    "url": "https://www.autoscout24.nl/lst/kia/soul/ft_lpg",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20271,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-sorento/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20272,
+    "url": "https://www.autoscout24.nl/auto/kia/suv/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20273,
+    "url": "https://www.autoscout24.nl/auto/kia/hybride/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20274,
+    "url": "https://www.autoscout24.nl/auto/kia/ez-2014/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20275,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-stonic/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20276,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-pride/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20278,
+    "url": "https://www.autoscout24.nl/auto/kia/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20280,
+    "url": "https://www.autoscout24.nl/lst/kia/rio/bc_blauw",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20281,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-shuma/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20282,
+    "url": "https://www.autoscout24.nl/lst/kia/rio",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20283,
+    "url": "https://www.autoscout24.nl/lst/kia/sportage/tr_automatisch",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20284,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-picanto/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20286,
+    "url": "https://www.autoscout24.nl/auto/kia/automaat/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20287,
+    "url": "https://www.autoscout24.nl/lst/kia/opirus",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20288,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-carnival/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20289,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-optima/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20290,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-joice/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20292,
+    "url": "https://www.autoscout24.nl/lst/kia/rio/bc_zwart",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20293,
+    "url": "https://www.autoscout24.nl/auto/kia/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20294,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-xceed/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20295,
+    "url": "https://www.autoscout24.nl/lst/kia/proceed-%2F-pro_cee\u0027d/ve_1.6-gt",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20296,
+    "url": "https://www.autoscout24.nl/auto/kia/ez-2013/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20297,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-ceed/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20298,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-cerato/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20299,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-soul/kia-soul-ev/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20300,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-ev3/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20301,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-rio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20302,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-venga/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20303,
+    "url": "https://www.autoscout24.nl/lst/kia/rio/tr_automatisch",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20305,
+    "url": "https://www.autoscout24.nl/lst/kia/magentis",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20306,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-stinger/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "id": 20307,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/woonwagen/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20308,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/kip/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20309,
+    "url": "https://www.autoscout24.nl/caravans-campers/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20310,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/tec/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20311,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/kabe/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20312,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/adria/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20313,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/caravelair/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20314,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/lmc/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20315,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/weippert/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20317,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/wilk/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20318,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/oldtimer-caravans/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20319,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/buerstner/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20320,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/kampeerauto/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20321,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/knaus/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20322,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/hobby/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20323,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/dethleffs/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20324,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/sunlight/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20325,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/rapido/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20326,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/fendt/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20327,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/hymer/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20328,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/weinsberg/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20329,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/sterckeman/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20330,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20331,
+    "url": "https://www.autoscout24.nl/caravans-campers/caravans/tabbert/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "id": 20405,
+    "url": "https://www.autoscout24.nl/informeren/autotests/skoda/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20406,
+    "url": "https://www.autoscout24.nl/informeren/autotests/suzuki/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20407,
+    "url": "https://www.autoscout24.nl/informeren/autotests/byd/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20408,
+    "url": "https://www.autoscout24.nl/informeren/autotests/lamborghini/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20411,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volkswagen/id-3/vw-id-3-neo-2026-eerste-indruk/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20412,
+    "url": "https://www.autoscout24.nl/informeren/autotests/maserati/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20413,
+    "url": "https://www.autoscout24.nl/informeren/autotests/toyota/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20414,
+    "url": "https://www.autoscout24.nl/informeren/autotests/nissan/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20415,
+    "url": "https://www.autoscout24.nl/informeren/autotests/xpeng/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20416,
+    "url": "https://www.autoscout24.nl/informeren/autotests/vergelijking/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20418,
+    "url": "https://www.autoscout24.nl/informeren/autotests/kia/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20419,
+    "url": "https://www.autoscout24.nl/informeren/autotests/opel/grandland/review-opel-grandland-electric-awd-ruime-no-nonsense-suv-met-slimme-tech/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20420,
+    "url": "https://www.autoscout24.nl/informeren/autotests/cupra/model/cupra-raval-introductie-2026/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20421,
+    "url": "https://www.autoscout24.nl/informeren/autotests/opel/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20423,
+    "url": "https://www.autoscout24.nl/informeren/autotests/hyundai/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20424,
+    "url": "https://www.autoscout24.nl/informeren/autotests/jeep/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20425,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mazda/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20426,
+    "url": "https://www.autoscout24.nl/informeren/autotests/tesla/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20427,
+    "url": "https://www.autoscout24.nl/informeren/autotests/subaru/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20428,
+    "url": "https://www.autoscout24.nl/informeren/autotests/zeekr/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20429,
+    "url": "https://www.autoscout24.nl/informeren/autotests/vinfast/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20430,
+    "url": "https://www.autoscout24.nl/informeren/autotests/jaecoo/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20431,
+    "url": "https://www.autoscout24.nl/informeren/autotests/land-rover/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20432,
+    "url": "https://www.autoscout24.nl/informeren/autotests/ds-automobiles/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20433,
+    "url": "https://www.autoscout24.nl/informeren/autotests/seat/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20434,
+    "url": "https://www.autoscout24.nl/informeren/autotests/polestar/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20435,
+    "url": "https://www.autoscout24.nl/informeren/autotests/ford/ranger/review-ford-ranger-phev-de-definitie-van-een-alleskunner/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20436,
+    "url": "https://www.autoscout24.nl/informeren/autotests/alfa-romeo/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20437,
+    "url": "https://www.autoscout24.nl/informeren/autotests/alpine/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20438,
+    "url": "https://www.autoscout24.nl/informeren/autotests/omoda/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20439,
+    "url": "https://www.autoscout24.nl/informeren/autotests/bmw/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20440,
+    "url": "https://www.autoscout24.nl/informeren/autotests/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20442,
+    "url": "https://www.autoscout24.nl/informeren/autotests/lexus/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20443,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mclaren/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20444,
+    "url": "https://www.autoscout24.nl/informeren/autotests/ssangyong/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20445,
+    "url": "https://www.autoscout24.nl/informeren/autotests/ford/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20446,
+    "url": "https://www.autoscout24.nl/informeren/autotests/kgm/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20447,
+    "url": "https://www.autoscout24.nl/informeren/autotests/leapmotor/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20448,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mg/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20449,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volvo/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20450,
+    "url": "https://www.autoscout24.nl/informeren/autotests/aiways/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20452,
+    "url": "https://www.autoscout24.nl/informeren/autotests/citroen/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20453,
+    "url": "https://www.autoscout24.nl/informeren/autotests/morgan/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20454,
+    "url": "https://www.autoscout24.nl/informeren/autotests/suzuki/vitara/review-suzuki-e-vitara-eerste-elektrische-suv-van-suzuki-bewijst-zich/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20455,
+    "url": "https://www.autoscout24.nl/informeren/autotests/porsche/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20456,
+    "url": "https://www.autoscout24.nl/informeren/autotests/lancia/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20457,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mini/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20458,
+    "url": "https://www.autoscout24.nl/informeren/autotests/dacia/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20459,
+    "url": "https://www.autoscout24.nl/informeren/autotests/peugeot/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20460,
+    "url": "https://www.autoscout24.nl/informeren/autotests/renault/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20461,
+    "url": "https://www.autoscout24.nl/informeren/autotests/ferrari/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20462,
+    "url": "https://www.autoscout24.nl/informeren/autotests/seres/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20463,
+    "url": "https://www.autoscout24.nl/informeren/autotests/smart/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20464,
+    "url": "https://www.autoscout24.nl/informeren/autotests/nio/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20466,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mitsubishi/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20467,
+    "url": "https://www.autoscout24.nl/informeren/autotests/abarth/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20468,
+    "url": "https://www.autoscout24.nl/informeren/autotests/lotus/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20469,
+    "url": "https://www.autoscout24.nl/informeren/autotests/honda/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20470,
+    "url": "https://www.autoscout24.nl/informeren/autotests/fiat/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20471,
+    "url": "https://www.autoscout24.nl/informeren/autotests/lynk-and-co/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "id": 20473,
+    "url": "https://www.autoscout24.nl/informeren/autotests/cupra/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autotests/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4dprcAQCcAsqDcdXjJOAC/88e6cbe6054de18751b653cfde3baeec/lynk-co-08-more-2026.jpg?w\u003d1100",
+    "alt": "Lynk \u0026 Co 08 (2026)",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/IMy3UlPLSPxQJ43NTgqE0/34a6294e3772440549aebc41d4e104db/Autorenfoto_Armin_Hoyer.jpg?w\u003d130",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6QrxRIGO4wQohPGqv1ExW3/7a647efa3acc830c9f09a4764411a367/vw-id-polo-2026-titel-tv.jpg?w\u003d460",
+    "alt": "VW ID Polo 2026",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/TWvU85ndS7k5qfHXYwkAj/64fe0526a90b152cb4067aa8bdb2c234/vogelhuber.avif",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/012ILYaqYbxYb5iRsLgbKE/d119060df57457deb9caf1a2b1972ba1/audi-q4-etron-2026.jpg?w\u003d460",
+    "alt": "Audi Q4 etron 2026",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/TWvU85ndS7k5qfHXYwkAj/64fe0526a90b152cb4067aa8bdb2c234/vogelhuber.avif",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/moFZgyoSI26IACqKcKKlh/9b05581d66fd8509de9b2004e7782d53/bmw-7er-g70-facelift.jpg?w\u003d460",
+    "alt": "bmw-7er-g70-facelift",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/TWvU85ndS7k5qfHXYwkAj/64fe0526a90b152cb4067aa8bdb2c234/vogelhuber.avif",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4GNGBbc1RBf21b9fDW1EIy/21839a2a19994f63c5b35811782d64e8/Mercedes-Benz_C-Klasse_EQ.jpg?w\u003d460",
+    "alt": "Mercedes-Benz C-Klasse EQ",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/Rt7oJEPDqUWuYy6Kvr8eR/a82c00d9997ced2df786c14de5128fda/boegel-avatar.jpg?w\u003d130",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4NozqqUEPIFZm99OOGvwAZ/fd006dd5fe74299849fdf21fb1f132c3/vw-id3neo-hero.jpg?w\u003d460",
+    "alt": "vw-id3neo-hero",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/TWvU85ndS7k5qfHXYwkAj/64fe0526a90b152cb4067aa8bdb2c234/vogelhuber.avif",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/kn6Ajt9Yd68qkiLY4BEwX/c50a44bbf3723faa08e594f29e582508/Cupra_Raval_Header.jpg?w\u003d460",
+    "alt": "Cupra Raval Header",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/Rt7oJEPDqUWuYy6Kvr8eR/a82c00d9997ced2df786c14de5128fda/boegel-avatar.jpg?w\u003d130",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/lVxIpsNPKziSyEEeIBgsY/110030fb0085375d5486f4b7b074c024/Ford_Ranger_PHEV_header.jpg?w\u003d460",
+    "alt": "Ford Ranger PHEV header",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3Gz8lccbY9s4d9VwwbQjKe/38b9e6b2425e5ec572667c74dfa56764/Suzuki_eVitara_header.jpg?w\u003d460",
+    "alt": "Suzuki eVitara header",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/64JW5n1AB02h5WopCbTiRZ/de634c2e5096fca8c8141acfcb4f6882/Opel_Grandland_AWD_header.jpg?w\u003d460",
+    "alt": "Opel Grandland AWD header",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/brands/toyota-new.png",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/brands/volkswagen-new.png",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/brands/honda-new.png",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/brands/hyundai-new.png",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/brands/ford-new.png",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/brands/byd-new.png",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/brands/tesla-new.png",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/brands/bmw-new.png",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/brands/mercedes-new.png",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/brands/nissan-new.png",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/brands/suzuki-new.png",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/brands/opel-new.png",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Autotests en beoordelingen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autotests/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/brandboxes/eu/brandboxv2/cars-full-width-v2/size_xs@2x.jpg",
+    "alt": "Het grootste online autoplatform van Europa.",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/bodyTypes/eu/cars/suv_1x_car.png",
+    "alt": "SUV \u0026 Pick-up",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/bodyTypes/eu/cars/sedan_1x_car.png",
+    "alt": "Sedan",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/bodyTypes/eu/cars/station-wagon_1x_car.png",
+    "alt": "Stationwagen",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/bodyTypes/eu/cars/compact_1x_car.png",
+    "alt": "Hatchback",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/bodyTypes/eu/cars/van_1x_car.png",
+    "alt": "MPV",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/bodyTypes/eu/cars/coupe_1x_car.png",
+    "alt": "Coupé",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/bodyTypes/eu/cars/convertible_1x_car.png",
+    "alt": "Cabrio",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/bodyTypes/eu/cars/transport_1x_car.png",
+    "alt": "Bedrijfswagen",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/oem/logo/volkswagen-logo.png",
+    "alt": "Volkswagen",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/oem/logo/bmw-logo.png",
+    "alt": "BMW",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/oem/logo/mercedes-logo.png",
+    "alt": "Mercedes",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/oem/logo/audi-logo.png",
+    "alt": "Audi",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/oem/logo/toyota-logo.png",
+    "alt": "Toyota",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/oem/logo/ford-logo.png",
+    "alt": "Ford",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/oem/logo/volvo-logo.png",
+    "alt": "Volvo",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/oem/logo/porsche-logo.png",
+    "alt": "Porsche",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/ingressBanner/ingress-banner_1x.png",
+    "alt": "Jouw auto verkopen?",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/328a1509-b8d6-401e-baad-c0d7122586cb_c01621b8-24ac-47fd-a565-7db5d7c62883.jpg/360x270.jpg",
+    "alt": "Mini 1.5 Cooper",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fa831cef-41eb-4b1f-a56a-190d4b82f2d8_0f02f4a4-f181-4047-991f-b85e8544c49b.jpg/360x270.jpg",
+    "alt": "Cooper S E Hybrid ALL4 Classic Trim",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/98b942ab-b580-4073-bb10-eab9aac96965_6139e60d-1608-4049-9d79-885d2f46d529.jpg/360x270.jpg",
+    "alt": "1.4 TFSI CoD Sport Pro Line Cruise | Airco |",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d041f80e-dadd-4d6b-bc35-066d44d3bb83_e3316b57-3df0-42f4-a7a1-c3a583acddcf.jpg/360x270.jpg",
+    "alt": "1.4 e-Hybrid 245 pk VZ Performance Copper Edition",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3dbb11ce-7d9f-4b3c-baa2-f5e41078977b_c26af408-a10b-4dcc-ace6-98be73fb7881.jpg/360x270.jpg",
+    "alt": "1.2 PureTech Performance Line * CARPLAY * NAVI * A",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/726ac82d-d605-4d24-9594-74bd90fa3ec0_cbe8043c-1bf6-40aa-afe0-11dd212a2475.jpg/360x270.jpg",
+    "alt": "1.0 Hybrid ST-Line 1e Eigenaar | Volledig Onderh |",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ef51ae0c-cc30-45d3-b103-6b0cc9cd6185_1fc499c1-7c41-4d61-bd42-5cedf754ac60.jpg/360x270.jpg",
+    "alt": "1.4 eHybrid |PANO|STOELVW|ADAPTIEF|STUURVW|CARPLAY",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/76557dfb-d1c3-4e2d-bca8-18982a4ca26a_8d51fcec-ba6e-48cb-801a-b2a767cd73d5.jpg/360x270.jpg",
+    "alt": "1.3 DIG-T Automaat Cruise Clima Trekhaak Panorama",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f5c85e35-ffdf-4311-a785-fe5bf90f80f5_980da051-461f-4dc9-b870-b85cbd4e6a80.jpg/360x270.jpg",
+    "alt": "3.0 TDI Quattro. ProL. PLUS, Xenon, Leder, AUT",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/badd8c76-b478-4323-b2e5-7ea7ba8f68ab_6f769f64-ae31-4736-90cf-1c41246133d4.jpg/360x270.jpg",
+    "alt": "1.4-16V OPC-line Cosmo Pano Clima Navi Stoelverwar",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/622edb06-659d-4835-b7af-e88135cb6e63_a2db7c4f-8d07-447e-89ea-234e5067291b.jpg/360x270.jpg",
+    "alt": "7-serie 745e High Executive - NL AUTO - M PAKKET -",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/dc67018e-5593-410a-b192-f8b365259a05_03b9955a-989a-4c49-8570-c919d2a31299.jpg/360x270.jpg",
+    "alt": "1.2 Turbo 120 Jaar Edition 2e Eigenaar | Dealer On",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9f302d67-3952-4f23-b84e-72e6a1e67f22_6128fe9c-cdac-4e61-aa31-c8a6ce91f9f4.jpg/360x270.jpg",
+    "alt": "1.0 TSI Highline NAVI | PDC | NETTE STAAT",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a5141c6f-abff-4b2a-a140-1940a2084321_74b5e4b8-0c44-4d82-ab1a-f630cf39bc53.jpg/360x270.jpg",
+    "alt": "1.2 TSI TEAM BlueMotion **5DRS-AIRCO-CRUISECNTRL**",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2d0d8a48-6534-4bb5-8679-d628fa1f1619_79d4a26f-7947-4b76-bc91-ee2e727c823c.jpg/360x270.jpg",
+    "alt": "Mini 1.5 136pk Clima | Navi | Led",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c5866fdc-1d37-4a57-9c4d-eb31d1df56f4_a60b0398-d9a5-46d6-bb5f-d243b52cb18b.jpg/360x270.jpg",
+    "alt": "1.8 Hybrid Active",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-home/images/newsletter/newsletter_car2x.png",
+    "alt": "Promotional image for car newsletter signup section",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7oBGurBAQHoMTp5mNHvHIW/0d59e6ce560b2bca330860b578e8d31d/DO-1097_SEO_Homepage_Imagery_Update_gebrauchtwagen_suche_665267.jpg?w\u003d768\u0026fit\u003dfill",
+    "alt": "",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6Od8lFN2iq2prwCyaQtolV/ebe2cae6681f833476a25d48e8a352a9/DO-1097_SEO_Homepage_Imagery_Update_auto_verkauf_5604714__1_.jpg?w\u003d768\u0026fit\u003dfill",
+    "alt": "",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4c5ApZitl8XDX2xuK6FhEZ/fd1ebe6c3caf40d1d1c20cab254cacd1/DO-1097_SEO_Homepage_Imagery_Update_entscheidungsfindung_4901273.jpg?w\u003d768\u0026fit\u003dfill",
+    "alt": "",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "AutoScout24 – Occasion of nieuwe auto kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/#main-target"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/caravan/images/hero/default-banner-wohnwagen-l-02.jpg",
+    "alt": "Caravans",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/788745b1-79a8-4b41-bed3-f47e876e64fa_fca3c31e-1d55-4336-a622-f5674fa34464.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ffb40e85-623d-4219-b3b7-82c76ceefd43_bdf1894b-7e56-493a-8c30-eeb05a368b19.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5dfe0570-3542-4823-857e-367aafc1c62c_2bec613c-265f-4480-8206-f5543bfe24d8.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a31d6f3f-0a80-4879-a223-5d614ec35d84_5f6e0b9a-45c3-4218-9fa9-fd5c6d4a327c.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/459ebc6d-37f5-40aa-b57e-b8589a716aed_276d39c1-36d6-48b1-af84-7264c209d894.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6e7a1588-e380-49f2-a9d5-ef10df91ebac_cd911227-cb60-4db1-a1e9-5ce84790e071.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/50258ade-6507-4560-9816-62401df1b9ae_0b0efb50-970d-4764-a845-06eeaf282b42.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ba5aeeaa-6e9c-4f77-b4af-bbe3e0df313b_2be6f5a2-c940-49a5-bd67-745a544b0b81.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b6c79bf2-9059-4c0a-aafc-66d0d483bb84_d81803fb-7eef-4010-9421-db1a4f95a477.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/788745b1-79a8-4b41-bed3-f47e876e64fa_fca3c31e-1d55-4336-a622-f5674fa34464.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ffb40e85-623d-4219-b3b7-82c76ceefd43_bdf1894b-7e56-493a-8c30-eeb05a368b19.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5dfe0570-3542-4823-857e-367aafc1c62c_2bec613c-265f-4480-8206-f5543bfe24d8.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a31d6f3f-0a80-4879-a223-5d614ec35d84_5f6e0b9a-45c3-4218-9fa9-fd5c6d4a327c.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/459ebc6d-37f5-40aa-b57e-b8589a716aed_276d39c1-36d6-48b1-af84-7264c209d894.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6e7a1588-e380-49f2-a9d5-ef10df91ebac_cd911227-cb60-4db1-a1e9-5ce84790e071.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/50258ade-6507-4560-9816-62401df1b9ae_0b0efb50-970d-4764-a845-06eeaf282b42.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ba5aeeaa-6e9c-4f77-b4af-bbe3e0df313b_2be6f5a2-c940-49a5-bd67-745a544b0b81.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b6c79bf2-9059-4c0a-aafc-66d0d483bb84_d81803fb-7eef-4010-9421-db1a4f95a477.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Tweedehands caravans te koop - caravans occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/caravans/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4XxlHbyOq74m2RjcIt4ZWn/60e4bad4af8102b0c5604a3bd15f3aee/kia-stonic-gt-line-banner.jpeg?w\u003d1100",
+    "alt": "kia-stonic-gt-line-banner",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4XxlHbyOq74m2RjcIt4ZWn/60e4bad4af8102b0c5604a3bd15f3aee/kia-stonic-gt-line-banner.jpeg?w\u003d1100",
+    "alt": "kia-stonic-gt-line-banner",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4EF2aB7q5otjZhBSd8HzqX/0b2684493e7f1db8039d8d0acb645155/AS24-kia_banner.jpg?w\u003d1100",
+    "alt": "Kia EV9 (2023) banner",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2sLrBZdsxXSmYPgoSQ88t3/1a824ab4b31c1318e710890b64b089d9/AS24-kia_banner.jpg?w\u003d1100",
+    "alt": "Kia Niro HEV (2022) banner",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/zECg5JcBOMOmeI3U3WnPN/9925808aa8d5a02c78221282fa759943/kia-ceed-sw_banner.jpeg?w\u003d1100",
+    "alt": "AS24 Ceed SW banner",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7129AE2T6F2Lqn9OwDsC7y/e9f11dfa402461d06cac0ff1307cb89f/kia-sorento_banner.jpg?w\u003d1100",
+    "alt": "AS24 Kia Sorento banner",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7iR8WvUj6ujrw3dmlqzDIz/e411831b344a4f3290819b9677050bc4/kia-xceed-phev-2020_01.jpeg?w\u003d1100",
+    "alt": "AS24 Kia XCeed banner",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7nJwN3Ff3JzzFgaERjYNVX/aa311b936597d0cca2389c941aeeb2b6/Kia-EV6-2022.jpg?w\u003d1100",
+    "alt": "Kia EV6 2022",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1JbMnDhvDUR4Z9Fvt3e7Ei/3957aeded7f6a48dd43d99319f7f7273/KIA-EV6-GT-22_1_.jpg?w\u003d1100",
+    "alt": "KIA-EV6-GT-22(1)",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/16m81ws8WT77Kj9A8n3zTD/2904ee20b3cc9e437b1c2dd0135fda53/KIA_E-SOUL__4_.jpg?w\u003d1100",
+    "alt": "kia-e-soul-front",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4Lird8eC18StOGMIKz7iTL/997171dfc65d04bef68c26b581d671f6/kia-picanto-side.jpeg?w\u003d1100",
+    "alt": "kia-picanto-side",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1tlIhPCOUHCjaZ0P3NKK43/4b237431350f22a53bb090a38dbd3f85/kia-rio-side.jpg?w\u003d1100",
+    "alt": "kia-rio-side",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3rKXZtVNyy2M7yFGQN0ClU/9bb969cacf388ffcd140b216697958c3/Kia_Carens_Front_2.jpeg?w\u003d1100",
+    "alt": "Kia Carens",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3bsGcx2X0GeGyEKAOuE892/60f215f4b21be80cf4aa687cde727f4f/kia-carnival-front.jpeg?w\u003d1100",
+    "alt": "Kia Carnival",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5IkYCvhbUINwFdPHrC19GZ/2a62af33fa2539c3bc9a1f01dbfecd82/Kia_Ceed_shot_a01.jpeg?w\u003d1100",
+    "alt": "Kia Ceed",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7AOX8V2xBBSZXwMsOYJlST/0986daf3add4f512fd0a6d105171aec8/kia-ceed-sw-l-01.jpg?w\u003d1100",
+    "alt": "Kia Ceed Sportswagon",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2YAkOZuBsf8QqQRXoaMAXZ/14245c798f32ea1b509d387656190ed8/kia-cerato-front.jpg?w\u003d1100",
+    "alt": "Kia Cerato",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/27J2lZMdkY2xynEeYTz4K9/37b5ae4eee5b683b23714868c70580fa/Kia_EV3_1.jpg?w\u003d1100",
+    "alt": "Kia EV3 ",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/36XlGjfZmzlhQKtMqe0o6H/bcdde12e29ff583367013b0493d23b49/Kia_EV6_2.jpg?w\u003d1100",
+    "alt": "Kia EV6",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3wdc4TECqiPtlDt1jfW3Pd/6aec1ed6bfbe0c5a14001e6bb35c8ce4/kia-joice-l-01.jpg?w\u003d1100",
+    "alt": "Kia Joice",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e632f941-dda6-4a33-9088-e2c89ec3b269_fae30a37-d532-4d7a-b7bc-9f17944c1f32.jpg/360x270.jpg",
+    "alt": "1.2 CVVT Super Pack Climate/Cruise/Keyless/Pdc/El.",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/644f15db-9a82-4a0e-8178-717fd3aa5b56_38554840-96ee-4b1a-843d-6e9b27d07f6a.jpg/360x270.jpg",
+    "alt": "Plus 77.4 kWh | SOH 100% | Warmtepomp | Leder | Ap",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/26fdc878-a05f-4674-b251-1470d77dd029_49ded58f-b36c-456e-82cc-a6f7c94433bc.jpg/360x270.jpg",
+    "alt": "1.6 GDI DynamicLine Trekhaak | Cruise | Camera",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c8226187-d055-4eed-90ea-55471133da8a_aeb3e0fc-9e72-4f04-8949-b10bdbb2c30f.jpg/360x270.jpg",
+    "alt": "1.2 CVVT PLUS PACK I 5-DEURS I TREKHAAK I AIRCONDI",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e7d6125b-99fc-4b97-9a9d-2e944335158a_d5fe74d4-18f4-4b6a-ad3e-6488b9fa4910.jpg/360x270.jpg",
+    "alt": "1.4 CVVT DynamicLine",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8cf7988f-fa37-4552-90e8-4917b91b5585_48154011-257e-4212-a461-04cb8bfa2d3f.jpg/360x270.jpg",
+    "alt": "2.0i CVVT X-ception Trekhaak Side bars Bullbar Gar",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/65930683-e7f9-4292-914f-925a6771ca28_1a71a240-6642-4b9d-80de-73526cfc30c6.jpg/360x270.jpg",
+    "alt": "1.0 T-GDi 100pk DynamicLine",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/53d4fda1-dfd0-4d1e-aa80-38e8442758b8_27a7e2e7-e555-4fb2-b54f-d29e51d9be76.jpg/360x270.jpg",
+    "alt": "1.6 GDi PHEV ExecutiveLine / Stoel/stuurverwr. / A",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bd5a15f0-7649-43ad-b588-37af01ef25a1_61b55916-b761-4f2c-b5bc-2f5c2513bf58.jpg/360x270.jpg",
+    "alt": "1.6 T-GDi 177pk ECOdynamics DynamicLine",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b0247b33-7bfe-4320-a204-1cb3386f19da_9e71fe85-1cd9-4f32-a6a1-93ef82b8aaa0.jpg/360x270.jpg",
+    "alt": "1.4 CVVT Seven panodak airco/ecc navigatie/camera",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a2916b73-245a-4db6-a2c2-3a95c6c798d8_95e172a5-047b-4788-bb8c-5e88871614a6.jpg/360x270.jpg",
+    "alt": "Sportswagon 1.0 T-GDi DynamicLine | ACC | Camera |",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/51c217e1-74f0-4e1c-886b-5a8d9b3c1ee1_0f825ba2-c50f-4429-8856-10ea244405cd.jpg/360x270.jpg",
+    "alt": "1.0 T-GDi GT-PlusLine | LED | Camera | CarPlay | N",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/546be910-130d-4b39-8c66-e8e584c0cf13_10779f2f-10b5-4ec5-bdc0-385b35fb0e7a.jpg/360x270.jpg",
+    "alt": "1.0 DPi DynamicLine | CarPlay | Camera | Airco | C",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fb9bdbb8-823a-43d8-b9ce-4135ace2d6b2_c9ac60cd-c20f-49ae-9c7c-290685486e24.jpg/360x270.jpg",
+    "alt": "2.0 CVVT X-ecutive CLIMA TREKHAAK PDC RIJDT GOED N",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/693f30f6-b067-493b-8402-a55ae4478c31_070691ae-5acc-4cda-955a-e216d88c9be3.jpg/360x270.jpg",
+    "alt": "Sportswagon 1.5 T-GDi DynamicPlusLine CAMERA CARPL",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0ba424ce-ac7c-41ab-8a31-d45a5f6e96ce_fe601201-0328-40c4-95ea-4742e351d3c2.jpg/360x270.jpg",
+    "alt": "1.0 TGDI Airco Apple Carplay Android Auto Navi Cam",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/78de6be9-dd51-4600-8bf7-39801fe1c275_ae5812dc-d948-46cd-8354-0299db8a594c.jpg/360x270.jpg",
+    "alt": "GT AWD 77.4 kWh | Panoramadak | Sportstoelen | 98,",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a68614a1-e6ec-43ac-8307-4b867a3a6df6_646339ea-51eb-42a2-856c-1731be675342.jpg/360x270.jpg",
+    "alt": "1.6 GDI BusinessLine | Automaat | Clima | Cruise |",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3e06dd52-38ad-4b49-a80f-c6b2ae6b7f20_37bc9d67-e6fb-4fec-b3e3-6542b6d82543.jpg/360x270.jpg",
+    "alt": "1.6 T-GDi Plug-in Hybrid AWD DynamicLine",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d57c520b-6393-4d0c-ad14-80f9286e22ad_36bbd68f-cda1-44a0-8895-4719f99aa3fb.jpg/360x270.jpg",
+    "alt": "1.6 T-GDI Hybrid ExecutiveLine 7p. | Pano | Sfeer",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3DXlhhAkSFZHmsHOHlvweR/eb42ed5fbc66e5d29dd3be6b97c14244/Kia-Sportage-2022-Front.jpg?w\u003d1100",
+    "alt": "kia-sportage-2022-front",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/796Frp5hQ2aOHSbXGZUTDa/b6893d462de24be6529ae1ac8945c051/kia-stonic-gt-line-front.jpeg?w\u003d1100",
+    "alt": "kia-stonic-gt-line-front",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Alle informatie over het automerk Kia bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3V7vaCvUWuJBvKkxHIiqJ8/a4254cd2d658717506e7e09049eac3c2/toyota-prius-plug-in-hybrid-2024-front-seite.jpg?w\u003d1100",
+    "alt": "",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4ioQpHV5Oo7bl3tEHc9xOM/9b585c806c7a54313ac05a073e0b214d/toyota-prius-218-2023-1.jpg?fm\u003dwebp\u0026w\u003d1100",
+    "alt": "toyota-prius-218-2023-1",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6nFPGLcJVahzuuz6dHjuFN/25e0a3cf010fd6dca39fbc3936727e5c/honda-cr-v-hybrid-front.jpeg?fm\u003dwebp\u0026w\u003d1100",
+    "alt": "honda-cr-v-hybrid-front",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4IGMp6peIXOZcuWGtAtegr/2f511a37c33f5cc3a5d9a632033c6448/hyundai-ioniq-hybrid-front.jpeg?fm\u003dwebp\u0026w\u003d1100",
+    "alt": "hyundai-ioniq-hybrid-front",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2INpf41qNtBfLn9GnnqVrP/fade3f0643a6bcb44633d934e5a044ed/Ford_Kuga_Plug-in-Hybrid.jpg?fm\u003dwebp\u0026w\u003d1100",
+    "alt": "Ford Kuga Plug-in-Hybrid",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1WpQgfeOOSeG7WYQNNTSWb/58732fee74f329bf833c402e038d369b/Lexus_UX_2019_.jpeg?fm\u003dwebp\u0026w\u003d1100",
+    "alt": "Lexus UX 2019",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7mFeb6CJjZaZQgC76o2bjV/a97f73a53d0ee9829fdd075e07d0d8e0/AS24-kia_01.jpeg?fm\u003dwebp\u0026w\u003d1100",
+    "alt": "Kia Niro EV (2022) statisch, vooraanzicht",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/illustrations/social-links/facebook.svg",
+    "alt": "Facebook",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/illustrations/social-links/whatsup.svg",
+    "alt": "WhatsApp",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/illustrations/social-links/email.svg",
+    "alt": "Email",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/illustrations/social-links/link.svg",
+    "alt": "Copy link",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/18XX42xzRxjhEtcPxKJZST/a92fa03eb31a20603af533c36fc25317/Small-21082-MaseratiGranTurismoFolgoreCopperGlance.jpg?w\u003d1100",
+    "alt": "maserati-granturismo-folgore-front",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5URhveuFGwvDHmI6vuFoHC/f1df100f1ab98c692f2c4bec48d8de1b/Tesla-Model-3-Performance-2025__2_.jpg?w\u003d1100",
+    "alt": "Tesla-Model-3-Performance-2025 (2)",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6VfA4HzSkTGnVcbWfFPpBD/0ef904539067972edfa714981f3146d9/_BST-118__Volvo-EX30-2025.jpg?w\u003d1100",
+    "alt": "(BST-118) Volvo-EX30-2025",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/illustrations/seo-grid/car.svg",
+    "alt": "",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/illustrations/seo-grid/moto.svg",
+    "alt": "",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/illustrations/seo-grid/car-search.svg",
+    "alt": "",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-contentful-pages/illustrations/seo-grid/electric.svg",
+    "alt": "",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Beste hybride auto - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-hybride-auto/"
+  },
   {
     "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
     "alt": "",
