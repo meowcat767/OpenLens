@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1215,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Text",
+    "title": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Development Tools » typing — Support for type hints | Theme Auto Light Dark | typing — Support for type hints¶ Added in version 3.5. Source code: Lib/typing.py Note The Python runtime does not enforce function and variable type annotations. They can be used by third party tools such as type checkers, IDEs, linters, etc. This module provides runtime support for type hints. Consider the function below: def surface_area_of_cube(edge_length: float) -\u003e str:\n    return f\"The surface area of the cube is {6 * edge_length ** 2}.\"\n The function surface_area_of_cube takes an argument expected to be an instance of float, as indicated by the type hint edge_length: float. The function is expected to return an instance of str, as indicated by the -\u003e str hint. While type hints can be simple classes like float or str, they can also be more complex. The typing module provides a vocabulary of more advanced type hints. New features are frequently added to the typing module. The typing_extensions package provides backports of these new features to older versions of Python. See also Typing cheat sheet A quick overview of type hints (hosted at the mypy docs) Type System Reference section of the mypy docs The Python typing system is standardised via PEPs, so this reference should broadly apply to most Python type checkers. (Some parts may still be specific to mypy.) Static Typing with Python Type-checker-agnostic documentation written by the community detailing type system features, useful typing related tools and typing best practices. Specification for the Python Type System¶ The canonical, up-to-date specification of the Python type system can be found at Specification for the Python type system. Type aliases¶ A type alias is defined using the type statement, which creates an instance of TypeAliasType. In this example, Vector and list[float] will be treated equivalently by static type checkers: type Vector \u003d list[float]\n\ndef scale(scalar: float, vector: Vector) -\u003e Vector:\n    return [scalar * num for num in vector]\n\n# passes type checking; a list of floats qualifies as a Vector.\nnew_vector \u003d scale(2.0, [1.0, -4.2, 5.4])\n Type aliases are useful for simplifying complex type signatures. For example: from collections.abc import Sequence\n\ntype ConnectionOptions \u003d dict[str, str]\ntype Address \u003d tuple[str, int]\ntype Server \u003d tuple[Address, ConnectionOptions]\n\ndef broadcast_message(message: str, servers: Sequence[Server]) -\u003e None:\n    ...\n\n# The static type checker will treat the previous type signature as\n# being exactly equivalent to this one.\ndef broadcast_message(\n    message: str,\n    servers: Sequence[tuple[tuple[str, int], dict[str, str]]]\n) -\u003e None:\n    ...\n The type statement is new in Python 3.12. For backwards compatibility, type aliases can also be created through simple assignment: Vector \u003d list[float]\n Or marked with TypeAlias to make it explicit that this is a type alias, not a normal variable assignment: from typing import TypeAlias\n\nVector: TypeAlias \u003d list[float]\n NewType¶ Use the NewType helper to create distinct types: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\nsome_id \u003d UserId(524313)\n The static type checker will treat the new type as if it were a subclass of the original type. This is useful in helping catch logical errors: def get_user_name(user_id: UserId) -\u003e str:\n    ...\n\n# passes type checking\nuser_a \u003d get_user_name(UserId(42351))\n\n# fails type checking; an int is not a UserId\nuser_b \u003d get_user_name(-1)\n You may still perform all int operations on a variable of type UserId, but the result will always be of type int. This lets you pass in a UserId wherever an int might be expected, but will prevent you from accidentally creating a UserId in an invalid way: # \u0027output\u0027 is of type \u0027int\u0027, not \u0027UserId\u0027\noutput \u003d UserId(23413) + UserId(54341)\n Note that these checks are enforced only by the static type checker. At runtime, the statement Derived \u003d NewType(\u0027Derived\u0027, Base) will make Derived a callable that immediately returns whatever parameter you pass it. That means the expression Derived(some_value) does not create a new class or introduce much overhead beyond that of a regular function call. More precisely, the expression some_value is Derived(some_value) is always true at runtime. It is invalid to create a subtype of Derived: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\n# Fails at runtime and does not pass type checking\nclass AdminUserId(UserId): pass\n However, it is possible to create a NewType based on a ‘derived’ NewType: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\nProUserId \u003d NewType(\u0027ProUserId\u0027, UserId)\n and typechecking for ProUserId will work as expected. See PEP 484 for more details. Note Recall that the use of a type alias declares two types to be equivalent to one another. Doing type Alias \u003d Original will make the static type checker treat Alias a",
+    "scrapedAt": "2026-05-09 01:10:38.998166"
+  },
+  {
+    "id": 1214,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read",
+    "title": "wave — Read and write WAV files — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Multimedia Services » wave — Read and write WAV files | Theme Auto Light Dark | wave — Read and write WAV files¶ Source code: Lib/wave.py The wave module provides a convenient interface to the Waveform Audio “WAVE” (or “WAV”) file format. Only uncompressed PCM encoded wave files are supported. Changed in version 3.12: Support for WAVE_FORMAT_EXTENSIBLE headers was added, provided that the extended format is KSDATAFORMAT_SUBTYPE_PCM. The wave module defines the following function and exception: wave.open(file, mode\u003dNone)¶ If file is a string, open the file by that name, otherwise treat it as a file-like object. mode can be: \u0027rb\u0027 Read only mode. \u0027wb\u0027 Write only mode. Note that it does not allow read/write WAV files. A mode of \u0027rb\u0027 returns a Wave_read object, while a mode of \u0027wb\u0027 returns a Wave_write object. If mode is omitted and a file-like object is passed as file, file.mode is used as the default value for mode. If you pass in a file-like object, the wave object will not close it when its close() method is called; it is the caller’s responsibility to close the file object. The open() function may be used in a with statement. When the with block completes, the Wave_read.close() or Wave_write.close() method is called. Changed in version 3.4: Added support for unseekable files. exception wave.Error¶ An error raised when something is impossible because it violates the WAV specification or hits an implementation deficiency. Wave_read Objects¶ class wave.Wave_read¶ Read a WAV file. Wave_read objects, as returned by open(), have the following methods: close()¶ Close the stream if it was opened by wave, and make the instance unusable. This is called automatically on object collection. getnchannels()¶ Returns number of audio channels (1 for mono, 2 for stereo). getsampwidth()¶ Returns sample width in bytes. getframerate()¶ Returns sampling frequency. getnframes()¶ Returns number of audio frames. getcomptype()¶ Returns compression type (\u0027NONE\u0027 is the only supported type). getcompname()¶ Human-readable version of getcomptype(). Usually \u0027not compressed\u0027 parallels \u0027NONE\u0027. getparams()¶ Returns a namedtuple() (nchannels, sampwidth, framerate, nframes, comptype, compname), equivalent to output of the get*() methods. readframes(n)¶ Reads and returns at most n frames of audio, as a bytes object. rewind()¶ Rewind the file pointer to the beginning of the audio stream. The following two methods are defined for compatibility with the old aifc module, and don’t do anything interesting. getmarkers()¶ Returns None. Deprecated since version 3.13, will be removed in version 3.15: The method only existed for compatibility with the aifc module which has been removed in Python 3.13. getmark(id)¶ Raise an error. Deprecated since version 3.13, will be removed in version 3.15: The method only existed for compatibility with the aifc module which has been removed in Python 3.13. The following two methods define a term “position” which is compatible between them, and is otherwise implementation dependent. setpos(pos)¶ Set the file pointer to the specified position. tell()¶ Return current file pointer position. Wave_write Objects¶ class wave.Wave_write¶ Write a WAV file. Wave_write objects, as returned by open(). For seekable output streams, the wave header will automatically be updated to reflect the number of frames actually written. For unseekable streams, the nframes value must be accurate when the first frame data is written. An accurate nframes value can be achieved either by calling setnframes() or setparams() with the number of frames that will be written before close() is called and then using writeframesraw() to write the frame data, or by calling writeframes() with all of the frame data to be written. In the latter case writeframes() will calculate the number of frames in the data and set nframes accordingly before writing the frame data. Changed in version 3.4: Added support for unseekable files. Wave_write objects have the following methods: close()¶ Make sure nframes is correct, and close the file if it was opened by wave. This method is called upon object collection. It will raise an exception if the output stream is not seekable and nframes does not match the number of frames actually written. setnchannels(n)¶ Set the number of channels. getnchannels()¶ Return the number of channels. setsampwidth(n)¶ Set the sample width to n bytes. getsampwidth()¶ Return the sample width in bytes. setframerate(n)¶ Set the frame rate to n. Changed in version 3.2: A non-integral input to this method is rounded to the nearest integer. getframerate()¶ Return the frame rate. setnframes(n)¶ Set the number of frames to n. This will be changed later if the number of frames actually written is different (this update attempt will raise an error if the output stream is not seekable). getnframes()¶ Return the number of audio frames written so far",
+    "scrapedAt": "2026-05-09 01:10:37.755022"
+  },
+  {
+    "id": 1213,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.IsolatedAsyncioTestCase",
+    "title": "unittest — Unit testing framework — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Development Tools » unittest — Unit testing framework | Theme Auto Light Dark | unittest — Unit testing framework¶ Source code: Lib/unittest/__init__.py (If you are already familiar with the basic concepts of testing, you might want to skip to the list of assert methods.) The unittest unit testing framework was originally inspired by JUnit and has a similar flavor as major unit testing frameworks in other languages. It supports test automation, sharing of setup and shutdown code for tests, aggregation of tests into collections, and independence of the tests from the reporting framework. To achieve this, unittest supports some important concepts in an object-oriented way: test fixture A test fixture represents the preparation needed to perform one or more tests, and any associated cleanup actions. This may involve, for example, creating temporary or proxy databases, directories, or starting a server process. test case A test case is the individual unit of testing. It checks for a specific response to a particular set of inputs. unittest provides a base class, TestCase, which may be used to create new test cases. test suite A test suite is a collection of test cases, test suites, or both. It is used to aggregate tests that should be executed together. test runner A test runner is a component which orchestrates the execution of tests and provides the outcome to the user. The runner may use a graphical interface, a textual interface, or return a special value to indicate the results of executing the tests. See also Module doctest Another test-support module with a very different flavor. Simple Smalltalk Testing: With Patterns Kent Beck’s original paper on testing frameworks using the pattern shared by unittest. pytest Third-party unittest framework with a lighter-weight syntax for writing tests. For example, assert func(10) \u003d\u003d 42. The Python Testing Tools Taxonomy An extensive list of Python testing tools including functional testing frameworks and mock object libraries. Testing in Python Mailing List A special-interest-group for discussion of testing, and testing tools, in Python. The script Tools/unittestgui/unittestgui.py in the Python source distribution is a GUI tool for test discovery and execution. This is intended largely for ease of use for those new to unit testing. For production environments it is recommended that tests be driven by a continuous integration system such as Buildbot, Jenkins, GitHub Actions, or AppVeyor. Basic example¶ The unittest module provides a rich set of tools for constructing and running tests. This section demonstrates that a small subset of the tools suffice to meet the needs of most users. Here is a short script to test three string methods: import unittest\n\nclass TestStringMethods(unittest.TestCase):\n\n    def test_upper(self):\n        self.assertEqual(\u0027foo\u0027.upper(), \u0027FOO\u0027)\n\n    def test_isupper(self):\n        self.assertTrue(\u0027FOO\u0027.isupper())\n        self.assertFalse(\u0027Foo\u0027.isupper())\n\n    def test_split(self):\n        s \u003d \u0027hello world\u0027\n        self.assertEqual(s.split(), [\u0027hello\u0027, \u0027world\u0027])\n        # check that s.split fails when the separator is not a string\n        with self.assertRaises(TypeError):\n            s.split(2)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    unittest.main()\n A test case is created by subclassing unittest.TestCase. The three individual tests are defined with methods whose names start with the letters test. This naming convention informs the test runner about which methods represent tests. The crux of each test is a call to assertEqual() to check for an expected result; assertTrue() or assertFalse() to verify a condition; or assertRaises() to verify that a specific exception gets raised. These methods are used instead of the assert statement so the test runner can accumulate all test results and produce a report. The setUp() and tearDown() methods allow you to define instructions that will be executed before and after each test method. They are covered in more detail in the section Organizing test code. The final block shows a simple way to run the tests. unittest.main() provides a command-line interface to the test script. When run from the command line, the above script produces an output that looks like this: ...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n Passing the -v option to your test script will instruct unittest.main() to enable a higher level of verbosity, and produce the following output: test_isupper (__main__.TestStringMethods.test_isupper) ... ok\ntest_split (__main__.TestStringMethods.test_split) ... ok\ntest_upper (__main__.TestStringMethods.test_upper) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK\n The above examples show the most commonly used unittest features which are sufficient to meet many everyday testing needs. The rem",
+    "scrapedAt": "2026-05-09 01:10:36.554488"
+  },
+  {
+    "id": 1212,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_READY",
+    "title": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Unicode Objects and Codecs | Theme Auto Light Dark | Unicode Objects and Codecs¶ Unicode Objects¶ Since the implementation of PEP 393 in Python 3.3, Unicode objects internally use a variety of representations, in order to allow handling the complete range of Unicode characters while staying memory efficient. There are special cases for strings where all code points are below 128, 256, or 65536; otherwise, code points must be below 1114112 (which is the full Unicode range). UTF-8 representation is created on demand and cached in the Unicode object. Note The Py_UNICODE representation has been removed since Python 3.12 with deprecated APIs. See PEP 623 for more information. Unicode Type¶ These are the basic Unicode object types used for the Unicode implementation in Python: PyTypeObject PyUnicode_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode type. It is exposed to Python code as str. PyTypeObject PyUnicodeIter_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode iterator type. It is used to iterate over Unicode string objects. type Py_UCS4¶ type Py_UCS2¶ type Py_UCS1¶ Part of the Stable ABI. These types are typedefs for unsigned integer types wide enough to contain characters of 32 bits, 16 bits and 8 bits, respectively. When dealing with single Unicode characters, use Py_UCS4. Added in version 3.3. type PyASCIIObject¶ type PyCompactUnicodeObject¶ type PyUnicodeObject¶ These subtypes of PyObject represent a Python Unicode object. In almost all cases, they shouldn’t be used directly, since all API functions that deal with Unicode objects take and return PyObject pointers. Added in version 3.3. The structure of a particular object can be determined using the following macros. The macros cannot fail; their behavior is undefined if their argument is not a Python Unicode object. PyUnicode_IS_COMPACT(o)¶ True if o uses the PyCompactUnicodeObject structure. Added in version 3.3. PyUnicode_IS_COMPACT_ASCII(o)¶ True if o uses the PyASCIIObject structure. Added in version 3.3. The following APIs are C macros and static inlined functions for fast checks and access to internal read-only data of Unicode objects: int PyUnicode_Check(PyObject *obj)¶ Return true if the object obj is a Unicode object or an instance of a Unicode subtype. This function always succeeds. int PyUnicode_CheckExact(PyObject *obj)¶ Return true if the object obj is a Unicode object, but not an instance of a subtype. This function always succeeds. Py_ssize_t PyUnicode_GET_LENGTH(PyObject *unicode)¶ Return the length of the Unicode string, in code points. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. Py_UCS1 *PyUnicode_1BYTE_DATA(PyObject *unicode)¶ Py_UCS2 *PyUnicode_2BYTE_DATA(PyObject *unicode)¶ Py_UCS4 *PyUnicode_4BYTE_DATA(PyObject *unicode)¶ Return a pointer to the canonical representation cast to UCS1, UCS2 or UCS4 integer types for direct character access. No checks are performed if the canonical representation has the correct character size; use PyUnicode_KIND() to select the right function. Added in version 3.3. PyUnicode_1BYTE_KIND¶ PyUnicode_2BYTE_KIND¶ PyUnicode_4BYTE_KIND¶ Return values of the PyUnicode_KIND() macro. Added in version 3.3. Changed in version 3.12: PyUnicode_WCHAR_KIND has been removed. int PyUnicode_KIND(PyObject *unicode)¶ Return one of the PyUnicode kind constants (see above) that indicate how many bytes per character this Unicode object uses to store its data. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void *PyUnicode_DATA(PyObject *unicode)¶ Return a void pointer to the raw Unicode buffer. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void PyUnicode_WRITE(int kind, void *data, Py_ssize_t index, Py_UCS4 value)¶ Write the code point value to the given zero-based index in a string. The kind value and data pointer must have been obtained from a string using PyUnicode_KIND() and PyUnicode_DATA() respectively. You must hold a reference to that string while calling PyUnicode_WRITE(). All requirements of PyUnicode_WriteChar() also apply. The function performs no checks for any of its requirements, and is intended for usage in loops. Added in version 3.3. Py_UCS4 PyUnicode_READ(int kind, void *data, Py_ssize_t index)¶ Read a code point from a canonical representation data (as obtained with PyUnicode_DATA()). No checks or ready calls are performed. Added in version 3.3. Py_UCS4 PyUnicode_READ_CHAR(PyObject *unicode, Py_ssize_t index)¶ Read a character from a Unicode object unicode, which must be in the “canonical” representation. This is less efficient than PyUnicode_READ() if you do multiple consecutive reads. Added in version 3.3. Py_U",
+    "scrapedAt": "2026-05-09 01:10:35.312811"
+  },
+  {
+    "id": 1211,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_HasOption",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:10:34.075755"
+  },
+  {
     "id": 1210,
     "url": "https://docs.python.org/3/glossary.html#term-immortal",
     "title": "Glossary — Python 3.14.5rc1 documentation",
@@ -8118,26 +8153,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1211,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_HasOption"
-  },
-  {
-    "id": 1212,
-    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_READY"
-  },
-  {
-    "id": 1213,
-    "url": "https://docs.python.org/3/library/unittest.html#unittest.IsolatedAsyncioTestCase"
-  },
-  {
-    "id": 1214,
-    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
-  },
-  {
-    "id": 1215,
-    "url": "https://docs.python.org/3/library/typing.html#typing.Text"
   },
   {
     "id": 1216,
@@ -216890,10 +216905,240 @@ window.searchData = [
     "id": 233938,
     "url": "https://docs.python.org/3/c-api/structures.html#c.PyMemberDef.doc",
     "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 235189,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.getnframes",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235190,
+    "url": "https://docs.python.org/3/library/wave.html#",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235195,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.tell",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235198,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.writeframesraw",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235200,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.getsampwidth",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235202,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.getnframes",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235204,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.setnchannels",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235205,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.getframerate",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235207,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.setpos",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235208,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.setparams",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235209,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Error",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235210,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.getcompname",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235211,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.setcomptype",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235212,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.getsampwidth",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235214,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.getframerate",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235215,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/wave.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235217,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.getparams",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235218,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.getnchannels",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235219,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.close",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235225,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.readframes",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235226,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.getcompname",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235228,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.writeframes",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235229,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.getcomptype",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235231,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/wave.py",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235232,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.tell",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235234,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.setnframes",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235236,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.getcomptype",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235238,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.getparams",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235239,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.close",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235240,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.getnchannels",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235241,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.setsampwidth",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235243,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write.setframerate",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235244,
+    "url": "https://docs.python.org/3/library/wave.html#wave.open",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 235245,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.rewind",
+    "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.Text"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.Text"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "wave — Read and write WAV files — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "wave — Read and write WAV files — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "unittest — Unit testing framework — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/unittest.html#unittest.IsolatedAsyncioTestCase"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "unittest — Unit testing framework — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/unittest.html#unittest.IsolatedAsyncioTestCase"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_READY"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_READY"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_HasOption"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_HasOption"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
