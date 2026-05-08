@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 831,
+    "url": "https://github.com/python/cpython/issues/132168",
+    "title": "Add `__class_getitem__` support to `ctypes.py_object` · Issue #132168 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add __class_getitem__ support to ctypes.py_object #132168 New issue Copy link New issue Copy link Closed Closed Add __class_getitem__ support to ctypes.py_object#132168 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-ctypestopic-typingtype-featureA feature request or enhancementA feature request or enhancement Description brianschubert opened on Apr 6, 2025 Issue body actions Feature or enhancement Proposal: ctypes.py_object is generic in typeshed, but is not subscriptable at runtime. This can be troublesome for end users, since type checkers will prompt them to supply a generic type argument, but doing so will produce a TypeError at runtime: \u003e\u003e\u003e import ctypes\n\u003e\u003e\u003e ctypes.py_object[int]\nTraceback (most recent call last):\n  File \"\u003cpython-input-1\u003e\", line 1, in \u003cmodule\u003e\n    ctypes.py_object[int]\n    ~~~~~~~~~~~~~~~~^^^^^\nTypeError: type \u0027py_object\u0027 is not subscriptable (albeit this is partially mitigated by deferred annotations in 3.14, but TypeError can still pop up if the annotations are ever evaluated) py_object\u0027s typeshed stubs have been stable for a while, and it seems unlikely to be made non-generic in the future. Therefore I propose that __class_getitem__ be added to ctypes.py_object so that it can be subscripted at runtime. Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: python/typeshed#13760 Linked PRs gh-132168: Add __class_getitem__ to ctypes.py_object #132169 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-ctypestopic-typingtype-featureA feature request or enhancementA feature request or enhancement Projects Ctypes issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:55:16.487994"
+  },
+  {
+    "id": 830,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#except",
+    "title": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 8. Compound statements | Theme Auto Light Dark | 8. Compound statements¶ Compound statements contain (groups of) other statements; they affect or control the execution of those other statements in some way. In general, compound statements span multiple lines, although in simple incarnations a whole compound statement may be contained in one line. The if, while and for statements implement traditional control flow constructs. try specifies exception handlers and/or cleanup code for a group of statements, while the with statement allows the execution of initialization and finalization code around a block of code. Function and class definitions are also syntactically compound statements. A compound statement consists of one or more ‘clauses.’ A clause consists of a header and a ‘suite.’ The clause headers of a particular compound statement are all at the same indentation level. Each clause header begins with a uniquely identifying keyword and ends with a colon. A suite is a group of statements controlled by a clause. A suite can be one or more semicolon-separated simple statements on the same line as the header, following the header’s colon, or it can be one or more indented statements on subsequent lines. Only the latter form of a suite can contain nested compound statements; the following is illegal, mostly because it wouldn’t be clear to which if clause a following else clause would belong: if test1: if test2: print(x)\n Also note that the semicolon binds tighter than the colon in this context, so that in the following example, either all or none of the print() calls are executed: if x \u003c y \u003c z: print(x); print(y); print(z)\n Summarizing: compound_stmt: if_stmt\n               | while_stmt\n               | for_stmt\n               | try_stmt\n               | with_stmt\n               | match_stmt\n               | funcdef\n               | classdef\n               | async_with_stmt\n               | async_for_stmt\n               | async_funcdef\nsuite:         stmt_list NEWLINE | NEWLINE INDENT statement+ DEDENT\nstatement:     stmt_list NEWLINE | compound_stmt\nstmt_list:     simple_stmt (\";\" simple_stmt)* [\";\"]\n Note that statements always end in a NEWLINE possibly followed by a DEDENT. Also note that optional continuation clauses always begin with a keyword that cannot start a statement, thus there are no ambiguities (the ‘dangling else’ problem is solved in Python by requiring nested if statements to be indented). The formatting of the grammar rules in the following sections places each clause on a separate line for clarity. 8.1. The if statement¶ The if statement is used for conditional execution: if_stmt: \"if\" assignment_expression \":\" suite\n         (\"elif\" assignment_expression \":\" suite)*\n         [\"else\" \":\" suite]\n It selects exactly one of the suites by evaluating the expressions one by one until one is found to be true (see section Boolean operations for the definition of true and false); then that suite is executed (and no other part of the if statement is executed or evaluated). If all expressions are false, the suite of the else clause, if present, is executed. 8.2. The while statement¶ The while statement is used for repeated execution as long as an expression is true: while_stmt: \"while\" assignment_expression \":\" suite\n            [\"else\" \":\" suite]\n This repeatedly tests the expression and, if it is true, executes the first suite; if the expression is false (which may be the first time it is tested) the suite of the else clause, if present, is executed and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and goes back to testing the expression. 8.3. The for statement¶ The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object: for_stmt: \"for\" target_list \"in\" starred_expression_list \":\" suite\n          [\"else\" \":\" suite]\n The starred_expression_list expression is evaluated once; it should yield an iterable object. An iterator is created for that iterable. The first item provided by the iterator is then assigned to the target list using the standard rules for assignments (see Assignment statements), and the suite is executed. This repeats for each item provided by the iterator. When the iterator is exhausted, the suite in the else clause, if present, is executed, and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and continues with the next item, or with the else clause if there is no next item. The for-loop makes assignments to the variables in the target list. This overwrites all previous assignments to those v",
+    "scrapedAt": "2026-05-09 00:55:14.340118"
+  },
+  {
+    "id": 829,
+    "url": "https://docs.python.org/3/library/functions.html#int",
+    "title": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Functions | Theme Auto Light Dark | Built-in Functions¶ The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order. Built-in Functions A abs() aiter() all() anext() any() ascii() B bin() bool() breakpoint() bytearray() bytes() C callable() chr() classmethod() compile() complex() D delattr() dict() dir() divmod() E enumerate() eval() exec() F filter() float() format() frozenset() G getattr() globals() H hasattr() hash() help() hex() I id() input() int() isinstance() issubclass() iter() L len() list() locals() M map() max() memoryview() min() N next() O object() oct() open() ord() P pow() print() property() R range() repr() reversed() round() S set() setattr() slice() sorted() staticmethod() str() sum() super() T tuple() type() V vars() Z zip() _ __import__() abs(number, /)¶ Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__(). If the argument is a complex number, its magnitude is returned. aiter(async_iterable, /)¶ Return an asynchronous iterator for an asynchronous iterable. Equivalent to calling x.__aiter__(). Note: Unlike iter(), aiter() has no 2-argument variant. Added in version 3.10. all(iterable, /)¶ Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to: def all(iterable):\n    for element in iterable:\n        if not element:\n            return False\n    return True\n awaitable anext(async_iterator, /)¶ awaitable anext(async_iterator, default, /) When awaited, return the next item from the given asynchronous iterator, or default if given and the iterator is exhausted. This is the async variant of the next() builtin, and behaves similarly. This calls the __anext__() method of async_iterator, returning an awaitable. Awaiting this returns the next value of the iterator. If default is given, it is returned if the iterator is exhausted, otherwise StopAsyncIteration is raised. Added in version 3.10. any(iterable, /)¶ Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to: def any(iterable):\n    for element in iterable:\n        if element:\n            return True\n    return False\n ascii(object, /)¶ As repr(), return a string containing a printable representation of an object, but escape the non-ASCII characters in the string returned by repr() using \\x, \\u, or \\U escapes. This generates a string similar to that returned by repr() in Python 2. bin(integer, /)¶ Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If integer is not a Python int object, it has to define an __index__() method that returns an integer. Some examples: \u003e\u003e\u003e bin(3)\n\u00270b11\u0027\n\u003e\u003e\u003e bin(-10)\n\u0027-0b1010\u0027\n If the prefix “0b” is desired or not, you can use either of the following ways. \u003e\u003e\u003e format(14, \u0027#b\u0027), format(14, \u0027b\u0027)\n(\u00270b1110\u0027, \u00271110\u0027)\n\u003e\u003e\u003e f\u0027{14:#b}\u0027, f\u0027{14:b}\u0027\n(\u00270b1110\u0027, \u00271110\u0027)\n See also enum.bin() to represent negative values as twos-complement. See also format() for more information. class bool(object\u003dFalse, /)¶ Return a Boolean value, i.e. one of True or False. The argument is converted using the standard truth testing procedure. If the argument is false or omitted, this returns False; otherwise, it returns True. The bool class is a subclass of int (see Numeric Types — int, float, complex). It cannot be subclassed further. Its only instances are False and True (see Boolean Type - bool). Changed in version 3.7: The parameter is now positional-only. breakpoint(*args, **kws)¶ This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or type as much code to enter the debugger. However, sys.breakpointhook() can be set to some other function and breakpoint() will automatically call that, allowing you to drop into the debugger of choice. If sys.breakpointhook() is not accessible, this function will raise RuntimeError. By default, the behavior of breakpoint() can be changed with the PYTHONBREAKPOINT environment variable. See sys.breakpointhook() for usage details. Note that this is not guaranteed if sys.breakpointhook() has been replaced. Raises an auditing event builtins.breakpoint with argument breakpointhook. Added in version 3.7. class bytearray(source\u003db\u0027\u0027) class bytearray(source, encoding, errors\u003d\u0027strict\u0027) Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 \u003c\u003d x \u003c 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and ",
+    "scrapedAt": "2026-05-09 00:55:13.168619"
+  },
+  {
+    "id": 828,
+    "url": "https://docs.python.org/3/library/functions.html#staticmethod",
+    "title": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Functions | Theme Auto Light Dark | Built-in Functions¶ The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order. Built-in Functions A abs() aiter() all() anext() any() ascii() B bin() bool() breakpoint() bytearray() bytes() C callable() chr() classmethod() compile() complex() D delattr() dict() dir() divmod() E enumerate() eval() exec() F filter() float() format() frozenset() G getattr() globals() H hasattr() hash() help() hex() I id() input() int() isinstance() issubclass() iter() L len() list() locals() M map() max() memoryview() min() N next() O object() oct() open() ord() P pow() print() property() R range() repr() reversed() round() S set() setattr() slice() sorted() staticmethod() str() sum() super() T tuple() type() V vars() Z zip() _ __import__() abs(number, /)¶ Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__(). If the argument is a complex number, its magnitude is returned. aiter(async_iterable, /)¶ Return an asynchronous iterator for an asynchronous iterable. Equivalent to calling x.__aiter__(). Note: Unlike iter(), aiter() has no 2-argument variant. Added in version 3.10. all(iterable, /)¶ Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to: def all(iterable):\n    for element in iterable:\n        if not element:\n            return False\n    return True\n awaitable anext(async_iterator, /)¶ awaitable anext(async_iterator, default, /) When awaited, return the next item from the given asynchronous iterator, or default if given and the iterator is exhausted. This is the async variant of the next() builtin, and behaves similarly. This calls the __anext__() method of async_iterator, returning an awaitable. Awaiting this returns the next value of the iterator. If default is given, it is returned if the iterator is exhausted, otherwise StopAsyncIteration is raised. Added in version 3.10. any(iterable, /)¶ Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to: def any(iterable):\n    for element in iterable:\n        if element:\n            return True\n    return False\n ascii(object, /)¶ As repr(), return a string containing a printable representation of an object, but escape the non-ASCII characters in the string returned by repr() using \\x, \\u, or \\U escapes. This generates a string similar to that returned by repr() in Python 2. bin(integer, /)¶ Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If integer is not a Python int object, it has to define an __index__() method that returns an integer. Some examples: \u003e\u003e\u003e bin(3)\n\u00270b11\u0027\n\u003e\u003e\u003e bin(-10)\n\u0027-0b1010\u0027\n If the prefix “0b” is desired or not, you can use either of the following ways. \u003e\u003e\u003e format(14, \u0027#b\u0027), format(14, \u0027b\u0027)\n(\u00270b1110\u0027, \u00271110\u0027)\n\u003e\u003e\u003e f\u0027{14:#b}\u0027, f\u0027{14:b}\u0027\n(\u00270b1110\u0027, \u00271110\u0027)\n See also enum.bin() to represent negative values as twos-complement. See also format() for more information. class bool(object\u003dFalse, /)¶ Return a Boolean value, i.e. one of True or False. The argument is converted using the standard truth testing procedure. If the argument is false or omitted, this returns False; otherwise, it returns True. The bool class is a subclass of int (see Numeric Types — int, float, complex). It cannot be subclassed further. Its only instances are False and True (see Boolean Type - bool). Changed in version 3.7: The parameter is now positional-only. breakpoint(*args, **kws)¶ This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or type as much code to enter the debugger. However, sys.breakpointhook() can be set to some other function and breakpoint() will automatically call that, allowing you to drop into the debugger of choice. If sys.breakpointhook() is not accessible, this function will raise RuntimeError. By default, the behavior of breakpoint() can be changed with the PYTHONBREAKPOINT environment variable. See sys.breakpointhook() for usage details. Note that this is not guaranteed if sys.breakpointhook() has been replaced. Raises an auditing event builtins.breakpoint with argument breakpointhook. Added in version 3.7. class bytearray(source\u003db\u0027\u0027) class bytearray(source, encoding, errors\u003d\u0027strict\u0027) Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 \u003c\u003d x \u003c 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and ",
+    "scrapedAt": "2026-05-09 00:55:11.992807"
+  },
+  {
+    "id": 827,
+    "url": "https://github.com/python/cpython/issues/132828",
+    "title": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member vstinner commented Apr 23, 2025 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. Issue: \"unhashable type\" is a beginner-unfriendly error message #132825 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions pythongh-132825: Change unhashable key error messages for dict and set b23bd8d vstinner requested review from brettcannon, ericsnowcurrently, markshannon, methane, ncoghlan, rhettinger and warsaw as code owners April 23, 2025 09:38 bedevere-app Bot added the awaiting core review label Apr 23, 2025 bedevere-app Bot mentioned this pull request Apr 23, 2025 \"unhashable type\" is a beginner-unfriendly error message #132825 Closed vstinner changed the title gh-132825: Change unhashable key error messages for dict and set gh-132825: Enhance unhashable error messages for dict and set Apr 23, 2025 cfbolz approved these changes Apr 23, 2025 View reviewed changes Copy link Copy Markdown Contributor cfbolz left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment I think this is great thanks for working on this right away, Victor! As @methane pointed out, maybe Cannot -\u003e cannot. We don\u0027t have a style guide or anything for exception messages, so maybe it doesn\u0027t matter either. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions bedevere-app Bot added awaiting merge and removed awaiting core review labels Apr 23, 2025 Cannot \u003d\u003e cannot aff2967 Copy link Copy Markdown Member Author vstinner commented Apr 23, 2025 maybe Cannot -\u003e cannot Done: I replaced \"Cannot ...\" with \"cannot ...\". All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. cfbolz approved these changes Apr 23, 2025 View reviewed changes rhettinger removed their request for review April 23, 2025 14:46 Hide details View details cfbolz merged commit 426449d into python:main Apr 23, 2025 42 checks passed Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot removed the awaiting merge label Apr 23, 2025 vstinner deleted the unhashable branch April 23, 2025 15:16 Copy link Copy Markdown matthiask commented Apr 23, 2025 Thanks for this improvement! One minor nit: I like wordplays but I\u0027m not sure if the T in unhashTable has been introduced on purpose? All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member Author vstinner commented Apr 23, 2025 Thanks for this improvement! One minor nit: I like wordplays but I\u0027m not sure if the T in unhashTable has been introduced on purpose? It wasn\u0027t done on purpose, it\u0027s a typo :-( I wrote #132847 to fix the typo. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Feuermurmel mentioned this pull request May 3, 2026 Exception notes discarded from TypeError within __hash__() #149313 Open This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters. Learn more about bidirectional Unicode characters Show hidden characters Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Reviewers cfbolz cfbolz approved these changes brettcannon Awaiting requested review from brettcannon brettcannon is a code owner ericsnowcurrently Awaiting requested review from ericsnowcurrently ericsnowcurrently is a code owner ncoghlan Awaiting requested review from ncoghlan ncoghlan is a code owner warsaw Awaiting requested review from warsaw warsaw is a code owner methane Awaiting requested review from methane methane is a code owner markshannon Awaiting requested review from markshannon markshannon is a code owner Assignees No one assigned Labels None yet Projects None yet Milestone No milestone Development Successfully merging this pull request may close these issues. Uh oh! There was an error while loading. Please reload this page. 3 participants Add this suggestion to a batch that can be applied as a single commit.This suggestion is invalid because no changes were made to the code.Suggestions c",
+    "scrapedAt": "2026-05-09 00:55:10.795369"
+  },
+  {
     "id": 826,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#operator",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -5488,26 +5523,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 827,
-    "url": "https://github.com/python/cpython/issues/132828"
-  },
-  {
-    "id": 828,
-    "url": "https://docs.python.org/3/library/functions.html#staticmethod"
-  },
-  {
-    "id": 829,
-    "url": "https://docs.python.org/3/library/functions.html#int"
-  },
-  {
-    "id": 830,
-    "url": "https://docs.python.org/3/reference/compound_stmts.html#except"
-  },
-  {
-    "id": 831,
-    "url": "https://github.com/python/cpython/issues/132168"
   },
   {
     "id": 832,
@@ -140914,10 +140929,1013 @@ window.searchData = [
     "id": 109666,
     "url": "https://docs.python.org/3/library/os.html#os-filenames",
     "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 110903,
+    "url": "https://github.com/python/cpython/pull/132828#issuecomment-2824821782",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110904,
+    "url": "https://github.com/python/cpython/pull/132828#pullrequestreview-2786924852",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110905,
+    "url": "https://github.com/python/cpython/pull/132847",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110906,
+    "url": "https://github.com/python/cpython/pull/132828/files/aff2967ab794631e0a0eec614e3581804adbbf5f",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110909,
+    "url": "https://github.com/python/cpython/pull/132828#event-17367474733",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110910,
+    "url": "https://github.com/python/cpython/pull/132828#issue-3013356972",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110912,
+    "url": "https://github.com/Feuermurmel",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110913,
+    "url": "https://github.com/python/cpython/pull/132828/commits/b23bd8db51a15327f98aec445e493ec59de7ce9c",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110914,
+    "url": "https://github.com/python/cpython/pull/132828#issuecomment-2824843060",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110915,
+    "url": "https://github.com/matthiask",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110916,
+    "url": "https://github.com/python/cpython/pull/132828#event-17369037655",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110917,
+    "url": "https://github.com/cfbolz",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110920,
+    "url": "https://github.com/python/cpython/issues/149313",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110921,
+    "url": "https://github.com/python/cpython/pull/132828#event-17373182202",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110922,
+    "url": "https://github.com/python/cpython/pull/132828#event-17367469256",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110923,
+    "url": "https://github.com/python/cpython/pull/132828#ref-issue-4371384086",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110924,
+    "url": "https://github.com/python/cpython/commit/426449d9834855fcf8c150889157af8c39526b81",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110925,
+    "url": "https://github.com/ncoghlan",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110926,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F132828",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110928,
+    "url": "https://github.com/python/cpython/pull/132828",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110929,
+    "url": "https://github.com/ericsnowcurrently",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110930,
+    "url": "https://github.com/python/cpython/pull/132828#event-17372764476",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110931,
+    "url": "https://github.com/python/cpython/pull/132828#event-17367470156",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110932,
+    "url": "https://github.com/python/cpython/pull/132828#ref-issue-3013035249",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110934,
+    "url": "https://github.com/python/cpython/pull/132828#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110935,
+    "url": "https://github.com/methane",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110937,
+    "url": "https://github.com/python/cpython/pull/132828#pullrequestreview-2787555689",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110938,
+    "url": "https://github.com/python/cpython/pull/132828/files/b23bd8db51a15327f98aec445e493ec59de7ce9c",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110941,
+    "url": "https://github.com/python/cpython/pull/132828#event-17373285676",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110942,
+    "url": "https://github.com/python/cpython/pull/132828/commits/aff2967ab794631e0a0eec614e3581804adbbf5f",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110945,
+    "url": "https://github.com/python/cpython/blob/de9deb7ca7120fbb5cbbb53044ce91087065e723/.github/CODEOWNERS#L137",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110946,
+    "url": "https://github.com/python/cpython/pull/132828#issuecomment-2824115306",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 110949,
+    "url": "https://github.com/python/cpython/pull/132828#event-17373181012",
+    "parentUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 111566,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-decorators",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111567,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-inheritance",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111570,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-compound_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111571,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-type_param",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111572,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-pattern_arguments",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111574,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-star_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111576,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-suite",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111581,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-mapping_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111585,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#literal-patterns",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111586,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-parameter_list_starargs",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111587,
+    "url": "https://peps.python.org/pep-0614/",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111591,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#as",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111593,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#overview",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111596,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-async_funcdef",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111600,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-patterns",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111601,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-async_with_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111603,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-if_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111606,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-typevartuple",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111612,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#capture-patterns",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111613,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-keyword_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111614,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#imaginary",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111615,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#def",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111617,
+    "url": "https://peps.python.org/pep-0636/",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111620,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-key_value_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111624,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-while_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111627,
+    "url": "https://peps.python.org/pep-0570/",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111628,
+    "url": "https://docs.python.org/3/library/stdtypes.html#definition.__type_params__",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111629,
+    "url": "https://docs.python.org/3/reference/datamodel.html#class-pattern-matching",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111630,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-wildcard_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111632,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-async_for_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111634,
+    "url": "https://peps.python.org/pep-0318/",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111642,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-try1_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111643,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-value_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111645,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-or_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111648,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-funcdef",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111650,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-simple_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111652,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-for_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111655,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111656,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#patterns",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111658,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-as_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111661,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-try3_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111665,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-paramspec",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111667,
+    "url": "https://docs.python.org/3/reference/expressions.html#booleans",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111675,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#the-async-for-statement",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111677,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-with_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111678,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-parameter",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111680,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-items_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111682,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-with_stmt_contents",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111684,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#finally-clause",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111687,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-positional_patterns",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111688,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-try2_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111690,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-guard",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111699,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-classdef",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111700,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#guards",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111702,
+    "url": "https://peps.python.org/pep-3129/",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111708,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-typevar",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111712,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-attr",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111714,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-try_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111719,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-capture_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111721,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-keyword_patterns",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111722,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-star_parameter",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111723,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#compound-statements",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111726,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-match_stmt",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111727,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-sequence_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111729,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-open_sequence_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111731,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-group_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111733,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-maybe_sequence_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111743,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#or-patterns",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111747,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#id13",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111748,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#id11",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111749,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#mapping-patterns",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111750,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111751,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-literal_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111752,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-decorator",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111753,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#id16",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111754,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#id15",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111756,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-classname",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111758,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#the-async-with-statement",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111765,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#id24",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111767,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#id23",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111768,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#id22",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111769,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#coroutine-function-definition",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111770,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#id21",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111772,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-subject_expr",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111773,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-parameter_list_no_posonly",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111775,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#id25",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111776,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#as-patterns",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111777,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#irrefutable-case",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111778,
+    "url": "https://docs.python.org/3/reference/executionmodel.html#resolve-names",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111780,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#else-clause",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111781,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#class-patterns",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111782,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#except-else",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111790,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-parameter_star_kwargs",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111793,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-class_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111795,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-funcname",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111796,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#value-patterns",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111797,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-with_item",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111800,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-stmt_list",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111819,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#irrefutable-case-blocks",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111821,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-statement",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111823,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-signed_number",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111828,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#except-clause",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111829,
+    "url": "https://github.com/python/cpython/blob/main/Doc/reference/compound_stmts.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111830,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#group-patterns",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111832,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#wildcard-patterns",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111833,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-maybe_star_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111835,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-closed_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111836,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#sequence-patterns",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111837,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#id1",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111839,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-double_star_pattern",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111840,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-case_block",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111843,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-defparameter",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111845,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-name_or_attr",
+    "parentUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 111849,
+    "url": "https://github.com/python/cpython/issues/132168#issue-2975084498",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111850,
+    "url": "https://github.com/orgs/python/projects/42",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111854,
+    "url": "https://github.com/brianschubert",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111855,
+    "url": "https://github.com/python/typeshed/blob/1c17cd429c2f91b0066547deb99c537af3e54d39/stdlib/ctypes/__init__.pyi#L253",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111857,
+    "url": "https://github.com/python/cpython/pull/132169",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111860,
+    "url": "https://github.com/python/typeshed/pull/13760",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111861,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-ctypes%22",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111862,
+    "url": "https://github.com/python/cpython/issues/132168#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111863,
+    "url": "https://github.com/python/cpython/issues/132168#top",
+    "parentUrl": "https://github.com/python/cpython/issues/132168"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/25313350?u\u003d73b184aa203a878927d87aa1fce19fd529155f39\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@brianschubert",
+    "pageTitle": "Add `__class_getitem__` support to `ctypes.py_object` · Issue #132168 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/25313350?u\u003d73b184aa203a878927d87aa1fce19fd529155f39\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@brianschubert",
+    "pageTitle": "Add `__class_getitem__` support to `ctypes.py_object` · Issue #132168 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#int"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#int"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#staticmethod"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#staticmethod"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d80\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d48\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d40\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d40\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d40\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/85942?s\u003d60\u0026v\u003d4",
+    "alt": "cfbolz",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/85942?s\u003d48\u0026v\u003d4",
+    "alt": "@cfbolz",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d40\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d80\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/85942?s\u003d60\u0026v\u003d4",
+    "alt": "cfbolz",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?s\u003d40\u0026u\u003de11cfc20d0f21ef549393dfe80ea91c42fbc9928\u0026v\u003d4",
+    "alt": "@rhettinger",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/85942?s\u003d40\u0026v\u003d4",
+    "alt": "@cfbolz",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d40\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2627?s\u003d80\u0026u\u003d857d87abc02f3fbd60c5dd37bb7a4cf7f86d8aa8\u0026v\u003d4",
+    "alt": "@matthiask",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d80\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/50332?s\u003d40\u0026v\u003d4",
+    "alt": "@Feuermurmel",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/85942?s\u003d40\u0026v\u003d4",
+    "alt": "@cfbolz",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d40\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d40\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/210184?s\u003d40\u0026v\u003d4",
+    "alt": "@warsaw",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?s\u003d40\u0026v\u003d4",
+    "alt": "@markshannon",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d52\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2627?s\u003d52\u0026v\u003d4",
+    "alt": "@matthiask",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/85942?s\u003d52\u0026v\u003d4",
+    "alt": "@cfbolz",
+    "pageTitle": "gh-132825: Enhance unhashable error messages for dict and set by vstinner · Pull Request #132828 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132828"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
