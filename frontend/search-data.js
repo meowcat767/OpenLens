@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 826,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#operator",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 00:55:04.09891"
+  },
+  {
+    "id": 825,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError",
+    "title": "tarfile — Read and write tar archive files — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Compression and Archiving » tarfile — Read and write tar archive files | Theme Auto Light Dark | tarfile — Read and write tar archive files¶ Source code: Lib/tarfile.py The tarfile module makes it possible to read and write tar archives, including those using gzip, bz2 and lzma compression. Use the zipfile module to read or write .zip files, or the higher-level functions in shutil. Some facts and figures: reads and writes gzip, bz2, compression.zstd, and lzma compressed archives if the respective modules are available. If any of these optional modules are missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. read/write support for the POSIX.1-1988 (ustar) format. read/write support for the GNU tar format including longname and longlink extensions, read-only support for all variants of the sparse extension including restoration of sparse files. read/write support for the POSIX.1-2001 (pax) format. handles directories, regular files, hardlinks, symbolic links, fifos, character devices and block devices and is able to acquire and restore file information like timestamp, access permissions and owner. Changed in version 3.3: Added support for lzma compression. Changed in version 3.12: Archives are extracted using a filter, which makes it possible to either limit surprising/dangerous features, or to acknowledge that they are expected and the archive is fully trusted. Changed in version 3.14: Set the default extraction filter to data, which disallows some dangerous features such as links to absolute paths or paths outside of the destination. Previously, the filter strategy was equivalent to fully_trusted. Changed in version 3.14: Added support for Zstandard compression using compression.zstd. tarfile.open(name\u003dNone, mode\u003d\u0027r\u0027, fileobj\u003dNone, bufsize\u003d10240, **kwargs)¶ Return a TarFile object for the pathname name. For detailed information on TarFile objects and the keyword arguments that are allowed, see TarFile Objects. mode has to be a string of the form \u0027filemode[:compression]\u0027, it defaults to \u0027r\u0027. Here is a full list of mode combinations: mode action \u0027r\u0027 or \u0027r:*\u0027 Open for reading with transparent compression (recommended). \u0027r:\u0027 Open for reading exclusively without compression. \u0027r:gz\u0027 Open for reading with gzip compression. \u0027r:bz2\u0027 Open for reading with bzip2 compression. \u0027r:xz\u0027 Open for reading with lzma compression. \u0027r:zst\u0027 Open for reading with Zstandard compression. \u0027x\u0027 or \u0027x:\u0027 Create a tarfile exclusively without compression. Raise a FileExistsError exception if it already exists. \u0027x:gz\u0027 Create a tarfile with gzip compression. Raise a FileExistsError exception if it already exists. \u0027x:bz2\u0027 Create a tarfile with bzip2 compression. Raise a FileExistsError exception if it already exists. \u0027x:xz\u0027 Create a tarfile with lzma compression. Raise a FileExistsError exception if it already exists. \u0027x:zst\u0027 Create a tarfile with Zstandard compression. Raise a FileExistsError exception if it already exists. \u0027a\u0027 or \u0027a:\u0027 Open for appending with no compression. The file is created if it does not exist. \u0027w\u0027 or \u0027w:\u0027 Open for uncompressed writing. \u0027w:gz\u0027 Open for gzip compressed writing. \u0027w:bz2\u0027 Open for bzip2 compressed writing. \u0027w:xz\u0027 Open for lzma compressed writing. \u0027w:zst\u0027 Open for Zstandard compressed writing. Note that \u0027a:gz\u0027, \u0027a:bz2\u0027 or \u0027a:xz\u0027 is not possible. If mode is not suitable to open a certain (compressed) file for reading, ReadError is raised. Use mode \u0027r\u0027 to avoid this. If a compression method is not supported, CompressionError is raised. If fileobj is specified, it is used as an alternative to a file object opened in binary mode for name. It is supposed to be at position 0. For modes \u0027w:gz\u0027, \u0027x:gz\u0027, \u0027w|gz\u0027, \u0027w:bz2\u0027, \u0027x:bz2\u0027, \u0027w|bz2\u0027, tarfile.open() accepts the keyword argument compresslevel (default 9) to specify the compression level of the file. For modes \u0027w:xz\u0027, \u0027x:xz\u0027 and \u0027w|xz\u0027, tarfile.open() accepts the keyword argument preset to specify the compression level of the file. For modes \u0027w:zst\u0027, \u0027x:zst\u0027 and \u0027w|zst\u0027, tarfile.open() accepts the keyword argument level to specify the compression level of the file. The keyword argument options may also be passed, providing advanced Zstandard compression parameters described by CompressionParameter. The keyword argument zstd_dict can be passed to provide a ZstdDict, a Zstandard dictionary used to improve compression of smaller amounts of data. For special purposes, there is a second format for mode: \u0027filemode|[compression]\u0027. tarfile.open() will return a TarFile object that processes its data as a stream of blocks. No random seeking will be done on the file. If given, fileobj may be any object that has a read() or write() method (depending on the mode) that works with bytes. bufsize specifies the blocksize and defaults ",
+    "scrapedAt": "2026-05-09 00:55:02.897335"
+  },
+  {
+    "id": 824,
+    "url": "https://github.com/python/cpython/issues/126390",
+    "title": "Preserving order of options and nonoption arguments in gnu_getopt() · Issue #126390 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Preserving order of options and nonoption arguments in gnu_getopt() #126390 New issue Copy link New issue Copy link Closed Closed Preserving order of options and nonoption arguments in gnu_getopt()#126390 Copy link Assignees Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description serhiy-storchaka opened on Nov 4, 2024 Issue body actions Feature or enhancement by default GNU getopt() permutes the contents of argv as it scans, so that eventually all the nonoptions are at the end. It supports two other scanning modes -- one compatible with Posix getopt() (stop at first nonoption argument), and other allows to return options and nonoption arguments in order. getopt.gnu_getopt() returns two lists -- the list of option-and-value pairs and the list of nonoption arguments. Thus, the relative order of options and nonoption arguments is lost. I propose to add support for the missed feature. If the first character of the option string is minus (\u0027-\u0027), non-option arguments that are followed by options will be added to the list of option-and-value pairs as a pair that has None as its first element and the list of non-option arguments as its second element. Non-option arguments that follow the last option will be returned as the second element of the gnu_getopt() result. For example: \u003e\u003e\u003e s \u003d \u0027a1 -x a2 a3 a4 --long a5 a6\u0027\n\u003e\u003e\u003e args \u003d s.split()\n\u003e\u003e\u003e args\n[\u0027a1\u0027, \u0027-x\u0027, \u0027a2\u0027, \u0027a3\u0027, \u0027a4\u0027, \u0027--long\u0027, \u0027a5\u0027, \u0027a6\u0027]\n\u003e\u003e\u003e optlist, args \u003d getopt.gnu_getopt(args, \u0027-x:\u0027, [\u0027long\u003d\u0027])\n\u003e\u003e\u003e optlist\n[(None, [\u0027a1\u0027]), (\u0027-x\u0027, \u0027a2\u0027), (None, [\u0027a3\u0027, \u0027a4\u0027]), (\u0027--long\u0027, \u0027a5\u0027)]\n\u003e\u003e\u003e args\n[\u0027a6\u0027] I considered also alternative options: Returning each nonoption argument as a separate (None, value) tuple instead of (None, list). But if you need a list of consequent arguments, it will be less convenient to build it from separate argument. And if you need separate arguments, you can simply iterate the list. Returning the last portion of nonoption arguments also as a (None, list) pair. This makes handling nonoption arguments followed and not followed by options in user code uniform. But then the second element of the gnu_getopt() result will always be an empty list. I am not sure about this. Add the third function (gnu_getopt_iter()?) which is a generator function and emits (option, value) or (None, list) pairs. Linked PRs gh-126390: Support for preserving order of options and nonoption arguments in gnu_getopt() #126393 Reactions are currently unavailable Metadata Metadata Assignees serhiy-storchaka Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:55:01.732497"
+  },
+  {
+    "id": 822,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#linecache",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 00:54:59.377178"
+  },
+  {
+    "id": 821,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pty",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 00:54:58.165537"
+  },
+  {
     "id": 820,
     "url": "https://github.com/python/cpython/issues/130645",
     "title": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
@@ -5453,26 +5488,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 821,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#pty"
-  },
-  {
-    "id": 822,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#linecache"
-  },
-  {
-    "id": 824,
-    "url": "https://github.com/python/cpython/issues/126390"
-  },
-  {
-    "id": 825,
-    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
-  },
-  {
-    "id": 826,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#operator"
   },
   {
     "id": 827,
@@ -140219,10 +140234,762 @@ window.searchData = [
     "id": 107000,
     "url": "https://private-user-images.githubusercontent.com/1324225/417676451-35bfe5e9-5985-4db1-bfe4-a06f0bcf999e.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3NjQ1MS0zNWJmZTVlOS01OTg1LTRkYjEtYmZlNC1hMDZmMGJjZjk5OWUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NTlhZmYwMDIwYTczODVkMDI1NTliNzQzMmFmMDMxZjkwZjc0NTYyOGE3N2FlODM2MGFlNDcwYjE5NDRmODkzMiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.vOexUb5XNu0bHN2RZRnw0zhlKVxcTs5nDDOLGN6ykeQ",
     "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 109471,
+    "url": "https://github.com/python/cpython/issues/126390#issue-2632508712",
+    "parentUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "id": 109473,
+    "url": "https://github.com/python/cpython/pull/126393",
+    "parentUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "id": 109474,
+    "url": "https://github.com/python/cpython/issues/126390#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "id": 109476,
+    "url": "https://github.com/python/cpython/issues/126390#top",
+    "parentUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "id": 109480,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.SpecialFileError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109481,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.isdir",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109482,
+    "url": "https://peps.python.org/pep-0706/",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109483,
+    "url": "https://docs.python.org/3/library/tempfile.html#tempfile.mkdtemp",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109485,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.type",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109489,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.REGTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109490,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IXGRP",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109491,
+    "url": "https://docs.python.org/3/library/tarfile.html#stateful-extraction-filter-example",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109493,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109494,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.add",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109497,
+    "url": "https://docs.python.org/3/library/tarfile.html#",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109499,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile-objects",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109500,
+    "url": "https://docs.python.org/3/library/tarfile.html#supporting-older-python-versions",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109502,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.GNUTYPE_LONGLINK",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109504,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.pax_headers",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109505,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile-extraction-filter",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109506,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.fully_trusted_filter",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109507,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.extraction_filter",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109508,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.fromtarfile",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109509,
+    "url": "https://docs.python.org/3/library/tarfile.html#tar-formats",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109510,
+    "url": "https://docs.python.org/3/library/io.html#io.FileIO.name",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109512,
+    "url": "https://docs.python.org/3/library/tarfile.html#filter-errors",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109513,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.isblk",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109514,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-create",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109515,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.frombuf",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109516,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.FilterError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109519,
+    "url": "https://www.gnu.org/software/tar/manual/html_node/Standard.html",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109520,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.GNUTYPE_SPARSE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109521,
+    "url": "https://docs.python.org/3/library/shutil.html#archiving-operations",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109522,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.issym",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109523,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.size",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109524,
+    "url": "https://docs.python.org/3/library/tarfile.html#writing-examples",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109525,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.USTAR_FORMAT",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109527,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-e",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109528,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/tarfile.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109529,
+    "url": "https://docs.python.org/3/library/tarfile.html#reading-examples",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109530,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-c",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109531,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IXUSR",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109533,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.GNU_FORMAT",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109534,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/tarfile.py",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109535,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.uid",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109536,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.ischr",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109537,
+    "url": "https://docs.python.org/3/library/compression.zstd.html#compression.zstd.CompressionParameter",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109538,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarinfo-objects",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109539,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-t",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109540,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-v",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109541,
+    "url": "https://docs.python.org/3/library/tarfile.html#tar-examples",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109544,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.CHRTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109545,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.isfile",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109546,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IWOTH",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109548,
+    "url": "https://docs.python.org/3/library/tarfile.html#unicode-issues",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109549,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-l",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109550,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkOutsideDestinationError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109551,
+    "url": "https://docs.python.org/3/library/tarfile.html#extraction-filters",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109552,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_mtime",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109553,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.uname",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109555,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.isreg",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109556,
+    "url": "https://docs.python.org/3/library/tarfile.html#default-named-filters",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109557,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.is_tarfile",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109559,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.tar_filter",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109562,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.linkname",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109563,
+    "url": "https://docs.python.org/3/library/tarfile.html#supported-tar-formats",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109565,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.AbsoluteLinkError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109566,
+    "url": "https://docs.python.org/3/library/compression.zstd.html#compression.zstd.ZstdDict",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109567,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.next",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109568,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.mode",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109570,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.open",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109571,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.CompressionError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109573,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.gname",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109574,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IRUSR",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109576,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.replace",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109577,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.isfifo",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109579,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.extractfile",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109581,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile-extraction-refuse",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109583,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.SYMTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109584,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.ExtractError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109586,
+    "url": "https://docs.python.org/3/library/tarfile.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109587,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.mtime",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109588,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IWGRP",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109589,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.close",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109590,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.addfile",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109591,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.devmajor",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109592,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.devminor",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109593,
+    "url": "https://docs.python.org/3/library/tarfile.html#examples",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109594,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.ReadError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109595,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.AREGTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109598,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.FilterError.tarinfo",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109599,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.offset_data",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109601,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.BLKTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109602,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.normpath",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109604,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.OutsideDestinationError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109605,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.getmembers",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109606,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.gettarinfo",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109607,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.StreamError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109608,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.getnames",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109610,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.ENCODING",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109611,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.list",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109613,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109615,
+    "url": "https://docs.python.org/3/library/time.html#epoch",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109616,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IXOTH",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109618,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.DEFAULT_FORMAT",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109620,
+    "url": "https://docs.python.org/3/library/io.html#io.RawIOBase.write",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109621,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-list",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109624,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.sparse",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109625,
+    "url": "https://docs.python.org/3/library/tarfile.html#hints-for-further-verification",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109626,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.HeaderError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109627,
+    "url": "https://docs.python.org/3/library/tarfile.html#command-line-options",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109631,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile-further-verification",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109633,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.gid",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109635,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.getmember",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109636,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.CONTTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109637,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-filter",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109638,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.open",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109640,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-extract",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109641,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.GNUTYPE_LONGNAME",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109642,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.pax_headers",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109643,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.name",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109644,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.chksum",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109645,
+    "url": "https://docs.python.org/3/library/tarfile.html#tar-unicode",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109648,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.AbsolutePathError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109649,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.islnk",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109651,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.LNKTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109653,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.DIRTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109655,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.PAX_FORMAT",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109656,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-test",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109657,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109659,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.tobuf",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109660,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.isdev",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109662,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IWUSR",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109663,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.FIFOTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109665,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.offset",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109666,
+    "url": "https://docs.python.org/3/library/os.html#os-filenames",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#operator"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#operator"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tarfile — Read and write tar archive files — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tarfile — Read and write tar archive files — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "Preserving order of options and nonoption arguments in gnu_getopt() · Issue #126390 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Preserving order of options and nonoption arguments in gnu_getopt() · Issue #126390 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Preserving order of options and nonoption arguments in gnu_getopt() · Issue #126390 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Preserving order of options and nonoption arguments in gnu_getopt() · Issue #126390 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#linecache"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#linecache"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pty"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pty"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d80",
     "alt": "@hugovk",
