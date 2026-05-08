@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1091,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#free-threaded-mode-improvements",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:05:44.647312"
+  },
+  {
+    "id": 1090,
+    "url": "https://docs.python.org/3/library/pdb.html#module-pdb",
+    "title": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Debugging and Profiling » pdb — The Python Debugger | Theme Auto Light Dark | pdb — The Python Debugger¶ Source code: Lib/pdb.py The module pdb defines an interactive source code debugger for Python programs. It supports setting (conditional) breakpoints and single stepping at the source line level, inspection of stack frames, source code listing, and evaluation of arbitrary Python code in the context of any stack frame. It also supports post-mortem debugging and can be called under program control. The debugger is extensible – it is actually defined as the class Pdb. This is currently undocumented but easily understood by reading the source. The extension interface uses the modules bdb and cmd. See also Module faulthandler Used to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal. Module traceback Standard interface to extract, format and print stack traces of Python programs. The typical usage to break into the debugger is to insert: import pdb; pdb.set_trace()\n Or: breakpoint()\n at the location you want to break into the debugger, and then run the program. You can then step through the code following this statement, and continue running without the debugger using the continue command. Changed in version 3.7: The built-in breakpoint(), when called with defaults, can be used instead of import pdb; pdb.set_trace(). def double(x):\n   breakpoint()\n   return x * 2\nval \u003d 3\nprint(f\"{val} * 2 is {double(val)}\")\n The debugger’s prompt is (Pdb), which is the indicator that you are in debug mode: \u003e ...(2)double()\n-\u003e breakpoint()\n(Pdb) p x\n3\n(Pdb) continue\n3 * 2 is 6\n Changed in version 3.3: Tab-completion via the readline module is available for commands and command arguments, e.g. the current global and local names are offered as arguments of the p command. Command-line interface¶ You can also invoke pdb from the command line to debug other scripts. For example: python -m pdb [-c command] (-m module | -p pid | pyfile) [args ...]\n When invoked as a module, pdb will automatically enter post-mortem debugging if the program being debugged exits abnormally. After post-mortem debugging (or after normal exit of the program), pdb will restart the program. Automatic restarting preserves pdb’s state (such as breakpoints) and in most cases is more useful than quitting the debugger upon program’s exit. -c, --command \u003ccommand\u003e¶ To execute commands as if given in a .pdbrc file; see Debugger commands. Changed in version 3.2: Added the -c option. -m \u003cmodule\u003e¶ To execute modules similar to the way python -m does. As with a script, the debugger will pause execution just before the first line of the module. Changed in version 3.7: Added the -m option. -p, --pid \u003cpid\u003e¶ Attach to the process with the specified PID. Added in version 3.14. To attach to a running Python process for remote debugging, use the -p or --pid option with the target process’s PID: python -m pdb -p 1234\n Note Attaching to a process that is blocked in a system call or waiting for I/O will only work once the next bytecode instruction is executed or when the process receives a signal. Typical usage to execute a statement under control of the debugger is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n\u003e\u003e\u003e pdb.run(\"f(2)\")\n\u003e \u003cstring\u003e(1)\u003cmodule\u003e()\n(Pdb) continue\n0.5\n\u003e\u003e\u003e\n The typical usage to inspect a crashed program is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n...\n\u003e\u003e\u003e f(0)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"\u003cstdin\u003e\", line 2, in f\nZeroDivisionError: division by zero\n\u003e\u003e\u003e pdb.pm()\n\u003e \u003cstdin\u003e(2)f()\n(Pdb) p x\n0\n(Pdb)\n Changed in version 3.13: The implementation of PEP 667 means that name assignments made via pdb will immediately affect the active scope, even when running inside an optimized scope. The module defines the following functions; each enters the debugger in a slightly different way: pdb.run(statement, globals\u003dNone, locals\u003dNone)¶ Execute the statement (given as a string or a code object) under debugger control. The debugger prompt appears before any code is executed; you can set breakpoints and type continue, or you can step through the statement using step or next (all these commands are explained below). The optional globals and locals arguments specify the environment in which the code is executed; by default the dictionary of the module __main__ is used. (See the explanation of the built-in exec() or eval() functions.) pdb.runeval(expression, globals\u003dNone, locals\u003dNone)¶ Evaluate the expression (given as a string or a code object) under debugger control. When runeval() returns, it returns the value of the expression. Otherwise this function is similar to run(). pdb.runcall(function, *args, **kwds)¶ Call the function (a function or method object, not a string) with the given arguments. When runcall() returns, it returns whatever the function call returned. The debug",
+    "scrapedAt": "2026-05-09 01:05:43.3963"
+  },
+  {
+    "id": 1089,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-disable-safety",
+    "title": "3. Configure Python — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python Setup and Usage » 3. Configure Python | Theme Auto Light Dark | 3. Configure Python¶ 3.1. Build Requirements¶ To build CPython, you will need: A C11 compiler. Optional C11 features are not required. On Windows, Microsoft Visual Studio 2017 or later is required. Support for IEEE 754 floating-point numbers and floating-point Not-a-Number (NaN). Support for threads. Changed in version 3.5: On Windows, Visual Studio 2015 or later is now required. Changed in version 3.6: Selected C99 features, like \u003cstdint.h\u003e and static inline functions, are now required. Changed in version 3.7: Thread support is now required. Changed in version 3.11: C11 compiler, IEEE 754 and NaN support are now required. On Windows, Visual Studio 2017 or later is required. See also PEP 7 “Style Guide for C Code” and PEP 11 “CPython platform support”. 3.1.1. Requirements for optional modules¶ Some optional modules of the standard library require third-party libraries installed for development (for example, header files must be available). Missing requirements are reported in the configure output. Modules that are missing due to missing dependencies are listed near the end of the make output, sometimes using an internal name, for example, _ctypes for ctypes module. If you distribute a CPython interpreter without optional modules, it’s best practice to advise users, who generally expect that standard library modules are available. Dependencies to build optional modules are: Dependency Minimum version Python module libbz2 bz2 libffi 3.3.0 recommended ctypes liblzma lzma libmpdec 2.5.0 decimal [1] libreadline or libedit [2] readline libuuid _uuid [3] ncurses [4] curses OpenSSL 3.0.18 recommended (1.1.1 minimum) ssl, hashlib [5] SQLite 3.15.2 sqlite3 Tcl/Tk 8.5.12 tkinter, IDLE, turtle zlib 1.2.2.1 zlib, gzip, ensurepip zstd 1.4.5 compression.zstd [1] If libmpdec is not available, the decimal module will use a pure-Python implementation. See --with-system-libmpdec for details. [2] See --with-readline for choosing the backend for the readline module. [3] The uuid module uses _uuid to generate “safe” UUIDs. See the module documentation for details. [4] The curses module requires the libncurses or libncursesw library. The curses.panel module additionally requires the libpanel or libpanelw library. [5] If OpenSSL is not available, the hashlib module will use bundled implementations of several hash functions. See --with-builtin-hashlib-hashes for forcing usage of OpenSSL. Note that the table does not include all optional modules; in particular, platform-specific modules like winreg are not listed here. See also The devguide includes a full list of dependencies required to build all modules and instructions on how to install them on common platforms. --with-system-expat allows building with an external libexpat library. Options for third-party dependencies Changed in version 3.1: Tcl/Tk version 8.3.1 is now required for tkinter. Changed in version 3.5: Tcl/Tk version 8.4 is now required for tkinter. Changed in version 3.7: OpenSSL 1.0.2 is now required for hashlib and ssl. Changed in version 3.10: OpenSSL 1.1.1 is now required for hashlib and ssl. SQLite 3.7.15 is now required for sqlite3. Changed in version 3.11: Tcl/Tk version 8.5.12 is now required for tkinter. Changed in version 3.13: SQLite 3.15.2 is now required for sqlite3. 3.2. Generated files¶ To reduce build dependencies, Python source code contains multiple generated files. Commands to regenerate all generated files: make regen-all\nmake regen-stdlib-module-names\nmake regen-limited-abi\nmake regen-configure\n The Makefile.pre.in file documents generated files, their inputs, and tools used to regenerate them. Search for regen-* make targets. 3.2.1. configure script¶ The make regen-configure command regenerates the aclocal.m4 file and the configure script using the Tools/build/regen-configure.sh shell script which uses an Ubuntu container to get the same tools versions and have a reproducible output. The container is optional, the following command can be run locally: autoreconf -ivf -Werror\n The generated files can change depending on the exact versions of the tools used. The container that CPython uses has Autoconf 2.72, aclocal from Automake 1.16.5, and pkg-config 1.8.1. Changed in version 3.13: Autoconf 2.71 and aclocal 1.16.5 and are now used to regenerate configure. Changed in version 3.14: Autoconf 2.72 is now used to regenerate configure. 3.3. Configure Options¶ List all configure script options using: ./configure --help\n See also the Misc/SpecialBuilds.txt in the Python source distribution. 3.3.1. General Options¶ --enable-loadable-sqlite-extensions¶ Support loadable extensions in the _sqlite extension module (default is no) of the sqlite3 module. See the sqlite3.Connection.enable_load_extension() method of the sqlite3 module. Added in version 3.6. --disable-ipv6¶ Disable IPv6 support (enabled by default",
+    "scrapedAt": "2026-05-09 01:05:42.101324"
+  },
+  {
+    "id": 1088,
+    "url": "https://github.com/python/cpython/issues/122213",
+    "title": "Add details for pickle serialization errors · Issue #122213 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add details for pickle serialization errors #122213 New issue Copy link New issue Copy link Closed Closed Add details for pickle serialization errors#122213 Copy link Labels 3.14bugs and security fixesbugs and security fixestype-featureA feature request or enhancementA feature request or enhancement Description serhiy-storchaka opened on Jul 24, 2024 Issue body actions Feature or enhancement When pickling a complex object, or a graph of objects, it is difficult to locate the source of error. At best you get the type of the unpickleable object at the bottom level, but you cannot know the part of what object or data structure it is. The proposed PR adds notes to the raised exception which allow to identify the source of the error. For example: \u003e\u003e\u003e import pickle\n\u003e\u003e\u003e pickle.dumps([{\u0027a\u0027: 1, \u0027b\u0027: 2}, {\u0027a\u0027: 3, \u0027b\u0027: pickle}])\nTraceback (most recent call last):\n  File \"\u003cpython-input-1\u003e\", line 1, in \u003cmodule\u003e\n    pickle.dumps([{\u0027a\u0027: 1, \u0027b\u0027: 2}, {\u0027a\u0027: 3, \u0027b\u0027: pickle}])\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: cannot pickle \u0027module\u0027 object\nwhen serializing dict item \u0027b\u0027\nwhen serializing list item 1 \u003e\u003e\u003e class A: pass\n... \n\u003e\u003e\u003e a \u003d A()\n\u003e\u003e\u003e a.x \u003d pickle\n\u003e\u003e\u003e pickle.dumps(a)\nTraceback (most recent call last):\n  File \"\u003cpython-input-5\u003e\", line 1, in \u003cmodule\u003e\n    pickle.dumps(a)\n    ~~~~~~~~~~~~^^^\nTypeError: cannot pickle \u0027module\u0027 object\nwhen serializing dict item \u0027x\u0027\nwhen serializing A state See also similar issue #122163 for JSON. Linked PRs gh-122213: Add notes for pickle serialization errors #122214 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixestype-featureA feature request or enhancementA feature request or enhancement Projects Pickle and copy issues 🥒 Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:05:40.863889"
+  },
+  {
+    "id": 1087,
+    "url": "https://github.com/python/cpython/issues/133336",
+    "title": "Remove option \"-J\" from cmdline docs · Issue #133336 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Remove option \"-J\" from cmdline docs #133336 New issue Copy link New issue Copy link Closed Closed Remove option \"-J\" from cmdline docs#133336 Copy link Labels docsDocumentation in the Doc dirDocumentation in the Doc dir Description vasily-v-ryabov opened on May 3, 2025 Issue body actions Documentation File Doc/using/cmdline.rst mentions Options you shouldn’t use: Options you shouldn\u0027t use\n~~~~~~~~~~~~~~~~~~~~~~~~~\n\n.. option:: -J\n\n   Reserved for use by Jython_.\n\n.. _Jython: https://www.jython.org/ Option -J was added in Python 2.6. Since all Jython related things are being removed, I\u0027d suggest to remove reference to this option from the docs as well. Remove compatibility Jython code #99482 Linked PRs GH-133336: Remove reserved -J flag for Jython #133444 gh-133336: remove comment about reserved -J in initconfig.c #133821 [3.14] gh-133336: Remove comment about reserved -J in initconfig.c (GH-133821) #133855 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels docsDocumentation in the Doc dirDocumentation in the Doc dir Projects docs issues Status Todo Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:05:38.621792"
+  },
+  {
     "id": 1086,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#command-line-and-environment",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -7278,26 +7313,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1087,
-    "url": "https://github.com/python/cpython/issues/133336"
-  },
-  {
-    "id": 1088,
-    "url": "https://github.com/python/cpython/issues/122213"
-  },
-  {
-    "id": 1089,
-    "url": "https://docs.python.org/3/using/configure.html#cmdoption-disable-safety"
-  },
-  {
-    "id": 1090,
-    "url": "https://docs.python.org/3/library/pdb.html#module-pdb"
-  },
-  {
-    "id": 1091,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#free-threaded-mode-improvements"
   },
   {
     "id": 1092,
@@ -192030,10 +192045,135 @@ window.searchData = [
     "id": 184829,
     "url": "https://github.com/python/cpython/pull/132061",
     "parentUrl": "https://github.com/python/cpython/issues/105499"
+  },
+  {
+    "id": 186268,
+    "url": "https://github.com/python/cpython/pull/133855",
+    "parentUrl": "https://github.com/python/cpython/issues/133336"
+  },
+  {
+    "id": 186272,
+    "url": "https://github.com/python/cpython/pull/133821",
+    "parentUrl": "https://github.com/python/cpython/issues/133336"
+  },
+  {
+    "id": 186273,
+    "url": "https://github.com/python/cpython/issues/133336#issue-3037331495",
+    "parentUrl": "https://github.com/python/cpython/issues/133336"
+  },
+  {
+    "id": 186274,
+    "url": "https://github.com/python/cpython/pull/133444",
+    "parentUrl": "https://github.com/python/cpython/issues/133336"
+  },
+  {
+    "id": 186275,
+    "url": "https://github.com/python/cpython/issues/133336#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/133336"
+  },
+  {
+    "id": 186276,
+    "url": "https://github.com/python/cpython/issues/133336#top",
+    "parentUrl": "https://github.com/python/cpython/issues/133336"
+  },
+  {
+    "id": 186278,
+    "url": "https://github.com/vasily-v-ryabov",
+    "parentUrl": "https://github.com/python/cpython/issues/133336"
+  },
+  {
+    "id": 186279,
+    "url": "https://github.com/python/cpython/issues/99482",
+    "parentUrl": "https://github.com/python/cpython/issues/133336"
+  },
+  {
+    "id": 186282,
+    "url": "https://github.com/python/cpython/issues/122213#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/122213"
+  },
+  {
+    "id": 186283,
+    "url": "https://github.com/orgs/python/projects/9",
+    "parentUrl": "https://github.com/python/cpython/issues/122213"
+  },
+  {
+    "id": 186284,
+    "url": "https://github.com/python/cpython/issues/122213#issue-2426642161",
+    "parentUrl": "https://github.com/python/cpython/issues/122213"
+  },
+  {
+    "id": 186290,
+    "url": "https://github.com/python/cpython/issues/122213#top",
+    "parentUrl": "https://github.com/python/cpython/issues/122213"
+  },
+  {
+    "id": 186292,
+    "url": "https://github.com/python/cpython/pull/122214",
+    "parentUrl": "https://github.com/python/cpython/issues/122213"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#free-threaded-mode-improvements"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#free-threaded-mode-improvements"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#module-pdb"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#module-pdb"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Configure Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/configure.html#cmdoption-disable-safety"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Configure Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/configure.html#cmdoption-disable-safety"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Add details for pickle serialization errors · Issue #122213 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122213"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Add details for pickle serialization errors · Issue #122213 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122213"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/7419086?u\u003d85a30dcaceae3f3fec06a8eba0b9432319c1455b\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@vasily-v-ryabov",
+    "pageTitle": "Remove option \"-J\" from cmdline docs · Issue #133336 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133336"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/7419086?u\u003d85a30dcaceae3f3fec06a8eba0b9432319c1455b\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vasily-v-ryabov",
+    "pageTitle": "Remove option \"-J\" from cmdline docs · Issue #133336 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133336"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
