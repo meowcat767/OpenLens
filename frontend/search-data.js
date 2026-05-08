@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 938,
+    "url": "https://docs.python.org/3/library/sysconfig.html#module-sysconfig",
+    "title": "sysconfig — Provide access to Python’s configuration information — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » sysconfig — Provide access to Python’s configuration information | Theme Auto Light Dark | sysconfig — Provide access to Python’s configuration information¶ Added in version 3.2. Source code: Lib/sysconfig The sysconfig module provides access to Python’s configuration information like the list of installation paths and the configuration variables relevant for the current platform. Configuration variables¶ A Python distribution contains a Makefile and a pyconfig.h header file that are necessary to build both the Python binary itself and third-party C extensions compiled using setuptools. sysconfig puts all variables found in these files in a dictionary that can be accessed using get_config_vars() or get_config_var(). Notice that on Windows, it’s a much smaller set. sysconfig.get_config_vars(*args)¶ With no arguments, return a dictionary of all configuration variables relevant for the current platform. With arguments, return a list of values that result from looking up each argument in the configuration variable dictionary. For each argument, if the value is not found, return None. sysconfig.get_config_var(name)¶ Return the value of a single variable name. Equivalent to get_config_vars().get(name). If name is not found, return None. Example of usage: \u003e\u003e\u003e import sysconfig\n\u003e\u003e\u003e sysconfig.get_config_var(\u0027Py_ENABLE_SHARED\u0027)\n0\n\u003e\u003e\u003e sysconfig.get_config_var(\u0027LIBDIR\u0027)\n\u0027/usr/local/lib\u0027\n\u003e\u003e\u003e sysconfig.get_config_vars(\u0027AR\u0027, \u0027CXX\u0027)\n[\u0027ar\u0027, \u0027g++\u0027]\n Installation paths¶ Python uses an installation scheme that differs depending on the platform and on the installation options. These schemes are stored in sysconfig under unique identifiers based on the value returned by os.name. The schemes are used by package installers to determine where to copy files to. Python currently supports nine schemes: posix_prefix: scheme for POSIX platforms like Linux or macOS. This is the default scheme used when Python or a component is installed. posix_home: scheme for POSIX platforms, when the home option is used. This scheme defines paths located under a specific home prefix. posix_user: scheme for POSIX platforms, when the user option is used. This scheme defines paths located under the user’s home directory (site.USER_BASE). posix_venv: scheme for Python virtual environments on POSIX platforms; by default it is the same as posix_prefix. nt: scheme for Windows. This is the default scheme used when Python or a component is installed. nt_user: scheme for Windows, when the user option is used. nt_venv: scheme for Python virtual environments on Windows; by default it is the same as nt. venv: a scheme with values from either posix_venv or nt_venv depending on the platform Python runs on. osx_framework_user: scheme for macOS, when the user option is used. Each scheme is itself composed of a series of paths and each path has a unique identifier. Python currently uses eight paths: stdlib: directory containing the standard Python library files that are not platform-specific. platstdlib: directory containing the standard Python library files that are platform-specific. platlib: directory for site-specific, platform-specific files. purelib: directory for site-specific, non-platform-specific files (‘pure’ Python). include: directory for non-platform-specific header files for the Python C-API. platinclude: directory for platform-specific header files for the Python C-API. scripts: directory for script files. data: directory for data files. User scheme¶ This scheme is designed to be the most convenient solution for users that don’t have write permission to the global site-packages directory or don’t want to install into it. Files will be installed into subdirectories of site.USER_BASE (written as userbase hereafter). This scheme installs pure Python modules and extension modules in the same location (also known as site.USER_SITE). posix_user¶ Path Installation directory stdlib userbase/lib/pythonX.Y platstdlib userbase/lib/pythonX.Y platlib userbase/lib/pythonX.Y/site-packages purelib userbase/lib/pythonX.Y/site-packages include userbase/include/pythonX.Y scripts userbase/bin data userbase nt_user¶ Path Installation directory stdlib userbase\\PythonXY platstdlib userbase\\PythonXY platlib userbase\\PythonXY\\site-packages purelib userbase\\PythonXY\\site-packages include userbase\\PythonXY\\Include scripts userbase\\PythonXY\\Scripts data userbase osx_framework_user¶ Path Installation directory stdlib userbase/lib/python platstdlib userbase/lib/python platlib userbase/lib/python/site-packages purelib userbase/lib/python/site-packages include userbase/include/pythonX.Y scripts userbase/bin data userbase Home scheme¶ The idea behind the “home scheme” is that you build and maintain a personal stash of Python modules. This scheme’s name is derived from the idea of a “home” directory on Unix, since it’s not unusual for a Unix user to make ",
+    "scrapedAt": "2026-05-09 00:59:31.306316"
+  },
+  {
+    "id": 937,
+    "url": "https://github.com/python/cpython/issues/128715",
+    "title": "Untangle ctypes bitfield size and expose field information · Issue #128715 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Untangle ctypes bitfield size and expose field information #128715 New issue Copy link New issue Copy link Open Open Untangle ctypes bitfield size and expose field information#128715 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-ctypestype-featureA feature request or enhancementA feature request or enhancement Description encukou opened on Jan 10, 2025 Issue body actions Feature or enhancement Currently, the internal representation of bitfields in ctypes is a bit-packed number containing the size and offset. This is rather cumbersome to deal with. (As far as I can tell, the reason is that getters/setters take a single argument. But, these are internal so the signature can be changed.) My plan is to break the CField size/offset information out into more wordy but explicit fields: byte_size \u0026 byte_offset, which describe the byte-aligned field within a struct. (This has the same size as the underlying type, and must be fully contained in the struct \u0026 readable/writable.) bit_size \u0026 bit_offset, which identify the bits within that chunk Also, I intend to add corresponding attributes an the Python level, and expose _CField publicly as ctypes.CField, mainly for typing purposes. At this point I don\u0027t plan to make the type instantiable. Something like: \u003e\u003e\u003e class Color(Structure):\n...     _fields_ \u003d (\n...         (\u0027red\u0027, c_uint8),\n...         (\u0027green\u0027, c_uint8),\n...         (\u0027blue\u0027, c_uint8),\n...         (\u0027intense\u0027, c_bool, 1),\n...         (\u0027blinking\u0027, c_bool, 1),\n...    )\n...\n\u003e\u003e\u003e Color.red\n\u003cctypes.CField \u0027red\u0027 type\u003dc_ubyte, ofs\u003d0, size\u003d1\u003e\n\u003e\u003e\u003e Color.green.type\n\u003cclass \u0027ctypes.c_ubyte\u0027\u003e\n\u003e\u003e\u003e Color.blue.byte_offset\n2\n\u003e\u003e\u003e Color.intense\n\u003cctypes.CField \u0027intense\u0027 type\u003dc_bool, ofs\u003d3, bit_size\u003d1, bit_offset\u003d0\u003e\n\u003e\u003e\u003e Color.blinking.bit_offset\n1 Linked PRs gh-128715: Expose ctypes.CField, with info attributes #128950 gh-128715: CTypeField: Put intness, signedness and pointerness in flags #138541 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-ctypestype-featureA feature request or enhancementA feature request or enhancement Projects Ctypes issues Status No status Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:59:30.030916"
+  },
+  {
+    "id": 936,
+    "url": "https://github.com/python/cpython/issues/133079",
+    "title": "Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining · Issue #133079 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining #133079 New issue Copy link New issue Copy link Closed Closed Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining#133079 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description encukou opened on Apr 28, 2025 Issue body actions Both were added in 3.13, are undocumented, and don\u0027t make sense in 3.14 due to changes in the stack overflow detection machinery. (On current main they contain dummy values.) SC exception for removal without deprecation: python/steering-council#288 Linked PRs gh-133079: Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining #133080 Reactions are currently unavailable Metadata Metadata Assignees encukou Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:59:27.792183"
+  },
+  {
+    "id": 935,
+    "url": "https://docs.python.org/3/copyright.html",
+    "title": "Copyright — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Copyright | Theme Auto Light Dark | Copyright¶ Python and this documentation is: Copyright © 2001 Python Software Foundation. All rights reserved. Copyright © 2000 BeOpen.com. All rights reserved. Copyright © 1995-2000 Corporation for National Research Initiatives. All rights reserved. Copyright © 1991-1995 Stichting Mathematisch Centrum. All rights reserved. See History and License for complete license and permissions information. Previous topic Dealing with Bugs Next topic History and License This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Copyright | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 00:59:25.677183"
+  },
+  {
+    "id": 934,
+    "url": "https://github.com/python/cpython/issues/91279",
+    "title": "ZipFile.writestr should respect SOURCE_DATE_EPOCH · Issue #91279 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k ZipFile.writestr should respect SOURCE_DATE_EPOCH #91279 New issue Copy link New issue Copy link Closed Closed ZipFile.writestr should respect SOURCE_DATE_EPOCH#91279 Copy link Labels 3.10only security fixesonly security fixes3.11only security fixesonly security fixes3.9 (EOL)end of lifeend of lifestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description SomberNight mannequin opened on Mar 25, 2022 Issue body actions BPO 47123 Nosy @SomberNight Files zipfile_respect_sourcedate.diff: change the ZipFile.writestr to respect SOURCE_DATE_EPOCH Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2022-03-25.19:47:10.113\u003e\nlabels \u003d [\u0027type-feature\u0027, \u0027library\u0027, \u00273.9\u0027, \u00273.10\u0027, \u00273.11\u0027]\ntitle \u003d \u0027ZipFile.writestr should respect SOURCE_DATE_EPOCH\u0027\nupdated_at \u003d \u003cDate 2022-03-25.19:47:10.113\u003e\nuser \u003d \u0027https://github.com/SomberNight\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-03-25.19:47:10.113\u003e\nactor \u003d \u0027ghost43\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2022-03-25.19:47:10.113\u003e\ncreator \u003d \u0027ghost43\u0027\ndependencies \u003d []\nfiles \u003d [\u002750702\u0027]\nhgrepos \u003d []\nissue_num \u003d 47123\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 1.0\nmessages \u003d [\u0027416015\u0027]\nnosy_count \u003d 1.0\nnosy_names \u003d [\u0027ghost43\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue47123\u0027\nversions \u003d [\u0027Python 3.9\u0027, \u0027Python 3.10\u0027, \u0027Python 3.11\u0027] Linked PRs gh-91279: ZipFile.writestr now respect SOURCE_DATE_EPOCH #124435 gh-91279: Note SOURCE_DATE_EPOCH support in ZipFile.writestr() #139396 [3.14] gh-91279: Note SOURCE_DATE_EPOCH support in ZipFile.writestr() doc (GH-139396) #146222 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.10only security fixesonly security fixes3.11only security fixesonly security fixes3.9 (EOL)end of lifeend of lifestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects Zipfile issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:59:24.411831"
+  },
+  {
     "id": 933,
     "url": "https://docs.python.org/3/library/pathlib.html#pathlib.types.PathInfo",
     "title": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
@@ -6228,26 +6263,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 934,
-    "url": "https://github.com/python/cpython/issues/91279"
-  },
-  {
-    "id": 935,
-    "url": "https://docs.python.org/3/copyright.html"
-  },
-  {
-    "id": 936,
-    "url": "https://github.com/python/cpython/issues/133079"
-  },
-  {
-    "id": 937,
-    "url": "https://github.com/python/cpython/issues/128715"
-  },
-  {
-    "id": 938,
-    "url": "https://docs.python.org/3/library/sysconfig.html#module-sysconfig"
   },
   {
     "id": 939,
@@ -159545,10 +159560,212 @@ window.searchData = [
     "id": 137907,
     "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.cmdqueue",
     "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 139346,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%223.9%20(EOL)%22",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139347,
+    "url": "https://github.com/python/cpython/issues/91279#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139350,
+    "url": "https://github.com/python/cpython/issues/91279#top",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139351,
+    "url": "https://github.com/SomberNight",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139354,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%223.10%22",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139356,
+    "url": "https://github.com/python/cpython/issues/91279#issue-1199077658",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139357,
+    "url": "https://github.com/python/cpython/pull/139396",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139358,
+    "url": "https://github.com/orgs/python/projects/7",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139359,
+    "url": "https://bugs.python.org/issue47123",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139360,
+    "url": "https://bugs.python.org/file50702/zipfile_respect_sourcedate.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139361,
+    "url": "https://github.com/python/cpython/pull/124435",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139362,
+    "url": "https://github.com/python/cpython/pull/146222",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139368,
+    "url": "https://docs.python.org/3/copyright.html#",
+    "parentUrl": "https://docs.python.org/3/copyright.html"
+  },
+  {
+    "id": 139373,
+    "url": "https://docs.python.org/3/copyright.html#copyright",
+    "parentUrl": "https://docs.python.org/3/copyright.html"
+  },
+  {
+    "id": 139375,
+    "url": "https://github.com/python/cpython/blob/main/Doc/copyright.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/copyright.html"
+  },
+  {
+    "id": 139378,
+    "url": "https://docs.python.org/3/license.html#history-and-license",
+    "parentUrl": "https://docs.python.org/3/copyright.html"
+  },
+  {
+    "id": 139381,
+    "url": "https://github.com/python/cpython/issues/133079#top",
+    "parentUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "id": 139382,
+    "url": "https://github.com/python/cpython/issues/133079#issue-3024621056",
+    "parentUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "id": 139386,
+    "url": "https://github.com/python/cpython/issues/133079#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "id": 139388,
+    "url": "https://github.com/python/cpython/pull/133080",
+    "parentUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "id": 139390,
+    "url": "https://github.com/python/steering-council/issues/288",
+    "parentUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "id": 139392,
+    "url": "https://github.com/python/cpython/pull/128950",
+    "parentUrl": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "id": 139396,
+    "url": "https://github.com/python/cpython/issues/128715#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "id": 139402,
+    "url": "https://github.com/python/cpython/pull/138541",
+    "parentUrl": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "id": 139403,
+    "url": "https://github.com/python/cpython/issues/128715#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "id": 139405,
+    "url": "https://github.com/python/cpython/issues/128715#issue-2780697483",
+    "parentUrl": "https://github.com/python/cpython/issues/128715"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sysconfig — Provide access to Python’s configuration information — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sysconfig.html#module-sysconfig"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sysconfig — Provide access to Python’s configuration information — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sysconfig.html#module-sysconfig"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@encukou",
+    "pageTitle": "Untangle ctypes bitfield size and expose field information · Issue #128715 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@encukou",
+    "pageTitle": "Untangle ctypes bitfield size and expose field information · Issue #128715 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d64\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "encukou",
+    "pageTitle": "Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining · Issue #133079 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@encukou",
+    "pageTitle": "Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining · Issue #133079 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@encukou",
+    "pageTitle": "Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining · Issue #133079 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d64\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining · Issue #133079 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Copyright — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/copyright.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Copyright — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/copyright.html"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93805517?v\u003d4\u0026size\u003d80",
+    "alt": "@SomberNight",
+    "pageTitle": "ZipFile.writestr should respect SOURCE_DATE_EPOCH · Issue #91279 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93805517?v\u003d4\u0026size\u003d48",
+    "alt": "@SomberNight",
+    "pageTitle": "ZipFile.writestr should respect SOURCE_DATE_EPOCH · Issue #91279 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91279"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
