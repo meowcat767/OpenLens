@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1311,
+    "url": "https://peps.python.org/pep-0626/",
+    "title": "PEP 626 – Precise line numbers for debugging and other tools. | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 626 – Precise line numbers for debugging and other tools. PEP 626 – Precise line numbers for debugging and other tools. Author: Mark Shannon \u003cmark at hotpy.org\u003e BDFL-Delegate: Pablo Galindo Salgado \u003cpablogsal at python.org\u003e Status: Final Type: Standards Track Created: 15-Jul-2020 Python-Version: 3.10 Post-History: 17-Jul-2020 Table of Contents Abstract Motivation Rationale Specification Tracing What is considered to be code for the purposes of tracing Example event sequences The f_lineno attribute The new co_lines() method of code objects Zero width ranges The co_linetable attribute The co_lnotab attribute Backwards Compatibility Examples of code for which the sequence of trace events will change pass statement in an if statement. Multiple pass statements. C API Out of process debuggers and profilers Performance Implications Reference Implementation Copyright References Abstract Python should guarantee that when tracing is turned on, “line” tracing events are generated for all lines of code executed and only for lines of code that are executed. The f_lineno attribute of frame objects should always contain the expected line number. During frame execution, the expected line number is the line number of source code currently being executed. After a frame has completed, either by returning or by raising an exception, the expected line number is the line number of the last line of source that was executed. A side effect of ensuring correct line numbers, is that some bytecodes will need to be marked as artificial, and not have a meaningful line number. To assist tools, a new co_lines attribute will be added that describes the mapping from bytecode to source. Motivation Users of sys.settrace and associated tools should be able to rely on tracing events being generated for all lines of code, and only for actual code. They should also be able to assume that the line number in f_lineno is correct. The current implementation mostly does this, but fails in a few cases. This requires workarounds in tooling and is a nuisance for alternative Python implementations. Having this guarantee also benefits implementers of CPython in the long term, as the current behaviour is not obvious and has some odd corner cases. Rationale In order to guarantee that line events are generated when expected, the co_lnotab attribute, in its current form, can no longer be the source of truth for line number information. Rather than attempt to fix the co_lnotab attribute, a new method co_lines() will be added, which returns an iterator over bytecode offsets and source code lines. Ensuring that the bytecode is annotated correctly to enable accurate line number information means that some bytecodes must be marked as artificial, and not have a line number. Some care must be taken not to break existing tooling. To minimize breakage, the co_lnotab attribute will be retained, but lazily generated on demand. Specification Line events and the f_lineno attribute should act as an experienced Python user would expect in all cases. Tracing Tracing generates events for calls, returns, exceptions, lines of source code executed, and, under some circumstances, instructions executed. Only line events are covered by this PEP. When tracing is turned on, line events will be generated when: A new line of source code is reached. A backwards jump occurs, even if it jumps to the same line, as may happen in list comprehensions. Additionally, line events will never be generated for source code lines that are not executed. What is considered to be code for the purposes of tracing All expressions and parts of expressions are considered to be executable code. In general, all statements are also considered to be executable code. However, when a statement is spread over several lines, we must consider which parts of a statement are considered to be executable code. Statements are made up of keywords and expressions. Not all keywords have a direct runtime effect, so not all keywords are considered to be executable code. For example, else, is a necessary part of an if statement, but there is no runtime effect associated with an else. For the purposes of tracing, the following keywords will not be considered to be executable code: del – The expression to be deleted is treated as the executable code. else – No runtime effect finally – No runtime effect global – Purely declarative nonlocal – Purely declarative All other keywords are considered to be executable code. Example event sequences In the following examples, events are listed as “name”, f_lineno pairs. The code 1.     global x\n2.     x \u003d a\n generates the following event: \"line\" 2\n The code 1.     try:\n2.        pass\n3.     finally:\n4.        pass\n generates the following events: \"line\" 1\n\"line\" 2\n\"line\" 4\n The code 1.      for (\n2.          x) in [1]:\n3.          pass\n4.      return\n generates the following events: \"line\" 2       # ",
+    "scrapedAt": "2026-05-09 01:15:12.806267"
+  },
+  {
+    "id": 1310,
+    "url": "https://docs.python.org/3/library/gettext.html#module-gettext",
+    "title": "gettext — Multilingual internationalization services — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internationalization » gettext — Multilingual internationalization services | Theme Auto Light Dark | gettext — Multilingual internationalization services¶ Source code: Lib/gettext.py The gettext module provides internationalization (I18N) and localization (L10N) services for your Python modules and applications. It supports both the GNU gettext message catalog API and a higher level, class-based API that may be more appropriate for Python files. The interface described below allows you to write your module and application messages in one natural language, and provide a catalog of translated messages for running under different natural languages. Some hints on localizing your Python modules and applications are also given. GNU gettext API¶ The gettext module defines the following API, which is very similar to the GNU gettext API. If you use this API you will affect the translation of your entire application globally. Often this is what you want if your application is monolingual, with the choice of language dependent on the locale of your user. If you are localizing a Python module, or if your application needs to switch languages on the fly, you probably want to use the class-based API instead. gettext.bindtextdomain(domain, localedir\u003dNone)¶ Bind the domain to the locale directory localedir. More concretely, gettext will look for binary .mo files for the given domain using the path (on Unix): localedir/language/LC_MESSAGES/domain.mo, where language is searched for in the environment variables LANGUAGE, LC_ALL, LC_MESSAGES, and LANG respectively. If localedir is omitted or None, then the current binding for domain is returned. [1] gettext.textdomain(domain\u003dNone)¶ Change or query the current global domain. If domain is None, then the current global domain is returned, otherwise the global domain is set to domain, which is returned. gettext.gettext(message)¶ Return the localized translation of message, based on the current global domain, language, and locale directory. This function is usually aliased as _() in the local namespace (see examples below). gettext.dgettext(domain, message)¶ Like gettext(), but look the message up in the specified domain. gettext.ngettext(singular, plural, n)¶ Like gettext(), but consider plural forms. If a translation is found, apply the plural formula to n, and return the resulting message (some languages have more than two plural forms). If no translation is found, return singular if n is 1; return plural otherwise. The Plural formula is taken from the catalog header. It is a C or Python expression that has a free variable n; the expression evaluates to the index of the plural in the catalog. See the GNU gettext documentation for the precise syntax to be used in .po files and the formulas for a variety of languages. gettext.dngettext(domain, singular, plural, n)¶ Like ngettext(), but look the message up in the specified domain. gettext.pgettext(context, message)¶ gettext.dpgettext(domain, context, message)¶ gettext.npgettext(context, singular, plural, n)¶ gettext.dnpgettext(domain, context, singular, plural, n)¶ Similar to the corresponding functions without the p in the prefix (that is, gettext(), dgettext(), ngettext(), dngettext()), but the translation is restricted to the given message context. Added in version 3.8. Note that GNU gettext also defines a dcgettext() method, but this was deemed not useful and so it is currently unimplemented. Here’s an example of typical usage for this API: import gettext\ngettext.bindtextdomain(\u0027myapplication\u0027, \u0027/path/to/my/language/directory\u0027)\ngettext.textdomain(\u0027myapplication\u0027)\n_ \u003d gettext.gettext\n# ...\nprint(_(\u0027This is a translatable string.\u0027))\n Class-based API¶ The class-based API of the gettext module gives you more flexibility and greater convenience than the GNU gettext API. It is the recommended way of localizing your Python applications and modules. gettext defines a GNUTranslations class which implements the parsing of GNU .mo format files, and has methods for returning strings. Instances of this class can also install themselves in the built-in namespace as the function _(). gettext.find(domain, localedir\u003dNone, languages\u003dNone, all\u003dFalse)¶ This function implements the standard .mo file search algorithm. It takes a domain, identical to what textdomain() takes. Optional localedir is as in bindtextdomain(). Optional languages is a list of strings, where each string is a language code. If localedir is not given, then the default system locale directory is used. [2] If languages is not given, then the following environment variables are searched: LANGUAGE, LC_ALL, LC_MESSAGES, and LANG. The first one returning a non-empty value is used for the languages variable. The environment variables should contain a colon separated list of languages, which will be split on the colon to produce the expected list of language code strings. find",
+    "scrapedAt": "2026-05-09 01:15:11.419077"
+  },
+  {
+    "id": 1309,
+    "url": "https://github.com/python/cpython/issues/111178",
+    "title": "UBSan: Calling a function through pointer to incorrect function type is undefined behavior · Issue #111178 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k UBSan: Calling a function through pointer to incorrect function type is undefined behavior #111178 New issue Copy link New issue Copy link Closed Closed UBSan: Calling a function through pointer to incorrect function type is undefined behavior#111178 Copy link Labels topic-C-APItype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description chrstphrchvz opened on Oct 22, 2023 Issue body actions Bug report Bug description: UBSan (UndefinedBehaviorSanitizer) in LLVM.org Clang 17 makes -fsanitize\u003dfunction available for C; previously, it was only for C++. (So it may also be made available in future Apple Xcode clang and GCC.) By default, it is implied by -fsanitize\u003dundefined (which is what ./configure --with-undefined-behavior-sanitizer uses), but it can be disabled using -fno-sanitize\u003dfunction. For a project such as CPython, which has long relied on function pointers for callbacks, yet seems to have only required that callbacks behave as expected under typical ABI calling conventions, rather than more strictly be declared/defined as a type compatible with the function pointer they will be called as, this leads to numerous errors from UBSan. Examples when starting Python REPL: % ./python.exe           \nObjects/object.c:2731:5: runtime error: call to function list_dealloc through pointer to incorrect function type \u0027void (*)(struct _object *)\u0027\nlistobject.c:347: note: list_dealloc defined here\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Objects/object.c:2731:5 in \nObjects/object.c:878:16: runtime error: call to function long_hash through pointer to incorrect function type \u0027long (*)(struct _object *)\u0027\nlongobject.c:3295: note: long_hash defined here\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Objects/object.c:878:16 in \nInclude/internal/pycore_object.h:365:43: runtime error: call to function type_is_gc through pointer to incorrect function type \u0027int (*)(struct _object *)\u0027\ntypeobject.c:5347: note: type_is_gc defined here\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Include/internal/pycore_object.h:365:43 in \nObjects/abstract.c:157:26: runtime error: call to function dict_subscript through pointer to incorrect function type \u0027struct _object *(*)(struct _object *, struct _object *)\u0027\ndictobject.c:2511: note: dict_subscript defined here\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Objects/abstract.c:157:26 in \nObjects/abstract.c:2954:14: runtime error: call to function tupleiter_next through pointer to incorrect function type \u0027struct _object *(*)(struct _object *)\u0027\ntupleobject.c:999: note: tupleiter_next defined here\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Objects/abstract.c:2954:14 in \nObjects/abstract.c:236:19: runtime error: call to function dict_ass_sub through pointer to incorrect function type \u0027int (*)(struct _object *, struct _object *, struct _object *)\u0027\ndictobject.c:2546: note: dict_ass_sub defined here\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Objects/abstract.c:236:19 in \nObjects/call.c:242:18: runtime error: call to function type_call through pointer to incorrect function type \u0027struct _object *(*)(struct _object *, struct _object *, struct _object *)\u0027\ntypeobject.c:1647: note: type_call defined here\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Objects/call.c:242:18 in \nObjects/typeobject.c:10309:24: runtime error: call to function classmethod_get through pointer to incorrect function type \u0027struct _object *(*)(struct _object *, struct _object *, struct _object *)\u0027\ndescrobject.c:94: note: classmethod_get defined here\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Objects/typeobject.c:10309:24 in \nModules/gcmodule.c:493:16: runtime error: call to function list_traverse through pointer to incorrect function type \u0027int (*)(struct _object *, int (*)(struct _object *, void *), void *)\u0027\nlistobject.c:2704: note: list_traverse defined here\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Modules/gcmodule.c:493:16 in \nModules/gcmodule.c:605:20: runtime error: call to function list_traverse through pointer to incorrect function type \u0027int (*)(struct _object *, int (*)(struct _object *, void *), void *)\u0027\nlistobject.c:2704: note: list_traverse defined here\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Modules/gcmodule.c:605:20 in \nObjects/dictobject.c:3569:17: runtime error: call to function visit_reachable through pointer to incorrect function type \u0027int (*)(struct _object *, void *)\u0027\ngcmodule.c:502: note: visit_reachable defined here\nSUMMARY:",
+    "scrapedAt": "2026-05-09 01:15:10.097015"
+  },
+  {
+    "id": 1308,
+    "url": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-tls-cert",
+    "title": "http.server — HTTP servers — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Protocols and Support » http.server — HTTP servers | Theme Auto Light Dark | http.server — HTTP servers¶ Source code: Lib/http/server.py This module defines classes for implementing HTTP servers. Warning http.server is not recommended for production. It only implements basic security checks. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. One class, HTTPServer, is a socketserver.TCPServer subclass. It creates and listens at the HTTP socket, dispatching the requests to a handler. Code to create and run the server looks like this: def run(server_class\u003dHTTPServer, handler_class\u003dBaseHTTPRequestHandler):\n    server_address \u003d (\u0027\u0027, 8000)\n    httpd \u003d server_class(server_address, handler_class)\n    httpd.serve_forever()\n class http.server.HTTPServer(server_address, RequestHandlerClass)¶ This class builds on the TCPServer class by storing the server address as instance variables named server_name and server_port. The server is accessible by the handler, typically through the handler’s server instance variable. class http.server.ThreadingHTTPServer(server_address, RequestHandlerClass)¶ This class is identical to HTTPServer but uses threads to handle requests by using the ThreadingMixIn. This is useful to handle web browsers pre-opening sockets, on which HTTPServer would wait indefinitely. Added in version 3.7. class http.server.HTTPSServer(server_address, RequestHandlerClass, bind_and_activate\u003dTrue, *, certfile, keyfile\u003dNone, password\u003dNone, alpn_protocols\u003dNone)¶ Subclass of HTTPServer with a wrapped socket using the ssl module. If the ssl module is not available, instantiating a HTTPSServer object fails with a RuntimeError. The certfile argument is the path to the SSL certificate chain file, and the keyfile is the path to file containing the private key. A password can be specified for files protected and wrapped with PKCS#8, but beware that this could possibly expose hardcoded passwords in clear. See also See ssl.SSLContext.load_cert_chain() for additional information on the accepted values for certfile, keyfile and password. When specified, the alpn_protocols argument must be a sequence of strings specifying the “Application-Layer Protocol Negotiation” (ALPN) protocols supported by the server. ALPN allows the server and the client to negotiate the application protocol during the TLS handshake. By default, it is set to [\"http/1.1\"], meaning the server supports HTTP/1.1. Added in version 3.14. class http.server.ThreadingHTTPSServer(server_address, RequestHandlerClass, bind_and_activate\u003dTrue, *, certfile, keyfile\u003dNone, password\u003dNone, alpn_protocols\u003dNone)¶ This class is identical to HTTPSServer but uses threads to handle requests by inheriting from ThreadingMixIn. This is analogous to ThreadingHTTPServer only using HTTPSServer. Added in version 3.14. The HTTPServer, ThreadingHTTPServer, HTTPSServer and ThreadingHTTPSServer must be given a RequestHandlerClass on instantiation, of which this module provides three different variants: class http.server.BaseHTTPRequestHandler(request, client_address, server)¶ This class is used to handle the HTTP requests that arrive at the server. By itself, it cannot respond to any actual HTTP requests; it must be subclassed to handle each request method (for example, \u0027GET\u0027 or \u0027POST\u0027). BaseHTTPRequestHandler provides a number of class and instance variables, and methods for use by subclasses. The handler will parse the request and the headers, then call a method specific to the request type. The method name is constructed from the request. For example, for the request method SPAM, the do_SPAM() method will be called with no arguments. All of the relevant information is stored in instance variables of the handler. Subclasses should not need to override or extend the __init__() method. BaseHTTPRequestHandler has the following instance variables: client_address¶ Contains a tuple of the form (host, port) referring to the client’s address. server¶ Contains the server instance. close_connection¶ Boolean that should be set before handle_one_request() returns, indicating if another request may be expected, or if the connection should be shut down. requestline¶ Contains the string representation of the HTTP request line. The terminating CRLF is stripped. This attribute should be set by handle_one_request(). If no valid request line was processed, it should be set to the empty string. command¶ Contains the command (request type). For example, \u0027GET\u0027. path¶ Contains the request path. If query component of the URL is present, then path includes the query. Using the terminology of RFC 3986, path here includes hier-part and the query. request_version¶ Contains the version string from the request. For example, \u0027HTTP/1.0\u0027. headers¶ Holds an instance of the class specified by the MessageClass class variabl",
+    "scrapedAt": "2026-05-09 01:15:06.616511"
+  },
+  {
+    "id": 1307,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#webbrowser",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:15:05.380425"
+  },
+  {
     "id": 1306,
     "url": "https://docs.python.org/3/library/os.html#os.SCHED_DEADLINE",
     "title": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
@@ -8783,26 +8818,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1307,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#webbrowser"
-  },
-  {
-    "id": 1308,
-    "url": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-tls-cert"
-  },
-  {
-    "id": 1309,
-    "url": "https://github.com/python/cpython/issues/111178"
-  },
-  {
-    "id": 1310,
-    "url": "https://docs.python.org/3/library/gettext.html#module-gettext"
-  },
-  {
-    "id": 1311,
-    "url": "https://peps.python.org/pep-0626/"
   },
   {
     "id": 1312,
@@ -225670,10 +225685,1213 @@ window.searchData = [
     "id": 261899,
     "url": "https://github.com/python/cpython/issues/118805#issue-2286556854",
     "parentUrl": "https://github.com/python/cpython/issues/118805"
+  },
+  {
+    "id": 263932,
+    "url": "https://github.com/python/cpython/pull/129798",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263933,
+    "url": "https://github.com/python/cpython/pull/129797",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263934,
+    "url": "https://github.com/python/cpython/pull/129796",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263935,
+    "url": "https://github.com/python/cpython/pull/129795",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263936,
+    "url": "https://github.com/python/cpython/pull/129794",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263937,
+    "url": "https://github.com/python/cpython/pull/129793",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263938,
+    "url": "https://github.com/python/cpython/pull/129792",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263939,
+    "url": "https://github.com/python/cpython/pull/129791",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263940,
+    "url": "https://github.com/python/cpython/pull/129790",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263941,
+    "url": "https://github.com/python/cpython/issues/111178#issuecomment-2642725837",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263942,
+    "url": "https://github.com/python/cpython/pull/112793",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263943,
+    "url": "https://github.com/python/cpython/pull/112792",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263944,
+    "url": "https://github.com/python/cpython/pull/131191",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263945,
+    "url": "https://github.com/python/cpython/pull/131192",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263946,
+    "url": "https://github.com/python/cpython/pull/131193",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263947,
+    "url": "https://github.com/python/cpython/pull/124942",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263948,
+    "url": "https://github.com/python/cpython/issues/111178#issue-1955903601",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263949,
+    "url": "https://github.com/python/cpython/pull/124943",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263950,
+    "url": "https://github.com/python/cpython/pull/124940",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263951,
+    "url": "https://github.com/python/cpython/pull/129799",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263952,
+    "url": "https://github.com/python/cpython/pull/129787",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263953,
+    "url": "https://github.com/python/cpython/pull/131228",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263954,
+    "url": "https://github.com/python/cpython/pull/129786",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263955,
+    "url": "https://github.com/python/cpython/pull/129785",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263956,
+    "url": "https://github.com/python/cpython/pull/128178",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263957,
+    "url": "https://github.com/python/cpython/pull/129784",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263958,
+    "url": "https://github.com/python/cpython/pull/131227",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263959,
+    "url": "https://github.com/python/cpython/pull/129783",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263960,
+    "url": "https://github.com/python/cpython/pull/125182",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263961,
+    "url": "https://github.com/python/cpython/pull/129782",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263962,
+    "url": "https://github.com/python/cpython/pull/129781",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263964,
+    "url": "https://github.com/python/cpython/pull/129780",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263965,
+    "url": "https://github.com/python/cpython/pull/131463",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263966,
+    "url": "https://github.com/python/cpython/pull/112687",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263967,
+    "url": "https://github.com/python/cpython/pull/132395",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263968,
+    "url": "https://github.com/python/cpython/pull/135547",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263969,
+    "url": "https://github.com/python/cpython/pull/125180",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263970,
+    "url": "https://github.com/python/cpython/pull/131101",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263971,
+    "url": "https://github.com/python/cpython/pull/131464",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263972,
+    "url": "https://github.com/python/cpython/pull/131102",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263973,
+    "url": "https://github.com/python/cpython/pull/131180",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263974,
+    "url": "https://github.com/python/cpython/pull/124896",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263975,
+    "url": "https://github.com/python/cpython/pull/129789",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263976,
+    "url": "https://github.com/python/cpython/pull/124895",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263977,
+    "url": "https://github.com/python/cpython/pull/129788",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263978,
+    "url": "https://github.com/python/cpython/pull/129776",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263979,
+    "url": "https://github.com/python/cpython/pull/131613",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263980,
+    "url": "https://github.com/python/cpython/pull/129775",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263981,
+    "url": "https://github.com/python/cpython/pull/131614",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263982,
+    "url": "https://github.com/python/cpython/pull/131977",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263983,
+    "url": "https://github.com/python/cpython/pull/129774",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263984,
+    "url": "https://github.com/python/cpython/pull/131611",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263985,
+    "url": "https://github.com/python/cpython/pull/129773",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263986,
+    "url": "https://github.com/python/cpython/pull/131612",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263987,
+    "url": "https://github.com/python/cpython/pull/129772",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263988,
+    "url": "https://github.com/python/cpython/pull/135539",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263989,
+    "url": "https://github.com/python/cpython/pull/131615",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263990,
+    "url": "https://github.com/python/cpython/pull/131616",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263991,
+    "url": "https://github.com/python/cpython/pull/131979",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263993,
+    "url": "https://github.com/python/cpython/pull/131455",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263994,
+    "url": "https://github.com/python/cpython/pull/131456",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263995,
+    "url": "https://github.com/python/cpython/pull/131610",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263996,
+    "url": "https://github.com/python/cpython/pull/112892",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263997,
+    "url": "https://github.com/python/cpython/pull/112893",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263998,
+    "url": "https://github.com/python/cpython/pull/129090",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 263999,
+    "url": "https://github.com/python/cpython/pull/133072",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264000,
+    "url": "https://github.com/python/cpython/pull/124806",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264001,
+    "url": "https://github.com/python/cpython/pull/132020",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264002,
+    "url": "https://github.com/python/cpython/pull/124804",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264003,
+    "url": "https://github.com/python/cpython/issues/111178#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264004,
+    "url": "https://github.com/python/cpython/pull/131608",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264005,
+    "url": "https://github.com/python/cpython/pull/124888",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264006,
+    "url": "https://github.com/python/cpython/pull/131609",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264007,
+    "url": "https://github.com/python/cpython/pull/129779",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264008,
+    "url": "https://github.com/python/cpython/pull/128447",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264009,
+    "url": "https://github.com/python/cpython/pull/129778",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264010,
+    "url": "https://github.com/python/cpython/pull/124763",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264011,
+    "url": "https://github.com/python/cpython/pull/129777",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264012,
+    "url": "https://github.com/python/cpython/pull/127982",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264013,
+    "url": "https://github.com/python/cpython/pull/131602",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264014,
+    "url": "https://github.com/python/cpython/pull/125043",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264015,
+    "url": "https://github.com/python/cpython/pull/131603",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264016,
+    "url": "https://github.com/python/cpython/pull/131606",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264017,
+    "url": "https://github.com/python/cpython/pull/128154",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264018,
+    "url": "https://github.com/python/cpython/pull/131607",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264019,
+    "url": "https://github.com/python/cpython/pull/129088",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264020,
+    "url": "https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html#available-checks",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264021,
+    "url": "https://github.com/python/cpython/pull/129087",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264022,
+    "url": "https://github.com/python/cpython/pull/131605",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264023,
+    "url": "https://github.com/python/cpython/pull/130591",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264024,
+    "url": "https://github.com/python/cpython/pull/129084",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264025,
+    "url": "https://github.com/python/cpython/pull/131163",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264026,
+    "url": "https://github.com/python/cpython/pull/112820",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264027,
+    "url": "https://github.com/python/cpython/pull/129083",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264028,
+    "url": "https://github.com/python/cpython/pull/112782",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264029,
+    "url": "https://github.com/python/cpython/pull/131161",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264030,
+    "url": "https://github.com/python/cpython/pull/131162",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264031,
+    "url": "https://github.com/python/cpython/pull/130590",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264032,
+    "url": "https://github.com/python/cpython/pull/131160",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264033,
+    "url": "https://github.com/python/cpython/pull/122972",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264034,
+    "url": "https://github.com/python/cpython/pull/129802",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264035,
+    "url": "https://github.com/python/cpython/pull/129801",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264036,
+    "url": "https://github.com/python/cpython/pull/129800",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264037,
+    "url": "https://github.com/python/cpython/pull/130589",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264039,
+    "url": "https://github.com/python/cpython/pull/131714",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264040,
+    "url": "https://github.com/python/cpython/pull/129074",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264041,
+    "url": "https://github.com/python/cpython/pull/129071",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264042,
+    "url": "https://github.com/python/cpython/pull/112752",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264043,
+    "url": "https://github.com/python/cpython/pull/131159",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264044,
+    "url": "https://github.com/python/cpython/pull/131673",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264045,
+    "url": "https://github.com/python/cpython/pull/131157",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264046,
+    "url": "https://github.com/python/cpython/pull/131674",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264047,
+    "url": "https://github.com/python/cpython/pull/124908",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264048,
+    "url": "https://github.com/python/cpython/pull/124902",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264049,
+    "url": "https://github.com/python/cpython/pull/124903",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264050,
+    "url": "https://github.com/python/cpython/pull/124900",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264052,
+    "url": "https://github.com/python/cpython/pull/131668",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264053,
+    "url": "https://github.com/python/cpython/pull/131669",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264054,
+    "url": "https://github.com/python/cpython/pull/131667",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264055,
+    "url": "https://github.com/python/cpython/pull/129101",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264056,
+    "url": "https://github.com/python/cpython/pull/128253",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264057,
+    "url": "https://github.com/python/cpython/pull/129100",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264058,
+    "url": "https://github.com/python/cpython/pull/128252",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264059,
+    "url": "https://github.com/python/cpython/pull/128251",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264060,
+    "url": "https://github.com/python/cpython/pull/128250",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264061,
+    "url": "https://github.com/python/cpython/pull/131660",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264062,
+    "url": "https://github.com/python/cpython/pull/129060",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264063,
+    "url": "https://github.com/python/cpython/pull/131664",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264064,
+    "url": "https://github.com/python/cpython/pull/131665",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264067,
+    "url": "https://github.com/python/cpython/pull/130575",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264068,
+    "url": "https://github.com/python/cpython/pull/131663",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264069,
+    "url": "https://github.com/python/cpython/pull/124733",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264070,
+    "url": "https://github.com/chrstphrchvz",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264071,
+    "url": "https://github.com/python/cpython/pull/124970",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264072,
+    "url": "https://github.com/python/cpython/pull/123004",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264073,
+    "url": "https://github.com/python/cpython/pull/128259",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264074,
+    "url": "https://github.com/python/cpython/pull/128247",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264075,
+    "url": "https://github.com/python/cpython/pull/130446",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264076,
+    "url": "https://github.com/python/cpython/pull/128246",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264077,
+    "url": "https://github.com/python/cpython/pull/128245",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264078,
+    "url": "https://github.com/python/cpython/pull/128244",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264079,
+    "url": "https://github.com/python/cpython/pull/128243",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264080,
+    "url": "https://github.com/python/cpython/pull/128242",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264081,
+    "url": "https://github.com/python/cpython/pull/128241",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264082,
+    "url": "https://github.com/python/cpython/pull/131659",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264083,
+    "url": "https://github.com/python/cpython/pull/128240",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264084,
+    "url": "https://github.com/python/cpython/pull/131496",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264085,
+    "url": "https://github.com/python/cpython/pull/130682",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264086,
+    "url": "https://github.com/python/cpython/pull/130684",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264087,
+    "url": "https://github.com/python/cpython/pull/130683",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264088,
+    "url": "https://github.com/python/cpython/pull/131135",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264090,
+    "url": "https://github.com/python/cpython/issues/111178#top",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264091,
+    "url": "https://github.com/python/cpython/pull/124964",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264092,
+    "url": "https://github.com/python/cpython/pull/130719",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264093,
+    "url": "https://github.com/python/cpython/pull/128249",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264094,
+    "url": "https://github.com/python/cpython/pull/128248",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264095,
+    "url": "https://github.com/python/cpython/pull/128236",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264096,
+    "url": "https://github.com/python/cpython/pull/128235",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264098,
+    "url": "https://github.com/python/cpython/pull/112742",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264099,
+    "url": "https://github.com/python/cpython/pull/112863",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264100,
+    "url": "https://github.com/python/cpython/pull/112861",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264101,
+    "url": "https://github.com/python/cpython/pull/128239",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264102,
+    "url": "https://github.com/python/cpython/pull/128238",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264103,
+    "url": "https://github.com/python/cpython/pull/128237",
+    "parentUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 264107,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.install",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264110,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.GNUTranslations",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264112,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.dngettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264113,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.dpgettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264114,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.GNUTranslations.gettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264116,
+    "url": "https://www.gnu.org/software/gettext/manual/gettext.html",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264118,
+    "url": "https://docs.python.org/3/library/gettext.html#",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264119,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.gettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264120,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.NullTranslations.info",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264122,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.bindtextdomain",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264124,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/gettext.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264125,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.GNUTranslations.npgettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264126,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.NullTranslations.npgettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264130,
+    "url": "https://docs.python.org/3/library/gettext.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264131,
+    "url": "https://docs.python.org/3/library/gettext.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264132,
+    "url": "https://docs.python.org/3/library/gettext.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264134,
+    "url": "https://docs.python.org/3/library/gettext.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264136,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.find",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264138,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.NullTranslations.gettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264141,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.NullTranslations._parse",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264146,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.dgettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264147,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.ngettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264149,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.NullTranslations",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264150,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.pgettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264152,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.GNUTranslations.ngettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264153,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.GNUTranslations.pgettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264154,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.NullTranslations.add_fallback",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264155,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.npgettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264156,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/gettext.py",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264157,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.NullTranslations.ngettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264162,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.textdomain",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264164,
+    "url": "https://datatracker.ietf.org/doc/html/rfc822.html",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264166,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.dnpgettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264168,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.NullTranslations.install",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264170,
+    "url": "https://github.com/pinard/po-utils",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264171,
+    "url": "https://babel.pocoo.org/",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264173,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.translation",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264174,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.NullTranslations.pgettext",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264176,
+    "url": "https://docs.python.org/3/library/gettext.html#gettext.NullTranslations.charset",
+    "parentUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 264177,
+    "url": "https://peps.python.org/pep-0626/#id2",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264178,
+    "url": "https://peps.python.org/pep-0626/#id1",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264179,
+    "url": "https://peps.python.org/pep-0626/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264180,
+    "url": "https://peps.python.org/pep-0626/#the-co-lnotab-attribute",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264181,
+    "url": "https://peps.python.org/pep-0626/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264182,
+    "url": "https://github.com/benfred/py-spy",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264183,
+    "url": "https://peps.python.org/pep-0626/#the-new-co-lines-method-of-code-objects",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264184,
+    "url": "https://peps.python.org/pep-0626/#what-is-considered-to-be-code-for-the-purposes-of-tracing",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264185,
+    "url": "https://peps.python.org/pep-0626/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264186,
+    "url": "https://peps.python.org/pep-0626/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264187,
+    "url": "https://peps.python.org/pep-0626/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264188,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0626.rst",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264189,
+    "url": "https://peps.python.org/pep-0626/#references",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264190,
+    "url": "https://peps.python.org/pep-0626/#multiple-pass-statements",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264191,
+    "url": "https://peps.python.org/pep-0626/#performance-implications",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264192,
+    "url": "https://github.com/markshannon/cpython/tree/new-linetable-format-version-2",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264193,
+    "url": "https://peps.python.org/pep-0626/#tracing",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264194,
+    "url": "https://peps.python.org/pep-0626/#out-of-process-debuggers-and-profilers",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264195,
+    "url": "https://peps.python.org/pep-0626/#example-event-sequences",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264196,
+    "url": "https://peps.python.org/pep-0626/#the-co-linetable-attribute",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264197,
+    "url": "https://peps.python.org/pep-0626/#examples-of-code-for-which-the-sequence-of-trace-events-will-change",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264198,
+    "url": "https://peps.python.org/pep-0626/#c-api",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264199,
+    "url": "https://peps.python.org/pep-0626/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264200,
+    "url": "https://peps.python.org/pep-0626/#pass-statement-in-an-if-statement",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264201,
+    "url": "https://peps.python.org/pep-0626/#the-f-lineno-attribute",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264202,
+    "url": "https://peps.python.org/pep-0626/#specification",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264203,
+    "url": "https://peps.python.org/pep-0626/#zero-width-ranges",
+    "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264204,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0626.rst",
+    "parentUrl": "https://peps.python.org/pep-0626/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gettext — Multilingual internationalization services — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gettext — Multilingual internationalization services — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/7941193?v\u003d4\u0026size\u003d80",
+    "alt": "@chrstphrchvz",
+    "pageTitle": "UBSan: Calling a function through pointer to incorrect function type is undefined behavior · Issue #111178 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/7941193?v\u003d4\u0026size\u003d48",
+    "alt": "@chrstphrchvz",
+    "pageTitle": "UBSan: Calling a function through pointer to incorrect function type is undefined behavior · Issue #111178 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "http.server — HTTP servers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-tls-cert"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "http.server — HTTP servers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-tls-cert"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#webbrowser"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#webbrowser"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
