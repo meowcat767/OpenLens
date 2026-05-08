@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 185,
+    "url": "https://www.tensorflow.org/",
+    "title": "TensorFlow",
+    "content": "Skip to main content / English Español – América Latina Français Português – Brasil 中文 – 简体 中文 – 繁體 日本語 한국어 GitHub Sign in TensorFlow Stay organized with collections Save and categorize content based on your preferences. An end-to-end platform for machine learning Install TensorFlow Get started with TensorFlow TensorFlow makes it easy to create ML models that can run in any environment. Learn how to use the intuitive APIs through interactive code samples. View tutorials import tensorflow as tf\nmnist \u003d tf.keras.datasets.mnist\n\n(x_train, y_train),(x_test, y_test) \u003d mnist.load_data()\nx_train, x_test \u003d x_train / 255.0, x_test / 255.0\n\nmodel \u003d tf.keras.models.Sequential([\n  tf.keras.layers.Flatten(input_shape\u003d(28, 28)),\n  tf.keras.layers.Dense(128, activation\u003d\u0027relu\u0027),\n  tf.keras.layers.Dropout(0.2),\n  tf.keras.layers.Dense(10, activation\u003d\u0027softmax\u0027)\n])\n\nmodel.compile(optimizer\u003d\u0027adam\u0027,\n  loss\u003d\u0027sparse_categorical_crossentropy\u0027,\n  metrics\u003d[\u0027accuracy\u0027])\n\nmodel.fit(x_train, y_train, epochs\u003d5)\nmodel.evaluate(x_test, y_test) Run quickstart Solve real-world problems with ML Explore examples of how TensorFlow is used to advance research and build AI-powered applications. TENSORFLOW.JS Catch up on the latest from the Web AI Summit Explore the latest advancements in running models client-side with speakers from Chrome, MediaPipe, Intel, Hugging Face, Microsoft, LangChain, and more. Watch now close TensorFlow GNN Analyze relational data using graph neural networks GNNs can process complex relationships between objects, making them a powerful technique for traffic forecasting, medical discovery, and more. Learn about TF GNN TensorFlow Agents Build recommendation systems with reinforcement learning Learn how Spotify uses the TensorFlow ecosystem to design an extendable offline simulator and train RL Agents to generate playlists. Read the blog What\u0027s new in TensorFlow Read the latest announcements from the TensorFlow team and community. Explore the ecosystem Discover production-tested tools to accelerate modeling, deployment, and other workflows. Library TensorFlow.js Train and run models directly in the browser using JavaScript or Node.js. Library LiteRT Deploy ML on mobile and edge devices such as Android, iOS, Raspberry Pi, and Edge TPU. API tf.data Preprocess data and create input pipelines for ML models. Library TFX Create production ML pipelines and implement MLOps best practices. API tf.keras Create ML models with TensorFlow\u0027s high-level API. Resource Kaggle Models Find pre-trained models ready for fine-tuning and deployment. Resource TensorFlow Datasets Browse the collection of standard datasets for initial training and validation. Tool TensorBoard Visualize and track development of ML models. ML models \u0026 datasets Pretrained models and ready-to-use datasets for image, text, audio, and video use cases. Libraries \u0026 extensions Packages for domain-specific applications and APIs for languages other than Python. Developer tools Tools to evaluate models, optimize performance, and productionize ML workflows. Join the community Collaborate, find support, and share your projects by joining interest groups or attending developer events. Get involved Learn ML New to machine learning? Begin with TensorFlow\u0027s curated curriculums or browse the resource library of books, online courses, and videos. Explore resources Stay connected Learn the latest in machine learning and TensorFlow by following our channels or signing up for the newsletter. View past newsletters in the archive. Forum X YouTube Linkedin Forum X YouTube Linkedin Start building with TensorFlow Install TensorFlow Explore tutorials [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINeed\",\"thumb-down\"],[\"Too complicated / too many steps\",\"tooComplicatedTooManySteps\",\"thumb-down\"],[\"Out of date\",\"outOfDate\",\"thumb-down\"],[\"Samples / code issue\",\"samplesCodeIssue\",\"thumb-down\"],[\"Other\",\"otherDown\",\"thumb-down\"]],[],[],[]]",
+    "scrapedAt": "2026-05-09 00:33:08.041628"
+  },
+  {
+    "id": 184,
+    "url": "https://bottlepy.org",
+    "title": "Bottle: Python Web Framework — Bottle 0.14-dev documentation",
+    "content": "Bottle: Python Web Framework¶ Bottle is a fast, simple and lightweight WSGI micro web-framework for Python. It is distributed as a single file module and has no dependencies other than the Python Standard Library. Routing: Requests to function-call mapping with support for clean and dynamic URLs. Templates: Fast and pythonic built-in template engine and support for mako, jinja2 and cheetah templates. Utilities: Convenient access to form data, file uploads, cookies, headers and other HTTP features. Server: Built-in HTTP development server and support for a wide range of WSGI capable HTTP server (e.g. gunicorn, paste or cheroot). Example: “Hello World” in a bottle from bottle import route, run, template\n\n@route(\u0027/hello/\u003cname\u003e\u0027)\ndef index(name):\n    return template(\u0027\u003cb\u003eHello {{name}}\u003c/b\u003e!\u0027, name\u003dname)\n\nrun(host\u003d\u0027localhost\u0027, port\u003d8080)\n Run this script or paste it into a Python console, then point your browser to http://localhost:8080/hello/world. That’s it. Download and Install¶ Install the latest stable release with pip install bottle or download bottle.py (unstable) into your project directory. There are no hard [1] dependencies other than the Python standard library. Dead Snakes¶ Bottle up to version 0.12 supported an absurd range of Python versions, some of which reached their end-of-life well over a decade ago. Starting with Bottle 0.13 we ensure backwards compatibility with maintained versions of Python only. Outdated Python versions may still work, but are no longer tested for compatibility. If you are in the unfortunate position to have to rely on “dead snakes” for production, just stick with Bottle 0.12 (LTS) or whichever release of Bottle still supports it. Everyone else should upgrade regularly to benefit from new features and improvements. Python Support Matrix¶ Bottle Release Python 2 Python 3 0.12 2.5 - 2.7 3.2 - 3.12 0.13 2.7 \u003e\u003d3.8 [2] 0.14 (planned) dropped \u003e\u003d3.9 [2] Documentation¶ Getting Started User’s Guide Installation Hello World! The Application Object Debug Mode Command Line Interface Request Routing Serving Assets Generating content Error handling Request Data Templates Structuring Applications Glossary API Reference Global functions Global decorators Request Context Helper Functions Exceptions The Bottle Class The Request Object The Response Object Data Structures Request routing Templating HTTP utilities Misc utilities Release Notes Release 0.14 (in development) Release 0.13 Release 0.12 Release 0.11 Release 0.10 Release 0.9 Release 0.8 F.A.Q. General questions Common errors and pitfalls Recipes for common tasks Advanced Topics Request Routing Rule Syntax Wildcard Filters Legacy Syntax Explicit routing configuration Configuration Configuration Basics Naming Convention Load configuration from a File Load configuration from a python module Loading configuration from a dict Listening to configuration changes Filters and other Meta Data API Documentation SimpleTemplate SimpleTemplate Syntax Template Functions SimpleTemplate API Deployment Scaling for Production Asynchronous Applications The Limits of Synchronous WSGI Greenlets to the rescue Event Callbacks Finally: WebSockets Plugins Using Plugins Plugin Basics Managing Plugins Configuring Plugins Writing Plugins Plugin API The Route Context Runtime optimizations Common patterns Plugin Example: SQLitePlugin 3rd Party Plugins Additional Notes ToDo Application Example Goals Prior to Starting … Writing a Web-Based ToDo Application with Bottle Deployment Final Words Complete Example Listing Development Developer Notes Get involved Get the Sources Releases and Updates Repository Structure Submitting Patches Contributors License¶ Code and documentation are available according to the MIT License: Copyright (c) 2009-2025, Marcel Hellkamp.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n The Bottle logo however is NOT covered by that license. It is allowed to use the logo as a link to the bottle homepage or in direct context with the unmodified library. In all other cases please ask first. ",
+    "scrapedAt": "2026-05-09 00:33:05.661262"
+  },
+  {
+    "id": 183,
+    "url": "https://trypyramid.com/",
+    "title": "Welcome to Pyramid, a Python Web Framework",
+    "content": "Pyramid The Start Small, Finish Big Stay Finished Framework Projects with ambition start small but finish big and must stay finished. You need a Python web framework that supports your decisions, by artisans for artisans. Quick Start             from wsgiref.simple_server import make_server\nfrom pyramid.config import Configurator\nfrom pyramid.response import Response\n\ndef hello_world(request):\n    return Response(\u0027Hello World!\u0027)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    with Configurator() as config:\n        config.add_route(\u0027hello\u0027, \u0027/\u0027)\n        config.add_view(hello_world, route_name\u003d\u0027hello\u0027)\n        app \u003d config.make_wsgi_app()\n    server \u003d make_server(\u00270.0.0.0\u0027, 6543, app)\n    server.serve_forever()\n          Pyramid makes it easy to write web applications. You can start small with this \"hello world\" minimal request/response web app. This may take you far, especially while learning. As your application grows, Pyramid offers many features that make writing complex software take less effort. Pyramid works in all supported versions of Python. Our installation instructions will help you get Pyramid up and running. Pyramid\u0027s quick tutorial will take you step by step through writing a single file application, forms, database integration, and authentication. Developers may dive in to Pyramid\u0027s narrative documentation, or browse the extensive API reference. Pyramid has a rich pool of helpful resources from which to draw. Extending Pyramid is a curated and filterable list of add-ons, packages, and applications built to work with Pyramid. When You Need Pyramid Megaframeworks make decisions for you. But if you don\u0027t fit their viewpoint, you end up fighting their decisions. Microframeworks force no decisions, making it easy to start. But as your application grows, you\u0027re on your own. In both cases, the focus is on the start: either too much or too little. Either way, finishing and staying finished is hard. You need a finishing-focused framework with an architectural design that scales down to getting started, then up as your application grows. Pyramid was made for just this. It\u0027s a Goldilocks Solution: not too small, not too big, just right. Pyramid The Start Small, Finish Big, Stay Finished Framework. Start Small Getting started quickly and simply is a key attraction of lightweight frameworks. Equally, you get to choose what approaches to use for templating, database, security, and more, or use a convenient starting point with a scaffold. Pyramid excels at scaling down to the first hour of learning, while avoiding the pitfalls of framework magic. Start as a single-file module with little first-hour complexity Use a convenient scaffold to generate a sample project with your combination of subsystems Choose from a variety of templating, database, security solutions and more using the quality and convenience of Pyramid\u0027s add-on system Tap into a variety of high-quality documentation for evaluating, trying out, or doing advanced development with Pyramid Ask the growing Pyramid community for tips and successes Finish Big Ambitious projects aspire to grow big without losing their dignity. Pyramid is uniquely equipped to scale with you. Its configuration, extension, and add-on system gives the skeleton to support your ambitions, and its architecture ensures that you don\u0027t lose those performance and quality features you started with. Include and configure Pyramid add-ons inside your application Override and customize core code and add-ons from the outside, without forking Build and deliver re-usable subsystems inside and outside our organization Less magic by forgoing globals and import side-effects Use the configuration system to keep your wiring separate from your code Numerous extension facilities built into the framework Use Pyramid as a \"framework framework\" to craft your own special-purpose, domain-specific web system Gain insight from our long-standing culture of systems that organically get big Stay Finished Pyramid\u0027s simple first hour helps you get started and its extensability helps you finish your ambitions. There\u0027s life after shipping. Pyramid helps keep your application finished by understanding the full life cycle of a professional web application. Deep commitment to API stability and bug fixing over the 120+ software releases Culture of 100% test and documentation coverage makes Pyramid a future-proof choice Keeping configuration out of code means less forking and side-effects Long history of repeatable deployments provides a community culture of helpful tips Top-notch performance even as Pyramid grows Deep extensibility and large-scale design patterns means you won\u0027t outgrow it Strong following of Python practices (WSGI, packages, virtual environments, first to support Python 3) means you won\u0027t be out of the Python mainstream Supports Your Decisions Full-stack frameworks provide built-in value by telling you what to do. But doing something different, or using something better, leads to the dreaded \"fighting the fram",
+    "scrapedAt": "2026-05-09 00:33:04.407214"
+  },
+  {
+    "id": 182,
+    "url": "https://saltproject.io/",
+    "title": "Saltproject.io",
+    "content": "Welcome to Salt Project Salty Content Scroll through Salt videos to learn more and expand your knowledge of the platform. What is Salt? It\u0027s automation, infrastructure management. It\u0027s data-driven orchestration and remote execution. It\u0027s configuration management. It\u0027s so much more. Understand Salt in 10 minutes. Get Started Learn Salt Get hands on with Salt with nothing to install and step-by-step instructions using the Salt User Guide. Dive into the details with Salt Documentation or Salt Project YouTube Channel. Learn to automate and secure IT with Salt. Salt Workshop Discord Server GitHub Channel Mailing List Security Updates Recent Blogs Salt 3008 RC2 is now available May 6, 2026 The Salt Project has just released RC2 (release candidate 2) of the Salt 3008 LTS. Read More Salt 3007.14 STS is available Apr 29, 2026 The Salt Project has just released the 3007.14 STS bugfix release! Read More Salt 3006.24 LTS is available Apr 23, 2026 The Salt Project has just released the 3006.24 LTS bugfix of Salt 3006. Read More View All Posts ` Looking for Enterprise-ready Salt? Good news! Salt is now fully integrated into Tanzu Salt. Learn more about how Salt powers VMware’s leading automation platform and how you can harness the power of Salt across the enterprise. Learn More",
+    "scrapedAt": "2026-05-09 00:33:02.83801"
+  },
+  {
+    "id": 181,
+    "url": "https://blog.python.org",
+    "title": "Python Insider",
+    "content": "News \u0026 updates from the Python core team 314 posts / 26 authors / since 2011 RSS Latest Python 3.15.0 beta 1 is here! Hugo van Kemenade · May 7, 2026 The propreantepenultimate 3.15 beta is out! releases Recent All posts Python 3.14.5 release candidate Hugo van Kemenade · May 4, 2026 A special release candidate with a new (old) garbage collector. Rust for CPython Progress Update April 2026 Emma Smith · April 8, 2026 Rust for CPython project status update April 2026 Python 3.15.0a8, 3.14.4 and 3.13.13 are out! Hugo van Kemenade · April 7, 2026 A final alpha and two bug fixes are awaiting your upgrade. Python 3.15\u0027s JIT is now back on track Ken Jin · March 23, 2026 A look at Python\u0027s JIT in 3.15a7. Python 3.15.0 alpha 7 Hugo van Kemenade · March 10, 2026 The penultimate 3.15 alpha is out! CPython: 36 Years of Source Code Stan Ulbrych · March 8, 2026 An analysis of the growth of CPython\u0027s codebase from its first commits to the present day Python 3.12.13, 3.11.15 and 3.10.20 are now available! Thomas Wouters · March 3, 2026 Python Releases For Your Security! New security releases for 3.10, 3.11 and 3.12 are now available. The Python Insider Blog Has Moved! Jacob Coffee · March 3, 2026 Python Insider now lives at blog.python.org, backed by a Git repository. All 307 posts from the Blogger era have been migrated, and old URLs redirect automatically. Browse all 314 posts ?",
+    "scrapedAt": "2026-05-09 00:33:01.739915"
+  },
+  {
     "id": 180,
     "url": "https://scipy.org/",
     "title": "SciPy",
@@ -1258,26 +1293,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 181,
-    "url": "https://blog.python.org"
-  },
-  {
-    "id": 182,
-    "url": "https://saltproject.io/"
-  },
-  {
-    "id": 183,
-    "url": "https://trypyramid.com/"
-  },
-  {
-    "id": 184,
-    "url": "https://bottlepy.org"
-  },
-  {
-    "id": 185,
-    "url": "https://www.tensorflow.org/"
   },
   {
     "id": 186,
@@ -32483,10 +32498,1153 @@ window.searchData = [
     "id": 15227,
     "url": "https://scipy.org/#",
     "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 15228,
+    "url": "https://blog.python.org/2026/03/python-3150-alpha-7",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 15229,
+    "url": "https://discuss.python.org/t/python-3-12-13-3-11-15-and-3-10-20-are-now-available/106363",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 15230,
+    "url": "https://blog.python.org/2026/05/python-3150-beta-1",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 15231,
+    "url": "https://blog.python.org/blog",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 15232,
+    "url": "https://blog.python.org/2026/03/the-python-insider-blog-has-moved",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 15233,
+    "url": "https://blog.python.org/2026/03/jit-on-track",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 15234,
+    "url": "https://blog.python.org/2026/04/rust-for-cpython-2026-04",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 15235,
+    "url": "https://blog.python.org/2026/04/python-3150a8-3144-31313",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 15236,
+    "url": "https://blog.python.org/2026/05/python-3145rc1",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 15237,
+    "url": "https://blog.python.org/2026/03/cpython-codebase-growth",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 15238,
+    "url": "https://blog.python.org/tags/releases",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 15239,
+    "url": "https://blog.python.org/rss.xml",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 15240,
+    "url": "https://blog.python.org/2026/03/python-31213-31115-31020",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 15241,
+    "url": "https://groups.google.com/forum/#!forum/salt-users",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15242,
+    "url": "https://docs.saltproject.io/en/master/topics/tutorials/walkthrough.html#salt-in-10-minutes/",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15243,
+    "url": "https://github.com/saltstack",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15244,
+    "url": "https://www.youtube.com/watch?v\u003dG4CExfRn5rs",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15245,
+    "url": "https://www.youtube.com/watch?v\u003dYBgW--PDeic",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15246,
+    "url": "https://www.youtube.com/watch?v\u003dTj2QHLW5UwQ",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15247,
+    "url": "https://docs.saltproject.io/en/latest/",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15248,
+    "url": "https://www.youtube.com/?gl\u003dUS\u0026tab\u003dk1/",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15249,
+    "url": "https://docs.saltproject.io/salt/user-guide/en/latest/index.html",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15250,
+    "url": "https://www.youtube.com/watch?v\u003dnfYHEhKLqHg",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15251,
+    "url": "https://saltproject.io/blog",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15252,
+    "url": "https://saltproject.io/security-announcements/",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15253,
+    "url": "https://discord.gg/J7b7EscrAs",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15254,
+    "url": "https://saltproject.io/blog/salt-3008-rc2-available",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15255,
+    "url": "https://docs.saltproject.io/salt/install-guide/en/latest/",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15257,
+    "url": "https://tanzu.vmware.com/salt",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 15258,
+    "url": "https://docs.pylonsproject.org/projects/pyramid/en/latest/narr/viewconfig.html#mapping-views-using-a-decorator-section",
+    "parentUrl": "https://trypyramid.com/"
+  },
+  {
+    "id": 15259,
+    "url": "https://docs.pylonsproject.org/projects/pyramid/en/latest/narr/renderers.html",
+    "parentUrl": "https://trypyramid.com/"
+  },
+  {
+    "id": 15260,
+    "url": "https://docs.pylonsproject.org/projects/pyramid/en/latest/narr/install.html",
+    "parentUrl": "https://trypyramid.com/"
+  },
+  {
+    "id": 15261,
+    "url": "https://docs.pylonsproject.org/projects/pyramid/en/latest/quick_tutorial/index.html",
+    "parentUrl": "https://trypyramid.com/"
+  },
+  {
+    "id": 15262,
+    "url": "https://trypyramid.com/resources-extending-pyramid.html",
+    "parentUrl": "https://trypyramid.com/"
+  },
+  {
+    "id": 15263,
+    "url": "https://docs.pylonsproject.org/projects/pyramid/en/latest/api/index.html",
+    "parentUrl": "https://trypyramid.com/"
+  },
+  {
+    "id": 15264,
+    "url": "https://docs.pylonsproject.org/projects/pyramid/en/latest/narr/hooks.html",
+    "parentUrl": "https://trypyramid.com/"
+  },
+  {
+    "id": 15265,
+    "url": "https://trypyramid.com/resources.html",
+    "parentUrl": "https://trypyramid.com/"
+  },
+  {
+    "id": 15266,
+    "url": "https://docs.pylonsproject.org/projects/pyramid/en/latest/narr/viewconfig.html#view-configuration-parameters",
+    "parentUrl": "https://trypyramid.com/"
+  },
+  {
+    "id": 15267,
+    "url": "https://docs.pylonsproject.org/projects/pyramid/en/latest/narr/assets.html",
+    "parentUrl": "https://trypyramid.com/"
+  },
+  {
+    "id": 15268,
+    "url": "https://docs.pylonsproject.org/projects/pyramid/en/latest/narr/introduction.html",
+    "parentUrl": "https://trypyramid.com/"
+  },
+  {
+    "id": 15269,
+    "url": "http://0.0.0.0:6543",
+    "parentUrl": "https://trypyramid.com/"
+  },
+  {
+    "id": 15270,
+    "url": "https://bottlepy.org/docs/dev/tutorial.html#error-handling",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15271,
+    "url": "https://bottlepy.org/docs/dev/tutorial.html#debug-mode",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15272,
+    "url": "http://localhost:8080/hello/world",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15273,
+    "url": "https://bottlepy.org/docs/dev/faq.html",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15274,
+    "url": "https://bottlepy.org/docs/dev/plugins/dev.html#runtime-optimizations",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15275,
+    "url": "https://bottlepy.org/docs/dev/#",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15276,
+    "url": "https://bottlepy.org/docs/dev/changelog.html#release-0-14-in-development",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15277,
+    "url": "https://bottlepy.org/docs/dev/faq.html#common-errors-and-pitfalls",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15278,
+    "url": "https://bottlepy.org/docs/dev/tutorial.html#tutorial-templates",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15279,
+    "url": "https://bottlepy.org/docs/dev/api.html",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15280,
+    "url": "https://bottlepy.org/docs/dev/plugins/dev.html#common-patterns",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15281,
+    "url": "https://bottlepy.org/docs/dev/configuration.html#filters-and-other-meta-data",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15282,
+    "url": "https://bottlepy.org/docs/dev/plugins/index.html#managing-plugins",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15283,
+    "url": "https://bottlepy.org/docs/dev/#license",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15284,
+    "url": "https://bottlepy.org/docs/dev/deployment.html#scaling-for-production",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15285,
+    "url": "https://bottlepy.org/docs/dev/stpl.html#template-functions",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15286,
+    "url": "https://bottlepy.org/docs/dev/plugins/list.html",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15287,
+    "url": "https://bottlepy.org/docs/dev/api.html#global-functions",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15288,
+    "url": "https://groups.google.de/group/bottlepy",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15289,
+    "url": "https://bottlepy.org/docs/dev/tutorial_app.html#goals",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15290,
+    "url": "https://bottlepy.org/docs/dev/tutorial_app.html#final-words",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15291,
+    "url": "https://bottlepy.org/docs/dev/api.html#global-decorators",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15292,
+    "url": "https://bottlepy.org/docs/dev/api.html#helper-functions",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15293,
+    "url": "https://bottlepy.org/docs/dev/api.html#the-bottle-class",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15294,
+    "url": "https://bottlepy.org/docs/dev/configuration.html#listening-to-configuration-changes",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15295,
+    "url": "https://bottlepy.org/docs/dev/##license",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15296,
+    "url": "https://github.com/bottlepy/bottle/raw/master/bottle.py",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15297,
+    "url": "https://bottlepy.org/docs/dev/changelog.html#release-0-8",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15298,
+    "url": "https://bottlepy.org/docs/dev/changelog.html#release-0-9",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15299,
+    "url": "https://bottlepy.org/docs/dev/configuration.html#configuration-basics",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15300,
+    "url": "https://bottlepy.org/docs/dev/plugins/dev.html#plugin-example-sqliteplugin",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15301,
+    "url": "https://bottlepy.org/docs/dev/#id6",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15302,
+    "url": "https://bottlepy.org/docs/dev/tutorial.html#installation",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15303,
+    "url": "https://bottlepy.org/docs/dev/#id5",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15304,
+    "url": "https://bottlepy.org/docs/dev/#id4",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15305,
+    "url": "https://bottlepy.org/docs/dev/#id3",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15306,
+    "url": "https://bottlepy.org/docs/dev/#id7",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15307,
+    "url": "https://bottlepy.org/docs/dev/#documentation",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15308,
+    "url": "https://bottlepy.org/docs/dev/#download-and-install",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15309,
+    "url": "https://bottlepy.org/docs/dev/development.html#submitting-patches",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15310,
+    "url": "https://bottlepy.org/docs/dev/#id2",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15311,
+    "url": "https://www.makotemplates.org/",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15312,
+    "url": "https://bottlepy.org/docs/dev/api.html#the-request-object",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15313,
+    "url": "https://bottlepy.org/docs/dev/plugins/dev.html#the-route-context",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15314,
+    "url": "https://bottlepy.org/docs/dev/tutorial.html#structuring-applications",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15315,
+    "url": "https://bottlepy.org/docs/0.13/",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15316,
+    "url": "https://bottlepy.org/docs/dev/tutorial_app.html#deployment",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15317,
+    "url": "https://bottlepy.org/docs/dev/tutorial.html#templates",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15318,
+    "url": "https://bottlepy.org/docs/dev/api.html#the-response-object",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15319,
+    "url": "https://bottlepy.org/docs/dev/tutorial.html#glossary",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15320,
+    "url": "https://pythonpaste.readthedocs.io/",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15321,
+    "url": "https://devguide.python.org/versions/",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15322,
+    "url": "https://cheroot.cherrypy.dev/",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15323,
+    "url": "https://bottlepy.org/docs/dev/#dead-snakes",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15324,
+    "url": "https://github.com/bottlepy/bottle",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15325,
+    "url": "https://python.org/",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15326,
+    "url": "https://bottlepy.org/docs/dev/routing.html#explicit-routing-configuration",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15327,
+    "url": "https://bottlepy.org/docs/dev/stpl.html#simpletemplate-api",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15328,
+    "url": "https://bottlepy.org/docs/dev/tutorial_app.html#writing-a-web-based-todo-application-with-bottle",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15329,
+    "url": "https://bottlepy.org/docs/dev/routing.html#wildcard-filters",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15330,
+    "url": "https://bottlepy.org/docs/dev/#bottle-python-web-framework",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15331,
+    "url": "https://bottlepy.org/docs/dev/configuration.html",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15332,
+    "url": "https://bottlepy.org/docs/dev/development.html#repository-structure",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15333,
+    "url": "https://bottlepy.org/docs/dev/api.html#request-routing",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15334,
+    "url": "https://bottlepy.org/docs/dev/tutorial_app.html#complete-example-listing",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15335,
+    "url": "https://bottlepy.org/docs/dev/tutorial_app.html",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15336,
+    "url": "https://bottlepy.org/docs/dev/",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15337,
+    "url": "https://www.cheetahtemplate.org/",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15338,
+    "url": "https://bottlepy.org/docs/dev/faq.html#recipes-for-common-tasks",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15339,
+    "url": "https://bottlepy.org/docs/dev/changelog.html#release-0-13",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15340,
+    "url": "https://bottlepy.org/docs/dev/api.html#misc-utilities",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15341,
+    "url": "https://bottlepy.org/docs/dev/changelog.html#release-0-11",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15342,
+    "url": "https://bottlepy.org/docs/dev/tutorial.html#hello-world",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15343,
+    "url": "https://bottlepy.org/docs/dev/changelog.html#release-0-12",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15344,
+    "url": "https://bottlepy.org/docs/dev/api.html#http-utilities",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15345,
+    "url": "https://bottlepy.org/docs/dev/changelog.html#release-0-10",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15346,
+    "url": "https://bottlepy.org/docs/dev/configuration.html#load-configuration-from-a-python-module",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15347,
+    "url": "https://bottlepy.org/docs/dev/development.html#releases-and-updates",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15348,
+    "url": "https://bottlepy.org/docs/dev/changelog.html",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15349,
+    "url": "https://bottlepy.org/docs/dev/development.html",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15350,
+    "url": "https://bottlepy.org/docs/dev/contributors.html",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15351,
+    "url": "https://bottlepy.org/docs/dev/configuration.html#loading-configuration-from-a-dict",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15352,
+    "url": "https://bottlepy.org/docs/dev/plugins/index.html#plugin-basics",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15354,
+    "url": "https://bottlepy.org/docs/dev/async.html#greenlets-to-the-rescue",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15355,
+    "url": "https://bottlepy.org/docs/dev/development.html#get-involved",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15356,
+    "url": "https://pypi.python.org/pypi/bottle",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15357,
+    "url": "https://bottlepy.org/docs/dev/tutorial.html#the-application-object",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15358,
+    "url": "https://bottlepy.org/docs/dev/tutorial.html#command-line-interface",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15359,
+    "url": "https://bottlepy.org/docs/0.12/",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15360,
+    "url": "https://bottlepy.org/docs/dev/api.html#request-context",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15361,
+    "url": "https://bottlepy.org/docs/dev/routing.html",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15362,
+    "url": "https://docs.python.org/library/",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15363,
+    "url": "https://jinja.palletsprojects.com/",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15364,
+    "url": "https://bottlepy.org/docs/dev/tutorial_app.html#prior-to-starting",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15365,
+    "url": "https://bottlepy.org/docs/dev/async.html#event-callbacks",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15366,
+    "url": "https://bottlepy.org/docs/dev/api.html#templating",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15367,
+    "url": "https://bottlepy.org/docs/dev/routing.html#rule-syntax",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15368,
+    "url": "https://bottlepy.org/docs/dev/async.html#the-limits-of-synchronous-wsgi",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15369,
+    "url": "https://bottlepy.org/docs/dev/stpl.html#simpletemplate-syntax",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15370,
+    "url": "https://peps.python.org/pep-3333/",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15371,
+    "url": "https://bottlepy.org/docs/dev/routing.html#legacy-syntax",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15372,
+    "url": "https://bottlepy.org/docs/dev/tutorial.html",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15373,
+    "url": "https://bottlepy.org/docs/dev/tutorial.html#request-data",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15374,
+    "url": "https://bottlepy.org/docs/dev/tutorial.html#generating-content",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15375,
+    "url": "https://bottlepy.org/docs/dev/plugins/dev.html",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15376,
+    "url": "https://bottlepy.org/docs/dev/tutorial.html#serving-assets",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15377,
+    "url": "https://bottlepy.org/docs/dev/stpl.html",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15378,
+    "url": "https://bottlepy.org/docs/dev/configuration.html#load-configuration-from-a-file",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15379,
+    "url": "https://bottlepy.org/docs/dev/tutorial.html#request-routing",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15380,
+    "url": "https://gunicorn.org/",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15381,
+    "url": "https://bottlepy.org/docs/dev/plugins/index.html",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15382,
+    "url": "https://bottlepy.org/docs/dev/development.html#get-the-sources",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15383,
+    "url": "https://bottlepy.org/docs/dev/api.html#data-structures",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15384,
+    "url": "https://bottlepy.org/docs/dev/api.html#exceptions",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15385,
+    "url": "https://bottlepy.org/docs/dev/faq.html#general-questions",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15386,
+    "url": "https://bottlepy.org/docs/dev/configuration.html#api-documentation",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15387,
+    "url": "https://bottlepy.org/docs/dev/async.html",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15388,
+    "url": "https://bottlepy.org/docs/dev/plugins/dev.html#plugin-api",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15389,
+    "url": "https://bottlepy.org/docs/dev/deployment.html",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15390,
+    "url": "https://bottlepy.org/docs/dev/async.html#finally-websockets",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15391,
+    "url": "https://bottlepy.org/docs/dev/configuration.html#naming-convention",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15392,
+    "url": "https://bottlepy.org/docs/dev/plugins/index.html#configuring-plugins",
+    "parentUrl": "https://bottlepy.org"
+  },
+  {
+    "id": 15393,
+    "url": "https://www.tensorflow.org/tfx",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15394,
+    "url": "https://www.tensorflow.org/#main-content",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15395,
+    "url": "https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/quickstart/beginner.ipynb",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15396,
+    "url": "https://www.linkedin.com/showcase/tensorflowdev/",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15397,
+    "url": "https://www.tensorflow.org/tensorboard",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15398,
+    "url": "https://www.tensorflow.org/community",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15399,
+    "url": "https://www.tensorflow.org/resources/libraries-extensions",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15400,
+    "url": "https://github.com/tensorflow",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15401,
+    "url": "https://www.youtube.com/tensorflow",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15403,
+    "url": "https://www.tensorflow.org/resources/learn-ml",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15404,
+    "url": "https://www.kaggle.com/models",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15405,
+    "url": "https://www.tensorflow.org/datasets",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15406,
+    "url": "https://www.tensorflow.org/resources/tools",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15407,
+    "url": "https://www.tensorflow.org/install",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15408,
+    "url": "https://www.tensorflow.org/tutorials",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15409,
+    "url": "https://www.tensorflow.org/guide/data",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15410,
+    "url": "https://www.tensorflow.org/resources/models-datasets",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15411,
+    "url": "https://discuss.tensorflow.org/",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15412,
+    "url": "https://www.tensorflow.org/guide/keras",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15413,
+    "url": "https://www.tensorflow.org/js",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15414,
+    "url": "https://twitter.com/tensorflow",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15415,
+    "url": "https://www.youtube.com/watch?v\u003dtF70o1Q8VkM\u0026list\u003dPLNYkxOF6rcIAEVKJ98bDkQRkwvO4grhnt",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15416,
+    "url": "https://www.tensorflow.org/subscribe/latest",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15417,
+    "url": "https://blog.tensorflow.org/2024/02/graph-neural-networks-in-tensorflow.html",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15418,
+    "url": "https://ai.google.dev/edge/litert",
+    "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15419,
+    "url": "https://blog.tensorflow.org/2023/10/simulated-spotify-listening-experiences-reinforcement-learning-tensorflow-tf-agents.html",
+    "parentUrl": "https://www.tensorflow.org/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/tensorflow/images/lockup.svg",
+    "alt": "TensorFlow",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/learn/learn-hero.svg",
+    "alt": "",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/cards/webai-summit-2024.jpg",
+    "alt": "",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/cards/tensorflow-gnn.png",
+    "alt": "",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/cards/spotify-tensorflow-agents-recommendation-systems.png",
+    "alt": "",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/cards/spotify-tensorflow-agents-recommendation-systems.gif",
+    "alt": "",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/home/model.svg",
+    "alt": "",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/home/research.svg",
+    "alt": "",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/home/robust.svg",
+    "alt": "",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/home/home-join-3.svg",
+    "alt": "",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/home/home-join-2.svg",
+    "alt": "",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/home/forum-logo.svg",
+    "alt": "forum logo",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/home/x-logo.svg",
+    "alt": "x logo",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/home/youtube-logo.svg",
+    "alt": "youtube logo",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/home/linkedin-logo.svg",
+    "alt": "linkedin logo",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/home/forum-logo.svg",
+    "alt": "forum logo",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/home/x-logo.svg",
+    "alt": "x logo",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/home/youtube-logo.svg",
+    "alt": "youtube logo",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://www.tensorflow.org/static/site-assets/images/marketing/home/linkedin-logo.svg",
+    "alt": "linkedin logo",
+    "pageTitle": "TensorFlow",
+    "pageUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "src": "https://bottlepy.org/docs/dev/_static/logo_nav.png",
+    "alt": "Logo of Bottle",
+    "pageTitle": "Bottle: Python Web Framework — Bottle 0.14-dev documentation",
+    "pageUrl": "https://bottlepy.org"
+  },
+  {
+    "src": "https://saltproject.io/images/blog-banner-e1666724181870.jpg",
+    "alt": "",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/img1.jpg",
+    "alt": "Video additional",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/img1.jpg",
+    "alt": "Video additional",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/img1.jpg",
+    "alt": "Video additional",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/what-is-salt.png",
+    "alt": "What is Salt",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/learn-salt.png",
+    "alt": "Learn Salt",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/discord.png",
+    "alt": "Discord Icon",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/github.png",
+    "alt": "GitHub Icon",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/mail.png",
+    "alt": "Mail Icon",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/security.png",
+    "alt": "Security Icon",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/blog/new-update.png",
+    "alt": "",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/blog/new-release.png",
+    "alt": "",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/blog/new-release.png",
+    "alt": "",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
   {
     "src": "https://scipy.org/images/logo.svg",
     "alt": "SciPy logo. A blue circle with a snake in the shape of the letter \u0027S\u0027.",
