@@ -1,5 +1,61 @@
 window.searchData = [
   {
+    "id": 955,
+    "url": "https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tar.xz.spdx.json",
+    "title": "",
+    "content": "{ \"SPDXID\": \"SPDXRef-DOCUMENT\", \"creationInfo\": { \"created\": \"2026-04-07T15:11:49Z\", \"creators\": [ \"Person: Python Release Managers\", \"Tool: ReleaseTools-2133a4a21a9fe2acc68a130eaf615deae3c6080c\" ], \"licenseListVersion\": \"3.22\" }, \"dataLicense\": \"CC0-1.0\", \"documentNamespace\": \"https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tar.xz.spdx.json\", \"files\": [ { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-COPYING\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"f1b1126ed7da8f2068302e7a692b0600e6f94b07\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"31b15de82aa19a845156169a17a5488bf597e561b2c318d159ed583139b25e87\" } ], \"fileName\": \"Modules/expat/COPYING\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-ascii.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"b0235fa3cf845a7d68e8e66dd344d5e32e8951b5\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"42f8b392c70366743eacbc60ce021389ccaa333598dd49eef6ee5c93698ca205\" } ], \"fileName\": \"Modules/expat/ascii.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-asciitab.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"cbb53d16ca1f35ee9c9e296116efd222ae611ed9\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"1cc0ae749019fc0e488cd1cf245f6beaa6d4f7c55a1fc797e5aa40a408bc266b\" } ], \"fileName\": \"Modules/expat/asciitab.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-expat.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"9dfd09a3be37618cbcea380c2374b2b8f0288f57\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"26805a0d1a7a6a5cd8ead9cf7f4da29f63f0547a9ad41e80dba4ed9fe1943140\" } ], \"fileName\": \"Modules/expat/expat.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-expat-external.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"da0328279276800cc747ea7da23886a3f402ccb3\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"15a80e414e9e7c43edba64b1608a77c724387070138693f9e9bcca49c78a2df7\" } ], \"fileName\": \"Modules/expat/expat_external.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-iasciitab.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"1b0e9014c0baa4c6254d2b5e6a67c70148309c34\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"ad8b01e9f323cc4208bcd22241df383d7e8641fe3c8b3415aa513de82531f89f\" } ], \"fileName\": \"Modules/expat/iasciitab.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-internal.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"6a4a232233ba1034c3f2b459159d502e9b2d413b\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"c803935722f0dbdeeede7f040028fb119135e96dfad949479f8a5304b885bdd6\" } ], \"fileName\": \"Modules/expat/internal.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-latin1tab.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"d335ecca380e331a0ea7dc33838a4decd93ec1e4\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"eab66226da100372e01e42e1cbcd8ac2bbbb5c1b5f95d735289cc85c7a8fc2ba\" } ], \"fileName\": \"Modules/expat/latin1tab.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-nametab.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"cf2bc9626c945826602ba9170786e9a2a44645e4\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"67dcf415d37a4b692a6a8bb46f990c02d83f2ef3d01a65cd61c8594a084246f2\" } ], \"fileName\": \"Modules/expat/nametab.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-siphash.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"aca27f46d9fd387b63ce7ff2e4f172cad130b39b\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"f537add526ecda8389503b7ef45fb52b6217e4dc171dcc3a8dc6903ff6134726\" } ], \"fileName\": \"Modules/expat/siphash.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-utf8tab.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"b77c8fcfb551553c81d6fbd94c798c8aa04ad021\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"8cd26bd461d334d5e1caedb3af4518d401749f2fc66d56208542b29085159c18\" } ], \"fileName\": \"Modules/expat/utf8tab.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-winconfig.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"a3a8c44efd55dbf2cfea8fcee009ec63120ec0a3\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"e70948500d34dfcba4e9f0b305319dfe2a937c7cbfb687905128b56e1a6f8b33\" } ], \"fileName\": \"Modules/expat/winconfig.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-xmlparse.c\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"0c74fbd48dd515c58eeb65b7e71b29da94be4694\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"861e7a50ce81f9f16b42d32a9caa4f817d962b274b2929b579511c6f76d348d4\" } ], \"fileName\": \"Modules/expat/xmlparse.c\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-xmlrole.c\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"7cff4d7210f046144f5fa635113f9c26f30fe3d3\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"eaa6c327f9db4a5cec768d0c01927fea212d3ef4d4f970ebc0a98b9f3602784c\" } ], \"fileName\": \"Modules/expat/xmlrole.c\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-xmlrole.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"ac2964cca107f62dd133bfd4736a9a17defbc401\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"92e41f373b67f6e0dcd7735faef3c3f1e2c17fe59e007e6b74beef6a2e70fa88\" } ], \"fileName\": \"Modules/expat/xmlrole.h\"",
+    "scrapedAt": "2026-05-08 17:52:39.289992"
+  },
+  {
+    "id": 954,
+    "url": "https://www.python.org/ftp/python/3.14.4/windows-3.14.4.json",
+    "title": "",
+    "content": "{ \"versions\": [ { \"schema\": 1, \"id\": \"pythoncore-3.14-32\", \"sort-version\": \"3.14.4\", \"company\": \"PythonCore\", \"tag\": \"3.14-32\", \"install-for\": [ \"3.14.4-32\", \"3.14-32\", \"3-32\", \"3.14-dev-32\", \"3-dev-32\" ], \"alias\": [ { \"target\": \"python.exe\", \"name\": \"python3.14.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3.14-32.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3-32.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.14.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.14-32.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3-32.exe\" } ], \"display-name\": \"Python 3.14.4 (32-bit)\", \"executable\": \".\\\\python.exe\", \"url\": \"https://www.python.org/ftp/python/3.14.4/python-3.14.4-win32.zip\", \"hash\": { \"sha256\": \"a2713520fda0e82727f62d4180f98d5352e52f69e2f9a951c23b01cb0b7db442\" } }, { \"schema\": 1, \"id\": \"pythoncore-3.14-64\", \"sort-version\": \"3.14.4\", \"company\": \"PythonCore\", \"tag\": \"3.14-64\", \"install-for\": [ \"3.14.4-64\", \"3.14-64\", \"3-64\", \"3.14-dev-64\", \"3-dev-64\" ], \"alias\": [ { \"target\": \"python.exe\", \"name\": \"python3.14.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3.14-64.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3-64.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.14.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.14-64.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3-64.exe\" } ], \"display-name\": \"Python 3.14.4\", \"executable\": \".\\\\python.exe\", \"url\": \"https://www.python.org/ftp/python/3.14.4/python-3.14.4-amd64.zip\", \"hash\": { \"sha256\": \"11a6f5f5e7defeaa67a0b8e797f0eabec6e4499e663815319a0e0d360091f906\" } }, { \"schema\": 1, \"id\": \"pythoncore-3.14-arm64\", \"sort-version\": \"3.14.4\", \"company\": \"PythonCore\", \"tag\": \"3.14-arm64\", \"install-for\": [ \"3.14.4-arm64\", \"3.14-arm64\", \"3-arm64\", \"3.14-dev-arm64\", \"3-dev-arm64\" ], \"alias\": [ { \"target\": \"python.exe\", \"name\": \"python3.14.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3.14-arm64.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3-arm64.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.14.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.14-arm64.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3-arm64.exe\" } ], \"display-name\": \"Python 3.14.4 (ARM64)\", \"executable\": \".\\\\python.exe\", \"url\": \"https://www.python.org/ftp/python/3.14.4/python-3.14.4-arm64.zip\", \"hash\": { \"sha256\": \"f4430f865ec6a76b58a0effc8261609663f8a7509e95eaf7a166d7644bfb776a\" } }, { \"schema\": 1, \"id\": \"pythoncore-3.14t-32\", \"sort-version\": \"3.14.4\", \"company\": \"PythonCore\", \"tag\": \"3.14t-32\", \"install-for\": [ \"3.14.4t-32\", \"3.14t-32\", \"3t-32\", \"3.14t-dev-32\", \"3t-dev-32\" ], \"alias\": [ { \"target\": \"python3.14t.exe\", \"name\": \"python3.14t.exe\" }, { \"target\": \"python3.14t.exe\", \"name\": \"python3.14t-32.exe\" }, { \"target\": \"python3.14t.exe\", \"name\": \"python3t.exe\" }, { \"target\": \"python3.14t.exe\", \"name\": \"python3t-32.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3.14t.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3.14t-32.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3t.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3t-32.exe\" } ], \"display-name\": \"Python 3.14.4 (32-bit, free-threaded)\", \"executable\": \".\\\\python3.14t.exe\", \"url\": \"https://www.python.org/ftp/python/3.14.4/python-3.14.4t-win32.zip\", \"hash\": { \"sha256\": \"395d9f34b525760cd22785ceca4b9a570bd8591d21bb357ce77acf6a6d4c5f1d\" } }, { \"schema\": 1, \"id\": \"pythoncore-3.14t-64\", \"sort-version\": \"3.14.4\", \"company\": \"PythonCore\", \"tag\": \"3.14t-64\", \"install-for\": [ \"3.14.4t-64\", \"3.14t-64\", \"3t-64\", \"3.14t-dev-64\", \"3t-dev-64\" ], \"alias\": [ { \"target\": \"python3.14t.exe\", \"name\": \"python3.14t.exe\" }, { \"target\": \"python3.14t.exe\", \"name\": \"python3.14t-64.exe\" }, { \"target\": \"python3.14t.exe\", \"name\": \"python3t.exe\" }, { \"target\": \"python3.14t.exe\", \"name\": \"python3t-64.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3.14t.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3.14t-64.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3t.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3t-64.exe\" } ], \"display-name\": \"Python 3.14.4 (free-threaded)\", \"executable\": \".\\\\python3.14t.exe\", \"url\": \"https://www.python.org/ftp/python/3.14.4/python-3.14.4t-amd64.zip\", \"hash\": { \"sha256\": \"96893211d653ee5227444e5563738e68f98788dde35a8570f1f454eb517d6135\" } }, { \"schema\": 1, \"id\": \"pythoncore-3.14t-arm64\", \"sort-version\": \"3.14.4\", \"company\": \"PythonCore\", \"tag",
+    "scrapedAt": "2026-05-08 17:52:38.032702"
+  },
+  {
+    "id": 953,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-amd64.exe.spdx.json",
+    "title": "",
+    "content": "{ \"SPDXID\": \"SPDXRef-DOCUMENT\", \"creationInfo\": { \"created\": \"2026-04-07T16:50:57Z\", \"creators\": [ \"Person: Python Release Managers\", \"Tool: ReleaseTools-2133a4a21a9fe2acc68a130eaf615deae3c6080c\" ], \"licenseListVersion\": \"3.22\" }, \"dataLicense\": \"CC0-1.0\", \"documentNamespace\": \"https://www.python.org/ftp/python/3.14.4/python-3.14.4-amd64.exe.spdx.json\", \"files\": [], \"name\": \"CPython SBOM\", \"packages\": [ { \"SPDXID\": \"SPDXRef-PACKAGE-bzip2\", \"checksums\": [ { \"algorithm\": \"SHA256\", \"checksumValue\": \"ab8d1b0cc087c20d4c32c0e4fcf7d0c733a95da12cedc6d63b3f0a9af07427e2\" } ], \"downloadLocation\": \"https://github.com/python/cpython-source-deps/archive/refs/tags/bzip2-1.0.8.tar.gz\", \"externalRefs\": [ { \"referenceCategory\": \"SECURITY\", \"referenceLocator\": \"cpe:2.3:a:bzip:bzip2:1.0.8:*:*:*:*:*:*:*\", \"referenceType\": \"cpe23Type\" } ], \"licenseConcluded\": \"NOASSERTION\", \"name\": \"bzip2\", \"primaryPackagePurpose\": \"LIBRARY\", \"supplier\": \"Organization: Python Software Foundation\", \"versionInfo\": \"1.0.8\" }, { \"SPDXID\": \"SPDXRef-PACKAGE-cachecontrol\", \"checksums\": [ { \"algorithm\": \"SHA256\", \"checksumValue\": \"b7ac014ff72ee199b5f8af1de29d60239954f223e948196fa3d84adaffc71d2b\" } ], \"downloadLocation\": \"https://files.pythonhosted.org/packages/ef/79/c45f2d53efe6ada1110cf6f9fca095e4ff47a0454444aefdde6ac4789179/cachecontrol-0.14.4-py3-none-any.whl\", \"externalRefs\": [ { \"referenceCategory\": \"PACKAGE_MANAGER\", \"referenceLocator\": \"pkg:pypi/cachecontrol@0.14.4\", \"referenceType\": \"purl\" } ], \"licenseConcluded\": \"NOASSERTION\", \"name\": \"cachecontrol\", \"primaryPackagePurpose\": \"LIBRARY\", \"supplier\": \"Organization: Python Software Foundation\", \"versionInfo\": \"0.14.4\" }, { \"SPDXID\": \"SPDXRef-PACKAGE-certifi\", \"checksums\": [ { \"algorithm\": \"SHA256\", \"checksumValue\": \"9943707519e4add1115f44c2bc244f782c0249876bf51b6599fee1ffbedd685c\" } ], \"downloadLocation\": \"https://files.pythonhosted.org/packages/e6/ad/3cc14f097111b4de0040c83a525973216457bbeeb63739ef1ed275c1c021/certifi-2026.1.4-py3-none-any.whl\", \"externalRefs\": [ { \"referenceCategory\": \"PACKAGE_MANAGER\", \"referenceLocator\": \"pkg:pypi/certifi@2026.1.4\", \"referenceType\": \"purl\" } ], \"licenseConcluded\": \"NOASSERTION\", \"name\": \"certifi\", \"primaryPackagePurpose\": \"LIBRARY\", \"supplier\": \"Organization: Python Software Foundation\", \"versionInfo\": \"2026.1.4\" }, { \"SPDXID\": \"SPDXRef-PACKAGE-cpython\", \"checksums\": [ { \"algorithm\": \"SHA256\", \"checksumValue\": \"b571567bd11ea98fd7a2cf85791d2c8557a63b1e04e9d1dae665a275cac87f1b\" } ], \"downloadLocation\": \"https://www.python.org/ftp/python/3.14.4/python-3.14.4-amd64.exe\", \"externalRefs\": [ { \"referenceCategory\": \"SECURITY\", \"referenceLocator\": \"cpe:2.3:a:python:python:3.14.4:*:*:*:*:*:*:*\", \"referenceType\": \"cpe23Type\" } ], \"licenseConcluded\": \"PSF-2.0\", \"name\": \"CPython\", \"originator\": \"Organization: Python Software Foundation\", \"packageFileName\": \"python-3.14.4-amd64.exe\", \"primaryPackagePurpose\": \"LIBRARY\", \"supplier\": \"Organization: Python Software Foundation\", \"versionInfo\": \"3.14.4\" }, { \"SPDXID\": \"SPDXRef-PACKAGE-dependency-groups\", \"checksums\": [ { \"algorithm\": \"SHA256\", \"checksumValue\": \"51aeaa0dfad72430fcfb7bcdbefbd75f3792e5919563077f30bc0d73f4493030\" } ], \"downloadLocation\": \"https://files.pythonhosted.org/packages/99/c7/d1ec24fb280caa5a79b6b950db565dab30210a66259d17d5bb2b3a9f878d/dependency_groups-1.3.1-py3-none-any.whl\", \"externalRefs\": [ { \"referenceCategory\": \"PACKAGE_MANAGER\", \"referenceLocator\": \"pkg:pypi/dependency-groups@1.3.1\", \"referenceType\": \"purl\" } ], \"licenseConcluded\": \"NOASSERTION\", \"name\": \"dependency-groups\", \"primaryPackagePurpose\": \"LIBRARY\", \"supplier\": \"Organization: Python Software Foundation\", \"versionInfo\": \"1.3.1\" }, { \"SPDXID\": \"SPDXRef-PACKAGE-distlib\", \"checksums\": [ { \"algorithm\": \"SHA256\", \"checksumValue\": \"9659f7d87e46584a30b5780e43ac7a2143098441670ff0a49d5f9034c54a6c16\" } ], \"downloadLocation\": \"https://files.pythonhosted.org/packages/33/6b/e0547afaf41bf2c42e52430072fa5658766e3d65bd4b03a563d1b6336f57/distlib-0.4.0-py2.py3-none-any.whl\", \"externalRefs\": [ { \"referenceCategory\": \"PACKAGE_MANAGER\", \"referenceLocator\": \"pkg:pypi/distlib@0.4.0\", \"referenceType\": \"purl\" } ], \"licenseConcluded\": \"NOASSERTION\", \"name\": \"distlib\", \"primaryPackagePurpose\": \"LIBRARY\", \"supplier\": \"Organization: Python Software Foundation\", \"versionInfo\": \"0.4.0\" }, { \"SPDXID\": \"SPDXRef-PACKAGE-distro\", \"checksums\": [ { \"algorithm\": \"SHA256\", \"checksumValue\": \"7bffd925d65168f85027d8da9af6bddab658135b840670a223589bc0c8ef02b2\" } ], \"downloadLocation\": \"https://files.pythonhosted.org/packages/12/b3/231ffd4ab1fc9d679809f356cebee130ac7daa00d6d6f3206dd4fd137e9e/distro-1.9.0-py3-none-any.whl\", \"externalRefs\": [ { \"referenceCategory\": \"PACKAGE_MANAGER\", \"referenceLocator\": \"pkg:pypi/distro@1.9.0\", \"referenceType\": \"purl\" } ], \"licenseConcluded\": \"NOASSERTION\", \"name\": \"distro\", \"primaryPackagePurpose\": \"LIBRARY\", \"supplier\": \"Organization: Python Software Foundation\", \"versionInfo\": \"1.9.0\" }, { \"SPDXID\": \"SPDXRef-PACKAGE-expat-2.7.5\", \"checksums\": [ { \"alg",
+    "scrapedAt": "2026-05-08 17:52:36.966877"
+  },
+  {
+    "id": 952,
+    "url": "https://docs.python.org/3/using/windows.html",
+    "title": "4. Using Python on Windows — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python Setup and Usage » 4. Using Python on Windows | Theme Auto Light Dark | 4. Using Python on Windows¶ This document aims to give an overview of Windows-specific behaviour you should know about when using Python on Microsoft Windows. Unlike most Unix systems and services, Windows does not include a system supported installation of Python. Instead, Python can be obtained from a number of distributors, including directly from the CPython team. Each Python distribution will have its own benefits and drawbacks, however, consistency with other tools you are using is generally a worthwhile benefit. Before committing to the process described here, we recommend investigating your existing tools to see if they can provide Python directly. To obtain Python from the CPython team, use the Python Install Manager. This is a standalone tool that makes Python available as global commands on your Windows machine, integrates with the system, and supports updates over time. You can download the Python Install Manager from python.org/downloads or through the Microsoft Store app. Once you have installed the Python Install Manager, the global python command can be used from any terminal to launch your current latest version of Python. This version may change over time as you add or remove different versions, and the py list command will show which is current. In general, we recommend that you create a virtual environment for each project and run \u003cenv\u003e\\Scripts\\Activate in your terminal to use it. This provides isolation between projects, consistency over time, and ensures that additional commands added by packages are also available in your session. Create a virtual environment using python -m venv \u003cenv path\u003e. If the python or py commands do not seem to be working, please see the Troubleshooting section below. There are sometimes additional manual steps required to configure your PC. Apart from using the Python install manager, Python can also be obtained as NuGet packages. See The nuget.org packages below for more information on these packages. The embeddable distros are minimal packages of Python suitable for embedding into larger applications. They can be installed using the Python install manager. See The embeddable package below for more information on these packages. 4.1. Python install manager¶ 4.1.1. Installation¶ The Python install manager can be installed from the Microsoft Store app or downloaded and installed from python.org/downloads. The two versions are identical. To install through the Store, simply click “Install”. After it has completed, open a terminal and type python to get started. To install the file downloaded from python.org, either double-click and select “Install”, or run Add-AppxPackage \u003cpath to MSIX\u003e in Windows Powershell. After installation, the python, py, and pymanager commands should be available. If you have existing installations of Python, or you have modified your PATH variable, you may need to remove them or undo the modifications. See Troubleshooting for more help with fixing non-working commands. When you first install a runtime, you will likely be prompted to add a directory to your PATH. This is optional, if you prefer to use the py command, but is offered for those who prefer the full range of aliases (such as python3.14.exe) to be available. The directory will be %LocalAppData%\\Python\\bin by default, but may be customized by an administrator. Click Start and search for “Edit environment variables for your account” for the system settings page to add the path. Each Python runtime you install will have its own directory for scripts. These also need to be added to PATH if you want to use them. The Python install manager will be automatically updated to new releases. This does not affect any installs of Python runtimes. Uninstalling the Python install manager does not uninstall any Python runtimes. If you are not able to install an MSIX in your context, for example, you are using automated deployment software that does not support it, or are targeting Windows Server 2019, please see Advanced installation below for more information. 4.1.2. Basic use¶ The recommended command for launching Python is python, which will either launch the version requested by the script being launched, an active virtual environment, or the default installed version, which will be the latest stable release unless configured otherwise. If no version is specifically requested and no runtimes are installed at all, the current latest release will be installed automatically. For all scenarios involving multiple runtime versions, the recommended command is py. This may be used anywhere in place of python or the older py.exe launcher. By default, py matches the behaviour of python, but also allows command line options to select a specific version as well as subcommands to manage installations. These are detailed below. Because the py comman",
+    "scrapedAt": "2026-05-08 17:52:35.872169"
+  },
+  {
+    "id": 951,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-amd64.zip.sigstore",
+    "title": "",
+    "content": "{\"mediaType\": \"application/vnd.dev.sigstore.bundle.v0.3+json\", \"verificationMaterial\": {\"certificate\": {\"rawBytes\": \"MIICzjCCAlOgAwIBAgIUR1gxn+2Q+Te8vUQ3kVzMYifugbQwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwNDA3MTc0ODQxWhcNMjYwNDA3MTc1ODQxWjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEMaqU7APna9Y2zuVYlpdphshOooabNOsR0c7wLYp7wYswzzA9WG+Km+6D69aiixpS0nHPIaFjor1GgDG87b0p56OCAXIwggFuMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQU0SGISWs2Ojmweio6GwmgPKpsOb8wHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHQYDVR0RAQH/BBMwEYEPaHVnb0BweXRob24ub3JnMCwGCisGAQQBg78wAQEEHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDAuBgorBgEEAYO/MAEIBCAMHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDCBiQYKKwYBBAHWeQIEAgR7BHkAdwB1AN09MGrGxxEyYxkeHJlnNwKiSl643jyt/4eKcoAvKe6OAAABnWkPkoQAAAQDAEYwRAIgWLT+bqGgcdUfVRkivBlwtH1LaeRjf0F9rH/F2Zzuw1ACIFNtg6BLhsKY4HM91/A6K/zBS1hZCiGkA4WWYhDmEAa/MAoGCCqGSM49BAMDA2kAMGYCMQCI23zAeiHMZ6udEWZ+2bHh0/5ytKI0eRYIzSvE/Z33AxhfMCFP7uGvchkXBPWHN2oCMQDGMO8EJyAnjazutiAm4qgHcbE5XX8Mig6Xmzmg+JRpoLWdDSg5Jek/ZPEjaNUpKKw\u003d\"}, \"tlogEntries\": [{\"logIndex\": \"1247676281\", \"logId\": {\"keyId\": \"wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0\u003d\"}, \"kindVersion\": {\"kind\": \"hashedrekord\", \"version\": \"0.0.1\"}, \"integratedTime\": \"1775584121\", \"inclusionPromise\": {\"signedEntryTimestamp\": \"MEQCIHjOFOrQlMgLcDm8ticn9JadQ0To4X/UkstSs2lCJGwxAiAl3QQr6KfG2rc0wL4mWZ3liIo8QamKyMqcZvHr0BJ7Dg\u003d\u003d\"}, \"inclusionProof\": {\"logIndex\": \"1125772019\", \"rootHash\": \"CVTDegd2Tt1fkOf/g2oN8M1g0AU6+fvdXkTuI6XjSCo\u003d\", \"treeSize\": \"1125772024\", \"hashes\": [\"7NMHckqvT2L5/mBKX5FE5jZaVWJ5Sxyz58JcVYn92qY\u003d\", \"tt/K06Hk04hgwvxkTXKrbEIbPU+pQJeITI9tZSd6bfA\u003d\", \"Vq4BN1BlOuX+PkS3ZTG/hxRWlioy22JCWsQEwmmW9jU\u003d\", \"LtGhCXgDw/VzWmOLES9fRC84G1f4ASpwNhNYfp8vjfA\u003d\", \"xbIFN9kuWxg2HMy+8twOkWp5r9tJ/pQDbheMbbSaf6U\u003d\", \"D6MWIbClKGzg9eRySzhshly5kzSpd8+hd7oWozjhKsw\u003d\", \"+akx/a+4mk/fwt1VE0D7K8JZteVx3dEs1/ZtCt5Khno\u003d\", \"dJtu8pJ3yhn0rC0EFdgoebJF3MldcpHMX00y2eHPYDY\u003d\", \"81dr9W/Ax/UfYIsxNTxjBYK7sYU/az3TPo6rdJosDO0\u003d\", \"4rt9/yEt1Zy95yQxSCxpoOu6E3CWDDxpGd37aEEFadg\u003d\", \"+wrWv/cO9uKKpjC+BMIC/Fv2Ipe50C7wL0wd+YlH5Kw\u003d\", \"ZxCK8NmXD/qxQEyqBRFYo8WOz/kUHRHA+BXOPC6789o\u003d\", \"civ0dM20+gns15I1mfWo9Jt0YBzbex5QVYwaGjqgcs4\u003d\", \"2v7+H4Fejl7qkIhG2G79UQH+wJ0QpPreOZwulFGWzLI\u003d\", \"vXMaHYsu3vXUFKr78h1vCtaZWhgh1OwZh5O05RGwxkw\u003d\", \"WbswTMpSfvjDqroD6lDGb2VDeljBPlMsAchJ+0L+3U4\u003d\", \"psQ1PrYXqFtm6T3uF1q91rl1dhNiykO58GpOdq1ZaKI\u003d\", \"DOCeoSMovIvLExkhIvisow9AuNXgeWs4ECkyR6EcqYU\u003d\"], \"checkpoint\": {\"envelope\": \"rekor.sigstore.dev - 1193050959916656506\\n1125772024\\nCVTDegd2Tt1fkOf/g2oN8M1g0AU6+fvdXkTuI6XjSCo\u003d\\n\\n\\u2014 rekor.sigstore.dev wNI9ajBFAiEA7AgX2Odq1sUKvrGQaqoM9vumlCn6LS3SSJuBJofuqOYCIBSGvXticJ/4niild0o2kFLoxVfAzbeq77GGdsdzXNFj\\n\"}}, \"canonicalizedBody\": \"eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiJjZGE4MGE5YjFlNzVjMGYxYjRmOTg3MmNhMWI0MTdmMGQxOWJjZTMyZmFjYzgxMWFlYTkxODBlNzBmYWQ1ZmI5In19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FVUNJUURpQk5jaEFsTEt6K0tGRGNDUXdGWDl1cFltWkdqNFRKVjI5elR2bFAxN1ZnSWdWMHdBazhNZUVFaUJyMDA4MlVSYlZNbno0TEEwa1hreGNzVWNnckRTOThjPSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVTjZha05EUVd4UFowRjNTVUpCWjBsVlVqRm5lRzRyTWxFclZHVTRkbFZSTTJ0V2VrMVphV1oxWjJKUmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDVFUVROTlZHTXdUMFJSZUZkb1kwNU5hbGwzVGtSQk0wMVVZekZQUkZGNFYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZOWVhGVk4wRlFibUU1V1RKNmRWWlpiSEJrY0doemFFOXZiMkZpVGs5elVqQmpOM2NLVEZsd04zZFpjM2Q2ZWtFNVYwY3JTMjByTmtRMk9XRnBhWGh3VXpCdVNGQkpZVVpxYjNJeFIyZEVSemczWWpCd05UWlBRMEZZU1hkblowWjFUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlV3VTBkSkNsTlhjekpQYW0xM1pXbHZOa2QzYldkUVMzQnpUMkk0ZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoUldVUldVakJTUVZGSUwwSkNUWGRGV1VWUVlVaFdibUl3UW5kbFdGSnZZakkwZFdJelNtNU5RM2RIUTJselIwRlJVVUpuTnpoM1FWRkZSUXBJYldnd1pFaENlazlwT0haYU1td3dZVWhXYVV4dFRuWmlVemx6WWpKa2NHSnBPWFpaV0ZZd1lVUkJkVUpuYjNKQ1owVkZRVmxQTDAxQlJVbENRMEZOQ2todGFEQmtTRUo2VDJrNGRsb3liREJoU0ZacFRHMU9kbUpUT1hOaU1tUndZbWs1ZGxsWVZqQmhSRU5DYVZGWlMwdDNXVUpDUVVoWFpWRkpSVUZuVWpjS1FraHJRV1IzUWpGQlRqQTVUVWR5UjNoNFJYbFplR3RsU0Vwc2JrNTNTMmxUYkRZME0ycDVkQzgwWlV0amIwRjJTMlUyVDBGQlFVSnVWMnRRYTI5UlFRcEJRVkZFUVVWWmQxSkJTV2RYVEZRclluRkhaMk5rVldaV1VtdHBka0pzZDNSSU1VeGhaVkpxWmpCR09YSklMMFl5V25wMWR6RkJRMGxHVG5Sbk5rSk1DbWh6UzFrMFNFMDVNUzlCTmtzdmVrSlRNV2hhUTJsSGEwRTBWMWRaYUVSdFJVRmhMMDFCYjBkRFEzRkhVMDAwT1VKQlRVUkJNbXRCVFVkWlEwMVJRMGtLTWpONlFXVnBTRTFhTm5Wa1JWZGFLekppU0dnd0x6VjVkRXRKTUdWU1dVbDZVM1pGTDFvek0wRjRhR1pOUTBaUU4zVkhkbU5vYTFoQ1VGZElUakp2UXdwTlVVUkhUVTg0UlVwNVFXNXFZWHAxZEdsQmJUUnhaMGhqWWtVMVdGZzRUV2xuTmxodGVtMW5LMHBTY0c5TVYyUkVVMmMxU21WckwxcFFSV3BoVGxWd0NrdExkejBLTFMwdExTMUZUa1FnUTBWU1ZFbEdTVU5CVkVVdExTMHRMUW89In19fX0\u003d\"}], \"tim",
+    "scrapedAt": "2026-05-08 17:52:34.263937"
+  },
+  {
+    "id": 950,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-aarch64-linux-android.tar.gz.sigstore",
+    "title": "",
+    "content": "{\"mediaType\": \"application/vnd.dev.sigstore.bundle.v0.3+json\", \"verificationMaterial\": {\"certificate\": {\"rawBytes\": \"MIICzzCCAlWgAwIBAgIUA7MPU83torSQLwphkbO32VXYPYEwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwNDA3MTc0ODMyWhcNMjYwNDA3MTc1ODMyWjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEVD8b5aBWFfZ7ke3XBSSxFCI6zr1boJJpp6T7hzU/98GhAHs4yQkb/0+3U1nvZrMRs5kWg6MwEiqjU6m+jJMQ6qOCAXQwggFwMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQU0CZ/nh/zMbxBMwtFZ5K5OJWpvZcwHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHQYDVR0RAQH/BBMwEYEPaHVnb0BweXRob24ub3JnMCwGCisGAQQBg78wAQEEHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDAuBgorBgEEAYO/MAEIBCAMHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDCBiwYKKwYBBAHWeQIEAgR9BHsAeQB3AN09MGrGxxEyYxkeHJlnNwKiSl643jyt/4eKcoAvKe6OAAABnWkPcIMAAAQDAEgwRgIhAKsDZ6VoJ2AUTzRY3ylyVJXR/OKD1mpc7vV9Cm0R+fboAiEAweXxW+7h3abwQCvppSZqnztzhbNsN4J4eOTsSWM8T9owCgYIKoZIzj0EAwMDaAAwZQIxANRqLMbpglYOKZnhRGSWdqiwqnTaw0qlAGb0WmtXzN3V8rfN5WDHD4RVEmZZRzDiMQIwF/IjNcp0VipbghUw/JgToTLgMTabiGDNAan/Gw3Ozer565FQfvOg0GcWNMxp9f3F\"}, \"tlogEntries\": [{\"logIndex\": \"1247676149\", \"logId\": {\"keyId\": \"wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0\u003d\"}, \"kindVersion\": {\"kind\": \"hashedrekord\", \"version\": \"0.0.1\"}, \"integratedTime\": \"1775584113\", \"inclusionPromise\": {\"signedEntryTimestamp\": \"MEQCIHTPVtxHJDby9pFZrP64/bCrH5GiNVcuJprTne15ZZrbAiBrL89XXTh7ejdz31fe3L/Jwprk97w3Qe96fY4sJUBpBw\u003d\u003d\"}, \"inclusionProof\": {\"logIndex\": \"1125771887\", \"rootHash\": \"i7nHEb9PT4puSD/8RQHo30B5siYyVqzqRbJWOfPt9Dk\u003d\", \"treeSize\": \"1125771890\", \"hashes\": [\"s25WEx+C6Y83aIRxkWN2JTo/UYsY8iFO9f1utSiWChg\u003d\", \"CPZkQ5ejdZOqfCmkY6fE7RtlgmW/Ls89m8Kbrele4Pw\u003d\", \"IUEndsuG8hU/XSHw38xaGi2ZC1D0bTpXdwI5z2dFvk8\u003d\", \"Z/WGHv7jyKjJArvoknsyEyTmP2L5zfsUYkQRvnLQeiY\u003d\", \"pu+Bq+ArZnuj2ZUKEU9p0FW8uVczPZqi2ee70YmmPsQ\u003d\", \"LEvGYdLO2BZnfnKzvGMzpR4aflJbM1+62kAzjRwaTYI\u003d\", \"84ojRHL+9gWZrSU1/6A84MeXSST8fr1Sc3s+M/66QEA\u003d\", \"dJtu8pJ3yhn0rC0EFdgoebJF3MldcpHMX00y2eHPYDY\u003d\", \"81dr9W/Ax/UfYIsxNTxjBYK7sYU/az3TPo6rdJosDO0\u003d\", \"4rt9/yEt1Zy95yQxSCxpoOu6E3CWDDxpGd37aEEFadg\u003d\", \"+wrWv/cO9uKKpjC+BMIC/Fv2Ipe50C7wL0wd+YlH5Kw\u003d\", \"ZxCK8NmXD/qxQEyqBRFYo8WOz/kUHRHA+BXOPC6789o\u003d\", \"civ0dM20+gns15I1mfWo9Jt0YBzbex5QVYwaGjqgcs4\u003d\", \"2v7+H4Fejl7qkIhG2G79UQH+wJ0QpPreOZwulFGWzLI\u003d\", \"vXMaHYsu3vXUFKr78h1vCtaZWhgh1OwZh5O05RGwxkw\u003d\", \"WbswTMpSfvjDqroD6lDGb2VDeljBPlMsAchJ+0L+3U4\u003d\", \"psQ1PrYXqFtm6T3uF1q91rl1dhNiykO58GpOdq1ZaKI\u003d\", \"DOCeoSMovIvLExkhIvisow9AuNXgeWs4ECkyR6EcqYU\u003d\"], \"checkpoint\": {\"envelope\": \"rekor.sigstore.dev - 1193050959916656506\\n1125771890\\ni7nHEb9PT4puSD/8RQHo30B5siYyVqzqRbJWOfPt9Dk\u003d\\n\\n\\u2014 rekor.sigstore.dev wNI9ajBFAiEAqn1k3EEBMQvVQ92rzpW4Hm7YIwjSredtgnwZZjMEn6UCIBKCPWanmpTY/BGuwbOykW1Vs9rAGh89uR4sfFS1f6Tr\\n\"}}, \"canonicalizedBody\": \"eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiI0MTBmZmY5NmY0N2Q4MTgxMzZmOTFmNzljOGY4MzIwMmUxMzY0YWVhYWIyMDIyZDAwZmE3MGU1MzAwN2ViZGUxIn19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FWUNJUUNYaGFoMUVnZW53aEtnRnh3RHgrZUdKb2ZXeUxIcW55a3lINjVFVDYrSjR3SWhBSWdrd082V0xVTkJJT1pnRG0zUzdGNlNvSlNpU2V4TjV5OXd2R1I1alNLOSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVTjZla05EUVd4WFowRjNTVUpCWjBsVlFUZE5VRlU0TTNSdmNsTlJUSGR3YUd0aVR6TXlWbGhaVUZsRmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDVFUVROTlZHTXdUMFJOZVZkb1kwNU5hbGwzVGtSQk0wMVVZekZQUkUxNVYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZXUkRoaU5XRkNWMFptV2pkclpUTllRbE5UZUVaRFNUWjZjakZpYjBwS2NIQTJWRGNLYUhwVkx6azRSMmhCU0hNMGVWRnJZaTh3S3pOVk1XNTJXbkpOVW5NMWExZG5OazEzUldseGFsVTJiU3RxU2sxUk5uRlBRMEZZVVhkblowWjNUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlV3UTFvdkNtNW9MM3BOWW5oQ1RYZDBSbG8xU3pWUFNsZHdkbHBqZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoUldVUldVakJTUVZGSUwwSkNUWGRGV1VWUVlVaFdibUl3UW5kbFdGSnZZakkwZFdJelNtNU5RM2RIUTJselIwRlJVVUpuTnpoM1FWRkZSUXBJYldnd1pFaENlazlwT0haYU1td3dZVWhXYVV4dFRuWmlVemx6WWpKa2NHSnBPWFpaV0ZZd1lVUkJkVUpuYjNKQ1owVkZRVmxQTDAxQlJVbENRMEZOQ2todGFEQmtTRUo2VDJrNGRsb3liREJoU0ZacFRHMU9kbUpUT1hOaU1tUndZbWs1ZGxsWVZqQmhSRU5DYVhkWlMwdDNXVUpDUVVoWFpWRkpSVUZuVWprS1FraHpRV1ZSUWpOQlRqQTVUVWR5UjNoNFJYbFplR3RsU0Vwc2JrNTNTMmxUYkRZME0ycDVkQzgwWlV0amIwRjJTMlUyVDBGQlFVSnVWMnRRWTBsTlFRcEJRVkZFUVVWbmQxSm5TV2hCUzNORVdqWldiMG95UVZWVWVsSlpNM2xzZVZaS1dGSXZUMHRFTVcxd1l6ZDJWamxEYlRCU0syWmliMEZwUlVGM1pWaDRDbGNyTjJnellXSjNVVU4yY0hCVFduRnVlblI2YUdKT2MwNDBTalJsVDFSelUxZE5PRlE1YjNkRFoxbEpTMjlhU1hwcU1FVkJkMDFFWVVGQmQxcFJTWGdLUVU1U2NVeE5ZbkJuYkZsUFMxcHVhRkpIVTFka2NXbDNjVzVVWVhjd2NXeEJSMkl3VjIxMFdIcE9NMVk0Y21aT05WZEVTRVEwVWxaRmJWcGFVbnBFYVFwTlVVbDNSaTlKYWs1amNEQldhWEJpWjJoVmR5OUtaMVJ2VkV4blRWUmhZbWxIUkU1QllXNHZSM2N6VDNwbGNqVTJOVVpSWm5aUFp6QkhZMWRPVFhod0NqbG1NMFlLTFMwdExTMUZUa1FnUTBWU1ZFbEdTVU5CVkVVdExTMHRMUW89In19fX0\u003d\"}], \"tim",
+    "scrapedAt": "2026-05-08 17:51:44.062294"
+  },
+  {
+    "id": 949,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#hmac",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-08 17:51:41.303025"
+  },
+  {
+    "id": 948,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pep-784-zstandard-support-in-the-standard-library",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-08 17:51:38.934093"
+  },
+  {
     "id": 947,
     "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-arm64.exe",
     "title": "",
@@ -1905,38 +1961,6 @@ window.searchData = [
     "scrapedAt": "2026-05-08 17:50:45.338923"
   },
   {
-    "id": 948,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#pep-784-zstandard-support-in-the-standard-library"
-  },
-  {
-    "id": 949,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#hmac"
-  },
-  {
-    "id": 950,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-aarch64-linux-android.tar.gz.sigstore"
-  },
-  {
-    "id": 951,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-amd64.zip.sigstore"
-  },
-  {
-    "id": 952,
-    "url": "https://docs.python.org/3/using/windows.html"
-  },
-  {
-    "id": 953,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-amd64.exe.spdx.json"
-  },
-  {
-    "id": 954,
-    "url": "https://www.python.org/ftp/python/3.14.4/windows-3.14.4.json"
-  },
-  {
-    "id": 955,
-    "url": "https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tar.xz.spdx.json"
-  },
-  {
     "id": 956,
     "url": "https://docs.python.org/release/3.14.4/whatsnew/changelog.html"
   },
@@ -2955,10 +2979,5490 @@ window.searchData = [
   {
     "id": 1248,
     "url": "https://www.python.org/search"
+  },
+  {
+    "id": 1249,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 1250,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 1251,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-finally-syntaxwarning"
+  },
+  {
+    "id": 1252,
+    "url": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 1253,
+    "url": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 1254,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-c"
+  },
+  {
+    "id": 1255,
+    "url": "https://github.com/python/cpython/issues/107803"
+  },
+  {
+    "id": 1256,
+    "url": "https://docs.python.org/3/c-api/hash.html#c.Py_HashBuffer"
+  },
+  {
+    "id": 1257,
+    "url": "https://github.com/python/cpython/issues/127896"
+  },
+  {
+    "id": 1258,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-m"
+  },
+  {
+    "id": 1259,
+    "url": "https://github.com/python/cpython/issues/127413"
+  },
+  {
+    "id": 1260,
+    "url": "https://github.com/python/cpython/issues/118928"
+  },
+  {
+    "id": 1261,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 1262,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 1263,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 1264,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 1265,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 1266,
+    "url": "https://github.com/python/cpython/issues/118924"
+  },
+  {
+    "id": 1267,
+    "url": "https://docs.python.org/3/library/errno.html#errno.EHWPOISON"
+  },
+  {
+    "id": 1268,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#sys-monitoring"
+  },
+  {
+    "id": 1269,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 1270,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 1271,
+    "url": "https://github.com/python/cpython/issues/128509"
+  },
+  {
+    "id": 1272,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-JUMP_IF_TRUE"
+  },
+  {
+    "id": 1273,
+    "url": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 1274,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 1275,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-O"
+  },
+  {
+    "id": 1276,
+    "url": "https://github.com/python/cpython/issues/131913"
+  },
+  {
+    "id": 1277,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#itertools"
+  },
+  {
+    "id": 1278,
+    "url": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 1279,
+    "url": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 1280,
+    "url": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 1281,
+    "url": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 1282,
+    "url": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 1283,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#improved-modules"
+  },
+  {
+    "id": 1284,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 1285,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#fnmatch"
+  },
+  {
+    "id": 1286,
+    "url": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 1287,
+    "url": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 1288,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 1289,
+    "url": "https://github.com/python/cpython/issues/126585"
+  },
+  {
+    "id": 1290,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#tkinter"
+  },
+  {
+    "id": 1291,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsNegative"
+  },
+  {
+    "id": 1292,
+    "url": "https://github.com/python/cpython/issues/92332"
+  },
+  {
+    "id": 1293,
+    "url": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 1294,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-JUMP_IF_FALSE"
+  },
+  {
+    "id": 1295,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-typing-union"
+  },
+  {
+    "id": 1296,
+    "url": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 1297,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt64"
+  },
+  {
+    "id": 1298,
+    "url": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 1299,
+    "url": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 1301,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 1302,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 1303,
+    "url": "https://github.com/python/cpython/issues/126353"
+  },
+  {
+    "id": 1304,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#email"
+  },
+  {
+    "id": 1305,
+    "url": "https://github.com/python/cpython/issues/127688"
+  },
+  {
+    "id": 1306,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 1307,
+    "url": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 1308,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.user_site_directory"
+  },
+  {
+    "id": 1309,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 1310,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 1311,
+    "url": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 1312,
+    "url": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 1313,
+    "url": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 1314,
+    "url": "https://github.com/python/cpython/issues/126350"
+  },
+  {
+    "id": 1315,
+    "url": "https://docs.python.org/3/howto/isolating-extensions.html#isolating-extensions-howto"
+  },
+  {
+    "id": 1316,
+    "url": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 1317,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 1318,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_QuietFlag"
+  },
+  {
+    "id": 1319,
+    "url": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 1320,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_alloc"
+  },
+  {
+    "id": 1321,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 1322,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 1323,
+    "url": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 1324,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 1325,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoSiteFlag"
+  },
+  {
+    "id": 1326,
+    "url": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 1327,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#symtable"
+  },
+  {
+    "id": 1328,
+    "url": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 1329,
+    "url": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 1330,
+    "url": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 1331,
+    "url": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 1332,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 1333,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 1334,
+    "url": "https://docs.python.org/3/library/compression.html#module-compression"
+  },
+  {
+    "id": 1335,
+    "url": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 1336,
+    "url": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 1337,
+    "url": "https://docs.python.org/3/library/types.html#types.UnionType"
+  },
+  {
+    "id": 1338,
+    "url": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 1339,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 1340,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 1341,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsPositive"
+  },
+  {
+    "id": 1342,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.argv"
+  },
+  {
+    "id": 1343,
+    "url": "https://docs.python.org/3/library/importlib.html#module-importlib"
+  },
+  {
+    "id": 1344,
+    "url": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 1345,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#calendar"
+  },
+  {
+    "id": 1346,
+    "url": "https://github.com/python/cpython/issues/129889"
+  },
+  {
+    "id": 1347,
+    "url": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 1348,
+    "url": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 1349,
+    "url": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 1350,
+    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 1351,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#urllib"
+  },
+  {
+    "id": 1352,
+    "url": "https://github.com/python/cpython/issues/101693"
+  },
+  {
+    "id": 1353,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 1354,
+    "url": "https://docs.python.org/3/library/sys.html#sys.executable"
+  },
+  {
+    "id": 1355,
+    "url": "https://docs.python.org/3/library/webbrowser.html#module-webbrowser"
+  },
+  {
+    "id": 1356,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_IsolatedFlag"
+  },
+  {
+    "id": 1357,
+    "url": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 1358,
+    "url": "https://github.com/python/cpython/issues/126374"
+  },
+  {
+    "id": 1359,
+    "url": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "id": 1360,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#imaplib"
+  },
+  {
+    "id": 1361,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 1362,
+    "url": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 1363,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME"
+  },
+  {
+    "id": 1364,
+    "url": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 1365,
+    "url": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 1366,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 1367,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pickle"
+  },
+  {
+    "id": 1368,
+    "url": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 1369,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_LegacyWindowsFSEncodingFlag"
+  },
+  {
+    "id": 1370,
+    "url": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 1371,
+    "url": "https://docs.python.org/3/library/curses.html#curses.assume_default_colors"
+  },
+  {
+    "id": 1372,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d45325"
+  },
+  {
+    "id": 1373,
+    "url": "https://docs.python.org/3/library/typing.html#typing.no_type_check_decorator"
+  },
+  {
+    "id": 1374,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#future"
+  },
+  {
+    "id": 1375,
+    "url": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 1376,
+    "url": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 1377,
+    "url": "https://docs.python.org/3/library/threading.html#threading.RLock"
+  },
+  {
+    "id": 1378,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 1379,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#unittest"
+  },
+  {
+    "id": 1380,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ByteString"
+  },
+  {
+    "id": 1381,
+    "url": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 1382,
+    "url": "https://docs.python.org/3/glossary.html#term-GIL"
+  },
+  {
+    "id": 1383,
+    "url": "https://docs.python.org/3/library/sys.html#sys.exit"
+  },
+  {
+    "id": 1384,
+    "url": "https://docs.python.org/3/library/builtins.html#module-builtins"
+  },
+  {
+    "id": 1385,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 1386,
+    "url": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 1387,
+    "url": "https://github.com/python/cpython/issues/120600"
+  },
+  {
+    "id": 1388,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_free"
+  },
+  {
+    "id": 1389,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longdouble_complex"
+  },
+  {
+    "id": 1390,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteSubstring"
+  },
+  {
+    "id": 1391,
+    "url": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 1392,
+    "url": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 1393,
+    "url": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 1394,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pty"
+  },
+  {
+    "id": 1395,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#linecache"
+  },
+  {
+    "id": 1397,
+    "url": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "id": 1398,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 1399,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#operator"
+  },
+  {
+    "id": 1400,
+    "url": "https://github.com/python/cpython/issues/132828"
+  },
+  {
+    "id": 1401,
+    "url": "https://docs.python.org/3/library/functions.html#staticmethod"
+  },
+  {
+    "id": 1402,
+    "url": "https://docs.python.org/3/library/functions.html#int"
+  },
+  {
+    "id": 1403,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#except"
+  },
+  {
+    "id": 1404,
+    "url": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 1405,
+    "url": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 1406,
+    "url": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 1407,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 1408,
+    "url": "https://facebook.github.io/zstd/"
+  },
+  {
+    "id": 1409,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Discard"
+  },
+  {
+    "id": 1410,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.COMError"
+  },
+  {
+    "id": 1411,
+    "url": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 1412,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.get_annotations"
+  },
+  {
+    "id": 1413,
+    "url": "https://docs.python.org/3/reference/expressions.html#is"
+  },
+  {
+    "id": 1414,
+    "url": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 1415,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 1416,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.isolated"
+  },
+  {
+    "id": 1417,
+    "url": "https://docs.python.org/3/reference/expressions.html#in"
+  },
+  {
+    "id": 1418,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 1419,
+    "url": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 1420,
+    "url": "https://docs.python.org/3/library/functions.html#open"
+  },
+  {
+    "id": 1421,
+    "url": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 1422,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#binary-releases-for-the-experimental-just-in-time-compiler"
+  },
+  {
+    "id": 1423,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb"
+  },
+  {
+    "id": 1424,
+    "url": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 1425,
+    "url": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 1426,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 1427,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 1428,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#with"
+  },
+  {
+    "id": 1429,
+    "url": "https://docs.python.org/3/library/functools.html#module-functools"
+  },
+  {
+    "id": 1430,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#free-threaded-python-is-officially-supported"
+  },
+  {
+    "id": 1431,
+    "url": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 1432,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 1433,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 1434,
+    "url": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 1435,
+    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxError"
+  },
+  {
+    "id": 1436,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 1437,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_double_complex"
+  },
+  {
+    "id": 1438,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_BytesWarningFlag"
+  },
+  {
+    "id": 1439,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#threading"
+  },
+  {
+    "id": 1440,
+    "url": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 1441,
+    "url": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 1442,
+    "url": "https://github.com/python/cpython/issues/133036"
+  },
+  {
+    "id": 1443,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#zipfile"
+  },
+  {
+    "id": 1444,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set"
+  },
+  {
+    "id": 1445,
+    "url": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 1446,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 1447,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#porting-to-python-3-14"
+  },
+  {
+    "id": 1448,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.read_bytes"
+  },
+  {
+    "id": 1449,
+    "url": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 1450,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#changes-in-annotations-pep-649-and-pep-749"
+  },
+  {
+    "id": 1451,
+    "url": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 1452,
+    "url": "https://www.w3.org/TR/epub-33/#app-media-type"
+  },
+  {
+    "id": 1453,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#ast"
+  },
+  {
+    "id": 1454,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.daemon"
+  },
+  {
+    "id": 1455,
+    "url": "https://docs.python.org/3/library/pty.html#pty.openpty"
+  },
+  {
+    "id": 1456,
+    "url": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "id": 1457,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 1458,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_FreeStrList"
+  },
+  {
+    "id": 1459,
+    "url": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 1460,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.set_start_method"
+  },
+  {
+    "id": 1461,
+    "url": "https://docs.python.org/3/library/dis.html#dis.distb"
+  },
+  {
+    "id": 1462,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Create"
+  },
+  {
+    "id": 1463,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.signature"
+  },
+  {
+    "id": 1464,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.POINTER"
+  },
+  {
+    "id": 1465,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 1466,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 1467,
+    "url": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 1468,
+    "url": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 1469,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 1470,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#new-modules"
+  },
+  {
+    "id": 1471,
+    "url": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 1473,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 1474,
+    "url": "https://docs.python.org/3/library/sys.html#sys.prefix"
+  },
+  {
+    "id": 1475,
+    "url": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 1476,
+    "url": "https://docs.python.org/3/library/socket.html#socket.BTPROTO_SCO"
+  },
+  {
+    "id": 1477,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUInt64"
+  },
+  {
+    "id": 1478,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7616.html"
+  },
+  {
+    "id": 1479,
+    "url": "https://github.com/python/cpython/issues/127604"
+  },
+  {
+    "id": 1480,
+    "url": "https://github.com/python/cpython/issues/122163"
+  },
+  {
+    "id": 1481,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.util.dllist"
+  },
+  {
+    "id": 1482,
+    "url": "https://peps.python.org/pep-0563/"
+  },
+  {
+    "id": 1483,
+    "url": "https://peps.python.org/pep-0587/"
+  },
+  {
+    "id": 1484,
+    "url": "https://docs.python.org/3/library/exceptions.html#UnicodeError"
+  },
+  {
+    "id": 1485,
+    "url": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 1486,
+    "url": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 1487,
+    "url": "https://github.com/python/cpython/issues/122160"
+  },
+  {
+    "id": 1488,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_GetNativeLayout"
+  },
+  {
+    "id": 1489,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_OptimizeFlag"
+  },
+  {
+    "id": 1490,
+    "url": "https://docs.python.org/3/library/sys.html#sys._jit"
+  },
+  {
+    "id": 1491,
+    "url": "https://docs.python.org/3/library/pickle.html#pickle-protocols"
+  },
+  {
+    "id": 1492,
+    "url": "https://docs.python.org/3/library/threading.html#threading.current_thread"
+  },
+  {
+    "id": 1493,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 1494,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.pathconfig_warnings"
+  },
+  {
+    "id": 1495,
+    "url": "https://docs.python.org/3/library/locale.html#locale.getdefaultlocale"
+  },
+  {
+    "id": 1496,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-warnings-control"
+  },
+  {
+    "id": 1497,
+    "url": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 1498,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONLEGACYWINDOWSFSENCODING"
+  },
+  {
+    "id": 1499,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#getpass"
+  },
+  {
+    "id": 1500,
+    "url": "https://docs.python.org/3/library/getpass.html#getpass.getpass"
+  },
+  {
+    "id": 1501,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.use_hash_seed"
+  },
+  {
+    "id": 1502,
+    "url": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 1503,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Executor.map"
+  },
+  {
+    "id": 1504,
+    "url": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 1505,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-refcount"
+  },
+  {
+    "id": 1506,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.types.PathInfo"
+  },
+  {
+    "id": 1507,
+    "url": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 1508,
+    "url": "https://docs.python.org/3/copyright.html"
+  },
+  {
+    "id": 1509,
+    "url": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "id": 1510,
+    "url": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "id": 1511,
+    "url": "https://docs.python.org/3/library/sysconfig.html#module-sysconfig"
+  },
+  {
+    "id": 1512,
+    "url": "https://github.com/python/cpython/issues/70145"
+  },
+  {
+    "id": 1514,
+    "url": "https://docs.python.org/3/library/functions.html#zip"
+  },
+  {
+    "id": 1515,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappop_max"
+  },
+  {
+    "id": 1516,
+    "url": "https://github.com/python/cpython/issues/124369"
+  },
+  {
+    "id": 1517,
+    "url": "https://github.com/python/cpython/issues/124127"
+  },
+  {
+    "id": 1518,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._layout_"
+  },
+  {
+    "id": 1519,
+    "url": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 1520,
+    "url": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 1521,
+    "url": "https://docs.python.org/3/c-api/iter.html#c.PyIter_Next"
+  },
+  {
+    "id": 1522,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.start"
+  },
+  {
+    "id": 1523,
+    "url": "https://docs.python.org/3/library/functions.html#breakpoint"
+  },
+  {
+    "id": 1524,
+    "url": "https://docs.python.org/3/library/functools.html#functools.partialmethod"
+  },
+  {
+    "id": 1525,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#garbage-collection"
+  },
+  {
+    "id": 1526,
+    "url": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 1527,
+    "url": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 1528,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetStrList"
+  },
+  {
+    "id": 1529,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 1530,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__annotations__"
+  },
+  {
+    "id": 1531,
+    "url": "https://docs.python.org/3/library/locale.html#locale.getlocale"
+  },
+  {
+    "id": 1532,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#finally"
+  },
+  {
+    "id": 1533,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 1534,
+    "url": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 1535,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 1536,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-expression"
+  },
+  {
+    "id": 1537,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ModuleSpec.parent"
+  },
+  {
+    "id": 1538,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_AddWatcher"
+  },
+  {
+    "id": 1539,
+    "url": "https://github.com/python/cpython/issues/124130"
+  },
+  {
+    "id": 1540,
+    "url": "https://github.com/python/cpython/issues/87999"
+  },
+  {
+    "id": 1541,
+    "url": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 1542,
+    "url": "https://docs.python.org/3/library/io.html#io.Reader"
+  },
+  {
+    "id": 1543,
+    "url": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 1544,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2025-4435"
+  },
+  {
+    "id": 1545,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_count"
+  },
+  {
+    "id": 1546,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 1547,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_SPECIAL"
+  },
+  {
+    "id": 1548,
+    "url": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 1549,
+    "url": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 1550,
+    "url": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 1551,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.is_reserved"
+  },
+  {
+    "id": 1552,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#notable-changes-in-3-14-5"
+  },
+  {
+    "id": 1553,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Bytecode"
+  },
+  {
+    "id": 1554,
+    "url": "https://docs.python.org/3/library/types.html#types.CodeType"
+  },
+  {
+    "id": 1555,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#notable-changes-in-3-14-1"
+  },
+  {
+    "id": 1556,
+    "url": "https://docs.python.org/3/library/functions.html#repr"
+  },
+  {
+    "id": 1557,
+    "url": "https://github.com/python/cpython/issues/120220"
+  },
+  {
+    "id": 1558,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-POP_ITER"
+  },
+  {
+    "id": 1559,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_Free"
+  },
+  {
+    "id": 1560,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_VerboseFlag"
+  },
+  {
+    "id": 1561,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#from-future-import-annotations"
+  },
+  {
+    "id": 1562,
+    "url": "https://github.com/python/cpython/issues/129033"
+  },
+  {
+    "id": 1563,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process"
+  },
+  {
+    "id": 1564,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-programming-forkserver"
+  },
+  {
+    "id": 1565,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 1566,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.VALUE"
+  },
+  {
+    "id": 1567,
+    "url": "https://docs.python.org/3/library/locale.html#locale.setlocale"
+  },
+  {
+    "id": 1568,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 1569,
+    "url": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 1570,
+    "url": "https://github.com/python/cpython/issues/121797"
+  },
+  {
+    "id": 1571,
+    "url": "https://docs.python.org/3/library/sys.html#sys._is_immortal"
+  },
+  {
+    "id": 1572,
+    "url": "https://github.com/python/cpython/issues/121798"
+  },
+  {
+    "id": 1573,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.run"
+  },
+  {
+    "id": 1574,
+    "url": "https://github.com/python/cpython/issues/125916"
+  },
+  {
+    "id": 1575,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_Version"
+  },
+  {
+    "id": 1576,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor.kill_workers"
+  },
+  {
+    "id": 1577,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.py_object"
+  },
+  {
+    "id": 1578,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.thread_inherit_context"
+  },
+  {
+    "id": 1579,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#summary-release-highlights"
+  },
+  {
+    "id": 1580,
+    "url": "https://github.com/python/cpython/issues/132449"
+  },
+  {
+    "id": 1581,
+    "url": "https://docs.python.org/3/library/socket.html#socket.BTPROTO_HCI"
+  },
+  {
+    "id": 1582,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchRightEvent"
+  },
+  {
+    "id": 1583,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.build_opener"
+  },
+  {
+    "id": 1584,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-tail-call-interp"
+  },
+  {
+    "id": 1585,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.Context"
+  },
+  {
+    "id": 1586,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_DontWriteBytecodeFlag"
+  },
+  {
+    "id": 1587,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#os"
+  },
+  {
+    "id": 1588,
+    "url": "https://github.com/python/cpython/issues/128193"
+  },
+  {
+    "id": 1589,
+    "url": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 1590,
+    "url": "https://docs.python.org/3/library/functions.html#complex"
+  },
+  {
+    "id": 1591,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_comp_cell"
+  },
+  {
+    "id": 1592,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.urlopen"
+  },
+  {
+    "id": 1593,
+    "url": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 1594,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_Export"
+  },
+  {
+    "id": 1595,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 1596,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 1597,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 1598,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#re"
+  },
+  {
+    "id": 1599,
+    "url": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 1600,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.setName"
+  },
+  {
+    "id": 1601,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteStr"
+  },
+  {
+    "id": 1602,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 1603,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#break"
+  },
+  {
+    "id": 1604,
+    "url": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 1605,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#graphlib"
+  },
+  {
+    "id": 1606,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_CONST_IMMORTAL"
+  },
+  {
+    "id": 1607,
+    "url": "https://docs.python.org/3/library/os.html#os.environ"
+  },
+  {
+    "id": 1608,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_set_key_value"
+  },
+  {
+    "id": 1609,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 1610,
+    "url": "https://github.com/python/cpython/issues/85302"
+  },
+  {
+    "id": 1611,
+    "url": "https://github.com/python/cpython/issues/89902"
+  },
+  {
+    "id": 1612,
+    "url": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 1613,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getobjects"
+  },
+  {
+    "id": 1614,
+    "url": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 1615,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetProgramFullPath"
+  },
+  {
+    "id": 1616,
+    "url": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 1617,
+    "url": "https://docs.python.org/bugs.html"
+  },
+  {
+    "id": 1618,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.IEEEContext"
+  },
+  {
+    "id": 1619,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.string_at"
+  },
+  {
+    "id": 1620,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_Set"
+  },
+  {
+    "id": 1621,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_JIT"
+  },
+  {
+    "id": 1622,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#getopt"
+  },
+  {
+    "id": 1623,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig.utf8_mode"
+  },
+  {
+    "id": 1624,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#new-features"
+  },
+  {
+    "id": 1626,
+    "url": "https://docs.python.org/3/library/functools.html#partial-objects"
+  },
+  {
+    "id": 1627,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_AdjustIndices"
+  },
+  {
+    "id": 1628,
+    "url": "https://docs.python.org/3/glossary.html#term-context-manager"
+  },
+  {
+    "id": 1629,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.fromhex"
+  },
+  {
+    "id": 1630,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pkgutil"
+  },
+  {
+    "id": 1631,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilename"
+  },
+  {
+    "id": 1632,
+    "url": "https://github.com/python/cpython/issues/87790"
+  },
+  {
+    "id": 1633,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pending-removal-in-future-versions"
+  },
+  {
+    "id": 1634,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.pathname2url"
+  },
+  {
+    "id": 1635,
+    "url": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 1637,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 1638,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 1639,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 1640,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetInt"
+  },
+  {
+    "id": 1641,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Union"
+  },
+  {
+    "id": 1642,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#difflib"
+  },
+  {
+    "id": 1643,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.getsockname"
+  },
+  {
+    "id": 1644,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#math"
+  },
+  {
+    "id": 1645,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_In"
+  },
+  {
+    "id": 1646,
+    "url": "https://github.com/python/cpython/issues/120026"
+  },
+  {
+    "id": 1647,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-asyncio-introspection"
+  },
+  {
+    "id": 1648,
+    "url": "https://docs.python.org/3/glossary.html#term-annotate-function"
+  },
+  {
+    "id": 1649,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 1650,
+    "url": "https://github.com/python/cpython/issues/123539"
+  },
+  {
+    "id": 1651,
+    "url": "https://github.com/python/cpython/issues/120029"
+  },
+  {
+    "id": 1652,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#inspect"
+  },
+  {
+    "id": 1653,
+    "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 1654,
+    "url": "https://docs.python.org/3/library/ast.html#cmdoption-ast-optimize"
+  },
+  {
+    "id": 1655,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-BINARY_OP"
+  },
+  {
+    "id": 1656,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.SelectorEventLoop"
+  },
+  {
+    "id": 1657,
+    "url": "https://github.com/python/cpython/issues/105499"
+  },
+  {
+    "id": 1658,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.relative_to"
+  },
+  {
+    "id": 1659,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#command-line-and-environment"
+  },
+  {
+    "id": 1660,
+    "url": "https://github.com/python/cpython/issues/133336"
+  },
+  {
+    "id": 1661,
+    "url": "https://github.com/python/cpython/issues/122213"
+  },
+  {
+    "id": 1662,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-disable-safety"
+  },
+  {
+    "id": 1663,
+    "url": "https://docs.python.org/3/library/pdb.html#module-pdb"
+  },
+  {
+    "id": 1664,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#free-threaded-mode-improvements"
+  },
+  {
+    "id": 1665,
+    "url": "https://docs.python.org/3/using/cmdline.html#using-on-controlling-color"
+  },
+  {
+    "id": 1666,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_AddModule"
+  },
+  {
+    "id": 1667,
+    "url": "https://docs.python.org/3/library/functions.html#bool"
+  },
+  {
+    "id": 1668,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-multiple-interpreters"
+  },
+  {
+    "id": 1669,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_HashRandomizationFlag"
+  },
+  {
+    "id": 1670,
+    "url": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 1671,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#tarfile"
+  },
+  {
+    "id": 1672,
+    "url": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 1673,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#logging-handlers"
+  },
+  {
+    "id": 1674,
+    "url": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 1675,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#asyncio"
+  },
+  {
+    "id": 1676,
+    "url": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 1677,
+    "url": "https://docs.python.org/3/library/sys.html#sys.base_exec_prefix"
+  },
+  {
+    "id": 1679,
+    "url": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 1681,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 1682,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.move"
+  },
+  {
+    "id": 1683,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__trunc__"
+  },
+  {
+    "id": 1684,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_GetUnchecked"
+  },
+  {
+    "id": 1685,
+    "url": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 1686,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.PY_VERSION_HEX"
+  },
+  {
+    "id": 1687,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#pass"
+  },
+  {
+    "id": 1688,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-commands"
+  },
+  {
+    "id": 1689,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 1690,
+    "url": "https://github.com/python/cpython/issues/133367"
+  },
+  {
+    "id": 1691,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.realpath"
+  },
+  {
+    "id": 1692,
+    "url": "https://github.com/python/cpython/issues/115032"
+  },
+  {
+    "id": 1693,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_npn_protocols"
+  },
+  {
+    "id": 1694,
+    "url": "https://docs.python.org/3/library/sys.html#sys.warnoptions"
+  },
+  {
+    "id": 1695,
+    "url": "https://www.jython.org/"
+  },
+  {
+    "id": 1696,
+    "url": "https://docs.python.org/3/library/exceptions.html#ValueError"
+  },
+  {
+    "id": 1697,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor.terminate_workers"
+  },
+  {
+    "id": 1698,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#limited-c-api-changes"
+  },
+  {
+    "id": 1699,
+    "url": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "id": 1700,
+    "url": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "id": 1701,
+    "url": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 1702,
+    "url": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 1703,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.Runner"
+  },
+  {
+    "id": 1704,
+    "url": "https://docs.python.org/3/library/importlib.html#module-importlib.util"
+  },
+  {
+    "id": 1705,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 1706,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_SMALL_INT"
+  },
+  {
+    "id": 1707,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__int__"
+  },
+  {
+    "id": 1708,
+    "url": "https://docs.python.org/3/library/gc.html#gc.set_threshold"
+  },
+  {
+    "id": 1709,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__cached__"
+  },
+  {
+    "id": 1710,
+    "url": "https://docs.python.org/3/library/faulthandler.html#c-stack-compatibility"
+  },
+  {
+    "id": 1711,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_float_complex"
+  },
+  {
+    "id": 1712,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#fractions"
+  },
+  {
+    "id": 1713,
+    "url": "https://github.com/python/cpython/issues/131747"
+  },
+  {
+    "id": 1714,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_IMMUTABLETYPE"
+  },
+  {
+    "id": 1715,
+    "url": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 1716,
+    "url": "https://github.com/python/cpython/issues/80958"
+  },
+  {
+    "id": 1717,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.get_event_loop_policy"
+  },
+  {
+    "id": 1718,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-BRANCH_RIGHT"
+  },
+  {
+    "id": 1719,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteChar"
+  },
+  {
+    "id": 1720,
+    "url": "https://docs.python.org/3/library/threading.html#threading.active_count"
+  },
+  {
+    "id": 1721,
+    "url": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "id": 1722,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#concurrent-futures"
+  },
+  {
+    "id": 1723,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#http"
+  },
+  {
+    "id": 1724,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-methods"
+  },
+  {
+    "id": 1725,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#gc"
+  },
+  {
+    "id": 1726,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heapify_max"
+  },
+  {
+    "id": 1727,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9562.html"
+  },
+  {
+    "id": 1728,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteUTF8"
+  },
+  {
+    "id": 1729,
+    "url": "https://github.com/python/cpython/issues/85162"
+  },
+  {
+    "id": 1730,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9559.html"
+  },
+  {
+    "id": 1731,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id15"
+  },
+  {
+    "id": 1732,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Manager"
+  },
+  {
+    "id": 1733,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id16"
+  },
+  {
+    "id": 1734,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteRepr"
+  },
+  {
+    "id": 1735,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id19"
+  },
+  {
+    "id": 1736,
+    "url": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 1737,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id10"
+  },
+  {
+    "id": 1738,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id13"
+  },
+  {
+    "id": 1739,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id14"
+  },
+  {
+    "id": 1740,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id11"
+  },
+  {
+    "id": 1741,
+    "url": "https://docs.python.org/3/library/platform.html#platform.java_ver"
+  },
+  {
+    "id": 1742,
+    "url": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 1743,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id12"
+  },
+  {
+    "id": 1744,
+    "url": "https://github.com/python/cpython/issues/74033"
+  },
+  {
+    "id": 1745,
+    "url": "https://docs.python.org/3/library/sys.html#sys._clear_internal_caches"
+  },
+  {
+    "id": 1746,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetRaisedException"
+  },
+  {
+    "id": 1747,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.no_animation"
+  },
+  {
+    "id": 1748,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UCS4"
+  },
+  {
+    "id": 1749,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetProgramName"
+  },
+  {
+    "id": 1750,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-incremental-gc"
+  },
+  {
+    "id": 1751,
+    "url": "https://docs.python.org/3/library/zipfile.html#module-zipfile"
+  },
+  {
+    "id": 1752,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.create_task"
+  },
+  {
+    "id": 1753,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#discontinuation-of-pgp-signatures"
+  },
+  {
+    "id": 1754,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 1755,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetObject"
+  },
+  {
+    "id": 1756,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 1757,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FreeExport"
+  },
+  {
+    "id": 1758,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.isreserved"
+  },
+  {
+    "id": 1759,
+    "url": "https://docs.python.org/3/library/index.html#library-index"
+  },
+  {
+    "id": 1760,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.create_task"
+  },
+  {
+    "id": 1761,
+    "url": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "id": 1762,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.get_context"
+  },
+  {
+    "id": 1763,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#faulthandler"
+  },
+  {
+    "id": 1764,
+    "url": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 1765,
+    "url": "https://github.com/python/cpython/issues/112887"
+  },
+  {
+    "id": 1766,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#importlib-abc"
+  },
+  {
+    "id": 1767,
+    "url": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 1768,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key_value"
+  },
+  {
+    "id": 1769,
+    "url": "https://docs.python.org/3/library/ast.html#module-ast"
+  },
+  {
+    "id": 1770,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter"
+  },
+  {
+    "id": 1771,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_GetSign"
+  },
+  {
+    "id": 1772,
+    "url": "https://docs.python.org/3/library/sys.html#sys.exec_prefix"
+  },
+  {
+    "id": 1773,
+    "url": "https://docs.python.org/3/library/struct.html#module-struct"
+  },
+  {
+    "id": 1775,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#new-features-in-the-c-api"
+  },
+  {
+    "id": 1776,
+    "url": "https://discuss.python.org/t/84319/123"
+  },
+  {
+    "id": 1777,
+    "url": "https://docs.python.org/3/library/ast.html#ast.NodeVisitor"
+  },
+  {
+    "id": 1778,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
+  {
+    "id": 1779,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_TEMPLATE"
+  },
+  {
+    "id": 1780,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#io"
+  },
+  {
+    "id": 1782,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 1783,
+    "url": "https://docs.python.org/3/glossary.html#term-immortal"
+  },
+  {
+    "id": 1784,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_HasOption"
+  },
+  {
+    "id": 1785,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_READY"
+  },
+  {
+    "id": 1786,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.IsolatedAsyncioTestCase"
+  },
+  {
+    "id": 1787,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 1788,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Text"
+  },
+  {
+    "id": 1789,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_GetInt"
+  },
+  {
+    "id": 1790,
+    "url": "https://docs.python.org/3/library/functions.html#map"
+  },
+  {
+    "id": 1791,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#ctypes"
+  },
+  {
+    "id": 1792,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.getmark"
+  },
+  {
+    "id": 1793,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pseudo-instructions"
+  },
+  {
+    "id": 1794,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser"
+  },
+  {
+    "id": 1795,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_Names"
+  },
+  {
+    "id": 1796,
+    "url": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 1797,
+    "url": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 1798,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleNoBlock"
+  },
+  {
+    "id": 1799,
+    "url": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 1800,
+    "url": "https://docs.python.org/3/library/exceptions.html#NotImplementedError"
+  },
+  {
+    "id": 1801,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#turtle"
+  },
+  {
+    "id": 1802,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork_Child"
+  },
+  {
+    "id": 1803,
+    "url": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 1804,
+    "url": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "id": 1805,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_InitializeFromConfig"
+  },
+  {
+    "id": 1806,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField"
+  },
+  {
+    "id": 1807,
+    "url": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 1808,
+    "url": "https://docs.python.org/3/glossary.html#term-generic-type"
+  },
+  {
+    "id": 1809,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-bit-fields-in-structures-unions"
+  },
+  {
+    "id": 1810,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongObject"
+  },
+  {
+    "id": 1811,
+    "url": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "id": 1812,
+    "url": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 1813,
+    "url": "https://github.com/python/cpython/issues/128150"
+  },
+  {
+    "id": 1814,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pep-649-pep-749-deferred-evaluation-of-annotations"
+  },
+  {
+    "id": 1815,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST_BORROW_LOAD_FAST_BORROW"
+  },
+  {
+    "id": 1816,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_comp_iter"
+  },
+  {
+    "id": 1817,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONSTARTUP"
+  },
+  {
+    "id": 1818,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.rmtree"
+  },
+  {
+    "id": 1819,
+    "url": "https://docs.python.org/3/library/json.html#module-json"
+  },
+  {
+    "id": 1820,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-proxy-objects"
+  },
+  {
+    "id": 1821,
+    "url": "https://github.com/python/cpython/issues/132661"
+  },
+  {
+    "id": 1822,
+    "url": "https://github.com/python/cpython/issues/130482"
+  },
+  {
+    "id": 1823,
+    "url": "https://github.com/python/cpython/issues/122854"
+  },
+  {
+    "id": 1824,
+    "url": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 1825,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 1826,
+    "url": "https://docs.python.org/3/library/faulthandler.html#faulthandler.dump_c_stack"
+  },
+  {
+    "id": 1827,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#a-new-type-of-interpreter"
+  },
+  {
+    "id": 1828,
+    "url": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
+  },
+  {
+    "id": 1829,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 1830,
+    "url": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 1831,
+    "url": "https://docs.python.org/3/library/stdtypes.html#dict"
+  },
+  {
+    "id": 1832,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pydoc"
+  },
+  {
+    "id": 1833,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#zlib"
+  },
+  {
+    "id": 1834,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_IsImmortal"
+  },
+  {
+    "id": 1835,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-futures-interp-pool"
+  },
+  {
+    "id": 1836,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetError"
+  },
+  {
+    "id": 1837,
+    "url": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 1838,
+    "url": "https://docs.python.org/3/reference/expressions.html#if-expr"
+  },
+  {
+    "id": 1839,
+    "url": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-tls-password-file"
+  },
+  {
+    "id": 1840,
+    "url": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 1842,
+    "url": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 1843,
+    "url": "https://docs.python.org/3/library/warnings.html#warnings.catch_warnings"
+  },
+  {
+    "id": 1844,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.fromhex"
+  },
+  {
+    "id": 1845,
+    "url": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "id": 1846,
+    "url": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 1847,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_argument_group"
+  },
+  {
+    "id": 1848,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.optimization_level"
+  },
+  {
+    "id": 1849,
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 1850,
+    "url": "https://docs.python.org/3/glossary.html#term-package"
+  },
+  {
+    "id": 1851,
+    "url": "https://github.com/python/cpython/issues/122873"
+  },
+  {
+    "id": 1852,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#module-urllib.parse"
+  },
+  {
+    "id": 1853,
+    "url": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 1854,
+    "url": "https://github.com/python/cpython/issues/82909"
+  },
+  {
+    "id": 1855,
+    "url": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 1856,
+    "url": "https://docs.python.org/3/library/sys.html#sys.path"
+  },
+  {
+    "id": 1857,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb.set_trace"
+  },
+  {
+    "id": 1858,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Fetch"
+  },
+  {
+    "id": 1859,
+    "url": "https://docs.python.org/3/library/os.html#os.unsetenv"
+  },
+  {
+    "id": 1860,
+    "url": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 1861,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModule"
+  },
+  {
+    "id": 1862,
+    "url": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 1863,
+    "url": "https://www.python.org/downloads/metadata/sigstore/"
+  },
+  {
+    "id": 1864,
+    "url": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 1865,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.add_type"
+  },
+  {
+    "id": 1866,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 1867,
+    "url": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 1868,
+    "url": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 1869,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertHasAttr"
+  },
+  {
+    "id": 1870,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetPrefix"
+  },
+  {
+    "id": 1871,
+    "url": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 1872,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal"
+  },
+  {
+    "id": 1873,
+    "url": "https://docs.python.org/3/c-api/iter.html#c.PyIter_NextItem"
+  },
+  {
+    "id": 1874,
+    "url": "https://github.com/python/cpython/issues/128863"
+  },
+  {
+    "id": 1875,
+    "url": "https://github.com/python/cpython/issues/102471"
+  },
+  {
+    "id": 1876,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_lnotab"
+  },
+  {
+    "id": 1877,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.WindowsSelectorEventLoopPolicy"
+  },
+  {
+    "id": 1878,
+    "url": "https://github.com/python/cpython/issues/118805"
+  },
+  {
+    "id": 1879,
+    "url": "https://docs.python.org/3/library/os.html#os.SCHED_DEADLINE"
+  },
+  {
+    "id": 1880,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#webbrowser"
+  },
+  {
+    "id": 1881,
+    "url": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-tls-cert"
+  },
+  {
+    "id": 1882,
+    "url": "https://github.com/python/cpython/issues/111178"
+  },
+  {
+    "id": 1883,
+    "url": "https://docs.python.org/3/library/gettext.html#module-gettext"
+  },
+  {
+    "id": 1884,
+    "url": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 1885,
+    "url": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 1886,
+    "url": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "id": 1887,
+    "url": "https://docs.python.org/3/library/typing.html#typing.BinaryIO"
+  },
+  {
+    "id": 1888,
+    "url": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 1889,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#types"
+  },
+  {
+    "id": 1891,
+    "url": "https://docs.python.org/3/library/sys.html#sys._jit.is_available"
+  },
+  {
+    "id": 1892,
+    "url": "https://docs.python.org/3/library/dis.html#dis.disassemble"
+  },
+  {
+    "id": 1893,
+    "url": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 1894,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.hash_seed"
+  },
+  {
+    "id": 1895,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format"
+  },
+  {
+    "id": 1896,
+    "url": "https://docs.python.org/3/library/exceptions.html#DeprecationWarning"
+  },
+  {
+    "id": 1897,
+    "url": "https://github.com/python/cpython/issues/130704"
+  },
+  {
+    "id": 1898,
+    "url": "https://docs.python.org/3/library/ast.html#ast.parse"
+  },
+  {
+    "id": 1899,
+    "url": "https://github.com/python/cpython/issues/115765"
+  },
+  {
+    "id": 1900,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes"
+  },
+  {
+    "id": 1902,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_IgnoreEnvironmentFlag"
+  },
+  {
+    "id": 1903,
+    "url": "https://github.com/python/cpython/issues/124285"
+  },
+  {
+    "id": 1904,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork"
+  },
+  {
+    "id": 1905,
+    "url": "https://github.com/python/cpython/issues/69639"
+  },
+  {
+    "id": 1906,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Discard"
+  },
+  {
+    "id": 1907,
+    "url": "https://docs.python.org/3/reference/expressions.html#and"
+  },
+  {
+    "id": 1909,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Contains"
+  },
+  {
+    "id": 1910,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.copy_into"
+  },
+  {
+    "id": 1911,
+    "url": "https://peps.python.org/pep-0757/"
+  },
+  {
+    "id": 1912,
+    "url": "https://docs.python.org/3/library/importlib.html#module-importlib.abc"
+  },
+  {
+    "id": 1913,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.WindowsProactorEventLoopPolicy"
+  },
+  {
+    "id": 1914,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_DisplayException"
+  },
+  {
+    "id": 1915,
+    "url": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 1916,
+    "url": "https://docs.python.org/3/library/tarfile.html#module-tarfile"
+  },
+  {
+    "id": 1917,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_FrozenFlag"
+  },
+  {
+    "id": 1918,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 1919,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_InspectFlag"
+  },
+  {
+    "id": 1921,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#json"
+  },
+  {
+    "id": 1922,
+    "url": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 1923,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ModuleSpec.loader"
+  },
+  {
+    "id": 1924,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-multiprocessing-start-method"
+  },
+  {
+    "id": 1925,
+    "url": "https://docs.python.org/3/library/ssl.html#module-ssl"
+  },
+  {
+    "id": 1926,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.set_trace"
+  },
+  {
+    "id": 1927,
+    "url": "https://docs.python.org/3/library/sys.html#sys.base_prefix"
+  },
+  {
+    "id": 1928,
+    "url": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 1929,
+    "url": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "id": 1930,
+    "url": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 1931,
+    "url": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "id": 1932,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#textwrap"
+  },
+  {
+    "id": 1933,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetExecPrefix"
+  },
+  {
+    "id": 1934,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#os-path"
+  },
+  {
+    "id": 1935,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteWideChar"
+  },
+  {
+    "id": 1936,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__index__"
+  },
+  {
+    "id": 1937,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotHasAttr"
+  },
+  {
+    "id": 1938,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Constant"
+  },
+  {
+    "id": 1939,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.extract"
+  },
+  {
+    "id": 1940,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.Py_BuildValue"
+  },
+  {
+    "id": 1941,
+    "url": "https://peps.python.org/pep-0779/"
+  },
+  {
+    "id": 1942,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#typing"
+  },
+  {
+    "id": 1943,
+    "url": "https://github.com/python/cpython/issues/93963"
+  },
+  {
+    "id": 1944,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-NOT_TAKEN"
+  },
+  {
+    "id": 1945,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.home"
+  },
+  {
+    "id": 1946,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#decimal"
+  },
+  {
+    "id": 1947,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#sys"
+  },
+  {
+    "id": 1948,
+    "url": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 1949,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.Py_PreInitialize"
+  },
+  {
+    "id": 1950,
+    "url": "https://docs.python.org/3/library/decimal.html#module-decimal"
+  },
+  {
+    "id": 1951,
+    "url": "https://github.com/python/cpython/issues/126012"
+  },
+  {
+    "id": 1952,
+    "url": "https://github.com/python/cpython/issues/131831"
+  },
+  {
+    "id": 1953,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.BdbQuit"
+  },
+  {
+    "id": 1954,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#async-with"
+  },
+  {
+    "id": 1955,
+    "url": "https://docs.python.org/3/library/sys.html#sys.settrace"
+  },
+  {
+    "id": 1956,
+    "url": "https://github.com/python/cpython/issues/77065"
+  },
+  {
+    "id": 1958,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#built-ins"
+  },
+  {
+    "id": 1959,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#build-details-json"
+  },
+  {
+    "id": 1960,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#"
+  },
+  {
+    "id": 1961,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.Py_EnterRecursiveCall"
+  },
+  {
+    "id": 1962,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_BASIC_REPL"
+  },
+  {
+    "id": 1963,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_Equal"
+  },
+  {
+    "id": 1964,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_Initialize"
+  },
+  {
+    "id": 1965,
+    "url": "https://docs.python.org/3/library/typing.html#module-typing"
+  },
+  {
+    "id": 1966,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure"
+  },
+  {
+    "id": 1967,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#heapq"
+  },
+  {
+    "id": 1968,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CopyComPointer"
+  },
+  {
+    "id": 1969,
+    "url": "https://github.com/python/cpython/issues/128685"
+  },
+  {
+    "id": 1970,
+    "url": "https://docs.python.org/3/library/os.html#module-os"
+  },
+  {
+    "id": 1971,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 1972,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#build-changes"
+  },
+  {
+    "id": 1973,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-forkserver"
+  },
+  {
+    "id": 1974,
+    "url": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 1975,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.bytes_warning"
+  },
+  {
+    "id": 1976,
+    "url": "https://github.com/python/cpython/issues/127350"
+  },
+  {
+    "id": 1977,
+    "url": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 1978,
+    "url": "https://docs.python.org/3/glossary.html#term-provisional-API"
+  },
+  {
+    "id": 1980,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetPath"
+  },
+  {
+    "id": 1981,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.sqlite_version_info"
+  },
+  {
+    "id": 1982,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Pop"
+  },
+  {
+    "id": 1983,
+    "url": "https://docs.python.org/3/library/exceptions.html#OSError"
+  },
+  {
+    "id": 1984,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_LegacyWindowsStdioFlag"
+  },
+  {
+    "id": 1985,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "id": 1986,
+    "url": "https://docs.python.org/3/library/sys.html#sys._enablelegacywindowsfsencoding"
+  },
+  {
+    "id": 1987,
+    "url": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "id": 1988,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_UnbufferedStdioFlag"
+  },
+  {
+    "id": 1989,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_stats"
+  },
+  {
+    "id": 1990,
+    "url": "https://docs.python.org/3/library/operator.html#operator.is_not_none"
+  },
+  {
+    "id": 1991,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__loader__"
+  },
+  {
+    "id": 1992,
+    "url": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 1993,
+    "url": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 1994,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pathlib"
+  },
+  {
+    "id": 1995,
+    "url": "https://docs.python.org/3/library/argparse.html#prog"
+  },
+  {
+    "id": 1996,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#struct"
+  },
+  {
+    "id": 1997,
+    "url": "https://docs.python.org/3/library/typing.html#typing.get_args"
+  },
+  {
+    "id": 1998,
+    "url": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 1999,
+    "url": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 2000,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_lines"
+  },
+  {
+    "id": 2001,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlparse"
+  },
+  {
+    "id": 2002,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_GET_ITEM"
+  },
+  {
+    "id": 2003,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2024-12718"
+  },
+  {
+    "id": 2004,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 2005,
+    "url": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "id": 2006,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TextIO"
+  },
+  {
+    "id": 2007,
+    "url": "https://github.com/python/cpython/issues/132284"
+  },
+  {
+    "id": 2008,
+    "url": "https://docs.python.org/3/library/urllib.error.html#urllib.error.URLError"
+  },
+  {
+    "id": 2009,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_Hash"
+  },
+  {
+    "id": 2010,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#default-interactive-shell"
+  },
+  {
+    "id": 2011,
+    "url": "https://docs.python.org/3/glossary.html#term-free-threading"
+  },
+  {
+    "id": 2012,
+    "url": "https://docs.python.org/3/library/os.html#os.popen"
+  },
+  {
+    "id": 2013,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Format"
+  },
+  {
+    "id": 2014,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.verbose"
+  },
+  {
+    "id": 2015,
+    "url": "https://github.com/python/cpython/issues/122245"
+  },
+  {
+    "id": 2016,
+    "url": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 2017,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_free_class"
+  },
+  {
+    "id": 2018,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.utcnow"
+  },
+  {
+    "id": 2019,
+    "url": "https://docs.python.org/3/library/functools.html#functools.partial"
+  },
+  {
+    "id": 2020,
+    "url": "https://docs.python.org/3/library/sys.html#sys._jit.is_enabled"
+  },
+  {
+    "id": 2021,
+    "url": "https://docs.python.org/3/reference/index.html#reference-index"
+  },
+  {
+    "id": 2022,
+    "url": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 2023,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb-cli"
+  },
+  {
+    "id": 2024,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStrList"
+  },
+  {
+    "id": 2025,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.parser_debug"
+  },
+  {
+    "id": 2026,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Freeze"
+  },
+  {
+    "id": 2027,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_COMMON_CONSTANT"
+  },
+  {
+    "id": 2028,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetStr"
+  },
+  {
+    "id": 2029,
+    "url": "https://github.com/python/cpython/issues/133140"
+  },
+  {
+    "id": 2030,
+    "url": "https://github.com/python/cpython/issues/89083"
+  },
+  {
+    "id": 2031,
+    "url": "https://github.com/python/cpython/issues/133139"
+  },
+  {
+    "id": 2032,
+    "url": "https://docs.python.org/3/library/sys.html#module-sys"
+  },
+  {
+    "id": 2033,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write"
+  },
+  {
+    "id": 2034,
+    "url": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 2035,
+    "url": "https://docs.python.org/3/library/threading.html#module-threading"
+  },
+  {
+    "id": 2036,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 2037,
+    "url": "https://docs.python.org/3/library/functions.html#isinstance"
+  },
+  {
+    "id": 2038,
+    "url": "https://github.com/python/cpython/issues/85957"
+  },
+  {
+    "id": 2039,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.capture_call_graph"
+  },
+  {
+    "id": 2040,
+    "url": "https://docs.python.org/3/library/locale.html#module-locale"
+  },
+  {
+    "id": 2041,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.InterpreterPoolExecutor"
+  },
+  {
+    "id": 2042,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#if"
+  },
+  {
+    "id": 2043,
+    "url": "https://docs.python.org/3/library/curses.html#curses.use_default_colors"
+  },
+  {
+    "id": 2044,
+    "url": "https://github.com/python/cpython/issues/125767"
+  },
+  {
+    "id": 2045,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.AbstractEventLoopPolicy"
+  },
+  {
+    "id": 2046,
+    "url": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 2047,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEndsWith"
+  },
+  {
+    "id": 2048,
+    "url": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 2049,
+    "url": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 2050,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.move_into"
+  },
+  {
+    "id": 2051,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.FEBRUARY"
+  },
+  {
+    "id": 2052,
+    "url": "https://github.com/python/cpython/issues/123599"
+  },
+  {
+    "id": 2053,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.set"
+  },
+  {
+    "id": 2054,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.quiet"
+  },
+  {
+    "id": 2055,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 2056,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.getmarkers"
+  },
+  {
+    "id": 2057,
+    "url": "https://docs.python.org/3/library/os.html#os.register_at_fork"
+  },
+  {
+    "id": 2058,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.as_uri"
+  },
+  {
+    "id": 2059,
+    "url": "https://docs.python.org/3/whatsnew/index.html"
+  },
+  {
+    "id": 2060,
+    "url": "https://docs.python.org/3/library/uuid.html#cmdoption-uuid-count"
+  },
+  {
+    "id": 2061,
+    "url": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 2062,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#configparser"
+  },
+  {
+    "id": 2063,
+    "url": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 2064,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.iterdir"
+  },
+  {
+    "id": 2065,
+    "url": "https://github.com/python/cpython/issues/84850"
+  },
+  {
+    "id": 2066,
+    "url": "https://docs.python.org/3/library/functions.html#float"
+  },
+  {
+    "id": 2067,
+    "url": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 2068,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteUCS4"
+  },
+  {
+    "id": 2069,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#module-string.templatelib"
+  },
+  {
+    "id": 2070,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 2071,
+    "url": "https://github.com/python/cpython/issues/133164"
+  },
+  {
+    "id": 2072,
+    "url": "https://docs.python.org/3/library/pdb.html#cmdoption-pdb-p"
+  },
+  {
+    "id": 2073,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_Create"
+  },
+  {
+    "id": 2074,
+    "url": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 2075,
+    "url": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 2076,
+    "url": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 2077,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id3"
+  },
+  {
+    "id": 2078,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-improved-error-messages"
+  },
+  {
+    "id": 2079,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id2"
+  },
+  {
+    "id": 2080,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.DefaultEventLoopPolicy"
+  },
+  {
+    "id": 2081,
+    "url": "https://github.com/python/cpython/issues/103134"
+  },
+  {
+    "id": 2082,
+    "url": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 2083,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id7"
+  },
+  {
+    "id": 2084,
+    "url": "https://docs.python.org/3/library/stdtypes.html#dict.fromkeys"
+  },
+  {
+    "id": 2085,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id6"
+  },
+  {
+    "id": 2086,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertIsSubclass"
+  },
+  {
+    "id": 2087,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id5"
+  },
+  {
+    "id": 2088,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id4"
+  },
+  {
+    "id": 2089,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.write_bytecode"
+  },
+  {
+    "id": 2090,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id9"
+  },
+  {
+    "id": 2091,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id8"
+  },
+  {
+    "id": 2092,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.context_aware_warnings"
+  },
+  {
+    "id": 2093,
+    "url": "https://docs.python.org/3/glossary.html#term-interactive"
+  },
+  {
+    "id": 2094,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 2095,
+    "url": "https://docs.python.org/3/c-api/init_config.html#pyconfig-api"
+  },
+  {
+    "id": 2096,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_get"
+  },
+  {
+    "id": 2097,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.setDaemon"
+  },
+  {
+    "id": 2098,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#cpython-bytecode-changes"
+  },
+  {
+    "id": 2099,
+    "url": "https://docs.python.org/3/c-api/init_config.html#pyinitconfig-api"
+  },
+  {
+    "id": 2100,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-experimental-jit"
+  },
+  {
+    "id": 2101,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 2102,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_SetStackProtection"
+  },
+  {
+    "id": 2103,
+    "url": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 2104,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.name"
+  },
+  {
+    "id": 2105,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 2106,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-remote-debugging"
+  },
+  {
+    "id": 2107,
+    "url": "https://docs.python.org/3/library/os.html#os.environb"
+  },
+  {
+    "id": 2108,
+    "url": "https://docs.python.org/3/library/base64.html#module-base64"
+  },
+  {
+    "id": 2109,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#for"
+  },
+  {
+    "id": 2110,
+    "url": "https://github.com/python/cpython/issues/82017"
+  },
+  {
+    "id": 2111,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_DebugFlag"
+  },
+  {
+    "id": 2112,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase"
+  },
+  {
+    "id": 2113,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#changes-in-the-python-api"
+  },
+  {
+    "id": 2114,
+    "url": "https://docs.python.org/3/library/exceptions.html#FileNotFoundError"
+  },
+  {
+    "id": 2115,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.uuid8"
+  },
+  {
+    "id": 2116,
+    "url": "https://github.com/python/cpython/issues/112068"
+  },
+  {
+    "id": 2117,
+    "url": "https://docs.python.org/3/library/constants.html#NotImplemented"
+  },
+  {
+    "id": 2118,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.uuid6"
+  },
+  {
+    "id": 2119,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.uuid7"
+  },
+  {
+    "id": 2120,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.uuid4"
+  },
+  {
+    "id": 2121,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#logging.handlers.QueueListener"
+  },
+  {
+    "id": 2122,
+    "url": "https://github.com/python/cpython/issues/132099"
+  },
+  {
+    "id": 2123,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.uuid5"
+  },
+  {
+    "id": 2124,
+    "url": "https://docs.python.org/3/library/exceptions.html#BlockingIOError"
+  },
+  {
+    "id": 2125,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.uuid3"
+  },
+  {
+    "id": 2126,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.JANUARY"
+  },
+  {
+    "id": 2127,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#implications-for-annotated-code"
+  },
+  {
+    "id": 2128,
+    "url": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 2129,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._pack_"
+  },
+  {
+    "id": 2130,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor"
+  },
+  {
+    "id": 2131,
+    "url": "https://github.com/python/cpython/issues/107954"
+  },
+  {
+    "id": 2132,
+    "url": "https://github.com/python/cpython/issues/126899"
+  },
+  {
+    "id": 2134,
+    "url": "https://docs.python.org/3/library/pickle.html#module-pickle"
+  },
+  {
+    "id": 2135,
+    "url": "https://github.com/python/cpython/issues/127987"
+  },
+  {
+    "id": 2136,
+    "url": "https://github.com/python/cpython/issues/130907"
+  },
+  {
+    "id": 2137,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.program_name"
+  },
+  {
+    "id": 2138,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_Finalize"
+  },
+  {
+    "id": 2139,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_paths"
+  },
+  {
+    "id": 2140,
+    "url": "https://github.com/python/cpython/issues/116897"
+  },
+  {
+    "id": 2141,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_DISABLE_REMOTE_DEBUG"
+  },
+  {
+    "id": 2142,
+    "url": "https://docs.python.org/3/library/json.html#json-commandline"
+  },
+  {
+    "id": 2143,
+    "url": "https://github.com/python/cpython/issues/133197"
+  },
+  {
+    "id": 2144,
+    "url": "https://docs.python.org/3/library/dis.html#dis.dis"
+  },
+  {
+    "id": 2145,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#implications-for-readers-of-annotations"
+  },
+  {
+    "id": 2146,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Event.is_set"
+  },
+  {
+    "id": 2147,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.extractall"
+  },
+  {
+    "id": 2148,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.buffered_stdio"
+  },
+  {
+    "id": 2149,
+    "url": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 2150,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-zstandard"
+  },
+  {
+    "id": 2151,
+    "url": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
+  },
+  {
+    "id": 2152,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#elif"
+  },
+  {
+    "id": 2153,
+    "url": "https://docs.python.org/3/library/functools.html#functools.Placeholder"
+  },
+  {
+    "id": 2154,
+    "url": "https://github.com/python/cpython/issues/130914"
+  },
+  {
+    "id": 2155,
+    "url": "https://github.com/python/cpython/issues/118827"
+  },
+  {
+    "id": 2156,
+    "url": "https://github.com/python/cpython/issues/118824"
+  },
+  {
+    "id": 2157,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.urlretrieve"
+  },
+  {
+    "id": 2158,
+    "url": "https://docs.python.org/3/library/os.html#os.spawnl"
+  },
+  {
+    "id": 2160,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#ssl"
+  },
+  {
+    "id": 2161,
+    "url": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 2162,
+    "url": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "id": 2163,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 2164,
+    "url": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "id": 2165,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#sqlite3"
+  },
+  {
+    "id": 2166,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#c-api-changes"
+  },
+  {
+    "id": 2167,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 2168,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.info"
+  },
+  {
+    "id": 2169,
+    "url": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 2170,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#sysconfig"
+  },
+  {
+    "id": 2171,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task"
+  },
+  {
+    "id": 2172,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniquelyReferenced"
+  },
+  {
+    "id": 2173,
+    "url": "https://docs.python.org/3/c-api/hash.html#c.Py_HashPointer"
+  },
+  {
+    "id": 2174,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-incomplete-types"
+  },
+  {
+    "id": 2175,
+    "url": "https://docs.python.org/3/library/argparse.html#module-argparse"
+  },
+  {
+    "id": 2176,
+    "url": "https://github.com/python/cpython/issues/130139"
+  },
+  {
+    "id": 2177,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST_BORROW"
+  },
+  {
+    "id": 2178,
+    "url": "https://docs.python.org/3/library/locale.html#locale.getencoding"
+  },
+  {
+    "id": 2179,
+    "url": "https://github.com/python/cpython/issues/132554"
+  },
+  {
+    "id": 2180,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#contextvars"
+  },
+  {
+    "id": 2181,
+    "url": "https://docs.python.org/3/reference/expressions.html#await"
+  },
+  {
+    "id": 2182,
+    "url": "https://github.com/python/cpython/issues/129393"
+  },
+  {
+    "id": 2183,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.data_filter"
+  },
+  {
+    "id": 2184,
+    "url": "https://docs.python.org/3/library/mimetypes.html#module-mimetypes"
+  },
+  {
+    "id": 2185,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_GET_SIZE"
+  },
+  {
+    "id": 2186,
+    "url": "https://docs.python.org/3/library/zipimport.html#module-zipimport"
+  },
+  {
+    "id": 2187,
+    "url": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 2188,
+    "url": "https://docs.python.org/3/library/linecache.html#linecache.getline"
+  },
+  {
+    "id": 2189,
+    "url": "https://docs.python.org/3/library/os.html#os.putenv"
+  },
+  {
+    "id": 2190,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.inspect"
+  },
+  {
+    "id": 2191,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_delete"
+  },
+  {
+    "id": 2192,
+    "url": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 2193,
+    "url": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 2194,
+    "url": "https://github.com/python/cpython/issues/121676"
+  },
+  {
+    "id": 2195,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUInt32"
+  },
+  {
+    "id": 2196,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.site_import"
+  },
+  {
+    "id": 2197,
+    "url": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 2198,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo._for_archive"
+  },
+  {
+    "id": 2199,
+    "url": "https://docs.python.org/3/library/sys.html#sys._clear_type_cache"
+  },
+  {
+    "id": 2200,
+    "url": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "id": 2201,
+    "url": "https://docs.python.org/3/library/sys.html#sys.remote_exec"
+  },
+  {
+    "id": 2202,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Finish"
+  },
+  {
+    "id": 2203,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#what-s-new-in-python-3-14"
+  },
+  {
+    "id": 2204,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.filesystem_encoding"
+  },
+  {
+    "id": 2205,
+    "url": "https://docs.python.org/3/c-api/type.html#c.Py_tp_token"
+  },
+  {
+    "id": 2206,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.copy"
+  },
+  {
+    "id": 2207,
+    "url": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 2209,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#datetime"
+  },
+  {
+    "id": 2210,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_INTERPOLATION"
+  },
+  {
+    "id": 2211,
+    "url": "https://docs.python.org/3/library/functions.html#format"
+  },
+  {
+    "id": 2212,
+    "url": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "id": 2213,
+    "url": "https://github.com/python/cpython/issues/119562"
+  },
+  {
+    "id": 2214,
+    "url": "https://github.com/python/cpython/issues/50333"
+  },
+  {
+    "id": 2215,
+    "url": "https://docs.python.org/3/library/zlib.html#module-zlib"
+  },
+  {
+    "id": 2216,
+    "url": "https://docs.python.org/3/library/exceptions.html#TypeError"
+  },
+  {
+    "id": 2217,
+    "url": "https://github.com/python/cpython/issues/121450"
+  },
+  {
+    "id": 2218,
+    "url": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 2219,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.interactive"
+  },
+  {
+    "id": 2220,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_InteractiveFlag"
+  },
+  {
+    "id": 2221,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-futures-start-method"
+  },
+  {
+    "id": 2222,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 2223,
+    "url": "https://github.com/python/cpython/issues/119793"
+  },
+  {
+    "id": 2224,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotIsSubclass"
+  },
+  {
+    "id": 2225,
+    "url": "https://docs.python.org/3/library/logging.html#module-logging"
+  },
+  {
+    "id": 2226,
+    "url": "https://docs.python.org/3/library/socket.html#socket.BTPROTO_L2CAP"
+  },
+  {
+    "id": 2227,
+    "url": "https://github.com/python/cpython/issues/122549"
+  },
+  {
+    "id": 2228,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-free-threaded-cpython"
+  },
+  {
+    "id": 2229,
+    "url": "https://github.com/python/cpython/issues/122548"
+  },
+  {
+    "id": 2230,
+    "url": "https://docs.python.org/3/c-api/buffer.html#bufferobjects"
+  },
+  {
+    "id": 2231,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.dedent"
+  },
+  {
+    "id": 2232,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.write"
+  },
+  {
+    "id": 2233,
+    "url": "https://github.com/python/cpython/issues/132106"
+  },
+  {
+    "id": 2234,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Restore"
+  },
+  {
+    "id": 2235,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeAliasType"
+  },
+  {
+    "id": 2236,
+    "url": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "id": 2237,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__package__"
+  },
+  {
+    "id": 2238,
+    "url": "https://docs.python.org/3/library/os.html#os.readinto"
+  },
+  {
+    "id": 2239,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.HAS_PHA"
+  },
+  {
+    "id": 2240,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.open"
+  },
+  {
+    "id": 2241,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar-cli"
+  },
+  {
+    "id": 2242,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_NormalizeException"
+  },
+  {
+    "id": 2243,
+    "url": "https://docs.python.org/3/library/urllib.request.html#module-urllib.request"
+  },
+  {
+    "id": 2244,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#functools"
+  },
+  {
+    "id": 2245,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2025-4517"
+  },
+  {
+    "id": 2246,
+    "url": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 2247,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time"
+  },
+  {
+    "id": 2248,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.STRING"
+  },
+  {
+    "id": 2249,
+    "url": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 2250,
+    "url": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "id": 2251,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_GetIndicesEx"
+  },
+  {
+    "id": 2252,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#except-star"
+  },
+  {
+    "id": 2253,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.FileType"
+  },
+  {
+    "id": 2254,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#unicodeexceptions"
+  },
+  {
+    "id": 2255,
+    "url": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 2256,
+    "url": "https://docs.python.org/3/library/wave.html#module-wave"
+  },
+  {
+    "id": 2257,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#else"
+  },
+  {
+    "id": 2258,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsZero"
+  },
+  {
+    "id": 2259,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.Py_InitializeFromInitConfig"
+  },
+  {
+    "id": 2260,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview"
+  },
+  {
+    "id": 2261,
+    "url": "https://docs.python.org/3/glossary.html#term-borrowed-reference"
+  },
+  {
+    "id": 2262,
+    "url": "https://github.com/python/cpython/issues/119775"
+  },
+  {
+    "id": 2263,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PySys_ResetWarnOptions"
+  },
+  {
+    "id": 2264,
+    "url": "https://github.com/python/cpython/issues/120389"
+  },
+  {
+    "id": 2265,
+    "url": "https://docs.python.org/3/library/functions.html#pow"
+  },
+  {
+    "id": 2266,
+    "url": "https://github.com/python/cpython/issues/116022"
+  },
+  {
+    "id": 2267,
+    "url": "https://github.com/python/cpython/issues/124502"
+  },
+  {
+    "id": 2268,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Class.get_methods"
+  },
+  {
+    "id": 2269,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypedDict"
+  },
+  {
+    "id": 2271,
+    "url": "https://github.com/python/cpython/issues/125837"
+  },
+  {
+    "id": 2272,
+    "url": "https://docs.python.org/3/library/copy.html#module-copy"
+  },
+  {
+    "id": 2273,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromInt32"
+  },
+  {
+    "id": 2274,
+    "url": "https://github.com/python/cpython/issues/78707"
+  },
+  {
+    "id": 2275,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getrefcount"
+  },
+  {
+    "id": 2276,
+    "url": "https://docs.python.org/3/library/ast.html#cmdoption-ast-show-empty"
+  },
+  {
+    "id": 2277,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.ispackage"
+  },
+  {
+    "id": 2278,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#optimizations"
+  },
+  {
+    "id": 2279,
+    "url": "https://peps.python.org/pep-0011/"
+  },
+  {
+    "id": 2280,
+    "url": "https://github.com/python/cpython/issues/74598"
+  },
+  {
+    "id": 2281,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.sqlite_version"
+  },
+  {
+    "id": 2282,
+    "url": "https://docs.python.org/3/library/annotationlib.html#module-annotationlib"
+  },
+  {
+    "id": 2283,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappushpop_max"
+  },
+  {
+    "id": 2284,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-slower-safety"
+  },
+  {
+    "id": 2285,
+    "url": "https://docs.python.org/3/library/stdtypes.html#list"
+  },
+  {
+    "id": 2286,
+    "url": "https://docs.python.org/3/library/profile.html#module-pstats"
+  },
+  {
+    "id": 2287,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_get_key_value"
+  },
+  {
+    "id": 2288,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.exec_module"
+  },
+  {
+    "id": 2289,
+    "url": "https://github.com/python/cpython/issues/123424"
+  },
+  {
+    "id": 2290,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_EnableDeferredRefcount"
+  },
+  {
+    "id": 2291,
+    "url": "https://github.com/python/cpython/issues/121249"
+  },
+  {
+    "id": 2293,
+    "url": "https://github.com/python/cpython/issues/133231"
+  },
+  {
+    "id": 2294,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotStartsWith"
+  },
+  {
+    "id": 2295,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromInt64"
+  },
+  {
+    "id": 2296,
+    "url": "https://github.com/python/cpython/issues/123430"
+  },
+  {
+    "id": 2297,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_create_key"
+  },
+  {
+    "id": 2298,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#errno"
+  },
+  {
+    "id": 2299,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 2300,
+    "url": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 2301,
+    "url": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 2302,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-fork"
+  },
+  {
+    "id": 2303,
+    "url": "https://docs.python.org/3/library/typing.html#typing.NamedTuple"
+  },
+  {
+    "id": 2304,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.HTTPSServer"
+  },
+  {
+    "id": 2305,
+    "url": "https://docs.python.org/3/genindex.html"
+  },
+  {
+    "id": 2306,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qs"
+  },
+  {
+    "id": 2307,
+    "url": "https://docs.python.org/3/library/copy.html#copy.replace"
+  },
+  {
+    "id": 2308,
+    "url": "https://github.com/python/cpython/issues/123440"
+  },
+  {
+    "id": 2309,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_set"
+  },
+  {
+    "id": 2310,
+    "url": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 2311,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Union"
+  },
+  {
+    "id": 2312,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.memoryview_at"
+  },
+  {
+    "id": 2313,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Condition.notify_all"
+  },
+  {
+    "id": 2314,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_ReInitTLS"
+  },
+  {
+    "id": 2315,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.utcfromtimestamp"
+  },
+  {
+    "id": 2316,
+    "url": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 2317,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-porting-annotations"
+  },
+  {
+    "id": 2318,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_config_var"
+  },
+  {
+    "id": 2319,
+    "url": "https://github.com/python/cpython/issues/89416"
+  },
+  {
+    "id": 2320,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.Py_fclose"
+  },
+  {
+    "id": 2321,
+    "url": "https://docs.python.org/3/improve-page-nojs.html"
+  },
+  {
+    "id": 2322,
+    "url": "https://docs.python.org/3/library/typing.html#typing.IO"
+  },
+  {
+    "id": 2323,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 2324,
+    "url": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 2325,
+    "url": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 2326,
+    "url": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 2327,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_threshold"
+  },
+  {
+    "id": 2328,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsInt64"
+  },
+  {
+    "id": 2329,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#concurrent-safe-warnings-control"
+  },
+  {
+    "id": 2330,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#socket"
+  },
+  {
+    "id": 2331,
+    "url": "https://docs.python.org/3/glossary.html#term-namespace-package"
+  },
+  {
+    "id": 2332,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#multiprocessing"
+  },
+  {
+    "id": 2333,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.NIL"
+  },
+  {
+    "id": 2334,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.PyArg_ParseTuple"
+  },
+  {
+    "id": 2335,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#unicodedata"
+  },
+  {
+    "id": 2336,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.errorlevel"
+  },
+  {
+    "id": 2337,
+    "url": "https://github.com/python/cpython/issues/120507"
+  },
+  {
+    "id": 2338,
+    "url": "https://github.com/python/cpython/issues/142516"
+  },
+  {
+    "id": 2339,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Buffer"
+  },
+  {
+    "id": 2340,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig.legacy_windows_fs_encoding"
+  },
+  {
+    "id": 2341,
+    "url": "https://github.com/python/cpython/issues/120743"
+  },
+  {
+    "id": 2342,
+    "url": "https://github.com/python/cpython/blob/main/Doc/whatsnew/3.14.rst?plain\u003d1"
+  },
+  {
+    "id": 2343,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-template-string-literals"
+  },
+  {
+    "id": 2344,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig"
+  },
+  {
+    "id": 2345,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#related-changes"
+  },
+  {
+    "id": 2346,
+    "url": "https://github.com/python/cpython/issues/101410"
+  },
+  {
+    "id": 2347,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetPythonHome"
+  },
+  {
+    "id": 2348,
+    "url": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 2349,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_MAP"
+  },
+  {
+    "id": 2350,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappush_max"
+  },
+  {
+    "id": 2351,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#other-language-changes"
+  },
+  {
+    "id": 2352,
+    "url": "https://github.com/python/cpython/issues/115808"
+  },
+  {
+    "id": 2353,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#argparse"
+  },
+  {
+    "id": 2354,
+    "url": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 2355,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.writestr"
+  },
+  {
+    "id": 2356,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.ProgrammingError"
+  },
+  {
+    "id": 2357,
+    "url": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 2358,
+    "url": "https://docs.python.org/3/library/stdtypes.html#complex.from_number"
+  },
+  {
+    "id": 2359,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Create"
+  },
+  {
+    "id": 2360,
+    "url": "https://docs.python.org/3/library/fnmatch.html#fnmatch.filterfalse"
+  },
+  {
+    "id": 2361,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GET_OBJECT"
+  },
+  {
+    "id": 2362,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction"
+  },
+  {
+    "id": 2363,
+    "url": "https://docs.python.org/3/glossary.html#term-soft-deprecated"
+  },
+  {
+    "id": 2364,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2025-4138"
+  },
+  {
+    "id": 2365,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.poly"
+  },
+  {
+    "id": 2366,
+    "url": "https://docs.python.org/3/c-api/arg.html#c-arg-borrowed-buffer"
+  },
+  {
+    "id": 2367,
+    "url": "https://github.com/python/cpython/issues/120754"
+  },
+  {
+    "id": 2368,
+    "url": "https://docs.python.org/3/library/stdtypes.html#float.from_number"
+  },
+  {
+    "id": 2369,
+    "url": "https://github.com/python/cpython/issues/132734"
+  },
+  {
+    "id": 2370,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.is_relative_to"
+  },
+  {
+    "id": 2371,
+    "url": "https://github.com/python/cpython/issues/91760"
+  },
+  {
+    "id": 2372,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetExitCode"
+  },
+  {
+    "id": 2373,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element"
+  },
+  {
+    "id": 2374,
+    "url": "https://docs.python.org/3/library/warnings.html#module-warnings"
+  },
+  {
+    "id": 2376,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_Get"
+  },
+  {
+    "id": 2377,
+    "url": "https://github.com/python/cpython/issues/126061"
+  },
+  {
+    "id": 2378,
+    "url": "https://docs.python.org/3/library/array.html#module-array"
+  },
+  {
+    "id": 2379,
+    "url": "https://github.com/python/cpython/issues/128002"
+  },
+  {
+    "id": 2380,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#bdb"
+  },
+  {
+    "id": 2381,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pending-removal-in-python-3-17"
+  },
+  {
+    "id": 2382,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pending-removal-in-python-3-16"
+  },
+  {
+    "id": 2383,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_DecodeUTF8Stateful"
+  },
+  {
+    "id": 2384,
+    "url": "https://www.sigstore.dev/"
+  },
+  {
+    "id": 2385,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing"
+  },
+  {
+    "id": 2386,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pending-removal-in-python-3-19"
+  },
+  {
+    "id": 2387,
+    "url": "https://docs.python.org/3/library/os.html#os.reload_environ"
+  },
+  {
+    "id": 2388,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pending-removal-in-python-3-18"
+  },
+  {
+    "id": 2389,
+    "url": "https://github.com/python/cpython/issues/88535"
+  },
+  {
+    "id": 2390,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#continue"
+  },
+  {
+    "id": 2391,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttr"
+  },
+  {
+    "id": 2392,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#f-strings"
+  },
+  {
+    "id": 2393,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetInt"
+  },
+  {
+    "id": 2394,
+    "url": "https://github.com/python/pythoncapi-compat/"
+  },
+  {
+    "id": 2395,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#dis"
+  },
+  {
+    "id": 2396,
+    "url": "https://github.com/python/cpython/issues/101866"
+  },
+  {
+    "id": 2397,
+    "url": "https://docs.python.org/3/glossary.html#term-annotation"
+  },
+  {
+    "id": 2398,
+    "url": "https://github.com/python/cpython/issues/129349"
+  },
+  {
+    "id": 2399,
+    "url": "https://docs.python.org/3/library/dis.html#cmdoption-dis-P"
+  },
+  {
+    "id": 2400,
+    "url": "https://docs.python.org/3/library/dis.html#cmdoption-dis-S"
+  },
+  {
+    "id": 2401,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_FULL_VERSION"
+  },
+  {
+    "id": 2402,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.interrupt"
+  },
+  {
+    "id": 2403,
+    "url": "https://github.com/python/cpython/issues/132983"
+  },
+  {
+    "id": 2404,
+    "url": "https://github.com/python/cpython/issues/75223"
+  },
+  {
+    "id": 2405,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#base64"
+  },
+  {
+    "id": 2406,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.CGIHTTPRequestHandler"
+  },
+  {
+    "id": 2407,
+    "url": "https://github.com/python/cpython/issues/113601"
+  },
+  {
+    "id": 2408,
+    "url": "https://docs.python.org/3/c-api/subinterpreters.html#sub-interpreter-support"
+  },
+  {
+    "id": 2409,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pending-removal-in-python-3-15"
+  },
+  {
+    "id": 2410,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str"
+  },
+  {
+    "id": 2412,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-BRANCH_LEFT"
+  },
+  {
+    "id": 2413,
+    "url": "https://discuss.python.org/t/37075"
+  },
+  {
+    "id": 2414,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_AsUTF8"
+  },
+  {
+    "id": 2415,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#python-configuration-c-api"
+  },
+  {
+    "id": 2416,
+    "url": "https://docs.python.org/3/library/exceptions.html#NameError"
+  },
+  {
+    "id": 2417,
+    "url": "https://docs.python.org/3/library/datetime.html#module-datetime"
+  },
+  {
+    "id": 2418,
+    "url": "https://github.com/python/cpython/issues/123803"
+  },
+  {
+    "id": 2419,
+    "url": "https://docs.python.org/3/library/symtable.html#module-symtable"
+  },
+  {
+    "id": 2420,
+    "url": "https://github.com/python/cpython/issues/134939"
+  },
+  {
+    "id": 2421,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.ByteString"
+  },
+  {
+    "id": 2422,
+    "url": "https://docs.python.org/3/library/pathlib.html#module-pathlib"
+  },
+  {
+    "id": 2423,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#curses"
+  },
+  {
+    "id": 2424,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.Token"
+  },
+  {
+    "id": 2425,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Decode"
+  },
+  {
+    "id": 2426,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#new-deprecations"
+  },
+  {
+    "id": 2427,
+    "url": "https://docs.python.org/3/index.html"
+  },
+  {
+    "id": 2428,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#return"
+  },
+  {
+    "id": 2429,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#platform"
+  },
+  {
+    "id": 2430,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.strptime"
+  },
+  {
+    "id": 2431,
+    "url": "https://docs.python.org/3/library/os.html#os.SCHED_NORMAL"
+  },
+  {
+    "id": 2432,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#changes-in-the-c-api"
+  },
+  {
+    "id": 2433,
+    "url": "https://peps.python.org/pep-0739/"
+  },
+  {
+    "id": 2434,
+    "url": "https://github.com/python/cpython/issues/53032"
+  },
+  {
+    "id": 2435,
+    "url": "https://github.com/python/cpython/issues/55454"
+  },
+  {
+    "id": 2436,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.get_annotate_from_class_namespace"
+  },
+  {
+    "id": 2437,
+    "url": "https://docs.python.org/3/py-modindex.html"
+  },
+  {
+    "id": 2438,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable"
+  },
+  {
+    "id": 2439,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.filesystem_errors"
+  },
+  {
+    "id": 2440,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-bracketless-except"
+  },
+  {
+    "id": 2441,
+    "url": "https://github.com/python/cpython/issues/121637"
+  },
+  {
+    "id": 2442,
+    "url": "https://docs.python.org/3/c-api/synchronization.html#c.PyMutex_IsLocked"
+  },
+  {
+    "id": 2443,
+    "url": "https://github.com/python/cpython/issues/128036"
+  },
+  {
+    "id": 2444,
+    "url": "https://github.com/python/cpython/issues/130104"
+  },
+  {
+    "id": 2445,
+    "url": "https://docs.python.org/3/library/exceptions.html#RuntimeError"
+  },
+  {
+    "id": 2446,
+    "url": "https://docs.python.org/3/library/compression.zstd.html#module-compression.zstd"
+  },
+  {
+    "id": 2447,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ModuleSpec.cached"
+  },
+  {
+    "id": 2448,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteASCII"
+  },
+  {
+    "id": 2449,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html#changelog"
+  },
+  {
+    "id": 2450,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-without-remote-debug"
+  },
+  {
+    "id": 2451,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9639.html"
+  },
+  {
+    "id": 2452,
+    "url": "https://github.com/python/cpython/issues/69605"
+  },
+  {
+    "id": 2453,
+    "url": "https://github.com/python/cpython/issues/127186"
+  },
+  {
+    "id": 2454,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.use_environment"
+  },
+  {
+    "id": 2455,
+    "url": "https://docs.oasis-open.org/office/v1.2/cs01/OpenDocument-v1.2-cs01-part1.html#Appendix_C"
+  },
+  {
+    "id": 2456,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.Py_UNICODE"
+  },
+  {
+    "id": 2457,
+    "url": "https://github.com/python/cpython/issues/119127"
+  },
+  {
+    "id": 2458,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2025-4330"
+  },
+  {
+    "id": 2459,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3745.html"
+  },
+  {
+    "id": 2460,
+    "url": "https://github.com/python/cpython/issues/121645"
+  },
+  {
+    "id": 2462,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.set_task_factory"
+  },
+  {
+    "id": 2463,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.HtmlDiff"
+  },
+  {
+    "id": 2464,
+    "url": "https://docs.python.org/3/library/ctypes.html#module-ctypes"
+  },
+  {
+    "id": 2465,
+    "url": "https://docs.python.org/3/library/ast.html#cmdoption-ast-feature-version"
+  },
+  {
+    "id": 2466,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.set_trace_async"
+  },
+  {
+    "id": 2467,
+    "url": "https://docs.python.org/3/library/platform.html#module-platform"
+  },
+  {
+    "id": 2468,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Signature.format"
+  },
+  {
+    "id": 2469,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotEndsWith"
+  },
+  {
+    "id": 2470,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Interpolation"
+  },
+  {
+    "id": 2471,
+    "url": "https://docs.python.org/3/library/sysconfig.html#installation-paths"
+  },
+  {
+    "id": 2472,
+    "url": "https://github.com/python/cpython/issues/121654"
+  },
+  {
+    "id": 2473,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#mimetypes"
+  },
+  {
+    "id": 2474,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#logging.handlers.QueueListener.start"
+  },
+  {
+    "id": 2475,
+    "url": "https://docs.python.org/3/library/unittest.html#module-unittest"
+  },
+  {
+    "id": 2476,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.url2pathname"
+  },
+  {
+    "id": 2477,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.legacy_windows_stdio"
+  },
+  {
+    "id": 2479,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.from_number"
+  },
+  {
+    "id": 2480,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsInt32"
+  },
+  {
+    "id": 2481,
+    "url": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-tls-key"
+  },
+  {
+    "id": 2482,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_config_vars"
+  },
+  {
+    "id": 6885,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager-shebang",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6886,
+    "url": "https://www.python.org/downloads/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6888,
+    "url": "https://devguide.python.org/setup/#get-the-source-code",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6889,
+    "url": "https://docs.python.org/3/library/windows.html#mswin-specific-services",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6891,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6892,
+    "url": "https://peps.python.org/pep-0528/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6893,
+    "url": "https://docs.python.org/3/using/windows.html#python-launcher-for-windows-deprecated",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6894,
+    "url": "https://docs.python.org/3/using/windows.html#diagnostics",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6896,
+    "url": "https://www.nuget.org/packages/pythonx86",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6898,
+    "url": "https://docs.python.org/3/using/windows.html#utf-8-mode",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6899,
+    "url": "https://learn.microsoft.com/powershell/module/appx/remove-appxpackage",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6900,
+    "url": "https://www.nuget.org/packages/pythonarm64-freethreaded",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6901,
+    "url": "https://docs.python.org/3/using/windows.html#cx-freeze",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6902,
+    "url": "https://docs.python.org/3/using/windows.html#installation-steps",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6903,
+    "url": "https://docs.python.org/3/using/windows.html#pywin32",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6905,
+    "url": "https://peps.python.org/pep-0529/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6906,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager-offline",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6907,
+    "url": "https://docs.python.org/3/using/windows.html#configuration",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6908,
+    "url": "https://docs.python.org/3/using/windows.html#arguments-in-shebang-lines",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6909,
+    "url": "https://docs.python.org/3/using/windows.html#installing-free-threaded-binaries",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6910,
+    "url": "https://docs.python.org/3/using/windows.html#installing-runtimes",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6911,
+    "url": "https://docs.python.org/3/using/cmdline.html#using-on-envvars",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6912,
+    "url": "https://docs.python.org/3/using/index.html",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6913,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager-troubleshoot",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6914,
+    "url": "https://cx-freeze.readthedocs.io/en/latest/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6916,
+    "url": "https://docs.python.org/3/using/windows.html#from-the-command-line",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6917,
+    "url": "https://learn.microsoft.com/powershell/module/dism/add-appxprovisionedpackage",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6918,
+    "url": "https://docs.python.org/3/using/windows.html#id2",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6919,
+    "url": "https://docs.python.org/3/using/windows.html#id3",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6920,
+    "url": "https://docs.python.org/3/using/windows.html#embedding-python",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6921,
+    "url": "https://docs.python.org/3/using/windows.html#id4",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6922,
+    "url": "https://www.nuget.org/packages/python-freethreaded",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6923,
+    "url": "https://www.nuget.org/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6924,
+    "url": "https://peps.python.org/pep-0514/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6925,
+    "url": "https://docs.python.org/3/using/windows.html#command-help",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6926,
+    "url": "https://docs.python.org/3/tutorial/venv.html#tut-venv",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6927,
+    "url": "https://docs.python.org/3/using/windows.html#the-embeddable-package",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6928,
+    "url": "https://assets.enthought.com/downloads/edm/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6929,
+    "url": "https://www.anaconda.com/download/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6930,
+    "url": "https://www.nuget.org/packages/pythonx86-freethreaded",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6931,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager-config",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6932,
+    "url": "https://docs.python.org/3/using/windows.html#troubleshooting",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6933,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager-admin-config",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6936,
+    "url": "https://docs.python.org/3/using/windows.html#customization",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6937,
+    "url": "https://docs.python.org/3/using/windows.html#listing-runtimes",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6938,
+    "url": "https://docs.python.org/3/using/windows.html#launcher-ini",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6939,
+    "url": "https://docs.python.org/3/using/windows.html#",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6940,
+    "url": "https://winpython.github.io/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6941,
+    "url": "https://docs.python.org/3/using/windows.html#supported-windows-versions",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6942,
+    "url": "https://docs.python.org/3/using/windows.html#dry-run",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6943,
+    "url": "https://docs.python.org/3/using/windows.html#basic-use",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6944,
+    "url": "https://www.python.org/downloads/source/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6945,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager-advancedinstall",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6946,
+    "url": "https://docs.python.org/3/using/windows.html#customization-via-ini-files",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6947,
+    "url": "https://docs.python.org/3/using/windows.html#shebang-lines",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6948,
+    "url": "https://docs.python.org/3/using/windows.html#the-full-installer-deprecated",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6949,
+    "url": "https://timgolden.me.uk/python/win32_how_do_i.html",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6950,
+    "url": "https://www.boddie.org.uk/python/COM.html",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6951,
+    "url": "https://docs.python.org/3/using/windows.html#using-python-on-windows",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6952,
+    "url": "https://docs.python.org/3/using/windows.html#from-file-associations",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6953,
+    "url": "https://docs.python.org/3/using/windows.html#administrative-configuration",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6954,
+    "url": "https://docs.python.org/3/using/windows.html#compiling-python-on-windows",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6955,
+    "url": "https://support.enthought.com/hc/en-us/articles/360038600051-Canopy-GUI-end-of-life-transition-to-the-Enthought-Deployment-Manager-EDM-and-Visual-Studio-Code",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6957,
+    "url": "https://learn.microsoft.com/powershell/module/appx/add-appxpackage",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6958,
+    "url": "https://docs.python.org/3/using/windows.html#modifying-an-install",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6959,
+    "url": "https://docs.python.org/3/library/os.html#utf8-mode",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6960,
+    "url": "https://learn.microsoft.com/uwp/api/windows.management.deployment.packagemanager",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6961,
+    "url": "https://docs.python.org/3/library/sys_path_init.html#sys-path-init",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6962,
+    "url": "https://docs.python.org/3/using/windows.html#uninstalling-runtimes",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6963,
+    "url": "https://learn.microsoft.com/cpp/mfc/mfc-desktop-applications",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6964,
+    "url": "https://docs.python.org/3/using/windows.html#installing-without-downloading",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6965,
+    "url": "https://docs.python.org/3/library/sys.html#sys.meta_path",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6966,
+    "url": "https://peps.python.org/pep-0397/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6967,
+    "url": "https://docs.python.org/3/using/windows.html#customizing-default-python-versions",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6968,
+    "url": "https://www.nuget.org/packages/python",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6969,
+    "url": "https://docs.python.org/3/using/windows.html#python-install-manager",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6971,
+    "url": "https://docs.python.org/3/using/windows.html#launcher",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6972,
+    "url": "https://docs.python.org/3/using/windows.html#envvar-PYTHON_MANAGER_DEFAULT",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6973,
+    "url": "https://docs.python.org/3/using/windows.html#removing-the-max-path-limitation",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6974,
+    "url": "https://docs.python.org/3/using/windows.html#alternative-bundles",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6975,
+    "url": "https://github.com/python/cpython/blob/main/Doc/using/windows.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6976,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONUTF8",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6977,
+    "url": "https://docs.python.org/3/using/windows.html#windows-embeddable",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6978,
+    "url": "https://www.python.org/ftp/python/3.14.0/win32/launcher.msi",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6979,
+    "url": "https://docs.python.org/3/extending/windows.html#building-on-windows",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6981,
+    "url": "https://docs.python.org/3/using/windows.html#the-nuget-org-packages",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6983,
+    "url": "https://docs.python.org/3/using/windows.html#offline-installs",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6984,
+    "url": "https://www.activestate.com/products/python/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6986,
+    "url": "https://docs.python.org/3/using/windows.html#install-layout-option",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6988,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.WindowsRegistryFinder",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6989,
+    "url": "https://docs.python.org/3/using/windows.html#free-threaded-packages",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6990,
+    "url": "https://learn.microsoft.com/windows/win32/com/component-object-model--com--portal",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6991,
+    "url": "https://docs.python.org/3/using/mac.html",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6992,
+    "url": "https://docs.python.org/3/using/windows.html#setting-envvars",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6993,
+    "url": "https://docs.python.org/3/using/windows.html#envvar-PYTHON_MANAGER_AUTOMATIC_INSTALL",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6994,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.module_search_paths",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6995,
+    "url": "https://docs.python.org/3/using/configure.html",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6996,
+    "url": "https://docs.python.org/3/using/windows.html#windows-finding-modules",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6998,
+    "url": "https://docs.python.org/3/using/windows.html#additional-modules",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 6999,
+    "url": "https://pypi.org/project/PyWin32/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7001,
+    "url": "https://web.archive.org/web/20060524042422/https://www.python.org/windows/pythonwin/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7003,
+    "url": "https://www.nuget.org/packages/pythonarm64",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7005,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7007,
+    "url": "https://docs.python.org/3/using/windows.html#return-codes",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7008,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager-index-signatures",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7009,
+    "url": "https://docs.python.org/3/glossary.html#term-filesystem-encoding-and-error-handler",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7010,
+    "url": "https://docs.python.org/3/using/windows.html#advanced-installation",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7011,
+    "url": "https://docs.python.org/3/using/windows.html#from-a-script",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7013,
+    "url": "https://docs.python.org/3/using/windows.html#installing-without-ui",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7014,
+    "url": "https://docs.python.org/3/using/windows.html#virtual-environments",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7015,
+    "url": "https://docs.python.org/3/library/venv.html#module-venv",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7016,
+    "url": "https://docs.python.org/3/using/windows.html#python-application",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7018,
+    "url": "https://github.com/python/pymanager/issues",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7019,
+    "url": "https://docs.python.org/3/using/windows.html#installation",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7020,
+    "url": "https://docs.python.org/3/using/windows.html#index-signatures",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7021,
+    "url": "https://docs.python.org/3/using/windows.html#finding-modules",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7022,
+    "url": "https://docs.python.org/3/using/windows.html#windows-nuget",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7024,
+    "url": "https://docs.python.org/3/using/windows.html#install-on-demand",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7025,
+    "url": "https://docs.python.org/3/using/windows.html#getting-started",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 7026,
+    "url": "https://docs.python.org/3/library/site.html#module-site",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "4. Using Python on Windows — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/win_installer.png",
+    "alt": "../_images/win_installer.png",
+    "pageTitle": "4. Using Python on Windows — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/win_install_freethreaded.png",
+    "alt": "../_images/win_install_freethreaded.png",
+    "pageTitle": "4. Using Python on Windows — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "4. Using Python on Windows — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#hmac"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#hmac"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pep-784-zstandard-support-in-the-standard-library"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pep-784-zstandard-support-in-the-standard-library"
+  },
   {
     "src": "https://hugovk.dev/python-3.14.png",
     "alt": "Two snakes enjoying a pie with 3.14 on the top and π crimping",
