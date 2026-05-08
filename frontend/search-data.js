@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1640,
+    "url": "https://github.com/python/cpython/issues/119562",
+    "title": "Remove AST nodes deprecated since Python 3.8, with warnings since Python 3.12 · Issue #119562 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Remove AST nodes deprecated since Python 3.8, with warnings since Python 3.12 #119562 New issue Copy link New issue Copy link Closed #119563 Closed Remove AST nodes deprecated since Python 3.8, with warnings since Python 3.12#119562 #119563 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description AlexWaygood opened on May 25, 2024 Issue body actions Feature or enhancement Proposal: In #104199, we added deprecation warnings for AST nodes that had been deprecated in the docs since Python 3.8. They have now had deprecation warnings for two releases; it is time to remove them. Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-119562: Remove AST nodes deprecated since Python 3.8 #119563 gh-119562: Remove unused private string constants from ast.py #119576 Reactions are currently unavailable Metadata Metadata Assignees AlexWaygood Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:27:53.445473"
+  },
+  {
+    "id": 1639,
+    "url": "https://github.com/python/cpython/issues/109523",
+    "title": "sys.stdin.read() throws a TypeError when stdin is set to be non-blocking · Issue #109523 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k sys.stdin.read() throws a TypeError when stdin is set to be non-blocking #109523 New issue Copy link New issue Copy link Closed Closed sys.stdin.read() throws a TypeError when stdin is set to be non-blocking#109523 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-IOtype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description MartinHHProbst opened on Sep 17, 2023 Issue body actions Bug report Bug description: sys.stdin.read() throws a TypeError if stdin has been set to be non-blocking. The code below should just exit without issue. It throws a TypeError if no input is provided. #!/usr/bin/python3\n\nimport sys\nimport os\n\nos.set_blocking(sys.stdin.fileno(), False)\nsys.stdin.read() CPython versions tested on: 3.11 Operating systems tested on: Linux Linked PRs gh-109523: In _io_TextIOWrapper_read_impl skip decoding if bytes are None #121739 gh-109523: Reading text from a non-blocking stream with read may now raise a BlockingIOError if the operation cannot immediately return bytes. #122933 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-IOtype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:27:51.029315"
+  },
+  {
+    "id": 1638,
+    "url": "https://docs.python.org/3/library/functions.html#format",
+    "title": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Functions | Theme Auto Light Dark | Built-in Functions¶ The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order. Built-in Functions A abs() aiter() all() anext() any() ascii() B bin() bool() breakpoint() bytearray() bytes() C callable() chr() classmethod() compile() complex() D delattr() dict() dir() divmod() E enumerate() eval() exec() F filter() float() format() frozenset() G getattr() globals() H hasattr() hash() help() hex() I id() input() int() isinstance() issubclass() iter() L len() list() locals() M map() max() memoryview() min() N next() O object() oct() open() ord() P pow() print() property() R range() repr() reversed() round() S set() setattr() slice() sorted() staticmethod() str() sum() super() T tuple() type() V vars() Z zip() _ __import__() abs(number, /)¶ Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__(). If the argument is a complex number, its magnitude is returned. aiter(async_iterable, /)¶ Return an asynchronous iterator for an asynchronous iterable. Equivalent to calling x.__aiter__(). Note: Unlike iter(), aiter() has no 2-argument variant. Added in version 3.10. all(iterable, /)¶ Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to: def all(iterable):\n    for element in iterable:\n        if not element:\n            return False\n    return True\n awaitable anext(async_iterator, /)¶ awaitable anext(async_iterator, default, /) When awaited, return the next item from the given asynchronous iterator, or default if given and the iterator is exhausted. This is the async variant of the next() builtin, and behaves similarly. This calls the __anext__() method of async_iterator, returning an awaitable. Awaiting this returns the next value of the iterator. If default is given, it is returned if the iterator is exhausted, otherwise StopAsyncIteration is raised. Added in version 3.10. any(iterable, /)¶ Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to: def any(iterable):\n    for element in iterable:\n        if element:\n            return True\n    return False\n ascii(object, /)¶ As repr(), return a string containing a printable representation of an object, but escape the non-ASCII characters in the string returned by repr() using \\x, \\u, or \\U escapes. This generates a string similar to that returned by repr() in Python 2. bin(integer, /)¶ Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If integer is not a Python int object, it has to define an __index__() method that returns an integer. Some examples: \u003e\u003e\u003e bin(3)\n\u00270b11\u0027\n\u003e\u003e\u003e bin(-10)\n\u0027-0b1010\u0027\n If the prefix “0b” is desired or not, you can use either of the following ways. \u003e\u003e\u003e format(14, \u0027#b\u0027), format(14, \u0027b\u0027)\n(\u00270b1110\u0027, \u00271110\u0027)\n\u003e\u003e\u003e f\u0027{14:#b}\u0027, f\u0027{14:b}\u0027\n(\u00270b1110\u0027, \u00271110\u0027)\n See also enum.bin() to represent negative values as twos-complement. See also format() for more information. class bool(object\u003dFalse, /)¶ Return a Boolean value, i.e. one of True or False. The argument is converted using the standard truth testing procedure. If the argument is false or omitted, this returns False; otherwise, it returns True. The bool class is a subclass of int (see Numeric Types — int, float, complex). It cannot be subclassed further. Its only instances are False and True (see Boolean Type - bool). Changed in version 3.7: The parameter is now positional-only. breakpoint(*args, **kws)¶ This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or type as much code to enter the debugger. However, sys.breakpointhook() can be set to some other function and breakpoint() will automatically call that, allowing you to drop into the debugger of choice. If sys.breakpointhook() is not accessible, this function will raise RuntimeError. By default, the behavior of breakpoint() can be changed with the PYTHONBREAKPOINT environment variable. See sys.breakpointhook() for usage details. Note that this is not guaranteed if sys.breakpointhook() has been replaced. Raises an auditing event builtins.breakpoint with argument breakpointhook. Added in version 3.7. class bytearray(source\u003db\u0027\u0027) class bytearray(source, encoding, errors\u003d\u0027strict\u0027) Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 \u003c\u003d x \u003c 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and ",
+    "scrapedAt": "2026-05-09 01:27:48.946534"
+  },
+  {
+    "id": 1637,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_INTERPOLATION",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code o",
+    "scrapedAt": "2026-05-09 01:27:47.682567"
+  },
+  {
+    "id": 1636,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#datetime",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:27:46.427223"
+  },
+  {
     "id": 1634,
     "url": "https://github.com/python/cpython/issues/93096",
     "title": "Decide the fate of undocumented script behavior of some modules · Issue #93096 · python/cpython · GitHub",
@@ -11023,26 +11058,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1636,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#datetime"
-  },
-  {
-    "id": 1637,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_INTERPOLATION"
-  },
-  {
-    "id": 1638,
-    "url": "https://docs.python.org/3/library/functions.html#format"
-  },
-  {
-    "id": 1639,
-    "url": "https://github.com/python/cpython/issues/109523"
-  },
-  {
-    "id": 1640,
-    "url": "https://github.com/python/cpython/issues/119562"
   },
   {
     "id": 1641,
@@ -242030,10 +242045,142 @@ window.searchData = [
     "id": 356292,
     "url": "https://github.com/python/cpython/issues/93096#issue-1244802104",
     "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 358110,
+    "url": "https://github.com/MartinHHProbst",
+    "parentUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "id": 358112,
+    "url": "https://github.com/python/cpython/issues/109523#top",
+    "parentUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "id": 358115,
+    "url": "https://github.com/python/cpython/pull/121739",
+    "parentUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "id": 358116,
+    "url": "https://github.com/python/cpython/issues/109523#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "id": 358117,
+    "url": "https://github.com/python/cpython/pull/122933",
+    "parentUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "id": 358119,
+    "url": "https://github.com/python/cpython/issues/109523#issue-1899883336",
+    "parentUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "id": 358124,
+    "url": "https://github.com/python/cpython/pull/119563",
+    "parentUrl": "https://github.com/python/cpython/issues/119562"
+  },
+  {
+    "id": 358128,
+    "url": "https://github.com/python/cpython/pull/119576",
+    "parentUrl": "https://github.com/python/cpython/issues/119562"
+  },
+  {
+    "id": 358130,
+    "url": "https://github.com/python/cpython/issues/119562#top",
+    "parentUrl": "https://github.com/python/cpython/issues/119562"
+  },
+  {
+    "id": 358131,
+    "url": "https://github.com/python/cpython/issues/119562#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/119562"
+  },
+  {
+    "id": 358132,
+    "url": "https://github.com/python/cpython/issues/119562#issue-2317193760",
+    "parentUrl": "https://github.com/python/cpython/issues/119562"
+  },
+  {
+    "id": 358133,
+    "url": "https://github.com/python/cpython/pull/104199",
+    "parentUrl": "https://github.com/python/cpython/issues/119562"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d64\u0026u\u003dfc4602f3e8770bf2b4ce2b2f244159c10b1174d3\u0026v\u003d4",
+    "alt": "AlexWaygood",
+    "pageTitle": "Remove AST nodes deprecated since Python 3.8, with warnings since Python 3.12 · Issue #119562 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119562"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?u\u003dfc4602f3e8770bf2b4ce2b2f244159c10b1174d3\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@AlexWaygood",
+    "pageTitle": "Remove AST nodes deprecated since Python 3.8, with warnings since Python 3.12 · Issue #119562 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119562"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?u\u003dfc4602f3e8770bf2b4ce2b2f244159c10b1174d3\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@AlexWaygood",
+    "pageTitle": "Remove AST nodes deprecated since Python 3.8, with warnings since Python 3.12 · Issue #119562 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119562"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d64\u0026u\u003dfc4602f3e8770bf2b4ce2b2f244159c10b1174d3\u0026v\u003d4",
+    "alt": "@AlexWaygood",
+    "pageTitle": "Remove AST nodes deprecated since Python 3.8, with warnings since Python 3.12 · Issue #119562 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119562"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/98490638?v\u003d4\u0026size\u003d80",
+    "alt": "@MartinHHProbst",
+    "pageTitle": "sys.stdin.read() throws a TypeError when stdin is set to be non-blocking · Issue #109523 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/98490638?v\u003d4\u0026size\u003d48",
+    "alt": "@MartinHHProbst",
+    "pageTitle": "sys.stdin.read() throws a TypeError when stdin is set to be non-blocking · Issue #109523 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/109523"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#format"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#format"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-BUILD_INTERPOLATION"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-BUILD_INTERPOLATION"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#datetime"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#datetime"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/4881073?u\u003d02f1effcd378b0b5b57a7d3fae8ae55b5f0b0012\u0026v\u003d4\u0026size\u003d80",
     "alt": "@arhadthedev",
