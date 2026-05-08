@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1380,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.BdbQuit",
+    "title": "bdb — Debugger framework — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Debugging and Profiling » bdb — Debugger framework | Theme Auto Light Dark | bdb — Debugger framework¶ Source code: Lib/bdb.py The bdb module handles basic debugger functions, like setting breakpoints or managing execution via the debugger. The following exception is defined: exception bdb.BdbQuit¶ Exception raised by the Bdb class for quitting the debugger. The bdb module also defines two classes: class bdb.Breakpoint(self, file, line, temporary\u003dFalse, cond\u003dNone, funcname\u003dNone)¶ This class implements temporary breakpoints, ignore counts, disabling and (re-)enabling, and conditionals. Breakpoints are indexed by number through a list called bpbynumber and by (file, line) pairs through bplist. The former points to a single instance of class Breakpoint. The latter points to a list of such instances since there may be more than one breakpoint per line. When creating a breakpoint, its associated file name should be in canonical form. If a funcname is defined, a breakpoint hit will be counted when the first line of that function is executed. A conditional breakpoint always counts a hit. Breakpoint instances have the following methods: deleteMe()¶ Delete the breakpoint from the list associated to a file/line. If it is the last breakpoint in that position, it also deletes the entry for the file/line. enable()¶ Mark the breakpoint as enabled. disable()¶ Mark the breakpoint as disabled. bpformat()¶ Return a string with all the information about the breakpoint, nicely formatted: Breakpoint number. Temporary status (del or keep). File/line position. Break condition. Number of times to ignore. Number of times hit. Added in version 3.2. bpprint(out\u003dNone)¶ Print the output of bpformat() to the file out, or if it is None, to standard output. Breakpoint instances have the following attributes: file¶ File name of the Breakpoint. line¶ Line number of the Breakpoint within file. temporary¶ True if a Breakpoint at (file, line) is temporary. cond¶ Condition for evaluating a Breakpoint at (file, line). funcname¶ Function name that defines whether a Breakpoint is hit upon entering the function. enabled¶ True if Breakpoint is enabled. bpbynumber¶ Numeric index for a single instance of a Breakpoint. bplist¶ Dictionary of Breakpoint instances indexed by (file, line) tuples. ignore¶ Number of times to ignore a Breakpoint. hits¶ Count of the number of times a Breakpoint has been hit. class bdb.Bdb(skip\u003dNone, backend\u003d\u0027settrace\u0027)¶ The Bdb class acts as a generic Python debugger base class. This class takes care of the details of the trace facility; a derived class should implement user interaction. The standard debugger class (pdb.Pdb) is an example. The skip argument, if given, must be an iterable of glob-style module name patterns. The debugger will not step into frames that originate in a module that matches one of these patterns. Whether a frame is considered to originate in a certain module is determined by the __name__ in the frame globals. The backend argument specifies the backend to use for Bdb. It can be either \u0027settrace\u0027 or \u0027monitoring\u0027. \u0027settrace\u0027 uses sys.settrace() which has the best backward compatibility. The \u0027monitoring\u0027 backend uses the new sys.monitoring that was introduced in Python 3.12, which can be much more efficient because it can disable unused events. We are trying to keep the exact interfaces for both backends, but there are some differences. The debugger developers are encouraged to use the \u0027monitoring\u0027 backend to achieve better performance. Changed in version 3.1: Added the skip parameter. Changed in version 3.14: Added the backend parameter. The following methods of Bdb normally don’t need to be overridden. canonic(filename)¶ Return canonical form of filename. For real file names, the canonical form is an operating-system-dependent, case-normalized absolute path. A filename with angle brackets, such as \"\u003cstdin\u003e\" generated in interactive mode, is returned unchanged. start_trace(self)¶ Start tracing. For \u0027settrace\u0027 backend, this method is equivalent to sys.settrace(self.trace_dispatch) Added in version 3.14. stop_trace(self)¶ Stop tracing. For \u0027settrace\u0027 backend, this method is equivalent to sys.settrace(None) Added in version 3.14. reset()¶ Set the botframe, stopframe, returnframe and quitting attributes with values ready to start debugging. trace_dispatch(frame, event, arg)¶ This function is installed as the trace function of debugged frames. Its return value is the new trace function (in most cases, that is, itself). The default implementation decides how to dispatch a frame, depending on the type of event (passed as a string) that is about to be executed. event can be one of the following: \"line\": A new line of code is going to be executed. \"call\": A function is about to be called, or another code block entered. \"return\": A function or other code block is about to return. \"exception\": An exception",
+    "scrapedAt": "2026-05-09 01:17:47.839367"
+  },
+  {
+    "id": 1379,
+    "url": "https://github.com/python/cpython/issues/131831",
+    "title": "Implement PEP 758 – Allow except and except* expressions without parentheses · Issue #131831 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Implement PEP 758 – Allow except and except* expressions without parentheses #131831 New issue Copy link New issue Copy link Closed #131833 Closed Implement PEP 758 – Allow except and except* expressions without parentheses#131831 #131833 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description pablogsal opened on Mar 28, 2025 Issue body actions See PEP-758 Linked PRs gh-131831: Implement PEP 758 – Allow except and except* expressions without parentheses #131833 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:17:46.573599"
+  },
+  {
+    "id": 1378,
+    "url": "https://github.com/python/cpython/issues/126012",
+    "title": "Add `__class_getitem__` support to `memoryview` · Issue #126012 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add __class_getitem__ support to memoryview #126012 New issue Copy link New issue Copy link Closed Closed Add __class_getitem__ support to memoryview#126012 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-typingtype-featureA feature request or enhancementA feature request or enhancement Description brianschubert opened on Oct 26, 2024 Issue body actions Feature or enhancement Proposal: memoryview was made generic in typeshed in python/typeshed#12247. Mypy recently received a report (python/mypy#18053) due to it not being subscriptable at runtime: \u003e\u003e\u003e memoryview[int]\nTraceback (most recent call last):\n  File \"\u003cpython-input-0\u003e\", line 1, in \u003cmodule\u003e\n    memoryview[int]\n    ~~~~~~~~~~^^^^^\nTypeError: type \u0027memoryview\u0027 is not subscriptable It seems that memoryview should be made subscriptable at runtime, like other standard library classes that are generic in typeshed. Happy to make a PR if there\u0027s agreement that this should be added. Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-126012: Add __class_getitem__ to memoryview #126013 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-typingtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:17:44.434358"
+  },
+  {
+    "id": 1377,
+    "url": "https://docs.python.org/3/library/decimal.html#module-decimal",
+    "title": "decimal — Decimal fixed-point and floating-point arithmetic — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Numeric and Mathematical Modules » decimal — Decimal fixed-point and floating-point arithmetic | Theme Auto Light Dark | decimal — Decimal fixed-point and floating-point arithmetic¶ Source code: Lib/decimal.py The decimal module provides support for fast correctly rounded decimal floating-point arithmetic. It offers several advantages over the float datatype: Decimal “is based on a floating-point model which was designed with people in mind, and necessarily has a paramount guiding principle – computers must provide an arithmetic that works in the same way as the arithmetic that people learn at school.” – excerpt from the decimal arithmetic specification. Decimal numbers can be represented exactly. In contrast, numbers like 1.1 and 2.2 do not have exact representations in binary floating point. End users typically would not expect 1.1 + 2.2 to display as 3.3000000000000003 as it does with binary floating point. The exactness carries over into arithmetic. In decimal floating point, 0.1 + 0.1 + 0.1 - 0.3 is exactly equal to zero. In binary floating point, the result is 5.5511151231257827e-017. While near to zero, the differences prevent reliable equality testing and differences can accumulate. For this reason, decimal is preferred in accounting applications which have strict equality invariants. The decimal module incorporates a notion of significant places so that 1.30 + 1.20 is 2.50. The trailing zero is kept to indicate significance. This is the customary presentation for monetary applications. For multiplication, the “schoolbook” approach uses all the figures in the multiplicands. For instance, 1.3 * 1.2 gives 1.56 while 1.30 * 1.20 gives 1.5600. Unlike hardware based binary floating point, the decimal module has a user alterable precision (defaulting to 28 places) which can be as large as needed for a given problem: \u003e\u003e\u003e from decimal import *\n\u003e\u003e\u003e getcontext().prec \u003d 6\n\u003e\u003e\u003e Decimal(1) / Decimal(7)\nDecimal(\u00270.142857\u0027)\n\u003e\u003e\u003e getcontext().prec \u003d 28\n\u003e\u003e\u003e Decimal(1) / Decimal(7)\nDecimal(\u00270.1428571428571428571428571429\u0027)\n Both binary and decimal floating point are implemented in terms of published standards. While the built-in float type exposes only a modest portion of its capabilities, the decimal module exposes all required parts of the standard. When needed, the programmer has full control over rounding and signal handling. This includes an option to enforce exact arithmetic by using exceptions to block any inexact operations. The decimal module was designed to support “without prejudice, both exact unrounded decimal arithmetic (sometimes called fixed-point arithmetic) and rounded floating-point arithmetic.” – excerpt from the decimal arithmetic specification. The module design is centered around three concepts: the decimal number, the context for arithmetic, and signals. A decimal number is immutable. It has a sign, coefficient digits, and an exponent. To preserve significance, the coefficient digits do not truncate trailing zeros. Decimals also include special values such as Infinity, -Infinity, and NaN. The standard also differentiates -0 from +0. The context for arithmetic is an environment specifying precision, rounding rules, limits on exponents, flags indicating the results of operations, and trap enablers which determine whether signals are treated as exceptions. Rounding options include ROUND_CEILING, ROUND_DOWN, ROUND_FLOOR, ROUND_HALF_DOWN, ROUND_HALF_EVEN, ROUND_HALF_UP, ROUND_UP, and ROUND_05UP. Signals are groups of exceptional conditions arising during the course of computation. Depending on the needs of the application, signals may be ignored, considered as informational, or treated as exceptions. The signals in the decimal module are: Clamped, InvalidOperation, DivisionByZero, Inexact, Rounded, Subnormal, Overflow, Underflow and FloatOperation. For each signal there is a flag and a trap enabler. When a signal is encountered, its flag is set to one, then, if the trap enabler is set to one, an exception is raised. Flags are sticky, so the user needs to reset them before monitoring a calculation. See also IBM’s General Decimal Arithmetic Specification, The General Decimal Arithmetic Specification. Quick-start tutorial¶ The usual start to using decimals is importing the module, viewing the current context with getcontext() and, if necessary, setting new values for precision, rounding, or enabled traps: \u003e\u003e\u003e from decimal import *\n\u003e\u003e\u003e getcontext()\nContext(prec\u003d28, rounding\u003dROUND_HALF_EVEN, Emin\u003d-999999, Emax\u003d999999,\n        capitals\u003d1, clamp\u003d0, flags\u003d[], traps\u003d[Overflow, DivisionByZero,\n        InvalidOperation])\n\n\u003e\u003e\u003e getcontext().prec \u003d 7       # Set a new precision\n Decimal instances can be constructed from integers, strings, floats, or tuples. Construction from an integer or a float performs an exact conversion of the value of that integer or float. Decimal numbers include special values such",
+    "scrapedAt": "2026-05-09 01:17:41.988115"
+  },
+  {
+    "id": 1376,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.Py_PreInitialize",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:17:40.745668"
+  },
+  {
     "id": 1375,
     "url": "https://github.com/python/cpython/issues/100239",
     "title": "Specialize long tail of binary operations using a table. · Issue #100239 · python/cpython · GitHub",
@@ -9238,26 +9273,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1376,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.Py_PreInitialize"
-  },
-  {
-    "id": 1377,
-    "url": "https://docs.python.org/3/library/decimal.html#module-decimal"
-  },
-  {
-    "id": 1378,
-    "url": "https://github.com/python/cpython/issues/126012"
-  },
-  {
-    "id": 1379,
-    "url": "https://github.com/python/cpython/issues/131831"
-  },
-  {
-    "id": 1380,
-    "url": "https://docs.python.org/3/library/bdb.html#bdb.BdbQuit"
   },
   {
     "id": 1381,
@@ -229270,10 +229285,125 @@ window.searchData = [
     "id": 282641,
     "url": "https://github.com/python/cpython/pull/129700",
     "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 283176,
+    "url": "https://github.com/python/cpython/pull/126013",
+    "parentUrl": "https://github.com/python/cpython/issues/126012"
+  },
+  {
+    "id": 283177,
+    "url": "https://github.com/python/cpython/issues/126012#top",
+    "parentUrl": "https://github.com/python/cpython/issues/126012"
+  },
+  {
+    "id": 283180,
+    "url": "https://github.com/python/cpython/issues/126012#issue-2616012111",
+    "parentUrl": "https://github.com/python/cpython/issues/126012"
+  },
+  {
+    "id": 283184,
+    "url": "https://github.com/python/typeshed/pull/12247",
+    "parentUrl": "https://github.com/python/cpython/issues/126012"
+  },
+  {
+    "id": 283187,
+    "url": "https://github.com/python/mypy/issues/18053",
+    "parentUrl": "https://github.com/python/cpython/issues/126012"
+  },
+  {
+    "id": 283189,
+    "url": "https://github.com/python/cpython/issues/126012#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/126012"
+  },
+  {
+    "id": 283190,
+    "url": "https://github.com/python/cpython/pull/131833",
+    "parentUrl": "https://github.com/python/cpython/issues/131831"
+  },
+  {
+    "id": 283192,
+    "url": "https://github.com/python/cpython/issues/131831#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/131831"
+  },
+  {
+    "id": 283193,
+    "url": "https://github.com/python/cpython/issues/131831#issue-2955928476",
+    "parentUrl": "https://github.com/python/cpython/issues/131831"
+  },
+  {
+    "id": 283195,
+    "url": "https://github.com/python/cpython/issues/131831#top",
+    "parentUrl": "https://github.com/python/cpython/issues/131831"
+  },
+  {
+    "id": 283200,
+    "url": "https://peps.python.org/758",
+    "parentUrl": "https://github.com/python/cpython/issues/131831"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "bdb — Debugger framework — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/bdb.html#bdb.BdbQuit"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "bdb — Debugger framework — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/bdb.html#bdb.BdbQuit"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@pablogsal",
+    "pageTitle": "Implement PEP 758 – Allow except and except* expressions without parentheses · Issue #131831 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131831"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@pablogsal",
+    "pageTitle": "Implement PEP 758 – Allow except and except* expressions without parentheses · Issue #131831 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131831"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/25313350?u\u003d73b184aa203a878927d87aa1fce19fd529155f39\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@brianschubert",
+    "pageTitle": "Add `__class_getitem__` support to `memoryview` · Issue #126012 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126012"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/25313350?u\u003d73b184aa203a878927d87aa1fce19fd529155f39\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@brianschubert",
+    "pageTitle": "Add `__class_getitem__` support to `memoryview` · Issue #126012 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126012"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "decimal — Decimal fixed-point and floating-point arithmetic — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/decimal.html#module-decimal"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "decimal — Decimal fixed-point and floating-point arithmetic — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/decimal.html#module-decimal"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.Py_PreInitialize"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.Py_PreInitialize"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/40968415?s\u003d64\u0026u\u003db9fb61a07384ffc9174d8fd0a0826e06263a34a1\u0026v\u003d4",
     "alt": "brandtbucher",
