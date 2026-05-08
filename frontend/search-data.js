@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 160,
+    "url": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo",
+    "title": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "content": "Image source, Save Our Reds Image caption, A petition calling for urgent action has attracted more than 75,000 signatures ByNaj Modak North East and Cumbria Published 2 May 2026 England\u0027s red squirrels are close to extinction and the government needs to do more to protect them, an animal welfare group said. A petition set up by Save Our Reds, has attracted more than 75,000 signatures, urging more action. Founder of the campaign Marie Carter-Robb, said: \"We have a series of urgent actions that need to be brought together into one joined-up national plan.\" A spokesperson for the Department for Environment, Food and Rural Affairs (Defra), said the government was protecting endangered red squirrels by tackling the threat of non-native grey squirrels. Combining data from a number of wildlife organisations, the group said the endangered species, which \"still clings on\" across Cumbria, Northumberland and the North Pennines, could disappear within 25 years. It also said only 120,000 to 160,000 remained, with as few as 15,000 in England. According to Natural England, external causes for the decline include the introduction of grey squirrels from the USA and Canada from 1876 spreading the squirrelpox virus, which is fatal to the red squirrels only. The group said habitat loss and weak enforcement of existing protections were adding to the problem. Carter-Robb, said: \"The map is shocking. It makes the reality impossible to ignore. \"This is not theoretical, without action we will lose our red squirrels.\" She said the \"urgent actions that need to be brought together\" were \"fragmented\" and \"we are simply managing decline\". The campaign called for a national plan to humanely manage grey squirrel populations and urgent investment in squirrelpox vaccine development. It also wants support for fertility control research and deployment, and protection and enforcement of red squirrel habitat. \"We need government, conservation bodies, landowners, scientists and campaigners around the same table. The tools exist or are being developed. \"What is missing is coordination, funding and urgency,\" Carter-Robb added. The organisation suggested that while it was illegal to kill red squirrels, their habitats were being destroyed. Image source, PA Media Image caption, Grey squirrels, native to North America, carry a virus which is deadly to red squirrels A Defra spokesperson said: \"Working alongside landowners and conservation partners, we are supporting promising research into fertility control so that we can manage grey squirrel populations and help our iconic red squirrels and native wildlife flourish. Forestry England said: \"We support red squirrel populations in Cumbria and Northumberland by monitoring them and controlling the grey squirrel population. \"We also manage forest and woodland habitats to enable red squirrels to thrive. \"We work with and support partner organisations and volunteer red squirrel groups as part of our conservation activity.\" Image source, Save Our Reds Image caption, The group\u0027s map shows the collapse of the native red squirrel population over the past 150 years Follow BBC North East on X, external, Facebook, external, Nextdoor and Instagram, external. Get in touch Do you have a story suggestion for BBC North East \u0026 Cumbria? Contact form Contact form Related topics Conservation Squirrels Cumbria More on this story \u0027I\u0027m selling the red squirrel reserve my parents created\u0027 Published 12 April How I can help protect red squirrels? Published 9 February Red squirrel survey finds nests near housing site Published 27 February Related internet links Save Our Reds Defra Forestry England Top stories Live. Labour set for historic defeat in Wales as BBC projects Plaid Cymru will be biggest party 74779 viewing75k viewing Live. SNP forecast to win up to 63 seats, leaving it short of overall majority 31869 viewing32k viewing Live. Plaid Cymru on track to be largest party in Wales, as Labour faces historic defeat 25568 viewing26k viewing More to explore Election results so far - and what\u0027s still to come The risk-taker who changed how we see Earth Ten of Attenborough\u0027s best documentaries Live from your living room: The rise of concert films and livestreamed gigs Weekly quiz: Who was this mystery masked star at the Met Gala? How worried should we be about hantavirus? \u0027We were strangers until we helped bring a paedophile to justice\u0027 Ukraine war \u0027led me to surrogacy\u0027 to earn money but a new law could end those plans Politics Essential: Get the latest news and analysis delivered to your inbox every weekday Elsewhere on the BBC Amandaland has returned with Lucy Punch and Joanna Lumley From small-time carpenter to Britain’s most famous fugitive New mysteries and puzzling cases await DI Goodman The energy direct debit cycle and the cheapest ways to spend abroad Most read 1 What latest election results show us in maps and charts 2 Election results so far - and what\u0027s still to come 3 Emerging picture shows Reform gains as Labour counts l",
+    "scrapedAt": "2026-05-09 00:32:18.502942"
+  },
+  {
+    "id": 159,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t",
+    "title": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "content": "Live. 78,854 viewing78854 viewing Live pageUpdated 13 minutes ago Labour suffers historic Wales loss as Reform wins more than 1,000 English council seats and Greens make gains Eluned Morgan Quits as Welsh Labour Leader BBC News Close To play this video you need to enable JavaScript in your browser. This video can not be played Watch live Live Reporting (active) Watch \u0026 listen Summary Labour suffers a historic defeat in Wales after 27 years in power, as Plaid Cymru becomes the largest party - with Reform in second Labour First Minister Eluned Morgan also loses her seat The scale of Labour\u0027s collapse in Wales isn\u0027t something I thought I\u0027d see in my life, writes BBC Wales\u0027s political editor In Scotland, the BBC projects the SNP will win the most seats in the Scottish parliament, but also fall short of a majority Earlier, Keir Starmer said he was \"not going to walk away\" after Labour lost hundreds of councillors in England - Reform is the biggest winner so far, picking up more than 1,000 council seats How have party leaders been reacting? Scroll to previous item Scroll to next item 0:54Plaid Cymru is \u0027ready to serve\u0027 - leader Rhun ap Iorwerth. 00:00:54, play videoPlaid Cymru is \u0027ready to serve\u0027 - leader Rhun ap Iorwerth 0:40Welsh Labour suffered \u0027catastrophic result\u0027, says first minister. 00:00:40, play videoWelsh Labour suffered \u0027catastrophic result\u0027, says first minister 0:53\u0027SNP will be the largest party in Scotland\u0027, leader Swinney says. 00:00:53, play video\u0027SNP will be the largest party in Scotland\u0027, leader Swinney says 0:47\u0027I\u0027m not going to walk away and plunge country into chaos\u0027 00:00:47, play video\u0027I\u0027m not going to walk away and plunge country into chaos\u0027 1:16Jenrick \u0027hasn\u0027t spoken to me\u0027 - awkward reunion of former Tory ministers. 00:01:16, play videoJenrick \u0027hasn\u0027t spoken to me\u0027 - awkward reunion of former Tory ministers 0:35\u0027Good strategy takes time\u0027 - Badenoch. 00:00:35, play video\u0027Good strategy takes time\u0027 - Badenoch 0:34\u0027Very happy\u0027 with the results so far, says Farage. 00:00:34, play video\u0027Very happy\u0027 with the results so far, says Farage 0:19Henry Zeffman: Labour MPs messaging me about PM. 00:00:19, play videoHenry Zeffman: Labour MPs messaging me about PM 0:33\u0027The new politics is the Green Party vs Reform\u0027 - Polanski. 00:00:33, play video\u0027The new politics is the Green Party vs Reform\u0027 - Polanski 0:30\u0027Tories and Labour need to smell the coffee\u0027 - Davey. 00:00:30, play video\u0027Tories and Labour need to smell the coffee\u0027 - Davey 0:47\u0027We reject hate and division\u0027 - first Green mayor. 00:00:47, play video\u0027We reject hate and division\u0027 - first Green mayor 0:25Scottish Labour \u0027hurting\u0027 and \u0027disappointed\u0027, says Sarwar. 00:00:25, play videoScottish Labour \u0027hurting\u0027 and \u0027disappointed\u0027, says Sarwar 0:46\u0027It\u0027s been the Reform show so far\u0027 - politics professor. 00:00:46, play video\u0027It\u0027s been the Reform show so far\u0027 - politics professor 0:41\u0027Some of the results are mixed\u0027, says shadow transport secretary. 00:00:41, play video\u0027Some of the results are mixed\u0027, says shadow transport secretary 0:52Disappointment driving people from Labour - Green Party. 00:00:52, play videoDisappointment driving people from Labour - Green Party 0:40Why are these elections important? 00:00:40, play videoWhy are these elections important? Live Reporting Edited by Dulcie Lee and Alex Smith The final results have been declared in the election for the Welsh Senedd - and Plaid Cymru will be the biggest party, bringing an end to Labour\u0027s decades-long dominance of the country\u0027s politics. Plaid won the most votes and took four seats in the final constituency to be called - Gwynedd Maldwyn - followed by Reform UK, who claimed two seats. But the party will be short of an overall majority. It has won 43 seats - six short of a majority. Share close panel Share page Copy link About sharing There are six mayoral races running today. The Green Party have so far won two - one in Hackney we told you about earlier, and now another in Lewisham. Liam Shrivastava was declared the winner there, with Labour coming in second. The party had never held a mayoral position before this election. The Liberal Democrats have held on to Watford, the Conservatives have held on to Croydon, and Labour has held on to Newham. There\u0027s now just one left to declare - in Tower Hamlets. That position is currently held by the Aspire party\u0027s Luftur Rahman, who is running for re-election. Share close panel Share page Copy link About sharing Council and mayoral counts in England continue We\u0027re still awaiting results from around 40 councils - as Reform, the Greens and Liberal Democrats see gains in their number of councillors, and Labour and the Conservatives suffer losses. There\u0027s still one mayoral race to decide - in Tower Hamlets in London - more on the mayoral races in our next post. One more declaration in Wales to go There\u0027s just one region left to declare in Wales, and the BBC has forecast Plaid Cymru will be the biggest party in the Senedd. First Minister Eluned Morgan has a",
+    "scrapedAt": "2026-05-09 00:32:17.446548"
+  },
+  {
+    "id": 158,
+    "url": "https://www.bbc.co.uk/sounds/play/p0njc6c4",
+    "title": "Crumbs of History - BBC Sounds",
+    "content": "Close menu Use BBC.com or the new BBC App to listen to BBC podcasts, Radio 4 and the World Service outside the UK. Find out how to listen to other BBC stations Episode details BBC,·3 mins Crumbs of History Play BookmarkBookmark Available for over a year The story of the stolen Medieval tiles found in a biscuit tin after 60 Years. Taken in 1967 and forgotten in a humble biscuit tin, 68-year-old Simon White, remembers visiting heritage sites throughout Shropshire as a young boy. On one particular visit, he recalls being encouraged to help his father remove some historic tiles as a keepsake. Feeling uneasy about this ever since, he was delighted to rediscover the tiles intact while sorting through his belongings and set to work to find out where they might have come from. English Heritage\u0027s Matty Cambridge told Clare Ashford the incredible story. Programme Website Show less Cymraeg Gaeilge Gàidhlig BBC Sounds Help Contacts, Privacy and Information Help with Signing In Newsletter Explore the BBC",
+    "scrapedAt": "2026-05-09 00:32:16.380624"
+  },
+  {
+    "id": 157,
+    "url": "https://www.bbc.co.uk/aboutthebbc/governance/mission",
+    "title": "Mission, values and public purposes",
+    "content": "Close menu JavaScript has been disabled. This page needs JavaScript to work correctly. Please enable JavaScript in your browser settings. JavaScript is required for the following feature(s): opening and closing the navbar (on mobile) Mission, values and public purposes The Royal Charter states that the BBC’s object is “the fulfilment of its Mission and the promotion of its Public Purposes” Our mission is \"to act in the public interest, serving all audiences through the provision of impartial, high-quality and distinctive output and services which inform, educate and entertain\". The Charter also sets out our five public purposes: 1. To provide impartial news and information to help people understand and engage with the world around them The BBC should provide duly accurate and impartial news, current affairs and factual programming to build people’s understanding of all parts of the United Kingdom and of the wider world. Its content should be provided to the highest editorial standards. It should offer a range and depth of analysis and content not widely available from other United Kingdom news providers, using the highest calibre presenters and journalists, and championing freedom of expression, so that all audiences can engage fully with major local, regional, national, United Kingdom and global issues and participate in the democratic process, at all levels, as active and informed citizens. 2. To support learning for people of all ages The BBC should help everyone learn about different subjects in ways they will find accessible, engaging, inspiring and challenging. The BBC should provide specialist educational content to help support learning for children and teenagers across the United Kingdom. It should encourage people to explore new subjects and participate in new activities through partnerships with educational, sporting and cultural institutions. 3. To show the most creative, highest quality and distinctive output and services The BBC should provide high-quality output in many different genres and across a range of services and platforms which sets the standard in the United Kingdom and internationally. Its services should be distinctive from those provided elsewhere and should take creative risks, even if not all succeed, in order to develop fresh approaches and innovative content. 4. To reflect, represent and serve the diverse communities of all of the United Kingdom’s nations and regions and, in doing so, support the creative economy across the United Kingdom The BBC should reflect the diversity of the United Kingdom both in its output and services. In doing so, the BBC should accurately and authentically represent and portray the lives of the people of the United Kingdom today, and raise awareness of the different cultures and alternative viewpoints that make up its society. It should ensure that it provides output and services that meet the needs of the United Kingdom’s nations, regions and communities. The BBC should bring people together for shared experiences and help contribute to the social cohesion and wellbeing of the United Kingdom. In commissioning and delivering output the BBC should invest in the creative economies of each of the nations and contribute to their development. 5. To reflect the United Kingdom, its culture and values to the world The BBC should provide high-quality news coverage to international audiences, firmly based on British values of accuracy, impartiality, and fairness. Its international services should put the United Kingdom in a world context, aiding understanding of the United Kingdom as a whole, including its nations and regions where appropriate. It should ensure that it produces output and services which will be enjoyed by people in the United Kingdom and globally. BBC Values We have established a set of values for everyone working at the BBC. They represent the expectations we have for ourselves and each other, they guide our day-to-day decisions and the way we behave. Our values are: AUDIENCES are at the heart of everything we do CREATIVITY is the lifeblood of our organisation TRUST is the foundation of the BBC - we’re independent, impartial and truthful We RESPECT each other - we’re kind, and we champion inclusivity We are ACCOUNTABLE and deliver work of the highest quality We are ONE BBC - we collaborate, learn and grow together Annual report and accounts Annual report and accounts Each year in our Annual Report and Accounts we give our assessment of how we have delivered our public purposes through the output and services we have provided View The Royal Charter and agreement Charter and agreement The Royal Charter is the constitutional basis for the BBC iPages Dev tools Page built: Tue Jun 17 2025 11:19:03 BST Site ID: ipages-inside-the-bbc Built from: master @ 74ebd40 Rebuild Page The page will automatically reload. You may need to reload again if the build takes longer than expected. Rebuild page Useful links View in iSite View page XML View JSON cach",
+    "scrapedAt": "2026-05-09 00:32:15.228099"
+  },
+  {
+    "id": 156,
+    "url": "https://www.bbc.co.uk/news/scotland/scotland_politics",
+    "title": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "content": "Scotland Politics Follow Scotland Politics Follow Following Following Unfollow Unfollow close panel You are now following Scotland Politics Updates from your News topics will appear in My News and in a collection on the News homepage. Scottish Parliament results 65 seats for majority 69 of 129 seats Scottish National Party SNP 55 4 (Scottish National Party 55 seats 4 seats lost) Liberal Democrat LD 5 1 (Liberal Democrat 5 seats 1 seat gained) Conservative CON 4 1 (Conservative 4 seats 1 seat lost) Labour LAB 3 2 (Labour 3 seats 2 seats gained) Scottish Green SGR 2 2 (Scottish Green 2 seats 2 seats gained) Reform UK REF 0 - (Reform UK 0 seats No change) Change since 2021 How this election works The Scottish Parliament has 129 members, known as MSPs. There are 73 constituency MSPs and 56 regional MSPs. A party needs 65 seats to secure a majority. Counting will begin on Friday morning. Live. updates Get the full results Live. Scottish Greens win seats, Labour stalwart holds key constituency and SNP set to become biggest party.Scottish Greens win seats, Labour stalwart holds key constituency and SNP set to become biggest party 3min How to watch the results on the BBC 10min Tight election producing small majorities Attribution Scotland Politics Greens oust SNP\u0027s Robertson as they win first Holyrood constituencies Attribution Scotland Posted 20 minutes ago20min Lib Dems lose stronghold Shetland seat to SNP Attribution NE, Orkney \u0026 Shetland Posted 3 hours ago3h John Swinney among SNP winners in Perthshire and Dundee Attribution Scotland Politics Posted 40 minutes ago40min SNP\u0027s Westminster leader Stephen Flynn wins seat at Holyrood Attribution Scotland Posted 3 hours ago3h SNP narrowly beats Reform in Banffshire and Buchan Coast Attribution Scotland Posted 33 minutes ago33min Conservative \u0027blue wall\u0027 holds firm in south of Scotland Attribution South Scotland Posted 12 minutes ago12min SNP lose Western Isles seat it had held for 19 years Attribution Highlands \u0026 Islands Posted 1 hour ago1h Scottish Parliament election Six things to watch out for in the Scottish election Attribution Scotland Posted 12 hours ago12h Scottish election 2026: When will your result be declared? Attribution Scotland Politics Posted 7 hours ago7h Nine seats that could decide Scotland\u0027s election Attribution NE, Orkney \u0026 Shetland Posted 20 hours ago20h STV news strike takes election coverage off air Attribution Scotland Posted 6 hours ago6h It\u0027s been a Holyrood election of disputed claims - BBC Verify fact-checked them Attribution Scotland Politics Posted 3 days ago3d Scroll to previous item Scroll to next item 0:50Scottish Greens reach new milestone. 00:00:50, play videoScottish Greens reach new milestone 0:38\u0027We are forecasting the SNP will not have an overall majority\u0027 00:00:38, play video\u0027We are forecasting the SNP will not have an overall majority\u0027 0:20\u0027A vote for Reform hands potentially pro-UK seats to Swinney\u0027 00:00:20, play video\u0027A vote for Reform hands potentially pro-UK seats to Swinney\u0027 0:36\u0027Holyrood officials are contacting new MSPs as we speak\u0027 00:00:36, play video\u0027Holyrood officials are contacting new MSPs as we speak\u0027 0:53John Swinney believes SNP will be largest party. 00:00:53, play videoJohn Swinney believes SNP will be largest party 0:33Anas Sarwar: My party is hurting, we\u0027re disappointed. 00:00:33, play videoAnas Sarwar: My party is hurting, we\u0027re disappointed 1:01Election graphics - what happens behind the scenes? 00:01:01, play videoElection graphics - what happens behind the scenes? 1:10How does the mood of the nation affect the mood of the parties? 00:01:10, play videoHow does the mood of the nation affect the mood of the parties? 0:36What is the turnout in this election? 00:00:36, play videoWhat is the turnout in this election? 0:44Could there be some surprises ahead in the Scottish election? 00:00:44, play videoCould there be some surprises ahead in the Scottish election? 0:56\u0027We\u0027re not going to remain the second biggest party\u0027 00:00:56, play video\u0027We\u0027re not going to remain the second biggest party\u0027 0:56So you voted. What\u0027s next? 00:00:56, play videoSo you voted. What\u0027s next? 1:02Three moments that shaped the campaign in Scotland. 00:01:02, play videoThree moments that shaped the campaign in Scotland 1:11Why are there so many vape shops on our high streets? 00:01:11, play videoWhy are there so many vape shops on our high streets? 1:11What\u0027s next for Scotland\u0027s future NHS workforce? 00:01:11, play videoWhat\u0027s next for Scotland\u0027s future NHS workforce? 0:55Young Scots on housing: What we want next. 00:00:55, play videoYoung Scots on housing: What we want next 1:11What does it mean to be Scottish today? 00:01:11, play videoWhat does it mean to be Scottish today? 0:28All you need to know about party policies on key issues. 00:00:28, play videoAll you need to know about party policies on key issues 1:14What impact do refugees have on housing in Glasgow? 00:01:14, play videoWhat impact do refugees have on housing in Glasgow",
+    "scrapedAt": "2026-05-09 00:32:14.08423"
+  },
+  {
     "id": 155,
     "url": "https://www.bbc.co.uk/mediacentre/2026/springwatch-2026-from-national-trust-crom-fermanagh",
     "title": "Springwatch 2026 main location selected as National Trust Crom in County Fermanagh",
@@ -1083,26 +1118,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 156,
-    "url": "https://www.bbc.co.uk/news/scotland/scotland_politics"
-  },
-  {
-    "id": 157,
-    "url": "https://www.bbc.co.uk/aboutthebbc/governance/mission"
-  },
-  {
-    "id": 158,
-    "url": "https://www.bbc.co.uk/sounds/play/p0njc6c4"
-  },
-  {
-    "id": 159,
-    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
-  },
-  {
-    "id": 160,
-    "url": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
   },
   {
     "id": 161,
@@ -29768,10 +29783,1002 @@ window.searchData = [
     "id": 14314,
     "url": "https://www.bbc.co.uk/mediacentre/search/?tag\u003dNorthern_Ireland",
     "parentUrl": "https://www.bbc.co.uk/mediacentre/2026/springwatch-2026-from-national-trust-crom-fermanagh"
+  },
+  {
+    "id": 14319,
+    "url": "https://www.bbc.co.uk/news/articles/c3w28z78zd8o",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14320,
+    "url": "https://www.bbc.co.uk/send/u232648764",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14321,
+    "url": "https://www.bbc.co.uk/news/articles/ckgprglgj4zo",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14322,
+    "url": "https://www.bbc.co.uk/news/articles/cz02r3e3v5do",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14324,
+    "url": "https://www.bbc.co.uk/news/articles/cq8w079vjkzo",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14327,
+    "url": "https://www.bbc.co.uk/news/articles/cvgzpmepxvwo",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14330,
+    "url": "https://www.bbc.co.uk/news/articles/czd24z7563no",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14331,
+    "url": "https://www.bbc.co.uk/news/articles/c0m2v44v9pjo",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14333,
+    "url": "https://www.bbc.co.uk/news/articles/cn7pvrm07gjo",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14335,
+    "url": "https://www.bbc.co.uk/news/articles/c1k239p409po",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14339,
+    "url": "https://www.bbc.co.uk/news/articles/cy42l4ey98eo",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14340,
+    "url": "https://www.bbc.co.uk/news/articles/c4g934ep151o",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14341,
+    "url": "https://www.bbc.co.uk/news/articles/cg5p7yg82jro",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14347,
+    "url": "https://www.bbc.co.uk/news/articles/cddqdvdeqrlo",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14349,
+    "url": "https://www.bbc.co.uk/news/articles/cyv1m396n3eo",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14355,
+    "url": "https://www.bbc.co.uk/news/articles/c893xz9yw7eo",
+    "parentUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "id": 14357,
+    "url": "https://www.bbc.co.uk/aboutthebbc/governance/charter",
+    "parentUrl": "https://www.bbc.co.uk/aboutthebbc/governance/mission"
+  },
+  {
+    "id": 14358,
+    "url": "https://production.bbc.co.uk/isite2-xforms/fr/ipages-inside-the-bbc/page-standard/edit/ab8f7078-45f3-4513-bce8-022871a601cd",
+    "parentUrl": "https://www.bbc.co.uk/aboutthebbc/governance/mission"
+  },
+  {
+    "id": 14359,
+    "url": "https://www.bbc.co.uk/aboutthebbc/governance/mission#",
+    "parentUrl": "https://www.bbc.co.uk/aboutthebbc/governance/mission"
+  },
+  {
+    "id": 14360,
+    "url": "https://www.bbc.co.uk/aboutthebbc/reports/annualreport",
+    "parentUrl": "https://www.bbc.co.uk/aboutthebbc/governance/mission"
+  },
+  {
+    "id": 14368,
+    "url": "https://www.bbc.co.uk/sounds/play/p0njc6c4#",
+    "parentUrl": "https://www.bbc.co.uk/sounds/play/p0njc6c4"
+  },
+  {
+    "id": 14369,
+    "url": "https://www.bbc.co.uk/programmes/p0njc6c4",
+    "parentUrl": "https://www.bbc.co.uk/sounds/play/p0njc6c4"
+  },
+  {
+    "id": 14371,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t#Watch\u0026listen",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "id": 14372,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A37949d06-b9e4-4aef-84db-b9e69274a2c9#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "id": 14373,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A86dabb54-7470-416e-849a-c565169a2ecb#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "id": 14374,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t#player",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "id": 14375,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t#LiveReporting",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "id": 14377,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A63b91123-6842-45ab-9895-5b9926190d52#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "id": 14378,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A42d696dd-246a-4a7a-a439-c0f1aa56ef16#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "id": 14379,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A307aed46-339c-4afa-bf9c-132210733284#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "id": 14380,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A89d749a7-44c6-46fa-a631-241f66dbe07c#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "id": 14383,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A0a367346-aa6d-442c-b3d3-3d8f19c456ee#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "id": 14384,
+    "url": "https://www.bbc.co.uk/news/topics/c5vkx03dg8vt",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "id": 14395,
+    "url": "https://bbc.in/3yyMYUI",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "id": 14397,
+    "url": "https://www.bbc.co.uk/news/topics/c207p54mdd3t",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "id": 14400,
+    "url": "https://x.com/BBCNEandCumbria",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "id": 14401,
+    "url": "https://www.bbc.co.uk/news/articles/cwyk8zn4r9yo",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "id": 14404,
+    "url": "https://www.instagram.com/bbcneandcumbria/",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "id": 14405,
+    "url": "https://www.facebook.com/bbcnortheast",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "id": 14406,
+    "url": "https://www.bbc.co.uk/news/articles/cgmexkw8923o",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "id": 14409,
+    "url": "https://www.bbc.co.uk/send/u198505317",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "id": 14410,
+    "url": "https://www.forestryengland.uk/",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "id": 14411,
+    "url": "https://www.bbc.co.uk/news/articles/c17z7dng2y1o",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "id": 14412,
+    "url": "https://saveourreds.uk/",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "id": 14418,
+    "url": "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "id": 14423,
+    "url": "https://naturalengland.blog.gov.uk/2026/04/14/england-red-squirrel-recovery-strategy/",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/2048/cpsprodpb/c7fe/live/27a3e2d0-4553-11f1-a4b0-8306ec2ff5e9.jpg",
+    "alt": "A  red squirrel standing up leaning on a rock and looking into the camera. The background is blurred.",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/983/cpsprodpb/24fe/live/0d59fa10-4565-11f1-a66d-a173f5fb620e.jpg",
+    "alt": "Two grey squirrels are huddled together in woodland pine looking startled. There are tinges of red in their coats. There is a bunch of berries on the leave to the right of the picture. ",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1376/cpsprodpb/41e2/live/3fd6a440-44a5-11f1-bd52-e755d604ece4.png",
+    "alt": "Two map illustrations with the headlines 1876 - Once Widespread and Today, now confined to pockets without action red squirrels will disappear. They show more than three million red squirrels reduced to between 120,000 to 160,000 in the UK with the grey s",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/bb3f/live/d884d320-335b-11f1-9d5c-8ba507d7dbde.jpg",
+    "alt": "A red squirrel is looking directly at the camera whilst sitting on a felled tree covered in green moss. ",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/bfa2/live/82feca00-037c-11f1-a1bf-cf780f66d064.jpg",
+    "alt": "A red squirrel is perched on a mossy branch in woodland, illuminated by the sun\u0027s rays",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1800/cpsprodpb/1ddf/live/6ddfd4a0-1346-11f1-9f20-795c0d2a8d6b.jpg",
+    "alt": "Campaigners outside Cumberland Council headquarters. They hold reading, protect our wildlife. Another reads, we demand a proper ecology report.",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/db69/live/015d7fe0-4aef-11f1-ac78-2112837ce2aa.png",
+    "alt": "Nigel Farage ",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/60a2/live/7bfa1c10-cadc-11f0-a892-01d657345866.jpg",
+    "alt": "Sir David Attenborough being filmed in front of the sea and mountains for Life on Earth in 1979",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/af4f/live/8c892de0-4ac1-11f1-b55d-0f258dce1735.png",
+    "alt": "A composite image of 5 people  in flamboyant costumes at the Met gala. In the centre in a largest part of the image is a women in white  wearing a mask over her face",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b327/live/76b6ee00-4a38-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A person in protective clothing walks next to an ambulance during an evacuation operation of suspected hantavirus patients, following an outbreak on the cruise ship MV Hondius, in Praia, Cape Verde, May 6, 2026",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/2d4c/live/d268f6b0-4a1c-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "Two ladies are sat beside each other. The one on the left is wearing a mustard cardigan and has white wavy hair. The one on the right is wearing a pink collarless shirt and has blonde and brown hair. ",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/dd4d/live/992a5b50-494f-11f1-bd44-e578c5bd51ff.png",
+    "alt": "A pregnant woman stands in a garden with her hand on her belly. She has long, straight, dark hair and is wearing a matching top and trousers which are white with some patches of black. She also has a light brown hoodie on. ",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/0088/live/ee20d100-4aff-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Rhun ap lorwerth wears a pokadot tie and blue suit and smiles into the distance",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/6890/live/5b1d7560-4afb-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Welsh First Minister and Labour Leader Eluned Morgan arrives at Ysgol Bro Teifi",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/e6cd/live/455d0b30-4af3-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Swinney speaking ",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/c4fa/live/fada9460-4ade-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Starmer holds his hand in a fist and has a neutral expression as he speaks while sat at a table",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/b7e8/live/28947460-4ae5-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Robert Jenrick sat next to Victoria Atkins in the studio",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/9782/live/a12d1670-4ac7-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Kemi Badenoch ",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/af06/live/f6cc20f0-4af2-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Farage smiling",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/79cc/live/cd181b50-4af8-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Zeffman holding a phone and speaking to the camera",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/4ee8/live/47f85c10-4ade-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Zack Polanski seen gesticulating as he speaks, wearing a dark suit jacket with a white shirt",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/a31c/live/f063c880-4ac5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Ed Davey smiles and holds paper coffee cup",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/e8d5/live/0f10e380-4ae4-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Zoe Garbett at a podium",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/e157/live/532de0e0-4af3-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Sarwar speaking, holds his finger up",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/25c1/live/d59fe080-4aa5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Prof Jonathan Tonge in a dark suit wearing a pale floral tie ",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/ded3/live/ffc66060-4a86-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Richard Holden",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/395b/live/bebe0a50-4aa9-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Sian Berry MP in a studio wearing a floral shirt",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/226b/live/9878e920-4a61-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Laura Kuenssberg",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/425c0d64-bdb8-47da-ad39-3b972d870c6f.png.webp",
+    "alt": "Hemicycle chart showing seats won by party in the 2026 Welsh Parliament election. 96 seats total, 49 seats for a majority. Plaid Cymru 43, Reform UK 34, Labour 9, Conservative 7, Green 2, Lib Dem 1",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/341680ed-9e91-42d0-bc87-1459bd15b01b.png.webp",
+    "alt": "Mayor of Lewisham",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/aebd5f16-0e3b-4f7a-9012-0974f6cdfa97.jpg.webp",
+    "alt": "Scottish Greens candidate Holly Bruce, in the centre of this picture, after she was declared winner of Glasgow Southside",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/3348ad9b-4d6f-4591-8f1a-46248a6ab7f1.png.webp",
+    "alt": "Bar chart showing the results of the Glasgow Southside seat in the Scottish Parliament with vote share for candidates with more than 1% of the vote: Scottish Green 36.5% up 36.3 points, Scottish National Party 28.4% down 32.5 points, Labour 19% down 9 poi",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/d3e287ab-39af-474b-92ce-adec94ef0b68.png.webp",
+    "alt": "Bar chart showing the results for the council election in Norwich, After 14 of 14 seats declared. Seats needed for majority: 20. Green won 21 seats, a gain of 6; Labour won 12 seats, a loss of 8; Lib Dem won 3, same as previous election; Reform UK won 2 s",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/4f6ad9e5-3266-4af2-9ae4-5e2410958bea.jpg.webp",
+    "alt": "Ed Davey speaks to party campaigners and activists at a thank you party at Guildfordians Rugby Football Club in Guildford, Surrey,",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/d5f016b8-8b53-42db-b5e2-7424df33901b.jpg.webp",
+    "alt": "Eluned Morgan (L) in a green suit and hot pink shirt smiles as she poses with Keir Starmer (R) at the Welsh Labour Party Conference. They\u0027re standing on a stage, a red wall with a clear screen behind them",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/d8f430f0-cf1d-44ae-97f2-4daa21d0a0eb.jpg.webp",
+    "alt": "Welsh first minister Eluned Morgan mid-speech as she announces her resignation. She\u0027s wearing a sage green suit and white shirt",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/8966bed3-d895-410f-8b33-c69c0c7bd271.png.webp",
+    "alt": "Hemicycle chart showing seats won by party in the 2026 Welsh Parliament election. 96 seats total, 49 seats for a majority. Plaid Cymru 37, Reform UK 30, Labour 8, Conservative 6, Green 2, Lib Dem 1, 12 seats undeclared",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2026/4/28/66bc7433-f4b0-4993-87b9-8ea71b78a4d9.jpg.webp",
+    "alt": "",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/003a2379-dac3-4476-ad5e-5de5f396e4ad.jpg.webp",
+    "alt": "Eluned Morgan",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/b92e9137-e55b-474c-afcd-6a44498837c2.png.webp",
+    "alt": "Bar chart showing the results of the Ceredigion Penfro seat in the Welsh Parliament with vote share for candidates with more than 1% of the vote: Plaid Cymru 35.8% and 3 seats, Reform UK 25.8% and 2 seats, Conservative 16.6% and 1 seats, Labour 7.3% and 0",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/2d1e40aa-c016-4523-8341-8c2eec963ad8.jpg.webp",
+    "alt": "Leader of Plaid Cymru, Rhun ap Iorwerth",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/2a73aa29-a1c6-4a4d-8e6f-60f6b091914c.png.webp",
+    "alt": "Hemicycle chart showing seats won by party in the 2026 Welsh Parliament election. 96 seats total, 49 seats for a majority. Plaid Cymru 24, Reform UK 19, Labour 6, Conservative 4, Green 1, 42 seats undeclared",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2025/8/17/61dafb72-4c6b-41f2-b294-4d388effe420.jpg.webp",
+    "alt": "",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/b2f093ba-f2ac-415d-9e6b-04d12cad1bce.jpg.webp",
+    "alt": "\"We cannot descend into an irresponsible, messy, internal contest,\" Louise Haigh says",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2020/1/31/c234bf69-9b14-47b2-919f-d46d7d25f2af.jpg.webp",
+    "alt": "",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/f5612ed1-70c7-4d87-a0e7-36e7451b0d55.jpg.webp",
+    "alt": "First Minister Michelle O\u0027Neill speaking at a news conference, against a bright blue background",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/291e0b05-e50f-493c-bf6a-eefcad51bae3.png.webp",
+    "alt": "Bar chart showing the results of the Bangor Conwy Môn seat in the Welsh Parliament with vote share for candidates with more than 1% of the vote: Plaid Cymru 44.9% and 3 seats, Reform UK 28.1% and 2 seats, Conservative 12.4% and 1 seats, Labour 6.4% and 0 ",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/0671b6a9-8763-44ec-b38b-0912d013d67a.jpg.webp",
+    "alt": "Scottish Labour leader Anas Sarwar with a sad look on his face at count for the 2026 Holyrood elections",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/e91a1ce2-30ac-44b4-83f8-269226bb255e.png.webp",
+    "alt": "Hemicycle chart showing how many seats each party won in the 2026 Scottish Parliament election. 129 seats total, 65 seats for a majority. SNP 41, Lib Dem 3, Conservative 3, Labour 2, Scottish Green 1, 79 seats undeclared",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/8f73042d-af91-4bb5-940d-2fe7ff0a4add.png.webp",
+    "alt": "Bar chart showing the results of the Edinburgh Central seat in the Scottish Parliament with vote share for candidates with more than 1% of the vote: Scottish Green 36% up 29.3 points, Labour 23% down 5.5 points, Scottish National Party 21.9% down 17.3 poi",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/5c0c0c77-b43a-4cfe-b73b-ce4bb7c955fd.png.webp",
+    "alt": "Hemicycle chart showing seats won by party in the 2026 Welsh Parliament election. 96 seats total, 49 seats for a majority. Plaid Cymru 16, Reform UK 13, Labour 4, Conservative 2, Green 1, 60 seats undeclared",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0nk0xx1.jpg",
+    "alt": "Eluned Morgan Quits as Welsh Labour Leader",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0njp35m.jpg",
+    "alt": "Election 26",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0m60hvz.jpg",
+    "alt": "Radio 4 PM\u0027s extended election special",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0nk21b6.jpg",
+    "alt": "Newscast\u0027s election special",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dunknown\u0026x1\u003d[]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[sounds]\u0026x12\u003d[]",
+    "alt": "",
+    "pageTitle": "Crumbs of History - BBC Sounds",
+    "pageUrl": "https://www.bbc.co.uk/sounds/play/p0njc6c4"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400x400/p0njc9kr.jpg",
+    "alt": "",
+    "pageTitle": "Crumbs of History - BBC Sounds",
+    "pageUrl": "https://www.bbc.co.uk/sounds/play/p0njc6c4"
+  },
+  {
+    "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003d.aboutthebbc..static.aboutthebbc.governance.mission.\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[article]\u0026x8\u003d[reverb-4.0.0-nojs]\u0026x11\u003d[BBC_CORPORATE_PS]\u0026x12\u003d[]",
+    "alt": "",
+    "pageTitle": "Mission, values and public purposes",
+    "pageUrl": "https://www.bbc.co.uk/aboutthebbc/governance/mission"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0bqdmvy.jpg",
+    "alt": "",
+    "pageTitle": "Mission, values and public purposes",
+    "pageUrl": "https://www.bbc.co.uk/aboutthebbc/governance/mission"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400x225/p01j355y.jpg",
+    "alt": "",
+    "pageTitle": "Mission, values and public purposes",
+    "pageUrl": "https://www.bbc.co.uk/aboutthebbc/governance/mission"
+  },
+  {
+    "src": "https://static.files.bbci.co.uk/elections/images/uk2026/election-logo-cutout-en.svg",
+    "alt": "Election",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/36f9/live/a14c4420-4afc-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Scottish Green Party celebrations in Glasgow",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/590e/live/906cb360-4af2-11f1-9c75-d37955007435.jpg",
+    "alt": "Angus Robertson, who has grey hair and a grey beard, in a blue suit in a counting centre ",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/550e/live/7bfd3330-4aea-11f1-b8d1-0fcd60d6dd09.jpg",
+    "alt": "Hannah Mary Goodlad, SNP winning candidate, smiling, in between party representatives.",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2bf8/live/34f1c010-4ae9-11f1-b8d1-0fcd60d6dd09.jpg",
+    "alt": "John Swinney shakes a man\u0027s hand. They are standing in front of a smiling man wearing an SNP rosette",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/e4b5/live/d04fb490-4ad5-11f1-941e-d3689d7c57f6.jpg",
+    "alt": "Stephen Flynn, who is bald, speaks at a podium with his hand raised. He is wearing a business suit  ",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/24f5/live/c0fcc630-4aea-11f1-b8d1-0fcd60d6dd09.jpg",
+    "alt": "The SNP\u0027s Karen Adam winning her election seat, with other candidates looking on.",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/a676/live/d9384380-4ae7-11f1-b8d1-0fcd60d6dd09.jpg",
+    "alt": "Finlay Carson punches the air in celebration - he has short, grey hair and a grey beard and is wearing a navy jacket with a black and white tie and white shirt with a blue rosette. Next to him is Emma Harper with red hair, black jacket, pink t-shirt and y",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2a39/live/b4ac11c0-4af3-11f1-9c75-d37955007435.jpg",
+    "alt": "Alasdair Allan is pictured indoors. He has grey hair and is wearing glasses. He has a dark suit jacket over a white shirt and a tartan tie. He is wearing a yellow and black rosette.",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/0d93/live/e07c1f30-4a61-11f1-a4c0-1961880a461f.jpg",
+    "alt": "Ballot boxes being brought off a ferry by two men in waterproof orange jackets. A man in a suit is going to meet them",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f195/live/12b7b9c0-4a47-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Woman walks with black election ballot boxes past a sign saying \"polling place, this way\" and a number of crates",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4305/live/eda39940-39bd-11f1-ae0f-b9a8d6dfceb4.jpg",
+    "alt": "A generic image of a Polling Place Way In sign affixed to a railing in Scotland",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/49c4/live/5a6a0f40-4acc-11f1-9a78-91accbab2de0.jpg",
+    "alt": "A crowd of protesters stand on grass holding signs reading “Fair Pay Now”, “Support Local News” and “Standing up for Journalism”. Several people wear bright yellow Bectu union bibs, while others hold NUJ placards during the demonstration under a cloudy sk",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/5b4d/live/a011cd90-47b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Six men in suits standing behind rostrums during a TV debate for the 2026 Scottish Parliament",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/adfe/live/f38b13d0-4aff-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Lorna Slater smiles as she stands behind a podium. She has blonde curly hair and is wearing glasses, a white top and grey blazer. She is standing in front of a bald man wearing a black blazer.",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/48d4/live/8115a420-4af8-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Prof Sir John Curtice",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/17bf/live/1b479df0-4af4-11f1-9c75-d37955007435.jpg",
+    "alt": "Craig Hoy looking at camera with blue badge",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/fe54/live/da6bd2c0-4aed-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Alison Johnstone is in frame with a purple graphic border around her.",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/dae7/live/5c30edc0-4ae6-11f1-bd52-e755d604ece4.jpg",
+    "alt": "John Swinney",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk4kcw.jpg",
+    "alt": "Anas Sarwar surrounded by journalists answering questions",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/9250/live/65dcf6c0-4ad7-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Political Correspondent David Wallace Lockhart looks off camera as he points to a green screen inside the BBC Scotland building. He has short brown hair, brown stubble and is wearing a white shite and dark grey suit.",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/da8c/live/b5d44cd0-4aed-11f1-95d5-c35bb50319f8.jpg",
+    "alt": "David Wallace Lockhart looking at camera",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/2ed7/live/8baa1ab0-4ad0-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Phil Sim - man in shirt and suit, standing in front of a bank of TV monitors",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/0d72/live/d1621550-4add-11f1-9eb0-1940b1e77213.jpg",
+    "alt": "David Wallace Lockhart pointing at camera in TV studio",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk363m.jpg",
+    "alt": "Douglas Ross - a man with short brown hair wearing a suit",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/dd95/live/9904d700-4ac5-11f1-b55d-0f258dce1735.jpg",
+    "alt": "David Wallace Lockhart - man in blue suit and light shirt, standing in a newsroom",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/772b/live/44169460-4875-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Lynsey Bews - woman with shoulder length blonde hair, wearing blue jacket standing in front of Scottish Parliament building",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/af25/live/80ada640-4855-11f1-b55d-0f258dce1735.png",
+    "alt": "BB correspondent David Wallace Lockhart, a man with short brown hair looks to the left. Below is an image of vapes on the shelf",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/6a19/live/1ecd3890-478e-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Woman with blond hair sitting on chair with open arms and crossed legs",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/1b4c/live/fd87c3d0-478d-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Woman with log brown hair holding small mic standing in street",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/413f/live/099919c0-478f-11f1-ac78-2112837ce2aa.png",
+    "alt": "Head and shoulders shot of man with short hair outside with blue sky",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/3121/live/f3bef220-4309-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Graphics with Scotland policy guide",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/b6ba/live/eb854610-4492-11f1-b55d-0f258dce1735.png",
+    "alt": "Man looking at camera with blue border and BBC Verify logo",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/f052/live/3e209220-3e4a-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Young woman with shoulder length dark hair and white fluffy jacket.",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/36f9/live/a14c4420-4afc-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Scottish Green Party celebrations in Glasgow",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/590e/live/906cb360-4af2-11f1-9c75-d37955007435.jpg",
+    "alt": "Angus Robertson, who has grey hair and a grey beard, in a blue suit in a counting centre ",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/24f5/live/c0fcc630-4aea-11f1-b8d1-0fcd60d6dd09.jpg",
+    "alt": "The SNP\u0027s Karen Adam winning her election seat, with other candidates looking on.",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2bf8/live/34f1c010-4ae9-11f1-b8d1-0fcd60d6dd09.jpg",
+    "alt": "John Swinney shakes a man\u0027s hand. They are standing in front of a smiling man wearing an SNP rosette",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/b2b1/live/20ac1cc0-4ae6-11f1-bd52-e755d604ece4.jpg",
+    "alt": "John Swinney",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/e4b5/live/d04fb490-4ad5-11f1-941e-d3689d7c57f6.jpg",
+    "alt": "Stephen Flynn, who is bald, speaks at a podium with his hand raised. He is wearing a business suit  ",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f195/live/12b7b9c0-4a47-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Woman walks with black election ballot boxes past a sign saying \"polling place, this way\" and a number of crates",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/a33c/live/a4c2f8c0-4a56-11f1-b278-4dfa9ef2c19e.jpg",
+    "alt": "Black ballot box with white writing on it. It is locked with cable ties and there are papers on top of it and a calculator in front.",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ecd6/live/c64e7b10-4941-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Lochee Health Centre which is a long, white, single-storey building with a slate rood. There are flats and houses around it and cars in a car park at the front and side.",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/b141/live/41c0e090-43bf-11f1-bd52-e755d604ece4.png",
+    "alt": "A group of white wind turbines on moorland with sun and clouds  behind them ",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/24f1/live/0d071310-491e-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A man walks out of a large white building with Memorial Institute written above the doorway. On the left there is a polling place sign.",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/5b4d/live/a011cd90-47b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Six men in suits standing behind rostrums during a TV debate for the 2026 Scottish Parliament",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4ab8/live/f6017e40-471e-11f1-973f-3fcb874893eb.jpg",
+    "alt": "Man pores a box of votes onto a table ",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/994a/live/d8933be0-47b0-11f1-a815-8703cc282724.jpg",
+    "alt": "An image of a series of security gates in a prison - with floor-to-ceiling white metal bars. Above the first set it says \"E/F Wing\" and a prison officer - a bald man in a white shirt and black trousers - is opening the gate. We see him from behind. ",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/1c9f/live/ca7dae90-470c-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Jenny Gilruth sits with pupils opening their exam results ",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c833/live/d60330b0-4256-11f1-a8e5-d31af761243a.jpg",
+    "alt": "Sign saying polling place and way in. There is a man with grey hair and wearing shorts walking into a building. |He is passing a woman with a stick who has just come out",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/0973/live/4cb0ef70-456a-11f1-b55d-0f258dce1735.jpg",
+    "alt": "King Charles standing next to US President Donald Trump. who is speaking and pointing towards the monarch.",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/6c81/live/edf5abe0-43b8-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Close up of a wind turbine on the left and an oil platform in the north sea on the right",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/465d/live/a09e11b0-43c8-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Six men in business suits lined up behind podiums smiling at the camera in a television studio ",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/6498/live/d0c4fee0-b526-11ee-8f07-bbfdfa890097.png",
+    "alt": "Instagram logo",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/25eb/live/dd54a200-b526-11ee-beb5-e1400df560f2.png",
+    "alt": "TikTok logo",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/8fe4/live/b9b2c6b0-b526-11ee-bc2f-cb5579b90709.png",
+    "alt": "Facebook logo",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/d869/live/ec988fb0-b526-11ee-beb5-e1400df560f2.png",
+    "alt": "X logo",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Scotland Politics | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/scotland/scotland_politics"
+  },
   {
     "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003d.mediacentre..static.mediacentre.2026.springwatch-2026-from-national-trust-crom-fermanagh.\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[article]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[BBC_CORPORATE_PS]\u0026x12\u003d[]",
     "alt": "",
