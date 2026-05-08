@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1163,
+    "url": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches",
+    "title": "platform — Access to underlying platform’s identifying data — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » platform — Access to underlying platform’s identifying data | Theme Auto Light Dark | platform — Access to underlying platform’s identifying data¶ Source code: Lib/platform.py Note Specific platforms listed alphabetically, with Linux included in the Unix section. Cross platform¶ platform.architecture(executable\u003dsys.executable, bits\u003d\u0027\u0027, linkage\u003d\u0027\u0027)¶ Queries the given executable (defaults to the Python interpreter binary) for various architecture information. Returns a tuple (bits, linkage) which contain information about the bit architecture and the linkage format used for the executable. Both values are returned as strings. Values that cannot be determined are returned as given by the parameter presets. If bits is given as \u0027\u0027, the sizeof(pointer) (or sizeof(long) on Python version \u003c 1.5.2) is used as indicator for the supported pointer size. The function relies on the system’s file command to do the actual work. This is available on most if not all Unix platforms and some non-Unix platforms and then only if the executable points to the Python interpreter. Reasonable defaults are used when the above needs are not met. Note On macOS (and perhaps other platforms), executable files may be universal files containing multiple architectures. To get at the “64-bitness” of the current interpreter, it is more reliable to query the sys.maxsize attribute: is_64bits \u003d sys.maxsize \u003e 2**32\n platform.machine()¶ Returns the machine type, e.g. \u0027AMD64\u0027. An empty string is returned if the value cannot be determined. The output is platform-dependent and may differ in casing and naming conventions. platform.node()¶ Returns the computer’s network name (may not be fully qualified!). An empty string is returned if the value cannot be determined. platform.platform(aliased\u003dFalse, terse\u003dFalse)¶ Returns a single string identifying the underlying platform with as much useful information as possible. The output is intended to be human readable rather than machine parseable. It may look different on different platforms and this is intended. If aliased is true, the function will use aliases for various platforms that report system names which differ from their common names, for example SunOS will be reported as Solaris. The system_alias() function is used to implement this. Setting terse to true causes the function to return only the absolute minimum information needed to identify the platform. Changed in version 3.8: On macOS, the function now uses mac_ver(), if it returns a non-empty release string, to get the macOS version rather than the darwin version. platform.processor()¶ Returns the (real) processor name, e.g. \u0027amdk6\u0027. An empty string is returned if the value cannot be determined. Note that many platforms do not provide this information or simply return the same value as for machine(). NetBSD does this. platform.python_build()¶ Returns a tuple (buildno, builddate) stating the Python build number and date as strings. platform.python_compiler()¶ Returns a string identifying the compiler used for compiling Python. platform.python_branch()¶ Returns a string identifying the Python implementation SCM branch. platform.python_implementation()¶ Returns a string identifying the Python implementation. Possible return values are: ‘CPython’, ‘IronPython’, ‘Jython’, ‘PyPy’. platform.python_revision()¶ Returns a string identifying the Python implementation SCM revision. platform.python_version()¶ Returns the Python version as string \u0027major.minor.patchlevel\u0027. Note that unlike the Python sys.version, the returned value will always include the patchlevel (it defaults to 0). platform.python_version_tuple()¶ Returns the Python version as tuple (major, minor, patchlevel) of strings. Note that unlike the Python sys.version, the returned value will always include the patchlevel (it defaults to \u00270\u0027). platform.release()¶ Returns the system’s release, e.g. \u00272.2.0\u0027 or \u0027NT\u0027. An empty string is returned if the value cannot be determined. platform.system()¶ Returns the system/OS name, such as \u0027Linux\u0027, \u0027Darwin\u0027, \u0027Java\u0027, \u0027Windows\u0027. An empty string is returned if the value cannot be determined. On iOS and Android, this returns the user-facing OS name (i.e, \u0027iOS, \u0027iPadOS\u0027 or \u0027Android\u0027). To obtain the kernel name (\u0027Darwin\u0027 or \u0027Linux\u0027), use os.uname(). platform.system_alias(system, release, version)¶ Returns (system, release, version) aliased to common marketing names used for some systems. It also does some reordering of the information in some cases where it would otherwise cause confusion. platform.version()¶ Returns the system’s release version, e.g. \u0027#3 on degas\u0027. An empty string is returned if the value cannot be determined. On iOS and Android, this is the user-facing OS version. To obtain the Darwin or Linux kernel version, use os.uname(). platform.uname()¶ Fairly portable uname interface. Returns a namedtuple() cont",
+    "scrapedAt": "2026-05-09 01:08:40.575448"
+  },
+  {
+    "id": 1162,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id19",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:08:39.279902"
+  },
+  {
+    "id": 1161,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteRepr",
+    "title": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Unicode Objects and Codecs | Theme Auto Light Dark | Unicode Objects and Codecs¶ Unicode Objects¶ Since the implementation of PEP 393 in Python 3.3, Unicode objects internally use a variety of representations, in order to allow handling the complete range of Unicode characters while staying memory efficient. There are special cases for strings where all code points are below 128, 256, or 65536; otherwise, code points must be below 1114112 (which is the full Unicode range). UTF-8 representation is created on demand and cached in the Unicode object. Note The Py_UNICODE representation has been removed since Python 3.12 with deprecated APIs. See PEP 623 for more information. Unicode Type¶ These are the basic Unicode object types used for the Unicode implementation in Python: PyTypeObject PyUnicode_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode type. It is exposed to Python code as str. PyTypeObject PyUnicodeIter_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode iterator type. It is used to iterate over Unicode string objects. type Py_UCS4¶ type Py_UCS2¶ type Py_UCS1¶ Part of the Stable ABI. These types are typedefs for unsigned integer types wide enough to contain characters of 32 bits, 16 bits and 8 bits, respectively. When dealing with single Unicode characters, use Py_UCS4. Added in version 3.3. type PyASCIIObject¶ type PyCompactUnicodeObject¶ type PyUnicodeObject¶ These subtypes of PyObject represent a Python Unicode object. In almost all cases, they shouldn’t be used directly, since all API functions that deal with Unicode objects take and return PyObject pointers. Added in version 3.3. The structure of a particular object can be determined using the following macros. The macros cannot fail; their behavior is undefined if their argument is not a Python Unicode object. PyUnicode_IS_COMPACT(o)¶ True if o uses the PyCompactUnicodeObject structure. Added in version 3.3. PyUnicode_IS_COMPACT_ASCII(o)¶ True if o uses the PyASCIIObject structure. Added in version 3.3. The following APIs are C macros and static inlined functions for fast checks and access to internal read-only data of Unicode objects: int PyUnicode_Check(PyObject *obj)¶ Return true if the object obj is a Unicode object or an instance of a Unicode subtype. This function always succeeds. int PyUnicode_CheckExact(PyObject *obj)¶ Return true if the object obj is a Unicode object, but not an instance of a subtype. This function always succeeds. Py_ssize_t PyUnicode_GET_LENGTH(PyObject *unicode)¶ Return the length of the Unicode string, in code points. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. Py_UCS1 *PyUnicode_1BYTE_DATA(PyObject *unicode)¶ Py_UCS2 *PyUnicode_2BYTE_DATA(PyObject *unicode)¶ Py_UCS4 *PyUnicode_4BYTE_DATA(PyObject *unicode)¶ Return a pointer to the canonical representation cast to UCS1, UCS2 or UCS4 integer types for direct character access. No checks are performed if the canonical representation has the correct character size; use PyUnicode_KIND() to select the right function. Added in version 3.3. PyUnicode_1BYTE_KIND¶ PyUnicode_2BYTE_KIND¶ PyUnicode_4BYTE_KIND¶ Return values of the PyUnicode_KIND() macro. Added in version 3.3. Changed in version 3.12: PyUnicode_WCHAR_KIND has been removed. int PyUnicode_KIND(PyObject *unicode)¶ Return one of the PyUnicode kind constants (see above) that indicate how many bytes per character this Unicode object uses to store its data. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void *PyUnicode_DATA(PyObject *unicode)¶ Return a void pointer to the raw Unicode buffer. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void PyUnicode_WRITE(int kind, void *data, Py_ssize_t index, Py_UCS4 value)¶ Write the code point value to the given zero-based index in a string. The kind value and data pointer must have been obtained from a string using PyUnicode_KIND() and PyUnicode_DATA() respectively. You must hold a reference to that string while calling PyUnicode_WRITE(). All requirements of PyUnicode_WriteChar() also apply. The function performs no checks for any of its requirements, and is intended for usage in loops. Added in version 3.3. Py_UCS4 PyUnicode_READ(int kind, void *data, Py_ssize_t index)¶ Read a code point from a canonical representation data (as obtained with PyUnicode_DATA()). No checks or ready calls are performed. Added in version 3.3. Py_UCS4 PyUnicode_READ_CHAR(PyObject *unicode, Py_ssize_t index)¶ Read a character from a Unicode object unicode, which must be in the “canonical” representation. This is less efficient than PyUnicode_READ() if you do multiple consecutive reads. Added in version 3.3. Py_U",
+    "scrapedAt": "2026-05-09 01:08:38.031372"
+  },
+  {
+    "id": 1160,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id16",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:08:36.806974"
+  },
+  {
+    "id": 1159,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Manager",
+    "title": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » multiprocessing — Process-based parallelism | Theme Auto Light Dark | multiprocessing — Process-based parallelism¶ Source code: Lib/multiprocessing/ Availability: not Android, not iOS, not WASI. This module is not supported on mobile platforms or WebAssembly platforms. Introduction¶ multiprocessing is a package that supports spawning processes using an API similar to the threading module. The multiprocessing package offers both local and remote concurrency, effectively side-stepping the Global Interpreter Lock by using subprocesses instead of threads. Due to this, the multiprocessing module allows the programmer to fully leverage multiple processors on a given machine. It runs on both POSIX and Windows. The multiprocessing module also introduces the Pool object which offers a convenient means of parallelizing the execution of a function across multiple input values, distributing the input data across processes (data parallelism). The following example demonstrates the common practice of defining such functions in a module so that child processes can successfully import that module. This basic example of data parallelism using Pool, from multiprocessing import Pool\n\ndef f(x):\n    return x*x\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    with Pool(5) as p:\n        print(p.map(f, [1, 2, 3]))\n will print to standard output [1, 4, 9]\n The multiprocessing module also introduces APIs which do not have analogs in the threading module, like the ability to terminate, interrupt or kill a running process. See also concurrent.futures.ProcessPoolExecutor offers a higher level interface to push tasks to a background process without blocking execution of the calling process. Compared to using the Pool interface directly, the concurrent.futures API more readily allows the submission of work to the underlying process pool to be separated from waiting for the results. The Process class¶ In multiprocessing, processes are spawned by creating a Process object and then calling its start() method. Process follows the API of threading.Thread. A trivial example of a multiprocess program is from multiprocessing import Process\n\ndef f(name):\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n To show the individual process IDs involved, here is an expanded example: from multiprocessing import Process\nimport os\n\ndef info(title):\n    print(title)\n    print(\u0027module name:\u0027, __name__)\n    print(\u0027parent process:\u0027, os.getppid())\n    print(\u0027process id:\u0027, os.getpid())\n\ndef f(name):\n    info(\u0027function f\u0027)\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    info(\u0027main line\u0027)\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n For an explanation of why the if __name__ \u003d\u003d \u0027__main__\u0027 part is necessary, see Programming guidelines. The arguments to Process usually need to be unpickleable from within the child process. If you tried typing the above example directly into a REPL it could lead to an AttributeError in the child process trying to locate the f function in the __main__ module. Contexts and start methods¶ Depending on the platform, multiprocessing supports three ways to start a process. These start methods are spawn The parent process starts a fresh Python interpreter process. The child process will only inherit those resources necessary to run the process object’s run() method. In particular, unnecessary file descriptors and handles from the parent process will not be inherited. Starting a process using this method is rather slow compared to using fork or forkserver. Available on POSIX and Windows platforms. The default on Windows and macOS. fork The parent process uses os.fork() to fork the Python interpreter. The child process, when it begins, is effectively identical to the parent process. All resources of the parent are inherited by the child process. Note that safely forking a multithreaded process is problematic. Available on POSIX systems. Changed in version 3.14: This is no longer the default start method on any platform. Code that requires fork must explicitly specify that via get_context() or set_start_method(). Changed in version 3.12: If Python is able to detect that your process has multiple threads, the os.fork() function that this start method calls internally will raise a DeprecationWarning. Use a different start method. See the os.fork() documentation for further explanation. forkserver When the program starts and selects the forkserver start method, a server process is spawned. From then on, whenever a new process is needed, the parent process connects to the server and requests that it fork a new process. The fork server process is single threaded unless system libraries or preloaded imports spawn threads as a side-effect so it is generally safe for it to use os.fork(). No unnecessary resources are inherited. Availabl",
+    "scrapedAt": "2026-05-09 01:08:35.543338"
+  },
+  {
     "id": 1158,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#id15",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -7768,26 +7803,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1159,
-    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Manager"
-  },
-  {
-    "id": 1160,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#id16"
-  },
-  {
-    "id": 1161,
-    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteRepr"
-  },
-  {
-    "id": 1162,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#id19"
-  },
-  {
-    "id": 1163,
-    "url": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
   },
   {
     "id": 1164,
@@ -214790,10 +214805,235 @@ window.searchData = [
     "id": 211003,
     "url": "https://datatracker.ietf.org/doc/html/rfc9559.html#section-5.1.5.1.2.3-1.8",
     "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9559.html"
+  },
+  {
+    "id": 215272,
+    "url": "https://docs.python.org/3/library/platform.html#platform.freedesktop_os_release",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215273,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/platform.py",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215276,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/platform.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215282,
+    "url": "https://developer.android.com/reference/android/os/Build#DEVICE",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215284,
+    "url": "https://docs.python.org/3/library/platform.html#platform.python_branch",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215286,
+    "url": "https://docs.python.org/3/library/platform.html#platform.platform",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215287,
+    "url": "https://docs.python.org/3/library/platform.html#platform.processor",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215289,
+    "url": "https://docs.python.org/3/library/platform.html#platform.version",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215291,
+    "url": "https://docs.python.org/3/library/platform.html#platform.python_implementation",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215292,
+    "url": "https://docs.python.org/3/library/platform.html#",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215294,
+    "url": "https://docs.python.org/3/library/platform.html#platform.node",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215295,
+    "url": "https://docs.python.org/3/library/platform.html#platform.machine",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215296,
+    "url": "https://docs.python.org/3/library/platform.html#cmdoption-platform-terse",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215298,
+    "url": "https://docs.python.org/3/library/platform.html#platform.system_alias",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215300,
+    "url": "https://docs.python.org/3/library/platform.html#platform.win32_is_iot",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215303,
+    "url": "https://docs.python.org/3/library/platform.html#platform.python_version",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215305,
+    "url": "https://docs.python.org/3/library/platform.html#platform.python_version_tuple",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215306,
+    "url": "https://docs.python.org/3/library/platform.html#platform.system",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215310,
+    "url": "https://docs.python.org/3/library/platform.html#platform.mac_ver",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215311,
+    "url": "https://docs.python.org/3/library/platform.html#platform.python_compiler",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215313,
+    "url": "https://docs.python.org/3/library/platform.html#platform.python_build",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215316,
+    "url": "https://developer.android.com/reference/android/os/Build#MANUFACTURER",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215318,
+    "url": "https://docs.python.org/3/library/platform.html#platform.ios_ver",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215319,
+    "url": "https://storage.googleapis.com/play_public/supported_devices.html",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215322,
+    "url": "https://docs.python.org/3/library/platform.html#platform.release",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215324,
+    "url": "https://docs.python.org/3/library/platform.html#platform.architecture",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215325,
+    "url": "https://docs.python.org/3/library/platform.html#platform.win32_ver",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215330,
+    "url": "https://docs.python.org/3/library/platform.html#platform.libc_ver",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215334,
+    "url": "https://docs.python.org/3/library/platform.html#platform.win32_edition",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215335,
+    "url": "https://developer.android.com/reference/android/os/Build#MODEL",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215336,
+    "url": "https://docs.python.org/3/library/platform.html#cmdoption-platform-nonaliased",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215337,
+    "url": "https://docs.python.org/3/library/platform.html#platform.python_revision",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 215338,
+    "url": "https://www.freedesktop.org/software/systemd/man/os-release.html",
+    "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "platform — Access to underlying platform’s identifying data — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "platform — Access to underlying platform’s identifying data — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id19"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id19"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteRepr"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteRepr"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id16"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id16"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Manager"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Manager"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
