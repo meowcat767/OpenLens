@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 468,
+    "url": "https://www.python.org/events/python-user-group/1253/",
+    "title": "Python Meeting Düsseldorf | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Meeting Düsseldorf Düsseldorf, Germany 08 June from 4pm UTC to 6pm UTC, 2022 Python Meeting Düsseldorf Explore events -- Change your date range More events at Düsseldorf, Germany Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf - Python Herbst Sprint 2025 Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Sprint / Hackathon Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf",
+    "scrapedAt": "2026-05-09 00:42:41.976222"
+  },
+  {
+    "id": 467,
+    "url": "https://www.python.org/events/python-user-group/133/",
+    "title": "Python Meeting Düsseldorf | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Meeting Düsseldorf Düsseldorf, Germany 10 April from 3pm UTC to 5pm UTC, 2013 http://pyddf.de Explore events -- Change your date range More events at Düsseldorf, Germany Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf - Python Herbst Sprint 2025 Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Sprint / Hackathon Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf",
+    "scrapedAt": "2026-05-09 00:42:40.615724"
+  },
+  {
+    "id": 466,
+    "url": "https://www.python.org/events/python-user-group/137/",
+    "title": "Python Meeting Düsseldorf | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Meeting Düsseldorf Düsseldorf, Germany 22 Jan. from 5pm UTC to 7pm UTC, 2013 Python Meeting Düsseldorf Explore events -- Change your date range More events at Düsseldorf, Germany Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf - Python Herbst Sprint 2025 Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Sprint / Hackathon Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf",
+    "scrapedAt": "2026-05-09 00:42:39.391349"
+  },
+  {
+    "id": 465,
+    "url": "https://www.python.org/events/python-user-group/1095/",
+    "title": "Python Meeting Düsseldorf | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Meeting Düsseldorf Düsseldorf, Germany 09 June from 4pm UTC to 6pm UTC, 2021 Python Meeting Düsseldorf Explore events -- Change your date range More events at Düsseldorf, Germany Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf - Python Herbst Sprint 2025 Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Sprint / Hackathon Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf",
+    "scrapedAt": "2026-05-09 00:42:37.873318"
+  },
+  {
+    "id": 464,
+    "url": "https://www.python.org/events/python-user-group/139/",
+    "title": "Python Meeting Düsseldorf | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Meeting Düsseldorf Düsseldorf, Germany 23 Oct. from 4pm UTC to 6pm UTC, 2012 Python Meeting Düsseldorf Explore events -- Change your date range More events at Düsseldorf, Germany Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf - Python Herbst Sprint 2025 Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Sprint / Hackathon Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf",
+    "scrapedAt": "2026-05-09 00:42:36.492673"
+  },
+  {
     "id": 463,
     "url": "https://www.python.org/events/python-user-group/1517/",
     "title": "Python Meeting Düsseldorf | Python.org",
@@ -3223,26 +3258,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 464,
-    "url": "https://www.python.org/events/python-user-group/139/"
-  },
-  {
-    "id": 465,
-    "url": "https://www.python.org/events/python-user-group/1095/"
-  },
-  {
-    "id": 466,
-    "url": "https://www.python.org/events/python-user-group/137/"
-  },
-  {
-    "id": 467,
-    "url": "https://www.python.org/events/python-user-group/133/"
-  },
-  {
-    "id": 468,
-    "url": "https://www.python.org/events/python-user-group/1253/"
   },
   {
     "id": 469,
@@ -87479,6 +87494,11 @@ window.searchData = [
     "id": 65158,
     "url": "https://www.python.org/events/python-user-group/locations/1384/",
     "parentUrl": "https://www.python.org/events/python-user-group/2164/"
+  },
+  {
+    "id": 65415,
+    "url": "http://pyddf.de",
+    "parentUrl": "https://www.python.org/events/python-user-group/133/"
   }
 ];
 
