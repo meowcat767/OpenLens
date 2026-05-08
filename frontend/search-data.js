@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1787,
+    "url": "https://docs.python.org/3/library/fnmatch.html#fnmatch.filterfalse",
+    "title": "fnmatch — Unix filename pattern matching — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » File and Directory Access » fnmatch — Unix filename pattern matching | Theme Auto Light Dark | fnmatch — Unix filename pattern matching¶ Source code: Lib/fnmatch.py This module provides support for Unix shell-style wildcards, which are not the same as regular expressions (which are documented in the re module). The special characters used in shell-style wildcards are: Pattern Meaning * matches everything ? matches any single character [seq] matches any character in seq [!seq] matches any character not in seq For a literal match, wrap the meta-characters in brackets. For example, \u0027[?]\u0027 matches the character \u0027?\u0027. Note that the filename separator (\u0027/\u0027 on Unix) is not special to this module. See module glob for pathname expansion (glob uses filter() to match pathname segments). Similarly, filenames starting with a period are not special for this module, and are matched by the * and ? patterns. Unless stated otherwise, “filename string” and “pattern string” either refer to str or ISO-8859-1 encoded bytes objects. Note that the functions documented below do not allow to mix a bytes pattern with a str filename, and vice-versa. Finally, note that functools.lru_cache() with a maxsize of 32768 is used to cache the (typed) compiled regex patterns in the following functions: fnmatch(), fnmatchcase(), filter(), filterfalse(). fnmatch.fnmatch(name, pat)¶ Test whether the filename string name matches the pattern string pat, returning True or False. Both parameters are case-normalized using os.path.normcase(). fnmatchcase() can be used to perform a case-sensitive comparison, regardless of whether that’s standard for the operating system. This example will print all file names in the current directory with the extension .txt: import fnmatch\nimport os\n\nfor file in os.listdir(\u0027.\u0027):\n    if fnmatch.fnmatch(file, \u0027*.txt\u0027):\n        print(file)\n fnmatch.fnmatchcase(name, pat)¶ Test whether the filename string name matches the pattern string pat, returning True or False; the comparison is case-sensitive and does not apply os.path.normcase(). fnmatch.filter(names, pat)¶ Construct a list from those elements of the iterable of filename strings names that match the pattern string pat. It is the same as [n for n in names if fnmatch(n, pat)], but implemented more efficiently. fnmatch.filterfalse(names, pat)¶ Construct a list from those elements of the iterable of filename strings names that do not match the pattern string pat. It is the same as [n for n in names if not fnmatch(n, pat)], but implemented more efficiently. Added in version 3.14. fnmatch.translate(pat)¶ Return the shell-style pattern pat converted to a regular expression for using with re.match(). The pattern is expected to be a str. Example: \u003e\u003e\u003e import fnmatch, re\n\u003e\u003e\u003e\n\u003e\u003e\u003e regex \u003d fnmatch.translate(\u0027*.txt\u0027)\n\u003e\u003e\u003e regex\n\u0027(?s:.*\\\\.txt)\\\\z\u0027\n\u003e\u003e\u003e reobj \u003d re.compile(regex)\n\u003e\u003e\u003e reobj.match(\u0027foobar.txt\u0027)\n\u003cre.Match object; span\u003d(0, 10), match\u003d\u0027foobar.txt\u0027\u003e\n See also Module glob Unix shell-style path expansion. Previous topic glob — Unix style pathname pattern expansion Next topic linecache — Random access to text lines This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » File and Directory Access » fnmatch — Unix filename pattern matching | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 01:33:46.519424"
+  },
+  {
+    "id": 1786,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Create",
+    "title": "Integer Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)",
+    "scrapedAt": "2026-05-09 01:33:45.191729"
+  },
+  {
+    "id": 1785,
+    "url": "https://docs.python.org/3/library/stdtypes.html#complex.from_number",
+    "title": "Built-in Types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Types | Theme Auto Light Dark | Built-in Types¶ The following sections describe the standard types that are built into the interpreter. The principal built-in types are numerics, sequences, mappings, classes, instances and exceptions. Some collection classes are mutable. The methods that add, subtract, or rearrange their members in place, and don’t return a specific item, never return the collection instance itself but None. Some operations are supported by several object types; in particular, practically all objects can be compared for equality, tested for truth value, and converted to a string (with the repr() function or the slightly different str() function). The latter function is implicitly used when an object is written by the print() function. Truth Value Testing¶ Any object can be tested for truth value, for use in an if or while condition or as operand of the Boolean operations below. By default, an object is considered true unless its class defines either a __bool__() method that returns False or a __len__() method that returns zero, when called with the object. [1] If one of the methods raises an exception when called, the exception is propagated and the object does not have a truth value (for example, NotImplemented). Here are most of the built-in objects considered false: constants defined to be false: None and False zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1) empty sequences and collections: \u0027\u0027, (), [], {}, set(), range(0) Operations and built-in functions that have a Boolean result always return 0 or False for false and 1 or True for true, unless otherwise stated. (Important exception: the Boolean operations or and and always return one of their operands.) Boolean Operations — and, or, not¶ These are the Boolean operations, ordered by ascending priority: Operation Result Notes x or y if x is true, then x, else y (1) x and y if x is false, then x, else y (2) not x if x is false, then True, else False (3) Notes: This is a short-circuit operator, so it only evaluates the second argument if the first one is false. This is a short-circuit operator, so it only evaluates the second argument if the first one is true. not has a lower priority than non-Boolean operators, so not a \u003d\u003d b is interpreted as not (a \u003d\u003d b), and a \u003d\u003d not b is a syntax error. Comparisons¶ There are eight comparison operations in Python. They all have the same priority (which is higher than that of the Boolean operations). Comparisons can be chained arbitrarily; for example, x \u003c y \u003c\u003d z is equivalent to x \u003c y and y \u003c\u003d z, except that y is evaluated only once (but in both cases z is not evaluated at all when x \u003c y is found to be false). This table summarizes the comparison operations: Operation Meaning \u003c strictly less than \u003c\u003d less than or equal \u003e strictly greater than \u003e\u003d greater than or equal \u003d\u003d equal !\u003d not equal is object identity is not negated object identity Unless stated otherwise, objects of different types never compare equal. The \u003d\u003d operator is always defined but for some object types (for example, class objects) is equivalent to is. The \u003c, \u003c\u003d, \u003e and \u003e\u003d operators are only defined where they make sense; for example, they raise a TypeError exception when one of the arguments is a complex number. Non-identical instances of a class normally compare as non-equal unless the class defines the __eq__() method. Instances of a class cannot be ordered with respect to other instances of the same class, or other types of object, unless the class defines enough of the methods __lt__(), __le__(), __gt__(), and __ge__() (in general, __lt__() and __eq__() are sufficient, if you want the conventional meanings of the comparison operators). The behavior of the is and is not operators cannot be customized; also they can be applied to any two objects and never raise an exception. Two more operations with the same syntactic priority, in and not in, are supported by types that are iterable or implement the __contains__() method. Numeric Types — int, float, complex¶ There are three distinct numeric types: integers, floating-point numbers, and complex numbers. In addition, Booleans are a subtype of integers. Integers have unlimited precision. Floating-point numbers are usually implemented using double in C; information about the precision and internal representation of floating-point numbers for the machine on which your program is running is available in sys.float_info. Complex numbers have a real and imaginary part, which are each a floating-point number. To extract these parts from a complex number z, use z.real and z.imag. (The standard library includes the additional numeric types fractions.Fraction, for rationals, and decimal.Decimal, for floating-point numbers with user-definable precision.) Numbers are created by numeric literals or as the result of built-in functions and operators. Unadorned integer li",
+    "scrapedAt": "2026-05-09 01:33:43.925051"
+  },
+  {
+    "id": 1784,
+    "url": "https://github.com/python/cpython/issues/131638",
+    "title": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member gaogaotiantian commented Mar 23, 2025 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. When we try to get source lines for frozen modules with linecache.getlines(), it will be rejected because frozen modules have file names starting with \u003c. However, we can deal with that case, if we have module_globals - we can read __file__ in module_globals to get the real file and read it. pdb suffers from it when debugging frozen modules - list deals with it but stack entry and ll does not. I could fix it in pdb, but I think linecache could benefit from this change so it helps all users. This is also a pretty straighforward change, just convert the filename passed in to the actual file name and the rest is the same. Issue: can\u0027t step through _frozen_importlib/importlib._bootstrap using pdb #60115 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Support getting source file for frozen modules 7bbf5d6 gaogaotiantian requested review from iritkatriel and pablogsal March 23, 2025 18:38 bedevere-app Bot added the awaiting core review label Mar 23, 2025 bedevere-app Bot mentioned this pull request Mar 23, 2025 can\u0027t step through _frozen_importlib/importlib._bootstrap using pdb #60115 Open 📜🤖 Added by blurb_it. 31387a0 Copy link Copy Markdown Member Author gaogaotiantian commented Mar 23, 2025 Not sure if a whatsnew entry should be added for 3.14. Is this a significant enough change? All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. picnixz reviewed Mar 23, 2025 View reviewed changes Copy link Copy Markdown Member picnixz left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Just some small nits. Maybe a test with a frozen module with some content or do we have no way to do it easily? Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Comment thread Misc/NEWS.d/next/Library/2025-03-23-18-39-07.gh-issue-60115.AWdcmq.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/linecache.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/linecache.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/test/test_linecache.py Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Apply suggestions from code review … c101cf9 Co-authored-by: Bénédikt Tran \u003c10796600+picnixz@users.noreply.github.com\u003e Copy link Copy Markdown Member Author gaogaotiantian commented Mar 23, 2025 Maybe a test with a frozen module with some content or do we have no way to do it easily? The difficult part is to get the module global of it. It\u0027s not trivial to get the frame of a frozen module in linecache tests. However, after this, I\u0027ll polish pdb and I\u0027ll add more tests there to cover the real case. It\u0027s much easier (and practical) to do it in pdb. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. gaogaotiantian changed the title gh-60115: Support frozen modules for linecache.getlines() gh-60115: Support frozen modules for linecache.getline() Mar 23, 2025 Update 2025-03-23-18-39-07.gh-issue-60115.AWdcmq.rst 67505cc picnixz reviewed Mar 23, 2025 View reviewed changes Comment thread Misc/NEWS.d/next/Library/2025-03-23-18-39-07.gh-issue-60115.AWdcmq.rst Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member Author gaogaotiantian commented Apr 2, 2025 Hey @iritkatriel , do you mind taking a quick look at this? All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. iritkatriel reviewed Apr 2, 2025 View reviewed changes Copy link Copy Markdown Member iritkatriel left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment LGT",
+    "scrapedAt": "2026-05-09 01:33:42.610118"
+  },
+  {
+    "id": 1783,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.ProgrammingError",
+    "title": "sqlite3 — DB-API 2.0 interface for SQLite databases — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Persistence » sqlite3 — DB-API 2.0 interface for SQLite databases | Theme Auto Light Dark | sqlite3 — DB-API 2.0 interface for SQLite databases¶ Source code: Lib/sqlite3/ SQLite is a C library that provides a lightweight disk-based database that doesn’t require a separate server process and allows accessing the database using a nonstandard variant of the SQL query language. Some applications can use SQLite for internal data storage. It’s also possible to prototype an application using SQLite and then port the code to a larger database such as PostgreSQL or Oracle. The sqlite3 module was written by Gerhard Häring. It provides an SQL interface compliant with the DB-API 2.0 specification described by PEP 249, and requires the third-party SQLite library. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. This document includes four main sections: Tutorial teaches how to use the sqlite3 module. Reference describes the classes and functions this module defines. How-to guides details how to handle specific tasks. Explanation provides in-depth background on transaction control. See also https://www.sqlite.org The SQLite web page; the documentation describes the syntax and the available data types for the supported SQL dialect. https://www.w3schools.com/sql/ Tutorial, reference and examples for learning SQL syntax. PEP 249 - Database API Specification 2.0 PEP written by Marc-André Lemburg. Tutorial¶ In this tutorial, you will create a database of Monty Python movies using basic sqlite3 functionality. It assumes a fundamental understanding of database concepts, including cursors and transactions. First, we need to create a new database and open a database connection to allow sqlite3 to work with it. Call sqlite3.connect() to create a connection to the database tutorial.db in the current working directory, implicitly creating it if it does not exist: import sqlite3\ncon \u003d sqlite3.connect(\"tutorial.db\")\n The returned Connection object con represents the connection to the on-disk database. In order to execute SQL statements and fetch results from SQL queries, we will need to use a database cursor. Call con.cursor() to create the Cursor: cur \u003d con.cursor()\n Now that we’ve got a database connection and a cursor, we can create a database table movie with columns for title, release year, and review score. For simplicity, we can just use column names in the table declaration – thanks to the flexible typing feature of SQLite, specifying the data types is optional. Execute the CREATE TABLE statement by calling cur.execute(...): cur.execute(\"CREATE TABLE movie(title, year, score)\")\n We can verify that the new table has been created by querying the sqlite_master table built-in to SQLite, which should now contain an entry for the movie table definition (see The Schema Table for details). Execute that query by calling cur.execute(...), assign the result to res, and call res.fetchone() to fetch the resulting row: \u003e\u003e\u003e res \u003d cur.execute(\"SELECT name FROM sqlite_master\")\n\u003e\u003e\u003e res.fetchone()\n(\u0027movie\u0027,)\n We can see that the table has been created, as the query returns a tuple containing the table’s name. If we query sqlite_master for a non-existent table spam, res.fetchone() will return None: \u003e\u003e\u003e res \u003d cur.execute(\"SELECT name FROM sqlite_master WHERE name\u003d\u0027spam\u0027\")\n\u003e\u003e\u003e res.fetchone() is None\nTrue\n Now, add two rows of data supplied as SQL literals by executing an INSERT statement, once again by calling cur.execute(...): cur.execute(\"\"\"\n    INSERT INTO movie VALUES\n        (\u0027Monty Python and the Holy Grail\u0027, 1975, 8.2),\n        (\u0027And Now for Something Completely Different\u0027, 1971, 7.5)\n\"\"\")\n The INSERT statement implicitly opens a transaction, which needs to be committed before changes are saved in the database (see Transaction control for details). Call con.commit() on the connection object to commit the transaction: con.commit()\n We can verify that the data was inserted correctly by executing a SELECT query. Use the now-familiar cur.execute(...) to assign the result to res, and call res.fetchall() to return all resulting rows: \u003e\u003e\u003e res \u003d cur.execute(\"SELECT score FROM movie\")\n\u003e\u003e\u003e res.fetchall()\n[(8.2,), (7.5,)]\n The result is a list of two tuples, one per row, each containing that row’s score value. Now, insert three more rows by calling cur.executemany(...): data \u003d [\n    (\"Monty Python Live at the Hollywood Bowl\", 1982, 7.9),\n    (\"Monty Python\u0027s The Meaning of Life\", 1983, 7.5),\n    (\"Monty Python\u0027s Life of Brian\", 1979, 8.0),\n]\ncur.executemany(\"INSERT INTO movie VALUES(?, ?, ?)\", data)\ncon.commit()  # Remember to commit the transaction after executing INSERT.\n Notice that ? placeholders are used to bind data to the query. Always use placeholders inste",
+    "scrapedAt": "2026-05-09 01:33:39.081357"
+  },
+  {
     "id": 1782,
     "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.writestr",
     "title": "zipfile — Work with ZIP archives — Python 3.14.5rc1 documentation",
@@ -12038,26 +12073,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1783,
-    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.ProgrammingError"
-  },
-  {
-    "id": 1784,
-    "url": "https://github.com/python/cpython/issues/131638"
-  },
-  {
-    "id": 1785,
-    "url": "https://docs.python.org/3/library/stdtypes.html#complex.from_number"
-  },
-  {
-    "id": 1786,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Create"
-  },
-  {
-    "id": 1787,
-    "url": "https://docs.python.org/3/library/fnmatch.html#fnmatch.filterfalse"
   },
   {
     "id": 1788,
@@ -249815,10 +249830,527 @@ window.searchData = [
     "id": 393368,
     "url": "https://github.com/topics/zlib-ng",
     "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393756,
+    "url": "https://github.com/python/cpython/pull/131638#issuecomment-2773857164",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393757,
+    "url": "https://github.com/python/cpython/pull/131638/commits/188329c961eabdcae73940eb8075484eaecde2ba",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393758,
+    "url": "https://github.com/python/cpython/pull/131638/files/bcf913bc1c6704a7fbdb792ffc9479f24690a85a",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393759,
+    "url": "https://github.com/python/cpython/pull/131638",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393760,
+    "url": "https://github.com/python/cpython/pull/131638#issuecomment-2746368296",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393762,
+    "url": "https://github.com/python/cpython/pull/131638/files/31387a0a1e7c4ae6839abfece1c4f003554d3339#diff-a12aa9f6b37c73461f9566b9d36c7a8caa36b72eb964b5aaaa2dfcd30c0c118d",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393763,
+    "url": "https://github.com/python/cpython/pull/131638/commits/381adfb53bf9fc7c30e232f8008e907af84d0426",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393764,
+    "url": "https://github.com/python/cpython/pull/131638#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393765,
+    "url": "https://github.com/python/cpython/pull/131638#event-16945416472",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393767,
+    "url": "https://github.com/python/cpython/pull/131638#issuecomment-2773871879",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393768,
+    "url": "https://github.com/python/cpython/pull/131638/commits/bcf913bc1c6704a7fbdb792ffc9479f24690a85a",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393769,
+    "url": "https://github.com/python/cpython/pull/131638#pullrequestreview-2708687775",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393770,
+    "url": "https://github.com/python/cpython/pull/131638#issuecomment-2773841803",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393771,
+    "url": "https://github.com/python/cpython/pull/131638#event-17102450668",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393774,
+    "url": "https://github.com/python/cpython/pull/131638#event-16945342099",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393775,
+    "url": "https://github.com/python/cpython/pull/131638#pullrequestreview-2708696273",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393776,
+    "url": "https://github.com/python/cpython/pull/131638#event-17102476074",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393777,
+    "url": "https://github.com/python/cpython/pull/131638#pullrequestreview-2737856165",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393779,
+    "url": "https://github.com/python/cpython/pull/131638/files/67505cc7526fff70e86cdb487da515c62ce8d366",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393780,
+    "url": "https://github.com/python/cpython/pull/131638#issuecomment-2773970608",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393781,
+    "url": "https://github.com/python/cpython/pull/132862",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393786,
+    "url": "https://github.com/python/cpython/pull/131638#issue-2941390406",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393787,
+    "url": "https://github.com/python/cpython/pull/131638/files/31387a0a1e7c4ae6839abfece1c4f003554d3339#diff-538dc13ef43fc511d342639b4c36190a7180c452a921d047deab421b5945f5ec",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393788,
+    "url": "https://github.com/python/cpython/pull/131638/commits/7bbf5d6b69fb8ee577287242067d8c8b41000c29",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393789,
+    "url": "https://github.com/python/cpython/pull/131638/files/67505cc7526fff70e86cdb487da515c62ce8d366#diff-538dc13ef43fc511d342639b4c36190a7180c452a921d047deab421b5945f5ec",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393790,
+    "url": "https://github.com/python/cpython/pull/131638#event-17102476255",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393793,
+    "url": "https://github.com/python/cpython/pull/131638#event-17102476330",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393795,
+    "url": "https://github.com/python/cpython/pull/131638#ref-issue-1198888221",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393796,
+    "url": "https://github.com/python/cpython/pull/131638/files/31387a0a1e7c4ae6839abfece1c4f003554d3339",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393797,
+    "url": "https://github.com/python/cpython/pull/131638#issuecomment-2773838031",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393798,
+    "url": "https://github.com/python/cpython/pull/131638#commits-pushed-188329c",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393799,
+    "url": "https://github.com/python/cpython/commit/6bd96894269be4754a811fb8ea1e3b627a676562",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393800,
+    "url": "https://github.com/python/cpython/pull/131638#ref-pullrequest-3015590424",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393801,
+    "url": "https://github.com/python/cpython/pull/131638/commits/67505cc7526fff70e86cdb487da515c62ce8d366",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393802,
+    "url": "https://github.com/python/cpython/pull/131638/commits/31387a0a1e7c4ae6839abfece1c4f003554d3339",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393804,
+    "url": "https://github.com/python/cpython/pull/131638#issuecomment-2746359421",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393805,
+    "url": "https://github.com/python/cpython/pull/131638/commits/c101cf92092dc56e261eaff5126bcf1f8b4370d1",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393806,
+    "url": "https://github.com/python/cpython/pull/131638#issuecomment-2773313639",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393807,
+    "url": "https://github.com/python/cpython/pull/131638#pullrequestreview-2737633240",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393808,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F131638",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393809,
+    "url": "https://github.com/python/cpython/pull/131638#event-16945342233",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 393810,
+    "url": "https://github.com/python/cpython/pull/131638/files/31387a0a1e7c4ae6839abfece1c4f003554d3339#diff-bb1ec965bc56ed5873d2ae11444eb31021571c15e1becc703feb88233fe2dd75",
+    "parentUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "id": 394551,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/fnmatch.py",
+    "parentUrl": "https://docs.python.org/3/library/fnmatch.html#fnmatch.filterfalse"
+  },
+  {
+    "id": 394552,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/fnmatch.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/fnmatch.html#fnmatch.filterfalse"
+  },
+  {
+    "id": 394560,
+    "url": "https://docs.python.org/3/library/fnmatch.html#fnmatch.translate",
+    "parentUrl": "https://docs.python.org/3/library/fnmatch.html#fnmatch.filterfalse"
+  },
+  {
+    "id": 394563,
+    "url": "https://docs.python.org/3/library/fnmatch.html#fnmatch.filter",
+    "parentUrl": "https://docs.python.org/3/library/fnmatch.html#fnmatch.filterfalse"
+  },
+  {
+    "id": 394564,
+    "url": "https://docs.python.org/3/library/fnmatch.html#fnmatch.fnmatch",
+    "parentUrl": "https://docs.python.org/3/library/fnmatch.html#fnmatch.filterfalse"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "fnmatch — Unix filename pattern matching — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/fnmatch.html#fnmatch.filterfalse"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "fnmatch — Unix filename pattern matching — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/fnmatch.html#fnmatch.filterfalse"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Create"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Create"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#complex.from_number"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#complex.from_number"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d48\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d80\u0026u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d80\u0026u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d40\u0026v\u003d4",
+    "alt": "@pablogsal",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d52\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d52\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d52\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-60115: Support frozen modules for linecache.getline() by gaogaotiantian · Pull Request #131638 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131638"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sqlite3 — DB-API 2.0 interface for SQLite databases — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sqlite3.html#sqlite3.ProgrammingError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sqlite3 — DB-API 2.0 interface for SQLite databases — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sqlite3.html#sqlite3.ProgrammingError"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
