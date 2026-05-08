@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 504,
+    "url": "http://pypi.org",
+    "title": "PyPI · The Python Package Index",
+    "content": "Skip to main content Switch to mobile version Warning Some features may not work without JavaScript. Please try enabling it if you encounter problems. Find, install and publish Python packages with the Python Package Index Search PyPI Search Or browse projects 804,741 projects 8,641,849 releases 18,765,975 files 1,053,592 users The Python Package Index (PyPI) is a repository of software for the Python programming language. PyPI helps you find and install software developed and shared by the Python community. Learn about installing packages. Package authors use PyPI to distribute their software. Learn how to package your Python code for PyPI. English español français 日本語 português (Brasil) українська Ελληνικά Deutsch 中文 (简体) 中文 (繁體) русский עברית Esperanto 한국어 Supported by AWS Cloud computing and Security Sponsor Datadog Monitoring Depot Continuous Integration Fastly CDN Google Download Analytics Pingdom Monitoring Sentry Error logging StatusPage Status page",
+    "scrapedAt": "2026-05-09 00:44:05.449285"
+  },
+  {
+    "id": 503,
+    "url": "http://kivy.org/",
+    "title": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "content": "Kivy: The Open Source Python App Development Framework. Build and distribute beautiful Python cross-platform GUI apps with ease. Kivy runs on Android, iOS, Linux, macOS and Windows. MIT License 17.0K Stars Get started! Kivy has been built to be easy to use, cross-platform and fast. With a single codebase, you will be able to deploy apps on Windows, Linux, macOS, iOS and Android. Business Friendly Kivy is released under the MIT License, is 100% free to use, and is professionally developed, backed and maintained. Companies and individuals are using Kivy for their projects every day. Kivy is kept open source thanks to its contributors and backers. {{organizations.length}} organizations are supporting Kivy: {{ organization.account.name }} {{organization.tier.name}} ${{organization.totalDonations.value}} Amount contributed See all the {{organizations.length}} organizations supporting Kivy on OpenCollective {{individuals.length}} individuals are supporting Kivy See all the {{individuals.length}} individuals supporting Kivy on OpenCollective Start supporting Kivy from $5 Kivy is a free and open source software and is maintained by the community. Sometimes, a small contribution, could help to keep the wheel spinning flawlessly. Support Kivy as a Backer (Starts from $5/mo) Support Kivy as a Sponsor (Starts from $100/mo) Need help? The Kivy community will love ❤️ to help. Join us on Discord Join us on kivy-users group Source code hosted on Github Contact us",
+    "scrapedAt": "2026-05-09 00:44:04.266391"
+  },
+  {
+    "id": 502,
+    "url": "http://docs.python.org/howto/sockets.html",
+    "title": "Socket Programming HOWTO — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python HOWTOs » Socket Programming HOWTO | Theme Auto Light Dark | Socket Programming HOWTO¶ Author: Gordon McMillan Abstract Sockets are used nearly everywhere, but are one of the most severely misunderstood technologies around. This is a 10,000 foot overview of sockets. It’s not really a tutorial - you’ll still have work to do in getting things operational. It doesn’t cover the fine points (and there are a lot of them), but I hope it will give you enough background to begin using them decently. Sockets¶ I’m only going to talk about INET (i.e. IPv4) sockets, but they account for at least 99% of the sockets in use. And I’ll only talk about STREAM (i.e. TCP) sockets - unless you really know what you’re doing (in which case this HOWTO isn’t for you!), you’ll get better behavior and performance from a STREAM socket than anything else. I will try to clear up the mystery of what a socket is, as well as some hints on how to work with blocking and non-blocking sockets. But I’ll start by talking about blocking sockets. You’ll need to know how they work before dealing with non-blocking sockets. Part of the trouble with understanding these things is that “socket” can mean a number of subtly different things, depending on context. So first, let’s make a distinction between a “client” socket - an endpoint of a conversation, and a “server” socket, which is more like a switchboard operator. The client application (your browser, for example) uses “client” sockets exclusively; the web server it’s talking to uses both “server” sockets and “client” sockets. History¶ Of the various forms of IPC, sockets are by far the most popular. On any given platform, there are likely to be other forms of IPC that are faster, but for cross-platform communication, sockets are about the only game in town. They were invented in Berkeley as part of the BSD flavor of Unix. They spread like wildfire with the internet. With good reason — the combination of sockets with INET makes talking to arbitrary machines around the world unbelievably easy (at least compared to other schemes). Creating a Socket¶ Roughly speaking, when you clicked on the link that brought you to this page, your browser did something like the following: # create an INET, STREAMing socket\ns \u003d socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n# now connect to the web server on port 80 - the normal http port\ns.connect((\"www.python.org\", 80))\n When the connect completes, the socket s can be used to send in a request for the text of the page. The same socket will read the reply, and then be destroyed. That’s right, destroyed. Client sockets are normally only used for one exchange (or a small set of sequential exchanges). What happens in the web server is a bit more complex. First, the web server creates a “server socket”: # create an INET, STREAMing socket\nserversocket \u003d socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n# bind the socket to a public host, and a well-known port\nserversocket.bind((socket.gethostname(), 80))\n# become a server socket\nserversocket.listen(5)\n A couple things to notice: we used socket.gethostname() so that the socket would be visible to the outside world. If we had used s.bind((\u0027localhost\u0027, 80)) or s.bind((\u0027127.0.0.1\u0027, 80)) we would still have a “server” socket, but one that was only visible within the same machine. s.bind((\u0027\u0027, 80)) specifies that the socket is reachable by any address the machine happens to have. A second thing to note: low number ports are usually reserved for “well known” services (HTTP, SNMP etc). If you’re playing around, use a nice high number (4 digits). Finally, the argument to listen tells the socket library that we want it to queue up as many as 5 connect requests (the normal max) before refusing outside connections. If the rest of the code is written properly, that should be plenty. Now that we have a “server” socket, listening on port 80, we can enter the mainloop of the web server: while True:\n    # accept connections from outside\n    (clientsocket, address) \u003d serversocket.accept()\n    # now do something with the clientsocket\n    # in this case, we\u0027ll pretend this is a threaded server\n    ct \u003d make_client_thread(clientsocket)\n    ct.start()\n There’s actually 3 general ways in which this loop could work - dispatching a thread to handle clientsocket, create a new process to handle clientsocket, or restructure this app to use non-blocking sockets, and multiplex between our “server” socket and any active clientsockets using select. More about that later. The important thing to understand now is this: this is all a “server” socket does. It doesn’t send any data. It doesn’t receive any data. It just produces “client” sockets. Each clientsocket is created in response to some other “client” socket doing a connect() to the host and port we’re bound to. As soon as we’ve created that clientsocket, we go back to listening for more connections. The two “clients",
+    "scrapedAt": "2026-05-09 00:44:02.714667"
+  },
+  {
+    "id": 501,
+    "url": "http://wiki.python.org/moin/WebProgramming",
+    "title": "WebProgramming",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. Web Programming in Python This topic guide attempts to cover every aspect of programming Web applications (both clients and servers) using Python. Server Programming Topics concerned with writing providing Web applications, doing server-side programming, providing a Web site or pages which use Python in some way: WebFrameworks - for developing server-side Web applications in Python CgiScripts - information on writing CGI scripts/programs in Python when the WebFrameworks seem like too much work or aren\u0027t available at your provider WebServers - server solutions written in (or using) Python ContentManagementSystems - solutions specially designed for organising and publishing content WebServices - tools for accessing and providing functionality via APIs over the Web Client Programming Topics concerned with accessing Web applications, sites or pages using Python: WebBrowserProgramming - interfacing with existing browsers and browser technologies WebClientProgramming - writing clients, typically at a lower level than a full Web browser WebServices - tools for accessing and providing functionality via APIs over the Web Related Links Related topics of interest: WebStandardisation - working towards common solutions and APIs for Python Web programming DatabaseProgramming - guidance on available DatabaseInterfaces and related tools Templating - generating output, messages and more from Web applications BuildAnIntranet - advice on how one might go about developing and deploying an intranet solution Editorial Note This simplified start page replaces the previous \"comprehensive\" guide to Web programming. Unless adding a distinct category of Web programming, please add things like new frameworks to the appropriate page - not to this page. 2026-02-14 16:14",
+    "scrapedAt": "2026-05-09 00:44:01.43447"
+  },
+  {
+    "id": 500,
+    "url": "http://www.pygtk.org/",
+    "title": "pygtk.org",
+    "content": "",
+    "scrapedAt": "2026-05-09 00:43:59.889783"
+  },
+  {
     "id": 499,
     "url": "http://wiki.python.org/moin/NumericAndScientific",
     "title": "NumericAndScientific",
@@ -3473,26 +3508,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 500,
-    "url": "http://www.pygtk.org/"
-  },
-  {
-    "id": 501,
-    "url": "http://wiki.python.org/moin/WebProgramming"
-  },
-  {
-    "id": 502,
-    "url": "http://docs.python.org/howto/sockets.html"
-  },
-  {
-    "id": 503,
-    "url": "http://kivy.org/"
-  },
-  {
-    "id": 504,
-    "url": "http://pypi.org"
   },
   {
     "id": 505,
@@ -90940,10 +90955,354 @@ window.searchData = [
     "id": 66777,
     "url": "http://gts.sourceforge.net/",
     "parentUrl": "http://wiki.python.org/moin/NumericAndScientific"
+  },
+  {
+    "id": 66778,
+    "url": "https://wiki.python.org/moin/DatabaseProgramming.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66779,
+    "url": "https://wiki.python.org/moin/Templating.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66780,
+    "url": "https://wiki.python.org/moin/WebBrowserProgramming.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66781,
+    "url": "https://wiki.python.org/moin/WebClientProgramming.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66782,
+    "url": "https://wiki.python.org/moin/CgiScripts.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66784,
+    "url": "https://wiki.python.org/moin/BuildAnIntranet.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66786,
+    "url": "https://wiki.python.org/moin/WebServices.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66787,
+    "url": "https://wiki.python.org/moin/WebServers.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66788,
+    "url": "https://wiki.python.org/moin/WebFrameworks.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66789,
+    "url": "https://wiki.python.org/moin/WebStandardisation.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66790,
+    "url": "https://wiki.python.org/moin/DatabaseInterfaces.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66791,
+    "url": "https://wiki.python.org/moin/ContentManagementSystems.html",
+    "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 66792,
+    "url": "https://docs.python.org/3/howto/sockets.html#non-blocking-sockets",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66794,
+    "url": "https://docs.python.org/3/howto/sockets.html#creating-a-socket",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66795,
+    "url": "https://docs.python.org/3/howto/sockets.html#when-sockets-die",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66797,
+    "url": "https://docs.python.org/3/howto/sockets.html#ipc",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66800,
+    "url": "https://docs.python.org/3/howto/sockets.html#sockets",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66801,
+    "url": "https://docs.python.org/3/howto/sockets.html#history",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66806,
+    "url": "https://en.wikipedia.org/wiki/Endianness#Networking",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66807,
+    "url": "https://docs.python.org/3/howto/sockets.html#binary-data",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66810,
+    "url": "https://docs.python.org/3/howto/sockets.html",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66813,
+    "url": "https://docs.python.org/3/howto/sockets.html#using-a-socket",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66814,
+    "url": "https://docs.python.org/3/howto/sockets.html#",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66816,
+    "url": "https://github.com/python/cpython/blob/main/Doc/howto/sockets.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66817,
+    "url": "https://docs.python.org/3/howto/sockets.html#disconnecting",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66818,
+    "url": "https://docs.python.org/3/howto/regex.html",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66819,
+    "url": "https://docs.python.org/3/howto/sockets.html#socket-programming-howto",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66820,
+    "url": "https://docs.python.org/3/howto/sorting.html",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 66831,
+    "url": "https://aws.amazon.com/",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 66832,
+    "url": "https://www.pingdom.com/",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 66833,
+    "url": "https://pypi.org/search/",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 66834,
+    "url": "https://www.datadoghq.com/",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 66835,
+    "url": "https://statuspage.io",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 66836,
+    "url": "https://packaging.python.org/tutorials/installing-packages/",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 66837,
+    "url": "https://sentry.io/for/python/?utm_source\u003dpypi\u0026utm_medium\u003dpaid-community\u0026utm_campaign\u003dpython-na-evergreen\u0026utm_content\u003dstatic-ad-pypi-sponsor-learnmore",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 66838,
+    "url": "https://www.fastly.com/",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 66839,
+    "url": "https://pypi.org/#content",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 66840,
+    "url": "https://packaging.python.org/tutorials/packaging-projects/",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 66841,
+    "url": "https://depot.dev",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 66842,
+    "url": "https://careers.google.com/",
+    "parentUrl": "http://pypi.org"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://pypi.org/static/images/logo-large.516e776d.svg",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/ed7074cadad1a06f56bc520ad9bd3e00d0704c5b/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d77686974652d6c6f676f2d7443615473387a432e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/8855f7c063a3bdb5b0ce8d91bfc50cf851cc5c51/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d77686974652d6c6f676f2d6668644c4e666c6f2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/60f709d24f3e4d469f9adc77c65e2f5291a3d165/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6465706f742d77686974652d6c6f676f2d7038506f476831302e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/df6fe8829cbff2d7f668d98571df1fd011f36192/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d77686974652d6c6f676f2d65684d3077735f6f2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/420cc8cf360bac879e24c923b2f50ba7d1314fb0/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d77686974652d6c6f676f2d616734424e3774332e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/d01053c02f3a626b73ffcb06b96367fdbbf9e230/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f70696e67646f6d2d77686974652d6c6f676f2d67355831547546362e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/67af7117035e2345bacb5a82e9aa8b5b3e70701d/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d77686974652d6c6f676f2d4a2d6b64742d706e2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/b611884ff90435a0575dbab7d9b0d3e60f136466/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d77686974652d6c6f676f2d5467476c6a4a2d502e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/scale-balanced.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/star.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/kivy-colorwheel-examples.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/homepage-fast.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/homepage-company.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/contribute_coffee.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/help.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/discord.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/envelope.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/github.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/envelope.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/DO_Badge.png",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Socket Programming HOWTO — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Socket Programming HOWTO — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "src": "https://wiki.python.org/moin/logo.png",
+    "alt": "",
+    "pageTitle": "WebProgramming",
+    "pageUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
   {
     "src": "https://wiki.python.org/moin/logo.png",
     "alt": "",
