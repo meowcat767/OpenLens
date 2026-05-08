@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1573,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Event.is_set",
+    "title": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » threading — Thread-based parallelism | Theme Auto Light Dark | threading — Thread-based parallelism¶ Source code: Lib/threading.py This module constructs higher-level threading interfaces on top of the lower level _thread module. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Introduction¶ The threading module provides a way to run multiple threads (smaller units of a process) concurrently within a single process. It allows for the creation and management of threads, making it possible to execute tasks in parallel, sharing memory space. Threads are particularly useful when tasks are I/O bound, such as file operations or making network requests, where much of the time is spent waiting for external resources. A typical use case for threading includes managing a pool of worker threads that can process multiple tasks concurrently. Here’s a basic example of creating and starting threads using Thread: import threading\nimport time\n\ndef crawl(link, delay\u003d3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks \u003d [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads \u003d []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t \u003d threading.Thread(target\u003dcrawl, args\u003d(link,), kwargs\u003d{\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()\n Changed in version 3.7: This module used to be optional, it is now always available. See also concurrent.futures.ThreadPoolExecutor offers a higher level interface to push tasks to a background thread without blocking execution of the calling thread, while still being able to retrieve their results when needed. queue provides a thread-safe interface for exchanging data between running threads. asyncio offers an alternative approach to achieving task level concurrency without requiring the use of multiple operating system threads. Note In the Python 2.x series, this module contained camelCase names for some methods and functions. These are deprecated as of Python 3.10, but they are still supported for compatibility with Python 2.5 and lower. CPython implementation detail: In CPython, due to the Global Interpreter Lock, only one thread can execute Python code at once (even though certain performance-oriented libraries might overcome this limitation). If you want your application to make better use of the computational resources of multi-core machines, you are advised to use multiprocessing or concurrent.futures.ProcessPoolExecutor. However, threading is still an appropriate model if you want to run multiple I/O-bound tasks simultaneously. GIL and performance considerations¶ Unlike the multiprocessing module, which uses separate processes to bypass the global interpreter lock (GIL), the threading module operates within a single process, meaning that all threads share the same memory space. However, the GIL limits the performance gains of threading when it comes to CPU-bound tasks, as only one thread can execute Python bytecode at a time. Despite this, threads remain a useful tool for achieving concurrency in many scenarios. As of Python 3.13, free-threaded builds can disable the GIL, enabling true parallel execution of threads, but this feature is not available by default (see PEP 703). Reference¶ This module defines the following functions: threading.active_count()¶ Return the number of Thread objects currently alive. The returned count is equal to the length of the list returned by enumerate(). The function activeCount is a deprecated alias for this function. threading.current_thread()¶ Return the current Thread object, corresponding to the caller’s thread of control. If the caller’s thread of control was not created through the threading module, a dummy thread object with limited functionality is returned. The function currentThread is a deprecated alias for this function. threading.excepthook(args, /)¶ Handle uncaught exception raised by Thread.run(). The args argument has the following attributes: exc_type: Exception type. exc_value: Exception value, can be None. exc_traceback: Exception traceback, can be None. thread: Thread which raised the exception, can be None. If exc_type is SystemExit, the exception is silently ignored. Otherwise, the exception is printed out on sys.stderr. If this function raises an exception, sys.excepthook() is called to handle it. threading.excepthook() can be overridden to control how uncaught exceptions raised by Thread.run() are handled. Storing exc_value using a custom hook can create a reference cycle. It should be ",
+    "scrapedAt": "2026-05-09 01:25:11.34968"
+  },
+  {
+    "id": 1572,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#implications-for-readers-of-annotations",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:25:10.096165"
+  },
+  {
+    "id": 1571,
+    "url": "https://docs.python.org/3/library/dis.html#dis.dis",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code o",
+    "scrapedAt": "2026-05-09 01:25:08.803502"
+  },
+  {
+    "id": 1570,
+    "url": "https://github.com/python/cpython/issues/133197",
+    "title": "Improve error message for strings with conflicting prefixes · Issue #133197 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Improve error message for strings with conflicting prefixes #133197 New issue Copy link New issue Copy link Closed Closed Improve error message for strings with conflicting prefixes#133197 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-parsertype-featureA feature request or enhancementA feature request or enhancement Description sobolevn opened on Apr 30, 2025 Issue body actions Feature or enhancement Right now it is: \u003e\u003e\u003e ft\u0027a\u0027\n  File \"\u003cpython-input-3\u003e\", line 1\n    ft\u0027a\u0027\n      ^^^\nSyntaxError: invalid syntax I propose: \u003e\u003e\u003e ft\u0027a\u0027\n  File \"\u003cpython-input-3\u003e\", line 1\n    ft\u0027a\u0027\n      ^^^\nSyntaxError: can\u0027t use both \"f\" and \"t\" prefixes for strings at the same time cc @lysnikolaou I am working on the issue :) Linked PRs gh-133197: Improve error message for ft\"\" and bt\"\" cases #133202 gh-133197: Improve error message for incompatible string / bytes prefixes #133242 Reactions are currently unavailable Metadata Metadata Assignees sobolevn Labels 3.14bugs and security fixesbugs and security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-parsertype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:25:07.516997"
+  },
+  {
+    "id": 1569,
+    "url": "https://docs.python.org/3/library/json.html#json-commandline",
+    "title": "json — JSON encoder and decoder — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Data Handling » json — JSON encoder and decoder | Theme Auto Light Dark | json — JSON encoder and decoder¶ Source code: Lib/json/__init__.py JSON (JavaScript Object Notation), specified by RFC 7159 (which obsoletes RFC 4627) and by ECMA-404, is a lightweight data interchange format inspired by JavaScript object literal syntax (although it is not a strict subset of JavaScript [1] ). Note The term “object” in the context of JSON processing in Python can be ambiguous. All values in Python are objects. In JSON, an object refers to any data wrapped in curly braces, similar to a Python dictionary. Warning Be cautious when parsing JSON data from untrusted sources. A malicious JSON string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended. This module exposes an API familiar to users of the standard library marshal and pickle modules. Encoding basic Python object hierarchies: \u003e\u003e\u003e import json\n\u003e\u003e\u003e json.dumps([\u0027foo\u0027, {\u0027bar\u0027: (\u0027baz\u0027, None, 1.0, 2)}])\n\u0027[\"foo\", {\"bar\": [\"baz\", null, 1.0, 2]}]\u0027\n\u003e\u003e\u003e print(json.dumps(\"\\\"foo\\bar\"))\n\"\\\"foo\\bar\"\n\u003e\u003e\u003e print(json.dumps(\u0027\\u1234\u0027))\n\"\\u1234\"\n\u003e\u003e\u003e print(json.dumps(\u0027\\\\\u0027))\n\"\\\\\"\n\u003e\u003e\u003e print(json.dumps({\"c\": 0, \"b\": 0, \"a\": 0}, sort_keys\u003dTrue))\n{\"a\": 0, \"b\": 0, \"c\": 0}\n\u003e\u003e\u003e from io import StringIO\n\u003e\u003e\u003e io \u003d StringIO()\n\u003e\u003e\u003e json.dump([\u0027streaming API\u0027], io)\n\u003e\u003e\u003e io.getvalue()\n\u0027[\"streaming API\"]\u0027\n Compact encoding: \u003e\u003e\u003e import json\n\u003e\u003e\u003e json.dumps([1, 2, 3, {\u00274\u0027: 5, \u00276\u0027: 7}], separators\u003d(\u0027,\u0027, \u0027:\u0027))\n\u0027[1,2,3,{\"4\":5,\"6\":7}]\u0027\n Pretty printing: \u003e\u003e\u003e import json\n\u003e\u003e\u003e print(json.dumps({\u00276\u0027: 7, \u00274\u0027: 5}, sort_keys\u003dTrue, indent\u003d4))\n{\n    \"4\": 5,\n    \"6\": 7\n}\n Customizing JSON object encoding: \u003e\u003e\u003e import json\n\u003e\u003e\u003e def custom_json(obj):\n...     if isinstance(obj, complex):\n...         return {\u0027__complex__\u0027: True, \u0027real\u0027: obj.real, \u0027imag\u0027: obj.imag}\n...     raise TypeError(f\u0027Cannot serialize object of {type(obj)}\u0027)\n...\n\u003e\u003e\u003e json.dumps(1 + 2j, default\u003dcustom_json)\n\u0027{\"__complex__\": true, \"real\": 1.0, \"imag\": 2.0}\u0027\n Decoding JSON: \u003e\u003e\u003e import json\n\u003e\u003e\u003e json.loads(\u0027[\"foo\", {\"bar\":[\"baz\", null, 1.0, 2]}]\u0027)\n[\u0027foo\u0027, {\u0027bar\u0027: [\u0027baz\u0027, None, 1.0, 2]}]\n\u003e\u003e\u003e json.loads(\u0027\"\\\\\"foo\\\\bar\"\u0027)\n\u0027\"foo\\x08ar\u0027\n\u003e\u003e\u003e from io import StringIO\n\u003e\u003e\u003e io \u003d StringIO(\u0027[\"streaming API\"]\u0027)\n\u003e\u003e\u003e json.load(io)\n[\u0027streaming API\u0027]\n Customizing JSON object decoding: \u003e\u003e\u003e import json\n\u003e\u003e\u003e def as_complex(dct):\n...     if \u0027__complex__\u0027 in dct:\n...         return complex(dct[\u0027real\u0027], dct[\u0027imag\u0027])\n...     return dct\n...\n\u003e\u003e\u003e json.loads(\u0027{\"__complex__\": true, \"real\": 1, \"imag\": 2}\u0027,\n...     object_hook\u003das_complex)\n(1+2j)\n\u003e\u003e\u003e import decimal\n\u003e\u003e\u003e json.loads(\u00271.1\u0027, parse_float\u003ddecimal.Decimal)\nDecimal(\u00271.1\u0027)\n Extending JSONEncoder: \u003e\u003e\u003e import json\n\u003e\u003e\u003e class ComplexEncoder(json.JSONEncoder):\n...     def default(self, obj):\n...         if isinstance(obj, complex):\n...             return [obj.real, obj.imag]\n...         # Let the base class default method raise the TypeError\n...         return super().default(obj)\n...\n\u003e\u003e\u003e json.dumps(2 + 1j, cls\u003dComplexEncoder)\n\u0027[2.0, 1.0]\u0027\n\u003e\u003e\u003e ComplexEncoder().encode(2 + 1j)\n\u0027[2.0, 1.0]\u0027\n\u003e\u003e\u003e list(ComplexEncoder().iterencode(2 + 1j))\n[\u0027[2.0\u0027, \u0027, 1.0\u0027, \u0027]\u0027]\n Using json from the shell to validate and pretty-print: $ echo \u0027{\"json\":\"obj\"}\u0027 | python -m json\n{\n    \"json\": \"obj\"\n}\n$ echo \u0027{1.2:3.4}\u0027 | python -m json\nExpecting property name enclosed in double quotes: line 1 column 2 (char 1)\n See Command-line interface for detailed documentation. Note JSON is a subset of YAML 1.2. The JSON produced by this module’s default settings (in particular, the default separators value) is also a subset of YAML 1.0 and 1.1. This module can thus also be used as a YAML serializer. Note This module’s encoders and decoders preserve input and output order by default. Order is only lost if the underlying containers are unordered. Basic Usage¶ json.dump(obj, fp, *, skipkeys\u003dFalse, ensure_ascii\u003dTrue, check_circular\u003dTrue, allow_nan\u003dTrue, cls\u003dNone, indent\u003dNone, separators\u003dNone, default\u003dNone, sort_keys\u003dFalse, **kw)¶ Serialize obj as a JSON formatted stream to fp (a .write()-supporting file-like object) using this Python-to-JSON conversion table. Note Unlike pickle and marshal, JSON is not a framed protocol, so trying to serialize multiple objects with repeated calls to dump() using the same fp will result in an invalid JSON file. Parameters: obj (object) – The Python object to be serialized. fp (file-like object) – The file-like object obj will be serialized to. The json module always produces str objects, not bytes objects, therefore fp.write() must support str input. skipkeys (bool) – If True, keys that are not of a basic type (str, int, float, bool, None) will be skipped instead of raising a TypeError. Default False. ensure_ascii (bool) – If True (the default), the output is guaranteed to have all incoming non-ASCII and non-printable characters escaped. If False, all characters will",
+    "scrapedAt": "2026-05-09 01:25:04.981418"
+  },
+  {
     "id": 1568,
     "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_DISABLE_REMOTE_DEBUG",
     "title": "1. Command line and environment — Python 3.14.5rc1 documentation",
@@ -10568,26 +10603,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1569,
-    "url": "https://docs.python.org/3/library/json.html#json-commandline"
-  },
-  {
-    "id": 1570,
-    "url": "https://github.com/python/cpython/issues/133197"
-  },
-  {
-    "id": 1571,
-    "url": "https://docs.python.org/3/library/dis.html#dis.dis"
-  },
-  {
-    "id": 1572,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#implications-for-readers-of-annotations"
-  },
-  {
-    "id": 1573,
-    "url": "https://docs.python.org/3/library/threading.html#threading.Event.is_set"
   },
   {
     "id": 1574,
@@ -239740,10 +239755,107 @@ window.searchData = [
     "id": 338175,
     "url": "https://github.com/python/cpython/issues/116897#start-of-content",
     "parentUrl": "https://github.com/python/cpython/issues/116897"
+  },
+  {
+    "id": 338473,
+    "url": "https://github.com/python/cpython/pull/133242",
+    "parentUrl": "https://github.com/python/cpython/issues/133197"
+  },
+  {
+    "id": 338477,
+    "url": "https://github.com/python/cpython/pull/133202",
+    "parentUrl": "https://github.com/python/cpython/issues/133197"
+  },
+  {
+    "id": 338479,
+    "url": "https://github.com/python/cpython/issues/133197#top",
+    "parentUrl": "https://github.com/python/cpython/issues/133197"
+  },
+  {
+    "id": 338481,
+    "url": "https://github.com/python/cpython/issues/133197#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/133197"
+  },
+  {
+    "id": 338483,
+    "url": "https://github.com/python/cpython/issues/133197#issue-3030889713",
+    "parentUrl": "https://github.com/python/cpython/issues/133197"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Event.is_set"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Event.is_set"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#implications-for-readers-of-annotations"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#implications-for-readers-of-annotations"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#dis.dis"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#dis.dis"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "sobolevn",
+    "pageTitle": "Improve error message for strings with conflicting prefixes · Issue #133197 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133197"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@sobolevn",
+    "pageTitle": "Improve error message for strings with conflicting prefixes · Issue #133197 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133197"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@sobolevn",
+    "pageTitle": "Improve error message for strings with conflicting prefixes · Issue #133197 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133197"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "Improve error message for strings with conflicting prefixes · Issue #133197 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133197"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "json — JSON encoder and decoder — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/json.html#json-commandline"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "json — JSON encoder and decoder — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/json.html#json-commandline"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
