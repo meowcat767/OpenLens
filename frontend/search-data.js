@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 750,
+    "url": "https://github.com/python/cpython/issues/103636",
+    "title": "Convert calendar constants to enums and add months · Issue #103636 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Convert calendar constants to enums and add months #103636 New issue Copy link New issue Copy link Closed Closed Convert calendar constants to enums and add months#103636 Copy link Labels 3.12only security fixesonly security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description ethanfurman opened on Apr 19, 2023 Issue body actions From this discuss thread: The calendar module already defines constants e.g. MONDAY (0), TUESDAY (1), etc. for the [days of the week] https://docs.python.org/3/library/calendar.html#calendar.MONDAY). Since these are likely to be commonly needed too, would it make sense for the calendar module to also export constants for all of JANUARY (1), FEBRUARY (2), …, DECEMBER (12)? This would allow one to write from calendar import APRIL and then e.g. use APRIL instead of 4 when building a datetime.date object. Related: datetime - Python module defining constants for month numbers? - Stack Overflow Linked PRs gh-103636: add enums for days and months in calendar module #103642 gh-103636: issue warning for deprecated calendar constants #103833 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.12only security fixesonly security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects Date and time issues 🕰️ Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:52:09.753107"
+  },
+  {
+    "id": 749,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode",
+    "title": "Codec registry and support functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Utilities » Codec registry and support functions | Theme Auto Light Dark | Codec registry and support functions¶ int PyCodec_Register(PyObject *search_function)¶ Part of the Stable ABI. Register a new codec search function. As a side effect, this tries to load the encodings package, if not yet done, to make sure that it is always first in the list of search functions. int PyCodec_Unregister(PyObject *search_function)¶ Part of the Stable ABI since version 3.10. Unregister a codec search function and clear the registry’s cache. If the search function is not registered, do nothing. Return 0 on success. Raise an exception and return -1 on error. Added in version 3.10. int PyCodec_KnownEncoding(const char *encoding)¶ Part of the Stable ABI. Return 1 or 0 depending on whether there is a registered codec for the given encoding. This function always succeeds. PyObject *PyCodec_Encode(PyObject *object, const char *encoding, const char *errors)¶ Return value: New reference. Part of the Stable ABI. Generic codec based encoding API. object is passed through the encoder function found for the given encoding using the error handling method defined by errors. errors may be NULL to use the default method defined for the codec. Raises a LookupError if no encoder can be found. PyObject *PyCodec_Decode(PyObject *object, const char *encoding, const char *errors)¶ Return value: New reference. Part of the Stable ABI. Generic codec based decoding API. object is passed through the decoder function found for the given encoding using the error handling method defined by errors. errors may be NULL to use the default method defined for the codec. Raises a LookupError if no decoder can be found. Codec lookup API¶ In the following functions, the encoding string is looked up converted to all lower-case characters, which makes encodings looked up through this mechanism effectively case-insensitive. If no codec is found, a KeyError is set and NULL returned. PyObject *PyCodec_Encoder(const char *encoding)¶ Return value: New reference. Part of the Stable ABI. Get an encoder function for the given encoding. PyObject *PyCodec_Decoder(const char *encoding)¶ Return value: New reference. Part of the Stable ABI. Get a decoder function for the given encoding. PyObject *PyCodec_IncrementalEncoder(const char *encoding, const char *errors)¶ Return value: New reference. Part of the Stable ABI. Get an IncrementalEncoder object for the given encoding. PyObject *PyCodec_IncrementalDecoder(const char *encoding, const char *errors)¶ Return value: New reference. Part of the Stable ABI. Get an IncrementalDecoder object for the given encoding. PyObject *PyCodec_StreamReader(const char *encoding, PyObject *stream, const char *errors)¶ Return value: New reference. Part of the Stable ABI. Get a StreamReader factory function for the given encoding. PyObject *PyCodec_StreamWriter(const char *encoding, PyObject *stream, const char *errors)¶ Return value: New reference. Part of the Stable ABI. Get a StreamWriter factory function for the given encoding. Registry API for Unicode encoding error handlers¶ int PyCodec_RegisterError(const char *name, PyObject *error)¶ Part of the Stable ABI. Register the error handling callback function error under the given name. This callback function will be called by a codec when it encounters unencodable characters/undecodable bytes and name is specified as the error parameter in the call to the encode/decode function. The callback gets a single argument, an instance of UnicodeEncodeError, UnicodeDecodeError or UnicodeTranslateError that holds information about the problematic sequence of characters or bytes and their offset in the original string (see Unicode Exception Objects for functions to extract this information). The callback must either raise the given exception, or return a two-item tuple containing the replacement for the problematic sequence, and an integer giving the offset in the original string at which encoding/decoding should be resumed. Return 0 on success, -1 on error. PyObject *PyCodec_LookupError(const char *name)¶ Return value: New reference. Part of the Stable ABI. Lookup the error handling callback function registered under name. As a special case NULL can be passed, in which case the error handling callback for “strict” will be returned. PyObject *PyCodec_StrictErrors(PyObject *exc)¶ Return value: Always NULL. Part of the Stable ABI. Raise exc as an exception. PyObject *PyCodec_IgnoreErrors(PyObject *exc)¶ Return value: New reference. Part of the Stable ABI. Ignore the unicode error, skipping the faulty input. PyObject *PyCodec_ReplaceErrors(PyObject *exc)¶ Return value: New reference. Part of the Stable ABI. Replace the unicode encode error with ? or U+FFFD. PyObject *PyCodec_XMLCharRefReplaceErrors(PyObject *exc)¶ Return value: New reference. Part of the Stable ABI. Replace the unicode encode error",
+    "scrapedAt": "2026-05-09 00:52:07.531253"
+  },
+  {
+    "id": 748,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION",
+    "title": "API and ABI Versioning — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » API and ABI Versioning | Theme Auto Light Dark | API and ABI Versioning¶ Build-time version constants¶ CPython exposes its version number in the following macros. Note that these correspond to the version code is built with. See Py_Version for the version used at run time. See C API Stability for a discussion of API and ABI stability across versions. PY_MAJOR_VERSION¶ The 3 in 3.4.1a2. PY_MINOR_VERSION¶ The 4 in 3.4.1a2. PY_MICRO_VERSION¶ The 1 in 3.4.1a2. PY_RELEASE_LEVEL¶ The a in 3.4.1a2. This can be 0xA for alpha, 0xB for beta, 0xC for release candidate or 0xF for final. PY_RELEASE_SERIAL¶ The 2 in 3.4.1a2. Zero for final releases. PY_VERSION_HEX¶ The Python version number encoded in a single integer. See Py_PACK_FULL_VERSION() for the encoding details. Use this for numeric comparisons, for example, #if PY_VERSION_HEX \u003e\u003d .... These macros are defined in Include/patchlevel.h. Run-time version¶ const unsigned long Py_Version¶ Part of the Stable ABI since version 3.11. The Python runtime version number encoded in a single constant integer. See Py_PACK_FULL_VERSION() for the encoding details. This contains the Python version used at run time. Use this for numeric comparisons, for example, if (Py_Version \u003e\u003d ...). Added in version 3.11. Bit-packing macros¶ uint32_t Py_PACK_FULL_VERSION(int major, int minor, int micro, int release_level, int release_serial)¶ Part of the Stable ABI since version 3.14. Return the given version, encoded as a single 32-bit integer with the following structure: Argument No. of bits Bit mask Bit shift Example values 3.4.1a2 3.10.0 major 8 0xFF000000 24 0x03 0x03 minor 8 0x00FF0000 16 0x04 0x0A micro 8 0x0000FF00 8 0x01 0x00 release_level 4 0x000000F0 4 0xA 0xF release_serial 4 0x0000000F 0 0x2 0x0 For example: Version Py_PACK_FULL_VERSION arguments Encoded version 3.4.1a2 (3, 4, 1, 0xA, 2) 0x030401a2 3.10.0 (3, 10, 0, 0xF, 0) 0x030a00f0 Out-of range bits in the arguments are ignored. That is, the macro can be defined as: #ifndef Py_PACK_FULL_VERSION\n#define Py_PACK_FULL_VERSION(X, Y, Z, LEVEL, SERIAL) ( \\\n   (((X) \u0026 0xff) \u003c\u003c 24) |                              \\\n   (((Y) \u0026 0xff) \u003c\u003c 16) |                              \\\n   (((Z) \u0026 0xff) \u003c\u003c 8) |                               \\\n   (((LEVEL) \u0026 0xf) \u003c\u003c 4) |                            \\\n   (((SERIAL) \u0026 0xf) \u003c\u003c 0))\n#endif\n Py_PACK_FULL_VERSION is primarily a macro, intended for use in #if directives, but it is also available as an exported function. Added in version 3.14. uint32_t Py_PACK_VERSION(int major, int minor)¶ Part of the Stable ABI since version 3.14. Equivalent to Py_PACK_FULL_VERSION(major, minor, 0, 0, 0). The result does not correspond to any Python release, but is useful in numeric comparisons. Added in version 3.14. Table of Contents API and ABI Versioning Build-time version constants Run-time version Bit-packing macros Previous topic Supporting Cyclic Garbage Collection Next topic Monitoring C API This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » API and ABI Versioning | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 00:52:06.302397"
+  },
+  {
+    "id": 747,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_alloc",
+    "title": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Thread-local storage support | Theme Auto Light Dark | Thread-local storage support¶ The Python interpreter provides low-level support for thread-local storage (TLS) which wraps the underlying native TLS implementation to support the Python-level thread-local storage API (threading.local). The CPython C level APIs are similar to those offered by pthreads and Windows: use a thread key and functions to associate a void* value per thread. A thread state does not need to be attached when calling these functions; they supply their own locking. Note that Python.h does not include the declaration of the TLS APIs, you need to include pythread.h to use thread-local storage. Note None of these API functions handle memory management on behalf of the void* values. You need to allocate and deallocate them yourself. If the void* values happen to be PyObject*, these functions don’t do refcount operations on them either. Thread-specific storage API¶ The thread-specific storage (TSS) API was introduced to supersede the use of the existing TLS API within the CPython interpreter. This API uses a new type Py_tss_t instead of int to represent thread keys. Added in version 3.7. See also “A New C-API for Thread-Local Storage in CPython” (PEP 539) type Py_tss_t¶ This data structure represents the state of a thread key, the definition of which may depend on the underlying TLS implementation, and it has an internal field representing the key’s initialization state. There are no public members in this structure. When Py_LIMITED_API is not defined, static allocation of this type by Py_tss_NEEDS_INIT is allowed. Py_tss_NEEDS_INIT¶ This macro expands to the initializer for Py_tss_t variables. Note that this macro won’t be defined with Py_LIMITED_API. Dynamic allocation¶ Dynamic allocation of the Py_tss_t, required in extension modules built with Py_LIMITED_API, where static allocation of this type is not possible due to its implementation being opaque at build time. Py_tss_t *PyThread_tss_alloc()¶ Part of the Stable ABI since version 3.7. Return a value which is the same state as a value initialized with Py_tss_NEEDS_INIT, or NULL in the case of dynamic allocation failure. void PyThread_tss_free(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Free the given key allocated by PyThread_tss_alloc(), after first calling PyThread_tss_delete() to ensure any associated thread locals have been unassigned. This is a no-op if the key argument is NULL. Note A freed key becomes a dangling pointer. You should reset the key to NULL. Methods¶ The parameter key of these functions must not be NULL. Moreover, the behaviors of PyThread_tss_set() and PyThread_tss_get() are undefined if the given Py_tss_t has not been initialized by PyThread_tss_create(). int PyThread_tss_is_created(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a non-zero value if the given Py_tss_t has been initialized by PyThread_tss_create(). int PyThread_tss_create(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a zero value on successful initialization of a TSS key. The behavior is undefined if the value pointed to by the key argument is not initialized by Py_tss_NEEDS_INIT. This function can be called repeatedly on the same key – calling it on an already initialized key is a no-op and immediately returns success. void PyThread_tss_delete(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Destroy a TSS key to forget the values associated with the key across all threads, and change the key’s initialization state to uninitialized. A destroyed key is able to be initialized again by PyThread_tss_create(). This function can be called repeatedly on the same key – calling it on an already destroyed key is a no-op. int PyThread_tss_set(Py_tss_t *key, void *value)¶ Part of the Stable ABI since version 3.7. Return a zero value to indicate successfully associating a void* value with a TSS key in the current thread. Each thread has a distinct mapping of the key to a void* value. void *PyThread_tss_get(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return the void* value associated with a TSS key in the current thread. This returns NULL if no value is associated with the key in the current thread. Legacy APIs¶ Deprecated since version 3.7: This API is superseded by the thread-specific storage (TSS) API. Note This version of the API does not support platforms where the native TLS key is defined in a way that cannot be safely cast to int. On such platforms, PyThread_create_key() will return immediately with a failure status, and the other TLS functions will all be no-ops on such platforms. Due to the compatibility problem noted above, this version of the API should not be used in new code. int PyThread_create_key()¶ Part of the Stable ABI. void PyThread_delete_key(int key)¶ Part of the Stable ABI. int PyThread_set_key_value(int ",
+    "scrapedAt": "2026-05-09 00:52:05.089985"
+  },
+  {
+    "id": 746,
+    "url": "https://github.com/python/cpython/issues/91896",
+    "title": "Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString · Issue #91896 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString #91896 New issue Copy link New issue Copy link Closed Closed Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString#91896 Copy link Assignees Labels topic-typingtype-featureA feature request or enhancementA feature request or enhancement Description JelleZijlstra opened on Apr 25, 2022 Issue body actions The current docstring of collections.abc.ByteString is:     \"\"\"This unifies bytes and bytearray.\n\n    XXX Should add all their methods.\n    \"\"\"\n Let\u0027s do that last thing. This will be useful for typing code that accepts both bytes and bytearray, especially with my proposal in PEP-688 to make bytes no longer acceptable as a shortcut for bytearray in the type system. cc @rhettinger for collections.abc Linked PRs gh-91896: Deprecate collections.abc.ByteString #102096 gh-91896: Improve visibility of ByteString deprecation warnings #104294 gh-91896: Fixup some docs issues following ByteString deprecation #104422 gh-91896: Revert some very noisy DeprecationWarnings for ByteString #104424 Reactions are currently unavailable Metadata Metadata Assignees JelleZijlstra Labels topic-typingtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:52:03.925903"
+  },
+  {
     "id": 745,
     "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_QuietFlag",
     "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
@@ -4928,26 +4963,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 746,
-    "url": "https://github.com/python/cpython/issues/91896"
-  },
-  {
-    "id": 747,
-    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_alloc"
-  },
-  {
-    "id": 748,
-    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
-  },
-  {
-    "id": 749,
-    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
-  },
-  {
-    "id": 750,
-    "url": "https://github.com/python/cpython/issues/103636"
   },
   {
     "id": 751,
@@ -128509,10 +128524,397 @@ window.searchData = [
     "id": 91325,
     "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_RawRealloc",
     "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91516,
+    "url": "https://github.com/python/cpython/pull/104422",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91519,
+    "url": "https://github.com/rhettinger",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91520,
+    "url": "https://github.com/python/cpython/pull/104424",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91522,
+    "url": "https://peps.python.org/688",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91527,
+    "url": "https://github.com/python/cpython/issues/91896#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91528,
+    "url": "https://github.com/python/cpython/issues/91896#top",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91529,
+    "url": "https://github.com/python/cpython/pull/104294",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91530,
+    "url": "https://github.com/python/cpython/issues/91896#issue-1213932492",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91531,
+    "url": "https://github.com/python/cpython/pull/102096",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91575,
+    "url": "https://github.com/python/cpython/tree/3.14/Include/patchlevel.h",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91576,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#bit-packing-macros",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91578,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.PY_RELEASE_LEVEL",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91579,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.PY_MINOR_VERSION",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91580,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#run-time-version",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91586,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/apiabiversion.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91588,
+    "url": "https://docs.python.org/3/c-api/gcsupport.html",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91591,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.PY_MAJOR_VERSION",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91593,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#api-and-abi-versioning",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91599,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.PY_MICRO_VERSION",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91602,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91603,
+    "url": "https://docs.python.org/3/c-api/monitoring.html",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91604,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.PY_RELEASE_SERIAL",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91605,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#build-time-version-constants",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91608,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_StrictErrors",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91609,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_StreamReader",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91611,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamWriter",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91616,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/codec.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91618,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Decoder",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91619,
+    "url": "https://docs.python.org/3/c-api/codec.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91621,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_RegisterError",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91624,
+    "url": "https://docs.python.org/3/c-api/codec.html#codec-lookup-api",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91626,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Unregister",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91627,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.Py_hexdigits",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91631,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_ReplaceErrors",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91632,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalEncoder",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91633,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_StreamWriter",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91634,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encoder",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91636,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalDecoder",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91639,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_LookupError",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91641,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_IgnoreErrors",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91642,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_IncrementalDecoder",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91644,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_KnownEncoding",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91646,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_XMLCharRefReplaceErrors",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91647,
+    "url": "https://docs.python.org/3/c-api/codec.html#codec-utility-variables",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91648,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_NameReplaceErrors",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91649,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_BackslashReplaceErrors",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91653,
+    "url": "https://docs.python.org/3/c-api/codec.html#registry-api-for-unicode-encoding-error-handlers",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91656,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_IncrementalEncoder",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91657,
+    "url": "https://docs.python.org/3/c-api/codec.html#codec-registry-and-support-functions",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91658,
+    "url": "https://docs.python.org/3/c-api/time.html",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91659,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Register",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91660,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamReader",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91661,
+    "url": "https://github.com/python/cpython/pull/103642",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91664,
+    "url": "https://discuss.python.org/t/define-constants-for-month-numbers-in-calendar-module/25999?u\u003dstoneleaf",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91665,
+    "url": "https://github.com/python/cpython/pull/103833",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91666,
+    "url": "https://github.com/python/cpython/issues/103636#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91667,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.MONDAY",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91668,
+    "url": "https://github.com/orgs/python/projects/21",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91669,
+    "url": "https://stackoverflow.com/q/76028482/359178",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91670,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%223.12%22",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91675,
+    "url": "https://github.com/python/cpython/issues/103636#issue-1675629942",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91676,
+    "url": "https://github.com/python/cpython/issues/103636#top",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91677,
+    "url": "https://github.com/ethanfurman",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/7659890?v\u003d4\u0026size\u003d80",
+    "alt": "@ethanfurman",
+    "pageTitle": "Convert calendar constants to enums and add months · Issue #103636 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/7659890?v\u003d4\u0026size\u003d48",
+    "alt": "@ethanfurman",
+    "pageTitle": "Convert calendar constants to enums and add months · Issue #103636 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Codec registry and support functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Codec registry and support functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "API and ABI Versioning — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "API and ABI Versioning — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_alloc"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_alloc"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "JelleZijlstra",
+    "pageTitle": "Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString · Issue #91896 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString · Issue #91896 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString · Issue #91896 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString · Issue #91896 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91896"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
