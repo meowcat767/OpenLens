@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1675,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.STRING",
+    "title": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » annotationlib — Functionality for introspecting annotations | Theme Auto Light Dark | annotationlib — Functionality for introspecting annotations¶ Added in version 3.14. Source code: Lib/annotationlib.py The annotationlib module provides tools for introspecting annotations on modules, classes, and functions. Annotations are lazily evaluated and often contain forward references to objects that are not yet defined when the annotation is created. This module provides a set of low-level tools that can be used to retrieve annotations in a reliable way, even in the presence of forward references and other edge cases. This module supports retrieving annotations in three main formats (see Format), each of which works best for different use cases: VALUE evaluates the annotations and returns their value. This is most straightforward to work with, but it may raise errors, for example if the annotations contain references to undefined names. FORWARDREF returns ForwardRef objects for annotations that cannot be resolved, allowing you to inspect the annotations without evaluating them. This is useful when you need to work with annotations that may contain unresolved forward references. STRING returns the annotations as a string, similar to how it would appear in the source file. This is useful for documentation generators that want to display annotations in a readable way. The get_annotations() function is the main entry point for retrieving annotations. Given a function, class, or module, it returns an annotations dictionary in the requested format. This module also provides functionality for working directly with the annotate function that is used to evaluate annotations, such as get_annotate_from_class_namespace() and call_annotate_function(), as well as the call_evaluate_function() function for working with evaluate functions. Caution Most functionality in this module can execute arbitrary code; see the security section for more information. See also PEP 649 proposed the current model for how annotations work in Python. PEP 749 expanded on various aspects of PEP 649 and introduced the annotationlib module. Annotations Best Practices provides best practices for working with annotations. typing-extensions provides a backport of get_annotations() that works on earlier versions of Python. Annotation semantics¶ The way annotations are evaluated has changed over the history of Python 3, and currently still depends on a future import. There have been execution models for annotations: Stock semantics (default in Python 3.0 through 3.13; see PEP 3107 and PEP 526): Annotations are evaluated eagerly, as they are encountered in the source code. Stringified annotations (used with from __future__ import annotations in Python 3.7 and newer; see PEP 563): Annotations are stored as strings only. Deferred evaluation (default in Python 3.14 and newer; see PEP 649 and PEP 749): Annotations are evaluated lazily, only when they are accessed. As an example, consider the following program: def func(a: Cls) -\u003e None:\n    print(a)\n\nclass Cls: pass\n\nprint(func.__annotations__)\n This will behave as follows: Under stock semantics (Python 3.13 and earlier), it will throw a NameError at the line where func is defined, because Cls is an undefined name at that point. Under stringified annotations (if from __future__ import annotations is used), it will print {\u0027a\u0027: \u0027Cls\u0027, \u0027return\u0027: \u0027None\u0027}. Under deferred evaluation (Python 3.14 and later), it will print {\u0027a\u0027: \u003cclass \u0027Cls\u0027\u003e, \u0027return\u0027: None}. Stock semantics were used when function annotations were first introduced in Python 3.0 (by PEP 3107) because this was the simplest, most obvious way to implement annotations. The same execution model was used when variable annotations were introduced in Python 3.6 (by PEP 526). However, stock semantics caused problems when using annotations as type hints, such as a need to refer to names that are not yet defined when the annotation is encountered. In addition, there were performance problems with executing annotations at module import time. Therefore, in Python 3.7, PEP 563 introduced the ability to store annotations as strings using the from __future__ import annotations syntax. The plan at the time was to eventually make this behavior the default, but a problem appeared: stringified annotations are more difficult to process for those who introspect annotations at runtime. An alternative proposal, PEP 649, introduced the third execution model, deferred evaluation, and was implemented in Python 3.14. Stringified annotations are still used if from __future__ import annotations is present, but this behavior will eventually be removed. Classes¶ class annotationlib.Format¶ An IntEnum describing the formats in which annotations can be returned. Members of the enum, or their equivalent integer values, can be passed to get_annotations() ",
+    "scrapedAt": "2026-05-09 01:29:17.452179"
+  },
+  {
+    "id": 1674,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time",
+    "title": "datetime — Basic date and time types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » datetime — Basic date and time types | Theme Auto Light Dark | datetime — Basic date and time types¶ Source code: Lib/datetime.py The datetime module supplies classes for manipulating dates and times. While date and time arithmetic is supported, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation. Tip Skip to the format codes. See also Module calendar General calendar related functions. Module time Time access and conversions. Module zoneinfo Concrete time zones representing the IANA time zone database. Package dateutil Third-party library with expanded time zone and parsing support. Package DateType Third-party library that introduces distinct static types to for example, allow static type checkers to differentiate between naive and aware datetimes. Aware and naive objects¶ Date and time objects may be categorized as “aware” or “naive” depending on whether or not they include time zone information. With sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, an aware object can locate itself relative to other aware objects. An aware object represents a specific moment in time that is not open to interpretation. [1] A naive object does not contain enough information to unambiguously locate itself relative to other date/time objects. Whether a naive object represents Coordinated Universal Time (UTC), local time, or time in some other time zone is purely up to the program, just like it is up to the program whether a particular number represents metres, miles, or mass. Naive objects are easy to understand and to work with, at the cost of ignoring some aspects of reality. For applications requiring aware objects, datetime and time objects have an optional time zone information attribute, tzinfo, that can be set to an instance of a subclass of the abstract tzinfo class. These tzinfo objects capture information about the offset from UTC time, the time zone name, and whether daylight saving time is in effect. Only one concrete tzinfo class, the timezone class, is supplied by the datetime module. The timezone class can represent simple time zones with fixed offsets from UTC, such as UTC itself or North American EST and EDT time zones. Supporting time zones at deeper levels of detail is up to the application. The rules for time adjustment across the world are more political than rational, change frequently, and there is no standard suitable for every application aside from UTC. Constants¶ The datetime module exports the following constants: datetime.MINYEAR¶ The smallest year number allowed in a date or datetime object. MINYEAR is 1. datetime.MAXYEAR¶ The largest year number allowed in a date or datetime object. MAXYEAR is 9999. datetime.UTC¶ Alias for the UTC time zone singleton datetime.timezone.utc. Added in version 3.11. Available types¶ class datetime.date An idealized naive date, assuming the current Gregorian calendar always was, and always will be, in effect. Attributes: year, month, and day. class datetime.time An idealized time, independent of any particular day, assuming that every day has exactly 24*60*60 seconds. (There is no notion of “leap seconds” here.) Attributes: hour, minute, second, microsecond, and tzinfo. class datetime.datetime A combination of a date and a time. Attributes: year, month, day, hour, minute, second, microsecond, and tzinfo. class datetime.timedelta A duration expressing the difference between two datetime or date instances to microsecond resolution. class datetime.tzinfo An abstract base class for time zone information objects. These are used by the datetime and time classes to provide a customizable notion of time adjustment (for example, to account for time zone and/or daylight saving time). class datetime.timezone A class that implements the tzinfo abstract base class as a fixed offset from the UTC. Added in version 3.2. Objects of these types are immutable. Subclass relationships: Common properties¶ The date, datetime, time, and timezone types share these common features: Objects of these types are immutable. Objects of these types are hashable, meaning that they can be used as dictionary keys. Objects of these types support efficient pickling via the pickle module. Determining if an object is aware or naive¶ Objects of the date type are always naive. An object of type time or datetime may be aware or naive. A datetime object d is aware if both of the following hold: d.tzinfo is not None d.tzinfo.utcoffset(d) does not return None Otherwise, d is naive. A time object t is aware if both of the following hold: t.tzinfo is not None t.tzinfo.utcoffset(None) does not return None. Otherwise, t is naive. The distinction between aware and naive doesn’t apply to timedelta objects. timedelta objects¶ A timedelta object represents a",
+    "scrapedAt": "2026-05-09 01:29:16.185649"
+  },
+  {
+    "id": 1673,
+    "url": "https://github.com/python/cpython/issues/100926",
+    "title": "ctypes infinite pointer cache · Issue #100926 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k ctypes infinite pointer cache #100926 New issue Copy link New issue Copy link Closed Closed ctypes infinite pointer cache #100926 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-ctypestype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description earonesty opened on Jan 10, 2023 Issue body actions Bug(ish?) report The following function has a cache. If you are using a factory to call ctypes.POINTER in a loop, the memory usage is unbounded and unable to be reclaimed. https://docs.python.org/3/library/ctypes.html#ctypes.POINTER The documentation should mention that this is unbounded and should not be called in a loop, or the cache should be changed to a configurable, bounded LRU cache. Example of a variable length type factory used by windows, and a bad func that cannot be called in a loop: def shitemid_factory(size: int) -\u003e Type[ctypes.Structure]:\n    class SHITEMID_Var(ctypes.Structure):\n        _fields_ \u003d (\n            (\"cb\", USHORT),\n            (\"abID\", BYTE * size),\n        )\n\n    return SHITEMID_Var\n\ndef bad_func():\n    SHITEMID_Var \u003d shitemid_factory(sz - ctypes.sizeof(USHORT))\n    item_var \u003d ctypes.cast(item_ptr, ctypes.POINTER(SHITEMID_Var))\n Linked PRs gh-100926: Move ctype\u0027s pointers cache to StgInfo #131282 gh-100926: fix thread safety of ctypes __pointer_type__ #133843 gh-100926: use explicit stginfo lock for pointer cache #133867 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-ctypestype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects Ctypes issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:29:14.891784"
+  },
+  {
+    "id": 1672,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2025-4517",
+    "title": "",
+    "content": "Common vulnerabilities and Exposures (CVE) We\u0027re sorry but the CVE Website doesn\u0027t work properly without JavaScript enabled. Please enable it to continue.",
+    "scrapedAt": "2026-05-09 01:29:12.357293"
+  },
+  {
+    "id": 1671,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#functools",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:29:10.713463"
+  },
+  {
     "id": 1670,
     "url": "https://docs.python.org/3/library/urllib.request.html#module-urllib.request",
     "title": "urllib.request — Extensible library for opening URLs — Python 3.14.5rc1 documentation",
@@ -11268,26 +11303,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1671,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#functools"
-  },
-  {
-    "id": 1672,
-    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2025-4517"
-  },
-  {
-    "id": 1673,
-    "url": "https://github.com/python/cpython/issues/100926"
-  },
-  {
-    "id": 1674,
-    "url": "https://docs.python.org/3/library/datetime.html#datetime.time"
-  },
-  {
-    "id": 1675,
-    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.STRING"
   },
   {
     "id": 1676,
@@ -243510,10 +243525,99 @@ window.searchData = [
     "id": 363222,
     "url": "https://github.com/python/cpython/pull/131919",
     "parentUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "id": 366848,
+    "url": "https://github.com/python/cpython/pull/133867",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 366853,
+    "url": "https://github.com/python/cpython/pull/133843",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 366855,
+    "url": "https://github.com/python/cpython/issues/100926#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 366857,
+    "url": "https://github.com/python/cpython/pull/131282",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 366859,
+    "url": "https://github.com/python/cpython/issues/100926#issue-1527857014",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 366861,
+    "url": "https://github.com/python/cpython/issues/100926#top",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 366862,
+    "url": "https://github.com/earonesty",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.STRING"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.STRING"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "datetime — Basic date and time types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/datetime.html#datetime.time"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/datetime-inheritance.svg",
+    "alt": "timedelta, tzinfo, time, and date inherit from object; timezone inherits from tzinfo; and datetime inherits from date.",
+    "pageTitle": "datetime — Basic date and time types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/datetime.html#datetime.time"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "datetime — Basic date and time types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/datetime.html#datetime.time"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/50769?v\u003d4\u0026size\u003d80",
+    "alt": "@earonesty",
+    "pageTitle": "ctypes infinite pointer cache · Issue #100926 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/50769?v\u003d4\u0026size\u003d48",
+    "alt": "@earonesty",
+    "pageTitle": "ctypes infinite pointer cache · Issue #100926 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#functools"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#functools"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
