@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 20,
+    "url": "https://meowcat.site/posts/How I accidentally deleted my bin folder/",
+    "title": "",
+    "content": "How I accidentally deleted my bin folder I accidentally deleted the whole of my bin folder. If you don\u0027t know much about Linux, know lots of system files live here, including bash, DE\u0027s, X11 and Wayland, among other things. I didn\u0027t check the command I was running for syntax errors, and nuked my system. OverlayFS Overlayed Filesystems is what my Linux distro of choice uses. My etc/ directory had become full, and I needed to install TeX. The command I ran was \"sudo rm -rf /etc/*\". I assumed this was the overlayed FS and not the main partition, but I was wrong. I got hit with \"sudo: you do not exist in the passwd database\" a few minutes later. cooked. What I did wrong Let\u0027s break down the command I ran. \"sudo\" is to run the rest of the command as root. This is normal, as I need permissions to operate in etc/. The next command \"rm\" with the flags \"-rf\" removes the passed file, and \"-rf\" is to force remove. I had passed \"/etc/\", \"/etc/\" being the directory, and \"\" being the files (all.) What I didn\u0027t realise is that I had not passed in the overlayFS, thus nuking my system. Conclusion Don\u0027t wildcard stuff. Previous: Why Wordpress didn\u0027t work. Next: opening",
+    "scrapedAt": "2026-05-09 00:28:08.987387"
+  },
+  {
+    "id": 19,
+    "url": "https://meowcat.site/posts/opening/",
+    "title": "",
+    "content": "opening After 2 hours of the \"great CSS war\", I present \"blog.meowcat.site\". It used to run off of WordPress (;-;), but now it\u0027s powered by 11ty! thats all I guess, you\u0027ve gotta wait out the next post. Previous: How I accidentally deleted my bin folder",
+    "scrapedAt": "2026-05-09 00:28:07.699064"
+  },
+  {
+    "id": 18,
+    "url": "https://meowcat.site/posts/Why wordpress didn\u0027t work/",
+    "title": "",
+    "content": "Why Wordpress didn\u0027t work. Why I moved back to 11ty 11ty is a build system. It takes in Nunjucks and Markdown files and outputs HTML. Quite cool, actually. WordPress is a CMS. It runs on PHP and MySQL, and is used to create websites. It\u0027s quite popular, but I found it to be a bit of a pain to work with. Mainly plugins and themes. They are (for the most part) freemium (if you can even call them that). Millions of sites use Wordpress. I love Wordpress. I don\u0027t love it\u0027s ecosystem. \"free\" themes Themes are the backbone of a Wordpress site. They are what make the site look and feel. They are also what make the site look and feel like every other Wordpress site. Themes say they are free, but they really aren\u0027t. You have to pay to change the font or colours. \"But just write your own theme\", I hear you say. Most Wordpress users don\u0027t know PHP. I do. But developing for Wordpress is a pain. 11ty is faster, and it uses Nunjucks which is faster. \"free\" plugins Plugins suffer the same problem as themes. They are \"free\", but you have to pay to use them. I know you have to make money. I know that. But you don\u0027t need to add 700 banners on my dashboard about it. 11ty has \"plugins\". It\u0027s just npm packages. Conclusion Wordpress is a great CMS. It\u0027s just not for me. I prefer 11ty because it\u0027s faster, and it doesn\u0027t have the same ecosystem problems as Wordpress. It kept meowcat.site up for months. But it\u0027s just not for me. I prefer 11ty because of Markdown as well. Next: How I accidentally deleted my bin folder",
+    "scrapedAt": "2026-05-09 00:28:06.663646"
+  },
+  {
+    "id": 17,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)",
+    "title": "Method (computer programming) - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia Function that is tied to a particular instance or class A method in object-oriented programming (OOP) is a procedure associated with an object, and generally also a message. An object consists of state data and behavior; these compose an interface, which specifies how the object may be used. A method is a behavior of an object parametrized by a user. Data is represented as properties of the object, and behaviors are represented as methods. For example, a Window object could have methods such as open and close, while its state (whether it is open or closed at any given point in time) would be a property. In class-based programming, methods are defined within a class, and objects are instances of a given class. One of the most important capabilities that a method provides is method overriding - the same name (e.g., area) can be used for multiple different kinds of classes. This allows the sending objects to invoke behaviors and to delegate the implementation of those behaviors to the receiving object. A method in Java programming sets the behavior of a class object. For example, an object can send an area message to another object and the appropriate formula is invoked whether the receiving object is a Rectangle, Circle, Triangle, etc. Methods also provide the interface that other classes use to access and modify the properties of an object; this is known as encapsulation. Encapsulation and overriding are the two primary distinguishing features between methods and procedure calls.[1] Overriding and overloading [edit] Method overriding and overloading are two of the most significant ways that a method differs from a conventional procedure or function call. Overriding refers to a subclass redefining the implementation of a method of its superclass. For example, findArea may be a method defined on a shape class,[2] Triangle, etc. would each define the appropriate formula to calculate their area. The idea is to look at objects as \"black boxes\" so that changes to the internals of the object can be made with minimal impact on the other objects that use it. This is known as encapsulation and is meant to make code easier to maintain and re-use. Method overloading, on the other hand, refers to differentiating the code used to handle a message based on the parameters of the method. If one views the receiving object as the first parameter in any method then overriding is just a special case of overloading where the selection is based only on the first argument. The following simple Java example illustrates the difference: Accessor, mutator and manager methods [edit] Accessor methods are used to read the data values of an object. Mutator methods are used to modify the data of an object. Manager methods are used to initialize and destroy objects of a class, e.g. constructors and destructors. These methods provide an abstraction layer that facilitates encapsulation and modularity. For example, if a bank-account class provides a getBalance() accessor method to retrieve the current balance (rather than directly accessing the balance data fields), then later revisions of the same code can implement a more complex mechanism for balance retrieval (e.g., a database fetch), without the dependent code needing to be changed. The concepts of encapsulation and modularity are not unique to object-oriented programming. Indeed, in many ways the object-oriented approach is simply the logical extension of previous paradigms such as abstract data types and structured programming.[3] Constructors [edit] Main article: Constructor (computer science) A constructor is a method that is called at the beginning of an object\u0027s lifetime to create and initialize the object, a process called construction (or instantiation). Initialization may include an acquisition of resources. Constructors may have parameters but usually do not return values in most languages. See the following example in Java: public class Person {\n    private String name;\n    private int age;\n\n    // constructor method\n    public Person(String name, int age) {\n        this.name \u003d name;\n        this.age \u003d age;\n    }\n}\n Destructor [edit] Main article: Destructor (computer science) A Destructor is a method that is called automatically at the end of an object\u0027s lifetime, a process called destruction. Destruction in most languages does not allow destructor method arguments nor return values. Destructors can be implemented so as to perform cleanup chores and other tasks at object destruction. Finalizers [edit] In garbage-collected languages, such as Java,[4]: 26, 29  C#,[5]: 208–209  and Python, destructors are known as finalizers. They have a similar purpose and function to destructors, but because of the differences between languages that utilize garbage-collection and languages with manual memory management, the sequence in which they are called is different. Abstract methods [edit] An abstract method is one with only a signature ",
+    "scrapedAt": "2026-05-09 00:28:05.216273"
+  },
+  {
+    "id": 16,
+    "url": "https://en.wikipedia.org/wiki/BlueJ",
+    "title": "BlueJ - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia IDE for Java Programming Language BlueJ Screenshot of BlueJ Original authors Michael Kölling and John Rosenberg Developer BlueJ Team Stable release 5.5.0 / June 3, 2025; 11 months ago (2025-06-03) Written in Java Operating system Cross-platform Platform Java Available in Multilingual Type Integrated development environment License GPL-2.0-or-later with the Classpath exception Website bluej.org BlueJ is an integrated development environment (IDE) for the Java programming language, developed mainly for educational purposes, but also suitable for small-scale software development. It runs with the help of Java Development Kit (JDK). BlueJ was developed to support the learning and teaching of object-oriented programming, and its design differs from other development environments as a result.[1] The main screen graphically shows the class structure of an application under development (in a UML-like diagram), and objects can be interactively created and tested. This interaction facility, combined with a clean, simple user interface, allows easy experimentation with objects under development. Object-oriented concepts (classes, objects, communication through method calls) are represented visually and in its interaction design in the interface. History [edit] The development of BlueJ was started in 1999 by Michael Kölling and John Rosenberg at Monash University, as a successor to the Blue[2] system. Blue was an integrated system with its own programming language and environment, and was a relative of the Eiffel language. BlueJ implements the Blue environment design for the Java programming language. In March 2009, the BlueJ project became free and open source software, and licensed under GPL-2.0-or-later with the Classpath exception. BlueJ is currently being maintained by a team at King\u0027s College London, England, where Kölling works. Supported language [edit] BlueJ supports programming in Java and in Stride.[3] Java support has been provided in BlueJ since its inception, while Stride support was added in 2017. See also [edit] Free and open-source software portal Computer programming portal Greenfoot DrJava Educational programming language References [edit] ^ Kölling, M. (2008). \"Using BlueJ to Introduce Programming\" (PDF). In Bennedsen, J.; Caspersen, M.E; Kölling, M. (eds.). Reflections on the Teaching of Programming. Lecture Notes in Computer Science. Vol. 4821. Springer. pp. 182–196. ISBN 978-3-540-77933-9. ^ Kölling, M.; Rosenberg, J. (1996). \"An Object-Oriented Program Development Environment for the First Programming Course\" (PDF). Proceedings of the 27th SIGCSE Technical Symposiumon Computer Science Education. ACM. pp. 83–87. doi:10.1145/236462.236514. ISBN 0-89791-757-X. ^ Stride Bibliography [edit] Barnes, David J.; Kölling, Michael (May 12, 2011). Objects First with Java: A Practical Introduction Using BlueJ (5th ed.). Prentice Hall. p. 560. ISBN 978-0-13-249266-9. Kölling, Michael; Quig, Bruce; Patterson, Andrew; Rosenberg, John (Aug 9, 2010). \"The BlueJ System and its Pedagogy\". Computer Science Education. 13 (4): 249–268. CiteSeerX 10.1.1.22.3975. doi:10.1076/csed.13.4.249.17496. S2CID 2805887. External links [edit] Official website BlueJ textbook v t e Integrated development environments C, C++ Open source Arduino Code::Blocks CodeLite Dev-C++ Eclipse Emacs Geany GNOME Builder Kakoune KDevelop NetBeans QDevelop Qt Creator TheIDE Vi–Vim OpenWatcom Freeware DevEco Studio Oracle Developer Studio Visual Studio Code Visual Studio Community Xcode Retail C++Builder Eclipse-based CodeWarrior MyEclipse Visual Studio By JetBrains IntelliJ IDEA CLion LabWindows/CVI IBM Rational Software Architect Understand SlickEdit Discontinued Anjuta By JetBrains AppCode VisualAge Visual C++ Express MonoDevelop SharpDevelop Turbo C, C++ QuickC Java Open source Anjuta BlueJ DrJava Eclipse Geany Greenfoot IntelliJ IDEA Community Edition Android Studio NetBeans DevEco Studio Freeware jGRASP JDeveloper Retail JCreator MyEclipse JetBrains IntelliJ IDEA SlickEdit Understand Discontinued Metrowerks CodeWarrior Pro for Java JBuilder Sun Java Studio Creator (superseded by NetBeans) VisualAge (superseded by Eclipse) Visual Café (aka Espresso, superseded by JBuilder) Visual J++ Xelfi (became NetBeans) JavaScript Open source Vim Visual Studio Code Atom Chromium DevEco Studio Haxe IntelliJ IDEA VS Code Sublime Text Powerflasher FDT CLI (.NET) Open source Visual Studio Code PascalABC.NET Freeware Visual Studio Community Retail Visual Studio Rider Understand Discontinued Xamarin Studio MonoDevelop SharpDevelop Visual Basic Express Visual Web Developer Express Visual J# Express Visual Studio Express for Windows Phone Visual C++ Express Visual C# Express Express for Desktop Express for Web Express for Windows Flash Adobe Flash Builder FlashDevelop Powerflasher FDT PHP Open source Aptana NetBeans Komodo Edit Komodo IDE KDevelop Proprietary Codelobster PhpStorm PHPEdit SlickEdit Zend Studio R ",
+    "scrapedAt": "2026-05-09 00:28:04.16229"
+  },
+  {
     "id": 15,
     "url": "https://en.wikipedia.org/wiki/Java_(programming_language)",
     "title": "Java (programming language) - Wikipedia",
@@ -103,26 +138,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 16,
-    "url": "https://en.wikipedia.org/wiki/BlueJ"
-  },
-  {
-    "id": 17,
-    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
-  },
-  {
-    "id": 18,
-    "url": "https://meowcat.site/posts/Why wordpress didn\u0027t work/"
-  },
-  {
-    "id": 19,
-    "url": "https://meowcat.site/posts/opening/"
-  },
-  {
-    "id": 20,
-    "url": "https://meowcat.site/posts/How I accidentally deleted my bin folder/"
   },
   {
     "id": 21,
@@ -16373,10 +16388,1518 @@ window.searchData = [
     "id": 8403,
     "url": "https://en.wikipedia.org/wiki/Apache_Pivot",
     "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8404,
+    "url": "https://en.wikipedia.org/wiki/Xamarin_Studio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8405,
+    "url": "https://en.wikipedia.org/wiki/Code::Blocks",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8406,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dBlueJ\u0026action\u003dedit\u0026section\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8407,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dBlueJ\u0026action\u003dedit\u0026section\u003d2",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8408,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dBlueJ\u0026action\u003dedit\u0026section\u003d3",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8409,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dBlueJ\u0026action\u003dedit\u0026section\u003d4",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8410,
+    "url": "https://en.wikipedia.org/wiki/RapidQ",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8411,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dBlueJ\u0026action\u003dedit\u0026section\u003d5",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8413,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dBlueJ\u0026action\u003dedit\u0026section\u003d6",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8416,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Visual_Studio_Express#Visual_Web_Developer_Express",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8422,
+    "url": "https://en.wikipedia.org/wiki/Java_(Sun)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8423,
+    "url": "https://en.wikipedia.org/wiki/PyDev",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8425,
+    "url": "https://en.wikipedia.org/wiki/Category:Free_integrated_development_environments",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8426,
+    "url": "https://en.wikipedia.org/wiki/Class_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8427,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#cite_note-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8429,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#cite_note-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8430,
+    "url": "https://en.wikipedia.org/wiki/Liberty_BASIC",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8432,
+    "url": "https://en.wikipedia.org/wiki/Special:EditPage/Template:Integrated_development_environments",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8437,
+    "url": "https://en.wikipedia.org/wiki/Anjuta",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8439,
+    "url": "https://en.wikipedia.org/wiki/Adobe_Flash_Builder",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8440,
+    "url": "https://bluej.org/",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8441,
+    "url": "https://en.wikipedia.org/wiki/Category:1999_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8442,
+    "url": "https://en.wikipedia.org/wiki/Multilingual",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8444,
+    "url": "https://en.wikipedia.org/wiki/Category:Cross-platform_free_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8445,
+    "url": "https://en.wikipedia.org/wiki/Portal:Free_and_open-source_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8447,
+    "url": "https://en.wikipedia.org/wiki/Prentice_Hall",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8448,
+    "url": "https://en.wikipedia.org/wiki/Turbo_Pascal",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8450,
+    "url": "https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8451,
+    "url": "https://en.wikipedia.org/wiki/EiffelStudio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8454,
+    "url": "https://en.wikipedia.org/wiki/CodeWarrior",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8455,
+    "url": "https://en.wikipedia.org/wiki/JetBrains#GoLand",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8457,
+    "url": "https://en.wikipedia.org/wiki/Thonny",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8460,
+    "url": "https://en.wikipedia.org/wiki/GLBasic",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8461,
+    "url": "https://en.wikipedia.org/wiki/Xojo",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8462,
+    "url": "https://doi.org/10.1076%2Fcsed.13.4.249.17496",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8463,
+    "url": "https://en.wikipedia.org/wiki/FutureBASIC",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8465,
+    "url": "https://en.wikipedia.org/wiki/JBuilder",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8467,
+    "url": "https://en.wikipedia.org/wiki/QuickC",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8468,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Visual_Studio_Express#2015-2017_products",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8469,
+    "url": "https://en.wikipedia.org/wiki/Monash_University",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8475,
+    "url": "https://en.wikipedia.org/wiki/NS_Basic",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8476,
+    "url": "https://en.wikipedia.org/wiki/Xelfi",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8477,
+    "url": "https://en.wikipedia.org/wiki/Emacs",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8481,
+    "url": "https://en.wikipedia.org/wiki/File:20210807_13_06_03-BlueJ_FIX.png",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8483,
+    "url": "https://en.wikipedia.org/wiki/Visual_Eiffel",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8484,
+    "url": "https://en.wikipedia.org/wiki/Category:Free_software_programmed_in_Java",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8485,
+    "url": "https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8486,
+    "url": "https://en.wikipedia.org/wiki/Retail_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8487,
+    "url": "https://en.wikipedia.org/wiki/Cloud9_IDE",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8490,
+    "url": "https://en.wikipedia.org/wiki/Arduino",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8492,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0-13-249266-9",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8493,
+    "url": "https://en.wikipedia.org/wiki/SlickEdit",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8494,
+    "url": "http://stride-lang.net",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8495,
+    "url": "http://www.bluej.org/objects-first/",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8497,
+    "url": "https://api.semanticscholar.org/CorpusID:2805887",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8499,
+    "url": "https://en.wikipedia.org/wiki/RStudio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8505,
+    "url": "https://en.wikipedia.org/wiki/Qt_Creator",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8506,
+    "url": "https://en.wikipedia.org/wiki/GNOME_Builder",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8509,
+    "url": "https://en.wikipedia.org/wiki/Visual_Caf%C3%A9",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8511,
+    "url": "https://en.wikipedia.org/wiki/John_Rosenberg_(academic)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8512,
+    "url": "https://en.wikipedia.org/wiki/Turbo_C%2B%2B",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8513,
+    "url": "https://en.wikipedia.org/wiki/JetBrains",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8514,
+    "url": "https://en.wikipedia.org/wiki/Online_integrated_development_environment",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8515,
+    "url": "https://en.wikipedia.org/wiki/Light_Table_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8516,
+    "url": "https://en.wikipedia.org/wiki/PythonAnywhere",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8518,
+    "url": "https://en.wikipedia.org/wiki/Category:MacOS_programming_tools",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8519,
+    "url": "https://en.wikipedia.org/wiki/PureBasic",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8520,
+    "url": "https://en.wikipedia.org/wiki/AppCode",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8522,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-89791-757-X",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8525,
+    "url": "https://en.wikipedia.org/wiki/Visual_J%2B%2B",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8528,
+    "url": "https://en.wikipedia.org/wiki/Operating_system",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8529,
+    "url": "https://en.wikipedia.org/wiki/Xcode",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8530,
+    "url": "https://en.wikipedia.org/wiki/Adobe_Flash",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8531,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Small_Basic",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8534,
+    "url": "https://en.wikipedia.org/wiki/Vim_(text_editor)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8535,
+    "url": "https://en.wikipedia.org/wiki/Category:Linux_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8537,
+    "url": "https://en.wikipedia.org/wiki/QuickBASIC",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8538,
+    "url": "https://en.wikipedia.org/wiki/Visual_Studio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8544,
+    "url": "https://en.wikipedia.org/wiki/JetBrains#Rider",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8548,
+    "url": "https://en.wikipedia.org/wiki/Object_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8555,
+    "url": "https://en.wikipedia.org/wiki/Visual_Studio#Community",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8557,
+    "url": "https://en.wikipedia.org/wiki/Common_Language_Infrastructure",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8559,
+    "url": "https://en.wikipedia.org/wiki/CiteSeerX_(identifier)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8560,
+    "url": "http://www.bluej.org",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8561,
+    "url": "https://en.wikipedia.org/wiki/Rational_Software_Architect",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8565,
+    "url": "https://en.wikipedia.org/wiki/Watcom_C/C%2B%2B",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8568,
+    "url": "https://en.wikipedia.org/wiki/Turbo_Delphi",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8570,
+    "url": "https://en.wikipedia.org/wiki/Category:Java_development_tools",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8571,
+    "url": "https://en.wikipedia.org/wiki/Category:Software_using_the_GNU_General_Public_License",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8572,
+    "url": "https://en.wikipedia.org/wiki/Dev-Pascal",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8574,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Pascal",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8576,
+    "url": "https://en.wikipedia.org/wiki/PyCharm",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8583,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-3-540-77933-9",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8586,
+    "url": "https://en.wikipedia.org/wiki/Poplog",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8588,
+    "url": "https://en.wikipedia.org/wiki/Chromium_(web_browser)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8589,
+    "url": "https://en.wikipedia.org/wiki/Category:Integrated_development_environments",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8591,
+    "url": "https://en.wikipedia.org/wiki/Unified_Modeling_Language",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8592,
+    "url": "https://en.wikipedia.org/wiki/Ultimate%2B%2B",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8593,
+    "url": "https://en.wikipedia.org/wiki/King%27s_College_London",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8594,
+    "url": "https://en.wikipedia.org/wiki/Sublime_Text",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8596,
+    "url": "https://en.wikipedia.org/wiki/POP-11",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8597,
+    "url": "https://en.wikipedia.org/wiki/Eclipse_Che",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8605,
+    "url": "https://en.wikipedia.org/wiki/Vi_(text_editor)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8606,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Visual_Studio_Express#Visual_C#_Express",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8607,
+    "url": "https://en.wikipedia.org/wiki/SharpDevelop",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8608,
+    "url": "https://en.wikipedia.org/wiki/Kakoune",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8609,
+    "url": "https://en.wikipedia.org/wiki/Komodo_Edit",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8611,
+    "url": "https://en.wikipedia.org/wiki/Delphi_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8614,
+    "url": "https://en.wikipedia.org/wiki/Category:Software_development_kits",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8616,
+    "url": "https://en.wikipedia.org/wiki/DevEco_Studio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8618,
+    "url": "https://en.wikipedia.org/wiki/PhpStorm",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8621,
+    "url": "https://en.wikipedia.org/wiki/VisualAge",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8623,
+    "url": "http://www.pearsonhighered.com/pearsonhigheredus/educator/product/products_detail.page?isbn\u003d9780132492669",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8624,
+    "url": "https://en.wikipedia.org/wiki/Komodo_IDE",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8626,
+    "url": "https://en.wikipedia.org/wiki/SourceLair",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8629,
+    "url": "https://en.wikipedia.org/wiki/QBasic",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8630,
+    "url": "https://en.wikipedia.org/wiki/LabWindows/CVI",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8638,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Visual_Studio_Express#Visual_C++_Express",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8639,
+    "url": "https://en.wikipedia.org/wiki/Category:Official_website_different_in_Wikidata_and_Wikipedia",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8640,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dBlue_programming_language\u0026action\u003dedit\u0026redlink\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8641,
+    "url": "https://en.wikipedia.org/wiki/JetBrains#RustRover",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8642,
+    "url": "https://en.wikipedia.org/wiki/LibertyEiffel",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8643,
+    "url": "https://en.wikipedia.org/wiki/Aptana",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8644,
+    "url": "https://en.wikipedia.org/wiki/SdlBasic",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8645,
+    "url": "https://en.wikipedia.org/wiki/Lazarus_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8646,
+    "url": "https://en.wikipedia.org/wiki/Category:Pedagogic_integrated_development_environments",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8647,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#cite_ref-Ref_2-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8648,
+    "url": "https://en.wikipedia.org/wiki/Software_license",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8650,
+    "url": "https://en.wikipedia.org/wiki/Zend_Studio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8651,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dBlueJ\u0026oldid\u003d1331404774",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8653,
+    "url": "https://en.wikipedia.org/wiki/Eric_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8654,
+    "url": "https://en.wikipedia.org/wiki/Template:Integrated_development_environments",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8656,
+    "url": "https://en.wikipedia.org/wiki/Freeware",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8657,
+    "url": "https://en.wikipedia.org/wiki/Cross-platform",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8658,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Visual_Studio_Express#2005–2010_products",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8659,
+    "url": "https://en.wikipedia.org/wiki/VS_Code",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8661,
+    "url": "https://en.wikipedia.org/wiki/MonoDevelop",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8662,
+    "url": "https://en.wikipedia.org/wiki/PascalABC.NET",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8663,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Visual_Studio_Express#Visual_Basic_Express",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8667,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#cite_note-Ref_-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8668,
+    "url": "https://en.wikipedia.org/wiki/Wing_IDE",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8669,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8671,
+    "url": "https://en.wikipedia.org/wiki/Free_and_open_source_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8674,
+    "url": "https://en.wikipedia.org/wiki/Template_talk:Integrated_development_environments",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8677,
+    "url": "https://en.wikipedia.org/wiki/Delphi_(software)#Embarcadero_Delphi_10.2_Tokyo_(Community_Edition)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8679,
+    "url": "https://en.wikipedia.org/wiki/Turbo_C",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8683,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#cite_ref-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8684,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#cite_ref-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8685,
+    "url": "https://en.wikipedia.org/wiki/PHPEdit",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8687,
+    "url": "https://en.wikipedia.org/wiki/IDLE",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8689,
+    "url": "https://en.wikipedia.org/wiki/Powerflasher_FDT",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8691,
+    "url": "https://en.wikipedia.org/wiki/Category:Linux_programming_tools",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8695,
+    "url": "https://en.wikipedia.org/wiki/Software_development",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8696,
+    "url": "https://en.wikipedia.org/wiki/Basic-256",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8698,
+    "url": "https://en.wikipedia.org/wiki/Understand_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8700,
+    "url": "https://en.wikipedia.org/wiki/Spyder_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8701,
+    "url": "https://en.wikipedia.org/wiki/CLion",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8703,
+    "url": "https://en.wikipedia.org/wiki/Geany",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8707,
+    "url": "https://en.wikipedia.org/wiki/Firebase_Studio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8710,
+    "url": "https://en.wikipedia.org/wiki/Category:Programming_tools_for_Windows",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8715,
+    "url": "https://en.wikipedia.org/wiki/Software_categories#Categorization_approaches",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8716,
+    "url": "https://en.wikipedia.org/wiki/Free_Pascal",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8718,
+    "url": "http://www.cs.kent.ac.uk/pubs/2008/2697/content.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8720,
+    "url": "https://en.wikipedia.org/wiki/CA-Realizer",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8721,
+    "url": "https://en.wikipedia.org/wiki/Category:Educational_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8723,
+    "url": "https://en.wikipedia.org/wiki/FreeBASIC",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8725,
+    "url": "https://en.wikipedia.org/wiki/Borland_Kylix",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8726,
+    "url": "https://en.wikipedia.org/wiki/QB64",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8728,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#bodyContent",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8734,
+    "url": "https://en.wikipedia.org/wiki/R_Tools_for_Visual_Studio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8736,
+    "url": "https://en.wikipedia.org/wiki/Dev-C%2B%2B",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8738,
+    "url": "https://en.wikipedia.org/wiki/.NET",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8739,
+    "url": "https://en.wikipedia.org/wiki/Sun_Java_Studio_Creator",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8741,
+    "url": "https://en.wikipedia.org/wiki/Codelobster",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8742,
+    "url": "https://en.wikipedia.org/wiki/Basic4GL",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8743,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8746,
+    "url": "https://en.wikipedia.org/wiki/GPL_linking_exception#The_classpath_exception",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8747,
+    "url": "https://en.wikipedia.org/wiki/Atom_(text_editor)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8750,
+    "url": "https://citeseerx.ist.psu.edu/viewdoc/summary?doi\u003d10.1.1.22.3975",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8754,
+    "url": "https://en.wikipedia.org/wiki/CodeLite",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8755,
+    "url": "https://en.wikipedia.org/wiki/KDevelop",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8757,
+    "url": "https://doi.org/10.1145%2F236462.236514",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8759,
+    "url": "https://kar.kent.ac.uk/21392/1/ObjectKolling.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8765,
+    "url": "https://en.wikipedia.org/wiki/File:BlueJ_Logo.svg",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8768,
+    "url": "https://en.wikipedia.org/wiki/C%2B%2BBuilder",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8769,
+    "url": "https://en.wikipedia.org/wiki/Educational_programming_language",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8770,
+    "url": "https://en.wikipedia.org/wiki/Michael_K%C3%B6lling",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8771,
+    "url": "https://en.wikipedia.org/wiki/Virtual_Pascal",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8774,
+    "url": "https://en.wikipedia.org/wiki/Structured_programming",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8775,
+    "url": "https://en.wikipedia.org/wiki/Subroutine",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8776,
+    "url": "https://en.wikipedia.org/wiki/Accessor_method",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8777,
+    "url": "https://en.wikipedia.org/wiki/Virtual_function",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8778,
+    "url": "https://en.wikipedia.org/wiki/Dynamic_dispatch",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8779,
+    "url": "https://en.wikipedia.org/wiki/Property_(programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8780,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-1-098-12195-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8781,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-1-259-02993-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8782,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_note-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8783,
+    "url": "https://en.wikipedia.org/wiki/Abstraction_layer",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8784,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_note-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8785,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-7668-3894-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8786,
+    "url": "https://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8787,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-81-203-3085-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8788,
+    "url": "https://en.wikipedia.org/wiki/Function_overloading",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8789,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_ref-Albahari_5-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8792,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_ref-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8793,
+    "url": "https://en.wikipedia.org/wiki/Category:Articles_with_example_C%2B%2B_code",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8794,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_note-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8795,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0134685991",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8796,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0-7357-1434-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8797,
+    "url": "https://en.wikipedia.org/wiki/Interface_(computing)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8798,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8799,
+    "url": "https://en.wikipedia.org/wiki/Destructor_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8801,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_ref-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8803,
+    "url": "https://en.wikipedia.org/wiki/Object_model",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8805,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_ref-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8806,
+    "url": "https://en.wikipedia.org/wiki/Polymorphism_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8807,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026oldid\u003d1343172181",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8808,
+    "url": "https://en.wikipedia.org/wiki/Interface_(object-oriented_programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8809,
+    "url": "https://en.wikipedia.org/wiki/Revision_control",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8810,
+    "url": "https://en.wikipedia.org/wiki/Method_signature",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8811,
+    "url": "https://en.wikipedia.org/wiki/Procedure_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8813,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0-7637-1817-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8814,
+    "url": "https://books.google.com/books?id\u003dMiq73i_J1i4C\u0026pg\u003dPA36",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8815,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d8",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8816,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d7",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8818,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8819,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8821,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8822,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8823,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8824,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8825,
+    "url": "https://en.wikipedia.org/wiki/Common_Lisp_Object_System",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8826,
+    "url": "https://books.google.com/books?id\u003dfgGLZ7WYxCMC\u0026pg\u003dPA97",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8827,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d9",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8828,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0-929306-10-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8829,
+    "url": "https://en.wikipedia.org/wiki/Manual_memory_management",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8830,
+    "url": "https://en.wikipedia.org/wiki/Static_member_function",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8831,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_ref-Bloch_4-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8832,
+    "url": "https://books.google.com/books?id\u003d-yhuY0Wg_QcC\u0026pg\u003dPA181",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8833,
+    "url": "https://en.wikipedia.org/wiki/Database",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8834,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_note-Bloch-4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8835,
+    "url": "https://books.google.com/books?id\u003dDnsM0WD-6iMC\u0026pg\u003dPA131",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8836,
+    "url": "https://en.wikipedia.org/wiki/Robert_Cecil_Martin",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8837,
+    "url": "https://en.wikipedia.org/wiki/Abstract_data_types",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8838,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d18",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8839,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d19",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8840,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d16",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8841,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_ref-:0_2-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8842,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d17",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8843,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_ref-:0_2-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8845,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d14",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8846,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d15",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8847,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d12",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8848,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d13",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8849,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d10",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8850,
+    "url": "https://books.google.com/books?id\u003dZLzt5WtsdzIC\u0026pg\u003dPA50",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8851,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d11",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8852,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-81-7758-910-8",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8853,
+    "url": "https://en.wikipedia.org/wiki/Balance_(accounting)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8854,
+    "url": "https://en.wikipedia.org/wiki/Object_creation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8855,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d20",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8856,
+    "url": "https://books.google.com/books?id\u003dfxUVrhjD4k0C\u0026pg\u003dPA78",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8857,
+    "url": "https://en.wikipedia.org/wiki/Meta-object_protocol",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8858,
+    "url": "https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8859,
+    "url": "https://en.wikipedia.org/wiki/Message_passing",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8860,
+    "url": "https://en.wikipedia.org/wiki/Derived_class",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8862,
+    "url": "https://books.google.com/books?id\u003dWCHZAgAAQBAJ\u0026pg\u003dPA74",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8863,
+    "url": "http://docs.oracle.com/javase/tutorial/java/concepts/object.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8864,
+    "url": "https://en.wikipedia.org/wiki/Category:Method_(computer_programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8865,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d21",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8868,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0-13-235088-4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8869,
+    "url": "http://docs.oracle.com/javase/tutorial/java/IandI/abstract.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8871,
+    "url": "https://en.wikipedia.org/wiki/Remote_method_invocation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8874,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-81-203-1258-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8875,
+    "url": "https://books.google.com/books?id\u003dNXVkcCjPblcC\u0026pg\u003dPA18",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8877,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-13-629049-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8878,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#bodyContent",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8879,
+    "url": "https://en.wikipedia.org/wiki/Instance_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8881,
+    "url": "https://en.wikipedia.org/wiki/Method_body",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8882,
+    "url": "https://en.wikipedia.org/wiki/Compile_time",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8884,
+    "url": "https://books.google.com/books?id\u003d1F6ipojt7DcC\u0026pg\u003dPA79",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8885,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-81-203-2871-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8886,
+    "url": "https://en.wikipedia.org/wiki/Meta-model",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8887,
+    "url": "https://en.wikipedia.org/wiki/File:UML_abstract_methods.svg",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8888,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_note-:0-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8889,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_note-Albahari-5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8890,
+    "url": "https://en.wikipedia.org/wiki/Modularity_(programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8891,
+    "url": "https://en.wikipedia.org/wiki/Method_overriding",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8892,
+    "url": "https://en.wikipedia.org/wiki/Constructor_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8893,
+    "url": "https://en.wikipedia.org/wiki/Class_(programming)#Abstract_and_concrete",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8894,
+    "url": "https://en.wikipedia.org/wiki/Static_variable",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8895,
+    "url": "https://en.wikipedia.org/wiki/Finalizer",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/UML_abstract_methods.svg/330px-UML_abstract_methods.svg.png",
+    "alt": "",
+    "pageTitle": "Method (computer programming) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Method (computer programming) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/BlueJ_Logo.svg/120px-BlueJ_Logo.svg.png",
+    "alt": "",
+    "pageTitle": "BlueJ - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/20210807_13_06_03-BlueJ_FIX.png/250px-20210807_13_06_03-BlueJ_FIX.png",
+    "alt": "",
+    "pageTitle": "BlueJ - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/40px-Free_and_open-source_software_logo_%282009%29.svg.png",
+    "alt": "",
+    "pageTitle": "BlueJ - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/40px-Octicons-terminal.svg.png",
+    "alt": "icon",
+    "pageTitle": "BlueJ - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Sun-Logo.svg/250px-Sun-Logo.svg.png",
+    "alt": "Sun Microsystems logo",
+    "pageTitle": "BlueJ - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "BlueJ - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
   {
     "src": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/20px-Semi-protection-shackle.svg.png",
     "alt": "Page semi-protected",
