@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 790,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME",
+    "title": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python Setup and Usage » 1. Command line and environment | Theme Auto Light Dark | 1. Command line and environment¶ The CPython interpreter scans the command line and the environment for various settings. CPython implementation detail: Other implementations’ command line schemes may differ. See Alternate Implementations for further resources. 1.1. Command line¶ When invoking Python, you may specify any of these options: python [-bBdEhiIOPqRsSuvVWx?] [-c command | -m module-name | script | - ] [args]\n The most common use case is, of course, a simple invocation of a script: python myscript.py\n 1.1.1. Interface options¶ The interpreter interface resembles that of the UNIX shell, but provides some additional methods of invocation: When called with standard input connected to a tty device, it prompts for commands and executes them until an EOF (an end-of-file character, you can produce that with Ctrl-D on UNIX or Ctrl-Z, Enter on Windows) is read. For more on interactive mode, see Interactive Mode. When called with a file name argument or with a file as standard input, it reads and executes a script from that file. When called with a directory name argument, it reads and executes an appropriately named script from that directory. When called with -c command, it executes the Python statement(s) given as command. Here command may contain multiple statements separated by newlines. Leading whitespace is significant in Python statements! When called with -m module-name, the given module is located on the Python module path and executed as a script. In non-interactive mode, the entire input is parsed before it is executed. An interface option terminates the list of options consumed by the interpreter, all consecutive arguments will end up in sys.argv – note that the first element, subscript zero (sys.argv[0]), is a string reflecting the program’s source. -c \u003ccommand\u003e¶ Execute the Python code in command. command can be one or more statements separated by newlines, with significant leading whitespace as in normal module code. If this option is given, the first element of sys.argv will be \"-c\" and the current directory will be added to the start of sys.path (allowing modules in that directory to be imported as top level modules). Raises an auditing event cpython.run_command with argument command. Changed in version 3.14: command is automatically dedented before execution. -m \u003cmodule-name\u003e¶ Search sys.path for the named module and execute its contents as the __main__ module. Since the argument is a module name, you must not give a file extension (.py). The module name should be a valid absolute Python module name, but the implementation may not always enforce this (e.g. it may allow you to use a name that includes a hyphen). Package names (including namespace packages) are also permitted. When a package name is supplied instead of a normal module, the interpreter will execute \u003cpkg\u003e.__main__ as the main module. This behaviour is deliberately similar to the handling of directories and zipfiles that are passed to the interpreter as the script argument. Note This option cannot be used with built-in modules and extension modules written in C, since they do not have Python module files. However, it can still be used for precompiled modules, even if the original source file is not available. If this option is given, the first element of sys.argv will be the full path to the module file (while the module file is being located, the first element will be set to \"-m\"). As with the -c option, the current directory will be added to the start of sys.path. -I option can be used to run the script in isolated mode where sys.path contains neither the current directory nor the user’s site-packages directory. All PYTHON* environment variables are ignored, too. Many standard library modules contain code that is invoked on their execution as a script. An example is the timeit module: python -m timeit -s \"setup here\" \"benchmarked code here\"\npython -m timeit -h # for details\n Raises an auditing event cpython.run_module with argument module-name. See also runpy.run_module() Equivalent functionality directly available to Python code PEP 338 – Executing modules as scripts Changed in version 3.1: Supply the package name to run a __main__ submodule. Changed in version 3.4: namespace packages are also supported - Read commands from standard input (sys.stdin). If standard input is a terminal, -i is implied. If this option is given, the first element of sys.argv will be \"-\" and the current directory will be added to the start of sys.path. Raises an auditing event cpython.run_stdin with no arguments. \u003cscript\u003e Execute the Python code contained in script, which must be a filesystem path (absolute or relative) referring to either a Python file, a directory containing a __main__.py file, or a zipfile containing a __main__.py file. If this option is given, the first element of sys",
+    "scrapedAt": "2026-05-09 00:53:42.21252"
+  },
+  {
+    "id": 789,
+    "url": "https://docs.python.org/3/library/functools.html#functools.reduce",
+    "title": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Functional Programming Modules » functools — Higher-order functions and operations on callable objects | Theme Auto Light Dark | functools — Higher-order functions and operations on callable objects¶ Source code: Lib/functools.py The functools module is for higher-order functions: functions that act on or return other functions. In general, any callable object can be treated as a function for the purposes of this module. The functools module defines the following functions: @functools.cache(user_function)¶ Simple lightweight unbounded function cache. Sometimes called “memoize”. Returns the same as lru_cache(maxsize\u003dNone), creating a thin wrapper around a dictionary lookup for the function arguments. Because it never needs to evict old values, this is smaller and faster than lru_cache() with a size limit. For example: @cache\ndef factorial(n):\n    return n * factorial(n-1) if n else 1\n\n\u003e\u003e\u003e factorial(10)   # no previously cached result, makes 11 recursive calls\n3628800\n\u003e\u003e\u003e factorial(5)    # no new calls, just returns the cached result\n120\n\u003e\u003e\u003e factorial(12)   # two new recursive calls, factorial(10) is cached\n479001600\n The cache is threadsafe so that the wrapped function can be used in multiple threads. This means that the underlying data structure will remain coherent during concurrent updates. It is possible for the wrapped function to be called more than once if another thread makes an additional call before the initial call has been completed and cached. Added in version 3.9. @functools.cached_property(func)¶ Transform a method of a class into a property whose value is computed once and then cached as a normal attribute for the life of the instance. Similar to property(), with the addition of caching. Useful for expensive computed properties of instances that are otherwise effectively immutable. Example: class DataSet:\n\n    def __init__(self, sequence_of_numbers):\n        self._data \u003d tuple(sequence_of_numbers)\n\n    @cached_property\n    def stdev(self):\n        return statistics.stdev(self._data)\n The mechanics of cached_property() are somewhat different from property(). A regular property blocks attribute writes unless a setter is defined. In contrast, a cached_property allows writes. The cached_property decorator only runs on lookups and only when an attribute of the same name doesn’t exist. When it does run, the cached_property writes to the attribute with the same name. Subsequent attribute reads and writes take precedence over the cached_property method and it works like a normal attribute. The cached value can be cleared by deleting the attribute. This allows the cached_property method to run again. The cached_property does not prevent a possible race condition in multi-threaded usage. The getter function could run more than once on the same instance, with the latest run setting the cached value. If the cached property is idempotent or otherwise not harmful to run more than once on an instance, this is fine. If synchronization is needed, implement the necessary locking inside the decorated getter function or around the cached property access. Note, this decorator interferes with the operation of PEP 412 key-sharing dictionaries. This means that instance dictionaries can take more space than usual. Also, this decorator requires that the __dict__ attribute on each instance be a mutable mapping. This means it will not work with some types, such as metaclasses (since the __dict__ attributes on type instances are read-only proxies for the class namespace), and those that specify __slots__ without including __dict__ as one of the defined slots (as such classes don’t provide a __dict__ attribute at all). If a mutable mapping is not available or if space-efficient key sharing is desired, an effect similar to cached_property() can also be achieved by stacking property() on top of lru_cache(). See How do I cache method calls? for more details on how this differs from cached_property(). Added in version 3.8. Changed in version 3.12: Prior to Python 3.12, cached_property included an undocumented lock to ensure that in multi-threaded usage the getter function was guaranteed to run only once per instance. However, the lock was per-property, not per-instance, which could result in unacceptably high lock contention. In Python 3.12+ this locking is removed. functools.cmp_to_key(func)¶ Transform an old-style comparison function to a key function. Used with tools that accept key functions (such as sorted(), min(), max(), heapq.nlargest(), heapq.nsmallest(), itertools.groupby()). This function is primarily used as a transition tool for programs being converted from Python 2 which supported the use of comparison functions. A comparison function is any callable that accepts two arguments, compares them, and returns a negative number for less-than, zero for equality, or a positive number for greater-than. A key fun",
+    "scrapedAt": "2026-05-09 00:53:41.040842"
+  },
+  {
+    "id": 788,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree",
+    "title": "xml.etree.ElementTree — The ElementTree XML API — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Structured Markup Processing Tools » xml.etree.ElementTree — The ElementTree XML API | Theme Auto Light Dark | xml.etree.ElementTree — The ElementTree XML API¶ Source code: Lib/xml/etree/ElementTree.py The xml.etree.ElementTree module implements a simple and efficient API for parsing and creating XML data. Changed in version 3.3: This module will use a fast implementation whenever available. Deprecated since version 3.3: The xml.etree.cElementTree module is deprecated. Note If you need to parse untrusted or unauthenticated data, see XML security. Tutorial¶ This is a short tutorial for using xml.etree.ElementTree (ET in short). The goal is to demonstrate some of the building blocks and basic concepts of the module. XML tree and elements¶ XML is an inherently hierarchical data format, and the most natural way to represent it is with a tree. ET has two classes for this purpose - ElementTree represents the whole XML document as a tree, and Element represents a single node in this tree. Interactions with the whole document (reading and writing to/from files) are usually done on the ElementTree level. Interactions with a single XML element and its sub-elements are done on the Element level. Parsing XML¶ We’ll be using the fictive country_data.xml XML document as the sample data for this section: \u003c?xml version\u003d\"1.0\"?\u003e\n\u003cdata\u003e\n    \u003ccountry name\u003d\"Liechtenstein\"\u003e\n        \u003crank\u003e1\u003c/rank\u003e\n        \u003cyear\u003e2008\u003c/year\u003e\n        \u003cgdppc\u003e141100\u003c/gdppc\u003e\n        \u003cneighbor name\u003d\"Austria\" direction\u003d\"E\"/\u003e\n        \u003cneighbor name\u003d\"Switzerland\" direction\u003d\"W\"/\u003e\n    \u003c/country\u003e\n    \u003ccountry name\u003d\"Singapore\"\u003e\n        \u003crank\u003e4\u003c/rank\u003e\n        \u003cyear\u003e2011\u003c/year\u003e\n        \u003cgdppc\u003e59900\u003c/gdppc\u003e\n        \u003cneighbor name\u003d\"Malaysia\" direction\u003d\"N\"/\u003e\n    \u003c/country\u003e\n    \u003ccountry name\u003d\"Panama\"\u003e\n        \u003crank\u003e68\u003c/rank\u003e\n        \u003cyear\u003e2011\u003c/year\u003e\n        \u003cgdppc\u003e13600\u003c/gdppc\u003e\n        \u003cneighbor name\u003d\"Costa Rica\" direction\u003d\"W\"/\u003e\n        \u003cneighbor name\u003d\"Colombia\" direction\u003d\"E\"/\u003e\n    \u003c/country\u003e\n\u003c/data\u003e\n We can import this data by reading from a file: import xml.etree.ElementTree as ET\ntree \u003d ET.parse(\u0027country_data.xml\u0027)\nroot \u003d tree.getroot()\n Or directly from a string: root \u003d ET.fromstring(country_data_as_string)\n fromstring() parses XML from a string directly into an Element, which is the root element of the parsed tree. Other parsing functions may create an ElementTree. Check the documentation to be sure. As an Element, root has a tag and a dictionary of attributes: \u003e\u003e\u003e root.tag\n\u0027data\u0027\n\u003e\u003e\u003e root.attrib\n{}\n It also has children nodes over which we can iterate: \u003e\u003e\u003e for child in root:\n...     print(child.tag, child.attrib)\n...\ncountry {\u0027name\u0027: \u0027Liechtenstein\u0027}\ncountry {\u0027name\u0027: \u0027Singapore\u0027}\ncountry {\u0027name\u0027: \u0027Panama\u0027}\n Children are nested, and we can access specific child nodes by index: \u003e\u003e\u003e root[0][1].text\n\u00272008\u0027\n Note Not all elements of the XML input will end up as elements of the parsed tree. Currently, this module skips over any XML comments, processing instructions, and document type declarations in the input. Nevertheless, trees built using this module’s API rather than parsing from XML text can have comments and processing instructions in them; they will be included when generating XML output. A document type declaration may be accessed by passing a custom TreeBuilder instance to the XMLParser constructor. Pull API for non-blocking parsing¶ Most parsing functions provided by this module require the whole document to be read at once before returning any result. It is possible to use an XMLParser and feed data into it incrementally, but it is a push API that calls methods on a callback target, which is too low-level and inconvenient for most needs. Sometimes what the user really wants is to be able to parse XML incrementally, without blocking operations, while enjoying the convenience of fully constructed Element objects. The most powerful tool for doing this is XMLPullParser. It does not require a blocking read to obtain the XML data, and is instead fed with data incrementally with XMLPullParser.feed() calls. To get the parsed XML elements, call XMLPullParser.read_events(). Here is an example: \u003e\u003e\u003e parser \u003d ET.XMLPullParser([\u0027start\u0027, \u0027end\u0027])\n\u003e\u003e\u003e parser.feed(\u0027\u003cmytag\u003esometext\u0027)\n\u003e\u003e\u003e list(parser.read_events())\n[(\u0027start\u0027, \u003cElement \u0027mytag\u0027 at 0x7fa66db2be58\u003e)]\n\u003e\u003e\u003e parser.feed(\u0027 more text\u003c/mytag\u003e\u0027)\n\u003e\u003e\u003e for event, elem in parser.read_events():\n...     print(event)\n...     print(elem.tag, \u0027text\u003d\u0027, elem.text)\n...\nend\nmytag text\u003d sometext more text\n The obvious use case is applications that operate in a non-blocking fashion where the XML data is being received from a socket or read incrementally from some storage device. In such cases, blocking reads are unacceptable. Because it’s so flexible, XMLPullParser can be inconvenient to use for simpler use-cases. If you don’t mind your application blocking on reading XML data but would still like to have incremental parsing ",
+    "scrapedAt": "2026-05-09 00:53:39.902936"
+  },
+  {
+    "id": 787,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#imaplib",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 00:53:38.747647"
+  },
+  {
+    "id": 786,
+    "url": "https://github.com/python/cpython/issues/127221",
+    "title": "Add colour to unittest output · Issue #127221 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add colour to unittest output #127221 New issue Copy link New issue Copy link Closed Closed Add colour to unittest output#127221 Copy link Assignees Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description hugovk opened on Nov 24, 2024 Issue body actions Feature or enhancement In Python 3.13, we added colour output to the new REPL, tracebacks and doctest, that can also be controlled with the PYTHON_COLORS, NO_COLOR and FORCE_COLOR environment variables: https://docs.python.org/3/whatsnew/3.13.html#summary-release-highlights https://docs.python.org/3.13/using/cmdline.html#using-on-controlling-color Let\u0027s add colour to unittest output. Linked PRs gh-127221: Add colour to unittest output #127223 Reactions are currently unavailable Metadata Metadata Assignees hugovk Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:53:37.522161"
+  },
+  {
     "id": 785,
     "url": "https://github.com/python/cpython/issues/126374",
     "title": "Support options with optional arguments · Issue #126374 · python/cpython · GitHub",
@@ -5208,26 +5243,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 786,
-    "url": "https://github.com/python/cpython/issues/127221"
-  },
-  {
-    "id": 787,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#imaplib"
-  },
-  {
-    "id": 788,
-    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
-  },
-  {
-    "id": 789,
-    "url": "https://docs.python.org/3/library/functools.html#functools.reduce"
-  },
-  {
-    "id": 790,
-    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME"
   },
   {
     "id": 791,
@@ -133514,10 +133529,687 @@ window.searchData = [
     "id": 98715,
     "url": "https://github.com/python/cpython/issues/126374#top",
     "parentUrl": "https://github.com/python/cpython/issues/126374"
+  },
+  {
+    "id": 98716,
+    "url": "https://github.com/python/cpython/issues/127221#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "id": 98717,
+    "url": "https://github.com/python/cpython/pull/127223",
+    "parentUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "id": 98721,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#summary-release-highlights",
+    "parentUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "id": 98725,
+    "url": "https://github.com/python/cpython/issues/127221#issue-2687656091",
+    "parentUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "id": 98726,
+    "url": "https://docs.python.org/3.13/using/cmdline.html#using-on-controlling-color",
+    "parentUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "id": 98727,
+    "url": "https://github.com/python/cpython/issues/127221#top",
+    "parentUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "id": 99963,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.find",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99964,
+    "url": "https://docs.python.org/3/library/xml.html#xml-security",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99965,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementInclude",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99969,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLParser",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99971,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.start",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99972,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.tostring",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99973,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.parse",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99975,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLID",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99978,
+    "url": "https://www.w3.org/TR/xml-infoset/",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99979,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99980,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.items",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99983,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.clear",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99984,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ParseError.code",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99986,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.canonicalize",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99987,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.iselement",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99988,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.extend",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99990,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/xml/etree/ElementTree.py",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99992,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Comment",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99993,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.fromstringlist",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99994,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.getroot",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99995,
+    "url": "https://www.w3.org/TR/xml-c14n2/",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 99997,
+    "url": "https://www.iana.org/assignments/character-sets/character-sets.xhtml",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100001,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.parse",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100002,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLPullParser.flush",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100003,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.end",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100004,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.keys",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100005,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.tag",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100007,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.fromstring",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100008,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100010,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.register_namespace",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100013,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#elementtree-parsing-xml",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100014,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.findtext",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100015,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementInclude.default_loader",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100017,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#id8",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100018,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#id9",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100019,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.tostringlist",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100021,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.itertext",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100022,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100024,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100025,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100027,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLParser.feed",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100028,
+    "url": "https://docs.python.org/3/library/pyexpat.html#xml.parsers.expat.xmlparser.SetReparseDeferralEnabled",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100029,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.makeelement",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100030,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.iter",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100032,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.findall",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100033,
+    "url": "https://www.w3.org/TR/2006/REC-xml11-20060816/#NT-EncodingDecl",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100036,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.pi",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100037,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLPullParser.feed",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100038,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XML",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100042,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.insert",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100043,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.get",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100044,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.QName",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100045,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.write",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100046,
+    "url": "https://en.wikipedia.org/wiki/XML_namespace",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100049,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLParser.close",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100053,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.indent",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100054,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.tail",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100055,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree._setroot",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100057,
+    "url": "https://docs.python.org/3/library/pyexpat.html#module-xml.parsers.expat",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100059,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.iterparse",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100060,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.remove",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100061,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/xml.etree.elementtree.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100062,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.doctype",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100063,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.findall",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100064,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.start_ns",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100067,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.comment",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100068,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.text",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100069,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.iter",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100070,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLPullParser",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100071,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.set",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100072,
+    "url": "https://www.w3.org/TR/xinclude/",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100073,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementInclude.include",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100076,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.close",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100078,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.iterfind",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100079,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.iterfind",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100080,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLPullParser.read_events",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100081,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.findtext",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100082,
+    "url": "https://www.w3.org/TR/xpath",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100083,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#elementtree-xpath",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100084,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.dump",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100086,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ParseError.position",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100090,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.find",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100092,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLParser.flush",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100093,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.end_ns",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100094,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.C14NWriterTarget",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100095,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLPullParser.close",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100096,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.attrib",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100098,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.append",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100099,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100103,
+    "url": "https://www.w3.org/TR/xml-names/#defaulting",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100104,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.data",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100106,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.SubElement",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100108,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ProcessingInstruction",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100110,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ParseError",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100123,
+    "url": "https://en.wikipedia.org/wiki/Fibonacci_number",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100124,
+    "url": "https://docs.python.org/3/library/functools.html#functools.partial.args",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100125,
+    "url": "https://docs.python.org/3/library/functools.html#",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100126,
+    "url": "https://docs.python.org/3/library/functools.html#functools.cached_property",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100127,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.accumulate",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100130,
+    "url": "https://en.wikipedia.org/wiki/Memoization",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100131,
+    "url": "https://docs.python.org/3/library/functools.html#functools.partial.func",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100138,
+    "url": "https://en.wikipedia.org/wiki/Dynamic_programming",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100143,
+    "url": "https://docs.python.org/3/library/abc.html#abc.abstractmethod",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100144,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/functools.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100145,
+    "url": "https://docs.python.org/3/library/functools.html#functools.partial.keywords",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100150,
+    "url": "https://docs.python.org/3/library/functools.html#functools.singledispatch.register",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100152,
+    "url": "https://docs.python.org/3/faq/programming.html#faq-cache-method-calls",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100159,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/functools.py",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100171,
+    "url": "https://peps.python.org/pep-0412/",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100182,
+    "url": "https://docs.python.org/3/library/functools.html#functools.wraps",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100184,
+    "url": "https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_Recently_Used_(LRU)",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100186,
+    "url": "https://docs.python.org/3/library/functools.html#functools.lru_cache",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100189,
+    "url": "https://docs.python.org/3/library/functools.html#functools.singledispatchmethod",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100193,
+    "url": "https://docs.python.org/3/library/functools.html#functools.cache",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100194,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d17482",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "xml.etree.ElementTree — The ElementTree XML API — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "xml.etree.ElementTree — The ElementTree XML API — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#imaplib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#imaplib"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d64\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "hugovk",
+    "pageTitle": "Add colour to unittest output · Issue #127221 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@hugovk",
+    "pageTitle": "Add colour to unittest output · Issue #127221 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@hugovk",
+    "pageTitle": "Add colour to unittest output · Issue #127221 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d64\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "Add colour to unittest output · Issue #127221 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127221"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d80",
     "alt": "@serhiy-storchaka",
