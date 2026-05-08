@@ -7,13 +7,18 @@ public class DbCheck {
     public static void main(String[] args) throws Exception {
         DatabaseConfig dbConfig = DatabaseConfig.getInstance();
         try (Connection conn = dbConfig.getConnection();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT url, parent_url FROM pages LIMIT 20")) {
+             Statement stmt = conn.createStatement()) {
             
-            System.out.println("URL | Parent URL");
-            System.out.println("----------------");
-            while (rs.next()) {
-                System.out.println(rs.getString("url") + " | " + rs.getString("parent_url"));
+            try (ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM pages WHERE parent_url IS NOT NULL")) {
+                if (rs.next()) {
+                    System.out.println("Total pages with parent_url: " + rs.getInt(1));
+                }
+            }
+            
+            try (ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM pages")) {
+                if (rs.next()) {
+                    System.out.println("Total pages in database: " + rs.getInt(1));
+                }
             }
         }
     }
