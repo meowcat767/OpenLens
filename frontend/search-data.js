@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1193,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#importlib-abc",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:09:51.13572"
+  },
+  {
+    "id": 1192,
+    "url": "https://github.com/python/cpython/issues/112887",
+    "title": "[CVE-2025-4435] tarfile still extracts problematic files when filter is set and errorlevel is 0 · Issue #112887 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k [CVE-2025-4435] tarfile still extracts problematic files when filter is set and errorlevel is 0 #112887 New issue Copy link New issue Copy link Closed Closed [CVE-2025-4435] tarfile still extracts problematic files when filter is set and errorlevel is 0#112887 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or errortype-securityA security issueA security issue Description ChuckWoodraska opened on Dec 8, 2023 Issue body actions Bug report Bug description: From the docs https://docs.python.org/3.11/library/tarfile.html#tarfile.data_filter it sounds like setting errorlevel to 0 and having a filter should logged that the offending member was skipped and continue extraction. It looks like it actually logs the filter error and extracts the offending member. The below code shows the filtererror and the extraction. From the docs: When a filter refuses to extract a file, it will raise an appropriate exception, a subclass of FilterError. This will abort the extraction if TarFile.errorlevel is 1 or more. With errorlevel\u003d0 the error will be logged and the member will be skipped, but extraction will continue. I was expecting it to tell me the file it skipped and not have any extraction with the given code. import tarfile\n\nwith open(\u0027test.txt\u0027, \u0027w\u0027) as f:\n    f.write(\u0027Hello\u0027)\n\nwith tarfile.open(\u0027my_archive.tar\u0027, \u0027w:xz\u0027) as tar:\n    tar.add(\u0027test.txt\u0027, arcname\u003d\u0027../test.txt\u0027)\n\nwith tarfile.open(\"my_archive.tar\") as tar:\n    tar.debug \u003d True\n    tar.errorlevel \u003d 0\n    print(tar.errorlevel)\n\n    tar.extractall(filter\u003d\"data\") CPython versions tested on: 3.11 Operating systems tested on: macOS Linked PRs gh-112887: Fix tarfile FilterError handling to skip member extraction #112954 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or errortype-securityA security issueA security issue Projects Tarfile issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:09:49.886214"
+  },
+  {
+    "id": 1191,
+    "url": "https://peps.python.org/pep-0011/#tier-3",
+    "title": "PEP 11 – CPython platform support | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 11 – CPython platform support PEP 11 – CPython platform support Author: Martin von Löwis \u003cmartin at v.loewis.de\u003e, Brett Cannon \u003cbrett at python.org\u003e Status: Active Type: Process Created: 07-Jul-2002 Post-History: 18-Aug-2007, 14-May-2014, 20-Feb-2015, 10-Mar-2022, 21-Nov-2025 Table of Contents Abstract Rationale Support tiers Tier 1 Tier 2 Tier 3 Unsupported platforms Notes Microsoft Windows POSIX Legacy C Locale Unsupporting platforms No-longer-supported platforms Discussions Copyright Abstract This PEP documents how an operating system (platform) becomes supported in CPython, what platforms are currently supported, and documents past support. Rationale Over time, the CPython source code has collected various pieces of platform-specific code, which, at some point in time, was considered necessary to use CPython on a specific platform. Without access to this platform, it is not possible to determine whether this code is still needed. As a result, this code may either break during CPython’s evolution, or it may become unnecessary as the platforms evolve as well. Allowing these fragments to grow poses the risk of unmaintainability: without having experts for a large number of platforms, it is not possible to determine whether a certain change to the CPython source code will work on all supported platforms. To reduce this risk, this PEP specifies what is required for a platform to be considered supported by the CPython core team, as well as providing a procedure to remove code for platforms with few or no CPython users. On the other hand, allowing these fragments in the main repository can promote collaboration, can help identify non-portable parts of the code base, and is necessary for bootstrapping support for a “new” platform. This PEP specifies what it means for a platform to be “unsupported”, and how the core team handles code for such platforms. This PEP also explicitly lists what platforms are directly supported by the CPython development team. Support tiers Platform support is broken down into tiers. Each tier comes with different requirements which lead to different promises being made about support. To be promoted to a tier, steering council support is required and is expected to be driven by team consensus. Demotion to a lower tier occurs when the requirements of the current tier are no longer met for a platform for an extended period of time based on the judgment of the release manager or steering council. For platforms which no longer meet the requirements of any tier by b1 of a new feature release, an announcement will be made to warn the community of the pending removal of support for the platform (e.g. in the b1 announcement). If the platform is not brought into line for at least one of the tiers by the first release candidate, it will be listed as unsupported in this PEP. Tier 1 STATUS CI failures block releases. Changes which would break the main branch are not allowed to be merged; any breakage should be fixed or reverted immediately. All core developers are responsible to keep main, and thus these platforms, working. Failures on these platforms block a release. Target Triple Notes aarch64-apple-darwin clang aarch64-unknown-linux-gnu glibc, gcc i686-pc-windows-msvc x86_64-pc-windows-msvc x86_64-unknown-linux-gnu glibc, gcc Tier 2 STATUS Must have a reliable buildbot. At least two core developers are signed up to support the platform. Changes which break any of these platforms are to be fixed or reverted within 24 hours. Failures on these platforms block a release. Target Triple Notes Contacts aarch64-unknown-linux-gnu glibc, clang Victor Stinner, Gregory P. Smith wasm32-unknown-wasip1 WASI SDK, Wasmtime Brett Cannon, Michael Droettboom, Savannah Ostrowski x86_64-apple-darwin macOS, clang Sam Gross, Barry Warsaw, Ronald Oussoren x86_64-unknown-linux-gnu glibc, clang Victor Stinner, Gregory P. Smith Tier 3 STATUS Must have a reliable buildbot. At least one core developer is signed up to support the platform. No response SLA to failures. Failures on these platforms do not block a release. Target Triple Notes Contacts aarch64-linux-android Russell Keith-Magee, Petr Viktorin aarch64-pc-windows-msvc Steve Dower arm64-apple-ios iOS on device Russell Keith-Magee, Ned Deily arm64-apple-ios-simulator iOS on M1 macOS simulator Russell Keith-Magee, Ned Deily armv7l-unknown-linux-gnueabihf 32-bit Raspberry Pi OS, gcc Gregory P. Smith aarch64-unknown-linux-gnu 64-bit Raspberry Pi OS, gcc Savannah Ostrowski, Stan Ulbrych powerpc64le-unknown-linux-gnu glibc, clang glibc, gcc Victor Stinner Victor Stinner s390x-unknown-linux-gnu glibc, gcc Victor Stinner wasm32-unknown-emscripten emcc Russell Keith-Magee x86_64-linux-android Russell Keith-Magee, Petr Viktorin x86_64-unknown-freebsd BSD libc, clang Victor Stinner Unsupported platforms All platforms not listed in the above tiers are unsupported by the core team. The cor",
+    "scrapedAt": "2026-05-09 01:09:47.583241"
+  },
+  {
+    "id": 1190,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#faulthandler",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:09:46.174045"
+  },
+  {
+    "id": 1189,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.get_context",
+    "title": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » multiprocessing — Process-based parallelism | Theme Auto Light Dark | multiprocessing — Process-based parallelism¶ Source code: Lib/multiprocessing/ Availability: not Android, not iOS, not WASI. This module is not supported on mobile platforms or WebAssembly platforms. Introduction¶ multiprocessing is a package that supports spawning processes using an API similar to the threading module. The multiprocessing package offers both local and remote concurrency, effectively side-stepping the Global Interpreter Lock by using subprocesses instead of threads. Due to this, the multiprocessing module allows the programmer to fully leverage multiple processors on a given machine. It runs on both POSIX and Windows. The multiprocessing module also introduces the Pool object which offers a convenient means of parallelizing the execution of a function across multiple input values, distributing the input data across processes (data parallelism). The following example demonstrates the common practice of defining such functions in a module so that child processes can successfully import that module. This basic example of data parallelism using Pool, from multiprocessing import Pool\n\ndef f(x):\n    return x*x\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    with Pool(5) as p:\n        print(p.map(f, [1, 2, 3]))\n will print to standard output [1, 4, 9]\n The multiprocessing module also introduces APIs which do not have analogs in the threading module, like the ability to terminate, interrupt or kill a running process. See also concurrent.futures.ProcessPoolExecutor offers a higher level interface to push tasks to a background process without blocking execution of the calling process. Compared to using the Pool interface directly, the concurrent.futures API more readily allows the submission of work to the underlying process pool to be separated from waiting for the results. The Process class¶ In multiprocessing, processes are spawned by creating a Process object and then calling its start() method. Process follows the API of threading.Thread. A trivial example of a multiprocess program is from multiprocessing import Process\n\ndef f(name):\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n To show the individual process IDs involved, here is an expanded example: from multiprocessing import Process\nimport os\n\ndef info(title):\n    print(title)\n    print(\u0027module name:\u0027, __name__)\n    print(\u0027parent process:\u0027, os.getppid())\n    print(\u0027process id:\u0027, os.getpid())\n\ndef f(name):\n    info(\u0027function f\u0027)\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    info(\u0027main line\u0027)\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n For an explanation of why the if __name__ \u003d\u003d \u0027__main__\u0027 part is necessary, see Programming guidelines. The arguments to Process usually need to be unpickleable from within the child process. If you tried typing the above example directly into a REPL it could lead to an AttributeError in the child process trying to locate the f function in the __main__ module. Contexts and start methods¶ Depending on the platform, multiprocessing supports three ways to start a process. These start methods are spawn The parent process starts a fresh Python interpreter process. The child process will only inherit those resources necessary to run the process object’s run() method. In particular, unnecessary file descriptors and handles from the parent process will not be inherited. Starting a process using this method is rather slow compared to using fork or forkserver. Available on POSIX and Windows platforms. The default on Windows and macOS. fork The parent process uses os.fork() to fork the Python interpreter. The child process, when it begins, is effectively identical to the parent process. All resources of the parent are inherited by the child process. Note that safely forking a multithreaded process is problematic. Available on POSIX systems. Changed in version 3.14: This is no longer the default start method on any platform. Code that requires fork must explicitly specify that via get_context() or set_start_method(). Changed in version 3.12: If Python is able to detect that your process has multiple threads, the os.fork() function that this start method calls internally will raise a DeprecationWarning. Use a different start method. See the os.fork() documentation for further explanation. forkserver When the program starts and selects the forkserver start method, a server process is spawned. From then on, whenever a new process is needed, the parent process connects to the server and requests that it fork a new process. The fork server process is single threaded unless system libraries or preloaded imports spawn threads as a side-effect so it is generally safe for it to use os.fork(). No unnecessary resources are inherited. Availabl",
+    "scrapedAt": "2026-05-09 01:09:44.929081"
+  },
+  {
     "id": 1188,
     "url": "https://github.com/python/cpython/issues/74028",
     "title": "Make Executor.map work with infinite/large inputs correctly · Issue #74028 · python/cpython · GitHub",
@@ -7978,26 +8013,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1189,
-    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.get_context"
-  },
-  {
-    "id": 1190,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#faulthandler"
-  },
-  {
-    "id": 1191,
-    "url": "https://peps.python.org/pep-0011/#tier-3"
-  },
-  {
-    "id": 1192,
-    "url": "https://github.com/python/cpython/issues/112887"
-  },
-  {
-    "id": 1193,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#importlib-abc"
   },
   {
     "id": 1194,
@@ -215665,10 +215680,258 @@ window.searchData = [
     "id": 226764,
     "url": "https://github.com/python/cpython/pull/125663",
     "parentUrl": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "id": 228305,
+    "url": "https://mail.python.org/archives/list/python-committers@python.org/thread/K757345KX6W5ZLTWYBUXOXQTJJTL7GW5/",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228306,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0011.rst",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228307,
+    "url": "https://learn.microsoft.com/en-us/lifecycle/policies/fixed",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228308,
+    "url": "https://peps.python.org/pep-0011/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228309,
+    "url": "https://learn.microsoft.com/en-us/lifecycle/policies/modern",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228310,
+    "url": "https://peps.python.org/pep-0011/#tier-2",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228311,
+    "url": "http://www.syllable.org/discussion.php?id\u003d2320",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228312,
+    "url": "https://mail.python.org/archives/list/python-dev@python.org/thread/T7WTUJ6TD3IGYGWV3M4PHJWNLM2WPZAW/",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228313,
+    "url": "https://peps.python.org/pep-0011/#tier-1",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228315,
+    "url": "https://peps.python.org/pep-0011/#legacy-c-locale",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228316,
+    "url": "https://peps.python.org/pep-0011/#posix",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228317,
+    "url": "https://mail.python.org/archives/list/python-dev@python.org/thread/DSSGXU5LBCMKYMZBRVB6RF3YAB6ST5AV/",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228318,
+    "url": "https://peps.python.org/pep-0011/#support-tiers",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228319,
+    "url": "https://peps.python.org/pep-0011/#unsupporting-platforms",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228320,
+    "url": "https://github.com/python/cpython/actions/workflows/build.yml?query\u003dbranch%3Amain+is%3Acompleted",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228321,
+    "url": "https://peps.python.org/pep-0011/#unsupported-platforms",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228322,
+    "url": "https://learn.microsoft.com/en-us/lifecycle/faq/extended-security-updates",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228323,
+    "url": "https://devguide.python.org/core-team/experts/#platforms",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228324,
+    "url": "https://buildbot.python.org/all/#/builders?tags\u003d%2B3.x\u0026tags\u003d%2Btier-2",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228325,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0011.rst",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228326,
+    "url": "https://mail.python.org/archives/list/python-dev@python.org/thread/OEQHRR2COYZDL6LZ42RBZOMIUB32WI34/",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228327,
+    "url": "https://buildbot.python.org/all/#/builders?tags\u003d%2B3.x\u0026tags\u003d%2Btier-3",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228328,
+    "url": "https://learn.microsoft.com/en-us/lifecycle/faq/windows",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228329,
+    "url": "https://peps.python.org/pep-0011/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228330,
+    "url": "https://peps.python.org/pep-0011/#discussions",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228331,
+    "url": "https://peps.python.org/pep-0011/#microsoft-windows",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228332,
+    "url": "https://peps.python.org/pep-0011/#no-longer-supported-platforms",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228333,
+    "url": "https://peps.python.org/pep-0011/#notes",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228334,
+    "url": "https://discuss.python.org/t/104986",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228335,
+    "url": "https://peps.python.org/pep-0011/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228336,
+    "url": "https://mail.python.org/archives/list/python-committers@python.org/thread/V3OZPJGA5VJFYM6XYGPZIVPOIYKX6KTD/",
+    "parentUrl": "https://peps.python.org/pep-0011/#tier-3"
+  },
+  {
+    "id": 228339,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22type-security%22",
+    "parentUrl": "https://github.com/python/cpython/issues/112887"
+  },
+  {
+    "id": 228340,
+    "url": "https://github.com/python/cpython/pull/112954",
+    "parentUrl": "https://github.com/python/cpython/issues/112887"
+  },
+  {
+    "id": 228341,
+    "url": "https://github.com/orgs/python/projects/11",
+    "parentUrl": "https://github.com/python/cpython/issues/112887"
+  },
+  {
+    "id": 228345,
+    "url": "https://github.com/python/cpython/issues/112887#issue-2033249221",
+    "parentUrl": "https://github.com/python/cpython/issues/112887"
+  },
+  {
+    "id": 228346,
+    "url": "https://docs.python.org/3.11/library/tarfile.html#tarfile.FilterError",
+    "parentUrl": "https://github.com/python/cpython/issues/112887"
+  },
+  {
+    "id": 228349,
+    "url": "https://docs.python.org/3.11/library/tarfile.html#tarfile.data_filter",
+    "parentUrl": "https://github.com/python/cpython/issues/112887"
+  },
+  {
+    "id": 228350,
+    "url": "https://docs.python.org/3.11/library/tarfile.html#tarfile.TarFile.errorlevel",
+    "parentUrl": "https://github.com/python/cpython/issues/112887"
+  },
+  {
+    "id": 228351,
+    "url": "https://github.com/python/cpython/issues/112887#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/112887"
+  },
+  {
+    "id": 228352,
+    "url": "https://github.com/python/cpython/issues/112887#top",
+    "parentUrl": "https://github.com/python/cpython/issues/112887"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#importlib-abc"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#importlib-abc"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/737690?u\u003db8db203aac58b072bfabec2fe3acd2e0b0e01284\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@ChuckWoodraska",
+    "pageTitle": "[CVE-2025-4435] tarfile still extracts problematic files when filter is set and errorlevel is 0 · Issue #112887 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112887"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/737690?u\u003db8db203aac58b072bfabec2fe3acd2e0b0e01284\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@ChuckWoodraska",
+    "pageTitle": "[CVE-2025-4435] tarfile still extracts problematic files when filter is set and errorlevel is 0 · Issue #112887 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112887"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#faulthandler"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#faulthandler"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.get_context"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.get_context"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/92820050?v\u003d4\u0026size\u003d80",
     "alt": "@MojoVampire",
