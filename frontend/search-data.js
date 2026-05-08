@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 679,
+    "url": "https://docs.python.org/3/bugs.html",
+    "title": "Dealing with Bugs — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Dealing with Bugs | Theme Auto Light Dark | Dealing with Bugs¶ Python is a mature programming language which has established a reputation for stability. In order to maintain this reputation, the developers would like to know of any deficiencies you find in Python. It can be sometimes faster to fix bugs yourself and contribute patches to Python as it streamlines the process and involves fewer people. Learn how to contribute. Documentation bugs¶ If you find a bug in this documentation or would like to propose an improvement, please submit a bug report on the issue tracker. If you have a suggestion on how to fix it, include that as well. You can also open a discussion item on our Documentation Discourse forum. If you find a bug in the theme (HTML / CSS / JavaScript) of the documentation, please submit a bug report on the python-doc-theme issue tracker. See also Documentation bugs A list of documentation bugs that have been submitted to the Python issue tracker. Issue Tracking Overview of the process involved in reporting an improvement on the tracker. Helping with Documentation Comprehensive guide for individuals that are interested in contributing to Python documentation. Documentation Translations A list of GitHub pages for documentation translation and their primary contacts. Using the Python issue tracker¶ Issue reports for Python itself should be submitted via the GitHub issues tracker (https://github.com/python/cpython/issues). The GitHub issues tracker offers a web form which allows pertinent information to be entered and submitted to the developers. The first step in filing a report is to determine whether the problem has already been reported. The advantage in doing so, aside from saving the developers’ time, is that you learn what has been done to fix it; it may be that the problem has already been fixed for the next release, or additional information is needed (in which case you are welcome to provide it if you can!). To do this, search the tracker using the search box at the top of the page. If the problem you’re reporting is not already in the list, log in to GitHub. If you don’t already have a GitHub account, create a new account using the “Sign up” link. It is not possible to submit a bug report anonymously. Being now logged in, you can submit an issue. Click on the “New issue” button in the top bar to report a new issue. The submission form has two fields, “Title” and “Comment”. For the “Title” field, enter a very short description of the problem; fewer than ten words is good. In the “Comment” field, describe the problem in detail, including what you expected to happen and what did happen. Be sure to include whether any extension modules were involved, and what hardware and software platform you were using (including version information as appropriate). Each issue report will be reviewed by a developer who will determine what needs to be done to correct the problem. You will receive an update each time an action is taken on the issue. See also How to Report Bugs Effectively Article which goes into some detail about how to create a useful bug report. This describes what kind of information is useful and why it is useful. Bug Writing Guidelines Information about writing a good bug report. Some of this is specific to the Mozilla project, but describes general good practices. Getting started contributing to Python yourself¶ Beyond just reporting bugs that you find, you are also welcome to submit patches to fix them. You can find more information on how to get started patching Python in the Python Developer’s Guide. If you have questions, the core-mentorship mailing list is a friendly place to get answers to any and all questions pertaining to the process of fixing issues in Python. Table of Contents Dealing with Bugs Documentation bugs Using the Python issue tracker Getting started contributing to Python yourself Previous topic About this documentation Next topic Copyright This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Dealing with Bugs | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 00:49:07.341762"
+  },
+  {
+    "id": 678,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-finally-syntaxwarning",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 00:49:06.133923"
+  },
+  {
+    "id": 677,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-X",
+    "title": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python Setup and Usage » 1. Command line and environment | Theme Auto Light Dark | 1. Command line and environment¶ The CPython interpreter scans the command line and the environment for various settings. CPython implementation detail: Other implementations’ command line schemes may differ. See Alternate Implementations for further resources. 1.1. Command line¶ When invoking Python, you may specify any of these options: python [-bBdEhiIOPqRsSuvVWx?] [-c command | -m module-name | script | - ] [args]\n The most common use case is, of course, a simple invocation of a script: python myscript.py\n 1.1.1. Interface options¶ The interpreter interface resembles that of the UNIX shell, but provides some additional methods of invocation: When called with standard input connected to a tty device, it prompts for commands and executes them until an EOF (an end-of-file character, you can produce that with Ctrl-D on UNIX or Ctrl-Z, Enter on Windows) is read. For more on interactive mode, see Interactive Mode. When called with a file name argument or with a file as standard input, it reads and executes a script from that file. When called with a directory name argument, it reads and executes an appropriately named script from that directory. When called with -c command, it executes the Python statement(s) given as command. Here command may contain multiple statements separated by newlines. Leading whitespace is significant in Python statements! When called with -m module-name, the given module is located on the Python module path and executed as a script. In non-interactive mode, the entire input is parsed before it is executed. An interface option terminates the list of options consumed by the interpreter, all consecutive arguments will end up in sys.argv – note that the first element, subscript zero (sys.argv[0]), is a string reflecting the program’s source. -c \u003ccommand\u003e¶ Execute the Python code in command. command can be one or more statements separated by newlines, with significant leading whitespace as in normal module code. If this option is given, the first element of sys.argv will be \"-c\" and the current directory will be added to the start of sys.path (allowing modules in that directory to be imported as top level modules). Raises an auditing event cpython.run_command with argument command. Changed in version 3.14: command is automatically dedented before execution. -m \u003cmodule-name\u003e¶ Search sys.path for the named module and execute its contents as the __main__ module. Since the argument is a module name, you must not give a file extension (.py). The module name should be a valid absolute Python module name, but the implementation may not always enforce this (e.g. it may allow you to use a name that includes a hyphen). Package names (including namespace packages) are also permitted. When a package name is supplied instead of a normal module, the interpreter will execute \u003cpkg\u003e.__main__ as the main module. This behaviour is deliberately similar to the handling of directories and zipfiles that are passed to the interpreter as the script argument. Note This option cannot be used with built-in modules and extension modules written in C, since they do not have Python module files. However, it can still be used for precompiled modules, even if the original source file is not available. If this option is given, the first element of sys.argv will be the full path to the module file (while the module file is being located, the first element will be set to \"-m\"). As with the -c option, the current directory will be added to the start of sys.path. -I option can be used to run the script in isolated mode where sys.path contains neither the current directory nor the user’s site-packages directory. All PYTHON* environment variables are ignored, too. Many standard library modules contain code that is invoked on their execution as a script. An example is the timeit module: python -m timeit -s \"setup here\" \"benchmarked code here\"\npython -m timeit -h # for details\n Raises an auditing event cpython.run_module with argument module-name. See also runpy.run_module() Equivalent functionality directly available to Python code PEP 338 – Executing modules as scripts Changed in version 3.1: Supply the package name to run a __main__ submodule. Changed in version 3.4: namespace packages are also supported - Read commands from standard input (sys.stdin). If standard input is a terminal, -i is implied. If this option is given, the first element of sys.argv will be \"-\" and the current directory will be added to the start of sys.path. Raises an auditing event cpython.run_stdin with no arguments. \u003cscript\u003e Execute the Python code contained in script, which must be a filesystem path (absolute or relative) referring to either a Python file, a directory containing a __main__.py file, or a zipfile containing a __main__.py file. If this option is given, the first element of sys",
+    "scrapedAt": "2026-05-09 00:49:04.945686"
+  },
+  {
+    "id": 676,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32",
+    "title": "Integer Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)",
+    "scrapedAt": "2026-05-09 00:49:03.80728"
+  },
+  {
+    "id": 675,
+    "url": "https://www.python.org/search",
+    "title": "Welcome to Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Search Python.org",
+    "scrapedAt": "2026-05-09 00:49:02.565123"
+  },
+  {
     "id": 674,
     "url": "http://wiki.python.org/moin/IntroductoryBooks",
     "title": "IntroductoryBooks",
@@ -4438,26 +4473,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 675,
-    "url": "https://www.python.org/search"
-  },
-  {
-    "id": 676,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
-  },
-  {
-    "id": 677,
-    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
-  },
-  {
-    "id": 678,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-finally-syntaxwarning"
-  },
-  {
-    "id": 679,
-    "url": "https://docs.python.org/3/bugs.html"
   },
   {
     "id": 680,
@@ -107744,10 +107759,1253 @@ window.searchData = [
     "id": 73356,
     "url": "http://www.cs.otago.ac.nz/student/papers.php?name\u003dCOMP150",
     "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73358,
+    "url": "https://docs.python.org/3/c-api/long.html#deprecated-api",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73359,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUnsignedLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73360,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUnsignedLongLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73364,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73366,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongLayout.bits_per_digit",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73367,
+    "url": "https://docs.python.org/3/c-api/long.html#pylongwriter-api",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73369,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsNativeBytes",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73370,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsLongLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73372,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUnicodeObject",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73373,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AS_LONG",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73374,
+    "url": "https://docs.python.org/3/c-api/long.html#integer-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73375,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_SHIFT",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73376,
+    "url": "https://docs.python.org/3/library/sys.html#sys.int_info",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73379,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongLayout.digit_size",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73381,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromString",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73384,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsSsize_t",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73389,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUnsignedLongMask",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73392,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongLayout.digits_order",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73394,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_GetInfo",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73395,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73396,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/long.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73397,
+    "url": "https://docs.python.org/3/glossary.html#term-named-tuple",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73400,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongLayout",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73401,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongExport.value",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73403,
+    "url": "https://docs.python.org/3/c-api/long.html#c.Py_ASNATIVEBYTES_REJECT_NEGATIVE",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73404,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromSsize_t",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73405,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73406,
+    "url": "https://docs.python.org/3/c-api/none.html",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73407,
+    "url": "https://docs.python.org/3/c-api/long.html#export-api",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73408,
+    "url": "https://docs.python.org/3/c-api/long.html#c.Py_ASNATIVEBYTES_LITTLE_ENDIAN",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73410,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyTypeObject",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73411,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsLongLongAndOverflow",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73412,
+    "url": "https://docs.python.org/3/c-api/long.html#c.Py_ASNATIVEBYTES_BIG_ENDIAN",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73413,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyObject",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73414,
+    "url": "https://docs.python.org/3/c-api/bool.html",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73415,
+    "url": "https://docs.python.org/3/c-api/concrete.html",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73416,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73419,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongExport",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73420,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUnsignedLongLongMask",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73423,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongExport.negative",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73424,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsDouble",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73425,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Occurred",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73426,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromSize_t",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73430,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongExport.ndigits",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73431,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUnsignedNativeBytes",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73433,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongExport.digits",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73434,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyUnstable_Long_IsCompact",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73435,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_CheckExact",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73436,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsPid",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73437,
+    "url": "https://docs.python.org/3/c-api/long.html#c.Py_ASNATIVEBYTES_DEFAULTS",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73438,
+    "url": "https://docs.python.org/3/c-api/long.html#c.Py_ASNATIVEBYTES_NATIVE_ENDIAN",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73439,
+    "url": "https://docs.python.org/3/c-api/long.html#c.Py_ASNATIVEBYTES_UNSIGNED_BUFFER",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73440,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUnsignedLongLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73441,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsSize_t",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73442,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73443,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsVoidPtr",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73444,
+    "url": "https://docs.python.org/3/library/exceptions.html#OverflowError",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73445,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_MASK",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73446,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromVoidPtr",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73450,
+    "url": "https://docs.python.org/3/c-api/stable.html#stable",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73451,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromPid",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73452,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsLongAndOverflow",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73453,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongLayout.digit_endianness",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73454,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsInt",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73455,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromDouble",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73456,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUnsignedLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73457,
+    "url": "https://docs.python.org/3/c-api/long.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73458,
+    "url": "https://docs.python.org/3/c-api/long.html#c.Py_ASNATIVEBYTES_ALLOW_INDEX",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73459,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyUnstable_Long_CompactValue",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73460,
+    "url": "https://docs.python.org/3/c-api/intro.html#c.Py_ssize_t",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73461,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#integers",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73462,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_BASE",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73464,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromLongLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73467,
+    "url": "https://docs.python.org/3/c-api/stable.html#unstable-c-api",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73468,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromNativeBytes",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 73471,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-W",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73472,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-V",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73473,
+    "url": "https://docs.python.org/3/using/cmdline.html#miscellaneous-options",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73478,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPROFILEIMPORTTIME",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73479,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PYMEM_DOMAIN_MEM",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73480,
+    "url": "https://docs.python.org/3/library/readline.html#module-readline",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73481,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-d",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73483,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-b",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73484,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-i",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73485,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-h",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73486,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGABRT",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73488,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONNODEBUGRANGES",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73489,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-q",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73490,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#import",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73491,
+    "url": "https://docs.python.org/3/using/cmdline.html#debug-mode-variables",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73492,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-u",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73493,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-s",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73494,
+    "url": "https://docs.python.org/3/library/runpy.html#runpy.run_path",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73495,
+    "url": "https://docs.python.org/3/reference/introduction.html#implementations",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73496,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#tut-invoking",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73497,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-E",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73498,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONMALLOCSTATS",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73500,
+    "url": "https://docs.python.org/3/using/cmdline.html#command-line",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73501,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-B",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73502,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig-user-scheme",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73503,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONASYNCIODEBUG",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73504,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-I",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73505,
+    "url": "https://docs.python.org/3/using/cmdline.html#",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73506,
+    "url": "https://docs.python.org/3/tutorial/appendix.html#tut-interac",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73507,
+    "url": "https://docs.python.org/3/library/faulthandler.html#module-faulthandler",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73508,
+    "url": "https://docs.python.org/3/c-api/memory.html#pymalloc",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73509,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-P",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73511,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-S",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73512,
+    "url": "https://docs.python.org/3/glossary.html#term-REPL",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73514,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-R",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73515,
+    "url": "https://docs.python.org/3/library/sys.html#sys.__interactivehook__",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73516,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDUMPREFS",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73518,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-version",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73519,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_FROZEN_MODULES",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73520,
+    "url": "https://peps.python.org/pep-0538/",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73522,
+    "url": "https://docs.python.org/3/using/cmdline.html#generic-options",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73523,
+    "url": "https://docs.python.org/3/glossary.html#term-bytecode",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73524,
+    "url": "https://docs.python.org/3/using/configure.html#debug-build",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73525,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONNOUSERSITE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73526,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#module-tracemalloc",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73527,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-0",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73529,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONWARNINGS",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73530,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONCASEOK",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73531,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_PERF_JIT_SUPPORT",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73534,
+    "url": "https://force-color.org/",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73536,
+    "url": "https://ocert.org/advisories/ocert-2011-003.html",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73537,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGFPE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73538,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPERFSUPPORT",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73539,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONBREAKPOINT",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73540,
+    "url": "https://docs.python.org/3/c-api/memory.html#mimalloc",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73541,
+    "url": "https://docs.python.org/3/using/cmdline.html#command-line-and-environment",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73542,
+    "url": "https://docs.python.org/3/library/sys.html#sys.platlibdir",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73543,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONIOENCODING",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73544,
+    "url": "https://docs.python.org/3/library/exceptions.html#EncodingWarning",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73545,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONUSERBASE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73546,
+    "url": "https://docs.python.org/3/using/cmdline.html#controlling-color",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73547,
+    "url": "https://docs.python.org/3/library/io.html#io-encoding-warning",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73548,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDEVMODE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73550,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONINSPECT",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73551,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__hash__",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73552,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-trace-refs",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73553,
+    "url": "https://docs.python.org/3/library/sys.html#sys.ps1",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73554,
+    "url": "https://docs.python.org/3/library/runpy.html#runpy.run_module",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73555,
+    "url": "https://docs.python.org/3/using/cmdline.html#environment-variables",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73556,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONTRACEMALLOC",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73557,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_COLORS",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73558,
+    "url": "https://docs.python.org/3/library/site.html#site.USER_SITE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73560,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-help-env",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73562,
+    "url": "https://docs.python.org/3/using/unix.html",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73564,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONVERBOSE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73567,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGBUS",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73569,
+    "url": "https://docs.python.org/3/library/sys.html#sys.ps2",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73570,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PYMEM_DOMAIN_OBJ",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73571,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDUMPREFSFILE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73572,
+    "url": "https://docs.python.org/3/library/sys.html#sys.stderr",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73576,
+    "url": "https://docs.python.org/3/howto/perf_profiling.html#perf-profiling",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73577,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHASHSEED",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73578,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONWARNDEFAULTENCODING",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73579,
+    "url": "https://docs.python.org/3/library/__main__.html#module-__main__",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73580,
+    "url": "https://docs.python.org/3/reference/import.html#pyc-invalidation",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73581,
+    "url": "https://docs.python.org/3/library/asyncio-dev.html#asyncio-debug-mode",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73583,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPYCACHEPREFIX",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73584,
+    "url": "https://docs.python.org/3/c-api/memory.html#pymem-debug-hooks",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73585,
+    "url": "https://peps.python.org/pep-0338/",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73587,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-help",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73589,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.cpu_count",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73590,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONEXECUTABLE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73591,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-OO",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73592,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.encode",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73594,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONUNBUFFERED",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73595,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_PRESITE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73596,
+    "url": "https://no-color.org/",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73597,
+    "url": "https://docs.python.org/3/library/os.html#os.process_cpu_count",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73598,
+    "url": "https://docs.python.org/3/library/sys.html#sys.argv",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73599,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_TLBC",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73600,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-pydebug",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73601,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONMALLOC",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73602,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-help-xoptions",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73603,
+    "url": "https://docs.python.org/3/library/site.html#site.USER_BASE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73604,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_HISTORY",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73605,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDEBUG",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73606,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_GIL",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73608,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONOPTIMIZE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73609,
+    "url": "https://peps.python.org/pep-0370/",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73610,
+    "url": "https://docs.python.org/3/c-api/memory.html#default-memory-allocators",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73611,
+    "url": "https://docs.python.org/3/library/site.html#site.main",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73612,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_THREAD_INHERIT_CONTEXT",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73613,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPLATLIBDIR",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73614,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONLEGACYWINDOWSSTDIO",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73616,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDONTWRITEBYTECODE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73618,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-help-all",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73620,
+    "url": "https://docs.python.org/3/library/sys.html#sys.breakpointhook",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73621,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONFAULTHANDLER",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73622,
+    "url": "https://docs.python.org/3/library/os.html#os.cpu_count",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73623,
+    "url": "https://docs.python.org/3/using/cmdline.html#using-on-interface-options",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73625,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGILL",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73626,
+    "url": "https://docs.python.org/3/library/site.html#rlcompleter-config",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73627,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGSEGV",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73629,
+    "url": "https://docs.python.org/3/using/cmdline.html#interface-options",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73630,
+    "url": "https://docs.python.org/3/library/os.html#os.pathsep",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73632,
+    "url": "https://docs.python.org/3/library/timeit.html#module-timeit",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73636,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONCOERCECLOCALE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73637,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PYMEM_DOMAIN_RAW",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73638,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-disable-gil",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73640,
+    "url": "https://docs.python.org/3/library/sys.html#sys._xoptions",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73643,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_CPU_COUNT",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73645,
+    "url": "https://docs.python.org/3/library/constants.html#debug__",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73647,
+    "url": "https://docs.python.org/3/library/warnings.html#warnings.filterwarnings",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73648,
+    "url": "https://docs.python.org/3/library/devmode.html#devmode",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73649,
+    "url": "https://github.com/python/cpython/blob/main/Doc/using/cmdline.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73650,
+    "url": "https://peps.python.org/pep-0488/",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73652,
+    "url": "https://docs.python.org/3/library/warnings.html#describing-warning-filters",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73655,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-x",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73656,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.ContextVar",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73657,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-v",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73660,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-check-hash-based-pycs",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73662,
+    "url": "https://docs.python.org/3/library/codecs.html#error-handlers",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73663,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_CONTEXT_AWARE_WARNINGS",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73665,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONINTMAXSTRDIGITS",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73666,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONSAFEPATH",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73667,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#whatsnew313-free-threaded-cpython",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 73669,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#tracemalloc.start",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 74910,
+    "url": "https://devguide.python.org/documentation/translating/",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74913,
+    "url": "https://github.com/python/cpython/issues?q\u003dis%3Aissue+is%3Aopen+label%3Adocs",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74914,
+    "url": "https://bugzilla.mozilla.org/page.cgi?id\u003dbug-writing.html",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74916,
+    "url": "https://docs.python.org/3/bugs.html#getting-started-contributing-to-python-yourself",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74917,
+    "url": "https://docs.python.org/3/bugs.html#dealing-with-bugs",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74918,
+    "url": "https://docs.python.org/3/bugs.html#documentation-bugs",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74921,
+    "url": "https://devguide.python.org/tracker/",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74923,
+    "url": "https://docs.python.org/3/bugs.html#contributing-to-python",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74924,
+    "url": "https://docs.python.org/3/bugs.html#using-the-python-issue-tracker",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74925,
+    "url": "https://www.chiark.greenend.org.uk/~sgtatham/bugs.html",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74928,
+    "url": "https://discuss.python.org/c/documentation/26",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74929,
+    "url": "https://devguide.python.org/docquality/#helping-with-documentation",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74930,
+    "url": "https://mail.python.org/mailman3/lists/core-mentorship.python.org/",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74931,
+    "url": "https://github.com/python/cpython/blob/main/Doc/bugs.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74932,
+    "url": "https://docs.python.org/3/bugs.html#using-the-tracker",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74933,
+    "url": "https://docs.python.org/3/bugs.html#",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 74934,
+    "url": "https://github.com/python/python-docs-theme",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Dealing with Bugs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Dealing with Bugs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-finally-syntaxwarning"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-finally-syntaxwarning"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
   {
     "src": "https://wiki.python.org/moin/logo.png",
     "alt": "",
