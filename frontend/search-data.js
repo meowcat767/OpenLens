@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 40,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo",
+    "title": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "content": "Image source, Getty Images Image caption, Andoni Iraola\u0027s Bournemouth are sixth in the Premier League By Sami Mokbel Senior football correspondent Published 2 hours ago Bournemouth manager Andoni Iraola heads Crystal Palace\u0027s shortlist of candidates to replace outgoing head coach Oliver Glasner next season. Glasner, who has led the club to their first European final, is leaving Selhurst Park this month, confirming his decision to step down in January. Palace are at an advanced stage of identifying the Austrian\u0027s successor, with multiple sources indicating Iraola, who last month announced he will leave Bournemouth this summer, is the club\u0027s preferred option to replace Glasner. In addition to Iraola, it is understood that Coventry manager Frank Lampard, Ipswich\u0027s Kieran McKenna, former Tottenham boss Thomas Frank, ex-Nottingham Forest manager Sean Dyche, Fulham\u0027s Marco Silva and Lens\u0027 Pierre Sage are among the candidates Palace have explored. BBC Sport first revealed Palace\u0027s interest in Iraola in January. He had also been linked with the Athletic Bilbao job but German coach Edin Terzic was appointed their manager this week. Palace are now making concrete moves to persuade Iraola to stay in the Premier League next season. It is understood he is aware of Palace\u0027s interest and following preliminary talks - according to sources - is not ruling out joining the Eagles next season. Having made the decision to leave Bournemouth, it is understood Iraola is open to staying in the Premier League. Iraola would have shown an interest in the Newcastle job but it looks likely that Eddie Howe, barring an unforeseen change of situation, will stay at St James\u0027 Park next season. Chelsea is another option for Iraola as the Stamford Bridge club look to replace Liam Rosenior, who was sacked last month. There is an understanding at Selhurst Park that the situation regarding their next manager is fluid and the club are confident they can attract an accomplished head coach if their efforts to land Iraola are unsuccessful. But the south London club are also mindful of having a new manager in position as soon as possible to allow for the new man to be involved in the summer recruitment operation. The prospect of leading Palace into next season\u0027s Europa League could help the club attract one of their main candidates in the coming weeks. Palace will face Spanish side Rayo Vallecano in the final of the Europa Conference League on 27 May, with the winner qualifying for next season\u0027s Europa League. Related topics Premier League Crystal Palace Bournemouth Football More on this story Latest Crystal Palace news, analysis and fan views Ask about Crystal Palace - what do you want to know? Top stories Man Utd\u0027s Fernandes wins Football Writers\u0027 men\u0027s award Published 17 minutes ago Shaw named Football Writers\u0027 Women\u0027s Player of Year Published 18 minutes ago Live. Wardley v Dubois: Heavyweights weigh in \u0026 final face-off 797 viewing797 viewing Elsewhere on the BBC Watch the new drama from the creator of Baby Reindeer The show that launched Sir David Attenborough\u0027s career Catch up on all episodes ahead of the new series The Ipswich Town player who made it into a 1981 Hollywood film Elsewhere in Sport Players on the beach? Why lack of motivation is difficult to deal with \u0027Be honest with each other\u0027 - Norris gives title advice to Rice. Video\u0027Be honest with each other\u0027 - Norris gives title advice to Rice Why Spurs fans face Arsenal dilemma \u0027Unlikely it lasts long\u0027 - Wardley v Dubois: who wins? Video\u0027Unlikely it lasts long\u0027 - Wardley v Dubois: who wins? England\u0027s Kemp never considered future during injury woe Sutton\u0027s predictions v boxing world champion Fabio Wardley Mashed potato \u0026 19 minutes\u0027 sleep - Entrekin\u0027s epic race English clubs reach all three European finals for first time Shakira unveils official World Cup 2026 song The AI fitness instructors selling unreal gains Is 15-year-old IPL wonderkid ready to play for India? From ego-ridden team to complete package - why PSG pose ultimate test Why resolute Arsenal will believe prolific PSG can be beaten Battle of heavy hitters - Wardley \u0026 Dubois\u0027 best knockouts. VideoBattle of heavy hitters - Wardley \u0026 Dubois\u0027 best knockouts Inside Man City\u0027s WSL title-winning season All you need to know about the Champions League final Injury row, yacht trip \u0026 petition - what\u0027s going on with Mbappe? Celtic could win double - but is change inevitable? The family sacrifices that helped Wu become world champion Is Saudi Arabia\u0027s sports revolution unravelling?",
+    "scrapedAt": "2026-05-09 00:28:43.770734"
+  },
+  {
+    "id": 39,
+    "url": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t",
+    "title": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "content": "Live. 3,007 viewing3007 viewing County Championship: Stokes takes two wickets; Notts\u0027 Clarke hits century; Bears all out for 147 Live scores Essex v Hampshire BBC Essex Close To play this video you need to enable JavaScript in your browser. This video can not be played Essex v Hampshire BBC Essex Listen live Live Reporting (active) Watch \u0026 listen Summary Day one of nine County Championship matches Ben Stokes and Harry Brook make first domestic appearances this season Div One: Notts\u0027 Clarke hits century as Worrall takes five wickets for Surrey James Rew out for four opening the batting for Somerset against Glamorgan Warwickshire all out for 147 at home to Yorkshire; Hampshire collapse to 235 against Essex; Sussex v Leics Div Two: Lancashire all out for 201 v Middlesex; Derbyshire v Northants, Glos v Kent Stokes takes wicket for Durham before Hose and D\u0027Oliveira lead Worcs fightback Have your say using the Get Involved button Close form Send us your county cricket views Get involved Live Reporting Ben Kosky, Alex Winter, Steve Mather and Thomas Dodd That\u0027s a big wicket before the end of the day! Zain ul Hassan has thrown everything at the Somerset batting line today and finally gets something to show for it. Tom Abell takes a tired-looking swing and clips the ball through to Chris Cooke\u0027s gloves. A fine innings nevertheless, that leaves Somerset in a strong position whatever happens between now and the close. 5 8 Share close panel Share page Copy link About sharing Joe Clarke squirts Gus Atkinson for a single behind gully and that secures another bonus point for Nottinghamshire. Surrey, of course, already have two in the bag after taking the sixth wicket. It\u0027s needed a reset for the batting side, who would probably have been targeting 400 plus when they came out after tea but that cluster of wickets means sights may need to be set a little lower. 4 1 Share close panel Share page Copy link About sharing It\u0027s developed into something of a stalemate, with Nottinghamshire hovering on the brink of a second batting bonus point but content to defy the Surrey seamers for now. We\u0027ve just had a light meter check, but play continues for now with nine overs still scheduled. 3 2 Share close panel Share page Copy link About sharing Image source, Getty Images A third 50 partnership of the day for Somerset, as Tom Abell and Lewis Gregory keep Glamorgan at bay as the hosts chase wicket number seven. They join Abell and Craig Overton (71) and Josh Thomas and Tom Lammonby (133) as half-century partnerships in this match. 15 1 Share close panel Share page Copy link About sharing Image source, Shutterstock There\u0027s been an enticing duel between the two captains, with Leus du Plooy advancing out of his crease to drive Jimmy Anderson for two off-side fours in an over. It\u0027s a positive approach from the Middlesex skipper - but we won\u0027t see any more of it for now because the light has deteriorated sufficiently for the umpires to take the players off. Still 17 overs left tonight, in theory. 0 6 Share close panel Share page Copy link About sharing Four leg byes as Ollie Robinson loses his line a fraction and Leicestershire have their second point. Sent in and having slumped to 202-7, they’ll be fairly pleased. 13 overs to go. 12 3 Share close panel Share page Copy link About sharing It\u0027s been gloomy for the majority of the day but Edgbaston has until now managed to escape the clutches of the gathering darkness. But a check of the light reader results in the sides heading off for a break in play. 7 8 Share close panel Share page Copy link About sharing Richard Wilford BBC Radio WM commentator A good low catch and a wicket for Jordan Thompson against his former county to break up a stand of 63 that was really threatening to carry the day away from the Bears. Thompson found the right line and length. The celebration was quite in your face but in a way like it is between two guys that know each other extremely well. It wasn’t unpleasant but it was certainly meant. 6 20 Share close panel Share page Copy link About sharing Fergus O\u0027Neill is on the counter-attack here for Nottinghamshire. The batters could barely get a run against Dan Worrall earlier in the day, but O\u0027Neill has just clobbered the Surrey seamer for back to back boundaries to lift his side closer to that 300 mark. He and Joe Clarke have added 39 so far and O\u0027Neill has 22 of them. 9 3 Share close panel Share page Copy link About sharing Stephan Shemilt BBC Sport cricket correspondent at New Road Who writes his scripts, etc, etc? Ben Stokes strikes again with the first ball after the resumption. It looked too quick for Adam Hose - straight through the defence and into the top of the stumps. 11 4 Share close panel Share page Copy link About sharing The visitors get to three centuries and pick up their second bonus point of the day. Tom Abell now leading the way as highest scorer for Somerset with 82 from 140 balls. It matches the Glamorgan bonus tally, with the hosts having already ",
+    "scrapedAt": "2026-05-09 00:28:42.72785"
+  },
+  {
+    "id": 38,
+    "url": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo",
+    "title": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "content": "Image source, Getty Images By Theo Leggett Transport correspondent Published 8 May 2026, 11:40 BST Updated 2 hours ago European airlines can use US-grade jet fuel to ease potential shortages caused by the US-Israel war with Iran, the EU and two major international airline bodies have suggested. The International Air Transport Association (IATA) has suggested that wider international acceptance of US-grade jet fuel could help to head off any supply problems. The European Aviation Safety Agency (EASA) has drawn up safety guidance, setting out how US supplies could be introduced into the European market, as well as information on the risks involved. Meanwhile, the EU has said there are no \"regulatory obstacles\" stopping European airlines using US-grade fuel so long as it done so safely. The price of jet fuel most European airlines currently use has jumped by half since the start of the war. In a blog post, IATA\u0027s director of flight and technical operations, Stuart Fox warned , externalthat if the conflict in the Middle East continues \"it won\u0027t be long before we see fuel shortages in some parts of the world\". There are two main types of fuel used in commercial aviation. Jet A-1 is the global standard used in most international operations, while Jet A is primarily used in North America. The two are both forms of kerosene and are essentially similar. However, Jet A-1 has a lower freezing point than Jet A. According to Fox, that means it can be used more flexibly on long haul and polar routes. Since the crisis erupted, supplies of Jet A-1 from the Gulf region have slowed to a trickle. This has been a particular problem for Europe, which normally relies heavily on imports from the region. Increased shipments from the US have been making up some of the shortfall. However, many US refineries are not set up to produce jet A-1, limiting the extra that can be brought across the Atlantic. Fox said in his post: \"European fuel supply could come under pressure if the war in the Middle East continues. Using Jet A, which is produced at scale outside the Gulf, could be a practical way to help ease some pressure on existing supply chains.\" He added that airlines in North America use Jet A every day, but still manage to serve communities in very cold regions, such as parts of Alaska, by using fuel additives, as well as by planning and monitoring flights to ensure aircraft operate within safe limits. Meanwhile, the EASA has issued a \"safety information bulletin\", external providing guidance for fuel suppliers and aircraft and airport operators. It said: \"A potential introduction of Jet A in Europe or in other parts of the world would not generate safety concerns provided that its introduction is properly managed\". However, it also warned that if it were introduced without careful management, it \"could result in an aircraft flying outside of its safe operating limits\". \"These risks may be further exacerbated by inconsistent fuel grade availability across airports, increasing the likelihood of mixing fuel grade and associated assumption mismatches\", EASA said. Later on Friday, the EU said: \"There is no regulatory obligation mandating the use of either fuel grade.\" It added: \"There are also no regulatory obstacles to the use of Jet A fuel imported to Europe provided its use is properly managed and communicated throughout the fuel supply chain to ensure highest standards of safe operation.\" Earlier on Friday, British Airways\u0027 owner IAG said, external that it currently had \"no issues with fuel availability in our main markets\", but suggested there could be problems if the war carries on. \"If the current conflict continues to restrict flows of both crude oil and jet fuel from the Middle East, there is the potential for supplies of jet fuel to be restricted on a global basis,\" it said. Related topics Companies Air travel More on this story Oil prices rise after US and Iran exchange fire in Hormuz strait Published 8 hours ago Top stories Live. Labour suffers historic Wales loss as Reform wins more than 1,000 English council seats and Greens make gains 79413 viewing79k viewing Live. Plaid Cymru becomes largest party in Wales as Labour vote collapses 16669 viewing17k viewing Live. Scottish Greens win seats, Labour stalwart holds key constituency and SNP set to become biggest party 28817 viewing29k viewing More to explore Election results so far - and what\u0027s still to come The risk-taker who changed how we see Earth From primates to climates - ten of Attenborough\u0027s best documentaries Live from your living room: The rise of concert films and livestreamed gigs Weekly quiz: Who was this mystery masked star at the Met Gala? How worried should we be about hantavirus? \u0027We were strangers until we helped bring a paedophile to justice\u0027 Ukraine war \u0027led me to surrogacy\u0027 to earn money but a new law could end those plans Politics Essential: Get the latest news and analysis delivered to your inbox every weekday Elsewhere on the BBC Amandaland has returne",
+    "scrapedAt": "2026-05-09 00:28:41.68585"
+  },
+  {
+    "id": 37,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb",
+    "title": "This Is a Bomb: The Nevada Casino Heist - BBC iPlayer",
+    "content": "Close menu Home This Is a Bomb: The Nevada Casino Heist Documentary This Is a Bomb: The Nevada Casino Heist 1,000 lbs of dynamite, a $3 million ransom, a casino facing destruction - and as the FBI races against the clock, each step reveals dark secrets. An outrageous true crime saga. Series 1: 1. The Bomb (38 mins) Start watching 1. The Bomb Unbeknownst to the FBI, a quiet Hungarian immigrant concocts an elaborate extortion plan. 38 mins 2. The Ransom Meticulous and methodical, Big John engineers his ransom scheme with military precision. 38 mins 3. The Manhunt The bomb\u0027s detonation leaves behind unanswered questions. 43 mins Explore the BBC",
+    "scrapedAt": "2026-05-09 00:28:40.646153"
+  },
+  {
+    "id": 36,
+    "url": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb",
+    "title": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "content": "The Met Gala hype returned this year and so did a flurry of viral AI celeb outfits. The annual fundraiser for New York’s Metropolitan Museum of Art’s Costume Institute gives guests the chance to dress up in more creative ways than usual. In 2026, the theme was costume art and socials are full of famous faces like Beyoncé and Madonna in elaborate outfits inspired by well-known masterpieces. Image caption, This AI image of Katy Perry at the 2024 Met Gala was one of the first to make headlines Why does the Met Gala attract so much AI? Perhaps due to the more creative looks on show, this is one event where AI-generated images of stars apparently making their big entrance in over-the-top outfits can easily go viral. One of the first viral images featured the singer Katy Perry. Posted in 2024, the image was found to be a fake when it turned out Katy wasn’t even at the event that year, and the carpet in the background was one used at the 2018 Gala. As AI becomes more sophisticated, so do the images of famous people. BBC Bitesize Other Side of the Story found some of the most popular Met Gala AI stories. So how can you tell the real from the fake? Was Kendall Jenner really dressed as a statue? Well, yes and no. Model Kendall Jenner wore a gown to the 2026 Met Gala that was inspired by a Greek statue which can be found at the Louvre in Paris. Image caption, Kendall Jenner did attend the 2026 Met Gala in a sculpture-inspired outfit - but not in full body make-up as this AI image suggests While her dress reflected the form of a sculpture, one AI image shows Kendall in full body make-up and looking like an actual statue. This is an example of disinformation, taking elements of the truth but knowingly sharing a fake image. Although it probably wasn’t intended as anything more than a bit of fun, it’s still important to know the difference. A head-to-toe statue outfit is not an impossible look to achieve and the Met Gala had looks that were similar - model Heidi Klum did attend as a full-on famous sculpture - but a reverse image search will show that this photo of Kendall was not from the event. This is great thing to have in your fact-checking tool kit as reverse image searches dig deep into the source of a picture. If this was a genuine photo of Kendall, it would trace back to her official socials, newspaper and magazine websites and photo agencies. Did Dua Lipa go to the Met Gala? As one of the most famous singers on the planet, it would be understandable that Dua Lipa was on the Met Gala guest list - especially in a dress inspired by the famous image of Venus by the artist Botticelli. Image caption, Dua Lipa may be striking a pose in this picture - but the singer wasn\u0027t even at the Met Gala this year Except, Dua wasn’t there. Although she and her fiance Callum Turner did go to the 2025 Gala together, they were elsewhere this year. A quick check of Dua’s official Instagram account showed posts from a trip to the Danish capital Copenhagen that were shared on the day of the Gala itself. Their trip was also featured on reputable news websites. Although they may not have been taken on the day they were posted, it’s possible that the couple were still in Denmark on the day the Met Gala took place - around 3,800 miles away! That would have made it very tricky for Dua to make her entrance in the art-inspired gown. If you use reliable sources when looking into a story - such as Dua’s official blue-ticked Instagram account - it helps to identify fake news. Did Lewis Hamilton go from the Miami Grand Prix to the Met Gala? One way of finding out if an image is genuine or not is to do some background research on the people featured. For example, this image shows Formula 1 driver Lewis Hamilton in attendance at this year’s Met Gala in a suit inspired by Vincent Van Gogh’s famous Sunflowers paintings. However - like Dua Lipa - he wasn’t at the event either. Image caption, Did Lewis Hamilton attend the Met Gala dressed as Vincent Van Gogh\u0027s Sunflowers? No, he didn\u0027t The previous evening he had raced in the Miami Grand Prix, finishing sixth. Although it wouldn’t have been impossible for him to be at the Met Gala the next day, it would have been a fast turnaround from event one to the other. Another reason Lewis may have featured in Met Gala AI is that he was one of the chairpersons of the event in 2025, so he has an existing link. It’s always important to check your facts, something journalists do on every story. A reporter would also check Lewis’s official Instagram account or a photo agency that covered the Met Gala to see if there any shots of him in attendance - which there aren’t. How to tell the real from the fake With AI images and videos appearing on Instagram, TikTok and other platforms, it can be confusing knowing which photos of the Met Gala are genuine. A good way to be sure is going straight to the official source. The Metropolitan Museum of Art which hosts the Gala has its own verified Instagram account sharing genuine im",
+    "scrapedAt": "2026-05-09 00:28:39.268531"
+  },
+  {
     "id": 35,
     "url": "https://www.bbc.co.uk/iplayer/watchlist",
     "title": "Watchlist - BBC iPlayer",
@@ -243,26 +278,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 36,
-    "url": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
-  },
-  {
-    "id": 37,
-    "url": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb"
-  },
-  {
-    "id": 38,
-    "url": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
-  },
-  {
-    "id": 39,
-    "url": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
-  },
-  {
-    "id": 40,
-    "url": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
   },
   {
     "id": 41,
@@ -19188,10 +19203,708 @@ window.searchData = [
     "id": 9328,
     "url": "https://session.bbc.co.uk/session?action\u003dregister\u0026ptrt\u003dhttps%3A%2F%2Fwww.bbc.co.uk%2Fiplayer%2Fwatchlist\u0026context\u003diplayer\u0026userOrigin\u003diplayer",
     "parentUrl": "https://www.bbc.co.uk/iplayer/watchlist"
+  },
+  {
+    "id": 9329,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zxhcywx",
+    "parentUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "id": 9330,
+    "url": "https://www.bbc.co.uk/bitesize/articles/z6s4239",
+    "parentUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "id": 9331,
+    "url": "https://www.bbc.co.uk/bitesize/groups/c0rx3447znvt",
+    "parentUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "id": 9332,
+    "url": "https://www.bbc.co.uk/bitesize/articles/z8xq9ty",
+    "parentUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "id": 9333,
+    "url": "https://www.bbc.co.uk/bitesize/articles/z3hhvj6",
+    "parentUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "id": 9334,
+    "url": "https://www.bbc.co.uk/bitesize/articles/z63wwty",
+    "parentUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "id": 9335,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zqr7xbk",
+    "parentUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "id": 9336,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zfw9ywx#zbmjrmn",
+    "parentUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "id": 9337,
+    "url": "https://www.bbc.co.uk/teach/class-clips-video/articles/zw677yc",
+    "parentUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "id": 9338,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zdxj96f",
+    "parentUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "id": 9339,
+    "url": "https://www.bbc.co.uk/sport/formula1/articles/cx21n879zlxo",
+    "parentUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "id": 9340,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002w1v8/this-is-a-bomb-the-nevada-casino-heist-series-1-1-the-bomb",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb"
+  },
+  {
+    "id": 9341,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002w90x/this-is-a-bomb-the-nevada-casino-heist-series-1-2-the-ransom",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb"
+  },
+  {
+    "id": 9342,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002w90n/this-is-a-bomb-the-nevada-casino-heist-series-1-3-the-manhunt",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb"
+  },
+  {
+    "id": 9343,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb/this-is-a-bomb-the-nevada-casino-heist#",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb"
+  },
+  {
+    "id": 9345,
+    "url": "https://www.bbc.co.uk/news/business/companies",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "id": 9346,
+    "url": "https://www.easa.europa.eu/en/newsroom-and-events/news/easa-issues-sib-safe-usage-jet-aviation-fuel-europe",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "id": 9353,
+    "url": "https://www.bbc.co.uk/news/topics/ce8nyjzdp0et",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "id": 9355,
+    "url": "https://www.rns-pdf.londonstockexchange.com/rns/4939D_1-2026-5-7.pdf",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "id": 9356,
+    "url": "https://www.bbc.co.uk/news/topics/crz4004j5zet",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "id": 9363,
+    "url": "https://www.iata.org/en/pressroom/opinions/jet-fuel-flexibility-how-the-industry-is-preparing-for-supply-disruptions/",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "id": 9374,
+    "url": "https://www.bbc.co.uk/news/articles/c86dp85g59xo",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "id": 9377,
+    "url": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t#LiveReporting",
+    "parentUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "id": 9378,
+    "url": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t#Watch\u0026listen",
+    "parentUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "id": 9379,
+    "url": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t#player",
+    "parentUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "id": 9381,
+    "url": "https://www.bbc.co.uk/sport/cricket/scores-fixtures/2026-05-08",
+    "parentUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "id": 9382,
+    "url": "https://www.bbc.co.uk/sport/cricket/articles/cpwpdpqd0z0o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9383,
+    "url": "https://www.bbc.co.uk/sport/articles/cx21p247016o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9384,
+    "url": "https://www.bbc.co.uk/sport/articles/cglp42nnyeko",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9385,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c3v2r5400l0o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9386,
+    "url": "https://www.bbc.co.uk/sport/football/teams/chelsea",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9387,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cx218q541lvo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9388,
+    "url": "https://www.bbc.co.uk/sport/boxing/videos/cdjpyp2d7n1o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9389,
+    "url": "https://www.bbc.co.uk/sport/football/articles/ckgpxp9q8yno",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9391,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c5yr4vle9w2o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9392,
+    "url": "https://www.bbc.co.uk/sport/football/articles/czr2m1463npo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9394,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cdeplyje9zzo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9395,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c20dyjd604qo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9396,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c24213eqv87o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9397,
+    "url": "https://www.bbc.co.uk/sport/athletics/articles/ceqpjdgge2zo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9399,
+    "url": "https://www.bbc.co.uk/sport/football/teams/nottingham-forest",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9400,
+    "url": "https://www.bbc.co.uk/sport/boxing/videos/ckgpz9xe8jxo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9401,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cdepl8k6y5no",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9402,
+    "url": "https://www.bbc.co.uk/sport/football/teams/newcastle-united",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9403,
+    "url": "https://www.bbc.co.uk/sport/football/teams/tottenham-hotspur",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9404,
+    "url": "https://www.bbc.co.uk/sport/videos/c5y08kx5jyvo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9405,
+    "url": "https://www.bbc.co.uk/sport/topics/cpv471x401jt",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9406,
+    "url": "https://www.bbc.co.uk/sport/snooker/articles/cgrpwvlv149o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9407,
+    "url": "https://www.bbc.co.uk/sport/football/teams/fulham",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9409,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c2lrzd4x02vo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9411,
+    "url": "https://www.bbc.co.uk/sport/football/teams/crystal-palace",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9412,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c1wz9002008o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9414,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cy42l7jz7q2o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9415,
+    "url": "https://www.bbc.co.uk/sport/football/articles/crlezygrpe6o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9416,
+    "url": "https://www.bbc.co.uk/sport/articles/c5ye7dnxv86o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9418,
+    "url": "https://www.bbc.co.uk/sport/cricket/articles/cd6p5vvqne2o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9419,
+    "url": "https://www.bbc.co.uk/send/u211221744",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9423,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cgjp5q6xvg9o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/923/cpsprodpb/9ef8/live/e107fb50-4aec-11f1-95d5-c35bb50319f8.jpg",
+    "alt": "Andoni Iraola",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/e5d3/live/eb58d3e0-fd8c-11ee-a9f7-4d961743aa47.jpg",
+    "alt": "Selhurst Park",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/e333/live/3219e500-7ac1-11f0-a34f-318be3fb0481.png",
+    "alt": "Ask Me Anything logo",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf0d/live/6c618fa0-3da4-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Half Man",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/dd67/live/6c5a85b0-4ad4-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Witness History: Sir David Attenborough\u0027s first Zoo Quest",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/183b/live/30064c60-3bf9-11f0-aa24-d1c64c46ace6.jpg",
+    "alt": "Death Valley",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c69f/live/f4384230-4348-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Sporting Witness: Making Escape to Victory",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/b5f5/live/8d30efd0-3fae-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Going Direct - The Tony Pulis column",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/33fe/live/61e53980-42f1-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Maclaren\u0027s Lando Norris and Arsenal\u0027s Declan Rice.",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c673/live/63e07870-49f0-11f1-9921-0be54b6c608a.jpg",
+    "alt": "A Tottenham fan wearing shirt saying \u0027We 8 Arsenal\u0027",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/86f5/live/1be0d920-4a22-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Fabio Wardley and Daniel Dubois",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/928e/live/1c2ff140-4a27-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Freya Kemp holds her arms aloft",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ee2e/live/6d90bfd0-49e4-11f1-b55d-0f258dce1735.png",
+    "alt": "A graphic of Chris Sutton and world champion boxer Fabio Wardley",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/a707/live/c4b0de80-4a2f-11f1-91d3-69962f9a0625.jpg",
+    "alt": "Rachel Entrekin looks emotional at the finish line of the Cocodona 250 ultramarathon ",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ddb1/live/016a1000-4a60-11f1-b55d-0f258dce1735.png",
+    "alt": "Arsenal, Aston Villa and Crystal Palace players celebrate reaching European finals",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/dd59/live/ac3ce2b0-4a4b-11f1-9cf8-9bf0cf6f692d.jpg",
+    "alt": "Pop star Shakira",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/1d6b/live/192e4910-496e-11f1-bd52-e755d604ece4.png",
+    "alt": "A picture of three fitness instructors that were generated by AI",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/97f1/live/891f2b60-4962-11f1-a87a-55dfd3c7a311.jpg",
+    "alt": "Vaibhav Sooryavanshi",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/d81b/live/cae2cfa0-4996-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Paris St -Germain manager Luis Enrique celebrates after his side reached the 2026 Champions League final",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c422/live/943ce2a0-499c-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Mikel Arteta celebrates Arsenal reaching Champions League final",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/387b/live/12a74540-4966-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Fabio Wardley and Daniel Dubois",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f0e2/live/62490d00-4997-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Manchester City\u0027s Rebecca Knaak and Lauren Hemp celebrate their win over Liverpool in the Women\u0027s Super League",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/bcf5/live/e52e9420-4937-11f1-bd52-e755d604ece4.png",
+    "alt": "Bukayo Saka and Khvicha Kvaratskhelia of Paris Saint-Germain celebrate",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/13c7/live/01da6d70-4941-11f1-861c-270dbba6d6ae.jpg",
+    "alt": "Kylian Mbappe",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ad0f/live/5eb9d3f0-4964-11f1-a87a-55dfd3c7a311.jpg",
+    "alt": "Celtic fans during a William Hill Premiership match between Celtic and Falkirk at Celtic Park, on April 25, 2026, in Glasgow, Scotland",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/d94c/live/5be09b90-480c-11f1-940e-3ffd566da2b5.jpg",
+    "alt": "Wu Yize with his parents",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f37c/live/d42b73f0-454a-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "LIV Golf sign on a golf course",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/1ed53ad2-3e11-4a0e-a695-215cd96c68dd.jpg.webp",
+    "alt": "Tom Abell",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/65e0d9da-92ec-440d-af8f-36bff75bcf2c.jpg.webp",
+    "alt": "James Anderson",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2014/12/4/e642850c-04c1-4830-b7b3-96604e89b42c.jpg.webp",
+    "alt": "",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2019/5/30/e04931f5-3918-4858-b47f-a7b69c53482f.jpg.webp",
+    "alt": "",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0cjdqpx.jpg",
+    "alt": "Essex v Hampshire",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0fgfb1m.jpg",
+    "alt": "Glamorgan v Somerset",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0cjdxvp.jpg",
+    "alt": "Nottinghamshire v Surrey",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0cjdzcq.jpg",
+    "alt": "Sussex v Leicestershire",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0cjf1gh.jpg",
+    "alt": "Warwickshire v Yorkshire",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0cjdpg6.jpg",
+    "alt": "Derbyshire v Northamptonshire",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0czgtsv.jpg",
+    "alt": "Gloucestershire v Kent",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0cjdtvs.jpg",
+    "alt": "Lancashire v Middlesex",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0cjdslf.jpg",
+    "alt": "Worcestershire v Durham",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/f286/live/ba7a9570-4ac3-11f1-9325-ade34e8d64d0.jpg",
+    "alt": "Picture of the underside of an unmarked plane coming in to land",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/867/cpsprodpb/ceca/live/514c94a0-4a6d-11f1-9270-375e80dbfe3c.jpg",
+    "alt": "A man grabs a black fuel pump at a petrol station",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/db69/live/015d7fe0-4aef-11f1-ac78-2112837ce2aa.png",
+    "alt": "Nigel Farage ",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/60a2/live/7bfa1c10-cadc-11f0-a892-01d657345866.jpg",
+    "alt": "Sir David Attenborough being filmed in front of the sea and mountains for Life on Earth in 1979",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/af4f/live/8c892de0-4ac1-11f1-b55d-0f258dce1735.png",
+    "alt": "A composite image of 5 people  in flamboyant costumes at the Met gala. In the centre in a largest part of the image is a women in white  wearing a mask over her face",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b327/live/76b6ee00-4a38-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A person in protective clothing walks next to an ambulance during an evacuation operation of suspected hantavirus patients, following an outbreak on the cruise ship MV Hondius, in Praia, Cape Verde, May 6, 2026",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/2d4c/live/d268f6b0-4a1c-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "Two ladies are sat beside each other. The one on the left is wearing a mustard cardigan and has white wavy hair. The one on the right is wearing a pink collarless shirt and has blonde and brown hair. ",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/dd4d/live/992a5b50-494f-11f1-bd44-e578c5bd51ff.png",
+    "alt": "A pregnant woman stands in a garden with her hand on her belly. She has long, straight, dark hair and is wearing a matching top and trousers which are white with some patches of black. She also has a light brown hoodie on. ",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dbbc_two::iplayer.tv.tleo.this_is_a_bomb_the_nevada_casino_heist.m002w1vb.page\u0026x1\u003d[page]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[list-tleo]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[iplayer]\u0026x12\u003d[bbc_two]",
+    "alt": "",
+    "pageTitle": "This Is a Bomb: The Nevada Casino Heist - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb"
+  },
+  {
+    "src": "http://b.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "This Is a Bomb: The Nevada Casino Heist - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0njdrq1.jpg",
+    "alt": "An AI image of Katy Perry at the 2024 Met Gala",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0njd8s6.jpg",
+    "alt": "An AI image of Kendall Jenner in full statue make-up at the 2026 Met Gala",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0njd94p.jpg",
+    "alt": "An AI image of Dua Lipa attending the Met Gala in a gown inspired by Botticelli\u0027s Venus",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0njd9kb.jpg",
+    "alt": "An AI image of Lewis Hamilton at the Met Gala in a suit inspired by Van Gogh\u0027s Sunflowers painting",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0ct65y6.png",
+    "alt": "This is a decorative purple line to separate and organise content on the page.",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0n7b9r5.jpg",
+    "alt": "Is gravity going to ‘switch off’ for seven seconds this summer?",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0nhl9cf.jpg",
+    "alt": "Elections: Debunking the myths and claims",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0km9l6p.png",
+    "alt": "Back to our homepage",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
   {
     "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003diplayer.tv.watchlist.page\u0026x1\u003d[page]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[list-personalised-active]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[iplayer]\u0026x12\u003d[iplayer]",
     "alt": "",
