@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 266,
+    "url": "https://nos.nl/regio/gelderland/artikel/757004-brug-bij-eefde-per-direct-twee-weken-gesloten-door-zinkgat",
+    "title": "Brug bij Eefde per direct twee weken gesloten door zinkgat",
+    "content": "Gemeente Lochem Het zinkgat net voor de brug bij Eefde. Dit is een nieuwsbericht van Omroep Gelderland vandaag, 19:00 Brug bij Eefde per direct twee weken gesloten door zinkgat Deel dit artikel De gemeente Lochem heeft in overleg met Rijkswaterstaat de Eefdese Brug tussen Zutphen en Eefde per direct afgesloten voor al het verkeer. Een zinkgat, net voor de brug aan de kant van Eefde, zorgt voor verzakking van het wegdek. ‘Het zinkgat zit er al een paar dagen’, laat de gemeente weten aan Regio8(opent in nieuw venster). ‘Uit inspectie van Rijkswaterstaat, de eigenaar van de brug, blijkt dat de verzakking inmiddels zo ernstig is dat de verkeersveiligheid in gevaar is.’ Het fietspad bij de brug blijft wel open. N348 ook afgesloten Inwoners uit Eefde, Gorssel en Zutphen gebruiken de brug volgens de gemeente als doorgaande en alternatieve route, aangezien de N348 tussen Eefde en Zutphen ook is afgesloten dor werkzaamheden. Omleiding De omleidingsroutes lopen via de Kapperalle en de Sluis. Ook buslijn 81 wordt omgeleid via de Sluis. Omdat de bus ver om moet rijden is het niet mogelijk om via de dienstregeling te blijven rijden. Bushalte Rustoordlaan komt tijdelijk te vervallen. Rijkswaterstaat en adviseurs van de gemeente zijn aan het kijken hoe dit komt en wat er nodig is om de situatie te herstellen. Naar verwachting duurt de afsluiting twee weken. Dit is een nieuwsbericht van Omroep Gelderland (opent in nieuw venster) Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd!",
+    "scrapedAt": "2026-05-09 00:36:00.18914"
+  },
+  {
+    "id": 265,
+    "url": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp",
+    "title": "Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp",
+    "content": "Xinhua/ABACA Smeulend puin na de ontploffing in Liuyang NOS Nieuws•gisteren, 13:09 Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp Deel dit artikel Laura van Megen correspondent China Gabi Verberg correspondent Oost-Azië Vorige slide Laura van Megen correspondent China Gabi Verberg correspondent Oost-Azië Volgende slide De enorme explosie in een vuurwerkfabriek in Zuid-China heeft deze week aan 26 mensen het leven gekost. Tientallen mensen raakten gewond. Fabriekshallen zijn met de grond gelijkgemaakt en in de wijde omtrek zijn door de kracht van de ontploffing de ramen van huizen gebroken. \"Het was als een regen van glas,\" vertelt een buurtbewoner. Al meer dan duizend jaar wordt er vuurwerk gemaakt in de stad Liuyang, ook wel de \u0027vuurwerkhoofdstad van China\u0027 genoemd. De sector is de levensader van de regio. Maar het gaat ook geregeld fout: jaarlijks gebeuren er ongelukken in een van de honderden vuurwerkfabrieken, zeggen mensen daar. De overheid heeft nu alle fabrieken gesloten voor veiligheidsinspecties. Naast het verlies van levens en de angst na deze ramp, zullen daarom ook de economische consequenties voor het stadje groot zijn. AFP De schade is groot na de explosie in de vuurwerkfabriek Bij huizen in de buurt van de fabriek is de schade groot. Vensters zijn er half uit geslagen, plafonds zijn naar beneden gekomen en overal ligt glas van de gebroken ramen. \"Onze achterdeur is kapotgeslagen, boven is het stucwerk naar beneden gekomen en alle lampen zijn kapot,\" zegt diezelfde buurtbewoner. Haar huis staat op een paar honderd meter van de fabriek. Zodra ze het nieuws hoorde, is ze meteen naar huis gereden om haar schoonmoeder te helpen, die wel thuis was. \"Het glas viel zo op mijn armen,\" vertelt die. Ze hoefde gelukkig niet naar het ziekenhuis, maar haar buren hadden wel medische verzorging nodig voor hun verwondingen. Yorben den Hartog Het opruimen van de schade Dichter bij de fabriek kan je nu niet komen. De politie heeft de wegen afgezet. Op het terrein staan ook grote pakhuizen vol met buskruit, dus de autoriteiten vrezen voor verdere explosies. Het zal nog lang duren voordat de politie het gebied weer vrijgeeft. Vuurwerkhoofdstad van China In de \u0027vuurwerkhoofdstad van China\u0027 werken zo\u0027n 300.000 mensen in de sector, meer dan twintig procent van de bevolking. \"Bijna elk huishouden heeft wel iemand die in de vuurwerksector werkt,\" vertelt vuurwerkexporteur Li Muzi. Volgens de Chinese legende werd vuurwerk hier uitgevonden toen een man genaamd Li Tian aan het experimenteren was met bamboe en buskruit. Wat begon als een traditie om boze geesten te verdrijven en voorspoed te brengen, groeide uit tot een wereldwijde industrie. Maar die industrie ligt nu stil. Op last van de overheid moesten alle fabrieken voor onbepaalde tijd sluiten. Sommigen schatten dat het misschien wel een half jaar kan duren. \"We gaan grote verliezen lijden,\" verwacht een vuurwerkgroothandelaar, ook genaamd meneer Li. \"De leveringen zullen vertraging oplopen en het zal het inkomen van mensen sterk raken.\" Yorben den Hartog Vuurwerkwinkel in Liuyang Ondertussen is het onderzoek naar de precieze toedracht in volle gang. Volgens Li Muzi had het ongeluk te maken met de nieuwe nationale veiligheidsnormen voor vuurwerk. Fabrieken moesten hun productieproces aanpassen, wat leidde tot fouten en verwarring. Dat lijkt ook het geval bij de Huasheng fabriek waar het afgelopen week misging. Het bedrijf was eerder dit jaar al op de vingers getikt. Inspecteurs constateerden in januari dat werknemers onzorgvuldig omgingen met explosieve stoffen. Het bedrijf kreeg een boete en moest een veiligheidscursus volgen. Li Muzi heeft een familielid verloren in de ontploffing, iemand die op dat moment aan het werk was in de fabriek. \"Het management van de fabriek heeft een grote verantwoordelijkheid hierin,\" zegt hij stellig. \"Natuurlijk zullen ze naar de gevangenis moeten.\" Yorben den Hartog Li Muzi in zijn kantoor Zeker 26 doden en tientallen gewonden bij explosie in Chinese vuurwerkfabriek Dit is de \u0027vuurwerkmitrailleur\u0027 waar de politie over spreekt Nieuwe EU-vuurwerkwet in de maak, hoop op Europees cobraverbod Buitenland Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Meer bekijken? vandaag, 11:55 Dodental vuurwerkramp China loopt op naar 37 woensdag 8 april, 18:06 Zwaarste Israëlische aanvallen op Libanon, Iran sluit Straat van Hormuz woensdag 11 maart, 19:30 Rust keert terug na bendegeweld in Guadalajara, net op tijd voor WK voetbal vrijdag 17 april, 20:35 In de energiecrisis vertrouwt China nog vooral op de eigen steenkool Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-09 00:35:58.798896"
+  },
+  {
+    "id": 264,
+    "url": "https://nos.nl/livestream/2607746-handbal-finale-landstitel-voc-sew-v",
+    "title": "Handbal: finale landstitel VOC - SEW (v)",
+    "content": "Deze livestream is nog niet begonnen Kom morgen, 18:00 uur terug om deze livestream te bekijken. Handbal: finale landstitel VOC - SEW (v) Kijk hier live naar de finale om de Nederlandse titel bij de vrouwen tussen VOC Amsterdam en Westfriesland SEW. Aan het laden",
+    "scrapedAt": "2026-05-09 00:35:57.719287"
+  },
+  {
+    "id": 263,
+    "url": "https://nos.nl/video/2613588-veerdienst-wadden-getroffen-door-brand-in-datacentrum-alles-uitgeprint",
+    "title": "Veerdienst Wadden getroffen door brand in datacentrum: \u0027Alles uitgeprint\u0027",
+    "content": "Aan het laden NOS Nieuws•vandaag, 14:49 Veerdienst Wadden getroffen door brand in datacentrum: \u0027Alles uitgeprint\u0027 In Harlingen wordt ouderwets met pen en papier de reserveringen van passagiers naar Vlieland en Terschelling gecontroleerd. De kaartjesscanners werken niet na de zware brand in een datacentrum in Almere gisteren. Deze video komt voor in \u0027Geen data verloren gegaan bij brand Almere, klanten snel weer online\u0027",
+    "scrapedAt": "2026-05-09 00:35:56.651222"
+  },
+  {
+    "id": 262,
+    "url": "https://www.ster.nl/online-reclame-bij-ster/",
+    "title": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "content": "Bereik miljoenen Nederlanders Adverteren bij de publieke omroep Gratis media-advies Bereik miljoenen Nederlanders Adverteren bij de publieke omroep Gratis media-advies Online reclame inzetten bij de publieke omroep? In een paar snelle stappen zetten we samen jouw online campagne in en profiteer je van een groot bereik op een veilig en betrouwbaar netwerk. Denk hierbij aan pre-rolls voor programma’s als ‘Heel Holland Bakt’, pre-rolls voor livestreams op NPO Start en banners op NOS.nl. Online adverteren bij Ster: bereik miljoenen mensen via NPO, zonder cookies. Neem contact op Vraag gratis advies aan! Voornaam Vul je voornaam in. Achternaam Vul je achternaam in. Bedrijfsnaam Telefoonnummer Vul een geldig telefoonnummer in. Zakelijk e-mailadres Vul een geldig e-mailadres in. Controle Vul de verplichte velden in en we nemen spoedig contact op! Bel me terug Mail me terug Neem contact met mij op Meer weten? Joyce Kolijn accountmanager Kom in contact Joyce Kolijn accountmanager Voornaam Achternaam Telefoon Zakelijk e‑mailadres Controle Nee, toch niet Verstuur Bedankt! Placeholder wanneer ongeveer contact opgenomen gaat worden. Oké Meer weten? VOORDELEN ONLine adverteren bij ster Online marketing is constant in beweging. Je wil daarom zichtbaar zijn op kanalen die vertrouwd zijn bij je doelgroep, een groot bereik genereren en veilig zijn. We zetten de voordelen van online adverteren bij de NPO op een rij: Een campagne is mogelijk vanaf €1.000 Snel inzetbaar Lage productiekosten Veilig online netwerk: inzicht waar jouw reclame wordt geplaatst Veel respect voor privacy van de gebruiker, cookieloos inzetten van online reclame Voordeliger tarief voor partijen van algemeen nut Waarom Ster: onderzoek en privacy Bij Ster staat online adverteren in het teken van vertrouwen, kwaliteit en effectiviteit. Al decennialang doet Ster onderzoek naar het effect, de impact en de waardering van reclame rond de content van de publieke omroep. Deze inzichten worden continu vertaald naar praktische adviezen voor campagnes met meer aandacht en een hogere merkimpact. De programma’s, websites en apps van de publieke omroep worden door het Nederlandse publiek hoog gewaardeerd. Reclame rondom deze content profiteert van die waardering en straalt positief af op merken. Onderzoek van Ster laat zien dat adverteren in een kwalitatieve, vertrouwde omgeving bijdraagt aan betere reclame‑acceptatie, hogere aandacht en een positievere merkbeleving. Tegelijkertijd kiest Ster bewust voor privacyvriendelijk adverteren. Online campagnes worden ingezet zonder cookies of persoonsgegevens. In plaats daarvan maakt Ster gebruik van contextual targeting: advertenties sluiten aan bij de inhoud van programma’s en artikelen, het platform, het moment van de dag en het device. Zo blijft adverteren relevant, terwijl de privacy van gebruikers volledig wordt gerespecteerd. Online Video Bereik 3 miljoen Nederlanders per maand (6+) Display Bereik 5,9 miljoen Nederlanders per maand (6+) Meer weten? Kees-Jan van Ruler accountmanager +31 35 672 55 64 kees-jan.van.ruler@ster.nl Kom in contact Voornaam Vul je voornaam in. Achternaam Vul je achternaam in. Zakelijk e‑mailadres Vul je e-mail in. Telefoon Vul je telefoonnummer in. Controle Nee, toch niet Verstuur Bedankt! Placeholder wanneer ongeveer contact opgenomen gaat worden. Oké Mogelijkheden online reclame bij de publieke omroep Zowel niet-commerciële partijen met een niet-commerciële boodschap als commerciële partijen kunnen display-advertenties en pre-rolls bij livestreams inkopen. Daarnaast hebben niet-commerciële partijen ook de mogelijkheid om video-advertenties in te zetten. Bij Ster hanteren we voor niet-commerciële partijen met een niet-commerciële boodschap de definitie algemeen nut. Het gaat om instellingen met een wetenschappelijk, cultureel, godsdienstig, levensbeschouwelijk, politiek of liefdadig karakter, die een CBF-keurmerk of ANBI-status hebben. Voor campagnes van dergelijke afzenders is er niet alleen ruimte online, maar natuurlijk ook op radio en televisie. DISPLAY-ADVERTenties (banners) Met display‑advertenties (banners) adverteer je op de websites en in de apps van de publieke omroep. Denk aan apps en NPO‑platforms. Ster toont per pagina maximaal één banner, waardoor je campagne altijd exclusieve zichtbaarheid krijgt zonder concurrentie van andere advertenties. Dit zorgt voor een hoge acceptatie, goede viewability en meer impact. Een campagne van Ziemi leverde het bedrijf 3,2 miljoen impressies en 8.000 websitebezoeken op. Je kunt banners inkopen op verschillende niveaus. Met Run of Network (RON) wordt je banner breed over het Ster‑netwerk verspreid. Kies je voor Run of Channel (ROC), dan adverteer je binnen een specifieke titel of kanaal. Met Run of Specifics (ROS) kun je nog gerichter inkopen, bijvoorbeeld op een bepaald programma, website, app of inhoudelijke context. Zo sluit je campagne aan bij de omgeving waarin je doelgroep zich bevindt. Banners zijn beschikbaar in vaste formaten, waaronder het",
+    "scrapedAt": "2026-05-09 00:35:55.566356"
+  },
+  {
     "id": 261,
     "url": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome",
     "title": "Van de Zandschulp na thriller door naar derde ronde Masters-toernooi Rome",
@@ -1823,26 +1858,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 262,
-    "url": "https://www.ster.nl/online-reclame-bij-ster/"
-  },
-  {
-    "id": 263,
-    "url": "https://nos.nl/video/2613588-veerdienst-wadden-getroffen-door-brand-in-datacentrum-alles-uitgeprint"
-  },
-  {
-    "id": 264,
-    "url": "https://nos.nl/livestream/2607746-handbal-finale-landstitel-voc-sew-v"
-  },
-  {
-    "id": 265,
-    "url": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
-  },
-  {
-    "id": 266,
-    "url": "https://nos.nl/regio/gelderland/artikel/757004-brug-bij-eefde-per-direct-twee-weken-gesloten-door-zinkgat"
   },
   {
     "id": 267,
@@ -44454,10 +44469,322 @@ window.searchData = [
     "id": 18513,
     "url": "https://nos.nl/artikel/2606993-van-de-zandschulp-naar-tweede-ronde-van-masterstoernooi-in-miami",
     "parentUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "id": 18514,
+    "url": "https://www.ster.nl/klantcases/ziemi/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18515,
+    "url": "https://www.ster.nl/bereik-doelgroepen/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18516,
+    "url": "https://www.ster.nl/commercialtests/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18517,
+    "url": "https://www.ster.nl/klantportal/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18518,
+    "url": "https://www.ster.nl/contact/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18519,
+    "url": "https://www.ster.nl/radioreclame-bij-ster/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18520,
+    "url": "https://www.ster.nl/onderzoek/stappenplan-online-display/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18521,
+    "url": "https://www.ster.nl/hoe-werkt-het/tv-reclame-bij-ster/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18522,
+    "url": "https://www.ster.nl/uitgelichte-inkoopopties/wk-online/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18523,
+    "url": "https://www.ster.nl/bereik-doelgroepen/npo-online/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18524,
+    "url": "https://www.ster.nl/tv-reclame-bij-ster/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18525,
+    "url": "https://www.ster.nl/online-reclame-bij-ster#veelgestelde-vragen-over-online-adverteren-bij-ster",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18526,
+    "url": "https://ster365-my.sharepoint.com/personal/eileen_snelders_ster_nl/_layouts/15/Doc.aspx?sourcedoc\u003d%7BAA3CB809-CEFA-4446-9779-A052542299BA%7D\u0026file\u003dStandpuntenpagina.docx\u0026action\u003ddefault\u0026mobileredirect\u003dtrue\u0026DefaultItemOpen\u003d1",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18527,
+    "url": "https://www.ster.nl/maatschappelijke-organisaties-algemeen-nut/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18528,
+    "url": "https://www.ster.nl/kosten-online-reclame/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18529,
+    "url": "https://www.ster.nl/onderzoek/whitepaper-online-beleving/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 18531,
+    "url": "https://api.whatsapp.com/send?text\u003dDodelijke+explosie+zet+toekomst+van+vuurwerkstad+Liuyang+op+scherp+https%3A%2F%2Fnos.nl%2Fartikel%2F2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp",
+    "parentUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "id": 18532,
+    "url": "https://nos.nl/artikel/2613567-dodental-vuurwerkramp-china-loopt-op-naar-37",
+    "parentUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "id": 18533,
+    "url": "https://nos.nl/artikel/2610882-in-de-energiecrisis-vertrouwt-china-nog-vooral-op-de-eigen-steenkool",
+    "parentUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "id": 18534,
+    "url": "https://nos.nl/artikel/2609643-zwaarste-israelische-aanvallen-op-libanon-iran-sluit-straat-van-hormuz",
+    "parentUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "id": 18536,
+    "url": "https://twitter.com/intent/tweet?text\u003dDodelijke+explosie+zet+toekomst+van+vuurwerkstad+Liuyang+op+scherp\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "id": 18537,
+    "url": "https://nos.nl/artikel/2613165-zeker-26-doden-en-tientallen-gewonden-bij-explosie-in-chinese-vuurwerkfabriek",
+    "parentUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "id": 18538,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp",
+    "parentUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "id": 18539,
+    "url": "https://nos.nl/artikel/2605953-rust-keert-terug-na-bendegeweld-in-guadalajara-net-op-tijd-voor-wk-voetbal",
+    "parentUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "id": 18540,
+    "url": "https://nos.nl/artikel/2612386-nieuwe-eu-vuurwerkwet-in-de-maak-hoop-op-europees-cobraverbod",
+    "parentUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "id": 18542,
+    "url": "https://nos.nl/artikel/2597215-dit-is-de-vuurwerkmitrailleur-waar-de-politie-over-spreekt",
+    "parentUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "id": 18543,
+    "url": "https://api.whatsapp.com/send?text\u003dBrug+bij+Eefde+per+direct+twee+weken+gesloten+door+zinkgat+https%3A%2F%2Fnos.nl%2Fregio%2Fgelderland%2Fartikel%2F757004-brug-bij-eefde-per-direct-twee-weken-gesloten-door-zinkgat",
+    "parentUrl": "https://nos.nl/regio/gelderland/artikel/757004-brug-bij-eefde-per-direct-twee-weken-gesloten-door-zinkgat"
+  },
+  {
+    "id": 18544,
+    "url": "https://www.regio8.nl/nieuws/brug-bij-eefde-per-direct-afgesloten-vanwege-zinkgat",
+    "parentUrl": "https://nos.nl/regio/gelderland/artikel/757004-brug-bij-eefde-per-direct-twee-weken-gesloten-door-zinkgat"
+  },
+  {
+    "id": 18546,
+    "url": "https://twitter.com/intent/tweet?text\u003dBrug+bij+Eefde+per+direct+twee+weken+gesloten+door+zinkgat\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fregio%2Fgelderland%2Fartikel%2F757004-brug-bij-eefde-per-direct-twee-weken-gesloten-door-zinkgat\u0026via\u003d%40nos",
+    "parentUrl": "https://nos.nl/regio/gelderland/artikel/757004-brug-bij-eefde-per-direct-twee-weken-gesloten-door-zinkgat"
+  },
+  {
+    "id": 18547,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fregio%2Fgelderland%2Fartikel%2F757004-brug-bij-eefde-per-direct-twee-weken-gesloten-door-zinkgat",
+    "parentUrl": "https://nos.nl/regio/gelderland/artikel/757004-brug-bij-eefde-per-direct-twee-weken-gesloten-door-zinkgat"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://regio.cdn.nos.nl/2026/05/08/d08f087c-d66f-3498-a9ce-327cb5268734/128x72.jpg",
+    "alt": "",
+    "pageTitle": "Brug bij Eefde per direct twee weken gesloten door zinkgat",
+    "pageUrl": "https://nos.nl/regio/gelderland/artikel/757004-brug-bij-eefde-per-direct-twee-weken-gesloten-door-zinkgat"
+  },
+  {
+    "src": "https://static.nos.nl/regio/logos/Gelderland/Regio_Gelderland.svg",
+    "alt": "",
+    "pageTitle": "Brug bij Eefde per direct twee weken gesloten door zinkgat",
+    "pageUrl": "https://nos.nl/regio/gelderland/artikel/757004-brug-bij-eefde-per-direct-twee-weken-gesloten-door-zinkgat"
+  },
+  {
+    "src": "https://static.nos.nl/regio/logos/Gelderland/Regio_Gelderland.svg",
+    "alt": "",
+    "pageTitle": "Brug bij Eefde per direct twee weken gesloten door zinkgat",
+    "pageUrl": "https://nos.nl/regio/gelderland/artikel/757004-brug-bij-eefde-per-direct-twee-weken-gesloten-door-zinkgat"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/F/z/h/1/h/zReQj4CqpwGuue8fcafbdZXiVCGNZcrHiPz6j5L/0x307x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp",
+    "pageUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2025/05/21/1228099/bio_medium.jpg",
+    "alt": "",
+    "pageTitle": "Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp",
+    "pageUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2025/05/21/1228099/bio_medium.jpg",
+    "alt": "",
+    "pageTitle": "Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp",
+    "pageUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/F/1/E/4/1/Hs4RbJHrL24A2UvZpwBFZFYczQqSZEYhbPVRGt7/0x294x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp",
+    "pageUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/8/z/Y/w/U/gMiUa6m5Z8VaYUiyMprvHJPc9U2VFQvCTxK62sS/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp",
+    "pageUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/2/D/m/V/P/37oDpWSyb3TcJzZnEaevDm8i92ojXD6EVfrz1AQ/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp",
+    "pageUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/8/c/y/Q/C/aAhaY8Q8Td63eRQZUc4TnvUVk5QRfbP9xyA9u16/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp",
+    "pageUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/8/H/n/W/Y/p6PqFSKroUnNcNqeDJXk6gFzy2ALLMUvMPUHc8v/294x161x252x189-192x144.webp",
+    "alt": "",
+    "pageTitle": "Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp",
+    "pageUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/4/o/a/i/R/EVBG9E9kTLYM5mrKFrUcCLc5LvjmdC2wC9KA4X9/665x318x588x441-384x288.webp",
+    "alt": "",
+    "pageTitle": "Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp",
+    "pageUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/F/a/H/d/d/Psut29mgAw3ZXLdgWeZW6yPbUzAGgK6fJUvj9J2/373x69x1064x798-480x360.webp",
+    "alt": "",
+    "pageTitle": "Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp",
+    "pageUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/B/V/L/1/5/cpLPxxS47PQvRrefEtzH78noiazjsLjz2sfR2zG/0x0x3084x2313-96x72.webp",
+    "alt": "",
+    "pageTitle": "Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp",
+    "pageUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/E/r/U/M/o/AA3dBH7kb8XEQygo4D4qjtM125cLeMMuu7TEMzG/883x81x2628x1971-576x432.webp",
+    "alt": "",
+    "pageTitle": "Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp",
+    "pageUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/6/E/S/q/X/rnseEUcPKUb65FbVxNYey8osQdn8Je5SR4Xwjdt/147x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp",
+    "pageUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/3/G/A/L/d/tpxNyjFbzgi3yG3SCyFGY6naJY1gQCSfwRAK5Kj/441x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "Dodelijke explosie zet toekomst van vuurwerkstad Liuyang op scherp",
+    "pageUrl": "https://nos.nl/artikel/2613449-dodelijke-explosie-zet-toekomst-van-vuurwerkstad-liuyang-op-scherp"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2026/05/08/1357413/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "Veerdienst Wadden getroffen door brand in datacentrum: \u0027Alles uitgeprint\u0027",
+    "pageUrl": "https://nos.nl/video/2613588-veerdienst-wadden-getroffen-door-brand-in-datacentrum-alles-uitgeprint"
+  },
+  {
+    "src": "https://www.ster.nl/img/loading.svg",
+    "alt": "laden",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/img/loading.svg",
+    "alt": "laden",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/img/loading.svg",
+    "alt": "Loading",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/img/loading.svg",
+    "alt": "Loading",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/media/1m5h5duf/ster-smartphone-teletekst-loeki-add.jpg?width\u003d864\u0026height\u003d0\u0026quality\u003d60\u0026v\u003d1dc863e8c859010)",
+    "alt": "",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/img/loading.svg",
+    "alt": "Loading",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/media/oego52vt/nathanreinds-bevrijdingsfestivaloverijssel-shr-1.jpg?width\u003d700\u0026height\u003d320\u0026quality\u003d60\u0026v\u003d1db3070e3d4b500",
+    "alt": "",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/media/wzfhqelq/online-video-growing.jpg?cc\u003d0,0.13333333333333333,0,0.18095238095238092\u0026width\u003d700\u0026height\u003d320\u0026quality\u003d60\u0026v\u003d1d75854583bcc10",
+    "alt": "",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/media/4sfjojxp/ster-via-desktop-advertentie-nos-home-2024.jpg?width\u003d700\u0026height\u003d320\u0026quality\u003d60\u0026v\u003d1dbc98b9caf4190",
+    "alt": "",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
   {
     "src": "https://images.cdn.nos.nl/6/B/c/5/L/W/P52QhUMGHYcQnMZujYaBCTeR77HJRDt6dAdHkoK/2x38x2480x1395-768x432.webp",
     "alt": "",
