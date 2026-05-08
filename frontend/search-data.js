@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 755,
+    "url": "https://docs.python.org/3/library/gc.html#gc.collect",
+    "title": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » gc — Garbage Collector interface | Theme Auto Light Dark | gc — Garbage Collector interface¶ This module provides an interface to the optional garbage collector. It provides the ability to disable the collector, tune the collection frequency, and set debugging options. It also provides access to unreachable objects that the collector found but cannot free. Since the collector supplements the reference counting already used in Python, you can disable the collector if you are sure your program does not create reference cycles. Automatic collection can be disabled by calling gc.disable(). To debug a leaking program call gc.set_debug(gc.DEBUG_LEAK). Notice that this includes gc.DEBUG_SAVEALL, causing garbage-collected objects to be saved in gc.garbage for inspection. The gc module provides the following functions: gc.enable()¶ Enable automatic garbage collection. gc.disable()¶ Disable automatic garbage collection. gc.isenabled()¶ Return True if automatic collection is enabled. gc.collect(generation\u003d2)¶ With no arguments, run a full collection. The optional argument generation may be an integer specifying which generation to collect (from 0 to 2). A ValueError is raised if the generation number is invalid. The sum of collected objects and uncollectable objects is returned. The free lists maintained for a number of built-in types are cleared whenever a full collection or collection of the highest generation (2) is run. Not all items in some free lists may be freed due to the particular implementation, in particular float. The effect of calling gc.collect() while the interpreter is already performing a collection is undefined. Changed in version 3.14: generation\u003d1 performs an increment of collection. Changed in version 3.14.5: generation\u003d1 performs collection of the middle generation. gc.set_debug(flags)¶ Set the garbage collection debugging flags. Debugging information will be written to sys.stderr. See below for a list of debugging flags which can be combined using bit operations to control debugging. gc.get_debug()¶ Return the debugging flags currently set. gc.get_objects(generation\u003dNone)¶ Returns a list of all objects tracked by the collector, excluding the list returned. If generation is not None, return only the objects tracked by the collector that are in that generation. Changed in version 3.8: New generation parameter. Changed in version 3.14: Generation 1 is removed Changed in version 3.14.5: Generation 1 is reintroduced to maintain GC behavior from 3.13. Raises an auditing event gc.get_objects with argument generation. gc.get_stats()¶ Return a list of three per-generation dictionaries containing collection statistics since interpreter start. The number of keys may change in the future, but currently each dictionary will contain the following items: collections is the number of times this generation was collected; collected is the total number of objects collected inside this generation; uncollectable is the total number of objects which were found to be uncollectable (and were therefore moved to the garbage list) inside this generation. Added in version 3.4. gc.set_threshold(threshold0[, threshold1[, threshold2]])¶ Set the garbage collection thresholds (the collection frequency). Setting threshold0 to zero disables collection. The GC classifies objects into three generations depending on how many collection sweeps they have survived. New objects are placed in the youngest generation (generation 0). If an object survives a collection it is moved into the next older generation. Since generation 2 is the oldest generation, objects in that generation remain there after a collection. In order to decide when to run, the collector keeps track of the number object allocations and deallocations since the last collection. When the number of allocations minus the number of deallocations exceeds threshold0, collection starts. Initially only generation 0 is examined. If generation 0 has been examined more than threshold1 times since generation 1 has been examined, then generation 1 is examined as well. With the third generation, things are a bit more complicated, see Collecting the oldest generation for more information. In the free-threaded build, the increase in process memory usage is also checked before running the collector. If the memory usage has not increased by 10% since the last collection and the net number of object allocations has not exceeded 40 times threshold0, the collection is not run. See Garbage collector design for more information. Changed in version 3.14: threshold2 is ignored Changed in version 3.14.5: threshold2 is restored to match Python 3.13 behavior. gc.get_count()¶ Return the current collection counts as a tuple of (count0, count1, count2). gc.get_threshold()¶ Return the current collection thresholds as a tuple of (threshold0, threshold1, threshold2). g",
+    "scrapedAt": "2026-05-09 00:52:20.939585"
+  },
+  {
+    "id": 754,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#symtable",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 00:52:19.71005"
+  },
+  {
+    "id": 753,
+    "url": "https://github.com/python/cpython/issues/91417",
+    "title": "RFC: Clarify usage of macros for PySequence_Fast within the Limited C API · Issue #91417 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k RFC: Clarify usage of macros for PySequence_Fast within the Limited C API #91417 New issue Copy link New issue Copy link Closed Closed RFC: Clarify usage of macros for PySequence_Fast within the Limited C API#91417 Copy link Labels docsDocumentation in the Doc dirDocumentation in the Doc dirtopic-C-API Description HaoZeke mannequin opened on Apr 8, 2022 Issue body actions BPO 47261 Nosy @HaoZeke Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2022-04-08.15:14:46.053\u003e\nlabels \u003d [\u0027expert-C-API\u0027, \u0027docs\u0027]\ntitle \u003d \u0027RFC: Clarify usage of macros for PySequence_Fast within the Limited C API\u0027\nupdated_at \u003d \u003cDate 2022-04-08.15:19:49.541\u003e\nuser \u003d \u0027https://github.com/HaoZeke\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-04-08.15:19:49.541\u003e\nactor \u003d \u0027rgoswami\u0027\nassignee \u003d \u0027docs@python\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Documentation\u0027, \u0027C API\u0027]\ncreation \u003d \u003cDate 2022-04-08.15:14:46.053\u003e\ncreator \u003d \u0027rgoswami\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 47261\nkeywords \u003d []\nmessage_count \u003d 2.0\nmessages \u003d [\u0027416989\u0027, \u0027416990\u0027]\nnosy_count \u003d 2.0\nnosy_names \u003d [\u0027docs@python\u0027, \u0027rgoswami\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d None\nurl \u003d \u0027https://bugs.python.org/issue47261\u0027\nversions \u003d [] Linked PRs gh-91417: Remove PySequence_Fast() from the limited C API #129398 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels docsDocumentation in the Doc dirDocumentation in the Doc dirtopic-C-API Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:52:18.530987"
+  },
+  {
+    "id": 752,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoSiteFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-09 00:52:16.340297"
+  },
+  {
+    "id": 751,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty, the current directory is assumed: \u003e\u003e\u003e PurePath()\nPurePosixPath(\u0027.\u0027)\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Users/Ximénez\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027//server/share/file\u0027)\nPureWindow",
+    "scrapedAt": "2026-05-09 00:52:15.154182"
+  },
+  {
     "id": 750,
     "url": "https://github.com/python/cpython/issues/103636",
     "title": "Convert calendar constants to enums and add months · Issue #103636 · python/cpython · GitHub",
@@ -4963,26 +4998,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 751,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
-  },
-  {
-    "id": 752,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoSiteFlag"
-  },
-  {
-    "id": 753,
-    "url": "https://github.com/python/cpython/issues/91417"
-  },
-  {
-    "id": 754,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#symtable"
-  },
-  {
-    "id": 755,
-    "url": "https://docs.python.org/3/library/gc.html#gc.collect"
   },
   {
     "id": 756,
@@ -128839,10 +128854,966 @@ window.searchData = [
     "id": 91677,
     "url": "https://github.com/ethanfurman",
     "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91680,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.symlink_to",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91683,
+    "url": "https://docs.python.org/3/library/os.html#os.readlink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91684,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.joinpath",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91685,
+    "url": "https://docs.python.org/3/library/pathlib.html#general-properties",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91686,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.suffix",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91687,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.write_text",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91688,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.expanduser",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91689,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.rmdir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91690,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91691,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.glob",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91692,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.mkdir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91693,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.isabs",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91695,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.exists",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91696,
+    "url": "https://docs.python.org/3/library/pathlib.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91697,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_junction",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91699,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.rename",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91701,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.islink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91702,
+    "url": "https://docs.python.org/3/library/pathlib.html#id10",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91703,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.as_posix",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91704,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.ismount",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91705,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePosixPath",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91707,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.with_stem",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91710,
+    "url": "https://docs.python.org/3/library/pathlib.html#concrete-paths",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91711,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.isdir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91712,
+    "url": "https://docs.python.org/3/library/os.html#os.sep",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91713,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.types.PathInfo.is_symlink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91714,
+    "url": "https://docs.python.org/3/library/pathlib.html#pure-paths",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91715,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.parts",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91716,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.samefile",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91717,
+    "url": "https://docs.python.org/3/library/pathlib.html#reading-and-writing-files",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91718,
+    "url": "https://docs.python.org/3/library/pathlib.html#accessing-individual-parts",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91719,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91721,
+    "url": "https://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap04.html#tag_04_11",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91722,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.with_suffix",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91724,
+    "url": "https://docs.python.org/3/library/pwd.html#module-pwd",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91725,
+    "url": "https://docs.python.org/3/library/pathlib.html#methods-and-properties",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91726,
+    "url": "https://docs.python.org/3/library/os.html#os.lchmod",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91727,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_file",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91729,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.with_name",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91732,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.types.PathInfo.exists",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91733,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.absolute",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91734,
+    "url": "https://docs.python.org/3/library/os.html#os.listdir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91735,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.splitext",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91737,
+    "url": "https://docs.python.org/3/library/os.html#os.chmod",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91739,
+    "url": "https://docs.python.org/3/library/os.html#dir-fd",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91740,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.cwd",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91741,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.lchmod",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91742,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.parent",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91743,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.relpath",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91744,
+    "url": "https://docs.python.org/3/library/pathlib.html#pattern-language",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91745,
+    "url": "https://peps.python.org/pep-0428/",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91746,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.touch",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91747,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PureWindowsPath",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91749,
+    "url": "https://docs.python.org/3/library/pathlib.html#module-pathlib.types",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91750,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.group",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91751,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/pathlib.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91752,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8089.html",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91753,
+    "url": "https://docs.python.org/3/library/pathlib.html#comparison-to-the-os-and-os-path-modules",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91754,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.isfile",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91755,
+    "url": "https://docs.python.org/3/library/pathlib.html#",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91757,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.chmod",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91760,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.name",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91761,
+    "url": "https://docs.python.org/3/library/os.html#os.makedirs",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91763,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.replace",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91765,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.exists",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91767,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.types.PathInfo.is_file",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91768,
+    "url": "https://docs.python.org/3/library/os.html#os.replace",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91769,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.walk",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91771,
+    "url": "https://docs.python.org/3/library/grp.html#module-grp",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91772,
+    "url": "https://docs.python.org/3/library/glob.html#glob.glob",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91773,
+    "url": "https://docs.python.org/3/library/pathlib.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91774,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_symlink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91775,
+    "url": "https://docs.python.org/3/library/pathlib.html#id7",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91776,
+    "url": "https://docs.python.org/3/library/pathlib.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91778,
+    "url": "https://docs.python.org/3/library/pathlib.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91779,
+    "url": "https://docs.python.org/3/library/pathlib.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91783,
+    "url": "https://docs.python.org/3/library/pathlib.html#id9",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91784,
+    "url": "https://docs.python.org/3/library/pathlib.html#id8",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91785,
+    "url": "https://docs.python.org/3/library/os.html#os.unlink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91786,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_char_device",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91787,
+    "url": "https://docs.python.org/3/library/pathlib.html#operators",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91788,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.UnsupportedOperation",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91789,
+    "url": "https://docs.python.org/3/library/pathlib.html#copying-moving-and-deleting",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91790,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.stem",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91792,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.root",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91793,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_socket",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91795,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91796,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.unlink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91797,
+    "url": "https://docs.python.org/3/library/pathlib.html#comparison-to-the-glob-module",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91798,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.parser",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91799,
+    "url": "https://docs.python.org/3/library/pathlib.html#expanding-and-resolving-paths",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91800,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.hardlink_to",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91801,
+    "url": "https://docs.python.org/3/library/os.html#os.walk",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91802,
+    "url": "https://docs.python.org/3/library/os.html#os.altsep",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91803,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.full_match",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91804,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/pathlib/",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91805,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.suffixes",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91806,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.samefile",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91807,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.readlink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91809,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.match",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91811,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.resolve",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91812,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.stat",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91814,
+    "url": "https://docs.python.org/3/library/pathlib.html#parsing-and-generating-uris",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91815,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_block_device",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91818,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_dir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91819,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.open",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91821,
+    "url": "https://docs.python.org/3/library/pathlib.html#creating-files-and-directories",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91823,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.parents",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91824,
+    "url": "https://docs.python.org/3/library/os.html#os.rename",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91826,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_mount",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91827,
+    "url": "https://docs.python.org/3/library/pathlib.html#querying-file-type-and-status",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91828,
+    "url": "https://docs.python.org/3/library/os.html#os.link",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91829,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.join",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91830,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.WindowsPath",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91831,
+    "url": "https://en.wikipedia.org/wiki/Path_(computing)#UNC",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91832,
+    "url": "https://docs.python.org/3/library/os.html#os.symlink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91834,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.lstat",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91835,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.read_text",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91836,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_fifo",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91837,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.types.PathInfo.is_dir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91838,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.is_absolute",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91839,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.samestat",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91840,
+    "url": "https://docs.python.org/3/library/os.html#os.rmdir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91841,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.drive",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91842,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.anchor",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91844,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.dirname",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91846,
+    "url": "https://docs.python.org/3/library/pathlib.html#permissions-and-ownership",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91847,
+    "url": "https://docs.python.org/3/library/os.html#os.mkdir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91849,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.from_uri",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91850,
+    "url": "https://docs.python.org/3/library/pathlib.html#corresponding-tools",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91851,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.rglob",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91854,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.expanduser",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91856,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.isjunction",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91857,
+    "url": "https://docs.python.org/3/library/os.html#os.remove",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91858,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib-pattern-language",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91859,
+    "url": "https://docs.python.org/3/library/glob.html#module-glob",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91862,
+    "url": "https://docs.python.org/3/library/pathlib.html#basic-use",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91867,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.owner",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91868,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.basename",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91869,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.write_bytes",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91870,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.home",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91871,
+    "url": "https://docs.python.org/3/library/os.html#os.lstat",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91872,
+    "url": "https://docs.python.org/3/library/os.path.html#module-os.path",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91873,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.with_segments",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91874,
+    "url": "https://docs.python.org/3/library/os.html#os.getcwd",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91875,
+    "url": "https://docs.python.org/3/library/os.html#filesystem-encoding",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91877,
+    "url": "https://docs.python.org/3/library/pathlib.html#reading-directories",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91878,
+    "url": "https://docs.python.org/3/library/os.html#os.scandir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 92068,
+    "url": "https://github.com/python/cpython/issues/91417#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 92069,
+    "url": "https://github.com/python/cpython/issues/91417#issue-1199078444",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 92072,
+    "url": "https://bugs.python.org/issue47261",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 92073,
+    "url": "https://github.com/python/cpython/pull/129398",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 92075,
+    "url": "https://github.com/python/cpython/issues/91417#top",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 92076,
+    "url": "https://github.com/HaoZeke",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 93315,
+    "url": "https://github.com/python/cpython/blob/ff0ef0a54bef26fc507fbf9b7a6009eb7d3f17f5/InternalDocs/garbage_collector.md#collecting-the-oldest-generation",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93318,
+    "url": "https://docs.python.org/3/library/gc.html#gc.enable",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93320,
+    "url": "https://docs.python.org/3/library/gc.html#gc.garbage",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93322,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_objects",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93323,
+    "url": "https://docs.python.org/3/library/gc.html#gc.DEBUG_UNCOLLECTABLE",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93324,
+    "url": "https://docs.python.org/3/library/gc.html#gc.DEBUG_COLLECTABLE",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93326,
+    "url": "https://docs.python.org/3/library/gc.html#gc.set_debug",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93328,
+    "url": "https://peps.python.org/pep-0442/",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93330,
+    "url": "https://github.com/python/cpython/blob/3.14/InternalDocs/garbage_collector.md",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93332,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_referents",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93333,
+    "url": "https://docs.python.org/3/library/gc.html#gc.is_finalized",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93334,
+    "url": "https://docs.python.org/3/library/gc.html#gc.unfreeze",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93335,
+    "url": "https://docs.python.org/3/library/gc.html#gc.is_tracked",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93338,
+    "url": "https://docs.python.org/3/library/gc.html#gc.isenabled",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93344,
+    "url": "https://docs.python.org/3/library/gc.html#gc.callbacks",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93345,
+    "url": "https://docs.python.org/3/library/gc.html#gc.DEBUG_LEAK",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93347,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_debug",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93349,
+    "url": "https://docs.python.org/3/library/gc.html#gc.DEBUG_SAVEALL",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93351,
+    "url": "https://docs.python.org/3/library/gc.html#gc.DEBUG_STATS",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93352,
+    "url": "https://docs.python.org/3/library/gc.html#gc.disable",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93353,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/gc.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93356,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_referrers",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93364,
+    "url": "https://docs.python.org/3/library/gc.html#gc.freeze",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93365,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_freeze_count",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#symtable"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#symtable"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/103280611?v\u003d4\u0026size\u003d80",
+    "alt": "@HaoZeke",
+    "pageTitle": "RFC: Clarify usage of macros for PySequence_Fast within the Limited C API · Issue #91417 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/103280611?v\u003d4\u0026size\u003d48",
+    "alt": "@HaoZeke",
+    "pageTitle": "RFC: Clarify usage of macros for PySequence_Fast within the Limited C API · Issue #91417 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoSiteFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoSiteFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/7659890?v\u003d4\u0026size\u003d80",
     "alt": "@ethanfurman",
