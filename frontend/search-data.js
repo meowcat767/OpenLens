@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1452,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.parser_debug",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:20:30.518114"
+  },
+  {
+    "id": 1451,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStrList",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:20:29.267536"
+  },
+  {
+    "id": 1450,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb-cli",
+    "title": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Debugging and Profiling » pdb — The Python Debugger | Theme Auto Light Dark | pdb — The Python Debugger¶ Source code: Lib/pdb.py The module pdb defines an interactive source code debugger for Python programs. It supports setting (conditional) breakpoints and single stepping at the source line level, inspection of stack frames, source code listing, and evaluation of arbitrary Python code in the context of any stack frame. It also supports post-mortem debugging and can be called under program control. The debugger is extensible – it is actually defined as the class Pdb. This is currently undocumented but easily understood by reading the source. The extension interface uses the modules bdb and cmd. See also Module faulthandler Used to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal. Module traceback Standard interface to extract, format and print stack traces of Python programs. The typical usage to break into the debugger is to insert: import pdb; pdb.set_trace()\n Or: breakpoint()\n at the location you want to break into the debugger, and then run the program. You can then step through the code following this statement, and continue running without the debugger using the continue command. Changed in version 3.7: The built-in breakpoint(), when called with defaults, can be used instead of import pdb; pdb.set_trace(). def double(x):\n   breakpoint()\n   return x * 2\nval \u003d 3\nprint(f\"{val} * 2 is {double(val)}\")\n The debugger’s prompt is (Pdb), which is the indicator that you are in debug mode: \u003e ...(2)double()\n-\u003e breakpoint()\n(Pdb) p x\n3\n(Pdb) continue\n3 * 2 is 6\n Changed in version 3.3: Tab-completion via the readline module is available for commands and command arguments, e.g. the current global and local names are offered as arguments of the p command. Command-line interface¶ You can also invoke pdb from the command line to debug other scripts. For example: python -m pdb [-c command] (-m module | -p pid | pyfile) [args ...]\n When invoked as a module, pdb will automatically enter post-mortem debugging if the program being debugged exits abnormally. After post-mortem debugging (or after normal exit of the program), pdb will restart the program. Automatic restarting preserves pdb’s state (such as breakpoints) and in most cases is more useful than quitting the debugger upon program’s exit. -c, --command \u003ccommand\u003e¶ To execute commands as if given in a .pdbrc file; see Debugger commands. Changed in version 3.2: Added the -c option. -m \u003cmodule\u003e¶ To execute modules similar to the way python -m does. As with a script, the debugger will pause execution just before the first line of the module. Changed in version 3.7: Added the -m option. -p, --pid \u003cpid\u003e¶ Attach to the process with the specified PID. Added in version 3.14. To attach to a running Python process for remote debugging, use the -p or --pid option with the target process’s PID: python -m pdb -p 1234\n Note Attaching to a process that is blocked in a system call or waiting for I/O will only work once the next bytecode instruction is executed or when the process receives a signal. Typical usage to execute a statement under control of the debugger is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n\u003e\u003e\u003e pdb.run(\"f(2)\")\n\u003e \u003cstring\u003e(1)\u003cmodule\u003e()\n(Pdb) continue\n0.5\n\u003e\u003e\u003e\n The typical usage to inspect a crashed program is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n...\n\u003e\u003e\u003e f(0)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"\u003cstdin\u003e\", line 2, in f\nZeroDivisionError: division by zero\n\u003e\u003e\u003e pdb.pm()\n\u003e \u003cstdin\u003e(2)f()\n(Pdb) p x\n0\n(Pdb)\n Changed in version 3.13: The implementation of PEP 667 means that name assignments made via pdb will immediately affect the active scope, even when running inside an optimized scope. The module defines the following functions; each enters the debugger in a slightly different way: pdb.run(statement, globals\u003dNone, locals\u003dNone)¶ Execute the statement (given as a string or a code object) under debugger control. The debugger prompt appears before any code is executed; you can set breakpoints and type continue, or you can step through the statement using step or next (all these commands are explained below). The optional globals and locals arguments specify the environment in which the code is executed; by default the dictionary of the module __main__ is used. (See the explanation of the built-in exec() or eval() functions.) pdb.runeval(expression, globals\u003dNone, locals\u003dNone)¶ Evaluate the expression (given as a string or a code object) under debugger control. When runeval() returns, it returns the value of the expression. Otherwise this function is similar to run(). pdb.runcall(function, *args, **kwds)¶ Call the function (a function or method object, not a string) with the given arguments. When runcall() returns, it returns whatever the function call returned. The debug",
+    "scrapedAt": "2026-05-09 01:20:28.013742"
+  },
+  {
+    "id": 1449,
+    "url": "https://github.com/python/cpython/issues/132056",
+    "title": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Contributor Kristinita commented Apr 3, 2025 • edited Loading Uh oh! There was an error while loading. Please reload this page. Issue: Add application/yaml to mimetypes #132054 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions pythongh-132054 Add application/yaml to mimetypes 5e0f103 Kristinita requested a review from a team as a code owner April 3, 2025 17:43 bedevere-app Bot added the awaiting review label Apr 3, 2025 bedevere-app Bot mentioned this pull request Apr 3, 2025 Add application/yaml to mimetypes #132054 Closed AA-Turner reviewed Apr 3, 2025 View reviewed changes Comment thread Misc/NEWS.d/next/Library/2025-04-03-20-28-54.gh-issue-132054.c1nlOx.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Update NEWS fragment 1031592 AA-Turner approved these changes Apr 3, 2025 View reviewed changes bedevere-app Bot added awaiting merge and removed awaiting review labels Apr 3, 2025 AA-Turner changed the title gh-132054 Add application/yaml to mimetypes gh-132054: Add application/yaml to mimetypes Apr 3, 2025 Kristinita requested review from a team, AlexWaygood and JelleZijlstra as code owners April 3, 2025 18:40 fix(error): remove .yml from the list of preferred extensions … a528d60 https://github.com/python/cpython/actions/runs/14249517987/job/39938739555?pr\u003d132056#step:11:655 Copy link Copy Markdown Contributor brianschubert commented Apr 3, 2025 @Kristinita I think you accidentally included some unrelated changes in your last push All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor Author Kristinita commented Apr 3, 2025 • edited Loading Uh oh! There was an error while loading. Please reload this page. Type: Reply 💬 @brianschubert, I’m sorry, I made a mistake in the test file and create the new commit that fix tests. I can’t push my changes to GitHub, so I run git fetch, git rebase and then push changes to GitHub. I can close this pull request, update my CPython fork and send a new pull request. Or should I do something else? I can’t find instructions for this case in Python Developer’s Guide. I apologize for the concern. Thanks. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor brianschubert commented Apr 3, 2025 • edited Loading Uh oh! There was an error while loading. Please reload this page. No worries! And no need to open a new PR. You can undo the extra changes by running git restore -s HEAD~1 ./ (which will reset your working tree to what it was before the commit), then remake the intended change to test_mimetypes.py and create a new commit. 👍 1 Kristinita reacted with thumbs up emoji 🎉 1 Kristinita reacted with hooray emoji All reactions 👍 1 reaction 🎉 1 reaction Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member AA-Turner commented Apr 3, 2025 @Kristinita please read our AI policy. A All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. fix(git): undo extra changes from the last push use “git restore” com… … 6d29f25 …mand\n\npython#132056 (comment)\nSigned-off-by: Kristinita \u003cKristinita@users.noreply.github.com\u003e Copy link Copy Markdown Contributor Author Kristinita commented Apr 3, 2025 • edited Loading Uh oh! There was an error while loading. Please reload this page. Type: Fixed ✔️ @brianschubert , done. All checks have passed now. Thanks. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member hugovk commented Apr 3, 2025 Please could you add it to What\u0027s New? https://docs.python.org/3.14/whatsnew/3.14.html#mimetypes And add a test for .yml? All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor Author Kristinita commented Apr 4, 2025 Type: Question ❓ 1. Question And add a test for .yml? @hugovk, what is the preferred format for tests for non-preferred extensions like .yml? I was looking for the answer to this in previous pull requests that add new media types, but I can’t find a conventional method. 2. Missing tests Currently, the file test_mimetypes.py in many cases contains tests solely for preferred extensions.",
+    "scrapedAt": "2026-05-09 01:20:26.766373"
+  },
+  {
+    "id": 1448,
+    "url": "https://docs.python.org/3/reference/index.html#reference-index",
+    "title": "The Python Language Reference — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference | Theme Auto Light Dark | The Python Language Reference¶ This reference manual describes the syntax and “core semantics” of the language. It is terse, but attempts to be exact and complete. The semantics of non-essential built-in object types and of the built-in functions and modules are described in The Python Standard Library. For an informal introduction to the language, see The Python Tutorial. For C or C++ programmers, two additional manuals exist: Extending and Embedding the Python Interpreter describes the high-level picture of how to write a Python extension module, and the Python/C API reference manual describes the interfaces available to C/C++ programmers in detail. 1. Introduction 1.1. Alternate Implementations 1.2. Notation 2. Lexical analysis 2.1. Line structure 2.2. Other tokens 2.3. Names (identifiers and keywords) 2.4. Literals 2.5. String and Bytes literals 2.6. Numeric literals 2.7. Operators and delimiters 3. Data model 3.1. Objects, values and types 3.2. The standard type hierarchy 3.3. Special method names 3.4. Coroutines 4. Execution model 4.1. Structure of a program 4.2. Naming and binding 4.3. Exceptions 4.4. Runtime Components 5. The import system 5.1. importlib 5.2. Packages 5.3. Searching 5.4. Loading 5.5. The Path Based Finder 5.6. Replacing the standard import system 5.7. Package Relative Imports 5.8. Special considerations for __main__ 5.9. References 6. Expressions 6.1. Arithmetic conversions 6.2. Atoms 6.3. Primaries 6.4. Await expression 6.5. The power operator 6.6. Unary arithmetic and bitwise operations 6.7. Binary arithmetic operations 6.8. Shifting operations 6.9. Binary bitwise operations 6.10. Comparisons 6.11. Boolean operations 6.12. Assignment expressions 6.13. Conditional expressions 6.14. Lambdas 6.15. Expression lists 6.16. Evaluation order 6.17. Operator precedence 7. Simple statements 7.1. Expression statements 7.2. Assignment statements 7.3. The assert statement 7.4. The pass statement 7.5. The del statement 7.6. The return statement 7.7. The yield statement 7.8. The raise statement 7.9. The break statement 7.10. The continue statement 7.11. The import statement 7.12. The global statement 7.13. The nonlocal statement 7.14. The type statement 8. Compound statements 8.1. The if statement 8.2. The while statement 8.3. The for statement 8.4. The try statement 8.5. The with statement 8.6. The match statement 8.7. Function definitions 8.8. Class definitions 8.9. Coroutines 8.10. Type parameter lists 8.11. Annotations 9. Top-level components 9.1. Complete Python programs 9.2. File input 9.3. Interactive input 9.4. Expression input 10. Full Grammar specification Previous topic 8. Editors and IDEs Next topic 1. Introduction This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 01:20:23.043045"
+  },
+  {
     "id": 1447,
     "url": "https://docs.python.org/3/library/sys.html#sys._jit.is_enabled",
     "title": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
@@ -9728,26 +9763,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1448,
-    "url": "https://docs.python.org/3/reference/index.html#reference-index"
-  },
-  {
-    "id": 1449,
-    "url": "https://github.com/python/cpython/issues/132056"
-  },
-  {
-    "id": 1450,
-    "url": "https://docs.python.org/3/library/pdb.html#pdb-cli"
-  },
-  {
-    "id": 1451,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStrList"
-  },
-  {
-    "id": 1452,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.parser_debug"
   },
   {
     "id": 1453,
@@ -233405,10 +233420,608 @@ window.searchData = [
     "id": 303997,
     "url": "https://github.com/python/cpython/pull/121444",
     "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 304781,
+    "url": "https://docs.python.org/3/reference/index.html#the-python-language-reference",
+    "parentUrl": "https://docs.python.org/3/reference/index.html#reference-index"
+  },
+  {
+    "id": 304801,
+    "url": "https://github.com/python/cpython/pull/132056/commits/a528d603aabdea0469c87e2428b261eb7030d30e#diff-f74ffd6adcd8c804ba11aa32f2b5dd8cfb46bc111f67ddf91ec564f5de9c541dL248",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304802,
+    "url": "https://github.com/python/cpython/commit/132b6bc98f47a4d897dead8635b5a50a0baee485",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304804,
+    "url": "https://github.com/python/cpython/pull/132056#commits-pushed-3b3bd87",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304805,
+    "url": "https://github.com/python/cpython/pull/132056/commits/6d29f258b6a4d0ad5066c9c932b1b87b8a62d807",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304806,
+    "url": "https://github.com/python/cpython/pull/132056/files/5e0f103d86be13356cf5575bae537d750fe1ee94",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304807,
+    "url": "https://github.com/python/cpython/pull/132056/commits/3b3bd87ec74e74fb473998c78bfcebb78ac3ab09",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304810,
+    "url": "https://github.com/python/cpython/pull/132056/commits/bb8b661f1d073a448445fa4a2bc441b71ddb99cd",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304811,
+    "url": "https://github.com/python/cpython/pull/132056#issuecomment-2776755109",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304813,
+    "url": "https://github.com/python/cpython/pull/132056#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304814,
+    "url": "https://github.com/python/cpython/issues/123299",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304815,
+    "url": "https://github.com/python/cpython/pull/132056#pullrequestreview-2740713381",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304816,
+    "url": "https://github.com/python/cpython/pull/132056#issuecomment-2776940747",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304817,
+    "url": "https://github.com/python/cpython/pull/132056/commits/a528d603aabdea0469c87e2428b261eb7030d30e",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304818,
+    "url": "https://github.com/python/cpython/pull/132056/commits/3bf23ce4753d875c3f02e81d31072a34fa9d3619",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304819,
+    "url": "https://github.com/python/cpython/pull/132056#event-17118250532",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304820,
+    "url": "https://devguide.python.org/getting-started/git-boot-camp/#updating-your-cpython-fork",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304821,
+    "url": "https://github.com/python/cpython/pull/132056/files/c5a6f68c63e5d1d18045a33d9ebdfdf87d258fee",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304822,
+    "url": "https://github.com/python/cpython/pull/132056#issue-2970279764",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304824,
+    "url": "https://github.com/python/cpython/pull/132056#discussion_r2051722743",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304826,
+    "url": "https://github.com/python/cpython/pull/132056#event-17150607615",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304827,
+    "url": "https://github.com/python/cpython/pull/132056#event-17118138954",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304829,
+    "url": "https://github.com/python/cpython/commit/ef172521a9e9dfadebe57d590bfb53a0e9ac3a0b",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304830,
+    "url": "https://github.com/python/cpython/pull/132056#discussion_r2051713845",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304831,
+    "url": "https://github.com/Kristinita",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304832,
+    "url": "https://github.com/python/cpython/pull/132056#pullrequestreview-2740712567",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304833,
+    "url": "https://github.com/python/cpython/blob/b6c92ec419cfa1e4483b072996bab403c9970a5d/.github/CODEOWNERS#L221",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304834,
+    "url": "https://github.com/python/cpython/pull/132056#pullrequestreview-2780233975",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304835,
+    "url": "https://github.com/python/cpython/pull/132056#event-17336100226",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304836,
+    "url": "https://github.com/python/cpython/pull/132056#event-17336100703",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304837,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F132056",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304841,
+    "url": "https://github.com/python/cpython/pull/132056#issuecomment-2781436729",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304842,
+    "url": "https://github.com/python/cpython/pull/132056#ref-issue-2970222728",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304843,
+    "url": "https://github.com/python/cpython/pull/132056/commits/c8a4f73f5d144bca1724e4b0a99cb0ed0bd11c05",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304846,
+    "url": "https://github.com/python/cpython/pull/132056#event-17118832282",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304847,
+    "url": "https://github.com/python/cpython/pull/132056#issuecomment-2776805064",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304849,
+    "url": "https://github.com/python/cpython/pull/132056/files/5e0f103d86be13356cf5575bae537d750fe1ee94#diff-deaf68ce0b8a6e4308e18d929903156b30c31b84f27171600548ddc3669112be",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304851,
+    "url": "https://github.com/python/cpython/pull/132056#issuecomment-2776876634",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304852,
+    "url": "https://github.com/python/cpython/pull/132056/files/1031592c4a578fd998528e139e5fc66feb871b2d",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304855,
+    "url": "https://github.com/python/cpython/blob/ef172521a9e9dfadebe57d590bfb53a0e9ac3a0b/Lib/test/test_mimetypes.py#L177-L179",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304857,
+    "url": "https://devguide.python.org/getting-started/generative-ai/",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304858,
+    "url": "https://github.com/python/cpython/pull/132056#discussion_r2051733261",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304859,
+    "url": "https://github.com/python/cpython/pull/132056",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304860,
+    "url": "https://github.com/python/cpython/actions/runs/14249517987/job/39938739555?pr\u003d132056#step:11:655",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304861,
+    "url": "https://github.com/python/cpython/pull/132056#issuecomment-2776773957",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304862,
+    "url": "https://github.com/python/cpython/pull/132056#issuecomment-2777623566",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304863,
+    "url": "https://github.com/python/cpython/pull/132056/commits/c5a6f68c63e5d1d18045a33d9ebdfdf87d258fee",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304864,
+    "url": "https://github.com/python/cpython/pull/132056#issuecomment-2778911578",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304865,
+    "url": "https://github.com/python/cpython/pull/132056#event-17118139549",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304867,
+    "url": "https://github.com/python/cpython/pull/132056#issuecomment-2776820607",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304868,
+    "url": "https://docs.python.org/3.14/whatsnew/3.14.html#mimetypes",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304869,
+    "url": "https://github.com/python/cpython/pull/132056/commits/5e0f103d86be13356cf5575bae537d750fe1ee94",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304870,
+    "url": "https://github.com/python/cpython/pull/132056/commits/1031592c4a578fd998528e139e5fc66feb871b2d",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304871,
+    "url": "https://github.com/python/cpython/pull/132056/files/c5a6f68c63e5d1d18045a33d9ebdfdf87d258fee#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304872,
+    "url": "https://github.com/python/cpython/pull/132056#event-17118241519",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304873,
+    "url": "https://github.com/python/cpython/blob/b6c92ec419cfa1e4483b072996bab403c9970a5d/.github/CODEOWNERS#L166",
+    "parentUrl": "https://github.com/python/cpython/issues/132056"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.parser_debug"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.parser_debug"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStrList"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStrList"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdb-cli"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdb-cli"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/17247677?s\u003d80\u0026v\u003d4",
+    "alt": "@Kristinita",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/17247677?s\u003d48\u0026v\u003d4",
+    "alt": "@Kristinita",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/17247677?s\u003d40\u0026v\u003d4",
+    "alt": "@Kristinita",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/17247677?s\u003d40\u0026u\u003de9b324390f6e848b1e437dc6bd0a8c0241c5f4a6\u0026v\u003d4",
+    "alt": "@Kristinita",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d60\u0026v\u003d4",
+    "alt": "AA-Turner",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d60\u0026v\u003d4",
+    "alt": "AA-Turner",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026u\u003d11cc18fe41c8b4216e490ec9b145ecf50128bac0\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/17247677?s\u003d40\u0026u\u003de9b324390f6e848b1e437dc6bd0a8c0241c5f4a6\u0026v\u003d4",
+    "alt": "@Kristinita",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/17247677?s\u003d40\u0026v\u003d4",
+    "alt": "@Kristinita",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/25313350?s\u003d80\u0026u\u003d73b184aa203a878927d87aa1fce19fd529155f39\u0026v\u003d4",
+    "alt": "@brianschubert",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/17247677?s\u003d80\u0026u\u003de9b324390f6e848b1e437dc6bd0a8c0241c5f4a6\u0026v\u003d4",
+    "alt": "@Kristinita",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/25313350?s\u003d80\u0026u\u003d73b184aa203a878927d87aa1fce19fd529155f39\u0026v\u003d4",
+    "alt": "@brianschubert",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d80\u0026u\u003d11cc18fe41c8b4216e490ec9b145ecf50128bac0\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/17247677?s\u003d40\u0026v\u003d4",
+    "alt": "@Kristinita",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/17247677?s\u003d80\u0026u\u003de9b324390f6e848b1e437dc6bd0a8c0241c5f4a6\u0026v\u003d4",
+    "alt": "@Kristinita",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d80\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/17247677?s\u003d80\u0026u\u003de9b324390f6e848b1e437dc6bd0a8c0241c5f4a6\u0026v\u003d4",
+    "alt": "@Kristinita",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d80\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/1203010?s\u003d80\u0026v\u003d4",
+    "alt": "@python-cla-bot",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/1c7e7ec4141b7323ee376d8a3a48e6acfaa33577216949150bd85c32e231b8db/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f434c412532305369676e65642d4641453038353f7374796c653d666c61742d737175617265266c6f676f3d507974686f6e",
+    "alt": "CLA signed",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@python",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d60\u0026v\u003d4",
+    "alt": "hugovk",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d48\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d48\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/17247677?s\u003d48\u0026v\u003d4",
+    "alt": "@Kristinita",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d48\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d40\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d40\u0026v\u003d4",
+    "alt": "@AlexWaygood",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/17247677?s\u003d52\u0026v\u003d4",
+    "alt": "@Kristinita",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/25313350?s\u003d52\u0026v\u003d4",
+    "alt": "@brianschubert",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d52\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d52\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-132054: Add ``application/yaml`` to ``mimetypes`` by Kristinita · Pull Request #132056 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python Language Reference — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/index.html#reference-index"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python Language Reference — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/index.html#reference-index"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
