@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 600,
+    "url": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html",
+    "title": "Python Software Foundation News: Join the Python Security Response Team!",
+    "content": "Tuesday, February 17, 2026 Join the Python Security Response Team! Thanks to the work of the Security Developer-in-Residence Seth Larson, the Python Security Response Team (PSRT) now has an approved public governance document (PEP 811). Following the new governance structure the PSRT now publishes a public list of members, has documented responsibilities for members and admins, and a defined process for onboarding and offboarding members to balance the needs of security and sustainability. The document also clarifies the relationship between the Python Steering Council and the PSRT. And this new onboarding process is already working! The PSF Infrastructure Engineer, Jacob Coffee, has just joined the PSRT as the first new non-\"Release Manager\" member since Seth joined the PSRT in 2023. We expect new members to join further bolstering the sustainability of security work for the Python programming language. Thanks to Alpha-Omega for their support of Python ecosystem security by sponsoring Seth’s work as the Security Developer-in-Residence at the Python Software Foundation. What is the Python Security Response Team? Security doesn\u0027t happen by accident: it\u0027s thanks to the work of volunteers and paid Python Software Foundation staff on the Python Security Response Team to triage and coordinate vulnerability reports and remediations keeping all Python users safe. Just last year the PSRT published 16 vulnerability advisories for CPython and pip, the most in a single year to date! And the PSRT usually can’t do this work alone, PSRT coordinators are encouraged to involve maintainers and experts on the projects and submodules. By involving the experts directly in the remediation process ensures fixes adhere to existing API conventions and threat-models, are maintainable long-term, and have minimal impact on existing use-cases. Sometimes the PSRT even coordinates with other open source projects to avoid catching the Python ecosystem off-guard by publishing a vulnerability advisory that affects multiple other projects. The most recent example of this is PyPI’s ZIP archive differential attack mitigation. This work deserves recognition and celebration just like contributions to source code and documentation. Seth and Jacob are developing further improvements to workflows involving “GitHub Security Advisories” to record the reporter, coordinator, and remediation developers and reviewers to CVE and OSV records to properly thank everyone involved in the otherwise private contribution to open source projects. How can I join the Python Security Response Team? Maybe you’ve read all this and are interested in directly helping the Python programming language be more secure! The process is similar to the Core Team nomination process, you need an existing PSRT member to nominate you and for your nomination to receive at least ⅔ positive votes from existing PSRT members. You do not need to be a core developer, team member, or triager to be a member of the Python Security Response Team. Anyone with security expertise that is known and highly-trusted within the Python community and has time to volunteer or donate through their employer would make a good candidate for the PSRT. Please note that all PSRT team members have documented responsibilities and are expected to contribute meaningfully to the remediation of vulnerabilities. Being a member of the PSRT is not required to be notified of vulnerabilities and shouldn’t be to receive “early notification” of vulnerabilities affecting CPython and pip. The Python Software Foundation is a CVE Numbering Authority and publishes CVE and OSV records with up-to-date information about vulnerabilities affecting CPython and pip. Posted by Seth Michael Larson at 2/17/2026 02:30:00 AM Newer Post Older Post Home Mission The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. Python Software Foundation Grants Program Membership Awards Meeting Minutes PSF Sponsors A big thank you to the above PSF sponsors for supporting our mission! Blog Archive ▼ 2026 (11) ► April (3) ► March (1) ▼ February (3) Join the Python Security Response Team! Python is for Everyone: Inside the PSF\u0027s D\u0026I Work ... Introducing the PSF Community Partner Program ► January (4) ► 2025 (50) ► December (1) ► November (4) ► October (7) ► September (3) ► August (6) ► July (4) ► June (14) ► May (3) ► April (2) ► March (4) ► February (1) ► January (1) ► 2024 (58) ► December (6) ► November (5) ► October (3) ► September (2) ► August (4) ► July (7) ► June (16) ► May (4) ► April (2) ► March (2) ► February (3) ► January (4) ► 2023 (37) ► December (1) ► November (3) ► October (3) ► September (2) ► August (3) ► June (5) ► May (12) ► April (2) ► March (1) ► February (3) ► January (2) ► 2022 (35) ► December (2) ► November (3) ► October (2) ► July (3) ► June (6) ► May (12) ► April (2) ► Ma",
+    "scrapedAt": "2026-05-09 00:47:05.194802"
+  },
+  {
+    "id": 599,
+    "url": "https://pyfound.blogspot.com/2026/03/applications-to-join-psf-meetup-pro.html",
+    "title": "Python Software Foundation News: Applications to Join the PSF Meetup Pro Network Are Back Open",
+    "content": "Thursday, March 12, 2026 Applications to Join the PSF Meetup Pro Network Are Back Open Following the introduction of the PSF Community Partner Program, the Python Software Foundation (PSF) is pleased to announce that we have reopened the application for Python Meetup groups to join the PSF’s Meetup Pro Network! We’re very excited to bring back this offering to the Python community after applications were temporarily suspended under the broader PSF Grants Program pause last August. Make sure to check out the PSF’s Meetup Pro Network documentation page for more information on how to apply. Reopening applications for the PSF’s Meetup Pro Network is a small but meaningful step forward for our community support-focused programs. The rest of the PSF Grants Program remains on hold while we work through important considerations, such as what we can responsibly budget and how the program will be structured for long-term sustainability. We look forward to sharing more updates when possible. The PSF welcomes your comments, feedback, and suggestions regarding the reopening of the PSF Meetup Pro Network on the corresponding Discuss thread. We also invite you to join our upcoming PSF Board or Grants Program Office Hour sessions to talk with the PSF Board and Staff synchronously. If you wish to send your feedback privately, please email grants@python.org. About the PSF’s Meetup Pro Network The PSF manages a Meetup Pro account and adds qualified Python-focused Meetup groups to the overarching PSF Meetup Pro Network. Meetup organizers no longer pay for Meetup subscriptions once they become part of the PSF’s network. We currently have 109 groups in the PSF Meetup Pro Network, which costs the PSF $15/month per group. The PSF can run reports on Meetup activity, such as the number of interested attendees and events. Management of membership and events is left to the group’s organizers. Any registration fees or deposits for RSVPing or paying for registration to an event are also managed solely by the Meetup organizer. Once a Meetup organizer accepts the invite to join, a notation will be shown under the group name: “Part of Python Software Foundation Meetup Pro Network.” Check out the Meetup Pro overview page for more information. Criteria and how to apply We\u0027ve made the application process and criteria as simple as possible, so Python Meetup groups around the world can easily get the support they need. Along those lines, we’ve kept the requirements short and sweet—to qualify for the PSF’s Meetup Pro Network, a Meetup group must: Offer content that is majority Python related Include or link to a Code of Conduct in the About section of the Meetup page Hold at least 2 events per year (virtual or in-person) To apply, fill out the short application form on psfmember.org, that asks for basic contact information, as well as gathers information related to the criteria listed above. Make sure you have an account on psfmember.org and that you’re signed in! A PSF Staff member will reach out with any questions or provide the steps needed to add eligible groups to the PSF Meetup Pro Network. About the Python Software Foundation The Python Software Foundation is a US non-profit whose mission is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. The PSF supports the Python community using corporate sponsorships, grants, and donations. Are you interested in sponsoring or donating to the PSF so we can continue supporting Python and its community? Check out our sponsorship program, donate directly, or contact our team at sponsors@python.org! Posted by Marie Nordin at 3/12/2026 08:47:00 AM Newer Post Older Post Home Mission The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. Python Software Foundation Grants Program Membership Awards Meeting Minutes PSF Sponsors A big thank you to the above PSF sponsors for supporting our mission! Blog Archive ▼ 2026 (11) ► April (3) ▼ March (1) Applications to Join the PSF Meetup Pro Network Ar... ► February (3) ► January (4) ► 2025 (50) ► December (1) ► November (4) ► October (7) ► September (3) ► August (6) ► July (4) ► June (14) ► May (3) ► April (2) ► March (4) ► February (1) ► January (1) ► 2024 (58) ► December (6) ► November (5) ► October (3) ► September (2) ► August (4) ► July (7) ► June (16) ► May (4) ► April (2) ► March (2) ► February (3) ► January (4) ► 2023 (37) ► December (1) ► November (3) ► October (3) ► September (2) ► August (3) ► June (5) ► May (12) ► April (2) ► March (1) ► February (3) ► January (2) ► 2022 (35) ► December (2) ► November (3) ► October (2) ► July (3) ► June (6) ► May (12) ► April (2) ► March (3) ► February (1) ► January (1) ► 2021 (42) ► December (3) ► November (4) ► October (3) ► September (2) ►",
+    "scrapedAt": "2026-05-09 00:47:03.826952"
+  },
+  {
+    "id": 597,
+    "url": "https://www.python.org/psf/grants/",
+    "title": "PSF Grants Program | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! PSF\u003e\u003e\u003e Community Programs\u003e\u003e\u003e Grants Program The PSF Grants Program is currently paused The PSF Grants Program has been temporarily paused after hitting our 2025 funding cap early. It was an extremely difficult but necessary decision to ensure the program and foundation’s near and long term sustainability. Learn more about the pause and how you can support the PSF’s future in our blog post. PSF Meetup Pro Network Applications Now Open The PSF is pleased to announce that we have reopened the application for Python Meetup groups to join the PSF’s Meetup Pro Network! We’re very excited to bring back this offering to the Python community after applications were temporarily suspended under the broader PSF Grants Program pause in August 2025. Make sure to check out the PSF’s Meetup Pro Network documentation page for more information on how to apply. The rest of the PSF Grants Program remains on hold while we work through important considerations, such as what we can responsibly budget and how the program will be structured for long-term sustainability. We look forward to sharing more updates here and on the PSF blog when possible. Table of Contents Overview of the PSF Grants Program Guiding Principles Program Guiding Principles Funding Guiding Principles So what do these Guiding Principles mean? What to expect Why do we ask for so much information? Grant Process Application How to Submit Resolution After a Grant is Awarded Resources Grant Proposal Tips Office Hours Questions? Example Conference Grant Proposal Recent Grants Overview of the PSF Grants Program Welcome to the Python Software Foundation (PSF) Grants Program page! This page and the PSF Grants Work Group are here to help support your Python-related conferences, workshops, and local Python communities in line with the PSF\u0027s mission. The grants process is in place to ensure that we have the information we need to evaluate grant requests and maintain our records. We also want to make sure that grant requesters and recipients are set up for success! If you have any questions about the Program, process, or applying, you have a couple of options to find answers: Read through this page– we’ve tried to cover as much as possible! Check out the Grants FAQ page Join the monthly PSF Grants Program Office Hour sessions on the PSF Discord Email grants@python.org We have successfully provided over 3 million USD in grants since we started the program in 2015 all of which have supported tons of fun and exciting work and events to enrich the Python community. We can’t wait to hear about your event, workshop, or regional community—so let’s jump right in! Guiding Principles The PSF Grants Program supports hundreds of Python-related conferences, workshops, and communities globally in line with our mission: The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. To facilitate a sustainable grant program, the PSF Board established guiding principles for the program and funding in 2024. Program Guiding Principles The guiding principles of the PSF Grants Program are: Impactful Reliable Equitable Transparent Sustainable Funding Guiding Principles The guiding principles behind the PSF Grants Program funding are: Strive for geographic equity Prioritize underserved communities Prioritize high returns on investment in terms of community impact Invest in both new and existing communities Evaluate and fund in our areas of expertise Ensure Python and Pythonistas are supported So what do these Guiding Principles mean? The program and funding principles outlined in our PSF Grants Program Guiding Principles help us do a couple of things: Ensure alignment with the PSF\u0027s mission. Set a vision for the program. Make decisions on a program level basis, as well as on individual grants. Help guide our analysis of grants data in our yearly Grants Program transparency report, and any goals that come from the report and its analysis. What to expect The process for applying for a grant is thorough so we can make decisions as effectively and quickly as possible. Listed below is an overview of what to expect, followed by a more detailed explanation of each step in the “Grant Process” section below. Submit your application. Please fill out every applicable field in the application form to reduce questions later on. The more information you can give us, the better. You will receive a confirmation email from psf-donations@python.org that your application went through. A PSF Staff member pre-checks your application and may follow up with questio",
+    "scrapedAt": "2026-05-09 00:47:02.388242"
+  },
+  {
+    "id": 596,
+    "url": "https://pypi.org",
+    "title": "PyPI · The Python Package Index",
+    "content": "Skip to main content Switch to mobile version Warning Some features may not work without JavaScript. Please try enabling it if you encounter problems. Find, install and publish Python packages with the Python Package Index Search PyPI Search Or browse projects 804,741 projects 8,641,874 releases 18,766,045 files 1,053,593 users The Python Package Index (PyPI) is a repository of software for the Python programming language. PyPI helps you find and install software developed and shared by the Python community. Learn about installing packages. Package authors use PyPI to distribute their software. Learn how to package your Python code for PyPI. English español français 日本語 português (Brasil) українська Ελληνικά Deutsch 中文 (简体) 中文 (繁體) русский עברית Esperanto 한국어 Supported by AWS Cloud computing and Security Sponsor Datadog Monitoring Depot Continuous Integration Fastly CDN Google Download Analytics Pingdom Monitoring Sentry Error logging StatusPage Status page",
+    "scrapedAt": "2026-05-09 00:47:01.159745"
+  },
+  {
+    "id": 595,
+    "url": "https://us.pycon.org",
+    "title": "PyCon US 2026 - PyCon US 2026",
+    "content": "Translations available: español Presenting PyCon US 2026 May 13 - May 19, 2026 Long Beach, California Countdown to PyCon US 2026 Days Hours Minutes Seconds Registration - Now Open! Find more information and register today via the Registration Information page. Register Today! Where? Long Beach Convention Center 300 East Ocean Boulevard Long Beach, CA 90802 Conference breakdown: Tutorials: May 13 - 14, 2026 Sponsor Presentations: May 14 - May 15, 2026 Main Conference: May 15 - 17, 2026 Job Fair \u0026 Community Showcase: May 17, 2026 Sprints: May 18 - May 19, 2026 We are so excited to welcome our community to our new host city of Long Beach, California, for PyCon US 2026! Mark your calendars and be sure to read the About PyCon US page for more details. We can’t wait to see you all at the Long Beach Convention and Entertainment Center! The PyCon US Schedule is now live! Start planning your talks, meet the keynote speakers, and register for tutorials, summits \u0026 events! Head to the schedule page to see this year\u0027s stellar lineup. Please note: PyCon US 2026 will take place fully in-person in Long Beach, California with no live streaming of the main conference days. PyCon US will record all Talk tracks, Keynotes and Lightning Talks on the main days of the conference (Friday - Sunday) and publish them to the PyCon US YouTube Channel. PyCon US continues to keep the safety of our community as our top priority and wants PyCon US to be an event that everyone feels safe attending. With that in mind, PyCon US 2026 will have Health and Safety Guidelines in place again this year. For full details, read the PyCon US 2026 Health \u0026 Safety Guidelines here. To stay informed on details and announcements be sure to create an account here on this website and opt-in to receive PyCon US News. Also, follow us on Bluesky, X, and Mastodon, and subscribe to the PyCon US Blog. Tutorials May 13 - 14, 2026 Sponsor Presentations May 14 - 15, 2026 Main Conference May 15 - 17, 2026 Job Fair \u0026 Community Showcase May 17, 2026 Sprints May 18 - May 19, 2026 Search Search Search ESC",
+    "scrapedAt": "2026-05-09 00:47:00.027253"
+  },
+  {
     "id": 593,
     "url": "https://fosstodon.org/@ThePSF",
     "title": "Python Software Foundation (@ThePSF@fosstodon.org) - Fosstodon",
@@ -4053,26 +4088,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 595,
-    "url": "https://us.pycon.org"
-  },
-  {
-    "id": 596,
-    "url": "https://pypi.org"
-  },
-  {
-    "id": 597,
-    "url": "https://www.python.org/psf/grants/"
-  },
-  {
-    "id": 599,
-    "url": "https://pyfound.blogspot.com/2026/03/applications-to-join-psf-meetup-pro.html"
-  },
-  {
-    "id": 600,
-    "url": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
   },
   {
     "id": 601,
@@ -97989,10 +98004,444 @@ window.searchData = [
     "id": 70178,
     "url": "https://joinmastodon.org/apps",
     "parentUrl": "https://fosstodon.org/@ThePSF"
+  },
+  {
+    "id": 70179,
+    "url": "https://us.pycon.org/2026/schedule/talks/",
+    "parentUrl": "https://us.pycon.org"
+  },
+  {
+    "id": 70180,
+    "url": "https://bsky.app/profile/pycon.us",
+    "parentUrl": "https://us.pycon.org"
+  },
+  {
+    "id": 70181,
+    "url": "https://python.us19.list-manage.com/subscribe?u\u003d5697f493c3a48994f504d4deb\u0026id\u003da0a3bd5663",
+    "parentUrl": "https://us.pycon.org"
+  },
+  {
+    "id": 70183,
+    "url": "https://us.pycon.org/2026/about/pycon/",
+    "parentUrl": "https://us.pycon.org"
+  },
+  {
+    "id": 70184,
+    "url": "https://fosstodon.org/@pycon",
+    "parentUrl": "https://us.pycon.org"
+  },
+  {
+    "id": 70185,
+    "url": "https://pycon.blogspot.com/",
+    "parentUrl": "https://us.pycon.org"
+  },
+  {
+    "id": 70188,
+    "url": "https://us.pycon.org/2026/accounts/dashboard",
+    "parentUrl": "https://us.pycon.org"
+  },
+  {
+    "id": 70189,
+    "url": "https://www.youtube.com/c/pyconus",
+    "parentUrl": "https://us.pycon.org"
+  },
+  {
+    "id": 70192,
+    "url": "https://us.pycon.org/es/2026/",
+    "parentUrl": "https://us.pycon.org"
+  },
+  {
+    "id": 70193,
+    "url": "https://twitter.com/pycon",
+    "parentUrl": "https://us.pycon.org"
+  },
+  {
+    "id": 70203,
+    "url": "https://pypi.org#content",
+    "parentUrl": "https://pypi.org"
+  },
+  {
+    "id": 70207,
+    "url": "https://www.python.org/psf/grants/#funding-guiding-principles",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70208,
+    "url": "https://www.python.org/psf/grants/#what-to-expect",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70210,
+    "url": "https://www.python.org/psf/trademarks-faq/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70211,
+    "url": "https://www.python.org/psf/grants/#grant-proposal-tips",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70212,
+    "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70213,
+    "url": "https://www.python.org/psf/grants/#so-what-do-these-guiding-principles-mean",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70214,
+    "url": "https://www.python.org/psf/grants/#grant-process",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70216,
+    "url": "https://support.discord.com/hc/en-us/sections/360008206871-Discord-Basics",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70217,
+    "url": "http://bit.ly/2kgf4up",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70218,
+    "url": "https://docs.google.com/spreadsheets/d/1ihX_VbQeLij4j7r-e9Hd8hnYQhn_SqydxvA5zG8vqLM/edit?ts\u003d5f47e41c#gid\u003d0",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70219,
+    "url": "https://www.python.org/psf/grants/#resolution",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70220,
+    "url": "https://discord.gg/D56fUZTuVb",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70221,
+    "url": "https://djangogirls.org/en/organize/event_funding/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70222,
+    "url": "https://psfmember.org/grant-proposals/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70224,
+    "url": "https://www.python.org/psf/grants/#program-guiding-principles",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70225,
+    "url": "https://us.pycon.org/2020/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70226,
+    "url": "https://us.pycon.org/2020/about/code-of-conduct/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70227,
+    "url": "https://www.python.org/psf/records/board/resolutions/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70228,
+    "url": "https://www.python.org/psf/grants/#example-conference-grant-proposal",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70229,
+    "url": "https://us.pycon.org/2020/hatchery/beginnersdata/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70230,
+    "url": "https://www.python.org/psf/grants/#office-hours",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70232,
+    "url": "https://www.python.org/psf/mission/\u0027\u003ePSF\u0027s mission\u003c/a\u003e. \u003c/li\u003e\u003cli\u003eFor information on disbursements of payments, see our \u003ca href\u003d",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70233,
+    "url": "https://www.python.org/psf/grants/#why-do-we-ask-for-so-much-information",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70235,
+    "url": "https://www.python.org/psf/grants/#after-a-grant-is-awarded",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70236,
+    "url": "https://us.pycon.org/2020/hatchery/trainers/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70237,
+    "url": "https://psfmember.org/wp-login.php?action\u003dregister",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70239,
+    "url": "https://us.pycon.org/2020/hatchery/mentoredsprints/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70241,
+    "url": "https://www.python.org/psf/trademarks/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70242,
+    "url": "https://www.python.org/psf/grants/#questions",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70243,
+    "url": "https://www.python.org/psf/grants/#application",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70244,
+    "url": "https://github.com/pyladies/pyladies#registering-your-pyladies-chapter-and-onbtaining-a-website",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70245,
+    "url": "https://www.python.org/psf/grants/#guiding-principles",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70246,
+    "url": "https://discord.gg/4Hm36PPgpG",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70247,
+    "url": "https://www.python.org/psf/grants/#how-to-submit",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70248,
+    "url": "https://us.pycon.org/2020/sponsors/prospectus/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70249,
+    "url": "https://dateful.com/time-zone-converter",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70250,
+    "url": "https://www.python.org/psf/grants/#resources",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70251,
+    "url": "https://www.python.org/psf/grants/faq/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70252,
+    "url": "https://organize.djangogirls.org/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70253,
+    "url": "https://www.python.org/psf/grants/free-resources/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70254,
+    "url": "https://us.pycon.org/2020/online/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70255,
+    "url": "https://us.pycon.org/2020/events/edusummit/",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70256,
+    "url": "https://www.python.org/psf/grants/#recent-grants",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70259,
+    "url": "https://www.python.org/psf/grants/#overview-of-the-psf-grants-program",
+    "parentUrl": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 70278,
+    "url": "https://help.meetup.com/hc/en-us/articles/360002877711-Meetup-Pro-feature-overview",
+    "parentUrl": "https://pyfound.blogspot.com/2026/03/applications-to-join-psf-meetup-pro.html"
+  },
+  {
+    "id": 70402,
+    "url": "https://www.meetup.com/meetup-pro/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/03/applications-to-join-psf-meetup-pro.html"
+  },
+  {
+    "id": 70432,
+    "url": "https://discuss.python.org/t/applications-to-join-the-psf-meetup-pro-network-are-back-open/106499",
+    "parentUrl": "https://pyfound.blogspot.com/2026/03/applications-to-join-psf-meetup-pro.html"
+  },
+  {
+    "id": 70484,
+    "url": "https://www.blogger.com/post-edit.g?blogID\u003d8520\u0026postID\u003d3370319192295318468\u0026from\u003dpencil",
+    "parentUrl": "https://pyfound.blogspot.com/2026/03/applications-to-join-psf-meetup-pro.html"
+  },
+  {
+    "id": 70538,
+    "url": "https://alpha-omega.dev",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
+  },
+  {
+    "id": 70546,
+    "url": "https://www.blogger.com/profile/16555309043643874359",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
+  },
+  {
+    "id": 70561,
+    "url": "https://www.blogger.com/post-edit.g?blogID\u003d8520\u0026postID\u003d1641321644046445377\u0026from\u003dpencil",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
+  },
+  {
+    "id": 70579,
+    "url": "https://github.com/psf/advisory-database/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
+  },
+  {
+    "id": 70590,
+    "url": "https://gist.github.com/#what-is-the-python-security-response-team",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
+  },
+  {
+    "id": 70621,
+    "url": "https://devguide.python.org/developer-workflow/psrt/#members",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
+  },
+  {
+    "id": 70672,
+    "url": "https://devguide.python.org/developer-workflow/psrt/#responsibilities-of-psrt-admins",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
+  },
+  {
+    "id": 70693,
+    "url": "https://blog.pypi.org/posts/2025-08-07-wheel-archive-confusion-attacks/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
+  },
+  {
+    "id": 70695,
+    "url": "https://gist.github.com/#how-can-i-join-the-python-security-response-team",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
+  },
+  {
+    "id": 70744,
+    "url": "https://mail.python.org/archives/list/security-announce@python.org/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
+  },
+  {
+    "id": 70773,
+    "url": "https://github.com/python/steering-council",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
+    "alt": "",
+    "pageTitle": "Python Software Foundation News: Join the Python Security Response Team!",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
+  },
+  {
+    "src": "https://blogger.googleusercontent.com/img/a/AVvXsEiagchpTRkriKoEe2Cqh2Bd5mX7Un4EYG-fq2Gdwx-Jx5scs09-0bmLVT89ewlhrQsiaJVE6nUU1Z0UkZFu0KUM2f82CiXXGsY_mg0JRq8iUtt_Rob_rcWX9meUjM2ql0XMoYFwO7dtt8T3cHO5oGfxo3HPk-9Lz358AlCHMDRAo5fgBXTuEuo\u003ds302",
+    "alt": "PSF Sponsors",
+    "pageTitle": "Python Software Foundation News: Join the Python Security Response Team!",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
+  },
+  {
+    "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
+    "alt": "",
+    "pageTitle": "Python Software Foundation News: Applications to Join the PSF Meetup Pro Network Are Back Open",
+    "pageUrl": "https://pyfound.blogspot.com/2026/03/applications-to-join-psf-meetup-pro.html"
+  },
+  {
+    "src": "https://blogger.googleusercontent.com/img/a/AVvXsEiagchpTRkriKoEe2Cqh2Bd5mX7Un4EYG-fq2Gdwx-Jx5scs09-0bmLVT89ewlhrQsiaJVE6nUU1Z0UkZFu0KUM2f82CiXXGsY_mg0JRq8iUtt_Rob_rcWX9meUjM2ql0XMoYFwO7dtt8T3cHO5oGfxo3HPk-9Lz358AlCHMDRAo5fgBXTuEuo\u003ds302",
+    "alt": "PSF Sponsors",
+    "pageTitle": "Python Software Foundation News: Applications to Join the PSF Meetup Pro Network Are Back Open",
+    "pageUrl": "https://pyfound.blogspot.com/2026/03/applications-to-join-psf-meetup-pro.html"
+  },
+  {
+    "src": "https://pypi.org/static/images/logo-large.516e776d.svg",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/ed7074cadad1a06f56bc520ad9bd3e00d0704c5b/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d77686974652d6c6f676f2d7443615473387a432e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/8855f7c063a3bdb5b0ce8d91bfc50cf851cc5c51/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d77686974652d6c6f676f2d6668644c4e666c6f2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/60f709d24f3e4d469f9adc77c65e2f5291a3d165/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6465706f742d77686974652d6c6f676f2d7038506f476831302e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/df6fe8829cbff2d7f668d98571df1fd011f36192/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d77686974652d6c6f676f2d65684d3077735f6f2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/420cc8cf360bac879e24c923b2f50ba7d1314fb0/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d77686974652d6c6f676f2d616734424e3774332e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/d01053c02f3a626b73ffcb06b96367fdbbf9e230/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f70696e67646f6d2d77686974652d6c6f676f2d67355831547546362e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/67af7117035e2345bacb5a82e9aa8b5b3e70701d/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d77686974652d6c6f676f2d4a2d6b64742d706e2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/b611884ff90435a0575dbab7d9b0d3e60f136466/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d77686974652d6c6f676f2d5467476c6a4a2d502e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "https://pypi.org"
+  },
+  {
+    "src": "https://us.pycon.org/2026/static/images/theme/logo.25d1b5ccb097.svg",
+    "alt": "PyCon US 2026",
+    "pageTitle": "PyCon US 2026 - PyCon US 2026",
+    "pageUrl": "https://us.pycon.org"
+  },
   {
     "src": "https://fosstodon.org/packs/assets/logo-DXQkHAe5.svg",
     "alt": "Mastodon",
