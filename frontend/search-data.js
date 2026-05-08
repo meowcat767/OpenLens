@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1076,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b16decode",
+    "title": "base64 — Base16, Base32, Base64, Base85 Data Encodings — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Data Handling » base64 — Base16, Base32, Base64, Base85 Data Encodings | Theme Auto Light Dark | base64 — Base16, Base32, Base64, Base85 Data Encodings¶ Source code: Lib/base64.py This module provides functions for encoding binary data to printable ASCII characters and decoding such encodings back to binary data. This includes the encodings specified in RFC 4648 (Base64, Base32 and Base16) and the non-standard Base85 encodings. There are two interfaces provided by this module. The modern interface supports encoding bytes-like objects to ASCII bytes, and decoding bytes-like objects or strings containing ASCII to bytes. Both base-64 alphabets defined in RFC 4648 (normal, and URL- and filesystem-safe) are supported. The legacy interface does not support decoding from strings, but it does provide functions for encoding and decoding to and from file objects. It only supports the Base64 standard alphabet, and it adds newlines every 76 characters as per RFC 2045. Note that if you are looking for RFC 2045 support you probably want to be looking at the email package instead. Changed in version 3.3: ASCII-only Unicode strings are now accepted by the decoding functions of the modern interface. Changed in version 3.4: Any bytes-like objects are now accepted by all encoding and decoding functions in this module. Ascii85/Base85 support added. RFC 4648 Encodings¶ The RFC 4648 encodings are suitable for encoding binary data so that it can be safely sent by email, used as parts of URLs, or included as part of an HTTP POST request. base64.b64encode(s, altchars\u003dNone)¶ Encode the bytes-like object s using Base64 and return the encoded bytes. Optional altchars must be a bytes-like object of length 2 which specifies an alternative alphabet for the + and / characters. This allows an application to e.g. generate URL or filesystem safe Base64 strings. The default is None, for which the standard Base64 alphabet is used. May assert or raise a ValueError if the length of altchars is not 2. Raises a TypeError if altchars is not a bytes-like object. base64.b64decode(s, altchars\u003dNone, validate\u003dFalse)¶ Decode the Base64 encoded bytes-like object or ASCII string s and return the decoded bytes. Optional altchars must be a bytes-like object or ASCII string of length 2 which specifies the alternative alphabet used instead of the + and / characters. A binascii.Error exception is raised if s is incorrectly padded. If validate is False (the default), characters that are neither in the normal base-64 alphabet nor the alternative alphabet are discarded prior to the padding check. If validate is True, these non-alphabet characters in the input result in a binascii.Error. For more information about the strict base64 check, see binascii.a2b_base64() May assert or raise a ValueError if the length of altchars is not 2. base64.standard_b64encode(s)¶ Encode bytes-like object s using the standard Base64 alphabet and return the encoded bytes. base64.standard_b64decode(s)¶ Decode bytes-like object or ASCII string s using the standard Base64 alphabet and return the decoded bytes. base64.urlsafe_b64encode(s)¶ Encode bytes-like object s using the URL- and filesystem-safe alphabet, which substitutes - instead of + and _ instead of / in the standard Base64 alphabet, and return the encoded bytes. The result can still contain \u003d. base64.urlsafe_b64decode(s)¶ Decode bytes-like object or ASCII string s using the URL- and filesystem-safe alphabet, which substitutes - instead of + and _ instead of / in the standard Base64 alphabet, and return the decoded bytes. base64.b32encode(s)¶ Encode the bytes-like object s using Base32 and return the encoded bytes. base64.b32decode(s, casefold\u003dFalse, map01\u003dNone)¶ Decode the Base32 encoded bytes-like object or ASCII string s and return the decoded bytes. Optional casefold is a flag specifying whether a lowercase alphabet is acceptable as input. For security purposes, the default is False. RFC 4648 allows for optional mapping of the digit 0 (zero) to the letter O (oh), and for optional mapping of the digit 1 (one) to either the letter I (eye) or letter L (el). The optional argument map01 when not None, specifies which letter the digit 1 should be mapped to (when map01 is not None, the digit 0 is always mapped to the letter O). For security purposes the default is None, so that 0 and 1 are not allowed in the input. A binascii.Error is raised if s is incorrectly padded or if there are non-alphabet characters present in the input. base64.b32hexencode(s)¶ Similar to b32encode() but uses the Extended Hex Alphabet, as defined in RFC 4648. Added in version 3.10. base64.b32hexdecode(s, casefold\u003dFalse)¶ Similar to b32decode() but uses the Extended Hex Alphabet, as defined in RFC 4648. This version does not allow the digit 0 (zero) to the letter O (oh) and digit 1 (one) to either the letter I (eye) or letter L (el) mappings,",
+    "scrapedAt": "2026-05-09 01:05:05.244865"
+  },
+  {
+    "id": 1075,
+    "url": "https://docs.python.org/3/glossary.html#term-annotate-function",
+    "title": "Glossary — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Glossary | Theme Auto Light Dark | Glossary¶ \u003e\u003e\u003e¶ The default Python prompt of the interactive shell. Often seen for code examples which can be executed interactively in the interpreter. ...¶ Can refer to: The default Python prompt of the interactive shell when entering the code for an indented code block, when within a pair of matching left and right delimiters (parentheses, square brackets, curly braces or triple quotes), or after specifying a decorator. The three dots form of the Ellipsis object. abstract base class¶ Abstract base classes complement duck-typing by providing a way to define interfaces when other techniques like hasattr() would be clumsy or subtly wrong (for example with magic methods). ABCs introduce virtual subclasses, which are classes that don’t inherit from a class but are still recognized by isinstance() and issubclass(); see the abc module documentation. Python comes with many built-in ABCs for data structures (in the collections.abc module), numbers (in the numbers module), streams (in the io module), import finders and loaders (in the importlib.abc module). You can create your own ABCs with the abc module. annotate function¶ A function that can be called to retrieve the annotations of an object. This function is accessible as the __annotate__ attribute of functions, classes, and modules. Annotate functions are a subset of evaluate functions. annotation¶ A label associated with a variable, a class attribute or a function parameter or return value, used by convention as a type hint. Annotations of local variables cannot be accessed at runtime, but annotations of global variables, class attributes, and functions can be retrieved by calling annotationlib.get_annotations() on modules, classes, and functions, respectively. See variable annotation, function annotation, PEP 484, PEP 526, and PEP 649, which describe this functionality. Also see Annotations Best Practices for best practices on working with annotations. argument¶ A value passed to a function (or method) when calling the function. There are two kinds of argument: keyword argument: an argument preceded by an identifier (e.g. name\u003d) in a function call or passed as a value in a dictionary preceded by **. For example, 3 and 5 are both keyword arguments in the following calls to complex(): complex(real\u003d3, imag\u003d5)\ncomplex(**{\u0027real\u0027: 3, \u0027imag\u0027: 5})\n positional argument: an argument that is not a keyword argument. Positional arguments can appear at the beginning of an argument list and/or be passed as elements of an iterable preceded by *. For example, 3 and 5 are both positional arguments in the following calls: complex(3, 5)\ncomplex(*(3, 5))\n Arguments are assigned to the named local variables in a function body. See the Calls section for the rules governing this assignment. Syntactically, any expression can be used to represent an argument; the evaluated value is assigned to the local variable. See also the parameter glossary entry, the FAQ question on the difference between arguments and parameters, and PEP 362. asynchronous context manager¶ An object which controls the environment seen in an async with statement by defining __aenter__() and __aexit__() methods. Introduced by PEP 492. asynchronous generator¶ A function which returns an asynchronous generator iterator. It looks like a coroutine function defined with async def except that it contains yield expressions for producing a series of values usable in an async for loop. Usually refers to an asynchronous generator function, but may refer to an asynchronous generator iterator in some contexts. In cases where the intended meaning isn’t clear, using the full terms avoids ambiguity. An asynchronous generator function may contain await expressions as well as async for, and async with statements. asynchronous generator iterator¶ An object created by an asynchronous generator function. This is an asynchronous iterator which when called using the __anext__() method returns an awaitable object which will execute the body of the asynchronous generator function until the next yield expression. Each yield temporarily suspends processing, remembering the execution state (including local variables and pending try-statements). When the asynchronous generator iterator effectively resumes with another awaitable returned by __anext__(), it picks up where it left off. See PEP 492 and PEP 525. asynchronous iterable¶ An object, that can be used in an async for statement. Must return an asynchronous iterator from its __aiter__() method. Introduced by PEP 492. asynchronous iterator¶ An object that implements the __aiter__() and __anext__() methods. __anext__() must return an awaitable object. async for resolves the awaitables returned by an asynchronous iterator’s __anext__() method until it raises a StopAsyncIteration exception. Introduced by PEP 492. atomic operation¶ An operation that appears to execute as a single",
+    "scrapedAt": "2026-05-09 01:05:04.048812"
+  },
+  {
+    "id": 1074,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-asyncio-introspection",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:05:02.832541"
+  },
+  {
+    "id": 1073,
+    "url": "https://github.com/python/cpython/issues/120026",
+    "title": "Deprecate (soft) Py_HUGE_VAL macro · Issue #120026 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Deprecate (soft) Py_HUGE_VAL macro #120026 New issue Copy link New issue Copy link Closed Closed Deprecate (soft) Py_HUGE_VAL macro#120026 Copy link Labels type-featureA feature request or enhancementA feature request or enhancement Description skirpichev opened on Jun 4, 2024 Issue body actions Feature or enhancement Proposal: Nowadays, it\u0027s just an alias for Py_INFINITY. Using both macros in single codebase, probably, slightly confuse code readers. I think it worth to replace all such cases to Py_INFINITY, as mentioned in this comment. Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-120026: deprecate (soft) Py_HUGE_VAL macro #120027 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:05:01.575741"
+  },
+  {
+    "id": 1072,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_In",
+    "title": "Sequence Protocol — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Abstract Objects Layer » Sequence Protocol | Theme Auto Light Dark | Sequence Protocol¶ int PySequence_Check(PyObject *o)¶ Part of the Stable ABI. Return 1 if the object provides the sequence protocol, and 0 otherwise. Note that it returns 1 for Python classes with a __getitem__() method, unless they are dict subclasses, since in general it is impossible to determine what type of keys the class supports. This function always succeeds. Py_ssize_t PySequence_Size(PyObject *o)¶ Py_ssize_t PySequence_Length(PyObject *o)¶ Part of the Stable ABI. Returns the number of objects in sequence o on success, and -1 on failure. This is equivalent to the Python expression len(o). PyObject *PySequence_Concat(PyObject *o1, PyObject *o2)¶ Return value: New reference. Part of the Stable ABI. Return the concatenation of o1 and o2 on success, and NULL on failure. This is the equivalent of the Python expression o1 + o2. PyObject *PySequence_Repeat(PyObject *o, Py_ssize_t count)¶ Return value: New reference. Part of the Stable ABI. Return the result of repeating sequence object o count times, or NULL on failure. This is the equivalent of the Python expression o * count. PyObject *PySequence_InPlaceConcat(PyObject *o1, PyObject *o2)¶ Return value: New reference. Part of the Stable ABI. Return the concatenation of o1 and o2 on success, and NULL on failure. The operation is done in-place when o1 supports it. This is the equivalent of the Python expression o1 +\u003d o2. PyObject *PySequence_InPlaceRepeat(PyObject *o, Py_ssize_t count)¶ Return value: New reference. Part of the Stable ABI. Return the result of repeating sequence object o count times, or NULL on failure. The operation is done in-place when o supports it. This is the equivalent of the Python expression o *\u003d count. PyObject *PySequence_GetItem(PyObject *o, Py_ssize_t i)¶ Return value: New reference. Part of the Stable ABI. Return the ith element of o, or NULL on failure. This is the equivalent of the Python expression o[i]. PyObject *PySequence_GetSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)¶ Return value: New reference. Part of the Stable ABI. Return the slice of sequence object o between i1 and i2, or NULL on failure. This is the equivalent of the Python expression o[i1:i2]. int PySequence_SetItem(PyObject *o, Py_ssize_t i, PyObject *v)¶ Part of the Stable ABI. Assign object v to the ith element of o. Raise an exception and return -1 on failure; return 0 on success. This is the equivalent of the Python statement o[i] \u003d v. This function does not steal a reference to v. If v is NULL, the element is deleted, but this feature is deprecated in favour of using PySequence_DelItem(). int PySequence_DelItem(PyObject *o, Py_ssize_t i)¶ Part of the Stable ABI. Delete the ith element of object o. Returns -1 on failure. This is the equivalent of the Python statement del o[i]. int PySequence_SetSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2, PyObject *v)¶ Part of the Stable ABI. Assign the sequence object v to the slice in sequence object o from i1 to i2. This is the equivalent of the Python statement o[i1:i2] \u003d v. int PySequence_DelSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)¶ Part of the Stable ABI. Delete the slice in sequence object o from i1 to i2. Returns -1 on failure. This is the equivalent of the Python statement del o[i1:i2]. Py_ssize_t PySequence_Count(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Return the number of occurrences of value in o, that is, return the number of keys for which o[key] \u003d\u003d value. On failure, return -1. This is equivalent to the Python expression o.count(value). int PySequence_Contains(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Determine if o contains value. If an item in o is equal to value, return 1, otherwise return 0. On error, return -1. This is equivalent to the Python expression value in o. int PySequence_In(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Alias for PySequence_Contains(). Soft deprecated since version 3.14: The function should no longer be used to write new code. Py_ssize_t PySequence_Index(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Return the first index i for which o[i] \u003d\u003d value. On error, return -1. This is equivalent to the Python expression o.index(value). PyObject *PySequence_List(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. Return a list object with the same contents as the sequence or iterable o, or NULL on failure. The returned list is guaranteed to be new. This is equivalent to the Python expression list(o). PyObject *PySequence_Tuple(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. Return a tuple object with the same contents as the sequence or iterable o, or NULL on failure. If o is a tuple, a new reference will be returned, otherwise a tuple will be constructed with the appropriate contents. This is equivalent to the Py",
+    "scrapedAt": "2026-05-09 01:04:59.226218"
+  },
+  {
     "id": 1071,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#math",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -7173,26 +7208,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1072,
-    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_In"
-  },
-  {
-    "id": 1073,
-    "url": "https://github.com/python/cpython/issues/120026"
-  },
-  {
-    "id": 1074,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-asyncio-introspection"
-  },
-  {
-    "id": 1075,
-    "url": "https://docs.python.org/3/glossary.html#term-annotate-function"
-  },
-  {
-    "id": 1076,
-    "url": "https://docs.python.org/3/library/base64.html#base64.b16decode"
   },
   {
     "id": 1077,
@@ -191570,10 +191585,245 @@ window.searchData = [
     "id": 177663,
     "url": "https://docs.python.org/3/howto/argparse.html#argparse-tutorial",
     "parentUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_mutually_exclusive_group"
+  },
+  {
+    "id": 180992,
+    "url": "https://github.com/python/cpython/issues/120026#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/120026"
+  },
+  {
+    "id": 180993,
+    "url": "https://github.com/python/cpython/pull/104202#discussion_r1187191082",
+    "parentUrl": "https://github.com/python/cpython/issues/120026"
+  },
+  {
+    "id": 180995,
+    "url": "https://github.com/python/cpython/issues/120026#top",
+    "parentUrl": "https://github.com/python/cpython/issues/120026"
+  },
+  {
+    "id": 180998,
+    "url": "https://github.com/python/cpython/issues/120026#issue-2333174542",
+    "parentUrl": "https://github.com/python/cpython/issues/120026"
+  },
+  {
+    "id": 181001,
+    "url": "https://github.com/python/cpython/pull/120027",
+    "parentUrl": "https://github.com/python/cpython/issues/120026"
+  },
+  {
+    "id": 182665,
+    "url": "https://rfc.zeromq.org/spec/32/",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182667,
+    "url": "https://docs.python.org/3/library/base64.html#base64-legacy",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182670,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/base64.py",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182671,
+    "url": "https://docs.python.org/3/library/base64.html#base64.urlsafe_b64decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182676,
+    "url": "https://docs.python.org/3/library/base64.html#base64.a85decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182678,
+    "url": "https://docs.python.org/3/library/base64.html#base64.z85encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182679,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b16encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182680,
+    "url": "https://docs.python.org/3/library/base64.html#base64.encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182683,
+    "url": "https://docs.python.org/3/library/base64.html#",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182684,
+    "url": "https://docs.python.org/3/library/base64.html#base64.standard_b64encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182685,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b85encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182687,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/base64.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182689,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b32hexencode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182691,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b64decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182694,
+    "url": "https://docs.python.org/3/library/base64.html#base64-rfc-4648",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182695,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b85decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182701,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b32decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182703,
+    "url": "https://docs.python.org/3/library/base64.html#base64-base-85",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182704,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b64encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182706,
+    "url": "https://docs.python.org/3/library/binascii.html#module-binascii",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182707,
+    "url": "https://docs.python.org/3/library/base64.html#base64.standard_b64decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182708,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b32hexdecode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182710,
+    "url": "https://docs.python.org/3/library/base64.html#base64.z85decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182712,
+    "url": "https://docs.python.org/3/library/base64.html#base64.b32encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182715,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1521.html",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182717,
+    "url": "https://docs.python.org/3/library/base64.html#base64.decode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182720,
+    "url": "https://docs.python.org/3/library/base64.html#base64.a85encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182721,
+    "url": "https://docs.python.org/3/library/binascii.html#binascii.Error",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182722,
+    "url": "https://docs.python.org/3/library/binascii.html#binascii.a2b_base64",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "id": 182723,
+    "url": "https://docs.python.org/3/library/base64.html#base64.urlsafe_b64encode",
+    "parentUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "base64 — Base16, Base32, Base64, Base85 Data Encodings — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "base64 — Base16, Base32, Base64, Base85 Data Encodings — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/base64.html#base64.b16decode"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-annotate-function"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-annotate-function"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-asyncio-introspection"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-asyncio-introspection"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@skirpichev",
+    "pageTitle": "Deprecate (soft) Py_HUGE_VAL macro · Issue #120026 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120026"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@skirpichev",
+    "pageTitle": "Deprecate (soft) Py_HUGE_VAL macro · Issue #120026 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120026"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Sequence Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_In"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Sequence Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_In"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
