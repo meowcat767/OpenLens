@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 851,
+    "url": "https://github.com/python/cpython/issues/124548",
+    "title": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member ericsnowcurrently commented Sep 25, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page. This is an implementation of InterpreterPoolExecutor that builds on ThreadPoolExecutor. This assumes that we\u0027re okay adding the executor separately from PEP 734. That PEP is about adding a new stdlib module, which is a separate matter from adding the new executor. Possible future improvements: support passing (most) arbitrary functions without pickling support passing closures optionally exec functions against __main__ instead of the their original module CC @brianquinlan Issue: Add concurrent.futures.InterpreterPoolExecutor #124694 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. ❤️ 1 temeddix reacted with heart emoji All reactions ❤️ 1 reaction ericsnowcurrently added 4 commits September 27, 2024 12:04 Make ThreadPoolExecutor extensible. 5c69d38 Add InterpreterPoolExecutor. 01789be Clean up the interpreter if initialize() fails. 6def4be Add a missing import. 84993a5 ericsnowcurrently force-pushed the interpreter-pool-executor branch from 46b5388 to 84993a5 Compare September 27, 2024 18:08 ericsnowcurrently changed the title Add concurrent.futures.InterpreterPoolExecutor gh-124694: Add concurrent.futures.InterpreterPoolExecutor Sep 27, 2024 bedevere-app Bot mentioned this pull request Sep 27, 2024 Add concurrent.futures.InterpreterPoolExecutor #124694 Closed ericsnowcurrently added 2 commits September 27, 2024 14:57 Fix some typos. c540cf0 Add more tests. 45d584d ericsnowcurrently force-pushed the interpreter-pool-executor branch from 28f948b to 45d584d Compare September 27, 2024 20:57 ericsnowcurrently added 4 commits September 27, 2024 15:32 Add docs. c90c016 Add a NEwS entry. 1cb4657 Fix the last test. 4dc0989 Add more tests. 57b2db6 ericsnowcurrently marked this pull request as ready for review September 27, 2024 22:37 bedevere-app Bot added the awaiting core review label Sep 27, 2024 ZeroIntensity reviewed Sep 29, 2024 View reviewed changes Comment thread Doc/library/concurrent.futures.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/concurrent.futures.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/concurrent.futures.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/concurrent.futures.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/concurrent.futures.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/concurrent.futures.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/concurrent.futures.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/concurrent/futures/interpreter.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. ericsnowcurrently added 5 commits September 30, 2024 16:11 Simplify ExecutionFailed. 75e11d2 Fix the signature of resolve_task(). 69c2b8e Capture any uncaught exception. f03c314 Add TODO comments. 4806d9f Docs fixes. efc0395 Copy link Copy Markdown Member Author ericsnowcurrently commented Sep 30, 2024 @ZeroIntensity, I\u0027ve fixed all those Docs things. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. ZeroIntensity approved these changes Sep 30, 2024 View reviewed changes Copy link Copy Markdown Member ZeroIntensity left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment LGTM. A small nitpick is that it might be a good idea to mention textwrap.dedent in the docs for initializer -- I\u0027m worried that users might run into pesky indentation problems when passing scripts, and textwrap.dedent is a nice way to deal with that. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown M",
+    "scrapedAt": "2026-05-09 00:56:09.56396"
+  },
+  {
+    "id": 850,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb",
+    "title": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Debugging and Profiling » pdb — The Python Debugger | Theme Auto Light Dark | pdb — The Python Debugger¶ Source code: Lib/pdb.py The module pdb defines an interactive source code debugger for Python programs. It supports setting (conditional) breakpoints and single stepping at the source line level, inspection of stack frames, source code listing, and evaluation of arbitrary Python code in the context of any stack frame. It also supports post-mortem debugging and can be called under program control. The debugger is extensible – it is actually defined as the class Pdb. This is currently undocumented but easily understood by reading the source. The extension interface uses the modules bdb and cmd. See also Module faulthandler Used to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal. Module traceback Standard interface to extract, format and print stack traces of Python programs. The typical usage to break into the debugger is to insert: import pdb; pdb.set_trace()\n Or: breakpoint()\n at the location you want to break into the debugger, and then run the program. You can then step through the code following this statement, and continue running without the debugger using the continue command. Changed in version 3.7: The built-in breakpoint(), when called with defaults, can be used instead of import pdb; pdb.set_trace(). def double(x):\n   breakpoint()\n   return x * 2\nval \u003d 3\nprint(f\"{val} * 2 is {double(val)}\")\n The debugger’s prompt is (Pdb), which is the indicator that you are in debug mode: \u003e ...(2)double()\n-\u003e breakpoint()\n(Pdb) p x\n3\n(Pdb) continue\n3 * 2 is 6\n Changed in version 3.3: Tab-completion via the readline module is available for commands and command arguments, e.g. the current global and local names are offered as arguments of the p command. Command-line interface¶ You can also invoke pdb from the command line to debug other scripts. For example: python -m pdb [-c command] (-m module | -p pid | pyfile) [args ...]\n When invoked as a module, pdb will automatically enter post-mortem debugging if the program being debugged exits abnormally. After post-mortem debugging (or after normal exit of the program), pdb will restart the program. Automatic restarting preserves pdb’s state (such as breakpoints) and in most cases is more useful than quitting the debugger upon program’s exit. -c, --command \u003ccommand\u003e¶ To execute commands as if given in a .pdbrc file; see Debugger commands. Changed in version 3.2: Added the -c option. -m \u003cmodule\u003e¶ To execute modules similar to the way python -m does. As with a script, the debugger will pause execution just before the first line of the module. Changed in version 3.7: Added the -m option. -p, --pid \u003cpid\u003e¶ Attach to the process with the specified PID. Added in version 3.14. To attach to a running Python process for remote debugging, use the -p or --pid option with the target process’s PID: python -m pdb -p 1234\n Note Attaching to a process that is blocked in a system call or waiting for I/O will only work once the next bytecode instruction is executed or when the process receives a signal. Typical usage to execute a statement under control of the debugger is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n\u003e\u003e\u003e pdb.run(\"f(2)\")\n\u003e \u003cstring\u003e(1)\u003cmodule\u003e()\n(Pdb) continue\n0.5\n\u003e\u003e\u003e\n The typical usage to inspect a crashed program is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n...\n\u003e\u003e\u003e f(0)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"\u003cstdin\u003e\", line 2, in f\nZeroDivisionError: division by zero\n\u003e\u003e\u003e pdb.pm()\n\u003e \u003cstdin\u003e(2)f()\n(Pdb) p x\n0\n(Pdb)\n Changed in version 3.13: The implementation of PEP 667 means that name assignments made via pdb will immediately affect the active scope, even when running inside an optimized scope. The module defines the following functions; each enters the debugger in a slightly different way: pdb.run(statement, globals\u003dNone, locals\u003dNone)¶ Execute the statement (given as a string or a code object) under debugger control. The debugger prompt appears before any code is executed; you can set breakpoints and type continue, or you can step through the statement using step or next (all these commands are explained below). The optional globals and locals arguments specify the environment in which the code is executed; by default the dictionary of the module __main__ is used. (See the explanation of the built-in exec() or eval() functions.) pdb.runeval(expression, globals\u003dNone, locals\u003dNone)¶ Evaluate the expression (given as a string or a code object) under debugger control. When runeval() returns, it returns the value of the expression. Otherwise this function is similar to run(). pdb.runcall(function, *args, **kwds)¶ Call the function (a function or method object, not a string) with the given arguments. When runcall() returns, it returns whatever the function call returned. The debug",
+    "scrapedAt": "2026-05-09 00:56:05.621647"
+  },
+  {
+    "id": 849,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#binary-releases-for-the-experimental-just-in-time-compiler",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 00:56:04.370388"
+  },
+  {
+    "id": 848,
+    "url": "https://github.com/python/cpython/issues/119613",
+    "title": "Deprecate Py_IS_NAN/INFINITY/FINITE? · Issue #119613 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Deprecate Py_IS_NAN/INFINITY/FINITE? #119613 New issue Copy link New issue Copy link Closed Closed Deprecate Py_IS_NAN/INFINITY/FINITE?#119613 Copy link Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description skirpichev opened on May 27, 2024 Issue body actions Feature or enhancement Proposal: isnan(), isinf() and isfinite() are part of C99, which is a requirement for 3.11+. Probably, it does make sense to deprecate (undocumented) public macros and switch codebase to use C stdlib functions. JFR: #119457 (comment) Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-119613: use C99+ functions instead of Py_IS_NAN/INFINITY/FINITE #119619 gh-119613: deprecate Py_IS_NAN/INFINITY and Py_IS_FINITE #119701 gh-119613: Soft deprecate the Py_MEMCPY() macro #120020 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:56:03.141916"
+  },
+  {
+    "id": 847,
+    "url": "https://docs.python.org/3/library/functions.html#open",
+    "title": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Functions | Theme Auto Light Dark | Built-in Functions¶ The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order. Built-in Functions A abs() aiter() all() anext() any() ascii() B bin() bool() breakpoint() bytearray() bytes() C callable() chr() classmethod() compile() complex() D delattr() dict() dir() divmod() E enumerate() eval() exec() F filter() float() format() frozenset() G getattr() globals() H hasattr() hash() help() hex() I id() input() int() isinstance() issubclass() iter() L len() list() locals() M map() max() memoryview() min() N next() O object() oct() open() ord() P pow() print() property() R range() repr() reversed() round() S set() setattr() slice() sorted() staticmethod() str() sum() super() T tuple() type() V vars() Z zip() _ __import__() abs(number, /)¶ Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__(). If the argument is a complex number, its magnitude is returned. aiter(async_iterable, /)¶ Return an asynchronous iterator for an asynchronous iterable. Equivalent to calling x.__aiter__(). Note: Unlike iter(), aiter() has no 2-argument variant. Added in version 3.10. all(iterable, /)¶ Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to: def all(iterable):\n    for element in iterable:\n        if not element:\n            return False\n    return True\n awaitable anext(async_iterator, /)¶ awaitable anext(async_iterator, default, /) When awaited, return the next item from the given asynchronous iterator, or default if given and the iterator is exhausted. This is the async variant of the next() builtin, and behaves similarly. This calls the __anext__() method of async_iterator, returning an awaitable. Awaiting this returns the next value of the iterator. If default is given, it is returned if the iterator is exhausted, otherwise StopAsyncIteration is raised. Added in version 3.10. any(iterable, /)¶ Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to: def any(iterable):\n    for element in iterable:\n        if element:\n            return True\n    return False\n ascii(object, /)¶ As repr(), return a string containing a printable representation of an object, but escape the non-ASCII characters in the string returned by repr() using \\x, \\u, or \\U escapes. This generates a string similar to that returned by repr() in Python 2. bin(integer, /)¶ Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If integer is not a Python int object, it has to define an __index__() method that returns an integer. Some examples: \u003e\u003e\u003e bin(3)\n\u00270b11\u0027\n\u003e\u003e\u003e bin(-10)\n\u0027-0b1010\u0027\n If the prefix “0b” is desired or not, you can use either of the following ways. \u003e\u003e\u003e format(14, \u0027#b\u0027), format(14, \u0027b\u0027)\n(\u00270b1110\u0027, \u00271110\u0027)\n\u003e\u003e\u003e f\u0027{14:#b}\u0027, f\u0027{14:b}\u0027\n(\u00270b1110\u0027, \u00271110\u0027)\n See also enum.bin() to represent negative values as twos-complement. See also format() for more information. class bool(object\u003dFalse, /)¶ Return a Boolean value, i.e. one of True or False. The argument is converted using the standard truth testing procedure. If the argument is false or omitted, this returns False; otherwise, it returns True. The bool class is a subclass of int (see Numeric Types — int, float, complex). It cannot be subclassed further. Its only instances are False and True (see Boolean Type - bool). Changed in version 3.7: The parameter is now positional-only. breakpoint(*args, **kws)¶ This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or type as much code to enter the debugger. However, sys.breakpointhook() can be set to some other function and breakpoint() will automatically call that, allowing you to drop into the debugger of choice. If sys.breakpointhook() is not accessible, this function will raise RuntimeError. By default, the behavior of breakpoint() can be changed with the PYTHONBREAKPOINT environment variable. See sys.breakpointhook() for usage details. Note that this is not guaranteed if sys.breakpointhook() has been replaced. Raises an auditing event builtins.breakpoint with argument breakpointhook. Added in version 3.7. class bytearray(source\u003db\u0027\u0027) class bytearray(source, encoding, errors\u003d\u0027strict\u0027) Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 \u003c\u003d x \u003c 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and ",
+    "scrapedAt": "2026-05-09 00:56:00.730367"
+  },
+  {
     "id": 846,
     "url": "https://github.com/python/cpython/issues/118767",
     "title": "Make `bool(NotImplemented)` into an error · Issue #118767 · python/cpython · GitHub",
@@ -5628,26 +5663,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 847,
-    "url": "https://docs.python.org/3/library/functions.html#open"
-  },
-  {
-    "id": 848,
-    "url": "https://github.com/python/cpython/issues/119613"
-  },
-  {
-    "id": 849,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#binary-releases-for-the-experimental-just-in-time-compiler"
-  },
-  {
-    "id": 850,
-    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb"
-  },
-  {
-    "id": 851,
-    "url": "https://github.com/python/cpython/issues/124548"
   },
   {
     "id": 852,
@@ -144414,10 +144429,1068 @@ window.searchData = [
     "id": 114358,
     "url": "https://github.com/python/cpython/issues/118767#start-of-content",
     "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 114665,
+    "url": "https://github.com/python/cpython/issues/119613#issue-2319458234",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114669,
+    "url": "https://github.com/skirpichev",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114672,
+    "url": "https://github.com/python/cpython/issues/119613#top",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114674,
+    "url": "https://github.com/python/cpython/issues/119613#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114675,
+    "url": "https://github.com/python/cpython/pull/119701",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114676,
+    "url": "https://github.com/python/cpython/pull/119457#discussion_r1615985599",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114677,
+    "url": "https://github.com/python/cpython/pull/119619",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 114678,
+    "url": "https://github.com/python/cpython/pull/120020",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 116021,
+    "url": "https://github.com/cdce8p",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116022,
+    "url": "https://github.com/python/cpython/pull/124548#commits-pushed-a29aee3",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116023,
+    "url": "https://github.com/python/cpython/pull/124548/commits/c90c016202a86af860c638b59db7c62396fcb912",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116024,
+    "url": "https://github.com/python/cpython/pull/124548/commits/8bab4576c97e7ca70c96d707e13d8d00d2f9516c",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116025,
+    "url": "https://github.com/python/cpython/pull/124548#ref-commit-843c78d",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116026,
+    "url": "https://github.com/python/cpython/commit/46b5388d28782801867814efa94fd99e5b53ff43",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116028,
+    "url": "https://github.com/python/cpython/pull/124548/files/57b2db672fc011d19f04ca34bc6e716c580f382a#diff-eb5cd13d65d2f215d8dc0d95eb1a1341ff69b226ac56ec6099e39582edecc8cf",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116029,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420271014",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116030,
+    "url": "https://github.com/python/cpython/pull/124548/commits/45d584d43408772f0fe0cb00231161830c97caac",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116031,
+    "url": "https://github.com/python/cpython/pull/124548#ref-issue-1199014337",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116032,
+    "url": "https://github.com/python/cpython/pull/124548",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116033,
+    "url": "https://github.com/python/cpython/pull/124548/commits/1cb4657c418534198e633ea83335402ffe2b0470",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116034,
+    "url": "https://github.com/python/cpython/pull/124548/files/57b2db672fc011d19f04ca34bc6e716c580f382a",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116035,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420825212",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116036,
+    "url": "https://github.com/python/cpython/pull/124548/files/efc03956b5a3d2b519496fa58858d5c4153c0950",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116037,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420135705",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116038,
+    "url": "https://github.com/python/cpython/pull/124548/files/97d02924a5033f76ce0098814bc66a5d2e25e796",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116039,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2384294740",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116040,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420236091",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116042,
+    "url": "https://buildbot.python.org/#/builders/1594/builds/338",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116044,
+    "url": "https://buildbot.python.org/#/builders/1613/builds/112",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116045,
+    "url": "https://github.com/python/cpython/commit/28f948b115deff68360c1fe406855a00e7b1c2b1",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116046,
+    "url": "https://github.com/numpy/numpy/issues/24755",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116047,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2422766689",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116048,
+    "url": "https://github.com/python/cpython/pull/129669",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116049,
+    "url": "https://github.com/python/cpython/pull/124548/commits/a29aee3d7ebf8ca4dee811dae4c9258c7e87887e",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116051,
+    "url": "https://github.com/python/cpython/pull/124548#commits-pushed-c540cf0",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116052,
+    "url": "https://github.com/python/cpython/issues/81474",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116053,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2422842744",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116055,
+    "url": "https://github.com/python/cpython/pull/124548/commits/c540cf0a9de1709c5a3d8661875b19c99013e15d",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116057,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420159627",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116059,
+    "url": "https://github.com/python/cpython/pull/124548#event-14434642204",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116060,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2384350859",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116061,
+    "url": "https://github.com/python/cpython/pull/124548/commits/01789be00f372c65b0519eab1580faa5491e0e2e",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116062,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420488611",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116063,
+    "url": "https://github.com/python/cpython/pull/124548/files/f61d62d5c9d9dee1f473e603c0ad40ab76ffe790",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116064,
+    "url": "https://github.com/1st1",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116065,
+    "url": "https://buildbot.python.org/#/builders/259",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116067,
+    "url": "https://github.com/python/cpython/pull/124548#issue-2549015376",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116068,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420823208",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116071,
+    "url": "https://github.com/python/cpython/commit/84993a5f62a047af803e8e930748a81faf83275d",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116072,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420237059",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116073,
+    "url": "https://github.com/donbarbos",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116074,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2384571582",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116075,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F124548",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116076,
+    "url": "https://github.com/python/cpython/pull/124548#commits-pushed-5c69d38",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116078,
+    "url": "https://github.com/python/cpython/pull/124548/files/57b2db672fc011d19f04ca34bc6e716c580f382a#diff-2418446f6b32195bf39c0f315ac97d47108a451144cc0132a88a7c7997966417",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116079,
+    "url": "https://github.com/python/cpython/pull/124548/commits/84993a5f62a047af803e8e930748a81faf83275d",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116080,
+    "url": "https://github.com/python/cpython/pull/124548#event-14434758202",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116081,
+    "url": "https://github.com/ebonnal/cpython/commit/843c78d8b73c8c14bb5b253341f66e7b8c0834cd",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116082,
+    "url": "https://github.com/python/cpython/issues/125667",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116083,
+    "url": "https://github.com/python/cpython/pull/124548/commits/57b2db672fc011d19f04ca34bc6e716c580f382a",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116085,
+    "url": "https://github.com/cython/cython/issues/6445",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116086,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420323148",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116087,
+    "url": "https://github.com/python/cpython/pull/124548/commits/efc03956b5a3d2b519496fa58858d5c4153c0950",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116088,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420331719",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116089,
+    "url": "https://github.com/python/cpython/pull/124548#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116091,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2384510312",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116092,
+    "url": "https://github.com/python/cpython/commit/45d584d43408772f0fe0cb00231161830c97caac",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116093,
+    "url": "https://github.com/python/cpython/pull/124548#pullrequestreview-2338770119",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116094,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2423367364",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116095,
+    "url": "https://github.com/python/cpython/pull/124548#ref-pullrequest-3136684509",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116096,
+    "url": "https://github.com/python/cpython/pull/124548#commits-pushed-75e11d2",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116097,
+    "url": "https://github.com/python/cpython/pull/124548#pullrequestreview-2335870259",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116098,
+    "url": "https://github.com/python/cpython/pull/124548#commits-pushed-c90c016",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116099,
+    "url": "https://github.com/python/cpython/compare/46b5388d28782801867814efa94fd99e5b53ff43..84993a5f62a047af803e8e930748a81faf83275d",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116100,
+    "url": "https://github.com/python/cpython/pull/124548#ref-issue-2595961431",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116101,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2423241253",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116102,
+    "url": "https://github.com/python/cpython/pull/124548#event-14437840960",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116103,
+    "url": "https://github.com/python/cpython/pull/124548/commits/cd29914577b48124d4cafdd3709969b243e0402b",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116104,
+    "url": "https://github.com/bluss",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116105,
+    "url": "https://github.com/python/cpython/pull/116430",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116106,
+    "url": "https://github.com/python/cpython/issues/125716",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116107,
+    "url": "https://github.com/python/cpython/pull/124548#ref-issue-2553488515",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116108,
+    "url": "https://github.com/willingc",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116109,
+    "url": "https://github.com/python/cpython/pull/125708",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116110,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420845402",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116111,
+    "url": "https://github.com/python/cpython/pull/124548/commits/69c2b8efe501154d0811d42b3fa8fed27340aa07",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116113,
+    "url": "https://github.com/python/cpython/pull/125668",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116114,
+    "url": "https://github.com/python/cpython/pull/124548#ref-pullrequest-2831320805",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116115,
+    "url": "https://buildbot.python.org/#/builders/1613",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116116,
+    "url": "https://github.com/python/cpython/pull/124548/commits/5c69d38fa93f15224e859cf5d170e76bdcd7b2c6",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116117,
+    "url": "https://github.com/python/cpython/pull/124548#event-14690406418",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116118,
+    "url": "https://github.com/python/cpython/pull/133958",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116119,
+    "url": "https://github.com/python/cpython/pull/124548#ref-pullrequest-3058541953",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116120,
+    "url": "https://github.com/python/cpython/pull/124548/commits/f03c314fb643e7acc2d1181950a23702ee678fa0",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116121,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420764227",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116123,
+    "url": "https://github.com/python/cpython/pull/124548/commits/6def4bedeb4a61e10e66d94221490a55723eaebe",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116124,
+    "url": "https://github.com/python/typeshed/pull/14263",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116125,
+    "url": "https://github.com/python/cpython/pull/124548#ref-pullrequest-2172175353",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116126,
+    "url": "https://github.com/python/cpython/compare/28f948b115deff68360c1fe406855a00e7b1c2b1..45d584d43408772f0fe0cb00231161830c97caac",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116127,
+    "url": "https://buildbot.python.org/#/builders/259/builds/1528",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116128,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420147477",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116129,
+    "url": "https://github.com/python/cpython/pull/124548#event-14690406408",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116130,
+    "url": "https://github.com/apache/arrow/issues/44511",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116133,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420789112",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116134,
+    "url": "https://buildbot.python.org/#/builders/1610/builds/198",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116135,
+    "url": "https://github.com/brianquinlan",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116136,
+    "url": "https://github.com/python/cpython/pull/124548#event-14437841153",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116137,
+    "url": "https://github.com/python/cpython/pull/124548/commits/75e11d2ff9fe0849eac91dfe9bb30f55034ff55d",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116138,
+    "url": "https://github.com/python/cpython/pull/124548/commits/4dc0989b7287390347663c09aaeb367e1cacb38e",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116139,
+    "url": "https://github.com/python/cpython/pull/124548/commits/4806d9f469cbd2d5a1a42fb43fd32cf7b07e4fce",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116140,
+    "url": "https://github.com/python/cpython/pull/124548#event-14436228088",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 116141,
+    "url": "https://github.com/jakirkham",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d48\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d60\u0026v\u003d4",
+    "alt": "ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d60\u0026v\u003d4",
+    "alt": "ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d48\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8851008?s\u003d80\u0026u\u003d9b03921947eac905400f43f5929d4efdf66af8f1\u0026v\u003d4",
+    "alt": "@brianquinlan",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d80\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d80\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d80\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d80\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d80\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3019665?s\u003d40\u0026v\u003d4",
+    "alt": "@jakirkham",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32455369?s\u003d40\u0026v\u003d4",
+    "alt": "@ebonnal",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/47272787?s\u003d40\u0026v\u003d4",
+    "alt": "@donbarbos",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d40\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/30130371?s\u003d40\u0026v\u003d4",
+    "alt": "@cdce8p",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/239003?s\u003d40\u0026v\u003d4",
+    "alt": "@1st1",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2680980?s\u003d40\u0026v\u003d4",
+    "alt": "@willingc",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d40\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/356399?s\u003d40\u0026v\u003d4",
+    "alt": "@asvetlov",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d40\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3209739?s\u003d40\u0026v\u003d4",
+    "alt": "@bluss",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d52\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8851008?s\u003d52\u0026v\u003d4",
+    "alt": "@brianquinlan",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d52\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d52\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/239003?s\u003d52\u0026v\u003d4",
+    "alt": "@1st1",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2680980?s\u003d52\u0026v\u003d4",
+    "alt": "@willingc",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3209739?s\u003d52\u0026v\u003d4",
+    "alt": "@bluss",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdb.Pdb"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdb.Pdb"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#binary-releases-for-the-experimental-just-in-time-compiler"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#binary-releases-for-the-experimental-just-in-time-compiler"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@skirpichev",
+    "pageTitle": "Deprecate Py_IS_NAN/INFINITY/FINITE? · Issue #119613 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@skirpichev",
+    "pageTitle": "Deprecate Py_IS_NAN/INFINITY/FINITE? · Issue #119613 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#open"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#open"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
     "alt": "JelleZijlstra",
