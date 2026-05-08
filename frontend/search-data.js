@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 567,
+    "url": "https://www.python.org/success-stories/category/scientific/",
+    "title": "Scientific | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Scientific Scientific Why Python Matters for the VR Community Python for Collaborative Drug Discovery Python To Help Meteorologists Python for Scientific Data Visualization Simulating Biomolecules with Python Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-09 00:46:09.870378"
+  },
+  {
+    "id": 566,
+    "url": "https://www.python.org/success-stories/category/education/",
+    "title": "Education | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Education Education Elementary school education: Is it love or just Python? Using Python to Automate Tedious Tasks Python in the Blind Audio Tactile Mapping System Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-09 00:46:08.665367"
+  },
+  {
+    "id": 565,
+    "url": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/",
+    "title": "Bleeding Edge Dependency Testing Using Python | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Bleeding Edge Dependency Testing Using Python Written by Faisal Dosani and Akshay Gupta, Capital One Dependency management in any language can be a challenge and Python is no exception. Tools like pip and conda use dependency resolvers to try and honor the requirements given to them, but oftentimes version conflicts prevent installation; this problem became more apparent when pip introduced a new resolver in October 2020. New versions of an upstream package can break your code, and tracking down the culprit can be even more challenging if you have a long list of transient dependencies. edgetest is an open source plugin-based Python package designed to help developers test their code against new versions of their existing dependencies. edgetest helps alleviate some of the burden of dependency management by: - creating a virtual environment; - installing your local package into the environment; - upgrading specified dependency package(s); and - running your test command (e.g. pytest). Maintenance cost and environment management has become a part of “running the engine” with the pip resolver. Now, edgetest can help reduce the maintenance cost of packages by automating bleeding edge dependency testing. For example, if you depend on pandas\u003e\u003d0.25.1,\u003c\u003d1.0.0, edgetest will test your project against the most current pandas version (1.4.1 as of writing). With an effective test suite, you will know whether you can safely upgrade to pandas\u003e\u003d0.25.1,\u003c\u003d1.4.1 or not. edgetest will report whether or not it is safe to upgrade based on the test results. It will do this for each dependency individually before upgrading all upstream packages to identify any potential interactions. Why We Built edgetest After pip introduced a dependency resolver in October 2020, we decided to take a more prescriptive approach to dependency pinning for internal projects at Capital One. Specifically, this involved adding both lower and upper pins to any direct dependencies for all packages. However, this decision added a new form of maintenance cost: updating the pins. We needed an automated way to help remediate security vulnerabilities identified in packages and continue to support the latest version of dependencies in a way that scaled. edgetest was a solution to this problem given the number of Python packages our team supported during that time. Machine learning packages can often have complex dependency structures and experimentation with new features is critical. While implementations of models should always pin packages to ensure deterministic behavior and auditability, we don\u0027t want the tools themselves to be unnecessarily restrictive, but to allow for some flexibility in their implementation. We can now have scheduled CI/CD jobs which automatically run edgetest against many internal libraries to run unit tests and bump dependency pins, ensuring some level of trust in the latest versions. We should note that having robust unit testing is really critical to getting the most out of edgetest. Is This Different from GitHub’s Dependabot? edgetest is not tied to a particular version control system like GitHub. It also prevents accidental updates by only upgrading package dependencies when unit tests are passing. Finally, some users want to focus on a subset of their dependency tree for updates. Sometimes these are dependencies that release often (e.g. boto3), and sometimes these packages are core to their library’s functionality. edgetest offers multiple configuration options to help users create a test and upgrade a system that is functional for their use case. edgetest in Action For example, let’s imagine a simple toy_package like so: To configure edgetest we can include the following within our setup.cfg: And run with the following command line statement: edgetest -c setup.cfg This will tell edgetest to use Python 3.9 and also to install the tests extra into each conda environment. edgetest will create three environments: pandas, numpy, and all-requirements. In the first two, it will only upgrade the respective packages with those names, and the all-requirements will upgrade both pandas and numpy. Next, the test command (pytest is the default) is run in each environment and the results are reported back to the user: Alternatively you can also provide the –export flag to write the changes to setup.cfg for you if you wish. Using a Plugin Architecture One of the goals for edgetest was to ensure easy extensibility, which led us to use pluggy. Pluggy enables the extension or modification of the core package enabling the Python community to build custom plugins to interact with edgetest. Currently there are three plugins: conda, pip-tools, and hub. With pluggy we mapped out several hookspecs: edgetest.hookspecs.addoption() This hook allows the user to add global or environment-level h",
+    "scrapedAt": "2026-05-09 00:46:07.360657"
+  },
+  {
+    "id": 564,
+    "url": "https://www.python.org/success-stories/category/software-development/",
+    "title": "Software Development | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Software Development Software Development Python on Arm: 2025 Update Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning Building Robust Codebases with Python\u0027s Type Annotations Building a Dependency Graph of Our Python Codebase Bleeding Edge Dependency Testing Using Python How We Created a Python Development Framework for Non-Developers Vacation rental marketplace development using Python Deliver Clean and Safe Code for Your Python Applications A Startup Healthcare Tech Firm Is Now Poised for the Future Using Python to build a range of products across multiple industries Using Python for marketplace development under tight deadlines Using Python to develop a patient health portal Building an online pharmacy marketplace with Python Python provides convenience and flexibility for scalable ML/AI Securing Python Runtimes Building an open-source and cross-platform Azure CLI with Python D-Link Australia Uses Python to Control Firmware Updates Distributed System For Technology Integration EZRO Content Management System Avoiding Documentation Costs with Python A Custom Image Viewing Game for an Autistic Child XIST: An XML Transformation Engine Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-09 00:46:06.161294"
+  },
+  {
+    "id": 563,
+    "url": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/",
+    "title": "Frequentis TAPtools® - Python in Air Traffic Control | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Frequentis TAPtools® - Python in Air Traffic Control Written by Michael Bartl, Frequentis Introduction Frequentis is one of the world\u0027s leading providers for safety-critical solutions in the field of Air Traffic Management and Public Safety \u0026 Transport. With over 500 employees world-wide, it provides innovative, user-centered solutions to its customers. Frequentis has been using Python in its TAPtools® product family, which focuses on the Tower and Airport Tools segment of Air Traffic Control. These tools are used by air traffic controllers to track weather conditions, control runway lighting, and to monitor and control navigational aid instruments. TAPtools® products display runway and weather conditions for air traffic controllers managing the approach of incoming aircraft Zoom in A Brief History One of the problems in developing air traffic control solutions is that each customer\u0027s unique airport, regulatory picture, and methodologies impose specific and different requirements for user interface look and behavior. A significant part of the deployment of an air traffic control system is the customization of its interface. Instead of developing each user interface from the ground up on a per-customer basis, Frequentis has developed a user interface layout tool called PanView, similar to products like QDesigner or Visual Studio. This tool is used to design and build the user interface which is then executed by a piece of software called the PanMachine. The PanMachine runs on in-house developed hardware called the PowerPanel, a 66MHz PowerPC with 32 MB RAM and a 12\" touch screen entry device. TAPtools® user interfaces are developed for the unique requirements of each air traffic control customer Zoom in With these tools, Frequentis developers can rapidly prototype a layout in front of the customer, greatly reducing the number of customer design workshops necessary in the deployment of a solution. The Customer is King PanView and the PanMachine were originally developed using Lua as the scripting language used to connect the user interface to the underlying functionality of the air traffic control system. This choice was found to be problematic for the layout implementors for a variety of reasons: Limited information is provided on errors, making it hard for developers to locate bugs. Variables are global, not local, by default. Python is exactly the other way around, making programs less prone to error. Lua has no list data structure. Although its dictionaries can be used as lists, this caused unnecessary complexity in practice. Lua code is easy to follow for short scripts, but its syntax and minimal standard library makes it unmanageable for larger programs. In a very important project, the Finnish Civil Aviation Administration (FCAA) wanted to run their user interface layouts not just on the PowerPanel, but also in the context of a web browser. This requirement was important enough that it led to re-implementation of the PanMachine in Java, so it could be run as an applet in the browser. Because Lua could not be run under Java, this was a good time to replace it. Python and Jython, the Java implementation of Python, were chosen because they would allow both the PowerPC and Java implementations of the PanMachine to execute the same user interface layouts. Python, implemented in C, was used on the PowerPC, and Jython, implemented in Java, was used in the browser applet. Implementation in Python Re-implementation using Python went smoothly. The Python language interpreter and support libraries are written in C and can be compiled with most C compilers. In this project, the ability for Python to be embedded into other code worked very well. The documentation is excellent and the examples are easy to follow. However, the PowerPanel hardware has no hard disk and thus could not itself compile the Python interpreter\u0027s C sources. To work around this problem, the developers cross-compiled Python from another machine, producing object code for the PowerPC using a compiler running on another type of hardware. Once this was done, Python byte code produced on any machine could be run on the PowerPanel without modification; only the initial compilation of the language itself required cross-compilation. Rewriting the Lua Layouts Once the Python-based implementation of the GUI layout tools was complete, it became necessary to rewrite the existing Lua layouts using Python. Our layout coders embraced Python with open arms because it solved all the problems they had been having with Lua, and it made new code easier to write because of Python\u0027s straightforward syntax and extensive standard libraries. In this transition, we found that Python\u0027s syntax was very easy to learn for new users, and our coders were able to completely rewrite the Lua layouts to take advanta",
+    "scrapedAt": "2026-05-09 00:46:04.927893"
+  },
+  {
     "id": 562,
     "url": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/",
     "title": "Building a Dependency Graph of Our Python Codebase | Our Success Stories | Python.org",
@@ -3878,26 +3913,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 563,
-    "url": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
-  },
-  {
-    "id": 564,
-    "url": "https://www.python.org/success-stories/category/software-development/"
-  },
-  {
-    "id": 565,
-    "url": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
-  },
-  {
-    "id": 566,
-    "url": "https://www.python.org/success-stories/category/education/"
-  },
-  {
-    "id": 567,
-    "url": "https://www.python.org/success-stories/category/scientific/"
   },
   {
     "id": 568,
@@ -96594,10 +96609,247 @@ window.searchData = [
     "id": 68728,
     "url": "https://en.wikipedia.org/wiki/Coupling_(computer_programming)",
     "parentUrl": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/"
+  },
+  {
+    "id": 68731,
+    "url": "http://www.frequentis.com/",
+    "parentUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "id": 68732,
+    "url": "http://www.taptools.com/",
+    "parentUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "id": 68737,
+    "url": "https://www.python.org/m/about/success/frequentis/screen.png",
+    "parentUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "id": 68738,
+    "url": "http://www.lua.org/",
+    "parentUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "id": 68739,
+    "url": "http://docs.python.org/extending/",
+    "parentUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "id": 68741,
+    "url": "https://www.python.org/m/about/success/frequentis/main.png",
+    "parentUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "id": 68742,
+    "url": "http://www.jython.org/",
+    "parentUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "id": 68748,
+    "url": "https://www.python.org/success-stories/building-an-online-pharmacy-marketplace-with-python/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68749,
+    "url": "https://www.python.org/success-stories/caldintav-python-for-high-speed-railway-bridges/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68750,
+    "url": "https://www.python.org/success-stories/using-python-to-build-a-range-of-products-across-multiple-industries/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68751,
+    "url": "https://www.python.org/success-stories/using-python-to-develop-a-patient-health-portal/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68754,
+    "url": "https://www.python.org/success-stories/building-an-open-source-and-cross-platform-azure-cli-with-python/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68755,
+    "url": "https://www.python.org/success-stories/avoiding-documentation-costs-with-python/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68758,
+    "url": "https://www.python.org/success-stories/deliver-clean-and-safe-code-for-your-python-applications/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68759,
+    "url": "https://www.python.org/success-stories/a-custom-image-viewing-game-for-an-autistic-child/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68760,
+    "url": "https://www.python.org/success-stories/vacation-rental-marketplace-development-using-python/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68761,
+    "url": "https://www.python.org/success-stories/xist-an-xml-transformation-engine/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68762,
+    "url": "https://www.python.org/success-stories/ezro-content-management-system/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68763,
+    "url": "https://www.python.org/success-stories/distributed-system-for-technology-integration/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68768,
+    "url": "https://www.python.org/success-stories/using-python-for-marketplace-development-under-tight-deadlines/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68770,
+    "url": "https://www.python.org/success-stories/securing-python-runtimes/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68772,
+    "url": "https://www.python.org/success-stories/how-we-created-a-python-development-framework-for-non-developers/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68775,
+    "url": "https://www.python.org/success-stories/python-provides-convenience-and-flexibility-for-scalable-mlai/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68776,
+    "url": "https://www.python.org/success-stories/a-startup-healthcare-tech-firm-is-now-poised-for-the-future/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 68781,
+    "url": "https://imgur.com/x5jxee3",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 68784,
+    "url": "http://www.capitalone.com/tech",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 68785,
+    "url": "https://github.com/marketplace/actions/run-edgetest",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 68786,
+    "url": "https://imgur.com/UYiAPGs",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 68787,
+    "url": "https://imgur.com/tuk5NQ0",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 68788,
+    "url": "https://github.com/fdosani/run-edgetest-action/blob/dev/README.md",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 68791,
+    "url": "https://capitalone.github.io/edgetest/api/edgetest.html#edgetest.hookspecs.addoption",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 68794,
+    "url": "https://capitalone.github.io/edgetest/api/edgetest.html#edgetest.hookspecs.create_environment",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 68795,
+    "url": "https://imgur.com/AMW0U1h",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 68797,
+    "url": "https://www.capitalone.com/tech/open-source/",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 68798,
+    "url": "https://github.com/capitalone/edgetest",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 68799,
+    "url": "https://imgur.com/atWfy53",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 68801,
+    "url": "https://capitalone.github.io/edgetest/api/edgetest.html#edgetest.hookspecs.path_to_python",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 68804,
+    "url": "https://github.com/fdosani/run-edgetest-action",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 68805,
+    "url": "https://sdtimes.com/data/data-profiler-capital-ones-open-source-machine-learning-technology-for-data-monitoring/",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://i.imgur.com/tuk5NQ0.png",
+    "alt": "",
+    "pageTitle": "Bleeding Edge Dependency Testing Using Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "src": "https://i.imgur.com/atWfy53.png",
+    "alt": "",
+    "pageTitle": "Bleeding Edge Dependency Testing Using Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "src": "https://i.imgur.com/UYiAPGs.png",
+    "alt": "",
+    "pageTitle": "Bleeding Edge Dependency Testing Using Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "src": "https://i.imgur.com/AMW0U1h.png",
+    "alt": "",
+    "pageTitle": "Bleeding Edge Dependency Testing Using Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "src": "https://i.imgur.com/x5jxee3.png",
+    "alt": "",
+    "pageTitle": "Bleeding Edge Dependency Testing Using Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/frequentis/main-web.png",
+    "alt": "Runway Control Screen",
+    "pageTitle": "Frequentis TAPtools® - Python in Air Traffic Control | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/frequentis/screen-web.png",
+    "alt": "Custom Interface Screenshot",
+    "pageTitle": "Frequentis TAPtools® - Python in Air Traffic Control | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
   {
     "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/HRT_Building_a_Dependency_Graph_of_our_Python_Codebase.png",
     "alt": "Building a Dependency Graph of Our Python Codebase",
