@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 730,
+    "url": "https://github.com/python/cpython/issues/126353",
+    "title": "Remove implicit creation of event loop from `asyncio.get_event_loop` · Issue #126353 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k",
+    "scrapedAt": "2026-05-09 00:51:15.097626"
+  },
+  {
+    "id": 729,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 310, in __getitem__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function ordinal 0 not found\n\u003e\u003e\u003e\n Calling functions¶ You can call these functions like any other Python callable. This example uses the rand() functi",
+    "scrapedAt": "2026-05-09 00:51:11.187408"
+  },
+  {
+    "id": 728,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html",
+    "title": "Emscripten Runtime Environment — Emscripten 5.0.8-git (dev) documentation",
+    "content": "DocsDocumentation SDKDownloads HelpCommunity GitHub Home » Porting » Emscripten Runtime Environment Emscripten Runtime Environment The Emscripten runtime environment is different to that expected by most C/C++ applications. Emscripten works hard to abstract and mitigate these differences, so that in general code can be compiled with little or no change. This article expands on some of the differences and the resulting API Limitations, and outlines the few changes you may need to make to your C/C++ code. Input/output Emscripten implements the Simple DirectMedia Layer API (SDL) for the browser environment, which provides low level access to audio, keyboard, mouse, joystick, and graphics hardware. Applications that use SDL typically require no input/output changes to run in the browser. In addition, we have more limited support for glut, glfw, glew and xlib. Applications that do not use SDL or the other APIs can use the Emscripten-specific APIs for input and output: html5.h, which defines the Emscripten low-level glue bindings to interact with HTML5 events from native code, including access to keys, mouse, wheel, device orientation, battery levels, vibration, etc. Multimedia and Graphics APIs, including OpenGL and EGL. File Systems A lot of C/C++ code uses the synchronous file system APIs in libc and libcxx to access code in the local file system. This is problematic because the browser prevents code from directly accessing files on the host system, and because JavaScript only supports asynchronous file access outside of web workers. Emscripten provides an implementation of libc and libcxx and a virtual file system so that normal C/C++ code can be compiled and run without change. Most developers need only specify the set of files to be packaged for preloading into the virtual file system at runtime. Note Using a virtual file system bypasses the limitations listed above. The file data is packaged at compile time and downloaded into the file system using asynchronous JavaScript APIs before the compiled code is allowed to run. The compiled code then makes “file” calls that are really just calls into program memory. The default file system (MEMFS) stores files in-memory, so that any changes are lost when the page is reloaded. If file changes need to be stored more permanently then developers can mount the IDBFS file system, which allows data to be persisted in the browser. When running code in node.js, developers can mount NODEFS to give code direct access to the local file system. Emscripten also has an API to support asynchronous file access. For more information and examples see Files and File Systems. Browser main loop The browser event model uses co-operative multitasking — each event has a “turn” to run, and must then return control to the browser so that other events can be processed. A common cause of HTML pages hanging is JavaScript that does not complete and return control to the browser. Graphical C++ apps typically run in an infinite loop. Within each iteration of the loop the app performs event handling, processing and rendering, followed by a delay (“wait”) to keep the frame rate constant. This infinite loop is a problem in the browser environment because there is no way for control to return to the browser so other code can run. After a period the browser will notify the user that the page is stuck and offer to halt or close it. Similarly, JavaScript APIs like WebGL can only run when the current “turn” is over, and will automatically render and swap buffers at that point. This contrasts with OpenGL C++ apps where you would need to swap the buffers manually. Implementing an asynchronous main loop in C/C++ The standard solution for this problem is to define a C function that performs one iteration of your main loop (not including the “delay”). For a native build this function can be called in an infinite loop, leaving the behaviour effectively unchanged. Within Emscripten compiled code we use emscripten_request_animation_frame_loop() to get the environment to call this same function at the proper frequency for rendering a frame (that is, if the browser renders at 60fps, it will call this 60 times per second). The iteration is still run “infinitely” but now other code can run between iterations and the browser does not hang. Typically you will have a small section with #ifdef __EMSCRIPTEN__ for the two cases. For example: #include \u003cemscripten.h\u003e\n#include \u003cemscripten/html5.h\u003e\n#include \u003cstdio.h\u003e\n\n// Our \"main loop\" function. This callback receives the current time as\n// reported by the browser, and the user data we provide in the call to\n// emscripten_request_animation_frame_loop().\nbool one_iter(double time, void* userData) {\n  // Can render to the screen here, etc.\n  puts(\"one iteration\");\n  // Return true to keep the loop running.\n  return true;\n}\n\nint main() {\n#ifdef __EMSCRIPTEN__\n  // Receives a function to call and some user data to provide it.\n  emscripten_request_animation_frame_loop(one_it",
+    "scrapedAt": "2026-05-09 00:51:10.039685"
+  },
+  {
+    "id": 726,
+    "url": "https://github.com/python/cpython/issues/120804",
+    "title": "Rewrite asyncio subprocesses without child watchers · Issue #120804 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Rewrite asyncio subprocesses without child watchers #120804 New issue Copy link New issue Copy link Closed Closed Rewrite asyncio subprocesses without child watchers #120804 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixestopic-asyncio Description kumaraditya303 opened on Jun 20, 2024 Issue body actions Tasks Remove child watchers (excludes threaded and pidfd watcher) GH-120804: Remove SafeChildWatcher, FastChildWatcher and MultiLoopChildWatcher from asyncio #120805 Remove get_child_watcher and set_child_watcher GH-120804: Remove get_child_watcher and set_child_watcher from asyncio #120818 Remove threaded and pidfd watcher GH-120804: Remove PidfdChildWatcher, ThreadedChildWatcher and AbstractChildWatcher from asyncio APIs #120893 Remove abc of it GH-120804: Remove PidfdChildWatcher, ThreadedChildWatcher and AbstractChildWatcher from asyncio APIs #120893 Add documentation regarding it and news entry GH-120804: add docs for removal for asyncio child watchers #120895 Each task item will be done in a separate PR and news entry will be added when all of this is done otherwise it will be confusing for users. Linked PRs GH-120804: Remove SafeChildWatcher, FastChildWatcher and MultiLoopChildWatcher from asyncio #120805 GH-120804: Remove get_child_watcher and set_child_watcher from asyncio #120818 GH-120804: Remove PidfdChildWatcher, ThreadedChildWatcher and AbstractChildWatcher from asyncio APIs #120893 GH-120804: add docs for removal for asyncio child watchers #120895 gh-120804: remove is_active method from internal child watchers implementation in asyncio #121124 Reactions are currently unavailable Metadata Metadata Assignees kumaraditya303 Labels 3.14bugs and security fixesbugs and security fixestopic-asyncio Projects asyncio Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:51:08.709292"
+  },
+  {
+    "id": 725,
+    "url": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo",
+    "title": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internationalization » locale — Internationalization services | Theme Auto Light Dark | locale — Internationalization services¶ Source code: Lib/locale.py The locale module opens access to the POSIX locale database and functionality. The POSIX locale mechanism allows programmers to deal with certain cultural issues in an application, without requiring the programmer to know all the specifics of each country where the software is executed. The locale module is implemented on top of the _locale module, which in turn uses an ANSI C locale implementation if available. The locale module defines the following exception and functions: exception locale.Error¶ Exception raised when the locale passed to setlocale() is not recognized. locale.setlocale(category, locale\u003dNone)¶ If locale is given and not None, setlocale() modifies the locale setting for the category. The available categories are listed in the data description below. locale may be a string, or a pair, language code and encoding. An empty string specifies the user’s default settings. If the modification of the locale fails, the exception Error is raised. If successful, the new locale setting is returned. If locale is a pair, it is converted to a locale name using the locale aliasing engine. The language code has the same format as a locale name, but without encoding and @-modifier. The language code and encoding can be None. If locale is omitted or None, the current setting for category is returned. Example: \u003e\u003e\u003e import locale\n\u003e\u003e\u003e loc \u003d locale.setlocale(locale.LC_ALL)  # get current locale\n# use German locale; name and availability varies with platform\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027de_DE.UTF-8\u0027)\n\u003e\u003e\u003e locale.strcoll(\u0027f\\xe4n\u0027, \u0027foo\u0027)  # compare a string containing an umlaut\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027\u0027)   # use user\u0027s preferred locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027C\u0027)  # use default (C) locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, loc)  # restore saved locale\n setlocale() is not thread-safe on most systems. Applications typically start with a call of: import locale\nlocale.setlocale(locale.LC_ALL, \u0027\u0027)\n This sets the locale for all categories to the user’s default setting (typically specified in the LANG environment variable). If the locale is not changed thereafter, using multithreading should not cause problems. locale.localeconv()¶ Returns the database of the local conventions as a dictionary. This dictionary has the following strings as keys: Category Key Meaning LC_NUMERIC \u0027decimal_point\u0027 Decimal point character. \u0027grouping\u0027 Sequence of numbers specifying which relative positions the \u0027thousands_sep\u0027 is expected. If the sequence is terminated with CHAR_MAX, no further grouping is performed. If the sequence terminates with a 0, the last group size is repeatedly used. \u0027thousands_sep\u0027 Character used between groups. LC_MONETARY \u0027int_curr_symbol\u0027 International currency symbol. \u0027currency_symbol\u0027 Local currency symbol. \u0027p_cs_precedes/n_cs_precedes\u0027 Whether the currency symbol precedes the value (for positive resp. negative values). \u0027p_sep_by_space/n_sep_by_space\u0027 Whether the currency symbol is separated from the value by a space (for positive resp. negative values). \u0027mon_decimal_point\u0027 Decimal point used for monetary values. \u0027frac_digits\u0027 Number of fractional digits used in local formatting of monetary values. \u0027int_frac_digits\u0027 Number of fractional digits used in international formatting of monetary values. \u0027mon_thousands_sep\u0027 Group separator used for monetary values. \u0027mon_grouping\u0027 Equivalent to \u0027grouping\u0027, used for monetary values. \u0027positive_sign\u0027 Symbol used to annotate a positive monetary value. \u0027negative_sign\u0027 Symbol used to annotate a negative monetary value. \u0027p_sign_posn/n_sign_posn\u0027 The position of the sign (for positive resp. negative values), see below. All numeric values can be set to CHAR_MAX to indicate that there is no value specified in this locale. The possible values for \u0027p_sign_posn\u0027 and \u0027n_sign_posn\u0027 are given below. Value Explanation 0 Currency and value are surrounded by parentheses. 1 The sign should precede the value and currency symbol. 2 The sign should follow the value and currency symbol. 3 The sign should immediately precede the value. 4 The sign should immediately follow the value. CHAR_MAX Nothing is specified in this locale. The function temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale or the LC_MONETARY locale if locales are different and numeric or monetary strings are non-ASCII. This temporary change affects other threads. Changed in version 3.7: The function now temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale in some cases. locale.nl_langinfo(option)¶ Return some locale-specific information as a string. This function is not available on all systems, and the set of possible options might also vary across platforms. The possible argument values are numbers, for which symbolic c",
+    "scrapedAt": "2026-05-09 00:51:06.304393"
+  },
+  {
     "id": 724,
     "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt64",
     "title": "Integer Objects — Python 3.14.5rc1 documentation",
@@ -4788,26 +4823,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 725,
-    "url": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
-  },
-  {
-    "id": 726,
-    "url": "https://github.com/python/cpython/issues/120804"
-  },
-  {
-    "id": 728,
-    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
-  },
-  {
-    "id": 729,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
-  },
-  {
-    "id": 730,
-    "url": "https://github.com/python/cpython/issues/126353"
   },
   {
     "id": 731,
@@ -121534,10 +121549,1664 @@ window.searchData = [
     "id": 87347,
     "url": "https://github.com/python/cpython/pull/124963",
     "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 87463,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_ALL",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87464,
+    "url": "https://docs.python.org/3/library/locale.html#background-details-hints-tips-and-caveats",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87465,
+    "url": "https://www.rfc-editor.org/info/bcp47",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87466,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ERA",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87468,
+    "url": "https://docs.python.org/3/library/locale.html#locale.str",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87470,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_NUMERIC",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87471,
+    "url": "https://learn.microsoft.com/en-us/windows/win32/intl/locale-names",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87472,
+    "url": "https://docs.python.org/3/library/locale.html#locale.gettext",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87474,
+    "url": "https://docs.python.org/3/library/locale.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87475,
+    "url": "https://docs.python.org/3/library/locale.html#locale.bindtextdomain",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87476,
+    "url": "https://docs.python.org/3/library/locale.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87477,
+    "url": "https://docs.python.org/3/library/locale.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87478,
+    "url": "https://docs.python.org/3/library/locale.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87479,
+    "url": "https://docs.python.org/3/library/locale.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87481,
+    "url": "https://docs.python.org/3/library/locale.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87482,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_3",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87483,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_4",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87484,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_5",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87485,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_6",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87486,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87487,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_7",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87488,
+    "url": "https://docs.python.org/3/library/locale.html#locale.YESEXPR",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87490,
+    "url": "https://docs.python.org/3/library/locale.html#locale.T_FMT_AMPM",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87491,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_5",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87492,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_4",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87494,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_3",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87495,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_2",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87496,
+    "url": "https://docs.python.org/3/library/locale.html#locale.normalize",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87497,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_7",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87498,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87499,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_6",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87500,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_2",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87501,
+    "url": "https://docs.python.org/3/library/locale.html#locale.currency",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87502,
+    "url": "https://www.iso.org/iso-639-language-code",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87503,
+    "url": "https://docs.python.org/3/library/locale.html#locale.localize",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87507,
+    "url": "https://docs.python.org/3/library/time.html#time.strftime",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87508,
+    "url": "https://docs.python.org/3/library/locale.html#locale-names",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87509,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_8",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87510,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/locale.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87511,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_7",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87512,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_9",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87513,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_4",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87514,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_3",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87515,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ERA_D_T_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87516,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_6",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87517,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_5",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87518,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_MESSAGES",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87519,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_2",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87520,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87521,
+    "url": "https://docs.python.org/3/library/locale.html#locale.THOUSEP",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87523,
+    "url": "https://docs.python.org/3/library/locale.html#locale.format_string",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87524,
+    "url": "https://docs.python.org/3/library/locale.html#locale.D_T_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87525,
+    "url": "https://docs.python.org/3/library/locale.html#locale.RADIXCHAR",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87527,
+    "url": "https://docs.python.org/3/library/locale.html#locale-name",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87529,
+    "url": "https://docs.python.org/3/library/locale.html#for-extension-writers-and-programs-that-embed-python",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87531,
+    "url": "https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap07.html#tag_07_03_05_02",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87532,
+    "url": "https://docs.python.org/3/library/locale.html#locale.delocalize",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87533,
+    "url": "https://docs.python.org/3/library/locale.html#locale.NOEXPR",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87534,
+    "url": "https://docs.python.org/3/library/locale.html#locale.localeconv",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87535,
+    "url": "https://docs.python.org/3/library/locale.html#locale.strcoll",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87537,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_MONETARY",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87538,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ALT_DIGITS",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87539,
+    "url": "https://docs.python.org/3/library/locale.html#locale.Error",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87541,
+    "url": "https://docs.python.org/3/library/locale.html#",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87542,
+    "url": "https://docs.python.org/3/library/locale.html#locale.bind_textdomain_codeset",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87544,
+    "url": "https://docs.python.org/3/library/locale.html#access-to-message-catalogs",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87547,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_TIME",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87549,
+    "url": "https://docs.python.org/3/library/locale.html#locale.CODESET",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87552,
+    "url": "https://www.iso.org/iso-3166-country-codes.html",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87553,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/locale.py",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87554,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ERA_T_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87557,
+    "url": "https://learn.microsoft.com/en-us/cpp/c-runtime-library/locale-names-languages-and-country-region-strings",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87558,
+    "url": "https://docs.python.org/3/library/locale.html#locale.textdomain",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87559,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_11",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87560,
+    "url": "https://docs.python.org/3/library/locale.html#locale.dgettext",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87562,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_12",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87563,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ERA_D_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87564,
+    "url": "https://docs.python.org/3/c-api/conversion.html#c.Py_TOLOWER",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87565,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_10",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87566,
+    "url": "https://www.unicode.org/iso15924/",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87567,
+    "url": "https://docs.python.org/3/library/locale.html#locale.CHAR_MAX",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87568,
+    "url": "https://docs.python.org/3/library/locale.html#locale.getpreferredencoding",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87570,
+    "url": "https://docs.python.org/3/library/locale.html#locale.T_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87572,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_2",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87573,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_3",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87574,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_4",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87575,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_5",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87576,
+    "url": "https://docs.python.org/3/library/locale.html#locale.atof",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87577,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_6",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87578,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_COLLATE",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87579,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_7",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87580,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_8",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87581,
+    "url": "https://docs.python.org/3/library/locale.html#locale.atoi",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87582,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_9",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87583,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_CTYPE",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87584,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87587,
+    "url": "https://docs.python.org/3/library/locale.html#locale.dcgettext",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87591,
+    "url": "https://docs.python.org/3/library/locale.html#locale.D_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87592,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_12",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87593,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_11",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87594,
+    "url": "https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap08.html#tag_08_02",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87595,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_10",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87596,
+    "url": "https://docs.python.org/3/library/locale.html#locale.CRNCYSTR",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 87600,
+    "url": "https://github.com/python/cpython/issues/120804#issue-2364875592",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87601,
+    "url": "https://github.com/python/cpython/issues/120804#top",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87602,
+    "url": "https://github.com/python/cpython/pull/120818",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87606,
+    "url": "https://github.com/python/cpython/pull/120805",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87607,
+    "url": "https://github.com/python/cpython/pull/121124",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87609,
+    "url": "https://github.com/python/cpython/pull/120895",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87611,
+    "url": "https://github.com/python/cpython/issues/120804#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87612,
+    "url": "https://github.com/python/cpython/pull/120893",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 87613,
+    "url": "https://emscripten.org/docs/api_reference/html5.h.html#c.emscripten_request_animation_frame_loop",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87614,
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87615,
+    "url": "https://emscripten.org/docs/porting/files/index.html#packaging-code-index",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87616,
+    "url": "https://github.com/emscripten-core/emscripten",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87617,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#emscripten-runtime-environment",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87618,
+    "url": "https://emscripten.org/docs/porting/multimedia_and_graphics/index.html#multimedia-and-graphics-index",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87619,
+    "url": "https://emscripten.org/docs/api_reference/Filesystem-API.html#filesystem-api-nodefs",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87620,
+    "url": "https://emscripten.org/docs/api_reference/html5.h.html#html5-h",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87621,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#c.emscripten_push_main_loop_blocker",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87622,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#c.emscripten_async_call",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87623,
+    "url": "https://emscripten.org/docs/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87624,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#emscripten-h-asynchronous-file-system-api",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87625,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#file-systems",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87626,
+    "url": "https://emscripten.org/docs/site/glossary.html#term-SDL",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87627,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#implementing-an-asynchronous-main-loop-in-c-c",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87628,
+    "url": "https://emscripten.org/docs/api_reference/Filesystem-API.html#FS.createPreloadedFile",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87629,
+    "url": "https://emscripten.org/docs/porting/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87630,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#c.emscripten_pause_main_loop",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87631,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#emscripten-runtime-environment-howto-main-loop",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87632,
+    "url": "https://emscripten.org/docs/porting/multimedia_and_graphics/EGL-Support-in-Emscripten.html#egl-support-in-emscripten",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87633,
+    "url": "https://emscripten.org/docs/introducing_emscripten/community.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87634,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#c.emscripten_set_main_loop",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87635,
+    "url": "https://emscripten.org/docs/api_reference/Filesystem-API.html#filesystem-api-memfs",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87636,
+    "url": "https://emscripten.org/docs/porting/multimedia_and_graphics/OpenGL-support.html#opengl-support",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87637,
+    "url": "https://emscripten.org/docs/tools_reference/emcc.html#emcc-preload-file",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87638,
+    "url": "https://emscripten.org/docs/api_reference/preamble.js.html#addRunDependency",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87639,
+    "url": "https://emscripten.org/index.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87640,
+    "url": "https://emscripten.org/docs/api_reference/preamble.js.html#HEAPU32",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87641,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#emscripten-memory-representation",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87642,
+    "url": "https://emscripten.org/docs/api_reference/preamble.js.html#removeRunDependency",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87643,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#emscripten-h-browser-execution-environment",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87644,
+    "url": "https://emscripten.org/docs/porting/guidelines/api_limitations.html#api-limitations",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87645,
+    "url": "https://emscripten.org/docs/porting/files/packaging_files.html#packaging-files",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87646,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#execution-lifecycle",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87647,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#c.emscripten_set_main_loop_expected_blockers",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87648,
+    "url": "https://emscripten.org/docs/api_reference/Filesystem-API.html#filesystem-api-idbfs",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87649,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#c.emscripten_resume_main_loop",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87650,
+    "url": "https://emscripten.org/docs/getting_started/downloads.html",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87651,
+    "url": "https://emscripten.org/docs/porting/asyncify.html#yielding-to-main-loop",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87652,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#browser-main-loop",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87653,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#input-output",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87654,
+    "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html#using-asyncify-to-yield-to-the-browser",
+    "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87655,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.byte_offset",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87658,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.OleDLL",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87660,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._align_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87662,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_ulong",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87664,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.cdll",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87665,
+    "url": "https://docs.python.org/3/library/ctypes.html#incomplete-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87666,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.COMError.hresult",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87667,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.addressof",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87669,
+    "url": "https://docs.python.org/3/library/ctypes.html#loading-dynamic-link-libraries",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87671,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CFuncPtr.restype",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87672,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.bit_offset",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87673,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CDLL",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87674,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData._b_needsfree_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87675,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_ulonglong",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87676,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_short",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87677,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CDLL._name",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87678,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.get_last_error",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87679,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.BigEndianStructure",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87681,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.PyDLL",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87683,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.util.find_library",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87687,
+    "url": "https://manpages.debian.org/dlopen(3)",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87688,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData._objects",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87689,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.windll",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87690,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.RTLD_GLOBAL",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87692,
+    "url": "https://learn.microsoft.com/en-us/cpp/build/reference/dumpbin-reference?view\u003dmsvc-170",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87694,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.from_param",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87695,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.WinError",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87696,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_byte",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87697,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_time_t",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87698,
+    "url": "https://docs.python.org/3/library/ctypes.html#calling-functions-with-your-own-custom-data-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87699,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-fundamental-data-types-2",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87700,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.create_unicode_buffer",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87701,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_uint64",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87702,
+    "url": "https://docs.python.org/3/library/ctypes.html#accessing-values-exported-from-dlls",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87703,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_uint8",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87704,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.DllGetClassObject",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87705,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.cast",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87706,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.type",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87710,
+    "url": "https://docs.python.org/3/library/ctypes.html#arrays",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87711,
+    "url": "https://docs.python.org/3/library/ctypes.html#variable-sized-data-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87712,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.HRESULT",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87713,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_bool",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87714,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData._b_base_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87715,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._Pointer.contents",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87716,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.is_anonymous",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87717,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_ubyte",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87719,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.wstring_at",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87720,
+    "url": "https://docs.python.org/3/library/ctypes.html#fundamental-data-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87722,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.util.find_msvcrt",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87723,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.BigEndianUnion",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87724,
+    "url": "https://docs.python.org/3/library/ctypes.html#structured-data-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87726,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_size_t",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87730,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.GetLastError",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87731,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._SimpleCData.value",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87732,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._fields_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87733,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.memmove",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87734,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.sizeof",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87735,
+    "url": "https://docs.python.org/3/library/ctypes.html#thread-safety-without-the-gil",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87736,
+    "url": "https://docs.python.org/3/library/ctypes.html#loading-shared-libraries",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87737,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.DllCanUnloadNow",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87739,
+    "url": "https://docs.python.org/3/library/ctypes.html#calling-variadic-functions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87740,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._Pointer",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87741,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._anonymous_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87743,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_wchar",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87745,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.COMError.details",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87746,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.WinDLL",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87749,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longdouble",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87750,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.set_last_error",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87751,
+    "url": "https://docs.python.org/3/library/ctypes.html#structure-union-layout-alignment-and-byte-order",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87752,
+    "url": "https://docs.python.org/3/library/ctypes.html#specifying-the-required-argument-types-function-prototypes",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87753,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.byte_size",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87754,
+    "url": "https://docs.python.org/3/library/ctypes.html#utility-functions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87755,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Array._length_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87756,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CFuncPtr.argtypes",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87758,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.DEFAULT_MODE",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87759,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CFuncPtr",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87760,
+    "url": "https://docs.python.org/3/library/ctypes.html#calling-functions-continued",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87761,
+    "url": "https://docs.python.org/3/library/ctypes.html#",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87762,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.memset",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87763,
+    "url": "https://numpy.org/doc/stable/reference/arrays.interface.html#object.__array_interface__",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87765,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_char",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87769,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.WINFUNCTYPE",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87771,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.pythonapi",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87773,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_uint",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87774,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.alignment",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87775,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.bit_size",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87776,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.get_errno",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87777,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.ArgumentError",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87778,
+    "url": "https://docs.python.org/3/library/ctypes.html#function-prototypes",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87780,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.offset",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87781,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_double",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87782,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-reference",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87784,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_int",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87785,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Array",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87786,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.is_bitfield",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87791,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longlong",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87794,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-finding-shared-libraries",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87796,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_void_p",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87797,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.COMError.text",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87798,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CFuncPtr.errcheck",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87800,
+    "url": "https://docs.python.org/3/reference/expressions.html#shifting",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87802,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_int64",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87803,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_char_p",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87804,
+    "url": "https://docs.python.org/3/library/ctypes.html#calling-functions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87807,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.name",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87808,
+    "url": "https://docs.python.org/3/library/ctypes.html#structures-and-unions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87809,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._SimpleCData",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87810,
+    "url": "https://docs.python.org/3/library/struct.html#format-characters",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87813,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-data-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87814,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_ssize_t",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87816,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-wintypes",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87817,
+    "url": "https://docs.python.org/3/library/ctypes.html#callback-functions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87818,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_int32",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87819,
+    "url": "https://docs.python.org/3/library/ctypes.html#finding-shared-libraries",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87820,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.create_string_buffer",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87822,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87823,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_ushort",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87825,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.LibraryLoader",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87830,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.ARRAY",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87833,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._SimpleCData._type_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87834,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-callback-functions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87835,
+    "url": "https://docs.python.org/3/library/ctypes.html#bit-fields-in-structures-and-unions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87836,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_int16",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87837,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_uint16",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87839,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.oledll",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87840,
+    "url": "https://docs.python.org/3/library/ctypes.html#listing-loaded-shared-libraries",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87841,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CDLL._handle",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87843,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.LittleEndianStructure",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87844,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.from_buffer",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87845,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-fundamental-data-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87846,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.pydll",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87849,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.size",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87853,
+    "url": "https://docs.python.org/3/library/ctypes.html#foreign-functions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87854,
+    "url": "https://docs.python.org/3/library/ctypes.html#arrays-and-pointers",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87855,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.set_errno",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87857,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.LibraryLoader.LoadLibrary",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87858,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.RTLD_LOCAL",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87859,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Array._type_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87860,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_wchar_p",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87861,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_int8",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87863,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.from_address",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87864,
+    "url": "https://docs.python.org/3/library/ctypes.html#data-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87865,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/ctypes",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87866,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.pointer",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87867,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_uint32",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87870,
+    "url": "https://docs.python.org/3/library/ctypes.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87871,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.byref",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87872,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._Pointer._type_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87874,
+    "url": "https://docs.python.org/3/library/ctypes.html#type-conversions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87875,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.FormatError",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87876,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_long",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87878,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CFUNCTYPE",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87879,
+    "url": "https://docs.python.org/3/library/ctypes.html#passing-pointers-or-passing-parameters-by-reference",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87881,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.resize",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87882,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.PYFUNCTYPE",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87884,
+    "url": "https://docs.python.org/3/library/ctypes.html#return-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87885,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/ctypes.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87887,
+    "url": "https://docs.python.org/3/library/exceptions.html#WindowsError",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87888,
+    "url": "https://docs.python.org/3/library/ctypes.html#pointers",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87889,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-tutorial",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87890,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.from_buffer_copy",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87891,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_float",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87892,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.LittleEndianUnion",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87893,
+    "url": "https://docs.python.org/3/library/ctypes.html#surprises",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87894,
+    "url": "https://docs.python.org/3/library/ctypes.html#accessing-functions-from-loaded-dlls",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87895,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.in_dll",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87902,
+    "url": "https://github.com/python/cpython/issues/126353#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/126353"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "src": "https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png",
+    "alt": "Fork me on GitHub",
+    "pageTitle": "Emscripten Runtime Environment — Emscripten 5.0.8-git (dev) documentation",
+    "pageUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d64\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "Rewrite asyncio subprocesses without child watchers · Issue #120804 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@kumaraditya303",
+    "pageTitle": "Rewrite asyncio subprocesses without child watchers · Issue #120804 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@kumaraditya303",
+    "pageTitle": "Rewrite asyncio subprocesses without child watchers · Issue #120804 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d64\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "Rewrite asyncio subprocesses without child watchers · Issue #120804 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
