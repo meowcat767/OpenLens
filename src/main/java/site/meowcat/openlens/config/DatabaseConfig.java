@@ -60,8 +60,15 @@ public class DatabaseConfig {
                     url TEXT UNIQUE NOT NULL,
                     title TEXT,
                     content TEXT,
-                    scraped_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                    scraped_at TIMESTAMP,
+                    last_error TEXT,
+                    error_count INT DEFAULT 0
                 );
+                """;
+
+        String addColumns = """
+                ALTER TABLE pages ADD COLUMN IF NOT EXISTS last_error TEXT;
+                ALTER TABLE pages ADD COLUMN IF NOT EXISTS error_count INT DEFAULT 0;
                 """;
 
         String createImagesTable = """
@@ -83,6 +90,7 @@ public class DatabaseConfig {
                 Statement stmt = conn.createStatement()) {
 
             stmt.execute(createPagesTable);
+            stmt.execute(addColumns);
             stmt.execute(createImagesTable);
             stmt.execute(createIndexes);
 
