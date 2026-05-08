@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 892,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html",
+    "title": "RFC 3362 - Real-time Facsimile (T.38) - image/t38 MIME Sub-type Registration",
+    "content": "Light Dark Auto Network Working Group                                         G. Parsons\nRequest for Comments: 3362                               Nortel Networks\nCategory: Standards Track                                    August 2002\n\n\n                Real-time Facsimile (T.38) - image/t38\n                      MIME Sub-type Registration\n\nStatus of this Memo\n\n   This document specifies an Internet standards track protocol for the\n   Internet community, and requests discussion and suggestions for\n   improvements.  Please refer to the current edition of the \"Internet\n   Official Protocol Standards\" (STD 1) for the standardization state\n   and status of this protocol.  Distribution of this memo is unlimited.\n\nCopyright Notice\n\n   Copyright (C) The Internet Society (2002).  All Rights Reserved.\n\nAbstract\n\n   This document describes the registration of the MIME sub-type\n   image/t38.  The encoding is defined by ITU Recommendation T.38 and is\n   intended for use as an Session Description Protocol (SDP) media\n   descriptor.\n\n1.  Conventions used in this document\n\n   The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\",\n   \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this\n   document are to be interpreted as described in BCP 14, RFC 2119\n   [REQ].\n\n2.  Overview\n\n   This document describes the registration of the MIME sub-type\n   image/t38.  The encoding is defined by [T.38] and is intended for use\n   as an SDP media descriptor.\n\n3.  T.38 Definition\n\n   ITU-T Recommendation T.38 [T.38] describes the technical features\n   necessary to transfer facsimile documents in real-time between two\n   standard Group 3 facsimile terminals over the Internet or other\n   networks using IP protocols.  The Recommendation allows the use of\n   either TCP or UDP depending on the service environment.\n\n\n\n\nParsons                     Standards Track                     [Page 1] \nRFC 3362                MIME Sub-type image/t38              August 2002\n\n\n   ITU-T Recommendation T.38 [T.38] Annex D describes system level\n   requirements and procedures for internet aware facsimile\n   implementations and internet aware facsimile gateways conforming to\n   ITU-T T.38 to establish calls with other ITU-T T.38 implementations\n   using the procedures defined in IETF RFC 2543 [SIP-99] and IETF RFC\n   2327 [SDP].\n\n   Note that ITU-T T.38 Recommendation T.38 (04/02) [T.38] is an\n   aggregation of the original ITU-T Recommendation T.38 (06/98) [T.38-\n   98] and all of the subsequent Amendments and Corrigendum including\n   [T.38D-00].  While [T.38] and [T.38D-00] describe SIP procedures per\n   [SIP-99], the procedures can also be applied to the revised Session\n   Initiation Protocol specification [SIP].\n\n3.1  image/t38 Usage\n\n   Annex D of [T.38] describes that the image/t38 media type is intended\n   to indicate a T.38 media stream in SDP.\n\n   This media type registration is not intended for email usage.\n\n4.  IANA Registration\n\n      To: ietf-types@iana.org\n      Subject: Registration of Standard MIME media type image/t38\n\n      MIME media type name: image\n\n      MIME subtype name: t38\n\n      Required parameters: none\n\n      Optional parameters: none\n\n      Encoding considerations: Binary\n\n      Security considerations:\n\n         This content denotes a facsimile bit stream that may or\n         may not be encrypted.\n\n      Interoperability considerations :\n\n         This MIME media subtype is intended to be used as a\n         parameter by SDP in SIP call setup for T.38 as described in\n         ITU-T Rec. T.38 Annex D.  Any use of this media type by\n         email applications is not defined and as a result is not\n         guaranteed to interoperate with a T.38 stream.\n\n\n\nParsons                     Standards Track                     [Page 2] \nRFC 3362                MIME Sub-type image/t38              August 2002\n\n\n\n      Published specification:\n\n         ITU-T Recommendation T.38, \u0027Procedures for real-time\n         Group 3 facsimile communication over IP networks\u0027, April\n         2002.\n\n         A copy of the T.38 specifications can be found at:\n\n         http://www.itu.int/rec/recommendation.asp?type\u003dfolders\u0026\n         lang\u003de\u0026parent\u003dT-REC-T.38\n\n      Applications which use this media type:\n\n         Real-time facsimile (fax)\n\n      Additional information:\n\n         Magic number(s):\n              II (little-endian):\n              MM (big-endian):\n         File extension(s): .T38\n         Macintosh File Type Code(s): T38\n\n      Person \u0026 email address to contact for further information:\n\n         Glenn W. Parsons\n         gparsons@nortelnetworks.com\n\n      Intended usage: COMMON\n\n      Change controller: Glenn Parsons\n\n5. Security Considerations\n\n   Security considerations for this media type are discussed in the MIME\n   type registration that appears in section 4.\n\n6. References\n\n   [REQ]      Bradner, S., \"Key words for use in RFCs to Indicate\n              Requirement Levels\", BCP 14, RFC 2119, March 1997.\n\n   [MIME4] ",
+    "scrapedAt": "2026-05-09 00:57:43.917658"
+  },
+  {
+    "id": 891,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.POINTER",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 310, in __getitem__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function ordinal 0 not found\n\u003e\u003e\u003e\n Calling functions¶ You can call these functions like any other Python callable. This example uses the rand() functi",
+    "scrapedAt": "2026-05-09 00:57:42.5029"
+  },
+  {
+    "id": 890,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.signature",
+    "title": "inspect — Inspect live objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » inspect — Inspect live objects | Theme Auto Light Dark | inspect — Inspect live objects¶ Source code: Lib/inspect.py The inspect module provides several useful functions to help get information about live objects such as modules, classes, methods, functions, tracebacks, frame objects, and code objects. For example, it can help you examine the contents of a class, retrieve the source code of a method, extract and format the argument list for a function, or get all the information you need to display a detailed traceback. There are four main kinds of services provided by this module: type checking, getting source code, inspecting classes and functions, and examining the interpreter stack. Types and members¶ The getmembers() function retrieves the members of an object such as a class or module. The functions whose names begin with “is” are mainly provided as convenient choices for the second argument to getmembers(). They also help you determine when you can expect to find the following special attributes (see Import-related attributes on module objects for module attributes): Type Attribute Description class __doc__ documentation string __name__ name with which this class was defined __qualname__ qualified name __module__ name of module in which this class was defined __type_params__ A tuple containing the type parameters of a generic class method __doc__ documentation string __name__ name with which this method was defined __qualname__ qualified name __func__ function object containing implementation of method __self__ instance to which this method is bound, or None __module__ name of module in which this method was defined function __doc__ documentation string __name__ name with which this function was defined __qualname__ qualified name __code__ code object containing compiled function bytecode __defaults__ tuple of any default values for positional or keyword parameters __kwdefaults__ mapping of any default values for keyword-only parameters __globals__ global namespace in which this function was defined __builtins__ builtins namespace __annotations__ mapping of parameters names to annotations; \"return\" key is reserved for return annotations. __type_params__ A tuple containing the type parameters of a generic function __module__ name of module in which this function was defined traceback tb_frame frame object at this level tb_lasti index of last attempted instruction in bytecode tb_lineno current line number in Python source code tb_next next inner traceback object (called by this level) frame f_back next outer frame object (this frame’s caller) f_builtins builtins namespace seen by this frame f_code code object being executed in this frame f_globals global namespace seen by this frame f_lasti index of last attempted instruction in bytecode f_lineno current line number in Python source code f_locals local namespace seen by this frame f_generator returns the generator or coroutine object that owns this frame, or None if the frame is of a regular function f_trace tracing function for this frame, or None f_trace_lines indicate whether a tracing event is triggered for each source source line f_trace_opcodes indicate whether per-opcode events are requested clear() used to clear all references to local variables code co_argcount number of arguments (not including keyword only arguments, * or ** args) co_code string of raw compiled bytecode co_cellvars tuple of names of cell variables (referenced by containing scopes) co_consts tuple of constants used in the bytecode co_filename name of file in which this code object was created co_firstlineno number of first line in Python source code co_flags bitmap of CO_* flags, read more here co_lnotab encoded mapping of line numbers to bytecode indices co_freevars tuple of names of free variables (referenced via a function’s closure) co_posonlyargcount number of positional only arguments co_kwonlyargcount number of keyword only arguments (not including ** arg) co_name name with which this code object was defined co_qualname fully qualified name with which this code object was defined co_names tuple of names other than arguments and function locals co_nlocals number of local variables co_stacksize virtual machine stack space required co_varnames tuple of names of arguments and local variables co_lines() returns an iterator that yields successive bytecode ranges co_positions() returns an iterator of source code positions for each bytecode instruction replace() returns a copy of the code object with new values generator __name__ name __qualname__ qualified name gi_frame frame gi_running is the generator running? gi_suspended is the generator suspended? gi_code code gi_yieldfrom object being iterated by yield from, or None async generator __name__ name __qualname__ qualified name ag_await object being awaited on, or None ag_frame frame ag_runn",
+    "scrapedAt": "2026-05-09 00:57:41.319014"
+  },
+  {
+    "id": 889,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Create",
+    "title": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Unicode Objects and Codecs | Theme Auto Light Dark | Unicode Objects and Codecs¶ Unicode Objects¶ Since the implementation of PEP 393 in Python 3.3, Unicode objects internally use a variety of representations, in order to allow handling the complete range of Unicode characters while staying memory efficient. There are special cases for strings where all code points are below 128, 256, or 65536; otherwise, code points must be below 1114112 (which is the full Unicode range). UTF-8 representation is created on demand and cached in the Unicode object. Note The Py_UNICODE representation has been removed since Python 3.12 with deprecated APIs. See PEP 623 for more information. Unicode Type¶ These are the basic Unicode object types used for the Unicode implementation in Python: PyTypeObject PyUnicode_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode type. It is exposed to Python code as str. PyTypeObject PyUnicodeIter_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode iterator type. It is used to iterate over Unicode string objects. type Py_UCS4¶ type Py_UCS2¶ type Py_UCS1¶ Part of the Stable ABI. These types are typedefs for unsigned integer types wide enough to contain characters of 32 bits, 16 bits and 8 bits, respectively. When dealing with single Unicode characters, use Py_UCS4. Added in version 3.3. type PyASCIIObject¶ type PyCompactUnicodeObject¶ type PyUnicodeObject¶ These subtypes of PyObject represent a Python Unicode object. In almost all cases, they shouldn’t be used directly, since all API functions that deal with Unicode objects take and return PyObject pointers. Added in version 3.3. The structure of a particular object can be determined using the following macros. The macros cannot fail; their behavior is undefined if their argument is not a Python Unicode object. PyUnicode_IS_COMPACT(o)¶ True if o uses the PyCompactUnicodeObject structure. Added in version 3.3. PyUnicode_IS_COMPACT_ASCII(o)¶ True if o uses the PyASCIIObject structure. Added in version 3.3. The following APIs are C macros and static inlined functions for fast checks and access to internal read-only data of Unicode objects: int PyUnicode_Check(PyObject *obj)¶ Return true if the object obj is a Unicode object or an instance of a Unicode subtype. This function always succeeds. int PyUnicode_CheckExact(PyObject *obj)¶ Return true if the object obj is a Unicode object, but not an instance of a subtype. This function always succeeds. Py_ssize_t PyUnicode_GET_LENGTH(PyObject *unicode)¶ Return the length of the Unicode string, in code points. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. Py_UCS1 *PyUnicode_1BYTE_DATA(PyObject *unicode)¶ Py_UCS2 *PyUnicode_2BYTE_DATA(PyObject *unicode)¶ Py_UCS4 *PyUnicode_4BYTE_DATA(PyObject *unicode)¶ Return a pointer to the canonical representation cast to UCS1, UCS2 or UCS4 integer types for direct character access. No checks are performed if the canonical representation has the correct character size; use PyUnicode_KIND() to select the right function. Added in version 3.3. PyUnicode_1BYTE_KIND¶ PyUnicode_2BYTE_KIND¶ PyUnicode_4BYTE_KIND¶ Return values of the PyUnicode_KIND() macro. Added in version 3.3. Changed in version 3.12: PyUnicode_WCHAR_KIND has been removed. int PyUnicode_KIND(PyObject *unicode)¶ Return one of the PyUnicode kind constants (see above) that indicate how many bytes per character this Unicode object uses to store its data. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void *PyUnicode_DATA(PyObject *unicode)¶ Return a void pointer to the raw Unicode buffer. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void PyUnicode_WRITE(int kind, void *data, Py_ssize_t index, Py_UCS4 value)¶ Write the code point value to the given zero-based index in a string. The kind value and data pointer must have been obtained from a string using PyUnicode_KIND() and PyUnicode_DATA() respectively. You must hold a reference to that string while calling PyUnicode_WRITE(). All requirements of PyUnicode_WriteChar() also apply. The function performs no checks for any of its requirements, and is intended for usage in loops. Added in version 3.3. Py_UCS4 PyUnicode_READ(int kind, void *data, Py_ssize_t index)¶ Read a code point from a canonical representation data (as obtained with PyUnicode_DATA()). No checks or ready calls are performed. Added in version 3.3. Py_UCS4 PyUnicode_READ_CHAR(PyObject *unicode, Py_ssize_t index)¶ Read a character from a Unicode object unicode, which must be in the “canonical” representation. This is less efficient than PyUnicode_READ() if you do multiple consecutive reads. Added in version 3.3. Py_U",
+    "scrapedAt": "2026-05-09 00:57:40.064892"
+  },
+  {
+    "id": 888,
+    "url": "https://docs.python.org/3/library/dis.html#dis.distb",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code o",
+    "scrapedAt": "2026-05-09 00:57:38.796538"
+  },
+  {
     "id": 887,
     "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.set_start_method",
     "title": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
@@ -5913,26 +5948,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 888,
-    "url": "https://docs.python.org/3/library/dis.html#dis.distb"
-  },
-  {
-    "id": 889,
-    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Create"
-  },
-  {
-    "id": 890,
-    "url": "https://docs.python.org/3/library/inspect.html#inspect.signature"
-  },
-  {
-    "id": 891,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.POINTER"
-  },
-  {
-    "id": 892,
-    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html"
   },
   {
     "id": 893,
@@ -150660,10 +150675,208 @@ window.searchData = [
     "id": 127402,
     "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a1-x86_64-linux-android.tar.gz",
     "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 128712,
+    "url": "https://datatracker.ietf.org/group/app/about/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128713,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-3.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128714,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#ref-T.38",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128716,
+    "url": "https://datatracker.ietf.org/doc/draft-parsons-itu-t38-reg/00/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128717,
+    "url": "https://datatracker.ietf.org/doc/rfc3362/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128718,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#ref-REQ",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128722,
+    "url": "https://www.rfc-editor.org/rfc/rfc3362.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128723,
+    "url": "https://www.rfc-editor.org/rfc/pdfrfc/rfc3362.txt.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128724,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128725,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3261",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128726,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#ref-SIP",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128727,
+    "url": "https://datatracker.ietf.org/doc/rfc3362/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128728,
+    "url": "https://datatracker.ietf.org/doc/html/draft-parsons-itu-t38-reg-00",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128730,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#ref-SIP-99",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128731,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-8",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128732,
+    "url": "https://www.rfc-editor.org/rfc/rfc3362.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128733,
+    "url": "https://datatracker.ietf.org/person/glenn.parsons@ericsson.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128734,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#ref-T.38D-00",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128735,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128736,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128737,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128738,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#ref-SDP",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128739,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128740,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128741,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128742,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2327",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128743,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128744,
+    "url": "http://www.itu.int/rec/recommendation",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128745,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2543",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128746,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2048",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.POINTER"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.POINTER"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "inspect — Inspect live objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/inspect.html#inspect.signature"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "inspect — Inspect live objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/inspect.html#inspect.signature"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Create"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Create"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#dis.distb"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#dis.distb"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
