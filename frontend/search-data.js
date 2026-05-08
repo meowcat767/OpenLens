@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1350,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ModuleSpec.loader",
+    "title": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Importing Modules » importlib — The implementation of import | Theme Auto Light Dark | importlib — The implementation of import¶ Added in version 3.1. Source code: Lib/importlib/__init__.py Introduction¶ The purpose of the importlib package is three-fold. One is to provide the implementation of the import statement (and thus, by extension, the __import__() function) in Python source code. This provides an implementation of import which is portable to any Python interpreter. This also provides an implementation which is easier to comprehend than one implemented in a programming language other than Python. Two, the components to implement import are exposed in this package, making it easier for users to create their own custom objects (known generically as an importer) to participate in the import process. Three, the package contains modules exposing additional functionality for managing aspects of Python packages: importlib.metadata presents access to metadata from third-party distributions. importlib.resources provides routines for accessing non-code “resources” from Python packages. See also The import statement The language reference for the import statement. Packages specification Original specification of packages. Some semantics have changed since the writing of this document (e.g. redirecting based on None in sys.modules). The __import__() function The import statement is syntactic sugar for this function. The initialization of the sys.path module search path The initialization of sys.path. PEP 235 Import on Case-Insensitive Platforms PEP 263 Defining Python Source Code Encodings PEP 302 New Import Hooks PEP 328 Imports: Multi-Line and Absolute/Relative PEP 366 Main module explicit relative imports PEP 420 Implicit namespace packages PEP 451 A ModuleSpec Type for the Import System PEP 488 Elimination of PYO files PEP 489 Multi-phase extension module initialization PEP 552 Deterministic pycs PEP 3120 Using UTF-8 as the Default Source Encoding PEP 3147 PYC Repository Directories Functions¶ importlib.__import__(name, globals\u003dNone, locals\u003dNone, fromlist\u003d(), level\u003d0)¶ An implementation of the built-in __import__() function. Note Programmatic importing of modules should use import_module() instead of this function. importlib.import_module(name, package\u003dNone)¶ Import a module. The name argument specifies what module to import in absolute or relative terms (e.g. either pkg.mod or ..mod). If the name is specified in relative terms, then the package argument must be set to the name of the package which is to act as the anchor for resolving the package name (e.g. import_module(\u0027..mod\u0027, \u0027pkg.subpkg\u0027) will import pkg.mod). The import_module() function acts as a simplifying wrapper around importlib.__import__(). This means all semantics of the function are derived from importlib.__import__(). The most important difference between these two functions is that import_module() returns the specified package or module (e.g. pkg.mod), while __import__() returns the top-level package or module (e.g. pkg). If you are dynamically importing a module that was created since the interpreter began execution (e.g., created a Python source file), you may need to call invalidate_caches() in order for the new module to be noticed by the import system. Changed in version 3.3: Parent packages are automatically imported. importlib.invalidate_caches()¶ Invalidate the internal caches of finders stored at sys.meta_path. If a finder implements invalidate_caches() then it will be called to perform the invalidation. This function should be called if any modules are created/installed while your program is running to guarantee all finders will notice the new module’s existence. Added in version 3.3. Changed in version 3.10: Namespace packages created/installed in a different sys.path location after the same namespace was already imported are noticed. importlib.reload(module)¶ Reload a previously imported module. The argument must be a module object, so it must have been successfully imported before. This is useful if you have edited the module source file using an external editor and want to try out the new version without leaving the Python interpreter. The return value is the module object (which can be different if re-importing causes a different object to be placed in sys.modules). When reload() is executed: Python module’s code is recompiled and the module-level code re-executed, defining a new set of objects which are bound to names in the module’s dictionary by reusing the loader which originally loaded the module. The init function of extension modules is not called a second time. As with all other objects in Python the old objects are only reclaimed after their reference counts drop to zero. The names in the module namespace are updated to point to any new or changed objects. Other references to the old objects (such as names e",
+    "scrapedAt": "2026-05-09 01:16:35.266817"
+  },
+  {
+    "id": 1349,
+    "url": "https://docs.python.org/3/library/csv.html#module-csv",
+    "title": "csv — CSV File Reading and Writing — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » File Formats » csv — CSV File Reading and Writing | Theme Auto Light Dark | csv — CSV File Reading and Writing¶ Source code: Lib/csv.py The so-called CSV (Comma Separated Values) format is the most common import and export format for spreadsheets and databases. CSV format was used for many years prior to attempts to describe the format in a standardized way in RFC 4180. The lack of a well-defined standard means that subtle differences often exist in the data produced and consumed by different applications. These differences can make it annoying to process CSV files from multiple sources. Still, while the delimiters and quoting characters vary, the overall format is similar enough that it is possible to write a single module which can efficiently manipulate such data, hiding the details of reading and writing the data from the programmer. The csv module implements classes to read and write tabular data in CSV format. It allows programmers to say, “write this data in the format preferred by Excel,” or “read data from this file which was generated by Excel,” without knowing the precise details of the CSV format used by Excel. Programmers can also describe the CSV formats understood by other applications or define their own special-purpose CSV formats. The csv module’s reader and writer objects read and write sequences. Programmers can also read and write data in dictionary form using the DictReader and DictWriter classes. See also PEP 305 - CSV File API The Python Enhancement Proposal which proposed this addition to Python. Module Contents¶ The csv module defines the following functions: csv.reader(csvfile, /, dialect\u003d\u0027excel\u0027, **fmtparams)¶ Return a reader object that will process lines from the given csvfile. A csvfile must be an iterable of strings, each in the reader’s defined csv format. A csvfile is most commonly a file-like object or list. If csvfile is a file object, it should be opened with newline\u003d\u0027\u0027. [1] An optional dialect parameter can be given which is used to define a set of parameters specific to a particular CSV dialect. It may be an instance of a subclass of the Dialect class or one of the strings returned by the list_dialects() function. The other optional fmtparams keyword arguments can be given to override individual formatting parameters in the current dialect. For full details about the dialect and formatting parameters, see section Dialects and Formatting Parameters. Each row read from the csv file is returned as a list of strings. No automatic data type conversion is performed unless the QUOTE_NONNUMERIC format option is specified (in which case unquoted fields are transformed into floats). A short usage example: \u003e\u003e\u003e import csv\n\u003e\u003e\u003e with open(\u0027eggs.csv\u0027, newline\u003d\u0027\u0027) as csvfile:\n...     spamreader \u003d csv.reader(csvfile, delimiter\u003d\u0027 \u0027, quotechar\u003d\u0027|\u0027)\n...     for row in spamreader:\n...         print(\u0027, \u0027.join(row))\nSpam, Spam, Spam, Spam, Spam, Baked Beans\nSpam, Lovely Spam, Wonderful Spam\n csv.writer(csvfile, /, dialect\u003d\u0027excel\u0027, **fmtparams)¶ Return a writer object responsible for converting the user’s data into delimited strings on the given file-like object. csvfile can be any object with a write() method. If csvfile is a file object, it should be opened with newline\u003d\u0027\u0027 [1]. An optional dialect parameter can be given which is used to define a set of parameters specific to a particular CSV dialect. It may be an instance of a subclass of the Dialect class or one of the strings returned by the list_dialects() function. The other optional fmtparams keyword arguments can be given to override individual formatting parameters in the current dialect. For full details about dialects and formatting parameters, see the Dialects and Formatting Parameters section. To make it as easy as possible to interface with modules which implement the DB API, the value None is written as the empty string. While this isn’t a reversible transformation, it makes it easier to dump SQL NULL data values to CSV files without preprocessing the data returned from a cursor.fetch* call. All other non-string data are stringified with str() before being written. A short usage example: import csv\nwith open(\u0027eggs.csv\u0027, \u0027w\u0027, newline\u003d\u0027\u0027) as csvfile:\n    spamwriter \u003d csv.writer(csvfile, delimiter\u003d\u0027 \u0027,\n                            quotechar\u003d\u0027|\u0027, quoting\u003dcsv.QUOTE_MINIMAL)\n    spamwriter.writerow([\u0027Spam\u0027] * 5 + [\u0027Baked Beans\u0027])\n    spamwriter.writerow([\u0027Spam\u0027, \u0027Lovely Spam\u0027, \u0027Wonderful Spam\u0027])\n csv.register_dialect(name, /, dialect\u003d\u0027excel\u0027, **fmtparams)¶ Associate dialect with name. name must be a string. The dialect can be specified either by passing a sub-class of Dialect, or by fmtparams keyword arguments, or both, with keyword arguments overriding parameters of the dialect. For full details about dialects and formatting parameters, see section Dialects and Formatting Parameters. csv.unregister_dialect(name)¶ Delete the di",
+    "scrapedAt": "2026-05-09 01:16:34.024471"
+  },
+  {
+    "id": 1348,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#json",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:16:32.710096"
+  },
+  {
+    "id": 1346,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_InspectFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-09 01:16:31.436236"
+  },
+  {
+    "id": 1345,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html",
+    "title": "RFC 2104 - HMAC: Keyed-Hashing for Message Authentication",
+    "content": "Light Dark Auto Network Working Group                                       H. Krawczyk\nRequest for Comments: 2104                                          IBM\nCategory: Informational                                      M. Bellare\n                                                                   UCSD\n                                                             R. Canetti\n                                                                    IBM\n                                                          February 1997\n\n\n             HMAC: Keyed-Hashing for Message Authentication\n\nStatus of This Memo\n\n   This memo provides information for the Internet community.  This memo\n   does not specify an Internet standard of any kind.  Distribution of\n   this memo is unlimited.\n\nAbstract\n\n   This document describes HMAC, a mechanism for message authentication\n   using cryptographic hash functions. HMAC can be used with any\n   iterative cryptographic hash function, e.g., MD5, SHA-1, in\n   combination with a secret shared key.  The cryptographic strength of\n   HMAC depends on the properties of the underlying hash function.\n\n1. Introduction\n\n   Providing a way to check the integrity of information transmitted\n   over or stored in an unreliable medium is a prime necessity in the\n   world of open computing and communications. Mechanisms that provide\n   such integrity check based on a secret key are usually called\n   \"message authentication codes\" (MAC). Typically, message\n   authentication codes are used between two parties that share a secret\n   key in order to validate information transmitted between these\n   parties. In this document we present such a MAC mechanism based on\n   cryptographic hash functions. This mechanism, called HMAC, is based\n   on work by the authors [BCK1] where the construction is presented and\n   cryptographically analyzed. We refer to that work for the details on\n   the rationale and security analysis of HMAC, and its comparison to\n   other keyed-hash methods.\n\n\n\n\n\n\n\n\n\n\n\nKrawczyk, et. al.            Informational                      [Page 1] \nRFC 2104                          HMAC                     February 1997\n\n\n   HMAC can be used in combination with any iterated cryptographic hash\n   function. MD5 and SHA-1 are examples of such hash functions. HMAC\n   also uses a secret key for calculation and verification of the\n   message authentication values. The main goals behind this\n   construction are\n\n   * To use, without modifications, available hash functions.\n     In particular, hash functions that perform well in software,\n     and for which code is freely and widely available.\n\n   * To preserve the original performance of the hash function without\n     incurring a significant degradation.\n\n   * To use and handle keys in a simple way.\n\n   * To have a well understood cryptographic analysis of the strength of\n     the authentication mechanism based on reasonable assumptions on the\n     underlying hash function.\n\n   * To allow for easy replaceability of the underlying hash function in\n     case that faster or more secure hash functions are found or\n     required.\n\n   This document specifies HMAC using a generic cryptographic hash\n   function (denoted by H). Specific instantiations of HMAC need to\n   define a particular hash function. Current candidates for such hash\n   functions include SHA-1 [SHA], MD5 [MD5], RIPEMD-128/160 [RIPEMD].\n   These different realizations of HMAC will be denoted by HMAC-SHA1,\n   HMAC-MD5, HMAC-RIPEMD, etc.\n\n   Note: To the date of writing of this document MD5 and SHA-1 are the\n   most widely used cryptographic hash functions. MD5 has been recently\n   shown to be vulnerable to collision search attacks [Dobb].  This\n   attack and other currently known weaknesses of MD5 do not compromise\n   the use of MD5 within HMAC as specified in this document (see\n   [Dobb]); however, SHA-1 appears to be a cryptographically stronger\n   function. To this date, MD5 can be considered for use in HMAC for\n   applications where the superior performance of MD5 is critical.   In\n   any case, implementers and users need to be aware of possible\n   cryptanalytic developments regarding any of these cryptographic hash\n   functions, and the eventual need to replace the underlying hash\n   function. (See section 6 for more information on the security of\n   HMAC.)\n\n\n\n\n\n\n\n\nKrawczyk, et. al.            Informational                      [Page 2] \nRFC 2104                          HMAC                     February 1997\n\n\n2. Definition of HMAC\n\n   The definition of HMAC requires a cryptographic hash function, which\n   we denote by H, and a secret key K. We assume H to be a cryptographic\n   hash function where data is hashed by iterating a basic compression\n   function on blocks of data.   We denote by B the byte-length of such\n   blocks (B\u003d64 for all the above mentioned examples of hash functions),\n   and by L the byte-length of hash outputs (L\u003d16 for MD5, L\u003d20 for\n   SHA-1).  The authentication key K can be ",
+    "scrapedAt": "2026-05-09 01:16:30.173869"
+  },
+  {
     "id": 1344,
     "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_FrozenFlag",
     "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
@@ -9028,26 +9063,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1345,
-    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html"
-  },
-  {
-    "id": 1346,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_InspectFlag"
-  },
-  {
-    "id": 1348,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#json"
-  },
-  {
-    "id": 1349,
-    "url": "https://docs.python.org/3/library/csv.html#module-csv"
-  },
-  {
-    "id": 1350,
-    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ModuleSpec.loader"
   },
   {
     "id": 1351,
@@ -227950,10 +227965,490 @@ window.searchData = [
     "id": 269774,
     "url": "https://github.com/pytorch/pytorch/blob/d2455b99fb4b50731f2ac0e26ee351d9b2f7623f/torch/csrc/dynamo/guards.cpp#L671-L685",
     "parentUrl": "https://github.com/python/cpython/issues/124296"
+  },
+  {
+    "id": 270151,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#ref-MM",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270152,
+    "url": "https://www.rfc-editor.org/rfc/rfc2104.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270153,
+    "url": "https://www.rfc-editor.org/rfc/rfc2104.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270154,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#ref-Dobb",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270156,
+    "url": "https://www.rfc-editor.org/rfc/inline-errata/rfc2104.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270157,
+    "url": "https://datatracker.ietf.org/doc/rfc2104/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270158,
+    "url": "http://www.research.ibm.com/security/keyed-md5.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270159,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1826",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270160,
+    "url": "https://datatracker.ietf.org/person/hugo@ee.technion.ac.il",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270161,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#ref-SHA",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270162,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270163,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270164,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270165,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270166,
+    "url": "https://datatracker.ietf.org/person/mbellare@ucsd.edu",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270167,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-ipsec-hmac-md5-00",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270168,
+    "url": "https://datatracker.ietf.org/person/canetti@theory.lcs.mit.edu",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270169,
+    "url": "https://www.rfc-editor.org/rfc/pdfrfc/rfc2104.txt.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270170,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1321",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270171,
+    "url": "https://mailarchive.ietf.org/arch/browse/ipsec?q\u003drfc2104 OR %22draft-ietf-ipsec-hmac-md5%22",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270172,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#ref-VW",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270173,
+    "url": "https://datatracker.ietf.org/doc/draft-ietf-ipsec-hmac-md5/00/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270174,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270175,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#ref-MD5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270176,
+    "url": "https://www.rfc-editor.org/errata_search.php?rfc\u003d2104",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270177,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270178,
+    "url": "https://datatracker.ietf.org/doc/rfc2104/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270179,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6151",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270180,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#ref-PV",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270182,
+    "url": "http://www.rsa.com/rsalabs/pubs/cryptobytes.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270183,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#ref-RIPEMD",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270184,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#ref-ANSI",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270185,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270186,
+    "url": "https://datatracker.ietf.org/wg/ipsec/about/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270187,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#ref-BCK2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 270188,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2104.html#ref-BCK1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "id": 271612,
+    "url": "https://docs.python.org/3/library/csv.html#csv.Dialect",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271615,
+    "url": "https://docs.python.org/3/library/csv.html#csv.reader",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271617,
+    "url": "https://docs.python.org/3/library/csv.html#csv.Dialect.skipinitialspace",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271619,
+    "url": "https://docs.python.org/3/library/csv.html#csv.excel_tab",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271620,
+    "url": "https://docs.python.org/3/library/csv.html#csv.DictWriter.writeheader",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271621,
+    "url": "https://docs.python.org/3/library/csv.html#csv.Dialect.lineterminator",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271622,
+    "url": "https://docs.python.org/3/library/csv.html#csv.csvwriter.writerow",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271624,
+    "url": "https://docs.python.org/3/library/csv.html#csv.Dialect.strict",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271625,
+    "url": "https://docs.python.org/3/library/csv.html#csv.writer",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271631,
+    "url": "https://docs.python.org/3/library/csv.html#csv.unregister_dialect",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271633,
+    "url": "https://docs.python.org/3/library/csv.html#csv.QUOTE_MINIMAL",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271636,
+    "url": "https://docs.python.org/3/library/csv.html#csv.Dialect.delimiter",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271638,
+    "url": "https://docs.python.org/3/library/csv.html#csv.QUOTE_NONE",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271639,
+    "url": "https://docs.python.org/3/library/csv.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271641,
+    "url": "https://docs.python.org/3/library/csv.html#csv.get_dialect",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271642,
+    "url": "https://docs.python.org/3/library/csv.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271644,
+    "url": "https://docs.python.org/3/library/csv.html#csv.Dialect.doublequote",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271645,
+    "url": "https://docs.python.org/3/library/csv.html#csv.Error",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271647,
+    "url": "https://docs.python.org/3/library/csv.html#csv.csvreader.dialect",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271648,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/csv.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271649,
+    "url": "https://docs.python.org/3/library/csv.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271651,
+    "url": "https://docs.python.org/3/library/csv.html#csv.csvreader.__next__",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271653,
+    "url": "https://docs.python.org/3/library/csv.html#csv.csvwriter.dialect",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271655,
+    "url": "https://docs.python.org/3/library/csv.html#csv.DictReader",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271656,
+    "url": "https://docs.python.org/3/library/csv.html#csv.DictWriter",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271658,
+    "url": "https://docs.python.org/3/library/csv.html#csv.Sniffer",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271664,
+    "url": "https://docs.python.org/3/library/csv.html#csv-constants",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271665,
+    "url": "https://docs.python.org/3/library/csv.html#csv.csvreader.line_num",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271667,
+    "url": "https://docs.python.org/3/library/csv.html#csv.register_dialect",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271668,
+    "url": "https://docs.python.org/3/library/csv.html#csv.list_dialects",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271669,
+    "url": "https://docs.python.org/3/library/csv.html#csv.excel",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271670,
+    "url": "https://docs.python.org/3/library/csv.html#csv.Sniffer.has_header",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271673,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/csv.py",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271674,
+    "url": "https://docs.python.org/3/library/csv.html#csv.Dialect.quotechar",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271675,
+    "url": "https://docs.python.org/3/library/csv.html#csv.QUOTE_STRINGS",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271676,
+    "url": "https://docs.python.org/3/library/csv.html#csv.QUOTE_NONNUMERIC",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271677,
+    "url": "https://docs.python.org/3/library/csv.html#csv.QUOTE_ALL",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271678,
+    "url": "https://docs.python.org/3/library/csv.html#csv.unix_dialect",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271679,
+    "url": "https://docs.python.org/3/library/csv.html#csv.DictReader.fieldnames",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271683,
+    "url": "https://peps.python.org/pep-0305/",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271684,
+    "url": "https://docs.python.org/3/library/csv.html#csv.csvwriter.writerows",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271685,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4180.html",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271686,
+    "url": "https://docs.python.org/3/library/csv.html#csv-fmt-params",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271690,
+    "url": "https://docs.python.org/3/library/csv.html#csv.Dialect.quoting",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271691,
+    "url": "https://docs.python.org/3/library/csv.html#csv.QUOTE_NOTNULL",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271693,
+    "url": "https://docs.python.org/3/library/csv.html#csv.Sniffer.sniff",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271694,
+    "url": "https://docs.python.org/3/library/csv.html#csv.Dialect.escapechar",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "id": 271695,
+    "url": "https://docs.python.org/3/library/csv.html#",
+    "parentUrl": "https://docs.python.org/3/library/csv.html#module-csv"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ModuleSpec.loader"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ModuleSpec.loader"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "csv — CSV File Reading and Writing — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "csv — CSV File Reading and Writing — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/csv.html#module-csv"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#json"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#json"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_InspectFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_InspectFlag"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.64.0/ietf/images/ietf-logo-nor-white.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 2104 - HMAC: Keyed-Hashing for Message Authentication",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.64.0/ietf/images/ietf-logo-nor.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 2104 - HMAC: Keyed-Hashing for Message Authentication",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc2104.html"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
