@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 657,
+    "url": "http://wiki.python.org/moin/BeginnersGuide/Examples",
+    "title": "BeginnersGuide/Examples",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. Python Examples and Sample Code When you\u0027re learning, small examples can be very helpful. The Python Standard Library (archived copy), an electronically published book by Fredrik Lundh, examines most of the modules in Python\u0027s standard library, describing what the module does and giving a short example of its use. Note that this book is now relatively old and so misses a lot of the developments of the last two decades. The Python Recipes, from ActiveState, is a very large collection of code snippets, some elementary and some advanced. 2026-02-14 16:07",
+    "scrapedAt": "2026-05-09 00:48:24.155211"
+  },
+  {
+    "id": 656,
+    "url": "http://wiki.python.org/moin/BeginnersGuide/Download",
+    "title": "BeginnersGuide/Download",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. Downloading Python The official download page for Python is python.org/downloads. On many systems Python comes pre-installed, you can try running the python command to start the Python interpreter to check and see if it is already installed. On windows you can try the py command which is a launcher which is more likely to work. If it is installed you will see a response which will include the version number, for example: Python 3.9.6 (tags/v3.9.6:db3ff76, Jun 28 2021, 15:26:21) [MSC v.1929 64 bit (AMD64)] on win32\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information. If you don\u0027t see this, you will need to install Python on your system. If the version number is Python 2.x.y (where x and y are any number) you are using Python 2 which is no longer supported and is not a good choice for development. You can try running python3 to see if there is also a Python 3.x.y version installed, if not you\u0027ll want to install the latest version of Python. If you do not have Python installed or need a newer version you can go to: https://www.python.org/downloads/ which will provide a button to download an installer for your particular system. The Python documentation also has a detailed guide on how to install and setup Python here: https://docs.python.org/3/using/index.html Below are some system specific notes to keep in mind. Windows On Windows the most stable build is available from the official download page https://www.python.org/downloads/ You should download and run the installer from that page to get the latest version of Python for your system. You can refer to the Python documentation for more details on the installation process and getting started: https://docs.python.org/3/using/windows.html Mac For macOS 10.9 (Jaguar) up until 12.3 (Catalina) the operating system includes Python 2, which is no longer supported and is not a good choice for development. You should go to do the downloads page: https://www.python.org/downloads/ and download the installer. For newer versions of macOS, Python is no longer included by default and you will have to download and install it. You can refer to the Python documentation for more details on the installation process and getting started: https://docs.python.org/3/using/mac.html Linux On most Linux distributions Python comes pre-installed and/or available via the distribution\u0027s package managers. Below are some common examples, but refer to your specific distribution\u0027s documentation and package list to get the most up to date instructions. If you\u0027d like to download and build Python from source (or your distribution\u0027s package manager does not include a version of Python you need) you can download a source tarball from the general download page: https://www.python.org/downloads/ Red Hat, CentOS, or Fedora dnf install python3 python3-devel Debian or Ubuntu apt-get install python3 python3-dev Gentoo emerge dev-lang/python Arch Linux pacman -S python3 2026-02-14 16:07",
+    "scrapedAt": "2026-05-09 00:48:22.853187"
+  },
+  {
+    "id": 655,
+    "url": "http://us.pycon.org",
+    "title": "PyCon US 2026 - PyCon US 2026",
+    "content": "Translations available: español Presenting PyCon US 2026 May 13 - May 19, 2026 Long Beach, California Countdown to PyCon US 2026 Days Hours Minutes Seconds Registration - Now Open! Find more information and register today via the Registration Information page. Register Today! Where? Long Beach Convention Center 300 East Ocean Boulevard Long Beach, CA 90802 Conference breakdown: Tutorials: May 13 - 14, 2026 Sponsor Presentations: May 14 - May 15, 2026 Main Conference: May 15 - 17, 2026 Job Fair \u0026 Community Showcase: May 17, 2026 Sprints: May 18 - May 19, 2026 We are so excited to welcome our community to our new host city of Long Beach, California, for PyCon US 2026! Mark your calendars and be sure to read the About PyCon US page for more details. We can’t wait to see you all at the Long Beach Convention and Entertainment Center! The PyCon US Schedule is now live! Start planning your talks, meet the keynote speakers, and register for tutorials, summits \u0026 events! Head to the schedule page to see this year\u0027s stellar lineup. Please note: PyCon US 2026 will take place fully in-person in Long Beach, California with no live streaming of the main conference days. PyCon US will record all Talk tracks, Keynotes and Lightning Talks on the main days of the conference (Friday - Sunday) and publish them to the PyCon US YouTube Channel. PyCon US continues to keep the safety of our community as our top priority and wants PyCon US to be an event that everyone feels safe attending. With that in mind, PyCon US 2026 will have Health and Safety Guidelines in place again this year. For full details, read the PyCon US 2026 Health \u0026 Safety Guidelines here. To stay informed on details and announcements be sure to create an account here on this website and opt-in to receive PyCon US News. Also, follow us on Bluesky, X, and Mastodon, and subscribe to the PyCon US Blog. Tutorials May 13 - 14, 2026 Sponsor Presentations May 14 - 15, 2026 Main Conference May 15 - 17, 2026 Job Fair \u0026 Community Showcase May 17, 2026 Sprints May 18 - May 19, 2026 Search Search Search ESC",
+    "scrapedAt": "2026-05-09 00:48:21.19276"
+  },
+  {
+    "id": 654,
+    "url": "https://www.python.org/psf/annual-report/",
+    "title": "2024 PSF Annual Impact Report | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PSF\u003e\u003e\u003e About\u003e\u003e\u003e Annual Impact Report The Python Software Foundation 2024 Annual Impact Report In 2024, the Python community and language continued to grow! The PSF celebrated a year of remarkable growth, with Python becoming the most popular language on GitHub and worldwide community engagement at an all-time high. We expanded our impact by welcoming our inaugural PyPI Support Specialist, Maria Ashna, the revival of the User Success and Education and Outreach Workgroups, and continued investment in grants, infrastructure, and accessibility. We’d love for you to take a look at the 2024 Annual Impact Report that we put together to share more highlights from the year, financial reporting, and some previews of what’s to come in the next year. Download and read the report today! Thank you to Robb Design Co. for the beautiful design! The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-09 00:48:20.010378"
+  },
+  {
+    "id": 653,
+    "url": "https://www.python.org/m/files/irs_determination.pdf",
+    "title": "https://www.python.org/m/files/irs_determination.pdf",
+    "content": "\n",
+    "scrapedAt": "2026-05-09 00:48:18.633149"
+  },
+  {
     "id": 650,
     "url": "http://pyfound.blogspot.com/",
     "title": "Python Software Foundation News",
@@ -4298,26 +4333,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 653,
-    "url": "https://www.python.org/m/files/irs_determination.pdf"
-  },
-  {
-    "id": 654,
-    "url": "https://www.python.org/psf/annual-report/"
-  },
-  {
-    "id": 655,
-    "url": "http://us.pycon.org"
-  },
-  {
-    "id": 656,
-    "url": "http://wiki.python.org/moin/BeginnersGuide/Download"
-  },
-  {
-    "id": 657,
-    "url": "http://wiki.python.org/moin/BeginnersGuide/Examples"
   },
   {
     "id": 658,
@@ -100839,10 +100854,63 @@ window.searchData = [
     "id": 71506,
     "url": "https://pyfound.blogspot.com/feeds/posts/default",
     "parentUrl": "http://pyfound.blogspot.com/"
+  },
+  {
+    "id": 71740,
+    "url": "https://robbdesign.co/",
+    "parentUrl": "https://www.python.org/psf/annual-report/"
+  },
+  {
+    "id": 71741,
+    "url": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/2024_PSF_Annual_Impact_Report.pdf",
+    "parentUrl": "https://www.python.org/psf/annual-report/"
+  },
+  {
+    "id": 71764,
+    "url": "https://python.org/downloads",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Download"
+  },
+  {
+    "id": 71765,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/FrontPage.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Download"
+  },
+  {
+    "id": 71766,
+    "url": "https://code.activestate.com/recipes/langs/python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Examples"
+  },
+  {
+    "id": 71767,
+    "url": "https://web.archive.org/web/20201017142948/http://effbot.org/zone/librarybook-index.htm",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Examples"
+  },
+  {
+    "id": 71769,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/ActiveState.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Examples"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://wiki.python.org/moin/BeginnersGuide/logo.png",
+    "alt": "",
+    "pageTitle": "BeginnersGuide/Examples",
+    "pageUrl": "http://wiki.python.org/moin/BeginnersGuide/Examples"
+  },
+  {
+    "src": "https://wiki.python.org/moin/BeginnersGuide/logo.png",
+    "alt": "",
+    "pageTitle": "BeginnersGuide/Download",
+    "pageUrl": "http://wiki.python.org/moin/BeginnersGuide/Download"
+  },
+  {
+    "src": "https://us.pycon.org/2026/static/images/theme/logo.25d1b5ccb097.svg",
+    "alt": "PyCon US 2026",
+    "pageTitle": "PyCon US 2026 - PyCon US 2026",
+    "pageUrl": "http://us.pycon.org"
+  },
   {
     "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
     "alt": "",
