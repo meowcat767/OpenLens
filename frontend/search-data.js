@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1614,
+    "url": "https://github.com/python/cpython/issues/90817",
+    "title": "Deprecate locale.getdefaultlocale() function · Issue #90817 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Deprecate locale.getdefaultlocale() function #90817 New issue Copy link New issue Copy link Closed Closed Deprecate locale.getdefaultlocale() function#90817 Copy link Labels 3.11only security fixesonly security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directory Description vstinner opened on Feb 6, 2022 Issue body actions BPO 46659 Nosy @malemburg, @vstinner, @serhiy-storchaka, @eryksun PRs bpo-46659: calendar uses locale.getlocale() #31166 bpo-46659: test.support avoids locale.getdefaultlocale() #31167 bpo-46659: Update the test on the mbcs codec alias #31168 bpo-46659: Deprecate locale.getdefaultlocale() #31206 bpo-46659: Enhance LocaleTextCalendar for C locale #31214 bpo-46659: Fix the MBCS codec alias on Windows #31218 Files cal_locale.py Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d \u003cDate 2022-02-24.13:41:35.585\u003e\ncreated_at \u003d \u003cDate 2022-02-06.17:33:14.432\u003e\nlabels \u003d [\u0027library\u0027, \u00273.11\u0027]\ntitle \u003d \u0027Deprecate locale.getdefaultlocale() function\u0027\nupdated_at \u003d \u003cDate 2022-02-24.14:53:20.800\u003e\nuser \u003d \u0027https://github.com/vstinner\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-02-24.14:53:20.800\u003e\nactor \u003d \u0027lemburg\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d True\nclosed_date \u003d \u003cDate 2022-02-24.13:41:35.585\u003e\ncloser \u003d \u0027vstinner\u0027\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2022-02-06.17:33:14.432\u003e\ncreator \u003d \u0027vstinner\u0027\ndependencies \u003d []\nfiles \u003d [\u002750606\u0027]\nhgrepos \u003d []\nissue_num \u003d 46659\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 19.0\nmessages \u003d [\u0027412647\u0027, \u0027412652\u0027, \u0027412664\u0027, \u0027412666\u0027, \u0027412667\u0027, \u0027412668\u0027, \u0027412687\u0027, \u0027412800\u0027, \u0027412819\u0027, \u0027412825\u0027, \u0027412826\u0027, \u0027412827\u0027, \u0027412829\u0027, \u0027412842\u0027, \u0027413744\u0027, \u0027413745\u0027, \u0027413907\u0027, \u0027413910\u0027, \u0027413915\u0027]\nnosy_count \u003d 4.0\nnosy_names \u003d [\u0027lemburg\u0027, \u0027vstinner\u0027, \u0027serhiy.storchaka\u0027, \u0027eryksun\u0027]\npr_nums \u003d [\u002731166\u0027, \u002731167\u0027, \u002731168\u0027, \u002731206\u0027, \u002731214\u0027, \u002731218\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d \u0027fixed\u0027\nstage \u003d \u0027resolved\u0027\nstatus \u003d \u0027closed\u0027\nsuperseder \u003d None\ntype \u003d None\nurl \u003d \u0027https://bugs.python.org/issue46659\u0027\nversions \u003d [\u0027Python 3.11\u0027] Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.11only security fixesonly security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directory Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:26:47.257928"
+  },
+  {
+    "id": 1613,
+    "url": "https://docs.python.org/3/library/zipimport.html#module-zipimport",
+    "title": "zipimport — Import modules from Zip archives — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Importing Modules » zipimport — Import modules from Zip archives | Theme Auto Light Dark | zipimport — Import modules from Zip archives¶ Source code: Lib/zipimport.py This module adds the ability to import Python modules (*.py, *.pyc) and packages from ZIP-format archives. It is usually not needed to use the zipimport module explicitly; it is automatically used by the built-in import mechanism for sys.path items that are paths to ZIP archives. Typically, sys.path is a list of directory names as strings. This module also allows an item of sys.path to be a string naming a ZIP file archive. The ZIP archive can contain a subdirectory structure to support package imports, and a path within the archive can be specified to only import from a subdirectory. For example, the path example.zip/lib/ would only import from the lib/ subdirectory within the archive. Any files may be present in the ZIP archive, but importers are only invoked for .py and .pyc files. ZIP import of dynamic modules (.pyd, .so) is disallowed. Note that if an archive only contains .py files, Python will not attempt to modify the archive by adding the corresponding .pyc file, meaning that if a ZIP archive doesn’t contain .pyc files, importing may be rather slow. Changed in version 3.13: ZIP64 is supported Changed in version 3.8: Previously, ZIP archives with an archive comment were not supported. See also PKZIP Application Note Documentation on the ZIP file format by Phil Katz, the creator of the format and algorithms used. PEP 273 - Import Modules from Zip Archives Written by James C. Ahlstrom, who also provided an implementation. Python 2.3 follows the specification in PEP 273, but uses an implementation written by Just van Rossum that uses the import hooks described in PEP 302. importlib - The implementation of the import machinery Package providing the relevant protocols for all importers to implement. This module defines an exception: exception zipimport.ZipImportError¶ Exception raised by zipimporter objects. It’s a subclass of ImportError, so it can be caught as ImportError, too. zipimporter Objects¶ zipimporter is the class for importing ZIP files. class zipimport.zipimporter(archivepath)¶ Create a new zipimporter instance. archivepath must be a path to a ZIP file, or to a specific path within a ZIP file. For example, an archivepath of foo/bar.zip/lib will look for modules in the lib directory inside the ZIP file foo/bar.zip (provided that it exists). ZipImportError is raised if archivepath doesn’t point to a valid ZIP archive. Changed in version 3.12: Methods find_loader() and find_module(), deprecated in 3.10 are now removed. Use find_spec() instead. create_module(spec)¶ Implementation of importlib.abc.Loader.create_module() that returns None to explicitly request the default semantics. Added in version 3.10. exec_module(module)¶ Implementation of importlib.abc.Loader.exec_module(). Added in version 3.10. find_spec(fullname, target\u003dNone)¶ An implementation of importlib.abc.PathEntryFinder.find_spec(). Added in version 3.10. get_code(fullname)¶ Return the code object for the specified module. Raise ZipImportError if the module couldn’t be imported. get_data(pathname)¶ Return the data associated with pathname. Raise OSError if the file wasn’t found. Changed in version 3.3: IOError used to be raised, it is now an alias of OSError. get_filename(fullname)¶ Return the value __file__ would be set to if the specified module was imported. Raise ZipImportError if the module couldn’t be imported. Added in version 3.1. get_source(fullname)¶ Return the source code for the specified module. Raise ZipImportError if the module couldn’t be found, return None if the archive does contain the module, but has no source for it. is_package(fullname)¶ Return True if the module specified by fullname is a package. Raise ZipImportError if the module couldn’t be found. load_module(fullname)¶ Load the module specified by fullname. fullname must be the fully qualified (dotted) module name. Returns the imported module on success, raises ZipImportError on failure. Deprecated since version 3.10, will be removed in version 3.15: Use exec_module() instead. invalidate_caches()¶ Clear out the internal cache of information about files found within the ZIP archive. Added in version 3.10. archive¶ The file name of the importer’s associated ZIP file, without a possible subpath. prefix¶ The subpath within the ZIP file where modules are searched. This is the empty string for zipimporter objects which point to the root of the ZIP file. The archive and prefix attributes, when combined with a slash, equal the original archivepath argument given to the zipimporter constructor. Examples¶ Here is an example that imports a module from a ZIP archive - note that the zipimport module is not explicitly used. $ unzip -l example_archive.zip\nArchive:  example_archive.zip\n  Length     D",
+    "scrapedAt": "2026-05-09 01:26:44.980936"
+  },
+  {
+    "id": 1612,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_GET_SIZE",
+    "title": "Sequence Protocol — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Abstract Objects Layer » Sequence Protocol | Theme Auto Light Dark | Sequence Protocol¶ int PySequence_Check(PyObject *o)¶ Part of the Stable ABI. Return 1 if the object provides the sequence protocol, and 0 otherwise. Note that it returns 1 for Python classes with a __getitem__() method, unless they are dict subclasses, since in general it is impossible to determine what type of keys the class supports. This function always succeeds. Py_ssize_t PySequence_Size(PyObject *o)¶ Py_ssize_t PySequence_Length(PyObject *o)¶ Part of the Stable ABI. Returns the number of objects in sequence o on success, and -1 on failure. This is equivalent to the Python expression len(o). PyObject *PySequence_Concat(PyObject *o1, PyObject *o2)¶ Return value: New reference. Part of the Stable ABI. Return the concatenation of o1 and o2 on success, and NULL on failure. This is the equivalent of the Python expression o1 + o2. PyObject *PySequence_Repeat(PyObject *o, Py_ssize_t count)¶ Return value: New reference. Part of the Stable ABI. Return the result of repeating sequence object o count times, or NULL on failure. This is the equivalent of the Python expression o * count. PyObject *PySequence_InPlaceConcat(PyObject *o1, PyObject *o2)¶ Return value: New reference. Part of the Stable ABI. Return the concatenation of o1 and o2 on success, and NULL on failure. The operation is done in-place when o1 supports it. This is the equivalent of the Python expression o1 +\u003d o2. PyObject *PySequence_InPlaceRepeat(PyObject *o, Py_ssize_t count)¶ Return value: New reference. Part of the Stable ABI. Return the result of repeating sequence object o count times, or NULL on failure. The operation is done in-place when o supports it. This is the equivalent of the Python expression o *\u003d count. PyObject *PySequence_GetItem(PyObject *o, Py_ssize_t i)¶ Return value: New reference. Part of the Stable ABI. Return the ith element of o, or NULL on failure. This is the equivalent of the Python expression o[i]. PyObject *PySequence_GetSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)¶ Return value: New reference. Part of the Stable ABI. Return the slice of sequence object o between i1 and i2, or NULL on failure. This is the equivalent of the Python expression o[i1:i2]. int PySequence_SetItem(PyObject *o, Py_ssize_t i, PyObject *v)¶ Part of the Stable ABI. Assign object v to the ith element of o. Raise an exception and return -1 on failure; return 0 on success. This is the equivalent of the Python statement o[i] \u003d v. This function does not steal a reference to v. If v is NULL, the element is deleted, but this feature is deprecated in favour of using PySequence_DelItem(). int PySequence_DelItem(PyObject *o, Py_ssize_t i)¶ Part of the Stable ABI. Delete the ith element of object o. Returns -1 on failure. This is the equivalent of the Python statement del o[i]. int PySequence_SetSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2, PyObject *v)¶ Part of the Stable ABI. Assign the sequence object v to the slice in sequence object o from i1 to i2. This is the equivalent of the Python statement o[i1:i2] \u003d v. int PySequence_DelSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)¶ Part of the Stable ABI. Delete the slice in sequence object o from i1 to i2. Returns -1 on failure. This is the equivalent of the Python statement del o[i1:i2]. Py_ssize_t PySequence_Count(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Return the number of occurrences of value in o, that is, return the number of keys for which o[key] \u003d\u003d value. On failure, return -1. This is equivalent to the Python expression o.count(value). int PySequence_Contains(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Determine if o contains value. If an item in o is equal to value, return 1, otherwise return 0. On error, return -1. This is equivalent to the Python expression value in o. int PySequence_In(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Alias for PySequence_Contains(). Soft deprecated since version 3.14: The function should no longer be used to write new code. Py_ssize_t PySequence_Index(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Return the first index i for which o[i] \u003d\u003d value. On error, return -1. This is equivalent to the Python expression o.index(value). PyObject *PySequence_List(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. Return a list object with the same contents as the sequence or iterable o, or NULL on failure. The returned list is guaranteed to be new. This is equivalent to the Python expression list(o). PyObject *PySequence_Tuple(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. Return a tuple object with the same contents as the sequence or iterable o, or NULL on failure. If o is a tuple, a new reference will be returned, otherwise a tuple will be constructed with the appropriate contents. This is equivalent to the Py",
+    "scrapedAt": "2026-05-09 01:26:43.654485"
+  },
+  {
+    "id": 1611,
+    "url": "https://docs.python.org/3/library/mimetypes.html#module-mimetypes",
+    "title": "mimetypes — Map filenames to MIME types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Data Handling » mimetypes — Map filenames to MIME types | Theme Auto Light Dark | mimetypes — Map filenames to MIME types¶ Source code: Lib/mimetypes.py The mimetypes module converts between a filename or URL and the MIME type associated with the filename extension. Conversions are provided from filename to MIME type and from MIME type to filename extension; encodings are not supported for the latter conversion. The module provides one class and a number of convenience functions. The functions are the normal interface to this module, but some applications may be interested in the class as well. The functions described below provide the primary interface for this module. If the module has not been initialized, they will call init() if they rely on the information init() sets up. mimetypes.guess_type(url, strict\u003dTrue)¶ Guess the type of a file based on its filename, path or URL, given by url. URL can be a string or a path-like object. The return value is a tuple (type, encoding) where type is None if the type can’t be guessed (missing or unknown suffix) or a string of the form \u0027type/subtype\u0027, usable for a MIME content-type header. encoding is None for no encoding or the name of the program used to encode (e.g. compress or gzip). The encoding is suitable for use as a Content-Encoding header, not as a Content-Transfer-Encoding header. The mappings are table driven. Encoding suffixes are case sensitive; type suffixes are first tried case sensitively, then case insensitively. The optional strict argument is a flag specifying whether the list of known MIME types is limited to only the official types registered with IANA. However, the behavior of this module also depends on the underlying operating system. Only file types recognized by the OS or explicitly registered with Python’s internal database can be identified. When strict is True (the default), only the IANA types are supported; when strict is False, some additional non-standard but commonly used MIME types are also recognized. Changed in version 3.8: Added support for url being a path-like object. Soft deprecated since version 3.13: Passing a file path instead of URL is soft deprecated. Use guess_file_type() for this. mimetypes.guess_file_type(path, *, strict\u003dTrue)¶ Guess the type of a file based on its path, given by path. Similar to the guess_type() function, but accepts a path instead of URL. Path can be a string, a bytes object or a path-like object. Added in version 3.13. mimetypes.guess_all_extensions(type, strict\u003dTrue)¶ Guess the extensions for a file based on its MIME type, given by type. The return value is a list of strings giving all possible filename extensions, including the leading dot (\u0027.\u0027). The extensions are not guaranteed to have been associated with any particular data stream, but would be mapped to the MIME type type by guess_type() and guess_file_type(). The optional strict argument has the same meaning as with the guess_type() function. mimetypes.guess_extension(type, strict\u003dTrue)¶ Guess the extension for a file based on its MIME type, given by type. The return value is a string giving a filename extension, including the leading dot (\u0027.\u0027). The extension is not guaranteed to have been associated with any particular data stream, but would be mapped to the MIME type type by guess_type() and guess_file_type(). If no extension can be guessed for type, None is returned. The optional strict argument has the same meaning as with the guess_type() function. Some additional functions and data items are available for controlling the behavior of the module. mimetypes.init(files\u003dNone)¶ Initialize the internal data structures. If given, files must be a sequence of file names which should be used to augment the default type map. If omitted, the file names to use are taken from knownfiles; on Windows, the current registry settings are loaded. Each file named in files or knownfiles takes precedence over those named before it. Calling init() repeatedly is allowed. Specifying an empty list for files will prevent the system defaults from being applied: only the well-known values will be present from a built-in list. If files is None the internal data structure is completely rebuilt to its initial default value. This is a stable operation and will produce the same results when called multiple times. Changed in version 3.2: Previously, Windows registry settings were ignored. mimetypes.read_mime_types(filename)¶ Load the type map given in the file filename, if it exists. The type map is returned as a dictionary mapping filename extensions, including the leading dot (\u0027.\u0027), to strings of the form \u0027type/subtype\u0027. If the file filename does not exist or cannot be read, None is returned. mimetypes.add_type(type, ext, strict\u003dTrue)¶ Add a mapping from the MIME type type to the extension ext. When the extension is already known, the new type will repl",
+    "scrapedAt": "2026-05-09 01:26:42.328539"
+  },
+  {
+    "id": 1610,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.data_filter",
+    "title": "tarfile — Read and write tar archive files — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Compression and Archiving » tarfile — Read and write tar archive files | Theme Auto Light Dark | tarfile — Read and write tar archive files¶ Source code: Lib/tarfile.py The tarfile module makes it possible to read and write tar archives, including those using gzip, bz2 and lzma compression. Use the zipfile module to read or write .zip files, or the higher-level functions in shutil. Some facts and figures: reads and writes gzip, bz2, compression.zstd, and lzma compressed archives if the respective modules are available. If any of these optional modules are missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. read/write support for the POSIX.1-1988 (ustar) format. read/write support for the GNU tar format including longname and longlink extensions, read-only support for all variants of the sparse extension including restoration of sparse files. read/write support for the POSIX.1-2001 (pax) format. handles directories, regular files, hardlinks, symbolic links, fifos, character devices and block devices and is able to acquire and restore file information like timestamp, access permissions and owner. Changed in version 3.3: Added support for lzma compression. Changed in version 3.12: Archives are extracted using a filter, which makes it possible to either limit surprising/dangerous features, or to acknowledge that they are expected and the archive is fully trusted. Changed in version 3.14: Set the default extraction filter to data, which disallows some dangerous features such as links to absolute paths or paths outside of the destination. Previously, the filter strategy was equivalent to fully_trusted. Changed in version 3.14: Added support for Zstandard compression using compression.zstd. tarfile.open(name\u003dNone, mode\u003d\u0027r\u0027, fileobj\u003dNone, bufsize\u003d10240, **kwargs)¶ Return a TarFile object for the pathname name. For detailed information on TarFile objects and the keyword arguments that are allowed, see TarFile Objects. mode has to be a string of the form \u0027filemode[:compression]\u0027, it defaults to \u0027r\u0027. Here is a full list of mode combinations: mode action \u0027r\u0027 or \u0027r:*\u0027 Open for reading with transparent compression (recommended). \u0027r:\u0027 Open for reading exclusively without compression. \u0027r:gz\u0027 Open for reading with gzip compression. \u0027r:bz2\u0027 Open for reading with bzip2 compression. \u0027r:xz\u0027 Open for reading with lzma compression. \u0027r:zst\u0027 Open for reading with Zstandard compression. \u0027x\u0027 or \u0027x:\u0027 Create a tarfile exclusively without compression. Raise a FileExistsError exception if it already exists. \u0027x:gz\u0027 Create a tarfile with gzip compression. Raise a FileExistsError exception if it already exists. \u0027x:bz2\u0027 Create a tarfile with bzip2 compression. Raise a FileExistsError exception if it already exists. \u0027x:xz\u0027 Create a tarfile with lzma compression. Raise a FileExistsError exception if it already exists. \u0027x:zst\u0027 Create a tarfile with Zstandard compression. Raise a FileExistsError exception if it already exists. \u0027a\u0027 or \u0027a:\u0027 Open for appending with no compression. The file is created if it does not exist. \u0027w\u0027 or \u0027w:\u0027 Open for uncompressed writing. \u0027w:gz\u0027 Open for gzip compressed writing. \u0027w:bz2\u0027 Open for bzip2 compressed writing. \u0027w:xz\u0027 Open for lzma compressed writing. \u0027w:zst\u0027 Open for Zstandard compressed writing. Note that \u0027a:gz\u0027, \u0027a:bz2\u0027 or \u0027a:xz\u0027 is not possible. If mode is not suitable to open a certain (compressed) file for reading, ReadError is raised. Use mode \u0027r\u0027 to avoid this. If a compression method is not supported, CompressionError is raised. If fileobj is specified, it is used as an alternative to a file object opened in binary mode for name. It is supposed to be at position 0. For modes \u0027w:gz\u0027, \u0027x:gz\u0027, \u0027w|gz\u0027, \u0027w:bz2\u0027, \u0027x:bz2\u0027, \u0027w|bz2\u0027, tarfile.open() accepts the keyword argument compresslevel (default 9) to specify the compression level of the file. For modes \u0027w:xz\u0027, \u0027x:xz\u0027 and \u0027w|xz\u0027, tarfile.open() accepts the keyword argument preset to specify the compression level of the file. For modes \u0027w:zst\u0027, \u0027x:zst\u0027 and \u0027w|zst\u0027, tarfile.open() accepts the keyword argument level to specify the compression level of the file. The keyword argument options may also be passed, providing advanced Zstandard compression parameters described by CompressionParameter. The keyword argument zstd_dict can be passed to provide a ZstdDict, a Zstandard dictionary used to improve compression of smaller amounts of data. For special purposes, there is a second format for mode: \u0027filemode|[compression]\u0027. tarfile.open() will return a TarFile object that processes its data as a stream of blocks. No random seeking will be done on the file. If given, fileobj may be any object that has a read() or write() method (depending on the mode) that works with bytes. bufsize specifies the blocksize and defaults ",
+    "scrapedAt": "2026-05-09 01:26:41.071879"
+  },
+  {
     "id": 1609,
     "url": "https://github.com/python/cpython/issues/129393",
     "title": "Issue · GitHub",
@@ -10848,26 +10883,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1610,
-    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.data_filter"
-  },
-  {
-    "id": 1611,
-    "url": "https://docs.python.org/3/library/mimetypes.html#module-mimetypes"
-  },
-  {
-    "id": 1612,
-    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_GET_SIZE"
-  },
-  {
-    "id": 1613,
-    "url": "https://docs.python.org/3/library/zipimport.html#module-zipimport"
-  },
-  {
-    "id": 1614,
-    "url": "https://github.com/python/cpython/issues/90817"
   },
   {
     "id": 1615,
@@ -240970,10 +240985,125 @@ window.searchData = [
     "id": 351341,
     "url": "https://github.com/python/cpython/issues/129393#start-of-content",
     "parentUrl": "https://github.com/python/cpython/issues/129393"
+  },
+  {
+    "id": 351694,
+    "url": "https://github.com/python/cpython/pull/31218",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 351695,
+    "url": "https://github.com/python/cpython/pull/31206",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 351697,
+    "url": "https://github.com/python/cpython/pull/31214",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 351698,
+    "url": "https://github.com/python/cpython/pull/31168",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 351702,
+    "url": "https://github.com/python/cpython/pull/31166",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 351703,
+    "url": "https://github.com/python/cpython/pull/31167",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 351705,
+    "url": "https://github.com/python/cpython/issues/90817#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 351706,
+    "url": "https://bugs.python.org/issue46659",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 351707,
+    "url": "https://github.com/python/cpython/issues/90817#issue-1199074753",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 351709,
+    "url": "https://bugs.python.org/file50606/cal_locale.py",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 351710,
+    "url": "https://github.com/python/cpython/issues/90817#top",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@vstinner",
+    "pageTitle": "Deprecate locale.getdefaultlocale() function · Issue #90817 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "Deprecate locale.getdefaultlocale() function · Issue #90817 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipimport — Import modules from Zip archives — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipimport.html#module-zipimport"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipimport — Import modules from Zip archives — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipimport.html#module-zipimport"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Sequence Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_GET_SIZE"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Sequence Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_GET_SIZE"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "mimetypes — Map filenames to MIME types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/mimetypes.html#module-mimetypes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "mimetypes — Map filenames to MIME types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/mimetypes.html#module-mimetypes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tarfile — Read and write tar archive files — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.data_filter"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tarfile — Read and write tar archive files — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.data_filter"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/573017?v\u003d4\u0026size\u003d80",
     "alt": "@michael-o",
