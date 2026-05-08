@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 572,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d39",
+    "title": "Python Software Foundation Supporting Member – Sliding Scale – Python Software Foundation",
+    "content": "Skip to content Zip PSF Supporting Members allow the Python Software Foundation to do the work you care most about. Your Supporting Membership provides crucial support to Python and the Python community, while giving you a voice in the direction of the PSF. The PSF has made a sliding scale option available for Supporting Membership, because we want to make membership more accessible for more people and to increase the size and diversity of our voting membership. We welcome you to sign up for a sliding scale Supporting Membership if the standard Supporting Membership rate presents a financial burden to you. Examples of why you might select a sliding scale membership: You work in a country with lower average incomes than the US or Western Europe. You are a student. You are currently unemployed. (These are just illustrative examples to help you select your rate! We will not request any information about the reason for your selection.) We just need to collect a few details to process your membership. Thank you for joining us and supporting the Python Software Foundation! PSF Supporting Member Please join Python Software Foundation as a Supporting Member! Select one of the options below: Membership * Supporting - Sliding Scale - $ 25.00 Supporting - Automatic Yearly Renewal Sliding Scale - $ 25.00 Please renew my membership automatically. Membership will renew automatically. Make an additional gift to the PSF $10 $25 $50 - none - Other Amount Optional: Checking this box covers the PSF\u0027s 3% processing fees. Thank you! Total Amount Email Address * Payment Options Payment Method Credit Card PayPal Stripe Checkout Contact information is required for transaction processing, accounting system, and compliance purposes. Please see the PSF Privacy Notice for more information. Name and Address Required First Name * Middle Name Last Name * How should your name appear publicly? Enter \"Anonymous\" to keep it hidden. Display Name Country (Home) * - select Country (Home) - United States Afghanistan Åland Islands Albania Algeria American Samoa Andorra Angola Anguilla Antarctica Antigua and Barbuda Argentina Armenia Aruba Australia Austria Azerbaijan Bahamas Bahrain Bangladesh Barbados Belarus Belgium Belize Benin Bermuda Bhutan Bolivia Bonaire, Saint Eustatius and Saba Bosnia and Herzegovina Botswana Bouvet Island Brazil British Indian Ocean Territory Brunei Darussalam Bulgaria Burkina Faso Burundi Cabo Verde Cambodia Cameroon Canada Cape Verde Cayman Islands Central African Republic Chad Chile China Christmas Island Cocos (Keeling) Islands Colombia Comoros Congo, Republic Of The Congo, The Democratic Republic of the Cook Islands Costa Rica Côte d’Ivoire Croatia Cuba Curaçao Cyprus Czech Republic Denmark Djibouti Dominica Dominican Republic Ecuador Egypt El Salvador Equatorial Guinea Eritrea Estonia Eswatini Ethiopia Falkland Islands (Malvinas) Faroe Islands Fiji Finland France French Guiana French Polynesia French Southern Territories Gabon Gambia Georgia Germany Ghana Gibraltar Greece Greenland Grenada Guadeloupe Guam Guatemala Guernsey Guinea Guinea-Bissau Guyana Haiti Heard Island and McDonald Islands Holy See (Vatican City State) Honduras Hong Kong Hungary Iceland India Indonesia Iran, Islamic Republic of Iraq Ireland Isle of Man Israel Italy Jamaica Japan Jersey Jordan Kazakhstan Kenya Kiribati Korea, Democratic People\u0027s Republic of Korea, Republic of Kosovo Kuwait Kyrgyzstan Lao People\u0027s Democratic Republic Latvia Lebanon Lesotho Liberia Libya Liechtenstein Lithuania Luxembourg Macao Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia (Federated States of) Micronesia, Federated States of Moldova Monaco Mongolia Montenegro Montserrat Morocco Mozambique Myanmar Namibia Nauru Nepal Netherlands New Caledonia New Zealand Nicaragua Niger Nigeria Niue Norfolk Island North Macedonia Northern Mariana Islands Norway Oman Pakistan Palau Palestine, State of Panama Papua New Guinea Paraguay Peru Philippines Pitcairn Poland Portugal Puerto Rico Qatar Reunion Romania Russian Federation Rwanda Saint Barthélemy Saint Helena Saint Kitts and Nevis Saint Lucia Saint Martin (French part) Saint Pierre and Miquelon Saint Vincent and the Grenadines Samoa San Marino Sao Tome and Principe Saudi Arabia Senegal Serbia Serbia and Montenegro Seychelles Sierra Leone Singapore Sint Maarten (Dutch Part) Slovakia Slovenia Solomon Islands Somalia South Africa South Georgia and the South Sandwich Islands South Sudan Spain Sri Lanka Sudan Suriname Svalbard and Jan Mayen Sweden Switzerland Syrian Arab Republic Taiwan Tajikistan Tanzania, United Republic of Thailand Timor-Leste Togo Tokelau Tonga Trinidad and Tobago Tunisia Turkey Turkmenistan Turks and Caicos Islands Tuvalu Uganda Ukraine United Arab Emirates United Kingdom United States Minor Outlying Islands Uruguay Uzbekistan Vanuatu Venezuela Viet Nam Virgin Islands, British Virgin Islands, U.S. Wallis and Futuna Western Sahara Yemen Za",
+    "scrapedAt": "2026-05-09 00:46:21.440836"
+  },
+  {
+    "id": 571,
+    "url": "https://www.python.org/users/membership/",
+    "title": "Sign In to Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Sign In Login: Password: Forgot your password? Remember Me: Forgot Password? Sign In Register Don\u0027t have a Python.org account yet? Create new account",
+    "scrapedAt": "2026-05-09 00:46:19.849141"
+  },
+  {
+    "id": 570,
+    "url": "https://psfmember.org/python-software-foundation-supporting-member-2/",
+    "title": "Python Software Foundation Supporting Member – Python Software Foundation",
+    "content": "Skip to content Phone PSF Supporting Members allow the Python Software Foundation to do the work you care most about. Your Supporting Membership provides crucial support to Python and the Python community, while giving you a voice in the direction of the PSF. We just need to collect a few details to process your membership. Thank you for joining us and supporting the Python Software Foundation! Please follow this link if you are interested in the sliding scale option. PSF Supporting Member Please join Python Software Foundation as a Supporting Member! Select one of the options below: Membership * Supporting - $ 99.00 Supporting - Automatic Yearly Renewal - $ 99.00 Please renew my membership automatically. Membership will renew automatically. Additional Contribution (minimum $10) Optional: Checking this box covers the PSF\u0027s 3% processing fees. Thank you! Total Amount Email Address * Payment Options Payment Method Credit Card PayPal Stripe Checkout Pay later Contact information is required for transaction processing, accounting system, and compliance purposes. Please see the PSF Privacy Notice for more information. Name and Address Required First Name * Middle Name Last Name * How should your name appear publicly? Enter \"Anonymous\" to keep it hidden. Display Name Country (Home) * - select Country (Home) - United States Afghanistan Åland Islands Albania Algeria American Samoa Andorra Angola Anguilla Antarctica Antigua and Barbuda Argentina Armenia Aruba Australia Austria Azerbaijan Bahamas Bahrain Bangladesh Barbados Belarus Belgium Belize Benin Bermuda Bhutan Bolivia Bonaire, Saint Eustatius and Saba Bosnia and Herzegovina Botswana Bouvet Island Brazil British Indian Ocean Territory Brunei Darussalam Bulgaria Burkina Faso Burundi Cabo Verde Cambodia Cameroon Canada Cape Verde Cayman Islands Central African Republic Chad Chile China Christmas Island Cocos (Keeling) Islands Colombia Comoros Congo, Republic Of The Congo, The Democratic Republic of the Cook Islands Costa Rica Côte d’Ivoire Croatia Cuba Curaçao Cyprus Czech Republic Denmark Djibouti Dominica Dominican Republic Ecuador Egypt El Salvador Equatorial Guinea Eritrea Estonia Eswatini Ethiopia Falkland Islands (Malvinas) Faroe Islands Fiji Finland France French Guiana French Polynesia French Southern Territories Gabon Gambia Georgia Germany Ghana Gibraltar Greece Greenland Grenada Guadeloupe Guam Guatemala Guernsey Guinea Guinea-Bissau Guyana Haiti Heard Island and McDonald Islands Holy See (Vatican City State) Honduras Hong Kong Hungary Iceland India Indonesia Iran, Islamic Republic of Iraq Ireland Isle of Man Israel Italy Jamaica Japan Jersey Jordan Kazakhstan Kenya Kiribati Korea, Democratic People\u0027s Republic of Korea, Republic of Kosovo Kuwait Kyrgyzstan Lao People\u0027s Democratic Republic Latvia Lebanon Lesotho Liberia Libya Liechtenstein Lithuania Luxembourg Macao Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia (Federated States of) Micronesia, Federated States of Moldova Monaco Mongolia Montenegro Montserrat Morocco Mozambique Myanmar Namibia Nauru Nepal Netherlands New Caledonia New Zealand Nicaragua Niger Nigeria Niue Norfolk Island North Macedonia Northern Mariana Islands Norway Oman Pakistan Palau Palestine, State of Panama Papua New Guinea Paraguay Peru Philippines Pitcairn Poland Portugal Puerto Rico Qatar Reunion Romania Russian Federation Rwanda Saint Barthélemy Saint Helena Saint Kitts and Nevis Saint Lucia Saint Martin (French part) Saint Pierre and Miquelon Saint Vincent and the Grenadines Samoa San Marino Sao Tome and Principe Saudi Arabia Senegal Serbia Serbia and Montenegro Seychelles Sierra Leone Singapore Sint Maarten (Dutch Part) Slovakia Slovenia Solomon Islands Somalia South Africa South Georgia and the South Sandwich Islands South Sudan Spain Sri Lanka Sudan Suriname Svalbard and Jan Mayen Sweden Switzerland Syrian Arab Republic Taiwan Tajikistan Tanzania, United Republic of Thailand Timor-Leste Togo Tokelau Tonga Trinidad and Tobago Tunisia Turkey Turkmenistan Turks and Caicos Islands Tuvalu Uganda Ukraine United Arab Emirates United Kingdom United States Minor Outlying Islands Uruguay Uzbekistan Vanuatu Venezuela Viet Nam Virgin Islands, British Virgin Islands, U.S. Wallis and Futuna Western Sahara Yemen Zambia Zimbabwe Street Address (Home) * City (Home) * State (Home) * - select State/Province - Alabama Alaska American Samoa Arizona Arkansas Armed Forces Americas Armed Forces Europe Armed Forces Pacific California Colorado Connecticut Delaware District of Columbia Florida Georgia Guam Hawaii Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Minnesota Mississippi Missouri Montana Nebraska Nevada New Hampshire New Jersey New Mexico New York North Carolina North Dakota Northern Mariana Islands Ohio Oklahoma Oregon Pennsylvania Puerto Rico Rhode Island South Carolina South Dakota Tennessee Texas United States Minor O",
+    "scrapedAt": "2026-05-09 00:46:18.439177"
+  },
+  {
+    "id": 569,
+    "url": "https://www.python.org/psf/membership-faq/",
+    "title": "PSF Membership Types \u0026 FAQ | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of the international community of Python programmers. —from the Mission Statement page What does it mean to be a member of the PSF? What membership classes are there? Who is allowed to vote? Why am I a Basic Member even though I’m a Supporting/Contributing/Fellow Member? How does a person become a PSF Fellow? What does the PSF do? How can I ask other questions? What does it mean to be a member of the PSF? Being part of the PSF means being part of the Python community. In 2014, we changed the bylaws to make the PSF an open membership organization, so that everyone who uses and supports Python can join. For those who wish to participate more, we have classes of membership that include voting rights for those who contribute time, work, and money to the foundation. What membership classes are there? There are four classes of members: Basic Members, Supporting Members, Contributing Members and Fellows. Basic Members Basic members are individuals or entities who are part of the Python language community and who have decided to declare their support for Python and agree to the community Code of Conduct. There is no cost to be a Basic Member. You can sign up as a basic member right here on the site. Supporting Members Supporting Members make a specific annual donation to the PSF to sustain the Foundation and support the Python community. Supporting Members are eligible to vote. You may combine Supporting Membership with any other Membership - i.e. you may sign up for Supporting Membership and also be a Basic Member, Contributing Member, or a Fellow. You can sign up as a Supporting Member here. Contributing Members Contributing Members are people who dedicate at least five hours per month volunteering on projects that advance the mission of the PSF, where the work relates to the creation or maintenance of open source software available to the public at no charge, or by organizing Python events, running infrastructure, participating in one of the PSF\u0027s working groups, etc. Contributing Members are eligible to vote. There is no cost to be a Contributing Member. For details on signing up as a Contributing Member, refer to this form. Fellows Fellows are members who have been nominated for their extraordinary efforts and impact upon Python, the community, and the broader Python ecosystem. Fellows are nominated from the broader community and elevated by a vote of the members. Fellow members are eligible to vote. More info on the nomination process is available here. Who is allowed to vote? Who is eligible: Supporting Members, Contributing Members, and Fellows are eligible for voting privileges. To vote you must be 1) eligible to vote, and then 2) affirm each year you would like to exercise your voting privileges. More information on affirming your voting status is here. Why am I a Basic Member even though I’m a Supporting/Contributing/Fellow Member? Your Basic Membership information is managed here on https://www.python.org/users/membership/edit/. To manage your Supporting and Contributing Memberships, visit https://psfmember.org/user-information/. This site, https://www.python.org , will list you as a Basic Member even if you are a Supporting, Contribution, or Fellowship member because the voting tiers of membership are managed on the separate, https://www.psfmember.org website. To verify your PSF Voting Eligibility you will need to use https://www.psfmember.org. If you believe you are a Supporting, Contributing, or Fellow Member but do not have an account on psfmember.org, please create an account and verify your email, then email psf-donations@python.org to get your account linked to your membership. How does a person become a PSF Fellow? To nominate someone to be a PSF Fellow member, please send your nomination to psf-fellow@python.org. More info on the nomination process is available here. The criteria for becoming a PSF Fellow are as follows: For those who have served the Python community by creating and/or maintaining various creative contributions, the following statement should be true: \"[Nominated Person] has served the Python community by making available code, tests, documentation, or design, either in a Python implementation or in a Python ecosystem project, that 1) shows technical excellence, 2) is an example of software engineering principles and best practices, and 3) has achieved widespread usage or acclaim.\" For those who have served the Python community by coordinating, organizing, teaching, writing, and evangelizing, the following statement should b",
+    "scrapedAt": "2026-05-09 00:46:16.595582"
+  },
+  {
+    "id": 568,
+    "url": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/",
+    "title": "How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python Written by Jim Gradwell, HyperFinity \u0026 Snowflake HyperFinity is a decision science SaaS platform. Through machine learning and AI, embedded analytics, and data visualization, HyperFinity enables nontechnical users to make data-led decisions and create simple outputs to power downstream systems, such as CRM, ERP, or content management systems. This enables organizations to quickly make ML-powered decisions across multiple areas, from smarter supply chain to optimized pricing. Snowflake sits at the core of HyperFinity’s data-intensive platform. In addition to the extensive data type support such as variant data type for semi-structured data, other features such as Snowflake REST API and Zero-Copy Cloning serve as valuable tools in the platform’s serverless architecture. Snowflake’s Secure Data Sharing also streamlines the ELT processes and simplifies the integration of the HyperFinity platform and its outputs with our customers who are already using Snowflake. Challenge: Separate infrastructure for separate programming languages While HyperFinity’s platform is built for nontechnical users to easily apply machine learning and AI at the click of a button, all of the functionality for the data processing that is needed is developed by a data science-focused team, whose primary coding languages are SQL and Python. Snowflake handled all of our SQL development and processing, but in order to construct a serverless compute engine for our Python code, our team had to set up a new set of cloud infrastructure on AWS, which entailed stitching together multiple compute services such as Amazon EC2 and AWS Lambda. This had several downsides such as having to move the data outside of Snowflake’s governance boundary for processing, maintaining additional infrastructure, and writing additional code to handle the data structures changing between services. When we saw Python support for Snowpark announced, we got very excited about the possibilities it would enable for us, and we were very lucky to take part in the private preview. Streamlining our architecture with Snowpark for Python One of the benefits of Python is its rich ecosystem of open source packages and libraries, which we use extensively. For example, a core part of the platform is creating “Customer Needstates” for groups of products. This uses a technique called hierarchical clustering to create a customer decision tree, which represents the choices an individual makes to arrive at the product they purchase. Computing these Needstates requires matrix and array multiplication, which our team leverages in Snowpark using the Python libraries numpy and scipy. This type of calculation is much simpler to develop and implement in Snowflake through the use of Snowpark. Previous cloud infrastructure for Python processing replaced by simple Snowpark code Because the Snowpark for Python environment comes with 1,000+ pre-installed libraries through Snowflake’s partnership with Anaconda, we could easily move existing functions with minimal effort. Having the most popular libraries available removes another layer of administration from the development process, and with the integrated conda package manager there is no need to worry about dependency management. In case we need a custom library, Snowflake supports the ability to upload and import custom Python code. We’re also able to blend SQL and Python logic together in a way that would previously have involved sending data back and forth between multiple tools, and our team has also been able to gain increased performance through parallelizing our processing. Using this blend of SQL and Python we can run logic written in Python on multiple rows of SQL concurrently, turning what was previously a looping operation into a parallel process. For example, running our clustering solutions at five different depths takes the same time as running at one depth. “Snowpark enables us to accelerate development while reducing costs associated with data movement and running separate environments for SQL and Python.” Running a Python function as part of a SQL statement in Snowflake, including parallel processing Moving our Python processes to Snowpark has removed unnecessary complexity from our architecture and simplified our development by removing all the extra code that handled data structures changing between services. Now our team can develop, test, and deploy their Python code within the same environment the data is stored, leveraging the power of the Snowflake platform, and in their preferred development language. HyperFinity is software designed to make decision-making simple, using powerful data science and advanced analytics techniques. Snowflake, and now Snowpark, are major ",
+    "scrapedAt": "2026-05-09 00:46:15.272778"
+  },
+  {
     "id": 567,
     "url": "https://www.python.org/success-stories/category/scientific/",
     "title": "Scientific | Our Success Stories | Python.org",
@@ -3913,26 +3948,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 568,
-    "url": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
-  },
-  {
-    "id": 569,
-    "url": "https://www.python.org/psf/membership-faq/"
-  },
-  {
-    "id": 570,
-    "url": "https://psfmember.org/python-software-foundation-supporting-member-2/"
-  },
-  {
-    "id": 571,
-    "url": "https://www.python.org/users/membership/"
-  },
-  {
-    "id": 572,
-    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d39"
   },
   {
     "id": 573,
@@ -96804,10 +96819,204 @@ window.searchData = [
     "id": 68805,
     "url": "https://sdtimes.com/data/data-profiler-capital-ones-open-source-machine-learning-technology-for-data-monitoring/",
     "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 68836,
+    "url": "http://hyperfinity.ai/",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 68838,
+    "url": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/(https://www.snowflake.com/snowpark/)",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 68840,
+    "url": "https://www.snowflake.com/blog/snowflake-partners-with-and-invests-in-anaconda-to-bring-enterprise-grade-open-source-python-innovation-to-the-data-cloud/?utm_cta\u003dAnaconda-press-release-9-29",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 68842,
+    "url": "https://resources.snowflake.com/webinars-office-hours/show-me-your-architecture-a-technical-deep-dive-of-hyperfinity-s-ai-platform-for-retailers-2",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 68843,
+    "url": "https://www.snowflake.com/snowpark-for-python/",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 68844,
+    "url": "https://www.snowflake.com/blog/snowpark-python-feature-engineering-machine-learning/",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 68846,
+    "url": "https://www.snowflake.com/blog/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowpark-for-python/",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 68847,
+    "url": "https://www.snowflake.com/snowpark/",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 68848,
+    "url": "https://medium.com/snowflake/deploying-custom-python-packages-from-github-to-snowflake-f0bb396480c7",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 68851,
+    "url": "https://repo.anaconda.com/pkgs/snowflake/",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 68852,
+    "url": "https://www.snowflake.com/en/data-cloud/snowpark/",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 68857,
+    "url": "https://www.python.org/psf/membership-faq/#how-can-i-ask-other-questions",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68860,
+    "url": "https://www.python.org/users/membership/edit/",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68861,
+    "url": "https://www.python.org/psf/membership-faq/#what-membership-classes-are-there",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68862,
+    "url": "https://www.python.org/psf/membership-faq/#who-is-allowed-to-vote",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68864,
+    "url": "https://www.psfmember.org",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68865,
+    "url": "https://www.python.org/psf/membership-faq/#why-am-i-a-basic-member-even-though-im-a-supporting-contributing-fellow-member",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68866,
+    "url": "https://psfmember.org/user-information/",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68867,
+    "url": "https://www.python.org/psf/membership-faq/#toc-entry-6",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68868,
+    "url": "https://www.python.org/psf/membership-faq/#toc-entry-7",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68869,
+    "url": "https://www.python.org/psf/membership-faq/#what-does-the-psf-do",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68870,
+    "url": "https://www.python.org/psf/membership-faq/#what-does-it-mean-to-be-a-member-of-the-psf",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68872,
+    "url": "https://www.python.org/psf/mission",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68873,
+    "url": "https://www.python.org/psf/membership-faq/#toc-entry-1",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68874,
+    "url": "https://www.python.org/psf/membership-faq/#toc-entry-2",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68875,
+    "url": "https://www.python.org/psf/membership-faq/#toc-entry-3",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68876,
+    "url": "https://www.python.org/psf/membership-faq/#toc-entry-4",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68877,
+    "url": "https://www.python.org/psf/membership-faq/#toc-entry-5",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68881,
+    "url": "https://www.python.org/psf/membership-faq/#how-does-a-person-become-a-psf-fellow",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68883,
+    "url": "https://pyfound.blogspot.com/2023/06/affirming-your-psf-membership-voting.html",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 68884,
+    "url": "https://policies.python.org/PSF-Privacy-Notice/",
+    "parentUrl": "https://psfmember.org/python-software-foundation-supporting-member-2/"
+  },
+  {
+    "id": 68886,
+    "url": "https://mailchimp.com/legal/",
+    "parentUrl": "https://psfmember.org/python-software-foundation-supporting-member-2/"
+  },
+  {
+    "id": 68887,
+    "url": "https://psfmember.org/python-software-foundation-supporting-member-2/#content",
+    "parentUrl": "https://psfmember.org/python-software-foundation-supporting-member-2/"
+  },
+  {
+    "id": 68892,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d39#content",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d39"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/Snowflake_Partner_Hyper.jpeg",
+    "alt": "How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python",
+    "pageTitle": "How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4LOKGFj1kPxwsiHa43qIDZVqRZWYeCVRh98Xw-vPj-oKYXpHYHmSEHwt8UWZag9xdhXfsDWgxh9BfeLDmVbvqkQ3Sf6T_mrajjTatEFAUXydcnntSjy4WmH4BK1G-jN8gCjyrgxn-S_2MKHG1g",
+    "alt": "enter image description here",
+    "pageTitle": "How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "src": "https://lh4.googleusercontent.com/hBxzAakSq_N2J7QH5GUKgK5vgo4UGOLMdLKKxmqYI-gWc9w764WK5xrOmoH3RyEcrYSLUgtZqeWTzA5gglnuPXMNfiaQRsxaXR-T3fuqqk2KC7ee6qQkPOt6QATdWRn9XJxFTIF09bISXhyZgg",
+    "alt": "enter image description here",
+    "pageTitle": "How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "src": "https://lh4.googleusercontent.com/5hOOqdGrGcRbzHrXd_xr1JBBo0zxm2OGha5IeLHMSVzBeKZBQhTyON1EPBiuNgrSBwye9BeY4vEo5GaiLfgWqDfeM5lRtVx_kk7Z8VASswlngZVi5lFEFsJRUZtjkT6OjFiq8tJNrLGZUc6DvA",
+    "alt": "enter image description here",
+    "pageTitle": "How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
   {
     "src": "https://i.imgur.com/tuk5NQ0.png",
     "alt": "",
