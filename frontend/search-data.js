@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 780,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction",
+    "title": "inspect — Inspect live objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » inspect — Inspect live objects | Theme Auto Light Dark | inspect — Inspect live objects¶ Source code: Lib/inspect.py The inspect module provides several useful functions to help get information about live objects such as modules, classes, methods, functions, tracebacks, frame objects, and code objects. For example, it can help you examine the contents of a class, retrieve the source code of a method, extract and format the argument list for a function, or get all the information you need to display a detailed traceback. There are four main kinds of services provided by this module: type checking, getting source code, inspecting classes and functions, and examining the interpreter stack. Types and members¶ The getmembers() function retrieves the members of an object such as a class or module. The functions whose names begin with “is” are mainly provided as convenient choices for the second argument to getmembers(). They also help you determine when you can expect to find the following special attributes (see Import-related attributes on module objects for module attributes): Type Attribute Description class __doc__ documentation string __name__ name with which this class was defined __qualname__ qualified name __module__ name of module in which this class was defined __type_params__ A tuple containing the type parameters of a generic class method __doc__ documentation string __name__ name with which this method was defined __qualname__ qualified name __func__ function object containing implementation of method __self__ instance to which this method is bound, or None __module__ name of module in which this method was defined function __doc__ documentation string __name__ name with which this function was defined __qualname__ qualified name __code__ code object containing compiled function bytecode __defaults__ tuple of any default values for positional or keyword parameters __kwdefaults__ mapping of any default values for keyword-only parameters __globals__ global namespace in which this function was defined __builtins__ builtins namespace __annotations__ mapping of parameters names to annotations; \"return\" key is reserved for return annotations. __type_params__ A tuple containing the type parameters of a generic function __module__ name of module in which this function was defined traceback tb_frame frame object at this level tb_lasti index of last attempted instruction in bytecode tb_lineno current line number in Python source code tb_next next inner traceback object (called by this level) frame f_back next outer frame object (this frame’s caller) f_builtins builtins namespace seen by this frame f_code code object being executed in this frame f_globals global namespace seen by this frame f_lasti index of last attempted instruction in bytecode f_lineno current line number in Python source code f_locals local namespace seen by this frame f_generator returns the generator or coroutine object that owns this frame, or None if the frame is of a regular function f_trace tracing function for this frame, or None f_trace_lines indicate whether a tracing event is triggered for each source source line f_trace_opcodes indicate whether per-opcode events are requested clear() used to clear all references to local variables code co_argcount number of arguments (not including keyword only arguments, * or ** args) co_code string of raw compiled bytecode co_cellvars tuple of names of cell variables (referenced by containing scopes) co_consts tuple of constants used in the bytecode co_filename name of file in which this code object was created co_firstlineno number of first line in Python source code co_flags bitmap of CO_* flags, read more here co_lnotab encoded mapping of line numbers to bytecode indices co_freevars tuple of names of free variables (referenced via a function’s closure) co_posonlyargcount number of positional only arguments co_kwonlyargcount number of keyword only arguments (not including ** arg) co_name name with which this code object was defined co_qualname fully qualified name with which this code object was defined co_names tuple of names other than arguments and function locals co_nlocals number of local variables co_stacksize virtual machine stack space required co_varnames tuple of names of arguments and local variables co_lines() returns an iterator that yields successive bytecode ranges co_positions() returns an iterator of source code positions for each bytecode instruction replace() returns a copy of the code object with new values generator __name__ name __qualname__ qualified name gi_frame frame gi_running is the generator running? gi_suspended is the generator suspended? gi_code code gi_yieldfrom object being iterated by yield from, or None async generator __name__ name __qualname__ qualified name ag_await object being awaited on, or None ag_frame frame ag_runn",
+    "scrapedAt": "2026-05-09 00:53:19.223163"
+  },
+  {
+    "id": 779,
+    "url": "https://github.com/python/cpython/issues/101693",
+    "title": "sqlite3: issue a warning if a sequence of params are used with named placeholders in queries · Issue #101693 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k sqlite3: issue a warning if a sequence of params are used with named placeholders in queries #101693 New issue Copy link New issue Copy link Closed Closed sqlite3: issue a warning if a sequence of params are used with named placeholders in queries#101693 Copy link Assignees Labels topic-sqlite3type-featureA feature request or enhancementA feature request or enhancement Description erlend-aasland opened on Feb 8, 2023 Issue body actions (See Discourse topic.) Per now, it is possible to supply a sequence of params to queries with named placeholders: \u003e\u003e\u003e cx.execute(\"select :name\", [42]).fetchall()\n[(42,)]\n\u003e\u003e\u003e cx.execute(\"select :other\", [42]).fetchall()\n[(42,)] This may result in unexpected results if a user misuse the sqlite3 module and use PEP-249 style numeric placeholders: \u003e\u003e\u003e cx.execute(\"select :1\", (\"first\",)).fetchall()\n[(\u0027first\u0027,)]\n\u003e\u003e\u003e cx.execute(\"select :1, :2\", (\"first\", \"second\")).fetchall()\n[(\u0027first\u0027, \u0027second\u0027)]\n\u003e\u003e\u003e cx.execute(\"select :2, :1\", (\"first\", \"second\")).fetchall()  # Unexpected result follows\n[(\u0027first\u0027, \u0027second\u0027)]\n PEP-249 style numeric placeholders are not supported by sqlite3; it only supports PEP-249 style named placeholders and PEP-249 style qmark placeholders, so the placeholders in the above example are interpreted as named, not numeric, placeholders. Based on the discussion in the above linked Discourse topic, I propose to now issue a deprecation warning if sequences are used with named placeholders. The deprecation warning should inform that from Python 3.14 and onward, sqlite3.ProgrammingError will be raised instead. Linked PRs gh-101693: In sqlite3, deprecate using named placeholders with parameters supplied as a sequence #101698 Reactions are currently unavailable Metadata Metadata Assignees erlend-aasland Labels topic-sqlite3type-featureA feature request or enhancementA feature request or enhancement Projects sqlite3 issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:53:17.973152"
+  },
+  {
+    "id": 778,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#urllib",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 00:53:15.822862"
+  },
+  {
+    "id": 777,
+    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning",
+    "title": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Exceptions | Theme Auto Light Dark | Built-in Exceptions¶ In Python, all exceptions must be instances of a class that derives from BaseException. In a try statement with an except clause that mentions a particular class, that clause also handles any exception classes derived from that class (but not exception classes from which it is derived). Two exception classes that are not related via subclassing are never equivalent, even if they have the same name. The built-in exceptions listed in this chapter can be generated by the interpreter or built-in functions. Except where mentioned, they have an “associated value” indicating the detailed cause of the error. This may be a string or a tuple of several items of information (e.g., an error code and a string explaining the code). The associated value is usually passed as arguments to the exception class’s constructor. User code can raise built-in exceptions. This can be used to test an exception handler or to report an error condition “just like” the situation in which the interpreter raises the same exception; but beware that there is nothing to prevent user code from raising an inappropriate error. The built-in exception classes can be subclassed to define new exceptions; programmers are encouraged to derive new exceptions from the Exception class or one of its subclasses, and not from BaseException. More information on defining exceptions is available in the Python Tutorial under User-defined Exceptions. Exception context¶ Three attributes on exception objects provide information about the context in which the exception was raised: BaseException.__context__¶ BaseException.__cause__¶ BaseException.__suppress_context__¶ When raising a new exception while another exception is already being handled, the new exception’s __context__ attribute is automatically set to the handled exception. An exception may be handled when an except or finally clause, or a with statement, is used. This implicit exception context can be supplemented with an explicit cause by using from with raise: raise new_exc from original_exc\n The expression following from must be an exception or None. It will be set as __cause__ on the raised exception. Setting __cause__ also implicitly sets the __suppress_context__ attribute to True, so that using raise new_exc from None effectively replaces the old exception with the new one for display purposes (e.g. converting KeyError to AttributeError), while leaving the old exception available in __context__ for introspection when debugging. The default traceback display code shows these chained exceptions in addition to the traceback for the exception itself. An explicitly chained exception in __cause__ is always shown when present. An implicitly chained exception in __context__ is shown only if __cause__ is None and __suppress_context__ is false. In either case, the exception itself is always shown after any chained exceptions so that the final line of the traceback always shows the last exception that was raised. Inheriting from built-in exceptions¶ User code can create subclasses that inherit from an exception type. It’s recommended to only subclass one exception type at a time to avoid any possible conflicts between how the bases handle the args attribute, as well as due to possible memory layout incompatibilities. CPython implementation detail: Most built-in exceptions are implemented in C for efficiency, see: Objects/exceptions.c. Some have custom memory layouts which makes it impossible to create a subclass that inherits from multiple exception types. The memory layout of a type is an implementation detail and might change between Python versions, leading to new conflicts in the future. Therefore, it’s recommended to avoid subclassing multiple exception types altogether. Base classes¶ The following exceptions are used mostly as base classes for other exceptions. exception BaseException¶ The base class for all built-in exceptions. It is not meant to be directly inherited by user-defined classes (for that, use Exception). If str() is called on an instance of this class, the representation of the argument(s) to the instance are returned, or the empty string when there were no arguments. args¶ The tuple of arguments given to the exception constructor. Some built-in exceptions (like OSError) expect a certain number of arguments and assign a special meaning to the elements of this tuple, while others are usually called only with a single string giving an error message. with_traceback(tb)¶ This method sets tb as the new traceback for the exception and returns the exception object. It was more commonly used before the exception chaining features of PEP 3134 became available. The following example shows how we can convert an instance of SomeException into an instance of OtherException while preserving the traceback. Once raised, the current ",
+    "scrapedAt": "2026-05-09 00:53:14.614486"
+  },
+  {
+    "id": 776,
+    "url": "https://github.com/python/cpython/issues/131952",
+    "title": "Color in json.tool CLI · Issue #131952 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Color in json.tool CLI #131952 New issue Copy link New issue Copy link Closed Closed Color in json.tool CLI#131952 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description raztd opened on Mar 31, 2025 Issue body actions Feature or enhancement Proposal: apologies if this is not the right place to ask for enhancement requests. since python3.13 added support for colorization in repl, i was wondering if some basic colorization could be added for the python\u0027s cli json tool? jq[0] does this, the keys are bolded and have a different color from the values. if this gets implemented i think a lot of people will be happy to just use python and not have to install yet another library to fulfill their needs :-) [0] https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2020/01/5-7.png Has this already been discussed elsewhere? No response given Links to previous discussion of this feature: No response Linked PRs gh-131952: Add color to the json CLI #132126 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects JSON issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:53:13.434103"
+  },
+  {
     "id": 775,
     "url": "https://github.com/python/cpython/issues/125286",
     "title": "test_audit_subinterpreter crashes with tracerefs enabled · Issue #125286 · python/cpython · GitHub",
@@ -5138,26 +5173,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 776,
-    "url": "https://github.com/python/cpython/issues/131952"
-  },
-  {
-    "id": 777,
-    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
-  },
-  {
-    "id": 778,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#urllib"
-  },
-  {
-    "id": 779,
-    "url": "https://github.com/python/cpython/issues/101693"
-  },
-  {
-    "id": 780,
-    "url": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
   },
   {
     "id": 781,
@@ -131969,10 +131984,1067 @@ window.searchData = [
     "id": 96118,
     "url": "https://github.com/python/cpython/pull/125314",
     "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 96119,
+    "url": "https://github.com/python/cpython/issues/131952#top",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96120,
+    "url": "https://github.com/python/cpython/issues/131952#issue-2961246667",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96123,
+    "url": "https://github.com/python/cpython/issues/131952#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96126,
+    "url": "https://github.com/python/cpython/pull/132126",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96129,
+    "url": "https://github.com/orgs/python/projects/6",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96130,
+    "url": "https://github.com/raztd",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96131,
+    "url": "https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2020/01/5-7.png",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96132,
+    "url": "https://docs.python.org/3/library/exceptions.html#NameError.name",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96139,
+    "url": "https://docs.python.org/3/library/exceptions.html#OSError.filename",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96146,
+    "url": "https://docs.python.org/3/library/exceptions.html#OSError.errno",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96148,
+    "url": "https://docs.python.org/3/library/warnings.html#warning-categories",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96151,
+    "url": "https://docs.python.org/3/library/exceptions.html#EnvironmentError",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96152,
+    "url": "https://peps.python.org/pep-0475/",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96153,
+    "url": "https://docs.python.org/3/library/os.html#os.fork",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96156,
+    "url": "https://docs.python.org/3/library/exceptions.html#BaseExceptionGroup.subgroup",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96174,
+    "url": "https://docs.python.org/3/tutorial/errors.html#tut-userexceptions",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96177,
+    "url": "https://docs.python.org/3/library/exceptions.html#BaseException.add_note",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96188,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.lookup",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96203,
+    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxError.text",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96205,
+    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxError.offset",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96209,
+    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxError.end_lineno",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96211,
+    "url": "https://docs.python.org/3/library/exceptions.html#IOError",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96214,
+    "url": "https://docs.python.org/3/library/exceptions.html#BaseExceptionGroup.split",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96232,
+    "url": "https://docs.python.org/3/library/exceptions.html#BlockingIOError.characters_written",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96235,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/exceptions.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96239,
+    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxError.filename",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96246,
+    "url": "https://docs.python.org/3/library/exceptions.html#BaseExceptionGroup.derive",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96257,
+    "url": "https://docs.python.org/3/library/exceptions.html#BaseException.__notes__",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96259,
+    "url": "https://docs.python.org/3/library/exceptions.html#AttributeError.name",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96261,
+    "url": "https://docs.python.org/3/library/exceptions.html#AttributeError.obj",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96262,
+    "url": "https://docs.python.org/3/library/exceptions.html#OSError.filename2",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96274,
+    "url": "https://github.com/python/cpython/tree/3.14/Objects/exceptions.c",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96276,
+    "url": "https://docs.python.org/3/library/exceptions.html#BaseExceptionGroup.exceptions",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96280,
+    "url": "https://docs.python.org/3/library/exceptions.html#os-exceptions",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96283,
+    "url": "https://peps.python.org/pep-0565/",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96284,
+    "url": "https://docs.python.org/3/library/os.html#os._exit",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96287,
+    "url": "https://docs.python.org/3/library/exceptions.html#BaseExceptionGroup.message",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96289,
+    "url": "https://docs.python.org/3/library/socket.html#socket.error",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96296,
+    "url": "https://docs.python.org/3/library/exceptions.html#SystemExit.code",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96302,
+    "url": "https://docs.python.org/3/library/weakref.html#weakref.proxy",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96305,
+    "url": "https://docs.python.org/3/library/select.html#select.error",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96316,
+    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxError.end_offset",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96328,
+    "url": "https://peps.python.org/pep-0479/",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96329,
+    "url": "https://docs.python.org/3/library/exceptions.html#ImportError.path",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96330,
+    "url": "https://docs.python.org/3/library/exceptions.html#UnicodeError.encoding",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96331,
+    "url": "https://docs.python.org/3/library/signal.html#handlers-and-exceptions",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96338,
+    "url": "https://docs.python.org/3/library/exceptions.html#ImportError.name",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96341,
+    "url": "https://peps.python.org/pep-3134/",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96342,
+    "url": "https://docs.python.org/3/library/exceptions.html#",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96343,
+    "url": "https://docs.python.org/3/library/exceptions.html#built-in-exceptions",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96349,
+    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxError.lineno",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96351,
+    "url": "https://docs.python.org/3/library/exceptions.html#UnicodeError.reason",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96353,
+    "url": "https://docs.python.org/3/library/exceptions.html#BaseException.with_traceback",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 97591,
+    "url": "https://github.com/python/cpython/pull/101698",
+    "parentUrl": "https://github.com/python/cpython/issues/101693"
+  },
+  {
+    "id": 97592,
+    "url": "https://github.com/orgs/python/projects/23",
+    "parentUrl": "https://github.com/python/cpython/issues/101693"
+  },
+  {
+    "id": 97593,
+    "url": "https://peps.python.org/249",
+    "parentUrl": "https://github.com/python/cpython/issues/101693"
+  },
+  {
+    "id": 97594,
+    "url": "https://github.com/python/cpython/issues/101693#issue-1576254457",
+    "parentUrl": "https://github.com/python/cpython/issues/101693"
+  },
+  {
+    "id": 97598,
+    "url": "https://discuss.python.org/t/sqlite3-consider-deprecating-combining-named-placeholders-with-sequence-of-params/22450?u\u003derlendaasland",
+    "parentUrl": "https://github.com/python/cpython/issues/101693"
+  },
+  {
+    "id": 97599,
+    "url": "https://github.com/python/cpython/issues/101693#top",
+    "parentUrl": "https://github.com/python/cpython/issues/101693"
+  },
+  {
+    "id": 97600,
+    "url": "https://github.com/python/cpython/issues/101693#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/101693"
+  },
+  {
+    "id": 97604,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.istraceback",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97605,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getfile",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97607,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect-signature-object",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97608,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.STRIDED",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97609,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getinnerframes",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97611,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Signature.parameters",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97612,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.FrameInfo.index",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97616,
+    "url": "https://docs.python.org/3/library/inspect.html#current-state-of-generators-coroutines-and-asynchronous-generators",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97617,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.trace",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97619,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getasyncgenlocals",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97620,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.CO_COROUTINE",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97621,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.markcoroutinefunction",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97623,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.get_annotations",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97626,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.isclass",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97627,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getcallargs",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97629,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.CO_VARARGS",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97631,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Signature.replace",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97632,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Parameter.annotation",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97636,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/inspect.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97637,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.FULL_RO",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97640,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BoundArguments.signature",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97641,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.isframe",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97644,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Traceback.index",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97645,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.FrameInfo.code_context",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97647,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Signature.empty",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97648,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.WRITABLE",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97649,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.CO_NEWLOCALS",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97650,
+    "url": "https://docs.python.org/3/c-api/buffer.html#buffer-request-types",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97651,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.STRIDES",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97652,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getclasstree",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97653,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.isfunction",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97655,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.FORMAT",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97656,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getasyncgenstate",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97657,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.WRITE",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97659,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.ismethodwrapper",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97661,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.F_CONTIGUOUS",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97662,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.isbuiltin",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97663,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyMemberDef",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97664,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.ismodule",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97665,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getmembers",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97666,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getouterframes",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97667,
+    "url": "https://docs.python.org/3/library/inspect.html#cmdoption-inspect-details",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97668,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.ANY_CONTIGUOUS",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97669,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.SIMPLE",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97674,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.FrameInfo.filename",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97675,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Parameter.default",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97676,
+    "url": "https://docs.python.org/3/library/functions.html#locals",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97677,
+    "url": "https://docs.python.org/3/library/inspect.html#types-and-members",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97678,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.isasyncgen",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97681,
+    "url": "https://docs.python.org/3/library/inspect.html#code-objects-bit-flags",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97683,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.stack",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97685,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutine",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97686,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.isabstract",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97687,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getcomments",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97689,
+    "url": "https://docs.python.org/3/library/inspect.html#introspecting-callables-with-the-signature-object",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97691,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Parameter.name",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97692,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.unwrap",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97697,
+    "url": "https://docs.python.org/3/library/inspect.html#fetching-attributes-statically",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97698,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.READ",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97701,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BoundArguments.kwargs",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97702,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Signature.from_callable",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97703,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.isasyncgenfunction",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97704,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.currentframe",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97707,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.FrameInfo.frame",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97709,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.isgeneratorfunction",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97711,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Parameter.empty",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97714,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.CONTIG_RO",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97715,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.RECORDS_RO",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97716,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getclosurevars",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97717,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getfullargspec",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97721,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getframeinfo",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97722,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.isawaitable",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97726,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect-inspect-live-objects",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97728,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.FrameInfo.function",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97729,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Traceback",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97734,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getcoroutinestate",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97735,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.CO_NESTED",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97736,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Signature",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97737,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.RECORDS",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97738,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getmro",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97740,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getsourcefile",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97745,
+    "url": "https://docs.python.org/3/library/enum.html#enum.IntFlag",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97746,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Traceback.lineno",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97747,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BoundArguments",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97748,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.CO_ASYNC_GENERATOR",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97749,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.C_CONTIGUOUS",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97750,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.STRIDED_RO",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97752,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.isgenerator",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97754,
+    "url": "https://docs.python.org/3/library/inspect.html#classes-and-functions",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97755,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.ismethod",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97756,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BoundArguments.apply_defaults",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97758,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.FrameInfo.lineno",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97759,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.CO_GENERATOR",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97760,
+    "url": "https://docs.python.org/3/library/inspect.html#retrieving-source-code",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97761,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getsourcelines",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97762,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.ND",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97763,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Traceback.filename",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97764,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getcoroutinelocals",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97765,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getargvalues",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97766,
+    "url": "https://docs.python.org/3/reference/datamodel.html#import-mod-attrs",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97770,
+    "url": "https://docs.python.org/3/faq/programming.html#faq-positional-only-arguments",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97772,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Signature.bind",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97773,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Signature.return_annotation",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97774,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Parameter.replace",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97778,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Traceback.function",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97779,
+    "url": "https://docs.python.org/3/library/inspect.html#buffer-flags",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97781,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getgeneratorlocals",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97783,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getsource",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97784,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Traceback.positions",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97785,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.INDIRECT",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97786,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.iscode",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97787,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Parameter.kind",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97788,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.FrameInfo",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97789,
+    "url": "https://docs.python.org/3/library/inspect.html#",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97791,
+    "url": "https://docs.python.org/3/library/inspect.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97792,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.formatargvalues",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97796,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.ismemberdescriptor",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97797,
+    "url": "https://docs.python.org/3/library/inspect.html#the-interpreter-stack",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97798,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.CO_VARKEYWORDS",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97801,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/inspect.py",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97803,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.CONTIG",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97804,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getgeneratorstate",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97805,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Parameter.kind.description",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97806,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags.FULL",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97807,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.ismethoddescriptor",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97808,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.CO_OPTIMIZED",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97810,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.isdatadescriptor",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97811,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BoundArguments.args",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97813,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.FrameInfo.positions",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97815,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.CO_METHOD",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97816,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Traceback.code_context",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97822,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BoundArguments.arguments",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97824,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getmodule",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97826,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.isgetsetdescriptor",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97828,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Signature.bind_partial",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97829,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.isroutine",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "id": 97830,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getmembers_static",
+    "parentUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "inspect — Inspect live objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "inspect — Inspect live objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/inspect.html#inspect.iscoroutinefunction"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?s\u003d64\u0026u\u003dfd2a3ddb80bd163742847340896ae10103d3eac2\u0026v\u003d4",
+    "alt": "erlend-aasland",
+    "pageTitle": "sqlite3: issue a warning if a sequence of params are used with named placeholders in queries · Issue #101693 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101693"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?u\u003dfd2a3ddb80bd163742847340896ae10103d3eac2\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@erlend-aasland",
+    "pageTitle": "sqlite3: issue a warning if a sequence of params are used with named placeholders in queries · Issue #101693 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101693"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?u\u003dfd2a3ddb80bd163742847340896ae10103d3eac2\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@erlend-aasland",
+    "pageTitle": "sqlite3: issue a warning if a sequence of params are used with named placeholders in queries · Issue #101693 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101693"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?s\u003d64\u0026u\u003dfd2a3ddb80bd163742847340896ae10103d3eac2\u0026v\u003d4",
+    "alt": "@erlend-aasland",
+    "pageTitle": "sqlite3: issue a warning if a sequence of params are used with named placeholders in queries · Issue #101693 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101693"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#urllib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#urllib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6805609?v\u003d4\u0026size\u003d80",
+    "alt": "@raztd",
+    "pageTitle": "Color in json.tool CLI · Issue #131952 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6805609?v\u003d4\u0026size\u003d48",
+    "alt": "@raztd",
+    "pageTitle": "Color in json.tool CLI · Issue #131952 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131952"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/690853?u\u003de678e0834db5c4fd7dcb9f3b37055641c26edc3b\u0026v\u003d4\u0026size\u003d80",
     "alt": "@nascheme",
