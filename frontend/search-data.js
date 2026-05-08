@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 949,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.start",
+    "title": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » threading — Thread-based parallelism | Theme Auto Light Dark | threading — Thread-based parallelism¶ Source code: Lib/threading.py This module constructs higher-level threading interfaces on top of the lower level _thread module. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Introduction¶ The threading module provides a way to run multiple threads (smaller units of a process) concurrently within a single process. It allows for the creation and management of threads, making it possible to execute tasks in parallel, sharing memory space. Threads are particularly useful when tasks are I/O bound, such as file operations or making network requests, where much of the time is spent waiting for external resources. A typical use case for threading includes managing a pool of worker threads that can process multiple tasks concurrently. Here’s a basic example of creating and starting threads using Thread: import threading\nimport time\n\ndef crawl(link, delay\u003d3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks \u003d [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads \u003d []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t \u003d threading.Thread(target\u003dcrawl, args\u003d(link,), kwargs\u003d{\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()\n Changed in version 3.7: This module used to be optional, it is now always available. See also concurrent.futures.ThreadPoolExecutor offers a higher level interface to push tasks to a background thread without blocking execution of the calling thread, while still being able to retrieve their results when needed. queue provides a thread-safe interface for exchanging data between running threads. asyncio offers an alternative approach to achieving task level concurrency without requiring the use of multiple operating system threads. Note In the Python 2.x series, this module contained camelCase names for some methods and functions. These are deprecated as of Python 3.10, but they are still supported for compatibility with Python 2.5 and lower. CPython implementation detail: In CPython, due to the Global Interpreter Lock, only one thread can execute Python code at once (even though certain performance-oriented libraries might overcome this limitation). If you want your application to make better use of the computational resources of multi-core machines, you are advised to use multiprocessing or concurrent.futures.ProcessPoolExecutor. However, threading is still an appropriate model if you want to run multiple I/O-bound tasks simultaneously. GIL and performance considerations¶ Unlike the multiprocessing module, which uses separate processes to bypass the global interpreter lock (GIL), the threading module operates within a single process, meaning that all threads share the same memory space. However, the GIL limits the performance gains of threading when it comes to CPU-bound tasks, as only one thread can execute Python bytecode at a time. Despite this, threads remain a useful tool for achieving concurrency in many scenarios. As of Python 3.13, free-threaded builds can disable the GIL, enabling true parallel execution of threads, but this feature is not available by default (see PEP 703). Reference¶ This module defines the following functions: threading.active_count()¶ Return the number of Thread objects currently alive. The returned count is equal to the length of the list returned by enumerate(). The function activeCount is a deprecated alias for this function. threading.current_thread()¶ Return the current Thread object, corresponding to the caller’s thread of control. If the caller’s thread of control was not created through the threading module, a dummy thread object with limited functionality is returned. The function currentThread is a deprecated alias for this function. threading.excepthook(args, /)¶ Handle uncaught exception raised by Thread.run(). The args argument has the following attributes: exc_type: Exception type. exc_value: Exception value, can be None. exc_traceback: Exception traceback, can be None. thread: Thread which raised the exception, can be None. If exc_type is SystemExit, the exception is silently ignored. Otherwise, the exception is printed out on sys.stderr. If this function raises an exception, sys.excepthook() is called to handle it. threading.excepthook() can be overridden to control how uncaught exceptions raised by Thread.run() are handled. Storing exc_value using a custom hook can create a reference cycle. It should be ",
+    "scrapedAt": "2026-05-09 00:59:58.406059"
+  },
+  {
+    "id": 948,
+    "url": "https://docs.python.org/3/c-api/iter.html#c.PyIter_Next",
+    "title": "Iterator Protocol — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Abstract Objects Layer » Iterator Protocol | Theme Auto Light Dark | Iterator Protocol¶ There are two functions specifically for working with iterators. int PyIter_Check(PyObject *o)¶ Part of the Stable ABI since version 3.8. Return non-zero if the object o can be safely passed to PyIter_NextItem() and 0 otherwise. This function always succeeds. int PyAIter_Check(PyObject *o)¶ Part of the Stable ABI since version 3.10. Return non-zero if the object o provides the AsyncIterator protocol, and 0 otherwise. This function always succeeds. Added in version 3.10. int PyIter_NextItem(PyObject *iter, PyObject **item)¶ Part of the Stable ABI since version 3.14. Return 1 and set item to a strong reference of the next value of the iterator iter on success. Return 0 and set item to NULL if there are no remaining values. Return -1, set item to NULL and set an exception on error. Added in version 3.14. PyObject *PyIter_Next(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. This is an older version of PyIter_NextItem(), which is retained for backwards compatibility. Prefer PyIter_NextItem(). Return the next value from the iterator o. The object must be an iterator according to PyIter_Check() (it is up to the caller to check this). If there are no remaining values, returns NULL with no exception set. If an error occurs while retrieving the item, returns NULL and passes along the exception. type PySendResult¶ The enum value used to represent different results of PyIter_Send(). Added in version 3.10. PySendResult PyIter_Send(PyObject *iter, PyObject *arg, PyObject **presult)¶ Part of the Stable ABI since version 3.10. Sends the arg value into the iterator iter. Returns: PYGEN_RETURN if iterator returns. Return value is returned via presult. PYGEN_NEXT if iterator yields. Yielded value is returned via presult. PYGEN_ERROR if iterator has raised and exception. presult is set to NULL. Added in version 3.10. Previous topic Mapping Protocol Next topic Buffer Protocol This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Abstract Objects Layer » Iterator Protocol | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 00:59:57.223281"
+  },
+  {
+    "id": 947,
+    "url": "https://docs.python.org/3/library/shutil.html#module-shutil",
+    "title": "shutil — High-level file operations — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » File and Directory Access » shutil — High-level file operations | Theme Auto Light Dark | shutil — High-level file operations¶ Source code: Lib/shutil.py The shutil module offers a number of high-level operations on files and collections of files. In particular, functions are provided which support file copying and removal. For operations on individual files, see also the os module. Warning Even the higher-level file copying functions (shutil.copy(), shutil.copy2()) cannot copy all file metadata. On POSIX platforms, this means that file owner and group are lost as well as ACLs. On Mac OS, the resource fork and other metadata are not used. This means that resources will be lost and file type and creator codes will not be correct. On Windows, file owners, ACLs and alternate data streams are not copied. Directory and files operations¶ shutil.copyfileobj(fsrc, fdst[, length])¶ Copy the contents of the file-like object fsrc to the file-like object fdst. The integer length, if given, is the buffer size. In particular, a negative length value means to copy the data without looping over the source data in chunks; by default the data is read in chunks to avoid uncontrolled memory consumption. Note that if the current file position of the fsrc object is not 0, only the contents from the current file position to the end of the file will be copied. copyfileobj() will not guarantee that the destination stream has been flushed on completion of the copy. If you want to read from the destination at the completion of the copy operation (for example, reading the contents of a temporary file that has been copied from a HTTP stream), you must ensure that you have called flush() or close() on the file-like object before attempting to read the destination file. shutil.copyfile(src, dst, *, follow_symlinks\u003dTrue)¶ Copy the contents (no metadata) of the file named src to a file named dst and return dst in the most efficient way possible. src and dst are path-like objects or path names given as strings. dst must be the complete target file name; look at copy() for a copy that accepts a target directory path. If src and dst specify the same file, SameFileError is raised. The destination location must be writable; otherwise, an OSError exception will be raised. If dst already exists, it will be replaced. Special files such as character or block devices and pipes cannot be copied with this function. If follow_symlinks is false and src is a symbolic link, a new symbolic link will be created instead of copying the file src points to. Raises an auditing event shutil.copyfile with arguments src, dst. Changed in version 3.3: IOError used to be raised instead of OSError. Added follow_symlinks argument. Now returns dst. Changed in version 3.4: Raise SameFileError instead of Error. Since the former is a subclass of the latter, this change is backward compatible. Changed in version 3.8: Platform-specific fast-copy syscalls may be used internally in order to copy the file more efficiently. See Platform-dependent efficient copy operations section. exception shutil.SpecialFileError¶ This exception is raised when copyfile() or copytree() attempt to copy a named pipe. Added in version 2.7. exception shutil.SameFileError¶ This exception is raised if source and destination in copyfile() are the same file. Added in version 3.4. shutil.copymode(src, dst, *, follow_symlinks\u003dTrue)¶ Copy the permission bits from src to dst. The file contents, owner, and group are unaffected. src and dst are path-like objects or path names given as strings. If follow_symlinks is false, and both src and dst are symbolic links, copymode() will attempt to modify the mode of dst itself (rather than the file it points to). This functionality is not available on every platform; please see copystat() for more information. If copymode() cannot modify symbolic links on the local platform, and it is asked to do so, it will do nothing and return. Raises an auditing event shutil.copymode with arguments src, dst. Changed in version 3.3: Added follow_symlinks argument. shutil.copystat(src, dst, *, follow_symlinks\u003dTrue)¶ Copy the permission bits, last access time, last modification time, and flags from src to dst. On Linux, copystat() also copies the “extended attributes” where possible. The file contents, owner, and group are unaffected. src and dst are path-like objects or path names given as strings. If follow_symlinks is false, and src and dst both refer to symbolic links, copystat() will operate on the symbolic links themselves rather than the files the symbolic links refer to—reading the information from the src symbolic link, and writing the information to the dst symbolic link. Note Not all platforms provide the ability to examine and modify symbolic links. Python itself can tell you what functionality is locally available. If os.chmod in os.supports_follow_symlinks is Tru",
+    "scrapedAt": "2026-05-09 00:59:55.950228"
+  },
+  {
+    "id": 946,
+    "url": "https://github.com/python/cpython/issues/124367",
+    "title": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member gaogaotiantian commented Sep 23, 2024 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. This is a draft because we still need to decide on the format. I\u0027m aiming for something short, the original repr of asyncio task is just too long. For now it\u0027s like gaotian@gaotian-mba cpython % ./python.exe example.py             \nTask-1: \u003cmain pending\u003e\n\u003e /Users/gaotian/programs/cpython/example.py(11)main()\n-\u003e breakpoint()\n If pdb stops in an asyncio task, it will print an extra line showing the name of the task (Task-1), the name of the coroutine (main) and the status (pending). As of now I think it will always be pending because we hit a breakpoint inside. However, we will add the feature to list all asyncio tasks in the future and allow switching between those, so we will have more status and it will be some important information. I will work on the docs and the tests as long as the format is okay. Issue: Make pdb asyncio aware #121468 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👀 1 jloehel reacted with eyes emoji All reactions 👀 1 reaction Show asyncio information in pdb 5c52a71 gaogaotiantian requested a review from iritkatriel September 23, 2024 19:01 bedevere-app Bot mentioned this pull request Sep 23, 2024 Make pdb asyncio aware #121468 Open Wulian233 reviewed Sep 23, 2024 View reviewed changes Comment thread Lib/pdb.py import codeop import pprint import signal import asyncio Copy link Copy Markdown Contributor Wulian233 Sep 23, 2024 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Line 614 has deferred import of asyncio.base_futures, so we could consider adding a lazy import of asyncio at line 606 to improve import time? #109653 #118761 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Member Author gaogaotiantian Sep 23, 2024 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment asyncio will be used as long as pdb is used. pdb is not an module that is often imported explicitly or implicitly, I don\u0027t think import time of pdb is specifically critical. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Contributor Wulian233 Sep 23, 2024 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment You\u0027re right. I didn\u0027t realize that at the time Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions iritkatriel requested a review from kumaraditya303 September 23, 2024 20:30 kumaraditya303 reviewed Nov 1, 2024 View reviewed changes Comment thread Lib/pdb.py Outdated def _get_asyncio_loop_and_task(self): try: loop \u003d asyncio.get_event_loop() Copy link Copy Markdown Contributor kumaraditya303 Nov 1, 2024 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment You can replace this with direct call to current_task and if it exists get loop from it, using get_event_loop can have unwanted consequences Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Member Author gaogaotiantian Nov 1, 2024 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Yeah I will change this. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions gaogaotiantian and others added 3 commits March 11, 2025 17:29 Merge branch \u0027main\u0027 into pdb-asyncio-basic a51ba04 Rem",
+    "scrapedAt": "2026-05-09 00:59:54.70149"
+  },
+  {
+    "id": 945,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._layout_",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 310, in __getitem__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function ordinal 0 not found\n\u003e\u003e\u003e\n Calling functions¶ You can call these functions like any other Python callable. This example uses the rand() functi",
+    "scrapedAt": "2026-05-09 00:59:51.199805"
+  },
+  {
     "id": 944,
     "url": "https://github.com/python/cpython/issues/124127",
     "title": "[C API] Make Py_REFCNT() opaque in limited C API 3.14 · Issue #124127 · python/cpython · GitHub",
@@ -6298,26 +6333,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 945,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._layout_"
-  },
-  {
-    "id": 946,
-    "url": "https://github.com/python/cpython/issues/124367"
-  },
-  {
-    "id": 947,
-    "url": "https://docs.python.org/3/library/shutil.html#module-shutil"
-  },
-  {
-    "id": 948,
-    "url": "https://docs.python.org/3/c-api/iter.html#c.PyIter_Next"
-  },
-  {
-    "id": 949,
-    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.start"
   },
   {
     "id": 950,
@@ -160020,10 +160035,967 @@ window.searchData = [
     "id": 139910,
     "url": "https://github.com/python/cpython/issues/124127#top",
     "parentUrl": "https://github.com/python/cpython/issues/124127"
+  },
+  {
+    "id": 140155,
+    "url": "https://github.com/python/cpython/pull/124367#pullrequestreview-2685571678",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140156,
+    "url": "https://github.com/python/cpython/pull/124367#issuecomment-2725539083",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140159,
+    "url": "https://github.com/python/cpython/pull/124367#issuecomment-2725675100",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140160,
+    "url": "https://buildbot.python.org/#/builders/259/builds/2320",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140161,
+    "url": "https://buildbot.python.org/#/builders/1610/builds/1028",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140162,
+    "url": "https://github.com/python/cpython/pull/124367#issuecomment-2728269702",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140164,
+    "url": "https://github.com/python/cpython/pull/124367#event-16698732663",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140166,
+    "url": "https://github.com/python/cpython/pull/124367#issuecomment-2728171702",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140167,
+    "url": "https://github.com/python/cpython/pull/124367/files/5c52a717707cf31b276587d84d95e36a8318d6b3#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140168,
+    "url": "https://github.com/python/cpython/pull/124367#issuecomment-2731245227",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140169,
+    "url": "https://github.com/python/cpython/pull/124367/files/dcb96df5baba1804dd3f0d485915729e66032e42",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140170,
+    "url": "https://github.com/python/cpython/commit/27fc62cf4f6a9bbb4698299f02b8a519cbefdf53",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140171,
+    "url": "https://github.com/python/cpython/pull/124367/commits/5c52a717707cf31b276587d84d95e36a8318d6b3",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140172,
+    "url": "https://github.com/python/cpython/pull/124367#discussion_r1826124594",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140173,
+    "url": "https://buildbot.python.org/#/builders/1594/builds/1586",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140174,
+    "url": "https://github.com/plashchynski",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140176,
+    "url": "https://github.com/python/cpython/pull/124367#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140177,
+    "url": "https://github.com/python/cpython/pull/124367/commits/490a6d9e3ca163c9ed6d1ff2f757676476cd6d35",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140179,
+    "url": "https://buildbot.python.org/#/builders/320/builds/2113",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140180,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F124367",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140181,
+    "url": "https://github.com/python/cpython/pull/124367/files/5c52a717707cf31b276587d84d95e36a8318d6b3",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140183,
+    "url": "https://github.com/python/cpython/pull/124367#ref-pullrequest-2926705830",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140184,
+    "url": "https://github.com/python/cpython/pull/124367#event-16779215390",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140185,
+    "url": "https://github.com/python/cpython/pull/124367#ref-pullrequest-2921126731",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140186,
+    "url": "https://github.com/python/cpython/pull/124367#event-14370060394",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140187,
+    "url": "https://github.com/python/cpython/pull/131388",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140188,
+    "url": "https://github.com/python/cpython/pull/124367#discussion_r1826047081",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140190,
+    "url": "https://github.com/python/cpython/pull/124367/files/9c66d9b92327ca3ed42b96e41dfe1681a125febb",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140191,
+    "url": "https://github.com/python/cpython/pull/124367#issuecomment-2730126997",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140193,
+    "url": "https://github.com/python/cpython/pull/124367#event-16778461091",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140194,
+    "url": "https://github.com/python/cpython/pull/124367#event-16779216249",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140196,
+    "url": "https://github.com/python/cpython/pull/124367/files/dcb96df5baba1804dd3f0d485915729e66032e42#diff-a457673d485d0a443c578e17925b544eb192a9189e5863c79354b16d7c1d1f28",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140197,
+    "url": "https://github.com/python/cpython/pull/124367#issuecomment-2725635206",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140198,
+    "url": "https://github.com/python/cpython/pull/124367#issuecomment-2725566162",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140199,
+    "url": "https://github.com/python/cpython/pull/124367#issue-2543421129",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140200,
+    "url": "https://github.com/python/cpython/pull/124367#ref-issue-2394261685",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140201,
+    "url": "https://github.com/python/cpython/pull/124367#issuecomment-2725768916",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140202,
+    "url": "https://github.com/python/cpython/pull/124367#pullrequestreview-2686352975",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140203,
+    "url": "https://buildbot.python.org/#/builders/75/builds/2315",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140205,
+    "url": "https://github.com/python/cpython/pull/124367#pullrequestreview-2323146414",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140206,
+    "url": "https://buildbot.python.org/#/builders/1613/builds/957",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140209,
+    "url": "https://github.com/python/cpython/pull/131258",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140210,
+    "url": "https://github.com/python/cpython/pull/124367/commits/a51ba04c8ba36c6b75f68dd15dac39f8602c3684",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140211,
+    "url": "https://github.com/python/cpython/pull/124367#pullrequestreview-2410463039",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140213,
+    "url": "https://github.com/python/cpython/pull/124367#commits-pushed-297a684",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140214,
+    "url": "https://buildbot.python.org/#/builders/1368/builds/2817",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140215,
+    "url": "https://github.com/python/cpython/pull/124367#discussion_r1771975418",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140216,
+    "url": "https://buildbot.python.org/#/builders/1591/builds/1479",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140217,
+    "url": "https://github.com/python/cpython/pull/124367#issuecomment-2725638145",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140219,
+    "url": "https://github.com/python/cpython/pull/124367/commits/297a6841c9d11e04284e4a15cf500e96c0c4ee8b",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140220,
+    "url": "https://github.com/plashchynski/cpython/commit/7d1d4d018159d32df5f191619d885803b0aae739",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140222,
+    "url": "https://buildbot.python.org/#/builders/1380/builds/2883",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140223,
+    "url": "https://github.com/python/cpython/pull/124367#discussion_r1772040948",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140224,
+    "url": "https://github.com/python/cpython/pull/124367#ref-commit-7d1d4d0",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140225,
+    "url": "https://github.com/python/cpython/pull/124367",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140226,
+    "url": "https://github.com/python/cpython/pull/124367#issuecomment-2725633516",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140229,
+    "url": "https://github.com/python/cpython/pull/124367/commits/9c66d9b92327ca3ed42b96e41dfe1681a125febb",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140231,
+    "url": "https://github.com/python/cpython/pull/124367/commits/dcb96df5baba1804dd3f0d485915729e66032e42",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140232,
+    "url": "https://github.com/python/cpython/pull/124367#event-16698732239",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140233,
+    "url": "https://devguide.python.org/buildbots/",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140234,
+    "url": "https://github.com/python/cpython/pull/124367#event-14368991420",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140235,
+    "url": "https://github.com/python/cpython/pull/124367#issuecomment-2715886614",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140236,
+    "url": "https://github.com/python/cpython/pull/124367#issuecomment-2725642398",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140237,
+    "url": "https://github.com/python/cpython/pull/124367/commits/ae16c8bdc6fbe507c3d54c442fea2c047bbea0b5",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140238,
+    "url": "https://github.com/python/cpython/pull/124367#commits-pushed-a51ba04",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140240,
+    "url": "https://github.com/python/cpython/pull/124367#discussion_r1772302954",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140241,
+    "url": "https://github.com/python/cpython/pull/124367#issuecomment-2725531091",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140242,
+    "url": "https://github.com/python/cpython/pull/124367#issuecomment-2725636597",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140243,
+    "url": "https://github.com/python/cpython/pull/124367#event-16779216306",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140244,
+    "url": "https://buildbot.python.org/#/builders/1589/builds/1115",
+    "parentUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "id": 140245,
+    "url": "https://docs.python.org/3/library/shutil.html#archiving-example",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140250,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.copyfileobj",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140251,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil-archiving-example",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140254,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.unregister_archive_format",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140255,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.copymode",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140257,
+    "url": "https://docs.python.org/3/library/shutil.html#copytree-example",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140258,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.copytree",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140259,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/shutil.py",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140260,
+    "url": "http://www.manpagez.com/man/3/copyfile/",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140261,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.rmtree.avoids_symlink_attacks",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140263,
+    "url": "https://docs.python.org/3/library/shutil.html#directory-and-files-operations",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140264,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.disk_usage",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140266,
+    "url": "https://docs.python.org/3/library/shutil.html#querying-the-size-of-the-output-terminal",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140268,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.Error",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140271,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.ignore_patterns",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140275,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.get_unpack_formats",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140276,
+    "url": "https://docs.python.org/3/library/shutil.html#",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140280,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.register_archive_format",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140281,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.copystat",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140282,
+    "url": "https://peps.python.org/pep-0282/",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140286,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.unpack_archive",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140293,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/shutil.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140295,
+    "url": "https://pubs.opengroup.org/onlinepubs/7908799/xbd/envvar.html#tag_002_003",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140296,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.copyfile",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140299,
+    "url": "https://docs.python.org/3/library/shutil.html#archiving-example-with-base-dir",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140301,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d33671",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140302,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.copy2",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140304,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.unregister_unpack_format",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140307,
+    "url": "https://docs.python.org/3/library/shutil.html#platform-dependent-efficient-copy-operations",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140309,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.make_archive",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140310,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil-archiving-example-with-basedir",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140311,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil-rmtree-example",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140317,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.get_archive_formats",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140322,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.copy",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140323,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.SpecialFileError",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140324,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil-platform-dependent-efficient-copy-operations",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140326,
+    "url": "https://docs.python.org/3/library/shutil.html#rmtree-example",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140332,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140340,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.register_unpack_format",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140347,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.SameFileError",
+    "parentUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "id": 140352,
+    "url": "https://docs.python.org/3/c-api/iter.html#iterator-protocol",
+    "parentUrl": "https://docs.python.org/3/c-api/iter.html#c.PyIter_Next"
+  },
+  {
+    "id": 140355,
+    "url": "https://docs.python.org/3/c-api/iter.html#c.PySendResult",
+    "parentUrl": "https://docs.python.org/3/c-api/iter.html#c.PyIter_Next"
+  },
+  {
+    "id": 140357,
+    "url": "https://docs.python.org/3/c-api/iter.html#c.PyAIter_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/iter.html#c.PyIter_Next"
+  },
+  {
+    "id": 140361,
+    "url": "https://docs.python.org/3/c-api/iter.html#c.PyIter_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/iter.html#c.PyIter_Next"
+  },
+  {
+    "id": 140363,
+    "url": "https://docs.python.org/3/c-api/buffer.html",
+    "parentUrl": "https://docs.python.org/3/c-api/iter.html#c.PyIter_Next"
+  },
+  {
+    "id": 140368,
+    "url": "https://docs.python.org/3/c-api/iter.html#c.PyIter_Send",
+    "parentUrl": "https://docs.python.org/3/c-api/iter.html#c.PyIter_Next"
+  },
+  {
+    "id": 140374,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/iter.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/iter.html#c.PyIter_Next"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread.start"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread.start"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Iterator Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/iter.html#c.PyIter_Next"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Iterator Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/iter.html#c.PyIter_Next"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "shutil — High-level file operations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "shutil — High-level file operations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/shutil.html#module-shutil"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d60\u0026v\u003d4",
+    "alt": "Wulian233",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d48\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d48\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d60\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d48\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d60\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d60\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d80\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d80\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/30833?s\u003d40\u0026v\u003d4",
+    "alt": "@plashchynski",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d80\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d40\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d52\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d52\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d52\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d52\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d52\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-121468: Show asyncio information in pdb by gaogaotiantian · Pull Request #124367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124367"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._layout_"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._layout_"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d80",
     "alt": "@vstinner",
