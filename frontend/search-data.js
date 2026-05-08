@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1589,
+    "url": "https://github.com/python/cpython/issues/129939",
+    "title": "Add darkmode support for difflib\u0027s comparison pages · Issue #129939 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add darkmode support for difflib\u0027s comparison pages #129939 New issue Copy link New issue Copy link Closed Closed Add darkmode support for difflib\u0027s comparison pages#129939 Copy link Labels type-featureA feature request or enhancementA feature request or enhancement Description Wulian233 opened on Feb 10, 2025 Issue body actions Feature or enhancement Proposal: Previously, a similar change was made in #123475, which was considered a new feature. Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-129939: Add darkmode support for difflib\u0027s comparison pages #129940 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:25:49.189322"
+  },
+  {
+    "id": 1588,
+    "url": "https://github.com/python/cpython/issues/71339",
+    "title": "Additional assert methods for unittest · Issue #71339 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Additional assert methods for unittest #71339 New issue Copy link New issue Copy link Closed Closed Additional assert methods for unittest#71339 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytestsTests in the Lib/test dirTests in the Lib/test dirtype-featureA feature request or enhancementA feature request or enhancement Description serhiy-storchaka opened on May 29, 2016 Issue body actions BPO 27152 Nosy @rhettinger, @rbtcollins, @ezio-melotti, @bitdancer, @voidspace, @serhiy-storchaka, @PythonCHB Files extra_assertions.patch Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2016-05-29.15:25:19.795\u003e\nlabels \u003d [\u0027type-feature\u0027, \u0027tests\u0027]\ntitle \u003d \u0027Additional assert methods for unittest\u0027\nupdated_at \u003d \u003cDate 2016-06-22.14:03:21.198\u003e\nuser \u003d \u0027https://github.com/serhiy-storchaka\u0027 bugs.python.org fields: activity \u003d \u003cDate 2016-06-22.14:03:21.198\u003e\nactor \u003d \u0027r.david.murray\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Tests\u0027]\ncreation \u003d \u003cDate 2016-05-29.15:25:19.795\u003e\ncreator \u003d \u0027serhiy.storchaka\u0027\ndependencies \u003d []\nfiles \u003d [\u002743047\u0027]\nhgrepos \u003d []\nissue_num \u003d 27152\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 10.0\nmessages \u003d [\u0027266600\u0027, \u0027266601\u0027, \u0027266620\u0027, \u0027266627\u0027, \u0027266675\u0027, \u0027266682\u0027, \u0027267175\u0027, \u0027267185\u0027, \u0027268877\u0027, \u0027269074\u0027]\nnosy_count \u003d 8.0\nnosy_names \u003d [\u0027rhettinger\u0027, \u0027rbcollins\u0027, \u0027ezio.melotti\u0027, \u0027r.david.murray\u0027, \u0027michael.foord\u0027, \u0027Pam.McANulty\u0027, \u0027serhiy.storchaka\u0027, \u0027ChrisBarker\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue27152\u0027\nversions \u003d [\u0027Python 3.6\u0027] Linked PRs gh-71339: Add additional assertion methods for unittest #128707 [3.13] gh-71339: Add additional assertion methods in test.support (GH-128707) #128815 gh-71339: Improve error report for types in assertHasAttr() and assertNotHasAttr() #128818 gh-71339: Use assertIsSubclass() and assertNotIsSubclass() in test_collections #128824 gh-71339: Use new assertion methods in test_typing #128825 gh-71339: Use new assertion methods in test_abc #128826 gh-71339: Use assertIsSubclass() and assertNotIsSubclass() in test_decimal #128827 gh-71339: Use new assertion methods in test_logging #128828 gh-71339: Use new assertion methods in test_functools #128829 gh-71339: Use new assertion methods in test_sqlite3 #128830 gh-71339: Use new assertion methods in the multiprocessing tests #128847 gh-71339: Use new assertion methods in test_traceback #128848 gh-71339: Use new assertion methods in tests #129046 gh-71339: Use new assertion methods in test_asyncio #129051 gh-71339: Use new assertion methods in test_capi #129053 gh-71339: Use new assertion methods in test_ctypes #129054 gh-71339: Use new assertion methods in the email tests #129055 gh-71339: Use new assertion methods in the urllib tests #129056 gh-71339: Use new assertion methods in the http tests #129058 [3.12] gh-71339: Add additional assertion methods in test.support (GH-128707) (GH-128815) #129059 gh-71339: Use new assertion methods in test_import and test_importlib #129052 [3.13] gh-71339: Use new assertion methods in test_import and test_importlib (GH-129052) #129123 gh-71339: Use new assertion methods in test_enum #129128 gh-71339: Fix an order-dependent failure in test_unittest #129133 gh-71339: Use new assertion methods in test_idle #129213 [3.13] gh-71339: Use new assertion methods in test_idle (GH-129213) #129237 [3.12] gh-71339: Use new assertion methods in test_idle (GH-129213) #129238 [3.13] gh-71339: Use new assertion methods in test_idle #129314 [3.12] gh-71339: Use new assertion methods in test_idle (GH-129314) #129315 [3.13] gh-71339: Use new assertion methods in the urllib tests (GH-129056) #132499 [3.13] gh-71339: Use new assertion methods in the http tests (GH-129058) #132500 [3.13] gh-71339: Use new assertion methods in the email tests (GH-129055) #132501 [3.14] gh-71339: Use new assertion methods in tests (GH-129046) #134498 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytestsTests in the Lib/test dirTests in the Lib/test dirtype-featureA feature request or enhancementA feature request or enhancement Projects Unittest \u0026 doctest issues ",
+    "scrapedAt": "2026-05-09 01:25:47.232365"
+  },
+  {
+    "id": 1587,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#ssl",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:25:44.572833"
+  },
+  {
+    "id": 1585,
+    "url": "https://docs.python.org/3/library/os.html#os.spawnl",
+    "title": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » os — Miscellaneous operating system interfaces | Theme Auto Light Dark | os — Miscellaneous operating system interfaces¶ Source code: Lib/os.py This module provides a portable way of using operating system dependent functionality. If you just want to read or write a file see open(), if you want to manipulate paths, see the os.path module, and if you want to read all the lines in all the files on the command line see the fileinput module. For creating temporary files and directories see the tempfile module, and for high-level file and directory handling see the shutil module. Notes on the availability of these functions: The design of all built-in operating system dependent modules of Python is such that as long as the same functionality is available, it uses the same interface; for example, the function os.stat(path) returns stat information about path in the same format (which happens to have originated with the POSIX interface). Extensions peculiar to a particular operating system are also available through the os module, but using them is of course a threat to portability. All functions accepting path or file names accept both bytes and string objects, and result in an object of the same type, if a path or file name is returned. On VxWorks, os.popen, os.fork, os.execv and os.spawn*p* are not supported. On WebAssembly platforms, Android and iOS, large parts of the os module are not available or behave differently. APIs related to processes (e.g. fork(), execve()) and resources (e.g. nice()) are not available. Others like getuid() and getpid() are emulated or stubs. WebAssembly platforms also lack support for signals (e.g. kill(), wait()). Note All functions in this module raise OSError (or subclasses thereof) in the case of invalid or inaccessible file names and paths, or other arguments that have the correct type, but are not accepted by the operating system. exception os.error¶ An alias for the built-in OSError exception. os.name¶ The name of the operating system dependent module imported. The following names have currently been registered: \u0027posix\u0027, \u0027nt\u0027, \u0027java\u0027. See also sys.platform has a finer granularity. os.uname() gives system-dependent version information. The platform module provides detailed checks for the system’s identity. File Names, Command Line Arguments, and Environment Variables¶ In Python, file names, command line arguments, and environment variables are represented using the string type. On some systems, decoding these strings to and from bytes is necessary before passing them to the operating system. Python uses the filesystem encoding and error handler to perform this conversion (see sys.getfilesystemencoding()). The filesystem encoding and error handler are configured at Python startup by the PyConfig_Read() function: see filesystem_encoding and filesystem_errors members of PyConfig. Changed in version 3.1: On some systems, conversion using the file system encoding may fail. In this case, Python uses the surrogateescape encoding error handler, which means that undecodable bytes are replaced by a Unicode character U+DCxx on decoding, and these are again translated to the original byte on encoding. The file system encoding must guarantee to successfully decode all bytes below 128. If the file system encoding fails to provide this guarantee, API functions can raise UnicodeError. See also the locale encoding. Python UTF-8 Mode¶ Added in version 3.7: See PEP 540 for more details. The Python UTF-8 Mode ignores the locale encoding and forces the usage of the UTF-8 encoding: Use UTF-8 as the filesystem encoding. sys.getfilesystemencoding() returns \u0027utf-8\u0027. locale.getpreferredencoding() returns \u0027utf-8\u0027 (the do_setlocale argument has no effect). sys.stdin, sys.stdout, and sys.stderr all use UTF-8 as their text encoding, with the surrogateescape error handler being enabled for sys.stdin and sys.stdout (sys.stderr continues to use backslashreplace as it does in the default locale-aware mode) On Unix, os.device_encoding() returns \u0027utf-8\u0027 rather than the device encoding. Note that the standard stream settings in UTF-8 mode can be overridden by PYTHONIOENCODING (just as they can be in the default locale-aware mode). As a consequence of the changes in those lower level APIs, other higher level APIs also exhibit different default behaviours: Command line arguments, environment variables and filenames are decoded to text using the UTF-8 encoding. os.fsdecode() and os.fsencode() use the UTF-8 encoding. open(), io.open(), and codecs.open() use the UTF-8 encoding by default. However, they still use the strict error handler by default so that attempting to open a binary file in text mode is likely to raise an exception rather than producing nonsense data. The Python UTF-8 Mode is enabled if the LC_CTYPE locale is C or POSIX at Python startup (see the PyConfig_R",
+    "scrapedAt": "2026-05-09 01:25:43.301486"
+  },
+  {
+    "id": 1584,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.urlretrieve",
+    "title": "urllib.request — Extensible library for opening URLs — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Protocols and Support » urllib.request — Extensible library for opening URLs | Theme Auto Light Dark | urllib.request — Extensible library for opening URLs¶ Source code: Lib/urllib/request.py The urllib.request module defines functions and classes which help in opening URLs (mostly HTTP) in a complex world — basic and digest authentication, redirections, cookies and more. See also The Requests package is recommended for a higher-level HTTP client interface. Warning On macOS it is unsafe to use this module in programs using os.fork() because the getproxies() implementation for macOS uses a higher-level system API. Set the environment variable no_proxy to * to avoid this problem (e.g. os.environ[\"no_proxy\"] \u003d \"*\"). Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. The urllib.request module defines the following functions: urllib.request.urlopen(url, data\u003dNone, [timeout, ]*, context\u003dNone)¶ Open url, which can be either a string containing a valid, properly encoded URL, or a Request object. data must be an object specifying additional data to be sent to the server, or None if no such data is needed. See Request for details. urllib.request module uses HTTP/1.1 and includes Connection:close header in its HTTP requests. The optional timeout parameter specifies a timeout in seconds for blocking operations like the connection attempt (if not specified, the global default timeout setting will be used). This actually only works for HTTP, HTTPS and FTP connections. If context is specified, it must be a ssl.SSLContext instance describing the various SSL options. See HTTPSConnection for more details. This function always returns an object which can work as a context manager and has the properties url, headers, and status. See urllib.response.addinfourl for more detail on these properties. For HTTP and HTTPS URLs, this function returns a http.client.HTTPResponse object slightly modified. In addition to the three new methods above, the msg attribute contains the same information as the reason attribute — the reason phrase returned by server — instead of the response headers as it is specified in the documentation for HTTPResponse. For FTP, file, and data URLs, this function returns a urllib.response.addinfourl object. Raises URLError on protocol errors. Note that None may be returned if no handler handles the request (though the default installed global OpenerDirector uses UnknownHandler to ensure this never happens). In addition, if proxy settings are detected (for example, when a *_proxy environment variable like http_proxy is set), ProxyHandler is default installed and makes sure the requests are handled through the proxy. The legacy urllib.urlopen function from Python 2.6 and earlier has been discontinued; urllib.request.urlopen() corresponds to the old urllib2.urlopen. Proxy handling, which was done by passing a dictionary parameter to urllib.urlopen, can be obtained by using ProxyHandler objects. The default opener raises an auditing event urllib.Request with arguments fullurl, data, headers, method taken from the request object. Changed in version 3.2: cafile and capath were added. HTTPS virtual hosts are now supported if possible (that is, if ssl.HAS_SNI is true). data can be an iterable object. Changed in version 3.3: cadefault was added. Changed in version 3.4.3: context was added. Changed in version 3.10: HTTPS connection now send an ALPN extension with protocol indicator http/1.1 when no context is given. Custom context should set ALPN protocols with set_alpn_protocols(). Changed in version 3.13: Remove cafile, capath and cadefault parameters: use the context parameter instead. urllib.request.install_opener(opener)¶ Install an OpenerDirector instance as the default global opener. Installing an opener is only necessary if you want urlopen to use that opener; otherwise, simply call OpenerDirector.open() instead of urlopen(). The code does not check for a real OpenerDirector, and any class with the appropriate interface will work. urllib.request.build_opener([handler, ...])¶ Return an OpenerDirector instance, which chains the handlers in the order given. handlers can be either instances of BaseHandler, or subclasses of BaseHandler (in which case it must be possible to call the constructor without any parameters). Instances of the following classes will be in front of the handlers, unless the handlers contain them, instances of them or subclasses of them: ProxyHandler (if proxy settings are detected), UnknownHandler, HTTPHandler, HTTPDefaultErrorHandler, HTTPRedirectHandler, FTPHandler, FileHandler, HTTPErrorProcessor. If the Python installation has SSL support (i.e., if the ssl module can be imported), HTTPSHandler will also be added. A BaseHandler subclass may also change its handler_order attribute to modify its ",
+    "scrapedAt": "2026-05-09 01:25:42.017848"
+  },
+  {
     "id": 1583,
     "url": "https://github.com/python/cpython/issues/118824",
     "title": "Remove deprecated `master_open` and `slave_open` from `pty` · Issue #118824 · python/cpython · GitHub",
@@ -10673,26 +10708,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1584,
-    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.urlretrieve"
-  },
-  {
-    "id": 1585,
-    "url": "https://docs.python.org/3/library/os.html#os.spawnl"
-  },
-  {
-    "id": 1587,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#ssl"
-  },
-  {
-    "id": 1588,
-    "url": "https://github.com/python/cpython/issues/71339"
-  },
-  {
-    "id": 1589,
-    "url": "https://github.com/python/cpython/issues/129939"
   },
   {
     "id": 1590,
@@ -240390,10 +240405,306 @@ window.searchData = [
     "id": 342413,
     "url": "https://github.com/python/cpython/issues/118824#start-of-content",
     "parentUrl": "https://github.com/python/cpython/issues/118824"
+  },
+  {
+    "id": 344534,
+    "url": "https://github.com/python/cpython/pull/129237",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344535,
+    "url": "https://github.com/python/cpython/pull/129314",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344537,
+    "url": "https://github.com/python/cpython/pull/128829",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344538,
+    "url": "https://github.com/python/cpython/pull/128707",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344539,
+    "url": "https://github.com/python/cpython/pull/128828",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344540,
+    "url": "https://github.com/python/cpython/pull/128827",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344541,
+    "url": "https://github.com/python/cpython/pull/128826",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344542,
+    "url": "https://github.com/python/cpython/pull/128825",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344543,
+    "url": "https://github.com/PythonCHB",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344544,
+    "url": "https://github.com/python/cpython/pull/128824",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344545,
+    "url": "https://github.com/python/cpython/pull/129238",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344546,
+    "url": "https://github.com/python/cpython/pull/129315",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344547,
+    "url": "https://bugs.python.org/issue27152",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344549,
+    "url": "https://github.com/python/cpython/pull/134498",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344552,
+    "url": "https://github.com/python/cpython/pull/128818",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344553,
+    "url": "https://github.com/python/cpython/pull/128815",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344554,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22tests%22",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344556,
+    "url": "https://github.com/python/cpython/pull/129059",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344557,
+    "url": "https://github.com/python/cpython/pull/129213",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344559,
+    "url": "https://github.com/python/cpython/pull/129058",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344560,
+    "url": "https://github.com/python/cpython/pull/129056",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344561,
+    "url": "https://github.com/python/cpython/pull/129133",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344562,
+    "url": "https://github.com/python/cpython/pull/129055",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344563,
+    "url": "https://github.com/python/cpython/issues/71339#issue-1198953147",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344564,
+    "url": "https://github.com/python/cpython/pull/129054",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344565,
+    "url": "https://github.com/python/cpython/issues/71339#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344566,
+    "url": "https://github.com/python/cpython/pull/129053",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344567,
+    "url": "https://github.com/python/cpython/pull/129052",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344568,
+    "url": "https://github.com/python/cpython/pull/129051",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344571,
+    "url": "https://github.com/python/cpython/pull/132500",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344572,
+    "url": "https://github.com/python/cpython/pull/132501",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344573,
+    "url": "https://github.com/python/cpython/issues/71339#top",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344574,
+    "url": "https://github.com/python/cpython/pull/128848",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344575,
+    "url": "https://github.com/python/cpython/pull/128847",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344576,
+    "url": "https://bugs.python.org/file43047/extra_assertions.patch",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344577,
+    "url": "https://github.com/python/cpython/pull/128830",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344579,
+    "url": "https://github.com/python/cpython/pull/129046",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344580,
+    "url": "https://github.com/python/cpython/pull/129123",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344584,
+    "url": "https://github.com/python/cpython/pull/132499",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344586,
+    "url": "https://github.com/python/cpython/pull/129128",
+    "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 344588,
+    "url": "https://github.com/python/cpython/pull/129940",
+    "parentUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "id": 344591,
+    "url": "https://github.com/python/cpython/issues/129939#issue-2841475535",
+    "parentUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "id": 344593,
+    "url": "https://github.com/python/cpython/issues/129939#top",
+    "parentUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "id": 344594,
+    "url": "https://private-user-images.githubusercontent.com/71213467/411436548-5ad80601-15ea-4aec-8abe-2f494dd570e3.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjUwNDgsIm5iZiI6MTc3ODI2NDc0OCwicGF0aCI6Ii83MTIxMzQ2Ny80MTE0MzY1NDgtNWFkODA2MDEtMTVlYS00YWVjLThhYmUtMmY0OTRkZDU3MGUzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA1MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNTA4VDE4MjU0OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTkzNzgyMzcwZjA3ZTY1MGI2ZmMzOTIwYTA4NTZlOWY5ODk1YWMzNTM4MTk4ZDEyZTNhMmI1NmU4NDIxNGIxMjMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9._nt4RFUFIazC2PFy1LtPUIIL8RjJLspPI4erQtVw1iA",
+    "parentUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "id": 344595,
+    "url": "https://github.com/python/cpython/issues/129939#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "id": 344597,
+    "url": "https://github.com/python/cpython/pull/123475",
+    "parentUrl": "https://github.com/python/cpython/issues/129939"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@Wulian233",
+    "pageTitle": "Add darkmode support for difflib\u0027s comparison pages · Issue #129939 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@Wulian233",
+    "pageTitle": "Add darkmode support for difflib\u0027s comparison pages · Issue #129939 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/71213467/411436548-5ad80601-15ea-4aec-8abe-2f494dd570e3.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjUwNDgsIm5iZiI6MTc3ODI2NDc0OCwicGF0aCI6Ii83MTIxMzQ2Ny80MTE0MzY1NDgtNWFkODA2MDEtMTVlYS00YWVjLThhYmUtMmY0OTRkZDU3MGUzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA1MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNTA4VDE4MjU0OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTkzNzgyMzcwZjA3ZTY1MGI2ZmMzOTIwYTA4NTZlOWY5ODk1YWMzNTM4MTk4ZDEyZTNhMmI1NmU4NDIxNGIxMjMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9._nt4RFUFIazC2PFy1LtPUIIL8RjJLspPI4erQtVw1iA",
+    "alt": "Image",
+    "pageTitle": "Add darkmode support for difflib\u0027s comparison pages · Issue #129939 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Additional assert methods for unittest · Issue #71339 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Additional assert methods for unittest · Issue #71339 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#ssl"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#ssl"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.spawnl"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.spawnl"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.request — Extensible library for opening URLs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.urlretrieve"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.request — Extensible library for opening URLs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.urlretrieve"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
     "alt": "sobolevn",
