@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1029,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection",
+    "title": "Thread states and the global interpreter lock — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Thread states and the global interpreter lock | Theme Auto Light Dark | Thread states and the global interpreter lock¶ Unless on a free-threaded build of CPython, the Python interpreter is generally not thread-safe. In order to support multi-threaded Python programs, there’s a global lock, called the global interpreter lock or GIL, that must be held by a thread before accessing Python objects. Without the lock, even the simplest operations could cause problems in a multi-threaded program: for example, when two threads simultaneously increment the reference count of the same object, the reference count could end up being incremented only once instead of twice. As such, only a thread that holds the GIL may operate on Python objects or invoke Python’s C API. In order to emulate concurrency, the interpreter regularly tries to switch threads between bytecode instructions (see sys.setswitchinterval()). This is why locks are also necessary for thread-safety in pure-Python code. Additionally, the global interpreter lock is released around blocking I/O operations, such as reading or writing to a file. From the C API, this is done by detaching the thread state. The Python interpreter keeps some thread-local information inside a data structure called PyThreadState, known as a thread state. Each thread has a thread-local pointer to a PyThreadState; a thread state referenced by this pointer is considered to be attached. A thread can only have one attached thread state at a time. An attached thread state is typically analogous with holding the GIL, except on free-threaded builds. On builds with the GIL enabled, attaching a thread state will block until the GIL can be acquired. However, even on builds with the GIL disabled, it is still required to have an attached thread state, as the interpreter needs to keep track of which threads may access Python objects. Note Even on the free-threaded build, attaching a thread state may block, as the GIL can be re-enabled or threads might be temporarily suspended (such as during a garbage collection). Generally, there will always be an attached thread state when using Python’s C API, including during embedding and when implementing methods, so it’s uncommon to need to set up a thread state on your own. Only in some specific cases, such as in a Py_BEGIN_ALLOW_THREADS block or in a fresh thread, will the thread not have an attached thread state. If uncertain, check if PyThreadState_GetUnchecked() returns NULL. If it turns out that you do need to create a thread state, call PyThreadState_New() followed by PyThreadState_Swap(), or use the dangerous PyGILState_Ensure() function. Detaching the thread state from extension code¶ Most extension code manipulating the thread state has the following simple structure: Save the thread state in a local variable.\n... Do some blocking I/O operation ...\nRestore the thread state from the local variable.\n This is so common that a pair of macros exists to simplify it: Py_BEGIN_ALLOW_THREADS\n... Do some blocking I/O operation ...\nPy_END_ALLOW_THREADS\n The Py_BEGIN_ALLOW_THREADS macro opens a new block and declares a hidden local variable; the Py_END_ALLOW_THREADS macro closes the block. The block above expands to the following code: PyThreadState *_save;\n\n_save \u003d PyEval_SaveThread();\n... Do some blocking I/O operation ...\nPyEval_RestoreThread(_save);\n Here is how these functions work: The attached thread state implies that the GIL is held for the interpreter. To detach it, PyEval_SaveThread() is called and the result is stored in a local variable. By detaching the thread state, the GIL is released, which allows other threads to attach to the interpreter and execute while the current thread performs blocking I/O. When the I/O operation is complete, the old thread state is reattached by calling PyEval_RestoreThread(), which will wait until the GIL can be acquired. Note Performing blocking I/O is the most common use case for detaching the thread state, but it is also useful to call it over long-running native code that doesn’t need access to Python objects or Python’s C API. For example, the standard zlib and hashlib modules detach the thread state when compressing or hashing data. On a free-threaded build, the GIL is usually out of the question, but detaching the thread state is still required, because the interpreter periodically needs to block all threads to get a consistent view of Python objects without the risk of race conditions. For example, CPython currently suspends all threads for a short period of time while running the garbage collector. Warning Detaching the thread state can lead to unexpected behavior during interpreter finalization. See Cautions regarding runtime finalization for more details. APIs¶ The following macros are normally used without a trailing semicolon; look for example usage in the Python source distribution. Note The",
+    "scrapedAt": "2026-05-09 01:03:16.099067"
+  },
+  {
+    "id": 1028,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteStr",
+    "title": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Unicode Objects and Codecs | Theme Auto Light Dark | Unicode Objects and Codecs¶ Unicode Objects¶ Since the implementation of PEP 393 in Python 3.3, Unicode objects internally use a variety of representations, in order to allow handling the complete range of Unicode characters while staying memory efficient. There are special cases for strings where all code points are below 128, 256, or 65536; otherwise, code points must be below 1114112 (which is the full Unicode range). UTF-8 representation is created on demand and cached in the Unicode object. Note The Py_UNICODE representation has been removed since Python 3.12 with deprecated APIs. See PEP 623 for more information. Unicode Type¶ These are the basic Unicode object types used for the Unicode implementation in Python: PyTypeObject PyUnicode_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode type. It is exposed to Python code as str. PyTypeObject PyUnicodeIter_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode iterator type. It is used to iterate over Unicode string objects. type Py_UCS4¶ type Py_UCS2¶ type Py_UCS1¶ Part of the Stable ABI. These types are typedefs for unsigned integer types wide enough to contain characters of 32 bits, 16 bits and 8 bits, respectively. When dealing with single Unicode characters, use Py_UCS4. Added in version 3.3. type PyASCIIObject¶ type PyCompactUnicodeObject¶ type PyUnicodeObject¶ These subtypes of PyObject represent a Python Unicode object. In almost all cases, they shouldn’t be used directly, since all API functions that deal with Unicode objects take and return PyObject pointers. Added in version 3.3. The structure of a particular object can be determined using the following macros. The macros cannot fail; their behavior is undefined if their argument is not a Python Unicode object. PyUnicode_IS_COMPACT(o)¶ True if o uses the PyCompactUnicodeObject structure. Added in version 3.3. PyUnicode_IS_COMPACT_ASCII(o)¶ True if o uses the PyASCIIObject structure. Added in version 3.3. The following APIs are C macros and static inlined functions for fast checks and access to internal read-only data of Unicode objects: int PyUnicode_Check(PyObject *obj)¶ Return true if the object obj is a Unicode object or an instance of a Unicode subtype. This function always succeeds. int PyUnicode_CheckExact(PyObject *obj)¶ Return true if the object obj is a Unicode object, but not an instance of a subtype. This function always succeeds. Py_ssize_t PyUnicode_GET_LENGTH(PyObject *unicode)¶ Return the length of the Unicode string, in code points. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. Py_UCS1 *PyUnicode_1BYTE_DATA(PyObject *unicode)¶ Py_UCS2 *PyUnicode_2BYTE_DATA(PyObject *unicode)¶ Py_UCS4 *PyUnicode_4BYTE_DATA(PyObject *unicode)¶ Return a pointer to the canonical representation cast to UCS1, UCS2 or UCS4 integer types for direct character access. No checks are performed if the canonical representation has the correct character size; use PyUnicode_KIND() to select the right function. Added in version 3.3. PyUnicode_1BYTE_KIND¶ PyUnicode_2BYTE_KIND¶ PyUnicode_4BYTE_KIND¶ Return values of the PyUnicode_KIND() macro. Added in version 3.3. Changed in version 3.12: PyUnicode_WCHAR_KIND has been removed. int PyUnicode_KIND(PyObject *unicode)¶ Return one of the PyUnicode kind constants (see above) that indicate how many bytes per character this Unicode object uses to store its data. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void *PyUnicode_DATA(PyObject *unicode)¶ Return a void pointer to the raw Unicode buffer. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void PyUnicode_WRITE(int kind, void *data, Py_ssize_t index, Py_UCS4 value)¶ Write the code point value to the given zero-based index in a string. The kind value and data pointer must have been obtained from a string using PyUnicode_KIND() and PyUnicode_DATA() respectively. You must hold a reference to that string while calling PyUnicode_WRITE(). All requirements of PyUnicode_WriteChar() also apply. The function performs no checks for any of its requirements, and is intended for usage in loops. Added in version 3.3. Py_UCS4 PyUnicode_READ(int kind, void *data, Py_ssize_t index)¶ Read a code point from a canonical representation data (as obtained with PyUnicode_DATA()). No checks or ready calls are performed. Added in version 3.3. Py_UCS4 PyUnicode_READ_CHAR(PyObject *unicode, Py_ssize_t index)¶ Read a character from a Unicode object unicode, which must be in the “canonical” representation. This is less efficient than PyUnicode_READ() if you do multiple consecutive reads. Added in version 3.3. Py_U",
+    "scrapedAt": "2026-05-09 01:03:14.799819"
+  },
+  {
+    "id": 1027,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.setName",
+    "title": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » threading — Thread-based parallelism | Theme Auto Light Dark | threading — Thread-based parallelism¶ Source code: Lib/threading.py This module constructs higher-level threading interfaces on top of the lower level _thread module. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Introduction¶ The threading module provides a way to run multiple threads (smaller units of a process) concurrently within a single process. It allows for the creation and management of threads, making it possible to execute tasks in parallel, sharing memory space. Threads are particularly useful when tasks are I/O bound, such as file operations or making network requests, where much of the time is spent waiting for external resources. A typical use case for threading includes managing a pool of worker threads that can process multiple tasks concurrently. Here’s a basic example of creating and starting threads using Thread: import threading\nimport time\n\ndef crawl(link, delay\u003d3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks \u003d [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads \u003d []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t \u003d threading.Thread(target\u003dcrawl, args\u003d(link,), kwargs\u003d{\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()\n Changed in version 3.7: This module used to be optional, it is now always available. See also concurrent.futures.ThreadPoolExecutor offers a higher level interface to push tasks to a background thread without blocking execution of the calling thread, while still being able to retrieve their results when needed. queue provides a thread-safe interface for exchanging data between running threads. asyncio offers an alternative approach to achieving task level concurrency without requiring the use of multiple operating system threads. Note In the Python 2.x series, this module contained camelCase names for some methods and functions. These are deprecated as of Python 3.10, but they are still supported for compatibility with Python 2.5 and lower. CPython implementation detail: In CPython, due to the Global Interpreter Lock, only one thread can execute Python code at once (even though certain performance-oriented libraries might overcome this limitation). If you want your application to make better use of the computational resources of multi-core machines, you are advised to use multiprocessing or concurrent.futures.ProcessPoolExecutor. However, threading is still an appropriate model if you want to run multiple I/O-bound tasks simultaneously. GIL and performance considerations¶ Unlike the multiprocessing module, which uses separate processes to bypass the global interpreter lock (GIL), the threading module operates within a single process, meaning that all threads share the same memory space. However, the GIL limits the performance gains of threading when it comes to CPU-bound tasks, as only one thread can execute Python bytecode at a time. Despite this, threads remain a useful tool for achieving concurrency in many scenarios. As of Python 3.13, free-threaded builds can disable the GIL, enabling true parallel execution of threads, but this feature is not available by default (see PEP 703). Reference¶ This module defines the following functions: threading.active_count()¶ Return the number of Thread objects currently alive. The returned count is equal to the length of the list returned by enumerate(). The function activeCount is a deprecated alias for this function. threading.current_thread()¶ Return the current Thread object, corresponding to the caller’s thread of control. If the caller’s thread of control was not created through the threading module, a dummy thread object with limited functionality is returned. The function currentThread is a deprecated alias for this function. threading.excepthook(args, /)¶ Handle uncaught exception raised by Thread.run(). The args argument has the following attributes: exc_type: Exception type. exc_value: Exception value, can be None. exc_traceback: Exception traceback, can be None. thread: Thread which raised the exception, can be None. If exc_type is SystemExit, the exception is silently ignored. Otherwise, the exception is printed out on sys.stderr. If this function raises an exception, sys.excepthook() is called to handle it. threading.excepthook() can be overridden to control how uncaught exceptions raised by Thread.run() are handled. Storing exc_value using a custom hook can create a reference cycle. It should be ",
+    "scrapedAt": "2026-05-09 01:03:13.57239"
+  },
+  {
+    "id": 1026,
+    "url": "https://github.com/python/cpython/issues/133306",
+    "title": "add \\z as a synonym for \\Z in Python REs for standardization · Issue #133306 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k add \\z as a synonym for \\Z in Python REs for standardization #133306 New issue Copy link New issue Copy link Closed Closed add \\z as a synonym for \\Z in Python REs for standardization#133306 Copy link Assignees Labels topic-regextype-featureA feature request or enhancementA feature request or enhancement Description mstevenbrown opened on May 2, 2025 Issue body actions Feature or enhancement Proposal: Hello - I’m with the Austin Common Standards Revision Group - the joint technical working group established to develop and maintain the core open systems interfaces that are the POSIX™ 1003.1 (and former 1003.2) standards, ISO/IEC 9945, and the core of the Single UNIX Specification. We have had a request to unify/rationalize the regex behaviors for “anchor at string beginning” (^ is the closest in POSIX) and “anchor at string end” ($ is the closest in POSIX). A description of this problem in depth can be found here and a table that scopes the varied solutions across varying languages can be found here. Our working group has come to the conclusion that \\A and \\z are widely implemented across many ecosystems and are the most “standard” solution to the issue. We are asking if the Python community would consider adding “\\z” as a synonym for “\\Z” in their regex lexicon. Has this already been discussed elsewhere? I have already discussed this feature proposal on Discourse Links to previous discussion of this feature: https://discuss.python.org/t/proposal-add-z-as-a-synonym-for-z-in-python-res-for-standardization/90378/1 Linked PRs gh-133306: Support \\z as a synonym for \\Z in regular expressions #133314 gh-133306: Use \\z instead of \\Z in regular expressions in the stdlib #133337 gh-133306: Use \\z instead of \\Z in fnmatch.translate() and glob.translate() #133338 Reactions are currently unavailable Metadata Metadata Assignees serhiy-storchaka Labels topic-regextype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:03:12.37264"
+  },
+  {
+    "id": 1025,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#re",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:03:09.875065"
+  },
+  {
     "id": 1024,
     "url": "https://docs.python.org/3/library/uuid.html#uuid.MAX",
     "title": "uuid — UUID objects according to RFC 9562 — Python 3.14.5rc1 documentation",
@@ -6858,26 +6893,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1025,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#re"
-  },
-  {
-    "id": 1026,
-    "url": "https://github.com/python/cpython/issues/133306"
-  },
-  {
-    "id": 1027,
-    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.setName"
-  },
-  {
-    "id": 1028,
-    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteStr"
-  },
-  {
-    "id": 1029,
-    "url": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
   },
   {
     "id": 1030,
@@ -188085,10 +188100,397 @@ window.searchData = [
     "id": 164048,
     "url": "https://docs.python.org/3/library/uuid.html#uuid.UUID.clock_seq_hi_variant",
     "parentUrl": "https://docs.python.org/3/library/uuid.html#uuid.MAX"
+  },
+  {
+    "id": 165284,
+    "url": "https://best.openssf.org/Correctly-Using-Regular-Expressions",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165286,
+    "url": "https://github.com/python/cpython/pull/133338",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165287,
+    "url": "https://github.com/mstevenbrown",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165288,
+    "url": "https://github.com/python/cpython/issues/133306#issue-3036308157",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165291,
+    "url": "https://github.com/python/cpython/pull/133337",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165292,
+    "url": "https://github.com/python/cpython/pull/133314",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165293,
+    "url": "https://github.com/python/cpython/issues/133306#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165296,
+    "url": "https://github.com/python/cpython/issues/133306#top",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165297,
+    "url": "https://www.austingroupbugs.net/view.php?id\u003d1919",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165298,
+    "url": "https://discuss.python.org/t/proposal-add-z-as-a-synonym-for-z-in-python-res-for-standardization/90378/1",
+    "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 165688,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyEval_AcquireThread",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165689,
+    "url": "https://docs.python.org/3/c-api/threads.html#detaching-thread-state",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165690,
+    "url": "https://docs.python.org/3/c-api/subinterpreters.html#c.PyInterpreterState_Get",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165692,
+    "url": "https://docs.python.org/3/c-api/profiling.html#c.PyEval_SetProfile",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165693,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyGILState_STATE",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165694,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.Py_MakePendingCalls",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165696,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyGILState_Ensure",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165697,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyGILState_STATE.PyGILState_LOCKED",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165699,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_GetFrame",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165701,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_DeleteCurrent",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165702,
+    "url": "https://docs.python.org/3/c-api/reflection.html#c.PyEval_GetFrame",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165703,
+    "url": "https://manpages.debian.org/pthread_exit(3)",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165704,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_GetInterpreter",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165705,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_get_thread_native_id",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165708,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.Py_BLOCK_THREADS",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165712,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_LeaveTracing",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165715,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_init_thread",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165720,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_GetDict",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165723,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyGILState_Release",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165726,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyEval_ReleaseThread",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165727,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PYTHREAD_INVALID_THREAD_ID",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165728,
+    "url": "https://docs.python.org/3/c-api/threads.html#thread-states-and-the-global-interpreter-lock",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165729,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_Get",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165730,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.Py_AddPendingCall",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165731,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.Py_END_ALLOW_THREADS",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165737,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#recursion",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165739,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_EnterTracing",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165741,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/threads.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165743,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_GetID",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165744,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_New",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165746,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PY_HAVE_THREAD_NATIVE_ID",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165747,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyEval_RestoreThread",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165749,
+    "url": "https://docs.python.org/3/c-api/threads.html#gilstate",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165750,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.Py_BEGIN_ALLOW_THREADS",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165752,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_get_thread_ident",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165754,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.Py_UNBLOCK_THREADS",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165758,
+    "url": "https://docs.python.org/3/c-api/profiling.html#c.PyEval_SetTrace",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165759,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_Clear",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165763,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165764,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_Swap",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165765,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyGILState_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165768,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState.interp",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165769,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyEval_SaveThread",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165771,
+    "url": "https://docs.python.org/3/c-api/threads.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165774,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_get_stacksize",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165776,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_start_new_thread",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165777,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_GetInfo",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165782,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_set_stacksize",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165783,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyGILState_STATE.PyGILState_UNLOCKED",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165785,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_exit_thread",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165786,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_Delete",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165794,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_SetAsyncExc",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165797,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyGILState_GetThisThreadState",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread states and the global interpreter lock — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread states and the global interpreter lock — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteStr"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteStr"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread.setName"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread.setName"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "add \\z as a synonym for \\Z in Python REs for standardization · Issue #133306 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5108736?v\u003d4\u0026size\u003d80",
+    "alt": "@mstevenbrown",
+    "pageTitle": "add \\z as a synonym for \\Z in Python REs for standardization · Issue #133306 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5108736?v\u003d4\u0026size\u003d48",
+    "alt": "@mstevenbrown",
+    "pageTitle": "add \\z as a synonym for \\Z in Python REs for standardization · Issue #133306 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "add \\z as a synonym for \\Z in Python REs for standardization · Issue #133306 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#re"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#re"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
