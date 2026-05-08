@@ -1,13 +1,14 @@
 package site.meowcat.openlens.scraper;
 
 import site.meowcat.openlens.config.DatabaseConfig;
+import site.meowcat.openlens.util.PdfExtractor;
+import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Collections;
@@ -18,10 +19,11 @@ import java.util.Set;
  * Web scraper that fetches pages and stores them in the database
  */
 public class WebScraper {
-    private static final int TIMEOUT_MS = 60000; // 60 seconds
-    private static final String USER_AGENT = "Mozilla/5.0 (compatible; SearchEngineBot/1.0)";
-    private Set<String> blacklist = new HashSet<>();
 
+    private static final int TIMEOUT_MS = 60000;
+    private static final String USER_AGENT = "Mozilla/5.0 (compatible; SearchEngineBot/1.0)";
+
+    private final Set<String> blacklist = new HashSet<>();
     private final DatabaseConfig dbConfig;
 
     public WebScraper() {
@@ -30,112 +32,128 @@ public class WebScraper {
     }
 
     private void loadBlacklist() {
-        try (java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.FileReader("blacklist.txt"))) {
+        try (java.io.BufferedReader reader =
+                     new java.io.BufferedReader(new java.io.FileReader("blacklist.txt"))) {
+
             String line;
             while ((line = reader.readLine()) != null) {
                 line = line.trim().toLowerCase();
-                if (!line.isEmpty()) {
-                    blacklist.add(line);
-                }
+                if (!line.isEmpty()) blacklist.add(line);
             }
+
         } catch (IOException e) {
             System.err.println("Warning: Could not load blacklist.txt: " + e.getMessage());
         }
     }
 
     /**
-     * Scrape a single URL and return the result
+     * Scrape a single URL
      */
     public ScrapeResult scrapeUrl(String url) {
         System.out.println("Checking: " + url);
 
-        // Check if we need to scrape this URL (re-crawl logic)
         if (!shouldScrape(url)) {
-            // It's a known URL and was scraped recently.
-            // We still return 'true' for success so the crawler continues,
-            // but we return empty links so we don't re-queue everything immediately.
-            // OR: we might want to return links if we want to deep crawl known paths?
-            // For now, let's treat it as "Skipped" but valid.
             return new ScrapeResult(true, Collections.emptySet());
         }
 
-        System.out.println("Crawling: " + url);
-
         String urlMatch = getBlacklistedTerm(url);
         if (urlMatch != null) {
-            System.out.println("✗ Skipped (URL blacklisted by '" + urlMatch + "'): " + url);
+            System.out.println("✗ Skipped (URL blacklisted by '" + urlMatch + "')");
             return new ScrapeResult(false, Collections.emptySet());
         }
 
         try {
-            // Fetch the page
-            Document doc = Jsoup.connect(url)
+
+            Connection.Response response = Jsoup.connect(url)
                     .userAgent(USER_AGENT)
                     .timeout(TIMEOUT_MS)
-                    .get();
+                    .ignoreContentType(true)
+                    .execute();
 
-            // Extract title
-            String title = doc.title();
+            String contentType = response.contentType();
 
-            // Check title for blacklisted words
-            String titleMatch = getBlacklistedTerm(title);
-            if (titleMatch != null) {
-                System.out.println("✗ Skipped (Title blacklisted by '" + titleMatch + "'): " + title);
-                return new ScrapeResult(false, Collections.emptySet());
+            String title = "";
+            String content = "";
+            Set<String> links = new HashSet<>();
+
+            // =========================
+            // PDF HANDLING
+            // =========================
+            if (contentType != null && contentType.contains("application/pdf")) {
+
+                System.out.println("   > Detected PDF");
+
+                content = PdfExtractor.extractText(url);
+                title = url;
+
+            } else {
+
+                // =========================
+                // HTML HANDLING
+                // =========================
+                Document doc = response.parse();
+
+                title = doc.title();
+
+                String titleMatch = getBlacklistedTerm(title);
+                if (titleMatch != null) {
+                    System.out.println("✗ Skipped (Title blacklisted by '" + titleMatch + "')");
+                    return new ScrapeResult(false, Collections.emptySet());
+                }
+
+                content = extractContent(doc);
+
+                String contentMatch = getBlacklistedTerm(content);
+                if (contentMatch != null) {
+                    System.out.println("✗ Skipped (Content blacklisted)");
+                    return new ScrapeResult(false, Collections.emptySet());
+                }
+
+                links = extractLinks(doc, url);
+                storeImages(url, doc);
             }
 
-            String content = extractContent(doc);
-
-            // Check content for blacklisted words
-            String contentMatch = getBlacklistedTerm(content);
-            if (contentMatch != null) {
-                System.out.println("✗ Skipped (Content blacklisted by '" + contentMatch + "')");
-                return new ScrapeResult(false, Collections.emptySet());
-            }
-
-            Set<String> links = extractLinks(doc, url);
-
-            // Store in database
             storeInDatabase(url, title, content);
 
-            // Store images (using the original doc which still has image tags)
-            storeImages(url, doc);
-
-            System.out.println("✓ Indexed: " + title + " (" + links.size() + " new links)");
+            System.out.println("✓ Indexed: " + title + " (" + links.size() + " links)");
             return new ScrapeResult(true, links);
 
         } catch (IOException e) {
             System.err.println("✗ Error fetching " + url + ": " + e.getMessage());
-            return new ScrapeResult(false, Collections.emptySet());
         } catch (SQLException e) {
             System.err.println("✗ Database error for " + url + ": " + e.getMessage());
-            return new ScrapeResult(false, Collections.emptySet());
         }
+
+        return new ScrapeResult(false, Collections.emptySet());
     }
 
-    // Returns the blacklisted term encountered, or null if none
-    private String getBlacklistedTerm(String text) {
-        if (text == null)
-            return null;
-        String lowerText = text.toLowerCase();
+    // =========================
+    // BLACKLIST
+    // =========================
 
-        for (String badWord : blacklist) {
-            // Use regex for whole word matching to avoid "Sussex" matching "sex"
-            // \b matches word boundaries
-            if (lowerText.matches(".*\\b" + java.util.regex.Pattern.quote(badWord) + "\\b.*")) {
-                return badWord;
+    private String getBlacklistedTerm(String text) {
+        if (text == null) return null;
+
+        String lower = text.toLowerCase();
+
+        for (String bad : blacklist) {
+            if (lower.matches(".*\\b" + java.util.regex.Pattern.quote(bad) + "\\b.*")) {
+                return bad;
             }
         }
         return null;
     }
 
+    // =========================
+    // LINKS
+    // =========================
+
     private Set<String> extractLinks(Document doc, String baseUrl) {
         Set<String> links = new HashSet<>();
         Elements elements = doc.select("a[href]");
 
-        for (Element element : elements) {
-            String link = element.attr("abs:href");
-            // Basic validation and blacklist check
+        for (Element el : elements) {
+            String link = el.attr("abs:href");
             if (isValidLink(link) && getBlacklistedTerm(link) == null) {
                 links.add(link);
             }
@@ -144,17 +162,19 @@ public class WebScraper {
     }
 
     private boolean isValidLink(String url) {
-        return url != null && (url.startsWith("http://") || url.startsWith("https://"));
+        return url != null &&
+                (url.startsWith("http://") || url.startsWith("https://"));
     }
 
+    // =========================
+    // CONTENT
+    // =========================
+
     private String extractContent(Document doc) {
-        // Remove script and style elements
         doc.select("script, style, nav, footer, header").remove();
 
-        // Get text from body
         String content = doc.body().text();
 
-        // Limit content length
         if (content.length() > 50000) {
             content = content.substring(0, 50000);
         }
@@ -162,61 +182,117 @@ public class WebScraper {
         return content;
     }
 
-    /**
-     * Get the next URL that needs to be scraped.
-     * Priorities:
-     * 1. Never scraped (scraped_at IS NULL)
-     * 2. Scraped > 7 days ago
-     */
-    public String getNextUrlToScrape() {
+    // =========================
+    // DATABASE
+    // =========================
+
+    private void storeInDatabase(String url, String title, String content)
+            throws SQLException {
+
         String sql = """
-                SELECT url FROM pages
-                WHERE scraped_at IS NULL
-                   OR scraped_at < CURRENT_TIMESTAMP - INTERVAL '7' DAY
-                ORDER BY scraped_at ASC NULLS FIRST
-                LIMIT 1
+                MERGE INTO pages (url, title, content, scraped_at)
+                KEY (url)
+                VALUES (?, ?, ?, CURRENT_TIMESTAMP)
                 """;
 
-        try (Connection conn = dbConfig.getConnection();
-                PreparedStatement stmt = conn.prepareStatement(sql);
-                var rs = stmt.executeQuery()) {
-
-            if (rs.next()) {
-                return rs.getString("url");
-            }
-        } catch (SQLException e) {
-            System.err.println("Error getting next URL: " + e.getMessage());
-        }
-        return null;
-    }
-
-    /**
-     * Add a URL to the queue (if not already present).
-     * If present, does nothing (preserves existing scrape timestamp).
-     */
-    public void queueUrl(String url) {
-        if (!isValidLink(url) || getBlacklistedTerm(url) != null) {
-            return;
-        }
-
-        // Use INSERT and ignore unique constraint violation
-        String sql = "INSERT INTO pages (url, scraped_at) VALUES (?, NULL)";
-
-        try (Connection conn = dbConfig.getConnection();
-                PreparedStatement stmt = conn.prepareStatement(sql)) {
+        try (java.sql.Connection conn = dbConfig.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, url);
-            stmt.executeUpdate();
+            stmt.setString(2, title);
+            stmt.setString(3, content);
 
-        } catch (SQLException e) {
-            // Check for unique constraint violation (H2 error codes 23505)
-            if (!e.getSQLState().startsWith("23")) {
-                System.err.println("Error queuing URL " + url + ": " + e.getMessage());
-            }
-            // If it's a duplicate, we just ignore it (do nothing), preserving the old
-            // scrape time.
+            stmt.executeUpdate();
         }
     }
+
+    private void storeImages(String pageUrl, Document doc) {
+        try {
+            Elements images = doc.select("img[src]");
+
+            System.out.println("   > Found " + images.size() + " images");
+
+            try (java.sql.Connection conn = dbConfig.getConnection();
+                 PreparedStatement del = conn.prepareStatement(
+                         "DELETE FROM images WHERE page_url = ?")) {
+
+                del.setString(1, pageUrl);
+                del.executeUpdate();
+            }
+
+            String sql = "INSERT INTO images (src, alt, page_url) VALUES (?, ?, ?)";
+
+            try (java.sql.Connection conn = dbConfig.getConnection();
+                 PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+                for (Element img : images) {
+
+                    String src = img.attr("abs:src");
+                    String alt = img.attr("alt");
+
+                    if (isValidImage(src)) {
+                        stmt.setString(1, src);
+                        stmt.setString(2, alt != null && alt.length() > 255
+                                ? alt.substring(0, 255)
+                                : alt);
+                        stmt.setString(3, pageUrl);
+                        stmt.addBatch();
+                    }
+                }
+
+                stmt.executeBatch();
+            }
+
+        } catch (Exception e) {
+            System.err.println("Error storing images: " + e.getMessage());
+        }
+    }
+
+    private boolean isValidImage(String src) {
+        return src != null &&
+                (src.startsWith("http://") || src.startsWith("https://")) &&
+                !src.contains("pixel") &&
+                !src.contains("analytics");
+    }
+
+    // =========================
+    // SCHEDULING
+    // =========================
+
+    private boolean shouldScrape(String url) {
+        String sql = "SELECT scraped_at FROM pages WHERE url = ?";
+
+        try (java.sql.Connection conn = dbConfig.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, url);
+
+            try (java.sql.ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    java.sql.Timestamp ts = rs.getTimestamp("scraped_at");
+
+                    if (ts != null) {
+                        long age = System.currentTimeMillis() - ts.getTime();
+                        long sevenDays = 7L * 24 * 60 * 60 * 1000;
+
+                        if (age < sevenDays) {
+                            System.out.println("   > Skipped (recently scraped)");
+                            return false;
+                        }
+                    }
+                }
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Warning: DB check failed, scraping anyway: " + e.getMessage());
+        }
+
+        return true;
+    }
+
+    // =========================
+    // RESULT
+    // =========================
 
     public static class ScrapeResult {
         public final boolean success;
@@ -231,125 +307,6 @@ public class WebScraper {
             this.success = success;
             this.discoveredLinks = discoveredLinks;
             this.failureReason = failureReason;
-        }
-    }
-
-    /**
-     * Store the scraped page in the database
-     */
-    private void storeInDatabase(String url, String title, String content) throws SQLException {
-        // Use MERGE to Insert or Update
-        String sql = """
-                MERGE INTO pages (url, title, content, scraped_at)
-                KEY (url)
-                VALUES (?, ?, ?, CURRENT_TIMESTAMP)
-                """;
-
-        try (Connection conn = dbConfig.getConnection();
-                PreparedStatement stmt = conn.prepareStatement(sql)) {
-
-            stmt.setString(1, url);
-            stmt.setString(2, title);
-            stmt.setString(3, content);
-
-            stmt.executeUpdate();
-        }
-    }
-
-    private void storeImages(String pageUrl, Document doc) {
-        try {
-            Elements images = doc.select("img[src]");
-
-            System.out.println("   > Found " + images.size() + " <img> tags on page.");
-
-            // First delete existing images for this page to prevent duplicates
-            try (Connection conn = dbConfig.getConnection();
-                    PreparedStatement delStmt = conn.prepareStatement("DELETE FROM images WHERE page_url = ?")) {
-                delStmt.setString(1, pageUrl);
-                delStmt.executeUpdate();
-            }
-
-            String sql = "INSERT INTO images (src, alt, page_url) VALUES (?, ?, ?)";
-            int count = 0;
-
-            try (Connection conn = dbConfig.getConnection();
-                    PreparedStatement stmt = conn.prepareStatement(sql)) {
-
-                for (Element img : images) {
-                    String src = img.attr("abs:src");
-                    String alt = img.attr("alt");
-
-                    if (isValidImage(src)) {
-                        stmt.setString(1, src);
-                        stmt.setString(2, alt.length() > 255 ? alt.substring(0, 255) : alt);
-                        stmt.setString(3, pageUrl);
-                        stmt.addBatch();
-                        count++;
-                    }
-                }
-                stmt.executeBatch();
-            }
-            if (count > 0) {
-                System.out.println("   > Stored " + count + " valid images.");
-            }
-        } catch (Exception e) {
-            System.err.println("Error storing images for " + pageUrl + ": " + e.getMessage());
-        }
-    }
-
-    private boolean shouldScrape(String url) {
-        String sql = "SELECT scraped_at FROM pages WHERE url = ?";
-
-        try (Connection conn = dbConfig.getConnection();
-                PreparedStatement stmt = conn.prepareStatement(sql)) {
-
-            stmt.setString(1, url);
-            try (java.sql.ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    java.sql.Timestamp scrapedAt = rs.getTimestamp("scraped_at");
-                    if (scrapedAt != null) {
-                        long sevenDaysInMillis = 7L * 24 * 60 * 60 * 1000;
-                        long timeSinceScrape = System.currentTimeMillis() - scrapedAt.getTime();
-
-                        if (timeSinceScrape < sevenDaysInMillis) {
-                            System.out.println("   > Skipped (Recently scraped: " + scrapedAt + ")");
-                            return false;
-                        }
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            System.err.println("Warning: Could not check crawl status for " + url + ": " + e.getMessage());
-            // If DB check fails, default to scraping it to be safe (or safe-fail?)
-            // Let's safe-fail to scraping it.
-        }
-        return true;
-    }
-
-    private boolean isValidImage(String src) {
-        return src != null &&
-                (src.startsWith("http://") || src.startsWith("https://")) &&
-                !src.contains("pixel") &&
-                !src.contains("analytics");
-    }
-
-    /**
-     * Get statistics about scraped pages
-     */
-    public void printStats() {
-        String sql = "SELECT COUNT(*) as total FROM pages";
-
-        try (Connection conn = dbConfig.getConnection();
-                PreparedStatement stmt = conn.prepareStatement(sql);
-                var rs = stmt.executeQuery()) {
-
-            if (rs.next()) {
-                int total = rs.getInt("total");
-                System.out.println("\n=== Scraping Statistics ===");
-                System.out.println("Total pages in database: " + total);
-            }
-        } catch (SQLException e) {
-            System.err.println("Error getting stats: " + e.getMessage());
         }
     }
 }
