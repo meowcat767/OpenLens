@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1634,
+    "url": "https://github.com/python/cpython/issues/93096",
+    "title": "Decide the fate of undocumented script behavior of some modules · Issue #93096 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Decide the fate of undocumented script behavior of some modules #93096 New issue Copy link New issue Copy link Open Open Decide the fate of undocumented script behavior of some modules#93096 Copy link Labels docsDocumentation in the Doc dirDocumentation in the Doc dirtestsTests in the Lib/test dirTests in the Lib/test dirtype-featureA feature request or enhancementA feature request or enhancement Description arhadthedev opened on May 23, 2022 Issue body actions There are three dozens of standard modules that can be called via python -m and their documentation doesn\u0027t mention it. They can be grouped into five categories: kind of smoke tests: codecs: performs stdin:latin1 → utf-8 → latin1 → stdout passthrough edit: it just wraps stdin and stdout then just exits the script ( gh-93096: Remove python -m codecs #94233) curses.has_key: \"Compare the output of this implementation and the ncurses has_key, on platforms where has_key is already available\" pprint: measures performance ( gh-92546: Move pprint benchmark into pyperformance #94613 → Add a benchmark based on python -m pprint pyperformance#222) random: evaluates output statistics of supported generators full-fledged crossplatform utils for admin-like users and small automation: asyncio: like python but allows to use await in top-level script code cProfile, profile: runs a script under the profiler encodings.rot_13: a stream converter filecmp: a crossplatform file comparison utility fileinput: prints specified files one by another annotating lines with their source http.server: makes a directory available as a site; useful to quickly test a static site with relative links mimetypes: useful for batch processing of files (maybe) ( gh-93096: Make mimetypes CLI tool public #93097) modulefinder: the objdump but for Python source files netrc: prints content of .netrc for a current user pdb platform: returns a single line like Windows-10-10.0.19044-SP0; can be useful in automation quopri: a stream converter tabnanny wsgiref.simple_server - the same as http.server but for APIs; pases a single request and exits both: base64: a stream converter base64 -t encodes/decodes Aladdin:open sesame and tests if the result is the same as the original ( gh-93096: Remove python -m base64 -t #94230) demos with no real world application: curses.textpad: shows an input area; when a user closes it, prints the text back ftplib: a simple one-pass FTP downloader (uses ~/.netrc for login) getopt: just passes arguments to getopt() The module is no longer maintained after gh-106535: Soft deprecate the getopt module #105735 imaplib: sending emails to a dead end has no sence but can be used to check if a email client works or got broken shlex: parses stdin using shlex() and prints the list into stdout smtplib: a simple e-mail client xmlrpc.server: serves a datetime service complex matter; better leave untouched: idlelib.* tkinter.* turtledemo.* pstats Eggs and to-be-removed modules aren\u0027t listed. We need to decide what to do with all these undocumented categories. I propose the following: move smoke tests into test module with deduplication for full-fledged utils, add Command-Line Usage into the docs like in https://docs.python.org/3/library/ast.html#command-line-usage or https://docs.python.org/3/library/trace.html#command-line-usage move demos into the docs of the corresponding module Linked PRs gh-93096: Remove -t and -v flags from pickletools cli #131039 gh-93096: Remove -t and -v flags from pickle cli #131068 gh-93096: Load doctests in test_pickle #131069 [3.13] gh-93096: Load doctests in test_pickle (GH-131069) #131080 [3.12] gh-93096: Load doctests in test_pickle (GH-131069) #131081 gh-93096: Update and document pickle CLI #131097 gh-93096: Remove CLI interface for difflib #131099 gh-93096: Remove run block in heapq #131130 gh-93096: Load doctests in test_itertools #131133 [3.13] gh-93096: Load doctests in test_itertools (GH-131133) #131136 [3.12] gh-93096: Load doctests in test_itertools (GH-131133) #131137 gh-93096: Move random benchmark into pyperformance #131144 gh-93096: Update and document pickletools CLI #131273 gh-93096: fix test_mimetypes.test_guess_type_conflicting_with_mimetypes #131408 gh-93096: fix test_mimetypes.test_invocation_error tests on iOS ARM64 #132266 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels docsDocumentation in the Doc dirDocumentation in the Doc dirtestsTests in the Lib/test dirTests in the Lib/test dirtype-featureA feature request or enhancementA feature request or enhancem",
+    "scrapedAt": "2026-05-09 01:27:40.762881"
+  },
+  {
+    "id": 1633,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.copy",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty, the current directory is assumed: \u003e\u003e\u003e PurePath()\nPurePosixPath(\u0027.\u0027)\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Users/Ximénez\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027//server/share/file\u0027)\nPureWindow",
+    "scrapedAt": "2026-05-09 01:27:38.223083"
+  },
+  {
+    "id": 1632,
+    "url": "https://docs.python.org/3/c-api/type.html#c.Py_tp_token",
+    "title": "Type Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Type Objects | Theme Auto Light Dark | Type Objects¶ type PyTypeObject¶ Part of the Limited API (as an opaque struct). The C structure of the objects used to describe built-in types. PyTypeObject PyType_Type¶ Part of the Stable ABI. This is the type object for type objects; it is the same object as type in the Python layer. int PyType_Check(PyObject *o)¶ Return non-zero if the object o is a type object, including instances of types derived from the standard type object. Return 0 in all other cases. This function always succeeds. int PyType_CheckExact(PyObject *o)¶ Return non-zero if the object o is a type object, but not a subtype of the standard type object. Return 0 in all other cases. This function always succeeds. unsigned int PyType_ClearCache()¶ Part of the Stable ABI. Clear the internal lookup cache. Return the current version tag. unsigned long PyType_GetFlags(PyTypeObject *type)¶ Part of the Stable ABI. Return the tp_flags member of type. This function is primarily meant for use with Py_LIMITED_API; the individual flag bits are guaranteed to be stable across Python releases, but access to tp_flags itself is not part of the limited API. Added in version 3.2. Changed in version 3.4: The return type is now unsigned long rather than long. PyObject *PyType_GetDict(PyTypeObject *type)¶ Return the type object’s internal namespace, which is otherwise only exposed via a read-only proxy (cls.__dict__). This is a replacement for accessing tp_dict directly. The returned dictionary must be treated as read-only. This function is meant for specific embedding and language-binding cases, where direct access to the dict is necessary and indirect access (e.g. via the proxy or PyObject_GetAttr()) isn’t adequate. Extension modules should continue to use tp_dict, directly or indirectly, when setting up their own types. Added in version 3.12. void PyType_Modified(PyTypeObject *type)¶ Part of the Stable ABI. Invalidate the internal lookup cache for the type and all of its subtypes. This function must be called after any manual modification of the attributes or base classes of the type. int PyType_AddWatcher(PyType_WatchCallback callback)¶ Register callback as a type watcher. Return a non-negative integer ID which must be passed to future calls to PyType_Watch(). In case of error (e.g. no more watcher IDs available), return -1 and set an exception. In free-threaded builds, PyType_AddWatcher() is not thread-safe, so it must be called at start up (before spawning the first thread). Added in version 3.12. int PyType_ClearWatcher(int watcher_id)¶ Clear watcher identified by watcher_id (previously returned from PyType_AddWatcher()). Return 0 on success, -1 on error (e.g. if watcher_id was never registered.) An extension should never call PyType_ClearWatcher with a watcher_id that was not returned to it by a previous call to PyType_AddWatcher(). Added in version 3.12. int PyType_Watch(int watcher_id, PyObject *type)¶ Mark type as watched. The callback granted watcher_id by PyType_AddWatcher() will be called whenever PyType_Modified() reports a change to type. (The callback may be called only once for a series of consecutive modifications to type, if _PyType_Lookup() is not called on type between the modifications; this is an implementation detail and subject to change.) An extension should never call PyType_Watch with a watcher_id that was not returned to it by a previous call to PyType_AddWatcher(). Added in version 3.12. int PyType_Unwatch(int watcher_id, PyObject *type)¶ Mark type as not watched. This undoes a previous call to PyType_Watch(). type must not be NULL. An extension should never call this function with a watcher_id that was not returned to it by a previous call to PyType_AddWatcher(). On success, this function returns 0. On failure, this function returns -1 with an exception set. Added in version 3.12. typedef int (*PyType_WatchCallback)(PyObject *type)¶ Type of a type-watcher callback function. The callback must not modify type or cause PyType_Modified() to be called on type or any type in its MRO; violating this rule could cause infinite recursion. Added in version 3.12. int PyType_HasFeature(PyTypeObject *o, int feature)¶ Return non-zero if the type object o sets the feature feature. Type features are denoted by single bit flags. int PyType_FastSubclass(PyTypeObject *type, int flag)¶ Return non-zero if the type object type sets the subclass flag flag. Subclass flags are denoted by Py_TPFLAGS_*_SUBCLASS. This function is used by many _Check functions for common types. See also PyObject_TypeCheck(), which is used as a slower alternative in _Check functions for types that don’t come with subclass flags. int PyType_IS_GC(PyTypeObject *o)¶ Return true if the type object includes support for the cycle detector; this tests the type flag Py_TPFLAGS_HAVE_GC. int PyType_IsSubtype(PyType",
+    "scrapedAt": "2026-05-09 01:27:36.947606"
+  },
+  {
+    "id": 1631,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.filesystem_encoding",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:27:35.681844"
+  },
+  {
+    "id": 1630,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#what-s-new-in-python-3-14",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:27:34.412489"
+  },
+  {
     "id": 1629,
     "url": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Finish",
     "title": "Integer Objects — Python 3.14.5rc1 documentation",
@@ -10988,26 +11023,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1630,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#what-s-new-in-python-3-14"
-  },
-  {
-    "id": 1631,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.filesystem_encoding"
-  },
-  {
-    "id": 1632,
-    "url": "https://docs.python.org/3/c-api/type.html#c.Py_tp_token"
-  },
-  {
-    "id": 1633,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.copy"
-  },
-  {
-    "id": 1634,
-    "url": "https://github.com/python/cpython/issues/93096"
   },
   {
     "id": 1636,
@@ -241895,10 +241910,196 @@ window.searchData = [
     "id": 353909,
     "url": "https://www.man7.org/linux/man-pages/man1/uuidgen.1.html",
     "parentUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "id": 356261,
+    "url": "https://github.com/python/cpython/pull/94233",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356262,
+    "url": "https://github.com/python/cpython/pull/131039",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356264,
+    "url": "https://github.com/python/cpython/pull/94230",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356266,
+    "url": "https://github.com/python/cpython/pull/94613",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356267,
+    "url": "https://github.com/python/cpython/pull/131099",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356268,
+    "url": "https://github.com/python/cpython/pull/131133",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356269,
+    "url": "https://github.com/python/cpython/pull/132266",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356270,
+    "url": "https://github.com/python/cpython/pull/131097",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356271,
+    "url": "https://github.com/python/cpython/pull/131130",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356272,
+    "url": "https://github.com/python/cpython/pull/131273",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356274,
+    "url": "https://github.com/python/cpython/pull/131136",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356275,
+    "url": "https://github.com/python/cpython/pull/131137",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356276,
+    "url": "https://github.com/python/pyperformance/pull/222",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356278,
+    "url": "https://github.com/python/cpython/pull/131408",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356280,
+    "url": "https://github.com/python/cpython/pull/105735",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356281,
+    "url": "https://github.com/python/cpython/pull/93097",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356282,
+    "url": "https://github.com/python/cpython/pull/131144",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356283,
+    "url": "https://github.com/python/cpython/pull/131068",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356284,
+    "url": "https://github.com/python/cpython/pull/131069",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356286,
+    "url": "https://github.com/python/cpython/pull/131080",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356287,
+    "url": "https://github.com/python/cpython/pull/131081",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356289,
+    "url": "https://github.com/python/cpython/issues/93096#top",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356290,
+    "url": "https://github.com/python/cpython/issues/93096#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "id": 356292,
+    "url": "https://github.com/python/cpython/issues/93096#issue-1244802104",
+    "parentUrl": "https://github.com/python/cpython/issues/93096"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/4881073?u\u003d02f1effcd378b0b5b57a7d3fae8ae55b5f0b0012\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@arhadthedev",
+    "pageTitle": "Decide the fate of undocumented script behavior of some modules · Issue #93096 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4881073?u\u003d02f1effcd378b0b5b57a7d3fae8ae55b5f0b0012\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@arhadthedev",
+    "pageTitle": "Decide the fate of undocumented script behavior of some modules · Issue #93096 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/93096"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.copy"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.copy"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.copy"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Type Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/type.html#c.Py_tp_token"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Type Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/type.html#c.Py_tp_token"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.filesystem_encoding"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.filesystem_encoding"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#what-s-new-in-python-3-14"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#what-s-new-in-python-3-14"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
