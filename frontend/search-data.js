@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1492,
+    "url": "https://github.com/python/cpython/issues/84850",
+    "title": "remove deprecated urllib.request.URLopener/FancyURLopener · Issue #84850 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k remove deprecated urllib.request.URLopener/FancyURLopener #84850 New issue Copy link New issue Copy link Closed Closed remove deprecated urllib.request.URLopener/FancyURLopener#84850 Copy link Labels 3.11only security fixesonly security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description PetterS mannequin opened on May 18, 2020 Issue body actions BPO 40673 Nosy @vstinner, @PetterS, @remilapeyre, @idomic Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2020-05-18.21:30:13.142\u003e\nlabels \u003d [\u0027type-feature\u0027, \u0027library\u0027, \u00273.11\u0027]\ntitle \u003d \u0027remove deprecated urllib.request.URLopener/FancyURLopener\u0027\nupdated_at \u003d \u003cDate 2021-11-23.13:31:04.736\u003e\nuser \u003d \u0027https://github.com/PetterS\u0027 bugs.python.org fields: activity \u003d \u003cDate 2021-11-23.13:31:04.736\u003e\nactor \u003d \u0027vstinner\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2020-05-18.21:30:13.142\u003e\ncreator \u003d \u0027Petter S\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 40673\nkeywords \u003d []\nmessage_count \u003d 7.0\nmessages \u003d [\u0027369291\u0027, \u0027369293\u0027, \u0027369294\u0027, \u0027369295\u0027, \u0027369300\u0027, \u0027369886\u0027, \u0027406839\u0027]\nnosy_count \u003d 4.0\nnosy_names \u003d [\u0027vstinner\u0027, \u0027Petter S\u0027, \u0027remi.lapeyre\u0027, \u0027Ido Michael\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue40673\u0027\nversions \u003d [\u0027Python 3.11\u0027] Linked PRs GH-84850: Remove urllib.request.URLopener and FancyURLopener #125739 GH-84850: Improve whatsnew entry for [Fancy]URLopener removal #127032 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.11only security fixesonly security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:22:02.032882"
+  },
+  {
+    "id": 1491,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.iterdir",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty, the current directory is assumed: \u003e\u003e\u003e PurePath()\nPurePosixPath(\u0027.\u0027)\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Users/Ximénez\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027//server/share/file\u0027)\nPureWindow",
+    "scrapedAt": "2026-05-09 01:22:00.013674"
+  },
+  {
+    "id": 1490,
+    "url": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses",
+    "title": "dataclasses — Data Classes — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » dataclasses — Data Classes | Theme Auto Light Dark | dataclasses — Data Classes¶ Source code: Lib/dataclasses.py This module provides a decorator and functions for automatically adding generated special methods such as __init__() and __repr__() to user-defined classes. It was originally described in PEP 557. The member variables to use in these generated methods are defined using PEP 526 type annotations. For example, this code: from dataclasses import dataclass\n\n@dataclass\nclass InventoryItem:\n    \"\"\"Class for keeping track of an item in inventory.\"\"\"\n    name: str\n    unit_price: float\n    quantity_on_hand: int \u003d 0\n\n    def total_cost(self) -\u003e float:\n        return self.unit_price * self.quantity_on_hand\n will add, among other things, a __init__() that looks like: def __init__(self, name: str, unit_price: float, quantity_on_hand: int \u003d 0):\n    self.name \u003d name\n    self.unit_price \u003d unit_price\n    self.quantity_on_hand \u003d quantity_on_hand\n Note that this method is automatically added to the class: it is not directly specified in the InventoryItem definition shown above. Added in version 3.7. Module contents¶ @dataclasses.dataclass(*, init\u003dTrue, repr\u003dTrue, eq\u003dTrue, order\u003dFalse, unsafe_hash\u003dFalse, frozen\u003dFalse, match_args\u003dTrue, kw_only\u003dFalse, slots\u003dFalse, weakref_slot\u003dFalse)¶ This function is a decorator that is used to add generated special methods to classes, as described below. The @dataclass decorator examines the class to find fields. A field is defined as a class variable that has a type annotation. With two exceptions described below, nothing in @dataclass examines the type specified in the variable annotation. The order of the fields in all of the generated methods is the order in which they appear in the class definition. The @dataclass decorator will add various “dunder” methods to the class, described below. If any of the added methods already exist in the class, the behavior depends on the parameter, as documented below. The decorator returns the same class that it is called on; no new class is created. If @dataclass is used just as a simple decorator with no parameters, it acts as if it has the default values documented in this signature. That is, these three uses of @dataclass are equivalent: @dataclass\nclass C:\n    ...\n\n@dataclass()\nclass C:\n    ...\n\n@dataclass(init\u003dTrue, repr\u003dTrue, eq\u003dTrue, order\u003dFalse, unsafe_hash\u003dFalse, frozen\u003dFalse,\n           match_args\u003dTrue, kw_only\u003dFalse, slots\u003dFalse, weakref_slot\u003dFalse)\nclass C:\n    ...\n The parameters to @dataclass are: init: If true (the default), a __init__() method will be generated. If the class already defines __init__(), this parameter is ignored. repr: If true (the default), a __repr__() method will be generated. The generated repr string will have the class name and the name and repr of each field, in the order they are defined in the class. Fields that are marked as being excluded from the repr are not included. For example: InventoryItem(name\u003d\u0027widget\u0027, unit_price\u003d3.0, quantity_on_hand\u003d10). If the class already defines __repr__(), this parameter is ignored. eq: If true (the default), an __eq__() method will be generated. This method compares the class as if it were a tuple of its fields, in order. Both instances in the comparison must be of the identical type. If the class already defines __eq__(), this parameter is ignored. order: If true (the default is False), __lt__(), __le__(), __gt__(), and __ge__() methods will be generated. These compare the class as if it were a tuple of its fields, in order. Both instances in the comparison must be of the identical type. If order is true and eq is false, a ValueError is raised. If the class already defines any of __lt__(), __le__(), __gt__(), or __ge__(), then TypeError is raised. unsafe_hash: If true, force dataclasses to create a __hash__() method, even though it may not be safe to do so. Otherwise, generate a __hash__() method according to how eq and frozen are set. The default value is False. __hash__() is used by built-in hash(), and when objects are added to hashed collections such as dictionaries and sets. Having a __hash__() implies that instances of the class are immutable. Mutability is a complicated property that depends on the programmer’s intent, the existence and behavior of __eq__(), and the values of the eq and frozen flags in the @dataclass decorator. By default, @dataclass will not implicitly add a __hash__() method unless it is safe to do so. Neither will it add or change an existing explicitly defined __hash__() method. Setting the class attribute __hash__ \u003d None has a specific meaning to Python, as described in the __hash__() documentation. If __hash__() is not explicitly defined, or if it is set to None, then @dataclass may add an implicit __hash__() method. Although not recommended, you can force @dataclass to create a __hash__() method with un",
+    "scrapedAt": "2026-05-09 01:21:58.764309"
+  },
+  {
+    "id": 1489,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#configparser",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:21:57.511235"
+  },
+  {
+    "id": 1488,
+    "url": "https://github.com/python/cpython/issues/84852",
+    "title": "Add missing mimetypes for fonts · Issue #84852 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add missing mimetypes for fonts #84852 New issue Copy link New issue Copy link Closed #20199 Closed Add missing mimetypes for fonts#84852 #20199 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directory Description sahil290791 mannequin opened on May 19, 2020 Issue body actions BPO 40675 Nosy @sahil290791 PRs gh-84852: Add MIME types for .eot, ,otf, .ttf, .woff and .woff2 fonts #20199 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2020-05-19.01:08:13.333\u003e\nlabels \u003d [\u0027library\u0027]\ntitle \u003d \u0027Add missing mimetypes for fonts\u0027\nupdated_at \u003d \u003cDate 2020-05-19.01:08:13.333\u003e\nuser \u003d \u0027https://github.com/sahil290791\u0027 bugs.python.org fields: activity \u003d \u003cDate 2020-05-19.01:08:13.333\u003e\nactor \u003d \u0027sahil.prajapati\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2020-05-19.01:08:13.333\u003e\ncreator \u003d \u0027sahil.prajapati\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 40675\nkeywords \u003d []\nmessage_count \u003d 1.0\nmessages \u003d [\u0027369312\u0027]\nnosy_count \u003d 1.0\nnosy_names \u003d [\u0027sahil.prajapati\u0027]\npr_nums \u003d [\u002720199\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d None\nurl \u003d \u0027https://bugs.python.org/issue40675\u0027\nversions \u003d [] Linked PRs gh-84852: Add basic font MIME types #113592 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directory Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:21:56.193271"
+  },
+  {
     "id": 1487,
     "url": "https://docs.python.org/3/library/uuid.html#cmdoption-uuid-count",
     "title": "uuid — UUID objects according to RFC 9562 — Python 3.14.5rc1 documentation",
@@ -10008,26 +10043,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1488,
-    "url": "https://github.com/python/cpython/issues/84852"
-  },
-  {
-    "id": 1489,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#configparser"
-  },
-  {
-    "id": 1490,
-    "url": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
-  },
-  {
-    "id": 1491,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.iterdir"
-  },
-  {
-    "id": 1492,
-    "url": "https://github.com/python/cpython/issues/84850"
   },
   {
     "id": 1493,
@@ -235415,10 +235430,241 @@ window.searchData = [
     "id": 311091,
     "url": "https://github.com/python/cpython/blob/main/Doc/whatsnew/index.rst?plain\u003d1",
     "parentUrl": "https://docs.python.org/3/whatsnew/index.html"
+  },
+  {
+    "id": 311421,
+    "url": "https://github.com/python/cpython/pull/20199",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 311422,
+    "url": "https://github.com/python/cpython/pull/113592",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 311423,
+    "url": "https://github.com/python/cpython/issues/84852#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 311425,
+    "url": "https://github.com/python/cpython/issues/84852#issue-1199036725",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 311426,
+    "url": "https://github.com/sahil290791",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 311427,
+    "url": "https://bugs.python.org/issue40675",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 311429,
+    "url": "https://github.com/python/cpython/issues/84852#top",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 312666,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.asdict",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312669,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/dataclasses.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312675,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.MISSING",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312682,
+    "url": "https://docs.python.org/3/reference/datamodel.html#datamodel-note-slots",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312685,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.FrozenInstanceError",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312693,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.KW_ONLY",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312696,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.astuple",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312697,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.fields",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312698,
+    "url": "https://docs.python.org/3/library/dataclasses.html#",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312701,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.replace",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312705,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses-init-only-variables",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312712,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/dataclasses.py",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312724,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses-frozen",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312725,
+    "url": "https://docs.python.org/3/library/weakref.html#weakref.ref",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312730,
+    "url": "https://github.com/python/cpython/issues/91126",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312734,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.is_dataclass",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312743,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.__post_init__",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312749,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.InitVar",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 312953,
+    "url": "https://github.com/python/cpython/issues/84850#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/84850"
+  },
+  {
+    "id": 312956,
+    "url": "https://github.com/python/cpython/pull/127032",
+    "parentUrl": "https://github.com/python/cpython/issues/84850"
+  },
+  {
+    "id": 312958,
+    "url": "https://github.com/PetterS",
+    "parentUrl": "https://github.com/python/cpython/issues/84850"
+  },
+  {
+    "id": 312965,
+    "url": "https://github.com/python/cpython/pull/125739",
+    "parentUrl": "https://github.com/python/cpython/issues/84850"
+  },
+  {
+    "id": 312966,
+    "url": "https://github.com/idomic",
+    "parentUrl": "https://github.com/python/cpython/issues/84850"
+  },
+  {
+    "id": 312967,
+    "url": "https://github.com/python/cpython/issues/84850#issue-1199036714",
+    "parentUrl": "https://github.com/python/cpython/issues/84850"
+  },
+  {
+    "id": 312968,
+    "url": "https://github.com/python/cpython/issues/84850#top",
+    "parentUrl": "https://github.com/python/cpython/issues/84850"
+  },
+  {
+    "id": 312969,
+    "url": "https://bugs.python.org/issue40673",
+    "parentUrl": "https://github.com/python/cpython/issues/84850"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/93804622?v\u003d4\u0026size\u003d80",
+    "alt": "@PetterS",
+    "pageTitle": "remove deprecated urllib.request.URLopener/FancyURLopener · Issue #84850 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84850"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93804622?v\u003d4\u0026size\u003d48",
+    "alt": "@PetterS",
+    "pageTitle": "remove deprecated urllib.request.URLopener/FancyURLopener · Issue #84850 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84850"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.iterdir"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.iterdir"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.iterdir"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dataclasses — Data Classes — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dataclasses — Data Classes — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#configparser"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#configparser"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93806311?v\u003d4\u0026size\u003d80",
+    "alt": "@sahil290791",
+    "pageTitle": "Add missing mimetypes for fonts · Issue #84852 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93806311?v\u003d4\u0026size\u003d48",
+    "alt": "@sahil290791",
+    "pageTitle": "Add missing mimetypes for fonts · Issue #84852 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84852"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
