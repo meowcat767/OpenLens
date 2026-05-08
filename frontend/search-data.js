@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1276,
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-376/",
+    "title": "ECMA-376 - Ecma International",
+    "content": "This Standard defines Office Open XML’s vocabularies and document representation and packaging. It also specifies requirements for consumers and producers of Office Open XML. ECMA-376 contains 4 parts but only part 2 has been adopted in the last edition of the Standard. An Office Open XML overview is available below under ressources. The four parts of the Standard are the following: Part 1 “Fundamentals And Markup Language Reference”, 5th edition, December 2016 Part 2 “Open Packaging Conventions”, 5th edition, December 2021 Part 3 “Markup Compatibility and Extensibility”, 5th edition, December 2015 Part 4 “Transitional Migration Features”, 5th edition, December 2016 Download part 1 Download part 2 Download part 3 Download part 4 Classification CategoryDocument architecture SubcategoryNot available Technical CommitteeTC45 ISO/IEC number29500 Archives ECMA-376, 1st edition, December 2006Download ECMA-376, 2nd edition, December 2008Download ECMA-376, 3rd edition, June 2011Download ECMA-376, 4th edition, December 2012Download Resources Office Open XML overviewDownload Ecma International Rue du Rhône 114 1204 Geneva Switzerland About Ecma Publications and standards Policies Contact Committees News Privacy policy Members only Twitter Linkedin Link to: ECMA-420 Link to: ECMA-420 ECMA-420 Link to: ECMA-352 Link to: ECMA-352 ECMA-352 Scroll to top Scroll to top Scroll to top This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies. AcceptManage Cookie and privacy settings Necessary cookies Essential cookies are strictly necessary for the proper operation of our site. In particular, they govern the principles of navigation and memorize some of your choices between pages. If you refuse them, your browsing experience may be affected. Analytics cookies Analysis cookies collect statistical and anonymous information on the traffic recorded on our site. They help us to improve our pages, in order to better meet our users\u0027 expectations. If you do not want us to record your visit, you can disable this tracking. Click to enable/disable Google Analytics tracking. Additional services We also use various external services such as Google WebFonts and Google Maps. These providers may collect data such as your IP address. If you deactivate these cookies, the appearance of our site may have a negative impact on your reading experience. Changes will take effect once you reload the page. Click to enable/disable Google Webfonts. Click to enable/disable Google Maps. Privacy policy You can find out more about our use of cookies on our privacy policy page. SaveDeactivate all cookies Check to enable permanent hiding of message bar and refuse all cookies if you do not opt in. We need 2 cookies to store this setting. Otherwise you will be prompted again when opening a new browser window or new a tab. Click to enable/disable essential site cookies.",
+    "scrapedAt": "2026-05-09 01:13:44.446943"
+  },
+  {
+    "id": 1275,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.optimization_level",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:13:42.067128"
+  },
+  {
+    "id": 1274,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_argument_group",
+    "title": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Command-line interface libraries » argparse — Parser for command-line options, arguments and subcommands | Theme Auto Light Dark | argparse — Parser for command-line options, arguments and subcommands¶ Added in version 3.2. Source code: Lib/argparse.py Note While argparse is the default recommended standard library module for implementing basic command line applications, authors with more exacting requirements for exactly how their command line applications behave may find it doesn’t provide the necessary level of control. Refer to Choosing an argument parsing library for alternatives to consider when argparse doesn’t support behaviors that the application requires (such as entirely disabling support for interspersed options and positional arguments, or accepting option parameter values that start with - even when they correspond to another defined option). Tutorial This page contains the API reference information. For a more gentle introduction to Python command-line parsing, have a look at the argparse tutorial. The argparse module makes it easy to write user-friendly command-line interfaces. The program defines what arguments it requires, and argparse will figure out how to parse those out of sys.argv. The argparse module also automatically generates help and usage messages. The module will also issue errors when users give the program invalid arguments. The argparse module’s support for command-line interfaces is built around an instance of argparse.ArgumentParser. It is a container for argument specifications and has options that apply to the parser as whole: parser \u003d argparse.ArgumentParser(\n                    prog\u003d\u0027ProgramName\u0027,\n                    description\u003d\u0027What the program does\u0027,\n                    epilog\u003d\u0027Text at the bottom of help\u0027)\n The ArgumentParser.add_argument() method attaches individual argument specifications to the parser. It supports positional arguments, options that accept values, and on/off flags: parser.add_argument(\u0027filename\u0027)           # positional argument\nparser.add_argument(\u0027-c\u0027, \u0027--count\u0027)      # option that takes a value\nparser.add_argument(\u0027-v\u0027, \u0027--verbose\u0027,\n                    action\u003d\u0027store_true\u0027)  # on/off flag\n The ArgumentParser.parse_args() method runs the parser and places the extracted data in a argparse.Namespace object: args \u003d parser.parse_args()\nprint(args.filename, args.count, args.verbose)\n Note If you’re looking for a guide about how to upgrade optparse code to argparse, see Upgrading Optparse Code. ArgumentParser objects¶ class argparse.ArgumentParser(prog\u003dNone, usage\u003dNone, description\u003dNone, epilog\u003dNone, parents\u003d[], formatter_class\u003dargparse.HelpFormatter, prefix_chars\u003d\u0027-\u0027, fromfile_prefix_chars\u003dNone, argument_default\u003dNone, conflict_handler\u003d\u0027error\u0027, add_help\u003dTrue, allow_abbrev\u003dTrue, exit_on_error\u003dTrue, *, suggest_on_error\u003dFalse, color\u003dTrue)¶ Create a new ArgumentParser object. All parameters should be passed as keyword arguments. Each parameter has its own more detailed description below, but in short they are: prog - The name of the program (default: generated from the __main__ module attributes and sys.argv[0]) usage - The string describing the program usage (default: generated from arguments added to parser) description - Text to display before the argument help (by default, no text) epilog - Text to display after the argument help (by default, no text) parents - A list of ArgumentParser objects whose arguments should also be included formatter_class - A class for customizing the help output prefix_chars - The set of characters that prefix optional arguments (default: ‘-‘) fromfile_prefix_chars - The set of characters that prefix files from which additional arguments should be read (default: None) argument_default - The global default value for arguments (default: None) conflict_handler - The strategy for resolving conflicting optionals (usually unnecessary) add_help - Add a -h/--help option to the parser (default: True) allow_abbrev - Allows long options to be abbreviated if the abbreviation is unambiguous (default: True) exit_on_error - Determines whether or not ArgumentParser exits with error info when an error occurs. (default: True) suggest_on_error - Enables suggestions for mistyped argument choices and subparser names (default: False) color - Allow color output (default: True) Changed in version 3.5: allow_abbrev parameter was added. Changed in version 3.8: In previous versions, allow_abbrev also disabled grouping of short flags such as -vv to mean -v -v. Changed in version 3.9: exit_on_error parameter was added. Changed in version 3.14: suggest_on_error and color parameters were added. The following sections describe how each of these are used. prog¶ By default, ArgumentParser calculates the name of the program to display in help messages depending on the way the Python interpreter was run: The base name of sys.argv[0] if a file was passe",
+    "scrapedAt": "2026-05-09 01:13:40.698499"
+  },
+  {
+    "id": 1273,
+    "url": "https://github.com/python/cpython/issues/132429",
+    "title": "Bluetooth socket support is disabled on NetBSD and DragonFly BSD · Issue #132429 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Bluetooth socket support is disabled on NetBSD and DragonFly BSD #132429 New issue Copy link New issue Copy link Closed Closed Bluetooth socket support is disabled on NetBSD and DragonFly BSD#132429 Copy link Assignees Labels OS-freebsdOS-linuxOS-unsupportedextension-modulesC modules in the Modules dirC modules in the Modules dirtype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description serhiy-storchaka opened on Apr 12, 2025 Issue body actions Despite that there is a code to support Bluetooth sockets on NetBSD and DragonFly BSD, it did not work from 2010 (see 2501aca, 3e85dfd) due to error in conditional compilation. Condition (defined(HAVE_BLUETOOTH_H) || defined(HAVE_BLUETOOTH_BLUETOOTH_H)) \u0026\u0026 !defined(__NetBSD__) \u0026\u0026 !defined(__DragonFly__) is always false on NetBSD and DragonFly BSD, so USE_BLUETOOTH was not defined, and the code was omitted during compilation. cc @gpshead Linked PRs gh-132429: Fix support of Bluetooth sockets on NetBSD and DragonFly BSD #132431 [3.13] gh-132429: Fix support of Bluetooth sockets on NetBSD and DragonFly BSD #132458 gh-132429: Remove not working test for Bluetooth socket #132459 Reactions are currently unavailable Metadata Metadata Assignees serhiy-storchaka Labels OS-freebsdOS-linuxOS-unsupportedextension-modulesC modules in the Modules dirC modules in the Modules dirtype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects Unsupported platforms Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:13:39.006419"
+  },
+  {
+    "id": 1272,
+    "url": "https://github.com/python/cpython/issues/123958",
+    "title": "codegen should ideally not need to know the optimization level · Issue #123958 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k codegen should ideally not need to know the optimization level #123958 New issue Copy link New issue Copy link Closed Closed codegen should ideally not need to know the optimization level#123958 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs) Description iritkatriel opened on Sep 11, 2024 Issue body actions Optimization level is used for things that can be done in ast_opt. I\u0027ll try to move them there. Linked PRs gh-123958: apply docstring removal optimization in ast_opt instead of codegen #123959 gh-123958: move assert optimization from codegen to ast_opt #124143 Reactions are currently unavailable Metadata Metadata Assignees iritkatriel Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs) Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:13:36.117097"
+  },
+  {
     "id": 1271,
     "url": "https://docs.python.org/3/library/stdtypes.html#bytes.fromhex",
     "title": "Built-in Types — Python 3.14.5rc1 documentation",
@@ -8538,26 +8573,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1272,
-    "url": "https://github.com/python/cpython/issues/123958"
-  },
-  {
-    "id": 1273,
-    "url": "https://github.com/python/cpython/issues/132429"
-  },
-  {
-    "id": 1274,
-    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_argument_group"
-  },
-  {
-    "id": 1275,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.optimization_level"
-  },
-  {
-    "id": 1276,
-    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
   },
   {
     "id": 1277,
@@ -222605,10 +222620,292 @@ window.searchData = [
     "id": 253389,
     "url": "https://github.com/AlanRockefeller/faststack/pull/84",
     "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 257227,
+    "url": "https://github.com/python/cpython/pull/123959",
+    "parentUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "id": 257229,
+    "url": "https://github.com/python/cpython/issues/123958#issue-2520106370",
+    "parentUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "id": 257231,
+    "url": "https://github.com/python/cpython/pull/124143",
+    "parentUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "id": 257232,
+    "url": "https://github.com/python/cpython/issues/123958#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "id": 257236,
+    "url": "https://github.com/python/cpython/issues/123958#top",
+    "parentUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "id": 257239,
+    "url": "https://github.com/python/cpython/issues/132429#top",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 257240,
+    "url": "https://github.com/python/cpython/pull/132458",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 257242,
+    "url": "https://github.com/python/cpython/pull/132459",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 257243,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22OS-unsupported%22",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 257244,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22OS-linux%22",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 257245,
+    "url": "https://github.com/python/cpython/pull/132431",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 257246,
+    "url": "https://github.com/python/cpython/commit/2501aca6281500ecc31cccdd4d78977c84c9e4f6",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 257249,
+    "url": "https://github.com/orgs/python/projects/27",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 257253,
+    "url": "https://github.com/python/cpython/issues/132429#issue-2990373166",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 257255,
+    "url": "https://github.com/python/cpython/commit/3e85dfd15e36b7d890fb70a6c9edf0b1e6bbff6c",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 257256,
+    "url": "https://github.com/python/cpython/issues/132429#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 257702,
+    "url": "https://ecma-international.org/technical-committees/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257703,
+    "url": "https://www.linkedin.com/company/ecma-international",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257704,
+    "url": "https://twitter.com/EcmaIntl",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257705,
+    "url": "https://www.ecma-international.org/policies/privacy-policy/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257706,
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-376/#top",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257707,
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-420/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257708,
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-376/#",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257709,
+    "url": "https://www.ecma-international.org/publications-and-standards/standards/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257710,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376_3rd_edition_june_2011.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257711,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376_1st_edition_december_2006.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257712,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376-4_5th_edition_december_2016.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257713,
+    "url": "https://ecma-international.org/wp-content/uploads/OpenXML-White-Paper.pdf",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257714,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376-2_5th_edition_december_2021.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257715,
+    "url": "https://ecma-international.org/contact/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257716,
+    "url": "https://ecma-international.org/policies/privacy-policy/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257717,
+    "url": "https://www.ecma-international.org/mission/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257718,
+    "url": "https://ecma-international.org/policies/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257719,
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-352/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257720,
+    "url": "https://members.ecma-international.org/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257721,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376-3_5th_edition_december_2015.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257722,
+    "url": "https://ecma-international.org/news/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257723,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376_2nd_edition_december_2008.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257724,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376-1_5th_edition_december_2016.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257725,
+    "url": "https://ecma-international.org/technical-committees/tc45/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257726,
+    "url": "https://ecma-international.org/publications-and-standards/standards?order\u003dcategory#Document-architecture",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 257727,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376_4th_edition_december_2012.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.optimization_level"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.optimization_level"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_argument_group"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_argument_group"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "Bluetooth socket support is disabled on NetBSD and DragonFly BSD · Issue #132429 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Bluetooth socket support is disabled on NetBSD and DragonFly BSD · Issue #132429 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Bluetooth socket support is disabled on NetBSD and DragonFly BSD · Issue #132429 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Bluetooth socket support is disabled on NetBSD and DragonFly BSD · Issue #132429 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d64\u0026u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "codegen should ideally not need to know the optimization level · Issue #123958 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@iritkatriel",
+    "pageTitle": "codegen should ideally not need to know the optimization level · Issue #123958 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@iritkatriel",
+    "pageTitle": "codegen should ideally not need to know the optimization level · Issue #123958 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d64\u0026u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "codegen should ideally not need to know the optimization level · Issue #123958 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123958"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
