@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1060,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pending-removal-in-future-versions",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:04:28.472861"
+  },
+  {
+    "id": 1059,
+    "url": "https://github.com/python/cpython/issues/87790",
+    "title": "Add underscore as a decimal separator for string formatting · Issue #87790 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add underscore as a decimal separator for string formatting #87790 New issue Copy link New issue Copy link Closed Closed Add underscore as a decimal separator for string formatting#87790 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description TerryDavis mannequin opened on Mar 25, 2021 Issue body actions BPO 43624 Nosy @rhettinger, @mdickinson, @vstinner, @ericvsmith, @serhiy-storchaka, @domdfcoding Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2021-03-25.17:19:07.475\u003e\nlabels \u003d [\u0027interpreter-core\u0027, \u0027type-feature\u0027, \u00273.11\u0027]\ntitle \u003d \u0027Add underscore as a decimal separator for string formatting\u0027\nupdated_at \u003d \u003cDate 2021-05-04.15:37:03.108\u003e\nuser \u003d \u0027https://bugs.python.org/TerryDavis\u0027 bugs.python.org fields: activity \u003d \u003cDate 2021-05-04.15:37:03.108\u003e\nactor \u003d \u0027Terry Davis\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Interpreter Core\u0027]\ncreation \u003d \u003cDate 2021-03-25.17:19:07.475\u003e\ncreator \u003d \u0027Terry Davis\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 43624\nkeywords \u003d []\nmessage_count \u003d 17.0\nmessages \u003d [\u0027389508\u0027, \u0027389512\u0027, \u0027389517\u0027, \u0027389529\u0027, \u0027389534\u0027, \u0027389546\u0027, \u0027389547\u0027, \u0027389574\u0027, \u0027389687\u0027, \u0027389708\u0027, \u0027389709\u0027, \u0027389735\u0027, \u0027389736\u0027, \u0027389744\u0027, \u0027389754\u0027, \u0027389762\u0027, \u0027392911\u0027]\nnosy_count \u003d 7.0\nnosy_names \u003d [\u0027rhettinger\u0027, \u0027mark.dickinson\u0027, \u0027vstinner\u0027, \u0027eric.smith\u0027, \u0027serhiy.storchaka\u0027, \u0027Terry Davis\u0027, \u0027domdfcoding\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue43624\u0027\nversions \u003d [\u0027Python 3.11\u0027] Linked PRs gh-87790: support thousands separators for formatting fractional part of floats #125304 gh-87790: support thousands separators for formatting fractional part of Decimal #132202 gh-87790: support thousands separators for formatting fractional part of Fraction #132204 gh-87790: fix precision_with_grouping in formatting mini-language #132205 [3.14] gh-87790: support thousands separators for formatting fractional part of Fraction (GH-132204) #136364 [3.14] gh-87790: support thousands separators for formatting fractional part of Decimal (GH-132202) #136365 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:04:27.221652"
+  },
+  {
+    "id": 1058,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilename",
+    "title": "Module Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Module Objects | Theme Auto Light Dark | Module Objects¶ PyTypeObject PyModule_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python module type. This is exposed to Python programs as types.ModuleType. int PyModule_Check(PyObject *p)¶ Return true if p is a module object, or a subtype of a module object. This function always succeeds. int PyModule_CheckExact(PyObject *p)¶ Return true if p is a module object, but not a subtype of PyModule_Type. This function always succeeds. PyObject *PyModule_NewObject(PyObject *name)¶ Return value: New reference. Part of the Stable ABI since version 3.7. Return a new module object with module.__name__ set to name. The module’s __name__, __doc__, __package__ and __loader__ attributes are filled in (all but __name__ are set to None). The caller is responsible for setting a __file__ attribute. Return NULL with an exception set on error. Added in version 3.3. Changed in version 3.4: __package__ and __loader__ are now set to None. PyObject *PyModule_New(const char *name)¶ Return value: New reference. Part of the Stable ABI. Similar to PyModule_NewObject(), but the name is a UTF-8 encoded string instead of a Unicode object. PyObject *PyModule_GetDict(PyObject *module)¶ Return value: Borrowed reference. Part of the Stable ABI. Return the dictionary object that implements module’s namespace; this object is the same as the __dict__ attribute of the module object. If module is not a module object (or a subtype of a module object), SystemError is raised and NULL is returned. It is recommended extensions use other PyModule_* and PyObject_* functions rather than directly manipulate a module’s __dict__. The returned reference is borrowed from the module; it is valid until the module is destroyed. PyObject *PyModule_GetNameObject(PyObject *module)¶ Return value: New reference. Part of the Stable ABI since version 3.7. Return module’s __name__ value. If the module does not provide one, or if it is not a string, SystemError is raised and NULL is returned. Added in version 3.3. const char *PyModule_GetName(PyObject *module)¶ Part of the Stable ABI. Similar to PyModule_GetNameObject() but return the name encoded to \u0027utf-8\u0027. The returned buffer is only valid until the module is renamed or destroyed. Note that Python code may rename a module by setting its __name__ attribute. void *PyModule_GetState(PyObject *module)¶ Part of the Stable ABI. Return the “state” of the module, that is, a pointer to the block of memory allocated at module creation time, or NULL. See PyModuleDef.m_size. PyModuleDef *PyModule_GetDef(PyObject *module)¶ Part of the Stable ABI. Return a pointer to the PyModuleDef struct from which the module was created, or NULL if the module wasn’t created from a definition. On error, return NULL with an exception set. Use PyErr_Occurred() to tell this case apart from a missing PyModuleDef. PyObject *PyModule_GetFilenameObject(PyObject *module)¶ Return value: New reference. Part of the Stable ABI. Return the name of the file from which module was loaded using module’s __file__ attribute. If this is not defined, or if it is not a string, raise SystemError and return NULL; otherwise return a reference to a Unicode object. Added in version 3.2. const char *PyModule_GetFilename(PyObject *module)¶ Part of the Stable ABI. Similar to PyModule_GetFilenameObject() but return the filename encoded to ‘utf-8’. The returned buffer is only valid until the module’s __file__ attribute is reassigned or the module is destroyed. Deprecated since version 3.2: PyModule_GetFilename() raises UnicodeEncodeError on unencodable filenames, use PyModule_GetFilenameObject() instead. Module definitions¶ The functions in the previous section work on any module object, including modules imported from Python code. Modules defined using the C API typically use a module definition, PyModuleDef – a statically allocated, constant “description” of how a module should be created. The definition is usually used to define an extension’s “main” module object (see Defining extension modules for details). It is also used to create extension modules dynamically. Unlike PyModule_New(), the definition allows management of module state – a piece of memory that is allocated and cleared together with the module object. Unlike the module’s Python attributes, Python code cannot replace or delete data stored in module state. type PyModuleDef¶ Part of the Stable ABI (including all members). The module definition struct, which holds all information needed to create a module object. This structure must be statically allocated (or be otherwise guaranteed to be valid while any modules created from it exist). Usually, there is only one variable of this type for each extension module. PyModuleDef_Base m_base¶ Always initialize this member to PyModuleDef_HEAD_INIT. const char *m_nam",
+    "scrapedAt": "2026-05-09 01:04:25.020984"
+  },
+  {
+    "id": 1057,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pkgutil",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:04:23.816667"
+  },
+  {
+    "id": 1056,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.fromhex",
+    "title": "Built-in Types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Types | Theme Auto Light Dark | Built-in Types¶ The following sections describe the standard types that are built into the interpreter. The principal built-in types are numerics, sequences, mappings, classes, instances and exceptions. Some collection classes are mutable. The methods that add, subtract, or rearrange their members in place, and don’t return a specific item, never return the collection instance itself but None. Some operations are supported by several object types; in particular, practically all objects can be compared for equality, tested for truth value, and converted to a string (with the repr() function or the slightly different str() function). The latter function is implicitly used when an object is written by the print() function. Truth Value Testing¶ Any object can be tested for truth value, for use in an if or while condition or as operand of the Boolean operations below. By default, an object is considered true unless its class defines either a __bool__() method that returns False or a __len__() method that returns zero, when called with the object. [1] If one of the methods raises an exception when called, the exception is propagated and the object does not have a truth value (for example, NotImplemented). Here are most of the built-in objects considered false: constants defined to be false: None and False zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1) empty sequences and collections: \u0027\u0027, (), [], {}, set(), range(0) Operations and built-in functions that have a Boolean result always return 0 or False for false and 1 or True for true, unless otherwise stated. (Important exception: the Boolean operations or and and always return one of their operands.) Boolean Operations — and, or, not¶ These are the Boolean operations, ordered by ascending priority: Operation Result Notes x or y if x is true, then x, else y (1) x and y if x is false, then x, else y (2) not x if x is false, then True, else False (3) Notes: This is a short-circuit operator, so it only evaluates the second argument if the first one is false. This is a short-circuit operator, so it only evaluates the second argument if the first one is true. not has a lower priority than non-Boolean operators, so not a \u003d\u003d b is interpreted as not (a \u003d\u003d b), and a \u003d\u003d not b is a syntax error. Comparisons¶ There are eight comparison operations in Python. They all have the same priority (which is higher than that of the Boolean operations). Comparisons can be chained arbitrarily; for example, x \u003c y \u003c\u003d z is equivalent to x \u003c y and y \u003c\u003d z, except that y is evaluated only once (but in both cases z is not evaluated at all when x \u003c y is found to be false). This table summarizes the comparison operations: Operation Meaning \u003c strictly less than \u003c\u003d less than or equal \u003e strictly greater than \u003e\u003d greater than or equal \u003d\u003d equal !\u003d not equal is object identity is not negated object identity Unless stated otherwise, objects of different types never compare equal. The \u003d\u003d operator is always defined but for some object types (for example, class objects) is equivalent to is. The \u003c, \u003c\u003d, \u003e and \u003e\u003d operators are only defined where they make sense; for example, they raise a TypeError exception when one of the arguments is a complex number. Non-identical instances of a class normally compare as non-equal unless the class defines the __eq__() method. Instances of a class cannot be ordered with respect to other instances of the same class, or other types of object, unless the class defines enough of the methods __lt__(), __le__(), __gt__(), and __ge__() (in general, __lt__() and __eq__() are sufficient, if you want the conventional meanings of the comparison operators). The behavior of the is and is not operators cannot be customized; also they can be applied to any two objects and never raise an exception. Two more operations with the same syntactic priority, in and not in, are supported by types that are iterable or implement the __contains__() method. Numeric Types — int, float, complex¶ There are three distinct numeric types: integers, floating-point numbers, and complex numbers. In addition, Booleans are a subtype of integers. Integers have unlimited precision. Floating-point numbers are usually implemented using double in C; information about the precision and internal representation of floating-point numbers for the machine on which your program is running is available in sys.float_info. Complex numbers have a real and imaginary part, which are each a floating-point number. To extract these parts from a complex number z, use z.real and z.imag. (The standard library includes the additional numeric types fractions.Fraction, for rationals, and decimal.Decimal, for floating-point numbers with user-definable precision.) Numbers are created by numeric literals or as the result of built-in functions and operators. Unadorned integer li",
+    "scrapedAt": "2026-05-09 01:04:22.546032"
+  },
+  {
     "id": 1055,
     "url": "https://docs.python.org/3/glossary.html#term-context-manager",
     "title": "Glossary — Python 3.14.5rc1 documentation",
@@ -7068,26 +7103,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1056,
-    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.fromhex"
-  },
-  {
-    "id": 1057,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#pkgutil"
-  },
-  {
-    "id": 1058,
-    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilename"
-  },
-  {
-    "id": 1059,
-    "url": "https://github.com/python/cpython/issues/87790"
-  },
-  {
-    "id": 1060,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#pending-removal-in-future-versions"
   },
   {
     "id": 1061,
@@ -190335,10 +190350,125 @@ window.searchData = [
     "id": 169374,
     "url": "https://github.com/python/cpython/pull/123757/commits/78746ba7f99258968a793fc7343ba57534b59582",
     "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 175686,
+    "url": "https://github.com/python/cpython/pull/132205",
+    "parentUrl": "https://github.com/python/cpython/issues/87790"
+  },
+  {
+    "id": 175689,
+    "url": "https://github.com/domdfcoding",
+    "parentUrl": "https://github.com/python/cpython/issues/87790"
+  },
+  {
+    "id": 175693,
+    "url": "https://github.com/python/cpython/issues/87790#top",
+    "parentUrl": "https://github.com/python/cpython/issues/87790"
+  },
+  {
+    "id": 175694,
+    "url": "https://github.com/python/cpython/pull/132204",
+    "parentUrl": "https://github.com/python/cpython/issues/87790"
+  },
+  {
+    "id": 175696,
+    "url": "https://github.com/python/cpython/issues/87790#issue-1199055327",
+    "parentUrl": "https://github.com/python/cpython/issues/87790"
+  },
+  {
+    "id": 175697,
+    "url": "https://github.com/python/cpython/pull/132202",
+    "parentUrl": "https://github.com/python/cpython/issues/87790"
+  },
+  {
+    "id": 175699,
+    "url": "https://github.com/python/cpython/pull/136364",
+    "parentUrl": "https://github.com/python/cpython/issues/87790"
+  },
+  {
+    "id": 175700,
+    "url": "https://github.com/python/cpython/pull/136365",
+    "parentUrl": "https://github.com/python/cpython/issues/87790"
+  },
+  {
+    "id": 175701,
+    "url": "https://bugs.python.org/issue43624",
+    "parentUrl": "https://github.com/python/cpython/issues/87790"
+  },
+  {
+    "id": 175703,
+    "url": "https://github.com/python/cpython/issues/87790#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/87790"
+  },
+  {
+    "id": 175704,
+    "url": "https://github.com/python/cpython/pull/125304",
+    "parentUrl": "https://github.com/python/cpython/issues/87790"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pending-removal-in-future-versions"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pending-removal-in-future-versions"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93804312?v\u003d4\u0026size\u003d80",
+    "alt": "@TerryDavis",
+    "pageTitle": "Add underscore as a decimal separator for string formatting · Issue #87790 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/87790"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93804312?v\u003d4\u0026size\u003d48",
+    "alt": "@TerryDavis",
+    "pageTitle": "Add underscore as a decimal separator for string formatting · Issue #87790 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/87790"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Module Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilename"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Module Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilename"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pkgutil"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pkgutil"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray.fromhex"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray.fromhex"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
