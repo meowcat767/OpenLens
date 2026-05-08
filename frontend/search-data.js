@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 740,
+    "url": "https://docs.python.org/3/library/typing.html#typing.get_origin",
+    "title": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Development Tools » typing — Support for type hints | Theme Auto Light Dark | typing — Support for type hints¶ Added in version 3.5. Source code: Lib/typing.py Note The Python runtime does not enforce function and variable type annotations. They can be used by third party tools such as type checkers, IDEs, linters, etc. This module provides runtime support for type hints. Consider the function below: def surface_area_of_cube(edge_length: float) -\u003e str:\n    return f\"The surface area of the cube is {6 * edge_length ** 2}.\"\n The function surface_area_of_cube takes an argument expected to be an instance of float, as indicated by the type hint edge_length: float. The function is expected to return an instance of str, as indicated by the -\u003e str hint. While type hints can be simple classes like float or str, they can also be more complex. The typing module provides a vocabulary of more advanced type hints. New features are frequently added to the typing module. The typing_extensions package provides backports of these new features to older versions of Python. See also Typing cheat sheet A quick overview of type hints (hosted at the mypy docs) Type System Reference section of the mypy docs The Python typing system is standardised via PEPs, so this reference should broadly apply to most Python type checkers. (Some parts may still be specific to mypy.) Static Typing with Python Type-checker-agnostic documentation written by the community detailing type system features, useful typing related tools and typing best practices. Specification for the Python Type System¶ The canonical, up-to-date specification of the Python type system can be found at Specification for the Python type system. Type aliases¶ A type alias is defined using the type statement, which creates an instance of TypeAliasType. In this example, Vector and list[float] will be treated equivalently by static type checkers: type Vector \u003d list[float]\n\ndef scale(scalar: float, vector: Vector) -\u003e Vector:\n    return [scalar * num for num in vector]\n\n# passes type checking; a list of floats qualifies as a Vector.\nnew_vector \u003d scale(2.0, [1.0, -4.2, 5.4])\n Type aliases are useful for simplifying complex type signatures. For example: from collections.abc import Sequence\n\ntype ConnectionOptions \u003d dict[str, str]\ntype Address \u003d tuple[str, int]\ntype Server \u003d tuple[Address, ConnectionOptions]\n\ndef broadcast_message(message: str, servers: Sequence[Server]) -\u003e None:\n    ...\n\n# The static type checker will treat the previous type signature as\n# being exactly equivalent to this one.\ndef broadcast_message(\n    message: str,\n    servers: Sequence[tuple[tuple[str, int], dict[str, str]]]\n) -\u003e None:\n    ...\n The type statement is new in Python 3.12. For backwards compatibility, type aliases can also be created through simple assignment: Vector \u003d list[float]\n Or marked with TypeAlias to make it explicit that this is a type alias, not a normal variable assignment: from typing import TypeAlias\n\nVector: TypeAlias \u003d list[float]\n NewType¶ Use the NewType helper to create distinct types: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\nsome_id \u003d UserId(524313)\n The static type checker will treat the new type as if it were a subclass of the original type. This is useful in helping catch logical errors: def get_user_name(user_id: UserId) -\u003e str:\n    ...\n\n# passes type checking\nuser_a \u003d get_user_name(UserId(42351))\n\n# fails type checking; an int is not a UserId\nuser_b \u003d get_user_name(-1)\n You may still perform all int operations on a variable of type UserId, but the result will always be of type int. This lets you pass in a UserId wherever an int might be expected, but will prevent you from accidentally creating a UserId in an invalid way: # \u0027output\u0027 is of type \u0027int\u0027, not \u0027UserId\u0027\noutput \u003d UserId(23413) + UserId(54341)\n Note that these checks are enforced only by the static type checker. At runtime, the statement Derived \u003d NewType(\u0027Derived\u0027, Base) will make Derived a callable that immediately returns whatever parameter you pass it. That means the expression Derived(some_value) does not create a new class or introduce much overhead beyond that of a regular function call. More precisely, the expression some_value is Derived(some_value) is always true at runtime. It is invalid to create a subtype of Derived: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\n# Fails at runtime and does not pass type checking\nclass AdminUserId(UserId): pass\n However, it is possible to create a NewType based on a ‘derived’ NewType: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\nProUserId \u003d NewType(\u0027ProUserId\u0027, UserId)\n and typechecking for ProUserId will work as expected. See PEP 484 for more details. Note Recall that the use of a type alias declares two types to be equivalent to one another. Doing type Alias \u003d Original will make the static type checker treat Alias a",
+    "scrapedAt": "2026-05-09 00:51:41.112362"
+  },
+  {
+    "id": 739,
+    "url": "https://github.com/python/cpython/issues/130849",
+    "title": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Contributor csm10495 commented Mar 4, 2025 • edited by github-actions Bot Loading Uh oh! There was an error while loading. Please reload this page. Provides a way to forcefully stop all the workers in the pool Typically this would be used as a last effort to stop all workers if unable to shutdown / join in the expected way. This is a newer version of #128043 that includes fixes for transient issues seen in CI. Issue: Add terminate_workers to ProcessPoolExecutor #128041 📚 Documentation preview 📚: https://cpython-previews--130849.org.readthedocs.build/ Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 🎉 1 153957 reacted with hooray emoji All reactions 🎉 1 reaction pythongh-128041: Add terminate_workers and kill_workers methods t… … ec7599c …o ProcessPoolExecutor\n\nAdd some fixes to tests to make them no longer transient bedevere-app Bot added the awaiting review label Mar 4, 2025 bedevere-app Bot mentioned this pull request Mar 4, 2025 Add terminate_workers to ProcessPoolExecutor #128041 Closed gpshead added the 🔨 test-with-buildbots Test PR w/ buildbots; report in status section label Mar 4, 2025 Copy link Copy Markdown bedevere-bot commented Mar 4, 2025 🤖 New build scheduled with the buildbot fleet by @gpshead for commit ec7599c 🤖 Results will be shown at: https://buildbot.python.org/all/#/grid?branch\u003drefs%2Fpull%2F130849%2Fmerge If you want to schedule another build, you need to add the 🔨 test-with-buildbots label again. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-bot removed the 🔨 test-with-buildbots Test PR w/ buildbots; report in status section label Mar 4, 2025 colesbury reviewed Mar 4, 2025 View reviewed changes Comment thread Lib/test/test_concurrent_futures/test_process_pool.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/test/test_concurrent_futures/test_process_pool.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/test/test_concurrent_futures/test_process_pool.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/test/test_concurrent_futures/test_process_pool.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. colesbury reviewed Mar 4, 2025 View reviewed changes Comment thread Lib/test/test_concurrent_futures/test_process_pool.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. csm10495 added 3 commits March 4, 2025 10:46 Handle possible bug in join 6dec6f4 PR feedback wrt timeouts e48e0ea More PR feedback 4edea15 Copy link Copy Markdown Contributor Author csm10495 commented Mar 4, 2025 I\u0027ve run ./python.exe -m test test.test_concurrent_futures.test_process_pool  -vvv --fail-env-changed\n 75 times in a row now without a failure. @colesbury mind checking again. Thanks for the feedback! All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. csm10495 requested a review from colesbury March 4, 2025 18:59 colesbury reviewed Mar 4, 2025 View reviewed changes Comment thread Lib/test/test_concurrent_futures/test_process_pool.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. csm10495 added 2 commits March 4, 2025 11:48 PR feedback on looping for process death 4c2f35f Update pr number 92a2d72 colesbury added the 🔨 test-with-buildbots Test PR w/ buildbots; report in status section label Mar 4, 2025 Copy link Copy Markdown bedevere-bot commented Mar 4, 2025 🤖 New build scheduled with the buildbot fleet by @colesbury for commit 92a2d72 🤖 Results will be shown at: https://buildbot.python.org/all/#/grid?branch\u003drefs%2Fpull%2F130849%2Fmerge If you want to schedule another build, you need to add the 🔨 test-with-buildbots label again. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-bot removed the 🔨 test-with-buildbots Test PR w/ buildbots; report in status section label Mar 4, 2025 colesbury approved these changes Mar 4, 2025 View reviewed changes Copy link Copy Markdown Contributor colesbury left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be ",
+    "scrapedAt": "2026-05-09 00:51:39.930316"
+  },
+  {
+    "id": 738,
+    "url": "https://github.com/python/cpython/issues/127683",
+    "title": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Contributor hoodmane commented Dec 6, 2024 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. Issue: Emscripten: Add ctypes to the Emscripten build #127629 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions pythongh-127629: Add ctypes to the Emscripten build d9b6e9b hoodmane requested review from brettcannon and freakboy3742 as code owners December 6, 2024 11:46 bedevere-app Bot mentioned this pull request Dec 6, 2024 Emscripten: Add ctypes to the Emscripten build #127629 Closed bedevere-app Bot added the awaiting review label Dec 6, 2024 hoodmane removed the request for review from brettcannon December 6, 2024 11:47 hoodmane added the OS-emscripten label Dec 6, 2024 hoodmane and others added 2 commits December 6, 2024 12:47 Add news 8172368 Merge branch \u0027main\u0027 into emscripten-ctypes 91a70b3 freakboy3742 requested changes Dec 9, 2024 View reviewed changes Copy link Copy Markdown Contributor freakboy3742 left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Functionally, this works fine; a couple of questions inline about documentation and gross structure. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Comment thread Tools/wasm/emscripten/__main__.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Tools/wasm/emscripten/__main__.py Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Tools/wasm/emscripten/__main__.py Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot added awaiting changes and removed awaiting review labels Dec 9, 2024 Copy link Copy Markdown bedevere-app Bot commented Dec 9, 2024 A Python core developer has requested some changes be made to your pull request before we can consider merging it. If you could please address their requests along with any other requests in other reviews from core developers that would be appreciated. Once you have made the requested changes, please leave a comment on this pull request containing the phrase I have made the requested changes; please review again. I will then notify any core developers who have left a review that you\u0027re ready for them to take another look at this pull request. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. hoodmane added 3 commits December 9, 2024 19:39 Use release libffi a3f4891 Distinguish between build and prefix directories 556de1e Add separate make-libffi step to readme f670c21 Copy link Copy Markdown Contributor Author hoodmane commented Dec 9, 2024 I have made the requested changes; please review again. Thanks @freakboy3742! All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot added awaiting change review and removed awaiting changes labels Dec 9, 2024 Copy link Copy Markdown bedevere-app Bot commented Dec 9, 2024 Thanks for making the requested changes! @freakboy3742: please review the changes made to this pull request. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot requested a review from freakboy3742 December 9, 2024 19:06 freakboy3742 approved these changes Dec 10, 2024 View reviewed changes Copy link Copy Markdown Contributor freakboy3742 left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment 👍 Thanks for those fixes - this looks great! Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions bedevere-app Bot added awaiting merge and removed awaiting change review labels Dec 10, 2024 freakboy3742 merged commit 3b18af9 into python:main Dec 10, 2024 bedevere-app Bot removed the awaiting merge label Dec 10, 2024 srinivasreddy pushed a commit to srinivasreddy/cpython that referenced this pull request Jan 8, 2025 pythongh-1276",
+    "scrapedAt": "2026-05-09 00:51:36.7484"
+  },
+  {
+    "id": 737,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo",
+    "title": "zipfile — Work with ZIP archives — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Compression and Archiving » zipfile — Work with ZIP archives | Theme Auto Light Dark | zipfile — Work with ZIP archives¶ Source code: Lib/zipfile/ The ZIP file format is a common archive and compression standard. This module provides tools to create, read, write, append, and list a ZIP file. Any advanced use of this module will require an understanding of the format, as defined in PKZIP Application Note. This module does not handle multipart ZIP files. It can handle ZIP files that use the ZIP64 extensions (that is ZIP files that are more than 4 GiB in size). It supports decryption of encrypted files in ZIP archives, but it cannot create an encrypted file. Decryption is extremely slow as it is implemented in native Python rather than C. Handling compressed archives requires optional modules such as zlib, bz2, lzma, and compression.zstd. If any of them are missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. The module defines the following items: exception zipfile.BadZipFile¶ The error raised for bad ZIP files. Added in version 3.2. exception zipfile.BadZipfile¶ Alias of BadZipFile, for compatibility with older Python versions. Deprecated since version 3.2. exception zipfile.LargeZipFile¶ The error raised when a ZIP file would require ZIP64 functionality but that has not been enabled. class zipfile.ZipFile The class for reading and writing ZIP files. See section ZipFile objects for constructor details. class zipfile.Path Class that implements a subset of the interface provided by pathlib.Path, including the full importlib.resources.abc.Traversable interface. Added in version 3.8. class zipfile.PyZipFile Class for creating ZIP archives containing Python libraries. class zipfile.ZipInfo(filename\u003d\u0027NoName\u0027, date_time\u003d(1980, 1, 1, 0, 0, 0))¶ Class used to represent information about a member of an archive. Instances of this class are returned by the getinfo() and infolist() methods of ZipFile objects. Most users of the zipfile module will not need to create these, but only use those created by this module. filename should be the full name of the archive member, and date_time should be a tuple containing six fields which describe the time of the last modification to the file; the fields are described in section ZipInfo objects. Changed in version 3.13: A public compress_level attribute has been added to expose the formerly protected _compresslevel. The older protected name continues to work as a property for backwards compatibility. _for_archive(archive)¶ Resolve the date_time, compression attributes, and external attributes to suitable defaults as used by ZipFile.writestr(). Returns self for chaining. Added in version 3.14. zipfile.is_zipfile(filename)¶ Returns True if filename is a valid ZIP file based on its magic number, otherwise returns False. filename may be a file or file-like object too. Changed in version 3.1: Support for file and file-like objects. zipfile.ZIP_STORED¶ The numeric constant for an uncompressed archive member. zipfile.ZIP_DEFLATED¶ The numeric constant for the usual ZIP compression method. This requires the zlib module. zipfile.ZIP_BZIP2¶ The numeric constant for the BZIP2 compression method. This requires the bz2 module. Added in version 3.3. zipfile.ZIP_LZMA¶ The numeric constant for the LZMA compression method. This requires the lzma module. Added in version 3.3. zipfile.ZIP_ZSTANDARD¶ The numeric constant for Zstandard compression. This requires the compression.zstd module. Note In APPNOTE 6.3.7, the method ID 20 was assigned to Zstandard compression. This was changed in APPNOTE 6.3.8 to method ID 93 to avoid conflicts, with method ID 20 being deprecated. For compatibility, the zipfile module reads both method IDs but will only write data with method ID 93. Added in version 3.14. Note The ZIP file format specification has included support for bzip2 compression since 2001, for LZMA compression since 2006, and Zstandard compression since 2020. However, some tools (including older Python releases) do not support these compression methods, and may either refuse to process the ZIP file altogether, or fail to extract individual files. See also PKZIP Application Note Documentation on the ZIP file format by Phil Katz, the creator of the format and algorithms used. Info-ZIP Home Page Information about the Info-ZIP project’s ZIP archive programs and development libraries. ZipFile objects¶ class zipfile.ZipFile(file, mode\u003d\u0027r\u0027, compression\u003dZIP_STORED, allowZip64\u003dTrue, compresslevel\u003dNone, *, strict_timestamps\u003dTrue, metadata_encoding\u003dNone)¶ Open a ZIP file, where file can be a path to a file (a string), a file-like object or a path-like object. The mode parameter should be \u0027r\u0027 to read an existing file, \u0027w\u0027 to truncate and write a new file, \u0027a\u0027 to appen",
+    "scrapedAt": "2026-05-09 00:51:32.848701"
+  },
+  {
+    "id": 736,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF",
+    "title": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » annotationlib — Functionality for introspecting annotations | Theme Auto Light Dark | annotationlib — Functionality for introspecting annotations¶ Added in version 3.14. Source code: Lib/annotationlib.py The annotationlib module provides tools for introspecting annotations on modules, classes, and functions. Annotations are lazily evaluated and often contain forward references to objects that are not yet defined when the annotation is created. This module provides a set of low-level tools that can be used to retrieve annotations in a reliable way, even in the presence of forward references and other edge cases. This module supports retrieving annotations in three main formats (see Format), each of which works best for different use cases: VALUE evaluates the annotations and returns their value. This is most straightforward to work with, but it may raise errors, for example if the annotations contain references to undefined names. FORWARDREF returns ForwardRef objects for annotations that cannot be resolved, allowing you to inspect the annotations without evaluating them. This is useful when you need to work with annotations that may contain unresolved forward references. STRING returns the annotations as a string, similar to how it would appear in the source file. This is useful for documentation generators that want to display annotations in a readable way. The get_annotations() function is the main entry point for retrieving annotations. Given a function, class, or module, it returns an annotations dictionary in the requested format. This module also provides functionality for working directly with the annotate function that is used to evaluate annotations, such as get_annotate_from_class_namespace() and call_annotate_function(), as well as the call_evaluate_function() function for working with evaluate functions. Caution Most functionality in this module can execute arbitrary code; see the security section for more information. See also PEP 649 proposed the current model for how annotations work in Python. PEP 749 expanded on various aspects of PEP 649 and introduced the annotationlib module. Annotations Best Practices provides best practices for working with annotations. typing-extensions provides a backport of get_annotations() that works on earlier versions of Python. Annotation semantics¶ The way annotations are evaluated has changed over the history of Python 3, and currently still depends on a future import. There have been execution models for annotations: Stock semantics (default in Python 3.0 through 3.13; see PEP 3107 and PEP 526): Annotations are evaluated eagerly, as they are encountered in the source code. Stringified annotations (used with from __future__ import annotations in Python 3.7 and newer; see PEP 563): Annotations are stored as strings only. Deferred evaluation (default in Python 3.14 and newer; see PEP 649 and PEP 749): Annotations are evaluated lazily, only when they are accessed. As an example, consider the following program: def func(a: Cls) -\u003e None:\n    print(a)\n\nclass Cls: pass\n\nprint(func.__annotations__)\n This will behave as follows: Under stock semantics (Python 3.13 and earlier), it will throw a NameError at the line where func is defined, because Cls is an undefined name at that point. Under stringified annotations (if from __future__ import annotations is used), it will print {\u0027a\u0027: \u0027Cls\u0027, \u0027return\u0027: \u0027None\u0027}. Under deferred evaluation (Python 3.14 and later), it will print {\u0027a\u0027: \u003cclass \u0027Cls\u0027\u003e, \u0027return\u0027: None}. Stock semantics were used when function annotations were first introduced in Python 3.0 (by PEP 3107) because this was the simplest, most obvious way to implement annotations. The same execution model was used when variable annotations were introduced in Python 3.6 (by PEP 526). However, stock semantics caused problems when using annotations as type hints, such as a need to refer to names that are not yet defined when the annotation is encountered. In addition, there were performance problems with executing annotations at module import time. Therefore, in Python 3.7, PEP 563 introduced the ability to store annotations as strings using the from __future__ import annotations syntax. The plan at the time was to eventually make this behavior the default, but a problem appeared: stringified annotations are more difficult to process for those who introspect annotations at runtime. An alternative proposal, PEP 649, introduced the third execution model, deferred evaluation, and was implemented in Python 3.14. Stringified annotations are still used if from __future__ import annotations is present, but this behavior will eventually be removed. Classes¶ class annotationlib.Format¶ An IntEnum describing the formats in which annotations can be returned. Members of the enum, or their equivalent integer values, can be passed to get_annotations() ",
+    "scrapedAt": "2026-05-09 00:51:31.632828"
+  },
+  {
     "id": 735,
     "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.user_site_directory",
     "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
@@ -4858,26 +4893,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 736,
-    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
-  },
-  {
-    "id": 737,
-    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
-  },
-  {
-    "id": 738,
-    "url": "https://github.com/python/cpython/issues/127683"
-  },
-  {
-    "id": 739,
-    "url": "https://github.com/python/cpython/issues/130849"
-  },
-  {
-    "id": 740,
-    "url": "https://docs.python.org/3/library/typing.html#typing.get_origin"
   },
   {
     "id": 741,
@@ -124629,10 +124644,2704 @@ window.searchData = [
     "id": 89538,
     "url": "https://peps.python.org/pep-0744/#abstract",
     "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89851,
+    "url": "https://docs.python.org/3/library/functools.html#functools.update_wrapper",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89853,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib-security",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89856,
+    "url": "https://docs.python.org/3/library/annotationlib.html#recipes",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89861,
+    "url": "https://peps.python.org/pep-0649/#the-stringizer-and-the-fake-globals-environment",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89863,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.ForwardRef",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89864,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.call_annotate_function",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89868,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVar.evaluate_constraints",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89874,
+    "url": "https://docs.python.org/3/library/annotationlib.html#functions",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89875,
+    "url": "https://docs.python.org/3/library/annotationlib.html#classes",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89879,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ClassVar",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89881,
+    "url": "https://docs.python.org/3/library/annotationlib.html#using-annotations-in-a-metaclass",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89891,
+    "url": "https://docs.python.org/3/library/annotationlib.html#limitations-of-the-forwardref-format",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89895,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVar.evaluate_default",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89896,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.type_repr",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89898,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotation-semantics",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89903,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVarTuple.evaluate_default",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89904,
+    "url": "https://docs.python.org/3/library/annotationlib.html#security-implications-of-introspecting-annotations",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89908,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.ForwardRef.__forward_arg__",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89914,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.VALUE_WITH_FAKE_GLOBALS",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89932,
+    "url": "https://docs.python.org/3/library/enum.html#enum.IntEnum",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89933,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib-metaclass",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89934,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVar.evaluate_bound",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89937,
+    "url": "https://peps.python.org/pep-3107/",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89940,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/annotationlib.py",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89946,
+    "url": "https://docs.python.org/3/library/annotationlib.html#",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89948,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.annotations_to_string",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89949,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeAliasType.evaluate_value",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89957,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ParamSpec.evaluate_default",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89958,
+    "url": "https://pypi.org/project/typing-extensions/",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89962,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/annotationlib.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89966,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.call_evaluate_function",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89970,
+    "url": "https://docs.python.org/3/library/annotationlib.html#limitations-of-the-string-format",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89971,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.ForwardRef.evaluate",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89972,
+    "url": "https://docs.python.org/3/library/zipfile.html#interruption",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89973,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.BadZipfile",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89975,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.read_bytes",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89977,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.is_dir",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89979,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.abspath",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89981,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-test",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89984,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/zipfile.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89985,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.open",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89986,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.iterdir",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89987,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.is_file",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89989,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-list",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89991,
+    "url": "https://infozip.sourceforge.net/",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89992,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-extract",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89993,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.is_zipfile",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89994,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.seek",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89995,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.header_offset",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89997,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZIP_STORED",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89998,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.namelist",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89999,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.external_attr",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90000,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.LargeZipFile",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90004,
+    "url": "https://docs.python.org/3/library/zipfile.html#pyzipfile-objects",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90005,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2File",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90006,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.mkdir",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90007,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.tell",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90008,
+    "url": "https://docs.python.org/3/library/zipfile.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90010,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.read_text",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90011,
+    "url": "https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90013,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZIP_ZSTANDARD",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90014,
+    "url": "https://docs.python.org/3/library/zipfile.html#path-objects",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90017,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.BadZipFile",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90018,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZIP_LZMA",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90019,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.comment",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90020,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.filename",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90021,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-create",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90022,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.printdir",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90023,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.open",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90024,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.extract_version",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90025,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.close",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90026,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.extra",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90027,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.write",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90028,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.PyZipFile.writepy",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90030,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.create_version",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90031,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZIP_DEFLATED",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90033,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/zipfile/",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90034,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.volume",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90035,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.is_symlink",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90037,
+    "url": "https://docs.python.org/3/library/zipfile.html#default-behaviors-of-extraction",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90038,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.file_size",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90040,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.compress_size",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90042,
+    "url": "https://docs.python.org/3/library/zipfile.html#from-file-itself",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90044,
+    "url": "https://docs.python.org/3/library/compression.zstd.html#compression.zstd.CompressionParameter.compression_level",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90045,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.infolist",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90046,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.exists",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90047,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.reserved",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90048,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.compressobj",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90049,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-metadata-encoding",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90051,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.readlines",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90052,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90053,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-l",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90055,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.is_dir",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90056,
+    "url": "https://docs.python.org/3/library/zipfile.html#",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90058,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.name",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90059,
+    "url": "https://en.wikipedia.org/wiki/Zip_bomb",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90060,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.extract",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90061,
+    "url": "https://docs.python.org/3/library/zipfile.html#command-line-options",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90062,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-t",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90064,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.comment",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90065,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile-objects",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90066,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.flag_bits",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90068,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-c",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90070,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.compress_type",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90074,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-e",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90075,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.CRC",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90076,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.internal_attr",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90077,
+    "url": "https://docs.python.org/3/library/zipfile.html#resources-limitations",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90078,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.create_system",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90079,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.getinfo",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90080,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90084,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.filename",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90085,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.from_file",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90086,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZIP_BZIP2",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90087,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.commonpath",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90089,
+    "url": "https://docs.python.org/3/library/zipfile.html#decompression-pitfalls",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90091,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.read",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90093,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.testzip",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90095,
+    "url": "https://docs.python.org/3/library/zipfile.html#file-system-limitations",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90096,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.PyZipFile",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90097,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.suffixes",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90098,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipinfo-objects",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90099,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.suffix",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90100,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.stem",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90103,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.extractall",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90105,
+    "url": "https://docs.python.org/3/library/stdtypes.html#container.__iter__",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90106,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.joinpath",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90108,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.setpassword",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90110,
+    "url": "https://pypi.org/project/zipp/",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90111,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.debug",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90113,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedIOBase.write",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90114,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.date_time",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90115,
+    "url": "https://github.com/python/cpython/pull/127683#ref-issue-2719846943",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90117,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F127683",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90118,
+    "url": "https://github.com/python/cpython/pull/127683#event-15559137836",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90119,
+    "url": "https://github.com/python/cpython/pull/127683#issuecomment-2529128862",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90120,
+    "url": "https://github.com/python/cpython/pull/127683/commits/556de1e773839e63a1678630958dd9781b370f58",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90121,
+    "url": "https://github.com/brettcannon",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90122,
+    "url": "https://github.com/python/cpython/pull/127683#event-15593415165",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90124,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22awaiting%20change%20review%22",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90125,
+    "url": "https://github.com/python/cpython/pull/127683#pullrequestreview-2748935192",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90126,
+    "url": "https://github.com/python/cpython/pull/127683#event-15593428483",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90127,
+    "url": "https://github.com/python/cpython/pull/127683#event-15559131619",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90128,
+    "url": "https://github.com/python/cpython/pull/127683#pullrequestreview-2490694397",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90129,
+    "url": "https://github.com/python/cpython/pull/127683#pullrequestreview-2487426099",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90130,
+    "url": "https://github.com/python/cpython/pull/127683",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90131,
+    "url": "https://github.com/python/cpython/pull/127683#event-15588828802",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90133,
+    "url": "https://github.com/python/cpython/pull/127683#discussion_r2032556066",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90134,
+    "url": "https://github.com/python/cpython/pull/127683/files/f670c2153cc6a70203ea96bf6504e6febf9a0255",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90135,
+    "url": "https://github.com/python/cpython/pull/127683#event-15593428112",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90136,
+    "url": "https://github.com/python/cpython/pull/127683#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90137,
+    "url": "https://github.com/python/cpython/pull/127683/commits/a3f4891d172264959e1025aed1c4b91007f3e8ff",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90138,
+    "url": "https://github.com/python/cpython/pull/127683/commits/d9b6e9bbf32110c38c6f2274079474ec495474bf",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90139,
+    "url": "https://github.com/python/cpython/pull/127683#ref-commit-655b380",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90140,
+    "url": "https://github.com/python/cpython/pull/127683#commits-pushed-a3f4891",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90141,
+    "url": "https://github.com/python/cpython/pull/127683/commits/91a70b385c6e38340c7495b87c6d15543cb83ba8",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90142,
+    "url": "https://github.com/python/cpython/pull/127683#issuecomment-2529129099",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90143,
+    "url": "https://github.com/python/cpython/blob/023b7d2141467017abc27de864f3f44677768cb3/.github/CODEOWNERS#L283",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90144,
+    "url": "https://github.com/srinivasreddy",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90146,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3AOS-emscripten",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90148,
+    "url": "https://github.com/freakboy3742",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90149,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22awaiting%20changes%22",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90150,
+    "url": "https://github.com/python/cpython/pull/127683#discussion_r2032628731",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90151,
+    "url": "https://github.com/python/cpython/pull/127683#issuecomment-2526675957",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90153,
+    "url": "https://github.com/MichaelBuhler",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90154,
+    "url": "https://github.com/python/cpython/pull/127683/files/91a70b385c6e38340c7495b87c6d15543cb83ba8#diff-033dac21c82169b95fb79a21efc43cd8fd720ff351cce2d6dc8d2a82caa9d293",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90155,
+    "url": "https://github.com/python/cpython/pull/127683/files/f670c2153cc6a70203ea96bf6504e6febf9a0255#diff-6be8b1f36800531461f921a13fabf5b6d7361abb5d78ec526c3a948334c176d7",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90157,
+    "url": "https://github.com/python/cpython/pull/127683#event-15559133450",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90159,
+    "url": "https://github.com/srinivasreddy/cpython/commit/655b3808b8fac686d3d2098670032725eee7c576",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90160,
+    "url": "https://github.com/python/cpython/commit/3b18af964da9814474a5db9e502962c7e0593e8d",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90161,
+    "url": "https://github.com/python/cpython/pull/127683#event-15576061317",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90162,
+    "url": "https://github.com/python/cpython/pull/127683#issue-2722855313",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90166,
+    "url": "https://github.com/python/cpython/pull/127683/commits/f670c2153cc6a70203ea96bf6504e6febf9a0255",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90167,
+    "url": "https://github.com/python/cpython/pull/127683/files/8172368e9550aa054c4f1480dee2574e80019379#diff-033dac21c82169b95fb79a21efc43cd8fd720ff351cce2d6dc8d2a82caa9d293",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90168,
+    "url": "https://github.com/python/cpython/pull/127683#event-15588829917",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90169,
+    "url": "https://github.com/python/cpython/pull/127683#commits-pushed-8172368",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90170,
+    "url": "https://github.com/python/cpython/pull/127683#event-15559133042",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90171,
+    "url": "https://github.com/python/cpython/pull/127683/files/91a70b385c6e38340c7495b87c6d15543cb83ba8",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90172,
+    "url": "https://github.com/python/cpython/pull/127683/commits/8172368e9550aa054c4f1480dee2574e80019379",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90173,
+    "url": "https://github.com/hoodmane",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90174,
+    "url": "https://github.com/python/cpython/pull/130849#ref-issue-2898511540",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90176,
+    "url": "https://github.com/python/cpython/pull/130849/files/4edea153b41344702b132b51718fb6a369c6d248",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90177,
+    "url": "https://buildbot.python.org/all/#/grid?branch\u003drefs%2Fpull%2F130849%2Fmerge",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90178,
+    "url": "https://github.com/python/cpython/pull/130849#pullrequestreview-2658804294",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90179,
+    "url": "https://github.com/python/cpython/pull/130849/files/92a2d723c491834f1c98ad7537ca024dd55942a7",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90181,
+    "url": "https://github.com/python/cpython/pull/130849/commits/e48e0ea0abf5f3a595e00b87ad75c8b066cfb8f6",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90182,
+    "url": "https://github.com/python/cpython/commit/ba05a4ebcb67506b4e6d65ea11e78d06f57dc23b",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90183,
+    "url": "https://github.com/python/cpython/pull/130849#event-16607613802",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90184,
+    "url": "https://github.com/csm10495",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90185,
+    "url": "https://github.com/python/cpython/issues/130854",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90186,
+    "url": "https://github.com/python/cpython/pull/130849/commits/6dec6f45f5f88dcacf96eef2fa0e88bfd40fd39d",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90187,
+    "url": "https://github.com/python/cpython/issues/130895",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90188,
+    "url": "https://github.com/python/cpython/pull/130849#event-16607613379",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90189,
+    "url": "https://cpython-previews--130849.org.readthedocs.build/",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90190,
+    "url": "https://github.com/python/cpython/pull/130849/files/4edea153b41344702b132b51718fb6a369c6d248#diff-ceb3c61e8d982ca1de088c471618cc635c2660f42a53af0902cad78d6dffacfc",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90191,
+    "url": "https://github.com/python/cpython/pull/130849#issue-2895019840",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90192,
+    "url": "https://github.com/python/cpython/pull/130849/commits/92a2d723c491834f1c98ad7537ca024dd55942a7",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90193,
+    "url": "https://github.com/python/cpython/pull/130849#event-16575646680",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90194,
+    "url": "https://github.com/python/cpython/pull/130849#pullrequestreview-2662645925",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90195,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22%3Ahammer%3A%20test-with-buildbots%22",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90196,
+    "url": "https://github.com/python/cpython/pull/130849#issuecomment-2698614734",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90199,
+    "url": "https://github.com/python/cpython/pull/130849#issuecomment-2698540038",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90200,
+    "url": "https://github.com/python/cpython/pull/130849",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90201,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F130849",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90202,
+    "url": "https://github.com/python/cpython/pull/130849#issuecomment-2698752877",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90203,
+    "url": "https://github.com/python/cpython/pull/130849/files/92a2d723c491834f1c98ad7537ca024dd55942a7#diff-ceb3c61e8d982ca1de088c471618cc635c2660f42a53af0902cad78d6dffacfc",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90204,
+    "url": "https://github.com/python/cpython/pull/130849#pullrequestreview-2658585615",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90205,
+    "url": "https://github.com/python/cpython/pull/130849#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90206,
+    "url": "https://github.com/python/cpython/pull/128043",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90207,
+    "url": "https://github.com/python/cpython/pull/130849#event-16568429319",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90208,
+    "url": "https://github.com/python/cpython/pull/130849#event-16569149157",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90209,
+    "url": "https://github.com/python/cpython/pull/130849/files/ec7599c79caaf7f750097a5c72f385a0cfc2fe98",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90210,
+    "url": "https://github.com/bedevere-bot",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90212,
+    "url": "https://github.com/python/cpython/pull/130849#pullrequestreview-2658607413",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90213,
+    "url": "https://github.com/python/cpython/commit/92a2d723c491834f1c98ad7537ca024dd55942a7",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90214,
+    "url": "https://github.com/python/cpython/pull/130849/files/ec7599c79caaf7f750097a5c72f385a0cfc2fe98#diff-ceb3c61e8d982ca1de088c471618cc635c2660f42a53af0902cad78d6dffacfc",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90215,
+    "url": "https://github.com/python/cpython/pull/130849#ref-issue-2895375626",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90218,
+    "url": "https://github.com/python/cpython/pull/130849#event-16567874503",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90221,
+    "url": "https://github.com/python/cpython/pull/130849/commits/ec7599c79caaf7f750097a5c72f385a0cfc2fe98",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90223,
+    "url": "https://github.com/python/cpython/pull/130849#event-16572855563",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90224,
+    "url": "https://github.com/python/cpython/pull/130849#event-16568429823",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90225,
+    "url": "https://github.com/gpshead",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90229,
+    "url": "https://github.com/colesbury",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90230,
+    "url": "https://github.com/python/cpython/commit/ec7599c79caaf7f750097a5c72f385a0cfc2fe98",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90231,
+    "url": "https://github.com/python/cpython/pull/130849#pullrequestreview-2658830959",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90232,
+    "url": "https://github.com/python/cpython/pull/130849#issuecomment-2699972337",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90233,
+    "url": "https://github.com/python/cpython/pull/130849/commits/4edea153b41344702b132b51718fb6a369c6d248",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90234,
+    "url": "https://github.com/python/cpython/pull/130849/commits/4c2f35f96d20bab0952c7d48ef2fb6c979f7e621",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90235,
+    "url": "https://github.com/python/cpython/pull/130849#commits-pushed-6dec6f4",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90236,
+    "url": "https://github.com/python/cpython/pull/130849#event-16572932864",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90237,
+    "url": "https://github.com/python/cpython/pull/130849#event-16572855195",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90238,
+    "url": "https://github.com/python/cpython/pull/130849#ref-issue-2745635435",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90239,
+    "url": "https://github.com/python/cpython/pull/130849#commits-pushed-4c2f35f",
+    "parentUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "id": 90241,
+    "url": "https://docs.python.org/3/library/typing.html#typing-constrained-typevar",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90242,
+    "url": "https://docs.python.org/3/library/typing.html#typing.evaluate_forward_ref",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90246,
+    "url": "https://docs.python.org/3/library/typing.html#",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90247,
+    "url": "https://peps.python.org/pep-0613/",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90248,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Final",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90251,
+    "url": "https://docs.python.org/3/library/typing.html#abcs-and-protocols-for-working-with-i-o",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90253,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ParamSpec.has_default",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90254,
+    "url": "https://typing.python.org/en/latest/",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90255,
+    "url": "https://docs.python.org/3/library/typing.html#distinct",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90256,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ParamSpec.__default__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90257,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Any",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90258,
+    "url": "https://docs.python.org/3/library/typing.html#annotating-generators-and-coroutines",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90259,
+    "url": "https://docs.python.org/3/library/typing.html#annotating-callables",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90261,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVar.__name__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90262,
+    "url": "https://peps.python.org/pep-0612/",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90263,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Callable",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90265,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Required",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90266,
+    "url": "https://peps.python.org/pep-0692/",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90269,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Unpack",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90270,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Dict",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90271,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Collection",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90274,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVar.__constraints__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90275,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVar.__contravariant__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90277,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ParamSpecArgs",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90281,
+    "url": "https://docs.python.org/3/library/typing.html#typing.LiteralString",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90282,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ParamSpec.__name__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90284,
+    "url": "https://peps.python.org/pep-0681/",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90287,
+    "url": "https://peps.python.org/pep-0647/",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90289,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Generator",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90290,
+    "url": "https://mypy.readthedocs.io/en/stable/index.html",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90291,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90293,
+    "url": "https://docs.python.org/3/library/typing.html#typing.MutableSequence",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90297,
+    "url": "https://docs.python.org/3/library/typing.html#typing.AsyncIterator",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90300,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Hashable",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90302,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVar.__default__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90303,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Sequence",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90304,
+    "url": "https://peps.python.org/pep-0593/",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90305,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeGuard",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90307,
+    "url": "https://docs.python.org/3/library/typing.html#typing.DefaultDict",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90311,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Sized",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90312,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVarTuple.__name__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90316,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVar.has_default",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90317,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Match",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90319,
+    "url": "https://docs.python.org/3/library/typing.html#typing.is_typeddict",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90321,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Annotated",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90322,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.AsyncIterable",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90323,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.AsyncIterator",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90325,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Protocol",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90330,
+    "url": "https://docs.python.org/3/library/typing.html#typing.MappingView",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90332,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeAlias",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90333,
+    "url": "https://docs.python.org/3/library/typing.html#typing.SupportsInt",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90334,
+    "url": "https://docs.python.org/3/library/typing.html#typing.NewType.__supertype__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90336,
+    "url": "https://peps.python.org/pep-0591/",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90338,
+    "url": "https://docs.python.org/3/library/typing.html#building-generic-types-and-type-aliases",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90339,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypedDict.__optional_keys__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90340,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVar.__covariant__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90342,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Pattern",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90343,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Awaitable",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90345,
+    "url": "https://docs.python.org/3/library/typing.html#typing.dataclass_transform",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90347,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeAliasType.__module__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90348,
+    "url": "https://docs.python.org/3/library/typing.html#typing.MutableMapping",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90349,
+    "url": "https://docs.python.org/3/library/typing.html#typing.final",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90351,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.MappingView",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90355,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVarTuple.__default__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90359,
+    "url": "https://docs.python.org/3/library/collections.html#collections.ChainMap",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90360,
+    "url": "https://docs.python.org/3/library/typing.html#typing.SupportsComplex",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90363,
+    "url": "https://docs.python.org/3/library/typing.html#typing.get_protocol_members",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90364,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getattr_static",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90365,
+    "url": "https://docs.python.org/3/library/typing.html#typing.reveal_type",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90366,
+    "url": "https://docs.python.org/3/library/typing.html#other-special-directives",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90367,
+    "url": "https://docs.python.org/3/library/typing.html#typing.KeysView",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90369,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Container",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90371,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVar.__bound__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90372,
+    "url": "https://docs.python.org/3/library/re.html#re.compile",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90373,
+    "url": "https://docs.python.org/3/library/typing.html#typing.MutableSet",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90375,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.field",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90376,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypedDict.__total__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90378,
+    "url": "https://docs.python.org/3/whatsnew/3.12.html#whatsnew-typing-py312",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90379,
+    "url": "https://docs.python.org/3/library/typing.html#typing.clear_overloads",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90380,
+    "url": "https://docs.python.org/3/library/typing.html#typing.type_check_only",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90381,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeAliasType.__name__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90383,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ParamSpec.kwargs",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90384,
+    "url": "https://docs.python.org/3/library/typing.html#type-of-class-objects",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90387,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.ItemsView",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90388,
+    "url": "https://docs.python.org/3/library/typing.html#the-any-type",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90389,
+    "url": "https://docs.python.org/3/library/typing.html#annotating-callable-objects",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90391,
+    "url": "https://docs.python.org/3/library/typing.html#introspection-helpers",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90392,
+    "url": "https://docs.python.org/3/library/typing.html#typing-support-for-type-hints",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90393,
+    "url": "https://docs.python.org/3/library/typing.html#typing.is_protocol",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90395,
+    "url": "https://docs.python.org/3/library/typing.html#typing.AbstractSet",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90396,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Coroutine",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90397,
+    "url": "https://docs.python.org/3/library/typing.html#typing.runtime_checkable",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90398,
+    "url": "https://docs.python.org/3/library/typing.html#aliases-to-asynchronous-abcs-in-collections-abc",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90399,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Reversible",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90404,
+    "url": "https://docs.python.org/3/library/typing.html#special-types",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90407,
+    "url": "https://peps.python.org/pep-0655/",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90408,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.KeysView",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90409,
+    "url": "https://docs.python.org/3/library/typing.html#typing.NoDefault",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90410,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.dataclass",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90413,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ParamSpecKwargs",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90415,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeAliasType.__type_params__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90417,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Optional",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90418,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ReadOnly",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90419,
+    "url": "https://docs.python.org/3/library/typing.html#typing.no_type_check",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90423,
+    "url": "https://docs.python.org/3/library/typing.html#typing.List",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90424,
+    "url": "https://docs.python.org/3/library/typing.html#typevartuple",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90428,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/typing.py",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90429,
+    "url": "https://docs.python.org/3/library/typing.html#nominal-vs-structural-subtyping",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90431,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.MutableSet",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90434,
+    "url": "https://docs.python.org/3/library/contextlib.html#module-contextlib",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90437,
+    "url": "https://docs.python.org/3/library/typing.html#typing.AsyncGenerator",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90438,
+    "url": "https://docs.python.org/3/library/typing.html#newtype",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90440,
+    "url": "https://docs.python.org/3/library/typing.html#typing.SupportsIndex",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90441,
+    "url": "https://docs.python.org/3/library/typing.html#aliases-to-built-in-types",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90444,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Iterable",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90445,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeAliasType.__value__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90446,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypedDict.__mutable_keys__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90448,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypedDict.__required_keys__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90449,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Iterator",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90450,
+    "url": "https://docs.python.org/3/library/typing.html#typing.override",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90451,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Collection",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90452,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Awaitable",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90454,
+    "url": "https://peps.python.org/pep-0544/",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90456,
+    "url": "https://docs.python.org/3/library/typing.html#typing.overload",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90457,
+    "url": "https://docs.python.org/3/library/typing.html#annotating-tuples",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90459,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.AsyncGenerator",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90461,
+    "url": "https://docs.python.org/3/library/typing.html#functions-and-decorators",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90463,
+    "url": "https://typing.python.org/en/latest/spec/typeddict.html#typeddict",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90464,
+    "url": "https://docs.python.org/3/library/typing.html#typevar",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90465,
+    "url": "https://docs.python.org/3/library/typing.html#specification-for-the-python-type-system",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90467,
+    "url": "https://docs.python.org/3/library/typing.html#typing.OrderedDict",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90470,
+    "url": "https://peps.python.org/pep-0698/",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90471,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.ValuesView",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90472,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ChainMap",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90473,
+    "url": "https://docs.python.org/3/library/typing.html#typing.FrozenSet",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90475,
+    "url": "https://docs.python.org/3/library/typing.html#typing.SupportsBytes",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90476,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVarTuple.has_default",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90477,
+    "url": "https://docs.python.org/3/library/typing.html#typing.SupportsRound",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90479,
+    "url": "https://en.wikipedia.org/wiki/Bottom_type",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90481,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Coroutine",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90484,
+    "url": "https://docs.python.org/3/library/typing.html#aliases-to-other-abcs-in-collections-abc",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90485,
+    "url": "https://docs.python.org/3/library/typing.html#user-defined-generic-types",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90487,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Reversible",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90488,
+    "url": "https://docs.python.org/3/library/typing.html#typing.NewType.__module__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90489,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/typing.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90491,
+    "url": "https://docs.python.org/3/library/typing.html#typing.assert_never",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90493,
+    "url": "https://peps.python.org/pep-0675/",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90495,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Set",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90496,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Mapping",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90497,
+    "url": "https://docs.python.org/3/library/typing.html#id7",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90499,
+    "url": "https://docs.python.org/3/library/typing.html#protocols",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90501,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TYPE_CHECKING",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90502,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Container",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90503,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Concatenate",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90504,
+    "url": "https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90506,
+    "url": "https://docs.python.org/3/library/typing.html#typing.assert_type",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90508,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Hashable",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90509,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Counter",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90510,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Literal",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90511,
+    "url": "https://docs.python.org/3/library/typing.html#typing.AsyncContextManager",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90512,
+    "url": "https://docs.python.org/3/library/typing.html#typing.AnyStr",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90513,
+    "url": "https://docs.python.org/3/library/typing.html#aliases-to-types-in-collections",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90514,
+    "url": "https://docs.python.org/3/library/typing.html#deprecation-timeline-of-major-features",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90517,
+    "url": "https://docs.python.org/3/library/re.html#re.match",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90518,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Tuple",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90519,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ValuesView",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90521,
+    "url": "https://docs.python.org/3/library/contextlib.html#contextlib.AbstractAsyncContextManager",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90522,
+    "url": "https://docs.python.org/3/library/contextlib.html#contextlib.AbstractContextManager",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90524,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Set",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90525,
+    "url": "https://docs.python.org/3/library/typing.html#typing.cast",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90526,
+    "url": "https://docs.python.org/3/library/typing.html#typing.NewType.__name__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90528,
+    "url": "https://docs.python.org/3/library/collections.html#collections.deque",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90529,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ParamSpec.args",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90530,
+    "url": "https://docs.python.org/3/library/typing.html#the-type-of-class-objects",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90532,
+    "url": "https://docs.python.org/3/library/typing.html#typing.NewType",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90533,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ItemsView",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90534,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ContextManager",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90535,
+    "url": "https://docs.python.org/3/reference/expressions.html#private-name-mangling",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90537,
+    "url": "https://docs.python.org/3/library/typing.html#module-contents",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90538,
+    "url": "https://docs.python.org/3/library/typing.html#overload",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90539,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Type",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90540,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Never",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90541,
+    "url": "https://docs.python.org/3/library/typing.html#typing.AsyncIterable",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90543,
+    "url": "https://docs.python.org/3/library/typing.html#typing.get_overloads",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90544,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterator",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90545,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Self",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90546,
+    "url": "https://peps.python.org/pep-0673/",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90548,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#generic-type-aliases",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90550,
+    "url": "https://docs.python.org/3/library/typing.html#typing.SupportsFloat",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90551,
+    "url": "https://docs.python.org/3/library/typing.html#special-typing-primitives",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90553,
+    "url": "https://docs.python.org/3/library/typing.html#deprecated-aliases",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90554,
+    "url": "https://docs.python.org/3/library/typing.html#aliases-to-container-abcs-in-collections-abc",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90555,
+    "url": "https://typing.python.org/en/latest/spec/index.html",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90558,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.MutableSequence",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90560,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypedDict.__readonly_keys__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90561,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90565,
+    "url": "https://github.com/python/cpython/issues/94309",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90567,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeIs",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90568,
+    "url": "https://docs.python.org/3/library/typing.html#aliases-to-contextlib-abcs",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90569,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVar.__infer_variance__",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90570,
+    "url": "https://docs.python.org/3/library/typing.html#constant",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90571,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Deque",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90572,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ForwardRef",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90574,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLObject",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90575,
+    "url": "https://typing.python.org/en/latest/guides/unreachable.html",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90577,
+    "url": "https://docs.python.org/3/library/typing.html#typing.SupportsAbs",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90579,
+    "url": "https://docs.python.org/3/library/typing.html#aliases-to-other-concrete-types",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90580,
+    "url": "https://docs.python.org/3/library/typing.html#special-forms",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90582,
+    "url": "https://peps.python.org/pep-0586/",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90584,
+    "url": "https://docs.python.org/3/library/typing.html#typing.NoReturn",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "id": 90585,
+    "url": "https://docs.python.org/3/library/typing.html#typing.NotRequired",
+    "parentUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.get_origin"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5749838?s\u003d80\u0026v\u003d4",
+    "alt": "@csm10495",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5749838?s\u003d48\u0026v\u003d4",
+    "alt": "@csm10495",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5749838?s\u003d40\u0026v\u003d4",
+    "alt": "@csm10495",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d40\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/655866?s\u003d60\u0026v\u003d4",
+    "alt": "colesbury",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/655866?s\u003d60\u0026v\u003d4",
+    "alt": "colesbury",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5749838?s\u003d40\u0026v\u003d4",
+    "alt": "@csm10495",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5749838?s\u003d40\u0026v\u003d4",
+    "alt": "@csm10495",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5749838?s\u003d40\u0026v\u003d4",
+    "alt": "@csm10495",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5749838?s\u003d80\u0026v\u003d4",
+    "alt": "@csm10495",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5749838?s\u003d40\u0026v\u003d4",
+    "alt": "@csm10495",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/655866?s\u003d60\u0026v\u003d4",
+    "alt": "colesbury",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5749838?s\u003d40\u0026v\u003d4",
+    "alt": "@csm10495",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5749838?s\u003d40\u0026v\u003d4",
+    "alt": "@csm10495",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/655866?s\u003d40\u0026u\u003db622ef6e3c8ace6e7ffe49e1cf8ca164d94c0867\u0026v\u003d4",
+    "alt": "@colesbury",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d40\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/655866?s\u003d60\u0026v\u003d4",
+    "alt": "colesbury",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/655866?s\u003d48\u0026v\u003d4",
+    "alt": "@colesbury",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5749838?s\u003d80\u0026v\u003d4",
+    "alt": "@csm10495",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d40\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/655866?s\u003d40\u0026u\u003db622ef6e3c8ace6e7ffe49e1cf8ca164d94c0867\u0026v\u003d4",
+    "alt": "@colesbury",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d60\u0026v\u003d4",
+    "alt": "gpshead",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/655866?s\u003d40\u0026v\u003d4",
+    "alt": "@colesbury",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5749838?s\u003d52\u0026v\u003d4",
+    "alt": "@csm10495",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d52\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d52\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/655866?s\u003d52\u0026v\u003d4",
+    "alt": "@colesbury",
+    "pageTitle": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor by csm10495 · Pull Request #130849 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130849"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d80\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d48\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d60\u0026v\u003d4",
+    "alt": "freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d48\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d80\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d60\u0026v\u003d4",
+    "alt": "freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d48\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/198396?s\u003d40\u0026v\u003d4",
+    "alt": "@srinivasreddy",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9561039?s\u003d60\u0026v\u003d4",
+    "alt": "MichaelBuhler",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9561039?s\u003d48\u0026v\u003d4",
+    "alt": "@MichaelBuhler",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d48\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9561039?s\u003d40\u0026v\u003d4",
+    "alt": "@MichaelBuhler",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d52\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d52\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9561039?s\u003d52\u0026v\u003d4",
+    "alt": "@MichaelBuhler",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipfile — Work with ZIP archives — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipfile — Work with ZIP archives — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
