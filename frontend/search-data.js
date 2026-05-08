@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1432,
+    "url": "https://github.com/python/cpython/issues/125746",
+    "title": "Delay deprecated `zipimport.zipimporter.load_module` removal time to 3.15 · Issue #125746 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Delay deprecated zipimport.zipimporter.load_module removal time to 3.15 #125746 New issue Copy link New issue Copy link Closed Closed Delay deprecated zipimport.zipimporter.load_module removal time to 3.15#125746 Copy link Assignees Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description Wulian233 opened on Oct 20, 2024 Issue body actions Feature or enhancement Proposal: This method have been deprecated since Python 3.10 At https://github.com/python/cpython/blob/main/Lib/zipimport.py#L224-L225 msg \u003d (\"zipimport.zipimporter.load_module() is deprecated and slated for \"\n               \"removal in Python 3.12; use exec_module() instead\") edit: Delay the removal time to 3.15 #125746 (comment) Linked PRs gh-125746: Delay deprecated zipimport.zipimporter.load_module removal time to 3.15 #125748 Reactions are currently unavailable Metadata Metadata Assignees brettcannon warsaw Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:19:44.288281"
+  },
+  {
+    "id": 1431,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources",
+    "title": "importlib.resources.abc – Abstract base classes for resources — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Importing Modules » importlib.resources.abc – Abstract base classes for resources | Theme Auto Light Dark | importlib.resources.abc – Abstract base classes for resources¶ Source code: Lib/importlib/resources/abc.py Added in version 3.11. class importlib.resources.abc.ResourceReader¶ Superseded by TraversableResources An abstract base class to provide the ability to read resources. From the perspective of this ABC, a resource is a binary artifact that is shipped within a package. Typically this is something like a data file that lives next to the __init__.py file of the package. The purpose of this class is to help abstract out the accessing of such data files so that it does not matter if the package and its data file(s) are stored e.g. in a zip file versus on the file system. For any of methods of this class, a resource argument is expected to be a path-like object which represents conceptually just a file name. This means that no subdirectory paths should be included in the resource argument. This is because the location of the package the reader is for, acts as the “directory”. Hence the metaphor for directories and file names is packages and resources, respectively. This is also why instances of this class are expected to directly correlate to a specific package (instead of potentially representing multiple packages or a module). Loaders that wish to support resource reading are expected to provide a method called get_resource_reader(fullname) which returns an object implementing this ABC’s interface. If the module specified by fullname is not a package, this method should return None. An object compatible with this ABC should only be returned when the specified module is a package. Deprecated since version 3.12: Use importlib.resources.abc.TraversableResources instead. abstractmethod open_resource(resource)¶ Returns an opened, file-like object for binary reading of the resource. If the resource cannot be found, FileNotFoundError is raised. abstractmethod resource_path(resource)¶ Returns the file system path to the resource. If the resource does not concretely exist on the file system, raise FileNotFoundError. abstractmethod is_resource(path)¶ Returns True if the named path is considered a resource. FileNotFoundError is raised if path does not exist. Changed in version 3.10: The argument name was renamed to path. abstractmethod contents()¶ Returns an iterable of strings over the contents of the package. Do note that it is not required that all names returned by the iterator be actual resources, e.g. it is acceptable to return names for which is_resource() would be false. Allowing non-resource names to be returned is to allow for situations where how a package and its resources are stored are known a priori and the non-resource names would be useful. For instance, returning subdirectory names is allowed so that when it is known that the package and resources are stored on the file system then those subdirectory names can be used directly. The abstract method returns an iterable of no items. class importlib.resources.abc.Traversable¶ An object with a subset of pathlib.Path methods suitable for traversing directories and opening files. For a representation of the object on the file-system, use importlib.resources.as_file(). name¶ Abstract. The base name of this object without any parent references. abstractmethod iterdir()¶ Yield Traversable objects in self. abstractmethod is_dir()¶ Return True if self is a directory. abstractmethod is_file()¶ Return True if self is a file. abstractmethod joinpath(*pathsegments)¶ Traverse directories according to pathsegments and return the result as Traversable. Each pathsegments argument may contain multiple names separated by forward slashes (/, posixpath.sep ). For example, the following are equivalent: files.joinpath(\u0027subdir\u0027, \u0027subsuddir\u0027, \u0027file.txt\u0027)\nfiles.joinpath(\u0027subdir/subsuddir/file.txt\u0027)\n Note that some Traversable implementations might not be updated to the latest version of the protocol. For compatibility with such implementations, provide a single argument without path separators to each call to joinpath. For example: files.joinpath(\u0027subdir\u0027).joinpath(\u0027subsubdir\u0027).joinpath(\u0027file.txt\u0027)\n Changed in version 3.11: joinpath accepts multiple pathsegments, and these segments may contain forward slashes as path separators. Previously, only a single child argument was accepted. abstractmethod __truediv__(child)¶ Return Traversable child in self. Equivalent to joinpath(child). abstractmethod open(mode\u003d\u0027r\u0027, *args, **kwargs)¶ mode may be ‘r’ or ‘rb’ to open as text or binary. Return a handle suitable for reading (same as pathlib.Path.open). When opening as text, accepts encoding parameters such as those accepted by io.TextIOWrapper. read_bytes()¶ Read contents of self as bytes. read_text(encoding\u003dNone)¶ Read contents of self as text. class importlib.resources.ab",
+    "scrapedAt": "2026-05-09 01:19:42.054567"
+  },
+  {
+    "id": 1430,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2024-12718",
+    "title": "",
+    "content": "Common vulnerabilities and Exposures (CVE) We\u0027re sorry but the CVE Website doesn\u0027t work properly without JavaScript enabled. Please enable it to continue.",
+    "scrapedAt": "2026-05-09 01:19:40.729676"
+  },
+  {
+    "id": 1429,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_GET_ITEM",
+    "title": "Sequence Protocol — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Abstract Objects Layer » Sequence Protocol | Theme Auto Light Dark | Sequence Protocol¶ int PySequence_Check(PyObject *o)¶ Part of the Stable ABI. Return 1 if the object provides the sequence protocol, and 0 otherwise. Note that it returns 1 for Python classes with a __getitem__() method, unless they are dict subclasses, since in general it is impossible to determine what type of keys the class supports. This function always succeeds. Py_ssize_t PySequence_Size(PyObject *o)¶ Py_ssize_t PySequence_Length(PyObject *o)¶ Part of the Stable ABI. Returns the number of objects in sequence o on success, and -1 on failure. This is equivalent to the Python expression len(o). PyObject *PySequence_Concat(PyObject *o1, PyObject *o2)¶ Return value: New reference. Part of the Stable ABI. Return the concatenation of o1 and o2 on success, and NULL on failure. This is the equivalent of the Python expression o1 + o2. PyObject *PySequence_Repeat(PyObject *o, Py_ssize_t count)¶ Return value: New reference. Part of the Stable ABI. Return the result of repeating sequence object o count times, or NULL on failure. This is the equivalent of the Python expression o * count. PyObject *PySequence_InPlaceConcat(PyObject *o1, PyObject *o2)¶ Return value: New reference. Part of the Stable ABI. Return the concatenation of o1 and o2 on success, and NULL on failure. The operation is done in-place when o1 supports it. This is the equivalent of the Python expression o1 +\u003d o2. PyObject *PySequence_InPlaceRepeat(PyObject *o, Py_ssize_t count)¶ Return value: New reference. Part of the Stable ABI. Return the result of repeating sequence object o count times, or NULL on failure. The operation is done in-place when o supports it. This is the equivalent of the Python expression o *\u003d count. PyObject *PySequence_GetItem(PyObject *o, Py_ssize_t i)¶ Return value: New reference. Part of the Stable ABI. Return the ith element of o, or NULL on failure. This is the equivalent of the Python expression o[i]. PyObject *PySequence_GetSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)¶ Return value: New reference. Part of the Stable ABI. Return the slice of sequence object o between i1 and i2, or NULL on failure. This is the equivalent of the Python expression o[i1:i2]. int PySequence_SetItem(PyObject *o, Py_ssize_t i, PyObject *v)¶ Part of the Stable ABI. Assign object v to the ith element of o. Raise an exception and return -1 on failure; return 0 on success. This is the equivalent of the Python statement o[i] \u003d v. This function does not steal a reference to v. If v is NULL, the element is deleted, but this feature is deprecated in favour of using PySequence_DelItem(). int PySequence_DelItem(PyObject *o, Py_ssize_t i)¶ Part of the Stable ABI. Delete the ith element of object o. Returns -1 on failure. This is the equivalent of the Python statement del o[i]. int PySequence_SetSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2, PyObject *v)¶ Part of the Stable ABI. Assign the sequence object v to the slice in sequence object o from i1 to i2. This is the equivalent of the Python statement o[i1:i2] \u003d v. int PySequence_DelSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)¶ Part of the Stable ABI. Delete the slice in sequence object o from i1 to i2. Returns -1 on failure. This is the equivalent of the Python statement del o[i1:i2]. Py_ssize_t PySequence_Count(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Return the number of occurrences of value in o, that is, return the number of keys for which o[key] \u003d\u003d value. On failure, return -1. This is equivalent to the Python expression o.count(value). int PySequence_Contains(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Determine if o contains value. If an item in o is equal to value, return 1, otherwise return 0. On error, return -1. This is equivalent to the Python expression value in o. int PySequence_In(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Alias for PySequence_Contains(). Soft deprecated since version 3.14: The function should no longer be used to write new code. Py_ssize_t PySequence_Index(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Return the first index i for which o[i] \u003d\u003d value. On error, return -1. This is equivalent to the Python expression o.index(value). PyObject *PySequence_List(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. Return a list object with the same contents as the sequence or iterable o, or NULL on failure. The returned list is guaranteed to be new. This is equivalent to the Python expression list(o). PyObject *PySequence_Tuple(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. Return a tuple object with the same contents as the sequence or iterable o, or NULL on failure. If o is a tuple, a new reference will be returned, otherwise a tuple will be constructed with the appropriate contents. This is equivalent to the Py",
+    "scrapedAt": "2026-05-09 01:19:39.042874"
+  },
+  {
+    "id": 1428,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlparse",
+    "title": "urllib.parse — Parse URLs into components — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Protocols and Support » urllib.parse — Parse URLs into components | Theme Auto Light Dark | urllib.parse — Parse URLs into components¶ Source code: Lib/urllib/parse.py This module defines a standard interface to break Uniform Resource Locator (URL) strings up in components (addressing scheme, network location, path etc.), to combine the components back into a URL string, and to convert a “relative URL” to an absolute URL given a “base URL.” The module has been designed to match the internet RFC on Relative Uniform Resource Locators. It supports the following URL schemes: file, ftp, gopher, hdl, http, https, imap, itms-services, mailto, mms, news, nntp, prospero, rsync, rtsp, rtsps, rtspu, sftp, shttp, sip, sips, snews, svn, svn+ssh, telnet, wais, ws, wss. CPython implementation detail: The inclusion of the itms-services URL scheme can prevent an app from passing Apple’s App Store review process for the macOS and iOS App Stores. Handling for the itms-services scheme is always removed on iOS; on macOS, it may be removed if CPython has been built with the --with-app-store-compliance option. The urllib.parse module defines functions that fall into two broad categories: URL parsing and URL quoting. These are covered in detail in the following sections. This module’s functions use the deprecated term netloc (or net_loc), which was introduced in RFC 1808. However, this term has been obsoleted by RFC 3986, which introduced the term authority as its replacement. The use of netloc is continued for backward compatibility. URL Parsing¶ The URL parsing functions focus on splitting a URL string into its components, or on combining URL components into a URL string. urllib.parse.urlsplit(urlstring, scheme\u003dNone, allow_fragments\u003dTrue)¶ Parse a URL into five components, returning a 5-item named tuple SplitResult or SplitResultBytes. This corresponds to the general structure of a URL: scheme://netloc/path?query#fragment. Each tuple item is a string, possibly empty. The components are not broken up into smaller parts (for example, the network location is a single string), and % escapes are not expanded. The delimiters as shown above are not part of the result, except for a leading slash in the path component, which is retained if present. For example: \u003e\u003e\u003e from urllib.parse import urlsplit\n\u003e\u003e\u003e urlsplit(\"scheme://netloc/path?query#fragment\")\nSplitResult(scheme\u003d\u0027scheme\u0027, netloc\u003d\u0027netloc\u0027, path\u003d\u0027/path\u0027,\n            query\u003d\u0027query\u0027, fragment\u003d\u0027fragment\u0027)\n\u003e\u003e\u003e o \u003d urlsplit(\"http://docs.python.org:80/3/library/urllib.parse.html?\"\n...              \"highlight\u003dparams#url-parsing\")\n\u003e\u003e\u003e o\nSplitResult(scheme\u003d\u0027http\u0027, netloc\u003d\u0027docs.python.org:80\u0027,\n            path\u003d\u0027/3/library/urllib.parse.html\u0027,\n            query\u003d\u0027highlight\u003dparams\u0027, fragment\u003d\u0027url-parsing\u0027)\n\u003e\u003e\u003e o.scheme\n\u0027http\u0027\n\u003e\u003e\u003e o.netloc\n\u0027docs.python.org:80\u0027\n\u003e\u003e\u003e o.hostname\n\u0027docs.python.org\u0027\n\u003e\u003e\u003e o.port\n80\n\u003e\u003e\u003e o._replace(fragment\u003d\"\").geturl()\n\u0027http://docs.python.org:80/3/library/urllib.parse.html?highlight\u003dparams\u0027\n Following the syntax specifications in RFC 1808, urlsplit() recognizes a netloc only if it is properly introduced by ‘//’. Otherwise the input is presumed to be a relative URL and thus to start with a path component. \u003e\u003e\u003e from urllib.parse import urlsplit\n\u003e\u003e\u003e urlsplit(\u0027//www.cwi.nl:80/%7Eguido/Python.html\u0027)\nSplitResult(scheme\u003d\u0027\u0027, netloc\u003d\u0027www.cwi.nl:80\u0027, path\u003d\u0027/%7Eguido/Python.html\u0027,\n            query\u003d\u0027\u0027, fragment\u003d\u0027\u0027)\n\u003e\u003e\u003e urlsplit(\u0027www.cwi.nl/%7Eguido/Python.html\u0027)\nSplitResult(scheme\u003d\u0027\u0027, netloc\u003d\u0027\u0027, path\u003d\u0027www.cwi.nl/%7Eguido/Python.html\u0027,\n            query\u003d\u0027\u0027, fragment\u003d\u0027\u0027)\n\u003e\u003e\u003e urlsplit(\u0027help/Python.html\u0027)\nSplitResult(scheme\u003d\u0027\u0027, netloc\u003d\u0027\u0027, path\u003d\u0027help/Python.html\u0027,\n            query\u003d\u0027\u0027, fragment\u003d\u0027\u0027)\n The scheme argument gives the default addressing scheme, to be used only if the URL does not specify one. It should be the same type (text or bytes) as urlstring, except that the default value \u0027\u0027 is always allowed, and is automatically converted to b\u0027\u0027 if appropriate. If the allow_fragments argument is false, fragment identifiers are not recognized. Instead, they are parsed as part of the path, parameters or query component, and fragment is set to the empty string in the return value. The return value is a named tuple, which means that its items can be accessed by index or as named attributes, which are: Attribute Index Value Value if not present scheme 0 URL scheme specifier scheme parameter netloc 1 Network location part empty string path 2 Hierarchical path empty string query 3 Query component empty string fragment 4 Fragment identifier empty string username User name None password Password None hostname Host name (lower case) None port Port number as integer, if present None Reading the port attribute will raise a ValueError if an invalid port is specified in the URL. See section Structured Parse Results for more information on the result object. Unmatched square brackets in t",
+    "scrapedAt": "2026-05-09 01:19:37.783574"
+  },
+  {
     "id": 1427,
     "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_lines",
     "title": "3. Data model — Python 3.14.5rc1 documentation",
@@ -9588,26 +9623,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1428,
-    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlparse"
-  },
-  {
-    "id": 1429,
-    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_GET_ITEM"
-  },
-  {
-    "id": 1430,
-    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2024-12718"
-  },
-  {
-    "id": 1431,
-    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
-  },
-  {
-    "id": 1432,
-    "url": "https://github.com/python/cpython/issues/125746"
   },
   {
     "id": 1433,
@@ -233000,10 +233015,202 @@ window.searchData = [
     "id": 299710,
     "url": "https://github.com/python/cpython/blob/709ca90a00e66cea432096a7ba61aa6459d2a9a7/.github/CODEOWNERS#L54",
     "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 300411,
+    "url": "https://docs.python.org/3/library/importlib.resources.html#importlib.resources.as_file",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300412,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.read_text",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300416,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/importlib.resources.abc.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300423,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.ResourceReader.is_resource",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300429,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.ResourceReader.contents",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300431,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.is_dir",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300434,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.read_bytes",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300437,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.is_file",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300438,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.joinpath",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300441,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.name",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300442,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.open",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300447,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/importlib/resources/abc.py",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300449,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources.files",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300450,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.iterdir",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300451,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.ResourceReader.open_resource",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300452,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.ResourceReader.resource_path",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300453,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.__truediv__",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300455,
+    "url": "https://docs.python.org/3/library/importlib.resources.html#importlib.resources.files",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 300456,
+    "url": "https://github.com/python/cpython/blob/main/Lib/zipimport.py#L224-L225",
+    "parentUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "id": 300462,
+    "url": "https://github.com/python/cpython/issues/125746#issuecomment-2425030377",
+    "parentUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "id": 300466,
+    "url": "https://github.com/python/cpython/issues/125746#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "id": 300468,
+    "url": "https://github.com/python/cpython/issues/125746#issue-2599970156",
+    "parentUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "id": 300469,
+    "url": "https://github.com/python/cpython/pull/125748",
+    "parentUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "id": 300470,
+    "url": "https://github.com/python/cpython/issues/125746#top",
+    "parentUrl": "https://github.com/python/cpython/issues/125746"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d64\u0026u\u003d5fee810e3ef9706c1ef483a91d048cdbf8aa8397\u0026v\u003d4",
+    "alt": "brettcannon",
+    "pageTitle": "Delay deprecated `zipimport.zipimporter.load_module` removal time to 3.15 · Issue #125746 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/210184?s\u003d64\u0026u\u003de30815e4dd7e4b5d2683263b7bf7c39edb5fbd7f\u0026v\u003d4",
+    "alt": "warsaw",
+    "pageTitle": "Delay deprecated `zipimport.zipimporter.load_module` removal time to 3.15 · Issue #125746 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@Wulian233",
+    "pageTitle": "Delay deprecated `zipimport.zipimporter.load_module` removal time to 3.15 · Issue #125746 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@Wulian233",
+    "pageTitle": "Delay deprecated `zipimport.zipimporter.load_module` removal time to 3.15 · Issue #125746 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d64\u0026u\u003d5fee810e3ef9706c1ef483a91d048cdbf8aa8397\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "Delay deprecated `zipimport.zipimporter.load_module` removal time to 3.15 · Issue #125746 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/210184?s\u003d64\u0026u\u003de30815e4dd7e4b5d2683263b7bf7c39edb5fbd7f\u0026v\u003d4",
+    "alt": "@warsaw",
+    "pageTitle": "Delay deprecated `zipimport.zipimporter.load_module` removal time to 3.15 · Issue #125746 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125746"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib.resources.abc – Abstract base classes for resources — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib.resources.abc – Abstract base classes for resources — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Sequence Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_GET_ITEM"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Sequence Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_GET_ITEM"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.parse — Parse URLs into components — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlparse"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.parse — Parse URLs into components — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlparse"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
