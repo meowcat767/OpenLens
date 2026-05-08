@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1271,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.fromhex",
+    "title": "Built-in Types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Types | Theme Auto Light Dark | Built-in Types¶ The following sections describe the standard types that are built into the interpreter. The principal built-in types are numerics, sequences, mappings, classes, instances and exceptions. Some collection classes are mutable. The methods that add, subtract, or rearrange their members in place, and don’t return a specific item, never return the collection instance itself but None. Some operations are supported by several object types; in particular, practically all objects can be compared for equality, tested for truth value, and converted to a string (with the repr() function or the slightly different str() function). The latter function is implicitly used when an object is written by the print() function. Truth Value Testing¶ Any object can be tested for truth value, for use in an if or while condition or as operand of the Boolean operations below. By default, an object is considered true unless its class defines either a __bool__() method that returns False or a __len__() method that returns zero, when called with the object. [1] If one of the methods raises an exception when called, the exception is propagated and the object does not have a truth value (for example, NotImplemented). Here are most of the built-in objects considered false: constants defined to be false: None and False zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1) empty sequences and collections: \u0027\u0027, (), [], {}, set(), range(0) Operations and built-in functions that have a Boolean result always return 0 or False for false and 1 or True for true, unless otherwise stated. (Important exception: the Boolean operations or and and always return one of their operands.) Boolean Operations — and, or, not¶ These are the Boolean operations, ordered by ascending priority: Operation Result Notes x or y if x is true, then x, else y (1) x and y if x is false, then x, else y (2) not x if x is false, then True, else False (3) Notes: This is a short-circuit operator, so it only evaluates the second argument if the first one is false. This is a short-circuit operator, so it only evaluates the second argument if the first one is true. not has a lower priority than non-Boolean operators, so not a \u003d\u003d b is interpreted as not (a \u003d\u003d b), and a \u003d\u003d not b is a syntax error. Comparisons¶ There are eight comparison operations in Python. They all have the same priority (which is higher than that of the Boolean operations). Comparisons can be chained arbitrarily; for example, x \u003c y \u003c\u003d z is equivalent to x \u003c y and y \u003c\u003d z, except that y is evaluated only once (but in both cases z is not evaluated at all when x \u003c y is found to be false). This table summarizes the comparison operations: Operation Meaning \u003c strictly less than \u003c\u003d less than or equal \u003e strictly greater than \u003e\u003d greater than or equal \u003d\u003d equal !\u003d not equal is object identity is not negated object identity Unless stated otherwise, objects of different types never compare equal. The \u003d\u003d operator is always defined but for some object types (for example, class objects) is equivalent to is. The \u003c, \u003c\u003d, \u003e and \u003e\u003d operators are only defined where they make sense; for example, they raise a TypeError exception when one of the arguments is a complex number. Non-identical instances of a class normally compare as non-equal unless the class defines the __eq__() method. Instances of a class cannot be ordered with respect to other instances of the same class, or other types of object, unless the class defines enough of the methods __lt__(), __le__(), __gt__(), and __ge__() (in general, __lt__() and __eq__() are sufficient, if you want the conventional meanings of the comparison operators). The behavior of the is and is not operators cannot be customized; also they can be applied to any two objects and never raise an exception. Two more operations with the same syntactic priority, in and not in, are supported by types that are iterable or implement the __contains__() method. Numeric Types — int, float, complex¶ There are three distinct numeric types: integers, floating-point numbers, and complex numbers. In addition, Booleans are a subtype of integers. Integers have unlimited precision. Floating-point numbers are usually implemented using double in C; information about the precision and internal representation of floating-point numbers for the machine on which your program is running is available in sys.float_info. Complex numbers have a real and imaginary part, which are each a floating-point number. To extract these parts from a complex number z, use z.real and z.imag. (The standard library includes the additional numeric types fractions.Fraction, for rationals, and decimal.Decimal, for floating-point numbers with user-definable precision.) Numbers are created by numeric literals or as the result of built-in functions and operators. Unadorned integer li",
+    "scrapedAt": "2026-05-09 01:13:04.104123"
+  },
+  {
+    "id": 1270,
+    "url": "https://docs.python.org/3/library/warnings.html#warnings.catch_warnings",
+    "title": "warnings — Warning control — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » warnings — Warning control | Theme Auto Light Dark | warnings — Warning control¶ Source code: Lib/warnings.py Warning messages are typically issued in situations where it is useful to alert the user of some condition in a program, where that condition (normally) doesn’t warrant raising an exception and terminating the program. For example, one might want to issue a warning when a program uses an obsolete module. Python programmers issue warnings by calling the warn() function defined in this module. (C programmers use PyErr_WarnEx(); see Exception Handling for details). Warning messages are normally written to sys.stderr, but their disposition can be changed flexibly, from ignoring all warnings to turning them into exceptions. The disposition of warnings can vary based on the warning category, the text of the warning message, and the source location where it is issued. Repetitions of a particular warning for the same source location are typically suppressed. There are two stages in warning control: first, each time a warning is issued, a determination is made whether a message should be issued or not; next, if a message is to be issued, it is formatted and printed using a user-settable hook. The determination whether to issue a warning message is controlled by the warning filter, which is a sequence of matching rules and actions. Rules can be added to the filter by calling filterwarnings() and reset to its default state by calling resetwarnings(). The printing of warning messages is done by calling showwarning(), which may be overridden; the default implementation of this function formats the message by calling formatwarning(), which is also available for use by custom implementations. See also logging.captureWarnings() allows you to handle all warnings with the standard logging infrastructure. Warning Categories¶ There are a number of built-in exceptions that represent warning categories. This categorization is useful to be able to filter out groups of warnings. While these are technically built-in exceptions, they are documented here, because conceptually they belong to the warnings mechanism. User code can define additional warning categories by subclassing one of the standard warning categories. A warning category must always be a subclass of the Warning class. The following warnings category classes are currently defined: Class Description Warning This is the base class of all warning category classes. It is a subclass of Exception. UserWarning The default category for warn(). DeprecationWarning Base category for warnings about deprecated features when those warnings are intended for other Python developers (ignored by default, unless triggered by code in __main__). SyntaxWarning Base category for warnings about dubious syntactic features (typically emitted when compiling Python source code, and hence may not be suppressed by runtime filters) RuntimeWarning Base category for warnings about dubious runtime features. FutureWarning Base category for warnings about deprecated features when those warnings are intended for end users of applications that are written in Python. PendingDeprecationWarning Base category for warnings about features that will be deprecated in the future (ignored by default). ImportWarning Base category for warnings triggered during the process of importing a module (ignored by default). UnicodeWarning Base category for warnings related to Unicode. BytesWarning Base category for warnings related to bytes and bytearray. ResourceWarning Base category for warnings related to resource usage (ignored by default). Changed in version 3.7: Previously DeprecationWarning and FutureWarning were distinguished based on whether a feature was being removed entirely or changing its behaviour. They are now distinguished based on their intended audience and the way they’re handled by the default warnings filters. The Warnings Filter¶ The warnings filter controls whether warnings are ignored, displayed, or turned into errors (raising an exception). Conceptually, the warnings filter maintains an ordered list of filter specifications; any specific warning is matched against each filter specification in the list in turn until a match is found; the filter determines the disposition of the match. Each entry is a tuple of the form (action, message, category, module, lineno), where: action is one of the following strings: Value Disposition \"default\" print the first occurrence of matching warnings for each location (module + line number) where the warning is issued \"error\" turn matching warnings into exceptions \"ignore\" never print matching warnings \"always\" always print matching warnings \"all\" alias to “always” \"module\" print the first occurrence of matching warnings for each module where the warning is issued (regardless of line number) \"once\" print only the first occurrenc",
+    "scrapedAt": "2026-05-09 01:13:02.84825"
+  },
+  {
+    "id": 1269,
+    "url": "https://github.com/python/cpython/issues/130010",
+    "title": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member nascheme commented Feb 11, 2025 • edited Loading Uh oh! There was an error while loading. Please reload this page. Make warnings.catch_warnings() use a context variable for holding the warning filtering state if the sys.flags.context_aware_warnings flag is set to true. This makes using the context manager thread-safe in multi-threaded programs and safe for asyncio coroutines and tasks. The flag is true by default in free-threaded builds and is otherwise false. The value of the flag can be overridden by the the -X thread_safe_warnings command-line option or by the PYTHON_CONTEXT_AWARE_WARNINGS environment variable. It is expected that one day the flag might default to true for all Python builds, not just the free-threaded one. However, I think it makes sense to not commit to a schedule to do that until we have a better idea of what code is affected by this change. Feedback from people using the free-threaded build should provide guidance. This PR is on top of gh-128209. A previous version of this PR used a single flag to control both behavior of Thread inheriting the context and also the catch_warnings context manager. However, based on some feedback, I\u0027ve decided that two flags makes things more clear. Likely programs would like to set both flags to true to get the most intuitive behavior. When the context_aware_warnings flag is true and a catch_warnings() context is active, added filters go into a list of filters stored in the contextvar, not the warnings.filters list. The filters in warnings.filters are still applied but they apply after the contextvar filters. That difference with how warnings.filters works is probably the most likely thing to cause broken user code. In the unit tests, I had to change a number of references to warnings.filters to warnings._get_filters(). That function returns the list of filters from the current context or the global filters if there is no context active. Perhaps _get_filters() should become a public function? I think it would be better if examining and manipulating that list was discouraged and so that\u0027s why I made the function non-public, at least for now. I created _py_warnings.py to contain the Python implementation for the warnings module. This matches other modules like decimal that have Python and C versions of the same module. In the case of warnings things are a bit more complicated since you can assign to module globals (the filters list or the showwarning() function are common to override). This is a cleaner organization, IMHO. Now warnings.py just imports the parts it needs and the unit tests are a bit simpler. I cleaned up the unit tests for warnings a bit. Passing module to catch_warnings() actually serves no purpose. Since sys.modules[\u0027warnings\u0027] is already swapped to the module under test, the code does the right thing even when that parameter is not given. I also replaced calls to original_warnings.catch_warnings() with self.module.catch_warnings(). Both those calls do the same thing but the second spelling seems less confusing to me. Issue: warnings.catch_warnings is not thread safe or async safe #128384 pyperformance comparison 📚 Documentation preview 📚: https://cpython-previews--130010.org.readthedocs.build/ Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 🎉 4 colesbury, ngoldbaum, lysnikolaou, and Jackenmen reacted with hooray emoji All reactions 🎉 4 reactions nascheme added 6 commits February 6, 2025 12:53 Make _contextvars a builtin module. ba99f2e Add \u0027context\u0027 parameter to Thread. … 6d00c2a * Add ``sys.flags.inherit_context``.\n* Add ``-X inherit_context`` and :envvar:`PYTHON_INHERIT_CONTEXT` Tweak blurb markup. a868fe9 Doc markup fix. 16fa2c3 Use contextvar for catch_warnings(). f0ccc8d Add blurb. bcadd20 bedevere-app Bot mentioned this pull request Feb 11, 2025 warnings.catch_warnings is not thread safe or async safe #128384 Closed Add \"_warnings_context\" as identifier. 0cfe578 nascheme mentioned this pull request Feb 11, 2025 gh-128384: Add thread-safe context manager to \"warnings\" module #128300 Closed nascheme added 2 commits February 11, 2025 11:07 Fix test_support for context var filters. … 928c2df Since the unittest/runner.py establishes a new warnings context with\n`catch_warnings`, these tests must use `warnings._get_filters()` to\nretrieve the current list of filters, not the `warnings.filters` global. Regenerate \u0027configure\u0027 script. 65751d9 colesbury mentioned this pull request Feb 11, 2025 gh-129983: fi",
+    "scrapedAt": "2026-05-09 01:13:01.625444"
+  },
+  {
+    "id": 1267,
+    "url": "https://github.com/python/cpython/issues/130493",
+    "title": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member gaogaotiantian commented Feb 24, 2025 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. The testing code import pdb\ndef foo():\n    x \u003d 40 + 2\n    pdb.Pdb(skip\u003d[\u0027__main__\u0027]).set_trace()\nfoo() seems a bit silly, but this is a real issue because we use the last instance of pdb for inline breakpoints now. So if we instantiate a debugger like p \u003d pdb.Pdb(skip\u003d[\"django.*\"]) somewhere, and we set an inline breakpoint in Django with an innocent breakpoint(), it still won\u0027t stop inside Django modules. Overall I think it\u0027s reasonable that we always stop for inline breakpoints. The implementation I chose is to remove the condition for opcode events which also makes sense. For now that event is exclusively used by inline breakpoints. Even if we add instruction level debugging in the future, I think the only useful command is \"step instruction\". It\u0027s hard to imagine instruction level breakpoints or something like until instruction. Always trigger user function for opcode seems like an okay solution. Issue: \"pdb.Pdb(skip\u003d…).set_trace()\" should always stop on calling frame #82987 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Stop on calling frame unconditionally for inline breakpoints 37b3d29 gaogaotiantian requested a review from iritkatriel February 24, 2025 01:47 bedevere-app Bot added the awaiting core review label Feb 24, 2025 bedevere-app Bot mentioned this pull request Feb 24, 2025 \"pdb.Pdb(skip\u003d…).set_trace()\" should always stop on calling frame #82987 Closed 📜🤖 Added by blurb_it. 6716ac0 tomasr8 reviewed Feb 24, 2025 View reviewed changes Comment thread Lib/bdb.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Update Lib/bdb.py … c6947d1 Co-authored-by: Tomas R. \u003ctomas.roun8@gmail.com\u003e iritkatriel reviewed Mar 3, 2025 View reviewed changes Comment thread Misc/NEWS.d/next/Library/2025-02-24-01-49-11.gh-issue-82987.vHfQlG.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Misc/NEWS.d/next/Library/2025-02-24-01-49-11.gh-issue-82987.vHfQlG.rst Outdated @@ -0,0 +1 @@ :mod:`pdb` will always stop on calling frames when inline breakpoints like :func:`breakpoint` or :func:`pdb.set_trace` are used, regardless of whether the module matches ``skip`` pattern. Copy link Copy Markdown Member iritkatriel Mar 3, 2025 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment This is probably worth a what\u0027s new entry. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Member iritkatriel Mar 3, 2025 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment And a versionchange comment in the doc? Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Member Author gaogaotiantian Mar 3, 2025 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Done Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions gaogaotiantian and others added 2 commits March 3, 2025 17:37 Update Misc/NEWS.d/next/Library/2025-02-24-01-49-11.gh-issue-82987.vH… … e8c7d66 …fQlG.rst\n\nCo-authored-by: Irit Katriel \u003c1055913+iritkatriel@users.noreply.github.com\u003e Add version change in pdb and add whatsnew entry 2cda74c iritkatriel reviewed Mar 3, 2025 View reviewed changes Comment thread Doc/library/pdb.rst Outdated Added the *mode* argument. .. versionchanged:: 3.14 *skip* will be ignored if inline breakpoints like :func:`breakpoint` or :func:`set_trace` are used. Copy link Copy Markdown Member iritkatriel Mar 3, 2025 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn mo",
+    "scrapedAt": "2026-05-09 01:12:58.265953"
+  },
+  {
+    "id": 1266,
+    "url": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-tls-password-file",
+    "title": "http.server — HTTP servers — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Protocols and Support » http.server — HTTP servers | Theme Auto Light Dark | http.server — HTTP servers¶ Source code: Lib/http/server.py This module defines classes for implementing HTTP servers. Warning http.server is not recommended for production. It only implements basic security checks. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. One class, HTTPServer, is a socketserver.TCPServer subclass. It creates and listens at the HTTP socket, dispatching the requests to a handler. Code to create and run the server looks like this: def run(server_class\u003dHTTPServer, handler_class\u003dBaseHTTPRequestHandler):\n    server_address \u003d (\u0027\u0027, 8000)\n    httpd \u003d server_class(server_address, handler_class)\n    httpd.serve_forever()\n class http.server.HTTPServer(server_address, RequestHandlerClass)¶ This class builds on the TCPServer class by storing the server address as instance variables named server_name and server_port. The server is accessible by the handler, typically through the handler’s server instance variable. class http.server.ThreadingHTTPServer(server_address, RequestHandlerClass)¶ This class is identical to HTTPServer but uses threads to handle requests by using the ThreadingMixIn. This is useful to handle web browsers pre-opening sockets, on which HTTPServer would wait indefinitely. Added in version 3.7. class http.server.HTTPSServer(server_address, RequestHandlerClass, bind_and_activate\u003dTrue, *, certfile, keyfile\u003dNone, password\u003dNone, alpn_protocols\u003dNone)¶ Subclass of HTTPServer with a wrapped socket using the ssl module. If the ssl module is not available, instantiating a HTTPSServer object fails with a RuntimeError. The certfile argument is the path to the SSL certificate chain file, and the keyfile is the path to file containing the private key. A password can be specified for files protected and wrapped with PKCS#8, but beware that this could possibly expose hardcoded passwords in clear. See also See ssl.SSLContext.load_cert_chain() for additional information on the accepted values for certfile, keyfile and password. When specified, the alpn_protocols argument must be a sequence of strings specifying the “Application-Layer Protocol Negotiation” (ALPN) protocols supported by the server. ALPN allows the server and the client to negotiate the application protocol during the TLS handshake. By default, it is set to [\"http/1.1\"], meaning the server supports HTTP/1.1. Added in version 3.14. class http.server.ThreadingHTTPSServer(server_address, RequestHandlerClass, bind_and_activate\u003dTrue, *, certfile, keyfile\u003dNone, password\u003dNone, alpn_protocols\u003dNone)¶ This class is identical to HTTPSServer but uses threads to handle requests by inheriting from ThreadingMixIn. This is analogous to ThreadingHTTPServer only using HTTPSServer. Added in version 3.14. The HTTPServer, ThreadingHTTPServer, HTTPSServer and ThreadingHTTPSServer must be given a RequestHandlerClass on instantiation, of which this module provides three different variants: class http.server.BaseHTTPRequestHandler(request, client_address, server)¶ This class is used to handle the HTTP requests that arrive at the server. By itself, it cannot respond to any actual HTTP requests; it must be subclassed to handle each request method (for example, \u0027GET\u0027 or \u0027POST\u0027). BaseHTTPRequestHandler provides a number of class and instance variables, and methods for use by subclasses. The handler will parse the request and the headers, then call a method specific to the request type. The method name is constructed from the request. For example, for the request method SPAM, the do_SPAM() method will be called with no arguments. All of the relevant information is stored in instance variables of the handler. Subclasses should not need to override or extend the __init__() method. BaseHTTPRequestHandler has the following instance variables: client_address¶ Contains a tuple of the form (host, port) referring to the client’s address. server¶ Contains the server instance. close_connection¶ Boolean that should be set before handle_one_request() returns, indicating if another request may be expected, or if the connection should be shut down. requestline¶ Contains the string representation of the HTTP request line. The terminating CRLF is stripped. This attribute should be set by handle_one_request(). If no valid request line was processed, it should be set to the empty string. command¶ Contains the command (request type). For example, \u0027GET\u0027. path¶ Contains the request path. If query component of the URL is present, then path includes the query. Using the terminology of RFC 3986, path here includes hier-part and the query. request_version¶ Contains the version string from the request. For example, \u0027HTTP/1.0\u0027. headers¶ Holds an instance of the class specified by the MessageClass class variabl",
+    "scrapedAt": "2026-05-09 01:12:55.008299"
+  },
+  {
     "id": 1265,
     "url": "https://docs.python.org/3/reference/expressions.html#if-expr",
     "title": "6. Expressions — Python 3.14.5rc1 documentation",
@@ -8503,26 +8538,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1266,
-    "url": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-tls-password-file"
-  },
-  {
-    "id": 1267,
-    "url": "https://github.com/python/cpython/issues/130493"
-  },
-  {
-    "id": 1269,
-    "url": "https://github.com/python/cpython/issues/130010"
-  },
-  {
-    "id": 1270,
-    "url": "https://docs.python.org/3/library/warnings.html#warnings.catch_warnings"
-  },
-  {
-    "id": 1271,
-    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.fromhex"
   },
   {
     "id": 1272,
@@ -221885,10 +221900,1375 @@ window.searchData = [
     "id": 252802,
     "url": "https://peps.python.org/pep-0749/#pre-existing-bugs",
     "parentUrl": "https://peps.python.org/pep-0749/"
+  },
+  {
+    "id": 253215,
+    "url": "https://github.com/python/cpython/pull/130493#discussion_r1978359784",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253218,
+    "url": "https://github.com/python/cpython/pull/130493#discussion_r1978388705",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253220,
+    "url": "https://github.com/python/cpython/pull/130493#ref-issue-1199024013",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253221,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F130493",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253222,
+    "url": "https://github.com/python/cpython/pull/130493/files/6716ac02ad6f707e4b6ff791f3abdc655f5ae94e",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253224,
+    "url": "https://github.com/python/cpython/pull/130493#event-16423996602",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253225,
+    "url": "https://github.com/python/cpython/pull/130493#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253226,
+    "url": "https://github.com/python/cpython/pull/130493#event-16548143770",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253227,
+    "url": "https://github.com/python/cpython/pull/130493/commits/c6947d15baac229e837bb64b1a4f8f3791cb2b45",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253228,
+    "url": "https://github.com/python/cpython/pull/130493#event-16566623694",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253229,
+    "url": "https://github.com/python/cpython/pull/130493/files/418e7b1be6ca4b7db4b3c6ed56a9563f1a08a57d",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253230,
+    "url": "https://github.com/python/cpython/issues/139721",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253231,
+    "url": "https://github.com/python/cpython/pull/130493#discussion_r1978366208",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253232,
+    "url": "https://github.com/python/cpython/pull/130493",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253233,
+    "url": "https://github.com/python/cpython/pull/130493#pullrequestreview-2655530617",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253234,
+    "url": "https://github.com/python/cpython/pull/130493#event-16423996873",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253235,
+    "url": "https://github.com/python/cpython/pull/130493#discussion_r1978353928",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253236,
+    "url": "https://github.com/python/cpython/pull/130493#discussion_r1978355636",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253237,
+    "url": "https://github.com/python/cpython/pull/130493/commits/418e7b1be6ca4b7db4b3c6ed56a9563f1a08a57d",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253239,
+    "url": "https://github.com/python/cpython/pull/130493/commits/e8c7d669747c10c5dd28d16921595845b4eb0f06",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253240,
+    "url": "https://github.com/python/cpython/pull/130493#discussion_r1978073120",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253242,
+    "url": "https://github.com/python/cpython/pull/130493#discussion_r1978074094",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253243,
+    "url": "https://github.com/python/cpython/pull/130493#event-16567036153",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253244,
+    "url": "https://github.com/python/cpython/pull/130493#discussion_r1978478629",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253245,
+    "url": "https://github.com/python/cpython/pull/130493/commits/6716ac02ad6f707e4b6ff791f3abdc655f5ae94e",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253246,
+    "url": "https://github.com/python/cpython/pull/130493#issue-2873668954",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253247,
+    "url": "https://github.com/python/cpython/pull/130493#ref-issue-3492607504",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253248,
+    "url": "https://github.com/python/cpython/pull/130493#pullrequestreview-2655080552",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253250,
+    "url": "https://github.com/python/cpython/pull/130493/commits/37b3d294bc55443c946239a388d66f0badd3530b",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253251,
+    "url": "https://github.com/python/cpython/pull/130493/files/2cda74ce3ae831d824ba9aa3c9c583fb39340b81#diff-03cb75fe4cee43d472cdf7d000745d71b0d137dddde696c7053d4c178cf2c0f1",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253253,
+    "url": "https://github.com/python/cpython/pull/130493#discussion_r1978350750",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253254,
+    "url": "https://github.com/python/cpython/pull/130493/commits/2cda74ce3ae831d824ba9aa3c9c583fb39340b81",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253256,
+    "url": "https://github.com/python/cpython/commit/63b6ec31c44bc91f748a39daf4f65ef9ad25d21b",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253258,
+    "url": "https://github.com/python/cpython/pull/130493/files/c6947d15baac229e837bb64b1a4f8f3791cb2b45",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253259,
+    "url": "https://github.com/python/cpython/pull/130493#pullrequestreview-2656117021",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253260,
+    "url": "https://github.com/python/cpython/pull/130493/files/c6947d15baac229e837bb64b1a4f8f3791cb2b45#diff-38ed0c8c78ff68855721ec5b06deb1822b35c943410aacb537994ade3c51f98d",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253264,
+    "url": "https://github.com/python/cpython/pull/130493#pullrequestreview-2636771442",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253265,
+    "url": "https://github.com/python/cpython/pull/130493#event-16566621267",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253268,
+    "url": "https://github.com/python/cpython/pull/130493/files/2cda74ce3ae831d824ba9aa3c9c583fb39340b81",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253269,
+    "url": "https://github.com/python/cpython/pull/130493/files/6716ac02ad6f707e4b6ff791f3abdc655f5ae94e#diff-4eaa7a8c3d402e80fe50066fa4d714b629f73d4de4012734d728b0e247feebb3",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253270,
+    "url": "https://github.com/python/cpython/pull/130493#commits-pushed-e8c7d66",
+    "parentUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "id": 253271,
+    "url": "https://buildbot.python.org/#/builders/1368/builds/2970/steps/6/logs/stdio",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253272,
+    "url": "https://github.com/python/cpython/pull/132601",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253273,
+    "url": "https://github.com/python/cpython/issues/139355",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253274,
+    "url": "https://github.com/python/cpython/pull/130010#issuecomment-2809741033",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253275,
+    "url": "https://github.com/python/cpython/pull/128463",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253276,
+    "url": "https://github.com/python/cpython/pull/130010#issuecomment-2810039442",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253277,
+    "url": "https://github.com/python/cpython/blob/05e89c34bd8389f87bd6c9462d5a06ef9e1a65ab/.github/CODEOWNERS#L216",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253278,
+    "url": "https://github.com/python/cpython/pull/130010/commits/6d00c2aeec9a0e222d8df6383acde2f707f33bf6",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253279,
+    "url": "https://github.com/python/cpython/pull/130010/commits/4e461d9227200014bb0addbaca6c91a6e59da927",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253280,
+    "url": "https://github.com/python/cpython/pull/130010#event-16302698839",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253281,
+    "url": "https://github.com/python/cpython/pull/130010#ref-issue-3457815882",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253282,
+    "url": "https://github.com/python/cpython/pull/130010/commits/65751d9f7c09bcf26b6d1c279f8f039abe4ecc34",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253283,
+    "url": "https://github.com/corona10",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253284,
+    "url": "https://github.com/python/cpython/pull/130010#event-17197127147",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253285,
+    "url": "https://github.com/python/cpython/issues/141148",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253286,
+    "url": "https://github.com/python/cpython/pull/130010/commits/c2c90cb5014566120c5ad3a9266139bb6972aa59",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253287,
+    "url": "https://github.com/python/cpython/pull/130010",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253288,
+    "url": "https://github.com/python/cpython/pull/130010#pullrequestreview-2619421401",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253289,
+    "url": "https://github.com/python/cpython/pull/130015",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253290,
+    "url": "https://github.com/python/cpython/issues/91505",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253292,
+    "url": "https://github.com/python/cpython/pull/130010#event-17080772686",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253293,
+    "url": "https://github.com/python/cpython/pull/130010#commits-pushed-47d0b6f",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253294,
+    "url": "https://github.com/python/cpython/commit/51da563ee1ffca9054d96ba4a48b559e23d13f9c",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253295,
+    "url": "https://github.com/python/cpython/pull/130010/commits/5a1115bb482a23150d96c00ff8fc532ee1045cbd",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253296,
+    "url": "https://github.com/python/cpython/pull/130010#commits-pushed-4f11910",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253297,
+    "url": "https://github.com/python/cpython/pull/130010/commits/872920d525f3938bd22c623d4e0041f012688aba",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253299,
+    "url": "https://github.com/python/cpython/pull/130010/commits/983e7ee7272244de3ff8d4e2415ee7e37dccd5a2",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253301,
+    "url": "https://github.com/python/cpython/pull/130010#ref-pullrequest-2846459484",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253303,
+    "url": "https://github.com/python/cpython/pull/130010#commits-pushed-928c2df",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253305,
+    "url": "https://github.com/python/cpython/pull/130010/commits/9e955dc723d60d1f0d1017781fa098579f83d1bb",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253307,
+    "url": "https://github.com/python/cpython/pull/128209",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253308,
+    "url": "https://github.com/python/cpython/pull/130010/commits/15443e826e072d793b165bd6492ce9c28a361437",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253309,
+    "url": "https://github.com/python/cpython/pull/130010/commits/153c6b170fa8ca72a252deb1b94559962531d388",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253310,
+    "url": "https://github.com/python/cpython/commit/543927b7b3cb80cb23b06e63f01f6fcc5c926752",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253311,
+    "url": "https://github.com/python/cpython/pull/130010#ref-pullrequest-2761311880",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253312,
+    "url": "https://github.com/python/cpython/pull/130010#issuecomment-2810265633",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253314,
+    "url": "https://github.com/python/cpython/pull/130010/commits/75f1b3863dceef3bd21e4a8ab6c515d77ed46057",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253315,
+    "url": "https://github.com/python/cpython/pull/130010/commits/42d157beabc196862b3819941d7ba05f6c73ce72",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253316,
+    "url": "https://github.com/python/cpython/pull/130010/commits/a868fe97356f97f56468d43b3ca23b4b95636f62",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253317,
+    "url": "https://github.com/python/cpython/pull/130010#event-16302698289",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253318,
+    "url": "https://buildbot.python.org/#/release_status",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253320,
+    "url": "https://github.com/python/cpython/pull/130010#commits-pushed-daa3d52",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253321,
+    "url": "https://github.com/python/cpython/pull/130010/commits/b880dd1f5923c5480d214d1dea48ac4973909930",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253322,
+    "url": "https://github.com/python/cpython/pull/130010#event-17195282056",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253323,
+    "url": "https://github.com/python/cpython/pull/130010/commits/4f1191019a1a1ce6f7a2c77889e7d08373a69493",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253324,
+    "url": "https://github.com/python/cpython/issues/128770",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253325,
+    "url": "https://github.com/python/cpython/pull/130010/commits/ae701e3ead9f08fd16f451bc8c121632cbf611f9",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253327,
+    "url": "https://github.com/python/cpython/pull/128300",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253328,
+    "url": "https://github.com/python/cpython/pull/130010/commits/f0ccc8d21ae6c99ed4d706dcfbbfb4f1a0deca63",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253329,
+    "url": "https://github.com/python/cpython/pull/130010/files/c2c90cb5014566120c5ad3a9266139bb6972aa59#diff-99c15b7c040cc25ce8399287cd85d76007c4490165b59bfb590da14abc734ed0",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253330,
+    "url": "https://github.com/python/cpython/pull/130010/commits/3a56c64d90f8926d130362a2556a0a4a2e3c7345",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253331,
+    "url": "https://github.com/python/cpython/pull/130010/files/c2c90cb5014566120c5ad3a9266139bb6972aa59",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253332,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F130010",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253333,
+    "url": "https://github.com/python/cpython/pull/130010/files/3a56c64d90f8926d130362a2556a0a4a2e3c7345#diff-868cb9c3ec7f49459c652319e480e03ee132976b45fbedacb94958f8e0a9ea58",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253334,
+    "url": "https://github.com/python/cpython/pull/130010#commits-pushed-ba99f2e",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253335,
+    "url": "https://github.com/python/cpython/pull/130010#commits-pushed-09e72b8",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253336,
+    "url": "https://github.com/python/cpython/pull/130010#ref-issue-3861213508",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253337,
+    "url": "https://github.com/Quansight-Labs/pytest-run-parallel/issues/169",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253338,
+    "url": "https://github.com/python/cpython/pull/130010/commits/daa3d52245b8ec527425219960933b8474c285f9",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253340,
+    "url": "https://github.com/python/cpython/pull/130010#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253341,
+    "url": "https://github.com/facebookexperimental/free-threading-benchmarking/blob/main/results/bm-20250219-3.14.0a5%2B-dba89e0-NOGIL/bm-20250219-vultr-x86_64-nascheme-gh_128384_warnings_c-3.14.0a5%2B-dba89e0-vs-base.svg",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253342,
+    "url": "https://github.com/scikit-learn/scikit-learn/blob/b4da3a8ad8a4743fdf139ca16fd3f7435b77471d/sklearn/utils/parallel.py#L155-L182",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253343,
+    "url": "https://github.com/python/cpython/pull/130010/commits/c1def22818a6770bc27139beb19a657752d48de6",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253345,
+    "url": "https://github.com/scikit-learn/scikit-learn/blob/b4da3a8ad8a4743fdf139ca16fd3f7435b77471d/sklearn/utils/parallel.py#L73-L81",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253346,
+    "url": "https://buildbot.python.org/#/builders/1368",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253348,
+    "url": "https://github.com/python/cpython/pull/130010#ref-issue-3596171795",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253349,
+    "url": "https://github.com/python/cpython/pull/130010/commits/543927b7b3cb80cb23b06e63f01f6fcc5c926752",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253350,
+    "url": "https://github.com/python/cpython/pull/130010#pullrequestreview-2739691508",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253351,
+    "url": "https://github.com/python/cpython/pull/130010#issuecomment-2810523786",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253352,
+    "url": "https://github.com/python/cpython/pull/130010/commits/5b6b59ed4aa847c15d24859b6233d10c02422644",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253353,
+    "url": "https://github.com/python/cpython/pull/130010#ref-pullrequest-2768256313",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253354,
+    "url": "https://github.com/python/cpython/pull/130010/commits/bcadd20b918e16f730d085b3e550e38ed2a49a6c",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253355,
+    "url": "https://github.com/python/cpython/pull/130010#ref-issue-2764713401",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253356,
+    "url": "https://github.com/python/cpython/pull/130010/commits/9220223ebfc51110a0cddd4a684c3cae9c28a647",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253358,
+    "url": "https://github.com/python/cpython/pull/130010#issue-2846170878",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253359,
+    "url": "https://github.com/python/cpython/pull/130010/commits/83419e462b9d9e009b17ac4fe3230cec8a779903",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253360,
+    "url": "https://buildbot.python.org/#/builders/1610",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253361,
+    "url": "https://github.com/python/cpython/commit/d687900f98114bb5910daad9553ae381d7daf94b",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253362,
+    "url": "https://github.com/python/cpython/pull/130010/commits/47d0b6f3d3a0f40e610ac68b4274411fbb110184",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253364,
+    "url": "https://github.com/python/cpython/pull/130010#commits-pushed-c1def22",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253365,
+    "url": "https://github.com/lesteve",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253366,
+    "url": "https://cpython-previews--130010.org.readthedocs.build/",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253367,
+    "url": "https://github.com/python/cpython/pull/130010#event-16302698418",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253368,
+    "url": "https://github.com/python/cpython/pull/130010#event-17197126929",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253369,
+    "url": "https://github.com/python/cpython/compare/51da563ee1ffca9054d96ba4a48b559e23d13f9c..543927b7b3cb80cb23b06e63f01f6fcc5c926752",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253370,
+    "url": "https://github.com/hugovk/cpython/commit/d687900f98114bb5910daad9553ae381d7daf94b",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253371,
+    "url": "https://github.com/python/cpython/pull/130010/commits/ba99f2e455f29a5b3bd2f12f85e0b8985ec49bb2",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253372,
+    "url": "https://github.com/python/cpython/pull/130010/commits/0cfe578fbf8912b131b0762e7e013ab8bb583869",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253374,
+    "url": "https://github.com/hugovk/cpython/commit/32104a389618299b185236fb6798328e3ac6aba2",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253375,
+    "url": "https://github.com/python/cpython/pull/130010#ref-pullrequest-4296293129",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253376,
+    "url": "https://github.com/python/cpython/pull/130010/commits/928c2dfcca6dee85bbfc38ee8a3fa79028c676d5",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253378,
+    "url": "https://github.com/braingram",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253381,
+    "url": "https://github.com/python/cpython/pull/130010/commits/09e72b8d76ec25b1b23477ff7b8beb4218ee26a4",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253383,
+    "url": "https://github.com/python/cpython/pull/130010/files/3a56c64d90f8926d130362a2556a0a4a2e3c7345",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253384,
+    "url": "https://github.com/python/cpython/pull/130010#issuecomment-3327517342",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253385,
+    "url": "https://github.com/python/cpython/pull/132611",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253386,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3Atopic-free-threading",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253387,
+    "url": "https://github.com/python/cpython/pull/130010#ref-commit-32104a3",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253388,
+    "url": "https://github.com/python/cpython/pull/130010/commits/16fa2c3891e143eca728a84b6942670ff810276d",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 253389,
+    "url": "https://github.com/AlanRockefeller/faststack/pull/84",
+    "parentUrl": "https://github.com/python/cpython/issues/130010"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#bytes.fromhex"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#bytes.fromhex"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "warnings — Warning control — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/warnings.html#warnings.catch_warnings"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "warnings — Warning control — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/warnings.html#warnings.catch_warnings"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d80\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d48\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026u\u003de678e0834db5c4fd7dcb9f3b37055641c26edc3b\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/655866?s\u003d40\u0026v\u003d4",
+    "alt": "@colesbury",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026u\u003de678e0834db5c4fd7dcb9f3b37055641c26edc3b\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026u\u003de678e0834db5c4fd7dcb9f3b37055641c26edc3b\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d60\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026u\u003de678e0834db5c4fd7dcb9f3b37055641c26edc3b\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d60\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d40\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026u\u003de678e0834db5c4fd7dcb9f3b37055641c26edc3b\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026u\u003de678e0834db5c4fd7dcb9f3b37055641c26edc3b\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d80\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d80\u0026u\u003de678e0834db5c4fd7dcb9f3b37055641c26edc3b\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d80\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d80\u0026u\u003de678e0834db5c4fd7dcb9f3b37055641c26edc3b\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026u\u003de678e0834db5c4fd7dcb9f3b37055641c26edc3b\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1680079?s\u003d80\u0026v\u003d4",
+    "alt": "@lesteve",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/114267?s\u003d40\u0026v\u003d4",
+    "alt": "@braingram",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1680079?s\u003d40\u0026v\u003d4",
+    "alt": "@lesteve",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?s\u003d40\u0026v\u003d4",
+    "alt": "@skirpichev",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/347564?s\u003d40\u0026v\u003d4",
+    "alt": "@coderabbitai",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d40\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/239003?s\u003d40\u0026v\u003d4",
+    "alt": "@1st1",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?s\u003d40\u0026v\u003d4",
+    "alt": "@erlend-aasland",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5110323?s\u003d40\u0026v\u003d4",
+    "alt": "@corona10",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d52\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d52\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d52\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d52\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1680079?s\u003d52\u0026v\u003d4",
+    "alt": "@lesteve",
+    "pageTitle": "gh-128384: Use a context variable for warnings.catch_warnings by nascheme · Pull Request #130010 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d60\u0026v\u003d4",
+    "alt": "tomasr8",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d40\u0026v\u003d4",
+    "alt": "@tomasr8",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d48\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d48\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d48\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d48\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d48\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d40\u0026v\u003d4",
+    "alt": "@tomasr8",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d52\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d52\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d52\u0026v\u003d4",
+    "alt": "@tomasr8",
+    "pageTitle": "gh-82987: Stop on calling frame unconditionally for inline breakpoints by gaogaotiantian · Pull Request #130493 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130493"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "http.server — HTTP servers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-tls-password-file"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "http.server — HTTP servers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-tls-password-file"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
