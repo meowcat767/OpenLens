@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1034,
+    "url": "https://docs.python.org/3/library/os.html#os.environ",
+    "title": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » os — Miscellaneous operating system interfaces | Theme Auto Light Dark | os — Miscellaneous operating system interfaces¶ Source code: Lib/os.py This module provides a portable way of using operating system dependent functionality. If you just want to read or write a file see open(), if you want to manipulate paths, see the os.path module, and if you want to read all the lines in all the files on the command line see the fileinput module. For creating temporary files and directories see the tempfile module, and for high-level file and directory handling see the shutil module. Notes on the availability of these functions: The design of all built-in operating system dependent modules of Python is such that as long as the same functionality is available, it uses the same interface; for example, the function os.stat(path) returns stat information about path in the same format (which happens to have originated with the POSIX interface). Extensions peculiar to a particular operating system are also available through the os module, but using them is of course a threat to portability. All functions accepting path or file names accept both bytes and string objects, and result in an object of the same type, if a path or file name is returned. On VxWorks, os.popen, os.fork, os.execv and os.spawn*p* are not supported. On WebAssembly platforms, Android and iOS, large parts of the os module are not available or behave differently. APIs related to processes (e.g. fork(), execve()) and resources (e.g. nice()) are not available. Others like getuid() and getpid() are emulated or stubs. WebAssembly platforms also lack support for signals (e.g. kill(), wait()). Note All functions in this module raise OSError (or subclasses thereof) in the case of invalid or inaccessible file names and paths, or other arguments that have the correct type, but are not accepted by the operating system. exception os.error¶ An alias for the built-in OSError exception. os.name¶ The name of the operating system dependent module imported. The following names have currently been registered: \u0027posix\u0027, \u0027nt\u0027, \u0027java\u0027. See also sys.platform has a finer granularity. os.uname() gives system-dependent version information. The platform module provides detailed checks for the system’s identity. File Names, Command Line Arguments, and Environment Variables¶ In Python, file names, command line arguments, and environment variables are represented using the string type. On some systems, decoding these strings to and from bytes is necessary before passing them to the operating system. Python uses the filesystem encoding and error handler to perform this conversion (see sys.getfilesystemencoding()). The filesystem encoding and error handler are configured at Python startup by the PyConfig_Read() function: see filesystem_encoding and filesystem_errors members of PyConfig. Changed in version 3.1: On some systems, conversion using the file system encoding may fail. In this case, Python uses the surrogateescape encoding error handler, which means that undecodable bytes are replaced by a Unicode character U+DCxx on decoding, and these are again translated to the original byte on encoding. The file system encoding must guarantee to successfully decode all bytes below 128. If the file system encoding fails to provide this guarantee, API functions can raise UnicodeError. See also the locale encoding. Python UTF-8 Mode¶ Added in version 3.7: See PEP 540 for more details. The Python UTF-8 Mode ignores the locale encoding and forces the usage of the UTF-8 encoding: Use UTF-8 as the filesystem encoding. sys.getfilesystemencoding() returns \u0027utf-8\u0027. locale.getpreferredencoding() returns \u0027utf-8\u0027 (the do_setlocale argument has no effect). sys.stdin, sys.stdout, and sys.stderr all use UTF-8 as their text encoding, with the surrogateescape error handler being enabled for sys.stdin and sys.stdout (sys.stderr continues to use backslashreplace as it does in the default locale-aware mode) On Unix, os.device_encoding() returns \u0027utf-8\u0027 rather than the device encoding. Note that the standard stream settings in UTF-8 mode can be overridden by PYTHONIOENCODING (just as they can be in the default locale-aware mode). As a consequence of the changes in those lower level APIs, other higher level APIs also exhibit different default behaviours: Command line arguments, environment variables and filenames are decoded to text using the UTF-8 encoding. os.fsdecode() and os.fsencode() use the UTF-8 encoding. open(), io.open(), and codecs.open() use the UTF-8 encoding by default. However, they still use the strict error handler by default so that attempting to open a binary file in text mode is likely to raise an exception rather than producing nonsense data. The Python UTF-8 Mode is enabled if the LC_CTYPE locale is C or POSIX at Python startup (see the PyConfig_R",
+    "scrapedAt": "2026-05-09 01:03:27.195537"
+  },
+  {
+    "id": 1033,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_CONST_IMMORTAL",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code o",
+    "scrapedAt": "2026-05-09 01:03:25.866855"
+  },
+  {
+    "id": 1032,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#graphlib",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:03:24.673537"
+  },
+  {
+    "id": 1031,
+    "url": "https://docs.python.org/3/c-api/arg.html#arg-parsing",
+    "title": "Parsing arguments and building values — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Utilities » Parsing arguments and building values | Theme Auto Light Dark | Parsing arguments and building values¶ These functions are useful when creating your own extension functions and methods. Additional information and examples are available in Extending and Embedding the Python Interpreter. The first three of these functions described, PyArg_ParseTuple(), PyArg_ParseTupleAndKeywords(), and PyArg_Parse(), all use format strings which are used to tell the function about the expected arguments. The format strings use the same syntax for each of these functions. Parsing arguments¶ A format string consists of zero or more “format units.” A format unit describes one Python object; it is usually a single character or a parenthesized sequence of format units. With a few exceptions, a format unit that is not a parenthesized sequence normally corresponds to a single address argument to these functions. In the following description, the quoted form is the format unit; the entry in (round) parentheses is the Python object type that matches the format unit; and the entry in [square] brackets is the type of the C variable(s) whose address should be passed. Strings and buffers¶ Note On Python 3.12 and older, the macro PY_SSIZE_T_CLEAN must be defined before including Python.h to use all # variants of formats (s#, y#, etc.) explained below. This is not necessary on Python 3.13 and later. These formats allow accessing an object as a contiguous chunk of memory. You don’t have to provide raw storage for the returned unicode or bytes area. Unless otherwise stated, buffers are not NUL-terminated. There are three ways strings and buffers can be converted to C: Formats such as y* and s* fill a Py_buffer structure. This locks the underlying buffer so that the caller can subsequently use the buffer even inside a Py_BEGIN_ALLOW_THREADS block without the risk of mutable data being resized or destroyed. As a result, you have to call PyBuffer_Release() after you have finished processing the data (or in any early abort case). The es, es#, et and et# formats allocate the result buffer. You have to call PyMem_Free() after you have finished processing the data (or in any early abort case). Other formats take a str or a read-only bytes-like object, such as bytes, and provide a const char * pointer to its buffer. In this case the buffer is “borrowed”: it is managed by the corresponding Python object, and shares the lifetime of this object. You won’t have to release any memory yourself. To ensure that the underlying buffer may be safely borrowed, the object’s PyBufferProcs.bf_releasebuffer field must be NULL. This disallows common mutable objects such as bytearray, but also some read-only objects such as memoryview of bytes. Besides this bf_releasebuffer requirement, there is no check to verify whether the input object is immutable (e.g. whether it would honor a request for a writable buffer, or whether another thread can mutate the data). s (str) [const char *] Convert a Unicode object to a C pointer to a character string. A pointer to an existing string is stored in the character pointer variable whose address you pass. The C string is NUL-terminated. The Python string must not contain embedded null code points; if it does, a ValueError exception is raised. Unicode objects are converted to C strings using \u0027utf-8\u0027 encoding. If this conversion fails, a UnicodeError is raised. Note This format does not accept bytes-like objects. If you want to accept filesystem paths and convert them to C character strings, it is preferable to use the O\u0026 format with PyUnicode_FSConverter() as converter. Changed in version 3.5: Previously, TypeError was raised when embedded null code points were encountered in the Python string. s* (str or bytes-like object) [Py_buffer] This format accepts Unicode objects as well as bytes-like objects. It fills a Py_buffer structure provided by the caller. In this case the resulting C string may contain embedded NUL bytes. Unicode objects are converted to C strings using \u0027utf-8\u0027 encoding. s# (str, read-only bytes-like object) [const char *, Py_ssize_t] Like s*, except that it provides a borrowed buffer. The result is stored into two C variables, the first one a pointer to a C string, the second one its length. The string may contain embedded null bytes. Unicode objects are converted to C strings using \u0027utf-8\u0027 encoding. z (str or None) [const char *] Like s, but the Python object may also be None, in which case the C pointer is set to NULL. z* (str, bytes-like object or None) [Py_buffer] Like s*, but the Python object may also be None, in which case the buf member of the Py_buffer structure is set to NULL. z# (str, read-only bytes-like object or None) [const char *, Py_ssize_t] Like s#, but the Python object may also be None, in which case the C pointer is set to NULL. y (read-only bytes-like object) [const char",
+    "scrapedAt": "2026-05-09 01:03:23.422446"
+  },
+  {
+    "id": 1030,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#break",
+    "title": "7. Simple statements — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 7. Simple statements | Theme Auto Light Dark | 7. Simple statements¶ A simple statement is comprised within a single logical line. Several simple statements may occur on a single line separated by semicolons. The syntax for simple statements is: simple_stmt: expression_stmt\n             | assert_stmt\n             | assignment_stmt\n             | augmented_assignment_stmt\n             | annotated_assignment_stmt\n             | pass_stmt\n             | del_stmt\n             | return_stmt\n             | yield_stmt\n             | raise_stmt\n             | break_stmt\n             | continue_stmt\n             | import_stmt\n             | future_stmt\n             | global_stmt\n             | nonlocal_stmt\n             | type_stmt\n 7.1. Expression statements¶ Expression statements are used (mostly interactively) to compute and write a value, or (usually) to call a procedure (a function that returns no meaningful result; in Python, procedures return the value None). Other uses of expression statements are allowed and occasionally useful. The syntax for an expression statement is: expression_stmt: starred_expression\n An expression statement evaluates the expression list (which may be a single expression). In interactive mode, if the value is not None, it is converted to a string using the built-in repr() function and the resulting string is written to standard output on a line by itself (except if the result is None, so that procedure calls do not cause any output.) 7.2. Assignment statements¶ Assignment statements are used to (re)bind names to values and to modify attributes or items of mutable objects: assignment_stmt: (target_list \"\u003d\")+ (starred_expression | yield_expression)\ntarget_list:     target (\",\" target)* [\",\"]\ntarget:          identifier\n                 | \"(\" [target_list] \")\"\n                 | \"[\" [target_list] \"]\"\n                 | attributeref\n                 | subscription\n                 | \"*\" target\n (See section Primaries for the syntax definitions for attributeref and subscription.) An assignment statement evaluates the expression list (remember that this can be a single expression or a comma-separated list, the latter yielding a tuple) and assigns the single resulting object to each of the target lists, from left to right. Assignment is defined recursively depending on the form of the target (list). When a target is part of a mutable object (an attribute reference or subscription), the mutable object must ultimately perform the assignment and decide about its validity, and may raise an exception if the assignment is unacceptable. The rules observed by various types and the exceptions raised are given with the definition of the object types (see section The standard type hierarchy). Assignment of an object to a target list, optionally enclosed in parentheses or square brackets, is recursively defined as follows. If the target list is a single target with no trailing comma, optionally in parentheses, the object is assigned to that target. Else: If the target list contains one target prefixed with an asterisk, called a “starred” target: The object must be an iterable with at least as many items as there are targets in the target list, minus one. The first items of the iterable are assigned, from left to right, to the targets before the starred target. The final items of the iterable are assigned to the targets after the starred target. A list of the remaining items in the iterable is then assigned to the starred target (the list can be empty). Else: The object must be an iterable with the same number of items as there are targets in the target list, and the items are assigned, from left to right, to the corresponding targets. Assignment of an object to a single target is recursively defined as follows. If the target is an identifier (name): If the name does not occur in a global or nonlocal statement in the current code block: the name is bound to the object in the current local namespace. Otherwise: the name is bound to the object in the global namespace or the outer namespace determined by nonlocal, respectively. The name is rebound if it was already bound. This may cause the reference count for the object previously bound to the name to reach zero, causing the object to be deallocated and its destructor (if it has one) to be called. If the target is an attribute reference: The primary expression in the reference is evaluated. It should yield an object with assignable attributes; if this is not the case, TypeError is raised. That object is then asked to assign the assigned object to the given attribute; if it cannot perform the assignment, it raises an exception (usually but not necessarily AttributeError). Note: If the object is a class instance and the attribute reference occurs on both sides of the assignment operator, the right-hand side expression, a.x can access either an inst",
+    "scrapedAt": "2026-05-09 01:03:22.114372"
+  },
+  {
     "id": 1029,
     "url": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection",
     "title": "Thread states and the global interpreter lock — Python 3.14.5rc1 documentation",
@@ -6893,26 +6928,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1030,
-    "url": "https://docs.python.org/3/reference/simple_stmts.html#break"
-  },
-  {
-    "id": 1031,
-    "url": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
-  },
-  {
-    "id": 1032,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#graphlib"
-  },
-  {
-    "id": 1033,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_CONST_IMMORTAL"
-  },
-  {
-    "id": 1034,
-    "url": "https://docs.python.org/3/library/os.html#os.environ"
   },
   {
     "id": 1035,
@@ -188415,10 +188430,135 @@ window.searchData = [
     "id": 165797,
     "url": "https://docs.python.org/3/c-api/threads.html#c.PyGILState_GetThisThreadState",
     "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 165944,
+    "url": "https://docs.python.org/3/c-api/arg.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 165950,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.Py_VaBuildValue",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 165966,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.PyArg_Parse",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 165973,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.PyArg_VaParseTupleAndKeywords",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 165974,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.METH_VARARGS",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 165976,
+    "url": "https://docs.python.org/3/c-api/arg.html#parsing-arguments-and-building-values",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 165977,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.PyArg_ParseTupleAndKeywords",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 165979,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/arg.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 165980,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.PyArg_UnpackTuple",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 165987,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.PY_CXX_CONST",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 165997,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.PyArg_ValidateKeywordArguments",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 166010,
+    "url": "https://docs.python.org/3/c-api/complex.html#c.Py_complex",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 166011,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.PyArg_VaParse",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.environ"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.environ"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-LOAD_CONST_IMMORTAL"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-LOAD_CONST_IMMORTAL"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#graphlib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#graphlib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Parsing arguments and building values — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Parsing arguments and building values — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "7. Simple statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/simple_stmts.html#break"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "7. Simple statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/simple_stmts.html#break"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
