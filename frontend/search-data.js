@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 256,
+    "url": "https://nos.nl/artikel/2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet",
+    "title": "Nederlandse stewardess test negatief op hantavirus, Brit vermoedelijk wel besmet",
+    "content": "ANP De aankomst van een vermoedelijke hanta-patiënt gisteren op Schiphol NOS Nieuws•vandaag, 09:59•Aangepast vandaag, 14:39 Nederlandse stewardess test negatief op hantavirus, Brit vermoedelijk wel besmet Deel dit artikel De Nederlandse KLM-stewardess die was opgenomen vanwege een mogelijke besmetting met het hantavirus, heeft het virus niet. Dat hebben tests uitgewezen, meldt de Wereldgezondheidsorganisatie (WHO). De vrouw lag met milde klachten in isolatie in het Amsterdam UMC. Ze was tijdens haar werk in Johannesburg in contact gekomen met een Nederlandse vrouw die ziek was geworden aan boord van het cruiseschip Hondius. Die vrouw bleek al snel te ziek om vanuit Zuid-Afrika naar Nederland te vliegen en werd binnen een uur van boord gehaald(opent in nieuw venster). De volgende dag overleed ze aan de gevolgen van hanta. Britse besmettingen De Britse gezondheidsautoriteiten melden vanochtend(opent in nieuw venster) dat van twee Britten is vastgesteld dat ze het hantavirus onder de leden hebben. Een derde Brit is vermoedelijk ook besmet. Deze persoon is momenteel op Tristan da Cunha, in de zuidelijke Atlantische Oceaan. Het cruiseschip deed dat uiterst afgelegen vulkaaneiland half april aan. De WHO zei gisteren(opent in nieuw venster) dat er bij vijf mensen het hantavirus was vastgesteld. Daarbij waren de Britten vermoedelijk al meegeteld. Drie mensen zijn tot nu toe overleden. De Wereldgezondheidsorganisatie verwacht later vandaag met een nieuw overzicht van het aantal patiënten te komen. Op weg naar Tenerife Het Nederlandse cruiseschip is onderweg naar Tenerife, onderdeel van de Canarische eilanden. Daar komt het dit weekeinde aan. Dat zal gebeuren op een volledig afgesloten, geïsoleerde plek. De Amerikaanse en Britse autoriteiten hebben aangekondigd een vliegtuig naar het eiland te sturen om landgenoten op te halen, mits die geen symptomen hebben. Nederland is \"in principe\" alleen verantwoordelijk voor de repatriëring van Nederlandse reizigers, zei minister Berendsen van Buitenlandse Zaken voorafgaand aan de ministerraad. \"Maar we voelen wel degelijk de verantwoordelijkheid om ervoor te zorgen dat iedereen uiteindelijk ook veilig thuiskomt.\" Complexe operatie Berendsen werkt samen met onder meer Spanje, de Wereldgezondheidsorganisatie en het ministerie van VWS om \"ervoor te zorgen dat passagiers op een veilige manier straks zorg krijgen en van boord kunnen\". Over hoe de \"heel complexe\" operatie op Tenerife gaat verlopen, wil hij nog weinig kwijt. \"De specifieke details daarvan, op het moment dat die helemaal helder zijn, gaan we eerst delen met de passagiers zelf en de naasten van de passagiers, voordat we dat openlijk doen.\" Nederland heeft twee medisch specialisten naar het getroffen schip gestuurd, onder wie een internist-infectioloog(opent in nieuw venster) van het Centraal Militair Hospitaal in Utrecht. Ziekenhuizen Nijmegen en Leiden stellen hantavirus vast bij opvarenden cruiseschip Stewardess mogelijk ook besmet met hanta, ligt in Amsterdam UMC Moeten we ons zorgen maken? En nog vier vragen over het hantavirus Buitenland Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-09 00:35:41.859511"
+  },
+  {
+    "id": 255,
+    "url": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline",
+    "title": "Openbaar Ministerie haalt site met stiekem gefilmde misbruikbeelden Motherless offline",
+    "content": "Robin Utrecht Een agent van de afdeling cybercrime NOS Nieuws•vandaag, 11:00•Aangepast vandaag, 17:04 Openbaar Ministerie haalt site met stiekem gefilmde misbruikbeelden Motherless offline Deel dit artikel Joost Schellevis redacteur Tech Stuur e-mail naar joost.schellevis@nos.nl (opent in nieuw venster) Isa Huizing redacteur Binnenland Rachelle Verdel redacteur Nieuwsuur Vorige slide Joost Schellevis redacteur Tech Stuur e-mail naar joost.schellevis@nos.nl (opent in nieuw venster) Isa Huizing redacteur Binnenland Rachelle Verdel redacteur Nieuwsuur Volgende slide De pornosite Motherless, waar beelden van vrouwen te vinden waren die werden misbruikt of stiekem werden gefilmd, is gisteravond laat uit de lucht gehaald. \"Het OM heeft actie ondernomen naar aanleiding van berichtgeving van de NOS\", laat een woordvoerder weten. Momenteel doet het OM verkennend onderzoek. Uit onderzoek van de NOS en Nieuwsuur blijkt dat de IP-adressen van Motherless sinds gisteravond 22.30 uur onbereikbaar zijn. Eerder zag het bedrijf Nforce, dat Motherless in de lucht houdt, geen aanleiding om de site uit de lucht te halen. Nforce bevestigt tegenover de NOS dat de site offline is als gevolg van \"bepaalde acties in samenwerking met de autoriteiten\". \"Daarna hebben we vernomen dat de dienstverlening mag worden hervat, maar we hebben besloten eerst een interne evaluatie uit te voeren\", laat directeur Simon Elimeleh weten. \"Daarvoor hebben we ook de klant om opheldering gevraagd. De site zal onbereikbaar blijven zolang deze evaluatie loopt.\" Het OM wil niet ingaan op de vraag of de website weer online kan komen. Gisèle Pelicot De eigenaar van het datacenter waarin Nforce een ruimte huurt, Eurofiber is ervan geschrokken dat de site bij hem bleek te staan. \"Wij zijn daarover ook in gesprek gegaan met Nforce.\" Op de site, die al zeker sinds 2024 op Nederlandse servers staat, waren op grote schaal video\u0027s te vinden in rubrieken als \"incest\". De site kwam vorige maand in het nieuws doordat CNN er 20.000 video\u0027s vond(opent in nieuw venster) waarop te zien was hoe mannen hun vrouwen in hun slaap misbruiken. De zender deed onderzoek naar dergelijk materiaal naar aanleiding van de Franse zaak rond Gisèle Pelicot. 12.000 video\u0027s Expertisebureau online misbruik Offlimits kreeg alleen al dit jaar bijna 142 meldingen binnen over maar liefst 12.000 video\u0027s op Motherless. Van die 142 meldingen ging het in 25 gevallen om kinderporno. De site reageerde niet op vragen om commentaar, wel werd in de gevallen van kinderporno de informatie snel verwijderd. \"Dit is precies wat nodig is met een site als deze\", laat Offlimits-directeur Robbert Hoving weten in een schriftelijke reactie. \"Ik vind dit een hele goede actie van het OM. Want we moeten niet tolereren dat de wet overtreden mag worden, ook niet online.\" Publiciteit Minister Van Weel van Justitie en Veiligheid noemt het \"hartstikke goed\" dat het OM de site offline heeft gehaald. Dat dat pas gebeurde na publiciteit van zowel de NOS en Nieuwsuur als NRC(opent in nieuw venster), noemt Van Weel \"niet erg\". \"De triggerfunctie van de media is soms belangrijk.\" Gisteren zei de directeur van Nforce nog dat hoewel er veel klachten over Motherless zijn, dat niet betekent dat de site niet deugt. \"Het toont slechts aan dat het nodig is om die informatie op te merken, te verwijderen en ervoor te zorgen dat dat gebeurt.\" Wel vroeg Nforce Motherless om uitleg en wilde het maatregelen, blijkt uit een brief(opent in nieuw venster) aan Motherless die Nforce op zijn website publiceerde. Populairste categorie Uit onderzoek van de NOS bleek dat de tag \"incest\" in de afgelopen week na \"teen\" en \"amateur\" de populairste categorie was, met ruim 1000 video\u0027s die samen 60 miljoen keer werden bekeken. De meest bekeken video in de afgelopen week, met 4,2 miljoen views, is ondergebracht in de categorieën \"incest\" en \"rape\", in combinatie met \"school girl\" en \"sister\". Weer online Overigens is de kans aanwezig dat Motherless via een andere weg weer online komt. De domeinnaam van de website is niet in Nederland geregistreerd, en zou aan nieuwe servers kunnen worden gekoppeld. Servers pornosite met misbruikcontent en drogeervideo\u0027s staan in Nederland CDA: verkrachtingssites moeten offline, onderzoek naar Nederlandse daders Kinderpornosite bij grote actie offline gehaald, server stond in Nederland Binnenland Tech Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-09 00:35:40.793462"
+  },
+  {
+    "id": 254,
+    "url": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine",
+    "title": "Ondanks eenzijdig staakt-het-vuren honderden drone-aanvallen in Rusland en Oekraïne",
+    "content": "Reuters Een man blust een auto na een Russische drone-aanval in Charkiv in Oekraïne NOS Nieuws•vandaag, 14:51 Ondanks eenzijdig staakt-het-vuren honderden drone-aanvallen in Rusland en Oekraïne Deel dit artikel Afgelopen nacht hebben Rusland en Oekraïne over en weer honderden drone-aanvallen uitgevoerd, ondanks een staakt-het-vuren dat was aangekondigd. Dat melden beide landen op sociale media. Het staakt-het-vuren was afgekondigd door Rusland naar aanleiding van 9 mei, de dag waarop het land de overwinning op de nazi\u0027s herdenkt. Het bestand raakte afgelopen week steeds verder uit het zicht toen beide partijen de aanvallen op elkaar niet stopten. Honderden drones De Oekraïense president Zelensky schrijft op X(opent in nieuw venster) dat Rusland vannacht meer dan 850 drones op Oekraïne afstuurde. \"Dit alles laat duidelijk zien dat er aan Russische zijde zelfs geen symbolische poging is gedaan om het vuren aan het front te staken\", schrijft Zelensky. \"Net als de afgelopen 24 uur zal Oekraïne ook vandaag op dezelfde manier reageren.\" Volgens de Oekraïense autoriteiten woedt er een grote brand in een bos vlak bij Tsjernobyl. Het Russische ministerie van Defensie meldde op Telegram(opent in nieuw venster) dat meer dan 260 Oekraïense drones zijn neergehaald. Een grote olieraffinaderij in Jaroslavl, 700 kilometer van de Oekraïense grens, werd geraakt en vloog in brand. Vergelding Morgen viert Rusland zijn belangrijkste feestdag, de Dag van de Overwinning, waarop altijd een grote militaire parade in Moskou wordt gehouden. Maar dit jaar zullen er voor het eerst in bijna twintig jaar geen militaire voertuigen door de straten rijden vanwege de veiligheidssituatie. Rusland heeft Oekraïne gewaarschuwd om geen aanvallen uit te voeren op 9 mei en dreigt met vergelding als dit wel gebeurt. Het Russische ministerie van Buitenlandse Zaken heeft het personeel van ambassades in Kiev opgeroepen om de Oekraïense hoofdstad te verlaten. 26 Oekraïners gedood bij Russische luchtaanvallen, Moskou wil bestand in weekend Staakt-het-vuren op Russische feestdag onder druk na aanvallen op Oekraïne Doden bij aanvallen na aankondigen staakt-het-vuren Rusland en Oekraïne Buitenland Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-09 00:35:39.722134"
+  },
+  {
+    "id": 253,
+    "url": "https://source.android.com/docs/setup/start",
+    "title": "Try Android development | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs Getting Started Try Android development Stay organized with collections Save and categorize content based on your preferences. This tutorial lets you try Android operating system development for the first time. Set up for Android development Before you download and build the android-latest-release manifest branch of the Android source, ensure that your hardware meets the necessary requirements and that required software is properly installed. You should also be familiar with the following terms: Git Git is a free and open source distributed version control system. Android uses Git for local operations such as branching, commits, diffs, and edits. For help learning Git, refer to the Git documentation. Repo Repo is a Python wrapper around Git that simplifies performing complex operations across multiple Git repositories. Repo doesn\u0027t replace Git for all version control operations, it only makes complex Git operations easier to accomplish. Repo uses manifest files to aggregate Git projects into the Android superproject. manifest file A manifest file is an XML file specifying where the various Git projects in the Android source are placed within an AOSP source tree. Note: All commands on this page are preceded by a dollar sign ($) to differentiate them from output or entries within files. To copy a command to the clipboard, click the Copy code sample icon in the top right of each command box. Meet hardware requirements Your development workstation should meet or exceed these hardware requirements: A 64-bit x86 system. Note: You can compile AOSP versions previous to 2.3.x on 32-bit systems. At least 400 GB of free disk space to check out and build the code (250 GB to check out + 150 GB to build). Note: If you\u0027re checking out a mirror, you need more space because the full Android Open Source Project (AOSP) mirrors contain all Git repositories that have ever been used. A minimum of 64 GB of RAM. Google uses 72-core machines with 64 GB of RAM to build Android. With this hardware configuration, it takes approximately 40 minutes for a full build of Android and only a few minutes for incremental build of Android. By contrast, it takes approximately 6 hours for a full build with a 6-core machine with 64 GB of RAM. Meet operating system requirements Your development workstation must run any 64-bit Linux distribution with GNU C Library (glibc) 2.17 or later. Install required packages To install required packages for Ubuntu 18.04 or later, run the following command: sudo apt-get install git-core gnupg flex bison build-essential zip curl zlib1g-dev libc6-dev-i386 x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig Install required software Before you can work with AOSP, you must have installations of OpenJDK, Make, Python 3, and Repo. The latest release branch of Android comes with prebuilt versions of OpenJDK, Make, and Python 3, so additional installation steps aren\u0027t required. The following section explains how to install Repo. Install Repo Follow these steps to install Repo: Download the current package information: sudo apt-get update Run the following command to install the Repo launcher: sudo apt-get install repo The Repo launcher provides a Python script that initializes a checkout and downloads the full Repo tool. If successful, skip to step 4. (optional) Manually install Repo using the following series of commands: export REPO\u003d$(mktemp /tmp/repo.XXXXXXXXX)\ncurl -o ${REPO} https://storage.googleapis.com/git-repo-downloads/repo\ngpg --recv-keys 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65\ncurl -s https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verify - ${REPO} \u0026\u0026 install -m 755 ${REPO} ~/bin/repo The first three commands set up a temp file, download Repo to the file, and verify that the key provided matches the required key. If these commands are successful, the final command installs the Repo launcher. Verify the Repo launcher version: repo version The output should indicate a version of 2.4 or higher, for example: repo launcher version 2.45 Download the Android source The Android source is located in a collection of Git repositories hosted by Google. Each Git repository includes the entire history of the Android source, including changes to the source and when the changes were made. To download the Andr",
+    "scrapedAt": "2026-05-09 00:35:38.58457"
+  },
+  {
+    "id": 252,
+    "url": "https://source.android.com/docs/security/bulletin",
+    "title": "Android Security and Update Bulletins | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs Security Stay organized with collections Save and categorize content based on your preferences. Android Security Bulletins This Section contains the available Android Security Bulletins, which provide fixes for possible issues affecting Android devices. Bulletins Overview Android Security Bulletin The Android Security Bulletin provide fixes for possible issues affecting devices running Android. android Android platform fixes inbox_customize Upstream Linux kernel fixes memory Fixes from SOC manufacturers Latest Bulletins Android Automotive OS Update Bulletin The Android Automotive OS Update Bulletin provides fixes for possible issues affecting devices running Android Automotive OS Read Android Wear Bulletin The Android Wear Bulletin provides fixes for possible issues affecting devices running Android Wear OS Read Pixel Update Bulletins Security patches and functional improvements on supported Google Pixel and Nexus devices (Google devices) Read Chromecast Security Bulletin Security patches, providing fixes for possible issues affecting Chromecast devices. View Pixel Watch Security Bulletins Security patches, providing fixes for possible issues affecting Pixel watches. Read Android XR Security Bulletins Security patches, providing fixes for possible issues affecting Android XR devices. Read Content and code samples on this page are subject to the licenses described in the Content License. Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Last updated 2026-01-15 UTC. [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINeed\",\"thumb-down\"],[\"Too complicated / too many steps\",\"tooComplicatedTooManySteps\",\"thumb-down\"],[\"Out of date\",\"outOfDate\",\"thumb-down\"],[\"Samples / code issue\",\"samplesCodeIssue\",\"thumb-down\"],[\"Other\",\"otherDown\",\"thumb-down\"]],[\"Last updated 2026-01-15 UTC.\"],[],[]]",
+    "scrapedAt": "2026-05-09 00:35:35.581569"
+  },
+  {
     "id": 251,
     "url": "https://source.android.com/docs/security",
     "title": "Android Security | Android Open Source Project",
@@ -1753,26 +1788,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 252,
-    "url": "https://source.android.com/docs/security/bulletin"
-  },
-  {
-    "id": 253,
-    "url": "https://source.android.com/docs/setup/start"
-  },
-  {
-    "id": 254,
-    "url": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine"
-  },
-  {
-    "id": 255,
-    "url": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
-  },
-  {
-    "id": 256,
-    "url": "https://nos.nl/artikel/2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet"
   },
   {
     "id": 257,
@@ -43329,10 +43344,400 @@ window.searchData = [
     "id": 18265,
     "url": "https://source.android.com/docs/security/test/fuzz-sanitize",
     "parentUrl": "https://source.android.com/docs/security"
+  },
+  {
+    "id": 18268,
+    "url": "https://source.android.com/docs/security/bulletin#main-content",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 18269,
+    "url": "https://source.android.com/docs/security/bulletin/wear",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 18270,
+    "url": "https://source.android.com/docs/security/bulletin/pixel",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 18271,
+    "url": "https://source.android.com/docs/security/bulletin/pixel-watch",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 18275,
+    "url": "https://source.android.com/docs/security/bulletin/aaos",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 18276,
+    "url": "https://support.google.com/pixelphone/answer/4457705#pixel_phones\u0026nexus_devices",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 18278,
+    "url": "https://source.android.com/docs/security/bulletin/asb-overview",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 18281,
+    "url": "https://source.android.com/docs/security/bulletin/chromecast",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 18282,
+    "url": "https://gerrit-review.googlesource.com/Documentation/",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 18283,
+    "url": "https://source.android.com/docs/setup/start#install-software",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 18284,
+    "url": "https://android-review.googlesource.com/c/platform/frameworks/native/+/1181350",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 18285,
+    "url": "https://git-scm.com/doc",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 18286,
+    "url": "https://groups.google.com/forum/?fromgroups#!forum/android-building",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 18289,
+    "url": "https://source.android.com/docs/core/tests/development/atest",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 18290,
+    "url": "https://source.android.com/docs/setup/download/troubleshoot-sync",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 18292,
+    "url": "https://source.android.com/docs/setup/start#main-content",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 18294,
+    "url": "https://source.android.com/docs/setup/start#hardware-requirements",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 18295,
+    "url": "https://issuetracker.google.com/issues/new?component\u003d191476",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 18297,
+    "url": "https://nos.nl/artikel/2613353-26-oekrainers-gedood-bij-russische-luchtaanvallen-moskou-wil-bestand-in-weekend",
+    "parentUrl": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine"
+  },
+  {
+    "id": 18298,
+    "url": "https://nos.nl/artikel/2566532-voor-het-eerst-in-jaren-tientallen-staatshoofden-bij-russische-overwinningsdag",
+    "parentUrl": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine"
+  },
+  {
+    "id": 18299,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine",
+    "parentUrl": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine"
+  },
+  {
+    "id": 18300,
+    "url": "https://t.me/mod_russia/63310",
+    "parentUrl": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine"
+  },
+  {
+    "id": 18301,
+    "url": "https://x.com/ZelenskyyUa/status/2052613670333550957?ref_src\u003dtwsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E2052613670333550957%7Ctwgr%5Eccb9993d7c3b2683e6cd11268a70e6869aed3cbd%7Ctwcon%5Es1_\u0026ref_url\u003dhttps%3A%2F%2Fwww.vrt.be%2Fvrtnws%2Fnl%2Fliveblog%2Fondanks-eenzijdig-staakthetvuren-honderden-aanvallen-met-dron1772095281826%2F",
+    "parentUrl": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine"
+  },
+  {
+    "id": 18302,
+    "url": "https://nos.nl/artikel/2613205-doden-bij-aanvallen-na-aankondigen-staakt-het-vuren-rusland-en-oekraine",
+    "parentUrl": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine"
+  },
+  {
+    "id": 18303,
+    "url": "https://twitter.com/intent/tweet?text\u003dOndanks+eenzijdig+staakt-het-vuren+honderden+drone-aanvallen+in+Rusland+en+Oekra%C3%AFne\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine"
+  },
+  {
+    "id": 18304,
+    "url": "https://nos.nl/artikel/2613401-staakt-het-vuren-op-russische-feestdag-onder-druk-na-aanvallen-op-oekraine",
+    "parentUrl": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine"
+  },
+  {
+    "id": 18305,
+    "url": "https://nos.nl/nieuws/buitenland",
+    "parentUrl": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine"
+  },
+  {
+    "id": 18306,
+    "url": "https://api.whatsapp.com/send?text\u003dOndanks+eenzijdig+staakt-het-vuren+honderden+drone-aanvallen+in+Rusland+en+Oekra%C3%AFne+https%3A%2F%2Fnos.nl%2Fartikel%2F2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine",
+    "parentUrl": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine"
+  },
+  {
+    "id": 18308,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline",
+    "parentUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "id": 18309,
+    "url": "https://edition.cnn.com/interactive/2026/03/world/expose-rape-assault-online-vis-intl/index.html",
+    "parentUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "id": 18310,
+    "url": "https://nos.nl/artikel/2611663-cda-verkrachtingssites-moeten-offline-onderzoek-naar-nederlandse-daders",
+    "parentUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "id": 18311,
+    "url": "https://www.nrc.nl/nieuws/2026/05/08/om-haalt-website-met-extreme-drogeerporno-offline-a4927360",
+    "parentUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "id": 18312,
+    "url": "https://nforce.com/transparency?case\u003dmotherless-07-05-2026",
+    "parentUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "id": 18313,
+    "url": "https://nos.nl/nieuws/binnenland",
+    "parentUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "id": 18314,
+    "url": "https://api.whatsapp.com/send?text\u003dOpenbaar+Ministerie+haalt+site+met+stiekem+gefilmde+misbruikbeelden+Motherless+offline+https%3A%2F%2Fnos.nl%2Fartikel%2F2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline",
+    "parentUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "id": 18315,
+    "url": "https://nos.nl/artikel/2613430-servers-pornosite-met-misbruikcontent-en-drogeervideo-s-staan-in-nederland",
+    "parentUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "id": 18316,
+    "url": "https://twitter.com/intent/tweet?text\u003dOpenbaar+Ministerie+haalt+site+met+stiekem+gefilmde+misbruikbeelden+Motherless+offline\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "id": 18317,
+    "url": "https://nos.nl/artikel/2562091-kinderpornosite-bij-grote-actie-offline-gehaald-server-stond-in-nederland",
+    "parentUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "id": 18318,
+    "url": "https://nos.nl/nieuws/tech",
+    "parentUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "id": 18320,
+    "url": "https://nos.nl/artikel/2613466-ziekenhuizen-nijmegen-en-leiden-stellen-hantavirus-vast-bij-opvarenden-cruiseschip",
+    "parentUrl": "https://nos.nl/artikel/2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet"
+  },
+  {
+    "id": 18321,
+    "url": "https://nos.nl/artikel/2613426-stewardess-mogelijk-ook-besmet-met-hanta-ligt-in-amsterdam-umc",
+    "parentUrl": "https://nos.nl/artikel/2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet"
+  },
+  {
+    "id": 18322,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet",
+    "parentUrl": "https://nos.nl/artikel/2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet"
+  },
+  {
+    "id": 18323,
+    "url": "https://nieuws.klm.com/passagier-met-hantavirus-was-kort-aan-boord-van-klm-toestel-in-johannesburg/",
+    "parentUrl": "https://nos.nl/artikel/2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet"
+  },
+  {
+    "id": 18325,
+    "url": "https://twitter.com/intent/tweet?text\u003dNederlandse+stewardess+test+negatief+op+hantavirus%2C+Brit+vermoedelijk+wel+besmet\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet"
+  },
+  {
+    "id": 18327,
+    "url": "https://www.gov.uk/government/news/ukhsa-update-on-the-hantavirus-cruise-ship-outbreak",
+    "parentUrl": "https://nos.nl/artikel/2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet"
+  },
+  {
+    "id": 18328,
+    "url": "https://www.defensie.nl/actueel/nieuws/2026/05/08/defensie-ondersteunt-met-militair-arts-op-cruiseschip-hondius",
+    "parentUrl": "https://nos.nl/artikel/2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet"
+  },
+  {
+    "id": 18329,
+    "url": "https://api.whatsapp.com/send?text\u003dNederlandse+stewardess+test+negatief+op+hantavirus%2C+Brit+vermoedelijk+wel+besmet+https%3A%2F%2Fnos.nl%2Fartikel%2F2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet",
+    "parentUrl": "https://nos.nl/artikel/2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet"
+  },
+  {
+    "id": 18330,
+    "url": "https://www.who.int/news/item/07-05-2026-who-s-response-to-hantavirus-cases-linked-to-a-cruise-ship",
+    "parentUrl": "https://nos.nl/artikel/2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://images.cdn.nos.nl/5/9/N/g/R/i/KpyjSLDtGcfkTSadWnmGc98BQPosZsWgZZnu7bx/5x423x3984x2241-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Nederlandse stewardess test negatief op hantavirus, Brit vermoedelijk wel besmet",
+    "pageUrl": "https://nos.nl/artikel/2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/C/p/R/s/P/LSLp6CSXGGqq1xDzcX2FhhmoARHjqNdWbXPYwj4/1043x494x2648x1986-768x576.webp",
+    "alt": "",
+    "pageTitle": "Nederlandse stewardess test negatief op hantavirus, Brit vermoedelijk wel besmet",
+    "pageUrl": "https://nos.nl/artikel/2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/8/E/8/z/D/sZsGqYweaSq2ECc4iiNDJEWx2XpTFek5k3RuzfG/0x0x1776x1332-576x432.webp",
+    "alt": "",
+    "pageTitle": "Nederlandse stewardess test negatief op hantavirus, Brit vermoedelijk wel besmet",
+    "pageUrl": "https://nos.nl/artikel/2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/6/W/7/q/2/NpXRFizUvPz5jRq8gqKekCRTVpQb31JaUeC3AD2/9x0x1276x957-576x432.webp",
+    "alt": "",
+    "pageTitle": "Nederlandse stewardess test negatief op hantavirus, Brit vermoedelijk wel besmet",
+    "pageUrl": "https://nos.nl/artikel/2613552-nederlandse-stewardess-test-negatief-op-hantavirus-brit-vermoedelijk-wel-besmet"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/J/C/j/V/P/4RG8p6UhLQr1LArCBbPWvWoFn3QuUhFoLaNXibY/0x107x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Openbaar Ministerie haalt site met stiekem gefilmde misbruikbeelden Motherless offline",
+    "pageUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2023/10/11/1015862/bio_medium.jpg",
+    "alt": "",
+    "pageTitle": "Openbaar Ministerie haalt site met stiekem gefilmde misbruikbeelden Motherless offline",
+    "pageUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2023/10/11/1015862/bio_medium.jpg",
+    "alt": "",
+    "pageTitle": "Openbaar Ministerie haalt site met stiekem gefilmde misbruikbeelden Motherless offline",
+    "pageUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/G/e/8/M/v/WiqTPe75tG7ueW4DFt4KxJRCh1e4i38ePZBx3so/180x0x3548x2661-768x576.webp",
+    "alt": "",
+    "pageTitle": "Openbaar Ministerie haalt site met stiekem gefilmde misbruikbeelden Motherless offline",
+    "pageUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/G/z/e/k/x/ivxG1K9SUVbot8DWoZkxo1Rrqe4kwb9uDYuxnZy/347x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "Openbaar Ministerie haalt site met stiekem gefilmde misbruikbeelden Motherless offline",
+    "pageUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2025/04/02/1209798/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "Openbaar Ministerie haalt site met stiekem gefilmde misbruikbeelden Motherless offline",
+    "pageUrl": "https://nos.nl/artikel/2613560-openbaar-ministerie-haalt-site-met-stiekem-gefilmde-misbruikbeelden-motherless-offline"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/H/g/E/2/n/HAv93ykbQuZutMxt5oEdzuSQN1PKFFTbLfvmWsn/0x401x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Ondanks eenzijdig staakt-het-vuren honderden drone-aanvallen in Rusland en Oekraïne",
+    "pageUrl": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/6/b/5/8/Q/SoeacJhS3o2uWuNGHMuWnPNNfjx3yQSCGr2fgxs/0x0x2200x1650-768x576.webp",
+    "alt": "",
+    "pageTitle": "Ondanks eenzijdig staakt-het-vuren honderden drone-aanvallen in Rusland en Oekraïne",
+    "pageUrl": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/4/j/6/N/F/m7yeH8ZQWfqAo46V4L4fgXieM1A6zC6iYJeyJfY/0x0x4000x3000-768x576.webp",
+    "alt": "",
+    "pageTitle": "Ondanks eenzijdig staakt-het-vuren honderden drone-aanvallen in Rusland en Oekraïne",
+    "pageUrl": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/4/7/G/1/W/aU1hoH2zsia2jdzouuHf6sCUZNjS5DuzG6yToqW/7x136x1264x711-640x360.webp",
+    "alt": "",
+    "pageTitle": "Ondanks eenzijdig staakt-het-vuren honderden drone-aanvallen in Rusland en Oekraïne",
+    "pageUrl": "https://nos.nl/artikel/2613589-ondanks-eenzijdig-staakt-het-vuren-honderden-drone-aanvallen-in-rusland-en-oekraine"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Try Android development | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "src": "https://source.android.com/static/docs/setup/images/device-after-color-transform-matrix-change.png",
+    "alt": "Example of a successful color\nchange",
+    "pageTitle": "Try Android development | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/images/identity/identity-hero.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/images/cluster-illustrations/developer-preview.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/images/cluster-illustrations/car.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/images/spot-icons/watch.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/images/spot-icons/tools-update.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/cast.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/wear-os-development.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/static/images/picto-icons/xr.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
   {
     "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
     "alt": "Android Open Source Project",
