@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1792,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.poly",
+    "title": "turtle — Turtle graphics — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Graphical user interfaces with Tk » turtle — Turtle graphics | Theme Auto Light Dark | turtle — Turtle graphics¶ Source code: Lib/turtle.py Introduction¶ Turtle graphics is an implementation of the popular geometric drawing tools introduced in Logo, developed by Wally Feurzeig, Seymour Papert and Cynthia Solomon in 1967. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. Get started¶ Imagine a robotic turtle starting at (0, 0) in the x-y plane. After an import turtle, give it the command turtle.forward(15), and it moves (on-screen!) 15 pixels in the direction it is facing, drawing a line as it moves. Give it the command turtle.right(25), and it rotates in-place 25 degrees clockwise. Turtle star Turtle can draw intricate shapes using programs that repeat simple moves. In Python, turtle graphics provides a representation of a physical “turtle” (a little robot with a pen) that draws on a sheet of paper on the floor. It’s an effective and well-proven way for learners to encounter programming concepts and interaction with software, as it provides instant, visible feedback. It also provides convenient access to graphical output in general. Turtle drawing was originally created as an educational tool, to be used by teachers in the classroom. For the programmer who needs to produce some graphical output it can be a way to do that without the overhead of introducing more complex or external libraries into their work. Tutorial¶ New users should start here. In this tutorial we’ll explore some of the basics of turtle drawing. Starting a turtle environment¶ In a Python shell, import all the objects of the turtle module: from turtle import *\n If you run into a No module named \u0027_tkinter\u0027 error, you’ll have to install the Tk interface package on your system. Basic drawing¶ Send the turtle forward 100 steps: forward(100)\n You should see (most likely, in a new window on your display) a line drawn by the turtle, heading East. Change the direction of the turtle, so that it turns 120 degrees left (anti-clockwise): left(120)\n Let’s continue by drawing a triangle: forward(100)\nleft(120)\nforward(100)\n Notice how the turtle, represented by an arrow, points in different directions as you steer it. Experiment with those commands, and also with backward() and right(). Pen control¶ Try changing the color - for example, color(\u0027blue\u0027) - and width of the line - for example, width(3) - and then drawing again. You can also move the turtle around without drawing, by lifting up the pen: up() before moving. To start drawing again, use down(). The turtle’s position¶ Send your turtle back to its starting-point (useful if it has disappeared off-screen): home()\n The home position is at the center of the turtle’s screen. If you ever need to know them, get the turtle’s x-y coordinates with: pos()\n Home is at (0, 0). And after a while, it will probably help to clear the window so we can start anew: clearscreen()\n Making algorithmic patterns¶ Using loops, it’s possible to build up geometric patterns: for steps in range(100):\n    for c in (\u0027blue\u0027, \u0027red\u0027, \u0027green\u0027):\n        color(c)\n        forward(steps)\n        right(30)\n - which of course, are limited only by the imagination! Let’s draw the star shape at the top of this page. We want red lines, filled in with yellow: color(\u0027red\u0027)\nfillcolor(\u0027yellow\u0027)\n Just as up() and down() determine whether lines will be drawn, filling can be turned on and off: begin_fill()\n Next we’ll create a loop: while True:\n    forward(200)\n    left(170)\n    if abs(pos()) \u003c 1:\n        break\n abs(pos()) \u003c 1 is a good way to know when the turtle is back at its home position. Finally, complete the filling: end_fill()\n (Note that filling only actually takes place when you give the end_fill() command.) How to…¶ This section covers some typical turtle use-cases and approaches. Get started as quickly as possible¶ One of the joys of turtle graphics is the immediate, visual feedback that’s available from simple commands - it’s an excellent way to introduce children to programming ideas, with a minimum of overhead (not just children, of course). The turtle module makes this possible by exposing all its basic functionality as functions, available with from turtle import *. The turtle graphics tutorial covers this approach. It’s worth noting that many of the turtle commands also have even more terse equivalents, such as fd() for forward(). These are especially useful when working with learners for whom typing is not a skill. You’ll need to have the Tk interface package installed on your system for turtle graphics to work. Be warned that this is not always straightforward, so check this in advance if you’re planning to use turtle graphics with a learner. Automa",
+    "scrapedAt": "2026-05-09 01:33:57.398708"
+  },
+  {
+    "id": 1791,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2025-4138",
+    "title": "",
+    "content": "Common vulnerabilities and Exposures (CVE) We\u0027re sorry but the CVE Website doesn\u0027t work properly without JavaScript enabled. Please enable it to continue.",
+    "scrapedAt": "2026-05-09 01:33:56.135386"
+  },
+  {
+    "id": 1790,
+    "url": "https://docs.python.org/3/glossary.html#term-soft-deprecated",
+    "title": "Glossary — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Glossary | Theme Auto Light Dark | Glossary¶ \u003e\u003e\u003e¶ The default Python prompt of the interactive shell. Often seen for code examples which can be executed interactively in the interpreter. ...¶ Can refer to: The default Python prompt of the interactive shell when entering the code for an indented code block, when within a pair of matching left and right delimiters (parentheses, square brackets, curly braces or triple quotes), or after specifying a decorator. The three dots form of the Ellipsis object. abstract base class¶ Abstract base classes complement duck-typing by providing a way to define interfaces when other techniques like hasattr() would be clumsy or subtly wrong (for example with magic methods). ABCs introduce virtual subclasses, which are classes that don’t inherit from a class but are still recognized by isinstance() and issubclass(); see the abc module documentation. Python comes with many built-in ABCs for data structures (in the collections.abc module), numbers (in the numbers module), streams (in the io module), import finders and loaders (in the importlib.abc module). You can create your own ABCs with the abc module. annotate function¶ A function that can be called to retrieve the annotations of an object. This function is accessible as the __annotate__ attribute of functions, classes, and modules. Annotate functions are a subset of evaluate functions. annotation¶ A label associated with a variable, a class attribute or a function parameter or return value, used by convention as a type hint. Annotations of local variables cannot be accessed at runtime, but annotations of global variables, class attributes, and functions can be retrieved by calling annotationlib.get_annotations() on modules, classes, and functions, respectively. See variable annotation, function annotation, PEP 484, PEP 526, and PEP 649, which describe this functionality. Also see Annotations Best Practices for best practices on working with annotations. argument¶ A value passed to a function (or method) when calling the function. There are two kinds of argument: keyword argument: an argument preceded by an identifier (e.g. name\u003d) in a function call or passed as a value in a dictionary preceded by **. For example, 3 and 5 are both keyword arguments in the following calls to complex(): complex(real\u003d3, imag\u003d5)\ncomplex(**{\u0027real\u0027: 3, \u0027imag\u0027: 5})\n positional argument: an argument that is not a keyword argument. Positional arguments can appear at the beginning of an argument list and/or be passed as elements of an iterable preceded by *. For example, 3 and 5 are both positional arguments in the following calls: complex(3, 5)\ncomplex(*(3, 5))\n Arguments are assigned to the named local variables in a function body. See the Calls section for the rules governing this assignment. Syntactically, any expression can be used to represent an argument; the evaluated value is assigned to the local variable. See also the parameter glossary entry, the FAQ question on the difference between arguments and parameters, and PEP 362. asynchronous context manager¶ An object which controls the environment seen in an async with statement by defining __aenter__() and __aexit__() methods. Introduced by PEP 492. asynchronous generator¶ A function which returns an asynchronous generator iterator. It looks like a coroutine function defined with async def except that it contains yield expressions for producing a series of values usable in an async for loop. Usually refers to an asynchronous generator function, but may refer to an asynchronous generator iterator in some contexts. In cases where the intended meaning isn’t clear, using the full terms avoids ambiguity. An asynchronous generator function may contain await expressions as well as async for, and async with statements. asynchronous generator iterator¶ An object created by an asynchronous generator function. This is an asynchronous iterator which when called using the __anext__() method returns an awaitable object which will execute the body of the asynchronous generator function until the next yield expression. Each yield temporarily suspends processing, remembering the execution state (including local variables and pending try-statements). When the asynchronous generator iterator effectively resumes with another awaitable returned by __anext__(), it picks up where it left off. See PEP 492 and PEP 525. asynchronous iterable¶ An object, that can be used in an async for statement. Must return an asynchronous iterator from its __aiter__() method. Introduced by PEP 492. asynchronous iterator¶ An object that implements the __aiter__() and __anext__() methods. __anext__() must return an awaitable object. async for resolves the awaitables returned by an asynchronous iterator’s __anext__() method until it raises a StopAsyncIteration exception. Introduced by PEP 492. atomic operation¶ An operation that appears to execute as a single",
+    "scrapedAt": "2026-05-09 01:33:54.528208"
+  },
+  {
+    "id": 1789,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code o",
+    "scrapedAt": "2026-05-09 01:33:53.255838"
+  },
+  {
+    "id": 1788,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GET_OBJECT",
+    "title": "Weak Reference Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Weak Reference Objects | Theme Auto Light Dark | Weak Reference Objects¶ Python supports weak references as first-class objects. There are two specific object types which directly implement weak references. The first is a simple reference object, and the second acts as a proxy for the original object as much as it can. int PyWeakref_Check(PyObject *ob)¶ Return non-zero if ob is either a reference or proxy object. This function always succeeds. int PyWeakref_CheckRef(PyObject *ob)¶ Return non-zero if ob is a reference object or a subclass of the reference type. This function always succeeds. int PyWeakref_CheckRefExact(PyObject *ob)¶ Return non-zero if ob is a reference object, but not a subclass of the reference type. This function always succeeds. int PyWeakref_CheckProxy(PyObject *ob)¶ Return non-zero if ob is a proxy object. This function always succeeds. PyObject *PyWeakref_NewRef(PyObject *ob, PyObject *callback)¶ Return value: New reference. Part of the Stable ABI. Return a weak reference object for the object ob. This will always return a new reference, but is not guaranteed to create a new object; an existing reference object may be returned. The second parameter, callback, can be a callable object that receives notification when ob is garbage collected; it should accept a single parameter, which will be the weak reference object itself. callback may also be None or NULL. If ob is not a weakly referenceable object, or if callback is not callable, None, or NULL, this will return NULL and raise TypeError. See also PyType_SUPPORTS_WEAKREFS() for checking if ob is weakly referenceable. PyObject *PyWeakref_NewProxy(PyObject *ob, PyObject *callback)¶ Return value: New reference. Part of the Stable ABI. Return a weak reference proxy object for the object ob. This will always return a new reference, but is not guaranteed to create a new object; an existing proxy object may be returned. The second parameter, callback, can be a callable object that receives notification when ob is garbage collected; it should accept a single parameter, which will be the weak reference object itself. callback may also be None or NULL. If ob is not a weakly referenceable object, or if callback is not callable, None, or NULL, this will return NULL and raise TypeError. See also PyType_SUPPORTS_WEAKREFS() for checking if ob is weakly referenceable. int PyWeakref_GetRef(PyObject *ref, PyObject **pobj)¶ Part of the Stable ABI since version 3.13. Get a strong reference to the referenced object from a weak reference, ref, into *pobj. On success, set *pobj to a new strong reference to the referenced object and return 1. If the reference is dead, set *pobj to NULL and return 0. On error, raise an exception and return -1. Added in version 3.13. PyObject *PyWeakref_GetObject(PyObject *ref)¶ Return value: Borrowed reference. Part of the Stable ABI. Return a borrowed reference to the referenced object from a weak reference, ref. If the referent is no longer live, returns Py_None. Note This function returns a borrowed reference to the referenced object. This means that you should always call Py_INCREF() on the object except when it cannot be destroyed before the last usage of the borrowed reference. Deprecated since version 3.13, will be removed in version 3.15: Use PyWeakref_GetRef() instead. PyObject *PyWeakref_GET_OBJECT(PyObject *ref)¶ Return value: Borrowed reference. Similar to PyWeakref_GetObject(), but does no error checking. Deprecated since version 3.13, will be removed in version 3.15: Use PyWeakref_GetRef() instead. int PyWeakref_IsDead(PyObject *ref)¶ Test if the weak reference ref is dead. Returns 1 if the reference is dead, 0 if it is alive, and -1 with an error set if ref is not a weak reference object. Added in version 3.14. void PyObject_ClearWeakRefs(PyObject *object)¶ Part of the Stable ABI. This function is called by the tp_dealloc handler to clear weak references. This iterates through the weak references for object and calls callbacks for those references which have one. It returns when all callbacks have been attempted. void PyUnstable_Object_ClearWeakRefsNoCallbacks(PyObject *object)¶ This is Unstable API. It may change without warning in minor releases. Clears the weakrefs for object without calling the callbacks. This function is called by the tp_dealloc handler for types with finalizers (i.e., __del__()). The handler for those objects first calls PyObject_ClearWeakRefs() to clear weakrefs and call their callbacks, then the finalizer, and finally this function to clear any weakrefs that may have been created by the finalizer. In most circumstances, it’s more appropriate to use PyObject_ClearWeakRefs() to clear weakrefs instead of this function. Added in version 3.13. Previous topic Pickle buffer objects Next topic Capsules This page Report a bug Improve this page Show source « Nav",
+    "scrapedAt": "2026-05-09 01:33:51.98534"
+  },
+  {
     "id": 1787,
     "url": "https://docs.python.org/3/library/fnmatch.html#fnmatch.filterfalse",
     "title": "fnmatch — Unix filename pattern matching — Python 3.14.5rc1 documentation",
@@ -12073,26 +12108,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1788,
-    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GET_OBJECT"
-  },
-  {
-    "id": 1789,
-    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction"
-  },
-  {
-    "id": 1790,
-    "url": "https://docs.python.org/3/glossary.html#term-soft-deprecated"
-  },
-  {
-    "id": 1791,
-    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2025-4138"
-  },
-  {
-    "id": 1792,
-    "url": "https://docs.python.org/3/library/turtle.html#turtle.poly"
   },
   {
     "id": 1793,
@@ -250069,6 +250084,60 @@ window.searchData = [
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "turtle — Turtle graphics — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/turtle.html#turtle.poly"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/turtle-star.png",
+    "alt": "../_images/turtle-star.png",
+    "pageTitle": "turtle — Turtle graphics — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/turtle.html#turtle.poly"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "turtle — Turtle graphics — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/turtle.html#turtle.poly"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-soft-deprecated"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-soft-deprecated"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#dis.Instruction"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#dis.Instruction"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Weak Reference Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GET_OBJECT"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Weak Reference Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GET_OBJECT"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
