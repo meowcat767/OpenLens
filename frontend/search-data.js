@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 820,
+    "url": "https://github.com/python/cpython/issues/130645",
+    "title": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add colour to argparse help #130645 New issue Copy link New issue Copy link Closed Closed Add colour to argparse help#130645 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description hugovk opened on Feb 27, 2025 Issue body actions Feature or enhancement In Python 3.13 we added colour output to the new REPL, traceback and doctest, and in 3.14 to unittest, test.regrtest and calendar, that can also be controlled with the PYTHON_COLORS, NO_COLOR and FORCE_COLOR environment variables: https://docs.python.org/3.14/whatsnew/3.14.html#unittest https://docs.python.org/3.14/using/cmdline.html#using-on-controlling-color Let\u0027s add colour to argparse help output. Survey First, here\u0027s a survey of some other CLIs that use colour: Survey uv cargo composer ruff lsd fd See also: bat, hyperfine, oxipng, zizmor gh rich-cli typer These fall into four groups: uv/cargo: green + cyan composer: yellow + green ruff/lsd/fd/gh: only bold typer/rich-cli: green + cyan + yellow Prototypes I\u0027ve made prototypes of two of these (uv/cargo style, typer/rich-cli style), and another with blue + magenta similar to the 3.13 REPL/traceback. Prototypes main uv/cargo style typer/rich-cli style REPL style I think I prefer the typer/rich-cli style: the extra colour makes it easier to pick out the (green) short options from the (cyan) long options, and from their (green) arguments. And it should also be somewhat familiar to Python users who have used typer-based CLIs. Linked PRs gh-130645: Add colour to argparse help #132323 gh-130645: Add color to stdlib argparse CLIs #133380 GH-130645: Default to color help in argparse #136809 [3.14] GH-130645: Default to color help in argparse (GH-136809) #136886 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects Argparse issues Status Doc issues Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:54:52.634781"
+  },
+  {
+    "id": 819,
+    "url": "https://docs.python.org/3/library/re.html#module-re",
+    "title": "re — Regular expression operations — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Text Processing Services » re — Regular expression operations | Theme Auto Light Dark | re — Regular expression operations¶ Source code: Lib/re/ This module provides regular expression matching operations similar to those found in Perl. Both patterns and strings to be searched can be Unicode strings (str) as well as 8-bit strings (bytes). However, Unicode strings and 8-bit strings cannot be mixed: that is, you cannot match a Unicode string with a bytes pattern or vice-versa; similarly, when asking for a substitution, the replacement string must be of the same type as both the pattern and the search string. Regular expressions use the backslash character (\u0027\\\u0027) to indicate special forms or to allow special characters to be used without invoking their special meaning. This collides with Python’s usage of the same character for the same purpose in string literals; for example, to match a literal backslash, one might have to write \u0027\\\\\\\\\u0027 as the pattern string, because the regular expression must be \\\\, and each backslash must be expressed as \\\\ inside a regular Python string literal. Also, please note that any invalid escape sequences in Python’s usage of the backslash in string literals now generate a SyntaxWarning and in the future this will become a SyntaxError. This behaviour will happen even if it is a valid escape sequence for a regular expression. The solution is to use Python’s raw string notation for regular expression patterns; backslashes are not handled in any special way in a string literal prefixed with \u0027r\u0027. So r\"\\n\" is a two-character string containing \u0027\\\u0027 and \u0027n\u0027, while \"\\n\" is a one-character string containing a newline. Usually patterns will be expressed in Python code using this raw string notation. It is important to note that most regular expression operations are available as module-level functions and methods on compiled regular expressions. The functions are shortcuts that don’t require you to compile a regex object first, but miss some fine-tuning parameters. See also The third-party regex module, which has an API compatible with the standard library re module, but offers additional functionality and a more thorough Unicode support. Regular Expression Syntax¶ A regular expression (or RE) specifies a set of strings that matches it; the functions in this module let you check if a particular string matches a given regular expression (or if a given regular expression matches a particular string, which comes down to the same thing). Regular expressions can be concatenated to form new regular expressions; if A and B are both regular expressions, then AB is also a regular expression. In general, if a string p matches A and another string q matches B, the string pq will match AB. This holds unless A or B contain low precedence operations; boundary conditions between A and B; or have numbered group references. Thus, complex expressions can easily be constructed from simpler primitive expressions like the ones described here. For details of the theory and implementation of regular expressions, consult the Friedl book [Frie09], or almost any textbook about compiler construction. A brief explanation of the format of regular expressions follows. For further information and a gentler presentation, consult the Regular expression HOWTO. Regular expressions can contain both special and ordinary characters. Most ordinary characters, like \u0027A\u0027, \u0027a\u0027, or \u00270\u0027, are the simplest regular expressions; they simply match themselves. You can concatenate ordinary characters, so last matches the string \u0027last\u0027. (In the rest of this section, we’ll write RE’s in this special style, usually without quotes, and strings to be matched \u0027in single quotes\u0027.) Some characters, like \u0027|\u0027 or \u0027(\u0027, are special. Special characters either stand for classes of ordinary characters, or affect how the regular expressions around them are interpreted. Repetition operators or quantifiers (*, +, ?, {m,n}, etc) cannot be directly nested. This avoids ambiguity with the non-greedy modifier suffix ?, and with other modifiers in other implementations. To apply a second repetition to an inner repetition, parentheses may be used. For example, the expression (?:a{6})* matches any multiple of six \u0027a\u0027 characters. The special characters are: . (Dot.) In the default mode, this matches any character except a newline. If the DOTALL flag has been specified, this matches any character including a newline. (?s:.) matches any character regardless of flags. ^ (Caret.) Matches the start of the string, and in MULTILINE mode also matches immediately after each newline. $ Matches the end of the string or just before the newline at the end of the string, and in MULTILINE mode also matches before a newline. foo matches both ‘foo’ and ‘foobar’, while the regular expression foo$ matches only ‘foo’. More interestingly, searching for foo.$ in \u0027foo1\\nfoo2\\n\u0027 matches ",
+    "scrapedAt": "2026-05-09 00:54:50.131371"
+  },
+  {
+    "id": 818,
+    "url": "https://peps.python.org/pep-0630/#type-checking",
+    "title": "PEP 630 – Isolating Extension Modules | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 630 – Isolating Extension Modules PEP 630 – Isolating Extension Modules Author: Petr Viktorin \u003cencukou at gmail.com\u003e Discussions-To: Capi-SIG list Status: Final Type: Informational Created: 25-Aug-2020 Post-History: 16-Jul-2020 Table of Contents Abstract About This Document Motivation Rationale for Per-module State Goal: Easy-to-Use Module State Non-goals: Speedups and the GIL Making Modules Safe with Multiple Interpreters Isolated Module Objects Surprising Edge Cases Managing Global State Managing Per-Module State Opt-Out: Limiting to One Module Object per Process Module State Access from Functions Heap Types Defining Heap Types Garbage Collection Protocol Module State Access from Classes Module State Access from Regular Methods Module State Access from Slot Methods, Getters and Setters Lifetime of the Module State Open Issues Type Checking Metaclasses Per-Class Scope Lossless Conversion to Heap Types Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at Isolating Extension Modules HOWTO. × See PEP 1 for how to propose changes. Abstract Traditionally, state belonging to Python extension modules was kept in C static variables, which have process-wide scope. This document describes problems of such per-process state and efforts to make per-module state—a better default—possible and easy to use. The document also describes how to switch to per-module state where possible. This transition involves allocating space for that state, potentially switching from static types to heap types, and—perhaps most importantly—accessing per-module state from code. About This Document As an informational PEP, this document does not introduce any changes; those should be done in their own PEPs (or issues, if small enough). Rather, it covers the motivation behind an effort that spans multiple releases, and instructs early adopters on how to use the finished features. Once support is reasonably complete, this content can be moved to Python’s documentation as a HOWTO. Meanwhile, in the spirit of documentation-driven development, gaps identified in this PEP can show where to focus the effort, and it can be updated as new features are implemented. Whenever this PEP mentions extension modules, the advice also applies to built-in modules. Note This PEP contains generic advice. When following it, always take into account the specifics of your project. For example, while much of this advice applies to the C parts of Python’s standard library, the PEP does not factor in stdlib specifics (unusual backward compatibility issues, access to private API, etc.). PEPs related to this effort are: PEP 384 – Defining a Stable ABI, which added a C API for creating heap types PEP 489 – Multi-phase extension module initialization PEP 573 – Module State Access from C Extension Methods This document is concerned with Python’s public C API, which is not offered by all implementations of Python. However, nothing in this PEP is specific to CPython. As with any Informational PEP, this text does not necessarily represent a Python community consensus or recommendation. Motivation An interpreter is the context in which Python code runs. It contains configuration (e.g. the import path) and runtime state (e.g. the set of imported modules). Python supports running multiple interpreters in one process. There are two cases to think about—users may run interpreters: in sequence, with several Py_InitializeEx/Py_FinalizeEx cycles, and in parallel, managing “sub-interpreters” using Py_NewInterpreter/Py_EndInterpreter. Both cases (and combinations of them) would be most useful when embedding Python within a library. Libraries generally shouldn’t make assumptions about the application that uses them, which includes assuming a process-wide “main Python interpreter”. Currently, CPython doesn’t handle this use case well. Many extension modules (and even some stdlib modules) use per-process global state, because C static variables are extremely easy to use. Thus, data that should be specific to an interpreter ends up being shared between interpreters. Unless the extension developer is careful, it is very easy to introduce edge cases that lead to crashes when a module is loaded in more than one interpreter in the same process. Unfortunately, per-interpreter state is not easy to achieve—extension authors tend to not keep multiple interpreters in mind when developing, and it is currently cumbersome to test the behavior. Rationale for Per-module State Instead of focusing on per-interpreter state, Python’s C API is evolving to better support the more granular per-module state. By default, C-level data will be attached to a module object. Each interpreter will then create its own module object, keeping the data separate. For testing the isolation, multiple module objects corresponding to a single extension can even be loaded in a",
+    "scrapedAt": "2026-05-09 00:54:48.940144"
+  },
+  {
+    "id": 817,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteSubstring",
+    "title": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Unicode Objects and Codecs | Theme Auto Light Dark | Unicode Objects and Codecs¶ Unicode Objects¶ Since the implementation of PEP 393 in Python 3.3, Unicode objects internally use a variety of representations, in order to allow handling the complete range of Unicode characters while staying memory efficient. There are special cases for strings where all code points are below 128, 256, or 65536; otherwise, code points must be below 1114112 (which is the full Unicode range). UTF-8 representation is created on demand and cached in the Unicode object. Note The Py_UNICODE representation has been removed since Python 3.12 with deprecated APIs. See PEP 623 for more information. Unicode Type¶ These are the basic Unicode object types used for the Unicode implementation in Python: PyTypeObject PyUnicode_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode type. It is exposed to Python code as str. PyTypeObject PyUnicodeIter_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode iterator type. It is used to iterate over Unicode string objects. type Py_UCS4¶ type Py_UCS2¶ type Py_UCS1¶ Part of the Stable ABI. These types are typedefs for unsigned integer types wide enough to contain characters of 32 bits, 16 bits and 8 bits, respectively. When dealing with single Unicode characters, use Py_UCS4. Added in version 3.3. type PyASCIIObject¶ type PyCompactUnicodeObject¶ type PyUnicodeObject¶ These subtypes of PyObject represent a Python Unicode object. In almost all cases, they shouldn’t be used directly, since all API functions that deal with Unicode objects take and return PyObject pointers. Added in version 3.3. The structure of a particular object can be determined using the following macros. The macros cannot fail; their behavior is undefined if their argument is not a Python Unicode object. PyUnicode_IS_COMPACT(o)¶ True if o uses the PyCompactUnicodeObject structure. Added in version 3.3. PyUnicode_IS_COMPACT_ASCII(o)¶ True if o uses the PyASCIIObject structure. Added in version 3.3. The following APIs are C macros and static inlined functions for fast checks and access to internal read-only data of Unicode objects: int PyUnicode_Check(PyObject *obj)¶ Return true if the object obj is a Unicode object or an instance of a Unicode subtype. This function always succeeds. int PyUnicode_CheckExact(PyObject *obj)¶ Return true if the object obj is a Unicode object, but not an instance of a subtype. This function always succeeds. Py_ssize_t PyUnicode_GET_LENGTH(PyObject *unicode)¶ Return the length of the Unicode string, in code points. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. Py_UCS1 *PyUnicode_1BYTE_DATA(PyObject *unicode)¶ Py_UCS2 *PyUnicode_2BYTE_DATA(PyObject *unicode)¶ Py_UCS4 *PyUnicode_4BYTE_DATA(PyObject *unicode)¶ Return a pointer to the canonical representation cast to UCS1, UCS2 or UCS4 integer types for direct character access. No checks are performed if the canonical representation has the correct character size; use PyUnicode_KIND() to select the right function. Added in version 3.3. PyUnicode_1BYTE_KIND¶ PyUnicode_2BYTE_KIND¶ PyUnicode_4BYTE_KIND¶ Return values of the PyUnicode_KIND() macro. Added in version 3.3. Changed in version 3.12: PyUnicode_WCHAR_KIND has been removed. int PyUnicode_KIND(PyObject *unicode)¶ Return one of the PyUnicode kind constants (see above) that indicate how many bytes per character this Unicode object uses to store its data. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void *PyUnicode_DATA(PyObject *unicode)¶ Return a void pointer to the raw Unicode buffer. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void PyUnicode_WRITE(int kind, void *data, Py_ssize_t index, Py_UCS4 value)¶ Write the code point value to the given zero-based index in a string. The kind value and data pointer must have been obtained from a string using PyUnicode_KIND() and PyUnicode_DATA() respectively. You must hold a reference to that string while calling PyUnicode_WRITE(). All requirements of PyUnicode_WriteChar() also apply. The function performs no checks for any of its requirements, and is intended for usage in loops. Added in version 3.3. Py_UCS4 PyUnicode_READ(int kind, void *data, Py_ssize_t index)¶ Read a code point from a canonical representation data (as obtained with PyUnicode_DATA()). No checks or ready calls are performed. Added in version 3.3. Py_UCS4 PyUnicode_READ_CHAR(PyObject *unicode, Py_ssize_t index)¶ Read a character from a Unicode object unicode, which must be in the “canonical” representation. This is less efficient than PyUnicode_READ() if you do multiple consecutive reads. Added in version 3.3. Py_U",
+    "scrapedAt": "2026-05-09 00:54:47.645082"
+  },
+  {
+    "id": 816,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longdouble_complex",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 310, in __getitem__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function ordinal 0 not found\n\u003e\u003e\u003e\n Calling functions¶ You can call these functions like any other Python callable. This example uses the rand() functi",
+    "scrapedAt": "2026-05-09 00:54:46.474486"
+  },
+  {
     "id": 815,
     "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_free",
     "title": "Thread-local storage support — Python 3.14.5rc1 documentation",
@@ -5418,26 +5453,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 816,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longdouble_complex"
-  },
-  {
-    "id": 817,
-    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteSubstring"
-  },
-  {
-    "id": 818,
-    "url": "https://peps.python.org/pep-0630/#type-checking"
-  },
-  {
-    "id": 819,
-    "url": "https://docs.python.org/3/library/re.html#module-re"
-  },
-  {
-    "id": 820,
-    "url": "https://github.com/python/cpython/issues/130645"
   },
   {
     "id": 821,
@@ -139384,10 +139399,1034 @@ window.searchData = [
     "id": 106236,
     "url": "https://github.com/python/cpython/issues/120600#top",
     "parentUrl": "https://github.com/python/cpython/issues/120600"
+  },
+  {
+    "id": 106784,
+    "url": "https://peps.python.org/pep-0630/#opt-out-limiting-to-one-module-object-per-process",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106786,
+    "url": "https://peps.python.org/pep-0630/#lifetime-of-the-module-state",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106787,
+    "url": "https://peps.python.org/pep-0630/#open-issues",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106788,
+    "url": "https://peps.python.org/pep-0630/#about-this-document",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106789,
+    "url": "https://peps.python.org/pep-0630/#goal-easy-to-use-module-state",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106790,
+    "url": "https://peps.python.org/pep-0630/#rationale-for-per-module-state",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106792,
+    "url": "https://peps.python.org/pep-0630/#module-state-access-from-functions",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106793,
+    "url": "https://peps.python.org/pep-0001/#pep-types",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106795,
+    "url": "https://peps.python.org/pep-0630/#isolated-module-objects",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106796,
+    "url": "https://peps.python.org/pep-0630/#module-state-access-from-slot-methods-getters-and-setters",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106798,
+    "url": "https://docs.python.org/3.11/howto/isolating-extensions.html",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106800,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#Py_TPFLAGS_HAVE_GC",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106801,
+    "url": "https://peps.python.org/pep-0630/#garbage-collection-protocol",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106802,
+    "url": "https://peps.python.org/pep-0630/#module-state-access-from-classes",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106803,
+    "url": "https://peps.python.org/pep-0630/#lossless-conversion-to-heap-types",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106804,
+    "url": "https://peps.python.org/pep-0630/#heap-types",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106806,
+    "url": "https://peps.python.org/pep-0630/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106807,
+    "url": "https://peps.python.org/pep-0630/#making-modules-safe-with-multiple-interpreters",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106808,
+    "url": "https://docs.python.org/3/c-api/module.html#multi-phase-initialization",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106810,
+    "url": "https://peps.python.org/pep-0630/#per-class-scope",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106812,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0630.rst",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106814,
+    "url": "https://mail.python.org/archives/list/capi-sig@python.org/",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106815,
+    "url": "https://peps.python.org/pep-0573/",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106816,
+    "url": "https://peps.python.org/pep-0630/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106817,
+    "url": "https://peps.python.org/pep-0630/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106820,
+    "url": "https://peps.python.org/pep-0630/#managing-global-state",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106821,
+    "url": "https://peps.python.org/pep-0630/#defining-heap-types",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106822,
+    "url": "https://peps.python.org/pep-0630/#metaclasses",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106824,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0630.rst",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106826,
+    "url": "https://peps.python.org/pep-0630/#module-state-access-from-regular-methods",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106827,
+    "url": "https://peps.python.org/pep-0630/#surprising-edge-cases",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106829,
+    "url": "https://peps.python.org/pep-0630/#managing-per-module-state",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106830,
+    "url": "https://peps.python.org/pep-0630/#non-goals-speedups-and-the-gil",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106831,
+    "url": "https://mail.python.org/mailman3/lists/capi-sig.python.org/",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106832,
+    "url": "https://peps.python.org/pep-0384/",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106833,
+    "url": "https://docs.python.org/3/c-api/typeobj.html",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106834,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyType_GetModuleByDef",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106835,
+    "url": "https://docs.python.org/3/library/re.html#frie09",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106838,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.groups",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106840,
+    "url": "https://pypi.org/project/regex/",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106841,
+    "url": "https://docs.python.org/3/library/re.html#finding-all-adverbs",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106842,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/re/",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106843,
+    "url": "https://docs.python.org/3/library/re.html#re.PatternError.pattern",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106844,
+    "url": "https://docs.python.org/3/library/re.html#re.finditer",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106845,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.groupdict",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106847,
+    "url": "https://docs.python.org/3/library/re.html#regular-expression-objects",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106848,
+    "url": "https://docs.python.org/3/library/re.html#re.Match",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106849,
+    "url": "https://docs.python.org/3/library/re.html#re.search",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106850,
+    "url": "https://docs.python.org/3/library/re.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106852,
+    "url": "https://docs.python.org/3/library/re.html#writing-a-tokenizer",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106854,
+    "url": "https://docs.python.org/3/library/re.html#re.RegexFlag",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106855,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.__getitem__",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106856,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.start",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106857,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.re",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106858,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.pattern",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106860,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.groupindex",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106861,
+    "url": "https://docs.python.org/3/library/re.html#re.A",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106862,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.lastgroup",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106864,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.finditer",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106865,
+    "url": "https://docs.python.org/3/library/re.html#re.L",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106866,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.expand",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106867,
+    "url": "https://docs.python.org/3/library/re.html#re.I",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106869,
+    "url": "https://docs.python.org/3/library/re.html#re.PatternError.pos",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106871,
+    "url": "https://docs.python.org/3/library/re.html#re.DOTALL",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106872,
+    "url": "https://docs.python.org/3/library/re.html#re.S",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106873,
+    "url": "https://docs.python.org/3/library/re.html#re.LOCALE",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106874,
+    "url": "https://docs.python.org/3/library/re.html#re.M",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106875,
+    "url": "https://www.unicode.org/versions/Unicode15.0.0/ch04.pdf#G134153",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106876,
+    "url": "https://docs.python.org/3/library/re.html#re.NOFLAG",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106877,
+    "url": "https://docs.python.org/3/library/re.html#flags",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106878,
+    "url": "https://docs.python.org/3/library/re.html#text-munging",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106879,
+    "url": "https://docs.python.org/3/library/re.html#re.X",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106880,
+    "url": "https://docs.python.org/3/library/re.html#checking-for-a-pair",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106882,
+    "url": "https://docs.python.org/3/library/re.html#re.U",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106883,
+    "url": "https://docs.python.org/3/library/re.html#regular-expression-examples",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106885,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.pos",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106886,
+    "url": "https://docs.python.org/3/library/re.html#functions",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106887,
+    "url": "https://docs.python.org/3/library/re.html#re.fullmatch",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106889,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.search",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106890,
+    "url": "https://docs.python.org/3/library/copy.html#copy.deepcopy",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106891,
+    "url": "https://docs.python.org/3/library/re.html#re.VERBOSE",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106892,
+    "url": "https://en.wikipedia.org/wiki/Lexical_analysis",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106893,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.isspace",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106894,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.findall",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106895,
+    "url": "https://docs.python.org/3/library/re.html#search-vs-match",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106896,
+    "url": "https://docs.python.org/3/library/re.html#re.PatternError",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106897,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.string",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106901,
+    "url": "https://docs.python.org/3/library/re.html#re.PatternError.msg",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106902,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.flags",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106903,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/re.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106904,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.lastindex",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106905,
+    "url": "https://docs.python.org/3/library/re.html#re.subn",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106906,
+    "url": "https://docs.python.org/3/library/re.html#re.split",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106907,
+    "url": "https://docs.python.org/3/howto/regex.html#regex-howto",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106908,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#escape-sequences",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106909,
+    "url": "https://docs.python.org/3/library/re.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106911,
+    "url": "https://docs.python.org/3/library/re.html#re.sub",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106914,
+    "url": "https://docs.python.org/3/library/re.html#re.IGNORECASE",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106916,
+    "url": "https://docs.python.org/3/library/re.html#regular-expression-syntax",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106917,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.fullmatch",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106918,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.match",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106919,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.endpos",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106920,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106921,
+    "url": "https://docs.python.org/3/library/re.html#simulating-scanf",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106922,
+    "url": "https://docs.python.org/3/library/re.html#match-objects",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106924,
+    "url": "https://docs.python.org/3/library/re.html#re.MULTILINE",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106925,
+    "url": "https://unicode.org/reports/tr18/",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106926,
+    "url": "https://docs.python.org/3/library/re.html#",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106928,
+    "url": "https://docs.python.org/3/library/re.html#re.PatternError.lineno",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106929,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.subn",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106930,
+    "url": "https://docs.python.org/3/library/re.html#re-objects",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106931,
+    "url": "https://docs.python.org/3/library/re.html#re.PatternError.colno",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106932,
+    "url": "https://docs.python.org/3/library/re.html#re.findall",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106933,
+    "url": "https://docs.python.org/3/library/re.html#re.UNICODE",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106934,
+    "url": "https://docs.python.org/3/library/re.html#module-contents",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106936,
+    "url": "https://docs.python.org/3/library/re.html#re.DEBUG",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106938,
+    "url": "https://docs.python.org/3/library/re.html#re.purge",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106941,
+    "url": "https://docs.python.org/3/library/re.html#raw-string-notation",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106942,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.end",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106943,
+    "url": "https://docs.python.org/3/library/re.html#finding-all-adverbs-and-their-positions",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106945,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.span",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106946,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.split",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106948,
+    "url": "https://docs.python.org/3/library/re.html#re.ASCII",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106949,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.isalnum",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106950,
+    "url": "https://docs.python.org/3/library/copy.html#copy.copy",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106953,
+    "url": "https://docs.python.org/3/library/re.html#making-a-phonebook",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106954,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.sub",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106955,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.group",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106956,
+    "url": "https://docs.python.org/3/library/re.html#contents-of-module-re",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106957,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.groups",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106958,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719843-e32d0e16-8e2b-4597-97f2-43d9cdbd482f.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTg0My1lMzJkMGUxNi04ZTJiLTQ1OTctOTdmMi00M2Q5Y2RiZDQ4MmYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MDRkMDU0ZGU2MDRiOGRlNDA2YzIxOGU2NTQ5ZGE4YTc4ZDRkZmI4NzU3OWRlNWIyYzBjN2IzOTkzNmYyYzY5MiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.LbzHuZ8ldacqBJAz4jnlGVqDOI5kJ2ckRMY5zVIGdSc",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106960,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417676070-20be44cc-ae36-49d1-9911-3b4a0d6ddee6.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3NjA3MC0yMGJlNDRjYy1hZTM2LTQ5ZDEtOTkxMS0zYjRhMGQ2ZGRlZTYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YzllMDJmYTk4N2U0NWEyYzNmZTI5ZTk1MTJiZjJiNDhmZTlhNDE3NDljM2MxY2I3ODY5ZWM4OTEwNzI3YzEwMyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.6CBfS61fZw60L2CunCKf7Hbvkwh0wgLnDLzkHEZ5Qao",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106961,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417681405-ab5cdf6a-47a3-413b-bdf1-2dc885dc4c9a.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MTQwNS1hYjVjZGY2YS00N2EzLTQxM2ItYmRmMS0yZGM4ODVkYzRjOWEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MjRjNmJjYzRlZjk2NDA4NTcwZmVlOGE4MGYxMDkzNjUzOTE3ZmZmMGQ2MDFmNTEzNDMxYWJiZThhMDdlNmVhZSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.cBaAo95vRqwsJj3Db6SqgxBzu46dxQB395Wo_tR-o90",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106962,
+    "url": "https://github.com/python/cpython/pull/136809",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106963,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417718924-fcb522cc-b6a8-47c4-b784-d121b7acff3e.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODkyNC1mY2I1MjJjYy1iNmE4LTQ3YzQtYjc4NC1kMTIxYjdhY2ZmM2UucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NWE4ODIyYzY3MDAxZjAzM2I2ZDdhMTU1ZjMzMmY2MjViOTg0OTBjYzQ4ZjJlMDZiMjVjYmYzNzZkMjY0OTVhYSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.VMKVAMcrCj2t02yoYAIbBSZIezLZYeYTnDrVEcs_bQg",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106964,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417718272-eea6349f-9590-4d2e-8cbe-9c0f27784cac.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODI3Mi1lZWE2MzQ5Zi05NTkwLTRkMmUtOGNiZS05YzBmMjc3ODRjYWMucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9Y2Q3OWRiNTVmNTdmYzI3MmEwYTVmMzUxNzNkZjRhNTBjMTQyNTIxMWVjNDQwODg0ZThlYmQ1YzQ3Nzc5OWJkZiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.Nu--qXShLe2lt91fNelFKrKZG8OuUhxDV2bLFVPkHD4",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106965,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719649-2ef5971b-c322-440c-8179-08cce3b78b76.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTY0OS0yZWY1OTcxYi1jMzIyLTQ0MGMtODE3OS0wOGNjZTNiNzhiNzYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NGZiZjg0ZTBkZTljNWMxNzAzNWQ4NGFkYzNiY2FiNzlhMjMxM2M4M2Y2NzllZjUxNTUzMTEyZWVmMjRmYWFiYSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.71C1AHvm5g8IP-ZpO-N4GrgFAIJhIQc5rkgn7FVaZjk",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106968,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417679896-21e21ab2-3e22-46ae-a10a-dd3dcc6c194d.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3OTg5Ni0yMWUyMWFiMi0zZTIyLTQ2YWUtYTEwYS1kZDNkY2M2YzE5NGQucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YzZkM2ViOGEzOGY3YzlmZGRmOWI4MGZiOGQ1YmRmYjQwODJmY2MyOWNhNjQ0MDAwODk1MzEwOTBmMDVjNWJhOSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.sww1JfJR4KEvskxsSQaW2mk5qg7h4KXl4tToNff52I0",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106969,
+    "url": "https://github.com/python/cpython/pull/132323",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106970,
+    "url": "https://github.com/python/cpython/pull/136886",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106971,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719044-42a962c3-33d9-4fa1-aa35-1ba5a55f650a.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTA0NC00MmE5NjJjMy0zM2Q5LTRmYTEtYWEzNS0xYmE1YTU1ZjY1MGEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NmJlMDNjZmI3N2MzZGQ0NThkMTIyMTQ2ZjlhZjBkZDljYTM2YTU0NGVlMzMyMGZjMjdhNThlOWMzZjVjNTY3MCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.DshxWH_DXE5mOm4ifLv8563Ib9H-0j8U5WZQK2BKqgE",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106972,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719137-89f997ee-0a18-49f5-9039-1a5634503d90.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTEzNy04OWY5OTdlZS0wYTE4LTQ5ZjUtOTAzOS0xYTU2MzQ1MDNkOTAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NDE2NGJlZDc5Yzc5OGExODU4ZjVhNjA1Y2ZiMDhkYzAxNzc3ODJiNzM3NjVmY2YxYmZkOWYzYjk2OTlkYmE4OSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.SEi6e69FcHQqtJ1a-GTL_ydl3VVgHY90ku5C7uBulEU",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106973,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719724-4e7dae32-2992-419f-9ddc-92ae735ec3b9.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTcyNC00ZTdkYWUzMi0yOTkyLTQxOWYtOWRkYy05MmFlNzM1ZWMzYjkucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NTIyNGExZTU3MzMxZmExZWE2Njg3ODRjZWUwNGVlM2M0YjJjMjllMWFlNzZkNjRhNDU2YjU3NWEzM2UwZTNhOSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.6cl9klbb610oH2i8sm9VQEZhlhgb3H0ONnv-5rr87Po",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106975,
+    "url": "https://github.com/orgs/python/projects/5",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106976,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417681990-a43c721b-0ad0-4087-b241-14bf86c96c9e.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MTk5MC1hNDNjNzIxYi0wYWQwLTQwODctYjI0MS0xNGJmODZjOTZjOWUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YzQ0NjNmZjhjYTYzYjk4NTc3MTJiMTI3NmM2NmUyNTM0N2FiMTYxMWM1OWM1YTI3NDQ1NTAxNThjMmE1ZWNjNCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.rQkYk1h6kCpyV-dd-V9zFyjuPG0TbqL4eLIDQ71Y7aI",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106977,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417681197-3feb9a82-dfa8-4d29-8613-713db857bd00.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MTE5Ny0zZmViOWE4Mi1kZmE4LTRkMjktODYxMy03MTNkYjg1N2JkMDAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ODNmMThhOWI1MmM1MWM5ZjE1Mjg4N2RkZTZiNDRjM2JjY2ViOThkNThlODhjOWM2ZjYzZTUwMTc5NTcwYTU5OCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.gsGbMZA8uhkbgJ9P-byQ2BftoixgAAYufbQXgXOsJUs",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106978,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417717925-31869566-6580-4035-b1f4-d5695b77cfb1.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxNzkyNS0zMTg2OTU2Ni02NTgwLTQwMzUtYjFmNC1kNTY5NWI3N2NmYjEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YmQyMzYyYzZkZmY4MTRmODliNjQ3MTIwNmFkODEzNjFhZjZiZTM0YmY5NzZlZmUwMzAyMTZmNzI3NTQzYTVmYiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.IRJJF-hzfBfmx0SOJa65mXXIRaTA5sBtb_cUsQ6YLQU",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106979,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719518-c4eac0cf-b46d-478f-8604-86d666109e17.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTUxOC1jNGVhYzBjZi1iNDZkLTQ3OGYtODYwNC04NmQ2NjYxMDllMTcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MTRkNzdhNjQ0MGY3M2EwMTkwNWI4YmMzNzA0MGQyYzkyYjAzZmY2OWUwYjI2MzQzNDQ0ZDRmZWM3NWNkN2JkOSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.WjCXFGy9S5UHXV9kWUTm88cG5VcevrzXTMozNhVby8E",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106980,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719909-135643a7-7a1a-4786-ab96-3a2d69393b27.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTkwOS0xMzU2NDNhNy03YTFhLTQ3ODYtYWI5Ni0zYTJkNjkzOTNiMjcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9OTYzNGQ3NTJiZWUwMmZiOWE2ZGNiOWVjM2I4N2UwNjY5NTJhY2E0NzhiMWYzYzMyZDM3MDkzM2Y5YTg5M2UwYSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.G2kWzS7qoFVY-xWzGl4W8dn67hncWn33Ey3Gaf_qciI",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106982,
+    "url": "https://github.com/python/cpython/issues/130645#top",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106984,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719587-10be9e0e-3712-4ae5-98c5-7b2dcfe91908.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTU4Ny0xMGJlOWUwZS0zNzEyLTRhZTUtOThjNS03YjJkY2ZlOTE5MDgucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MmRmZjc1MzBiYTRhY2QzN2M0OGU4OTRmMTk0MmIwZWYzZDJmMTBjNmFiYmNmNzdmYWViNzI5YzdkZTQxNjc0MyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.W1fxziZHpK-9pz2QAdmHp047izzcXo_X1Pg3PMZ0VrI",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106985,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417718783-b4722fca-1610-407e-8672-604e3de2baf5.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODc4My1iNDcyMmZjYS0xNjEwLTQwN2UtODY3Mi02MDRlM2RlMmJhZjUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ZTM5MDhmMDQ4N2Y0MDczZmNmYWIyNjBlNDZkYmNiNjJlYWYyNGM3NjdiNmVlYzJiMjQ3MmE3NjJhMWQ2N2UyMyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.bWQoHh_FBtV8HkAYeFRn_RoPuoOD309kxpdTJKo5JOE",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106986,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417679964-e896f6e0-7112-482a-adba-21f1fdaa6dc1.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3OTk2NC1lODk2ZjZlMC03MTEyLTQ4MmEtYWRiYS0yMWYxZmRhYTZkYzEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YTgzZTU1Y2NjM2YxOTk3NjI4NzNlOWZjMDM3MTQzOTkzMTNmNzJhZTBiZTk4NWFmYWQxOTliMzg3MDg0MDc3NiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.clGKjp8KSmPKL0MNvW3YHgDRjqrLMLFCFfy78VCrXzQ",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106987,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417718855-ad691d30-918e-4f88-8ae0-ca5fc2bbd7d6.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODg1NS1hZDY5MWQzMC05MThlLTRmODgtOGFlMC1jYTVmYzJiYmQ3ZDYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9M2EzMDY0OTFmZjRjNTcyY2ZhZmNiMzVhNmRhOWVmZTQ5NTM0OGYzMzYzYjYyMGFiYzFhZTkxZmI3YzRiMDA5ZiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.Z3d7VXlmyTXIcFPa0DGW2dawBKnYlwdtF7IiTD2JYL4",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106988,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719217-03ad0675-1845-43aa-8802-fb6f3edf6d99.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTIxNy0wM2FkMDY3NS0xODQ1LTQzYWEtODgwMi1mYjZmM2VkZjZkOTkucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9M2I5YTRmMDY4MmZjMzI2MjgxZWVkMGU2MTdkYTI4OGNjYWIwMmI3OWYwZTc5Yzg4NTdhNWJmNGE5NTA2ZDgwMSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.s2c-xANnbIIWBbI6eazn8lxc6YlmCbLsIHU8rvT0Oqw",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106989,
+    "url": "https://github.com/python/cpython/issues/130645#issue-2885049118",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106992,
+    "url": "https://github.com/python/cpython/pull/133380",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106994,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719779-abd1bebe-2dcf-4299-9295-de8da11a2500.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTc3OS1hYmQxYmViZS0yZGNmLTQyOTktOTI5NS1kZThkYTExYTI1MDAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9Y2RmMWE4ZjdiMmE1ZjZmYjAxMDk3ZmM2OWEwYmE4MTVjMDU4ZTYwZWE0NjAwNTI1MTNkODg2OWE1MGRhZmM4OCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.i4C7j4X250DswZ0BLZViWn_u7yGsz_MwfVkHLnA5PmA",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106995,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719413-cd5caa47-fbda-47f8-841b-c3386534e8e4.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTQxMy1jZDVjYWE0Ny1mYmRhLTQ3ZjgtODQxYi1jMzM4NjUzNGU4ZTQucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YmRhN2FjMDNkMDc0NGRjMTY2ODhhODQxODEwNjc3ZmM2NmI0NWIzMjU0Mjc4MmIzZGQ0OWZkYzAyNDk2ODY2MyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.ZMPq3_OiYI_4Q61W4CjNkbIGM78NWxzr4JLzwr8Ywn8",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106996,
+    "url": "https://github.com/python/cpython/issues/130645#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106997,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719333-96b8b582-d40d-4a4e-be51-a04abb15c357.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTMzMy05NmI4YjU4Mi1kNDBkLTRhNGUtYmU1MS1hMDRhYmIxNWMzNTcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NWE4Mjc5MTcwOWQxMWVmODM0MmQ0MWFmOTdjOGQ2NjFkYWYxYmM5YzYyMTEzYzc0MmE4NzYxZmY3MGUwMzcwMCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.nU6GiYlf9r6N7ih19np1W4vGTJWGL-sfr8jRLk7c6po",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106998,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417682051-da4408e4-76c2-42c3-8fff-f1270c701d10.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MjA1MS1kYTQ0MDhlNC03NmMyLTQyYzMtOGZmZi1mMTI3MGM3MDFkMTAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YjRmZTNmY2IzNjQxZGY4YmM4YzVmMzJhMzA3MmNkNWNhYmQ0N2ZiNjRkYmFmNmNlOGJlNGE4NzJlY2RmZWQwZSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0._887tuq-TqOeWD6RnoUIridld4Y3fjEF4WzpIgtyZkw",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106999,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417718705-3b6834c1-ca9d-4c97-a8c5-e9af660a8144.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODcwNS0zYjY4MzRjMS1jYTlkLTRjOTctYThjNS1lOWFmNjYwYTgxNDQucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NThjZjBkMmFiNTEzOTU5ZjJkODE0ZDdhYjFkOWM1NjY4M2RkNTYwNDU1Nzc1N2ExMzlmOTY4MWM5ODZiYzZlOSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.q_AE3PRXKGx9L5JiXKz7ojYk5TgQ3q_YSPl8efUo11U",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 107000,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417676451-35bfe5e9-5985-4db1-bfe4-a06f0bcf999e.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3NjQ1MS0zNWJmZTVlOS01OTg1LTRkYjEtYmZlNC1hMDZmMGJjZjk5OWUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NTlhZmYwMDIwYTczODVkMDI1NTliNzQzMmFmMDMxZjkwZjc0NTYyOGE3N2FlODM2MGFlNDcwYjE5NDRmODkzMiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.vOexUb5XNu0bHN2RZRnw0zhlKVxcTs5nDDOLGN6ykeQ",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@hugovk",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@hugovk",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417717925-31869566-6580-4035-b1f4-d5695b77cfb1.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxNzkyNS0zMTg2OTU2Ni02NTgwLTQwMzUtYjFmNC1kNTY5NWI3N2NmYjEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YmQyMzYyYzZkZmY4MTRmODliNjQ3MTIwNmFkODEzNjFhZjZiZTM0YmY5NzZlZmUwMzAyMTZmNzI3NTQzYTVmYiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.IRJJF-hzfBfmx0SOJa65mXXIRaTA5sBtb_cUsQ6YLQU",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417718272-eea6349f-9590-4d2e-8cbe-9c0f27784cac.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODI3Mi1lZWE2MzQ5Zi05NTkwLTRkMmUtOGNiZS05YzBmMjc3ODRjYWMucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9Y2Q3OWRiNTVmNTdmYzI3MmEwYTVmMzUxNzNkZjRhNTBjMTQyNTIxMWVjNDQwODg0ZThlYmQ1YzQ3Nzc5OWJkZiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.Nu--qXShLe2lt91fNelFKrKZG8OuUhxDV2bLFVPkHD4",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417718705-3b6834c1-ca9d-4c97-a8c5-e9af660a8144.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODcwNS0zYjY4MzRjMS1jYTlkLTRjOTctYThjNS1lOWFmNjYwYTgxNDQucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NThjZjBkMmFiNTEzOTU5ZjJkODE0ZDdhYjFkOWM1NjY4M2RkNTYwNDU1Nzc1N2ExMzlmOTY4MWM5ODZiYzZlOSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.q_AE3PRXKGx9L5JiXKz7ojYk5TgQ3q_YSPl8efUo11U",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417718783-b4722fca-1610-407e-8672-604e3de2baf5.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODc4My1iNDcyMmZjYS0xNjEwLTQwN2UtODY3Mi02MDRlM2RlMmJhZjUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ZTM5MDhmMDQ4N2Y0MDczZmNmYWIyNjBlNDZkYmNiNjJlYWYyNGM3NjdiNmVlYzJiMjQ3MmE3NjJhMWQ2N2UyMyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.bWQoHh_FBtV8HkAYeFRn_RoPuoOD309kxpdTJKo5JOE",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417718855-ad691d30-918e-4f88-8ae0-ca5fc2bbd7d6.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODg1NS1hZDY5MWQzMC05MThlLTRmODgtOGFlMC1jYTVmYzJiYmQ3ZDYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9M2EzMDY0OTFmZjRjNTcyY2ZhZmNiMzVhNmRhOWVmZTQ5NTM0OGYzMzYzYjYyMGFiYzFhZTkxZmI3YzRiMDA5ZiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.Z3d7VXlmyTXIcFPa0DGW2dawBKnYlwdtF7IiTD2JYL4",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417718924-fcb522cc-b6a8-47c4-b784-d121b7acff3e.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODkyNC1mY2I1MjJjYy1iNmE4LTQ3YzQtYjc4NC1kMTIxYjdhY2ZmM2UucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NWE4ODIyYzY3MDAxZjAzM2I2ZDdhMTU1ZjMzMmY2MjViOTg0OTBjYzQ4ZjJlMDZiMjVjYmYzNzZkMjY0OTVhYSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.VMKVAMcrCj2t02yoYAIbBSZIezLZYeYTnDrVEcs_bQg",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719044-42a962c3-33d9-4fa1-aa35-1ba5a55f650a.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTA0NC00MmE5NjJjMy0zM2Q5LTRmYTEtYWEzNS0xYmE1YTU1ZjY1MGEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NmJlMDNjZmI3N2MzZGQ0NThkMTIyMTQ2ZjlhZjBkZDljYTM2YTU0NGVlMzMyMGZjMjdhNThlOWMzZjVjNTY3MCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.DshxWH_DXE5mOm4ifLv8563Ib9H-0j8U5WZQK2BKqgE",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719137-89f997ee-0a18-49f5-9039-1a5634503d90.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTEzNy04OWY5OTdlZS0wYTE4LTQ5ZjUtOTAzOS0xYTU2MzQ1MDNkOTAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NDE2NGJlZDc5Yzc5OGExODU4ZjVhNjA1Y2ZiMDhkYzAxNzc3ODJiNzM3NjVmY2YxYmZkOWYzYjk2OTlkYmE4OSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.SEi6e69FcHQqtJ1a-GTL_ydl3VVgHY90ku5C7uBulEU",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719217-03ad0675-1845-43aa-8802-fb6f3edf6d99.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTIxNy0wM2FkMDY3NS0xODQ1LTQzYWEtODgwMi1mYjZmM2VkZjZkOTkucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9M2I5YTRmMDY4MmZjMzI2MjgxZWVkMGU2MTdkYTI4OGNjYWIwMmI3OWYwZTc5Yzg4NTdhNWJmNGE5NTA2ZDgwMSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.s2c-xANnbIIWBbI6eazn8lxc6YlmCbLsIHU8rvT0Oqw",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719333-96b8b582-d40d-4a4e-be51-a04abb15c357.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTMzMy05NmI4YjU4Mi1kNDBkLTRhNGUtYmU1MS1hMDRhYmIxNWMzNTcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NWE4Mjc5MTcwOWQxMWVmODM0MmQ0MWFmOTdjOGQ2NjFkYWYxYmM5YzYyMTEzYzc0MmE4NzYxZmY3MGUwMzcwMCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.nU6GiYlf9r6N7ih19np1W4vGTJWGL-sfr8jRLk7c6po",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719413-cd5caa47-fbda-47f8-841b-c3386534e8e4.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTQxMy1jZDVjYWE0Ny1mYmRhLTQ3ZjgtODQxYi1jMzM4NjUzNGU4ZTQucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YmRhN2FjMDNkMDc0NGRjMTY2ODhhODQxODEwNjc3ZmM2NmI0NWIzMjU0Mjc4MmIzZGQ0OWZkYzAyNDk2ODY2MyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.ZMPq3_OiYI_4Q61W4CjNkbIGM78NWxzr4JLzwr8Ywn8",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719518-c4eac0cf-b46d-478f-8604-86d666109e17.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTUxOC1jNGVhYzBjZi1iNDZkLTQ3OGYtODYwNC04NmQ2NjYxMDllMTcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MTRkNzdhNjQ0MGY3M2EwMTkwNWI4YmMzNzA0MGQyYzkyYjAzZmY2OWUwYjI2MzQzNDQ0ZDRmZWM3NWNkN2JkOSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.WjCXFGy9S5UHXV9kWUTm88cG5VcevrzXTMozNhVby8E",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719587-10be9e0e-3712-4ae5-98c5-7b2dcfe91908.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTU4Ny0xMGJlOWUwZS0zNzEyLTRhZTUtOThjNS03YjJkY2ZlOTE5MDgucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MmRmZjc1MzBiYTRhY2QzN2M0OGU4OTRmMTk0MmIwZWYzZDJmMTBjNmFiYmNmNzdmYWViNzI5YzdkZTQxNjc0MyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.W1fxziZHpK-9pz2QAdmHp047izzcXo_X1Pg3PMZ0VrI",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719649-2ef5971b-c322-440c-8179-08cce3b78b76.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTY0OS0yZWY1OTcxYi1jMzIyLTQ0MGMtODE3OS0wOGNjZTNiNzhiNzYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NGZiZjg0ZTBkZTljNWMxNzAzNWQ4NGFkYzNiY2FiNzlhMjMxM2M4M2Y2NzllZjUxNTUzMTEyZWVmMjRmYWFiYSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.71C1AHvm5g8IP-ZpO-N4GrgFAIJhIQc5rkgn7FVaZjk",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719724-4e7dae32-2992-419f-9ddc-92ae735ec3b9.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTcyNC00ZTdkYWUzMi0yOTkyLTQxOWYtOWRkYy05MmFlNzM1ZWMzYjkucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NTIyNGExZTU3MzMxZmExZWE2Njg3ODRjZWUwNGVlM2M0YjJjMjllMWFlNzZkNjRhNDU2YjU3NWEzM2UwZTNhOSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.6cl9klbb610oH2i8sm9VQEZhlhgb3H0ONnv-5rr87Po",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719779-abd1bebe-2dcf-4299-9295-de8da11a2500.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTc3OS1hYmQxYmViZS0yZGNmLTQyOTktOTI5NS1kZThkYTExYTI1MDAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9Y2RmMWE4ZjdiMmE1ZjZmYjAxMDk3ZmM2OWEwYmE4MTVjMDU4ZTYwZWE0NjAwNTI1MTNkODg2OWE1MGRhZmM4OCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.i4C7j4X250DswZ0BLZViWn_u7yGsz_MwfVkHLnA5PmA",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719843-e32d0e16-8e2b-4597-97f2-43d9cdbd482f.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTg0My1lMzJkMGUxNi04ZTJiLTQ1OTctOTdmMi00M2Q5Y2RiZDQ4MmYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MDRkMDU0ZGU2MDRiOGRlNDA2YzIxOGU2NTQ5ZGE4YTc4ZDRkZmI4NzU3OWRlNWIyYzBjN2IzOTkzNmYyYzY5MiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.LbzHuZ8ldacqBJAz4jnlGVqDOI5kJ2ckRMY5zVIGdSc",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719909-135643a7-7a1a-4786-ab96-3a2d69393b27.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTkwOS0xMzU2NDNhNy03YTFhLTQ3ODYtYWI5Ni0zYTJkNjkzOTNiMjcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9OTYzNGQ3NTJiZWUwMmZiOWE2ZGNiOWVjM2I4N2UwNjY5NTJhY2E0NzhiMWYzYzMyZDM3MDkzM2Y5YTg5M2UwYSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.G2kWzS7qoFVY-xWzGl4W8dn67hncWn33Ey3Gaf_qciI",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417676070-20be44cc-ae36-49d1-9911-3b4a0d6ddee6.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3NjA3MC0yMGJlNDRjYy1hZTM2LTQ5ZDEtOTkxMS0zYjRhMGQ2ZGRlZTYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YzllMDJmYTk4N2U0NWEyYzNmZTI5ZTk1MTJiZjJiNDhmZTlhNDE3NDljM2MxY2I3ODY5ZWM4OTEwNzI3YzEwMyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.6CBfS61fZw60L2CunCKf7Hbvkwh0wgLnDLzkHEZ5Qao",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417676451-35bfe5e9-5985-4db1-bfe4-a06f0bcf999e.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3NjQ1MS0zNWJmZTVlOS01OTg1LTRkYjEtYmZlNC1hMDZmMGJjZjk5OWUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NTlhZmYwMDIwYTczODVkMDI1NTliNzQzMmFmMDMxZjkwZjc0NTYyOGE3N2FlODM2MGFlNDcwYjE5NDRmODkzMiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.vOexUb5XNu0bHN2RZRnw0zhlKVxcTs5nDDOLGN6ykeQ",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417679896-21e21ab2-3e22-46ae-a10a-dd3dcc6c194d.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3OTg5Ni0yMWUyMWFiMi0zZTIyLTQ2YWUtYTEwYS1kZDNkY2M2YzE5NGQucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YzZkM2ViOGEzOGY3YzlmZGRmOWI4MGZiOGQ1YmRmYjQwODJmY2MyOWNhNjQ0MDAwODk1MzEwOTBmMDVjNWJhOSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.sww1JfJR4KEvskxsSQaW2mk5qg7h4KXl4tToNff52I0",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417679964-e896f6e0-7112-482a-adba-21f1fdaa6dc1.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3OTk2NC1lODk2ZjZlMC03MTEyLTQ4MmEtYWRiYS0yMWYxZmRhYTZkYzEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YTgzZTU1Y2NjM2YxOTk3NjI4NzNlOWZjMDM3MTQzOTkzMTNmNzJhZTBiZTk4NWFmYWQxOTliMzg3MDg0MDc3NiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.clGKjp8KSmPKL0MNvW3YHgDRjqrLMLFCFfy78VCrXzQ",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417681990-a43c721b-0ad0-4087-b241-14bf86c96c9e.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MTk5MC1hNDNjNzIxYi0wYWQwLTQwODctYjI0MS0xNGJmODZjOTZjOWUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YzQ0NjNmZjhjYTYzYjk4NTc3MTJiMTI3NmM2NmUyNTM0N2FiMTYxMWM1OWM1YTI3NDQ1NTAxNThjMmE1ZWNjNCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.rQkYk1h6kCpyV-dd-V9zFyjuPG0TbqL4eLIDQ71Y7aI",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417682051-da4408e4-76c2-42c3-8fff-f1270c701d10.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MjA1MS1kYTQ0MDhlNC03NmMyLTQyYzMtOGZmZi1mMTI3MGM3MDFkMTAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YjRmZTNmY2IzNjQxZGY4YmM4YzVmMzJhMzA3MmNkNWNhYmQ0N2ZiNjRkYmFmNmNlOGJlNGE4NzJlY2RmZWQwZSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0._887tuq-TqOeWD6RnoUIridld4Y3fjEF4WzpIgtyZkw",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417681197-3feb9a82-dfa8-4d29-8613-713db857bd00.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MTE5Ny0zZmViOWE4Mi1kZmE4LTRkMjktODYxMy03MTNkYjg1N2JkMDAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ODNmMThhOWI1MmM1MWM5ZjE1Mjg4N2RkZTZiNDRjM2JjY2ViOThkNThlODhjOWM2ZjYzZTUwMTc5NTcwYTU5OCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.gsGbMZA8uhkbgJ9P-byQ2BftoixgAAYufbQXgXOsJUs",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417681405-ab5cdf6a-47a3-413b-bdf1-2dc885dc4c9a.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjMxOTEsIm5iZiI6MTc3ODI2Mjg5MSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MTQwNS1hYjVjZGY2YS00N2EzLTQxM2ItYmRmMS0yZGM4ODVkYzRjOWEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MDhUMTc1NDUxWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MjRjNmJjYzRlZjk2NDA4NTcwZmVlOGE4MGYxMDkzNjUzOTE3ZmZmMGQ2MDFmNTEzNDMxYWJiZThhMDdlNmVhZSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.cBaAo95vRqwsJj3Db6SqgxBzu46dxQB395Wo_tR-o90",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "re — Regular expression operations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "re — Regular expression operations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteSubstring"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteSubstring"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longdouble_complex"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longdouble_complex"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
