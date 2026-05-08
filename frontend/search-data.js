@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 43,
+    "url": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo",
+    "title": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "content": "England (active) Scotland Wales England council results Number of councillors 82 of 136 councils Counting under way Reform UK REF 772 770 (Reform UK 772 councillors 770 councillors gained) Liberal Democrat LD 496 46 (Liberal Democrat 496 councillors 46 councillors gained) Conservative CON 445 341 (Conservative 445 councillors 341 councillors lost) Labour LAB 438 571 (Labour 438 councillors 571 councillors lost) Green GRN 196 128 (Green 196 councillors 128 councillors gained) Independent IND 90 15 (Independent 90 councillors 15 councillors lost) Change How this election works Local elections in England cover more than 5,000 seats across 136 local authorities and six mayoral races. The banner shows each party’s seat total as results come in. Results from all counts are expected by Saturday. Live. updates Get the full results Scottish Parliament results 65 seats for majority 52 of 129 seats Scottish National Party SNP 42 2 (Scottish National Party 42 seats 2 seats lost) Liberal Democrat LD 4 - (Liberal Democrat 4 seats No change) Conservative CON 3 1 (Conservative 3 seats 1 seat lost) Labour LAB 2 2 (Labour 2 seats 2 seats gained) Scottish Green SGR 1 1 (Scottish Green 1 seat 1 seat gained) Reform UK REF 0 - (Reform UK 0 seats No change) Change since 2021 How this election works The Scottish Parliament has 129 members, known as MSPs. There are 73 constituency MSPs and 56 regional MSPs. A party needs 65 seats to secure a majority. Counting will begin on Friday morning. Live. updates Get the full results Welsh Parliament results 49 seats for majority 42 of 96 seats Plaid Cymru PC 19 8 (Plaid Cymru 19 seats 8 seats gained) Reform UK REF 15 15 (Reform UK 15 seats 15 seats gained) Labour LAB 5 17 (Labour 5 seats 17 seats lost) Conservative CON 2 7 (Conservative 2 seats 7 seats lost) Green GRN 1 1 (Green 1 seat 1 seat gained) Liberal Democrat LD 0 - (Liberal Democrat 0 seats No change) Change since 2021 How this election works Wales is split into 16 new constituencies, each electing six members, known as MSs. Voters choose one party or independent candidate. The 96 seats are allocated by share of the votes and a party needs 49 for a majority. Counting will begin on Friday morning. Live. updates Get the full results Back to nation selection Image source, PA Media Image caption, Labour activists look on as votes are counted in Clacton, Essex By Chris Mason Political editor Published 8 May 2026, 07:00 BST Updated 3 hours ago First things first, the headlines, even so far, are only an emerging picture. By now after a general election, the counting is all but done and the main winners and losers decided. Not so in these elections – a deluge of key results are still to come this afternoon. So far, we have a chunk of the results around the parts of England that have had contests, and results are just beginning to come in Scotland and Wales. But nonetheless, there are trends that we can take a look at. Reform are ahead, winning the most votes, as they did in last year\u0027s local elections. And behind them there is the trailing pack of Labour, the Conservatives, the Liberal Democrats and the Green Party of England and Wales. The much talked about fracturing of our politics is there to see, with none of the parties managing a runaway popularity, but votes splintering in five or more different directions. So far, Reform can point to substantial success, including big wins in Essex and the London Borough of Havering. Labour have lost around half of the seats they have been trying to defend – and they are defending the most seats in this set of elections. The party\u0027s rate of loss is considerably smaller in London than it is elsewhere. The parties\u0027 spin operations are up and running. At the core of Labour\u0027s argument is that elections are often challenging for governments mid term and are poor predictors of what might happen at the next general election. This is true, up to a point – although the governing party didn\u0027t go backwards in terms of seats in 2011, 2015, 2017 or 2021 for example. And Labour are going backwards big time. Click to expand A modern browser with JavaScript and a stable internet connection is required to view this interactive. More information about forthcoming elections (Opens in a new browser tab) Who won in my area? Enter your postcode or electoral area to find out No internet connection There is currently a problem with the service. Please try later. England Scotland Wales District council Mayor County council Constituency Region + - Reset Changed hands Key Show map key Map key Hide map key Please select an area on the map or try another postcode search. To make sure you get the correct information, please choose your address: Please select {options} Go What will be key in the coming hours and days is how Labour manages these losses psychologically, particularly the anticipated crushing loss in Wales. Labour have won in Wales since even Sir David Attenborough was a nipper. And it is not just in Wales where La",
+    "scrapedAt": "2026-05-08 22:18:22.282185"
+  },
+  {
+    "id": 42,
+    "url": "https://www.bbc.co.uk/reception/",
+    "title": "Welcome to BBC Reception Advice | Help receiving TV and radio",
+    "content": "Help receiving TV and radio search Welcome to BBC Reception Advice What are you having problems with? Freeview FM/MW/LW Radio DAB Radio Red Button Virgin Freesat \u0026 Sky BBC iPlayer BBC Sounds Latest works and warnings View all works and warnings Closure of Radio 4 on Long Wave (LW) 3 weeks 2 days ago | News More help with your TV and Radio problems Check if there are any faults with your transmitter Manual Retuning - to restore reception or missing channels If you are experiencing picture break up, missing channels or the wrong regional news you may need to retune your TV set manually How to Continue Listening to Radio 4 after the Closure of LW Radio 4 on Long Wave (LW) services will be closing later this year, but you can still enjoy your favourite stations in several easy ways. This factsheet explains how to continue listening to Radio 4. Red Button and Connected Red Button Troubleshooting steps for the two different red button services offered by the BBC How bad weather can affect reception and what to do about it How bad weather can affect reception and what to do about it How high pressure weather conditions can affect your Freeview reception DAB FAQs Why am I unable to receive Local Radio, or National Radio such as BBC Radio Scotland, on my DAB Radio? The BBC\u0027s local and national radio services are carried on local commercial DAB Multiplexes. Please see our help page to see how DAB multiplexes work, Therefore, you may not be receiving this service, as there is not a commercial DAB service in your local area. To check what coverage of DAB services are available in your locality, please see our Interactive Transmitter checker tool. My DAB reception has started to drop out, is this due to poor reception? Firstly, poor reception might be down to poor coverage, so it is best to check you are in a DAB coverage area. Use our transmitter tool, which will tell you what national and local DAB services are available in your locality. Secondly, If you are in a good coverage area, and are still receiving poor DAB reception please try our Problem Assistant for further advice. How can weather affect DAB reception? DAB reception is rarely disrupted by high-pressure weather conditions, but under some circumstances, signals from very distant transmitters can cause reception to break up, or be lost for periods of time. If you suspect this - particularly if you are also getting interference on FM - wait until the weather changes. Can LED Lights Interfere with my DAB Reception? There is a possibility some LED Lights can cause interference to DAB and FM Radio Reception, particularly if LED lights are used to replace halogen lights, and retain the original transformer. This is because the power used is lower, and is forced to work outside of its normal operating parameters, resulting in electrical impulse interference. For more information on interference, please see our RTIS site DAB Help Guides What is a good DAB installation? Coverage and location Your radio must be in a good DAB coverage area to receive BBC services. Have a look at our Transmitter Checker to see what BBC services you can receive where you are. If you live in a basement flat, or your building is steel-framed or reinforced concrete, coverage may be affected. Tuning Most DAB radios can be tuned easily at the touch of a button. Sometimes a full scan is required. Portable radios should be tuned in a location in your home where the best possible signal is received. Most DAB radios come with built in signal strength meters which can be helpful. From time to time radios should be re-tuned in order to discover new stations. Telescopic aerials Telescopic aerials on portable radios should be fully extended to receive a good signal. Tilting and swivelling the aerial will help to get the best signal. Broken aerials may affect reception. Outdoor aerials An externally mounted aerial can be attached to many types of DAB portable radio and hi-fi systems. DAB aerials are different from FM or TV aerials, so you need a good quality DAB-specific aerial. An indoor aerial may be good enough, but for the best reception use an outdoor one. Ideally, this should be on the roof or high up on the outside of the building, though it may also give good results in the loft. Cables and Connectors If you have an external aerial, a radio signal will always lose some of its strength as it passes along the cable and through the connectors. It is important to minimise the loss by using good quality cable and connectors. DAB radio in cars DAB uses different frequencies from FM radio. We advise you check that your antenna is able to receive DAB, in the majority of cases you will need a new antenna. An exception is \"helically wound\" FM aerials. See our guide on DAB radio in cars Qualified Installer The BBC cannot recommend individual Installers. GetMeViewing is the consumer site for CAI Ltd (Confederation of Aerial Industries) which is a recognised trade body which will can put you in touch with",
+    "scrapedAt": "2026-05-08 22:18:21.203685"
+  },
+  {
+    "id": 41,
+    "url": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo",
+    "title": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "content": "Image source, Getty Images Image caption, Daniel Radcliffe is nominated for his role in the one-man show Every Brilliant Thing BySteven McIntosh Entertainment reporter Published 5 May 2026 Harry Potter star Daniel Radcliffe and recent Oscar nominee Rose Byrne are among the stars recognised at this year\u0027s Tony Awards, which celebrate the best in US theatre. Lesley Manville, John Lithgow and Layton Williams are also nominated at this year\u0027s event for their performances on Broadway in the last year. Two shows lead this year\u0027s nominations overall with 12 each - a musical version of the 1987 film The Lost Boys, and a stage adaptation of Apple TV series Schmigadoon! The equivalent of the UK\u0027s Olivier Awards, this year\u0027s Tonys ceremony will take place in New York on 7 June, hosted by singer Pink. Image source, Getty Images Image caption, Rose Byrne (left) and her co-star Kelli O\u0027Hara are nominated for their roles in the Noël Coward comedy Fallen Angels Radcliffe is nominated for his role in Every Brilliant Thing, a one-man play about depression, while Byrne is recognised for her performance in Noël Coward\u0027s comedy Fallen Angels. Lesley Manville and Mark Strong are recognised for their role in Greek tragedy Oedipus, and Lithgow for his portrayal of Roald Dahl in Giant. Both productions previously played in the West End. Former Strictly contestant Williams is also recognised for his role as the iceberg in another London transfer, musical parody Titaníque. Manville, Lithgow and Williams have all previously won Oliviers for their performances in the West End. Other nominated shows include a new productions of musical Ragtime, Arthur Miller\u0027s play Death of a Salesman and Richard O\u0027Brien\u0027s The Rocky Horror Show. Millennial rom-com musical Two Strangers (Carry A Cake Across New York), which opened in the UK in 2024, scored eight nominations. Which shows have the most nominations? 12 nominations - The Lost Boys, Schmigadoon! 11 - Ragtime 9 - Death of a Salesman, Cats: The Jellicle Ball, The Rocky Horror Show 8 - Two Strangers (Carry a Cake Across New York) 7 - Oedipus 5 - Liberation, Fallen Angels, Chess, The Balusters, Joe Turner\u0027s Come and Gone 4 - Bug, Giant, Titaníque Tony Awards 2026: The main nominees Best musical The Lost Boys Schmigadoon! Titaníque Two Strangers (Carry a Cake Across New York) Best play The Balusters, Author: David Lindsay-Abaire Giant, Author: Mark Rosenblatt Liberation, Author: Bess Wohl Little Bear Ridge Road, Author: Samuel D. Hunter Best revival of a play Death of a Salesman Becky Shaw, Every Brilliant Thing Fallen Angels Oedipus Best revival of a musical Cats: The Jellicle Ball Ragtime Richard O\u0027Brien\u0027s The Rocky Horror Show Best leading actor in a musical Nicholas Christopher, Chess Luke Evans, Richard O\u0027Brien\u0027s The Rocky Horror Show Joshua Henry, Ragtime Sam Tutty, Two Strangers (Carry a Cake Across New York) Brandon Uranowitz, Ragtime Best leading actress in a musical Sara Chase, Schmigadoon! Stephanie Hsu, Richard O\u0027Brien\u0027s The Rocky Horror Show Caissie Levy, Ragtime Marla Mindelle, Titaníque Christiani Pitts, Two Strangers (Carry a Cake Across New York) Best leading actor in a play Will Harrison, Punch Nathan Lane, Arthur Miller\u0027s Death of a Salesman John Lithgow, Giant Daniel Radcliffe, Every Brilliant Thing Mark Strong, Oedipus Best leading actress in a play Rose Byrne, Fallen Angels Carrie Coon, Bug Susannah Flood, Liberation Lesley Manville, Oedipus Kelli O\u0027Hara, Fallen Angels Best supporting actress in a play Betsy Aidem, Liberation Marylouise Burke, The Balusters Aya Cash, Giant Laurie Metcalf, Arthur Miller\u0027s Death of a Salesman June Squibb, Marjorie Prime Best supporting actor in a play Christopher Abbott, Arthur Miller\u0027s Death of a Salesman Danny Burstein, Marjorie Prime Brandon J. Dirden, Waiting for Godot Alden Ehrenreich, Becky Shaw Ruben Santiago-Hudson, August Wilson\u0027s Joe Turner\u0027s Come and Gone Richard Thomas, The Balusters Best supporting actress in a musical Shoshana Bean, The Lost Boys Hannah Cruz, Chess Rachel Dratch, Richard O\u0027Brien\u0027s The Rocky Horror Show Ana Gasteyer, Schmigadoon! Nichelle Lewis, Ragtime Best supporting actor in a musical Ali Louis Bourzgui, The Lost Boys André De Shields, Cats: The Jellicle Ball Bryce Pinkham, Chess Ben Levi Ross, Ragtime Layton Williams, Titaníque Best direction of a play Nicholas Hytner, Giant Robert Icke, Oedipus Kenny Leon, The Balusters Joe Mantello, Arthur Miller\u0027s Death of a Salesman Whitney White, Liberation Best direction of a musical Michael Arden, The Lost Boys Lear deBessonet, Ragtime Christopher Gattelli, Schmigadoon! Tim Jackson, Two Strangers (Carry a Cake Across New York) Zhailon Levingston and Bill Rauch, Cats: The Jellicle Ball Best book of a musical The Lost Boys Schmigadoon! Titaníque Two Strangers (Carry a Cake Across New York) Best original score Arthur Miller\u0027s Death of a Salesman August Wilson\u0027s Joe Turner\u0027s Come and Gone, Music: Steve Bargonetti The Lost Boys Schmigadoon! Two Strangers (Carry a Cake Across ",
+    "scrapedAt": "2026-05-08 22:18:19.967263"
+  },
+  {
+    "id": 40,
+    "url": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth",
+    "title": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "content": "Bournemouth Follow Bournemouth Follow Following Following Unfollow Unfollow close panel You are now following Bournemouth Updates from your Sport topics will appear in My Sport and in a collection on the Sport homepage. Scores \u0026 Fixtures Scores \u0026 Fixtures Scroll Left Scroll Right Premier League Fulham Fulham plays Bournemouth AFC Bournemouth at15:0015:00 onSatthe9 ofMay Premier League Bournemouth AFC Bournemouth plays Man City Manchester City at19:3019:30 onTuethe19 ofMay Premier League Nottm Forest Nottingham Forest plays Bournemouth AFC Bournemouth at16:0016:00 onSunthe24 ofMay Latest updates 16:14 BSTIraola top of Palace shortlist for new manager, published at 16:14 BSTIraola top of Palace shortlist for new manager Attribution Premier League 15:00 BST 9 MayFulham v AFC Bournemouth, coverage starts at 15:00 BST 9 MayFulham v AFC Bournemouth Attribution Premier League 12:59 BSTJimenez suspended as Bournemouth launch investigation, published at 12:59 BSTJimenez suspended as Bournemouth launch investigation Attribution Bournemouth Bournemouth boss Andoni Iraola has been speaking to the media before Saturday\u0027s Premier League game against Fulham at Craven Cottage (15:00 BST). Here are the key lines from his news conference: Iraola said he expects Justin Kluivert to return to the squad for the first time in more than four months: \"Justin has been training with the team normally this week. I expect him to be in the squad.\" Lewis Cook, who has been sidelined since February, will probably not be fit to return on Saturday but could feature in the Cherries\u0027 final two matches: \"Lew also has been training, not fully, and is probably a little bit behind Justin in the process but is getting there. Probably not for tomorrow but he\u0027s training normally today and we will see. I hope Justin definitely and Lew can be available for the last two games.\" On Bournemouth\u0027s chances of qualifying for Europe: \"We are in the fight but we still need good results. You need wins, we don\u0027t have easy games. The thing that makes me optimistic is that we are in a good place. I hope we can go all the way.\" Referring to the atmosphere within the squad, Iraola said: \"I feel from the players that everyone wants it! Everyone is available and everyone wants to contribute. I have to make big decisions to leave players out of the squad but it creates competition and a good atmosphere.\" He emphasised his faith in the team: \"The only thing that makes me optimistic is that, I see my team in a really good place. We are doing good things, we are playing well. Even if we probably have one of the toughest, maybe with Brentford, toughest schedules. I trust my team because they show me that they are able to play a good game against any opposition.\" On his side\u0027s lengthy run without losing: \"We\u0027ve done something really difficult, going on a 15-game unbeaten run. But, we still have work to do. We are in a good position. It speaks well about the players, they have been consistent, tough to beat. They are playing well, when we aren\u0027t playing well they are finding ways to stay in the games. I hope that we can go all the way, knowing we have three difficult matches.\" More on his final three games in charge of the club: \"Personally for me, it would be massive to get Europe. We have to continue what we are doing. We are preparing the games as good as we can. I feel from the players that everyone wants to be there.\" Listen to live commentary of Fulham v Bournemouth on BBC Radio 5 Live Sports Extra and BBC Sounds Follow all of Friday\u0027s Premier League news conferences and the rest of the day\u0027s football news Got a question about Bournemouth? Get in touch here and we\u0027ll seek answers from our experts Share close panel Share page Copy link About sharing 08:22 BSTExeter approve takeover by AFC Bournemouth owners , published at 08:22 BSTExeter approve takeover by AFC Bournemouth owners Attribution Bournemouth Mark Mitchener BBC Sport Senior Journalist Image source, Getty Images Fulham away, in early May. Sound familiar? Bournemouth head to Craven Cottage on Saturday for their antepenultimate match of the Premier League season, knowing that winning their last three games – or matching the results of the teams below them – would bring the unprecedented reward of European football. For Cherries supporters of a certain age, there are echoes of a match at the same venue, 39 years ago this week, which is fondly remembered for all the right reasons. On 4 May 1987, Bournemouth headed to Fulham for their penultimate game of the season as leaders of the old Third Division, knowing that a win would seal promotion to the second tier for the first time in the club\u0027s history. Anything less, and it would go to the final game. Fulham had a strong wind at their backs in the first half, but Bournemouth needed a penalty save from keeper Gerry Peyton to ensure they went in goalless at the break. Harry Redknapp\u0027s side went behind early in the second half, but were presented with a penalty of the",
+    "scrapedAt": "2026-05-08 22:18:18.775624"
+  },
+  {
+    "id": 39,
+    "url": "https://www.bbc.co.uk/aboutthebbc/whatwedo/",
+    "title": "What we do",
+    "content": "Close menu JavaScript has been disabled. This page needs JavaScript to work correctly. Please enable JavaScript in your browser settings. JavaScript is required for the following feature(s): opening and closing the navbar (on mobile) What we do We are the world’s leading public service broadcaster We produce programmes and services for audiences throughout the UK. We also produce content which can be enjoyed across the globe. What we do UK public services We provide a wide range of programmes, content and services on television, radio and online for audiences across the UK Global news services BBC World Service television, radio and online is available in more than 40 languages Commercial services Our commercial operations generate income to invest in new programmes and content iPages Dev tools Page built: Tue Jun 17 2025 11:19:04 BST Site ID: ipages-inside-the-bbc Built from: master @ 74ebd40 Rebuild Page The page will automatically reload. You may need to reload again if the build takes longer than expected. Rebuild page Useful links View in iSite View page XML View JSON cache View in iPages Dashboard Demo mode Hides preview environment warning banner on preview pages. On Off Theme toggler Select a theme and theme mode and click \"Load theme\" to load in your theme combination. Theme: Blue Green Internal Pink Purple Red Studios Teal Wales Neutral Theme Mode: Dark Default Light Load theme Reset Explore the BBC",
+    "scrapedAt": "2026-05-08 22:18:17.510277"
+  },
+  {
     "id": 38,
     "url": "https://www.bbc.co.uk/#election-scotland",
     "title": "BBC - Home",
@@ -264,26 +299,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-08 22:14:32.985064"
-  },
-  {
-    "id": 39,
-    "url": "https://www.bbc.co.uk/aboutthebbc/whatwedo/"
-  },
-  {
-    "id": 40,
-    "url": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
-  },
-  {
-    "id": 41,
-    "url": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
-  },
-  {
-    "id": 42,
-    "url": "https://www.bbc.co.uk/reception/"
-  },
-  {
-    "id": 43,
-    "url": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
   },
   {
     "id": 44,
@@ -5552,10 +5567,1072 @@ window.searchData = [
   {
     "id": 6721,
     "url": "https://www.bbc.co.uk/sounds/play/m002vmdt"
+  },
+  {
+    "id": 6759,
+    "url": "https://www.bbc.co.uk/aboutthebbc/whatwedo/commercialservices"
+  },
+  {
+    "id": 6760,
+    "url": "https://www.bbc.co.uk/aboutthebbc/whatwedo/publicservices"
+  },
+  {
+    "id": 6761,
+    "url": "https://www.bbc.co.uk/aboutthebbc/whatwedo/worldservice"
+  },
+  {
+    "id": 6762,
+    "url": "https://www.bbc.co.uk/aboutthebbc/whatwedo/#"
+  },
+  {
+    "id": 6763,
+    "url": "https://production.bbc.co.uk/isite2-xforms/fr/ipages-inside-the-bbc/page-standard/edit/5b08a03c-f984-48b0-974b-fd1ca02a96fe"
+  },
+  {
+    "id": 6766,
+    "url": "https://www.bbc.co.uk/sport/football/teams/chelsea"
+  },
+  {
+    "id": 6767,
+    "url": "https://www.bbc.co.uk/sport/football/live/cx2rzle7dz2t"
+  },
+  {
+    "id": 6768,
+    "url": "https://www.bbc.co.uk/sport/football/teams/manchester-united"
+  },
+  {
+    "id": 6769,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002w0v2/match-of-the-day-202526-03052026"
+  },
+  {
+    "id": 6770,
+    "url": "https://www.bbc.co.uk/sport/football/teams/nottingham-forest"
+  },
+  {
+    "id": 6771,
+    "url": "https://www.bbc.co.uk/sport/football/teams/bradford-city"
+  },
+  {
+    "id": 6772,
+    "url": "https://www.bbc.co.uk/sport/football/live/c794w4l1drgt"
+  },
+  {
+    "id": 6773,
+    "url": "https://www.bbc.co.uk/sport/football/teams/brighton-and-hove-albion"
+  },
+  {
+    "id": 6774,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cn0p19vzvz1o"
+  },
+  {
+    "id": 6775,
+    "url": "https://www.afcbpodcast.com"
+  },
+  {
+    "id": 6776,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 6777,
+    "url": "https://www.bbc.co.uk/sport/my"
+  },
+  {
+    "id": 6778,
+    "url": "https://www.bbc.co.uk/sport/football/teams/manchester-city"
+  },
+  {
+    "id": 6779,
+    "url": "https://www.bbc.co.uk/sport/football/live/cwyv9yx4qxqt"
+  },
+  {
+    "id": 6781,
+    "url": "https://www.bbc.co.uk/sounds/play/p0nj4wlt"
+  },
+  {
+    "id": 6782,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cpqp9eqwe72o"
+  },
+  {
+    "id": 6783,
+    "url": "https://www.bbc.co.uk/sounds/play/live/bbc_radio_five_live?at_mid\u003dcZk1mYkgoH\u0026at_campaign\u003dFootball_Commentary_SportSounds_5L\u0026at_medium\u003daudio\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dall_map_aud\u0026at_product\u003dsounds\u0026at_brand\u003db0070hx6\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003deditorial\u0026at_format\u003dlink\u0026at_objective\u003dconsumption\u0026at_bbc_team\u003dps"
+  },
+  {
+    "id": 6784,
+    "url": "https://www.bbc.co.uk/sounds/play/m002vzhb"
+  },
+  {
+    "id": 6785,
+    "url": "https://www.bbc.co.uk/sport/football/gossip"
+  },
+  {
+    "id": 6786,
+    "url": "https://www.bbc.co.uk/send/u192221839"
+  },
+  {
+    "id": 6787,
+    "url": "https://www.bbc.co.uk/sport/football/live/cx2rr75vw49t"
+  },
+  {
+    "id": 6788,
+    "url": "https://www.bbc.co.uk/send/u211222377"
+  },
+  {
+    "id": 6789,
+    "url": "https://www.bbc.co.uk/sport/football/teams/notts-county"
+  },
+  {
+    "id": 6790,
+    "url": "https://www.bbc.co.uk/sounds/play/p0nj4tsf"
+  },
+  {
+    "id": 6791,
+    "url": "https://www.skysports.com/football/live-blog/11095/12476234/transfer-centre-live-football-transfer-news-updates-and-rumours#:~:text\u003dBarcelona%20another%20club%20interested%20in%20Kroupi%20this%20summer"
+  },
+  {
+    "id": 6793,
+    "url": "https://talksport.com/football/4234282/transfer-notebook-onana-rashford-man-utd-liverpool-hijack-tottenham-deal-jarrod-bowen/"
+  },
+  {
+    "id": 6794,
+    "url": "https://www.bbc.co.uk/sounds/play/live/bbc_radio_five_live_sports_extra?at_mid\u003de7oKkHU7V3\u0026at_campaign\u003dFootball_Commentary_SportSounds_5SX\u0026at_medium\u003daudio\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dall_map_aud\u0026at_product\u003dsounds\u0026at_brand\u003db009rx90\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003deditorial\u0026at_format\u003dlink\u0026at_objective\u003dconsumption\u0026at_bbc_team\u003dps"
+  },
+  {
+    "id": 6795,
+    "url": "https://www.bbc.co.uk/send/u192234798"
+  },
+  {
+    "id": 6796,
+    "url": "https://www.bbc.co.uk/sounds/play/m002w9hf"
+  },
+  {
+    "id": 6797,
+    "url": "https://www.bbc.co.uk/sport/football/teams/leeds-united"
+  },
+  {
+    "id": 6798,
+    "url": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth/scores-fixtures"
+  },
+  {
+    "id": 6799,
+    "url": "https://www.bbc.co.uk/sport/football/teams/charlton-athletic"
+  },
+  {
+    "id": 6800,
+    "url": "https://www.bbc.co.uk/sport/football/teams/newcastle-united"
+  },
+  {
+    "id": 6801,
+    "url": "https://www.bbc.co.uk/sport/football/teams/tottenham-hotspur"
+  },
+  {
+    "id": 6802,
+    "url": "https://www.bbc.co.uk/sport/football/teams/fulham"
+  },
+  {
+    "id": 6803,
+    "url": "https://www.bbc.co.uk/sport/football/premier-league"
+  },
+  {
+    "id": 6805,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cvgzdn248ngo"
+  },
+  {
+    "id": 6806,
+    "url": "https://www.bbc.co.uk/sport/articles/cn72zznm36xo"
+  },
+  {
+    "id": 6807,
+    "url": "https://www.bbc.co.uk/sport/football/teams/arsenal"
+  },
+  {
+    "id": 6808,
+    "url": "https://www.bbc.co.uk/sport/football/teams/crystal-palace"
+  },
+  {
+    "id": 6810,
+    "url": "https://www.bbc.co.uk/sport/football/teams/liverpool"
+  },
+  {
+    "id": 6811,
+    "url": "https://www.bbc.co.uk/sounds/brand/p0g48z0s"
+  },
+  {
+    "id": 6812,
+    "url": "https://www.bbc.co.uk/sport/football/live/c4g877nv1gdt"
+  },
+  {
+    "id": 6814,
+    "url": "https://www.bbc.co.uk/sport/football/live/c5y8p83gdw8t"
+  },
+  {
+    "id": 6815,
+    "url": "https://www.bbc.co.uk/sport/football/teams/southend-united"
+  },
+  {
+    "id": 6816,
+    "url": "https://www.bbc.co.uk/sport/football/live/cwy2421dj2vt"
+  },
+  {
+    "id": 6820,
+    "url": "https://www.bbc.co.uk/news/articles/cx2ql1jl74no"
+  },
+  {
+    "id": 6825,
+    "url": "https://www.bbc.co.uk/news/entertainment-arts-68881606"
+  },
+  {
+    "id": 6834,
+    "url": "https://www.tonyawards.com/nominees/"
+  },
+  {
+    "id": 6835,
+    "url": "https://www.bbc.co.uk/news/articles/c3v6n7wqd07o"
+  },
+  {
+    "id": 6846,
+    "url": "https://www.bbc.co.uk/news/topics/c008ql15v4yt"
+  },
+  {
+    "id": 6847,
+    "url": "https://www.ofcom.org.uk/make-a-complaint/complain-about-wireless-interference/interference-to-tv-and-radio-services"
+  },
+  {
+    "id": 6848,
+    "url": "https://www.bbc.co.uk/reception/help-guides/dab-radio/what-is-a-good-dab-installation"
+  },
+  {
+    "id": 6849,
+    "url": "https://www.ofcom.org.uk/make-a-complaint/complain-about-wireless-interference/illegal-broadcasting-pirates"
+  },
+  {
+    "id": 6850,
+    "url": "https://www.bbc.co.uk/reception/help-guides/everything-else/check-your-cables-for-any-signs-of-damage-or-if-water-has-seeped-into"
+  },
+  {
+    "id": 6851,
+    "url": "https://www.bbc.co.uk/reception/help-guides/everything-else/water-ingress"
+  },
+  {
+    "id": 6852,
+    "url": "https://www.bbc.co.uk/sounds"
+  },
+  {
+    "id": 6853,
+    "url": "https://www.bbc.co.uk/reception/help-guides/fmmwlw-radio/what-is-a-good-fm-radio-installation"
+  },
+  {
+    "id": 6854,
+    "url": "https://www.bbc.co.uk/reception/help-guides/fmmwlw-radio/radio-reception-problems-due-to-high-pressure"
+  },
+  {
+    "id": 6855,
+    "url": "https://www.radioandtvhelp.co.uk/interference"
+  },
+  {
+    "id": 6856,
+    "url": "https://www.bbc.co.uk/iplayer/help/questions/accessibility/remove-audio-des"
+  },
+  {
+    "id": 6857,
+    "url": "https://www.bbc.co.uk/reception/help-guides/fmmwlw-radio/buzzing-and-clicking-on-your-radio"
+  },
+  {
+    "id": 6858,
+    "url": "https://www.bbc.co.uk/reception/problems-freeview-reception#/Freeview"
+  },
+  {
+    "id": 6859,
+    "url": "https://www.bbc.co.uk/reception/issues-with-analogue-radio"
+  },
+  {
+    "id": 6860,
+    "url": "https://www.bbc.co.uk/reception/help-guides/fmmwlw-radio/what-is-a-good-medium-wave-long-wave-installation"
+  },
+  {
+    "id": 6861,
+    "url": "https://www.bbc.co.uk/reception/help-guides/fmmwlw-radio/lwclosure"
+  },
+  {
+    "id": 6862,
+    "url": "https://www.ofcom.org.uk/complaints/complain-about-wireless-interference/interference-to-wireless-devices-at-home/interference-to-tv-and-radio-services"
+  },
+  {
+    "id": 6863,
+    "url": "https://www.bbc.co.uk/reception/help-guides/freeview/how-high-pressure-weather-conditions-can-affect-your-freeview-reception-video"
+  },
+  {
+    "id": 6864,
+    "url": "https://www.virginmedia.com/help/accessibility/virgin-tv#:~:text\u003dPress%20the%20Info%20button%20on,audio%20description%20on%20or%20off."
+  },
+  {
+    "id": 6865,
+    "url": "https://www.bbc.co.uk/reception/help-guides/freeview-freely/how-clear-skies-and-fine-weather-can-affect-your-tv-reception"
+  },
+  {
+    "id": 6866,
+    "url": "https://www.bbc.co.uk/reception/satellite-tv"
+  },
+  {
+    "id": 6867,
+    "url": "https://www.bbc.co.uk/reception/works-warnings"
+  },
+  {
+    "id": 6868,
+    "url": "https://www.bbc.co.uk/reception/questions/freeview/what-is-the-effect-of-trees-on-reception-1"
+  },
+  {
+    "id": 6869,
+    "url": "https://www.bbc.co.uk/reception/check-for-transmitter-faults"
+  },
+  {
+    "id": 6870,
+    "url": "https://getdigitalradio.com/your-stations/retune/"
+  },
+  {
+    "id": 6871,
+    "url": "https://www.bbc.co.uk/reception/help-guides/analogue-radio/impact-of-tropospheric-ducting-on-radio"
+  },
+  {
+    "id": 6873,
+    "url": "https://www.bbc.co.uk/reception/help-guides/everything-else/audio-description"
+  },
+  {
+    "id": 6875,
+    "url": "https://www.bbc.co.uk/reception/help-guides/dab-radio/what-is-a-dab-multiplex"
+  },
+  {
+    "id": 6876,
+    "url": "https://www.bbc.co.uk/reception/help-guides/freeview/manual-retuning-to-restore-reception-or-missing-channels"
+  },
+  {
+    "id": 6877,
+    "url": "https://www.freeview.co.uk/help/audio-description"
+  },
+  {
+    "id": 6878,
+    "url": "https://www.bbc.co.uk/reception/work-warning/news/radio4lw"
+  },
+  {
+    "id": 6879,
+    "url": "https://www.sky.com/help/articles/enabling-audio-description#:~:text\u003dPress%20and%20hold%20the%20voice,Description%20on%E2%80%9D%20into%20the%20microphone."
+  },
+  {
+    "id": 6880,
+    "url": "https://www.bbc.co.uk/5livesportsextra"
+  },
+  {
+    "id": 6881,
+    "url": "https://www.bbc.co.uk/reception/check-for-transmitter-faults/#/undefined"
+  },
+  {
+    "id": 6882,
+    "url": "https://www.bbc.co.uk/reception/help-guides/dab-radio/dab-radio-in-the-car"
+  },
+  {
+    "id": 6883,
+    "url": "https://www.bbc.co.uk/reception/help-guides/freeview-freely/who-is-responsible-for-my-sharedcommunal-aerial"
+  },
+  {
+    "id": 6884,
+    "url": "https://www.freesat.co.uk/"
+  },
+  {
+    "id": 6885,
+    "url": "https://www.radioandtvhelp.co.uk/"
+  },
+  {
+    "id": 6886,
+    "url": "https://bbc-reception-uat-bbcas.orangebus.co.uk/check-transmitter-faults"
+  },
+  {
+    "id": 6887,
+    "url": "https://www.cai.org.uk/"
+  },
+  {
+    "id": 6888,
+    "url": "https://www.bbc.co.uk/reception/help-guides"
+  },
+  {
+    "id": 6889,
+    "url": "http://www.freesat.co.uk/help/4k-tv-boxes/accessibility/audio-description"
+  },
+  {
+    "id": 6890,
+    "url": "https://www.bbc.co.uk/reception/problem-assistant"
+  },
+  {
+    "id": 6891,
+    "url": "https://www.bbc.co.uk/reception/help-guides/fmmwlw-radio/effect-of-tropospheric-ducting-on-radio"
+  },
+  {
+    "id": 6892,
+    "url": "https://www.bbc.co.uk/reception/red-button"
+  },
+  {
+    "id": 6893,
+    "url": "https://www.bbc.co.uk/sounds/help/sounds-help"
+  },
+  {
+    "id": 6894,
+    "url": "https://www.bbc.co.uk/reception/help-guides/dab-radio/dab-tuning-information"
+  },
+  {
+    "id": 6895,
+    "url": "https://www.bbc.co.uk/reception/check-for-transmitter-faults/"
+  },
+  {
+    "id": 6896,
+    "url": "https://www.bbc.co.uk/reception/questions/everything-else/how-can-storms-affect-my-reception"
+  },
+  {
+    "id": 6897,
+    "url": "https://www.bbc.co.uk/reception/help-guides/freeview/what-is-a-good-freeview-installation"
+  },
+  {
+    "id": 6898,
+    "url": "https://www.getmeviewing.org.uk/"
+  },
+  {
+    "id": 6899,
+    "url": "https://www.bbc.co.uk/reception/help-guides/freeview/how-to-choose-the-right-amplifier"
+  },
+  {
+    "id": 6900,
+    "url": "https://www.bbc.co.uk/reception/help-guides/fmmwlw-radio/hissing-and-fading-on-your-fm-radio"
+  },
+  {
+    "id": 6901,
+    "url": "https://www.bbc.co.uk/reception/issues-with-dab?rtistype\u003ddab"
+  },
+  {
+    "id": 6902,
+    "url": "https://www.bbc.co.uk/reception/cable-tv-0"
+  },
+  {
+    "id": 6903,
+    "url": "https://www.bbc.co.uk/reception/help-guides/freeview-freely/what-is-a-good-freeview-installation"
+  },
+  {
+    "id": 6904,
+    "url": "https://www.bbc.co.uk/iplayer/help"
+  },
+  {
+    "id": 6905,
+    "url": "https://www.bbc.co.uk/reception/help-guides/everything-else/how-does-bad-weather-affect-my-television"
+  },
+  {
+    "id": 6906,
+    "url": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo#election-scotland"
+  },
+  {
+    "id": 6907,
+    "url": "https://www.bbc.co.uk/news/topics/cp07jzgm24jt"
+  },
+  {
+    "id": 6918,
+    "url": "https://www.bbc.co.uk/news/topics/c207p54md43t"
+  },
+  {
+    "id": 6919,
+    "url": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo#election-wales"
+  },
+  {
+    "id": 6922,
+    "url": "https://www.bbc.co.uk/news/topics/cvenzmgywg4t"
+  },
+  {
+    "id": 6924,
+    "url": "https://www.bbc.co.uk/news/topics/cq23pdgvy20t"
+  },
+  {
+    "id": 6930,
+    "url": "https://www.bbc.co.uk/news/topics/cddv4gjql21t"
+  },
+  {
+    "id": 6934,
+    "url": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo#election-england"
+  },
+  {
+    "id": 6939,
+    "url": "https://www.bbc.co.uk/news/topics/crr7mlg0dg1t"
+  },
+  {
+    "id": 6940,
+    "url": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo#tab-election-england"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://static.files.bbci.co.uk/elections/images/uk2026/election-logo-cutout-en.svg",
+    "alt": "Election",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1800/cpsprodpb/ad91/live/e53ca2f0-4aad-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Labour party activists look on as ballot papers are counted for the 2026 Essex County Council election at Clacton Leisure Centre in Essex",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://news.files.bbci.co.uk/include/newsspec/41045-uk-local-elections-2026/assets/app-project-assets/img/warning.svg",
+    "alt": "",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://news.files.bbci.co.uk/include/newsspec/41045-uk-local-elections-2026/assets/app-project-assets/img/warning.svg",
+    "alt": "",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/81fc/live/7b12bde0-4ac3-11f1-bd52-e755d604ece4.png",
+    "alt": "Banner with the words: More on election 2026",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/6133/live/2bce6ee0-0b00-11f0-97d3-37df2b293ed1.png",
+    "alt": "Thin, red banner promoting the Politics Essential newsletter with text saying, “Top political analysis in your inbox every day”. There is also an image of the Houses of Parliament.",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/409c/live/ab848230-4ada-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Iris Duane of the Green Party of Scotland celebrates with other Green Party hopefuls while ballots are still being counted in Glasgow",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/60a2/live/7bfa1c10-cadc-11f0-a892-01d657345866.jpg",
+    "alt": "Sir David Attenborough being filmed in front of the sea and mountains for Life on Earth in 1979",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/af4f/live/8c892de0-4ac1-11f1-b55d-0f258dce1735.png",
+    "alt": "A composite image of 5 people  in flamboyant costumes at the Met gala. In the centre in a largest part of the image is a women in white  wearing a mask over her face",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b327/live/76b6ee00-4a38-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A person in protective clothing walks next to an ambulance during an evacuation operation of suspected hantavirus patients, following an outbreak on the cruise ship MV Hondius, in Praia, Cape Verde, May 6, 2026",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/2d4c/live/d268f6b0-4a1c-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "Two ladies are sat beside each other. The one on the left is wearing a mustard cardigan and has white wavy hair. The one on the right is wearing a pink collarless shirt and has blonde and brown hair. ",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/dd4d/live/992a5b50-494f-11f1-bd44-e578c5bd51ff.png",
+    "alt": "A pregnant woman stands in a garden with her hand on her belly. She has long, straight, dark hair and is wearing a matching top and trousers which are white with some patches of black. She also has a light brown hoodie on. ",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Emerging picture shows Reform gains as Labour counts losses in heartland seats - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz8d556zpo"
+  },
+  {
+    "src": "https://www.bbc.co.uk/reception/sites/default/files/styles/more_help_block_big_thumb/public/2025-01/transmitter%20map%20new%202025.jpg?itok\u003driqnwm4F",
+    "alt": "Image of map showing transmitter locations",
+    "pageTitle": "Welcome to BBC Reception Advice | Help receiving TV and radio",
+    "pageUrl": "https://www.bbc.co.uk/reception/"
+  },
+  {
+    "src": "https://www.bbc.co.uk/reception/sites/default/files/styles/more_help_block_big_thumb/public/2025-01/RA_no%20signal_0.jpg?itok\u003dvF_rBVy1",
+    "alt": "Image showing fuzzy screen with a frustrated lady holding a remote control ",
+    "pageTitle": "Welcome to BBC Reception Advice | Help receiving TV and radio",
+    "pageUrl": "https://www.bbc.co.uk/reception/"
+  },
+  {
+    "src": "https://www.bbc.co.uk/reception/sites/default/files/styles/more_help_block_big_thumb/public/2026-02/fm%20radio%20%282%29.jpg?itok\u003dJCOjCsI9",
+    "alt": "Image of black portable FM radio with silver button and a handle",
+    "pageTitle": "Welcome to BBC Reception Advice | Help receiving TV and radio",
+    "pageUrl": "https://www.bbc.co.uk/reception/"
+  },
+  {
+    "src": "https://www.bbc.co.uk/reception/sites/default/files/styles/more_help_block_big_thumb/public/2025-01/RA_red%20button_0_0.jpg?itok\u003dD0VR4oP7",
+    "alt": "Image showing BBC logo and a red button",
+    "pageTitle": "Welcome to BBC Reception Advice | Help receiving TV and radio",
+    "pageUrl": "https://www.bbc.co.uk/reception/"
+  },
+  {
+    "src": "https://www.bbc.co.uk/reception/sites/default/files/styles/more_help_block_big_thumb/public/2022-11/rain%20roof.jpg?itok\u003d5p027rB0",
+    "alt": "Rainy roof",
+    "pageTitle": "Welcome to BBC Reception Advice | Help receiving TV and radio",
+    "pageUrl": "https://www.bbc.co.uk/reception/"
+  },
+  {
+    "src": "https://www.bbc.co.uk/reception/sites/default/files/styles/more_help_block_big_thumb/public/2022-08/Matt%20Freeview2.png?itok\u003dhmT_FN98",
+    "alt": "Matt Taylor weather presenter",
+    "pageTitle": "Welcome to BBC Reception Advice | Help receiving TV and radio",
+    "pageUrl": "https://www.bbc.co.uk/reception/"
+  },
+  {
+    "src": "https://www.bbc.co.uk/reception/sites/default/files/inline-images/External%20water%20ingress%20%28003%29.jpg",
+    "alt": "External water ingress",
+    "pageTitle": "Welcome to BBC Reception Advice | Help receiving TV and radio",
+    "pageUrl": "https://www.bbc.co.uk/reception/"
+  },
+  {
+    "src": "https://www.bbc.co.uk/reception/sites/default/files/inline-images/Water%20ingress%20screw%20on%20v%20compression.png",
+    "alt": "Water ingress screw",
+    "pageTitle": "Welcome to BBC Reception Advice | Help receiving TV and radio",
+    "pageUrl": "https://www.bbc.co.uk/reception/"
+  },
+  {
+    "src": "https://www.bbc.co.uk/reception/sites/default/files/inline-images/amps2.jpg",
+    "alt": "amplifiers",
+    "pageTitle": "Welcome to BBC Reception Advice | Help receiving TV and radio",
+    "pageUrl": "https://www.bbc.co.uk/reception/"
+  },
+  {
+    "src": "https://www.bbc.co.uk/reception/sites/default/files/inline-images/Attenuator.jpg",
+    "alt": "Attenuator",
+    "pageTitle": "Welcome to BBC Reception Advice | Help receiving TV and radio",
+    "pageUrl": "https://www.bbc.co.uk/reception/"
+  },
+  {
+    "src": "https://www.bbc.co.uk/reception/sites/default/files/inline-images/image_0.png",
+    "alt": "BBC Radio 4 logo in Black and blue",
+    "pageTitle": "Welcome to BBC Reception Advice | Help receiving TV and radio",
+    "pageUrl": "https://www.bbc.co.uk/reception/"
+  },
+  {
+    "src": "https://www.bbc.co.uk/reception/sites/default/files/inline-images/radio%20aerials.jpg",
+    "alt": "Examples of radio aerials",
+    "pageTitle": "Welcome to BBC Reception Advice | Help receiving TV and radio",
+    "pageUrl": "https://www.bbc.co.uk/reception/"
+  },
+  {
+    "src": "https://www.bbc.co.uk/reception/sites/default/files/inline-images/car_1.jpg",
+    "alt": "car radio",
+    "pageTitle": "Welcome to BBC Reception Advice | Help receiving TV and radio",
+    "pageUrl": "https://www.bbc.co.uk/reception/"
+  },
+  {
+    "src": "https://www.bbc.co.uk/reception/sites/default/files/inline-images/car_0.jpg",
+    "alt": "car radio",
+    "pageTitle": "Welcome to BBC Reception Advice | Help receiving TV and radio",
+    "pageUrl": "https://www.bbc.co.uk/reception/"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/ed4d/live/4abb82a0-488c-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Daniel Radcliffe seen onstage during curtain call at \"Every Brilliant Thing\" Opening Night at Hudson Theatre on March 12, 2026 in New York City",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/86d7/live/83c2a210-488f-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Rose Byrne and Kelli O\u0027Hara stand for curtain call during \"Fallen Angels\" Broadway opening night at the Todd Haimes Theatre on April 19, 2026 in New York City. ",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/4e2a/live/4c506140-4503-11f0-bace-e1270fc31f5e.jpg",
+    "alt": "Nicole Scherzinger accepts Best Performance by an Actress in a Leading Role in a Musical award for Sunset Blvd. at the 78th Annual Tony Awards in New York. she is holding her award and is wearing a red strapless dress.",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/6ef4/live/1134e920-36a5-11f1-9d5c-8ba507d7dbde.jpg",
+    "alt": "Paddington Bear on the red carpet at the Olivier Awards",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/409c/live/ab848230-4ada-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Iris Duane of the Green Party of Scotland celebrates with other Green Party hopefuls while ballots are still being counted in Glasgow",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/60a2/live/7bfa1c10-cadc-11f0-a892-01d657345866.jpg",
+    "alt": "Sir David Attenborough being filmed in front of the sea and mountains for Life on Earth in 1979",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/af4f/live/8c892de0-4ac1-11f1-b55d-0f258dce1735.png",
+    "alt": "A composite image of 5 people  in flamboyant costumes at the Met gala. In the centre in a largest part of the image is a women in white  wearing a mask over her face",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b327/live/76b6ee00-4a38-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A person in protective clothing walks next to an ambulance during an evacuation operation of suspected hantavirus patients, following an outbreak on the cruise ship MV Hondius, in Praia, Cape Verde, May 6, 2026",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/2d4c/live/d268f6b0-4a1c-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "Two ladies are sat beside each other. The one on the left is wearing a mustard cardigan and has white wavy hair. The one on the right is wearing a pink collarless shirt and has blonde and brown hair. ",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/dd4d/live/992a5b50-494f-11f1-bd44-e578c5bd51ff.png",
+    "alt": "A pregnant woman stands in a garden with her hand on her belly. She has long, straight, dark hair and is wearing a matching top and trousers which are white with some patches of black. She also has a light brown hoodie on. ",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Daniel Radcliffe and Rose Byrne nominated for Tony Awards - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr5p3eyrg1eo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/228/cpsprodpb/9761/live/ede5f0e0-df51-11f0-a8dc-93c15fe68710.png",
+    "alt": "",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/fulham.18d9a9610c.svg",
+    "alt": "",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/afc-bournemouth.3e0ae7da8e.svg",
+    "alt": "",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/afc-bournemouth.3e0ae7da8e.svg",
+    "alt": "",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-city.e4f9593ae9.svg",
+    "alt": "",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg",
+    "alt": "",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/afc-bournemouth.3e0ae7da8e.svg",
+    "alt": "",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/9ef8/live/e107fb50-4aec-11f1-95d5-c35bb50319f8.jpg",
+    "alt": "Andoni Iraola",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/dbe9/live/e31a3480-48b2-11f1-ac78-2112837ce2aa.png",
+    "alt": "Fulham and Bournemouth club badges",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/3503/live/88312b20-4ad1-11f1-92c1-4f69e4cb55db.jpg",
+    "alt": "Alex Jimenez looks on during a Bournemouth match",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/fb3b/live/b3a324e0-1c9e-11f1-9120-a910fc22c6ac.png.webp",
+    "alt": "Ask Me Anything green banner",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/edc7/live/45c2a410-4aa1-11f1-ad34-01f832f4c917.jpg",
+    "alt": "Exeter Chiefs banner outside Sandy Park",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/7ad9/live/e558ab00-492f-11f1-a36a-6bbcbd5b2296.jpg.webp",
+    "alt": "Bournemouth players celebrating",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/60ae/live/d19b75f0-494a-11f1-ac78-2112837ce2aa.jpg.webp",
+    "alt": "Andoni Iraola",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/c043/live/ecb3f520-0913-11ef-82e8-cd354766a224.png.webp",
+    "alt": "Gossip graphic",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/9cd7/live/0cd6e4a0-72f1-11f0-af20-030418be2ca5.jpg.webp",
+    "alt": "Bournemouth fan\u0027s voice banner",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/c9c9/live/22b5f780-486a-11f1-804a-9d85b054b34f.jpg.webp",
+    "alt": "Simon Francis in 2020",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/7411/live/525134f0-67c4-11f0-af20-030418be2ca5.jpg.webp",
+    "alt": "Your Bournemouth opinions banner",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/2053/live/e493e670-47a5-11f1-a815-8703cc282724.jpg.webp",
+    "alt": " Alex Scott of Bournemouth dribbles away from Jefferson Lerma of Crystal Palace ",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/4df6/live/d8acc940-47ae-11f1-b55d-0f258dce1735.png.webp",
+    "alt": "Alex Scott touch map and pass map against Crystal Palace",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/9826/live/9f51f370-47ca-11f1-bf7a-052ee4fcc57e.jpg.webp",
+    "alt": "Simon Francis, Richard Hughes and Jay Mellette of Bournemouth during a training session at Vitality Stadium",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/435a/live/6cb56320-63e6-11f0-89ea-4d6f9851f623.jpg.webp",
+    "alt": "Bournemouth have your say banner",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/3328/live/fea60300-67cb-11f0-af20-030418be2ca5.jpg.webp",
+    "alt": "Your opinions graphic",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/44ac/live/5e3db330-4700-11f1-ac78-2112837ce2aa.png.webp",
+    "alt": "Premier League table (sixth to 15th place)",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/3ce0/live/51d406f0-7b52-11f0-a34f-318be3fb0481.jpg.webp",
+    "alt": "Match of the Day logo graphic",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/f141/live/c8ea01e0-0d06-11f1-b5e2-dd58fc65f0f6.jpg.webp",
+    "alt": "The pink BBC iPlayer logo on a black background",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/1a19/live/49b5d350-0d00-11f1-b5e2-dd58fc65f0f6.jpg.webp",
+    "alt": "The orange BBC Sounds logo against a black background",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/7705/live/bc082e10-4704-11f1-bd22-17beaec4bfbd.jpg.webp",
+    "alt": "Head Coaches Andoni Iraola of Bournemouth and Oliver Glasner of Crystal Palace",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/1a78/live/45bc5ba0-46f5-11f1-9217-a5b6a670d3f7.jpg",
+    "alt": "Junior Kroupi scores for Bournemouth",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/0117/live/eb1097a0-79b5-11f0-a34f-318be3fb0481.jpg.webp",
+    "alt": "Have your say banner",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/8f13/live/18722700-46e7-11f1-bd52-e755d604ece4.png.webp",
+    "alt": "Bournemouth XI: Petrovic, Jimenez, Hill, Senesi, Truffert, Scott, Adams, Rayan, Kroupi, Tavernier, Evanilson",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/a89b/live/1ff2c6b0-46e7-11f1-bd52-e755d604ece4.png.webp",
+    "alt": "Crystal Palace XI: Henderson, Riad, Lacroix, Canvot, Munoz, Devenny, Kamada, Lerma, Johnson, Strand Larsen, Pino",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/766d/live/68b3da30-8e3a-11f0-b391-6936825093bd.jpg.webp",
+    "alt": "A graphic showing players from all 20 Premier League clubs with the text: \"Follow the teams you care about. Sign in or create an account for the latest news, insight, expert opinion, fan views and stats, and to get notifications.\"",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/cd24/live/fd57cc70-816e-11ef-ad45-893aa022fcbc.jpg.webp",
+    "alt": "An image detailing how to follow your Premier League team on BBC Sport: \"On the app? Tap the bell icon to get news about your club sent to you. Signed in on a browser? Hit \u0027Follow\u0027 to stay up to date.",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/1a19/live/49b5d350-0d00-11f1-b5e2-dd58fc65f0f6.jpg.webp",
+    "alt": "The orange BBC Sounds logo against a black background",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/561d/live/fbee38e0-d1d4-11ef-87df-d575b9a434a4.jpg.webp",
+    "alt": "Chris Sutton smiling on a yellow and black background with \u0027Sutton\u0027s predictions\u0027 written below his face",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/6a6b/live/1b35a2d0-4531-11f1-ac78-2112837ce2aa.png.webp",
+    "alt": "A list of Bournemouth\u0027s past five results at home, all of which have been draws",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "AFC Bournemouth - Transfer news, results, fixtures, video and audio",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/teams/afc-bournemouth"
+  },
+  {
+    "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003d.aboutthebbc..static.aboutthebbc.whatwedo.\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[article]\u0026x8\u003d[reverb-4.0.0-nojs]\u0026x11\u003d[BBC_CORPORATE_PS]\u0026x12\u003d[]",
+    "alt": "",
+    "pageTitle": "What we do",
+    "pageUrl": "https://www.bbc.co.uk/aboutthebbc/whatwedo/"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0jf6wpk.jpg",
+    "alt": "",
+    "pageTitle": "What we do",
+    "pageUrl": "https://www.bbc.co.uk/aboutthebbc/whatwedo/"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400x225/p0jd0z2v.jpg",
+    "alt": "",
+    "pageTitle": "What we do",
+    "pageUrl": "https://www.bbc.co.uk/aboutthebbc/whatwedo/"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400x225/p074k9rc.jpg",
+    "alt": "",
+    "pageTitle": "What we do",
+    "pageUrl": "https://www.bbc.co.uk/aboutthebbc/whatwedo/"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400x225/p0jd0ydy.jpg",
+    "alt": "",
+    "pageTitle": "What we do",
+    "pageUrl": "https://www.bbc.co.uk/aboutthebbc/whatwedo/"
+  },
   {
     "src": "https://static.files.bbci.co.uk/elections/images/uk2026/election-logo-cutout-en.svg",
     "alt": "Election",
