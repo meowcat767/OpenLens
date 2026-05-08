@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 979,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#notable-changes-in-3-14-5",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:01:14.244174"
+  },
+  {
+    "id": 978,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.is_reserved",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty, the current directory is assumed: \u003e\u003e\u003e PurePath()\nPurePosixPath(\u0027.\u0027)\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Users/Ximénez\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027//server/share/file\u0027)\nPureWindow",
+    "scrapedAt": "2026-05-09 01:01:12.950181"
+  },
+  {
+    "id": 977,
+    "url": "https://github.com/python/cpython/issues/131591",
+    "title": "Implement PEP 768 – Safe external debugger interface for CPython · Issue #131591 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Implement PEP 768 – Safe external debugger interface for CPython #131591 New issue Copy link New issue Copy link Closed Closed Implement PEP 768 – Safe external debugger interface for CPython#131591 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description pablogsal opened on Mar 22, 2025 Issue body actions See PEP-768 Linked PRs gh-131591: Implement PEP 768 #131592 gh-131591: Implement PEP 768 #131937 gh-131591: Handle includes for iOS in remote_debugging.c #132050 gh-131591: Fix GENERATE_DEBUG_SECTION for clangcl on Windows #132112 gh-131591: Allow pdb to attach to a running process #132451 gh-131591: Add remote debugging attachment protocol documentation #132638 gh-131591: Execute the source and not the file to avoid locking it in Windows #132712 gh-131591: Reset RemoteDebuggerSuupport state after fork #132793 gh-131591: Check for remote debug in PyErr_CheckSignals #132853 gh-131591: Implement PEP 768 support for FAT mac binaries and 32 bit binaries #132892 gh-131591: Add tests for _PdbClient #132976 gh-131591: Add Py_ prefix to MAX_SCRIPT_PATH_SIZE; remove unprefixed struct tag #135924 gh-131591: Make --without-remote-debug work #135925 gh-131591: Document Py_REMOTE_DEBUG #135929 [3.14] gh-131591: Make --without-remote-debug work (GH-135925) #135931 [3.14] gh-131591: Add Py_ prefix to MAX_SCRIPT_PATH_SIZE; remove unprefixed struct tag (GH-135924) #135969 [3.14] gh-131591: Document Py_REMOTE_DEBUG (GH-135929) #136374 gh-131591: Fix syntax in remote debugger doc #137225 [3.14] gh-131591: fix formatting of remote debugger docs (GH-137225) #137874 gh-131591: Do not free page caches that weren\u0027t allocated #143205 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:01:11.761749"
+  },
+  {
+    "id": 976,
+    "url": "https://docs.python.org/license.html",
+    "title": "History and License — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | previous | Python » 3.14.5rc1 Documentation » History and License | Theme Auto Light Dark | History and License¶ History of the software¶ Python was created in the early 1990s by Guido van Rossum at Stichting Mathematisch Centrum (CWI, see https://www.cwi.nl) in the Netherlands as a successor of a language called ABC. Guido remains Python’s principal author, although it includes many contributions from others. In 1995, Guido continued his work on Python at the Corporation for National Research Initiatives (CNRI, see https://www.cnri.reston.va.us) in Reston, Virginia where he released several versions of the software. In May 2000, Guido and the Python core development team moved to BeOpen.com to form the BeOpen PythonLabs team. In October of the same year, the PythonLabs team moved to Digital Creations, which became Zope Corporation. In 2001, the Python Software Foundation (PSF, see https://www.python.org/psf/) was formed, a non-profit organization created specifically to own Python-related Intellectual Property. Zope Corporation was a sponsoring member of the PSF. All Python releases are Open Source (see https://opensource.org for the Open Source Definition). Historically, most, but not all, Python releases have also been GPL-compatible; the table below summarizes the various releases. Release Derived from Year Owner GPL-compatible? (1) 0.9.0 thru 1.2 n/a 1991-1995 CWI yes 1.3 thru 1.5.2 1.2 1995-1999 CNRI yes 1.6 1.5.2 2000 CNRI no 2.0 1.6 2000 BeOpen.com no 1.6.1 1.6 2001 CNRI yes (2) 2.1 2.0+1.6.1 2001 PSF no 2.0.1 2.0+1.6.1 2001 PSF yes 2.1.1 2.1+2.0.1 2001 PSF yes 2.1.2 2.1.1 2002 PSF yes 2.1.3 2.1.2 2002 PSF yes 2.2 and above 2.1.1 2001-now PSF yes Note GPL-compatible doesn’t mean that we’re distributing Python under the GPL. All Python licenses, unlike the GPL, let you distribute a modified version without making your changes open source. The GPL-compatible licenses make it possible to combine Python with other software that is released under the GPL; the others don’t. According to Richard Stallman, 1.6.1 is not GPL-compatible, because its license has a choice of law clause. According to CNRI, however, Stallman’s lawyer has told CNRI’s lawyer that 1.6.1 is “not incompatible” with the GPL. Thanks to the many outside volunteers who have worked under Guido’s direction to make these releases possible. Terms and conditions for accessing or otherwise using Python¶ Python software and documentation are licensed under the Python Software Foundation License Version 2. Starting with Python 3.8.6, examples, recipes, and other code in the documentation are dual licensed under the PSF License Version 2 and the Zero-Clause BSD license. Some software incorporated into Python is under different licenses. The licenses are listed with code falling under that license. See Licenses and Acknowledgements for Incorporated Software for an incomplete list of these licenses. PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2¶ 1. This LICENSE AGREEMENT is between the Python Software Foundation (\"PSF\"), and\n   the Individual or Organization (\"Licensee\") accessing and otherwise using this\n   software (\"Python\") in source or binary form and its associated documentation.\n\n2. Subject to the terms and conditions of this License Agreement, PSF hereby\n   grants Licensee a nonexclusive, royalty-free, world-wide license to reproduce,\n   analyze, test, perform and/or display publicly, prepare derivative works,\n   distribute, and otherwise use Python alone or in any derivative\n   version, provided, however, that PSF\u0027s License Agreement and PSF\u0027s notice of\n   copyright, i.e., \"Copyright © 2001 Python Software Foundation; All Rights\n   Reserved\" are retained in Python alone or in any derivative version\n   prepared by Licensee.\n\n3. In the event Licensee prepares a derivative work that is based on or\n   incorporates Python or any part thereof, and wants to make the\n   derivative work available to others as provided herein, then Licensee hereby\n   agrees to include in any such work a brief summary of the changes made to Python.\n\n4. PSF is making Python available to Licensee on an \"AS IS\" basis.\n   PSF MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED.  BY WAY OF\n   EXAMPLE, BUT NOT LIMITATION, PSF MAKES NO AND DISCLAIMS ANY REPRESENTATION OR\n   WARRANTY OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE\n   USE OF PYTHON WILL NOT INFRINGE ANY THIRD PARTY RIGHTS.\n\n5. PSF SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF PYTHON\n   FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS AS A RESULT OF\n   MODIFYING, DISTRIBUTING, OR OTHERWISE USING PYTHON, OR ANY DERIVATIVE\n   THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF.\n\n6. This License Agreement will automatically terminate upon a material breach of\n   its terms and conditions.\n\n7. Nothing in this License Agreement shall be deemed to create any relationship\n   of agency, partnership, or joint venture between PSF and Licensee.  This",
+    "scrapedAt": "2026-05-09 01:01:09.476918"
+  },
+  {
+    "id": 975,
+    "url": "https://github.com/python/cpython/issues/122875",
+    "title": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Contributor Wulian233 commented Aug 10, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page. Same inspect.iscoroutinefunction, we don\u0027t need two different functions to do the same thing. Issue: Deprecate asyncio.iscoroutinefunction #122858 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Deprecate :func:asyncio.iscoroutinefunction in favor of :func:`insp… … 1036f01 …ect.iscoroutinefunction`. Wulian233 requested review from 1st1, asvetlov, cjw296, gvanrossum, kumaraditya303 and willingc as code owners August 10, 2024 02:25 bedevere-app Bot mentioned this pull request Aug 10, 2024 Deprecate asyncio.iscoroutinefunction #122858 Closed bedevere-app Bot added the awaiting review label Aug 10, 2024 Wulian233 added 3 commits August 10, 2024 10:27 gh:122875 228d2f2 typo c831bb1 fix d48ed66 Wulian233 marked this pull request as draft August 10, 2024 02:52 bedevere-app Bot removed the awaiting review label Aug 10, 2024 Wulian233 added 2 commits August 10, 2024 10:55 fix 7aae62f fix ae0b8f0 Copy link Copy Markdown Contributor Author Wulian233 commented Aug 10, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page. After my many fix, maybe it is normal for the Docs workflow to fail because the deprecated function asyncio.iscoroutinefunctiondoes not have a corresponding document page introduction But I don\u0027t know how to solve this problem. Delete whatnew/3.14.rst: func: iscoroutinefunctiondoes? (Solved) All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Wulian233 marked this pull request as ready for review August 10, 2024 04:15 bedevere-app Bot added the awaiting review label Aug 10, 2024 kumaraditya303 reviewed Aug 10, 2024 View reviewed changes Comment thread Doc/whatsnew/3.14.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. kumaraditya303 reviewed Aug 10, 2024 View reviewed changes Comment thread Doc/whatsnew/3.14.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Apply suggestions from code review 62b8d3b kumaraditya303 reviewed Aug 10, 2024 View reviewed changes Comment thread Lib/asyncio/unix_events.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. cjw296 removed their request for review August 10, 2024 09:31 Wulian233 added 2 commits August 10, 2024 19:00 use coroutines.iscoroutine and coroutines._iscoroutinefunction 750d294 import coroutines 78655aa kumaraditya303 reviewed Aug 10, 2024 View reviewed changes Comment thread Misc/NEWS.d/next/Library/2024-08-10-10-21-44.gh-issue-122858.ZC1rJD.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Update Misc/NEWS.d/next/Library/2024-08-10-10-21-44.gh-issue-122858.Z… … 58013d5 …C1rJD.rst kumaraditya303 reviewed Aug 10, 2024 View reviewed changes Comment thread Lib/unittest/mock.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. from inspect import iscoroutinefunction 1be0d66 12 hidden items Load more… Wulian233 added 2 commits August 11, 2024 07:28 finish 231cfb3 test_pep492 c1f2743 sobolevn reviewed Aug 11, 2024 View reviewed changes Copy link Copy Markdown Member sobolevn left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Please, use at least one test that ensures that the function is deprecated (which does not ignore the warnings). Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Contributor Author Wulian233 commented Aug 11, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page. This is the function that test this function c1f2743 If not have @ignore_warnings(category\u003dDeprecationWarning) this will cause the workflow test to fail (DeprecationWarning). Do you mean to add some kind of tip below, without causing failure? @ignore_warnings(category\u003dDeprecationWarning)\ndef test_iscoroutinefunction(self):\n    print(\"asyncio.iscoroutinefunction is deprecated, use inspect.iscoroutinefunction() instead\")\n    def fn(): ",
+    "scrapedAt": "2026-05-09 01:01:08.17115"
+  },
+  {
     "id": 974,
     "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_SPECIAL",
     "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
@@ -6508,26 +6543,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 975,
-    "url": "https://github.com/python/cpython/issues/122875"
-  },
-  {
-    "id": 976,
-    "url": "https://docs.python.org/license.html"
-  },
-  {
-    "id": 977,
-    "url": "https://github.com/python/cpython/issues/131591"
-  },
-  {
-    "id": 978,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.is_reserved"
-  },
-  {
-    "id": 979,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#notable-changes-in-3-14-5"
   },
   {
     "id": 980,
@@ -163495,10 +163510,1320 @@ window.searchData = [
     "id": 145156,
     "url": "https://docs.python.org/3/library/importlib.metadata.html#distributions",
     "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145430,
+    "url": "https://github.com/python/cpython/pull/122875#pullrequestreview-2231406159",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145431,
+    "url": "https://github.com/python/cpython/pull/122875#ref-pullrequest-3661820456",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145433,
+    "url": "https://github.com/python/cpython/pull/122875#ref-commit-a36e923",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145434,
+    "url": "https://github.com/python/cpython/pull/122875/files/ae0b8f04a17dd745bc9ac3a96047fda26d8e1e42",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145435,
+    "url": "https://github.com/python/cpython/pull/122875#event-13838468645",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145436,
+    "url": "https://github.com/python/cpython/pull/122875#event-13826923905",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145437,
+    "url": "https://github.com/python/cpython/pull/122875#event-13826755844",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145439,
+    "url": "https://github.com/python/cpython/pull/122875#event-13826800187",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145440,
+    "url": "https://github.com/python/cpython/pull/122875#commits-pushed-750d294",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145441,
+    "url": "https://github.com/python/cpython/pull/122875#ref-pullrequest-2636219141",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145442,
+    "url": "https://github.com/python/cpython/pull/122875#ref-pullrequest-4172806590",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145443,
+    "url": "https://github.com/servusdei2018",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145444,
+    "url": "https://github.com/python/cpython/pull/122875#ref-pullrequest-3485560450",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145445,
+    "url": "https://github.com/python/cpython/pull/122875/commits/228d2f2c7ad1290676a31105a1bf6b0d3f11d611",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145446,
+    "url": "https://github.com/python/cpython/pull/122875/commits/1036f01516112f77eff2397b6b8042de0e75a518",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145447,
+    "url": "https://github.com/python/cpython/pull/122875#commits-pushed-7aae62f",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145448,
+    "url": "https://github.com/python/cpython/pull/122875#ref-commit-1efe72f",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145449,
+    "url": "https://github.com/python/cpython/pull/122875/commits/62b8d3bb720b077ca03a62102ac6756a5c4d4d67",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145450,
+    "url": "https://github.com/python/cpython/pull/122875/commits/c1f2743db688e4fa58f9d099320000a629267a8c",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145451,
+    "url": "https://github.com/python/cpython/pull/122875/files/78655aa319ad8b5fffb7c5ff698d845cc962c4fa#diff-b4b9130870505530315dd91f79ea957184e7524dcf248b5e28b94fad79819848",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145452,
+    "url": "https://github.com/python/cpython/pull/122875/commits/1be0d6685fba5f3c4724b029c34fb1e019553341",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145454,
+    "url": "https://github.com/python/cpython/pull/122875#event-13826923970",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145455,
+    "url": "https://github.com/python/cpython/pull/122875#pullrequestreview-2231778858",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145456,
+    "url": "https://github.com/python/cpython/pull/122875#event-13826755678",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145457,
+    "url": "https://github.com/python/cpython/pull/122875/commits/c831bb1ce815e9d998c098a10807ab10d31f7ba5",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145458,
+    "url": "https://github.com/python/cpython/pull/122875/commits/d8c86c6406e88cf2473a3b557b5e22d9ff2b6214",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145459,
+    "url": "https://github.com/smithy-lang/smithy-python/pull/608",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145461,
+    "url": "https://github.com/python/cpython/commit/c1f2743db688e4fa58f9d099320000a629267a8c",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145463,
+    "url": "https://github.com/python/cpython/pull/122875",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145464,
+    "url": "https://github.com/pydanny/cached-property/pull/359",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145465,
+    "url": "https://github.com/python/cpython/pull/122875#ref-pullrequest-2474281729",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145467,
+    "url": "https://github.com/canbula/ParallelProgramming/pull/1075",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145468,
+    "url": "https://github.com/python/cpython/pull/122875/files/62b8d3bb720b077ca03a62102ac6756a5c4d4d67#diff-59eb90ea71c294e306140c76e079c867bcd69a6faf7f96831ce7152eb6e37fc4",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145469,
+    "url": "https://github.com/python/cpython/pull/122875#ref-commit-cb1f82b",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145470,
+    "url": "https://github.com/python/typeshed/pull/12558",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145473,
+    "url": "https://github.com/blhsing/cpython/commit/2e65db5e08a230e7df7cc5e044581457f275c40b",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145475,
+    "url": "https://github.com/litestar-org/litestar/pull/4405",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145476,
+    "url": "https://github.com/open-telemetry/opentelemetry-python/issues/4789",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145478,
+    "url": "https://github.com/python/cpython/pull/122875#event-13826800089",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145480,
+    "url": "https://github.com/python/cpython/pull/122875/commits/d48ed666cacfc30216fbef2e4a5a308f8d34a318",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145483,
+    "url": "https://github.com/commonism",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145485,
+    "url": "https://github.com/python/cpython/pull/122875#ref-issue-4040710748",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145486,
+    "url": "https://github.com/python/cpython/pull/122875#ref-pullrequest-3732677579",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145487,
+    "url": "https://github.com/python/cpython/pull/122875#issuecomment-2282807868",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145488,
+    "url": "https://github.com/python/cpython/pull/122875/commits/750d2943a3bf04f0cf4323f9f26ef0d02d2abbb8",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145490,
+    "url": "https://github.com/python/cpython/pull/122875#issuecomment-2282712393",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145491,
+    "url": "https://github.com/jonathan343",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145492,
+    "url": "https://github.com/python/cpython/pull/122875/commits/58013d5e24299d5990307e36dc658ea23e110293",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145493,
+    "url": "https://github.com/AdamWill/cached-property/commit/cb1f82b160e053819f41c87fcb41a48d4d44b0ea",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145494,
+    "url": "https://github.com/python/cpython/pull/122875#pullrequestreview-2231424330",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145495,
+    "url": "https://github.com/python/cpython/pull/122875#pullrequestreview-2231424177",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145496,
+    "url": "https://github.com/python/cpython/pull/122875/files/58013d5e24299d5990307e36dc658ea23e110293#diff-347d0254250a1ab7ab8e31b405e2c35b74cd2838df4ee74f1b658a459eb91f1a",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145498,
+    "url": "https://github.com/python/cpython/pull/122875/files/58013d5e24299d5990307e36dc658ea23e110293",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145499,
+    "url": "https://github.com/python/cpython/pull/122875#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145500,
+    "url": "https://github.com/python/cpython/pull/122875#ref-issue-3316458098",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145501,
+    "url": "https://github.com/edgarrmondragon",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145502,
+    "url": "https://github.com/python/cpython/pull/122875#pullrequestreview-2231405705",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145503,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F122875",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145504,
+    "url": "https://github.com/cjw296",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145505,
+    "url": "https://github.com/tox-dev/filelock/issues/431",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145506,
+    "url": "https://github.com/python/cpython/pull/122875/commits/ae0b8f04a17dd745bc9ac3a96047fda26d8e1e42",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145507,
+    "url": "https://github.com/python/cpython/pull/122875#ref-pullrequest-3762338655",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145508,
+    "url": "https://github.com/python/cpython/pull/122875/commits/231cfb3bb6429ae3fbecb3615e9fe8506daaa4e7",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145509,
+    "url": "https://github.com/python/typeshed/pull/15176",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145510,
+    "url": "https://github.com/python/cpython/pull/122875#ref-commit-2e65db5",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145511,
+    "url": "https://github.com/python/cpython/pull/122875/files/c1f2743db688e4fa58f9d099320000a629267a8c",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145512,
+    "url": "https://github.com/MagicStack/uvloop/issues/731",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145513,
+    "url": "https://github.com/blhsing",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145515,
+    "url": "https://github.com/python/cpython/pull/122875/files/ae0b8f04a17dd745bc9ac3a96047fda26d8e1e42#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145516,
+    "url": "https://github.com/python/cpython/pull/122875#event-13836081615",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145517,
+    "url": "https://github.com/aio-libs/aiohttp/pull/10634",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145518,
+    "url": "https://github.com/python/cpython/pull/122875/files/1be0d6685fba5f3c4724b029c34fb1e019553341",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145520,
+    "url": "https://github.com/python/cpython/pull/122875#event-13836200592",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145521,
+    "url": "https://github.com/python/cpython/pull/122875/files/d8c86c6406e88cf2473a3b557b5e22d9ff2b6214",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145522,
+    "url": "https://github.com/paultiq",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145523,
+    "url": "https://github.com/python/cpython/pull/122875#commits-pushed-228d2f2",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145525,
+    "url": "https://github.com/python/cpython/pull/122875#ref-issue-2458007086",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145526,
+    "url": "https://github.com/python/cpython/pull/122875#pullrequestreview-2231405771",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145527,
+    "url": "https://github.com/python/cpython/pull/122875#ref-issue-3566536678",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145528,
+    "url": "https://github.com/python/cpython/pull/122875/files/78655aa319ad8b5fffb7c5ff698d845cc962c4fa",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145529,
+    "url": "https://github.com/aio-libs/aiohttp/pull/10663",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145530,
+    "url": "https://github.com/fedora-infra/fedora-messaging/pull/558",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145531,
+    "url": "https://github.com/AdamWill",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145532,
+    "url": "https://github.com/aio-libs/aiohttp/pull/10664",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145533,
+    "url": "https://github.com/python/cpython/pull/122875#pullrequestreview-2231844753",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145534,
+    "url": "https://github.com/python/cpython/pull/122875/commits/7aae62f7e34a7e2bf9192b8bd5dbdfff33d1888a",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145535,
+    "url": "https://github.com/MertYksl03",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145537,
+    "url": "https://github.com/jenshnielsen",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145538,
+    "url": "https://github.com/python/cpython/pull/122875#issue-2458857243",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145539,
+    "url": "https://github.com/python/cpython/pull/122875/commits/78655aa319ad8b5fffb7c5ff698d845cc962c4fa",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145540,
+    "url": "https://github.com/python/cpython/pull/122875/files/62b8d3bb720b077ca03a62102ac6756a5c4d4d67",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145541,
+    "url": "https://github.com/python/cpython/pull/122875#event-13836073532",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145542,
+    "url": "https://github.com/python/cpython/pull/122875#event-13827483911",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145545,
+    "url": "https://github.com/jenshnielsen/opentelemetry-python/commit/a36e9234616e6d19c3c267627caea71f73b80f35",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145546,
+    "url": "https://github.com/python/cpython/commit/bc9d92c67933917b474e61905451c6408c68e71d",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145547,
+    "url": "https://github.com/python/cpython/pull/122875#event-13836200294",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145548,
+    "url": "https://github.com/python/cpython/pull/122875#issuecomment-2279057867",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145549,
+    "url": "https://github.com/python/cpython/blob/0fd97e46c75bb3060485b796ca597b13af7e6bec/.github/CODEOWNERS#L20",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145550,
+    "url": "https://github.com/python/cpython/pull/122875#commits-pushed-231cfb3",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145551,
+    "url": "https://github.com/layday/aiohttp/commit/1efe72f2f8b8051e231136102bd86aeae33da700",
+    "parentUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "id": 145552,
+    "url": "https://www.wide.ad.jp/",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145554,
+    "url": "https://docs.python.org/3/library/posix.html#module-posix",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145556,
+    "url": "https://docs.python.org/3/license.html#cfuhash",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145557,
+    "url": "https://docs.python.org/3/license.html#licenses-and-acknowledgements-for-incorporated-software",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145559,
+    "url": "https://docs.python.org/3/license.html#openssl",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145560,
+    "url": "https://docs.python.org/3/license.html#asyncio",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145563,
+    "url": "https://docs.python.org/3/license.html#cnri-license-agreement-for-python-1-6-1",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145567,
+    "url": "https://docs.python.org/3/license.html#terms-and-conditions-for-accessing-or-otherwise-using-python",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145568,
+    "url": "https://docs.python.org/3/license.html#libmpdec",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145569,
+    "url": "https://docs.python.org/3/license.html#xml-remote-procedure-calls",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145572,
+    "url": "https://docs.python.org/3/license.html#w3c-c14n-test-suite",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145573,
+    "url": "http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/emt19937ar.html",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145574,
+    "url": "https://docs.python.org/3/license.html#sockets",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145575,
+    "url": "https://docs.python.org/3/license.html#expat",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145577,
+    "url": "https://docs.python.org/3/license.html#beopen-com-license-agreement-for-python-2-0",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145578,
+    "url": "https://github.com/freebsd/freebsd-src/blob/main/sys/kern/subr_smr.c",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145579,
+    "url": "https://docs.python.org/3/license.html#global-unbounded-sequences-gus",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145580,
+    "url": "https://docs.python.org/3/license.html#select-kqueue",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145581,
+    "url": "https://docs.python.org/3/license.html#",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145582,
+    "url": "https://docs.python.org/3/license.html#test-epoll",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145583,
+    "url": "https://docs.python.org/3/license.html#execution-tracing",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145584,
+    "url": "https://docs.python.org/3/license.html#mersenne-twister",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145585,
+    "url": "https://docs.python.org/3/license.html#siphash24",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145587,
+    "url": "https://www.w3.org/TR/xml-c14n2-testcases/",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145588,
+    "url": "https://web.archive.org/web/20220517033456/http://www.netlib.org/fp/dtoa.c",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145589,
+    "url": "https://docs.python.org/3/license.html#zero-clause-bsd-license-for-code-in-the-python-documentation",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145591,
+    "url": "https://docs.python.org/3/license.html#libffi",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145592,
+    "url": "https://docs.python.org/3/license.html#cookie-management",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145593,
+    "url": "https://docs.python.org/3/license.html#mimalloc",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145595,
+    "url": "https://docs.python.org/3/library/test.html#module-test",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145597,
+    "url": "https://docs.python.org/3/license.html#otherlicenses",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145598,
+    "url": "https://docs.python.org/3/license.html#asynchronous-socket-services",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145599,
+    "url": "https://docs.python.org/3/license.html#strtod-and-dtoa",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145603,
+    "url": "https://docs.python.org/3/library/http.cookies.html#module-http.cookies",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145605,
+    "url": "https://www.cnri.reston.va.us",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145607,
+    "url": "https://docs.python.org/3/license.html#history-of-the-software",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145608,
+    "url": "https://docs.python.org/3/license.html#bsd0",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145609,
+    "url": "https://docs.python.org/3/license.html#zstandard-bindings",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145610,
+    "url": "https://docs.python.org/3/library/trace.html#module-trace",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145616,
+    "url": "https://docs.python.org/3/license.html#python-software-foundation-license-version-2",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145617,
+    "url": "https://docs.python.org/3/license.html#cwi-license-agreement-for-python-0-9-0-through-1-2",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145618,
+    "url": "https://docs.python.org/3/license.html#uuencode-and-uudecode-functions",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145620,
+    "url": "https://github.com/Rogdham/pyzstd/",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145621,
+    "url": "https://www.cwi.nl",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145622,
+    "url": "https://opensource.org",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145623,
+    "url": "https://docs.python.org/3/library/hashlib.html#module-hashlib",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145624,
+    "url": "https://github.com/python/cpython/blob/main/Doc/license.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145626,
+    "url": "https://docs.python.org/3/license.html#zlib",
+    "parentUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "id": 145628,
+    "url": "https://github.com/python/cpython/pull/131937",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145629,
+    "url": "https://github.com/python/cpython/pull/135931",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145630,
+    "url": "https://github.com/python/cpython/pull/131592",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145633,
+    "url": "https://github.com/python/cpython/pull/137874",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145634,
+    "url": "https://github.com/python/cpython/issues/131591#top",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145635,
+    "url": "https://github.com/python/cpython/issues/131591#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145636,
+    "url": "https://github.com/python/cpython/pull/143205",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145638,
+    "url": "https://github.com/python/cpython/pull/135929",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145640,
+    "url": "https://github.com/python/cpython/pull/132712",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145641,
+    "url": "https://github.com/python/cpython/pull/132976",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145642,
+    "url": "https://github.com/python/cpython/pull/135924",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145643,
+    "url": "https://github.com/python/cpython/pull/132638",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145644,
+    "url": "https://github.com/python/cpython/pull/135925",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145645,
+    "url": "https://github.com/python/cpython/pull/135969",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145646,
+    "url": "https://github.com/python/cpython/issues/131591#issue-2940613569",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145647,
+    "url": "https://github.com/python/cpython/pull/132793",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145648,
+    "url": "https://github.com/python/cpython/pull/132892",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145649,
+    "url": "https://github.com/python/cpython/pull/132112",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145650,
+    "url": "https://peps.python.org/768",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145651,
+    "url": "https://github.com/python/cpython/pull/132451",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145652,
+    "url": "https://github.com/python/cpython/pull/132853",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145653,
+    "url": "https://github.com/python/cpython/pull/137225",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145655,
+    "url": "https://github.com/python/cpython/pull/136374",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 145656,
+    "url": "https://github.com/python/cpython/pull/132050",
+    "parentUrl": "https://github.com/python/cpython/issues/131591"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#notable-changes-in-3-14-5"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#notable-changes-in-3-14-5"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.is_reserved"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.is_reserved"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.is_reserved"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@pablogsal",
+    "pageTitle": "Implement PEP 768 – Safe external debugger interface for CPython · Issue #131591 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@pablogsal",
+    "pageTitle": "Implement PEP 768 – Safe external debugger interface for CPython · Issue #131591 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "History and License — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "History and License — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/license.html"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d80\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d48\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d80\u0026u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d60\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d60\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d40\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d60\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/632049?s\u003d40\u0026u\u003d9fcc24b2d4d0475b898fde0782ec8b08c5a72caf\u0026v\u003d4",
+    "alt": "@cjw296",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d60\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d40\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d60\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d60\u0026v\u003d4",
+    "alt": "sobolevn",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d48\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d80\u0026u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d80\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d40\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d60\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d40\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d40\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d40\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d40\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6724692?s\u003d40\u0026v\u003d4",
+    "alt": "@blhsing",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/916551?s\u003d40\u0026v\u003d4",
+    "alt": "@AdamWill",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/916551?s\u003d40\u0026v\u003d4",
+    "alt": "@AdamWill",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/31134424?s\u003d40\u0026u\u003de8afd95a97b5556c467d1be27788950e67378ef1\u0026v\u003d4",
+    "alt": "@layday",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/104510378?s\u003d40\u0026v\u003d4",
+    "alt": "@paultiq",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16805946?s\u003d40\u0026v\u003d4",
+    "alt": "@edgarrmondragon",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/548266?s\u003d40\u0026v\u003d4",
+    "alt": "@jenshnielsen",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/548266?s\u003d40\u0026v\u003d4",
+    "alt": "@jenshnielsen",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/43360731?s\u003d40\u0026v\u003d4",
+    "alt": "@jonathan343",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37554478?s\u003d40\u0026v\u003d4",
+    "alt": "@servusdei2018",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/47272787?s\u003d40\u0026v\u003d4",
+    "alt": "@donbarbos",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/164513?s\u003d40\u0026v\u003d4",
+    "alt": "@commonism",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/148434218?s\u003d40\u0026v\u003d4",
+    "alt": "@MertYksl03",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d40\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d40\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/239003?s\u003d40\u0026v\u003d4",
+    "alt": "@1st1",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/356399?s\u003d40\u0026v\u003d4",
+    "alt": "@asvetlov",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2894642?s\u003d40\u0026v\u003d4",
+    "alt": "@gvanrossum",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2680980?s\u003d40\u0026v\u003d4",
+    "alt": "@willingc",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d52\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d52\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d52\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "gh-122858: Deprecate `asyncio.iscoroutinefunction` by Wulian233 · Pull Request #122875 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122875"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
