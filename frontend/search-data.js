@@ -1,5 +1,12 @@
 window.searchData = [
   {
+    "id": 33,
+    "url": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb",
+    "title": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "content": "The Met Gala hype returned this year and so did a flurry of viral AI celeb outfits. The annual fundraiser for New York’s Metropolitan Museum of Art’s Costume Institute gives guests the chance to dress up in more creative ways than usual. In 2026, the theme was costume art and socials are full of famous faces like Beyoncé and Madonna in elaborate outfits inspired by well-known masterpieces. Image caption, This AI image of Katy Perry at the 2024 Met Gala was one of the first to make headlines Why does the Met Gala attract so much AI? Perhaps due to the more creative looks on show, this is one event where AI-generated images of stars apparently making their big entrance in over-the-top outfits can easily go viral. One of the first viral images featured the singer Katy Perry. Posted in 2024, the image was found to be a fake when it turned out Katy wasn’t even at the event that year, and the carpet in the background was one used at the 2018 Gala. As AI becomes more sophisticated, so do the images of famous people. BBC Bitesize Other Side of the Story found some of the most popular Met Gala AI stories. So how can you tell the real from the fake? Was Kendall Jenner really dressed as a statue? Well, yes and no. Model Kendall Jenner wore a gown to the 2026 Met Gala that was inspired by a Greek statue which can be found at the Louvre in Paris. Image caption, Kendall Jenner did attend the 2026 Met Gala in a sculpture-inspired outfit - but not in full body make-up as this AI image suggests While her dress reflected the form of a sculpture, one AI image shows Kendall in full body make-up and looking like an actual statue. This is an example of disinformation, taking elements of the truth but knowingly sharing a fake image. Although it probably wasn’t intended as anything more than a bit of fun, it’s still important to know the difference. A head-to-toe statue outfit is not an impossible look to achieve and the Met Gala had looks that were similar - model Heidi Klum did attend as a full-on famous sculpture - but a reverse image search will show that this photo of Kendall was not from the event. This is great thing to have in your fact-checking tool kit as reverse image searches dig deep into the source of a picture. If this was a genuine photo of Kendall, it would trace back to her official socials, newspaper and magazine websites and photo agencies. Did Dua Lipa go to the Met Gala? As one of the most famous singers on the planet, it would be understandable that Dua Lipa was on the Met Gala guest list - especially in a dress inspired by the famous image of Venus by the artist Botticelli. Image caption, Dua Lipa may be striking a pose in this picture - but the singer wasn\u0027t even at the Met Gala this year Except, Dua wasn’t there. Although she and her fiance Callum Turner did go to the 2025 Gala together, they were elsewhere this year. A quick check of Dua’s official Instagram account showed posts from a trip to the Danish capital Copenhagen that were shared on the day of the Gala itself. Their trip was also featured on reputable news websites. Although they may not have been taken on the day they were posted, it’s possible that the couple were still in Denmark on the day the Met Gala took place - around 3,800 miles away! That would have made it very tricky for Dua to make her entrance in the art-inspired gown. If you use reliable sources when looking into a story - such as Dua’s official blue-ticked Instagram account - it helps to identify fake news. Did Lewis Hamilton go from the Miami Grand Prix to the Met Gala? One way of finding out if an image is genuine or not is to do some background research on the people featured. For example, this image shows Formula 1 driver Lewis Hamilton in attendance at this year’s Met Gala in a suit inspired by Vincent Van Gogh’s famous Sunflowers paintings. However - like Dua Lipa - he wasn’t at the event either. Image caption, Did Lewis Hamilton attend the Met Gala dressed as Vincent Van Gogh\u0027s Sunflowers? No, he didn\u0027t The previous evening he had raced in the Miami Grand Prix, finishing sixth. Although it wouldn’t have been impossible for him to be at the Met Gala the next day, it would have been a fast turnaround from event one to the other. Another reason Lewis may have featured in Met Gala AI is that he was one of the chairpersons of the event in 2025, so he has an existing link. It’s always important to check your facts, something journalists do on every story. A reporter would also check Lewis’s official Instagram account or a photo agency that covered the Met Gala to see if there any shots of him in attendance - which there aren’t. How to tell the real from the fake With AI images and videos appearing on Instagram, TikTok and other platforms, it can be confusing knowing which photos of the Met Gala are genuine. A good way to be sure is going straight to the official source. The Metropolitan Museum of Art which hosts the Gala has its own verified Instagram account sharing genuine im",
+    "scrapedAt": "2026-05-08 22:16:34.700616"
+  },
+  {
     "id": 32,
     "url": "https://www.bbc.co.uk/iplayer/watchlist",
     "title": "Watchlist - BBC iPlayer",
@@ -222,10 +229,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-08 22:14:32.985064"
-  },
-  {
-    "id": 33,
-    "url": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
   },
   {
     "id": 34,
@@ -5202,10 +5205,102 @@ window.searchData = [
   {
     "id": 4223,
     "url": "https://session.bbc.co.uk/session?action\u003dregister\u0026ptrt\u003dhttps%3A%2F%2Fwww.bbc.co.uk%2Fiplayer%2Fwatchlist\u0026context\u003diplayer\u0026userOrigin\u003diplayer"
+  },
+  {
+    "id": 4224,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zxhcywx"
+  },
+  {
+    "id": 4225,
+    "url": "https://www.bbc.co.uk/bitesize/articles/z6s4239"
+  },
+  {
+    "id": 4226,
+    "url": "https://www.bbc.co.uk/bitesize/groups/c0rx3447znvt"
+  },
+  {
+    "id": 4227,
+    "url": "https://www.bbc.co.uk/bitesize/articles/z8xq9ty"
+  },
+  {
+    "id": 4228,
+    "url": "https://www.bbc.co.uk/bitesize/articles/z3hhvj6"
+  },
+  {
+    "id": 4229,
+    "url": "https://www.bbc.co.uk/bitesize/articles/z63wwty"
+  },
+  {
+    "id": 4230,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zqr7xbk"
+  },
+  {
+    "id": 4231,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zfw9ywx#zbmjrmn"
+  },
+  {
+    "id": 4232,
+    "url": "https://www.bbc.co.uk/teach/class-clips-video/articles/zw677yc"
+  },
+  {
+    "id": 4233,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zdxj96f"
+  },
+  {
+    "id": 4234,
+    "url": "https://www.bbc.co.uk/sport/formula1/articles/cx21n879zlxo"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0njdrq1.jpg",
+    "alt": "An AI image of Katy Perry at the 2024 Met Gala",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0njd8s6.jpg",
+    "alt": "An AI image of Kendall Jenner in full statue make-up at the 2026 Met Gala",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0njd94p.jpg",
+    "alt": "An AI image of Dua Lipa attending the Met Gala in a gown inspired by Botticelli\u0027s Venus",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0njd9kb.jpg",
+    "alt": "An AI image of Lewis Hamilton at the Met Gala in a suit inspired by Van Gogh\u0027s Sunflowers painting",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0ct65y6.png",
+    "alt": "This is a decorative purple line to separate and organise content on the page.",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0n7b9r5.jpg",
+    "alt": "Is gravity going to ‘switch off’ for seven seconds this summer?",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0nhl9cf.jpg",
+    "alt": "Elections: Debunking the myths and claims",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0km9l6p.png",
+    "alt": "Back to our homepage",
+    "pageTitle": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
   {
     "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003diplayer.tv.watchlist.page\u0026x1\u003d[page]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[list-personalised-active]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[iplayer]\u0026x12\u003d[iplayer]",
     "alt": "",
