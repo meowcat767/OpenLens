@@ -1,5 +1,82 @@
 window.searchData = [
   {
+    "id": 156,
+    "url": "https://www.java.com/en/download/help/index.html",
+    "title": "Java Help Center",
+    "content": "Help Resources Installing Java Remove older versions Disable Java Using Java General questions Security Support options Support Handbook Java Help Center Welcome to the Java.com Help Center where we describe solutions for issues you might encounter when downloading and using Java on your computer. We track the most frequently reported issues and error codes and provide answers for them in this section. Top Developer - Java Security Manifest Changes in the Browser Why is the Add button on the Exception Site List grayed out? Error message: Java Platform SE Binary has stopped working Java Plug-in in IE mode on Microsoft Edge Browser Why am I asked to install Java even after installing the latest Java version, after upgrading OS X version? Why do I see the Java Update Needed message: Java is out of date? Troubleshooting tips for running Java Download errors: Corrupt MSI, File corrupt, Error 1606 Running Java on macOS Sierra 10.12 Why should I uninstall older versions of Java from my system? Which Java download should I choose for my 64-bit Windows operating system? Tips for using Java on Windows 8 Installing and using Oracle Java on macOS Why are Java applications blocked by your security settings? How do I disable Java in my web browser? » View all Terminology: Java is the general term used to denote the software and its components, which include \u0027Java Runtime Environment\u0027 (JRE), \u0027Java Virtual Machine\u0027 (JVM) and also \u0027Plug-in\u0027. When error messages specifically include terms such as JRE, JVM and Plug-in, we retain them. Versions: Version refers to the Java family and the Update number. Examples: On the website or under Windows programs, version appears as Java 8 Update 25. The Help section contains information on the following versions of Java. Current Version Name Replaces Old Name Other Legacy Formats Java 8 Java 8 Update x JRE 8.0 JRE 1.8 1.8.0_0x",
+    "scrapedAt": "2026-05-08 22:53:10.548476"
+  },
+  {
+    "id": 155,
+    "url": "https://www.java.com/en/download/help/whatis_java.html",
+    "title": "What is Java and why do I need it?",
+    "content": "Help Resources Installing Java Remove older versions Disable Java Using Java General questions Security Support options Support Handbook What is Java technology and why do I need it? Java is a programming language and computing platform first released by Sun Microsystems in 1995. It has evolved from humble beginnings to power a large share of today’s digital world, by providing the reliable platform upon which many services and applications are built. New, innovative products and digital services designed for the future continue to rely on Java, as well. While most modern Java applications combine the Java runtime and application together, there are still many applications and even some websites that will not function unless you have a desktop Java installed. Java.com, this website, is intended for consumers who may still require Java for their desktop applications – specifically applications targeting Java 8. Developers as well as users that would like to learn Java programming should visit the dev.java website instead and business users should visit oracle.com/java for more information. Is Java free to download? Yes, Java is free to download for personal use. Java is also free for development: developers can find all the development kits and other useful tools at https://www.oracle.com/javadownload/. Why should I upgrade to the latest Java patch each quarter when prompted? The latest Java patches contain important enhancements to improve performance, stability and security of the Java applications that run on your machine. Installing these updates will ensure that your Java applications continue to run with the most up-to-date version. MORE TECHNICAL INFORMATION What will I get when I download Java software from java.com? The Java Runtime Environment (JRE) version 8 is what you get when you download Java software from java.com. The JRE consists of the Java Virtual Machine (JVM), Java platform core classes, and supporting Java platform libraries. The JRE is the runtime portion of Java software, which is all you need to run Java WebStart applications from a supported web browser. It doesn’t come with development tools, though – these tools are part of the Java Development Kit (JDK). What is Java Plug-in software? The Java Plug-in software is a component of the Java Runtime Environment (JRE). The JRE allows some applications written in the Java programming language to launch via some browsers. The Java Plug-in software is not a standalone program and cannot be installed separately. I have heard the terms Java Virtual Machine and JVM. Is this Java software? The Java Virtual Machine is only one part of Java software that is involved in running an application. The Java Virtual Machine is built right into your Java software download, part of the JRE and helps run Java applications.",
+    "scrapedAt": "2026-05-08 22:53:09.417898"
+  },
+  {
+    "id": 154,
+    "url": "https://www.java.com/download/",
+    "title": "Download Java",
+    "content": "Download Java Help Resources » What is Java » Remove older versions » Security » Support » Other help Version 8 Update 491 Release date: April 21, 2026 This download is for end users who need Java for running applications on desktops or laptops. Java 8 integrates with your operating system to run separately installed Java applications. If you were asked to install Java to run a desktop application, it\u0027s most likely you need this version. Developers are encouraged to download the latest Java Development Kit from OTN downloads. Enterprise users with access to My Oracle Support or Oracle Software Delivery Cloud should download through those services. By downloading Java you acknowledge that you have read and accepted the terms of the Oracle Technology Network License Agreement for Oracle Java SE. Important Oracle Java License Information In order to optimize your experience and provide you with accurate messages, please enable javascript in your browser for the duration of your Java installation. Important Oracle Java License Information The Oracle Java License changed for releases starting April 16, 2019. The Oracle Technology Network License Agreement for Oracle Java SE is substantially different from prior Oracle Java licenses. This license permits certain uses, such as personal use and development use, at no cost -- but other uses authorized under prior Oracle Java licenses may no longer be available. Please review the terms carefully before downloading and using this product. An FAQ is available here. Commercial license and support is available with a low cost Java SE Subscription. Windows Which download should I choose? Windows Online filesize: 2.29 MB Instructions After installing Java, you may need to restart your browser in order to enable Java in your browser. Windows Offline filesize: 65.44 MB Instructions Windows Offline (64-bit) filesize: 69.00 MB Instructions If you use 32-bit and 64-bit browsers interchangeably, you will need to install both 32-bit and 64-bit Java in order to have the Java plug-in for both browsers. » FAQ about 64-bit Java for Windows Mac OS X macOS FAQ macOS x64 (10.7.3 and above) filesize: 95.83 MB Instructions After installing Java, you may need to restart your browser in order to enable Java in your browser. macOS ARM64 ((12 and above)) filesize: 93.26 MB Instructions Oracle Java 8 requires administrator privileges for installation. » More information Linux Linux RPM filesize: 51.56 MB Instructions After installing Java, you will need to enable Java in your browser. Linux filesize: 48.33 MB Instructions Linux x64 filesize: 105.68 MB Instructions Linux x64 RPM filesize: 108.72 MB Instructions Solaris Solaris SPARC (64-bit) filesize: 53.33 MB Instructions After installing Java, you will need to enable Java in your browser. Solaris x64 filesize: 51.31 MB Instructions",
+    "scrapedAt": "2026-05-08 22:53:08.294294"
+  },
+  {
+    "id": 153,
+    "url": "https://dev.java/",
+    "title": "Dev.java: The Destination for Java Developers",
+    "content": "JavaOne Was A Blast! JavaOne came back to California on March 17th to 19th. It\u0027s the premier Java event where you could meet the platform architects, be a part of the Java 26 launch live stream, see tons of great sessions, attend parties, engage the community, and more! Rewatch the Live Streams The Destination for Java Developers Hundreds of tutorials, news and videos from the experts, all right here. Get Started Getting Started with Java Java Language Basics Lambda Expressions Downloading Java Go Deeper The Collections Framework The Stream API The Gatherer API Virtual Threads Resources Java News Official Java Podcast and More The Official Java YouTube Channel Announcing JavaOne 2026 Latest News \u0026 Events Stay Informed with the latest Java News and Events News JEP targeted to JDK 27: 532: Primitive Types in Patterns, instanceof, and switch (5th Preview) Angelos Bimpoudis on May 8, 2026 Episode 57 “Make Java Safer with Flexible Constructor Bodies” Billy Korando on May 5, 2026 The JDK Client Desktop : 2026 and Still Swinging Phil Race on May 3, 2026 Make Java Safer with Flexible Constructor Bodies - Inside Java Newscast Episode #111 Billy Korando on April 30, 2026 More news on inside.java Upcoming Events GeeCon May 14, 2026 in Krakow, Poland Jnation May 26, 2026 in Coimbra, Portugal JCON Slovenia May 27, 2026 in Portorož JJUG CCC Spring May 30, 2026 in Tokyo, Japan More upcoming events Recent Java Videos Recently Updated Articles Been here before? Looking for something new to learn? Try these! Getting Started with Java Certification Overview of the Java Certification and how to study Last update: March 3, 2026 Building a Java application in IntelliJ IDEA Learn how to code, run, test, debug and document a Java application in IntelliJ IDEA. Last update: February 2, 2026 Launching Simple Source-Code Programs Launching simple source-code Java programs with the Java launcher. Last update: December 23, 2025 The Future of Java Learn about the future of the Java Platform Where Is the Java Language Going? Join Brian Goetz (Java Language Architect) on a whirlwind tour of recent enhancements and future directions for the Java language with a special emphasis on Project Amber and Project Valhalla. From Cowboy Mode to Careful Stewardship Java is a 30-year success story, made possible because its development consistently aligned with users\u0027 needs. In its early days, the platform required new features quickly, but over time, minimizing code breakage while carefully evolving the platform became essential. Critical junctures along that path included the introduction of modules and the current strive toward integrity by default. Java for AI Many Java features, existing and future, can meet the demands of AI. Existing features include the Foreign Function and Memory API and the Vector API. Future features include those proposed by Project Valhalla and Project Babylon. This video discusses these features and how they might be used by Java libraries and applications to build competitive AI solutions. Integrity by Default To assist performance, portability, and security, the Java Platform is progressing toward a state where its abstractions, as well as programmer-defined abstractions, can be made robust and invariants can be locally guaranteed. Libraries may violate some invariants but only if selectively allowed by the application. This session covers the why and how of the vision of \"Integrity by Default\".",
+    "scrapedAt": "2026-05-08 22:53:06.268891"
+  },
+  {
+    "id": 152,
+    "url": "https://jdk.java.net/",
+    "title": "JDK Builds from Oracle",
+    "content": "Production and Early-Access OpenJDK Builds, from Oracle Ready for use: JDK 26, JavaFX 26, JMC 9.1.2 Early access: JDK 27, JavaFX 27, JavaFX Direct3D 12, Jextract, Leyden, Loom, \u0026 Valhalla Looking to learn more about Java? Visit dev.java for the latest Java developer news and resources. Looking for Oracle JDK builds and information about Oracle’s enterprise Java products and services? Visit the Oracle JDK Download page. GA Releases JDK 26 JavaFX 26 JMC 9.1.2 Early-Access Releases JDK 27 JavaFX 27 JavaFX Direct3D 12 Jextract Leyden Loom Valhalla Reference Implementations Java SE 26 Java SE 25 Java SE 24 Java SE 23 Java SE 22 Java SE 21 Java SE 20 Java SE 19 Java SE 18 Java SE 17 Java SE 16 Java SE 15 Java SE 14 Java SE 13 Java SE 12 Java SE 11 Java SE 10 Java SE 9 Java SE 8 Java SE 7 Feedback Report a bug Archive © 2026 Oracle Corporation and/or its affiliates Terms of Use · Privacy · Trademarks",
+    "scrapedAt": "2026-05-08 22:53:04.647906"
+  },
+  {
+    "id": 151,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002vzjt?at_mid\u003dRlQxATlAnf\u0026at_campaign\u003dMaking_Life_on_Earth_Attenboroughs_Greatest_Adventure\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_nation\u003dNET\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm002vzjt\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dMaking_Life_on_Earth_Attenboroughs_Greatest_Adventure\u0026at_bbc_team\u003dBBC",
+    "title": "Making Life on Earth: Attenborough\u0027s Greatest Adventure - BBC iPlayer",
+    "content": "Close menu Home Making Life on Earth: Attenborough\u0027s Greatest Adventure JavaScript seems to be disabled. Please enable JavaScript to take full advantage of iPlayer. Making Life on Earth: Attenborough\u0027s Greatest Adventure Making Life on Earth: Attenborough\u0027s Greatest Adventure In 1976, David Attenborough embarked on the most ambitious television series he had ever attempted. This is the hair-raising story of how the first wildlife blockbuster was born. More Duration 59 mins First shown8pm 3 May 2026 Available for 11 months Watchlist Audio DescribedSign Language More Like This Episodes Secret Garden Life, drama and surprises. David Attenborough reveals a wild world in Britain\u0027s backyards Countryfile In the Chilterns, where grasslands, streams and wildlife all depend on the fragile ground 59 mins Queen Elizabeth II: Her Story, Our Century A century of change – but Her Majesty was a constant presence through troubled times 59 mins Inside Britain\u0027s National Parks On an island of natural wonder, the breathtaking parks protected by those calling it home Artemis: To the Moon and Back History in the making – the inside story of a thrilling new age in space exploration 59 mins I Made It at Market Turning passions into profits. Dom Chinea revisits makers turning hobbies into businesses 44 mins Make It at Market Do Diane and Sam have what it takes to build life-changing dream businesses? 44 mins Planet Earth II A World of Wonder. Nature’s best‑kept secrets revealed in iconic moments from the series 1h 29m Seven Worlds, One Planet Every corner of this incredible, unimaginable planet, with David Attenborough as a guide. Dinosaurs: The Final Day with David Attenborough New evidence, amazing details - their last moments as you\u0027ve never seen them 1h 28m Attenborough\u0027s Passion Projects A unique record of an expedition into the heart of unknown territory in Papua New Guinea. Attenborough and the Mammoth Graveyard Time travel through the gravel. David Attenborough, archaeologists and a mammoth mystery 58 mins Programme website Credits Explore the BBC",
+    "scrapedAt": "2026-05-08 22:50:28.826582"
+  },
+  {
+    "id": 150,
+    "url": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo",
+    "title": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "content": "Image source, Mat Capper Image caption, Johnny Vegas is back to film at Dagfields Crafts and Antiques Centre near Nantwich ByLee Bottomley Reporting fromNantwich Published 6 May 2026 Mat Capper, who runs a bike sales and repair business, has moved out of his shop, so a TV production can move in. The second series of Johnny Vegas\u0027 Little Shop of Antiques is being filmed at Dagfields Crafts and Antiques Centre near Nantwich, Cheshire. The show, on Quest TV, sees Vegas open a pop-up shop called Vintage Vegas to sell collectibles and quirky items. \"It\u0027s great for all the businesses on site,\" said Capper, who had been in the unit for about nine months, and has relocated to a smaller shop nearby to allow for the filming. Since the show first aired, visitors had constantly asked if it was where the comedian had been based, and if he was still around, said the 36-year-old. Image caption, Mat Capper has given up his shop unit so the second series of Johnny Vegas\u0027 Little Shop of Antiques can be filmed there Series one was filmed in the identical unit next door, which is occupied by a fireplace business, but for series two it was easier to move Capper\u0027s bike shop. Just a few doors along is a business called Dusty Gems Interiors, run by Jon Egglestone. He was involved in the show when it was filmed last year, giving Vegas a helping hand with his purchases. \"He was going from a collector to a dealer and it\u0027s a totally different thing buying as a collector than trying to buy as a dealer.\" Image caption, Jon Egglestone, who trades from Dagfields, was involved in series one of the show Egglestone, who has been in the antiques business for more than 25 years, said the comedian was a pleasure to be around, and the show had boosted visitor numbers. As a result of his appearance on the programme, he said he now gets recognised when he is out looking for stock, and not just in the UK. \"When it\u0027s abroad, people go - saw you on the TV - I\u0027m like I\u0027m not going to be able to buy anything here then!\" Image source, Mat Capper Image caption, The second series is being filmed in May and is due to air in summer Get in touch Tell us which stories we should cover in Cheshire Contact form Contact form Read more Cheshire stories from the BBC and follow BBC Stoke \u0026 Staffordshire on BBC Sounds, Facebook, external, X, external and Instagram, external. Related topics Television Antiques Nantwich Cheshire Related internet links Spoke and Span Dusty Gems Interiors Dagfields From other local news sites Man charged with multiple offences committed in Sandbach External Sandbach Nub News Police seek missing schoolboy, 15, from Hednesford External West Midlands Express \u0026 Star Man and woman charged after man killed following \u0027fight\u0027 in Burntwood External West Midlands Express \u0026 Star Red carpet welcome as luxury train to roll into Crewe External Crewe Nub News Weekend weather forecast for Biddulph - 8 May to 10 May External Biddulph Nub News Help shape future of Crewe\u0027s YMCA Cheshire with quick survey External Crewe Nub News Information about BBC links to other news sites Top stories Live. Labour set for historic defeat in Wales as BBC projects Plaid Cymru will be biggest party 74988 viewing75k viewing Live. SNP forecast to win up to 63 seats, leaving it short of overall majority 31810 viewing32k viewing Live. Plaid Cymru on track to be largest party in Wales, as Labour faces historic defeat 25197 viewing25k viewing More to explore Election results so far - and what\u0027s still to come The risk-taker who changed how we see Earth Ten of Attenborough\u0027s best documentaries Live from your living room: The rise of concert films and livestreamed gigs Weekly quiz: Who was this mystery masked star at the Met Gala? How worried should we be about hantavirus? \u0027We were strangers until we helped bring a paedophile to justice\u0027 Ukraine war \u0027led me to surrogacy\u0027 to earn money but a new law could end those plans Politics Essential: Get the latest news and analysis delivered to your inbox every weekday Elsewhere on the BBC Amandaland has returned with Lucy Punch and Joanna Lumley From small-time carpenter to Britain’s most famous fugitive New mysteries and puzzling cases await DI Goodman The energy direct debit cycle and the cheapest ways to spend abroad Most read 1 What latest election results show us in maps and charts 2 Election results so far - and what\u0027s still to come 3 Emerging picture shows Reform gains as Labour counts losses in heartland seats 4 Nationwide cashier who stole from vulnerable customers caught out by holiday photos 5 Scottish election 2026: When will your result be declared? 6 Sir John Curtice: Election results show politics in the UK has fragmented 7 Iran accuses US of \u0027reckless military adventure\u0027 8 King and Queen lead tributes for David Attenborough\u0027s 100th birthday 9 Football club owners in court on rape charges 10 Donkeys banned from beach ending 100-year tradition",
+    "scrapedAt": "2026-05-08 22:50:26.370649"
+  },
+  {
+    "id": 149,
+    "url": "https://www.bbc.co.uk/news/england/surrey",
+    "title": "Surrey | Latest News \u0026 Updates | BBC News",
+    "content": "Surrey Follow Surrey Follow Following Following Unfollow Unfollow close panel You are now following Surrey Updates from your News topics will appear in My News and in a collection on the News homepage. England council results Number of councillors 86 of 136 councils Counting under way Reform UK REF 885 883 (Reform UK 885 councillors 883 councillors gained) Liberal Democrat LD 540 68 (Liberal Democrat 540 councillors 68 councillors gained) Labour LAB 484 671 (Labour 484 councillors 671 councillors lost) Conservative CON 483 423 (Conservative 483 councillors 423 councillors lost) Green GRN 249 175 (Green 249 councillors 175 councillors gained) Independent IND 99 16 (Independent 99 councillors 16 councillors lost) Change How this election works Local elections in England cover more than 5,000 seats across 136 local authorities and six mayoral races. The banner shows each party’s seat total as results come in. Results from all counts are expected by Saturday. Live. updates Get the full results Live. Results starting to come in for South East 2026 local elections Votes are being counted on both Sussex county councils, plus some boroughs and districts, two new authorities in Surrey and Tunbridge Wells Borough Council. Attribution Sussex Surrey Day to explore county\u0027s hidden treasures Attribution Surrey Posted 10 hours ago10h EM Forster\u0027s letters among new wartime refugee archive Attribution Surrey Posted 10 hours ago10h Sir David Attenborough hailed a \u0027hero\u0027 in South East Attribution England Five things to watch as the election results come in Attribution England Posted 10 hours ago10h Motorcyclist spared jail over death of woman, 86 Attribution Surrey Posted 1 day ago1d Paul Hollywood speeding at 96mph \u0027due to sick cat\u0027 Attribution Surrey Posted 1 day ago1d Video playlist Watch our pick of standout clips from across Surrey Scroll to previous item Scroll to next item 1:30\u0027Illegal e-scooter riders are a menace\u0027 00:01:30, play video\u0027Illegal e-scooter riders are a menace\u0027 0:40Police issue disorder warning after Epsom rape protest. 00:00:40, play videoPolice issue disorder warning after Epsom rape protest 1:24Doctor Who\u0027s Colin Baker tours as Sherlock Holmes. 00:01:24, play videoDoctor Who\u0027s Colin Baker tours as Sherlock Holmes 1:13Pupils chosen as ball boys and girls at Wimbledon. 00:01:13, play videoPupils chosen as ball boys and girls at Wimbledon 1:16Calls for pedestrian safety measures at crash hotspot. 00:01:16, play videoCalls for pedestrian safety measures at crash hotspot 1:23Nigel Havers touring theatres across the South East. 00:01:23, play videoNigel Havers touring theatres across the South East 0:53\u0027Near-miss grief\u0027 showed on our faces after medal woe. 00:00:53, play video\u0027Near-miss grief\u0027 showed on our faces after medal woe 1:29Girl, 14, needs incontinence pads after using ketamine. 00:01:29, play videoGirl, 14, needs incontinence pads after using ketamine 1:20Why May\u0027s elections will be different in Surrey. 00:01:20, play videoWhy May\u0027s elections will be different in Surrey 1:22Finnish duo win wacky wife-carrying race. 00:01:22, play videoFinnish duo win wacky wife-carrying race 1:28Dog walkers urged to protect heathland bird nests. 00:01:28, play videoDog walkers urged to protect heathland bird nests 0:57\u0027Spiderman saved me from a boring nine-to-five job\u0027 00:00:57, play video\u0027Spiderman saved me from a boring nine-to-five job\u0027 1:35Billy Monger gears up for Paralympic Games. 00:01:35, play videoBilly Monger gears up for Paralympic Games 0:57Meerkat pub offering \u0027something unique\u0027 00:00:57, play videoMeerkat pub offering \u0027something unique\u0027 1:19Widow declared dead by DVLA in \u0027rare error\u0027 00:01:19, play videoWidow declared dead by DVLA in \u0027rare error\u0027 1:30What is the weirdest thing binmen have seen thrown away? 00:01:30, play videoWhat is the weirdest thing binmen have seen thrown away? 1:17Thousands of emergency dental appointments offered. 00:01:17, play videoThousands of emergency dental appointments offered 1:17Residents fear potholes may cause \u0027major accident\u0027 00:01:17, play videoResidents fear potholes may cause \u0027major accident\u0027 1:49The sinkhole that remains one year on. 00:01:49, play videoThe sinkhole that remains one year on 1:23Laughing gas canisters explode at waste centres hundreds of times a week, firms say. 00:01:23, play videoLaughing gas canisters explode at waste centres hundreds of times a week, firms say More from Surrey Teen supports children\u0027s charities as ambassador Attribution Surrey Posted 1 day ago1d \u0027Sailing after my stroke helps me in every way\u0027 Attribution Surrey Posted 1 day ago1d Rope swing death a \u0027shocking accident\u0027, coroner says Attribution Surrey Posted 2 days ago2d Ex-dance teacher jailed over historical sexual abuse Attribution Surrey Posted 2 days ago2d New wildfire sensors installed to protect habitats Attribution Surrey Posted 2 days ago2d Weather for Guildford Today, Sunny Intervals, High of 18° Low of 6° Saturday 9 May,Sat 9th Sunny Intervals, High of 21° Low of 9° ",
+    "scrapedAt": "2026-05-08 22:50:25.158908"
+  },
+  {
+    "id": 148,
+    "url": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o",
+    "title": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "content": "Image source, Getty Images Image caption, Sir David and King Charles have known each other for many years BySteven McIntosh, entertainment reporter, and Helen Bushby, culture reporter Published 7 May 2026 Updated 2 hours ago King Charles III and Queen Camilla are among well-wishers to share a birthday message celebrating Sir David Attenborough turning 100. The royal couple also shared photographs of Sir David, including one of him with a young Prince Charles and Princess Anne in 1958, in which he is introducing them to Cocky the cockatoo, from his BBC Zoo Quest TV series. The King and Queen wished him a very happy birthday, external, adding: \"Enjoy your special celebration this evening!\" The veteran broadcaster and environmentalist has said he was \"completely overwhelmed\" by messages he had received ahead of his big day, which includes a special concert on Friday evening at the Royal Albert Hall in London. Image source, PA Media Image caption, In one of the images shared on the Royal Family\u0027s Instagram account, Sir David introduced Cocky, the cockatoo to Prince Charles with his sister Princess Anne in 1958 Sir David added: \"I simply can\u0027t reply to each of you separately, but I\u0027d like to thank you all most sincerely for your kind messages, and wish those of you who have planned your own local events: have a very happy day.\" In a video for the Earthshot Prize, external, which celebrates climate leadership and innovation, the Prince of Wales said: \"Happy 100th David, cannot believe it\u0027s your 100th birthday.\" He went on to thank him for all his support, while noting how \"everything you do continues to inspire me\". Prince William\u0027s brother, the Duke of Sussex, is also among the well-wishers, describing Sir David as a \"secular saint\", external in an article in Time.com. \"His most significant contribution has been the systematic dismantling of the notion that climate issues are happening \u0027somewhere else\u0027,\" he said. \"Young people continue to listen to him not just for the spectacle of nature, but for a sense of continuity in an unstable world.\" Former England men\u0027s football captain Sir David Beckham simply called the broadcaster \"our National Treasure\", external, while actress and activist Joanna Lumley wished the broadcaster a happy birthday with a little help from the people of Stroud, Gloucestershire, in a video message. To play this video you need to enable JavaScript in your browser. This video can not be played Figure caption, Joanna Lumley wishes David Attenborough happy birthday TV naturalist and presenter Chris Packham wrote in The Big Issue, external: \"I don\u0027t think that any person in the entire history of our species has made such a significant contribution to engaging people and developing a love for all of life on Earth as David Attenborough.\" Meanwhile, the World Wide Fund for Nature (WWF) shared a birthday tribute video,, external voiced by actors Dame Judi Dench, Morgan Freeman, Miranda Richardson, Asa Butterfield, Sam Heughan and Iwan Rheon, along with former Spice Girl Geri Halliwell‑Horner and wildlife presenter Liz Bonnin. It is a spoken-word version of the Louis Armstrong classic song, What a Wonderful World, featuring footage of various animals. Oscar-winning composer Hans Zimmer also paid tribute, external, saying that despite his extensive feature film success, \"none of it is as important as working for David Attenborough because that is really about the existence of our planet.\" Actor Sir Ian McKellen added, external that Sir David \"sums up what was best about the BBC\" with \"serious programmes made for a popular audience\". \"His ability to communicate his own enthusiasms are very precious and he\u0027s brought such joy to so many people,\" he said. \"And I think, along with a lot of people, my favourite television programmes are probably natural history.\" Friday evening\u0027s show at the Royal Albert Hall is the climax of a week of special events and broadcast programming in honour of Sir David, who was born in 1926 and joined the BBC in 1952. Ten of Attenborough\u0027s best documentaries Published 56 minutes ago To play this video you need to enable JavaScript in your browser. This video can not be played Figure caption, Sir David Attenborough says thank you for birthday messages Presenter Kirsty Young will host the special 90-minute concert celebrating Sir David\u0027s life, which will air on BBC One and iPlayer from 20:30 BST. Special guests including Sir Michael Palin, Steve Backshall, Liz Bonnin and Chris Packham will appear at the event to reflect on Sir David\u0027s life and legacy. Ahead of the concert, Young said: \"Sir David\u0027s gift to the world has been a life spent exquisitely revealing Earth\u0027s wonders to us all. \"The very least he deserves is a big 100th birthday bash at the Royal Albert Hall. I\u0027m very happy indeed, as the host, to be able to invite everyone to the party.\" To play this video you need to enable JavaScript in your browser. This video can not be played Figure caption, \u0027Have a massive blowout\u0027",
+    "scrapedAt": "2026-05-08 22:50:23.844429"
+  },
+  {
+    "id": 147,
+    "url": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo",
+    "title": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "content": "Image source, Save Our Reds Image caption, A petition calling for urgent action has attracted more than 75,000 signatures ByNaj Modak North East and Cumbria Published 2 May 2026 England\u0027s red squirrels are close to extinction and the government needs to do more to protect them, an animal welfare group said. A petition set up by Save Our Reds, has attracted more than 75,000 signatures, urging more action. Founder of the campaign Marie Carter-Robb, said: \"We have a series of urgent actions that need to be brought together into one joined-up national plan.\" A spokesperson for the Department for Environment, Food and Rural Affairs (Defra), said the government was protecting endangered red squirrels by tackling the threat of non-native grey squirrels. Combining data from a number of wildlife organisations, the group said the endangered species, which \"still clings on\" across Cumbria, Northumberland and the North Pennines, could disappear within 25 years. It also said only 120,000 to 160,000 remained, with as few as 15,000 in England. According to Natural England, external causes for the decline include the introduction of grey squirrels from the USA and Canada from 1876 spreading the squirrelpox virus, which is fatal to the red squirrels only. The group said habitat loss and weak enforcement of existing protections were adding to the problem. Carter-Robb, said: \"The map is shocking. It makes the reality impossible to ignore. \"This is not theoretical, without action we will lose our red squirrels.\" She said the \"urgent actions that need to be brought together\" were \"fragmented\" and \"we are simply managing decline\". The campaign called for a national plan to humanely manage grey squirrel populations and urgent investment in squirrelpox vaccine development. It also wants support for fertility control research and deployment, and protection and enforcement of red squirrel habitat. \"We need government, conservation bodies, landowners, scientists and campaigners around the same table. The tools exist or are being developed. \"What is missing is coordination, funding and urgency,\" Carter-Robb added. The organisation suggested that while it was illegal to kill red squirrels, their habitats were being destroyed. Image source, PA Media Image caption, Grey squirrels, native to North America, carry a virus which is deadly to red squirrels A Defra spokesperson said: \"Working alongside landowners and conservation partners, we are supporting promising research into fertility control so that we can manage grey squirrel populations and help our iconic red squirrels and native wildlife flourish. Forestry England said: \"We support red squirrel populations in Cumbria and Northumberland by monitoring them and controlling the grey squirrel population. \"We also manage forest and woodland habitats to enable red squirrels to thrive. \"We work with and support partner organisations and volunteer red squirrel groups as part of our conservation activity.\" Image source, Save Our Reds Image caption, The group\u0027s map shows the collapse of the native red squirrel population over the past 150 years Follow BBC North East on X, external, Facebook, external, Nextdoor and Instagram, external. Get in touch Do you have a story suggestion for BBC North East \u0026 Cumbria? Contact form Contact form Related topics Conservation Squirrels Cumbria More on this story \u0027I\u0027m selling the red squirrel reserve my parents created\u0027 Published 12 April How I can help protect red squirrels? Published 9 February Red squirrel survey finds nests near housing site Published 27 February Related internet links Save Our Reds Defra Forestry England Top stories Live. Labour set for historic defeat in Wales as BBC projects Plaid Cymru will be biggest party 74779 viewing75k viewing Live. SNP forecast to win up to 63 seats, leaving it short of overall majority 31869 viewing32k viewing Live. Plaid Cymru on track to be largest party in Wales, as Labour faces historic defeat 25568 viewing26k viewing More to explore Election results so far - and what\u0027s still to come The risk-taker who changed how we see Earth Ten of Attenborough\u0027s best documentaries Live from your living room: The rise of concert films and livestreamed gigs Weekly quiz: Who was this mystery masked star at the Met Gala? How worried should we be about hantavirus? \u0027We were strangers until we helped bring a paedophile to justice\u0027 Ukraine war \u0027led me to surrogacy\u0027 to earn money but a new law could end those plans Politics Essential: Get the latest news and analysis delivered to your inbox every weekday Elsewhere on the BBC Amandaland has returned with Lucy Punch and Joanna Lumley From small-time carpenter to Britain’s most famous fugitive New mysteries and puzzling cases await DI Goodman The energy direct debit cycle and the cheapest ways to spend abroad Most read 1 What latest election results show us in maps and charts 2 Election results so far - and what\u0027s still to come 3 Emerging picture shows Reform gains as Labour counts l",
+    "scrapedAt": "2026-05-08 22:50:22.636532"
+  },
+  {
+    "id": 146,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t",
+    "title": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "content": "Live. 67,944 viewing67944 viewing Live pageUpdated 1 minute ago Labour set for historic defeat in Wales as BBC projects Plaid Cymru will be biggest party Plaid Cymru Leads Senedd Race in Wales BBC News Close To play this video you need to enable JavaScript in your browser. This video can not be played Watch live Live Reporting (active) Watch \u0026 listen Summary The BBC forecasts that Plaid Cymru will be the largest party in the Welsh parliament - but will fall short of a majority Labour earlier admitted defeat in Wales, where it\u0027s been in power for 27 years - this is huge, writes our political editor Chris Mason In Scotland, a BBC forecast has the SNP winning the most seats in the Scottish parliament, but also falling short of a majority Earlier, Keir Starmer said he was \"not going to walk away\" after Labour lost hundreds of councillors in England - Reform is the biggest winner so far, picking up more than 800 council seats How have party leaders been reacting? Scroll to previous item Scroll to next item 0:53\u0027SNP will be the largest party in Scotland\u0027, leader Swinney says. 00:00:53, play video\u0027SNP will be the largest party in Scotland\u0027, leader Swinney says 0:47\u0027I\u0027m not going to walk away and plunge country into chaos\u0027 00:00:47, play video\u0027I\u0027m not going to walk away and plunge country into chaos\u0027 1:16Jenrick \u0027hasn\u0027t spoken to me\u0027 - awkward reunion of former Tory ministers. 00:01:16, play videoJenrick \u0027hasn\u0027t spoken to me\u0027 - awkward reunion of former Tory ministers 0:34\u0027Very happy\u0027 with the results so far, says Farage. 00:00:34, play video\u0027Very happy\u0027 with the results so far, says Farage 0:35\u0027Good strategy takes time\u0027 - Badenoch. 00:00:35, play video\u0027Good strategy takes time\u0027 - Badenoch 0:31Labour won\u0027t form next Welsh government, says deputy FM. 00:00:31, play videoLabour won\u0027t form next Welsh government, says deputy FM 0:33\u0027The new politics is the Green Party vs Reform\u0027 - Polanski. 00:00:33, play video\u0027The new politics is the Green Party vs Reform\u0027 - Polanski 0:30\u0027Tories and Labour need to smell the coffee\u0027 - Davey. 00:00:30, play video\u0027Tories and Labour need to smell the coffee\u0027 - Davey 0:25Scottish Labour \u0027hurting\u0027 and \u0027disappointed\u0027, says Sarwar. 00:00:25, play videoScottish Labour \u0027hurting\u0027 and \u0027disappointed\u0027, says Sarwar 0:47\u0027We reject hate and division\u0027 - first Green mayor. 00:00:47, play video\u0027We reject hate and division\u0027 - first Green mayor 0:56What to look out for as counting under way in Scotland. 00:00:56, play videoWhat to look out for as counting under way in Scotland 1:02Henry Zeffman: More people voting this time. 00:01:02, play videoHenry Zeffman: More people voting this time 0:46\u0027It\u0027s been the Reform show so far\u0027 - politics professor. 00:00:46, play video\u0027It\u0027s been the Reform show so far\u0027 - politics professor 0:41\u0027Psychological impact\u0027 of losses to \u0027hurt\u0027 Labour. 00:00:41, play video\u0027Psychological impact\u0027 of losses to \u0027hurt\u0027 Labour 0:41\u0027Some of the results are mixed\u0027, says shadow transport secretary. 00:00:41, play video\u0027Some of the results are mixed\u0027, says shadow transport secretary 0:52Disappointment driving people from Labour - Green Party. 00:00:52, play videoDisappointment driving people from Labour - Green Party 0:40Why are these elections important? 00:00:40, play videoWhy are these elections important? Live Reporting Edited by Sam Hancock, Dulcie Lee and Alex Smith Image source, PA Media Speaking after winning his seat in Bangor Conwy Môn, Plaid Cymru\u0027s Rhun ap Iorwerth says: \"It has become clear that Wales has demanded that change of leadership. \"I look forward to saying more about this later as the full picture becomes complete.\" He says it\u0027s \"been a privilege to serve the community\" and an \"equal privilege\" to serve this wider, newly-formed constituency. \"We will work every day to the best of our abilities to represent the people of Bangor Conwy Môn,\" he adds. You can follow in-depth live coverage of the Welsh Senedd elections here Share close panel Share page Copy link About sharing The BBC is forecasting that Plaid Cymru will be the largest party in the Welsh Senedd - with Rhun ap Iorwerth\u0027s party will get between 41 and 46 seats. That forecast would mean Labour would lose its leadership of Wales for the first time since devolution, in 1997. We\u0027re still awaiting results from 42 seats - here\u0027s the current state of play: Share close panel Share page Copy link About sharing Jack Fenwick Political correspondent We’ve had what could be a significant intervention from Labour MP Louise Haigh, who has been speaking to my colleagues at BBC Look North. She is an influential voice among many MPs on the so-called soft left of the party and is seen as being close to Greater Manchester Mayor Andy Burnham. It’s a group that has been incredibly frustrated with the prime minister in recent months, and Haigh says the unpopularity of Starmer came up on nearly every doorstep – but says now is not the time to move against him. She says: “We cannot descend into an irresponsible, messy, internal contest",
+    "scrapedAt": "2026-05-08 22:50:21.087174"
+  },
+  {
     "id": 145,
     "url": "https://www.bbc.co.uk/sounds/play/p0njc6c4",
     "title": "Crumbs of History - BBC Sounds",
@@ -1013,50 +1090,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-08 22:14:32.985064"
-  },
-  {
-    "id": 146,
-    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
-  },
-  {
-    "id": 147,
-    "url": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
-  },
-  {
-    "id": 148,
-    "url": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
-  },
-  {
-    "id": 149,
-    "url": "https://www.bbc.co.uk/news/england/surrey"
-  },
-  {
-    "id": 150,
-    "url": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
-  },
-  {
-    "id": 151,
-    "url": "https://www.bbc.co.uk/iplayer/episode/m002vzjt?at_mid\u003dRlQxATlAnf\u0026at_campaign\u003dMaking_Life_on_Earth_Attenboroughs_Greatest_Adventure\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_nation\u003dNET\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm002vzjt\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dMaking_Life_on_Earth_Attenboroughs_Greatest_Adventure\u0026at_bbc_team\u003dBBC"
-  },
-  {
-    "id": 152,
-    "url": "https://jdk.java.net/"
-  },
-  {
-    "id": 153,
-    "url": "https://dev.java/"
-  },
-  {
-    "id": 154,
-    "url": "https://www.java.com/download/"
-  },
-  {
-    "id": 155,
-    "url": "https://www.java.com/en/download/help/whatis_java.html"
-  },
-  {
-    "id": 156,
-    "url": "https://www.java.com/en/download/help/index.html"
   },
   {
     "id": 157,
@@ -13953,10 +13986,2258 @@ window.searchData = [
   {
     "id": 26947,
     "url": "https://www.bbc.co.uk/programmes/p0njc6c4"
+  },
+  {
+    "id": 33754,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t#Watch\u0026listen"
+  },
+  {
+    "id": 33755,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A37949d06-b9e4-4aef-84db-b9e69274a2c9#post"
+  },
+  {
+    "id": 33756,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A86dabb54-7470-416e-849a-c565169a2ecb#post"
+  },
+  {
+    "id": 33757,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t#player"
+  },
+  {
+    "id": 33758,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t#LiveReporting"
+  },
+  {
+    "id": 33760,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A63b91123-6842-45ab-9895-5b9926190d52#post"
+  },
+  {
+    "id": 33761,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A89d749a7-44c6-46fa-a631-241f66dbe07c#post"
+  },
+  {
+    "id": 33762,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3Ae20de859-9e03-470b-8a11-8b2941965258#post"
+  },
+  {
+    "id": 33763,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A035b5485-0448-4823-a0eb-78d382a3cb0c#post"
+  },
+  {
+    "id": 33766,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A1ddf4ae6-8c0e-437a-b236-5bc509d41037#post"
+  },
+  {
+    "id": 33767,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A1d51ac49-55c9-4864-a0df-131aed307c11#post"
+  },
+  {
+    "id": 33768,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3Acfc0f015-b298-4fcd-9f3e-426e5ef35dc5#post"
+  },
+  {
+    "id": 33769,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A011fc83c-3760-4391-bd2a-0d6678a11ec6#post"
+  },
+  {
+    "id": 33770,
+    "url": "https://www.bbc.co.uk/news/live/c1428pev1n0t?post\u003dasset%3A45162df8-f6b4-4d43-b220-48acc76725ec#post"
+  },
+  {
+    "id": 33771,
+    "url": "https://www.bbc.co.uk/news/topics/c5vkx03dg8vt"
+  },
+  {
+    "id": 33782,
+    "url": "https://bbc.in/3yyMYUI"
+  },
+  {
+    "id": 33784,
+    "url": "https://www.bbc.co.uk/news/topics/c207p54mdd3t"
+  },
+  {
+    "id": 33787,
+    "url": "https://x.com/BBCNEandCumbria"
+  },
+  {
+    "id": 33788,
+    "url": "https://www.bbc.co.uk/news/articles/cwyk8zn4r9yo"
+  },
+  {
+    "id": 33791,
+    "url": "https://www.instagram.com/bbcneandcumbria/"
+  },
+  {
+    "id": 33792,
+    "url": "https://www.facebook.com/bbcnortheast"
+  },
+  {
+    "id": 33793,
+    "url": "https://www.bbc.co.uk/news/articles/cgmexkw8923o"
+  },
+  {
+    "id": 33796,
+    "url": "https://www.bbc.co.uk/send/u198505317"
+  },
+  {
+    "id": 33797,
+    "url": "https://www.forestryengland.uk/"
+  },
+  {
+    "id": 33798,
+    "url": "https://www.bbc.co.uk/news/articles/c17z7dng2y1o"
+  },
+  {
+    "id": 33799,
+    "url": "https://saveourreds.uk/"
+  },
+  {
+    "id": 33805,
+    "url": "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs"
+  },
+  {
+    "id": 33810,
+    "url": "https://naturalengland.blog.gov.uk/2026/04/14/england-red-squirrel-recovery-strategy/"
+  },
+  {
+    "id": 33818,
+    "url": "https://www.bbc.co.uk/send/u237213606"
+  },
+  {
+    "id": 33820,
+    "url": "https://www.instagram.com/p/DYEioAKjP0x/?hl\u003den\u0026img_index\u003d1"
+  },
+  {
+    "id": 33822,
+    "url": "https://www.bbc.co.uk/news/articles/cp8d3nvz4vzo"
+  },
+  {
+    "id": 33825,
+    "url": "https://www.instagram.com/reels/DYERw-IjpN4/"
+  },
+  {
+    "id": 33829,
+    "url": "https://time.com/article/2026/05/07/david-attenborough-100-birthday-prince-harry/"
+  },
+  {
+    "id": 33833,
+    "url": "https://www.youtube.com/watch?v\u003dbU9bxR8Wfn0"
+  },
+  {
+    "id": 33838,
+    "url": "https://www.bigissue.com/news/environment/david-attenborough-by-chris-packham/"
+  },
+  {
+    "id": 33840,
+    "url": "https://www.reutersconnect.com/item/my-hero-celebrities-reflect-on-attenboroughs-impact-ahead-of-his-100th-birthday/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1ZBNTg4MzI3MDQyMDI2UlAx/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX0xWQTAwMzU4ODMyNzA0MjAyNlJQMQ"
+  },
+  {
+    "id": 33844,
+    "url": "https://www.bbc.co.uk/news/articles/c1l7m7j6lzjo"
+  },
+  {
+    "id": 33850,
+    "url": "https://www.bbc.co.uk/news/articles/cx293zdyrp7o"
+  },
+  {
+    "id": 33852,
+    "url": "https://www.instagram.com/p/DYE0P6IDhk_/"
+  },
+  {
+    "id": 33856,
+    "url": "https://www.instagram.com/p/DYEp7G4iBE9/?img_index\u003d1"
+  },
+  {
+    "id": 33858,
+    "url": "https://www.bbc.co.uk/news/articles/cy823pprnnpo"
+  },
+  {
+    "id": 33859,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/b006pfp8"
+  },
+  {
+    "id": 33861,
+    "url": "https://www.bbc.co.uk/news/articles/clypel9lww2o"
+  },
+  {
+    "id": 33862,
+    "url": "https://www.bbc.co.uk/news/articles/cd6pv5wz4d6o"
+  },
+  {
+    "id": 33864,
+    "url": "https://www.bbc.co.uk/news/live/clyxp7x1znyt"
+  },
+  {
+    "id": 33865,
+    "url": "https://www.newsdesk.lexisnexis.com/click/?t\u003d4\u0026a\u003d59460596523\u0026f\u003dNews\u0026s\u003d1\u0026ci\u003d334\u0026i\u003d283\u0026si\u003d47145\u0026fmi\u003d169660751\u0026e\u003dSurrey+Comet\u0026d\u003d685\u0026mbc\u003dQ1QzL2E9NTk0NjA1OTY1MjMmcD0xNGUmdj0xJng9OHRBMzJpWUVQalBFZTdxNEE1UllFUSZ1MT1ORCZ1Mj11cC11cm46dXNlcjpQQTE4NzU1MjI3MA\u0026fi\u003d25351\u0026ac\u003d\u0026ck\u003d151ac5c12c70ce82"
+  },
+  {
+    "id": 33866,
+    "url": "https://www.bbc.co.uk/news/articles/c0j2g14weqpo"
+  },
+  {
+    "id": 33867,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/m000dk0t"
+  },
+  {
+    "id": 33868,
+    "url": "https://www.bbc.co.uk/sport/cricket/articles/c62d3ejv998o"
+  },
+  {
+    "id": 33869,
+    "url": "https://www.bbc.co.uk/news/articles/cj4qz9rr1l4o"
+  },
+  {
+    "id": 33870,
+    "url": "https://www.bbc.co.uk/news/articles/cde5p1g1pr5o"
+  },
+  {
+    "id": 33872,
+    "url": "https://www.bbc.co.uk/news/articles/clypn7p1p87o"
+  },
+  {
+    "id": 33874,
+    "url": "https://www.newsdesk.lexisnexis.com/click/?t\u003d4\u0026a\u003d59500351658\u0026f\u003dNews\u0026s\u003d1\u0026ci\u003d334\u0026i\u003d283\u0026si\u003d17886\u0026fmi\u003d169826142\u0026e\u003dFarnham+Herald\u0026d\u003d685\u0026mbc\u003dQ1QzL2E9NTk1MDAzNTE2NTgmcD0xNGUmdj0xJng9Rk9hQkNadFhaWVIzZW5oOWs5S1pvZyZ1MT1ORCZ1Mj11cC11cm46dXNlcjpQQTE4NzU1MjI3MA\u0026fi\u003d25351\u0026ac\u003d\u0026ck\u003dc10a869d9cb17ddd"
+  },
+  {
+    "id": 33875,
+    "url": "https://www.bbc.co.uk/news/articles/c626qdy18eqo"
+  },
+  {
+    "id": 33877,
+    "url": "https://www.bbc.co.uk/news/articles/clyp5m5yex7o"
+  },
+  {
+    "id": 33878,
+    "url": "https://www.farnhamherald.com"
+  },
+  {
+    "id": 33879,
+    "url": "https://www.bbc.co.uk/news/articles/c392198gvn8o"
+  },
+  {
+    "id": 33881,
+    "url": "https://www.bbc.co.uk/programmes/p0cgnkyf/clips"
+  },
+  {
+    "id": 33882,
+    "url": "https://www.bbc.co.uk/news/articles/c362p2dk95ko"
+  },
+  {
+    "id": 33884,
+    "url": "https://www.bbc.co.uk/sounds/play/p0ngtz7n"
+  },
+  {
+    "id": 33885,
+    "url": "https://www.bbc.co.uk/news/articles/cz9vl21wpgpo"
+  },
+  {
+    "id": 33886,
+    "url": "https://www.bbc.co.uk/news/articles/c8xw4l2ge9jo"
+  },
+  {
+    "id": 33887,
+    "url": "https://www.bbc.co.uk/news/articles/c2l207r40xzo"
+  },
+  {
+    "id": 33888,
+    "url": "https://www.bbc.co.uk/news/articles/c3d28epkn05o"
+  },
+  {
+    "id": 33889,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c202d2243xvo"
+  },
+  {
+    "id": 33891,
+    "url": "https://www.bbc.co.uk/weather/2647793/day3"
+  },
+  {
+    "id": 33892,
+    "url": "https://www.bbc.co.uk/weather/2647793/day2"
+  },
+  {
+    "id": 33893,
+    "url": "https://www.bbc.co.uk/weather/2647793/day1"
+  },
+  {
+    "id": 33894,
+    "url": "https://www.bbc.co.uk/sounds/play/p0nh6xdk"
+  },
+  {
+    "id": 33896,
+    "url": "https://www.bbc.co.uk/news/articles/c0j2g2pjd36o"
+  },
+  {
+    "id": 33897,
+    "url": "https://www.bbc.co.uk/news/articles/c7v9z5vz5pyo"
+  },
+  {
+    "id": 33898,
+    "url": "https://www.bbc.co.uk/news/articles/cx21ev0z9vzo"
+  },
+  {
+    "id": 33899,
+    "url": "https://www.bbc.co.uk/sport/cricket/articles/cqjpz1jjxj5o"
+  },
+  {
+    "id": 33901,
+    "url": "https://www.bbc.co.uk/news/articles/c332edlrx86o"
+  },
+  {
+    "id": 33902,
+    "url": "https://www.bbc.co.uk/news/articles/c3d2ex3k79xo"
+  },
+  {
+    "id": 33904,
+    "url": "https://www.bbc.co.uk/weather/2647793"
+  },
+  {
+    "id": 33905,
+    "url": "https://www.bbc.co.uk/news/articles/cn4p9yx8evvo"
+  },
+  {
+    "id": 33906,
+    "url": "https://www.bbc.co.uk/news/articles/cgl6ewdr2nyo"
+  },
+  {
+    "id": 33907,
+    "url": "https://www.bbc.co.uk/sport/football/teams/woking"
+  },
+  {
+    "id": 33908,
+    "url": "https://www.bbc.co.uk/sounds/play/p0nj9034"
+  },
+  {
+    "id": 33909,
+    "url": "https://api.whatsapp.com/message/EA64QYKUMQ6KI1?autoload\u003d1\u0026amp;app_absent\u003d0"
+  },
+  {
+    "id": 33910,
+    "url": "https://www.bbc.co.uk/news/articles/cpqp29901qyo"
+  },
+  {
+    "id": 33911,
+    "url": "https://www.newsdesk.lexisnexis.com/click/?t\u003d4\u0026a\u003d59466676618\u0026f\u003dNews\u0026s\u003d1\u0026ci\u003d334\u0026i\u003d283\u0026si\u003d47145\u0026fmi\u003d169660751\u0026e\u003dSurrey+Comet\u0026d\u003d685\u0026mbc\u003dQ1QzL2E9NTk0NjY2NzY2MTgmcD0xNGUmdj0xJng9dU9BTVEya1A5c3RsYjNBSHJ0ZkhUQSZ1MT1ORCZ1Mj11cC11cm46dXNlcjpQQTE4NzU1MjI3MA\u0026fi\u003d25351\u0026ac\u003d\u0026ck\u003d2650c72c9da2660e"
+  },
+  {
+    "id": 33912,
+    "url": "https://www.bbc.co.uk/sounds/play/live/bbc_radio_surrey"
+  },
+  {
+    "id": 33914,
+    "url": "https://www.newsdesk.lexisnexis.com/click/?t\u003d4\u0026a\u003d59501916390\u0026f\u003dNews\u0026s\u003d1\u0026ci\u003d334\u0026i\u003d283\u0026si\u003d17886\u0026fmi\u003d169826142\u0026e\u003dFarnham+Herald\u0026d\u003d685\u0026mbc\u003dQ1QzL2E9NTk1MDE5MTYzOTAmcD0xNGUmdj0xJng9UTNkZklpaC0yMmZnNHRNTDFLTFdYZyZ1MT1ORCZ1Mj11cC11cm46dXNlcjpQQTE4NzU1MjI3MA\u0026fi\u003d25351\u0026ac\u003d\u0026ck\u003dfb3fa079e48c38b4"
+  },
+  {
+    "id": 33916,
+    "url": "https://www.bbc.co.uk/sounds/play/p0nh7q9k"
+  },
+  {
+    "id": 33919,
+    "url": "https://www.bbc.co.uk/news/articles/c172qg0lnd9o"
+  },
+  {
+    "id": 33920,
+    "url": "https://www.bbc.co.uk/news/articles/c2k2547879yo"
+  },
+  {
+    "id": 33922,
+    "url": "https://www.surreycomet.co.uk"
+  },
+  {
+    "id": 33923,
+    "url": "https://www.bbc.co.uk/sport/cricket/articles/cpwprlll1j2o"
+  },
+  {
+    "id": 33925,
+    "url": "https://www.bbc.co.uk/weather/2647793/day4"
+  },
+  {
+    "id": 33931,
+    "url": "https://www.newsdesk.lexisnexis.com/click/?t\u003d4\u0026a\u003d59501926186\u0026f\u003dNews\u0026s\u003d1\u0026ci\u003d334\u0026i\u003d283\u0026si\u003d53362\u0026fmi\u003d169657483\u0026e\u003dWest+Midlands+Express+%26+Star\u0026d\u003d685\u0026mbc\u003dQ1QzL2E9NTk1MDE5MjYxODYmcD0xNGUmdj0xJng9d3ZjZTZXMWdjQWlLdmxsaVFGVmlidyZ1MT1ORCZ1Mj11cC11cm46dXNlcjpQQTE4NzU1MjI3MA\u0026fi\u003d25355\u0026ac\u003d\u0026ck\u003d998d6785431efb3a"
+  },
+  {
+    "id": 33934,
+    "url": "https://sandbach.nub.news"
+  },
+  {
+    "id": 33936,
+    "url": "https://www.newsdesk.lexisnexis.com/click/?t\u003d4\u0026a\u003d59502049913\u0026f\u003dNews\u0026s\u003d1\u0026ci\u003d334\u0026i\u003d0\u0026si\u003d278923\u0026fmi\u003d667622776\u0026e\u003dSandbach+Nub+News\u0026d\u003d685\u0026mbc\u003dQ1QzL2E9NTk1MDIwNDk5MTMmcD0xNGUmdj0xJng9RVk5V2JBN2xnVGZxV0tXZ0M3TGJzdyZ1MT1ORCZ1Mj11cC11cm46dXNlcjpQQTE4NzU1MjI3MA\u0026fi\u003d25355\u0026ac\u003d\u0026ck\u003d06c6b6d410b9548f"
+  },
+  {
+    "id": 33937,
+    "url": "https://www.newsdesk.lexisnexis.com/click/?t\u003d4\u0026a\u003d59500614081\u0026f\u003dNews\u0026s\u003d1\u0026ci\u003d334\u0026i\u003d283\u0026si\u003d53362\u0026fmi\u003d169657483\u0026e\u003dWest+Midlands+Express+%26+Star\u0026d\u003d685\u0026mbc\u003dQ1QzL2E9NTk1MDA2MTQwODEmcD0xNGUmdj0xJng9TFhQS0pqbjZNTVkycUhET0hvZ3ExUSZ1MT1ORCZ1Mj11cC11cm46dXNlcjpQQTE4NzU1MjI3MA\u0026fi\u003d25355\u0026ac\u003d\u0026ck\u003d68e55ace3e437c79"
+  },
+  {
+    "id": 33939,
+    "url": "https://spokeandspan.co.uk/"
+  },
+  {
+    "id": 33941,
+    "url": "https://www.newsdesk.lexisnexis.com/click/?t\u003d4\u0026a\u003d59499965647\u0026f\u003dNews\u0026s\u003d1\u0026ci\u003d334\u0026i\u003d0\u0026si\u003d278918\u0026fmi\u003d667623138\u0026e\u003dBiddulph+Nub+News\u0026d\u003d685\u0026mbc\u003dQ1QzL2E9NTk0OTk5NjU2NDcmcD0xNGUmdj0xJng9UzRvUDhtbnJVX1hEWmdVU3lGRXJsdyZ1MT1ORCZ1Mj11cC11cm46dXNlcjpQQTE4NzU1MjI3MA\u0026fi\u003d25355\u0026ac\u003d\u0026ck\u003d5d1fe18c05d79e37"
+  },
+  {
+    "id": 33943,
+    "url": "https://www.expressandstar.com"
+  },
+  {
+    "id": 33945,
+    "url": "https://www.bbc.co.uk/send/u195396169"
+  },
+  {
+    "id": 33946,
+    "url": "https://www.bbc.co.uk/news/topics/cjkm56d0w8nt"
+  },
+  {
+    "id": 33949,
+    "url": "https://twitter.com/bbcmtd"
+  },
+  {
+    "id": 33950,
+    "url": "https://www.bbc.co.uk/news/topics/c4qzxgddk0wt"
+  },
+  {
+    "id": 33951,
+    "url": "https://www.newsdesk.lexisnexis.com/click/?t\u003d4\u0026a\u003d59500600512\u0026f\u003dNews\u0026s\u003d1\u0026ci\u003d334\u0026i\u003d0\u0026si\u003d253878\u0026fmi\u003d661548351\u0026e\u003dCrewe+Nub+News\u0026d\u003d685\u0026mbc\u003dQ1QzL2E9NTk1MDA2MDA1MTImcD0xNGUmdj0xJng9Wk1MZkZIQkx5TUk0Qm1oa0RSRVhCUSZ1MT1ORCZ1Mj11cC11cm46dXNlcjpQQTE4NzU1MjI3MA\u0026fi\u003d25355\u0026ac\u003d\u0026ck\u003ddede8629ba42ee7c"
+  },
+  {
+    "id": 33952,
+    "url": "https://www.bbc.co.uk/sounds/curation/p0cjdz16"
+  },
+  {
+    "id": 33954,
+    "url": "https://www.bbc.co.uk/news/topics/cp7r8vglny2t"
+  },
+  {
+    "id": 33957,
+    "url": "https://biddulph.nub.news"
+  },
+  {
+    "id": 33960,
+    "url": "https://www.instagram.com/bbcstoke/"
+  },
+  {
+    "id": 33961,
+    "url": "https://crewe.nub.news"
+  },
+  {
+    "id": 33963,
+    "url": "https://www.facebook.com/BBCStokeandStaffordshire"
+  },
+  {
+    "id": 33964,
+    "url": "https://www.dagfields.co.uk/"
+  },
+  {
+    "id": 33970,
+    "url": "https://www.newsdesk.lexisnexis.com/click/?t\u003d4\u0026a\u003d59499736715\u0026f\u003dNews\u0026s\u003d1\u0026ci\u003d334\u0026i\u003d0\u0026si\u003d253878\u0026fmi\u003d661548351\u0026e\u003dCrewe+Nub+News\u0026d\u003d685\u0026mbc\u003dQ1QzL2E9NTk0OTk3MzY3MTUmcD0xNGUmdj0xJng9c0J4ekQySG15U2xMU3BIb1lEdDFtZyZ1MT1ORCZ1Mj11cC11cm46dXNlcjpQQTE4NzU1MjI3MA\u0026fi\u003d25355\u0026ac\u003d\u0026ck\u003d479d1627c13956f1"
+  },
+  {
+    "id": 33974,
+    "url": "https://dustygemsinteriors.co.uk/"
+  },
+  {
+    "id": 33976,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002vfqx/queen-elizabeth-ii-her-story-our-century"
+  },
+  {
+    "id": 33977,
+    "url": "https://www.bbc.co.uk/programmes/m002vzjt#credits"
+  },
+  {
+    "id": 33978,
+    "url": "https://www.bbc.co.uk/programmes/m002vzjt"
+  },
+  {
+    "id": 33979,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002vf34/artemis-to-the-moon-and-back"
+  },
+  {
+    "id": 33980,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/m002tfst/inside-britains-national-parks"
+  },
+  {
+    "id": 33981,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b087y9wf/planet-earth-ii-a-world-of-wonder"
+  },
+  {
+    "id": 33982,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m0028n51/make-it-at-market-series-3-3-signwriting-and-metal-sculpture"
+  },
+  {
+    "id": 33984,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002tsp0/i-made-it-at-market-series-1-1-stained-glass-and-metal-art"
+  },
+  {
+    "id": 33985,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/p07dzjwl/seven-worlds-one-planet"
+  },
+  {
+    "id": 33986,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m0012wjh/attenborough-and-the-mammoth-graveyard"
+  },
+  {
+    "id": 33987,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/m002sthz/secret-garden?seriesId\u003dm002sthz-structural-1-m002stj1"
+  },
+  {
+    "id": 33988,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002w0tz/countryfile-the-chalk-of-the-chilterns"
+  },
+  {
+    "id": 33989,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/b07bq08t/attenboroughs-passion-projects"
+  },
+  {
+    "id": 33990,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002vzjt/ad/making-life-on-earth-attenboroughs-greatest-adventure"
+  },
+  {
+    "id": 33992,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002vzjt/making-life-on-earth-attenboroughs-greatest-adventure?at_mid\u003dRlQxATlAnf\u0026at_campaign\u003dMaking_Life_on_Earth_Attenboroughs_Greatest_Adventure\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_nation\u003dNET\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm002vzjt\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dMaking_Life_on_Earth_Attenboroughs_Greatest_Adventure\u0026at_bbc_team\u003dBBC#"
+  },
+  {
+    "id": 41040,
+    "url": "https://jdk.java.net/loom/"
+  },
+  {
+    "id": 41041,
+    "url": "https://jdk.java.net/27/"
+  },
+  {
+    "id": 41043,
+    "url": "https://jdk.java.net/java-se-ri/11-MR3"
+  },
+  {
+    "id": 41044,
+    "url": "https://jdk.java.net/java-se-ri/14"
+  },
+  {
+    "id": 41045,
+    "url": "https://jdk.java.net/java-se-ri/13"
+  },
+  {
+    "id": 41046,
+    "url": "http://bugreport.java.com"
+  },
+  {
+    "id": 41047,
+    "url": "https://jdk.java.net/java-se-ri/16"
+  },
+  {
+    "id": 41048,
+    "url": "https://jdk.java.net/java-se-ri/15"
+  },
+  {
+    "id": 41049,
+    "url": "https://jdk.java.net/java-se-ri/18"
+  },
+  {
+    "id": 41050,
+    "url": "https://jdk.java.net/java-se-ri/19"
+  },
+  {
+    "id": 41051,
+    "url": "https://jdk.java.net/javafx26/"
+  },
+  {
+    "id": 41052,
+    "url": "https://www.oracle.com/legal/privacy/"
+  },
+  {
+    "id": 41053,
+    "url": "https://jdk.java.net/java-se-ri/10"
+  },
+  {
+    "id": 41054,
+    "url": "https://jdk.java.net/java-se-ri/9"
+  },
+  {
+    "id": 41055,
+    "url": "https://openjdk.org/legal/openjdk-trademark-notice.html"
+  },
+  {
+    "id": 41056,
+    "url": "https://jdk.java.net/java-se-ri/12"
+  },
+  {
+    "id": 41057,
+    "url": "https://jdk.java.net/java-se-ri/7"
+  },
+  {
+    "id": 41058,
+    "url": "https://dev.java"
+  },
+  {
+    "id": 41059,
+    "url": "https://jdk.java.net/jmc/9"
+  },
+  {
+    "id": 41060,
+    "url": "https://jdk.java.net/jmc/9/"
+  },
+  {
+    "id": 41061,
+    "url": "https://jdk.java.net/archive/"
+  },
+  {
+    "id": 41062,
+    "url": "https://jdk.java.net/26/"
+  },
+  {
+    "id": 41063,
+    "url": "https://jdk.java.net/valhalla/"
+  },
+  {
+    "id": 41064,
+    "url": "https://jdk.java.net/java-se-ri/25"
+  },
+  {
+    "id": 41065,
+    "url": "https://jdk.java.net/java-se-ri/24"
+  },
+  {
+    "id": 41066,
+    "url": "https://jdk.java.net/java-se-ri/26"
+  },
+  {
+    "id": 41067,
+    "url": "https://jdk.java.net/leyden/"
+  },
+  {
+    "id": 41068,
+    "url": "https://jdk.java.net/java-se-ri/17-MR1"
+  },
+  {
+    "id": 41069,
+    "url": "https://jdk.java.net/javafxdirect3d12/"
+  },
+  {
+    "id": 41070,
+    "url": "https://jdk.java.net/java-se-ri/8-MR6"
+  },
+  {
+    "id": 41071,
+    "url": "https://jdk.java.net/jextract/"
+  },
+  {
+    "id": 41072,
+    "url": "https://jdk.java.net/javafx27/"
+  },
+  {
+    "id": 41073,
+    "url": "https://jdk.java.net/java-se-ri/21"
+  },
+  {
+    "id": 41074,
+    "url": "https://oracle.com"
+  },
+  {
+    "id": 41075,
+    "url": "https://jdk.java.net/tou"
+  },
+  {
+    "id": 41076,
+    "url": "https://jdk.java.net/java-se-ri/20"
+  },
+  {
+    "id": 41077,
+    "url": "https://jdk.java.net/java-se-ri/23"
+  },
+  {
+    "id": 41078,
+    "url": "https://jdk.java.net/java-se-ri/22"
+  },
+  {
+    "id": 41108,
+    "url": "https://www.java.com/en/download/help/linux_x64rpm_install.xml"
+  },
+  {
+    "id": 41109,
+    "url": "https://www.java.com/en/download/which_download.jsp"
+  },
+  {
+    "id": 41110,
+    "url": "https://www.oracle.com/java/java-se-subscription.html"
+  },
+  {
+    "id": 41111,
+    "url": "https://support.oracle.com/"
+  },
+  {
+    "id": 41112,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk-faqs.html"
+  },
+  {
+    "id": 41114,
+    "url": "https://www.java.com/en/download/faq/java_win64bit.xml"
+  },
+  {
+    "id": 41116,
+    "url": "https://www.java.com/en/download/help/solaris_install.xml"
+  },
+  {
+    "id": 41118,
+    "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId\u003d253191_f7fe8e644f724108bdb54139381e29a7"
+  },
+  {
+    "id": 41119,
+    "url": "https://edelivery.oracle.com/"
+  },
+  {
+    "id": 41120,
+    "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId\u003d253193_f7fe8e644f724108bdb54139381e29a7"
+  },
+  {
+    "id": 41121,
+    "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId\u003d253194_f7fe8e644f724108bdb54139381e29a7"
+  },
+  {
+    "id": 41122,
+    "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId\u003d253195_f7fe8e644f724108bdb54139381e29a7"
+  },
+  {
+    "id": 41123,
+    "url": "https://www.java.com/en/download/help/windows_manual_download.xml"
+  },
+  {
+    "id": 41124,
+    "url": "https://www.java.com/en/download/#lightboxContent"
+  },
+  {
+    "id": 41125,
+    "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId\u003d253190_f7fe8e644f724108bdb54139381e29a7"
+  },
+  {
+    "id": 41126,
+    "url": "https://www.java.com/otnlicense/"
+  },
+  {
+    "id": 41127,
+    "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId\u003d253188_f7fe8e644f724108bdb54139381e29a7"
+  },
+  {
+    "id": 41128,
+    "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId\u003d253185_f7fe8e644f724108bdb54139381e29a7"
+  },
+  {
+    "id": 41129,
+    "url": "https://www.java.com/en/download/help/linux_x64_install.xml"
+  },
+  {
+    "id": 41130,
+    "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId\u003d253186_f7fe8e644f724108bdb54139381e29a7"
+  },
+  {
+    "id": 41131,
+    "url": "https://www.java.com/en/download/help/"
+  },
+  {
+    "id": 41132,
+    "url": "https://www.java.com/en/download/support.jsp"
+  },
+  {
+    "id": 41133,
+    "url": "https://www.java.com/en/download/mac_sysreq-sm.jsp"
+  },
+  {
+    "id": 41134,
+    "url": "https://www.java.com/en/download/help/linux_install.xml#rpm"
+  },
+  {
+    "id": 41135,
+    "url": "https://www.java.com/en/download/help/remove_olderversions.html"
+  },
+  {
+    "id": 41136,
+    "url": "https://www.java.com/en/download/faq/java_mac.xml"
+  },
+  {
+    "id": 41137,
+    "url": "https://www.java.com/en/download/help/windows_offline_download.xml"
+  },
+  {
+    "id": 41138,
+    "url": "https://www.java.com/en/security/"
+  },
+  {
+    "id": 41139,
+    "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId\u003d253182_f7fe8e644f724108bdb54139381e29a7"
+  },
+  {
+    "id": 41140,
+    "url": "https://www.java.com/en/download/help/linux_install.xml"
+  },
+  {
+    "id": 41141,
+    "url": "https://www.java.com/en/download/help/mac_install.xml"
+  },
+  {
+    "id": 41142,
+    "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId\u003d253184_f7fe8e644f724108bdb54139381e29a7"
+  },
+  {
+    "id": 41143,
+    "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId\u003d253183_f7fe8e644f724108bdb54139381e29a7"
+  },
+  {
+    "id": 41144,
+    "url": "https://www.java.com/en/download/help/remove_olderversions.xml"
+  },
+  {
+    "id": 41146,
+    "url": "https://www.oracle.com/javadownload/"
+  },
+  {
+    "id": 41147,
+    "url": "https://www.java.com/en/download/faq/index_general.xml"
+  },
+  {
+    "id": 41148,
+    "url": "https://ops.java/supporthandbook/"
+  },
+  {
+    "id": 41149,
+    "url": "https://www.java.com/en/download/help/index_installing.xml"
+  },
+  {
+    "id": 41150,
+    "url": "https://www.java.com/en/download/help/disable_browser.xml"
+  },
+  {
+    "id": 41153,
+    "url": "https://www.java.com/en/download/help/index_using.xml"
+  },
+  {
+    "id": 41155,
+    "url": "https://www.java.com/en/download/help/sierra_java.html"
+  },
+  {
+    "id": 41156,
+    "url": "https://www.java.com/en/download/help/java_plugin_ie_mode.html"
+  },
+  {
+    "id": 41157,
+    "url": "https://www.java.com/en/download/help/java_blocked.html"
+  },
+  {
+    "id": 41162,
+    "url": "https://www.java.com/en/download/help/java_crash_video_driver.html"
+  },
+  {
+    "id": 41163,
+    "url": "https://www.java.com/en/download/help/java_win64bit.html"
+  },
+  {
+    "id": 41164,
+    "url": "https://www.java.com/en/download/help/error_installshield.html"
+  },
+  {
+    "id": 41165,
+    "url": "https://www.java.com/en/download/help/disable_browser.html"
+  },
+  {
+    "id": 41167,
+    "url": "https://www.java.com/en/download/help/win8_faq.html"
+  },
+  {
+    "id": 41169,
+    "url": "https://www.java.com/en/download/help/signed_code.html"
+  },
+  {
+    "id": 41170,
+    "url": "https://www.java.com/en/download/faq/top_issues.xml"
+  },
+  {
+    "id": 41172,
+    "url": "https://www.java.com/en/download/help/expire_date.html"
+  },
+  {
+    "id": 41174,
+    "url": "https://www.java.com/en/download/help/java_mac.html"
+  },
+  {
+    "id": 41175,
+    "url": "https://www.java.com/en/download/help/yosemite_java.html"
+  },
+  {
+    "id": 41177,
+    "url": "https://www.java.com/en/download/help/troubleshoot_java.html"
+  },
+  {
+    "id": 41178,
+    "url": "https://www.java.com/en/download/help/sitelist_disabled.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.java.com/jcom/images/windows_media_logo_trans.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/ic-info16.png",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/download_widget.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/download_widget.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/download_widget.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/apple_trans.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/ic-info16.png",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/download_widget.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/download_widget.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/tux_trans.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/download_widget(2).gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/download_widget(2).gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/download_widget(2).gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/download_widget(2).gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/solaris_logo.png",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/a.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/download_widget.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://www.java.com/jcom/images/download_widget.gif",
+    "alt": "",
+    "pageTitle": "Download Java",
+    "pageUrl": "https://www.java.com/download/"
+  },
+  {
+    "src": "https://dev.java/assets/images/javaone/cbgmd-javaone26-hero.webp",
+    "alt": "JavaOne logo",
+    "pageTitle": "Dev.java: The Destination for Java Developers",
+    "pageUrl": "https://dev.java/"
+  },
+  {
+    "src": "https://img.youtube.com/vi/ux1IpWo3oXA/maxresdefault.jpg",
+    "alt": "",
+    "pageTitle": "Dev.java: The Destination for Java Developers",
+    "pageUrl": "https://dev.java/"
+  },
+  {
+    "src": "https://img.youtube.com/vi/-wmUt__lxPY/maxresdefault.jpg",
+    "alt": "",
+    "pageTitle": "Dev.java: The Destination for Java Developers",
+    "pageUrl": "https://dev.java/"
+  },
+  {
+    "src": "https://img.youtube.com/vi/uX7R_QTHeUI/maxresdefault.jpg",
+    "alt": "",
+    "pageTitle": "Dev.java: The Destination for Java Developers",
+    "pageUrl": "https://dev.java/"
+  },
+  {
+    "src": "https://jdk.java.net/images/jdk.java.net2.svg",
+    "alt": "jdk.java.net logo",
+    "pageTitle": "JDK Builds from Oracle",
+    "pageUrl": "https://jdk.java.net/"
+  },
+  {
+    "src": "https://jdk.java.net/images/jdk.java.net2.svg",
+    "alt": "jdk.java.net logo",
+    "pageTitle": "JDK Builds from Oracle",
+    "pageUrl": "https://jdk.java.net/"
+  },
+  {
+    "src": "https://jdk.java.net/images/oracle.svg",
+    "alt": "Oracle logo",
+    "pageTitle": "JDK Builds from Oracle",
+    "pageUrl": "https://jdk.java.net/"
+  },
+  {
+    "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dbbc_one::iplayer.tv.episode.making_life_on_earth_attenborough_s_greatest_adventure.m002vzjt.page\u0026x1\u003d[page]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[player-episode]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[iplayer]\u0026x12\u003d[bbc_one]",
+    "alt": "",
+    "pageTitle": "Making Life on Earth: Attenborough\u0027s Greatest Adventure - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episode/m002vzjt?at_mid\u003dRlQxATlAnf\u0026at_campaign\u003dMaking_Life_on_Earth_Attenboroughs_Greatest_Adventure\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_nation\u003dNET\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm002vzjt\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dMaking_Life_on_Earth_Attenboroughs_Greatest_Adventure\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "src": "https://iplayer-web.files.bbci.co.uk/iplayer-web-app-playback-v2/1.0.0-2768.aarch64/img/dogs/bbc_one.svg",
+    "alt": "BBC One",
+    "pageTitle": "Making Life on Earth: Attenborough\u0027s Greatest Adventure - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episode/m002vzjt?at_mid\u003dRlQxATlAnf\u0026at_campaign\u003dMaking_Life_on_Earth_Attenboroughs_Greatest_Adventure\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_nation\u003dNET\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm002vzjt\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dMaking_Life_on_Earth_Attenboroughs_Greatest_Adventure\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "src": "http://b.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Making Life on Earth: Attenborough\u0027s Greatest Adventure - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episode/m002vzjt?at_mid\u003dRlQxATlAnf\u0026at_campaign\u003dMaking_Life_on_Earth_Attenboroughs_Greatest_Adventure\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_nation\u003dNET\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm002vzjt\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dMaking_Life_on_Earth_Attenboroughs_Greatest_Adventure\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/894/cpsprodpb/7192/live/dbab6370-4562-11f1-a64e-99759cf0ebc0.jpg",
+    "alt": "Two men in glasses, each with an arm around the shoulder of the other. They are both smiling, the older man is wearing a flat cap",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/736/cpsprodpb/ac7e/live/59aa1630-3a5b-11f1-a214-6193255d1a38.png",
+    "alt": "A man with curly hair and glasses, wearing a grey jump is stood in front of a window. A sign in the window reads Notice: Spoke and Span Bike Shop has moved",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/690/cpsprodpb/2e91/live/eac6fb60-3a5b-11f1-b0fd-19d0757b0008.png",
+    "alt": "A man in a green bomber jacker, a grey hat and a goatee beard and moustache",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1552/cpsprodpb/6291/live/11e0fe40-4564-11f1-a66d-a173f5fb620e.jpg",
+    "alt": "A man in a dark top, wearing a flat cap is being filmed by a number of people. He is standing beside a van. There is a large barn behind him with a sign saying antiques",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/db69/live/015d7fe0-4aef-11f1-ac78-2112837ce2aa.png",
+    "alt": "Nigel Farage ",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/60a2/live/7bfa1c10-cadc-11f0-a892-01d657345866.jpg",
+    "alt": "Sir David Attenborough being filmed in front of the sea and mountains for Life on Earth in 1979",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/af4f/live/8c892de0-4ac1-11f1-b55d-0f258dce1735.png",
+    "alt": "A composite image of 5 people  in flamboyant costumes at the Met gala. In the centre in a largest part of the image is a women in white  wearing a mask over her face",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b327/live/76b6ee00-4a38-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A person in protective clothing walks next to an ambulance during an evacuation operation of suspected hantavirus patients, following an outbreak on the cruise ship MV Hondius, in Praia, Cape Verde, May 6, 2026",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/2d4c/live/d268f6b0-4a1c-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "Two ladies are sat beside each other. The one on the left is wearing a mustard cardigan and has white wavy hair. The one on the right is wearing a pink collarless shirt and has blonde and brown hair. ",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/dd4d/live/992a5b50-494f-11f1-bd44-e578c5bd51ff.png",
+    "alt": "A pregnant woman stands in a garden with her hand on her belly. She has long, straight, dark hair and is wearing a matching top and trousers which are white with some patches of black. She also has a light brown hoodie on. ",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "\u0027I\u0027ve moved out of my shop for Johnny Vegas\u0027 - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/ce3dp365ezdo"
+  },
+  {
+    "src": "https://static.files.bbci.co.uk/elections/images/uk2026/election-logo-cutout-en.svg",
+    "alt": "Election",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf27/live/4fdce550-4aec-11f1-95d5-c35bb50319f8.jpg",
+    "alt": "Crowds clap at an election count",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/a532/live/6a7b90b0-4acd-11f1-9a78-91accbab2de0.jpg",
+    "alt": "A shiny insect-like metal structure on three cylindrical legs stands in front of a tall glass-fronted building. There are two winding tentacles coming out the back of the statue.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/acc7/live/18808530-4a24-11f1-bfb3-af42b3144659.jpg",
+    "alt": "A man, EM Forster, in a coat and hat.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/e435/live/37507f60-4a1f-11f1-97c6-d32d5f1a58f0.jpg",
+    "alt": "Sir David Attenborough pictured at the Surrey Wildlife Trust centre at Nower Wood near Leatherhead. The picture, taken in 1985, is in black and white. Sir David is stood beside two people at the centre, and has a bird on his left arm.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ce40/live/4f9918f0-4954-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Two dark haired men in grey jumpers and two women, one with white hair, a black top and glasses and one with blonde short hair and a cream jumper counting ballot papers at a fold-down table, with three baskets of ballots in front of them",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/74cc/live/243adf50-4a16-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A metal statue of a woman holding scales in one hand and a sword in the other.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/5a6f/live/58261d20-49e4-11f1-9921-0be54b6c608a.jpg",
+    "alt": "A man with white hair and heard, wearing a dark blue polo shirt. ",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/a0d4/live/b14cdf90-3f1e-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Orange and black e-scooter parked on pavement next to a wooden fence",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/1afc/live/392669e0-39a2-11f1-879d-1b2f5c3919b8.jpg",
+    "alt": "A man facing away from the camera, facing towards riot police",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/a888/live/d2629660-374a-11f1-879d-1b2f5c3919b8.jpg",
+    "alt": "Colin Baker as Sixth Doctor in Doctor Who wearing muti-coloured coat inside the Tardis",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/655f/live/cc845290-3409-11f1-879d-1b2f5c3919b8.jpg",
+    "alt": "A young girl and a young boy both holding tennis balls above their heads",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/3367/live/7f986ed0-26ad-11f1-934f-036468834728.jpg",
+    "alt": "Flowers attached to road furniture",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/a8a6/live/8467d0a0-1eeb-11f1-9120-a910fc22c6ac.jpg",
+    "alt": "Nigel Havers in a black jumper and white shirt sitting in front of a purple backdrop.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/7835/live/aae6e5f0-1d64-11f1-b048-c9424b2cf5fd.jpg",
+    "alt": "A man in a tight white Team GB shirt standing next to a box which has the Team GB logo on it.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/0239/live/6b2d0bb0-1d41-11f1-9120-a910fc22c6ac.png",
+    "alt": "A small amount of white powder on a black screen.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/b0b2/live/422a0470-1c74-11f1-9120-a910fc22c6ac.jpg",
+    "alt": "The outside of a light stone building. There is a sign for Surrey County Council above the glass entrance.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/d2be/live/6f56abc0-1bce-11f1-b048-c9424b2cf5fd.jpg",
+    "alt": "A man with a marathon number on carrying a woman over his shoulders.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/2856/live/4b6d38c0-1960-11f1-9120-a910fc22c6ac.jpg",
+    "alt": "Side view of cocker spaniel\u0027s head",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/7ae3/live/d7335490-171a-11f1-b048-c9424b2cf5fd.jpg",
+    "alt": "Person indoors in a full body red and blue spiderman suit",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/e1c0/live/5ffcb330-162a-11f1-801d-ed3cff6bf876.jpg",
+    "alt": "Young man sat on park bench with two prosthetic legs ",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/338d/live/732b7d90-13e3-11f1-9120-a910fc22c6ac.jpg",
+    "alt": "A man in a white jumper holds a meerkat.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/3f80/live/a475cba0-130a-11f1-9120-a910fc22c6ac.jpg",
+    "alt": "A woman with short brown hair in a blue top.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/9dfe/live/d02e51f0-1192-11f1-801d-ed3cff6bf876.jpg",
+    "alt": "A man in hi vis jacket and weraing a cap emptying a large plastic bin into a bin truck ",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/739f/live/a2f67100-117d-11f1-9120-a910fc22c6ac.jpg",
+    "alt": "Young woman with mouth open wearing perspex glasses in dentist chair with hands wearing blue gloves and dentist tools in her mouth",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/8108/live/25728150-0cd3-11f1-b5e2-dd58fc65f0f6.jpg",
+    "alt": "A pothole filled with rain water.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/f7b6/live/68e7bc20-0c15-11f1-b5e2-dd58fc65f0f6.jpg",
+    "alt": "A sinkhole in a road in Godstone",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/ced8/live/3675e360-081f-11f1-b5e2-dd58fc65f0f6.jpg",
+    "alt": "The inside of an exploded gas canister.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/d85a/live/d6fe8150-461f-11f1-b0bc-1f5a59b5b6a6.jpg",
+    "alt": "Thomas, 14, is wearing dark‑rimmed glasses and a yellow headband, and is photographed against a plain light background.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4511/live/d191dd60-4968-11f1-a87a-55dfd3c7a311.jpg",
+    "alt": "A woman taking a selfie on a boat.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/d62e/live/7999c7b0-493d-11f1-861c-270dbba6d6ae.jpg",
+    "alt": "A child eating candy floss and smiling.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/b119/live/4fc0f2a0-495c-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "A bald man with short grey hair around the side of his head. He has black glasses.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/25b2/live/e05ab860-494c-11f1-bd44-e578c5bd51ff.jpg",
+    "alt": "A firefighter is putting out a fire in a countryside. Two fire engines can be seen in the background.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c6f0/live/ae2ab3b0-431e-11f1-89cc-ff708b4a3776.jpg",
+    "alt": "A man wearing a dark t-shirt stands outside his chip shop.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c45c/live/74018f50-3a50-11f1-a5de-8146db4c6e12.jpg",
+    "alt": "A man stands in a field on a sunny day. He is holding a metal detector. ",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/192a/live/51a04480-0772-11f1-9972-d3f265c101c6.jpg",
+    "alt": "Laughing gas cannisters in a grey basket",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f7a5/live/b1f86e70-e661-11f0-aae2-2191c0e48a3b.jpg",
+    "alt": "Lumi, a civil enforcement officer, is standing in a busy Hove street",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/320b/live/72f69000-d78c-11f0-a8dc-93c15fe68710.png",
+    "alt": "Robert Rhodes, pictured in a police interview in 2016, orchestrated a plot to kill Dawn Rhodes and claim he did so in self-defence",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0ngtzd1.jpg",
+    "alt": "",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0nh6ykc.jpg",
+    "alt": "",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0nj907v.jpg",
+    "alt": "",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0nh8tfr.jpg",
+    "alt": "",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/eac0/live/71268290-00c2-11f0-b50e-9d086302645f.jpg",
+    "alt": "BBC Radio Surrey image with a purple background and white font",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0dktb17.jpg",
+    "alt": "",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0n00jq4.jpg",
+    "alt": "",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/12dd/live/8db81450-4aea-11f1-b8d1-0fcd60d6dd09.jpg",
+    "alt": "Ben Stokes",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/5a79/live/7fdc3ad0-4a29-11f1-bfb3-af42b3144659.jpg",
+    "alt": "Harry Beautyman jogging on the pitch during a match for Woking this season",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/3e99/live/65981e70-47ca-11f1-bf7a-052ee4fcc57e.jpg",
+    "alt": "Jordan Clark celebrates taking a wicket against Sussex",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/8556/live/9913a250-47cb-11f1-bf7a-052ee4fcc57e.jpg",
+    "alt": "Georgia Elwiss and Emma Jones",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/d368/live/62849060-471b-11f1-973f-3fcb874893eb.jpg",
+    "alt": "Sean Abbott of Surrey congratulates Adam Thomas after scoring a century against Sussex",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/acc7/live/18808530-4a24-11f1-bfb3-af42b3144659.jpg",
+    "alt": "A man, EM Forster, in a coat and hat.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/a532/live/6a7b90b0-4acd-11f1-9a78-91accbab2de0.jpg",
+    "alt": "A shiny insect-like metal structure on three cylindrical legs stands in front of a tall glass-fronted building. There are two winding tentacles coming out the back of the statue.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/e435/live/37507f60-4a1f-11f1-97c6-d32d5f1a58f0.jpg",
+    "alt": "Sir David Attenborough pictured at the Surrey Wildlife Trust centre at Nower Wood near Leatherhead. The picture, taken in 1985, is in black and white. Sir David is stood beside two people at the centre, and has a bird on his left arm.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ce40/live/4f9918f0-4954-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Two dark haired men in grey jumpers and two women, one with white hair, a black top and glasses and one with blonde short hair and a cream jumper counting ballot papers at a fold-down table, with three baskets of ballots in front of them",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/5a79/live/7fdc3ad0-4a29-11f1-bfb3-af42b3144659.jpg",
+    "alt": "Harry Beautyman jogging on the pitch during a match for Woking this season",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/74cc/live/243adf50-4a16-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A metal statue of a woman holding scales in one hand and a sword in the other.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/d85a/live/d6fe8150-461f-11f1-b0bc-1f5a59b5b6a6.jpg",
+    "alt": "Thomas, 14, is wearing dark‑rimmed glasses and a yellow headband, and is photographed against a plain light background.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/5a6f/live/58261d20-49e4-11f1-9921-0be54b6c608a.jpg",
+    "alt": "A man with white hair and heard, wearing a dark blue polo shirt. ",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/b34f/live/758e1570-4877-11f1-b010-8f8612d9ae2e.jpg",
+    "alt": "Two people facing one another. We cannot see their heads. The one of the right is wearing a pink coat and is holding a clipboard. In between them is a white sign with the words POLLING STATION written in black.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4511/live/d191dd60-4968-11f1-a87a-55dfd3c7a311.jpg",
+    "alt": "A woman taking a selfie on a boat.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/d7fd/live/0ae4a010-4951-11f1-bd44-e578c5bd51ff.jpg",
+    "alt": "Two firefighters aim a hose on open, burnt ground surrounded by smoke and trees",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/d62e/live/7999c7b0-493d-11f1-861c-270dbba6d6ae.jpg",
+    "alt": "A child eating candy floss and smiling.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/b119/live/4fc0f2a0-495c-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "A bald man with short grey hair around the side of his head. He has black glasses.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/25b2/live/e05ab860-494c-11f1-bd44-e578c5bd51ff.jpg",
+    "alt": "A firefighter is putting out a fire in a countryside. Two fire engines can be seen in the background.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/516b/live/d0e06550-4934-11f1-a36a-6bbcbd5b2296.jpg",
+    "alt": "A computer-generated image showing the proposed rebuilt Chobham Fire Station, with two red appliance bay doors, a brick exterior, landscaped planting and a metal training tower to the side.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2231/live/3d976280-489e-11f1-9d2b-c9f441ed383e.jpg",
+    "alt": "BBC South East political editor Helen Catt stood on a cgi stage with a clock and dirving licence next to her",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/17fc/live/816fc580-489c-11f1-ac78-2112837ce2aa.png",
+    "alt": "A group of peregrine falcon chicks huddled together in a nest box. A fully grown peregrine falcon is stood next to them.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/50ee/live/8f022810-489b-11f1-9d2b-c9f441ed383e.jpg",
+    "alt": "The image shows the back of a police officers uniform.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cc3c/live/6642cd30-4855-11f1-9db4-19df36ab272c.jpg",
+    "alt": "A green Southern train approaches London Victoria station.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/75d5/live/51a4e3d0-486a-11f1-804a-9d85b054b34f.jpg",
+    "alt": "Three police officers in riot gear holding riot shields in front of them.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/669c/live/4b310400-455b-11f1-a4b0-8306ec2ff5e9.jpg",
+    "alt": "Man in wheelchair with spinal cord injury trying to catch a local bus",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cde9/live/bff91ed0-4579-11f1-86ec-5992fe9627d8.jpg",
+    "alt": "A man stood on a balcony with his arms folded in front of him. He is stood in front of a row of polytunnels with strawberry plants inside them.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/a524/live/e54abc70-f79a-11f0-8729-73ea3d71ddf9.jpg",
+    "alt": "A group of walkers, they are lined up in a row on a country path with a black dog.",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/3e99/live/65981e70-47ca-11f1-bf7a-052ee4fcc57e.jpg",
+    "alt": "Jordan Clark celebrates taking a wicket against Sussex",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/6498/live/d0c4fee0-b526-11ee-8f07-bbfdfa890097.png",
+    "alt": "Instagram logo",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/25eb/live/dd54a200-b526-11ee-beb5-e1400df560f2.png",
+    "alt": "TikTok logo",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/8fe4/live/b9b2c6b0-b526-11ee-bc2f-cb5579b90709.png",
+    "alt": "Facebook logo",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/320/cpsprodpb/d869/live/ec988fb0-b526-11ee-beb5-e1400df560f2.png",
+    "alt": "X logo",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Surrey | Latest News \u0026 Updates | BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/england/surrey"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/2560/cpsprodpb/2dda/live/f572f960-4acd-11f1-a909-a5874e7743fb.jpg",
+    "alt": "Sir David Attenborough and King Charles III in dinner suits and bow ties",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1680/cpsprodpb/9f52/live/f1c15120-4acf-11f1-a909-a5874e7743fb.jpg",
+    "alt": "Image from 1958 in black and white of Prince Charles with his sister Princess Anne meeting David Attenborough and Cocky, the cockatoo",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/1814/live/f221a790-4a35-11f1-a70d-c72ff4101914.jpg",
+    "alt": "Sir David Attenborough leans over a rock face to face with an iguana.",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/39f6/live/c99a51f0-4ac6-11f1-b55d-0f258dce1735.png",
+    "alt": "A thin, grey banner promoting the News Daily newsletter. On the right, there is a graphic of an orange sphere with two concentric crescent shapes around it in a red-orange gradient, like a sound wave. The banner reads: \"The latest news in your inbox first",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/db69/live/015d7fe0-4aef-11f1-ac78-2112837ce2aa.png",
+    "alt": "Nigel Farage ",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/60a2/live/7bfa1c10-cadc-11f0-a892-01d657345866.jpg",
+    "alt": "Sir David Attenborough being filmed in front of the sea and mountains for Life on Earth in 1979",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/af4f/live/8c892de0-4ac1-11f1-b55d-0f258dce1735.png",
+    "alt": "A composite image of 5 people  in flamboyant costumes at the Met gala. In the centre in a largest part of the image is a women in white  wearing a mask over her face",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b327/live/76b6ee00-4a38-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A person in protective clothing walks next to an ambulance during an evacuation operation of suspected hantavirus patients, following an outbreak on the cruise ship MV Hondius, in Praia, Cape Verde, May 6, 2026",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/2d4c/live/d268f6b0-4a1c-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "Two ladies are sat beside each other. The one on the left is wearing a mustard cardigan and has white wavy hair. The one on the right is wearing a pink collarless shirt and has blonde and brown hair. ",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/dd4d/live/992a5b50-494f-11f1-bd44-e578c5bd51ff.png",
+    "alt": "A pregnant woman stands in a garden with her hand on her belly. She has long, straight, dark hair and is wearing a matching top and trousers which are white with some patches of black. She also has a light brown hoodie on. ",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "David Attenborough: King and Queen lead tributes for 100th birthday - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp3pww9g0p5o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/2048/cpsprodpb/c7fe/live/27a3e2d0-4553-11f1-a4b0-8306ec2ff5e9.jpg",
+    "alt": "A  red squirrel standing up leaning on a rock and looking into the camera. The background is blurred.",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/983/cpsprodpb/24fe/live/0d59fa10-4565-11f1-a66d-a173f5fb620e.jpg",
+    "alt": "Two grey squirrels are huddled together in woodland pine looking startled. There are tinges of red in their coats. There is a bunch of berries on the leave to the right of the picture. ",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1376/cpsprodpb/41e2/live/3fd6a440-44a5-11f1-bd52-e755d604ece4.png",
+    "alt": "Two map illustrations with the headlines 1876 - Once Widespread and Today, now confined to pockets without action red squirrels will disappear. They show more than three million red squirrels reduced to between 120,000 to 160,000 in the UK with the grey s",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/bb3f/live/d884d320-335b-11f1-9d5c-8ba507d7dbde.jpg",
+    "alt": "A red squirrel is looking directly at the camera whilst sitting on a felled tree covered in green moss. ",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/bfa2/live/82feca00-037c-11f1-a1bf-cf780f66d064.jpg",
+    "alt": "A red squirrel is perched on a mossy branch in woodland, illuminated by the sun\u0027s rays",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1800/cpsprodpb/1ddf/live/6ddfd4a0-1346-11f1-9f20-795c0d2a8d6b.jpg",
+    "alt": "Campaigners outside Cumberland Council headquarters. They hold reading, protect our wildlife. Another reads, we demand a proper ecology report.",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/db69/live/015d7fe0-4aef-11f1-ac78-2112837ce2aa.png",
+    "alt": "Nigel Farage ",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/60a2/live/7bfa1c10-cadc-11f0-a892-01d657345866.jpg",
+    "alt": "Sir David Attenborough being filmed in front of the sea and mountains for Life on Earth in 1979",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/af4f/live/8c892de0-4ac1-11f1-b55d-0f258dce1735.png",
+    "alt": "A composite image of 5 people  in flamboyant costumes at the Met gala. In the centre in a largest part of the image is a women in white  wearing a mask over her face",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b327/live/76b6ee00-4a38-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A person in protective clothing walks next to an ambulance during an evacuation operation of suspected hantavirus patients, following an outbreak on the cruise ship MV Hondius, in Praia, Cape Verde, May 6, 2026",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/2d4c/live/d268f6b0-4a1c-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "Two ladies are sat beside each other. The one on the left is wearing a mustard cardigan and has white wavy hair. The one on the right is wearing a pink collarless shirt and has blonde and brown hair. ",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/dd4d/live/992a5b50-494f-11f1-bd44-e578c5bd51ff.png",
+    "alt": "A pregnant woman stands in a garden with her hand on her belly. She has long, straight, dark hair and is wearing a matching top and trousers which are white with some patches of black. She also has a light brown hoodie on. ",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Urgent calls to prevent the extinction of red squirrels - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cjwpd9d399wo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/e6cd/live/455d0b30-4af3-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Swinney speaking ",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/c4fa/live/fada9460-4ade-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Starmer holds his hand in a fist and has a neutral expression as he speaks while sat at a table",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/b7e8/live/28947460-4ae5-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Robert Jenrick sat next to Victoria Atkins in the studio",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/af06/live/f6cc20f0-4af2-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Farage smiling",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/9782/live/a12d1670-4ac7-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Kemi Badenoch ",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/963a/live/d403e950-4add-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Huw Irranca-Davies ",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/4ee8/live/47f85c10-4ade-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Zack Polanski seen gesticulating as he speaks, wearing a dark suit jacket with a white shirt",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/a31c/live/f063c880-4ac5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Ed Davey smiles and holds paper coffee cup",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/e157/live/532de0e0-4af3-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Sarwar speaking, holds his finger up",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/e8d5/live/0f10e380-4ae4-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Zoe Garbett at a podium",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/99fe/live/6a6983c0-4ad7-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Reporter David Wallace Lockhart in a suit ",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/a1ab/live/b373b240-4ac6-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Henry Zeffman outside Downing Street",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/25c1/live/d59fe080-4aa5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Prof Jonathan Tonge in a dark suit wearing a pale floral tie ",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/ea5d/live/41cb23c0-4aa4-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Chris Mason inside a BBC News studio",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/ded3/live/ffc66060-4a86-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Richard Holden",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/395b/live/bebe0a50-4aa9-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Sian Berry MP in a studio wearing a floral shirt",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/226b/live/9878e920-4a61-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Laura Kuenssberg",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/2d1e40aa-c016-4523-8341-8c2eec963ad8.jpg.webp",
+    "alt": "Leader of Plaid Cymru, Rhun ap Iorwerth",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/2a73aa29-a1c6-4a4d-8e6f-60f6b091914c.png.webp",
+    "alt": "Hemicycle chart showing seats won by party in the 2026 Welsh Parliament election. 96 seats total, 49 seats for a majority. Plaid Cymru 24, Reform UK 19, Labour 6, Conservative 4, Green 1, 42 seats undeclared",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2025/8/17/61dafb72-4c6b-41f2-b294-4d388effe420.jpg.webp",
+    "alt": "",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/b2f093ba-f2ac-415d-9e6b-04d12cad1bce.jpg.webp",
+    "alt": "\"We cannot descend into an irresponsible, messy, internal contest,\" Louise Haigh says",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2020/1/31/c234bf69-9b14-47b2-919f-d46d7d25f2af.jpg.webp",
+    "alt": "",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/f5612ed1-70c7-4d87-a0e7-36e7451b0d55.jpg.webp",
+    "alt": "First Minister Michelle O\u0027Neill speaking at a news conference, against a bright blue background",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/291e0b05-e50f-493c-bf6a-eefcad51bae3.png.webp",
+    "alt": "Bar chart showing the results of the Bangor Conwy Môn seat in the Welsh Parliament with vote share for candidates with more than 1% of the vote: Plaid Cymru 44.9% and 3 seats, Reform UK 28.1% and 2 seats, Conservative 12.4% and 1 seats, Labour 6.4% and 0 ",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/0671b6a9-8763-44ec-b38b-0912d013d67a.jpg.webp",
+    "alt": "Scottish Labour leader Anas Sarwar with a sad look on his face at count for the 2026 Holyrood elections",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/e91a1ce2-30ac-44b4-83f8-269226bb255e.png.webp",
+    "alt": "Hemicycle chart showing how many seats each party won in the 2026 Scottish Parliament election. 129 seats total, 65 seats for a majority. SNP 41, Lib Dem 3, Conservative 3, Labour 2, Scottish Green 1, 79 seats undeclared",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/8f73042d-af91-4bb5-940d-2fe7ff0a4add.png.webp",
+    "alt": "Bar chart showing the results of the Edinburgh Central seat in the Scottish Parliament with vote share for candidates with more than 1% of the vote: Scottish Green 36% up 29.3 points, Labour 23% down 5.5 points, Scottish National Party 21.9% down 17.3 poi",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/5c0c0c77-b43a-4cfe-b73b-ce4bb7c955fd.png.webp",
+    "alt": "Hemicycle chart showing seats won by party in the 2026 Welsh Parliament election. 96 seats total, 49 seats for a majority. Plaid Cymru 16, Reform UK 13, Labour 4, Conservative 2, Green 1, 60 seats undeclared",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2015/9/10/82ccc373-911d-4c8f-9cc8-51a736f5d12f.jpg.webp",
+    "alt": "",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/a4d7f5c4-c912-4d2b-a57f-b2989544f411.png.webp",
+    "alt": "Bar chart showing the results for the council election in Sunderland, After 39 of 75 seats declared. Seats needed for majority: 38. Reform UK won 30 seats, a gain of 30; Lib Dem won 6, same as previous election; Labour won 3 seats, a loss of 27; Conservat",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2024/11/21/efc4785b-e209-4310-bc20-65148f0cfca4.jpg.webp",
+    "alt": "",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/ab4265a7-3ade-4a8a-b61b-ec42682221b5.png.webp",
+    "alt": "A map showing the latest seat tallies in the Welsh Parliament elections are Plaid Cymru 13, Reform UK 11, Labour 3, Conservative 2, Green 1, Awaiting results 66",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/29cedcd5-a4d1-4834-b0a1-e51157b7de48.png.webp",
+    "alt": "Hemicycle chart showing how many seats each party won in the 2026 Scottish Parliament election. 129 seats total, 65 seats for a majority. SNP 33, Lib Dem 2, Conservative 2, Labour 1, 91 seats undeclared",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/32c23aba-f00b-4e75-977d-418a2c76cd6a.png.webp",
+    "alt": "The largest parties after 2,187 of 5,036 seats declared are as follows: Reform UK 695; Lib Dem 448; Labour 400; Conservative 393; Green 160; Independents and Others 69; Residents\u0027 Association 22.",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2022/10/4/4c103344-c221-4117-8552-c919a61b6dc4.jpg.webp",
+    "alt": "",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/38d74a2a-c4bf-4b98-a926-2b5fed01fb09.jpg.webp",
+    "alt": "Prime Minister Sir Keir Starmer and James Murray, Chief Secretary to the Treasury, meet Labour Party members at Kingsdown Methodist Church Hall in Ealing",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/9ced9197-b5b0-417e-845c-7f5f9d827519.png.webp",
+    "alt": "Bar chart showing the results for the council election in Preston, After 15 of 16 seats declared. Seats needed for majority: 25. Labour won 22 seats, a loss of 5; Lib Dem won 14 seats, a gain of 2; Reform UK won 4 seats, a gain of 4; Conservative won 3 se",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/b71ecc6e-6851-4b8e-880d-e9f74ebb55a4.png.webp",
+    "alt": "Bar chart showing the results for the council election in Cambridge, After 13 of 15 seats declared. Seats needed for majority: 22. Labour won 17 seats, a loss of 6; Green won 12 seats, a gain of 6; Lib Dem won 9, same as previous election; Conservative wo",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/8aa06372-18a5-4be2-b9b7-765389146844.png.webp",
+    "alt": "Pen-y-bont Bro Morgannwg",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2024/8/5/9d490be3-e53e-4ad2-b45d-0dd55ff10e07.jpg.webp",
+    "alt": "",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/b13626fa-fd14-432a-814d-bc69d934e970.jpg.webp",
+    "alt": "Amelia stands outside a train station in Cardiff",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/6d4cb380-e191-4a35-b665-6ecb4f9ba1b3.jpg.webp",
+    "alt": "First Minister and Welsh Labour leader Baroness Eluned Morgan arrives at the Ysgol Bro Teifi counting centre in Ceredigion. Picture date: Friday May 8, 2026. PA Photo. Photo credit should read: Ben Birchall/PA Wire",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/42289fb8-988d-4a63-aa07-615b090bddfc.png.webp",
+    "alt": "Bar chart showing the results of the Casnewydd Islwyn seat in the Welsh Parliament with vote share for candidates with more than 1% of the vote: Reform UK 32.9% and 2 seats, Plaid Cymru 29.7% and 2 seats, Labour 13.7% and 1 seats, Conservative 11.4% and 1",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2026/4/10/4afda92b-88ce-4e22-ad2b-52a962da9e05.png.webp",
+    "alt": "",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/bc152c5d-e9a7-4ce0-ada9-fc5f9adb5d27.jpg.webp",
+    "alt": "Stephen Flynn speaks at a lectern during an SNP conference in March",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/5e82ccc5-d07d-401d-af54-943b92f0060d.png.webp",
+    "alt": "Hemicycle chart showing how many seats each party won in the 2026 Scottish Parliament election. 129 seats total, 65 seats for a majority. SNP 14, Lib Dem 1, Labour 1, 113 seats undeclared",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/c2c3145d-42af-4432-94bc-2f9ac4b1b397.png.webp",
+    "alt": "Bar chart showing the results of the Na h-Eileanan an Iar seat in the Scottish Parliament with vote share for candidates with more than 1% of the vote: Labour 37.7% up 10 points, Scottish National Party 36.5% down 14.9 points, Reform UK 13.1% up 13.1 poin",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0nk0xx1.jpg",
+    "alt": "Plaid Cymru Leads Senedd Race in Wales",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/960xn/p0nk21b6.jpg",
+    "alt": "Newscast\u0027s election special",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Election results 2026 live: Follow the vote counts and reaction - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1428pev1n0t"
+  },
   {
     "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dunknown\u0026x1\u003d[]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[sounds]\u0026x12\u003d[]",
     "alt": "",
