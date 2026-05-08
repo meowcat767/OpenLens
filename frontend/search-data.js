@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 770,
+    "url": "https://docs.python.org/3/library/importlib.html#module-importlib",
+    "title": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Importing Modules » importlib — The implementation of import | Theme Auto Light Dark | importlib — The implementation of import¶ Added in version 3.1. Source code: Lib/importlib/__init__.py Introduction¶ The purpose of the importlib package is three-fold. One is to provide the implementation of the import statement (and thus, by extension, the __import__() function) in Python source code. This provides an implementation of import which is portable to any Python interpreter. This also provides an implementation which is easier to comprehend than one implemented in a programming language other than Python. Two, the components to implement import are exposed in this package, making it easier for users to create their own custom objects (known generically as an importer) to participate in the import process. Three, the package contains modules exposing additional functionality for managing aspects of Python packages: importlib.metadata presents access to metadata from third-party distributions. importlib.resources provides routines for accessing non-code “resources” from Python packages. See also The import statement The language reference for the import statement. Packages specification Original specification of packages. Some semantics have changed since the writing of this document (e.g. redirecting based on None in sys.modules). The __import__() function The import statement is syntactic sugar for this function. The initialization of the sys.path module search path The initialization of sys.path. PEP 235 Import on Case-Insensitive Platforms PEP 263 Defining Python Source Code Encodings PEP 302 New Import Hooks PEP 328 Imports: Multi-Line and Absolute/Relative PEP 366 Main module explicit relative imports PEP 420 Implicit namespace packages PEP 451 A ModuleSpec Type for the Import System PEP 488 Elimination of PYO files PEP 489 Multi-phase extension module initialization PEP 552 Deterministic pycs PEP 3120 Using UTF-8 as the Default Source Encoding PEP 3147 PYC Repository Directories Functions¶ importlib.__import__(name, globals\u003dNone, locals\u003dNone, fromlist\u003d(), level\u003d0)¶ An implementation of the built-in __import__() function. Note Programmatic importing of modules should use import_module() instead of this function. importlib.import_module(name, package\u003dNone)¶ Import a module. The name argument specifies what module to import in absolute or relative terms (e.g. either pkg.mod or ..mod). If the name is specified in relative terms, then the package argument must be set to the name of the package which is to act as the anchor for resolving the package name (e.g. import_module(\u0027..mod\u0027, \u0027pkg.subpkg\u0027) will import pkg.mod). The import_module() function acts as a simplifying wrapper around importlib.__import__(). This means all semantics of the function are derived from importlib.__import__(). The most important difference between these two functions is that import_module() returns the specified package or module (e.g. pkg.mod), while __import__() returns the top-level package or module (e.g. pkg). If you are dynamically importing a module that was created since the interpreter began execution (e.g., created a Python source file), you may need to call invalidate_caches() in order for the new module to be noticed by the import system. Changed in version 3.3: Parent packages are automatically imported. importlib.invalidate_caches()¶ Invalidate the internal caches of finders stored at sys.meta_path. If a finder implements invalidate_caches() then it will be called to perform the invalidation. This function should be called if any modules are created/installed while your program is running to guarantee all finders will notice the new module’s existence. Added in version 3.3. Changed in version 3.10: Namespace packages created/installed in a different sys.path location after the same namespace was already imported are noticed. importlib.reload(module)¶ Reload a previously imported module. The argument must be a module object, so it must have been successfully imported before. This is useful if you have edited the module source file using an external editor and want to try out the new version without leaving the Python interpreter. The return value is the module object (which can be different if re-importing causes a different object to be placed in sys.modules). When reload() is executed: Python module’s code is recompiled and the module-level code re-executed, defining a new set of objects which are bound to names in the module’s dictionary by reusing the loader which originally loaded the module. The init function of extension modules is not called a second time. As with all other objects in Python the old objects are only reclaimed after their reference counts drop to zero. The names in the module namespace are updated to point to any new or changed objects. Other references to the old objects (such as names e",
+    "scrapedAt": "2026-05-09 00:52:53.729554"
+  },
+  {
+    "id": 769,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.argv",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 00:52:52.493216"
+  },
+  {
+    "id": 768,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsPositive",
+    "title": "Integer Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)",
+    "scrapedAt": "2026-05-09 00:52:51.333973"
+  },
+  {
+    "id": 767,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event",
+    "title": "Synchronization Primitives — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Synchronization Primitives | Theme Auto Light Dark | Synchronization Primitives¶ Source code: Lib/asyncio/locks.py asyncio synchronization primitives are designed to be similar to those of the threading module with two important caveats: asyncio primitives are not thread-safe, therefore they should not be used for OS thread synchronization (use threading for that); methods of these synchronization primitives do not accept the timeout argument; use the asyncio.wait_for() function to perform operations with timeouts. asyncio has the following basic synchronization primitives: Lock Event Condition Semaphore BoundedSemaphore Barrier Lock¶ class asyncio.Lock¶ Implements a mutex lock for asyncio tasks. Not thread-safe. An asyncio lock can be used to guarantee exclusive access to a shared resource. The preferred way to use a Lock is an async with statement: lock \u003d asyncio.Lock()\n\n# ... later\nasync with lock:\n    # access shared state\n which is equivalent to: lock \u003d asyncio.Lock()\n\n# ... later\nawait lock.acquire()\ntry:\n    # access shared state\nfinally:\n    lock.release()\n Changed in version 3.10: Removed the loop parameter. async acquire()¶ Acquire the lock. This method waits until the lock is unlocked, sets it to locked and returns True. When more than one coroutine is blocked in acquire() waiting for the lock to be unlocked, only one coroutine eventually proceeds. Acquiring a lock is fair: the coroutine that proceeds will be the first coroutine that started waiting on the lock. release()¶ Release the lock. When the lock is locked, reset it to unlocked and return. If the lock is unlocked, a RuntimeError is raised. locked()¶ Return True if the lock is locked. Event¶ class asyncio.Event¶ An event object. Not thread-safe. An asyncio event can be used to notify multiple asyncio tasks that some event has happened. An Event object manages an internal flag that can be set to true with the set() method and reset to false with the clear() method. The wait() method blocks until the flag is set to true. The flag is set to false initially. Changed in version 3.10: Removed the loop parameter. Example: async def waiter(event):\n    print(\u0027waiting for it ...\u0027)\n    await event.wait()\n    print(\u0027... got it!\u0027)\n\nasync def main():\n    # Create an Event object.\n    event \u003d asyncio.Event()\n\n    # Spawn a Task to wait until \u0027event\u0027 is set.\n    waiter_task \u003d asyncio.create_task(waiter(event))\n\n    # Sleep for 1 second and set the event.\n    await asyncio.sleep(1)\n    event.set()\n\n    # Wait until the waiter task is finished.\n    await waiter_task\n\nasyncio.run(main())\n async wait()¶ Wait until the event is set. If the event is set, return True immediately. Otherwise block until another task calls set(). set()¶ Set the event. All tasks waiting for event to be set will be immediately awakened. clear()¶ Clear (unset) the event. Subsequent tasks awaiting on wait() will now block until the set() method is called again. is_set()¶ Return True if the event is set. Condition¶ class asyncio.Condition(lock\u003dNone)¶ A Condition object. Not thread-safe. An asyncio condition primitive can be used by a task to wait for some event to happen and then get exclusive access to a shared resource. In essence, a Condition object combines the functionality of an Event and a Lock. It is possible to have multiple Condition objects share one Lock, which allows coordinating exclusive access to a shared resource between different tasks interested in particular states of that shared resource. The optional lock argument must be a Lock object or None. In the latter case a new Lock object is created automatically. Changed in version 3.10: Removed the loop parameter. The preferred way to use a Condition is an async with statement: cond \u003d asyncio.Condition()\n\n# ... later\nasync with cond:\n    await cond.wait()\n which is equivalent to: cond \u003d asyncio.Condition()\n\n# ... later\nawait cond.acquire()\ntry:\n    await cond.wait()\nfinally:\n    cond.release()\n async acquire()¶ Acquire the underlying lock. This method waits until the underlying lock is unlocked, sets it to locked and returns True. notify(n\u003d1)¶ Wake up n tasks (1 by default) waiting on this condition. If fewer than n tasks are waiting they are all awakened. The lock must be acquired before this method is called and released shortly after. If called with an unlocked lock a RuntimeError error is raised. locked()¶ Return True if the underlying lock is acquired. notify_all()¶ Wake up all tasks waiting on this condition. This method acts like notify(), but wakes up all waiting tasks. The lock must be acquired before this method is called and released shortly after. If called with an unlocked lock a RuntimeError error is raised. release()¶ Release the underlying lock. When invoked on an unlocked lock, a RuntimeError is raised. async wait()¶ Wait un",
+    "scrapedAt": "2026-05-09 00:52:50.181526"
+  },
+  {
+    "id": 766,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max",
+    "title": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » heapq — Heap queue algorithm | Theme Auto Light Dark | heapq — Heap queue algorithm¶ Source code: Lib/heapq.py This module provides an implementation of the heap queue algorithm, also known as the priority queue algorithm. Min-heaps are binary trees for which every parent node has a value less than or equal to any of its children. We refer to this condition as the heap invariant. For min-heaps, this implementation uses lists for which heap[k] \u003c\u003d heap[2*k+1] and heap[k] \u003c\u003d heap[2*k+2] for all k for which the compared elements exist. Elements are counted from zero. The interesting property of a min-heap is that its smallest element is always the root, heap[0]. Max-heaps satisfy the reverse invariant: every parent node has a value greater than any of its children. These are implemented as lists for which maxheap[2*k+1] \u003c\u003d maxheap[k] and maxheap[2*k+2] \u003c\u003d maxheap[k] for all k for which the compared elements exist. The root, maxheap[0], contains the largest element; heap.sort(reverse\u003dTrue) maintains the max-heap invariant. The heapq API differs from textbook heap algorithms in two aspects: (a) We use zero-based indexing. This makes the relationship between the index for a node and the indexes for its children slightly less obvious, but is more suitable since Python uses zero-based indexing. (b) Textbooks often focus on max-heaps, due to their suitability for in-place sorting. Our implementation favors min-heaps as they better correspond to Python lists. These two aspects make it possible to view the heap as a regular Python list without surprises: heap[0] is the smallest item, and heap.sort() maintains the heap invariant! Like list.sort(), this implementation uses only the \u003c operator for comparisons, for both min-heaps and max-heaps. In the API below, and in this documentation, the unqualified term heap generally refers to a min-heap. The API for max-heaps is named using a _max suffix. To create a heap, use a list initialized as [], or transform an existing list into a min-heap or max-heap using the heapify() or heapify_max() functions, respectively. The following functions are provided for min-heaps: heapq.heapify(x)¶ Transform list x into a min-heap, in-place, in linear time. heapq.heappush(heap, item)¶ Push the value item onto the heap, maintaining the min-heap invariant. heapq.heappop(heap)¶ Pop and return the smallest item from the heap, maintaining the min-heap invariant. If the heap is empty, IndexError is raised. To access the smallest item without popping it, use heap[0]. heapq.heappushpop(heap, item)¶ Push item on the heap, then pop and return the smallest item from the heap. The combined action runs more efficiently than heappush() followed by a separate call to heappop(). heapq.heapreplace(heap, item)¶ Pop and return the smallest item from the heap, and also push the new item. The heap size doesn’t change. If the heap is empty, IndexError is raised. This one step operation is more efficient than a heappop() followed by heappush() and can be more appropriate when using a fixed-size heap. The pop/push combination always returns an element from the heap and replaces it with item. The value returned may be larger than the item added. If that isn’t desired, consider using heappushpop() instead. Its push/pop combination returns the smaller of the two values, leaving the larger value on the heap. For max-heaps, the following functions are provided: heapq.heapify_max(x)¶ Transform list x into a max-heap, in-place, in linear time. Added in version 3.14. heapq.heappush_max(heap, item)¶ Push the value item onto the max-heap heap, maintaining the max-heap invariant. Added in version 3.14. heapq.heappop_max(heap)¶ Pop and return the largest item from the max-heap heap, maintaining the max-heap invariant. If the max-heap is empty, IndexError is raised. To access the largest item without popping it, use maxheap[0]. Added in version 3.14. heapq.heappushpop_max(heap, item)¶ Push item on the max-heap heap, then pop and return the largest item from heap. The combined action runs more efficiently than heappush_max() followed by a separate call to heappop_max(). Added in version 3.14. heapq.heapreplace_max(heap, item)¶ Pop and return the largest item from the max-heap heap and also push the new item. The max-heap size doesn’t change. If the max-heap is empty, IndexError is raised. The value returned may be smaller than the item added. Refer to the analogous function heapreplace() for detailed usage notes. Added in version 3.14. The module also offers three general purpose functions based on heaps. heapq.merge(*iterables, key\u003dNone, reverse\u003dFalse)¶ Merge multiple sorted inputs into a single sorted output (for example, merge timestamped entries from multiple log files). Returns an iterator over the sorted values. Similar to sorted(itertools.chain(*iterables)) but returns an iterable, does not pull the d",
+    "scrapedAt": "2026-05-09 00:52:48.956065"
+  },
+  {
     "id": 765,
     "url": "https://github.com/python/cpython/issues/127691",
     "title": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
@@ -5068,26 +5103,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 766,
-    "url": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
-  },
-  {
-    "id": 767,
-    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
-  },
-  {
-    "id": 768,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsPositive"
-  },
-  {
-    "id": 769,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.argv"
-  },
-  {
-    "id": 770,
-    "url": "https://docs.python.org/3/library/importlib.html#module-importlib"
   },
   {
     "id": 771,
@@ -131434,10 +131449,380 @@ window.searchData = [
     "id": 94059,
     "url": "https://github.com/python/cpython/pull/123380#discussion_r1865910020",
     "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 94068,
+    "url": "https://en.wikipedia.org/wiki/Heapsort",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94069,
+    "url": "https://docs.python.org/3/library/heapq.html#",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94070,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappush",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94072,
+    "url": "https://en.wikipedia.org/wiki/Priority_queue",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94073,
+    "url": "https://docs.python.org/3/library/heapq.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94074,
+    "url": "https://docs.python.org/3/library/heapq.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94078,
+    "url": "https://docs.python.org/3/library/heapq.html#priority-queue-implementation-notes",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94080,
+    "url": "https://docs.python.org/3/library/heapq.html#other-applications",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94083,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heapify",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94087,
+    "url": "https://en.wikipedia.org/wiki/Online_algorithm",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94089,
+    "url": "https://docs.python.org/3/library/heapq.html#theory",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94095,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94097,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/heapq.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94099,
+    "url": "https://docs.python.org/3/library/heapq.html#module-heapq",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94105,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappop",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94107,
+    "url": "https://en.wikipedia.org/wiki/Median",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94108,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappushpop",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94110,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/heapq.py",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94111,
+    "url": "https://docs.python.org/3/library/heapq.html#basic-examples",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 94113,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.release",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94114,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.wait",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94115,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event.wait",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94117,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94118,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#barrier",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94119,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94120,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.wait",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94122,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.abort",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94125,
+    "url": "https://docs.python.org/3/library/asyncio-subprocess.html",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94126,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.notify",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94128,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.wait_for",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94129,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94130,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Lock.locked",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94131,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#condition",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94133,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.BrokenBarrierError",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94134,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/asyncio-sync.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94138,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#synchronization-primitives",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94139,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Lock",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94141,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.n_waiting",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94142,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.acquire",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94143,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore.locked",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94144,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#lock",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94146,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#boundedsemaphore",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94149,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#event",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94150,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#semaphore",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94152,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event.set",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94154,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.parties",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94155,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94156,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event.clear",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94157,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.BoundedSemaphore",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94158,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.wait_for",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94159,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94160,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/asyncio/locks.py",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94161,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event.is_set",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94162,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.locked",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94163,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Lock.release",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94164,
+    "url": "https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94165,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.reset",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94166,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.notify_all",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94168,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.broken",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94170,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Lock.acquire",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94173,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore.release",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94175,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore.acquire",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.html#module-importlib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.html#module-importlib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.argv"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.argv"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsPositive"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsPositive"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Synchronization Primitives — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Synchronization Primitives — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
     "alt": "picnixz",
