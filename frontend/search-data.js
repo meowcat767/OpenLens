@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 301,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/",
+    "title": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "content": "Ga naar hoofdinhoud De beste auto\u0027s De beste auto\u0027s: Alle artikelen Beste lease-auto 2026 AutoScout24 · 11-03-2026 · 7 min. Leestijd Lees meer Beste lease-auto 2026 De mooiste elektrische auto\u0027s 2026 AutoScout24 · 11-03-2026 · 10 min. Leestijd Lees meer De mooiste elektrische auto\u0027s 2026 Zuinigste auto in 2026 AutoScout24 · 11-03-2026 · 7 min. Leestijd Lees meer Zuinigste auto in 2026 Beste elektrische middenklassers 2026 De elektrische auto wordt voor steeds meer mensen bereikbaar, ook voor mensen met een kleinere portemonnee. In het middensegment zijn de EV’s niet aan te slepen. Hoog tijd om de beste elektrische middenklassers 2026 op een rij te zetten. AutoScout24 · 11-03-2026 · 6 min. Leestijd Lees meer Beste elektrische middenklassers 2026 Beste zakelijke leaseauto 2026 Wat zijn de beste zakelijke leaseauto’s in 2026? We zetten de modellen op een rij die uitblinken in comfort, zuinigheid en technologie. AutoScout24 · 10-03-2026 · 7 min. Leestijd Lees meer Beste zakelijke leaseauto 2026 Beste routeplanner voor elektrische auto: slimste keus voor EV-rijders Een elektrische auto vraagt om een slimme routeplanner, die rekening houdt met de laadstatus en actieradius van je EV en benodigde laadstops. Een goede routeplanner voor elektrische auto\u0027s voorkomt laadstress en leidt je soepel van A naar B via beschikbare openbare oplaadstations. Wat is de beste? AutoScout24 · 04-08-2025 · 7 min. Leestijd Lees meer Beste routeplanner voor elektrische auto: slimste keus voor EV-rijders Beste nieuwe elektrische auto 2025 De wereld van elektrische auto\u0027s blijft zich in een razendsnel tempo ontwikkelen. In dit artikel zetten we de beste nieuwe elektrische auto’s van 2025 op een rij. We bespreken meerdere modellen die opvallen door hun prestaties, technologie en milieuvriendelijkheid. AutoScout24 · 04-08-2025 · 6 min. Leestijd Lees meer Beste nieuwe elektrische auto 2025 Auto met schuifdeuren: welke past bij jou? Een auto met schuifdeuren is ideaal als je vaak kinderen, ouderen of grote spullen vervoert. Maar welke modellen zijn er in Nederland, wat zijn de voordelen, welke types schuifdeuren bestaan er en hoe werken elektrische schuifdeuren? Lees hier alles wat je moet weten. AutoScout24 · 07-07-2025 · 6 min. Leestijd Lees meer Auto met schuifdeuren: welke past bij jou? Goedkoopste nieuwe auto Niet iedereen heeft een groot budget om een dure auto te kopen. Sommigen geven simpelweg niet zoveel om auto\u0027s en willen gewoon een betaalbare, betrouwbare en zuinige auto die hen veilig van A naar B brengt. Maar wat is nu de goedkoopste nieuwe auto? AutoScout24 · 18-06-2025 · 8 min. Leestijd Lees meer Goedkoopste nieuwe auto De beste elektrische auto’s Wie op zoek is naar een elektrische auto, vraagt zich natuurlijk af wat de beste elektrische auto’s zijn. Wat ‘de beste’ elektrische auto is hangt af van je persoonlijke wensen, maar in dit artikel zetten we een aantal goede opties op een rij. AutoScout24 · 18-06-2025 · 6 min. Leestijd Lees meer De beste elektrische auto’s Advies: de nieuwste artikelen Alles bekijken Plug-in hybride in 2026: hoe zinvol is een PHEV echt? Hybride auto’s combineren een verbrandingsmotor met een elektromotor. Ontdek de verschillen tussen micro, mild, full en plug-in hybrides, hoe ze werken en welk type het beste past bij jouw rijgedrag en dagelijks gebruik. AutoScout24 · 08-05-2026 · 8 min. Leestijd Lees meer Plug-in hybride in 2026: hoe zinvol is een PHEV echt? Subsidie elektrische auto Elektrische auto’s spelen een belangrijke rol om klimaatdoelen te halen, alleen zijn ze door hun kostbare techniek duurder dan brandstofauto’s. De overheid stimuleert de verkoop via subsidies. Welke subsidies zijn nog mogelijk? Lees hier alles over subsidies voor elektrische auto’s. AutoScout24 · 16-03-2026 · 7 min. Leestijd Lees meer Subsidie elektrische auto Lease een Youngtimer – bijtelling extra voordelig! Hoe lease je nou precies een youngtimer? Wat zijn de voordelen? Hoe reken je uit hoeveel je gaat betalen? Wij zetten het voor je op een rijtje. AutoScout24 · 16-03-2026 · 5 min. Leestijd Lees meer Lease een Youngtimer – bijtelling extra voordelig! Naar boven",
+    "scrapedAt": "2026-05-09 00:37:03.124509"
+  },
+  {
+    "id": 300,
+    "url": "https://nos.nl/teletekst",
+    "title": "NOS.nl - NOS Teletekst",
+    "content": "Voorpagina Teletekst Teletekst pagina nummer OK Vorige Paginaniet beschikbaar Vorige subpaginaniet beschikbaar Volgende subpagina Volgende pagina 1234567890 Backspace Teletekst pagina 100                       NOS Teletekst 100 \n\n\n\n\n\n   \n\n   Geen data weg bij brand Almere.. 111 \n                          -             \n   Drone-aanvallen Rusland,Oekraïne 130 \n                                        \n   100 mln euro boete voor taxi-app 108 \n                                        \n   Gijzeling in Duitse bank voorbij 126 \n                                        \n\n     nieuws     101   sport         600 \n     televisie  200   weer,verkeer  700 \n     radio      250   voetbal       800 \n     financieel 501   ondertiteling 888 \n                                        \n\n          copyright N O S  2026         \n nieuws     sport     tv gids     weer  \n Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-09 00:37:01.767106"
+  },
+  {
+    "id": 299,
+    "url": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing",
+    "title": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "content": "NOS Sport•woensdag, 20:30 Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027 Deel dit artikel 0:51 Sabalenka sluit boycot grandslamtoernooien niet uit: \u0027Rechten verdedigen\u0027 Toptennisster Aryna Sabalenka, de nummer één van de wereld bij de vrouwen, zegt een boycot niet langer uit te sluiten als het prijzengeld bij de vier grandslamtoernooien, de belangrijkste evenementen van het seizoen, niet omhoog gaat. \"Wij geven een show. Zonder ons zouden er geen toernooien zijn, zonder ons zou er geen entertainment zijn. Ik denk dat we beter betaald zouden moeten worden\", laat de Witrussin weten in Rome, waar het laatste voorbereidingstoernooi voor Roland Garros plaatsvindt. \"Op een gegeven moment zullen we moeten boycotten als dat de enige manier is om onze rechten te verdedigen.\" Eltingh begrijpt ophef \"Een boycot is sowieso altijd de slechtste oplossing bij onenigheid\", vindt Jacco Eltingh, oud-prof en tegenwoordig technisch directeur bij de KNLTB. Maar hij begrijpt wel dat de tennissers zich tekortgedaan voelen. \"Op het moment dat het publiek geen interesse meer toont en niet naar het stadion komt en daar dingen koopt, niet meer televisie kijkt of naar de radio luistert, dan zullen er geen bedrijven meer zijn die zich daaraan willen koppelen en zouden er geen uitzendrechten betaald worden. En dat komt wel door datgene wat er op de baan gebeurt. En dat zijn de spelers.\" 1:42 Eltingh: \u0027Sabalenka heeft een punt, maar een boycot helpt de sport niet\u0027 Sabalenka uitte maandag samen met een groep wereldtoppers, onder wie ook Coco Gauff, Jannik Sinner en Carlos Alcaraz, haar \"diepe teleurstelling\" over het prijzengeld op Roland Garros dit jaar. Hoewel Roland Garros het prijzengeld voor de editie van dit jaar heeft verhoogd (met 9,5 procent tot 61,7 miljoen euro), zijn Sabalenka en haar collega\u0027s het niet eens met hun aandeel. \"Dat zal waarschijnlijk onder de 15 procent blijven, ver verwijderd van de gevraagde 22 procent.\" \u0027Eindjes aan elkaar knopen\u0027 De Amerikaanse Gauff, de nummer vier van de wereld, voegde eraan toe dat de oproep vooral betrekking heeft op de groep tennissers die lager op de wereldranglijst staan en daardoor van minder inkomsten verzekerd zijn. \"Kijk bijvoorbeeld naar zaken zoals sponsorinkomsten. Wij (de topspelers, red.) verdienen ook naast de baan geld, maar een speler uit de top tweehonderd moet echt de eindjes aan elkaar knopen.\" Veel grote namen De onderstaande spelers staan achter de oproep om de prijzengeldstructuur van Roland Garros aan te passen. Vrouwen: Aryna Sabalenka, Coco Gauff, Iga Swiatek, Jessica Pegula, Madison Keys, Jasmine Paolini, Emma Navarro, Zheng Qinwen, Paula Badosa en Mirra Andreeva. Mannen: Jannik Sinner, Carlos Alcaraz, Alexander Zverev, Taylor Fritz, Alex De Minaur, Casper Ruud, Daniil Medvedev, Andrey Rublev en Stefanos Tsitsipas. Novak Djokovic staat er niet bij, maar de 24-voudig grandslamkampioen is de afgelopen jaren een prominente voorvechter geweest voor het ophogen van het prijzengeld op de grootste toernooien. (Bron: Sky Sports) Eltingh bevestigt die zienswijze. \"Er gaat in het tennis best veel geld om. Maar dat gaat vooral naar een select groepje spelers. Ik denk dat zo\u0027n 150 tot 200 mannen en 100 tot 150 vrouwen kunnen zeggen: dit zijn mijn inkomsten geweest, dit mijn kosten en dan houd ik aan het eind van het jaar nog wat spaarcentjes over.\" \"Heel veel tennissers moeten er heel veel in investeren, zeker de eerste jaren. Sabalenka zegt ook dat het niet alleen om de topspelers gaat, maar met name ook voor buiten de top honderd. Dat is een beetje raar, want die komen niet eens rechtstreeks in het hoofdtoernooi. Maar als je heel eerlijk bent: als een bedrijf dit zou doen, zou er direct een staking van het personeel volgen.\" Eltingh ziet echter meer in overleg. \"Je moet het toch met deze mensen oplossen. Maar ook ik vind dat de grandslams te makkelijk autonome beslissingen kunnen nemen zonder dat ze daar door de ITF, of World Tennis zoals het tegenwoordig heet, op worden aangesproken. De spelers worden ook niet voldoende gehoord ten aanzien van hun wensen.\" Toptennissers verenigen zich tegen \u0027diep teleurstellend\u0027 prijzengeld op Roland Garros Tussen het grote geld weet tennistoernooi Rosmalen zich al jaren staande te houden Tennistoppers pleiten voor eerlijkere verdeling prijzengeld grandslamtoernooien Tennis Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Meer bekijken? woensdag, 15:54 Goede start Van de Zandschulp bij masterstoernooi Rome, afstraffing De Jong zondag, 18:36 Vijfde masterstitel op rij voor Sinner bij afwezigheid van Alcaraz maandag 23 maart, 21:06 Na Alcaraz strandt ook Medvedev al in derde ronde van masterstoernooi Miami vrijdag 24 april, 18:04 Titelhouder Alcaraz mist Roland Garros vanwege polsblessure Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-09 00:37:00.697065"
+  },
+  {
+    "id": 298,
+    "url": "https://nos.nl/livestream/2613619-kijk-en-luister-hier-naar-het-nos-radio-1-journaal",
+    "title": "Kijk (en luister) hier naar het NOS Radio 1 Journaal",
+    "content": "Deze livestream is nog niet begonnen Kom morgen, 07:00 uur terug om deze livestream te bekijken. Kijk (en luister) hier naar het NOS Radio 1 Journaal Je wordt bijgepraat over het nieuws van dit moment en de grote nieuwsverhalen van de dag. Met context, duiding, reacties en analyses. Deze uitzending terugluisteren? Dat kan via de NPO Luister-app of op de website van NPO Radio 1. Aan het laden",
+    "scrapedAt": "2026-05-09 00:36:59.613719"
+  },
+  {
+    "id": 297,
+    "url": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro",
+    "title": "Kabinet compenseert vuurwerkhandelaren voor 100 miljoen euro",
+    "content": "ANP Buurtbewoners van een wijk in Maasdam luidden 2026 in met vuurwerk NOS Nieuws•vandaag, 17:30•Aangepast vandaag, 18:36 Kabinet compenseert vuurwerkhandelaren voor 100 miljoen euro Deel dit artikel Het kabinet trekt in totaal 100 miljoen euro uit voor de compensatie van ondernemers in de vuurwerkbranche, die te lijden zal krijgen van het vuurwerkverbod dat voor de komende jaarwisseling moet ingaan. Dat laat staatssecretaris Bertram van Infrastructuur en Waterstaat weten. Het kabinet reserveert in eerste instantie 90 miljoen euro voor de compensatie van de winsten van de vuurwerkbranche. Maar omdat niet helemaal duidelijk is hoe hoog die gemiste winsten daadwerkelijk zullen zijn, is er uit voorzorg 10 miljoen euro extra gereserveerd. Verschil importeurs en verkopers Voor de compensatie van de vuurwerkimporteurs wordt meer geld vrijgemaakt dan voor de detailhandelaren. Dat komt doordat de vuurwerkhandel voor importeurs vaak hun hoofdactiviteit is, legt het kabinet uit. Detailhandelaren doen het vaak niet als hoofdactiviteit, maar als nevenactiviteit, betoogt het kabinet: zo verkopen tuincentra en fietsenzaken ook vuurwerk. Ruwweg krijgen importeurs voor de komende drie jaarwisselingen compensatie voor de winsten die ze niet kunnen maken. Bij detailhandelaren gaat het om één jaarwisseling, waar ze nog een extra bedrag bij krijgen. De vuurwerkbranche zei vorig jaar nog dat er 895 miljoen euro voor de compensatie zou moeten worden uitgetrokken, omdat een verbod tot een een enorme strop kan leiden. Dat bedrag ligt dus aanzienlijk hoger dan waar het kabinet nu mee komt. De vuurwerkbranche is teleurgesteld met hoe het kabinet tot dit besluit is gekomen. Belangrijke voorwaarde Nu de ministerraad heeft besloten dat er geld voor de compensatie wordt uitgetrokken, is ook aan de laatste voorwaarde voldaan die de Tweede Kamer aan de invoering van het vuurwerkverbod stelde. Dat betekent dat het aan het einde van dit jaar zou kunnen ingaan. De Kamer stemde een jaar geleden met ruime meerderheid in met een initiatiefwet van de Kamerleden Klaver (GroenLinks-PvdA) en Ouwehand (Partij voor de Dieren), waarin een algeheel vuurwerkverbod wordt geregeld. Een paar maanden later ging ook de Eerste Kamer akkoord. Wat houdt het vuurwerkverbod in? In Nederland is de verkoop en het afsteken van knalvuurwerk (F3) sinds december 2020 verboden. Het gaat daarbij bijvoorbeeld om rotjes, Chinese matten en losse vuurpijlen. Siervuurwerk (F2) mag tot nu toe nog wel, omdat dit in principe minder gevaarlijk is voor consumenten. Dat zijn de zogenoemde cakes, fonteintjes, grondbloemen en compoundboxen. Deze categorie wordt straks ook verboden. En dat betekent dat er alleen nog vuurwerk uit de categorie F1 verkocht mag worden: sterretjes en knalerwten. Georganiseerde groepen zoals clubs en buurtverenigingen mogen, onder strikte voorwaarden en met toestemming van de burgemeester, nog wel F2-vuurwerk afsteken. Het vuurwerkverbod heeft een lange aanloop gehad. De VVD hoorde lange tijd bij de tegenstanders, maar draaide vorig jaar na een roerige jaarwisseling met meer dan 8000 incidenten, waarbij veel geweld tegen politie en hulpverleners werd gebruikt. De partij stelde daarbij drie voorwaarden: behalve een compensatie voor de vuurwerkbranche eiste de partij dat er een effectief handhavingsplan zou komen en dat er hard zou worden opgetreden tegen illegaal vuurwerk. Met het landelijke vuurwerkverbod komt er een einde aan een lange traditie in Nederland, waarbij particulieren aan het eind van het jaar zelf vuurwerk mogen afsteken. Een deel van de gemeenten stelde de afgelopen jaren al een plaatselijk verbod of vuurwerkvrije zones in: Sla over \"Het is niet gepast hoe de staatssecretaris hiermee is omgegaan\", zegt Frans Köhler van Stichting VuurwerkCheck. De stichting was betrokken bij de gesprekken hierover, maar volgens Köhler was er geen sprake van onderhandelingen. \"Ze hebben naar ons verhaal geluisterd, verder is er niks met ons afgestemd en nu is dit bedrag gecommuniceerd.\" Hij denkt dat nog geen derde van het geld bij de vuurwerkverkooppunten terechtkomt. \"Ik verwacht dat tientallen, misschien wel honderden bedrijven failliet zullen gaan.\" Verder heeft hij twijfels of het vuurwerkverbod verlichting gaat brengen voor de handhavers. \"Ik gun het ze, maar het verbod zet ook de deur open voor de georganiseerde misdaad.\" De stichting beraadt zich nog op juridische stappen tegen het kabinet. Kers op de taart Een van de ondernemers die vanaf dit jaar stoppen met de verkoop van vuurwerk is Eddy Posno. Al meer dan 50 jaar verkoopt hij naast sportartikelen rondom de jaarwisseling ook vuurwerk. Hoewel hij het jammer vindt dat het vuurwerkverbod ingaat, is hij blij dat de vuurwerkverkoop niet zijn belangrijkste bron van inkomsten is. \"50 jaar geleden was dat wel anders, maar de sportwinkel groeide en nu is het vuurwerk een mooie kers op de taart.\" Net zoals veel verkopers moest hij een flinke investering doen om ervoor te zorgen dat hij aan de veiligheidseisen",
+    "scrapedAt": "2026-05-09 00:36:58.530839"
+  },
+  {
     "id": 296,
     "url": "https://nos.nl#carousel_end_kijken",
     "title": "NOS.nl - Nieuws, Sport en Evenementen | Nederlandse Omroep Stichting",
@@ -2068,26 +2103,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 297,
-    "url": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
-  },
-  {
-    "id": 298,
-    "url": "https://nos.nl/livestream/2613619-kijk-en-luister-hier-naar-het-nos-radio-1-journaal"
-  },
-  {
-    "id": 299,
-    "url": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
-  },
-  {
-    "id": 300,
-    "url": "https://nos.nl/teletekst"
-  },
-  {
-    "id": 301,
-    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
   },
   {
     "id": 302,
@@ -47024,10 +47039,446 @@ window.searchData = [
     "id": 19143,
     "url": "https://twitter.com/intent/tweet?text\u003dPodcast+De+Stemming%3A+spoednood%2C+brievenbussen+en+koffievlekken\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken\u0026via\u003dNOS",
     "parentUrl": "https://nos.nl/artikel/2613594-podcast-de-stemming-spoednood-brievenbussen-en-koffievlekken"
+  },
+  {
+    "id": 19193,
+    "url": "https://nos.nl/nieuwsuur/artikel/2561597-vuurwerkbranche-wil-895-miljoen-euro-compensatie-bij-vuurwerkverbod",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 19194,
+    "url": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro#iframe_end_724687571347128",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 19195,
+    "url": "https://api.whatsapp.com/send?text\u003dKabinet+compenseert+vuurwerkhandelaren+voor+100+miljoen+euro+https%3A%2F%2Fnos.nl%2Fartikel%2F2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 19196,
+    "url": "https://nos.nl/artikel/2550795-politie-jaarwisseling-ontaardde-op-veel-plaatsen-in-geweld-en-vernieling",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 19197,
+    "url": "https://nos.nl/artikel/2598427-vuurwerk-afsteken-blijft-mogelijk-voor-clubs-en-buurtverenigingen",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 19198,
+    "url": "https://nos.nl/artikel/2598542-burgemeesters-over-vuurwerkvergunning-handhaving-wordt-onmogelijk",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 19199,
+    "url": "https://nos.nl/artikel/2561946-ruime-meerderheid-in-kamer-voor-algeheel-vuurwerkverbod-nsc-nu-ook-voor",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 19200,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 19201,
+    "url": "https://nos.nl/artikel/2561296-vuurwerkverbod-mogelijk-dichterbij-vvd-steunt-wetsvoorstel-onder-voorwaarden",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 19202,
+    "url": "https://twitter.com/intent/tweet?text\u003dKabinet+compenseert+vuurwerkhandelaren+voor+100+miljoen+euro\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 19207,
+    "url": "https://twitter.com/intent/tweet?text\u003dOphef+over+prijzengeld+grandslams%3A+%27Maar+boycot+altijd+slechtste+oplossing%27\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing\u0026via\u003dNOSSport",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 19208,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 19209,
+    "url": "https://nos.nl/artikel/2607573-na-alcaraz-strandt-ook-medvedev-al-in-derde-ronde-van-masterstoernooi-miami",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 19210,
+    "url": "https://nos.nl/artikel/2611858-titelhouder-alcaraz-mist-roland-garros-vanwege-polsblessure",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 19211,
+    "url": "https://nos.nl/artikel/2613021-toptennissers-verenigen-zich-tegen-diep-teleurstellend-prijzengeld-op-roland-garros",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 19212,
+    "url": "https://api.whatsapp.com/send?text\u003dOphef+over+prijzengeld+grandslams%3A+%27Maar+boycot+altijd+slechtste+oplossing%27+https%3A%2F%2Fnos.nl%2Fartikel%2F2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 19213,
+    "url": "https://nos.nl/artikel/2562304-tennistoppers-pleiten-voor-eerlijkere-verdeling-prijzengeld-grandslamtoernooien",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 19214,
+    "url": "https://nos.nl/artikel/2570741-tussen-het-grote-geld-weet-tennistoernooi-rosmalen-zich-al-jaren-staande-te-houden",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 19215,
+    "url": "https://nos.nl/artikel/2612935-vijfde-masterstitel-op-rij-voor-sinner-bij-afwezigheid-van-alcaraz",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 19217,
+    "url": "https://nos.nl/teletekst/108",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19218,
+    "url": "https://nos.nl/teletekst/702",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19219,
+    "url": "https://nos.nl/teletekst/800",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19220,
+    "url": "https://nos.nl/teletekst/888",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19221,
+    "url": "https://nos.nl/teletekst/700",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19222,
+    "url": "https://nos.nl/teletekst/601",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19223,
+    "url": "https://nos.nl/teletekst/600",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19224,
+    "url": "https://nos.nl/teletekst/501",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19225,
+    "url": "https://nos.nl/teletekst/126",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19226,
+    "url": "https://ster.nl/online-reclame-bij-ster/",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19227,
+    "url": "https://nos.nl/teletekst/101",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19228,
+    "url": "https://nos.nl/teletekst/200",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19229,
+    "url": "https://nos.nl/teletekst/100",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19230,
+    "url": "https://nos.nl/teletekst/111",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19231,
+    "url": "https://nos.nl/teletekst/100/2",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19232,
+    "url": "https://nos.nl/teletekst/130",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19233,
+    "url": "https://nos.nl/teletekst/250",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 19234,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 19235,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-lease-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 19236,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-nieuwe-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 19237,
+    "url": "https://www.autoscout24.nl/informeren/advies/hybride-autos/plug-in-hybride/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 19238,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/de-mooiste-elektrische-auto-s/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 19239,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-zakelijke-leaseauto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 19240,
+    "url": "https://www.autoscout24.nl/informeren/advies/kosten-en-wetgeving/subsidie-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 19241,
+    "url": "https://www.autoscout24.nl/informeren/advies/lease/lease-een-youngtimer-bijtelling-extra-voordelig/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 19242,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/de-goedkoopste-nieuwe-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 19243,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/auto-met-schuifdeuren/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 19244,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/de-beste-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 19246,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/zuinigste-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 19247,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-elektrische-middenklassers/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 19248,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-routeplanner-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5URhveuFGwvDHmI6vuFoHC/f1df100f1ab98c692f2c4bec48d8de1b/Tesla-Model-3-Performance-2025__2_.jpg?w\u003d1100",
+    "alt": "Tesla-Model-3-Performance-2025 (2)",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/18XX42xzRxjhEtcPxKJZST/a92fa03eb31a20603af533c36fc25317/Small-21082-MaseratiGranTurismoFolgoreCopperGlance.jpg?w\u003d460",
+    "alt": "maserati-granturismo-folgore-front",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4dtrr7EhLHV4DH8Z8MSBJh/0587554355ca5b5192202bb9b2d15e23/car_crosses_country_road_winding_in_twilight_.jpeg?w\u003d460",
+    "alt": "car crosses country road winding in twilight",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5URhveuFGwvDHmI6vuFoHC/f1df100f1ab98c692f2c4bec48d8de1b/Tesla-Model-3-Performance-2025__2_.jpg?w\u003d460",
+    "alt": "Tesla-Model-3-Performance-2025 (2)",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6VfA4HzSkTGnVcbWfFPpBD/0ef904539067972edfa714981f3146d9/_BST-118__Volvo-EX30-2025.jpg?w\u003d460",
+    "alt": "(BST-118) Volvo-EX30-2025",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1QgHiEZYg73cERueprP8A1/439ebfd85d83b09a0ae1d384cc8c273a/BST-14_-_Beste_routeplanner.jpg?w\u003d460",
+    "alt": "Beste routeplanner",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2oWawve4N2SqjVy06EAFcy/ee5c7cecd3c26e1eb589f87a0f4a1aa5/volkswagen_id.7_15.jpeg?w\u003d460",
+    "alt": "volkswagen id.7 15",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3rHR8N8JLJWlEWc6iOmUKi/4d5ab26175ff8c9b140c12437c768908/ADV-182_-_auto_met_schuifdeuren.jpg?w\u003d460",
+    "alt": "Auto met schuifdeuren",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/ehNDDNs9jyGqq3qnhU4UM/2ae0a1ad15ccaa2cd26abe7b0802ed29/BST-42_-_AutoScout24_-_Goedkoopste_nieuwe_auto_foto4.webp?w\u003d460",
+    "alt": "Goedkoopste nieuwe auto",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1lU2i8Q5hOSbDjBCE7LLVv/e234cc4cadffbc245bdf1a2489bf0355/ford-mustang-mach-e-side.jpg?w\u003d460",
+    "alt": "ford-mustang-mach-e-side",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1sKSgvDA0lxqSIRsmhEH2W/461271222b1e62c009fdf287c2ec6170/waarom-audis-e-hybrid-anders-is-dan-ehybrid-van-volkswagen-2025-03.jpg?w\u003d1100",
+    "alt": "waarom-audis-e-hybrid-anders-is-dan-ehybrid-van-volkswagen-2025-03",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4Z2wMpAuqoUqUJhIExN7dl/75f7e2aa8ecbf293e6f533206a00060b/iStock-936987354.jpg?w\u003d1100",
+    "alt": "Presse, Geld, Finanzen",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5C5uwNK4nBTJlPEuF6bwXm/31b5253d968dff559c05cf6497ab3a5f/youngtimers-en-klassiekers-2022-1.jpg?w\u003d1100",
+    "alt": "Betaalbare youngtimer of klassieker kopen? Waarom je één van deze acht moet hebben",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/7/k/V/t/e/VimcKJ4LtpJ5JaDPe8QdKyAeah6TFJWuVJTW2gb/0x0x2864x1611-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/C/g/5/Z/u/AUpNyTi2sp5QPN3riM3AedLh2q1sLa1WFUdw4VL/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/r/U/V/E/H/7t9x6n92KTJgAgnMKUeSJYRxt6a7beQzxax5R4/314x0x3176x2382-768x576.webp",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2025/06/11/1235855/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2025/04/04/1210391/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/E/N/P/Z/b/rfRHEAMLkvwTWmC727hWkfaVhY1bF4V1fsA54vQ/339x46x2684x2013-192x144.webp",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/4/N/C/m/7/sn6mmyass2Wch2yDZ5yUaZdoYshyckx5g8h6tce/65x86x2872x2154-768x576.webp",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/6/T/K/k/H/uczNqW4GT1JCg8MNB7U6WZH85UzZmx7cEc8wows/299x239x1648x1236-576x432.webp",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/E/e/S/E/p/18eQxxi5nbTa78Z2VWB3hYsuvEQDkjeBpXdAiQg/1064x109x1776x1332-576x432.webp",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/D/Y/J/8/1/2PXViARQaGNqtGPvNsH5aKfFm2HdjbWgtrpAXKh/0x0x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Kabinet compenseert vuurwerkhandelaren voor 100 miljoen euro",
+    "pageUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/H/W/H/3/t/fX7B1KgNHMqdUfHoxpwfKFoKL9sCaYRQ8gAQh4o/198x176x2032x1143-768x432.webp",
+    "alt": "",
+    "pageTitle": "Kabinet compenseert vuurwerkhandelaren voor 100 miljoen euro",
+    "pageUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/7/v/V/h/7/872z5K96ki4rmGDZZewzeZDqYv5CVf7N1tc2z3s/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "Kabinet compenseert vuurwerkhandelaren voor 100 miljoen euro",
+    "pageUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/G/G/y/U/X/HhpnhQPuLiHayjjoav7eL5qrJBJJoxwrC8pRSdF/261x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "Kabinet compenseert vuurwerkhandelaren voor 100 miljoen euro",
+    "pageUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2025/04/01/1209425/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "Kabinet compenseert vuurwerkhandelaren voor 100 miljoen euro",
+    "pageUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2025/03/29/1208466/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "Kabinet compenseert vuurwerkhandelaren voor 100 miljoen euro",
+    "pageUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2025/03/27/1207592/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "Kabinet compenseert vuurwerkhandelaren voor 100 miljoen euro",
+    "pageUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
   {
     "src": "https://images.cdn.nos.nl/6/G/y/9/7/R/ntFq2Bhwfwn8A9ZLi1CgVpUFCobfPF43jy7kQfa/0x0x4000x2250-1024x576.webp",
     "alt": "",
