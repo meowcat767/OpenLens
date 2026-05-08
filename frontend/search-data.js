@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1375,
+    "url": "https://github.com/python/cpython/issues/100239",
+    "title": "Specialize long tail of binary operations using a table. · Issue #100239 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Specialize long tail of binary operations using a table. #100239 New issue Copy link New issue Copy link Open Open Specialize long tail of binary operations using a table.#100239 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)performancePerformance or resource usagePerformance or resource usagetype-featureA feature request or enhancementA feature request or enhancement Description markshannon opened on Dec 14, 2022 Issue body actions There is a desire to specialize the remaining binary operations (including binary subscript). However adding more and more specialized instructions is likely to make performance worse. This idea is to have a lookup table of types pairs and function pointers. This is less efficient than inlining the code, but more extensible. A single instruction can then support up to 256 specializations. This will only work for immutable classes. struct table_entry {\n    PyTypeObject *left;\n    PyTypeObject *left;\n    binaryfunc *func;\n};\n\nTARGET(BINARY_OP_TABLE) {\n    PyObject *lhs \u003d SECOND();\n    PyObject *rhs \u003d TOP();\n    Cache *cache \u003d GET_CACHE();\n    struct table_entry* entry \u003d \u0026THE_TABLE[cache-\u003etable_index];\n    DEOPT_IF(Py_TYPE(lhs) !\u003d entry-\u003eleft);\n    DEOPT_IF(Py_TYPE(rhs) !\u003d entry-\u003eright);\n    PyObject *res \u003d entry-\u003efunc(lhs, rhs);\n    if (res \u003d\u003d NULL) {\n        goto error;\n    }\n    STACK_SHRINK(1);\n    Py_DECREF(lhs);\n    Py_DECREF(rhs);\n    SET_TOP(res);\n    DISPATCH();\n} An ancillary mapping of (left, right) -\u003e index will be needed for efficient specialization. It is probably worth keeping the most common operations int + int, float + float, etc. inline. We can replace BINARY_SUBSCR with BINARY_OP ([]) to allow effective specialization of BINARY_SUBSCR E.g. subscripting array.array[int] can be handled with the registration mechanism described below. Registering binary functions at runtime faster-cpython/ideas#162 Linked PRs gh-100239: specialize long tail of binary operations #128722 gh-100239: specialize bitwise logical binary ops on ints #128927 gh-100239: Specialize binary operations using BINARY_OP_EXTEND #128956 gh-100239: Handle NaN and zero division in guards #128963 gh-100239: replace BINARY_SUBSCR \u0026 family by BINARY_OP with oparg NB_SUBSCR #129379 gh-100239: specialize left and right shift ops on ints #129431 gh-100239: replace BINARY_SUBSCR \u0026 family by BINARY_OP with oparg NB_SUBSCR #129700 gh-100239: more refined specialisation stats for BINARY_OP/SUBSCR #132068 gh-100239: fix bug in comparison #132093 gh-100239: more stats for BINARY_OP/SUBSCR specialization #132230 gh-100239: specialize dict subclasses with no getitem override #132383 gh-100239: specialize BINARY_OP/SUBSCR for list-slice #132626 gh-100239: use PyFloat_AS_DOUBLE and _PyLong_IsZero in the float / compactlong specializations #144826 gh-100239: Propagate type info through _BINARY_OP_EXTEND in tier 2 #148146 gh-100239: expose sq_repeat helpers for BINARY_OP_EXTEND #148791 gh-100239: specialize mixed int/float inplace binary ops #149413 gh-100239: specialize bytes binary operations #149458 Reactions are currently unavailable Metadata Metadata Assignees brandtbucher Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)performancePerformance or resource usagePerformance or resource usagetype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:17:35.773744"
+  },
+  {
+    "id": 1374,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#sys",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:17:33.385343"
+  },
+  {
+    "id": 1373,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#decimal",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:17:32.095893"
+  },
+  {
+    "id": 1372,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.home",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:17:30.813586"
+  },
+  {
+    "id": 1371,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-NOT_TAKEN",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code o",
+    "scrapedAt": "2026-05-09 01:17:29.537405"
+  },
+  {
     "id": 1370,
     "url": "https://github.com/python/cpython/issues/93963",
     "title": "Officially deprecate and remove abcs in importlib.abc moved to importlib.resources. · Issue #93963 · python/cpython · GitHub",
@@ -9203,26 +9238,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1371,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-NOT_TAKEN"
-  },
-  {
-    "id": 1372,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.home"
-  },
-  {
-    "id": 1373,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#decimal"
-  },
-  {
-    "id": 1374,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#sys"
-  },
-  {
-    "id": 1375,
-    "url": "https://github.com/python/cpython/issues/100239"
   },
   {
     "id": 1376,
@@ -229145,10 +229160,192 @@ window.searchData = [
     "id": 279561,
     "url": "https://github.com/python/cpython/issues/93963#issue-1275397735",
     "parentUrl": "https://github.com/python/cpython/issues/93963"
+  },
+  {
+    "id": 282612,
+    "url": "https://github.com/python/cpython/pull/148791",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282613,
+    "url": "https://github.com/python/cpython/pull/129379",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282614,
+    "url": "https://github.com/python/cpython/pull/132626",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282616,
+    "url": "https://github.com/python/cpython/pull/129431",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282617,
+    "url": "https://github.com/python/cpython/pull/132068",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282619,
+    "url": "https://github.com/python/cpython/issues/100239#issue-1496452257",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282620,
+    "url": "https://github.com/python/cpython/pull/132383",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282621,
+    "url": "https://github.com/faster-cpython/ideas/discussions/162",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282622,
+    "url": "https://github.com/python/cpython/issues/100239#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282623,
+    "url": "https://github.com/python/cpython/pull/128927",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282624,
+    "url": "https://github.com/python/cpython/pull/128722",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282625,
+    "url": "https://github.com/python/cpython/pull/128963",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282626,
+    "url": "https://github.com/python/cpython/issues/100239#top",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282627,
+    "url": "https://github.com/brandtbucher",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282629,
+    "url": "https://github.com/python/cpython/pull/148146",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282630,
+    "url": "https://github.com/python/cpython/pull/132230",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282634,
+    "url": "https://github.com/python/cpython/pull/132093",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282636,
+    "url": "https://github.com/python/cpython/pull/144826",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282637,
+    "url": "https://github.com/python/cpython/pull/149458",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282638,
+    "url": "https://github.com/python/cpython/pull/149413",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282640,
+    "url": "https://github.com/python/cpython/pull/128956",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "id": 282641,
+    "url": "https://github.com/python/cpython/pull/129700",
+    "parentUrl": "https://github.com/python/cpython/issues/100239"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/40968415?s\u003d64\u0026u\u003db9fb61a07384ffc9174d8fd0a0826e06263a34a1\u0026v\u003d4",
+    "alt": "brandtbucher",
+    "pageTitle": "Specialize long tail of binary operations using a table. · Issue #100239 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d80",
+    "alt": "@markshannon",
+    "pageTitle": "Specialize long tail of binary operations using a table. · Issue #100239 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d48",
+    "alt": "@markshannon",
+    "pageTitle": "Specialize long tail of binary operations using a table. · Issue #100239 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/40968415?s\u003d64\u0026u\u003db9fb61a07384ffc9174d8fd0a0826e06263a34a1\u0026v\u003d4",
+    "alt": "@brandtbucher",
+    "pageTitle": "Specialize long tail of binary operations using a table. · Issue #100239 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/100239"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#sys"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#sys"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#decimal"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#decimal"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.home"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.home"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-NOT_TAKEN"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-NOT_TAKEN"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/308610?u\u003d5b3fdef94d1b0ac7392d17643eaba029f5f13bea\u0026v\u003d4\u0026size\u003d80",
     "alt": "@jaraco",
