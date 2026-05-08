@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 959,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#finally",
+    "title": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 8. Compound statements | Theme Auto Light Dark | 8. Compound statements¶ Compound statements contain (groups of) other statements; they affect or control the execution of those other statements in some way. In general, compound statements span multiple lines, although in simple incarnations a whole compound statement may be contained in one line. The if, while and for statements implement traditional control flow constructs. try specifies exception handlers and/or cleanup code for a group of statements, while the with statement allows the execution of initialization and finalization code around a block of code. Function and class definitions are also syntactically compound statements. A compound statement consists of one or more ‘clauses.’ A clause consists of a header and a ‘suite.’ The clause headers of a particular compound statement are all at the same indentation level. Each clause header begins with a uniquely identifying keyword and ends with a colon. A suite is a group of statements controlled by a clause. A suite can be one or more semicolon-separated simple statements on the same line as the header, following the header’s colon, or it can be one or more indented statements on subsequent lines. Only the latter form of a suite can contain nested compound statements; the following is illegal, mostly because it wouldn’t be clear to which if clause a following else clause would belong: if test1: if test2: print(x)\n Also note that the semicolon binds tighter than the colon in this context, so that in the following example, either all or none of the print() calls are executed: if x \u003c y \u003c z: print(x); print(y); print(z)\n Summarizing: compound_stmt: if_stmt\n               | while_stmt\n               | for_stmt\n               | try_stmt\n               | with_stmt\n               | match_stmt\n               | funcdef\n               | classdef\n               | async_with_stmt\n               | async_for_stmt\n               | async_funcdef\nsuite:         stmt_list NEWLINE | NEWLINE INDENT statement+ DEDENT\nstatement:     stmt_list NEWLINE | compound_stmt\nstmt_list:     simple_stmt (\";\" simple_stmt)* [\";\"]\n Note that statements always end in a NEWLINE possibly followed by a DEDENT. Also note that optional continuation clauses always begin with a keyword that cannot start a statement, thus there are no ambiguities (the ‘dangling else’ problem is solved in Python by requiring nested if statements to be indented). The formatting of the grammar rules in the following sections places each clause on a separate line for clarity. 8.1. The if statement¶ The if statement is used for conditional execution: if_stmt: \"if\" assignment_expression \":\" suite\n         (\"elif\" assignment_expression \":\" suite)*\n         [\"else\" \":\" suite]\n It selects exactly one of the suites by evaluating the expressions one by one until one is found to be true (see section Boolean operations for the definition of true and false); then that suite is executed (and no other part of the if statement is executed or evaluated). If all expressions are false, the suite of the else clause, if present, is executed. 8.2. The while statement¶ The while statement is used for repeated execution as long as an expression is true: while_stmt: \"while\" assignment_expression \":\" suite\n            [\"else\" \":\" suite]\n This repeatedly tests the expression and, if it is true, executes the first suite; if the expression is false (which may be the first time it is tested) the suite of the else clause, if present, is executed and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and goes back to testing the expression. 8.3. The for statement¶ The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object: for_stmt: \"for\" target_list \"in\" starred_expression_list \":\" suite\n          [\"else\" \":\" suite]\n The starred_expression_list expression is evaluated once; it should yield an iterable object. An iterator is created for that iterable. The first item provided by the iterator is then assigned to the target list using the standard rules for assignments (see Assignment statements), and the suite is executed. This repeats for each item provided by the iterator. When the iterator is exhausted, the suite in the else clause, if present, is executed, and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and continues with the next item, or with the else clause if there is no next item. The for-loop makes assignments to the variables in the target list. This overwrites all previous assignments to those v",
+    "scrapedAt": "2026-05-09 01:00:22.255007"
+  },
+  {
+    "id": 958,
+    "url": "https://docs.python.org/3/library/locale.html#locale.getlocale",
+    "title": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internationalization » locale — Internationalization services | Theme Auto Light Dark | locale — Internationalization services¶ Source code: Lib/locale.py The locale module opens access to the POSIX locale database and functionality. The POSIX locale mechanism allows programmers to deal with certain cultural issues in an application, without requiring the programmer to know all the specifics of each country where the software is executed. The locale module is implemented on top of the _locale module, which in turn uses an ANSI C locale implementation if available. The locale module defines the following exception and functions: exception locale.Error¶ Exception raised when the locale passed to setlocale() is not recognized. locale.setlocale(category, locale\u003dNone)¶ If locale is given and not None, setlocale() modifies the locale setting for the category. The available categories are listed in the data description below. locale may be a string, or a pair, language code and encoding. An empty string specifies the user’s default settings. If the modification of the locale fails, the exception Error is raised. If successful, the new locale setting is returned. If locale is a pair, it is converted to a locale name using the locale aliasing engine. The language code has the same format as a locale name, but without encoding and @-modifier. The language code and encoding can be None. If locale is omitted or None, the current setting for category is returned. Example: \u003e\u003e\u003e import locale\n\u003e\u003e\u003e loc \u003d locale.setlocale(locale.LC_ALL)  # get current locale\n# use German locale; name and availability varies with platform\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027de_DE.UTF-8\u0027)\n\u003e\u003e\u003e locale.strcoll(\u0027f\\xe4n\u0027, \u0027foo\u0027)  # compare a string containing an umlaut\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027\u0027)   # use user\u0027s preferred locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027C\u0027)  # use default (C) locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, loc)  # restore saved locale\n setlocale() is not thread-safe on most systems. Applications typically start with a call of: import locale\nlocale.setlocale(locale.LC_ALL, \u0027\u0027)\n This sets the locale for all categories to the user’s default setting (typically specified in the LANG environment variable). If the locale is not changed thereafter, using multithreading should not cause problems. locale.localeconv()¶ Returns the database of the local conventions as a dictionary. This dictionary has the following strings as keys: Category Key Meaning LC_NUMERIC \u0027decimal_point\u0027 Decimal point character. \u0027grouping\u0027 Sequence of numbers specifying which relative positions the \u0027thousands_sep\u0027 is expected. If the sequence is terminated with CHAR_MAX, no further grouping is performed. If the sequence terminates with a 0, the last group size is repeatedly used. \u0027thousands_sep\u0027 Character used between groups. LC_MONETARY \u0027int_curr_symbol\u0027 International currency symbol. \u0027currency_symbol\u0027 Local currency symbol. \u0027p_cs_precedes/n_cs_precedes\u0027 Whether the currency symbol precedes the value (for positive resp. negative values). \u0027p_sep_by_space/n_sep_by_space\u0027 Whether the currency symbol is separated from the value by a space (for positive resp. negative values). \u0027mon_decimal_point\u0027 Decimal point used for monetary values. \u0027frac_digits\u0027 Number of fractional digits used in local formatting of monetary values. \u0027int_frac_digits\u0027 Number of fractional digits used in international formatting of monetary values. \u0027mon_thousands_sep\u0027 Group separator used for monetary values. \u0027mon_grouping\u0027 Equivalent to \u0027grouping\u0027, used for monetary values. \u0027positive_sign\u0027 Symbol used to annotate a positive monetary value. \u0027negative_sign\u0027 Symbol used to annotate a negative monetary value. \u0027p_sign_posn/n_sign_posn\u0027 The position of the sign (for positive resp. negative values), see below. All numeric values can be set to CHAR_MAX to indicate that there is no value specified in this locale. The possible values for \u0027p_sign_posn\u0027 and \u0027n_sign_posn\u0027 are given below. Value Explanation 0 Currency and value are surrounded by parentheses. 1 The sign should precede the value and currency symbol. 2 The sign should follow the value and currency symbol. 3 The sign should immediately precede the value. 4 The sign should immediately follow the value. CHAR_MAX Nothing is specified in this locale. The function temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale or the LC_MONETARY locale if locales are different and numeric or monetary strings are non-ASCII. This temporary change affects other threads. Changed in version 3.7: The function now temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale in some cases. locale.nl_langinfo(option)¶ Return some locale-specific information as a string. This function is not available on all systems, and the set of possible options might also vary across platforms. The possible argument values are numbers, for which symbolic c",
+    "scrapedAt": "2026-05-09 01:00:21.064925"
+  },
+  {
+    "id": 957,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__annotations__",
+    "title": "3. Data model — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 3. Data model | Theme Auto Light Dark | 3. Data model¶ 3.1. Objects, values and types¶ Objects are Python’s abstraction for data. All data in a Python program is represented by objects or by relations between objects. Even code is represented by objects. Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory. The is operator compares the identity of two objects; the id() function returns an integer representing its identity. CPython implementation detail: For CPython, id(x) is the memory address where x is stored. An object’s type determines the operations that the object supports (e.g., “does it have a length?”) and also defines the possible values for objects of that type. The type() function returns an object’s type (which is an object itself). Like its identity, an object’s type is also unchangeable. [1] The value of some objects can change. Objects whose value can change are said to be mutable; objects whose value is unchangeable once they are created are called immutable. (The value of an immutable container object that contains a reference to a mutable object can change when the latter’s value is changed; however the container is still considered immutable, because the collection of objects it contains cannot be changed. So, immutability is not strictly the same as having an unchangeable value, it is more subtle.) An object’s mutability is determined by its type; for instance, numbers, strings and tuples are immutable, while dictionaries and lists are mutable. Objects are never explicitly destroyed; however, when they become unreachable they may be garbage-collected. An implementation is allowed to postpone garbage collection or omit it altogether — it is a matter of implementation quality how garbage collection is implemented, as long as no objects are collected that are still reachable. CPython implementation detail: CPython currently uses a reference-counting scheme with (optional) delayed detection of cyclically linked garbage, which collects most objects as soon as they become unreachable, but is not guaranteed to collect garbage containing circular references. See the documentation of the gc module for information on controlling the collection of cyclic garbage. Other implementations act differently and CPython may change. Do not depend on immediate finalization of objects when they become unreachable (so you should always close files explicitly). Note that the use of the implementation’s tracing or debugging facilities may keep objects alive that would normally be collectable. Also note that catching an exception with a try…except statement may keep objects alive. Some objects contain references to “external” resources such as open files or windows. It is understood that these resources are freed when the object is garbage-collected, but since garbage collection is not guaranteed to happen, such objects also provide an explicit way to release the external resource, usually a close() method. Programs are strongly recommended to explicitly close such objects. The try…finally statement and the with statement provide convenient ways to do this. Some objects contain references to other objects; these are called containers. Examples of containers are tuples, lists and dictionaries. The references are part of a container’s value. In most cases, when we talk about the value of a container, we imply the values, not the identities of the contained objects; however, when we talk about the mutability of a container, only the identities of the immediately contained objects are implied. So, if an immutable container (like a tuple) contains a reference to a mutable object, its value changes if that mutable object is changed. Types affect almost all aspects of object behavior. Even the importance of object identity is affected in some sense: for immutable types, operations that compute new values may actually return a reference to any existing object with the same type and value, while for mutable objects this is not allowed. For example, after a \u003d 1; b \u003d 1, a and b may or may not refer to the same object with the value one, depending on the implementation. This is because int is an immutable type, so the reference to 1 can be reused. This behaviour depends on the implementation used, so should not be relied upon, but is something to be aware of when making use of object identity tests. However, after c \u003d []; d \u003d [], c and d are guaranteed to refer to two different, unique, newly created empty lists. (Note that e \u003d f \u003d [] assigns the same object to both e and f.) 3.2. The standard type hierarchy¶ Below is a list of the types that are built into Python. Extension modules (written in C, Java, or other languages, depending on the implementation) can define additional types. Future versions of P",
+    "scrapedAt": "2026-05-09 01:00:19.883778"
+  },
+  {
+    "id": 956,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol",
+    "title": "symtable — Access to the compiler’s symbol tables — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » symtable — Access to the compiler’s symbol tables | Theme Auto Light Dark | symtable — Access to the compiler’s symbol tables¶ Source code: Lib/symtable.py Symbol tables are generated by the compiler from AST just before bytecode is generated. The symbol table is responsible for calculating the scope of every identifier in the code. symtable provides an interface to examine these tables. Generating Symbol Tables¶ symtable.symtable(code, filename, compile_type)¶ Return the toplevel SymbolTable for the Python source code. filename is the name of the file containing the code. compile_type is like the mode argument to compile(). Examining Symbol Tables¶ class symtable.SymbolTableType¶ An enumeration indicating the type of a SymbolTable object. MODULE \u003d \"module\"¶ Used for the symbol table of a module. FUNCTION \u003d \"function\"¶ Used for the symbol table of a function. CLASS \u003d \"class\"¶ Used for the symbol table of a class. The following members refer to different flavors of annotation scopes. ANNOTATION \u003d \"annotation\"¶ Used for annotations if from __future__ import annotations is active. TYPE_ALIAS \u003d \"type alias\"¶ Used for the symbol table of type constructions. TYPE_PARAMETERS \u003d \"type parameters\"¶ Used for the symbol table of generic functions or generic classes. TYPE_VARIABLE \u003d \"type variable\"¶ Used for the symbol table of the bound, the constraint tuple or the default value of a single type variable in the formal sense, i.e., a TypeVar, a TypeVarTuple or a ParamSpec object (the latter two do not support a bound or a constraint tuple). Added in version 3.13. class symtable.SymbolTable¶ A namespace table for a block. The constructor is not public. get_type()¶ Return the type of the symbol table. Possible values are members of the SymbolTableType enumeration. Changed in version 3.12: Added \u0027annotation\u0027, \u0027TypeVar bound\u0027, \u0027type alias\u0027, and \u0027type parameter\u0027 as possible return values. Changed in version 3.13: Return values are members of the SymbolTableType enumeration. The exact values of the returned string may change in the future, and thus, it is recommended to use SymbolTableType members instead of hard-coded strings. get_id()¶ Return the table’s identifier. get_name()¶ Return the table’s name. This is the name of the class if the table is for a class, the name of the function if the table is for a function, or \u0027top\u0027 if the table is global (get_type() returns \u0027module\u0027). For type parameter scopes (which are used for generic classes, functions, and type aliases), it is the name of the underlying class, function, or type alias. For type alias scopes, it is the name of the type alias. For TypeVar bound scopes, it is the name of the TypeVar. get_lineno()¶ Return the number of the first line in the block this table represents. is_optimized()¶ Return True if the locals in this table can be optimized. is_nested()¶ Return True if the block is a nested class or function. has_children()¶ Return True if the block has nested namespaces within it. These can be obtained with get_children(). get_identifiers()¶ Return a view object containing the names of symbols in the table. See the documentation of view objects. lookup(name)¶ Lookup name in the table and return a Symbol instance. get_symbols()¶ Return a list of Symbol instances for names in the table. get_children()¶ Return a list of the nested symbol tables. class symtable.Function¶ A namespace for a function or method. This class inherits from SymbolTable. get_parameters()¶ Return a tuple containing names of parameters to this function. get_locals()¶ Return a tuple containing names of locals in this function. get_globals()¶ Return a tuple containing names of globals in this function. get_nonlocals()¶ Return a tuple containing names of explicitly declared nonlocals in this function. get_frees()¶ Return a tuple containing names of free (closure) variables in this function. class symtable.Class¶ A namespace of a class. This class inherits from SymbolTable. get_methods()¶ Return a tuple containing the names of method-like functions declared in the class. Here, the term ‘method’ designates any function defined in the class body via def or async def. Functions defined in a deeper scope (e.g., in an inner class) are not picked up by get_methods(). For example: \u003e\u003e\u003e import symtable\n\u003e\u003e\u003e st \u003d symtable.symtable(\u0027\u0027\u0027\n... def outer(): pass\n...\n... class A:\n...    def f():\n...        def w(): pass\n...\n...    def g(self): pass\n...\n...    @classmethod\n...    async def h(cls): pass\n...\n...    global outer\n...    def outer(self): pass\n... \u0027\u0027\u0027, \u0027test\u0027, \u0027exec\u0027)\n\u003e\u003e\u003e class_A \u003d st.get_children()[2]\n\u003e\u003e\u003e class_A.get_methods()\n(\u0027f\u0027, \u0027g\u0027, \u0027h\u0027)\n Although A().f() raises TypeError at runtime, A.f is still considered as a method-like function. Deprecated since version 3.14, will be removed in version 3.16. class symtable.Symbol¶ An entry in a SymbolTable corresponding to an i",
+    "scrapedAt": "2026-05-09 01:00:18.688053"
+  },
+  {
+    "id": 955,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetStrList",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:00:17.43001"
+  },
+  {
     "id": 954,
     "url": "https://github.com/python/cpython/issues/91048",
     "title": "Async Call-Stack Reconstruction · Issue #91048 · python/cpython · GitHub",
@@ -6368,26 +6403,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 955,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetStrList"
-  },
-  {
-    "id": 956,
-    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
-  },
-  {
-    "id": 957,
-    "url": "https://docs.python.org/3/reference/datamodel.html#object.__annotations__"
-  },
-  {
-    "id": 958,
-    "url": "https://docs.python.org/3/library/locale.html#locale.getlocale"
-  },
-  {
-    "id": 959,
-    "url": "https://docs.python.org/3/reference/compound_stmts.html#finally"
   },
   {
     "id": 960,
@@ -161030,10 +161045,315 @@ window.searchData = [
     "id": 142251,
     "url": "https://github.com/python/cpython/pull/132807",
     "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142564,
+    "url": "https://docs.python.org/3/library/symtable.html#command-line-usage",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142566,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTable.get_type",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142568,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTable.get_lineno",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142569,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTable.is_nested",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142571,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTable.has_children",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142573,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Function.get_globals",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142575,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/symtable.py",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142577,
+    "url": "https://docs.python.org/3/library/symtable.html#",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142578,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.get_namespaces",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142581,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTableType.MODULE",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142583,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_free",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142584,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTable.get_id",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142586,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_annotated",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142587,
+    "url": "https://docs.python.org/3/library/symtable.html#examining-symbol-tables",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142588,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTable.is_optimized",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142590,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTable.get_children",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142597,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTableType.TYPE_VARIABLE",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142598,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTableType.TYPE_PARAMETERS",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142599,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Function",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142600,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Function.get_parameters",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142604,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_global",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142605,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_parameter",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142606,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.symtable",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142607,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_referenced",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142608,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_imported",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142610,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.get_name",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142611,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Class",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142612,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTableType.FUNCTION",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142613,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_type_parameter",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142615,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTableType.TYPE_ALIAS",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142617,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_local",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142618,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTableType.CLASS",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142620,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/symtable.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142621,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Function.get_nonlocals",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142622,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTable.get_name",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142623,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.get_namespace",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142625,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTable.get_symbols",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142626,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_nonlocal",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142628,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTable.lookup",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142629,
+    "url": "https://docs.python.org/3/library/symtable.html#generating-symbol-tables",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142630,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Function.get_frees",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142636,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_declared_global",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142637,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTableType",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142639,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTable",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142640,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Function.get_locals",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142641,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTableType.ANNOTATION",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142642,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_assigned",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142643,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_namespace",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 142644,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTable.get_identifiers",
+    "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#finally"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#finally"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.getlocale"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.getlocale"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Data model — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/datamodel.html#object.__annotations__"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Data model — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/datamodel.html#object.__annotations__"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "symtable — Access to the compiler’s symbol tables — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "symtable — Access to the compiler’s symbol tables — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetStrList"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetStrList"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/101755541?v\u003d4\u0026size\u003d80",
     "alt": "@mpage",
