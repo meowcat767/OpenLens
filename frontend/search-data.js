@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 765,
+    "url": "https://github.com/python/cpython/issues/127691",
+    "title": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Check for type consistency for PyUnicodeError API #127691 New issue Copy link New issue Copy link Closed Closed Check for type consistency for PyUnicodeError API#127691 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description picnixz opened on Dec 6, 2024 Issue body actions Feature or enhancement Proposal: This is a follow-up to #123380 (comment). The idea is to add assertion type-checks when calling helper functions on unicode objects:     assert(PyObject_TypeCheck(exc, (PyTypeObject*)\u0026PyExc_UnicodeError)); Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-127691: add type checks when using PyUnicodeError objects #127694 Reactions are currently unavailable Metadata Metadata Assignees picnixz Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:52:43.530482"
+  },
+  {
+    "id": 764,
+    "url": "https://docs.python.org/3/library/types.html#types.UnionType",
+    "title": "types — Dynamic type creation and names for built-in types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » types — Dynamic type creation and names for built-in types | Theme Auto Light Dark | types — Dynamic type creation and names for built-in types¶ Source code: Lib/types.py This module defines utility functions to assist in dynamic creation of new types. It also defines names for some object types that are used by the standard Python interpreter, but not exposed as builtins like int or str are. Finally, it provides some additional type-related utility classes and functions that are not fundamental enough to be builtins. Dynamic Type Creation¶ types.new_class(name, bases\u003d(), kwds\u003dNone, exec_body\u003dNone)¶ Creates a class object dynamically using the appropriate metaclass. The first three arguments are the components that make up a class definition header: the class name, the base classes (in order), the keyword arguments (such as metaclass). The exec_body argument is a callback that is used to populate the freshly created class namespace. It should accept the class namespace as its sole argument and update the namespace directly with the class contents. If no callback is provided, it has the same effect as passing in lambda ns: None. Added in version 3.3. types.prepare_class(name, bases\u003d(), kwds\u003dNone)¶ Calculates the appropriate metaclass and creates the class namespace. The arguments are the components that make up a class definition header: the class name, the base classes (in order) and the keyword arguments (such as metaclass). The return value is a 3-tuple: metaclass, namespace, kwds metaclass is the appropriate metaclass, namespace is the prepared class namespace and kwds is an updated copy of the passed in kwds argument with any \u0027metaclass\u0027 entry removed. If no kwds argument is passed in, this will be an empty dict. Added in version 3.3. Changed in version 3.6: The default value for the namespace element of the returned tuple has changed. Now an insertion-order-preserving mapping is used when the metaclass does not have a __prepare__ method. See also Metaclasses Full details of the class creation process supported by these functions PEP 3115 - Metaclasses in Python 3000 Introduced the __prepare__ namespace hook types.resolve_bases(bases)¶ Resolve MRO entries dynamically as specified by PEP 560. This function looks for items in bases that are not instances of type, and returns a tuple where each such object that has an __mro_entries__() method is replaced with an unpacked result of calling this method. If a bases item is an instance of type, or it doesn’t have an __mro_entries__() method, then it is included in the return tuple unchanged. Added in version 3.7. types.get_original_bases(cls, /)¶ Return the tuple of objects originally given as the bases of cls before the __mro_entries__() method has been called on any bases (following the mechanisms laid out in PEP 560). This is useful for introspecting Generics. For classes that have an __orig_bases__ attribute, this function returns the value of cls.__orig_bases__. For classes without the __orig_bases__ attribute, cls.__bases__ is returned. Examples: from typing import TypeVar, Generic, NamedTuple, TypedDict\n\nT \u003d TypeVar(\"T\")\nclass Foo(Generic[T]): ...\nclass Bar(Foo[int], float): ...\nclass Baz(list[str]): ...\nEggs \u003d NamedTuple(\"Eggs\", [(\"a\", int), (\"b\", str)])\nSpam \u003d TypedDict(\"Spam\", {\"a\": int, \"b\": str})\n\nassert Bar.__bases__ \u003d\u003d (Foo, float)\nassert get_original_bases(Bar) \u003d\u003d (Foo[int], float)\n\nassert Baz.__bases__ \u003d\u003d (list,)\nassert get_original_bases(Baz) \u003d\u003d (list[str],)\n\nassert Eggs.__bases__ \u003d\u003d (tuple,)\nassert get_original_bases(Eggs) \u003d\u003d (NamedTuple,)\n\nassert Spam.__bases__ \u003d\u003d (dict,)\nassert get_original_bases(Spam) \u003d\u003d (TypedDict,)\n\nassert int.__bases__ \u003d\u003d (object,)\nassert get_original_bases(int) \u003d\u003d (object,)\n Added in version 3.12. See also PEP 560 - Core support for typing module and generic types Standard Interpreter Types¶ This module provides names for many of the types that are required to implement a Python interpreter. It deliberately avoids including some of the types that arise only incidentally during processing such as the listiterator type. Typical use of these names is for isinstance() or issubclass() checks. If you instantiate any of these types, note that signatures may vary between Python versions. Standard names are defined for the following types: types.NoneType¶ The type of None. Added in version 3.10. types.FunctionType¶ types.LambdaType¶ The type of user-defined functions and functions created by lambda expressions. Raises an auditing event function.__new__ with argument code. The audit event only occurs for direct instantiation of function objects, and is not raised for normal compilation. types.GeneratorType¶ The type of generator-iterator objects, created by generator functions. types.CoroutineType¶ The type of coroutine objects, created by async def functions. Added in version 3.5. types.AsyncGeneratorType¶ ",
+    "scrapedAt": "2026-05-09 00:52:41.57575"
+  },
+  {
+    "id": 763,
+    "url": "https://peps.python.org/pep-0741/",
+    "title": "PEP 741 – Python Configuration C API | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 741 – Python Configuration C API PEP 741 – Python Configuration C API Author: Victor Stinner \u003cvstinner at python.org\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Created: 18-Jan-2024 Python-Version: 3.14 Post-History: 19-Jan-2024, 08-Feb-2024 Resolution: Discourse message Table of Contents Abstract Rationale Get the runtime configuration Security fix Redundancy between PyPreConfig and PyConfig Embedding Python Applications embedding Python Libraries embedding Python Utilities creating standalone applications Set the runtime configuration Specification PyInitConfig structure Configuration Options Public configuration options Read-only configuration options Create Config Get Options Set Options Initialize Python Error Handling Get and Set the Runtime Configuration Stability Interaction with the PyPreConfig and PyConfig APIs Examples Initialize Python Increase initialization bytes_warning option Get the runtime verbose option Implementation Backwards Compatibility Rejected Ideas Configuration as text Refer to an option with an integer Multi-phase initialization (similar to PEP 432) Locale encoding and wide strings Discussions Copyright Abstract Add a C API to configure the Python initialization without relying on C structures and the ability to make ABI-compatible changes in the future. Complete PEP 587 API by adding PyInitConfig_AddModule() which can be used to add a built-in extension module; feature previously referred to as the “inittab”. Add PyConfig_Get() and PyConfig_Set() functions to get and set the current runtime configuration. PEP 587 “Python Initialization Configuration” unified all the ways to configure the Python initialization. This PEP unifies also the configuration of the Python preinitialization and the Python initialization in a single API. Moreover, this PEP only provides a single choice to embed Python, instead of having two “Python” and “Isolated” choices (PEP 587), to simplify the API further. The lower level PEP 587 PyConfig API remains available for use cases with an intentionally higher level of coupling to CPython implementation details (such as emulating the full functionality of CPython’s CLI, including its configuration mechanisms). Rationale Get the runtime configuration PEP 587 has no API to get the current runtime configuration, only to configure the Python initialization. For example, the global configuration variable Py_UnbufferedStdioFlag was deprecated in Python 3.12 and using PyConfig.buffered_stdio is recommended instead. It only works to configure Python, there is no public API to get PyConfig.buffered_stdio. Users of the limited C API are asking for a public API to get the current runtime configuration. Cython needs to get the optimization_level configuration option: issue. When global configuration variables were deprecated in 2022, Marc-André Lemburg requested a C API to access these configuration variables at runtime (not only during Python initialization). Security fix To fix CVE-2020-10735, a denial-of-service when converting a very large string to an integer (in base 10), it was discussed to add a new PyConfig member to stable branches which affects the ABI. Gregory P. Smith proposed a different API using text based configuration file to not be limited by PyConfig members: FR: Allow private runtime config to enable extending without breaking the PyConfig ABI (August 2022). In the end, it was decided to not add a new PyConfig member to stable branches, but only add a new PyConfig.int_max_str_digits member to the development branch (which became Python 3.12). A dedicated private global variable (unrelated to PyConfig) is used in stable branches. Redundancy between PyPreConfig and PyConfig The Python preinitialization uses the PyPreConfig structure and the Python initialization uses the PyConfig structure. Both structures have four duplicated members: dev_mode, parse_argv, isolated and use_environment. The redundancy is caused by the fact that the two structures are separated, whereas some PyConfig members are needed by the preinitialization. Embedding Python Applications embedding Python Examples: Blender 3D graphics. fontforge font editor. Gimp. LibreOffice. OBS Studio. Tiled. vim text editor. On Linux, FreeBSD and macOS, applications are usually either statically linked to a libpython, or load dynamically a libpython . The libpython shared library is versioned, example: libpython3.12.so for Python 3.12 on Linux. The vim project can target the stable ABI. Usually, the “system Python” version is used. It’s not currently possible to select which Python version to use. Users would like the ability to select a newer Python on demand. On Linux, another approach to deploy an application embedding Python, such as GIMP, is to include Python in Flatpack, AppImage or Snap “container”. In this case, the application brings its own copy of Python version with th",
+    "scrapedAt": "2026-05-09 00:52:40.424729"
+  },
+  {
+    "id": 762,
+    "url": "https://peps.python.org/pep-0765/",
+    "title": "PEP 765 – Disallow return/break/continue that exit a finally block | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 765 – Disallow return/break/continue that exit a finally block PEP 765 – Disallow return/break/continue that exit a finally block Author: Irit Katriel \u003cirit at python.org\u003e, Alyssa Coghlan \u003cncoghlan at gmail.com\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Created: 15-Nov-2024 Python-Version: 3.14 Post-History: 09-Nov-2024, 16-Nov-2024 Replaces: 601 Resolution: Discourse message Table of Contents Abstract Motivation Rationale Specification Backwards Compatibility Security Implications How to Teach This Rejected Ideas Emit SyntaxError in CPython Change Semantics Appendix return in finally considered harmful Method Results Discussion Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at finally clause. × See PEP 1 for how to propose changes. Abstract This PEP proposes to withdraw support for return, break and continue statements that break out of a finally block. This was proposed in the past by PEP 601. The current PEP is based on empirical evidence regarding the cost/benefit of this change, which did not exist at the time that PEP 601 was rejected. It also proposes a slightly different solution than that which was proposed by PEP 601. Motivation The semantics of return, break and continue in a finally block are surprising for many developers. The documentation mentions that: If the finally clause executes a break, continue or return statement, exceptions are not re-raised. If a finally clause includes a return statement, the returned value will be the one from the finally clause’s return statement, not the value from the try clause’s return statement. Both of these behaviours cause confusion, but the first is particularly dangerous because a swallowed exception is more likely to slip through testing, than an incorrect return value. In 2019, PEP 601 proposed to change Python to emit a SyntaxWarning for a few releases and then turn it into a SyntaxError. It was rejected in favour of viewing this as a programming style issue, to be handled by linters and PEP 8. Indeed, PEP 8 now recommends not to use control flow statements in a finally block, and linters such as Pylint, Ruff and flake8-bugbear flag them as a problem. Rationale A recent analysis of real world code shows that: These features are rare (2 per million LOC in the top 8,000 PyPI packages, 4 per million LOC in a random selection of packages). This could be thanks to the linters that flag this pattern. Most of the usages are incorrect, and introduce unintended exception-swallowing bugs. Code owners are typically receptive to fixing the bugs, and find that easy to do. See the appendix for more details. This new data indicates that it would benefit Python’s users if Python itself moved them away from this harmful feature. One of the arguments brought up in the PEP 601 discussion was that language features should be orthogonal, and combine without context-based restrictions. However, in the meantime PEP 654 has been implemented, and it forbids return, break and continue in an except* clause because the semantics of that would violate the property that except* clauses operate in parallel, so the code of one clause should not suppress the invocation of another. In that case we accepted that a combination of features can be harmful enough that it makes sense to disallow it. Specification The change is to specify as part of the language spec that Python’s compiler may emit a SyntaxWarning or SyntaxError when a return, break or continue would transfer control flow from within a finally block to a location outside of it. These examples may emit a SyntaxWarning or SyntaxError:  def f():\n     try:\n         ...\n     finally:\n         return 42\n\n for x in o:\n     try:\n         ...\n     finally:\n         break  # (or continue)\n These examples would not emit the warning or error:  try:\n     ...\n finally:\n     def f():\n         return 42\n\n try:\n     ...\n finally:\n     for x in o:\n         break  # (or continue)\n CPython will emit a SyntaxWarning in version 3.14, and we leave it open whether, and when, this will become a SyntaxError. However, we specify here that a SyntaxError is permitted by the language spec, so that other Python implementations can choose to implement that. The CPython implementation will emit the SyntaxWarning during AST construction, to ensure that the warning will show up during static anlaysis and compilation, but not during execution of pre-compiled code. We expect that the warning will be seen by a project maintainer (when they run static analysis, or CI which does not have precompiled files). However, end users of a project will only see a warning if they skip precompilation at installation time, check installation time warnings, or run static analysis over their dependencies. Backwards Compatibility For backwards compatibility reasons, we are proposing that CPython e",
+    "scrapedAt": "2026-05-09 00:52:39.147755"
+  },
+  {
+    "id": 761,
+    "url": "https://docs.python.org/3/library/compression.html#module-compression",
+    "title": "The compression package — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Compression and Archiving » The compression package | Theme Auto Light Dark | The compression package¶ Added in version 3.14. The compression package contains the canonical compression modules containing interfaces to several different compression algorithms. Some of these modules have historically been available as separate modules; those will continue to be available under their original names for compatibility reasons, and will not be removed without a deprecation cycle. The use of modules in compression is encouraged where practical. compression.bz2 – Re-exports bz2 compression.gzip – Re-exports gzip compression.lzma – Re-exports lzma compression.zlib – Re-exports zlib compression.zstd – Wrapper for the Zstandard compression library Previous topic Data Compression and Archiving Next topic compression.zstd — Compression compatible with the Zstandard format This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Compression and Archiving » The compression package | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 00:52:37.85906"
+  },
+  {
     "id": 760,
     "url": "https://docs.python.org/3/library/threading.html#threading.Thread",
     "title": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
@@ -5033,26 +5068,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 761,
-    "url": "https://docs.python.org/3/library/compression.html#module-compression"
-  },
-  {
-    "id": 762,
-    "url": "https://peps.python.org/pep-0765/"
-  },
-  {
-    "id": 763,
-    "url": "https://peps.python.org/pep-0741/"
-  },
-  {
-    "id": 764,
-    "url": "https://docs.python.org/3/library/types.html#types.UnionType"
-  },
-  {
-    "id": 765,
-    "url": "https://github.com/python/cpython/issues/127691"
   },
   {
     "id": 766,
@@ -130869,10 +130884,608 @@ window.searchData = [
     "id": 93798,
     "url": "https://docs.python.org/3/library/threading.html#threading.Thread.isDaemon",
     "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93801,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/compression.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/compression.html#module-compression"
+  },
+  {
+    "id": 93820,
+    "url": "https://discuss.python.org/t/pep-765-disallow-return-break-continue-that-exit-a-finally-block/71348",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93821,
+    "url": "https://discuss.python.org/t/71348/111",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93822,
+    "url": "https://peps.python.org/pep-0765/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93823,
+    "url": "https://peps.python.org/pep-0765/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93824,
+    "url": "https://pylint.readthedocs.io/en/stable/",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93825,
+    "url": "https://peps.python.org/pep-0765/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93826,
+    "url": "https://docs.astral.sh/ruff/",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93827,
+    "url": "https://github.com/iritkatriel/finally/commits/main/README.md",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93828,
+    "url": "https://peps.python.org/pep-0765/#appendix",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93829,
+    "url": "https://peps.python.org/pep-0765/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93830,
+    "url": "https://discuss.python.org/t/an-analysis-of-return-in-finally-in-the-wild/70633/15",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93831,
+    "url": "https://docs.python.org/3.14/reference/compound_stmts.html#finally",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93832,
+    "url": "https://peps.python.org/pep-0654/",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93833,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0765.rst",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93834,
+    "url": "https://peps.python.org/pep-0765/#discussion",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93835,
+    "url": "https://peps.python.org/pep-0765/#results",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93836,
+    "url": "https://discuss.python.org/t/pep-765-disallow-return-break-continue-that-exit-a-finally-block/71348/32",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93838,
+    "url": "https://github.com/PyCQA/flake8-bugbear",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93839,
+    "url": "https://github.com/iritkatriel/finally/blob/main/README.md",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93840,
+    "url": "https://peps.python.org/pep-0765/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93841,
+    "url": "https://discuss.python.org/t/an-analysis-of-return-in-finally-in-the-wild/70633",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93842,
+    "url": "https://peps.python.org/pep-0765/#return-in-finally-considered-harmful",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93843,
+    "url": "https://discuss.python.org/t/pep-601-forbid-return-break-continue-breaking-out-of-finally/2239/24",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93844,
+    "url": "https://github.com/iritkatriel/finally/blob/main/scripts/ast_analysis.py",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93845,
+    "url": "https://github.com/faster-cpython/tools/blob/main/scripts/download_packages.py",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93846,
+    "url": "https://peps.python.org/pep-0765/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93847,
+    "url": "https://peps.python.org/pep-0765/#specification",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93848,
+    "url": "https://peps.python.org/pep-0765/#method",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93850,
+    "url": "https://peps.python.org/pep-0765/#security-implications",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93851,
+    "url": "https://peps.python.org/pep-0765/#emit-syntaxerror-in-cpython",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93852,
+    "url": "https://peps.python.org/pep-0601/",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93853,
+    "url": "https://peps.python.org/pep-0765/#change-semantics",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93854,
+    "url": "https://peps.python.org/pep-0765/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93855,
+    "url": "https://hugovk.github.io/top-pypi-packages/",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93856,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0765.rst",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93857,
+    "url": "https://docs.python.org/3/tutorial/errors.html#tut-cleanup",
+    "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 93858,
+    "url": "https://www.blender.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93859,
+    "url": "https://modwsgi.readthedocs.io/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93860,
+    "url": "https://peps.python.org/pep-0741/#security-fix",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93861,
+    "url": "https://discuss.python.org/t/pep-741-python-configuration-c-api-second-version/45403/27",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93862,
+    "url": "https://peps.python.org/pep-0741/#error-handling",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93863,
+    "url": "https://peps.python.org/pep-0741/#set-options",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93864,
+    "url": "https://www.gimp.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93865,
+    "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name\u003dCVE-2020-10735",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93866,
+    "url": "https://docs.python.org/dev/c-api/init_config.html#pyconfig",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93868,
+    "url": "https://peps.python.org/pep-0741/#specification",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93869,
+    "url": "https://github.com/indygreg/PyOxidizer",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93870,
+    "url": "https://peps.python.org/pep-0741/#get-options",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93871,
+    "url": "https://py2app.readthedocs.io/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93872,
+    "url": "https://peps.python.org/pep-0741/#configuration-as-text",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93873,
+    "url": "https://peps.python.org/pep-0741/#create-config",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93874,
+    "url": "https://www.libreoffice.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93875,
+    "url": "http://www.py2exe.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93876,
+    "url": "https://peps.python.org/pep-0741/#get-the-runtime-configuration",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93877,
+    "url": "https://www.mapeditor.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93878,
+    "url": "https://peps.python.org/pep-0741/#id1",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93880,
+    "url": "https://peps.python.org/pep-0741/#libraries-embedding-python",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93881,
+    "url": "https://github.com/PyO3/pyo3",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93882,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0741.rst",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93883,
+    "url": "https://peps.python.org/pep-0741/#refer-to-an-option-with-an-integer",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93884,
+    "url": "https://peps.python.org/pep-0741/#locale-encoding-and-wide-strings",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93885,
+    "url": "https://peps.python.org/pep-0741/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93886,
+    "url": "https://fontforge.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93887,
+    "url": "https://github.com/python/cpython/issues/99872",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93888,
+    "url": "https://peps.python.org/pep-0741/#redundancy-between-pypreconfig-and-pyconfig",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93889,
+    "url": "https://discuss.python.org/t/pep-741-python-configuration-c-api/43637",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93890,
+    "url": "https://docs.python.org/dev/c-api/init_config.html#isolated-configuration",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93891,
+    "url": "https://peps.python.org/pep-0741/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93892,
+    "url": "https://peps.python.org/pep-0741/#get-and-set-the-runtime-configuration",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93893,
+    "url": "https://peps.python.org/pep-0741/#public-configuration-options",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93894,
+    "url": "https://obsproject.com/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93895,
+    "url": "https://github.com/python/cpython/pull/123472",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93896,
+    "url": "https://docs.python.org/dev/c-api/init_config.html#pypreconfig",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93897,
+    "url": "https://peps.python.org/pep-0741/#stability",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93898,
+    "url": "https://discuss.python.org/t/fr-allow-private-runtime-config-to-enable-extending-without-breaking-the-pyconfig-abi/18004/34",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93899,
+    "url": "https://peps.python.org/pep-0741/#configuration-options",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93900,
+    "url": "https://peps.python.org/pep-0741/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93901,
+    "url": "https://peps.python.org/pep-0741/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93902,
+    "url": "https://github.com/python/cpython/issues/93103#issuecomment-1136462708",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93903,
+    "url": "https://discuss.python.org/t/pep-741-python-configuration-c-api-second-version/45403/88",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93904,
+    "url": "https://www.vim.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93905,
+    "url": "https://peps.python.org/pep-0741/#get-the-runtime-verbose-option",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93906,
+    "url": "https://peps.python.org/pep-0432/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93907,
+    "url": "https://peps.python.org/pep-0741/#implementation",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93909,
+    "url": "https://peps.python.org/pep-0741/#increase-initialization-bytes-warning-option",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93910,
+    "url": "https://peps.python.org/pep-0741/#pyinitconfig-structure",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93911,
+    "url": "https://peps.python.org/pep-0741/#examples",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93912,
+    "url": "https://discuss.python.org/t/fr-allow-private-runtime-config-to-enable-extending-without-breaking-the-pyconfig-abi/18004",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93913,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0741.rst",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93914,
+    "url": "https://peps.python.org/pep-0741/#interaction-with-the-pypreconfig-and-pyconfig-apis",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93915,
+    "url": "https://pyinstaller.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93916,
+    "url": "https://github.com/yglukhov/nimpy",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93917,
+    "url": "https://peps.python.org/pep-0741/#discussions",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93918,
+    "url": "https://peps.python.org/pep-0741/#embedding-python",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93919,
+    "url": "https://github.com/GrahamDumpleton/mod_wsgi/blob/f54eadd6da8e3da0faccd497d4165de435b97242/src/server/wsgi_interp.c#L2367-L2404",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93920,
+    "url": "https://peps.python.org/pep-0741/#utilities-creating-standalone-applications",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93921,
+    "url": "https://peps.python.org/pep-0741/#read-only-configuration-options",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93922,
+    "url": "https://peps.python.org/pep-0741/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93923,
+    "url": "https://peps.python.org/pep-0741/#initialize-python",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93924,
+    "url": "https://peps.python.org/pep-0741/#applications-embedding-python",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93925,
+    "url": "https://github.com/python/cpython/pull/123502",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93926,
+    "url": "https://peps.python.org/pep-0741/#multi-phase-initialization-similar-to-pep-432",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93927,
+    "url": "https://peps.python.org/pep-0741/#set-the-runtime-configuration",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93928,
+    "url": "https://discuss.python.org/t/pep-741-python-configuration-c-api-second-version/45403",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 94051,
+    "url": "https://github.com/python/cpython/pull/127694",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 94054,
+    "url": "https://github.com/python/cpython/issues/127691#issue-2723135260",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 94055,
+    "url": "https://github.com/python/cpython/issues/127691#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 94058,
+    "url": "https://github.com/python/cpython/issues/127691#top",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 94059,
+    "url": "https://github.com/python/cpython/pull/123380#discussion_r1865910020",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?v\u003d4\u0026size\u003d80",
+    "alt": "@picnixz",
+    "pageTitle": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?v\u003d4\u0026size\u003d48",
+    "alt": "@picnixz",
+    "pageTitle": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "types — Dynamic type creation and names for built-in types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/types.html#types.UnionType"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "types — Dynamic type creation and names for built-in types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/types.html#types.UnionType"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The compression package — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/compression.html#module-compression"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The compression package — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/compression.html#module-compression"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
