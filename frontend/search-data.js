@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1716,
+    "url": "https://github.com/python/cpython/issues/123424",
+    "title": "Extract ZipInfo for archive functionality · Issue #123424 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Extract ZipInfo for archive functionality #123424 New issue Copy link New issue Copy link Closed #123429 Closed Extract ZipInfo for archive functionality#123424 #123429 Copy link Assignees Labels easystdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description jaraco opened on Aug 28, 2024 Issue body actions In #123354, I found the need to copy code from zipfile into the test: cpython/Lib/test/test_zipfile/_path/test_path.py Lines 662 to 676 in 9e108b8 def for_name(cls, name, archive): \"\"\" Construct the same way that ZipFile.writestr does. TODO: extract this functionality and re-use \"\"\" self \u003d cls(filename\u003dname, date_time\u003dtime.localtime(time.time())[:6]) self.compress_type \u003d archive.compression self.compress_level \u003d archive.compresslevel if self.filename.endswith(\u0027/\u0027): # pragma: no cover self.external_attr \u003d 0o40775 \u003c\u003c 16 # drwxrwxr-x self.external_attr |\u003d 0x10 # MS-DOS directory flag else: self.external_attr \u003d 0o600 \u003c\u003c 16 # ?rw------- return self Let\u0027s instead extract that functionality in the zipfile module for re-use in the test (before it starts diverging). Linked PRs gh-123424: add ZipInfo._for_archive to set suitable default properties #123429 Reactions are currently unavailable Metadata Metadata Assignees jaraco Labels easystdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects Zipfile issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:30:51.834991"
+  },
+  {
+    "id": 1715,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.exec_module",
+    "title": "zipimport — Import modules from Zip archives — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Importing Modules » zipimport — Import modules from Zip archives | Theme Auto Light Dark | zipimport — Import modules from Zip archives¶ Source code: Lib/zipimport.py This module adds the ability to import Python modules (*.py, *.pyc) and packages from ZIP-format archives. It is usually not needed to use the zipimport module explicitly; it is automatically used by the built-in import mechanism for sys.path items that are paths to ZIP archives. Typically, sys.path is a list of directory names as strings. This module also allows an item of sys.path to be a string naming a ZIP file archive. The ZIP archive can contain a subdirectory structure to support package imports, and a path within the archive can be specified to only import from a subdirectory. For example, the path example.zip/lib/ would only import from the lib/ subdirectory within the archive. Any files may be present in the ZIP archive, but importers are only invoked for .py and .pyc files. ZIP import of dynamic modules (.pyd, .so) is disallowed. Note that if an archive only contains .py files, Python will not attempt to modify the archive by adding the corresponding .pyc file, meaning that if a ZIP archive doesn’t contain .pyc files, importing may be rather slow. Changed in version 3.13: ZIP64 is supported Changed in version 3.8: Previously, ZIP archives with an archive comment were not supported. See also PKZIP Application Note Documentation on the ZIP file format by Phil Katz, the creator of the format and algorithms used. PEP 273 - Import Modules from Zip Archives Written by James C. Ahlstrom, who also provided an implementation. Python 2.3 follows the specification in PEP 273, but uses an implementation written by Just van Rossum that uses the import hooks described in PEP 302. importlib - The implementation of the import machinery Package providing the relevant protocols for all importers to implement. This module defines an exception: exception zipimport.ZipImportError¶ Exception raised by zipimporter objects. It’s a subclass of ImportError, so it can be caught as ImportError, too. zipimporter Objects¶ zipimporter is the class for importing ZIP files. class zipimport.zipimporter(archivepath)¶ Create a new zipimporter instance. archivepath must be a path to a ZIP file, or to a specific path within a ZIP file. For example, an archivepath of foo/bar.zip/lib will look for modules in the lib directory inside the ZIP file foo/bar.zip (provided that it exists). ZipImportError is raised if archivepath doesn’t point to a valid ZIP archive. Changed in version 3.12: Methods find_loader() and find_module(), deprecated in 3.10 are now removed. Use find_spec() instead. create_module(spec)¶ Implementation of importlib.abc.Loader.create_module() that returns None to explicitly request the default semantics. Added in version 3.10. exec_module(module)¶ Implementation of importlib.abc.Loader.exec_module(). Added in version 3.10. find_spec(fullname, target\u003dNone)¶ An implementation of importlib.abc.PathEntryFinder.find_spec(). Added in version 3.10. get_code(fullname)¶ Return the code object for the specified module. Raise ZipImportError if the module couldn’t be imported. get_data(pathname)¶ Return the data associated with pathname. Raise OSError if the file wasn’t found. Changed in version 3.3: IOError used to be raised, it is now an alias of OSError. get_filename(fullname)¶ Return the value __file__ would be set to if the specified module was imported. Raise ZipImportError if the module couldn’t be imported. Added in version 3.1. get_source(fullname)¶ Return the source code for the specified module. Raise ZipImportError if the module couldn’t be found, return None if the archive does contain the module, but has no source for it. is_package(fullname)¶ Return True if the module specified by fullname is a package. Raise ZipImportError if the module couldn’t be found. load_module(fullname)¶ Load the module specified by fullname. fullname must be the fully qualified (dotted) module name. Returns the imported module on success, raises ZipImportError on failure. Deprecated since version 3.10, will be removed in version 3.15: Use exec_module() instead. invalidate_caches()¶ Clear out the internal cache of information about files found within the ZIP archive. Added in version 3.10. archive¶ The file name of the importer’s associated ZIP file, without a possible subpath. prefix¶ The subpath within the ZIP file where modules are searched. This is the empty string for zipimporter objects which point to the root of the ZIP file. The archive and prefix attributes, when combined with a slash, equal the original archivepath argument given to the zipimporter constructor. Examples¶ Here is an example that imports a module from a ZIP archive - note that the zipimport module is not explicitly used. $ unzip -l example_archive.zip\nArchive:  example_archive.zip\n  Length     D",
+    "scrapedAt": "2026-05-09 01:30:49.549041"
+  },
+  {
+    "id": 1714,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_get_key_value",
+    "title": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Thread-local storage support | Theme Auto Light Dark | Thread-local storage support¶ The Python interpreter provides low-level support for thread-local storage (TLS) which wraps the underlying native TLS implementation to support the Python-level thread-local storage API (threading.local). The CPython C level APIs are similar to those offered by pthreads and Windows: use a thread key and functions to associate a void* value per thread. A thread state does not need to be attached when calling these functions; they supply their own locking. Note that Python.h does not include the declaration of the TLS APIs, you need to include pythread.h to use thread-local storage. Note None of these API functions handle memory management on behalf of the void* values. You need to allocate and deallocate them yourself. If the void* values happen to be PyObject*, these functions don’t do refcount operations on them either. Thread-specific storage API¶ The thread-specific storage (TSS) API was introduced to supersede the use of the existing TLS API within the CPython interpreter. This API uses a new type Py_tss_t instead of int to represent thread keys. Added in version 3.7. See also “A New C-API for Thread-Local Storage in CPython” (PEP 539) type Py_tss_t¶ This data structure represents the state of a thread key, the definition of which may depend on the underlying TLS implementation, and it has an internal field representing the key’s initialization state. There are no public members in this structure. When Py_LIMITED_API is not defined, static allocation of this type by Py_tss_NEEDS_INIT is allowed. Py_tss_NEEDS_INIT¶ This macro expands to the initializer for Py_tss_t variables. Note that this macro won’t be defined with Py_LIMITED_API. Dynamic allocation¶ Dynamic allocation of the Py_tss_t, required in extension modules built with Py_LIMITED_API, where static allocation of this type is not possible due to its implementation being opaque at build time. Py_tss_t *PyThread_tss_alloc()¶ Part of the Stable ABI since version 3.7. Return a value which is the same state as a value initialized with Py_tss_NEEDS_INIT, or NULL in the case of dynamic allocation failure. void PyThread_tss_free(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Free the given key allocated by PyThread_tss_alloc(), after first calling PyThread_tss_delete() to ensure any associated thread locals have been unassigned. This is a no-op if the key argument is NULL. Note A freed key becomes a dangling pointer. You should reset the key to NULL. Methods¶ The parameter key of these functions must not be NULL. Moreover, the behaviors of PyThread_tss_set() and PyThread_tss_get() are undefined if the given Py_tss_t has not been initialized by PyThread_tss_create(). int PyThread_tss_is_created(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a non-zero value if the given Py_tss_t has been initialized by PyThread_tss_create(). int PyThread_tss_create(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a zero value on successful initialization of a TSS key. The behavior is undefined if the value pointed to by the key argument is not initialized by Py_tss_NEEDS_INIT. This function can be called repeatedly on the same key – calling it on an already initialized key is a no-op and immediately returns success. void PyThread_tss_delete(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Destroy a TSS key to forget the values associated with the key across all threads, and change the key’s initialization state to uninitialized. A destroyed key is able to be initialized again by PyThread_tss_create(). This function can be called repeatedly on the same key – calling it on an already destroyed key is a no-op. int PyThread_tss_set(Py_tss_t *key, void *value)¶ Part of the Stable ABI since version 3.7. Return a zero value to indicate successfully associating a void* value with a TSS key in the current thread. Each thread has a distinct mapping of the key to a void* value. void *PyThread_tss_get(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return the void* value associated with a TSS key in the current thread. This returns NULL if no value is associated with the key in the current thread. Legacy APIs¶ Deprecated since version 3.7: This API is superseded by the thread-specific storage (TSS) API. Note This version of the API does not support platforms where the native TLS key is defined in a way that cannot be safely cast to int. On such platforms, PyThread_create_key() will return immediately with a failure status, and the other TLS functions will all be no-ops on such platforms. Due to the compatibility problem noted above, this version of the API should not be used in new code. int PyThread_create_key()¶ Part of the Stable ABI. void PyThread_delete_key(int key)¶ Part of the Stable ABI. int PyThread_set_key_value(int ",
+    "scrapedAt": "2026-05-09 01:30:48.273223"
+  },
+  {
+    "id": 1713,
+    "url": "https://docs.python.org/3/library/profile.html#module-pstats",
+    "title": "The Python Profilers — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Debugging and Profiling » The Python Profilers | Theme Auto Light Dark | The Python Profilers¶ Source code: Lib/profile.py and Lib/pstats.py Introduction to the profilers¶ cProfile and profile provide deterministic profiling of Python programs. A profile is a set of statistics that describes how often and for how long various parts of the program executed. These statistics can be formatted into reports via the pstats module. The Python standard library provides two different implementations of the same profiling interface: cProfile is recommended for most users; it’s a C extension with reasonable overhead that makes it suitable for profiling long-running programs. Based on lsprof, contributed by Brett Rosen and Ted Czotter. profile, a pure Python module whose interface is imitated by cProfile, but which adds significant overhead to profiled programs. If you’re trying to extend the profiler in some way, the task might be easier with this module. Originally designed and written by Jim Roskind. Note The profiler modules are designed to provide an execution profile for a given program, not for benchmarking purposes (for that, there is timeit for reasonably accurate results). This particularly applies to benchmarking Python code against C code: the profilers introduce overhead for Python code, but not for C-level functions, and so the C code would seem faster than any Python one. Instant User’s Manual¶ This section is provided for users that “don’t want to read the manual.” It provides a very brief overview, and allows a user to rapidly perform profiling on an existing application. To profile a function that takes a single argument, you can do: import cProfile\nimport re\ncProfile.run(\u0027re.compile(\"foo|bar\")\u0027)\n (Use profile instead of cProfile if the latter is not available on your system.) The above action would run re.compile() and print profile results like the following:       214 function calls (207 primitive calls) in 0.002 seconds\n\nOrdered by: cumulative time\n\nncalls  tottime  percall  cumtime  percall filename:lineno(function)\n     1    0.000    0.000    0.002    0.002 {built-in method builtins.exec}\n     1    0.000    0.000    0.001    0.001 \u003cstring\u003e:1(\u003cmodule\u003e)\n     1    0.000    0.000    0.001    0.001 __init__.py:250(compile)\n     1    0.000    0.000    0.001    0.001 __init__.py:289(_compile)\n     1    0.000    0.000    0.000    0.000 _compiler.py:759(compile)\n     1    0.000    0.000    0.000    0.000 _parser.py:937(parse)\n     1    0.000    0.000    0.000    0.000 _compiler.py:598(_code)\n     1    0.000    0.000    0.000    0.000 _parser.py:435(_parse_sub)\n The first line indicates that 214 calls were monitored. Of those calls, 207 were primitive, meaning that the call was not induced via recursion. The next line: Ordered by: cumulative time indicates the output is sorted by the cumtime values. The column headings include: ncalls for the number of calls. tottime for the total time spent in the given function (and excluding time made in calls to sub-functions) percall is the quotient of tottime divided by ncalls cumtime is the cumulative time spent in this and all subfunctions (from invocation till exit). This figure is accurate even for recursive functions. percall is the quotient of cumtime divided by primitive calls filename:lineno(function) provides the respective data of each function When there are two numbers in the first column (for example 3/1), it means that the function recursed. The second value is the number of primitive calls and the former is the total number of calls. Note that when the function does not recurse, these two values are the same, and only the single figure is printed. Instead of printing the output at the end of the profile run, you can save the results to a file by specifying a filename to the run() function: import cProfile\nimport re\ncProfile.run(\u0027re.compile(\"foo|bar\")\u0027, \u0027restats\u0027)\n The pstats.Stats class reads profile results from a file and formats them in various ways. The files cProfile and profile can also be invoked as a script to profile another script. For example: python -m cProfile [-o output_file] [-s sort_order] (-m module | myscript.py)\n -o \u003coutput_file\u003e¶ Writes the profile results to a file instead of to stdout. -s \u003csort_order\u003e¶ Specifies one of the sort_stats() sort values to sort the output by. This only applies when -o is not supplied. -m \u003cmodule\u003e¶ Specifies that a module is being profiled instead of a script. Added in version 3.7: Added the -m option to cProfile. Added in version 3.8: Added the -m option to profile. The pstats module’s Stats class has a variety of methods for manipulating and printing the data saved into a profile results file: import pstats\nfrom pstats import SortKey\np \u003d pstats.Stats(\u0027restats\u0027)\np.strip_dirs().sort_stats(-1).print_stats()\n The strip_dirs() method removed the extraneous path from all the module names. The sort_s",
+    "scrapedAt": "2026-05-09 01:30:47.026188"
+  },
+  {
+    "id": 1712,
+    "url": "https://docs.python.org/3/library/stdtypes.html#list",
+    "title": "Built-in Types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Types | Theme Auto Light Dark | Built-in Types¶ The following sections describe the standard types that are built into the interpreter. The principal built-in types are numerics, sequences, mappings, classes, instances and exceptions. Some collection classes are mutable. The methods that add, subtract, or rearrange their members in place, and don’t return a specific item, never return the collection instance itself but None. Some operations are supported by several object types; in particular, practically all objects can be compared for equality, tested for truth value, and converted to a string (with the repr() function or the slightly different str() function). The latter function is implicitly used when an object is written by the print() function. Truth Value Testing¶ Any object can be tested for truth value, for use in an if or while condition or as operand of the Boolean operations below. By default, an object is considered true unless its class defines either a __bool__() method that returns False or a __len__() method that returns zero, when called with the object. [1] If one of the methods raises an exception when called, the exception is propagated and the object does not have a truth value (for example, NotImplemented). Here are most of the built-in objects considered false: constants defined to be false: None and False zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1) empty sequences and collections: \u0027\u0027, (), [], {}, set(), range(0) Operations and built-in functions that have a Boolean result always return 0 or False for false and 1 or True for true, unless otherwise stated. (Important exception: the Boolean operations or and and always return one of their operands.) Boolean Operations — and, or, not¶ These are the Boolean operations, ordered by ascending priority: Operation Result Notes x or y if x is true, then x, else y (1) x and y if x is false, then x, else y (2) not x if x is false, then True, else False (3) Notes: This is a short-circuit operator, so it only evaluates the second argument if the first one is false. This is a short-circuit operator, so it only evaluates the second argument if the first one is true. not has a lower priority than non-Boolean operators, so not a \u003d\u003d b is interpreted as not (a \u003d\u003d b), and a \u003d\u003d not b is a syntax error. Comparisons¶ There are eight comparison operations in Python. They all have the same priority (which is higher than that of the Boolean operations). Comparisons can be chained arbitrarily; for example, x \u003c y \u003c\u003d z is equivalent to x \u003c y and y \u003c\u003d z, except that y is evaluated only once (but in both cases z is not evaluated at all when x \u003c y is found to be false). This table summarizes the comparison operations: Operation Meaning \u003c strictly less than \u003c\u003d less than or equal \u003e strictly greater than \u003e\u003d greater than or equal \u003d\u003d equal !\u003d not equal is object identity is not negated object identity Unless stated otherwise, objects of different types never compare equal. The \u003d\u003d operator is always defined but for some object types (for example, class objects) is equivalent to is. The \u003c, \u003c\u003d, \u003e and \u003e\u003d operators are only defined where they make sense; for example, they raise a TypeError exception when one of the arguments is a complex number. Non-identical instances of a class normally compare as non-equal unless the class defines the __eq__() method. Instances of a class cannot be ordered with respect to other instances of the same class, or other types of object, unless the class defines enough of the methods __lt__(), __le__(), __gt__(), and __ge__() (in general, __lt__() and __eq__() are sufficient, if you want the conventional meanings of the comparison operators). The behavior of the is and is not operators cannot be customized; also they can be applied to any two objects and never raise an exception. Two more operations with the same syntactic priority, in and not in, are supported by types that are iterable or implement the __contains__() method. Numeric Types — int, float, complex¶ There are three distinct numeric types: integers, floating-point numbers, and complex numbers. In addition, Booleans are a subtype of integers. Integers have unlimited precision. Floating-point numbers are usually implemented using double in C; information about the precision and internal representation of floating-point numbers for the machine on which your program is running is available in sys.float_info. Complex numbers have a real and imaginary part, which are each a floating-point number. To extract these parts from a complex number z, use z.real and z.imag. (The standard library includes the additional numeric types fractions.Fraction, for rationals, and decimal.Decimal, for floating-point numbers with user-definable precision.) Numbers are created by numeric literals or as the result of built-in functions and operators. Unadorned integer li",
+    "scrapedAt": "2026-05-09 01:30:45.767117"
+  },
+  {
     "id": 1711,
     "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-slower-safety",
     "title": "3. Configure Python — Python 3.14.5rc1 documentation",
@@ -11548,26 +11583,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1712,
-    "url": "https://docs.python.org/3/library/stdtypes.html#list"
-  },
-  {
-    "id": 1713,
-    "url": "https://docs.python.org/3/library/profile.html#module-pstats"
-  },
-  {
-    "id": 1714,
-    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_get_key_value"
-  },
-  {
-    "id": 1715,
-    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.exec_module"
-  },
-  {
-    "id": 1716,
-    "url": "https://github.com/python/cpython/issues/123424"
   },
   {
     "id": 1717,
@@ -245850,10 +245865,117 @@ window.searchData = [
     "id": 373410,
     "url": "https://github.com/python/cpython/issues/74598#start-of-content",
     "parentUrl": "https://github.com/python/cpython/issues/74598"
+  },
+  {
+    "id": 374917,
+    "url": "https://github.com/python/cpython/issues/123424#top",
+    "parentUrl": "https://github.com/python/cpython/issues/123424"
+  },
+  {
+    "id": 374919,
+    "url": "https://github.com/python/cpython/commit/9e108b8719752a0a2e390eeeaa8f52391f75120d",
+    "parentUrl": "https://github.com/python/cpython/issues/123424"
+  },
+  {
+    "id": 374925,
+    "url": "https://github.com/python/cpython/blob/9e108b8719752a0a2e390eeeaa8f52391f75120d/Lib/test/test_zipfile/_path/test_path.py#L662-L676",
+    "parentUrl": "https://github.com/python/cpython/issues/123424"
+  },
+  {
+    "id": 374926,
+    "url": "https://github.com/python/cpython/pull/123429",
+    "parentUrl": "https://github.com/python/cpython/issues/123424"
+  },
+  {
+    "id": 374927,
+    "url": "https://github.com/python/cpython/issues/123424#issue-2492022923",
+    "parentUrl": "https://github.com/python/cpython/issues/123424"
+  },
+  {
+    "id": 374929,
+    "url": "https://github.com/python/cpython/pull/123354",
+    "parentUrl": "https://github.com/python/cpython/issues/123424"
+  },
+  {
+    "id": 374930,
+    "url": "https://github.com/python/cpython/issues/123424#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/123424"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/308610?s\u003d64\u0026u\u003d5b3fdef94d1b0ac7392d17643eaba029f5f13bea\u0026v\u003d4",
+    "alt": "jaraco",
+    "pageTitle": "Extract ZipInfo for archive functionality · Issue #123424 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123424"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/308610?u\u003d5b3fdef94d1b0ac7392d17643eaba029f5f13bea\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@jaraco",
+    "pageTitle": "Extract ZipInfo for archive functionality · Issue #123424 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123424"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/308610?u\u003d5b3fdef94d1b0ac7392d17643eaba029f5f13bea\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@jaraco",
+    "pageTitle": "Extract ZipInfo for archive functionality · Issue #123424 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123424"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/308610?s\u003d64\u0026u\u003d5b3fdef94d1b0ac7392d17643eaba029f5f13bea\u0026v\u003d4",
+    "alt": "@jaraco",
+    "pageTitle": "Extract ZipInfo for archive functionality · Issue #123424 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123424"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipimport — Import modules from Zip archives — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.exec_module"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipimport — Import modules from Zip archives — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.exec_module"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_get_key_value"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_get_key_value"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python Profilers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/profile.html#module-pstats"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python Profilers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/profile.html#module-pstats"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#list"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#list"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
