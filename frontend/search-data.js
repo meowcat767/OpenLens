@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 546,
+    "url": "https://www.python.org/success-stories/why-python-matters-for-the-vr-community/",
+    "title": "Why Python Matters for the VR Community | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Why Python Matters for the VR Community Written by Andrew Beall, WorldViz Why Python Matters for the VR Community Andrew Beall, Chief Scientist, WorldViz Believe it or not, Python was first released 30 years ago and for nearly that long we\u0027ve made it the cornerstone of our Vizard virtual reality (VR) development platform. You may also be surprised to know that VR has been around for nearly twice that long! How we came to choose Python so long ago is a story in itself, but what is remarkable is that even after so many years Python has only continued to become more and more valuable to us and our customers. For us, Python has shaped our product development lifecycle, and we firmly believe it’s the world’s most accessible and powerful scripting language. You can\u0027t help but embrace the rapid application development paradigm, which has enabled us to overcome challenges such as quickly building hardware drivers for a rapidly evolving VR industry. We cater to a scientifically inclined customer base, and Python\u0027s rich community with shared libraries provides ready-built functionality that is beyond compare. As it said by others, we build in Python whenever we can and only use C++ when we must. For our customers, Python plays a central role in their daily experience with our product. One of the core values we provide is wrapping up all the complexity of a sophisticated 3D render engine capable of low-level graphics control needed by researchers all into a friendly Python interface. The fact that Python was purposely designed to be an enjoyable language shows how quickly novice programmers across the board can begin coding projects of their own. Unlike Java and C++, Python is inherently obvious in how to do things, and that single characteristic has led our customers to feel self-empowered and confident enough to explore projects and make discoveries that they would otherwise have felt was beyond their programming expertise. Three reasons capture why Python is so great for scientists: 1) Python is easy to learn We think this is the most important reason why Python is a great choice for scientific research. We\u0027ve seen hundreds of researchers with no Python experience gain fluency in a matter of one or two months and successfully build virtual reality experiments. For our customers, the world of 3D graphics and real-time virtual reality environments is suddenly cracked up and ready to be used for research. It gets even more exciting when our customers see how easy Python makes it to collect data from the sensors, save it to files, and then use Python libraries like numpy and matplotlib to add a data analysis and visualization pipeline. 2) Python is easy to read Unless you\u0027ve worked with collections of code before this point may not fully resonate but trust us when we say this is critical. We\u0027ve heard countless claims by customers who say they are relieved to now feel that they can read, understand, and even tweak projects built by others in the lab. Alex Martelli, a Fellow at the Python Software Foundation writes that \"To describe something as \u0027clever\u0027 is not considered a compliment in the Python culture. Clever programming is often unreadable by anyone except an expert. Python is meant to be easily readable and immediately useful. 3) Python has a huge scientific community It\u0027s no joke when we say you can almost always find a useful library by googling \"python\" plus your target keyword. There are simply thousands of libraries available for scientific research, nearly all being open-source and freely shared amongst an amazing community. Scientists across numerous domains have adopted Python as the goto language for analysis, so it\u0027s easy to lean on the accomplishments of others when beginning new projects. Try a similar search in other languages and you\u0027ll see a huge difference. Or, compare the effort it takes to incorporate external libraries into Python compared to other languages and you\u0027ll be amazed. What about the performance penalty for using Python? We get this question sometimes and it\u0027s usually a red herring. Sure, Python and C compiled code are in different categories and if you pick the right computing problem, you can show C/C++ to be much faster. However, time to crunch numbers or similar isn\u0027t what most of our users care about. GPUs and CPUs are so fast today that it\u0027s rare that Python\u0027s efficiency is an issue. Not rare, though, is how often projects can be completed faster in Python. Identify what matters most to you and measure speed accordingly. In conclusion, whether you\u0027re developing code to immerse a person in a tightly controlled virtual world to study their reactions to stimuli, or you\u0027re using machine learning to model the spread of COVID-19, you owe it to yourself to try Python. You won\u0027t regret it. Success stories home Arts Business",
+    "scrapedAt": "2026-05-09 00:45:28.81558"
+  },
+  {
+    "id": 545,
+    "url": "https://www.python.org/success-stories/category/arts/",
+    "title": "Arts | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Arts Arts Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-09 00:45:27.591991"
+  },
+  {
+    "id": 544,
+    "url": "https://www.python.org/success-stories/python-on-arm-2025-update/",
+    "title": "Python on Arm: 2025 Update | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python on Arm: 2025 Update Written by Diego Russo, Arm Ltd Why Python Matters to Arm Python is one of the most widely used programming languages today, powering applications across Machine Learning (ML), automation, data science, DevOps, web development and developer tooling. At Arm, we see Python not just as a language to support, but as a strategic priority to enable a wide and growing community of developers. Over the past several years, we have worked closely with the Python community to make Arm a first-class platform for Python development. Thanks to consistent upstream collaboration, targeted engineering, and ecosystem investment, it is now practical to develop, test, and deploy Python workloads on Arm across Linux, Windows, and the cloud. In 2024, we shared how Arm had increased its engagement with the Python ecosystem. One year later, we are seeing the results of that investment, with new infrastructure, improved performance, and a growing number of real-world projects running on Arm. This post highlights the key developments from the past year and what is ahead. What\u0027s new in 2025 Easier development: Linux and Windows GitHub-hosted runners for Arm As part of our collaboration with GitHub, Arm helped enable GitHub-hosted CI runners for Arm-based platforms. These runners are now available for: Linux on Arm (GA) Windows on Arm, currently in beta Arm sponsored the underlying infrastructure and provided engineering support during the beta rollout. These runners offer open-source projects a fast, reliable way to run native CI workflows without emulation or self-hosting. The CPython project was the first open-source user of the Windows on Arm runners and continues to use them in daily CI pipelines. This helps ensure first-class support for the platform. Performance improvements Python 3.13 introduced an experimental Just-in-Time (JIT) compiler, developed by the CPython team to improve performance in real-world applications. Arm has contributed directly to this effort by testing, tuning, and extending the JIT on Arm platforms, particularly for the AArch64 architecture (see section below). Our work includes fixing architecture specific issues, validating generated machine code, and improving the overall quality of JIT output on Arm. These efforts have resulted in: Up to 4% speedup on Linux 17% reduction in generated header file size Smarter jump handling and more efficient code generation Lower memory overhead through trampoline reuse and targeted optimizations The result is a faster, more reliable JIT experience for Python workloads running on Arm. Better Windows on Arm ecosystem support Python support for Windows on Arm continues to mature. CPython itself, along with many essential packages, now builds and runs cleanly on the platform. This is thanks to upstream fixes, improved build systems, and expanded CI coverage. We are working closely with Microsoft to improve the overall Python experience on Windows on Arm devices. This includes: Enabling compatibility for popular libraries Refining build and packaging workflows Supporting key AI and ML tools One area of major progress is PyTorch, where the collaboration between Arm and Microsoft has delivered native builds and improved acceleration support. With the release of PyTorch 2.7 for Windows on Arm, developers can now access Arm-native builds for Windows, available for Python 3.12. This enables ML workflows to run natively on Arm64 Windows devices, including Copilot+ PCs, with full access to hardware capabilities. These improvements support a wide range of ML use cases. From generative models like Stable Diffusion, to natural language processing, to traditional regression and classification. Windows on Arm is now a production-ready platform for modern AI development. Arm\u0027s commitment to the Python community We continue to support the Python community not only through code, but with infrastructure, funding, and time through: Hosting the CPython Core Dev Sprint 2025 in our Cambridge office Sponsoring EuroPython 2022, 2023, and 2025 Providing a dedicated benchmarking server integrated with speed.python.org Funding a full-time CPython developer, now a core committer Arm is committed to supporting the Python ecosystem through sustained upstream contributions and community investment. Over the past year, we have expanded our efforts to support the community both technically and organizationally. CPython Core Dev Sprint 2025 We are proud to host and sponsor the upcoming CPython Core Dev Sprint 2025 this September at our Cambridge office. On track to be the largest sprint ever held, the event will bring together more than 55 core developers and contributors flying in from across Europe, the United States, South Korea, Singapore, and Australia. These sprints are vital to Python’s evolution, enabling ",
+    "scrapedAt": "2026-05-09 00:45:26.35293"
+  },
+  {
+    "id": 543,
+    "url": "https://www.python.org/success-stories/using-python-for-commercial-cloud-backup/",
+    "title": "Using Python for commercial cloud backup | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Using Python for commercial cloud backup Written by Deon Pollard, AcuWorkflow Using Python for commercial cloud backup. I know, may not make sense immediately, but it does. The new normal for us is moving beyond the traditional Python practices, meaning; we do a) Commercial instead of Free b) Closed Source instead of Open c) Python for Enterprise grade back-end instead of Java or C# Our Story Enter Smartsheet( https://www.smartsheet.com/welcome-customers-home) a well-respected Enterprise Platform used by 75% of Fortune 100 Companies. It is mainly used for collaborative work management around Project or Sales using a multi-user sheet-like environment or if you like “Excel on steroids” Introducing us – AcuWorkflow (https://www.acuworkflow.com/smartbackup.html) , a niche company offering services around Smartsheet. We saw a gap in securing Smartsheet data and build a product called SMARTBACKUP(https://www.acuworkflow.com/smartbackup.html) in Python. I hear you, as if the world needs another backup solution. However, the answer lies in what it is solving for. A Sheet within Smartsheet is a multi-faceted object which loses about 60% plus of its recoverable functionality once backed up outside Smartsheet via Smartsheet facilities. Reason being that by enlarge only the data is backed up leaving all of the formatting, formulas, cell links automation rules etc. behind. In reality the things that makes up a Smartsheet-sheet effectively are not backed up. Our Solution, SMARTBACKUP carve of a portion within Smartsheet called the Vault and then proceed to backup within. This way, restore is a doddle and a near identical copy is guaranteed – all this of course under full/incremental backup control. We did not stop there and proceeded with a complimentary archive solution and innovative export facility. why Python? To get back to why Python? Initially we were looking for rapid development utilizing the REST API layer provided by Smartsheet. Since we were steep many, many years in Java/C# et al it was our early choice. Fortunately we started experimenting with Python because we needed the smarts brought by Pandas dataframes with binning. When we saw how fast and easily we can consume API’s job done and we continued with a Python only back-end. For the front-end we did not like the typical Python GUI’s and ruled out Django because our requirements called for a nimble app-like UI instead of content-heavy interactions. Seems to us Django would have made a good choice if we had a content-heavy obligation. We settled on Vue.js a reactive SPA framework and the combination of the thread-aware Python back-end with Flask inter-operation really works for us. the Kicker Here is the kicker for us. We started 3-4 months ago completely new to Python and Vue, let alone some of the peripheries in support. We now have adoption of our platform in some very large Global Enterprises that uses Smartsheet. Future looks bright and we are super happy with our tech choices and the way it performs. Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-09 00:45:25.136436"
+  },
+  {
+    "id": 542,
+    "url": "https://www.python.org/success-stories/python-to-help-meteorologists/",
+    "title": "Python To Help Meteorologists | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python To Help Meteorologists Written by Eric Floehr, Intellovations Introduction ForecastWatch.com, a service of Intellovations, is in the business of rating the accuracy of weather reports from companies such as Accuweather, MyForecast.com, and The Weather Channel. Over 36,000 weather forecasts are collected every day for over 800 U.S. cities, and later compared with actual climatological data. These comparisons are used by meteorologists to improve their weather forecasts, and to compare their forecasts with others. They are also used by consumers to better understand the probable accuracy of a forecast. The Architecture ForecastWatch.com is built from four major architectural components: An input process for acquiring forecasts, an input process for acquiring measured climatological data, the data aggregation engine, and the web application framework. There are two main input processes in the system: The forecast parser, and the actuals parser. The forecast parser is responsible for requesting forecasts from the web for each of the forecast providers ForecastWatch.com tracks. It parses the forecast from the page and inserts the forecast data into a database until it can be compared to the actual data. The actuals parser takes actual data from the National Climatic Data Center of the National Weather Service, which provides high, low, precipitation, and significant weather events for over 800 United States cities and inserts the data into the database. This process also scores the forecasts with the actual weather data, and places that information in the database. Once the data has been collected and scored, it is processed by the aggregation engine, which combines the scores into yearly and monthly blocks, sliced by provider, location, and the number of days into the future for which the forecasts were predicting. In its first year, 2003, the system only gathered forecasts for 20 U.S. cities, or about 250,000 individual forecasts, so most of the data output was based on the raw scoring data. The aggregation engine was added once the system was scaled up to 800 cities, increasing the data stream by almost 4000%. In the first half of 2004, the system has already scored over 4 million forecasts, all collected, parsed, and displayed on the web. ForecastWatch.com can be used to determine the accuracy of weather forecasts, for example by reviewing maps of error magnitude in forecast low and high temperatures Zoom in The last component in ForecastWatch.com\u0027s architecture is the website itself. This is the interface through which customers access the collected and aggregated forecast accuracy information. Implemented with Python ForecastWatch.com is a 100% pure Python solution. Python is used in all its components, from the back-end to the front-end, including also the more performance-critical portions of the system. Python was chosen initially because it comes with many standard libraries useful in collecting, parsing, and storing data from the web. Among those particularly useful in this application were the regular expression library, the thread library, the object serialization library, and gzip data compression library. Other libraries, such as an HTTP client capable of accepting cookies (ClientCookie), and an HTML table parser (ClientTable) were available as third party modules. These proved invaluable and were easy to use. The threading library turned out to be very important in scaling ForecastWatch.com\u0027s coverage to over 800 cities. Grabbing web pages is a very I/O bound process, and requesting a single page at a time for roughly 5000 web pages a day would have been prohibitively time-consuming. Using Python\u0027s threading library, the web page retrieval loop simply calls thread.start_new() for each request, passing in the necessary class instance method that retrieves and processes the web page, along with the parameters necessary to describe the city for the desired forecast. The request classes use a Python built-in Event class instance to communicate with the main controlling thread when processing is complete. Python made this application of threading incredibly easy. Python is also used in the aggregation engine, which runs as a separate process to combine forecast accuracy scores into monthly and yearly slices. The aggregation process uses queries via MySQLdb to the MySQL database where the input modules have placed the forecast and climatological data they have harvested. Colorized maps, showing forecast accuracy by geographical area, are then generated for use on the web site and in printed reports. This forecast accuracy map uses intensity of blue and red to indicate the degree of error in predicting temperatures by geographical area ForecastWatch.com\u0027s web interface was originally written in PHP but later changed to Python to simp",
+    "scrapedAt": "2026-05-09 00:45:23.874358"
+  },
+  {
     "id": 541,
     "url": "https://www.python.org/success-stories/abridging-clinical-conversations-using-python/",
     "title": "Abridging clinical conversations using Python | Our Success Stories | Python.org",
@@ -3738,26 +3773,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 542,
-    "url": "https://www.python.org/success-stories/python-to-help-meteorologists/"
-  },
-  {
-    "id": 543,
-    "url": "https://www.python.org/success-stories/using-python-for-commercial-cloud-backup/"
-  },
-  {
-    "id": 544,
-    "url": "https://www.python.org/success-stories/python-on-arm-2025-update/"
-  },
-  {
-    "id": 545,
-    "url": "https://www.python.org/success-stories/category/arts/"
-  },
-  {
-    "id": 546,
-    "url": "https://www.python.org/success-stories/why-python-matters-for-the-vr-community/"
   },
   {
     "id": 548,
@@ -96114,10 +96129,248 @@ window.searchData = [
     "id": 68438,
     "url": "https://www.abridge.com/team",
     "parentUrl": "https://www.python.org/success-stories/abridging-clinical-conversations-using-python/"
+  },
+  {
+    "id": 68444,
+    "url": "http://www.weather.com/",
+    "parentUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "id": 68445,
+    "url": "http://www.mysql.com/",
+    "parentUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "id": 68448,
+    "url": "http://www.myforecast.com/",
+    "parentUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "id": 68449,
+    "url": "http://www.nws.noaa.gov/",
+    "parentUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "id": 68450,
+    "url": "http://www.mems-exchange.org/software/quixote/",
+    "parentUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "id": 68451,
+    "url": "http://www.mems-exchange.org/software/scgi/",
+    "parentUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "id": 68452,
+    "url": "http://www.intellovations.com/",
+    "parentUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "id": 68454,
+    "url": "http://www.apache.org/",
+    "parentUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "id": 68456,
+    "url": "http://wwwsearch.sourceforge.net/ClientCookie/",
+    "parentUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "id": 68459,
+    "url": "http://www.intellovations.com",
+    "parentUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "id": 68461,
+    "url": "http://www.accuweather.com/",
+    "parentUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "id": 68462,
+    "url": "http://sourceforge.net/projects/mysql-python",
+    "parentUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "id": 68463,
+    "url": "http://www.forecastwatch.com/",
+    "parentUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "id": 68464,
+    "url": "http://wwwsearch.sourceforge.net/ClientTable/",
+    "parentUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "id": 68468,
+    "url": "https://www.python.org/m/about/success/forecastwatch/screenshot.png",
+    "parentUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "id": 68470,
+    "url": "https://www.smartsheet.com/welcome-customers-home",
+    "parentUrl": "https://www.python.org/success-stories/using-python-for-commercial-cloud-backup/"
+  },
+  {
+    "id": 68471,
+    "url": "https://www.acuworkflow.com/smartbackup.html",
+    "parentUrl": "https://www.python.org/success-stories/using-python-for-commercial-cloud-backup/"
+  },
+  {
+    "id": 68481,
+    "url": "https://www.arm.com",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68482,
+    "url": "https://newsroom.arm.com/blog/windows-arm64-runners-git-hub-actions",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68484,
+    "url": "https://blogs.windows.com/windowsdeveloper/2025/04/23/pytorch-arm-native-builds-now-available-for-windows/",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68485,
+    "url": "https://ep2025.europython.eu/sponsors/\"%20\\l%20\"sponsor-arm",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68487,
+    "url": "https://developer.arm.com/arm-developer-program",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68488,
+    "url": "https://speed.python.org/",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68489,
+    "url": "https://ep2025.europython.eu/session/exploring-the-cpython-jit",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68491,
+    "url": "https://github.com/python/cpython/pull/123872",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68493,
+    "url": "https://github.com/python/cpython/pull/120250",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68495,
+    "url": "https://community.arm.com/arm-community-blogs/b/tools-software-ides-blog/posts/python-on-arm",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68496,
+    "url": "https://discuss.python.org/t/vote-to-promote-diego-russo/90492",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68498,
+    "url": "https://github.com/python/cpython/pull/131042",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68499,
+    "url": "https://www.arm.com/company/success-library/made-possible/github",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68500,
+    "url": "https://newsroom.arm.com/blog/arm-sme2-android-mobile-apps",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68501,
+    "url": "https://discuss.python.org/t/2025-core-dev-sprint-15th-19th-september-at-arm-ltd-in-cambridge-uk/71909",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68503,
+    "url": "https://github.blog/changelog/2025-04-14-windows-arm64-hosted-runners-now-available-in-public-preview/",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68504,
+    "url": "https://speed.python.org/timeline/#/?exe\u003d12\u0026ben\u003dgrid\u0026env\u003d6\u0026revs\u003d50\u0026equid\u003doff\u0026quarts\u003don\u0026extr\u003don",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68505,
+    "url": "https://github.blog/changelog/2025-01-16-linux-arm64-hosted-runners-now-available-for-free-in-public-repositories-public-preview/",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68506,
+    "url": "https://github.com/python/cpython/pull/131041",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68510,
+    "url": "https://github.com/python/cpython/pull/121001",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68525,
+    "url": "https://worldviz.com",
+    "parentUrl": "https://www.python.org/success-stories/why-python-matters-for-the-vr-community/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/ep-sponsor-1.png",
+    "alt": "EuroPython Arm Sponsor",
+    "pageTitle": "Python on Arm: 2025 Update | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/ep-sponsor-2.png",
+    "alt": "EuroPython Arm Booth",
+    "pageTitle": "Python on Arm: 2025 Update | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/ep-jit-talk-3.png",
+    "alt": "EuroPython JIT talk",
+    "pageTitle": "Python on Arm: 2025 Update | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/ep-jit-talk-1.png",
+    "alt": "EuroPython JIT talk",
+    "pageTitle": "Python on Arm: 2025 Update | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/ep-jit-talk-2.png",
+    "alt": "EuroPython JIT talk",
+    "pageTitle": "Python on Arm: 2025 Update | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/benchmarks.png",
+    "alt": "Arm benchmarks",
+    "pageTitle": "Python on Arm: 2025 Update | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/forecastwatch/screenshot-web.png",
+    "alt": "Screenshot of ForecastWatch.com",
+    "pageTitle": "Python To Help Meteorologists | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/forecastwatch/accuracy_map.png",
+    "alt": "Example Forecast Accuracy Map",
+    "pageTitle": "Python To Help Meteorologists | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-to-help-meteorologists/"
+  },
   {
     "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/Abridge_ML.png",
     "alt": "",
