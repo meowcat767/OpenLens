@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 381,
+    "url": "https://www.python.org/ftp/python/3.14.4/windows-3.14.4.json",
+    "title": "",
+    "content": "{ \"versions\": [ { \"schema\": 1, \"id\": \"pythoncore-3.14-32\", \"sort-version\": \"3.14.4\", \"company\": \"PythonCore\", \"tag\": \"3.14-32\", \"install-for\": [ \"3.14.4-32\", \"3.14-32\", \"3-32\", \"3.14-dev-32\", \"3-dev-32\" ], \"alias\": [ { \"target\": \"python.exe\", \"name\": \"python3.14.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3.14-32.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3-32.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.14.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.14-32.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3-32.exe\" } ], \"display-name\": \"Python 3.14.4 (32-bit)\", \"executable\": \".\\\\python.exe\", \"url\": \"https://www.python.org/ftp/python/3.14.4/python-3.14.4-win32.zip\", \"hash\": { \"sha256\": \"a2713520fda0e82727f62d4180f98d5352e52f69e2f9a951c23b01cb0b7db442\" } }, { \"schema\": 1, \"id\": \"pythoncore-3.14-64\", \"sort-version\": \"3.14.4\", \"company\": \"PythonCore\", \"tag\": \"3.14-64\", \"install-for\": [ \"3.14.4-64\", \"3.14-64\", \"3-64\", \"3.14-dev-64\", \"3-dev-64\" ], \"alias\": [ { \"target\": \"python.exe\", \"name\": \"python3.14.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3.14-64.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3-64.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.14.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.14-64.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3-64.exe\" } ], \"display-name\": \"Python 3.14.4\", \"executable\": \".\\\\python.exe\", \"url\": \"https://www.python.org/ftp/python/3.14.4/python-3.14.4-amd64.zip\", \"hash\": { \"sha256\": \"11a6f5f5e7defeaa67a0b8e797f0eabec6e4499e663815319a0e0d360091f906\" } }, { \"schema\": 1, \"id\": \"pythoncore-3.14-arm64\", \"sort-version\": \"3.14.4\", \"company\": \"PythonCore\", \"tag\": \"3.14-arm64\", \"install-for\": [ \"3.14.4-arm64\", \"3.14-arm64\", \"3-arm64\", \"3.14-dev-arm64\", \"3-dev-arm64\" ], \"alias\": [ { \"target\": \"python.exe\", \"name\": \"python3.14.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3.14-arm64.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3.exe\" }, { \"target\": \"python.exe\", \"name\": \"python3-arm64.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.14.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.14-arm64.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3.exe\" }, { \"target\": \"pythonw.exe\", \"windowed\": 1, \"name\": \"pythonw3-arm64.exe\" } ], \"display-name\": \"Python 3.14.4 (ARM64)\", \"executable\": \".\\\\python.exe\", \"url\": \"https://www.python.org/ftp/python/3.14.4/python-3.14.4-arm64.zip\", \"hash\": { \"sha256\": \"f4430f865ec6a76b58a0effc8261609663f8a7509e95eaf7a166d7644bfb776a\" } }, { \"schema\": 1, \"id\": \"pythoncore-3.14t-32\", \"sort-version\": \"3.14.4\", \"company\": \"PythonCore\", \"tag\": \"3.14t-32\", \"install-for\": [ \"3.14.4t-32\", \"3.14t-32\", \"3t-32\", \"3.14t-dev-32\", \"3t-dev-32\" ], \"alias\": [ { \"target\": \"python3.14t.exe\", \"name\": \"python3.14t.exe\" }, { \"target\": \"python3.14t.exe\", \"name\": \"python3.14t-32.exe\" }, { \"target\": \"python3.14t.exe\", \"name\": \"python3t.exe\" }, { \"target\": \"python3.14t.exe\", \"name\": \"python3t-32.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3.14t.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3.14t-32.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3t.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3t-32.exe\" } ], \"display-name\": \"Python 3.14.4 (32-bit, free-threaded)\", \"executable\": \".\\\\python3.14t.exe\", \"url\": \"https://www.python.org/ftp/python/3.14.4/python-3.14.4t-win32.zip\", \"hash\": { \"sha256\": \"395d9f34b525760cd22785ceca4b9a570bd8591d21bb357ce77acf6a6d4c5f1d\" } }, { \"schema\": 1, \"id\": \"pythoncore-3.14t-64\", \"sort-version\": \"3.14.4\", \"company\": \"PythonCore\", \"tag\": \"3.14t-64\", \"install-for\": [ \"3.14.4t-64\", \"3.14t-64\", \"3t-64\", \"3.14t-dev-64\", \"3t-dev-64\" ], \"alias\": [ { \"target\": \"python3.14t.exe\", \"name\": \"python3.14t.exe\" }, { \"target\": \"python3.14t.exe\", \"name\": \"python3.14t-64.exe\" }, { \"target\": \"python3.14t.exe\", \"name\": \"python3t.exe\" }, { \"target\": \"python3.14t.exe\", \"name\": \"python3t-64.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3.14t.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3.14t-64.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3t.exe\" }, { \"target\": \"pythonw3.14t.exe\", \"windowed\": 1, \"name\": \"pythonw3t-64.exe\" } ], \"display-name\": \"Python 3.14.4 (free-threaded)\", \"executable\": \".\\\\python3.14t.exe\", \"url\": \"https://www.python.org/ftp/python/3.14.4/python-3.14.4t-amd64.zip\", \"hash\": { \"sha256\": \"96893211d653ee5227444e5563738e68f98788dde35a8570f1f454eb517d6135\" } }, { \"schema\": 1, \"id\": \"pythoncore-3.14t-arm64\", \"sort-version\": \"3.14.4\", \"company\": \"PythonCore\", \"tag",
+    "scrapedAt": "2026-05-09 00:39:46.64846"
+  },
+  {
+    "id": 380,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-amd64.exe.spdx.json",
+    "title": "",
+    "content": "{ \"SPDXID\": \"SPDXRef-DOCUMENT\", \"creationInfo\": { \"created\": \"2026-04-07T16:50:57Z\", \"creators\": [ \"Person: Python Release Managers\", \"Tool: ReleaseTools-2133a4a21a9fe2acc68a130eaf615deae3c6080c\" ], \"licenseListVersion\": \"3.22\" }, \"dataLicense\": \"CC0-1.0\", \"documentNamespace\": \"https://www.python.org/ftp/python/3.14.4/python-3.14.4-amd64.exe.spdx.json\", \"files\": [], \"name\": \"CPython SBOM\", \"packages\": [ { \"SPDXID\": \"SPDXRef-PACKAGE-bzip2\", \"checksums\": [ { \"algorithm\": \"SHA256\", \"checksumValue\": \"ab8d1b0cc087c20d4c32c0e4fcf7d0c733a95da12cedc6d63b3f0a9af07427e2\" } ], \"downloadLocation\": \"https://github.com/python/cpython-source-deps/archive/refs/tags/bzip2-1.0.8.tar.gz\", \"externalRefs\": [ { \"referenceCategory\": \"SECURITY\", \"referenceLocator\": \"cpe:2.3:a:bzip:bzip2:1.0.8:*:*:*:*:*:*:*\", \"referenceType\": \"cpe23Type\" } ], \"licenseConcluded\": \"NOASSERTION\", \"name\": \"bzip2\", \"primaryPackagePurpose\": \"LIBRARY\", \"supplier\": \"Organization: Python Software Foundation\", \"versionInfo\": \"1.0.8\" }, { \"SPDXID\": \"SPDXRef-PACKAGE-cachecontrol\", \"checksums\": [ { \"algorithm\": \"SHA256\", \"checksumValue\": \"b7ac014ff72ee199b5f8af1de29d60239954f223e948196fa3d84adaffc71d2b\" } ], \"downloadLocation\": \"https://files.pythonhosted.org/packages/ef/79/c45f2d53efe6ada1110cf6f9fca095e4ff47a0454444aefdde6ac4789179/cachecontrol-0.14.4-py3-none-any.whl\", \"externalRefs\": [ { \"referenceCategory\": \"PACKAGE_MANAGER\", \"referenceLocator\": \"pkg:pypi/cachecontrol@0.14.4\", \"referenceType\": \"purl\" } ], \"licenseConcluded\": \"NOASSERTION\", \"name\": \"cachecontrol\", \"primaryPackagePurpose\": \"LIBRARY\", \"supplier\": \"Organization: Python Software Foundation\", \"versionInfo\": \"0.14.4\" }, { \"SPDXID\": \"SPDXRef-PACKAGE-certifi\", \"checksums\": [ { \"algorithm\": \"SHA256\", \"checksumValue\": \"9943707519e4add1115f44c2bc244f782c0249876bf51b6599fee1ffbedd685c\" } ], \"downloadLocation\": \"https://files.pythonhosted.org/packages/e6/ad/3cc14f097111b4de0040c83a525973216457bbeeb63739ef1ed275c1c021/certifi-2026.1.4-py3-none-any.whl\", \"externalRefs\": [ { \"referenceCategory\": \"PACKAGE_MANAGER\", \"referenceLocator\": \"pkg:pypi/certifi@2026.1.4\", \"referenceType\": \"purl\" } ], \"licenseConcluded\": \"NOASSERTION\", \"name\": \"certifi\", \"primaryPackagePurpose\": \"LIBRARY\", \"supplier\": \"Organization: Python Software Foundation\", \"versionInfo\": \"2026.1.4\" }, { \"SPDXID\": \"SPDXRef-PACKAGE-cpython\", \"checksums\": [ { \"algorithm\": \"SHA256\", \"checksumValue\": \"b571567bd11ea98fd7a2cf85791d2c8557a63b1e04e9d1dae665a275cac87f1b\" } ], \"downloadLocation\": \"https://www.python.org/ftp/python/3.14.4/python-3.14.4-amd64.exe\", \"externalRefs\": [ { \"referenceCategory\": \"SECURITY\", \"referenceLocator\": \"cpe:2.3:a:python:python:3.14.4:*:*:*:*:*:*:*\", \"referenceType\": \"cpe23Type\" } ], \"licenseConcluded\": \"PSF-2.0\", \"name\": \"CPython\", \"originator\": \"Organization: Python Software Foundation\", \"packageFileName\": \"python-3.14.4-amd64.exe\", \"primaryPackagePurpose\": \"LIBRARY\", \"supplier\": \"Organization: Python Software Foundation\", \"versionInfo\": \"3.14.4\" }, { \"SPDXID\": \"SPDXRef-PACKAGE-dependency-groups\", \"checksums\": [ { \"algorithm\": \"SHA256\", \"checksumValue\": \"51aeaa0dfad72430fcfb7bcdbefbd75f3792e5919563077f30bc0d73f4493030\" } ], \"downloadLocation\": \"https://files.pythonhosted.org/packages/99/c7/d1ec24fb280caa5a79b6b950db565dab30210a66259d17d5bb2b3a9f878d/dependency_groups-1.3.1-py3-none-any.whl\", \"externalRefs\": [ { \"referenceCategory\": \"PACKAGE_MANAGER\", \"referenceLocator\": \"pkg:pypi/dependency-groups@1.3.1\", \"referenceType\": \"purl\" } ], \"licenseConcluded\": \"NOASSERTION\", \"name\": \"dependency-groups\", \"primaryPackagePurpose\": \"LIBRARY\", \"supplier\": \"Organization: Python Software Foundation\", \"versionInfo\": \"1.3.1\" }, { \"SPDXID\": \"SPDXRef-PACKAGE-distlib\", \"checksums\": [ { \"algorithm\": \"SHA256\", \"checksumValue\": \"9659f7d87e46584a30b5780e43ac7a2143098441670ff0a49d5f9034c54a6c16\" } ], \"downloadLocation\": \"https://files.pythonhosted.org/packages/33/6b/e0547afaf41bf2c42e52430072fa5658766e3d65bd4b03a563d1b6336f57/distlib-0.4.0-py2.py3-none-any.whl\", \"externalRefs\": [ { \"referenceCategory\": \"PACKAGE_MANAGER\", \"referenceLocator\": \"pkg:pypi/distlib@0.4.0\", \"referenceType\": \"purl\" } ], \"licenseConcluded\": \"NOASSERTION\", \"name\": \"distlib\", \"primaryPackagePurpose\": \"LIBRARY\", \"supplier\": \"Organization: Python Software Foundation\", \"versionInfo\": \"0.4.0\" }, { \"SPDXID\": \"SPDXRef-PACKAGE-distro\", \"checksums\": [ { \"algorithm\": \"SHA256\", \"checksumValue\": \"7bffd925d65168f85027d8da9af6bddab658135b840670a223589bc0c8ef02b2\" } ], \"downloadLocation\": \"https://files.pythonhosted.org/packages/12/b3/231ffd4ab1fc9d679809f356cebee130ac7daa00d6d6f3206dd4fd137e9e/distro-1.9.0-py3-none-any.whl\", \"externalRefs\": [ { \"referenceCategory\": \"PACKAGE_MANAGER\", \"referenceLocator\": \"pkg:pypi/distro@1.9.0\", \"referenceType\": \"purl\" } ], \"licenseConcluded\": \"NOASSERTION\", \"name\": \"distro\", \"primaryPackagePurpose\": \"LIBRARY\", \"supplier\": \"Organization: Python Software Foundation\", \"versionInfo\": \"1.9.0\" }, { \"SPDXID\": \"SPDXRef-PACKAGE-expat-2.7.5\", \"checksums\": [ { \"alg",
+    "scrapedAt": "2026-05-09 00:39:45.550012"
+  },
+  {
+    "id": 379,
+    "url": "https://docs.python.org/3/using/windows.html",
+    "title": "4. Using Python on Windows — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python Setup and Usage » 4. Using Python on Windows | Theme Auto Light Dark | 4. Using Python on Windows¶ This document aims to give an overview of Windows-specific behaviour you should know about when using Python on Microsoft Windows. Unlike most Unix systems and services, Windows does not include a system supported installation of Python. Instead, Python can be obtained from a number of distributors, including directly from the CPython team. Each Python distribution will have its own benefits and drawbacks, however, consistency with other tools you are using is generally a worthwhile benefit. Before committing to the process described here, we recommend investigating your existing tools to see if they can provide Python directly. To obtain Python from the CPython team, use the Python Install Manager. This is a standalone tool that makes Python available as global commands on your Windows machine, integrates with the system, and supports updates over time. You can download the Python Install Manager from python.org/downloads or through the Microsoft Store app. Once you have installed the Python Install Manager, the global python command can be used from any terminal to launch your current latest version of Python. This version may change over time as you add or remove different versions, and the py list command will show which is current. In general, we recommend that you create a virtual environment for each project and run \u003cenv\u003e\\Scripts\\Activate in your terminal to use it. This provides isolation between projects, consistency over time, and ensures that additional commands added by packages are also available in your session. Create a virtual environment using python -m venv \u003cenv path\u003e. If the python or py commands do not seem to be working, please see the Troubleshooting section below. There are sometimes additional manual steps required to configure your PC. Apart from using the Python install manager, Python can also be obtained as NuGet packages. See The nuget.org packages below for more information on these packages. The embeddable distros are minimal packages of Python suitable for embedding into larger applications. They can be installed using the Python install manager. See The embeddable package below for more information on these packages. 4.1. Python install manager¶ 4.1.1. Installation¶ The Python install manager can be installed from the Microsoft Store app or downloaded and installed from python.org/downloads. The two versions are identical. To install through the Store, simply click “Install”. After it has completed, open a terminal and type python to get started. To install the file downloaded from python.org, either double-click and select “Install”, or run Add-AppxPackage \u003cpath to MSIX\u003e in Windows Powershell. After installation, the python, py, and pymanager commands should be available. If you have existing installations of Python, or you have modified your PATH variable, you may need to remove them or undo the modifications. See Troubleshooting for more help with fixing non-working commands. When you first install a runtime, you will likely be prompted to add a directory to your PATH. This is optional, if you prefer to use the py command, but is offered for those who prefer the full range of aliases (such as python3.14.exe) to be available. The directory will be %LocalAppData%\\Python\\bin by default, but may be customized by an administrator. Click Start and search for “Edit environment variables for your account” for the system settings page to add the path. Each Python runtime you install will have its own directory for scripts. These also need to be added to PATH if you want to use them. The Python install manager will be automatically updated to new releases. This does not affect any installs of Python runtimes. Uninstalling the Python install manager does not uninstall any Python runtimes. If you are not able to install an MSIX in your context, for example, you are using automated deployment software that does not support it, or are targeting Windows Server 2019, please see Advanced installation below for more information. 4.1.2. Basic use¶ The recommended command for launching Python is python, which will either launch the version requested by the script being launched, an active virtual environment, or the default installed version, which will be the latest stable release unless configured otherwise. If no version is specifically requested and no runtimes are installed at all, the current latest release will be installed automatically. For all scenarios involving multiple runtime versions, the recommended command is py. This may be used anywhere in place of python or the older py.exe launcher. By default, py matches the behaviour of python, but also allows command line options to select a specific version as well as subcommands to manage installations. These are detailed below. Because the py comman",
+    "scrapedAt": "2026-05-09 00:39:44.461645"
+  },
+  {
+    "id": 378,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-amd64.zip.sigstore",
+    "title": "",
+    "content": "{\"mediaType\": \"application/vnd.dev.sigstore.bundle.v0.3+json\", \"verificationMaterial\": {\"certificate\": {\"rawBytes\": \"MIICzjCCAlOgAwIBAgIUR1gxn+2Q+Te8vUQ3kVzMYifugbQwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwNDA3MTc0ODQxWhcNMjYwNDA3MTc1ODQxWjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEMaqU7APna9Y2zuVYlpdphshOooabNOsR0c7wLYp7wYswzzA9WG+Km+6D69aiixpS0nHPIaFjor1GgDG87b0p56OCAXIwggFuMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQU0SGISWs2Ojmweio6GwmgPKpsOb8wHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHQYDVR0RAQH/BBMwEYEPaHVnb0BweXRob24ub3JnMCwGCisGAQQBg78wAQEEHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDAuBgorBgEEAYO/MAEIBCAMHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDCBiQYKKwYBBAHWeQIEAgR7BHkAdwB1AN09MGrGxxEyYxkeHJlnNwKiSl643jyt/4eKcoAvKe6OAAABnWkPkoQAAAQDAEYwRAIgWLT+bqGgcdUfVRkivBlwtH1LaeRjf0F9rH/F2Zzuw1ACIFNtg6BLhsKY4HM91/A6K/zBS1hZCiGkA4WWYhDmEAa/MAoGCCqGSM49BAMDA2kAMGYCMQCI23zAeiHMZ6udEWZ+2bHh0/5ytKI0eRYIzSvE/Z33AxhfMCFP7uGvchkXBPWHN2oCMQDGMO8EJyAnjazutiAm4qgHcbE5XX8Mig6Xmzmg+JRpoLWdDSg5Jek/ZPEjaNUpKKw\u003d\"}, \"tlogEntries\": [{\"logIndex\": \"1247676281\", \"logId\": {\"keyId\": \"wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0\u003d\"}, \"kindVersion\": {\"kind\": \"hashedrekord\", \"version\": \"0.0.1\"}, \"integratedTime\": \"1775584121\", \"inclusionPromise\": {\"signedEntryTimestamp\": \"MEQCIHjOFOrQlMgLcDm8ticn9JadQ0To4X/UkstSs2lCJGwxAiAl3QQr6KfG2rc0wL4mWZ3liIo8QamKyMqcZvHr0BJ7Dg\u003d\u003d\"}, \"inclusionProof\": {\"logIndex\": \"1125772019\", \"rootHash\": \"CVTDegd2Tt1fkOf/g2oN8M1g0AU6+fvdXkTuI6XjSCo\u003d\", \"treeSize\": \"1125772024\", \"hashes\": [\"7NMHckqvT2L5/mBKX5FE5jZaVWJ5Sxyz58JcVYn92qY\u003d\", \"tt/K06Hk04hgwvxkTXKrbEIbPU+pQJeITI9tZSd6bfA\u003d\", \"Vq4BN1BlOuX+PkS3ZTG/hxRWlioy22JCWsQEwmmW9jU\u003d\", \"LtGhCXgDw/VzWmOLES9fRC84G1f4ASpwNhNYfp8vjfA\u003d\", \"xbIFN9kuWxg2HMy+8twOkWp5r9tJ/pQDbheMbbSaf6U\u003d\", \"D6MWIbClKGzg9eRySzhshly5kzSpd8+hd7oWozjhKsw\u003d\", \"+akx/a+4mk/fwt1VE0D7K8JZteVx3dEs1/ZtCt5Khno\u003d\", \"dJtu8pJ3yhn0rC0EFdgoebJF3MldcpHMX00y2eHPYDY\u003d\", \"81dr9W/Ax/UfYIsxNTxjBYK7sYU/az3TPo6rdJosDO0\u003d\", \"4rt9/yEt1Zy95yQxSCxpoOu6E3CWDDxpGd37aEEFadg\u003d\", \"+wrWv/cO9uKKpjC+BMIC/Fv2Ipe50C7wL0wd+YlH5Kw\u003d\", \"ZxCK8NmXD/qxQEyqBRFYo8WOz/kUHRHA+BXOPC6789o\u003d\", \"civ0dM20+gns15I1mfWo9Jt0YBzbex5QVYwaGjqgcs4\u003d\", \"2v7+H4Fejl7qkIhG2G79UQH+wJ0QpPreOZwulFGWzLI\u003d\", \"vXMaHYsu3vXUFKr78h1vCtaZWhgh1OwZh5O05RGwxkw\u003d\", \"WbswTMpSfvjDqroD6lDGb2VDeljBPlMsAchJ+0L+3U4\u003d\", \"psQ1PrYXqFtm6T3uF1q91rl1dhNiykO58GpOdq1ZaKI\u003d\", \"DOCeoSMovIvLExkhIvisow9AuNXgeWs4ECkyR6EcqYU\u003d\"], \"checkpoint\": {\"envelope\": \"rekor.sigstore.dev - 1193050959916656506\\n1125772024\\nCVTDegd2Tt1fkOf/g2oN8M1g0AU6+fvdXkTuI6XjSCo\u003d\\n\\n\\u2014 rekor.sigstore.dev wNI9ajBFAiEA7AgX2Odq1sUKvrGQaqoM9vumlCn6LS3SSJuBJofuqOYCIBSGvXticJ/4niild0o2kFLoxVfAzbeq77GGdsdzXNFj\\n\"}}, \"canonicalizedBody\": \"eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiJjZGE4MGE5YjFlNzVjMGYxYjRmOTg3MmNhMWI0MTdmMGQxOWJjZTMyZmFjYzgxMWFlYTkxODBlNzBmYWQ1ZmI5In19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FVUNJUURpQk5jaEFsTEt6K0tGRGNDUXdGWDl1cFltWkdqNFRKVjI5elR2bFAxN1ZnSWdWMHdBazhNZUVFaUJyMDA4MlVSYlZNbno0TEEwa1hreGNzVWNnckRTOThjPSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVTjZha05EUVd4UFowRjNTVUpCWjBsVlVqRm5lRzRyTWxFclZHVTRkbFZSTTJ0V2VrMVphV1oxWjJKUmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDVFUVROTlZHTXdUMFJSZUZkb1kwNU5hbGwzVGtSQk0wMVVZekZQUkZGNFYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZOWVhGVk4wRlFibUU1V1RKNmRWWlpiSEJrY0doemFFOXZiMkZpVGs5elVqQmpOM2NLVEZsd04zZFpjM2Q2ZWtFNVYwY3JTMjByTmtRMk9XRnBhWGh3VXpCdVNGQkpZVVpxYjNJeFIyZEVSemczWWpCd05UWlBRMEZZU1hkblowWjFUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlV3VTBkSkNsTlhjekpQYW0xM1pXbHZOa2QzYldkUVMzQnpUMkk0ZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoUldVUldVakJTUVZGSUwwSkNUWGRGV1VWUVlVaFdibUl3UW5kbFdGSnZZakkwZFdJelNtNU5RM2RIUTJselIwRlJVVUpuTnpoM1FWRkZSUXBJYldnd1pFaENlazlwT0haYU1td3dZVWhXYVV4dFRuWmlVemx6WWpKa2NHSnBPWFpaV0ZZd1lVUkJkVUpuYjNKQ1owVkZRVmxQTDAxQlJVbENRMEZOQ2todGFEQmtTRUo2VDJrNGRsb3liREJoU0ZacFRHMU9kbUpUT1hOaU1tUndZbWs1ZGxsWVZqQmhSRU5DYVZGWlMwdDNXVUpDUVVoWFpWRkpSVUZuVWpjS1FraHJRV1IzUWpGQlRqQTVUVWR5UjNoNFJYbFplR3RsU0Vwc2JrNTNTMmxUYkRZME0ycDVkQzgwWlV0amIwRjJTMlUyVDBGQlFVSnVWMnRRYTI5UlFRcEJRVkZFUVVWWmQxSkJTV2RYVEZRclluRkhaMk5rVldaV1VtdHBka0pzZDNSSU1VeGhaVkpxWmpCR09YSklMMFl5V25wMWR6RkJRMGxHVG5Sbk5rSk1DbWh6UzFrMFNFMDVNUzlCTmtzdmVrSlRNV2hhUTJsSGEwRTBWMWRaYUVSdFJVRmhMMDFCYjBkRFEzRkhVMDAwT1VKQlRVUkJNbXRCVFVkWlEwMVJRMGtLTWpONlFXVnBTRTFhTm5Wa1JWZGFLekppU0dnd0x6VjVkRXRKTUdWU1dVbDZVM1pGTDFvek0wRjRhR1pOUTBaUU4zVkhkbU5vYTFoQ1VGZElUakp2UXdwTlVVUkhUVTg0UlVwNVFXNXFZWHAxZEdsQmJUUnhaMGhqWWtVMVdGZzRUV2xuTmxodGVtMW5LMHBTY0c5TVYyUkVVMmMxU21WckwxcFFSV3BoVGxWd0NrdExkejBLTFMwdExTMUZUa1FnUTBWU1ZFbEdTVU5CVkVVdExTMHRMUW89In19fX0\u003d\"}], \"tim",
+    "scrapedAt": "2026-05-09 00:39:43.261913"
+  },
+  {
+    "id": 377,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-aarch64-linux-android.tar.gz.sigstore",
+    "title": "",
+    "content": "{\"mediaType\": \"application/vnd.dev.sigstore.bundle.v0.3+json\", \"verificationMaterial\": {\"certificate\": {\"rawBytes\": \"MIICzzCCAlWgAwIBAgIUA7MPU83torSQLwphkbO32VXYPYEwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwNDA3MTc0ODMyWhcNMjYwNDA3MTc1ODMyWjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEVD8b5aBWFfZ7ke3XBSSxFCI6zr1boJJpp6T7hzU/98GhAHs4yQkb/0+3U1nvZrMRs5kWg6MwEiqjU6m+jJMQ6qOCAXQwggFwMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQU0CZ/nh/zMbxBMwtFZ5K5OJWpvZcwHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHQYDVR0RAQH/BBMwEYEPaHVnb0BweXRob24ub3JnMCwGCisGAQQBg78wAQEEHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDAuBgorBgEEAYO/MAEIBCAMHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDCBiwYKKwYBBAHWeQIEAgR9BHsAeQB3AN09MGrGxxEyYxkeHJlnNwKiSl643jyt/4eKcoAvKe6OAAABnWkPcIMAAAQDAEgwRgIhAKsDZ6VoJ2AUTzRY3ylyVJXR/OKD1mpc7vV9Cm0R+fboAiEAweXxW+7h3abwQCvppSZqnztzhbNsN4J4eOTsSWM8T9owCgYIKoZIzj0EAwMDaAAwZQIxANRqLMbpglYOKZnhRGSWdqiwqnTaw0qlAGb0WmtXzN3V8rfN5WDHD4RVEmZZRzDiMQIwF/IjNcp0VipbghUw/JgToTLgMTabiGDNAan/Gw3Ozer565FQfvOg0GcWNMxp9f3F\"}, \"tlogEntries\": [{\"logIndex\": \"1247676149\", \"logId\": {\"keyId\": \"wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0\u003d\"}, \"kindVersion\": {\"kind\": \"hashedrekord\", \"version\": \"0.0.1\"}, \"integratedTime\": \"1775584113\", \"inclusionPromise\": {\"signedEntryTimestamp\": \"MEQCIHTPVtxHJDby9pFZrP64/bCrH5GiNVcuJprTne15ZZrbAiBrL89XXTh7ejdz31fe3L/Jwprk97w3Qe96fY4sJUBpBw\u003d\u003d\"}, \"inclusionProof\": {\"logIndex\": \"1125771887\", \"rootHash\": \"i7nHEb9PT4puSD/8RQHo30B5siYyVqzqRbJWOfPt9Dk\u003d\", \"treeSize\": \"1125771890\", \"hashes\": [\"s25WEx+C6Y83aIRxkWN2JTo/UYsY8iFO9f1utSiWChg\u003d\", \"CPZkQ5ejdZOqfCmkY6fE7RtlgmW/Ls89m8Kbrele4Pw\u003d\", \"IUEndsuG8hU/XSHw38xaGi2ZC1D0bTpXdwI5z2dFvk8\u003d\", \"Z/WGHv7jyKjJArvoknsyEyTmP2L5zfsUYkQRvnLQeiY\u003d\", \"pu+Bq+ArZnuj2ZUKEU9p0FW8uVczPZqi2ee70YmmPsQ\u003d\", \"LEvGYdLO2BZnfnKzvGMzpR4aflJbM1+62kAzjRwaTYI\u003d\", \"84ojRHL+9gWZrSU1/6A84MeXSST8fr1Sc3s+M/66QEA\u003d\", \"dJtu8pJ3yhn0rC0EFdgoebJF3MldcpHMX00y2eHPYDY\u003d\", \"81dr9W/Ax/UfYIsxNTxjBYK7sYU/az3TPo6rdJosDO0\u003d\", \"4rt9/yEt1Zy95yQxSCxpoOu6E3CWDDxpGd37aEEFadg\u003d\", \"+wrWv/cO9uKKpjC+BMIC/Fv2Ipe50C7wL0wd+YlH5Kw\u003d\", \"ZxCK8NmXD/qxQEyqBRFYo8WOz/kUHRHA+BXOPC6789o\u003d\", \"civ0dM20+gns15I1mfWo9Jt0YBzbex5QVYwaGjqgcs4\u003d\", \"2v7+H4Fejl7qkIhG2G79UQH+wJ0QpPreOZwulFGWzLI\u003d\", \"vXMaHYsu3vXUFKr78h1vCtaZWhgh1OwZh5O05RGwxkw\u003d\", \"WbswTMpSfvjDqroD6lDGb2VDeljBPlMsAchJ+0L+3U4\u003d\", \"psQ1PrYXqFtm6T3uF1q91rl1dhNiykO58GpOdq1ZaKI\u003d\", \"DOCeoSMovIvLExkhIvisow9AuNXgeWs4ECkyR6EcqYU\u003d\"], \"checkpoint\": {\"envelope\": \"rekor.sigstore.dev - 1193050959916656506\\n1125771890\\ni7nHEb9PT4puSD/8RQHo30B5siYyVqzqRbJWOfPt9Dk\u003d\\n\\n\\u2014 rekor.sigstore.dev wNI9ajBFAiEAqn1k3EEBMQvVQ92rzpW4Hm7YIwjSredtgnwZZjMEn6UCIBKCPWanmpTY/BGuwbOykW1Vs9rAGh89uR4sfFS1f6Tr\\n\"}}, \"canonicalizedBody\": \"eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiI0MTBmZmY5NmY0N2Q4MTgxMzZmOTFmNzljOGY4MzIwMmUxMzY0YWVhYWIyMDIyZDAwZmE3MGU1MzAwN2ViZGUxIn19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FWUNJUUNYaGFoMUVnZW53aEtnRnh3RHgrZUdKb2ZXeUxIcW55a3lINjVFVDYrSjR3SWhBSWdrd082V0xVTkJJT1pnRG0zUzdGNlNvSlNpU2V4TjV5OXd2R1I1alNLOSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVTjZla05EUVd4WFowRjNTVUpCWjBsVlFUZE5VRlU0TTNSdmNsTlJUSGR3YUd0aVR6TXlWbGhaVUZsRmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDVFUVROTlZHTXdUMFJOZVZkb1kwNU5hbGwzVGtSQk0wMVVZekZQUkUxNVYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZXUkRoaU5XRkNWMFptV2pkclpUTllRbE5UZUVaRFNUWjZjakZpYjBwS2NIQTJWRGNLYUhwVkx6azRSMmhCU0hNMGVWRnJZaTh3S3pOVk1XNTJXbkpOVW5NMWExZG5OazEzUldseGFsVTJiU3RxU2sxUk5uRlBRMEZZVVhkblowWjNUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlV3UTFvdkNtNW9MM3BOWW5oQ1RYZDBSbG8xU3pWUFNsZHdkbHBqZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoUldVUldVakJTUVZGSUwwSkNUWGRGV1VWUVlVaFdibUl3UW5kbFdGSnZZakkwZFdJelNtNU5RM2RIUTJselIwRlJVVUpuTnpoM1FWRkZSUXBJYldnd1pFaENlazlwT0haYU1td3dZVWhXYVV4dFRuWmlVemx6WWpKa2NHSnBPWFpaV0ZZd1lVUkJkVUpuYjNKQ1owVkZRVmxQTDAxQlJVbENRMEZOQ2todGFEQmtTRUo2VDJrNGRsb3liREJoU0ZacFRHMU9kbUpUT1hOaU1tUndZbWs1ZGxsWVZqQmhSRU5DYVhkWlMwdDNXVUpDUVVoWFpWRkpSVUZuVWprS1FraHpRV1ZSUWpOQlRqQTVUVWR5UjNoNFJYbFplR3RsU0Vwc2JrNTNTMmxUYkRZME0ycDVkQzgwWlV0amIwRjJTMlUyVDBGQlFVSnVWMnRRWTBsTlFRcEJRVkZFUVVWbmQxSm5TV2hCUzNORVdqWldiMG95UVZWVWVsSlpNM2xzZVZaS1dGSXZUMHRFTVcxd1l6ZDJWamxEYlRCU0syWmliMEZwUlVGM1pWaDRDbGNyTjJnellXSjNVVU4yY0hCVFduRnVlblI2YUdKT2MwNDBTalJsVDFSelUxZE5PRlE1YjNkRFoxbEpTMjlhU1hwcU1FVkJkMDFFWVVGQmQxcFJTWGdLUVU1U2NVeE5ZbkJuYkZsUFMxcHVhRkpIVTFka2NXbDNjVzVVWVhjd2NXeEJSMkl3VjIxMFdIcE9NMVk0Y21aT05WZEVTRVEwVWxaRmJWcGFVbnBFYVFwTlVVbDNSaTlKYWs1amNEQldhWEJpWjJoVmR5OUtaMVJ2VkV4blRWUmhZbWxIUkU1QllXNHZSM2N6VDNwbGNqVTJOVVpSWm5aUFp6QkhZMWRPVFhod0NqbG1NMFlLTFMwdExTMUZUa1FnUTBWU1ZFbEdTVU5CVkVVdExTMHRMUW89In19fX0\u003d\"}], \"tim",
+    "scrapedAt": "2026-05-09 00:39:42.175315"
+  },
+  {
     "id": 376,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#hmac",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -2628,26 +2663,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 377,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-aarch64-linux-android.tar.gz.sigstore"
-  },
-  {
-    "id": 378,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-amd64.zip.sigstore"
-  },
-  {
-    "id": 379,
-    "url": "https://docs.python.org/3/using/windows.html"
-  },
-  {
-    "id": 380,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-amd64.exe.spdx.json"
-  },
-  {
-    "id": 381,
-    "url": "https://www.python.org/ftp/python/3.14.4/windows-3.14.4.json"
   },
   {
     "id": 382,
@@ -58494,10 +58509,629 @@ window.searchData = [
     "id": 22773,
     "url": "https://www.autoscout24.nl/lst/opel/corsa/bt_hatchback",
     "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25242,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager-shebang",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25243,
+    "url": "https://www.python.org/downloads/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25245,
+    "url": "https://devguide.python.org/setup/#get-the-source-code",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25246,
+    "url": "https://docs.python.org/3/library/windows.html#mswin-specific-services",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25248,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25249,
+    "url": "https://peps.python.org/pep-0528/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25250,
+    "url": "https://docs.python.org/3/using/windows.html#python-launcher-for-windows-deprecated",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25251,
+    "url": "https://docs.python.org/3/using/windows.html#diagnostics",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25253,
+    "url": "https://www.nuget.org/packages/pythonx86",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25255,
+    "url": "https://docs.python.org/3/using/windows.html#utf-8-mode",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25256,
+    "url": "https://learn.microsoft.com/powershell/module/appx/remove-appxpackage",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25257,
+    "url": "https://www.nuget.org/packages/pythonarm64-freethreaded",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25258,
+    "url": "https://docs.python.org/3/using/windows.html#cx-freeze",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25259,
+    "url": "https://docs.python.org/3/using/windows.html#installation-steps",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25260,
+    "url": "https://docs.python.org/3/using/windows.html#pywin32",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25262,
+    "url": "https://peps.python.org/pep-0529/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25263,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager-offline",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25264,
+    "url": "https://docs.python.org/3/using/windows.html#configuration",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25265,
+    "url": "https://docs.python.org/3/using/windows.html#arguments-in-shebang-lines",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25266,
+    "url": "https://docs.python.org/3/using/windows.html#installing-free-threaded-binaries",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25267,
+    "url": "https://docs.python.org/3/using/windows.html#installing-runtimes",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25268,
+    "url": "https://docs.python.org/3/using/cmdline.html#using-on-envvars",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25270,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager-troubleshoot",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25271,
+    "url": "https://cx-freeze.readthedocs.io/en/latest/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25273,
+    "url": "https://docs.python.org/3/using/windows.html#from-the-command-line",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25274,
+    "url": "https://learn.microsoft.com/powershell/module/dism/add-appxprovisionedpackage",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25275,
+    "url": "https://docs.python.org/3/using/windows.html#id2",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25276,
+    "url": "https://docs.python.org/3/using/windows.html#id3",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25277,
+    "url": "https://docs.python.org/3/using/windows.html#embedding-python",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25278,
+    "url": "https://docs.python.org/3/using/windows.html#id4",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25279,
+    "url": "https://www.nuget.org/packages/python-freethreaded",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25280,
+    "url": "https://www.nuget.org/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25281,
+    "url": "https://peps.python.org/pep-0514/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25282,
+    "url": "https://docs.python.org/3/using/windows.html#command-help",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25283,
+    "url": "https://docs.python.org/3/tutorial/venv.html#tut-venv",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25284,
+    "url": "https://docs.python.org/3/using/windows.html#the-embeddable-package",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25285,
+    "url": "https://assets.enthought.com/downloads/edm/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25286,
+    "url": "https://www.anaconda.com/download/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25287,
+    "url": "https://www.nuget.org/packages/pythonx86-freethreaded",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25288,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager-config",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25289,
+    "url": "https://docs.python.org/3/using/windows.html#troubleshooting",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25290,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager-admin-config",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25293,
+    "url": "https://docs.python.org/3/using/windows.html#customization",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25294,
+    "url": "https://docs.python.org/3/using/windows.html#listing-runtimes",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25295,
+    "url": "https://docs.python.org/3/using/windows.html#launcher-ini",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25296,
+    "url": "https://docs.python.org/3/using/windows.html#",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25297,
+    "url": "https://winpython.github.io/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25298,
+    "url": "https://docs.python.org/3/using/windows.html#supported-windows-versions",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25299,
+    "url": "https://docs.python.org/3/using/windows.html#dry-run",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25300,
+    "url": "https://docs.python.org/3/using/windows.html#basic-use",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25301,
+    "url": "https://www.python.org/downloads/source/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25302,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager-advancedinstall",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25303,
+    "url": "https://docs.python.org/3/using/windows.html#customization-via-ini-files",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25304,
+    "url": "https://docs.python.org/3/using/windows.html#shebang-lines",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25305,
+    "url": "https://docs.python.org/3/using/windows.html#the-full-installer-deprecated",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25306,
+    "url": "https://timgolden.me.uk/python/win32_how_do_i.html",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25307,
+    "url": "https://www.boddie.org.uk/python/COM.html",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25308,
+    "url": "https://docs.python.org/3/using/windows.html#using-python-on-windows",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25309,
+    "url": "https://docs.python.org/3/using/windows.html#from-file-associations",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25310,
+    "url": "https://docs.python.org/3/using/windows.html#administrative-configuration",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25311,
+    "url": "https://docs.python.org/3/using/windows.html#compiling-python-on-windows",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25312,
+    "url": "https://support.enthought.com/hc/en-us/articles/360038600051-Canopy-GUI-end-of-life-transition-to-the-Enthought-Deployment-Manager-EDM-and-Visual-Studio-Code",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25314,
+    "url": "https://learn.microsoft.com/powershell/module/appx/add-appxpackage",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25315,
+    "url": "https://docs.python.org/3/using/windows.html#modifying-an-install",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25316,
+    "url": "https://docs.python.org/3/library/os.html#utf8-mode",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25317,
+    "url": "https://learn.microsoft.com/uwp/api/windows.management.deployment.packagemanager",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25318,
+    "url": "https://docs.python.org/3/library/sys_path_init.html#sys-path-init",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25319,
+    "url": "https://docs.python.org/3/using/windows.html#uninstalling-runtimes",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25320,
+    "url": "https://learn.microsoft.com/cpp/mfc/mfc-desktop-applications",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25321,
+    "url": "https://docs.python.org/3/using/windows.html#installing-without-downloading",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25322,
+    "url": "https://docs.python.org/3/library/sys.html#sys.meta_path",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25323,
+    "url": "https://peps.python.org/pep-0397/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25324,
+    "url": "https://docs.python.org/3/using/windows.html#customizing-default-python-versions",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25325,
+    "url": "https://www.nuget.org/packages/python",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25326,
+    "url": "https://docs.python.org/3/using/windows.html#python-install-manager",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25328,
+    "url": "https://docs.python.org/3/using/windows.html#launcher",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25329,
+    "url": "https://docs.python.org/3/using/windows.html#envvar-PYTHON_MANAGER_DEFAULT",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25330,
+    "url": "https://docs.python.org/3/using/windows.html#removing-the-max-path-limitation",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25331,
+    "url": "https://docs.python.org/3/using/windows.html#alternative-bundles",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25332,
+    "url": "https://github.com/python/cpython/blob/main/Doc/using/windows.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25333,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONUTF8",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25334,
+    "url": "https://docs.python.org/3/using/windows.html#windows-embeddable",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25335,
+    "url": "https://www.python.org/ftp/python/3.14.0/win32/launcher.msi",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25336,
+    "url": "https://docs.python.org/3/extending/windows.html#building-on-windows",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25338,
+    "url": "https://docs.python.org/3/using/windows.html#the-nuget-org-packages",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25340,
+    "url": "https://docs.python.org/3/using/windows.html#offline-installs",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25341,
+    "url": "https://www.activestate.com/products/python/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25343,
+    "url": "https://docs.python.org/3/using/windows.html#install-layout-option",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25345,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.WindowsRegistryFinder",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25346,
+    "url": "https://docs.python.org/3/using/windows.html#free-threaded-packages",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25347,
+    "url": "https://learn.microsoft.com/windows/win32/com/component-object-model--com--portal",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25348,
+    "url": "https://docs.python.org/3/using/mac.html",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25349,
+    "url": "https://docs.python.org/3/using/windows.html#setting-envvars",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25350,
+    "url": "https://docs.python.org/3/using/windows.html#envvar-PYTHON_MANAGER_AUTOMATIC_INSTALL",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25351,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.module_search_paths",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25352,
+    "url": "https://docs.python.org/3/using/configure.html",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25353,
+    "url": "https://docs.python.org/3/using/windows.html#windows-finding-modules",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25355,
+    "url": "https://docs.python.org/3/using/windows.html#additional-modules",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25356,
+    "url": "https://pypi.org/project/PyWin32/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25358,
+    "url": "https://web.archive.org/web/20060524042422/https://www.python.org/windows/pythonwin/",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25360,
+    "url": "https://www.nuget.org/packages/pythonarm64",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25362,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25364,
+    "url": "https://docs.python.org/3/using/windows.html#return-codes",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25365,
+    "url": "https://docs.python.org/3/using/windows.html#pymanager-index-signatures",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25366,
+    "url": "https://docs.python.org/3/glossary.html#term-filesystem-encoding-and-error-handler",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25367,
+    "url": "https://docs.python.org/3/using/windows.html#advanced-installation",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25368,
+    "url": "https://docs.python.org/3/using/windows.html#from-a-script",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25370,
+    "url": "https://docs.python.org/3/using/windows.html#installing-without-ui",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25371,
+    "url": "https://docs.python.org/3/using/windows.html#virtual-environments",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25372,
+    "url": "https://docs.python.org/3/library/venv.html#module-venv",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25373,
+    "url": "https://docs.python.org/3/using/windows.html#python-application",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25375,
+    "url": "https://github.com/python/pymanager/issues",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25376,
+    "url": "https://docs.python.org/3/using/windows.html#installation",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25377,
+    "url": "https://docs.python.org/3/using/windows.html#index-signatures",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25378,
+    "url": "https://docs.python.org/3/using/windows.html#finding-modules",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25379,
+    "url": "https://docs.python.org/3/using/windows.html#windows-nuget",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25381,
+    "url": "https://docs.python.org/3/using/windows.html#install-on-demand",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25382,
+    "url": "https://docs.python.org/3/using/windows.html#getting-started",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "id": 25383,
+    "url": "https://docs.python.org/3/library/site.html#module-site",
+    "parentUrl": "https://docs.python.org/3/using/windows.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "4. Using Python on Windows — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/win_installer.png",
+    "alt": "../_images/win_installer.png",
+    "pageTitle": "4. Using Python on Windows — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/win_install_freethreaded.png",
+    "alt": "../_images/win_install_freethreaded.png",
+    "pageTitle": "4. Using Python on Windows — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/windows.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "4. Using Python on Windows — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/windows.html"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
