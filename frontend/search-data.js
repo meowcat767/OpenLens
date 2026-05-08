@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1522,
+    "url": "https://docs.python.org/3/c-api/init_config.html#pyconfig-api",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:23:13.159214"
+  },
+  {
+    "id": 1521,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html",
+    "title": "RFC 3950 - Tag Image File Format Fax eXtended (TIFF-FX) - image/tiff-fx MIME Sub-type Registration",
+    "content": "Light Dark Auto Network Working Group                                        L. McIntyre\nRequest for Comments: 3950                                    Consultant\nObsoletes: 3250                                               G. Parsons\nCategory: Standards Track                                Nortel Networks\n                                                             J. Rafferty\n                                                   Brooktrout Technology\n                                                           February 2005\n\n\n      Tag Image File Format Fax eXtended (TIFF-FX) - image/tiff-fx\n                       MIME Sub-type Registration\n\nStatus of this Memo\n\n   This document specifies an Internet standards track protocol for the\n   Internet community, and requests discussion and suggestions for\n   improvements.  Please refer to the current edition of the \"Internet\n   Official Protocol Standards\" (STD 1) for the standardization state\n   and status of this protocol.  Distribution of this memo is unlimited.\n\nCopyright Notice\n\n   Copyright (C) The Internet Society (2005).\n\nAbstract\n\n   This document describes the registration of the MIME sub-type\n   image/tiff-fx.  The encodings are defined by File Format for Internet\n   Fax and its extensions.\n\n1.  Introduction\n\n   This document describes the registration of the MIME sub-type\n   image/tiff-fx.  The encodings are defined by File Format for Internet\n   Fax [TIFF-FX] and its extensions.\n\n   This document is a product of the IETF Internet Fax Working Group.\n\n   The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\",\n   \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this\n   document are to be interpreted as described in BCP 14, RFC 2119\n   [REQ].\n\n2.  TIFF-FX Definition\n\n   Tag Image File Format Fax eXtended (TIFF-FX), is defined in detail by\n   RFC 3949, \"File Format for Internet Fax\" [TIFF-FX].\n\n\n\n\nMcIntyre, et al.            Standards Track                     [Page 1] \nRFC 3950                     image/tiff-fx                 February 2005\n\n\n   While a brief scope and feature description is provided in this\n   section as background information, the reader is directed to the\n   original TIFF-FX specification (File Format for Internet Fax) to\n   obtain complete feature and technical details.\n\n2.1.  TIFF-FX Scope\n\n   This document defines a TIFF-based file format specification for\n   enabling standardized messaging-based fax over the Internet.  It\n   specifies the TIFF fields and field values required for compatibility\n   with the existing ITU-T Recommendations for Group 3 black-and-white,\n   grayscale and color facsimile.  TIFF has historically been used for\n   handling fax image files in applications such as store-and-forward\n   messaging.  Implementations that support this file format\n   specification for import/export may elect to support it as a native\n   format.  This document recommends a TIFF file structure that is\n   compatible with low-memory and page-level streaming implementations.\n\n   Unless otherwise noted, the current TIFF specification [TIFF] and\n   selected TIFF Technical Notes [TTN1, TTN2] are the primary references\n   for describing TIFF and defining TIFF fields.  This document is the\n   primary reference for defining TIFF field values for fax\n   applications.\n\n2.2.  TIFF-FX Features\n\n   Some of the features of TIFF-FX are:\n\n   -  TIFF-FX is capable of describing bilevel, grayscale, palette-\n      color, full-color and mixed content image data.\n\n   -  TIFF-FX includes a number of compression schemes that allow\n      developers to choose the best space or time tradeoff for their\n      applications.\n\n   -  TIFF-FX is designed to be extensible and to evolve gracefully as\n      new needs arise.\n\n3.  MIME Definition\n\n   This document defines the image/tiff-fx MIME sub-type to refer to\n   TIFF-FX Profiles J, C, L and M encoded image data and any future\n   TIFF-FX extensions, or a subset.  The image/tiff-fx content type MAY\n   be used when black-and-white image data is encoded using TIFF-FX\n   Profiles S or F, or a subset, however, the image/tiff content type\n   SHOULD be used.\n\n\n\n\n\nMcIntyre, et al.            Standards Track                     [Page 2] \nRFC 3950                     image/tiff-fx                 February 2005\n\n\n4.  IANA Registration\n\n   To: ietf-types@iana.org\n   Subject: Registration of Standard MIME media type image/tiff-fx\n\n   MIME media type name: image\n\n   MIME subtype name: tiff-fx\n\n   Required parameters: none\n\n   Optional parameters: none\n\n   Encoding Considerations:\n\n      This media type consists of binary data.  The base64 encoding\n      should be used on transports that cannot accommodate binary data\n      directly.\n\n   Security considerations:\n\n      TIFF-FX utilizes a structure which can store image data and\n      attributes of this image data.  The fields defined in the TIFF-FX\n      specification are of a descriptive nature and provide information\n      that is useful to facilitate viewin",
+    "scrapedAt": "2026-05-09 01:23:11.893813"
+  },
+  {
+    "id": 1520,
+    "url": "https://docs.python.org/3/glossary.html#term-interactive",
+    "title": "Glossary — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Glossary | Theme Auto Light Dark | Glossary¶ \u003e\u003e\u003e¶ The default Python prompt of the interactive shell. Often seen for code examples which can be executed interactively in the interpreter. ...¶ Can refer to: The default Python prompt of the interactive shell when entering the code for an indented code block, when within a pair of matching left and right delimiters (parentheses, square brackets, curly braces or triple quotes), or after specifying a decorator. The three dots form of the Ellipsis object. abstract base class¶ Abstract base classes complement duck-typing by providing a way to define interfaces when other techniques like hasattr() would be clumsy or subtly wrong (for example with magic methods). ABCs introduce virtual subclasses, which are classes that don’t inherit from a class but are still recognized by isinstance() and issubclass(); see the abc module documentation. Python comes with many built-in ABCs for data structures (in the collections.abc module), numbers (in the numbers module), streams (in the io module), import finders and loaders (in the importlib.abc module). You can create your own ABCs with the abc module. annotate function¶ A function that can be called to retrieve the annotations of an object. This function is accessible as the __annotate__ attribute of functions, classes, and modules. Annotate functions are a subset of evaluate functions. annotation¶ A label associated with a variable, a class attribute or a function parameter or return value, used by convention as a type hint. Annotations of local variables cannot be accessed at runtime, but annotations of global variables, class attributes, and functions can be retrieved by calling annotationlib.get_annotations() on modules, classes, and functions, respectively. See variable annotation, function annotation, PEP 484, PEP 526, and PEP 649, which describe this functionality. Also see Annotations Best Practices for best practices on working with annotations. argument¶ A value passed to a function (or method) when calling the function. There are two kinds of argument: keyword argument: an argument preceded by an identifier (e.g. name\u003d) in a function call or passed as a value in a dictionary preceded by **. For example, 3 and 5 are both keyword arguments in the following calls to complex(): complex(real\u003d3, imag\u003d5)\ncomplex(**{\u0027real\u0027: 3, \u0027imag\u0027: 5})\n positional argument: an argument that is not a keyword argument. Positional arguments can appear at the beginning of an argument list and/or be passed as elements of an iterable preceded by *. For example, 3 and 5 are both positional arguments in the following calls: complex(3, 5)\ncomplex(*(3, 5))\n Arguments are assigned to the named local variables in a function body. See the Calls section for the rules governing this assignment. Syntactically, any expression can be used to represent an argument; the evaluated value is assigned to the local variable. See also the parameter glossary entry, the FAQ question on the difference between arguments and parameters, and PEP 362. asynchronous context manager¶ An object which controls the environment seen in an async with statement by defining __aenter__() and __aexit__() methods. Introduced by PEP 492. asynchronous generator¶ A function which returns an asynchronous generator iterator. It looks like a coroutine function defined with async def except that it contains yield expressions for producing a series of values usable in an async for loop. Usually refers to an asynchronous generator function, but may refer to an asynchronous generator iterator in some contexts. In cases where the intended meaning isn’t clear, using the full terms avoids ambiguity. An asynchronous generator function may contain await expressions as well as async for, and async with statements. asynchronous generator iterator¶ An object created by an asynchronous generator function. This is an asynchronous iterator which when called using the __anext__() method returns an awaitable object which will execute the body of the asynchronous generator function until the next yield expression. Each yield temporarily suspends processing, remembering the execution state (including local variables and pending try-statements). When the asynchronous generator iterator effectively resumes with another awaitable returned by __anext__(), it picks up where it left off. See PEP 492 and PEP 525. asynchronous iterable¶ An object, that can be used in an async for statement. Must return an asynchronous iterator from its __aiter__() method. Introduced by PEP 492. asynchronous iterator¶ An object that implements the __aiter__() and __anext__() methods. __anext__() must return an awaitable object. async for resolves the awaitables returned by an asynchronous iterator’s __anext__() method until it raises a StopAsyncIteration exception. Introduced by PEP 492. atomic operation¶ An operation that appears to execute as a single",
+    "scrapedAt": "2026-05-09 01:23:10.373633"
+  },
+  {
+    "id": 1519,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.context_aware_warnings",
+    "title": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but refer",
+    "scrapedAt": "2026-05-09 01:23:09.117326"
+  },
+  {
+    "id": 1518,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id8",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:23:07.865021"
+  },
+  {
     "id": 1517,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#id9",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -10218,26 +10253,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1518,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#id8"
-  },
-  {
-    "id": 1519,
-    "url": "https://docs.python.org/3/library/sys.html#sys.flags.context_aware_warnings"
-  },
-  {
-    "id": 1520,
-    "url": "https://docs.python.org/3/glossary.html#term-interactive"
-  },
-  {
-    "id": 1521,
-    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html"
-  },
-  {
-    "id": 1522,
-    "url": "https://docs.python.org/3/c-api/init_config.html#pyconfig-api"
   },
   {
     "id": 1523,
@@ -237555,10 +237570,235 @@ window.searchData = [
     "id": 318240,
     "url": "https://github.com/python/cpython/blob/main/Doc/library/shlex.rst?plain\u003d1",
     "parentUrl": "https://docs.python.org/3/library/shlex.html#module-shlex"
+  },
+  {
+    "id": 327581,
+    "url": "https://datatracker.ietf.org/doc/rfc3950/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327582,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327583,
+    "url": "https://datatracker.ietf.org/person/lloyd10328@pacbell.net",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327584,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html#section-6.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327585,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html#section-6.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327586,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3250",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327588,
+    "url": "https://www.rfc-editor.org/rfc/pdfrfc/rfc3950.txt.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327589,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html#section-2.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327590,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html#section-2.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327591,
+    "url": "http://partners.adobe.com/asn/developer/pdfs/tn/TIFFPM6.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327592,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html#ref-REQ",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327593,
+    "url": "http://www.imc.org/ietf-fax/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327594,
+    "url": "https://www.rfc-editor.org/rfc/rfc3950.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327597,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3949",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327598,
+    "url": "https://datatracker.ietf.org/person/jrafferty@worldnet.att.net",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327600,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327601,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327602,
+    "url": "https://datatracker.ietf.org/doc/rfc3950/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327603,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327604,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327605,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327606,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327607,
+    "url": "https://www.rfc-editor.org/rfc/rfc3950.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327609,
+    "url": "https://datatracker.ietf.org/doc/draft-ietf-fax-tiff-fx-reg-v2/01/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327610,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-fax-tiff-fx-reg-v2-01",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327611,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html#ref-TTN1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327612,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html#ref-TTN2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327613,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html#ref-TIFF",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327616,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-fax-tiff-fx-13.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327617,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3950.html#ref-TIFF-FX",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327618,
+    "url": "http://partners.adobe.com/asn/developer/pdfs/tn/TIFFphotoshop.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327619,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2301",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 327620,
+    "url": "https://datatracker.ietf.org/wg/fax/about/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#pyconfig-api"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#pyconfig-api"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.64.0/ietf/images/ietf-logo-nor-white.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 3950 - Tag Image File Format Fax eXtended (TIFF-FX) - image/tiff-fx MIME Sub-type Registration",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.64.0/ietf/images/ietf-logo-nor.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 3950 - Tag Image File Format Fax eXtended (TIFF-FX) - image/tiff-fx MIME Sub-type Registration",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-interactive"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-interactive"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.flags.context_aware_warnings"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.flags.context_aware_warnings"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id8"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id8"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
