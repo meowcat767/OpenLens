@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 984,
+    "url": "https://github.com/python/cpython/issues/120220",
+    "title": "Tkinter: emit deprecation warning for trace_variable() etc · Issue #120220 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Tkinter: emit deprecation warning for trace_variable() etc #120220 New issue Copy link New issue Copy link Closed Closed Tkinter: emit deprecation warning for trace_variable() etc#120220 Copy link Assignees Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-tkintertype-featureA feature request or enhancementA feature request or enhancement Description serhiy-storchaka opened on Jun 7, 2024 Issue body actions The Variable methods trace_variable(), trace_vdelete() and trace_vinfo() wrap deprecated Tcl commands which were deleted in Tcl 9.0. Modern replacements trace_add(), trace_remove(), and trace_info() were added in Python 3.6 (#66313). They wrap Tcl commands supported since Tcl 8.4 or older, i.e. in all supported Tcl versions. It is a time to add runtime warnings for the old methods. Linked PRs gh-120220: Deprecate legacy methods for tracing variables in Tkinter #120223 Reactions are currently unavailable Metadata Metadata Assignees serhiy-storchaka Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-tkintertype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:01:25.930863"
+  },
+  {
+    "id": 983,
+    "url": "https://docs.python.org/3/library/functions.html#repr",
+    "title": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Functions | Theme Auto Light Dark | Built-in Functions¶ The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order. Built-in Functions A abs() aiter() all() anext() any() ascii() B bin() bool() breakpoint() bytearray() bytes() C callable() chr() classmethod() compile() complex() D delattr() dict() dir() divmod() E enumerate() eval() exec() F filter() float() format() frozenset() G getattr() globals() H hasattr() hash() help() hex() I id() input() int() isinstance() issubclass() iter() L len() list() locals() M map() max() memoryview() min() N next() O object() oct() open() ord() P pow() print() property() R range() repr() reversed() round() S set() setattr() slice() sorted() staticmethod() str() sum() super() T tuple() type() V vars() Z zip() _ __import__() abs(number, /)¶ Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__(). If the argument is a complex number, its magnitude is returned. aiter(async_iterable, /)¶ Return an asynchronous iterator for an asynchronous iterable. Equivalent to calling x.__aiter__(). Note: Unlike iter(), aiter() has no 2-argument variant. Added in version 3.10. all(iterable, /)¶ Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to: def all(iterable):\n    for element in iterable:\n        if not element:\n            return False\n    return True\n awaitable anext(async_iterator, /)¶ awaitable anext(async_iterator, default, /) When awaited, return the next item from the given asynchronous iterator, or default if given and the iterator is exhausted. This is the async variant of the next() builtin, and behaves similarly. This calls the __anext__() method of async_iterator, returning an awaitable. Awaiting this returns the next value of the iterator. If default is given, it is returned if the iterator is exhausted, otherwise StopAsyncIteration is raised. Added in version 3.10. any(iterable, /)¶ Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to: def any(iterable):\n    for element in iterable:\n        if element:\n            return True\n    return False\n ascii(object, /)¶ As repr(), return a string containing a printable representation of an object, but escape the non-ASCII characters in the string returned by repr() using \\x, \\u, or \\U escapes. This generates a string similar to that returned by repr() in Python 2. bin(integer, /)¶ Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If integer is not a Python int object, it has to define an __index__() method that returns an integer. Some examples: \u003e\u003e\u003e bin(3)\n\u00270b11\u0027\n\u003e\u003e\u003e bin(-10)\n\u0027-0b1010\u0027\n If the prefix “0b” is desired or not, you can use either of the following ways. \u003e\u003e\u003e format(14, \u0027#b\u0027), format(14, \u0027b\u0027)\n(\u00270b1110\u0027, \u00271110\u0027)\n\u003e\u003e\u003e f\u0027{14:#b}\u0027, f\u0027{14:b}\u0027\n(\u00270b1110\u0027, \u00271110\u0027)\n See also enum.bin() to represent negative values as twos-complement. See also format() for more information. class bool(object\u003dFalse, /)¶ Return a Boolean value, i.e. one of True or False. The argument is converted using the standard truth testing procedure. If the argument is false or omitted, this returns False; otherwise, it returns True. The bool class is a subclass of int (see Numeric Types — int, float, complex). It cannot be subclassed further. Its only instances are False and True (see Boolean Type - bool). Changed in version 3.7: The parameter is now positional-only. breakpoint(*args, **kws)¶ This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or type as much code to enter the debugger. However, sys.breakpointhook() can be set to some other function and breakpoint() will automatically call that, allowing you to drop into the debugger of choice. If sys.breakpointhook() is not accessible, this function will raise RuntimeError. By default, the behavior of breakpoint() can be changed with the PYTHONBREAKPOINT environment variable. See sys.breakpointhook() for usage details. Note that this is not guaranteed if sys.breakpointhook() has been replaced. Raises an auditing event builtins.breakpoint with argument breakpointhook. Added in version 3.7. class bytearray(source\u003db\u0027\u0027) class bytearray(source, encoding, errors\u003d\u0027strict\u0027) Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 \u003c\u003d x \u003c 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and ",
+    "scrapedAt": "2026-05-09 01:01:23.816674"
+  },
+  {
+    "id": 982,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#notable-changes-in-3-14-1",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:01:22.62088"
+  },
+  {
+    "id": 981,
+    "url": "https://docs.python.org/3/library/types.html#types.CodeType",
+    "title": "types — Dynamic type creation and names for built-in types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » types — Dynamic type creation and names for built-in types | Theme Auto Light Dark | types — Dynamic type creation and names for built-in types¶ Source code: Lib/types.py This module defines utility functions to assist in dynamic creation of new types. It also defines names for some object types that are used by the standard Python interpreter, but not exposed as builtins like int or str are. Finally, it provides some additional type-related utility classes and functions that are not fundamental enough to be builtins. Dynamic Type Creation¶ types.new_class(name, bases\u003d(), kwds\u003dNone, exec_body\u003dNone)¶ Creates a class object dynamically using the appropriate metaclass. The first three arguments are the components that make up a class definition header: the class name, the base classes (in order), the keyword arguments (such as metaclass). The exec_body argument is a callback that is used to populate the freshly created class namespace. It should accept the class namespace as its sole argument and update the namespace directly with the class contents. If no callback is provided, it has the same effect as passing in lambda ns: None. Added in version 3.3. types.prepare_class(name, bases\u003d(), kwds\u003dNone)¶ Calculates the appropriate metaclass and creates the class namespace. The arguments are the components that make up a class definition header: the class name, the base classes (in order) and the keyword arguments (such as metaclass). The return value is a 3-tuple: metaclass, namespace, kwds metaclass is the appropriate metaclass, namespace is the prepared class namespace and kwds is an updated copy of the passed in kwds argument with any \u0027metaclass\u0027 entry removed. If no kwds argument is passed in, this will be an empty dict. Added in version 3.3. Changed in version 3.6: The default value for the namespace element of the returned tuple has changed. Now an insertion-order-preserving mapping is used when the metaclass does not have a __prepare__ method. See also Metaclasses Full details of the class creation process supported by these functions PEP 3115 - Metaclasses in Python 3000 Introduced the __prepare__ namespace hook types.resolve_bases(bases)¶ Resolve MRO entries dynamically as specified by PEP 560. This function looks for items in bases that are not instances of type, and returns a tuple where each such object that has an __mro_entries__() method is replaced with an unpacked result of calling this method. If a bases item is an instance of type, or it doesn’t have an __mro_entries__() method, then it is included in the return tuple unchanged. Added in version 3.7. types.get_original_bases(cls, /)¶ Return the tuple of objects originally given as the bases of cls before the __mro_entries__() method has been called on any bases (following the mechanisms laid out in PEP 560). This is useful for introspecting Generics. For classes that have an __orig_bases__ attribute, this function returns the value of cls.__orig_bases__. For classes without the __orig_bases__ attribute, cls.__bases__ is returned. Examples: from typing import TypeVar, Generic, NamedTuple, TypedDict\n\nT \u003d TypeVar(\"T\")\nclass Foo(Generic[T]): ...\nclass Bar(Foo[int], float): ...\nclass Baz(list[str]): ...\nEggs \u003d NamedTuple(\"Eggs\", [(\"a\", int), (\"b\", str)])\nSpam \u003d TypedDict(\"Spam\", {\"a\": int, \"b\": str})\n\nassert Bar.__bases__ \u003d\u003d (Foo, float)\nassert get_original_bases(Bar) \u003d\u003d (Foo[int], float)\n\nassert Baz.__bases__ \u003d\u003d (list,)\nassert get_original_bases(Baz) \u003d\u003d (list[str],)\n\nassert Eggs.__bases__ \u003d\u003d (tuple,)\nassert get_original_bases(Eggs) \u003d\u003d (NamedTuple,)\n\nassert Spam.__bases__ \u003d\u003d (dict,)\nassert get_original_bases(Spam) \u003d\u003d (TypedDict,)\n\nassert int.__bases__ \u003d\u003d (object,)\nassert get_original_bases(int) \u003d\u003d (object,)\n Added in version 3.12. See also PEP 560 - Core support for typing module and generic types Standard Interpreter Types¶ This module provides names for many of the types that are required to implement a Python interpreter. It deliberately avoids including some of the types that arise only incidentally during processing such as the listiterator type. Typical use of these names is for isinstance() or issubclass() checks. If you instantiate any of these types, note that signatures may vary between Python versions. Standard names are defined for the following types: types.NoneType¶ The type of None. Added in version 3.10. types.FunctionType¶ types.LambdaType¶ The type of user-defined functions and functions created by lambda expressions. Raises an auditing event function.__new__ with argument code. The audit event only occurs for direct instantiation of function objects, and is not raised for normal compilation. types.GeneratorType¶ The type of generator-iterator objects, created by generator functions. types.CoroutineType¶ The type of coroutine objects, created by async def functions. Added in version 3.5. types.AsyncGeneratorType¶ ",
+    "scrapedAt": "2026-05-09 01:01:21.384806"
+  },
+  {
+    "id": 980,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Bytecode",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code o",
+    "scrapedAt": "2026-05-09 01:01:20.2096"
+  },
+  {
     "id": 979,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#notable-changes-in-3-14-5",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -6543,26 +6578,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 980,
-    "url": "https://docs.python.org/3/library/dis.html#dis.Bytecode"
-  },
-  {
-    "id": 981,
-    "url": "https://docs.python.org/3/library/types.html#types.CodeType"
-  },
-  {
-    "id": 982,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#notable-changes-in-3-14-1"
-  },
-  {
-    "id": 983,
-    "url": "https://docs.python.org/3/library/functions.html#repr"
-  },
-  {
-    "id": 984,
-    "url": "https://github.com/python/cpython/issues/120220"
   },
   {
     "id": 985,
@@ -164370,10 +164385,112 @@ window.searchData = [
     "id": 145656,
     "url": "https://github.com/python/cpython/pull/132050",
     "parentUrl": "https://github.com/python/cpython/issues/131591"
+  },
+  {
+    "id": 149029,
+    "url": "https://github.com/python/cpython/issues/120220#top",
+    "parentUrl": "https://github.com/python/cpython/issues/120220"
+  },
+  {
+    "id": 149033,
+    "url": "https://github.com/python/cpython/issues/120220#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/120220"
+  },
+  {
+    "id": 149035,
+    "url": "https://github.com/python/cpython/issues/120220#issue-2340252658",
+    "parentUrl": "https://github.com/python/cpython/issues/120220"
+  },
+  {
+    "id": 149037,
+    "url": "https://github.com/python/cpython/issues/66313",
+    "parentUrl": "https://github.com/python/cpython/issues/120220"
+  },
+  {
+    "id": 149038,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-tkinter%22",
+    "parentUrl": "https://github.com/python/cpython/issues/120220"
+  },
+  {
+    "id": 149039,
+    "url": "https://github.com/python/cpython/pull/120223",
+    "parentUrl": "https://github.com/python/cpython/issues/120220"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "Tkinter: emit deprecation warning for trace_variable() etc · Issue #120220 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120220"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Tkinter: emit deprecation warning for trace_variable() etc · Issue #120220 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120220"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Tkinter: emit deprecation warning for trace_variable() etc · Issue #120220 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120220"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Tkinter: emit deprecation warning for trace_variable() etc · Issue #120220 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120220"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#repr"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#repr"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#notable-changes-in-3-14-1"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#notable-changes-in-3-14-1"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "types — Dynamic type creation and names for built-in types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/types.html#types.CodeType"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "types — Dynamic type creation and names for built-in types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/types.html#types.CodeType"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#dis.Bytecode"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#dis.Bytecode"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
