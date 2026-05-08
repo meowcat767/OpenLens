@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1240,
+    "url": "https://github.com/python/cpython/issues/128150",
+    "title": "Improve performances of `uuid.*` functions · Issue #128150 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Improve performances of uuid.* functions #128150 New issue Copy link New issue Copy link Closed Closed Improve performances of uuid.* functions#128150 Copy link Assignees Labels performancePerformance or resource usagePerformance or resource usagestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description picnixz opened on Dec 21, 2024 Issue body actions Feature or enhancement The dedicated UUID constructors (e.g., uuid.uuid4()) generate bytes and pass them to the UUID constructor. However, the latter performs multiple and redundant checks. We can by-pass those checks since we are actually creating manually the UUID object. Here are the benchmarks for a PGO and python -OO (no LTO) build and a dedicated UUID.from_int constructor: +----------------------------------------+---------+-----------------------+\n| Benchmark                              | ref     | final                 |\n+\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d+\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d+\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d+\n| uuid1(node, None)                      | 1.20 us | 1.16 us: 1.04x faster |\n+----------------------------------------+---------+-----------------------+\n| uuid1(None, clock_seq)                 | 1.16 us | 1.14 us: 1.02x faster |\n+----------------------------------------+---------+-----------------------+\n| uuid3(NAMESPACE_DNS, os.urandom(16))   | 1.13 us | 809 ns: 1.40x faster  |\n+----------------------------------------+---------+-----------------------+\n| uuid3(NAMESPACE_DNS, os.urandom(1024)) | 2.08 us | 1.73 us: 1.20x faster |\n+----------------------------------------+---------+-----------------------+\n| uuid4()                                | 1.16 us | 885 ns: 1.31x faster  |\n+----------------------------------------+---------+-----------------------+\n| uuid5(NAMESPACE_DNS, os.urandom(16))   | 1.15 us | 832 ns: 1.39x faster  |\n+----------------------------------------+---------+-----------------------+\n| uuid5(NAMESPACE_DNS, os.urandom(1024)) | 1.57 us | 1.27 us: 1.24x faster |\n+----------------------------------------+---------+-----------------------+\n| uuid8()                                | 952 ns  | 694 ns: 1.37x faster  |\n+----------------------------------------+---------+-----------------------+\n| Geometric mean                         | (ref)   | 1.21x faster          |\n+----------------------------------------+---------+-----------------------+\n\nBenchmark hidden because not significant (1): uuid1()\n\n+----------------------------------------+---------+-----------------------+\n| Benchmark                              | ref     | final                 |\n+\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d+\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d+\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d+\n| uuid3(NAMESPACE_DNS, os.urandom(16))   | 1.13 us | 809 ns: 1.40x faster  |\n+----------------------------------------+---------+-----------------------+\n| uuid3(NAMESPACE_DNS, os.urandom(1024)) | 2.08 us | 1.73 us: 1.20x faster |\n+----------------------------------------+---------+-----------------------+\n| uuid4()                                | 1.16 us | 885 ns: 1.31x faster  |\n+----------------------------------------+---------+-----------------------+\n| uuid5(NAMESPACE_DNS, os.urandom(16))   | 1.15 us | 832 ns: 1.39x faster  |\n+----------------------------------------+---------+-----------------------+\n| uuid5(NAMESPACE_DNS, os.urandom(1024)) | 1.57 us | 1.27 us: 1.24x faster |\n+----------------------------------------+---------+-----------------------+\n| uuid8()                                | 952 ns  | 694 ns: 1.37x faster  |\n+----------------------------------------+---------+-----------------------+\n| Geometric mean                         | (ref)   | 1.31x faster          |\n+----------------------------------------+---------+-----------------------+\nIgnored benchmarks (3) of ref.json: uuid1(), uuid1(None, clock_seq), uuid1(node, None)\n The above benchmarks keep constants as is since constant folding would remove the inefficiency of recomputing 1 \u003c\u003c const everytime. With a hardcoded 1 \u003c\u003c const, the numbers are (almost) identical. I did not change the UUIDv1 generation because I observed that it would be worse in the uuid.uuid1() form (but 50% faster when either the node or the clock sequence is given, but this is likely not the usual call form). Benchmark script import os\nimport random\nimport uuid\n\nimport pyperf\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    runner \u003d pyperf.Runner()\n    runner.bench_func(\u0027uuid1()\u0027, uuid.uuid1)\n    node \u003d r",
+    "scrapedAt": "2026-05-09 01:11:47.23408"
+  },
+  {
+    "id": 1239,
+    "url": "https://github.com/python/cpython/issues/108362",
+    "title": "Incremental cycle GC · Issue #108362 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Incremental cycle GC #108362 New issue Copy link New issue Copy link Closed Closed Incremental cycle GC#108362 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description markshannon opened on Aug 23, 2023 Issue body actions The current GC is both inefficient and can have very long pause times. The efficiency can be improved by tweaking thresholds or by using fewer generations (see #100403), but that does nothing to shorten pause times. We should use an incremental collector, it can improve efficiency and hugely reduce maximum pause times. See #100403 for more details on the general idea and the algorithm. Linked PRs GH-108362: Incremental GC implementation #108038 GH-108362: Set old space for objects in finalizer list before adding to old space #115084 GH-108362: Revert \"GH-108362: Incremental GC implementation (GH-108038)\" #115132 GH-108362: Incremental GC implementation #116199 GH-108362: Incremental GC implementation #116206 gh-108362: Retarget incremental GC changes to 3.14 #125453 [3.14] gh-108362: Retarget incremental GC changes to 3.14 (GH-125453) #136851 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:11:45.263722"
+  },
+  {
+    "id": 1238,
+    "url": "https://github.com/python/cpython/issues/128398",
+    "title": "Suggest `async with` when `with` finds no `__enter__`/`__exit__` · Issue #128398 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Suggest async with when with finds no __enter__/__exit__ #128398 New issue Copy link New issue Copy link Closed Closed Suggest async with when with finds no __enter__/__exit__#128398 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description gvanrossum opened on Jan 1, 2025 Issue body actions Bug report Bug description: (This is not an asyncio bug! I am just using asyncio.TaskGroup() as an example.) import asyncio\ndef foo():\n    with asyncio.TaskGroup() as g:  # BUG: should be `async with`\n        pass This currently gives an error ending in TypeError: \u0027TaskGroup\u0027 object does not support the context manager protocol (missed __exit__ method)\n That\u0027s not very clear about what\u0027s wrong. Maybe when issuing this TypeError we could check if the object supports __aexit__ and __aenter__, and if so, suggest something like \"maybe try async with ?\". CPython versions tested on: 3.12, 3.13, 3.14 Operating systems tested on: No response Linked PRs gh-128398: improve error message when incorrectly with and async with #132218 Reactions are currently unavailable Metadata Metadata Assignees picnixz Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:11:42.725123"
+  },
+  {
+    "id": 1237,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongObject",
+    "title": "Integer Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)",
+    "scrapedAt": "2026-05-09 01:11:40.473736"
+  },
+  {
+    "id": 1236,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-bit-fields-in-structures-unions",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 310, in __getitem__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function ordinal 0 not found\n\u003e\u003e\u003e\n Calling functions¶ You can call these functions like any other Python callable. This example uses the rand() functi",
+    "scrapedAt": "2026-05-09 01:11:39.248092"
+  },
+  {
     "id": 1235,
     "url": "https://docs.python.org/3/glossary.html#term-generic-type",
     "title": "Glossary — Python 3.14.5rc1 documentation",
@@ -8293,26 +8328,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1236,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-bit-fields-in-structures-unions"
-  },
-  {
-    "id": 1237,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongObject"
-  },
-  {
-    "id": 1238,
-    "url": "https://github.com/python/cpython/issues/128398"
-  },
-  {
-    "id": 1239,
-    "url": "https://github.com/python/cpython/issues/108362"
-  },
-  {
-    "id": 1240,
-    "url": "https://github.com/python/cpython/issues/128150"
   },
   {
     "id": 1241,
@@ -219220,10 +219235,189 @@ window.searchData = [
     "id": 241847,
     "url": "https://github.com/python/cpython/commit/26ae05e95c7c5f1a646e8ec7fa690c0e7b4ab8b9",
     "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 242633,
+    "url": "https://github.com/python/cpython/pull/132218",
+    "parentUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "id": 242634,
+    "url": "https://github.com/python/cpython/issues/128398#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "id": 242636,
+    "url": "https://github.com/python/cpython/issues/128398#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "id": 242643,
+    "url": "https://github.com/python/cpython/issues/128398#issue-2765245048",
+    "parentUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "id": 242645,
+    "url": "https://github.com/python/cpython/pull/125453",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 242648,
+    "url": "https://github.com/python/cpython/pull/116199",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 242649,
+    "url": "https://github.com/python/cpython/pull/136851",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 242650,
+    "url": "https://github.com/python/cpython/issues/100403",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 242653,
+    "url": "https://github.com/python/cpython/pull/115132",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 242654,
+    "url": "https://github.com/python/cpython/pull/116206",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 242655,
+    "url": "https://github.com/python/cpython/pull/115084",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 242656,
+    "url": "https://github.com/python/cpython/issues/108362#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 242657,
+    "url": "https://github.com/python/cpython/issues/108362#top",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 242660,
+    "url": "https://github.com/python/cpython/issues/108362#issue-1863115578",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 242661,
+    "url": "https://github.com/python/cpython/pull/108038",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 242667,
+    "url": "https://github.com/python/cpython/pull/128151",
+    "parentUrl": "https://github.com/python/cpython/issues/128150"
+  },
+  {
+    "id": 242668,
+    "url": "https://github.com/python/cpython/issues/128150#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128150"
+  },
+  {
+    "id": 242671,
+    "url": "https://github.com/python/cpython/issues/128150#issue-2753875265",
+    "parentUrl": "https://github.com/python/cpython/issues/128150"
+  },
+  {
+    "id": 242673,
+    "url": "https://github.com/python/cpython/issues/128150#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128150"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "Improve performances of `uuid.*` functions · Issue #128150 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128150"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?v\u003d4\u0026size\u003d80",
+    "alt": "@picnixz",
+    "pageTitle": "Improve performances of `uuid.*` functions · Issue #128150 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128150"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?v\u003d4\u0026size\u003d48",
+    "alt": "@picnixz",
+    "pageTitle": "Improve performances of `uuid.*` functions · Issue #128150 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128150"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "Improve performances of `uuid.*` functions · Issue #128150 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128150"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d80",
+    "alt": "@markshannon",
+    "pageTitle": "Incremental cycle GC · Issue #108362 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d48",
+    "alt": "@markshannon",
+    "pageTitle": "Incremental cycle GC · Issue #108362 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "Suggest `async with` when `with` finds no `__enter__`/`__exit__` · Issue #128398 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2894642?u\u003d3fd95e46e081102446b1ebdf31e1cf3d77406c0b\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@gvanrossum",
+    "pageTitle": "Suggest `async with` when `with` finds no `__enter__`/`__exit__` · Issue #128398 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2894642?u\u003d3fd95e46e081102446b1ebdf31e1cf3d77406c0b\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@gvanrossum",
+    "pageTitle": "Suggest `async with` when `with` finds no `__enter__`/`__exit__` · Issue #128398 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "Suggest `async with` when `with` finds no `__enter__`/`__exit__` · Issue #128398 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLongObject"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLongObject"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes-bit-fields-in-structures-unions"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes-bit-fields-in-structures-unions"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
