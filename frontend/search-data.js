@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1447,
+    "url": "https://docs.python.org/3/library/sys.html#sys._jit.is_enabled",
+    "title": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but refer",
+    "scrapedAt": "2026-05-09 01:20:17.841232"
+  },
+  {
+    "id": 1446,
+    "url": "https://docs.python.org/3/library/functools.html#functools.partial",
+    "title": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Functional Programming Modules » functools — Higher-order functions and operations on callable objects | Theme Auto Light Dark | functools — Higher-order functions and operations on callable objects¶ Source code: Lib/functools.py The functools module is for higher-order functions: functions that act on or return other functions. In general, any callable object can be treated as a function for the purposes of this module. The functools module defines the following functions: @functools.cache(user_function)¶ Simple lightweight unbounded function cache. Sometimes called “memoize”. Returns the same as lru_cache(maxsize\u003dNone), creating a thin wrapper around a dictionary lookup for the function arguments. Because it never needs to evict old values, this is smaller and faster than lru_cache() with a size limit. For example: @cache\ndef factorial(n):\n    return n * factorial(n-1) if n else 1\n\n\u003e\u003e\u003e factorial(10)   # no previously cached result, makes 11 recursive calls\n3628800\n\u003e\u003e\u003e factorial(5)    # no new calls, just returns the cached result\n120\n\u003e\u003e\u003e factorial(12)   # two new recursive calls, factorial(10) is cached\n479001600\n The cache is threadsafe so that the wrapped function can be used in multiple threads. This means that the underlying data structure will remain coherent during concurrent updates. It is possible for the wrapped function to be called more than once if another thread makes an additional call before the initial call has been completed and cached. Added in version 3.9. @functools.cached_property(func)¶ Transform a method of a class into a property whose value is computed once and then cached as a normal attribute for the life of the instance. Similar to property(), with the addition of caching. Useful for expensive computed properties of instances that are otherwise effectively immutable. Example: class DataSet:\n\n    def __init__(self, sequence_of_numbers):\n        self._data \u003d tuple(sequence_of_numbers)\n\n    @cached_property\n    def stdev(self):\n        return statistics.stdev(self._data)\n The mechanics of cached_property() are somewhat different from property(). A regular property blocks attribute writes unless a setter is defined. In contrast, a cached_property allows writes. The cached_property decorator only runs on lookups and only when an attribute of the same name doesn’t exist. When it does run, the cached_property writes to the attribute with the same name. Subsequent attribute reads and writes take precedence over the cached_property method and it works like a normal attribute. The cached value can be cleared by deleting the attribute. This allows the cached_property method to run again. The cached_property does not prevent a possible race condition in multi-threaded usage. The getter function could run more than once on the same instance, with the latest run setting the cached value. If the cached property is idempotent or otherwise not harmful to run more than once on an instance, this is fine. If synchronization is needed, implement the necessary locking inside the decorated getter function or around the cached property access. Note, this decorator interferes with the operation of PEP 412 key-sharing dictionaries. This means that instance dictionaries can take more space than usual. Also, this decorator requires that the __dict__ attribute on each instance be a mutable mapping. This means it will not work with some types, such as metaclasses (since the __dict__ attributes on type instances are read-only proxies for the class namespace), and those that specify __slots__ without including __dict__ as one of the defined slots (as such classes don’t provide a __dict__ attribute at all). If a mutable mapping is not available or if space-efficient key sharing is desired, an effect similar to cached_property() can also be achieved by stacking property() on top of lru_cache(). See How do I cache method calls? for more details on how this differs from cached_property(). Added in version 3.8. Changed in version 3.12: Prior to Python 3.12, cached_property included an undocumented lock to ensure that in multi-threaded usage the getter function was guaranteed to run only once per instance. However, the lock was per-property, not per-instance, which could result in unacceptably high lock contention. In Python 3.12+ this locking is removed. functools.cmp_to_key(func)¶ Transform an old-style comparison function to a key function. Used with tools that accept key functions (such as sorted(), min(), max(), heapq.nlargest(), heapq.nsmallest(), itertools.groupby()). This function is primarily used as a transition tool for programs being converted from Python 2 which supported the use of comparison functions. A comparison function is any callable that accepts two arguments, compares them, and returns a negative number for less-than, zero for equality, or a positive number for greater-than. A key fun",
+    "scrapedAt": "2026-05-09 01:20:16.587821"
+  },
+  {
+    "id": 1445,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.utcnow",
+    "title": "datetime — Basic date and time types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » datetime — Basic date and time types | Theme Auto Light Dark | datetime — Basic date and time types¶ Source code: Lib/datetime.py The datetime module supplies classes for manipulating dates and times. While date and time arithmetic is supported, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation. Tip Skip to the format codes. See also Module calendar General calendar related functions. Module time Time access and conversions. Module zoneinfo Concrete time zones representing the IANA time zone database. Package dateutil Third-party library with expanded time zone and parsing support. Package DateType Third-party library that introduces distinct static types to for example, allow static type checkers to differentiate between naive and aware datetimes. Aware and naive objects¶ Date and time objects may be categorized as “aware” or “naive” depending on whether or not they include time zone information. With sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, an aware object can locate itself relative to other aware objects. An aware object represents a specific moment in time that is not open to interpretation. [1] A naive object does not contain enough information to unambiguously locate itself relative to other date/time objects. Whether a naive object represents Coordinated Universal Time (UTC), local time, or time in some other time zone is purely up to the program, just like it is up to the program whether a particular number represents metres, miles, or mass. Naive objects are easy to understand and to work with, at the cost of ignoring some aspects of reality. For applications requiring aware objects, datetime and time objects have an optional time zone information attribute, tzinfo, that can be set to an instance of a subclass of the abstract tzinfo class. These tzinfo objects capture information about the offset from UTC time, the time zone name, and whether daylight saving time is in effect. Only one concrete tzinfo class, the timezone class, is supplied by the datetime module. The timezone class can represent simple time zones with fixed offsets from UTC, such as UTC itself or North American EST and EDT time zones. Supporting time zones at deeper levels of detail is up to the application. The rules for time adjustment across the world are more political than rational, change frequently, and there is no standard suitable for every application aside from UTC. Constants¶ The datetime module exports the following constants: datetime.MINYEAR¶ The smallest year number allowed in a date or datetime object. MINYEAR is 1. datetime.MAXYEAR¶ The largest year number allowed in a date or datetime object. MAXYEAR is 9999. datetime.UTC¶ Alias for the UTC time zone singleton datetime.timezone.utc. Added in version 3.11. Available types¶ class datetime.date An idealized naive date, assuming the current Gregorian calendar always was, and always will be, in effect. Attributes: year, month, and day. class datetime.time An idealized time, independent of any particular day, assuming that every day has exactly 24*60*60 seconds. (There is no notion of “leap seconds” here.) Attributes: hour, minute, second, microsecond, and tzinfo. class datetime.datetime A combination of a date and a time. Attributes: year, month, day, hour, minute, second, microsecond, and tzinfo. class datetime.timedelta A duration expressing the difference between two datetime or date instances to microsecond resolution. class datetime.tzinfo An abstract base class for time zone information objects. These are used by the datetime and time classes to provide a customizable notion of time adjustment (for example, to account for time zone and/or daylight saving time). class datetime.timezone A class that implements the tzinfo abstract base class as a fixed offset from the UTC. Added in version 3.2. Objects of these types are immutable. Subclass relationships: Common properties¶ The date, datetime, time, and timezone types share these common features: Objects of these types are immutable. Objects of these types are hashable, meaning that they can be used as dictionary keys. Objects of these types support efficient pickling via the pickle module. Determining if an object is aware or naive¶ Objects of the date type are always naive. An object of type time or datetime may be aware or naive. A datetime object d is aware if both of the following hold: d.tzinfo is not None d.tzinfo.utcoffset(d) does not return None Otherwise, d is naive. A time object t is aware if both of the following hold: t.tzinfo is not None t.tzinfo.utcoffset(None) does not return None. Otherwise, t is naive. The distinction between aware and naive doesn’t apply to timedelta objects. timedelta objects¶ A timedelta object represents a",
+    "scrapedAt": "2026-05-09 01:20:15.345146"
+  },
+  {
+    "id": 1444,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_free_class",
+    "title": "symtable — Access to the compiler’s symbol tables — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » symtable — Access to the compiler’s symbol tables | Theme Auto Light Dark | symtable — Access to the compiler’s symbol tables¶ Source code: Lib/symtable.py Symbol tables are generated by the compiler from AST just before bytecode is generated. The symbol table is responsible for calculating the scope of every identifier in the code. symtable provides an interface to examine these tables. Generating Symbol Tables¶ symtable.symtable(code, filename, compile_type)¶ Return the toplevel SymbolTable for the Python source code. filename is the name of the file containing the code. compile_type is like the mode argument to compile(). Examining Symbol Tables¶ class symtable.SymbolTableType¶ An enumeration indicating the type of a SymbolTable object. MODULE \u003d \"module\"¶ Used for the symbol table of a module. FUNCTION \u003d \"function\"¶ Used for the symbol table of a function. CLASS \u003d \"class\"¶ Used for the symbol table of a class. The following members refer to different flavors of annotation scopes. ANNOTATION \u003d \"annotation\"¶ Used for annotations if from __future__ import annotations is active. TYPE_ALIAS \u003d \"type alias\"¶ Used for the symbol table of type constructions. TYPE_PARAMETERS \u003d \"type parameters\"¶ Used for the symbol table of generic functions or generic classes. TYPE_VARIABLE \u003d \"type variable\"¶ Used for the symbol table of the bound, the constraint tuple or the default value of a single type variable in the formal sense, i.e., a TypeVar, a TypeVarTuple or a ParamSpec object (the latter two do not support a bound or a constraint tuple). Added in version 3.13. class symtable.SymbolTable¶ A namespace table for a block. The constructor is not public. get_type()¶ Return the type of the symbol table. Possible values are members of the SymbolTableType enumeration. Changed in version 3.12: Added \u0027annotation\u0027, \u0027TypeVar bound\u0027, \u0027type alias\u0027, and \u0027type parameter\u0027 as possible return values. Changed in version 3.13: Return values are members of the SymbolTableType enumeration. The exact values of the returned string may change in the future, and thus, it is recommended to use SymbolTableType members instead of hard-coded strings. get_id()¶ Return the table’s identifier. get_name()¶ Return the table’s name. This is the name of the class if the table is for a class, the name of the function if the table is for a function, or \u0027top\u0027 if the table is global (get_type() returns \u0027module\u0027). For type parameter scopes (which are used for generic classes, functions, and type aliases), it is the name of the underlying class, function, or type alias. For type alias scopes, it is the name of the type alias. For TypeVar bound scopes, it is the name of the TypeVar. get_lineno()¶ Return the number of the first line in the block this table represents. is_optimized()¶ Return True if the locals in this table can be optimized. is_nested()¶ Return True if the block is a nested class or function. has_children()¶ Return True if the block has nested namespaces within it. These can be obtained with get_children(). get_identifiers()¶ Return a view object containing the names of symbols in the table. See the documentation of view objects. lookup(name)¶ Lookup name in the table and return a Symbol instance. get_symbols()¶ Return a list of Symbol instances for names in the table. get_children()¶ Return a list of the nested symbol tables. class symtable.Function¶ A namespace for a function or method. This class inherits from SymbolTable. get_parameters()¶ Return a tuple containing names of parameters to this function. get_locals()¶ Return a tuple containing names of locals in this function. get_globals()¶ Return a tuple containing names of globals in this function. get_nonlocals()¶ Return a tuple containing names of explicitly declared nonlocals in this function. get_frees()¶ Return a tuple containing names of free (closure) variables in this function. class symtable.Class¶ A namespace of a class. This class inherits from SymbolTable. get_methods()¶ Return a tuple containing the names of method-like functions declared in the class. Here, the term ‘method’ designates any function defined in the class body via def or async def. Functions defined in a deeper scope (e.g., in an inner class) are not picked up by get_methods(). For example: \u003e\u003e\u003e import symtable\n\u003e\u003e\u003e st \u003d symtable.symtable(\u0027\u0027\u0027\n... def outer(): pass\n...\n... class A:\n...    def f():\n...        def w(): pass\n...\n...    def g(self): pass\n...\n...    @classmethod\n...    async def h(cls): pass\n...\n...    global outer\n...    def outer(self): pass\n... \u0027\u0027\u0027, \u0027test\u0027, \u0027exec\u0027)\n\u003e\u003e\u003e class_A \u003d st.get_children()[2]\n\u003e\u003e\u003e class_A.get_methods()\n(\u0027f\u0027, \u0027g\u0027, \u0027h\u0027)\n Although A().f() raises TypeError at runtime, A.f is still considered as a method-like function. Deprecated since version 3.14, will be removed in version 3.16. class symtable.Symbol¶ An entry in a SymbolTable corresponding to an i",
+    "scrapedAt": "2026-05-09 01:20:14.087476"
+  },
+  {
+    "id": 1443,
+    "url": "https://github.com/python/cpython/issues/73991",
+    "title": "Support moving across filesystems in pathlib.Path, as shutil.move() does · Issue #73991 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Support moving across filesystems in pathlib.Path, as shutil.move() does #73991 New issue Copy link New issue Copy link Closed Closed Support moving across filesystems in pathlib.Path, as shutil.move() does#73991 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-pathlibtype-featureA feature request or enhancementA feature request or enhancement Description LaurentMazuel mannequin opened on Mar 13, 2017 Issue body actions BPO 29805 Nosy @brettcannon, @pfmoore, @ericvsmith, @tjguk, @zware, @eryksun, @zooba Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2017-03-13.21:03:44.694\u003e\nlabels \u003d [\u00273.8\u0027, \u0027type-feature\u0027, \u0027library\u0027, \u00273.9\u0027, \u00273.10\u0027]\ntitle \u003d \u0027Support moving across filesystems in pathlib.Path, as shutil.move() does\u0027\nupdated_at \u003d \u003cDate 2021-03-15.21:26:30.922\u003e\nuser \u003d \u0027https://bugs.python.org/LaurentMazuel\u0027 bugs.python.org fields: activity \u003d \u003cDate 2021-03-15.21:26:30.922\u003e\nactor \u003d \u0027eryksun\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2017-03-13.21:03:44.694\u003e\ncreator \u003d \u0027Laurent.Mazuel\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 29805\nkeywords \u003d []\nmessage_count \u003d 6.0\nmessages \u003d [\u0027289549\u0027, \u0027289552\u0027, \u0027289559\u0027, \u0027289630\u0027, \u0027289687\u0027, \u0027289688\u0027]\nnosy_count \u003d 8.0\nnosy_names \u003d [\u0027brett.cannon\u0027, \u0027paul.moore\u0027, \u0027eric.smith\u0027, \u0027tim.golden\u0027, \u0027Laurent.Mazuel\u0027, \u0027zach.ware\u0027, \u0027eryksun\u0027, \u0027steve.dower\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue29805\u0027\nversions \u003d [\u0027Python 3.8\u0027, \u0027Python 3.9\u0027, \u0027Python 3.10\u0027] Linked PRs GH-73991: Add pathlib.Path.move that can handle rename across FS #30650 GH-73991: Add pathlib.Path.copy() #119058 GH-73991: Add pathlib.Path.rmtree() #119060 [WIP] GH-73991: Add os.copy() and friends #119079 GH-73991: Split \"Directory and file operations\" section in shutil docs #119159 GH-73991: Use same signature for shutil._rmtree_[un]safe(). #120517 GH-73991: Add follow_symlinks argument to pathlib.Path.copy() #120519 GH-73991: pathlib ABC tests: add DummyPath.unlink() and rmdir() #120715 GH-73991: Add pathlib.Path.copytree() #120718 GH-73991: Support preserving metadata in pathlib.Path.copy() #120806 GH-73991: Support copying directory symlinks on older Windows #120807 GH-73991: Support preserving metadata in pathlib.Path.copytree() #121438 GH-73991: Fix \"Operation not supported\" on Fedora buildbot. #121444 GH-73991: Add pathlib.Path.move() #122073 GH-73991: Rework pathlib.Path.rmtree() into delete() #122368 GH-73991: Rework pathlib.Path.copytree() into copy() #122369 GH-73991: Disallow copying directory into itself via pathlib.Path.copy() #122924 GH-73991: Prune pathlib.Path.delete() arguments #123158 GH-73991: Add pathlib.Path.copy_into() and move_into() #123314 GH-73991: Make pathlib.Path.delete() private. #123315 GH-73991: Prune pathlib.Path.copy() and copy_into() arguments #123337 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-pathlibtype-featureA feature request or enhancementA feature request or enhancement Projects pathlib issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:20:12.81526"
+  },
+  {
     "id": 1442,
     "url": "https://github.com/python/cpython/issues/122245",
     "title": "Move detection of writes and shadowing of __debug__ from compiler to symtable. · Issue #122245 · python/cpython · GitHub",
@@ -9693,26 +9728,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1443,
-    "url": "https://github.com/python/cpython/issues/73991"
-  },
-  {
-    "id": 1444,
-    "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_free_class"
-  },
-  {
-    "id": 1445,
-    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.utcnow"
-  },
-  {
-    "id": 1446,
-    "url": "https://docs.python.org/3/library/functools.html#functools.partial"
-  },
-  {
-    "id": 1447,
-    "url": "https://docs.python.org/3/library/sys.html#sys._jit.is_enabled"
   },
   {
     "id": 1448,
@@ -233260,10 +233275,206 @@ window.searchData = [
     "id": 303957,
     "url": "https://github.com/python/cpython/pull/122322",
     "parentUrl": "https://github.com/python/cpython/issues/122245"
+  },
+  {
+    "id": 303959,
+    "url": "https://github.com/orgs/python/projects/41",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303960,
+    "url": "https://github.com/python/cpython/issues/73991#issue-1198970031",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303962,
+    "url": "https://github.com/python/cpython/pull/119058",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303963,
+    "url": "https://github.com/python/cpython/pull/119079",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303964,
+    "url": "https://github.com/python/cpython/pull/120718",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303966,
+    "url": "https://github.com/python/cpython/pull/119159",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303967,
+    "url": "https://bugs.python.org/issue29805",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303968,
+    "url": "https://github.com/python/cpython/pull/121438",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303970,
+    "url": "https://github.com/python/cpython/pull/122924",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303972,
+    "url": "https://github.com/python/cpython/pull/123314",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303973,
+    "url": "https://github.com/python/cpython/pull/122368",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303974,
+    "url": "https://github.com/python/cpython/pull/122369",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303976,
+    "url": "https://github.com/python/cpython/pull/123315",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303977,
+    "url": "https://github.com/python/cpython/pull/123337",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303978,
+    "url": "https://github.com/python/cpython/pull/123158",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303979,
+    "url": "https://github.com/python/cpython/pull/122073",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303981,
+    "url": "https://github.com/python/cpython/pull/119060",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303982,
+    "url": "https://github.com/python/cpython/issues/73991#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303983,
+    "url": "https://github.com/python/cpython/pull/120807",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303984,
+    "url": "https://github.com/python/cpython/pull/120806",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303987,
+    "url": "https://github.com/python/cpython/pull/30650",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303989,
+    "url": "https://github.com/python/cpython/issues/73991#top",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303992,
+    "url": "https://github.com/python/cpython/pull/120519",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303995,
+    "url": "https://github.com/python/cpython/pull/120517",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303996,
+    "url": "https://github.com/python/cpython/pull/120715",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "id": 303997,
+    "url": "https://github.com/python/cpython/pull/121444",
+    "parentUrl": "https://github.com/python/cpython/issues/73991"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._jit.is_enabled"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._jit.is_enabled"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#functools.partial"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#functools.partial"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "datetime — Basic date and time types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/datetime.html#datetime.datetime.utcnow"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/datetime-inheritance.svg",
+    "alt": "timedelta, tzinfo, time, and date inherit from object; timezone inherits from tzinfo; and datetime inherits from date.",
+    "pageTitle": "datetime — Basic date and time types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/datetime.html#datetime.datetime.utcnow"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "datetime — Basic date and time types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/datetime.html#datetime.datetime.utcnow"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "symtable — Access to the compiler’s symbol tables — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_free_class"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "symtable — Access to the compiler’s symbol tables — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_free_class"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/101762754?v\u003d4\u0026size\u003d80",
+    "alt": "@LaurentMazuel",
+    "pageTitle": "Support moving across filesystems in pathlib.Path, as shutil.move() does · Issue #73991 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/73991"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/101762754?v\u003d4\u0026size\u003d48",
+    "alt": "@LaurentMazuel",
+    "pageTitle": "Support moving across filesystems in pathlib.Path, as shutil.move() does · Issue #73991 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/73991"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d64\u0026u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4",
     "alt": "iritkatriel",
