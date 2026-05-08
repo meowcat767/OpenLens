@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1650,
+    "url": "https://github.com/python/cpython/issues/119793",
+    "title": "Add a \"strict\" option for map() · Issue #119793 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add a \"strict\" option for map() #119793 New issue Copy link New issue Copy link Closed Closed Add a \"strict\" option for map()#119793 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description rhettinger opened on May 30, 2024 Issue body actions These two examples silently truncate the unmatched inputs: \u003e\u003e\u003e list(map(pow, [1, 2, 3], [2, 2, 2, 2]))\n[1, 4, 9]\n\u003e\u003e\u003e list(map(pow, [1, 2, 3, 4, 5], [2, 2, 2, 2]))\n[1, 4, 9, 16] The current workaround is: starmap(pow, zip(vec1, vec2, strict\u003dTrue))\n Ideally, map() should support this directly. The reasoning is the same reasoning that motivated the strict option for zip() Linked PRs gh-119793: Add optional length-checking to map() #120471 gh-119793: Prefer map(..., strict\u003dTrue) over starmap/zip in examples #126407 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:28:19.585462"
+  },
+  {
+    "id": 1649,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html",
+    "title": "RFC 7903 - Windows Image Media Types",
+    "content": "Light Dark Auto Independent Submission                                        S. Leonard\nRequest for Comments: 7903                                 Penango, Inc.\nCategory: Informational                                   September 2016\nISSN: 2070-1721\n\n\n                       Windows Image Media Types\n\nAbstract\n\n   This document registers media types for certain image formats\n   promulgated in Microsoft Windows, namely image/wmf, image/x-wmf,\n   image/emf, image/x-emf, and image/bmp for use with Windows Metafile,\n   Enhanced Metafile, and Windows Bitmap formats.  Originally designed\n   for Microsoft Windows 2.0 and 3.0, these image files are intended to\n   be portable between applications and devices, and they may contain\n   both vector and raster graphics.\n\nStatus of This Memo\n\n   This document is not an Internet Standards Track specification; it is\n   published for informational purposes.\n\n   This is a contribution to the RFC Series, independently of any other\n   RFC stream.  The RFC Editor has chosen to publish this document at\n   its discretion and makes no statement about its value for\n   implementation or deployment.  Documents approved for publication by\n   the RFC Editor are not a candidate for any level of Internet\n   Standard; see Section 2 of RFC 7841.\n\n   Information about the current status of this document, any errata,\n   and how to provide feedback on it may be obtained at\n   http://www.rfc-editor.org/info/rfc7903.\n\nCopyright Notice\n\n   Copyright (c) 2016 IETF Trust and the persons identified as the\n   document authors.  All rights reserved.\n\n   This document is subject to BCP 78 and the IETF Trust\u0027s Legal\n   Provisions Relating to IETF Documents\n   (http://trustee.ietf.org/license-info) in effect on the date of\n   publication of this document.  Please review these documents\n   carefully, as they describe your rights and restrictions with respect\n   to this document.\n\n\n\n\n\n\nLeonard                       Informational                     [Page 1] \nRFC 7903                Windows Image Media Types         September 2016\n\n\nTable of Contents\n\n   1. Introduction ....................................................2\n      1.1. Windows Metafiles ..........................................2\n      1.2. Windows Bitmaps ............................................3\n   2. Windows Metafile Media Type Registration Application ............4\n   3. Enhanced Metafile Media Type Registration Application ...........6\n   4. Windows Bitmap Media Type Registration Application ..............9\n   5. IANA Considerations ............................................11\n   6. Security Considerations ........................................11\n   7. References .....................................................11\n      7.1. Normative References ......................................11\n      7.2. Informative References ....................................11\n   Author\u0027s Address ..................................................12\n\n1.  Introduction\n\n1.1.  Windows Metafiles\n\n   Long before the invention of Scalable Vector Graphics, Microsoft\n   Corporation recognized the value of recording images in a format that\n   its applications and operating systems could easily render\n   irrespective of the output device.  With the release of Windows 3.0,\n   Microsoft released its Windows Metafile (WMF) format, which can\n   contain vector and raster graphics in one package.  As a binary\n   format that needed to work on 16-bit machines, WMF is comprised of a\n   sequence of record structures.  Each record contains drawing\n   commands, object definitions, and configuration settings.  When a\n   metafile is processed, the image can be rendered on a display, output\n   to a printer or plotter, stored in memory, or saved to some\n   persistent storage.  Reflecting the relationship to the Windows\n   Graphics Device Interface (GDI) API, WMF data is \"played\" to a\n   playback device context in the same manner that PostScript content is\n   treated as an executable program that results in the output of the\n   original document.\n\n   As Microsoft\u0027s first 32-bit operating system, Windows NT 3.1\n   introduced an overhaul to the Windows API (\"Win32\") and the in-memory\n   formats upon which those APIs relied.  The Enhanced Metafile (EMF)\n   format was created at this time, using 32-bit values instead of WMF\u0027s\n   16-bit values.  In Windows XP, Microsoft extended EMF with \"EMF+\",\n   adding support for Windows GDI+.\n\n   Many implementations of WMF and EMF were created because of Windows\u0027\n   commercial success in the 1990s.  A large body of free and\n   commercially available clip art and other artwork exists in this\n   format.  Furthermore, WMF content appears non-normatively in certain\n\n\n\n\nLeonard                       Informational                     [Page 2] \nRFC 7903                Windows Image Media Types         September 2016\n\n\n   standards (e.g., [OOXML]); the usage is common enough that an\n   implementer would almost certainly need to support it for bas",
+    "scrapedAt": "2026-05-09 01:28:17.282839"
+  },
+  {
+    "id": 1648,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-futures-start-method",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:28:15.749021"
+  },
+  {
+    "id": 1647,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_InteractiveFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-09 01:28:14.447841"
+  },
+  {
+    "id": 1646,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.interactive",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:28:13.198911"
+  },
+  {
     "id": 1645,
     "url": "https://github.com/python/cpython/issues/132576",
     "title": "gh-121468: Support async breakpoint in pdb by gaogaotiantian · Pull Request #132576 · python/cpython · GitHub",
@@ -11093,26 +11128,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1646,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.interactive"
-  },
-  {
-    "id": 1647,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_InteractiveFlag"
-  },
-  {
-    "id": 1648,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-futures-start-method"
-  },
-  {
-    "id": 1649,
-    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html"
-  },
-  {
-    "id": 1650,
-    "url": "https://github.com/python/cpython/issues/119793"
   },
   {
     "id": 1651,
@@ -242710,10 +242725,338 @@ window.searchData = [
     "id": 358537,
     "url": "https://github.com/python/cpython/pull/132576#discussion_r2054410615",
     "parentUrl": "https://github.com/python/cpython/issues/132576"
+  },
+  {
+    "id": 360269,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#ref-PWNIES07",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360270,
+    "url": "http://pwnies.com/archive/2007/winners/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360271,
+    "url": "https://datatracker.ietf.org/doc/rfc7903/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360272,
+    "url": "http://www.penango.com/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360273,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360274,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360275,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#section-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360276,
+    "url": "http://www.rfc-editor.org/info/rfc7903",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360277,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#ref-BMPSTOR",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360278,
+    "url": "https://technet.microsoft.com/library/security/ms06-001",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360279,
+    "url": "https://www.rfc-editor.org/rfc/pdfrfc/rfc7903.txt.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360280,
+    "url": "https://datatracker.ietf.org/stream/ise/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360281,
+    "url": "https://www.rfc-editor.org/rfc/rfc7903.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360282,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360284,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#section-7.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360285,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#ref-MS-OSP",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360286,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#section-7.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360287,
+    "url": "https://datatracker.ietf.org/person/dev+ietf@seantek.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360288,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#section-1.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360289,
+    "url": "https://datatracker.ietf.org/doc/html/draft-seantek-windows-image-02",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360291,
+    "url": "https://datatracker.ietf.org/doc/html/draft-seantek-windows-image-01",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360292,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#section-2.1.1.7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360293,
+    "url": "https://datatracker.ietf.org/doc/html/draft-seantek-windows-image-03",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360294,
+    "url": "https://datatracker.ietf.org/doc/html/draft-seantek-windows-image-00",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360295,
+    "url": "https://datatracker.ietf.org/doc/draft-seantek-windows-image/03/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360296,
+    "url": "https://www.rfc-editor.org/rfc/rfc7903.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360298,
+    "url": "https://msdn.microsoft.com/en-us/openspecifications/dn646765",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360299,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#ref-OOXML",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360301,
+    "url": "https://datatracker.ietf.org/doc/rfc2026/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360302,
+    "url": "http://msdn.microsoft.com/library/cc250370",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360304,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#section-1.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360305,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#page-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360306,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#page-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360307,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#page-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360308,
+    "url": "http://msdn.microsoft.com/library/cc230724",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360309,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#page-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360310,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#page-11",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360311,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#page-12",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360312,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#ref-MS-EMF",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360313,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#page-9",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360314,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#ref-MICE",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360315,
+    "url": "http://www.iana.org/assignments/character-sets",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360316,
+    "url": "http://msdn.microsoft.com/library/dd183391",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360317,
+    "url": "https://datatracker.ietf.org/doc/rfc7903/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360318,
+    "url": "http://www.ecma-international.org/publications/standards/Ecma-376.htm",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360319,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360320,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360321,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#ref-MS-WMF",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360322,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360323,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7903.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360324,
+    "url": "http://msdn.microsoft.com/library/cc230514",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc7903.html"
+  },
+  {
+    "id": 360326,
+    "url": "https://github.com/python/cpython/issues/119793#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/119793"
+  },
+  {
+    "id": 360330,
+    "url": "https://github.com/python/cpython/issues/119793#issue-2326172729",
+    "parentUrl": "https://github.com/python/cpython/issues/119793"
+  },
+  {
+    "id": 360331,
+    "url": "https://github.com/python/cpython/pull/126407",
+    "parentUrl": "https://github.com/python/cpython/issues/119793"
+  },
+  {
+    "id": 360334,
+    "url": "https://github.com/python/cpython/pull/120471",
+    "parentUrl": "https://github.com/python/cpython/issues/119793"
+  },
+  {
+    "id": 360336,
+    "url": "https://github.com/python/cpython/issues/119793#top",
+    "parentUrl": "https://github.com/python/cpython/issues/119793"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?u\u003de11cfc20d0f21ef549393dfe80ea91c42fbc9928\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@rhettinger",
+    "pageTitle": "Add a \"strict\" option for map() · Issue #119793 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119793"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?u\u003de11cfc20d0f21ef549393dfe80ea91c42fbc9928\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@rhettinger",
+    "pageTitle": "Add a \"strict\" option for map() · Issue #119793 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119793"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-futures-start-method"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-futures-start-method"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_InteractiveFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_InteractiveFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.interactive"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.interactive"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
     "alt": "@gaogaotiantian",
