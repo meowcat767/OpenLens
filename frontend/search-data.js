@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1599,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniquelyReferenced",
+    "title": "Object Protocol — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Abstract Objects Layer » Object Protocol | Theme Auto Light Dark | Object Protocol¶ PyObject *Py_GetConstant(unsigned int constant_id)¶ Part of the Stable ABI since version 3.13. Get a strong reference to a constant. Set an exception and return NULL if constant_id is invalid. constant_id must be one of these constant identifiers: Constant Identifier Value Returned object Py_CONSTANT_NONE¶ 0 None Py_CONSTANT_FALSE¶ 1 False Py_CONSTANT_TRUE¶ 2 True Py_CONSTANT_ELLIPSIS¶ 3 Ellipsis Py_CONSTANT_NOT_IMPLEMENTED¶ 4 NotImplemented Py_CONSTANT_ZERO¶ 5 0 Py_CONSTANT_ONE¶ 6 1 Py_CONSTANT_EMPTY_STR¶ 7 \u0027\u0027 Py_CONSTANT_EMPTY_BYTES¶ 8 b\u0027\u0027 Py_CONSTANT_EMPTY_TUPLE¶ 9 () Numeric values are only given for projects which cannot use the constant identifiers. Added in version 3.13. CPython implementation detail: In CPython, all of these constants are immortal. PyObject *Py_GetConstantBorrowed(unsigned int constant_id)¶ Part of the Stable ABI since version 3.13. Similar to Py_GetConstant(), but return a borrowed reference. This function is primarily intended for backwards compatibility: using Py_GetConstant() is recommended for new code. The reference is borrowed from the interpreter, and is valid until the interpreter finalization. Added in version 3.13. PyObject *Py_NotImplemented¶ The NotImplemented singleton, used to signal that an operation is not implemented for the given type combination. Py_RETURN_NOTIMPLEMENTED¶ Properly handle returning Py_NotImplemented from within a C function (that is, create a new strong reference to NotImplemented and return it). Py_PRINT_RAW¶ Flag to be used with multiple functions that print the object (like PyObject_Print() and PyFile_WriteObject()). If passed, these functions use the str() of the object instead of the repr(). int PyObject_Print(PyObject *o, FILE *fp, int flags)¶ Print an object o, on file fp. Returns -1 on error. The flags argument is used to enable certain printing options. The only option currently supported is Py_PRINT_RAW; if given, the str() of the object is written instead of the repr(). int PyObject_HasAttrWithError(PyObject *o, PyObject *attr_name)¶ Part of the Stable ABI since version 3.13. Returns 1 if o has the attribute attr_name, and 0 otherwise. This is equivalent to the Python expression hasattr(o, attr_name). On failure, return -1. Added in version 3.13. int PyObject_HasAttrStringWithError(PyObject *o, const char *attr_name)¶ Part of the Stable ABI since version 3.13. This is the same as PyObject_HasAttrWithError(), but attr_name is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. Added in version 3.13. int PyObject_HasAttr(PyObject *o, PyObject *attr_name)¶ Part of the Stable ABI. Returns 1 if o has the attribute attr_name, and 0 otherwise. This function always succeeds. Note Exceptions that occur when this calls __getattr__() and __getattribute__() methods aren’t propagated, but instead given to sys.unraisablehook(). For proper error handling, use PyObject_HasAttrWithError(), PyObject_GetOptionalAttr() or PyObject_GetAttr() instead. int PyObject_HasAttrString(PyObject *o, const char *attr_name)¶ Part of the Stable ABI. This is the same as PyObject_HasAttr(), but attr_name is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. Note Exceptions that occur when this calls __getattr__() and __getattribute__() methods or while creating the temporary str object are silently ignored. For proper error handling, use PyObject_HasAttrStringWithError(), PyObject_GetOptionalAttrString() or PyObject_GetAttrString() instead. PyObject *PyObject_GetAttr(PyObject *o, PyObject *attr_name)¶ Return value: New reference. Part of the Stable ABI. Retrieve an attribute named attr_name from object o. Returns the attribute value on success, or NULL on failure. This is the equivalent of the Python expression o.attr_name. If the missing attribute should not be treated as a failure, you can use PyObject_GetOptionalAttr() instead. PyObject *PyObject_GetAttrString(PyObject *o, const char *attr_name)¶ Return value: New reference. Part of the Stable ABI. This is the same as PyObject_GetAttr(), but attr_name is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. If the missing attribute should not be treated as a failure, you can use PyObject_GetOptionalAttrString() instead. int PyObject_GetOptionalAttr(PyObject *obj, PyObject *attr_name, PyObject **result);¶ Part of the Stable ABI since version 3.13. Variant of PyObject_GetAttr() which doesn’t raise AttributeError if the attribute is not found. If the attribute is found, return 1 and set *result to a new strong reference to the attribute. If the attribute is not found, return 0 and set *result to NULL; the AttributeError is silenced. If an error other than AttributeError is raised, return -1 and set *result to NULL. Added in version 3.13. int PyObje",
+    "scrapedAt": "2026-05-09 01:26:12.082877"
+  },
+  {
+    "id": 1598,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task",
+    "title": "Coroutines and tasks — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Coroutines and tasks | Theme Auto Light Dark | Coroutines and tasks¶ This section outlines high-level asyncio APIs to work with coroutines and Tasks. Coroutines¶ Source code: Lib/asyncio/coroutines.py Coroutines declared with the async/await syntax is the preferred way of writing asyncio applications. For example, the following snippet of code prints “hello”, waits 1 second, and then prints “world”: \u003e\u003e\u003e import asyncio\n\n\u003e\u003e\u003e async def main():\n...     print(\u0027hello\u0027)\n...     await asyncio.sleep(1)\n...     print(\u0027world\u0027)\n\n\u003e\u003e\u003e asyncio.run(main())\nhello\nworld\n Note that simply calling a coroutine will not schedule it to be executed: \u003e\u003e\u003e main()\n\u003ccoroutine object main at 0x1053bb7c8\u003e\n To actually run a coroutine, asyncio provides the following mechanisms: The asyncio.run() function to run the top-level entry point “main()” function (see the above example.) Awaiting on a coroutine. The following snippet of code will print “hello” after waiting for 1 second, and then print “world” after waiting for another 2 seconds: import asyncio\nimport time\n\nasync def say_after(delay, what):\n    await asyncio.sleep(delay)\n    print(what)\n\nasync def main():\n    print(f\"started at {time.strftime(\u0027%X\u0027)}\")\n\n    await say_after(1, \u0027hello\u0027)\n    await say_after(2, \u0027world\u0027)\n\n    print(f\"finished at {time.strftime(\u0027%X\u0027)}\")\n\nasyncio.run(main())\n Expected output: started at 17:13:52\nhello\nworld\nfinished at 17:13:55\n The asyncio.create_task() function to run coroutines concurrently as asyncio Tasks. Let’s modify the above example and run two say_after coroutines concurrently: async def main():\n    task1 \u003d asyncio.create_task(\n        say_after(1, \u0027hello\u0027))\n\n    task2 \u003d asyncio.create_task(\n        say_after(2, \u0027world\u0027))\n\n    print(f\"started at {time.strftime(\u0027%X\u0027)}\")\n\n    # Wait until both tasks are completed (should take\n    # around 2 seconds.)\n    await task1\n    await task2\n\n    print(f\"finished at {time.strftime(\u0027%X\u0027)}\")\n Note that expected output now shows that the snippet runs 1 second faster than before: started at 17:14:32\nhello\nworld\nfinished at 17:14:34\n The asyncio.TaskGroup class provides a more modern alternative to create_task(). Using this API, the last example becomes: async def main():\n    async with asyncio.TaskGroup() as tg:\n        task1 \u003d tg.create_task(\n            say_after(1, \u0027hello\u0027))\n\n        task2 \u003d tg.create_task(\n            say_after(2, \u0027world\u0027))\n\n        print(f\"started at {time.strftime(\u0027%X\u0027)}\")\n\n    # The await is implicit when the context manager exits.\n\n    print(f\"finished at {time.strftime(\u0027%X\u0027)}\")\n The timing and output should be the same as for the previous version. Added in version 3.11: asyncio.TaskGroup. Awaitables¶ We say that an object is an awaitable object if it can be used in an await expression. Many asyncio APIs are designed to accept awaitables. There are three main types of awaitable objects: coroutines, Tasks, and Futures. Coroutines Python coroutines are awaitables and therefore can be awaited from other coroutines: import asyncio\n\nasync def nested():\n    return 42\n\nasync def main():\n    # Nothing happens if we just call \"nested()\".\n    # A coroutine object is created but not awaited,\n    # so it *won\u0027t run at all*.\n    nested()  # will raise a \"RuntimeWarning\".\n\n    # Let\u0027s do it differently now and await it:\n    print(await nested())  # will print \"42\".\n\nasyncio.run(main())\n Important In this documentation the term “coroutine” can be used for two closely related concepts: a coroutine function: an async def function; a coroutine object: an object returned by calling a coroutine function. Tasks Tasks are used to schedule coroutines concurrently. When a coroutine is wrapped into a Task with functions like asyncio.create_task() the coroutine is automatically scheduled to run soon: import asyncio\n\nasync def nested():\n    return 42\n\nasync def main():\n    # Schedule nested() to run soon concurrently\n    # with \"main()\".\n    task \u003d asyncio.create_task(nested())\n\n    # \"task\" can now be used to cancel \"nested()\", or\n    # can simply be awaited to wait until it is complete:\n    await task\n\nasyncio.run(main())\n Futures A Future is a special low-level awaitable object that represents an eventual result of an asynchronous operation. When a Future object is awaited it means that the coroutine will wait until the Future is resolved in some other place. Future objects in asyncio are needed to allow callback-based code to be used with async/await. Normally there is no need to create Future objects at the application level code. Future objects, sometimes exposed by libraries and some asyncio APIs, can be awaited: async def main():\n    await function_that_returns_a_future_object()\n\n    # this is also valid:\n    await asyncio.gather(\n        function_that_returns_a_future_object(),\n        some_python_coroutine()\n    )\n A good e",
+    "scrapedAt": "2026-05-09 01:26:10.843623"
+  },
+  {
+    "id": 1597,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#sysconfig",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:26:09.543234"
+  },
+  {
+    "id": 1596,
+    "url": "https://github.com/python/cpython/issues/119349",
+    "title": "Add a ctypes.util function to list loaded shared libraries · Issue #119349 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add a ctypes.util function to list loaded shared libraries #119349 New issue Copy link New issue Copy link Closed Closed Add a ctypes.util function to list loaded shared libraries#119349 Copy link Labels topic-ctypestype-featureA feature request or enhancementA feature request or enhancement Description WardBrian opened on May 21, 2024 Issue body actions Feature or enhancement Proposal: When writing code which loads dynamic libraries, it is often very useful to be able to query which shared libraries are already in use by the current process. There are a few well-known tricks to do this, but they all end up being platform dependent. For example, on Linux, you can use dl_iterate_phdr, and it seems that quite a bit of Python code does. This won’t work on macOS or Windows, which provide other functions for this same functionality. Julia provides this function in the standard library under Libdl.dllist. A Python re-implementation of the same platform-specific code can be found at GitHub - WardBrian/dllist: List DLLs loaded by the current process . This essentially just wraps the platform specific code in an if-else based on the runtime platform import dllist\nprint(dllist.dllist())\n# [\u0027linux-vdso.so.1\u0027, \u0027/lib/x86_64-linux-gnu/libpthread.so.0\u0027, \u0027/lib/x86_64-linux-gnu/libdl.so.2\u0027, ... I would like to take the next step toward adding a similar function to the standard library Has this already been discussed elsewhere? I have already discussed this feature proposal on Discourse Links to previous discussion of this feature: https://discuss.python.org/t/a-ctypes-function-to-list-all-loaded-shared-libraries/36370 Linked PRs gh-119349: Add ctypes.util function to list loaded shared libraries #122946 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels topic-ctypestype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:26:08.251387"
+  },
+  {
+    "id": 1595,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.info",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty, the current directory is assumed: \u003e\u003e\u003e PurePath()\nPurePosixPath(\u0027.\u0027)\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Users/Ximénez\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027//server/share/file\u0027)\nPureWindow",
+    "scrapedAt": "2026-05-09 01:26:05.819218"
+  },
+  {
     "id": 1594,
     "url": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive",
     "title": "2. Using the Python Interpreter — Python 3.14.5rc1 documentation",
@@ -10743,26 +10778,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1595,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.info"
-  },
-  {
-    "id": 1596,
-    "url": "https://github.com/python/cpython/issues/119349"
-  },
-  {
-    "id": 1597,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#sysconfig"
-  },
-  {
-    "id": 1598,
-    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task"
-  },
-  {
-    "id": 1599,
-    "url": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniquelyReferenced"
   },
   {
     "id": 1600,
@@ -240805,10 +240820,116 @@ window.searchData = [
     "id": 347164,
     "url": "https://github.com/python/cpython/blob/main/Doc/tutorial/interpreter.rst?plain\u003d1",
     "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 347373,
+    "url": "https://github.com/WardBrian/dllist",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 347375,
+    "url": "https://github.com/search?q\u003ddl_iterate_phdr+language%3APython\u0026type\u003dcode",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 347376,
+    "url": "https://github.com/python/cpython/issues/119349#issue-2308972413",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 347379,
+    "url": "https://github.com/python/cpython/issues/119349#top",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 347381,
+    "url": "https://github.com/WardBrian",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 347382,
+    "url": "https://github.com/python/cpython/pull/122946",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 347383,
+    "url": "https://github.com/python/cpython/issues/119349#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 347384,
+    "url": "https://discuss.python.org/t/a-ctypes-function-to-list-all-loaded-shared-libraries/36370",
+    "parentUrl": "https://github.com/python/cpython/issues/119349"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Object Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniquelyReferenced"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Object Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniquelyReferenced"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Coroutines and tasks — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Coroutines and tasks — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#sysconfig"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#sysconfig"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/31640292?u\u003d4430b58d702322e2a8bd729e99d8cd90f1428caa\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@WardBrian",
+    "pageTitle": "Add a ctypes.util function to list loaded shared libraries · Issue #119349 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/31640292?u\u003d4430b58d702322e2a8bd729e99d8cd90f1428caa\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@WardBrian",
+    "pageTitle": "Add a ctypes.util function to list loaded shared libraries · Issue #119349 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.info"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.info"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.info"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
