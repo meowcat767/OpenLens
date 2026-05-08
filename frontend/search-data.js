@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1108,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters",
+    "title": "concurrent.interpreters — Multiple interpreters in the same process — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » concurrent.interpreters — Multiple interpreters in the same process | Theme Auto Light Dark | concurrent.interpreters — Multiple interpreters in the same process¶ Added in version 3.14. Source code: Lib/concurrent/interpreters The concurrent.interpreters module constructs higher-level interfaces on top of the lower level _interpreters module. The module is primarily meant to provide a basic API for managing interpreters (AKA “subinterpreters”) and running things in them. Running mostly involves switching to an interpreter (in the current thread) and calling a function in that execution context. For concurrency, interpreters themselves (and this module) don’t provide much more than isolation, which on its own isn’t useful. Actual concurrency is available separately through threads See below See also InterpreterPoolExecutor Combines threads with interpreters in a familiar interface. Isolating Extension Modules How to update an extension module to support multiple interpreters. PEP 554 PEP 734 PEP 684 Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Key details¶ Before we dive in further, there are a small number of details to keep in mind about using multiple interpreters: isolated, by default no implicit threads not all PyPI packages support use in multiple interpreters yet Introduction¶ An “interpreter” is effectively the execution context of the Python runtime. It contains all of the state the runtime needs to execute a program. This includes things like the import state and builtins. (Each thread, even if there’s only the main thread, has some extra runtime state, in addition to the current interpreter, related to the current exception and the bytecode eval loop.) The concept and functionality of the interpreter have been a part of Python since version 2.2, but the feature was only available through the C-API and not well known, and the isolation was relatively incomplete until version 3.12. Multiple Interpreters and Isolation¶ A Python implementation may support using multiple interpreters in the same process. CPython has this support. Each interpreter is effectively isolated from the others (with a limited number of carefully managed process-global exceptions to the rule). That isolation is primarily useful as a strong separation between distinct logical components of a program, where you want to have careful control of how those components interact. Note Interpreters in the same process can technically never be strictly isolated from one another since there are few restrictions on memory access within the same process. The Python runtime makes a best effort at isolation but extension modules may easily violate that. Therefore, do not use multiple interpreters in security-sensitive situations, where they shouldn’t have access to each other’s data. Running in an Interpreter¶ Running in a different interpreter involves switching to it in the current thread and then calling some function. The runtime will execute the function using the current interpreter’s state. The concurrent.interpreters module provides a basic API for creating and managing interpreters, as well as the switch-and-call operation. No other threads are automatically started for the operation. There is a helper for that though. There is another dedicated helper for calling the builtin exec() in an interpreter. When exec() (or eval()) are called in an interpreter, they run using the interpreter’s __main__ module as the “globals” namespace. The same is true for functions that aren’t associated with any module. This is the same as how scripts invoked from the command-line run in the __main__ module. Concurrency and Parallelism¶ As noted earlier, interpreters do not provide any concurrency on their own. They strictly represent the isolated execution context the runtime will use in the current thread. That isolation makes them similar to processes, but they still enjoy in-process efficiency, like threads. All that said, interpreters do naturally support certain flavors of concurrency. There’s a powerful side effect of that isolation. It enables a different approach to concurrency than you can take with async or threads. It’s a similar concurrency model to CSP or the actor model, a model which is relatively easy to reason about. You can take advantage of that concurrency model in a single thread, switching back and forth between interpreters, Stackless-style. However, this model is more useful when you combine interpreters with multiple threads. This mostly involves starting a new thread, where you switch to another interpreter and run what you want there. Each actual thread in Python, even if you’re only running in the main thread, has its own current execution context. Multiple threads can use the same interpreter or different on",
+    "scrapedAt": "2026-05-09 01:06:23.110341"
+  },
+  {
+    "id": 1106,
+    "url": "https://github.com/python/cpython/issues/133350",
+    "title": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member gaogaotiantian commented May 3, 2025 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. Issue: Auto-indent for pdb\u0027s multi-line mode #133349 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👍 2 tanloong and shengbo-ma reacted with thumbs up emoji All reactions 👍 2 reactions Enable auto-indent for pdb\u0027s multi-line mode 71597b3 bedevere-app Bot mentioned this pull request May 3, 2025 Auto-indent for pdb\u0027s multi-line mode #133349 Closed bedevere-app Bot added the awaiting core review label May 3, 2025 gaogaotiantian and others added 2 commits May 3, 2025 12:03 Add whatsnew entry 5c82a7f 📜🤖 Added by blurb_it. d162e59 gaogaotiantian requested a review from iritkatriel May 3, 2025 16:04 Copy link Copy Markdown Member Author gaogaotiantian commented May 3, 2025 Sorry for trying to squeeze this in 3.14 before beta freeze :) I think this should be pretty straightforward to review and it could help user experiences. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member Author gaogaotiantian commented May 5, 2025 Hey @iritkatriel , do you think we still have a chance to merge this before beta freeze? All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. iritkatriel reviewed May 5, 2025 View reviewed changes Comment thread Lib/pdb.py last_line \u003d last_line.rstrip(\u0027\\r\\n\u0027) indent \u003d len(last_line) - len(last_line.lstrip()) if last_line.endswith(\":\"): indent +\u003d 4 Copy link Copy Markdown Member iritkatriel May 5, 2025 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Is indent always 4? Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Member Author gaogaotiantian May 5, 2025 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment We kind of dictated there, it is consistent with how we auto-fill the space when we hit \u003ctab\u003e. However, we can be smart and search for the history for the last indent. I have the time to do it and it should not be rocket science. Do you want me to do that? Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Member iritkatriel May 5, 2025 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Up to you. This is fine. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Member Author gaogaotiantian May 5, 2025 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Let\u0027s land this today and if people are complaining, we can treat that as a bug and fix it later :) Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions iritkatriel approved these changes May 5, 2025 View reviewed changes bedevere-app Bot added awaiting merge and removed awaiting core review labels May 5, 2025 Hide details View details gaogaotiantian merged commit 0eeaa0e into python:main May 5, 2025 43 checks passed Uh oh! There was an error while loading. Please reload this page. gaogaotiantian deleted the pdb-auto-indent branch May 5, 2025 17:48 bedevere-app Bot removed the awaiting merge label May 5, 2025 nascheme pushed a commit to nascheme/cpython that referenced this pull request May 5, 2025 pythongh-133349: Enable auto-indent for pdb\u0027s multi-line mode (python… … 9aa8261 …#133350) Copy link Copy Markdown Member vstinner commented May 5, 2025 test_pdb.test_multiline_auto_indent() fails on FreeBSD: FAIL: test_multiline_auto_indent (test.test_pdb.PdbTestRead",
+    "scrapedAt": "2026-05-09 01:06:21.850483"
+  },
+  {
+    "id": 1104,
+    "url": "https://docs.python.org/3/library/sys.html#sys.base_exec_prefix",
+    "title": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but refer",
+    "scrapedAt": "2026-05-09 01:06:18.591773"
+  },
+  {
+    "id": 1103,
+    "url": "https://github.com/python/cpython/issues/133355",
+    "title": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member gaogaotiantian commented May 3, 2025 • edited by github-actions Bot Loading Uh oh! There was an error while loading. Please reload this page. With #131507, we have some convenient interface to colorize a piece of code. We are so close to beta freeze so I\u0027m not trying to achieve some full colorization on pdb. This PR introduces the most essential and simple piece - static source code. Basically it only colorizes source code display like ll, l, source, where and the initial stack entry display. I think the ROI is great here. To make it safe for debuggers based on pdb, this uses the same mechanism as backend - default to False, and only enabled when pdb is explicitly brought up by breakpoint() or python -m pdb. The debuggers that inherit pdb won\u0027t be affected. The double protection from if self.colorize is intentional - we don\u0027t know what could happen in the future so I used it for both _colorize_code and in the functions that call it. Issue: Colorize pdb #113081 📚 Documentation preview 📚: https://cpython-previews--133355.org.readthedocs.build/ Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Highlight source code in pdb 32907da bedevere-app Bot mentioned this pull request May 3, 2025 Colorize pdb #113081 Open bedevere-app Bot added the awaiting core review label May 3, 2025 📜🤖 Added by blurb_it. 9b8c2b0 tomasr8 reviewed May 3, 2025 View reviewed changes Comment thread Lib/pdb.py Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. gaogaotiantian added 2 commits May 3, 2025 14:56 Limit split 9da9d33 Add whatsnew entry 4a9aeee gaogaotiantian requested review from ambv and iritkatriel May 3, 2025 18:58 Force nocolor test 1a9d20e Copy link Copy Markdown Member Author gaogaotiantian commented May 5, 2025 Hi @ambv , I know it\u0027s kind of last minute feature, but I do think it is very cool to syntax-highlight the code in pdb. You are super familiar with the colorization part and I\u0027m just using the existing interface (I hope it\u0027s correct). Could you take a look at it? Thanks! All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor ambv commented May 5, 2025 Excellent, I was thinking that you might want to do that. Looks great! All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Hide details View details ambv merged commit ff4959b into python:main May 5, 2025 39 checks passed Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot removed the awaiting core review label May 5, 2025 gaogaotiantian deleted the colorize-pdb-list branch May 5, 2025 17:49 Pranjal095 pushed a commit to Pranjal095/cpython that referenced this pull request Jul 12, 2025 pythongh-113081: Highlight source code in pdb (python#133355) 7c19d65 gpshead mentioned this pull request Dec 22, 2025 Commit ff4959b for pdb colorization GH-113081 broke some pdb backtraces #142964 Open This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters. Learn more about bidirectional Unicode characters Show hidden characters Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Reviewers tomasr8 tomasr8 left review comments iritkatriel Awaiting requested review from iritkatriel ambv Awaiting requested review from ambv Assignees No one assigned Labels None yet Projects None yet Milestone No milestone Development Successfully merging this pull request may close these issues. Uh oh! There was an error while loading. Please reload this page. 3 participants Add this suggestion to a batch that can be applied as a single commit.This suggestion is invalid because no changes were made to the code.Suggestions cannot be applied while the pull request is closed.Suggestions cannot be applied while viewing a subset of changes.Only one suggestion per line can be applied in a batch.Add this suggestion to a batch that can be applied as a single commit.Applying suggestions on deleted lines is not supported.You must change the existing code in this line in order to create a valid suggestion.Outdated suggestions cannot be applied.This suggestion has been applied or marked resolved.Suggestions cannot be applied from pending reviews.Suggestions ca",
+    "scrapedAt": "2026-05-09 01:06:17.372335"
+  },
+  {
+    "id": 1102,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#asyncio",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:06:14.125581"
+  },
+  {
     "id": 1101,
     "url": "https://docs.python.org/3/library/optparse.html#module-optparse",
     "title": "optparse — Parser for command line options — Python 3.14.5rc1 documentation",
@@ -7383,26 +7418,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1102,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#asyncio"
-  },
-  {
-    "id": 1103,
-    "url": "https://github.com/python/cpython/issues/133355"
-  },
-  {
-    "id": 1104,
-    "url": "https://docs.python.org/3/library/sys.html#sys.base_exec_prefix"
-  },
-  {
-    "id": 1106,
-    "url": "https://github.com/python/cpython/issues/133350"
-  },
-  {
-    "id": 1108,
-    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
   },
   {
     "id": 1109,
@@ -192515,10 +192530,950 @@ window.searchData = [
     "id": 192817,
     "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser.get_version",
     "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 194053,
+    "url": "https://github.com/python/cpython/issues/142964",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194057,
+    "url": "https://github.com/python/cpython/pull/133355",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194058,
+    "url": "https://github.com/python/cpython/pull/133355/commits/32907da0d94304738f2e1a9d7d04f2c12df53997",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194060,
+    "url": "https://github.com/python/cpython/pull/133355/commits/1a9d20e5655a693d71dbc5d8f512d40ac0b99466",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194062,
+    "url": "https://github.com/python/cpython/pull/133355/commits/9b8c2b0e6a6fc79e0dc804cd0cafa1dd2fd83055",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194063,
+    "url": "https://github.com/python/cpython/pull/133355#issue-3037557838",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194064,
+    "url": "https://github.com/python/cpython/pull/133355#event-17514923255",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194066,
+    "url": "https://github.com/python/cpython/pull/133355/commits/9da9d33122d9e5a2edd151b56c53d955ba63eaf4",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194067,
+    "url": "https://github.com/python/cpython/pull/133355#issuecomment-2849874001",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194069,
+    "url": "https://github.com/python/cpython/pull/133355#commits-pushed-9da9d33",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194070,
+    "url": "https://github.com/python/cpython/pull/133355#event-17514923833",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194073,
+    "url": "https://cpython-previews--133355.org.readthedocs.build/",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194076,
+    "url": "https://github.com/python/cpython/pull/133355/commits/4a9aeeee2ea0f8e1d0404c046a91354e4bad3794",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194078,
+    "url": "https://github.com/python/cpython/pull/133355#ref-issue-2040800053",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194079,
+    "url": "https://github.com/python/cpython/pull/133355#event-17523662222",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194080,
+    "url": "https://github.com/python/cpython/pull/133355#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194081,
+    "url": "https://github.com/python/cpython/commit/ff4959b6b0cf6da5d2f59260a9103b31c812b0ba",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194082,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F133355",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194083,
+    "url": "https://github.com/python/cpython/pull/133355/files/9b8c2b0e6a6fc79e0dc804cd0cafa1dd2fd83055#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194084,
+    "url": "https://github.com/python/cpython/pull/133355/files/9b8c2b0e6a6fc79e0dc804cd0cafa1dd2fd83055",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194086,
+    "url": "https://github.com/python/cpython/pull/133355#issuecomment-2850183497",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194087,
+    "url": "https://github.com/Pranjal095/cpython/commit/7c19d65883307fc67d74f021cf2f65fb5381561d",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194088,
+    "url": "https://github.com/python/cpython/pull/133355#event-17508466851",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194089,
+    "url": "https://github.com/python/cpython/pull/133355#pullrequestreview-2813286661",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194090,
+    "url": "https://github.com/python/cpython/pull/133355#ref-commit-7c19d65",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194092,
+    "url": "https://github.com/Pranjal095",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194094,
+    "url": "https://github.com/python/cpython/pull/133355#ref-issue-3745558822",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194095,
+    "url": "https://github.com/python/cpython/pull/133355#event-17508485818",
+    "parentUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "id": 194436,
+    "url": "https://github.com/python/cpython/pull/133350#commits-pushed-5c82a7f",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194437,
+    "url": "https://github.com/python/cpython/pull/133350/commits/d162e59c636d4a0f4bc3097b571b837c3dd2dc09",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194440,
+    "url": "https://github.com/python/cpython/pull/133350#issue-3037482439",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194441,
+    "url": "https://github.com/python/cpython/pull/133350#issuecomment-2851343772",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194442,
+    "url": "https://github.com/python/cpython/pull/133350#event-17523643071",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194443,
+    "url": "https://github.com/python/cpython/pull/133350#event-17522748635",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194444,
+    "url": "https://github.com/python/cpython/pull/133350#issuecomment-2855572670",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194445,
+    "url": "https://github.com/python/cpython/pull/133350#issuecomment-2848689756",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194446,
+    "url": "https://github.com/python/cpython/pull/133350#pullrequestreview-2815301764",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194447,
+    "url": "https://github.com/python/cpython/pull/133350/commits/71597b31edc035af3aea0b52e48c7769a064d41c",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194449,
+    "url": "https://github.com/python/cpython/pull/133350#event-17523642413",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194451,
+    "url": "https://github.com/python/cpython/pull/133350#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194452,
+    "url": "https://github.com/python/cpython/pull/133350#ref-issue-3045150659",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194453,
+    "url": "https://github.com/apps/coderabbitai",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194454,
+    "url": "https://github.com/python/cpython/commit/0eeaa0ef8bf60fd3b1448a615b6b1662d558990e",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194455,
+    "url": "https://github.com/python/cpython/pull/133350#issuecomment-2858039542",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194456,
+    "url": "https://github.com/python/cpython/pull/133350#issuecomment-2862089458",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194457,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F133350",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194459,
+    "url": "https://github.com/python/cpython/pull/133566",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194460,
+    "url": "https://github.com/python/cpython/pull/133350/files/d162e59c636d4a0f4bc3097b571b837c3dd2dc09",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194462,
+    "url": "https://github.com/python/cpython/pull/133350#ref-pullrequest-4155772006",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194463,
+    "url": "https://github.com/python/cpython/pull/133350#discussion_r2073725016",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194464,
+    "url": "https://github.com/python/cpython/pull/133350#issuecomment-2855579424",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194467,
+    "url": "https://github.com/python/cpython/pull/133350#event-17523643011",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194468,
+    "url": "https://github.com/python/cpython/pull/133350#discussion_r2073803102",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194469,
+    "url": "https://github.com/python/cpython/pull/133350#issuecomment-2858021668",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194470,
+    "url": "https://github.com/python/cpython/pull/133350#event-17508151258",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194471,
+    "url": "https://github.com/nascheme/cpython/commit/9aa8261a819396fc5b30b037f63bdf12df4dc383",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194473,
+    "url": "https://github.com/python/cpython/pull/133350#ref-pullrequest-3038184352",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194474,
+    "url": "https://github.com/tanloong",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194476,
+    "url": "https://github.com/python/cpython/pull/133350#issuecomment-2855559720",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194478,
+    "url": "https://github.com/python/cpython/pull/133350#ref-commit-9aa8261",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194479,
+    "url": "https://github.com/python/cpython/pull/133350",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194480,
+    "url": "https://github.com/python/cpython/pull/133393",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194481,
+    "url": "https://github.com/python/cpython/pull/133350/files/d162e59c636d4a0f4bc3097b571b837c3dd2dc09#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194484,
+    "url": "https://github.com/Pranjal095/cpython/commit/9d3594ac71b2bc8c2b409d0afd57a97e8913cb2f",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194485,
+    "url": "https://github.com/python/cpython/pull/133350#issuecomment-2852410733",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194486,
+    "url": "https://github.com/LabAutomationAndScreening/copier-nuxt-python-intranet-app/pull/138",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194487,
+    "url": "https://github.com/python/cpython/pull/133350#pullrequestreview-2815423810",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194488,
+    "url": "https://github.com/python/cpython/pull/133350#event-17508143222",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194492,
+    "url": "https://github.com/python/cpython/pull/133350#ref-issue-3037481662",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194493,
+    "url": "https://github.com/python/cpython/pull/133350#discussion_r2073823348",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194494,
+    "url": "https://github.com/python/cpython/issues/133558",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194496,
+    "url": "https://github.com/python/cpython/pull/133350/commits/5c82a7f23f38b6e561370f483780bce8c77fc332",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194497,
+    "url": "https://github.com/python/cpython/pull/133350#discussion_r2073900342",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194498,
+    "url": "https://github.com/python/cpython/pull/133350#ref-commit-9d3594a",
+    "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 194505,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.ExecutionFailed.excinfo",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194508,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194515,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.close",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194523,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.QueueFullError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194525,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.prepare_main",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194527,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Queue",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194529,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#interp-isolation",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194530,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.whence",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194532,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.NotShareableError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194533,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.create_queue",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194538,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#interp-object-sharing",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194540,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/concurrent/interpreters",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194541,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.InterpreterNotFoundError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194545,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.get_current",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194546,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.id",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194557,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.list_all",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194559,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Queue.id",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194561,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.call_in_thread",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194562,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.call",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194564,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.create",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194567,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.get_main",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194572,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194575,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.exec",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194576,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.QueueEmptyError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194577,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#interp-call-in-thread",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194580,
+    "url": "https://peps.python.org/pep-0554/",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194582,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/concurrent.interpreters.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194583,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#interp-concurrency",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194584,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.is_running",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 194585,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.InterpreterError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.interpreters — Multiple interpreters in the same process — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.interpreters — Multiple interpreters in the same process — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d48\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d48\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?s\u003d40\u0026v\u003d4",
+    "alt": "@nascheme",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d80\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d80\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d40\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d80\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d80\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71320000?s\u003d80\u0026v\u003d4",
+    "alt": "@tanloong",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71320000?s\u003d40\u0026v\u003d4",
+    "alt": "@tanloong",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/145594122?s\u003d40\u0026v\u003d4",
+    "alt": "@Pranjal095",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/347564?s\u003d40\u0026v\u003d4",
+    "alt": "@coderabbitai",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d52\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d52\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71320000?s\u003d52\u0026v\u003d4",
+    "alt": "@tanloong",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d52\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.base_exec_prefix"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.base_exec_prefix"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d60\u0026v\u003d4",
+    "alt": "tomasr8",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d80\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d40\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/145594122?s\u003d40\u0026v\u003d4",
+    "alt": "@Pranjal095",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d40\u0026v\u003d4",
+    "alt": "@tomasr8",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d40\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d52\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d52\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d52\u0026v\u003d4",
+    "alt": "@tomasr8",
+    "pageTitle": "gh-113081: Highlight source code in pdb by gaogaotiantian · Pull Request #133355 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133355"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#asyncio"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#asyncio"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
