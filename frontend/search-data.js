@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 110,
+    "url": "https://www.bbc.co.uk/news/articles/c0r255xlr59o",
+    "title": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "content": "England council results Number of councillors 104 of 136 councils Counting under way Reform UK REF 1,112 1,110 (Reform UK 1,112 councillors 1,110 councillors gained) Labour LAB 702 956 (Labour 702 councillors 956 councillors lost) Liberal Democrat LD 693 87 (Liberal Democrat 693 councillors 87 councillors gained) Conservative CON 616 466 (Conservative 616 councillors 466 councillors lost) Green GRN 358 257 (Green 358 councillors 257 councillors gained) Independent IND 117 16 (Independent 117 councillors 16 councillors lost) Change How this election works Local elections in England cover more than 5,000 seats across 136 local authorities and six mayoral races. The banner shows each party’s seat total as results come in. Results from all counts are expected by Saturday. Live. updates Get the full results Image source, PA Media ByRichard Wheeler Political reporter Published 2 hours ago Nigel Farage said he believes a \"truly historic shift in British politics\" has occurred after Reform UK won hundreds of seats and took control of more councils in England. The Reform leader said his party was showing it could win in Conservative and Labour heartlands, adding he expected the support from voters would not be a \"one-off\". The party\u0027s gains include winning control of its first London borough in Havering, surging to victory over the Tories in Essex and Suffolk, and picking up seats at the expense of Labour in the Midlands and the north of England. Party figures also expected a strong showing in the Welsh Parliament elections and to be \"competitive\" in Scotland. LIVE: UK election results LIVE: Scottish Parliament election LIVE: Wales Senedd election Reform was in its infancy the last time these councils in England were up for election, and when the national contests in Scotland and Wales took place. The party gained control of 10 councils in England last year and has now followed this up with further successes at the ballot box. Increased support for Reform in areas including Hartlepool, Tameside, Redditch and Tamworth led to Labour losing control of the councils. A third of the seats were up for election in Wigan, with Reform winning 24 out of 25 as Labour suffered heavy losses to see its majority on the council reduced. Control of Newcastle-under-Lyme passed to Reform from the Tories. Speaking after Reform secured control of Havering, Farage said: \"What\u0027s happened is a truly historic shift in British politics. \"We\u0027ve been so used to thinking about politics in terms of left and right, yet what Reform are able to do is to win in areas that have always been Conservative, but equally, we\u0027re proving in a big way that we could win in areas that Labour has dominated since the end of World War I.\" Farage highlighted his party\u0027s successes in former Labour strongholds dubbed the \"red wall\", which the Conservatives initially made gains in the 2019 general election under the leadership of Boris Johnson before suffering losses in 2024. He said he was convinced a \"fundamental change\" was happening in which voters \"aren\u0027t just coming to us for a one-off, they\u0027re now becoming Reformers in every way\". Farage added Reform was \"competitive right down from the southwest of England up to the northeast of Scotland\". Zia Yusuf, Reform\u0027s home affairs spokesperson, told the BBC: \"We\u0027re competitive in Scotland, we have a real chance of being the biggest party in Wales.\" Polling expert Sir John Curtice said Reform has done best in places that \"voted heavily for Brexit\" in 2016. Counting is still taking place in Scotland, Wales and at tens of councils in England, with most of the results expected by the end of Friday. Related topics England local elections 2026 Reform UK UK elections 2026 Top stories Live. Labour suffers historic Wales loss as Reform wins more than 1,000 English council seats and Greens make gains 79415 viewing79k viewing Live. Plaid Cymru becomes largest party in Wales as Labour vote collapses 16810 viewing17k viewing Live. Scottish Greens win seats, Labour stalwart holds key constituency and SNP set to become biggest party 28916 viewing29k viewing More to explore Election results so far - and what\u0027s still to come The risk-taker who changed how we see Earth From primates to climates - ten of Attenborough\u0027s best documentaries Live from your living room: The rise of concert films and livestreamed gigs Weekly quiz: Who was this mystery masked star at the Met Gala? How worried should we be about hantavirus? \u0027We were strangers until we helped bring a paedophile to justice\u0027 Ukraine war \u0027led me to surrogacy\u0027 to earn money but a new law could end those plans Politics Essential: Get the latest news and analysis delivered to your inbox every weekday Elsewhere on the BBC Amandaland has returned with Lucy Punch and Joanna Lumley From small-time carpenter to Britain’s most famous fugitive New mysteries and puzzling cases await DI Goodman The energy direct debit cycle and the cheapest ways to spend abroad Most read 1 What latest election r",
+    "scrapedAt": "2026-05-09 00:30:49.594265"
+  },
+  {
+    "id": 109,
+    "url": "https://www.bbc.co.uk/videos/cz02rz5z895o",
+    "title": "Could your child might be sitting on £2,000 of unclaimed cash? - BBC",
+    "content": "Could your child be sitting on £2,000 of unclaimed cash? To play this video you need to enable JavaScript in your browser. This video can not be played Could your child be sitting on £2,000 of unclaimed cash? Close It\u0027s Money Monday — and some good news for your bank balance. Finance expert Laura Pomfret shares how to save on your food shop, why your child could have £2,000 in unclaimed cash, and how to make sure you\u0027re getting all the benefits you\u0027re entitled to. To watch this with subtitles go to BBC iPlayer and search for Morning Live from 04/05/2026. Published 4 days ago Share close panel Share page Copy link About sharing Read description",
+    "scrapedAt": "2026-05-09 00:30:48.514362"
+  },
+  {
+    "id": 108,
+    "url": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o",
+    "title": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "content": "Image source, Getty Images Image caption, Paul Hollywood was caught speeding along the M25 ByHsin-Yi Lo South East Published 7 May 2026 Bake Off star Paul Hollywood was pulled over by police after speeding at nearly 100mph while rushing his sick cat to the vet, a court heard. The celebrity baker was accused of tailgating cars at high speeds on the M25 to \"bully\" them out of the fast lane. A Surrey Police officer said Hollywood\u0027s Land Rover Defender was officially clocked at 96mph, but he was believed to have reached speeds of more than 105mph when he got on to the M26. When pulled over, the court heard the 60-year-old blamed his behaviour on a desire to take his cat to the vet as quickly as possible. At Worthing Magistrates\u0027 Court last week, Hollywood pleaded guilty to speeding, and had five penalty points added to his licence, a £293 fine, £120 in costs, and a £117 victim surcharge. After an intervention from his lawyers, a second charge of driving without due care and attention was dropped. \"Mr Hollywood accepted he was driving too fast,\" wrote Peter Csemiczky, a partner at Hickman and Rose law firm. He added Hollywood \"apologised\" for his actions and \"understood he would be punished\". Court papers showed the incident happened at about 15:20 GMT on 9 January. \u0027Aggressively tailgating\u0027 Surrey Police officer, Alexander McAlpine, tracked Hollywood in an unmarked police car and said he saw his vehicle \"repeatedly bully\" other vehicles out of its way by tailgating. \"Whenever there was a vehicle ahead, the driver would close up to a follow distance of less than five metres which was wholly inappropriate for the conditions and speed,\" McAlphine said. He added Hollywood reached speeds of about 100mph on the M25 despite heavy traffic conditions and the road being damp. The officer caught the incident on his dash camera, then pulled over Hollywood to challenge him over his speeding and \"aggressively tailgating other road users\". Hollywood, a judge on Bake Off since 2010, is also a motoring enthusiast who has competed in professional races for Aston Martin. Court papers showed he had no penalty points on his licence when he was pulled over by the police officer in January. Additional reporting by PA Follow BBC Surrey on Facebook, external, on X, external, and on Instagram, external. Send your story ideas to southeasttoday@bbc.co.uk, external or WhatsApp us on 08081 002250. Related topics Worthing The Great British Bake Off M25 motorway Related internet links HM Courts \u0026 Tribunals Service Top stories Live. Labour set for historic defeat in Wales as Reform surge continues in English council elections 77146 viewing77k viewing Live. Scottish Greens win seats, Labour stalwart holds key constituency and SNP set to become biggest party 29260 viewing29k viewing Live. Plaid Cymru to be largest party in Wales with one seat left to declare 21296 viewing21k viewing More to explore Election results so far - and what\u0027s still to come The risk-taker who changed how we see Earth From primates to climates - ten of Attenborough\u0027s best documentaries Live from your living room: The rise of concert films and livestreamed gigs Weekly quiz: Who was this mystery masked star at the Met Gala? How worried should we be about hantavirus? \u0027We were strangers until we helped bring a paedophile to justice\u0027 Ukraine war \u0027led me to surrogacy\u0027 to earn money but a new law could end those plans Politics Essential: Get the latest news and analysis delivered to your inbox every weekday Elsewhere on the BBC Amandaland has returned with Lucy Punch and Joanna Lumley From small-time carpenter to Britain’s most famous fugitive New mysteries and puzzling cases await DI Goodman The energy direct debit cycle and the cheapest ways to spend abroad Most read 1 What latest election results show us in maps and charts 2 Election results so far - and what\u0027s still to come 3 Reform election gains show historic shift in British politics, says Farage 4 Major train operator to be renationalised in months 5 Nationwide cashier who stole from vulnerable customers caught out by holiday photos 6 How the BBC reports this election Published 1 July 2024 7 Iran accuses US of \u0027reckless military adventure\u0027 8 Scottish election 2026: When will your result be declared? 9 King and Queen lead tributes for David Attenborough\u0027s 100th birthday 10 Football club owners in court on rape charges",
+    "scrapedAt": "2026-05-09 00:30:47.334661"
+  },
+  {
+    "id": 107,
+    "url": "https://www.bbc.co.uk/aboutthebbc/documents/bbcmsa2025.pdf",
+    "title": "https://www.bbc.co.uk/aboutthebbc/documents/bbcmsa2025.pdf",
+    "content": " \n1 \n \nBBC GROUP MODERN SLAVERY STATEMENT  \nFINANCIAL YEAR ENDED 31 MARCH 2025 \nThis statement is made pursuant to section 54 of the Modern Slavery Act 2015 and sets \nout the work undertaken during the financial year ending 31 March 2025 to further \nprevent, identify and address modern slavery across the organisation and its supply \nchains, as well as detailing future plans to continue to drive this work forward.  \n \nThe BBC has a moral and legal responsibility to prevent modern slavery from occurring \nin any form across our organisation and within our supply chains. The BBC understands \nmodern slavery to include forced labour, human trafficking, sexual exploitation, child \nlabour, criminal exploitation, and servitude; and acknowledge that any form of labour \nexploitation, if left present, has the ability to evolve into modern slavery. We are \ncommitted to ensuring our organisational practices and risk-management approach \nsupport our responsibility to ensure the BBC is proactively preventing modern slavery \nand addressing it should a case occur.  \n \nOUR ORGANISATION \nThe BBC is one of the largest public service broadcasting organisations in the world. Our \nmission, public purpose, commitments and governance are set out in the Royal Charter \nand we are regulated by Ofcom, the communications regulator. The BBC uses the income \nfrom the licence fee to serve a global audience by providing television, radio and online \nservices. As a public service broadcaster, the BBC consists of a portfolio of television \nservices; ten UK-wide radio stations; two national radio stations; digital services \nincluding BBC News, Sport, Weather, CBBC, CBeebies, iPlayer, BBC Sounds, BBC Red \nButton and our archive; and BBC World Service television, radio and online, which is \navailable in more than 40 languages.  \n \nAs well as being a public service broadcaster, the BBC has commercial subsidiaries which \noperate in the UK and internationally. BBC StudioWorks provides studios and post \nproduction services to TV broadcasters and production companies, and BBC Studios \nproduces and distributes world-class content here in the UK and globally. Over the last \nyear, BBC Studios continued their ethical trading programme, which focused on the risks \nwithin their Licensed Consumer Products business and is monitored through their key \nperformance indicators. More detail can be found in the BBC Studios Modern Slavery \nStatement 2024/25. \n \nThe BBC has operations globally, including international news bureaus in 68 cities across \n55 countries, which support our mission to educate and inform by delivering news and \nother services to the world. This includes the BBC’s international news World Service.  \n \n \n2 \n \nWe are committed to ensuring that everyone who works for and with us is treated fairly, \nis able to work in a safe environment and has their human rights respected and \nprotected. During 2024/25 there were approximately 22,000 people working for the BBC \naround the world and thousands more across our global supply chains.  \n \nOUR SUPPLY CHAIN \nOur supply chains are complex, extensive and cover a wide range of products, goods not \nfor resale, and services. Major categories of the supply chain include: \n \n• Corporate Services - including consultancies, travel, legal services, publications, \noffice supplies, audit and financial services \n• Independents – independent production companies (indies) \n• Logistics - including hotels, shipping, couriers and transport \n• Marketing - including market research, audience reporting services, license fee \ncollection, advertising \n• Production Resources - including costume and make-up, lighting, location \nservices, events and exhibitions, post-production, outside broadcast \n• Property and Workplace - including cleaning, catering, security, utilities, \nconstruction  \n• Technology and Broadcasting - including IT hardware and infrastructure, \ntransmission, technology services, professional production equipment \n \nFor the indies, we commission them to produce TV, audio and online content for the \nBBC. More information about the standards indies work to when commissioned by the \nBBC can be found on our website.  \n \nAPPROACH TO IDENTIFYING AND ASSESSING MODERN SLAVERY RISK \nWe have a risk-based approach to managing modern slavery. This is informed through a \nrisk assessment to identify and target ethical issues, including modern slavery, in our \norganisation and supply chains. The ongoing conflicts around the world, increasing \nimpacts of climate change, the global cost of living crisis amongst other external factors, \nare all contributing to the challenges being felt across our organisation and supply chain.  \n \nThe risk assessment utilises publicly available reports on modern slavery and human \nrights, industry knowledge, as well as in-house expertise, to identify where the priority \nareas are based on inherent risk. It assesses the likelihood and impact of modern slavery \noccurring. The results of the assessm",
+    "scrapedAt": "2026-05-09 00:30:46.170209"
+  },
+  {
+    "id": 106,
+    "url": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments",
+    "title": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "content": "Image source, Getty Images ByLucy Hooker Business reporter Published 23 April 2026 Updated 6 May 2026 The price of flights has been rising since the start of the conflict in the Middle East, a worry for anyone planning a summer holiday. Some airlines are also cutting back the number of flights they are operating, which could mean travellers facing changes to their plans. On Wednesday, analytics firm Cirium released data showing that airlines have cut 13,000 flights globally in May. However, the travel agents\u0027 trade body Advantage Travel Partnership said the cancellations were marginal overall - about 1% - and UK flights to summer sun destinations were unaffected. Which airlines are cancelling flights? Many airlines that serve the UK have said they plan to operate fewer flights. They include: KLM Air Canada Asiana Airlines Delta Airlines Lufthansa SAS The following companies have said they don\u0027t plan to change their schedules: British Airways owner IAG EasyJet Jet2Holidays What is happening to flight prices? While some airlines have cut back on the number of flights to save money, others have said they will start charging more or will put up charges for luggage. These include: Air France-KLM Indigo British Airways-owner IAG Pakistan International Airlines Thai Airways Turkish Airlines-Sun Express Virgin Atlantic Image source, Getty Images Can airlines change the price or cancel my flight after I have booked? Overall cancellations will be a very small proportion of the millions of flights in and out of the UK, says Rory Boland, travel editor at consumer publication Which?. Airlines are likely to target cancellations on routes where there are multiple flights a day to make it easier to put passengers on a different flight. Low-cost Spanish regional airline Volotea has come under fire for saying it will add a surcharge to tickets it has already sold and is being challenged by local consumer rights groups. An airline or tour operator could only raise the price post-sale if they had a specific caveat written into the terms and conditions, says independent consumer commentator Jane Hawkes, but it is not standard practice. However, when it comes to package holidays, tour operators can add up to 8% to the cost of your deal after you\u0027ve booked, based on a \"significant rise in fuel costs\", says Boland. But Which? found most operators were promising not to add surcharges this year. To play this video you need to enable JavaScript in your browser. This video can not be played Figure caption, Could jet fuel shortages affect your holiday plans? Why are airlines raising prices? A lot of the industry\u0027s jet fuel supplies pass through the Strait of Hormuz, which has effectively been closed to shipping since the start of March. Airlines are not physically running short of fuel currently, but there have been warnings of potential shortages by the summer if the conflict continues. In the meantime the squeeze on supply has pushed up the price of jet fuel sharply - it roughly doubled during March and the first half of April. Airlines agree deals in advance that help them lock in a lower price, but longer term they will be paying more for fuel. The biggest rises in fares have been on long-haul routes via Asia, that have been forced to adapt their flight paths to avoid flying over the Gulf. Flights from London to Melbourne in June now cost 76% more than last year and a flights to Hong Kong are up 72%, according to consultancy Teneo. Should I book my summer holiday now or wait? \"There\u0027s no right or wrong,\" says Jane Hawkes. It could pay to wait for last-minute deals, or you might want to seize the moment now. She doesn\u0027t expect prices to fall over the rest of the year, however, because airlines still need to cover the increased costs. She suggests being flexible over where and when you travel, including considering switching to road or rail or holidaying in the UK. Book insurance and check your policy covers you for travel disruption, she adds. And make sure you have a \"contingency pot\". Even if your holiday operator or airline is supposed to cover any disruption, you may need to pay upfront and claim it back later, which can take months, she warns. Spain\u0027s industry and tourism minister said on 27 April that people should buy airline tickets as soon as possible in case fares are increased to cover higher jet fuel costs. Jordi Hereu told Spanish newspaper Expansion: \"What we\u0027re recommending is that people buy their tickets now because it\u0027s true that (airlines) are currently using kerosene that was purchased some time ago, and therefore there\u0027s an element of price fluctuations involved.\" What are my rights if my flight is cancelled? If your flight is cancelled the airline must get you to your destination or offer a refund. If you are delayed more than a couple of hours the airline is required to provide food and hotel accommodation. Your rights if your flight is delayed or cancelled That is in ordinary circumstances. In cases of war, w",
+    "scrapedAt": "2026-05-09 00:30:44.319421"
+  },
+  {
     "id": 105,
     "url": "https://www.bbc.co.uk/sounds/play/p0nhk30p",
     "title": "Lives Less Ordinary - Strangers to coworkers to friends to...sisters? - BBC Sounds",
@@ -733,26 +768,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 106,
-    "url": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
-  },
-  {
-    "id": 107,
-    "url": "https://www.bbc.co.uk/aboutthebbc/documents/bbcmsa2025.pdf"
-  },
-  {
-    "id": 108,
-    "url": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
-  },
-  {
-    "id": 109,
-    "url": "https://www.bbc.co.uk/videos/cz02rz5z895o"
-  },
-  {
-    "id": 110,
-    "url": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
   },
   {
     "id": 111,
@@ -25473,10 +25488,344 @@ window.searchData = [
     "id": 12410,
     "url": "https://www.bbc.co.uk/sounds/series/p02s5rx7",
     "parentUrl": "https://www.bbc.co.uk/sounds/play/p0nhk30p"
+  },
+  {
+    "id": 12451,
+    "url": "https://www.instagram.com/bbcinsurrey/",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "id": 12456,
+    "url": "https://www.bbc.co.uk/news/topics/c340r9425rvt",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "id": 12459,
+    "url": "https://www.bbc.co.uk/news/topics/c1kr68g27d2t",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "id": 12464,
+    "url": "https://www.gov.uk/government/organisations/hm-courts-and-tribunals-service",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "id": 12465,
+    "url": "https://twitter.com/BBCSurrey",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "id": 12466,
+    "url": "https://www.bbc.co.uk/news/topics/c88ky5rgvz3t",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "id": 12477,
+    "url": "https://www.facebook.com/BBCSurrey/",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "id": 12484,
+    "url": "https://www.bbc.co.uk/news/topics/cp07jzgm24jt",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://static.files.bbci.co.uk/elections/images/uk2026/election-logo-cutout-en.svg",
+    "alt": "Election",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/999/cpsprodpb/f54f/live/8c066220-4ae9-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Nigel Farage addresses the media in Havering. He is stood in front of a group of Reform supporters and is wearing a blue jacket, a white shirt and a striped tie.",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/81fc/live/7b12bde0-4ac3-11f1-bd52-e755d604ece4.png",
+    "alt": "Banner with the words: More on election 2026",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/db69/live/015d7fe0-4aef-11f1-ac78-2112837ce2aa.png",
+    "alt": "Nigel Farage ",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/60a2/live/7bfa1c10-cadc-11f0-a892-01d657345866.jpg",
+    "alt": "Sir David Attenborough being filmed in front of the sea and mountains for Life on Earth in 1979",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/af4f/live/8c892de0-4ac1-11f1-b55d-0f258dce1735.png",
+    "alt": "A composite image of 5 people  in flamboyant costumes at the Met gala. In the centre in a largest part of the image is a women in white  wearing a mask over her face",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b327/live/76b6ee00-4a38-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A person in protective clothing walks next to an ambulance during an evacuation operation of suspected hantavirus patients, following an outbreak on the cruise ship MV Hondius, in Praia, Cape Verde, May 6, 2026",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/2d4c/live/d268f6b0-4a1c-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "Two ladies are sat beside each other. The one on the left is wearing a mustard cardigan and has white wavy hair. The one on the right is wearing a pink collarless shirt and has blonde and brown hair. ",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/dd4d/live/992a5b50-494f-11f1-bd44-e578c5bd51ff.png",
+    "alt": "A pregnant woman stands in a garden with her hand on her belly. She has long, straight, dark hair and is wearing a matching top and trousers which are white with some patches of black. She also has a light brown hoodie on. ",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Could your child might be sitting on £2,000 of unclaimed cash? - BBC",
+    "pageUrl": "https://www.bbc.co.uk/videos/cz02rz5z895o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/5a6f/live/58261d20-49e4-11f1-9921-0be54b6c608a.jpg",
+    "alt": "A man with white hair and heard, wearing a dark blue polo shirt. ",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/db69/live/015d7fe0-4aef-11f1-ac78-2112837ce2aa.png",
+    "alt": "Nigel Farage ",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/60a2/live/7bfa1c10-cadc-11f0-a892-01d657345866.jpg",
+    "alt": "Sir David Attenborough being filmed in front of the sea and mountains for Life on Earth in 1979",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/af4f/live/8c892de0-4ac1-11f1-b55d-0f258dce1735.png",
+    "alt": "A composite image of 5 people  in flamboyant costumes at the Met gala. In the centre in a largest part of the image is a women in white  wearing a mask over her face",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b327/live/76b6ee00-4a38-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A person in protective clothing walks next to an ambulance during an evacuation operation of suspected hantavirus patients, following an outbreak on the cruise ship MV Hondius, in Praia, Cape Verde, May 6, 2026",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/2d4c/live/d268f6b0-4a1c-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "Two ladies are sat beside each other. The one on the left is wearing a mustard cardigan and has white wavy hair. The one on the right is wearing a pink collarless shirt and has blonde and brown hair. ",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/dd4d/live/992a5b50-494f-11f1-bd44-e578c5bd51ff.png",
+    "alt": "A pregnant woman stands in a garden with her hand on her belly. She has long, straight, dark hair and is wearing a matching top and trousers which are white with some patches of black. She also has a light brown hoodie on. ",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/b27c/live/3ee8b780-3f23-11f1-80a9-03674e4a073c.jpg",
+    "alt": "Young woman in red checked shirt rests her chin on her hand. She is sitting in an airport waiting room with a red case next to her",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/2048/cpsprodpb/a344/live/a1a2f3d0-328b-11f1-9fac-89e41bab67f2.jpg",
+    "alt": "Young woman wearing blue jeans, a grey trenchcoat and white trainers sits on her suitcase at an airport, clutching her passport and ticket ",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/db69/live/015d7fe0-4aef-11f1-ac78-2112837ce2aa.png",
+    "alt": "Nigel Farage ",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/60a2/live/7bfa1c10-cadc-11f0-a892-01d657345866.jpg",
+    "alt": "Sir David Attenborough being filmed in front of the sea and mountains for Life on Earth in 1979",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/af4f/live/8c892de0-4ac1-11f1-b55d-0f258dce1735.png",
+    "alt": "A composite image of 5 people  in flamboyant costumes at the Met gala. In the centre in a largest part of the image is a women in white  wearing a mask over her face",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b327/live/76b6ee00-4a38-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A person in protective clothing walks next to an ambulance during an evacuation operation of suspected hantavirus patients, following an outbreak on the cruise ship MV Hondius, in Praia, Cape Verde, May 6, 2026",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/2d4c/live/d268f6b0-4a1c-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "Two ladies are sat beside each other. The one on the left is wearing a mustard cardigan and has white wavy hair. The one on the right is wearing a pink collarless shirt and has blonde and brown hair. ",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/dd4d/live/992a5b50-494f-11f1-bd44-e578c5bd51ff.png",
+    "alt": "A pregnant woman stands in a garden with her hand on her belly. She has long, straight, dark hair and is wearing a matching top and trousers which are white with some patches of black. She also has a light brown hoodie on. ",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
   {
     "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dunknown\u0026x1\u003d[]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[sounds]\u0026x12\u003d[]",
     "alt": "",
