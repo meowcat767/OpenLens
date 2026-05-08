@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 281,
+    "url": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt",
+    "title": "Gijzelnemers Duitse bank gevlucht, kist met geld buitgemaakt",
+    "content": "Reuters Duitse politie bij het bankgebouw NOS Nieuws•vandaag, 15:19•Aangepast vandaag, 18:15 Gijzelnemers Duitse bank gevlucht, kist met geld buitgemaakt Deel dit artikel De gijzeling in een bank in de Duitse plaats Sinzig, zo\u0027n 25 kilometer ten zuiden van Bonn, is voorbij. De politie is het bankgebouw binnengegaan en heeft het doorzocht. Daarbij zijn twee mensen die waren opgesloten in een afgesloten ruimte vrijgelaten. Zij zijn ongedeerd, meldt de politie. De dader of daders lijken te zijn ontkomen. De politie heeft ze niet gesproken en denkt dat ze zijn gevlucht. Via welke route is nog niet duidelijk. Kist met geld buitgemaakt Er is een signalement van één verdachte verspreid: een man van zo\u0027n 1,80 meter lang, gekleed in een witte overall die lijkt op een imkerpak. Die man heeft een kist met geld meegenomen, maar hoeveel daarin zit is nog niet duidelijk. Over eventuele andere verdachten is niets bekendgemaakt, wat de vraag oproept of er überhaupt meerdere daders waren. Vanochtend rond 09.00 uur kwam er een melding dat er een gijzeling gaande was en werd vermoed dat het ging om meerdere gijzelaars en gijzelnemers. Een van de gegijzelden is de chauffeur van een geldtransport. Of er echt sprake was van een gijzeling staat nog ter discussie, zegt een woordvoerder van de politie tegen publieke omroep SWR(opent in nieuw venster). Mogelijk moet het niet bestempeld worden als gijzeling, maar als \"wederrechtelijke vrijheidsberoving\". Dat wordt nog vastgesteld. Opluchting De binnenstad van Sinzig werd direct afgesloten en ook werd een helikopter ingezet om de situatie vanuit de lucht in de gaten te houden. Omdat de gijzelnemers zelf het nieuws ook volgden deelde de politie tijdens de operatie beperkt informatie. Het centrum van de stad bleef nog afgesloten tot de hulpdiensten weg waren. De locoburgemeester van de plaats, Hans-Werner Adams, is opgelucht en spreekt van \"een nachtmerrie die voorbij is\". Hij baalt ervan dat de daders nog niet gepakt zijn en gaat komend weekend met inwoners van Sinzig in gesprek over het gebeurde. 0:30 Zwaarbewapende politie voor bank in Sinzig Gijzeling in Duitse bank, vermoedelijk meerdere mensen vastgehouden Buitenland Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-09 00:36:27.021642"
+  },
+  {
+    "id": 280,
+    "url": "https://app.nos.nl/shorthand/de-laatste-klassenfoto/link.html",
+    "title": "De laatste klassenfoto / NOS",
+    "content": "",
+    "scrapedAt": "2026-05-09 00:36:25.948572"
+  },
+  {
+    "id": 279,
+    "url": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus",
+    "title": "Moeten we ons zorgen maken? En nog vier vragen over het hantavirus",
+    "content": "ANP Een medische evacuatievlucht na de aankomst op Schiphol vanuit Kaapverdië NOS Nieuws•gisteren, 06:29 Moeten we ons zorgen maken? En nog vier vragen over het hantavirus Deel dit artikel Vanwege het hantavirus zijn gisteren drie opvarenden geëvacueerd van het Nederlandse cruiseschip de Hondius. Dat lag voor de kust van Kaapverdië en is onderweg naar de Canarische Eilanden. Het gaat om een Nederlander (41), een Brit (56) en een Duitse (65). Een van hen wordt behandeld in het Leids Universitair Medisch Centrum, een ander is naar een ziekenhuis in Düsseldorf gebracht. Wat er met de derde passagier gebeurt, is nog niet duidelijk. In het Zwitserse Zürich wordt nog een vierde persoon behandeld: een man die na thuiskomst ziek werd. Zijn vrouw ontwikkelde geen symptomen, maar is uit voorzorg in zelfisolatie. Een vijfde opvarende ligt op de intensive care in Zuid-Afrika. Eerder overleden drie passagiers van het cruiseschip, onder wie een Nederlands echtpaar. Bij een van hen werd het hantavirus vastgesteld. Bij de twee andere sterfgevallen is niet vastgesteld wat de doodsoorzaak is. Om welke variant van het virus gaat het? Het hantavirus heeft wel zestig varianten. In dit geval gaat het om het andesvirus, dat vooral voorkomt in Zuid-Amerika. Het is een van de weinige hantavirussen die van mens tot mens worden doorgegeven. De variant is afkomstig van een rijstrattensoort, zegt viroloog Chantal Reusken van het Rijksinstituut voor Volksgezondheid en Milieu (RIVM). \"Mensen kunnen hoge koorts en ademhalingsproblemen krijgen. Later kan dit leiden tot ernstige long- en hartproblemen.\" Het sterftepercentage van deze variant ligt tussen de 35 en 50 procent. Hoe verspreidt deze variant zich? Je krijgt het virus door contact met keutels, urine en speeksel van de rijstrat, of door het inademen van stofdeeltjes in dergelijke uitwerpselen. \"Er moet nog diepgaand onderzoek worden gedaan, maar het is waarschijnlijk dat in ieder geval één opvarende het virus heeft opgelopen aan wal in Argentinië\", zegt Reusken. Centers for Disease Control and Prevention De rijstrat, oftewel Oryzomys palustris Twee Argentijnse functionarissen, die anoniem willen blijven, zeggen tegen persbureau AP dat het Nederlandse stel dat overleed het hantavirus had opgelopen bij een tocht om vogels te spotten in het Zuid-Amerikaanse land. De Argentijnse regering zou dit als het meest waarschijnlijke scenario zien. Het is nog niet bekend hoe het virus van mens op mens overgaat. Maar het gaat niet heel makkelijk, zegt Reusken. \"Het is niet zoals met de covidpandemie of met griep. Dit virus wordt doorgegeven via nauw contact. En zeker op zo\u0027n schip, een beperkte ruimte, heb je eerder nauw contact met elkaar.\" \"Met de juiste maatregelen, zoals isolatie, kan verspreiding goed bestreden worden. Dat hebben we gezien bij een uitbraak met meer dan dertig besmettingen in Argentinië in 2018 en 2019. Door goede maatregelen is het toen snel ingedamd.\" Sla de carrousel over NOS NOS NOS NOS NOS Vorige slide Volgende slide Waarom worden reizigers die naar Zuid-Amerika gaan niet voor het andesvirus gewaarschuwd? Dat komt vooral doordat het een zeldzaam virus is, zegt Reusken. \"De kans is niet heel groot dat je het oploopt. Het wordt niet overgedragen door muggen bijvoorbeeld. Je loopt wel meer risico bij buitenactiviteiten zoals we dat ook zien bij het risico op de ziekte van Lyme.\" Het komt vooral in meer landelijke gebieden voor, dus bij activiteiten als kamperen, houthakken of wandelen. Het virus is door de jaren heen ook nauwelijks veranderd. Een vergelijking tussen uitbraken in 1996 en 2018 liet zien dat het virus stabiel is. Wat voor medische behandeling krijgen mensen die besmet zijn? Er is geen specifieke behandeling van het andesvirus, zegt arts-microbioloog Ann Vossen van het Leids Universitair Medisch Centrum (LUMC). Daar zijn ze gespecialiseerd in ernstige luchtweginfecties. Het is de eerste keer dat het ziekenhuis een patiënt met dit type virus heeft binnengekregen. Eerst wordt in het ziekenhuis bekeken hoe zo\u0027n patiënt eraan toe is. Afhankelijk daarvan gaat diegene naar de intensive care of een verpleegafdeling. Vervolgens moet uit bloedonderzoek binnen een paar uur duidelijk worden of er inderdaad een besmetting is. De behandeling wijkt verder niet veel af van die van andere patiënten, zegt Vossen. \"We zorgen ervoor dat we de luchtwegen zo goed mogelijk ondersteunen en proberen te voorkomen dat de persoon andere infecties krijgt. Daar zetten we op in.\" Moeten we ons zorgen maken? Nee, zegt RIVM-viroloog Reusken. \"Het virus is met de juiste maatregelen goed onder controle te krijgen. We kennen dit virus en we weten wat we moeten doen. Daarbij is de uitbraak op een schip, een afgeschermde plek.\" \"Ik denk dat er nu in de media veel aandacht voor is door de covidpandemie die we hebben meegemaakt. De situatie is extra complex doordat het schip in internationale wateren vaart en er meerdere landen bij betrokken zijn.\" Passagiers met hantavirus van schip geëvacueerd: Ne",
+    "scrapedAt": "2026-05-09 00:36:24.844894"
+  },
+  {
+    "id": 278,
+    "url": "https://nos.nl/artikel/2613606-podcast-de-dag-zingend-oud-worden",
+    "title": "Podcast De Dag: zingend oud worden",
+    "content": "NOS Nieuws•vandaag, 16:49 Podcast De Dag: zingend oud worden Deel dit artikel The Rolling Stones zijn de tachtig gepasseerd maar deze week kondigden ze een nieuw album aan. Ook Paul McCartney (83) komt met een nieuwe plaat. En Paul Simon (84) is bezig met een internationale tournee. De oude rockers, rocken dus nog even door. Hoe krijgen ze dat voor elkaar? Hoe blijf je goed zingen? Of helpt zingen juist om gezond oud te worden? anp Luisteren? Deze aflevering van De Dag kun je beluisteren via NPO Luister(opent in nieuw venster) en alle andere podcastkanalen(opent in nieuw venster). Bevalt het? Vergeet je dan niet te abonneren! In de podcast vertelt zangcoach Ingrid Stijsiger wat zij ziet gebeuren bij haar leerlingen op leeftijd. Zingen maakt gelukkig zegt ze, en ze legt uit waarom. Rebecca Schaefer is als neuropsycholoog gespecialiseerd in muziek en gezondheid. Zij vertelt wat muziek doet met je hersenen. En de Nederlandse rock-legende Peter Koelewijn (85) treedt ook nog geregeld op. Hij vertelt hoe lang je nog door kunt gaan, en wanneer je moet stoppen. Reageren? Mail dedag@nos.nl Presentatie en montage: Mattijs van de Wiel Redactie: Lisa Konings Eindredactie: Rosanne Sies Binnenland Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-09 00:36:23.746524"
+  },
+  {
+    "id": 277,
+    "url": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op",
+    "title": "Real Madrid legt vechtende spelers Valverde en Tchouaméni half miljoen boete op",
+    "content": "Getty Aurelien Tchouaméni en Federico Valverde NOS Voetbal•vandaag, 17:44 Real Madrid legt vechtende spelers Valverde en Tchouaméni half miljoen boete op Deel dit artikel Real Madrid heeft Aurélien Tchouaméni en Federico Valverde beiden een boete van 500.000 euro gegeven. Het tweetal raakte donderdag slaags met elkaar in de kleedkamer. \"De spelers hebben hun diepe spijt betuigd over wat er is gebeurd\", schrijft Real Madrid op de eigen website. \"Ze hebben hun excuses aangeboden aan de club, hun teamgenoten, de staf en de fans.\" Bij het voorval liep Valverde een hoofdwond op, waarvoor hij zelfs naar het ziekenhuis moest. Volgens Real Madrid is de Uruguayaan daardoor tien tot veertien dagen uitgeschakeld. Zwaar seizoen Real kent een moeizaam seizoen en tegen Barcelona wacht zondag mogelijk een sportief doemscenario. Barça kroont zich bij een overwinning of gelijkspel op de Madrileense aartsrivaal namelijk tot kampioen van Spanje. Spelers Real Madrid slaags met elkaar, Valverde met hoofdwond naar ziekenhuis Kritiek op Real Madrid-ster Mbappé na tripje kort voor El Clásico Voetbal Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Meer bekijken? zondag 22 maart, 16:13 Real Madrid wint stadsdeby tegen Atlético, Barcelona boekt zuinige zege woensdag 11 maart, 23:11 Valverde verlost Real met hattrick tegen City, stuntploeg Bodø/Glimt niet te stuiten zondag, 23:07 Real Madrid wint en stelt kampioensfeest Barça uit, volgende week El Clásico woensdag 22 april, 23:56 Barcelona verslaat Celta in recordwedstrijd De Jong, Lamine Yamal geblesseerd Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-09 00:36:22.667237"
+  },
+  {
     "id": 276,
     "url": "https://nos.nl/artikel/2613621-wolf-in-zuid-holland-waargenomen-als-laatste-provincie",
     "title": "Wolf in Zuid-Holland waargenomen, als laatste provincie",
@@ -1928,26 +1963,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 277,
-    "url": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
-  },
-  {
-    "id": 278,
-    "url": "https://nos.nl/artikel/2613606-podcast-de-dag-zingend-oud-worden"
-  },
-  {
-    "id": 279,
-    "url": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
-  },
-  {
-    "id": 280,
-    "url": "https://app.nos.nl/shorthand/de-laatste-klassenfoto/link.html"
-  },
-  {
-    "id": 281,
-    "url": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt"
   },
   {
     "id": 282,
@@ -45634,10 +45649,315 @@ window.searchData = [
     "id": 18830,
     "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613621-wolf-in-zuid-holland-waargenomen-als-laatste-provincie",
     "parentUrl": "https://nos.nl/artikel/2613621-wolf-in-zuid-holland-waargenomen-als-laatste-provincie"
+  },
+  {
+    "id": 18832,
+    "url": "https://nos.nl/artikel/2611622-barcelona-verslaat-celta-in-recordwedstrijd-de-jong-lamine-yamal-geblesseerd",
+    "parentUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "id": 18833,
+    "url": "https://nos.nl/artikel/2613494-spelers-real-madrid-slaags-met-elkaar-valverde-met-hoofdwond-naar-ziekenhuis",
+    "parentUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "id": 18834,
+    "url": "https://nos.nl/sport/voetbal",
+    "parentUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "id": 18835,
+    "url": "https://nos.nl/artikel/2613294-kritiek-op-real-madrid-ster-mbappe-na-tripje-kort-voor-el-clasico",
+    "parentUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "id": 18836,
+    "url": "https://twitter.com/intent/tweet?text\u003dReal+Madrid+legt+vechtende+spelers+Valverde+en+Tchouam%C3%A9ni+half+miljoen+boete+op\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op\u0026via\u003dNOSSport",
+    "parentUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "id": 18837,
+    "url": "https://nos.nl/artikel/2605977-valverde-verlost-real-met-hattrick-tegen-city-stuntploeg-bodo-glimt-niet-te-stuiten",
+    "parentUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "id": 18838,
+    "url": "https://nos.nl/artikel/2612974-real-madrid-wint-en-stelt-kampioensfeest-barca-uit-volgende-week-el-clasico",
+    "parentUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "id": 18839,
+    "url": "https://nos.nl/artikel/2607382-real-madrid-wint-stadsdeby-tegen-atletico-barcelona-boekt-zuinige-zege",
+    "parentUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "id": 18840,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op",
+    "parentUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "id": 18841,
+    "url": "https://api.whatsapp.com/send?text\u003dReal+Madrid+legt+vechtende+spelers+Valverde+en+Tchouam%C3%A9ni+half+miljoen+boete+op+https%3A%2F%2Fnos.nl%2Fartikel%2F2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op",
+    "parentUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "id": 18843,
+    "url": "https://pod.link/1339219119/episode/V09fTk9TXzIwMzQwMzQx",
+    "parentUrl": "https://nos.nl/artikel/2613606-podcast-de-dag-zingend-oud-worden"
+  },
+  {
+    "id": 18844,
+    "url": "https://twitter.com/intent/tweet?text\u003dPodcast+De+Dag%3A+zingend+oud+worden\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613606-podcast-de-dag-zingend-oud-worden\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613606-podcast-de-dag-zingend-oud-worden"
+  },
+  {
+    "id": 18845,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613606-podcast-de-dag-zingend-oud-worden",
+    "parentUrl": "https://nos.nl/artikel/2613606-podcast-de-dag-zingend-oud-worden"
+  },
+  {
+    "id": 18846,
+    "url": "https://api.whatsapp.com/send?text\u003dPodcast+De+Dag%3A+zingend+oud+worden+https%3A%2F%2Fnos.nl%2Fartikel%2F2613606-podcast-de-dag-zingend-oud-worden",
+    "parentUrl": "https://nos.nl/artikel/2613606-podcast-de-dag-zingend-oud-worden"
+  },
+  {
+    "id": 18848,
+    "url": "https://npo.nl/luister/podcasts/123-de-dag/140603",
+    "parentUrl": "https://nos.nl/artikel/2613606-podcast-de-dag-zingend-oud-worden"
+  },
+  {
+    "id": 18850,
+    "url": "https://nos.nl/artikel/2613279-uitbraken-zoals-op-de-hondius-zijn-zeldzaam-maar-cruiseschepen-zijn-voorbereid",
+    "parentUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "id": 18851,
+    "url": "https://nos.nl/artikel/2613164-dodelijke-virusuitbraak-op-hondius-vijf-vermoedelijke-besmettingen-twee-gevallen-zeker",
+    "parentUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "id": 18852,
+    "url": "https://twitter.com/intent/tweet?text\u003dMoeten+we+ons+zorgen+maken%3F+En+nog+vier+vragen+over+het+hantavirus\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "id": 18853,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus",
+    "parentUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "id": 18855,
+    "url": "https://nos.nl/artikel/2613232-drie-zieke-opvarenden-cruiseschip-klaargemaakt-voor-evacuatie-per-vliegtuig-naar-nederland",
+    "parentUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "id": 18857,
+    "url": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus#carousel_end_123341255197123125120125",
+    "parentUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "id": 18859,
+    "url": "https://nos.nl/artikel/2613323-passagiers-met-hantavirus-van-schip-geevacueerd-nederlander-brit-en-duitse",
+    "parentUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "id": 18860,
+    "url": "https://nos.nl/liveblog/2613369-patient-aangekomen-bij-lumc-tweede-vliegtuig-kampt-met-technische-problemen#UPDATE-94162788",
+    "parentUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "id": 18861,
+    "url": "https://nos.nl/artikel/2613263-who-zoekt-passagiers-van-dezelfde-vlucht-als-met-hantavirus-besmette-vrouw",
+    "parentUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "id": 18863,
+    "url": "https://nos.nl/liveblog/2613369-patient-aangekomen-bij-lumc-tweede-vliegtuig-kampt-met-technische-problemen#UPDATE-94159452",
+    "parentUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "id": 18864,
+    "url": "https://api.whatsapp.com/send?text\u003dMoeten+we+ons+zorgen+maken%3F+En+nog+vier+vragen+over+het+hantavirus+https%3A%2F%2Fnos.nl%2Fartikel%2F2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus",
+    "parentUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "id": 18865,
+    "url": "https://app.nos.nl/shorthand/de-laatste-klassenfoto/index.html",
+    "parentUrl": "https://app.nos.nl/shorthand/de-laatste-klassenfoto/link.html"
+  },
+  {
+    "id": 18866,
+    "url": "https://api.whatsapp.com/send?text\u003dGijzelnemers+Duitse+bank+gevlucht%2C+kist+met+geld+buitgemaakt+https%3A%2F%2Fnos.nl%2Fartikel%2F2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt",
+    "parentUrl": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt"
+  },
+  {
+    "id": 18867,
+    "url": "https://twitter.com/intent/tweet?text\u003dGijzelnemers+Duitse+bank+gevlucht%2C+kist+met+geld+buitgemaakt\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt"
+  },
+  {
+    "id": 18870,
+    "url": "https://www.swr.de/swraktuell/rheinland-pfalz/koblenz/liveticker-zu-geiselnahme-bank-sinzig-polizei-grosseinsatz-100.html",
+    "parentUrl": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt"
+  },
+  {
+    "id": 18872,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt",
+    "parentUrl": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://images.cdn.nos.nl/4/8/G/Y/C/q/KJ9k6zUbt9AaaoiMWnEyiUZ389VTD71P4Bz3ajF/3x1x3680x2070-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Gijzelnemers Duitse bank gevlucht, kist met geld buitgemaakt",
+    "pageUrl": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/H/1/j/p/K/YNd5edtrfEfpC2wt66KQ19ScrCtrFkeDVDDmyfd/4x2x1584x891-768x432.webp",
+    "alt": "",
+    "pageTitle": "Gijzelnemers Duitse bank gevlucht, kist met geld buitgemaakt",
+    "pageUrl": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/D/M/A/J/6/R4kQ69zWc1hCk8cgGMhYgXnc4csogm4Q7EvC2NN/976x165x848x636-480x360.webp",
+    "alt": "",
+    "pageTitle": "Gijzelnemers Duitse bank gevlucht, kist met geld buitgemaakt",
+    "pageUrl": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt"
+  },
+  {
+    "src": "https://app.nos.nl/shorthand/thumbs/de-laatste-klassenfoto/LINK_NOS_WEBSITE.webp",
+    "alt": "De laatste klassenfoto / NOS",
+    "pageTitle": "De laatste klassenfoto / NOS",
+    "pageUrl": "https://app.nos.nl/shorthand/de-laatste-klassenfoto/link.html"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/6/W/7/q/2/NpXRFizUvPz5jRq8gqKekCRTVpQb31JaUeC3AD2/6x46x1424x801-640x360.webp",
+    "alt": "",
+    "pageTitle": "Moeten we ons zorgen maken? En nog vier vragen over het hantavirus",
+    "pageUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/H/i/v/8/8/zgurVqgkc5hZ7uTE9vzFAxsrXdG54HyNoFjU87g/5x3x496x279-384x216.webp",
+    "alt": "",
+    "pageTitle": "Moeten we ons zorgen maken? En nog vier vragen over het hantavirus",
+    "pageUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/5/o/T/G/R/4gLyYt2wG5CCtAouH1te1cT1LPtXShd5bECVU5d/742x1x1077x1436-432x576.webp",
+    "alt": "",
+    "pageTitle": "Moeten we ons zorgen maken? En nog vier vragen over het hantavirus",
+    "pageUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/H/V/g/D/7/FBCoEiNrtnbRJ3WhCWV37JjMsvhfcoZbAVtgwvw/742x1x1077x1436-432x576.webp",
+    "alt": "",
+    "pageTitle": "Moeten we ons zorgen maken? En nog vier vragen over het hantavirus",
+    "pageUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/J/1/P/8/4/Eb9Te3uBRnC6cjYxmwzAaLbigYSAPjHoZqncbWS/742x1x1077x1436-432x576.webp",
+    "alt": "",
+    "pageTitle": "Moeten we ons zorgen maken? En nog vier vragen over het hantavirus",
+    "pageUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/c/9/S/V/F/kyLzNxVKsDnjXTKHMXEvVnMWCzgNgQ8KfNonJ2/742x1x1077x1436-432x576.webp",
+    "alt": "",
+    "pageTitle": "Moeten we ons zorgen maken? En nog vier vragen over het hantavirus",
+    "pageUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/5/v/R/2/F/QLjJu4T8YJBywQYpLWhAqewmA7QueFHicAK4Qox/694x0x1011x1348-432x576.webp",
+    "alt": "",
+    "pageTitle": "Moeten we ons zorgen maken? En nog vier vragen over het hantavirus",
+    "pageUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/G/k/Z/R/h/2CaWtPXPWW3Y9mgJh78jokGrYHrcjEqNB9L8X5o/227x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "Moeten we ons zorgen maken? En nog vier vragen over het hantavirus",
+    "pageUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/D/S/4/K/H/qBx1mXsc6AndPJ71W3q7rWrmMuEELbW3h5wAuz5/769x0x2460x1845-768x576.webp",
+    "alt": "",
+    "pageTitle": "Moeten we ons zorgen maken? En nog vier vragen over het hantavirus",
+    "pageUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/F/C/w/W/A/7ykuZJ53TJgkVwCE4GrDRsDQ77NgzNKyRjSQKqA/40x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "Moeten we ons zorgen maken? En nog vier vragen over het hantavirus",
+    "pageUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/Q/g/f/K/8/5qc3x2rsRyeGhFaqAFQy5mCqUajymRHKqJ8s1Y/267x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "Moeten we ons zorgen maken? En nog vier vragen over het hantavirus",
+    "pageUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/C/p/R/s/P/LSLp6CSXGGqq1xDzcX2FhhmoARHjqNdWbXPYwj4/1043x494x2648x1986-768x576.webp",
+    "alt": "",
+    "pageTitle": "Moeten we ons zorgen maken? En nog vier vragen over het hantavirus",
+    "pageUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/E/d/v/7/U/7dLH2xqsMH1QvguYhhtgzmsGq9Tz6PJVrCcdAgc/123x0x1776x1332-576x432.webp",
+    "alt": "",
+    "pageTitle": "Moeten we ons zorgen maken? En nog vier vragen over het hantavirus",
+    "pageUrl": "https://nos.nl/artikel/2613407-moeten-we-ons-zorgen-maken-en-nog-vier-vragen-over-het-hantavirus"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/C/p/w/6/A/uN42iu1R8Zerpvu7b7CeGMAsEvuW12VoGLTAEK2/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Podcast De Dag: zingend oud worden",
+    "pageUrl": "https://nos.nl/artikel/2613606-podcast-de-dag-zingend-oud-worden"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/H/q/d/3/D/duLmiTcQ113bbYiD3Ss6E7pQeMsPTTUDf5L1bHR/45x34x880x495-512x288.webp",
+    "alt": "",
+    "pageTitle": "Real Madrid legt vechtende spelers Valverde en Tchouaméni half miljoen boete op",
+    "pageUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/H/q/d/3/D/duLmiTcQ113bbYiD3Ss6E7pQeMsPTTUDf5L1bHR/82x20x812x609-480x360.webp",
+    "alt": "",
+    "pageTitle": "Real Madrid legt vechtende spelers Valverde en Tchouaméni half miljoen boete op",
+    "pageUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/2/d/f/k/R/KDLKHdtYGS3N9To5oEFeY9mv5j6cMBEkCHwo6Lc/789x107x2560x1920-768x576.webp",
+    "alt": "",
+    "pageTitle": "Real Madrid legt vechtende spelers Valverde en Tchouaméni half miljoen boete op",
+    "pageUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/D/A/s/Y/X/Ec4aM1U1Ktk3HXGRJ3BZL9royALFmFwQfgHNPR4/1271x47x1852x1389-576x432.webp",
+    "alt": "",
+    "pageTitle": "Real Madrid legt vechtende spelers Valverde en Tchouaméni half miljoen boete op",
+    "pageUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/C/1/k/W/n/v7oPHvRnvjAAw5iWncnrtMZRKiPgaBsgibFB6az/325x78x2372x1779-768x576.webp",
+    "alt": "",
+    "pageTitle": "Real Madrid legt vechtende spelers Valverde en Tchouaméni half miljoen boete op",
+    "pageUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/8/n/T/W/E/GddrtEJ1r8rAvBNeSGk161aTY9UitKSY4RwcmyS/509x164x2532x1899-288x216.webp",
+    "alt": "",
+    "pageTitle": "Real Madrid legt vechtende spelers Valverde en Tchouaméni half miljoen boete op",
+    "pageUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/D/n/T/Q/f/7HsAbbCm12VLbyskMETKq4tfn1xq2AxfbNo9Qis/1450x385x1636x1227-576x432.webp",
+    "alt": "",
+    "pageTitle": "Real Madrid legt vechtende spelers Valverde en Tchouaméni half miljoen boete op",
+    "pageUrl": "https://nos.nl/artikel/2613615-real-madrid-legt-vechtende-spelers-valverde-en-tchouameni-half-miljoen-boete-op"
+  },
   {
     "src": "https://images.cdn.nos.nl/6/G/y/9/7/R/ntFq2Bhwfwn8A9ZLi1CgVpUFCobfPF43jy7kQfa/0x0x4000x2250-1024x576.webp",
     "alt": "",
