@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1225,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleNoBlock",
+    "title": "Importing Modules — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Utilities » Importing Modules | Theme Auto Light Dark | Importing Modules¶ PyObject *PyImport_ImportModule(const char *name)¶ Return value: New reference. Part of the Stable ABI. This is a wrapper around PyImport_Import() which takes a const char* as an argument instead of a PyObject*. PyObject *PyImport_ImportModuleNoBlock(const char *name)¶ Return value: New reference. Part of the Stable ABI. This function is a deprecated alias of PyImport_ImportModule(). Changed in version 3.3: This function used to fail immediately when the import lock was held by another thread. In Python 3.3 though, the locking scheme switched to per-module locks for most purposes, so this function’s special behaviour isn’t needed anymore. Deprecated since version 3.13, will be removed in version 3.15: Use PyImport_ImportModule() instead. PyObject *PyImport_ImportModuleEx(const char *name, PyObject *globals, PyObject *locals, PyObject *fromlist)¶ Return value: New reference. Import a module. This is best described by referring to the built-in Python function __import__(). The return value is a new reference to the imported module or top-level package, or NULL with an exception set on failure. Like for __import__(), the return value when a submodule of a package was requested is normally the top-level package, unless a non-empty fromlist was given. Failing imports remove incomplete module objects, like with PyImport_ImportModule(). PyObject *PyImport_ImportModuleLevelObject(PyObject *name, PyObject *globals, PyObject *locals, PyObject *fromlist, int level)¶ Return value: New reference. Part of the Stable ABI since version 3.7. Import a module. This is best described by referring to the built-in Python function __import__(), as the standard __import__() function calls this function directly. The return value is a new reference to the imported module or top-level package, or NULL with an exception set on failure. Like for __import__(), the return value when a submodule of a package was requested is normally the top-level package, unless a non-empty fromlist was given. Added in version 3.3. PyObject *PyImport_ImportModuleLevel(const char *name, PyObject *globals, PyObject *locals, PyObject *fromlist, int level)¶ Return value: New reference. Part of the Stable ABI. Similar to PyImport_ImportModuleLevelObject(), but the name is a UTF-8 encoded string instead of a Unicode object. Changed in version 3.3: Negative values for level are no longer accepted. PyObject *PyImport_Import(PyObject *name)¶ Return value: New reference. Part of the Stable ABI. This is a higher-level interface that calls the current “import hook function” (with an explicit level of 0, meaning absolute import). It invokes the __import__() function from the __builtins__ of the current globals. This means that the import is done using whatever import hooks are installed in the current environment. This function always uses absolute imports. PyObject *PyImport_ReloadModule(PyObject *m)¶ Return value: New reference. Part of the Stable ABI. Reload a module. Return a new reference to the reloaded module, or NULL with an exception set on failure (the module still exists in this case). PyObject *PyImport_AddModuleRef(const char *name)¶ Return value: New reference. Part of the Stable ABI since version 3.13. Return the module object corresponding to a module name. The name argument may be of the form package.module. First check the modules dictionary if there’s one there, and if not, create a new one and insert it in the modules dictionary. Return a strong reference to the module on success. Return NULL with an exception set on failure. The module name name is decoded from UTF-8. This function does not load or import the module; if the module wasn’t already loaded, you will get an empty module object. Use PyImport_ImportModule() or one of its variants to import a module. Package structures implied by a dotted name for name are not created if not already present. Added in version 3.13. PyObject *PyImport_AddModuleObject(PyObject *name)¶ Return value: Borrowed reference. Part of the Stable ABI since version 3.7. Similar to PyImport_AddModuleRef(), but return a borrowed reference and name is a Python str object. Added in version 3.3. PyObject *PyImport_AddModule(const char *name)¶ Return value: Borrowed reference. Part of the Stable ABI. Similar to PyImport_AddModuleRef(), but return a borrowed reference. PyObject *PyImport_ExecCodeModule(const char *name, PyObject *co)¶ Return value: New reference. Part of the Stable ABI. Given a module name (possibly of the form package.module) and a code object read from a Python bytecode file or obtained from the built-in function compile(), load the module. Return a new reference to the module object, or NULL with an exception set if an error occurred. name is removed from sys.modules in error cases, even if name was already in sys.module",
+    "scrapedAt": "2026-05-09 01:11:02.25725"
+  },
+  {
+    "id": 1224,
+    "url": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc",
+    "title": "collections.abc — Abstract Base Classes for Containers — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » collections.abc — Abstract Base Classes for Containers | Theme Auto Light Dark | collections.abc — Abstract Base Classes for Containers¶ Added in version 3.3: Formerly, this module was part of the collections module. Source code: Lib/_collections_abc.py This module provides abstract base classes that can be used to test whether a class provides a particular interface; for example, whether it is hashable or whether it is a mapping. An issubclass() or isinstance() test for an interface works in one of three ways. A newly written class can inherit directly from one of the abstract base classes. The class must supply the required abstract methods. The remaining mixin methods come from inheritance and can be overridden if desired. Other methods may be added as needed: class C(Sequence):                      # Direct inheritance\n    def __init__(self): ...             # Extra method not required by the ABC\n    def __getitem__(self, index):  ...  # Required abstract method\n    def __len__(self):  ...             # Required abstract method\n    def count(self, value): ...         # Optionally override a mixin method\n \u003e\u003e\u003e issubclass(C, Sequence)\nTrue\n\u003e\u003e\u003e isinstance(C(), Sequence)\nTrue\n Existing classes and built-in classes can be registered as “virtual subclasses” of the ABCs. Those classes should define the full API including all of the abstract methods and all of the mixin methods. This lets users rely on issubclass() or isinstance() tests to determine whether the full interface is supported. The exception to this rule is for methods that are automatically inferred from the rest of the API: class D:                                 # No inheritance\n    def __init__(self): ...              # Extra method not required by the ABC\n    def __getitem__(self, index):  ...   # Abstract method\n    def __len__(self):  ...              # Abstract method\n    def count(self, value): ...          # Mixin method\n    def index(self, value): ...          # Mixin method\n\nSequence.register(D)                     # Register instead of inherit\n \u003e\u003e\u003e issubclass(D, Sequence)\nTrue\n\u003e\u003e\u003e isinstance(D(), Sequence)\nTrue\n In this example, class D does not need to define __contains__, __iter__, and __reversed__ because the in-operator, the iteration logic, and the reversed() function automatically fall back to using __getitem__ and __len__. Some simple interfaces are directly recognizable by the presence of the required methods (unless those methods have been set to None): class E:\n    def __iter__(self): ...\n    def __next__(self): ...\n \u003e\u003e\u003e issubclass(E, Iterable)\nTrue\n\u003e\u003e\u003e isinstance(E(), Iterable)\nTrue\n Complex interfaces do not support this last technique because an interface is more than just the presence of method names. Interfaces specify semantics and relationships between methods that cannot be inferred solely from the presence of specific method names. For example, knowing that a class supplies __getitem__, __len__, and __iter__ is insufficient for distinguishing a Sequence from a Mapping. Added in version 3.9: These abstract classes now support []. See Generic Alias Type and PEP 585. Collections Abstract Base Classes¶ The collections module offers the following ABCs: ABC Inherits from Abstract Methods Mixin Methods Container [1] __contains__ Hashable [1] __hash__ Iterable [1] [2] __iter__ Iterator [1] Iterable __next__ __iter__ Reversible [1] Iterable __reversed__ Generator [1] Iterator send, throw close, __iter__, __next__ Sized [1] __len__ Callable [1] __call__ Collection [1] Sized, Iterable, Container __contains__, __iter__, __len__ Sequence Reversible, Collection __getitem__, __len__ __contains__, __iter__, __reversed__, index, and count MutableSequence Sequence __getitem__, __setitem__, __delitem__, __len__, insert Inherited Sequence methods and append, clear, reverse, extend, pop, remove, and __iadd__ ByteString Sequence __getitem__, __len__ Inherited Sequence methods Set Collection __contains__, __iter__, __len__ __le__, __lt__, __eq__, __ne__, __gt__, __ge__, __and__, __or__, __sub__, __rsub__, __xor__, __rxor__ and isdisjoint MutableSet Set __contains__, __iter__, __len__, add, discard Inherited Set methods and clear, pop, remove, __ior__, __iand__, __ixor__, and __isub__ Mapping Collection __getitem__, __iter__, __len__ __contains__, keys, items, values, get, __eq__, and __ne__ MutableMapping Mapping __getitem__, __setitem__, __delitem__, __iter__, __len__ Inherited Mapping methods and pop, popitem, clear, update, and setdefault MappingView Sized __init__, __len__ and __repr__ ItemsView MappingView, Set __contains__, __iter__ KeysView MappingView, Set __contains__, __iter__ ValuesView MappingView, Collection __contains__, __iter__ Awaitable [1] __await__ Coroutine [1] Awaitable send, throw close AsyncIterable [1] __aiter__ AsyncIterator [1] AsyncIterable __anext__ __aiter__ AsyncGenerator [1] AsyncIterator ",
+    "scrapedAt": "2026-05-09 01:11:00.949239"
+  },
+  {
+    "id": 1223,
+    "url": "https://docs.python.org/3/library/calendar.html#module-calendar",
+    "title": "calendar — General calendar-related functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » calendar — General calendar-related functions | Theme Auto Light Dark | calendar — General calendar-related functions¶ Source code: Lib/calendar.py This module allows you to output calendars like the Unix cal program, and provides additional useful functions related to the calendar. By default, these calendars have Monday as the first day of the week, and Sunday as the last (the European convention). Use setfirstweekday() to set the first day of the week to Sunday (6) or to any other weekday. Parameters that specify dates are given as integers. For related functionality, see also the datetime and time modules. The functions and classes defined in this module use an idealized calendar, the current Gregorian calendar extended indefinitely in both directions. This matches the definition of the “proleptic Gregorian” calendar in Dershowitz and Reingold’s book “Calendrical Calculations”, where it’s the base calendar for all computations. Zero and negative years are interpreted as prescribed by the ISO 8601 standard. Year 0 is 1 BC, year -1 is 2 BC, and so on. class calendar.Calendar(firstweekday\u003d0)¶ Creates a Calendar object. firstweekday is an integer specifying the first day of the week. MONDAY is 0 (the default), SUNDAY is 6. A Calendar object provides several methods that can be used for preparing the calendar data for formatting. This class doesn’t do any formatting itself. This is the job of subclasses. Calendar instances have the following methods and attributes: firstweekday¶ The first weekday as an integer (0–6). This property can also be set and read using setfirstweekday() and getfirstweekday() respectively. getfirstweekday()¶ Return an int for the current first weekday (0–6). Identical to reading the firstweekday property. setfirstweekday(firstweekday)¶ Set the first weekday to firstweekday, passed as an int (0–6). Identical to setting the firstweekday property. iterweekdays()¶ Return an iterator for the weekday numbers that will be used for one week. The first value from the iterator will be the same as the value of the firstweekday property. itermonthdates(year, month)¶ Return an iterator for the month month (1–12) in the year year. This iterator will return all days (as datetime.date objects) for the month and all days before the start of the month or after the end of the month that are required to get a complete week. itermonthdays(year, month)¶ Return an iterator for the month month in the year year similar to itermonthdates(), but not restricted by the datetime.date range. Days returned will simply be day of the month numbers. For the days outside of the specified month, the day number is 0. itermonthdays2(year, month)¶ Return an iterator for the month month in the year year similar to itermonthdates(), but not restricted by the datetime.date range. Days returned will be tuples consisting of a day of the month number and a weekday number. itermonthdays3(year, month)¶ Return an iterator for the month month in the year year similar to itermonthdates(), but not restricted by the datetime.date range. Days returned will be tuples consisting of a year, a month and a day of the month numbers. Added in version 3.7. itermonthdays4(year, month)¶ Return an iterator for the month month in the year year similar to itermonthdates(), but not restricted by the datetime.date range. Days returned will be tuples consisting of a year, a month, a day of the month, and a day of the week numbers. Added in version 3.7. monthdatescalendar(year, month)¶ Return a list of the weeks in the month month of the year as full weeks. Weeks are lists of seven datetime.date objects. monthdays2calendar(year, month)¶ Return a list of the weeks in the month month of the year as full weeks. Weeks are lists of seven tuples of day numbers and weekday numbers. monthdayscalendar(year, month)¶ Return a list of the weeks in the month month of the year as full weeks. Weeks are lists of seven day numbers. yeardatescalendar(year, width\u003d3)¶ Return the data for the specified year ready for formatting. The return value is a list of month rows. Each month row contains up to width months (defaulting to 3). Each month contains between 4 and 6 weeks and each week contains 1–7 days. Days are datetime.date objects. yeardays2calendar(year, width\u003d3)¶ Return the data for the specified year ready for formatting (similar to yeardatescalendar()). Entries in the week lists are tuples of day numbers and weekday numbers. Day numbers outside this month are zero. yeardayscalendar(year, width\u003d3)¶ Return the data for the specified year ready for formatting (similar to yeardatescalendar()). Entries in the week lists are day numbers. Day numbers outside this month are zero. class calendar.TextCalendar(firstweekday\u003d0)¶ This class can be used to generate plain text calendars. TextCalendar instances have the following methods: formatday(theday, weekd",
+    "scrapedAt": "2026-05-09 01:10:59.646601"
+  },
+  {
+    "id": 1222,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_Names",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:10:58.319521"
+  },
+  {
+    "id": 1221,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser",
+    "title": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Command-line interface libraries » argparse — Parser for command-line options, arguments and subcommands | Theme Auto Light Dark | argparse — Parser for command-line options, arguments and subcommands¶ Added in version 3.2. Source code: Lib/argparse.py Note While argparse is the default recommended standard library module for implementing basic command line applications, authors with more exacting requirements for exactly how their command line applications behave may find it doesn’t provide the necessary level of control. Refer to Choosing an argument parsing library for alternatives to consider when argparse doesn’t support behaviors that the application requires (such as entirely disabling support for interspersed options and positional arguments, or accepting option parameter values that start with - even when they correspond to another defined option). Tutorial This page contains the API reference information. For a more gentle introduction to Python command-line parsing, have a look at the argparse tutorial. The argparse module makes it easy to write user-friendly command-line interfaces. The program defines what arguments it requires, and argparse will figure out how to parse those out of sys.argv. The argparse module also automatically generates help and usage messages. The module will also issue errors when users give the program invalid arguments. The argparse module’s support for command-line interfaces is built around an instance of argparse.ArgumentParser. It is a container for argument specifications and has options that apply to the parser as whole: parser \u003d argparse.ArgumentParser(\n                    prog\u003d\u0027ProgramName\u0027,\n                    description\u003d\u0027What the program does\u0027,\n                    epilog\u003d\u0027Text at the bottom of help\u0027)\n The ArgumentParser.add_argument() method attaches individual argument specifications to the parser. It supports positional arguments, options that accept values, and on/off flags: parser.add_argument(\u0027filename\u0027)           # positional argument\nparser.add_argument(\u0027-c\u0027, \u0027--count\u0027)      # option that takes a value\nparser.add_argument(\u0027-v\u0027, \u0027--verbose\u0027,\n                    action\u003d\u0027store_true\u0027)  # on/off flag\n The ArgumentParser.parse_args() method runs the parser and places the extracted data in a argparse.Namespace object: args \u003d parser.parse_args()\nprint(args.filename, args.count, args.verbose)\n Note If you’re looking for a guide about how to upgrade optparse code to argparse, see Upgrading Optparse Code. ArgumentParser objects¶ class argparse.ArgumentParser(prog\u003dNone, usage\u003dNone, description\u003dNone, epilog\u003dNone, parents\u003d[], formatter_class\u003dargparse.HelpFormatter, prefix_chars\u003d\u0027-\u0027, fromfile_prefix_chars\u003dNone, argument_default\u003dNone, conflict_handler\u003d\u0027error\u0027, add_help\u003dTrue, allow_abbrev\u003dTrue, exit_on_error\u003dTrue, *, suggest_on_error\u003dFalse, color\u003dTrue)¶ Create a new ArgumentParser object. All parameters should be passed as keyword arguments. Each parameter has its own more detailed description below, but in short they are: prog - The name of the program (default: generated from the __main__ module attributes and sys.argv[0]) usage - The string describing the program usage (default: generated from arguments added to parser) description - Text to display before the argument help (by default, no text) epilog - Text to display after the argument help (by default, no text) parents - A list of ArgumentParser objects whose arguments should also be included formatter_class - A class for customizing the help output prefix_chars - The set of characters that prefix optional arguments (default: ‘-‘) fromfile_prefix_chars - The set of characters that prefix files from which additional arguments should be read (default: None) argument_default - The global default value for arguments (default: None) conflict_handler - The strategy for resolving conflicting optionals (usually unnecessary) add_help - Add a -h/--help option to the parser (default: True) allow_abbrev - Allows long options to be abbreviated if the abbreviation is unambiguous (default: True) exit_on_error - Determines whether or not ArgumentParser exits with error info when an error occurs. (default: True) suggest_on_error - Enables suggestions for mistyped argument choices and subparser names (default: False) color - Allow color output (default: True) Changed in version 3.5: allow_abbrev parameter was added. Changed in version 3.8: In previous versions, allow_abbrev also disabled grouping of short flags such as -vv to mean -v -v. Changed in version 3.9: exit_on_error parameter was added. Changed in version 3.14: suggest_on_error and color parameters were added. The following sections describe how each of these are used. prog¶ By default, ArgumentParser calculates the name of the program to display in help messages depending on the way the Python interpreter was run: The base name of sys.argv[0] if a file was passe",
+    "scrapedAt": "2026-05-09 01:10:57.091669"
+  },
+  {
     "id": 1220,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#pseudo-instructions",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -8188,26 +8223,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1221,
-    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser"
-  },
-  {
-    "id": 1222,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_Names"
-  },
-  {
-    "id": 1223,
-    "url": "https://docs.python.org/3/library/calendar.html#module-calendar"
-  },
-  {
-    "id": 1224,
-    "url": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
-  },
-  {
-    "id": 1225,
-    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleNoBlock"
   },
   {
     "id": 1226,
@@ -217090,10 +217105,660 @@ window.searchData = [
     "id": 235245,
     "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.rewind",
     "parentUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read"
+  },
+  {
+    "id": 239180,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.AUGUST",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239182,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar.setfirstweekday",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239185,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.TextCalendar.formatweekday",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239186,
+    "url": "https://docs.python.org/3/library/calendar.html#cmdoption-calendar-arg-year",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239188,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.LocaleTextCalendar",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239189,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.TextCalendar",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239190,
+    "url": "https://docs.python.org/3/library/calendar.html#cmdoption-calendar-lines",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239192,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.HTMLCalendar.cssclass_year_head",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239193,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.LocaleHTMLCalendar",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239194,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.month_name",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239195,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.HTMLCalendar",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239198,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/calendar.py",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239199,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.TUESDAY",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239200,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.HTMLCalendar.formatmonth",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239202,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.IllegalMonthError.month",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239203,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.HTMLCalendar.formatmonthname",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239204,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.HTMLCalendar.cssclass_noday",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239205,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.HTMLCalendar.cssclasses_weekday_head",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239206,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.TextCalendar.formatday",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239207,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar.getfirstweekday",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239208,
+    "url": "https://docs.python.org/3/library/calendar.html#cmdoption-calendar-spacing",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239209,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.THURSDAY",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239210,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.FRIDAY",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239212,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.timegm",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239213,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.TextCalendar.formatmonthname",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239214,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.month_abbr",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239215,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.firstweekday",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239216,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar.yeardays2calendar",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239217,
+    "url": "https://docs.python.org/3/library/calendar.html#cmdoption-calendar-width",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239218,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.NOVEMBER",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239219,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.prcal",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239220,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.calendar",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239222,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.IllegalWeekdayError.weekday",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239223,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.TextCalendar.formatweek",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239224,
+    "url": "https://docs.python.org/3/library/calendar.html#cmdoption-calendar-type",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239225,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.setfirstweekday",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239227,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.OCTOBER",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239228,
+    "url": "https://docs.python.org/3/library/calendar.html#cmdoption-calendar-help",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239229,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.JULY",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239230,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.day_name",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239232,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar.itermonthdays",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239233,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.isleap",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239235,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar.firstweekday",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239236,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.monthrange",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239237,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.month",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239238,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.SUNDAY",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239239,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.monthcalendar",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239240,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.WEDNESDAY",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239241,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.HTMLCalendar.cssclass_month_head",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239242,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.HTMLCalendar.cssclasses",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239243,
+    "url": "https://docs.python.org/3/library/calendar.html#cmdoption-calendar-months",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239244,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/calendar.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239247,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.leapdays",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239248,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Day",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239249,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.DECEMBER",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239251,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.TextCalendar.formatyear",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239252,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.HTMLCalendar.cssclass_month",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239253,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.prmonth",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239254,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar.itermonthdays4",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239255,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Month",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239256,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar.itermonthdays3",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239257,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar.itermonthdays2",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239258,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.SATURDAY",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239259,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.HTMLCalendar.cssclass_year",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239263,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239264,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.HTMLCalendar.formatyear",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239265,
+    "url": "https://docs.python.org/3/library/calendar.html#cmdoption-calendar-arg-month",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239266,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.TextCalendar.formatweekheader",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239267,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.HTMLCalendar.formatyearpage",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239268,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.IllegalWeekdayError",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239269,
+    "url": "https://docs.python.org/3/library/calendar.html#cmdoption-calendar-css",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239271,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar.monthdatescalendar",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239274,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.weekday",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239275,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.JUNE",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239277,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.MARCH",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239278,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.TextCalendar.formatmonth",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239280,
+    "url": "https://docs.python.org/3/library/calendar.html#cmdoption-calendar-first-weekday",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239281,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.weekheader",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239282,
+    "url": "https://docs.python.org/3/library/calendar.html#cmdoption-calendar-locale",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239285,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.TextCalendar.pryear",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239286,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar.monthdays2calendar",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239288,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.IllegalMonthError",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239289,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar.itermonthdates",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239290,
+    "url": "https://docs.python.org/3/library/calendar.html#cmdoption-calendar-encoding",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239291,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.APRIL",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239292,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar.iterweekdays",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239294,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.day_abbr",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239297,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar.monthdayscalendar",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239298,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.SEPTEMBER",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239299,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.TextCalendar.prmonth",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239300,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar.yeardayscalendar",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239302,
+    "url": "https://docs.python.org/3/library/calendar.html#",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239304,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.MAY",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239305,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.Calendar.yeardatescalendar",
+    "parentUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "id": 239307,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id7",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239310,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id8",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239311,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239312,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239314,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id9",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239321,
+    "url": "https://docs.python.org/3/library/collections.abc.html#",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239322,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239323,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239325,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239347,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/_collections_abc.py",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239351,
+    "url": "https://code.activestate.com/recipes/576694/",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239356,
+    "url": "https://docs.python.org/3/library/abc.html#abc.ABCMeta.__subclasshook__",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239372,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id16",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239373,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id17",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239374,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id14",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239376,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id15",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239377,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id18",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239378,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id19",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239381,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id12",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239383,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id13",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239384,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id10",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239387,
+    "url": "https://docs.python.org/3/library/collections.abc.html#id11",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239399,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.ByteString.index",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 239418,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/collections.abc.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Importing Modules — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleNoBlock"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Importing Modules — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleNoBlock"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "collections.abc — Abstract Base Classes for Containers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "collections.abc — Abstract Base Classes for Containers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "calendar — General calendar-related functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "calendar — General calendar-related functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/calendar.html#module-calendar"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_Names"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_Names"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
