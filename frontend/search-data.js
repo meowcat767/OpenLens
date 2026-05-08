@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1301,
+    "url": "https://github.com/python/cpython/issues/128863",
+    "title": "[C API] Deprecate private functions which have a public replacement · Issue #128863 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k [C API] Deprecate private functions which have a public replacement #128863 New issue Copy link New issue Copy link Closed Closed [C API] Deprecate private functions which have a public replacement#128863 Copy link Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description vstinner opened on Jan 15, 2025 Issue body actions Hi, Python 3.13 and 3.14 added public functions to replace private functions. For example, a public function PyBytes_Join() was added to replace the private function _PyBytes_Join(). I propose to deprecate the private functions which have a public replacement, and remove them in Python 3.16. Victor Linked PRs gh-128863: Deprecate private C API functions #128864 gh-128863: Deprecate _PyLong_Sign() function #129176 gh-128863: deprecate _PyLong_New() function #129212 gh-128863: deprecate _PyLong_FromDigits() function #127939 gh-128863: Deprecate the private _PyUnicodeWriter API #129245 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:14:48.332319"
+  },
+  {
+    "id": 1300,
+    "url": "https://docs.python.org/3/c-api/iter.html#c.PyIter_NextItem",
+    "title": "Iterator Protocol — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Abstract Objects Layer » Iterator Protocol | Theme Auto Light Dark | Iterator Protocol¶ There are two functions specifically for working with iterators. int PyIter_Check(PyObject *o)¶ Part of the Stable ABI since version 3.8. Return non-zero if the object o can be safely passed to PyIter_NextItem() and 0 otherwise. This function always succeeds. int PyAIter_Check(PyObject *o)¶ Part of the Stable ABI since version 3.10. Return non-zero if the object o provides the AsyncIterator protocol, and 0 otherwise. This function always succeeds. Added in version 3.10. int PyIter_NextItem(PyObject *iter, PyObject **item)¶ Part of the Stable ABI since version 3.14. Return 1 and set item to a strong reference of the next value of the iterator iter on success. Return 0 and set item to NULL if there are no remaining values. Return -1, set item to NULL and set an exception on error. Added in version 3.14. PyObject *PyIter_Next(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. This is an older version of PyIter_NextItem(), which is retained for backwards compatibility. Prefer PyIter_NextItem(). Return the next value from the iterator o. The object must be an iterator according to PyIter_Check() (it is up to the caller to check this). If there are no remaining values, returns NULL with no exception set. If an error occurs while retrieving the item, returns NULL and passes along the exception. type PySendResult¶ The enum value used to represent different results of PyIter_Send(). Added in version 3.10. PySendResult PyIter_Send(PyObject *iter, PyObject *arg, PyObject **presult)¶ Part of the Stable ABI since version 3.10. Sends the arg value into the iterator iter. Returns: PYGEN_RETURN if iterator returns. Return value is returned via presult. PYGEN_NEXT if iterator yields. Yielded value is returned via presult. PYGEN_ERROR if iterator has raised and exception. presult is set to NULL. Added in version 3.10. Previous topic Mapping Protocol Next topic Buffer Protocol This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Abstract Objects Layer » Iterator Protocol | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 01:14:46.11418"
+  },
+  {
+    "id": 1299,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal",
+    "title": "decimal — Decimal fixed-point and floating-point arithmetic — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Numeric and Mathematical Modules » decimal — Decimal fixed-point and floating-point arithmetic | Theme Auto Light Dark | decimal — Decimal fixed-point and floating-point arithmetic¶ Source code: Lib/decimal.py The decimal module provides support for fast correctly rounded decimal floating-point arithmetic. It offers several advantages over the float datatype: Decimal “is based on a floating-point model which was designed with people in mind, and necessarily has a paramount guiding principle – computers must provide an arithmetic that works in the same way as the arithmetic that people learn at school.” – excerpt from the decimal arithmetic specification. Decimal numbers can be represented exactly. In contrast, numbers like 1.1 and 2.2 do not have exact representations in binary floating point. End users typically would not expect 1.1 + 2.2 to display as 3.3000000000000003 as it does with binary floating point. The exactness carries over into arithmetic. In decimal floating point, 0.1 + 0.1 + 0.1 - 0.3 is exactly equal to zero. In binary floating point, the result is 5.5511151231257827e-017. While near to zero, the differences prevent reliable equality testing and differences can accumulate. For this reason, decimal is preferred in accounting applications which have strict equality invariants. The decimal module incorporates a notion of significant places so that 1.30 + 1.20 is 2.50. The trailing zero is kept to indicate significance. This is the customary presentation for monetary applications. For multiplication, the “schoolbook” approach uses all the figures in the multiplicands. For instance, 1.3 * 1.2 gives 1.56 while 1.30 * 1.20 gives 1.5600. Unlike hardware based binary floating point, the decimal module has a user alterable precision (defaulting to 28 places) which can be as large as needed for a given problem: \u003e\u003e\u003e from decimal import *\n\u003e\u003e\u003e getcontext().prec \u003d 6\n\u003e\u003e\u003e Decimal(1) / Decimal(7)\nDecimal(\u00270.142857\u0027)\n\u003e\u003e\u003e getcontext().prec \u003d 28\n\u003e\u003e\u003e Decimal(1) / Decimal(7)\nDecimal(\u00270.1428571428571428571428571429\u0027)\n Both binary and decimal floating point are implemented in terms of published standards. While the built-in float type exposes only a modest portion of its capabilities, the decimal module exposes all required parts of the standard. When needed, the programmer has full control over rounding and signal handling. This includes an option to enforce exact arithmetic by using exceptions to block any inexact operations. The decimal module was designed to support “without prejudice, both exact unrounded decimal arithmetic (sometimes called fixed-point arithmetic) and rounded floating-point arithmetic.” – excerpt from the decimal arithmetic specification. The module design is centered around three concepts: the decimal number, the context for arithmetic, and signals. A decimal number is immutable. It has a sign, coefficient digits, and an exponent. To preserve significance, the coefficient digits do not truncate trailing zeros. Decimals also include special values such as Infinity, -Infinity, and NaN. The standard also differentiates -0 from +0. The context for arithmetic is an environment specifying precision, rounding rules, limits on exponents, flags indicating the results of operations, and trap enablers which determine whether signals are treated as exceptions. Rounding options include ROUND_CEILING, ROUND_DOWN, ROUND_FLOOR, ROUND_HALF_DOWN, ROUND_HALF_EVEN, ROUND_HALF_UP, ROUND_UP, and ROUND_05UP. Signals are groups of exceptional conditions arising during the course of computation. Depending on the needs of the application, signals may be ignored, considered as informational, or treated as exceptions. The signals in the decimal module are: Clamped, InvalidOperation, DivisionByZero, Inexact, Rounded, Subnormal, Overflow, Underflow and FloatOperation. For each signal there is a flag and a trap enabler. When a signal is encountered, its flag is set to one, then, if the trap enabler is set to one, an exception is raised. Flags are sticky, so the user needs to reset them before monitoring a calculation. See also IBM’s General Decimal Arithmetic Specification, The General Decimal Arithmetic Specification. Quick-start tutorial¶ The usual start to using decimals is importing the module, viewing the current context with getcontext() and, if necessary, setting new values for precision, rounding, or enabled traps: \u003e\u003e\u003e from decimal import *\n\u003e\u003e\u003e getcontext()\nContext(prec\u003d28, rounding\u003dROUND_HALF_EVEN, Emin\u003d-999999, Emax\u003d999999,\n        capitals\u003d1, clamp\u003d0, flags\u003d[], traps\u003d[Overflow, DivisionByZero,\n        InvalidOperation])\n\n\u003e\u003e\u003e getcontext().prec \u003d 7       # Set a new precision\n Decimal instances can be constructed from integers, strings, floats, or tuples. Construction from an integer or a float performs an exact conversion of the value of that integer or float. Decimal numbers include special values such",
+    "scrapedAt": "2026-05-09 01:14:44.878089"
+  },
+  {
+    "id": 1298,
+    "url": "https://github.com/python/cpython/issues/126686",
+    "title": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Contributor junkmd commented Nov 11, 2024 • edited by github-actions Bot Loading Uh oh! There was an error while loading. Please reload this page. Please refer also to gh-126384 and gh-126610 for the behavior when a foreign function fails to call a COM method. Issue: ctypes: Make COMError, mentioned in the \"Function prototypes\" section of documentation, public. #126615 📚 Documentation preview 📚: https://cpython-previews--126686.org.readthedocs.build/ Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions bedevere-app Bot added docs Documentation in the Doc dir skip news awaiting review labels Nov 11, 2024 bedevere-app Bot mentioned this pull request Nov 11, 2024 ctypes: Make COMError, mentioned in the \"Function prototypes\" section of documentation, public. #126615 Closed ZeroIntensity added topic-ctypes needs backport to 3.12 only security fixes needs backport to 3.13 bugs and security fixes labels Nov 11, 2024 junkmd added 4 commits November 16, 2024 09:18 add COMError exception to Doc/library/ctypes.rst. e70aa54 Add a mention of the difference in exceptions that can be raised. 181f512 Add a dot to refer to the object within the same module. 857fef5 Simplify descriptions of attributes. 90fb47f junkmd force-pushed the gh_126615_comerror_doc branch from 58cc032 to 90fb47f Compare November 16, 2024 09:22 junkmd mentioned this pull request Nov 16, 2024 Methods to bridge the gap between Integer error codes and HRESULT values represented as signed 32-bit hexadecimal enthought/comtypes#665 Closed Align with the docstring defined in the C implementation: … 1f9d4ee \"Raised when a COM method call failed.\"\n\nhttps://github.com/python/cpython/blob/2313f8421080ceb3343c6f5d291279adea85e073/Modules/_ctypes/_ctypes.c#L5548 picnixz reviewed Nov 16, 2024 View reviewed changes Comment thread Doc/library/ctypes.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/ctypes.rst Outdated .. exception:: COMError(hresult, text, details) Windows only: This non-public exception is raised when a COM method call Copy link Copy Markdown Member picnixz Nov 16, 2024 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment You can use .. availability:: Windows (but put the directive after the class doc) Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👍 1 junkmd reacted with thumbs up emoji All reactions 👍 1 reaction Copy link Copy Markdown Contributor Author junkmd Nov 16, 2024 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment I followed the pattern in ctypes.rst because it frequently used sentences like Windows only: .... Since this markup wasn\u0027t mentioned in the documentation guide, I overlooked it. Is this a more modern approach? Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Member picnixz Nov 16, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page. There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment It\u0027s widely used in the https://docs.python.org/3/library/socket.html module actually. But if it\u0027s not the pattern of ctypes maybe it\u0027s better to be consistent. We can make a follow-up PR to transform them into directives. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👍 1 junkmd reacted with thumbs up emoji All reactions 👍 1 reaction Copy link Copy Markdown Contributor Author junkmd Nov 16, 2024 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment I removed the Availability directive and reverted to the original \"Windows only: ...\". Once this PR i",
+    "scrapedAt": "2026-05-09 01:14:43.615282"
+  },
+  {
+    "id": 1297,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetPrefix",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-09 01:14:38.3458"
+  },
+  {
     "id": 1296,
     "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertHasAttr",
     "title": "unittest — Unit testing framework — Python 3.14.5rc1 documentation",
@@ -8713,26 +8748,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1297,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetPrefix"
-  },
-  {
-    "id": 1298,
-    "url": "https://github.com/python/cpython/issues/126686"
-  },
-  {
-    "id": 1299,
-    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal"
-  },
-  {
-    "id": 1300,
-    "url": "https://docs.python.org/3/c-api/iter.html#c.PyIter_NextItem"
-  },
-  {
-    "id": 1301,
-    "url": "https://github.com/python/cpython/issues/128863"
   },
   {
     "id": 1302,
@@ -224950,10 +224965,1180 @@ window.searchData = [
     "id": 260400,
     "url": "https://github.com/python/cpython/blob/b8f7bddd6c6b5d2d13c97882042ce808aceca5a8/.github/CODEOWNERS#L194",
     "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260839,
+    "url": "https://github.com/python/cpython/pull/127099",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260841,
+    "url": "https://github.com/python/cpython/pull/126686#event-15320981281",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260843,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22needs%20backport%20to%203.12%22",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260845,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1846524494",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260846,
+    "url": "https://github.com/python/cpython/pull/126686/commits/90fb47fd75400eecca9bb17807657e04777df450",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260847,
+    "url": "https://github.com/python/cpython/pull/126686",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260848,
+    "url": "https://github.com/python/cpython/commit/f9c5573dedcb2f2e9ae152672ce157987cdea612",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260849,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1844969162",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260850,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1846531238",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260851,
+    "url": "https://github.com/python/cpython/commit/58cc032eb75a08ad64ea58317ce2ef93bc5fc34c",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260852,
+    "url": "https://github.com/python/cpython/pull/126686/commits/57d76c5c23cf4c7222e5233bf8ec1abc6ac2b3fc",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260853,
+    "url": "https://github.com/python/cpython/pull/127122",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260854,
+    "url": "https://github.com/python/cpython/pull/126686#commits-pushed-9461642",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260855,
+    "url": "https://devguide.python.org/documentation/markup/#module-specific-markup",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260856,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1846761062",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260857,
+    "url": "https://github.com/python/cpython/pull/126686#user-content-fn-1-5f04dd93a758979919a0a30c32b477bd",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260858,
+    "url": "https://devguide.python.org/documentation/markup/#",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260861,
+    "url": "https://github.com/python/cpython/pull/126686/commits/1f9d4eea65de2dd20e789b64c6c7c2216d28922a",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260862,
+    "url": "https://github.com/python/cpython/pull/126686#commits-pushed-a16f1e2",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260863,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1844975222",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260864,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1844976676",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260865,
+    "url": "https://github.com/python/cpython/pull/126686/commits/181f512798590f8ba08bddbb82f8eeaacd68697e",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260866,
+    "url": "https://github.com/python/cpython/blob/f9c5573dedcb2f2e9ae152672ce157987cdea612/Modules/_ctypes/callproc.c#L1098-L1164",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260867,
+    "url": "https://github.com/python/cpython/pull/126686/commits/e70aa54456782d9cde3f612d11adf0a771faf18a",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260868,
+    "url": "https://github.com/python/cpython/pull/126686#pullrequestreview-2442522517",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260869,
+    "url": "https://github.com/python/cpython/pull/126686/commits/1fa159ab9a5c24125beb1302fd29d76755fb6355",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260870,
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/oaidl/nf-oaidl-ierrorinfo-getguid",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260871,
+    "url": "https://github.com/python/cpython/pull/126686#commits-pushed-dafb5b2",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260875,
+    "url": "https://github.com/python/cpython/pull/126686#pullrequestreview-2448202113",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260876,
+    "url": "https://cpython-previews--126686.org.readthedocs.build/",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260877,
+    "url": "https://github.com/python/cpython/pull/126686#issue-2649567019",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260879,
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/oaidl/nf-oaidl-ierrorinfo-getsource",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260881,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1844972804",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260883,
+    "url": "https://github.com/python/cpython/compare/58cc032eb75a08ad64ea58317ce2ef93bc5fc34c..90fb47fd75400eecca9bb17807657e04777df450",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260884,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1844961895",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260885,
+    "url": "https://github.com/python/cpython/pull/126686#commits-pushed-1fa159a",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260886,
+    "url": "https://github.com/python/cpython/pull/126686/commits/857fef5b074f90cca5bc99baef296fe374c6a3aa",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260887,
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/oaidl/nf-oaidl-ierrorinfo-gethelpfile",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260889,
+    "url": "https://github.com/python/cpython/pull/126686/files/934c36ae4a19069c15a66e3c3c5b45c845fecd77",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260890,
+    "url": "https://github.com/python/cpython/pull/126686#event-15366603814",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260892,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F126686",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260893,
+    "url": "https://github.com/python/cpython/pull/126686#ref-issue-2664190573",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260894,
+    "url": "https://github.com/python/cpython/commit/5b4502560ba83274badac46ad7f263402f7ad269",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260895,
+    "url": "https://github.com/python/cpython/pull/126686/commits/3da9e15d0fcd1ddd9ba3537ddd23541a530e1053",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260896,
+    "url": "https://github.com/python/cpython/pull/126686/files/b71e310fab5ca60dd5c51bde2476d7a162f25f86",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260897,
+    "url": "https://github.com/python/cpython/pull/126686/commits/dafb5b225a451adfa8763575fde7b77dcfa8f334",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260898,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1844978473",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260899,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1850045281",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260900,
+    "url": "https://github.com/python/cpython/pull/126686#pullrequestreview-2448505997",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260901,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1845268978",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260902,
+    "url": "https://github.com/python/cpython/pull/126686/files/934c36ae4a19069c15a66e3c3c5b45c845fecd77#diff-13b210c267218100dc49e485ac4735e44224ae266e36c35f1ac6bf774f59e60d",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260903,
+    "url": "https://github.com/python/cpython/pull/126686/commits/a16f1e20458498673fc95dc6bdcfbe0ac394fae1",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260904,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1844976578",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260905,
+    "url": "https://github.com/python/cpython/pull/126686/files/b71e310fab5ca60dd5c51bde2476d7a162f25f86#diff-13b210c267218100dc49e485ac4735e44224ae266e36c35f1ac6bf774f59e60d",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260906,
+    "url": "https://github.com/python/cpython/pull/126686/files/57d76c5c23cf4c7222e5233bf8ec1abc6ac2b3fc#diff-13b210c267218100dc49e485ac4735e44224ae266e36c35f1ac6bf774f59e60d",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260907,
+    "url": "https://github.com/python/cpython/pull/126686#ref-issue-2645693423",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260908,
+    "url": "https://github.com/enthought/comtypes/blob/1ea74f5a68c4f1e0ee511ba3591e2204688ec071/comtypes/errorinfo.py#L21-L35",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260909,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3Adocs",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260910,
+    "url": "https://github.com/python/cpython/pull/126686#pullrequestreview-2442507532",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260911,
+    "url": "https://github.com/python/cpython/pull/126686#pullrequestreview-2440355806",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260912,
+    "url": "https://github.com/python/cpython/blob/f9c5573dedcb2f2e9ae152672ce157987cdea612/Lib/test/test_ctypes/test_win32.py#L67-L76",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260913,
+    "url": "https://github.com/python/cpython/pull/126686#event-15349745522",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260915,
+    "url": "https://github.com/python/cpython/blob/main/Doc/tools/extensions/availability.py",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260916,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1846505896",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260917,
+    "url": "https://github.com/python/cpython/pull/126686#event-15367118839",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260918,
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-progidfromclsid",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260919,
+    "url": "https://github.com/python/cpython/pull/126686#user-content-fnref-1-5f04dd93a758979919a0a30c32b477bd",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260921,
+    "url": "https://github.com/python/cpython/pull/126686#event-15335994867",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260922,
+    "url": "https://github.com/python/cpython/pull/126686/commits/934c36ae4a19069c15a66e3c3c5b45c845fecd77",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260923,
+    "url": "https://github.com/python/cpython/pull/126686#issuecomment-2485583411",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260924,
+    "url": "https://github.com/python/cpython/pull/126686#event-15366790051",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260925,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1850099038",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260926,
+    "url": "https://github.com/python/cpython/pull/126686#event-15366503397",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260928,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1846624102",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260929,
+    "url": "https://github.com/python/cpython/pull/126686#event-15252806870",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260930,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1844962326",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260931,
+    "url": "https://github.com/python/cpython/pull/126686/commits/9461642637560ed31dfbc49e971f2e642920ccfb",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260932,
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/oaidl/nf-oaidl-ierrorinfo-getdescription",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260933,
+    "url": "https://github.com/python/cpython/pull/126686#commits-pushed-36f1607",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260934,
+    "url": "https://github.com/python/cpython/pull/126686/commits/705ffcc7f27957f9ae2a58761ee8e64ae9654901",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260935,
+    "url": "https://github.com/python/cpython/commit/90fb47fd75400eecca9bb17807657e04777df450",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260936,
+    "url": "https://github.com/python/cpython/pull/126686/commits/b71e310fab5ca60dd5c51bde2476d7a162f25f86",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260937,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1850125641",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260938,
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/oaidl/nn-oaidl-ierrorinfo",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260939,
+    "url": "https://github.com/python/cpython/pull/126686#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260940,
+    "url": "https://github.com/enthought/comtypes/issues/665",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260941,
+    "url": "https://github.com/python/cpython/pull/126686#ref-commit-1e1f7a4",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260944,
+    "url": "https://github.com/python/cpython/pull/126686/files/920bccc58873d8343f8f0c275757dc5d302aca55",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260945,
+    "url": "https://github.com/python/cpython/pull/126686/commits/b5a2170bc371bd0f8dbf31f84a25ae349775e694",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260947,
+    "url": "https://github.com/python/cpython/pull/126686/commits/068ea2a61c8e3c07239b739351f5d6c65ba13168",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260948,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1846596124",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260949,
+    "url": "https://github.com/python/cpython/pull/126686#event-15321306017",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260951,
+    "url": "https://github.com/python/cpython/blob/2313f8421080ceb3343c6f5d291279adea85e073/Modules/_ctypes/_ctypes.c#L5548",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260952,
+    "url": "https://github.com/python/cpython/pull/126686#event-15251365967",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260954,
+    "url": "https://github.com/python/cpython/pull/126686/files/1f9d4eea65de2dd20e789b64c6c7c2216d28922a#diff-13b210c267218100dc49e485ac4735e44224ae266e36c35f1ac6bf774f59e60d",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260955,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1846515808",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260956,
+    "url": "https://github.com/python/cpython/pull/126686#issuecomment-2485693847",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260957,
+    "url": "https://github.com/python/cpython/pull/126686#event-15366593136",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260958,
+    "url": "https://github.com/python/cpython/pull/126686#issuecomment-2483213595",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260959,
+    "url": "https://github.com/python/cpython/issues/126384",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260960,
+    "url": "https://github.com/python/cpython/pull/126686#issuecomment-2482928818",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260962,
+    "url": "https://github.com/orgs/python/projects/50",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260964,
+    "url": "https://github.com/python/cpython/pull/126686/commits/49d5e5f35b68e6a0e3cb2c542c8f95e7381bfb11",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260965,
+    "url": "https://github.com/ebonnal/cpython/commit/1e1f7a42a9ab14072203bd858493dc8cf712cb30",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260966,
+    "url": "https://github.com/python/cpython/pull/126686/files/57d76c5c23cf4c7222e5233bf8ec1abc6ac2b3fc",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260968,
+    "url": "https://github.com/python/cpython/pull/126686/files/1f9d4eea65de2dd20e789b64c6c7c2216d28922a",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260969,
+    "url": "https://github.com/python/cpython/pull/126686#event-15321195384",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260970,
+    "url": "https://github.com/python/cpython/pull/126686#event-15366596914",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260972,
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/oaidl/nf-oaidl-ierrorinfo-gethelpcontext",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260973,
+    "url": "https://github.com/python/cpython/pull/126686#commits-pushed-e70aa54",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260974,
+    "url": "https://github.com/python/cpython/pull/126686/commits/920bccc58873d8343f8f0c275757dc5d302aca55",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260975,
+    "url": "https://github.com/python/cpython/pull/126686/commits/e2617f3aa2eaf05c6cb052d1e12ca14d516c77bf",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260976,
+    "url": "https://github.com/python/cpython/pull/126686#event-15366789450",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260977,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22needs%20backport%20to%203.13%22",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260978,
+    "url": "https://github.com/python/cpython/pull/126686/commits/36f16071f3d15e1e75a44ce91fc05de873374588",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260979,
+    "url": "https://github.com/python/cpython/pull/126686#discussion_r1844988870",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260980,
+    "url": "https://github.com/python/cpython/pull/126686#pullrequestreview-2440352735",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 260981,
+    "url": "https://github.com/python/cpython/pull/126610",
+    "parentUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "id": 261235,
+    "url": "https://github.com/python/cpython/issues/128863#issue-2789434169",
+    "parentUrl": "https://github.com/python/cpython/issues/128863"
+  },
+  {
+    "id": 261236,
+    "url": "https://github.com/python/cpython/pull/129212",
+    "parentUrl": "https://github.com/python/cpython/issues/128863"
+  },
+  {
+    "id": 261237,
+    "url": "https://github.com/python/cpython/pull/129245",
+    "parentUrl": "https://github.com/python/cpython/issues/128863"
+  },
+  {
+    "id": 261238,
+    "url": "https://github.com/python/cpython/pull/129176",
+    "parentUrl": "https://github.com/python/cpython/issues/128863"
+  },
+  {
+    "id": 261243,
+    "url": "https://github.com/python/cpython/pull/127939",
+    "parentUrl": "https://github.com/python/cpython/issues/128863"
+  },
+  {
+    "id": 261245,
+    "url": "https://github.com/python/cpython/issues/128863#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128863"
+  },
+  {
+    "id": 261246,
+    "url": "https://github.com/python/cpython/issues/128863#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128863"
+  },
+  {
+    "id": 261247,
+    "url": "https://github.com/python/cpython/pull/128864",
+    "parentUrl": "https://github.com/python/cpython/issues/128863"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Deprecate private functions which have a public replacement · Issue #128863 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128863"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Deprecate private functions which have a public replacement · Issue #128863 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128863"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Iterator Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/iter.html#c.PyIter_NextItem"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Iterator Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/iter.html#c.PyIter_NextItem"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "decimal — Decimal fixed-point and floating-point arithmetic — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "decimal — Decimal fixed-point and floating-point arithmetic — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d80\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d48\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d40\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d48\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d48\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d48\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d48\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d48\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d48\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d48\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d80\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d60\u0026v\u003d4",
+    "alt": "encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d48\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d48\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d48\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d48\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d60\u0026v\u003d4",
+    "alt": "encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d48\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d48\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d80\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d80\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d80\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d60\u0026v\u003d4",
+    "alt": "encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d48\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d48\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d48\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d48\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d60\u0026v\u003d4",
+    "alt": "encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d48\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32455369?s\u003d40\u0026v\u003d4",
+    "alt": "@ebonnal",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d52\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d52\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d52\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d52\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d52\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-126615: Make `COMError` public and add to `ctypes` doc. by junkmd · Pull Request #126686 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126686"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetPrefix"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetPrefix"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
