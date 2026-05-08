@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1747,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.Py_fclose",
+    "title": "Operating System Utilities — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Utilities » Operating System Utilities | Theme Auto Light Dark | Operating System Utilities¶ PyObject *PyOS_FSPath(PyObject *path)¶ Return value: New reference. Part of the Stable ABI since version 3.6. Return the file system representation for path. If the object is a str or bytes object, then a new strong reference is returned. If the object implements the os.PathLike interface, then __fspath__() is returned as long as it is a str or bytes object. Otherwise TypeError is raised and NULL is returned. Added in version 3.6. int Py_FdIsInteractive(FILE *fp, const char *filename)¶ Return true (nonzero) if the standard I/O file fp with name filename is deemed interactive. This is the case for files for which isatty(fileno(fp)) is true. If the PyConfig.interactive is non-zero, this function also returns true if the filename pointer is NULL or if the name is equal to one of the strings \u0027\u003cstdin\u003e\u0027 or \u0027???\u0027. This function must not be called before Python is initialized. void PyOS_BeforeFork()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to prepare some internal state before a process fork. This should be called before calling fork() or any similar function that clones the current process. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_BeforeFork(). Added in version 3.7. void PyOS_AfterFork_Parent()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to update some internal state after a process fork. This should be called from the parent process after calling fork() or any similar function that clones the current process, regardless of whether process cloning was successful. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_AfterFork_Parent(). Added in version 3.7. void PyOS_AfterFork_Child()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to update internal interpreter state after a process fork. This must be called from the child process after calling fork(), or any similar function that clones the current process, if there is any chance the process will call back into the Python interpreter. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_AfterFork_Child(). Added in version 3.7. See also os.register_at_fork() allows registering custom Python functions to be called by PyOS_BeforeFork(), PyOS_AfterFork_Parent() and PyOS_AfterFork_Child(). void PyOS_AfterFork()¶ Part of the Stable ABI on platforms with fork(). Function to update some internal state after a process fork; this should be called in the new process if the Python interpreter will continue to be used. If a new executable is loaded into the new process, this function does not need to be called. Deprecated since version 3.7: This function is superseded by PyOS_AfterFork_Child(). int PyOS_CheckStack()¶ Part of the Stable ABI on platforms with USE_STACKCHECK since version 3.7. Return true when the interpreter runs out of stack space. This is a reliable check, but is only available when USE_STACKCHECK is defined (currently on certain versions of Windows using the Microsoft Visual C++ compiler). USE_STACKCHECK will be defined automatically; you should never change the definition in your own code. typedef void (*PyOS_sighandler_t)(int)¶ Part of the Stable ABI. PyOS_sighandler_t PyOS_getsig(int i)¶ Part of the Stable ABI. Return the current signal handler for signal i. This is a thin wrapper around either sigaction() or signal(). Do not call those functions directly! PyOS_sighandler_t PyOS_setsig(int i, PyOS_sighandler_t h)¶ Part of the Stable ABI. Set the signal handler for signal i to be h; return the old signal handler. This is a thin wrapper around either sigaction() or signal(). Do not call those functions directly! int PyOS_InterruptOccurred(void)¶ Part of the Stable ABI. Check if a SIGINT signal has been received. Returns 1 if a SIGINT has occurred and clears the signal flag, or 0 otherwise. In most cases, you should prefer PyErr_CheckSignals() over this function. PyErr_CheckSignals() invokes the appropriate signal handlers for all pending signals, allowing Python code to handle the signal properly. This function only detects SIGINT and does not invoke any Python signal handlers. This function is async-signal-safe and this function cannot fail. The caller must hold an attached thread state. wchar_t *Py_DecodeLocale(const char *arg, size_t *size)¶ Part of the Stable ABI since version 3.7. Warning This function should not be called directly: use the PyConfig API with the PyConfig_SetBytesStrin",
+    "scrapedAt": "2026-05-09 01:32:03.824821"
+  },
+  {
+    "id": 1746,
+    "url": "https://github.com/python/cpython/issues/89416",
+    "title": "mimetypes cannot detect mime of mka files · Issue #89416 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k mimetypes cannot detect mime of mka files #89416 New issue Copy link New issue Copy link Closed #126412 Closed mimetypes cannot detect mime of mka files#89416 #126412 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description manujchandra mannequin opened on Sep 21, 2021 Issue body actions BPO 45253 Nosy @Fidget-Spinner, @akulakov Files Screenshot from 2021-09-21 13-10-33.png Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2021-09-21.07:49:08.538\u003e\nlabels \u003d [\u0027type-bug\u0027, \u0027library\u0027, \u00273.9\u0027]\ntitle \u003d \u0027mimetypes cannot detect mime of mka files\u0027\nupdated_at \u003d \u003cDate 2021-10-11.18:23:24.571\u003e\nuser \u003d \u0027https://bugs.python.org/manujchandra\u0027 bugs.python.org fields: activity \u003d \u003cDate 2021-10-11.18:23:24.571\u003e\nactor \u003d \u0027andrei.avk\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2021-09-21.07:49:08.538\u003e\ncreator \u003d \u0027manujchandra\u0027\ndependencies \u003d []\nfiles \u003d [\u002750292\u0027]\nhgrepos \u003d []\nissue_num \u003d 45253\nkeywords \u003d []\nmessage_count \u003d 2.0\nmessages \u003d [\u0027402290\u0027, \u0027403666\u0027]\nnosy_count \u003d 3.0\nnosy_names \u003d [\u0027kj\u0027, \u0027andrei.avk\u0027, \u0027manujchandra\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027pending\u0027\nsuperseder \u003d None\ntype \u003d \u0027behavior\u0027\nurl \u003d \u0027https://bugs.python.org/issue45253\u0027\nversions \u003d [\u0027Python 3.9\u0027] Linked PRs gh-89416: Add RFC 9559 MIME types for Matroska formats #126412 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:32:02.552179"
+  },
+  {
+    "id": 1745,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_config_var",
+    "title": "sysconfig — Provide access to Python’s configuration information — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » sysconfig — Provide access to Python’s configuration information | Theme Auto Light Dark | sysconfig — Provide access to Python’s configuration information¶ Added in version 3.2. Source code: Lib/sysconfig The sysconfig module provides access to Python’s configuration information like the list of installation paths and the configuration variables relevant for the current platform. Configuration variables¶ A Python distribution contains a Makefile and a pyconfig.h header file that are necessary to build both the Python binary itself and third-party C extensions compiled using setuptools. sysconfig puts all variables found in these files in a dictionary that can be accessed using get_config_vars() or get_config_var(). Notice that on Windows, it’s a much smaller set. sysconfig.get_config_vars(*args)¶ With no arguments, return a dictionary of all configuration variables relevant for the current platform. With arguments, return a list of values that result from looking up each argument in the configuration variable dictionary. For each argument, if the value is not found, return None. sysconfig.get_config_var(name)¶ Return the value of a single variable name. Equivalent to get_config_vars().get(name). If name is not found, return None. Example of usage: \u003e\u003e\u003e import sysconfig\n\u003e\u003e\u003e sysconfig.get_config_var(\u0027Py_ENABLE_SHARED\u0027)\n0\n\u003e\u003e\u003e sysconfig.get_config_var(\u0027LIBDIR\u0027)\n\u0027/usr/local/lib\u0027\n\u003e\u003e\u003e sysconfig.get_config_vars(\u0027AR\u0027, \u0027CXX\u0027)\n[\u0027ar\u0027, \u0027g++\u0027]\n Installation paths¶ Python uses an installation scheme that differs depending on the platform and on the installation options. These schemes are stored in sysconfig under unique identifiers based on the value returned by os.name. The schemes are used by package installers to determine where to copy files to. Python currently supports nine schemes: posix_prefix: scheme for POSIX platforms like Linux or macOS. This is the default scheme used when Python or a component is installed. posix_home: scheme for POSIX platforms, when the home option is used. This scheme defines paths located under a specific home prefix. posix_user: scheme for POSIX platforms, when the user option is used. This scheme defines paths located under the user’s home directory (site.USER_BASE). posix_venv: scheme for Python virtual environments on POSIX platforms; by default it is the same as posix_prefix. nt: scheme for Windows. This is the default scheme used when Python or a component is installed. nt_user: scheme for Windows, when the user option is used. nt_venv: scheme for Python virtual environments on Windows; by default it is the same as nt. venv: a scheme with values from either posix_venv or nt_venv depending on the platform Python runs on. osx_framework_user: scheme for macOS, when the user option is used. Each scheme is itself composed of a series of paths and each path has a unique identifier. Python currently uses eight paths: stdlib: directory containing the standard Python library files that are not platform-specific. platstdlib: directory containing the standard Python library files that are platform-specific. platlib: directory for site-specific, platform-specific files. purelib: directory for site-specific, non-platform-specific files (‘pure’ Python). include: directory for non-platform-specific header files for the Python C-API. platinclude: directory for platform-specific header files for the Python C-API. scripts: directory for script files. data: directory for data files. User scheme¶ This scheme is designed to be the most convenient solution for users that don’t have write permission to the global site-packages directory or don’t want to install into it. Files will be installed into subdirectories of site.USER_BASE (written as userbase hereafter). This scheme installs pure Python modules and extension modules in the same location (also known as site.USER_SITE). posix_user¶ Path Installation directory stdlib userbase/lib/pythonX.Y platstdlib userbase/lib/pythonX.Y platlib userbase/lib/pythonX.Y/site-packages purelib userbase/lib/pythonX.Y/site-packages include userbase/include/pythonX.Y scripts userbase/bin data userbase nt_user¶ Path Installation directory stdlib userbase\\PythonXY platstdlib userbase\\PythonXY platlib userbase\\PythonXY\\site-packages purelib userbase\\PythonXY\\site-packages include userbase\\PythonXY\\Include scripts userbase\\PythonXY\\Scripts data userbase osx_framework_user¶ Path Installation directory stdlib userbase/lib/python platstdlib userbase/lib/python platlib userbase/lib/python/site-packages purelib userbase/lib/python/site-packages include userbase/include/pythonX.Y scripts userbase/bin data userbase Home scheme¶ The idea behind the “home scheme” is that you build and maintain a personal stash of Python modules. This scheme’s name is derived from the idea of a “home” directory on Unix, since it’s not unusual for a Unix user to make ",
+    "scrapedAt": "2026-05-09 01:32:00.297636"
+  },
+  {
+    "id": 1744,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-porting-annotations",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:31:59.010153"
+  },
+  {
+    "id": 1743,
+    "url": "https://github.com/python/cpython/issues/41431",
+    "title": "Add datetime.time.strptime and datetime.date.strptime · Issue #41431 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add datetime.time.strptime and datetime.date.strptime #41431 New issue Copy link New issue Copy link Closed Closed Add datetime.time.strptime and datetime.date.strptime#41431 Copy link Assignees Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Description josh-sf mannequin opened on Jan 12, 2005 Issue body actions BPO 1100942 Nosy @amauryfa, @abalkin, @vstinner, @devdanzin, @berkerpeksag, @soltysh, @matrixise, @vajrasky, @matheusportela, @pganssle PRs WIP: bpo-1100942: Add datetime.time.strptime and datetime.date.strptime #5578 Files strptime.diff strptime2.diff: time.strptime and date.strptime as well date-strptime.patch issue1100942.diff issue1100942_pure.diff issue1100942_pure2.diff issue1100942_v4.diff issue1100942_full.patch: Full (merged) patch against current HEAD issue1100942_20140409.patch: Patch fixed against current default branch issue1100942.patch issue1100942-3.6.patch issue1100942_20170722.patch Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2005-01-12.14:53:01.000\u003e\nlabels \u003d [\u0027extension-modules\u0027, \u0027type-feature\u0027, \u00273.8\u0027]\ntitle \u003d \u0027Add datetime.time.strptime and datetime.date.strptime\u0027\nupdated_at \u003d \u003cDate 2018-08-20.19:46:06.268\u003e\nuser \u003d \u0027https://bugs.python.org/josh-sf\u0027 bugs.python.org fields: activity \u003d \u003cDate 2018-08-20.19:46:06.268\u003e\nactor \u003d \u0027p-ganssle\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Extension Modules\u0027]\ncreation \u003d \u003cDate 2005-01-12.14:53:01.000\u003e\ncreator \u003d \u0027josh-sf\u0027\ndependencies \u003d []\nfiles \u003d [\u00276427\u0027, \u00276428\u0027, \u002714351\u0027, \u002717599\u0027, \u002726446\u0027, \u002726452\u0027, \u002729117\u0027, \u002733240\u0027, \u002734778\u0027, \u002739345\u0027, \u002744044\u0027, \u002747032\u0027]\nhgrepos \u003d []\nissue_num \u003d 1100942\nkeywords \u003d [\u0027patch\u0027, \u0027needs review\u0027]\nmessage_count \u003d 48.0\nmessages \u003d [\u002747516\u0027, \u002747517\u0027, \u002747518\u0027, \u002747519\u0027, \u002747520\u0027, \u002782109\u0027, \u002789650\u0027, \u0027103731\u0027, \u0027103732\u0027, \u0027106805\u0027, \u0027106807\u0027, \u0027107402\u0027, \u0027114247\u0027, \u0027126013\u0027, \u0027162732\u0027, \u0027165882\u0027, \u0027165905\u0027, \u0027165906\u0027, \u0027165929\u0027, \u0027174743\u0027, \u0027174746\u0027, \u0027182336\u0027, \u0027184577\u0027, \u0027206495\u0027, \u0027206498\u0027, \u0027206500\u0027, \u0027206519\u0027, \u0027206717\u0027, \u0027215472\u0027, \u0027215474\u0027, \u0027215491\u0027, \u0027215537\u0027, \u0027215559\u0027, \u0027215843\u0027, \u0027242569\u0027, \u0027242803\u0027, \u0027242809\u0027, \u0027242917\u0027, \u0027272149\u0027, \u0027273568\u0027, \u0027279331\u0027, \u0027279333\u0027, \u0027279334\u0027, \u0027298841\u0027, \u0027298842\u0027, \u0027311783\u0027, \u0027313948\u0027, \u0027321550\u0027]\nnosy_count \u003d 22.0\nnosy_names \u003d [\u0027jafo\u0027, \u0027guettli\u0027, \u0027amaury.forgeotdarc\u0027, \u0027belopolsky\u0027, \u0027sonderblade\u0027, \u0027alanvgreen\u0027, \u0027vstinner\u0027, \u0027ajaksu2\u0027, \u0027josh-sf\u0027, \u0027cvrebert\u0027, \u0027tiktuk\u0027, \u0027adam-collard\u0027, \u0027westley.martinez\u0027, \u0027berker.peksag\u0027, \u0027maciej.szulik\u0027, \u0027Juarez.Bochi\u0027, \u0027petre\u0027, \u0027matrixise\u0027, \u0027vajrasky\u0027, \u0027Julian.Gindi\u0027, \u0027matheus.v.portela\u0027, \u0027p-ganssle\u0027]\npr_nums \u003d [\u00275578\u0027]\npriority \u003d None\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue1100942\u0027\nversions \u003d [\u0027Python 3.8\u0027] Linked PRs gh-41431: Add datetime.time.strptime() and datetime.date.strptime() #120752 Reactions are currently unavailable Metadata Metadata Assignees abalkin Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Projects Date and time issues 🕰️ Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:31:57.626407"
+  },
+  {
     "id": 1742,
     "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.utcfromtimestamp",
     "title": "datetime — Basic date and time types — Python 3.14.5rc1 documentation",
@@ -11758,26 +11793,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1743,
-    "url": "https://github.com/python/cpython/issues/41431"
-  },
-  {
-    "id": 1744,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-porting-annotations"
-  },
-  {
-    "id": 1745,
-    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_config_var"
-  },
-  {
-    "id": 1746,
-    "url": "https://github.com/python/cpython/issues/89416"
-  },
-  {
-    "id": 1747,
-    "url": "https://docs.python.org/3/c-api/sys.html#c.Py_fclose"
   },
   {
     "id": 1748,
@@ -247565,10 +247580,227 @@ window.searchData = [
     "id": 378068,
     "url": "https://github.com/python/cpython/pull/124553",
     "parentUrl": "https://github.com/python/cpython/issues/124533"
+  },
+  {
+    "id": 379021,
+    "url": "https://bugs.python.org/issue1100942",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379025,
+    "url": "https://bugs.python.org/file14351/date-strptime.patch",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379026,
+    "url": "https://bugs.python.org/file44044/issue1100942-3.6.patch",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379028,
+    "url": "https://github.com/matheusportela",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379030,
+    "url": "https://bugs.python.org/file47032/issue1100942_20170722.patch",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379031,
+    "url": "https://github.com/python/cpython/issues/41431#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379032,
+    "url": "https://bugs.python.org/file6428/strptime2.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379033,
+    "url": "https://github.com/pganssle",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379035,
+    "url": "https://bugs.python.org/file26446/issue1100942_pure.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379036,
+    "url": "https://github.com/devdanzin",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379037,
+    "url": "https://github.com/vajrasky",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379038,
+    "url": "https://bugs.python.org/file17599/issue1100942.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379039,
+    "url": "https://bugs.python.org/file6427/strptime.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379040,
+    "url": "https://bugs.python.org/file34778/issue1100942_20140409.patch",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379042,
+    "url": "https://github.com/python/cpython/pull/5578",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379043,
+    "url": "https://bugs.python.org/file29117/issue1100942_v4.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379044,
+    "url": "https://github.com/python/cpython/issues/41431#top",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379046,
+    "url": "https://github.com/python/cpython/issues/41431#issue-1198806455",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379049,
+    "url": "https://bugs.python.org/file26452/issue1100942_pure2.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379051,
+    "url": "https://bugs.python.org/file39345/issue1100942.patch",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379052,
+    "url": "https://bugs.python.org/file33240/issue1100942_full.patch",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379053,
+    "url": "https://github.com/soltysh",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 379055,
+    "url": "https://github.com/python/cpython/pull/120752",
+    "parentUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "id": 380350,
+    "url": "https://github.com/python/cpython/issues/89416#top",
+    "parentUrl": "https://github.com/python/cpython/issues/89416"
+  },
+  {
+    "id": 380354,
+    "url": "https://bugs.python.org/file50292/Screenshot%20from%202021-09-21%2013-10-33.png",
+    "parentUrl": "https://github.com/python/cpython/issues/89416"
+  },
+  {
+    "id": 380356,
+    "url": "https://github.com/python/cpython/issues/89416#issue-1199065567",
+    "parentUrl": "https://github.com/python/cpython/issues/89416"
+  },
+  {
+    "id": 380357,
+    "url": "https://bugs.python.org/issue45253",
+    "parentUrl": "https://github.com/python/cpython/issues/89416"
+  },
+  {
+    "id": 380358,
+    "url": "https://github.com/python/cpython/issues/89416#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/89416"
+  },
+  {
+    "id": 380359,
+    "url": "https://github.com/python/cpython/pull/126412",
+    "parentUrl": "https://github.com/python/cpython/issues/89416"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Operating System Utilities — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fclose"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Operating System Utilities — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fclose"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/92882067?v\u003d4\u0026size\u003d80",
+    "alt": "@manujchandra",
+    "pageTitle": "mimetypes cannot detect mime of mka files · Issue #89416 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/89416"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/92882067?v\u003d4\u0026size\u003d48",
+    "alt": "@manujchandra",
+    "pageTitle": "mimetypes cannot detect mime of mka files · Issue #89416 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/89416"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sysconfig — Provide access to Python’s configuration information — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_config_var"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sysconfig — Provide access to Python’s configuration information — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_config_var"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-porting-annotations"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-porting-annotations"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/535197?s\u003d64\u0026v\u003d4",
+    "alt": "abalkin",
+    "pageTitle": "Add datetime.time.strptime and datetime.date.strptime · Issue #41431 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/101775458?v\u003d4\u0026size\u003d80",
+    "alt": "@josh-sf",
+    "pageTitle": "Add datetime.time.strptime and datetime.date.strptime · Issue #41431 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/101775458?v\u003d4\u0026size\u003d48",
+    "alt": "@josh-sf",
+    "pageTitle": "Add datetime.time.strptime and datetime.date.strptime · Issue #41431 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/41431"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/535197?s\u003d64\u0026v\u003d4",
+    "alt": "@abalkin",
+    "pageTitle": "Add datetime.time.strptime and datetime.date.strptime · Issue #41431 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/41431"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
