@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 190,
+    "url": "https://scikit-learn.org/",
+    "title": "scikit-learn: machine learning in Python — scikit-learn 0.16.1 documentation",
+    "content": "",
+    "scrapedAt": "2026-05-09 00:33:18.100578"
+  },
+  {
+    "id": 189,
+    "url": "https://www.roundup-tracker.org/",
+    "title": "Roundup Issue Tracker - Roundup 2.5.0 documentation",
+    "content": "Skip to main content Roundup Issue Tracker Download: Build Status: Roundup is an issue-tracking system that boasts a user-friendly interface and easy installation process. It offers a range of interfaces, including command-line, web, REST, XML-RPC, and e-mail, making it a versatile solution for issue tracking. The system is based on the award-winning design by Ka-Ping Yee, which emerged victorious in the Software Carpentry “Track” design competition. Roundup is highly customizable, allowing users to tailor the system to their specific needs and preferences. The latest stable version of Roundup is 2.5.0, which includes bug fixes and additional features compared to the previous 2.4.0 release. Roundup is compatible with Python 3.7+. Python 2 Support Python 2 support ends with release 2.4.0 (July 2024). Several Continuous Integration (CI) services are discontinuing their resources for testing with Python 2. Use Python 3 for the deployment of new trackers. Existing trackers should be upgraded to use Python 3. Release Highlights Some improvements from the 2.4.0 release are: XSS vulnerability with devel and responsive templates fixed Just before release an XSS security issue with trackers based on the devel or responsive templates was discovered. The updating directions include instructions on fixing this issue with the html templates from earlier releases. (CVE-2025-53865) The property/field advanced search expression feature has been enhanced and documented. Search expressions are usually built using the expression editor on the search page. They can be built manually by modifying the search URL but the RPN search expression format was undocumented. Errors in expressions could return results that didn’t match the user’s intent. This release documents the RPN expression syntax, adds basic expression error detection, and improves error reporting. The default hash method for password storage is more secure. We use PBKDF2 with SHA512 (was SHA1). With this change you can lower the value of password_pbkdf2_default_rounds in your tracker’s config.ini. Check the upgrading documentation for more info. (Note this may cause longer authentication times, the upgrade doc describes how to downgrade the hash method if required.) Roundup’s session token is now prefixed with the magic ``__Secure__`` tag when using HTTPS. This adds another layer of protection in addition to the existing Secure property that comes with the session cookie. Data authorization can be done at the database level speeding up display of index pages. Roundup verifies the user’s authorization for the data fetched from the database after retrieving data from the database. A new optional filter argument has been added to Permission objects. When the administrator supplies a filter function, it can boost performance with SQL server databases by pushing selection criteria to the database. By offloading some permission checks to the database, less data is retrieved from the database. This leads to quicker display of index pages with reduced CPU and network traffic. The REST endpoint can supply binary data (images, pdf, …) to its clients. Requesting binary data from a REST endpoint has been a hassle. Since JSON can’t handle binary data, images (and other binary data) need to be encoded. This makes them significantly larger. The workaround was to use a non-REST endpoint for fetching non-text attachments. This update lets the REST endpoint return raw message or file content data. You can utilize the binary_content endpoint along with an appropriate Accept header (e.g. image/jpeg) in your request. Extract translatable strings from your tracker easily. The roundup-gettext tool has been enhanced to extract translatable strings from detectors and extensions. This will simplify the process of translating your trackers. More info on the 42 changes can be found in the change notes. Roundup Use Cases For more information on Roundup see the features list, design overview, and all the other documentation. Roundup has been deployed for: bug tracking and TODO list management (the classic installation) customer help desk support (with a wizard for the phone answerers, linking to networking, system and development issue trackers) issue management for IETF working groups sales lead tracking conference paper submission and double-blind referee management weblogging (well, almost :) thing management using the GTD methodology. …and so on. It’s been designed with flexibility in mind - it’s not merely another bug tracker. Try It Out Roundup ships with a demo tracker to play with - you don’t need to install Roundup. After you’ve unpacked the source, just run “python demo.py” and load up the URL it prints out! Follow the source gratification mode with these steps (change the -2.4.0 version identifier to match your downloaded file). python3 -m pip download roundup tar -xzvf roundup-2.4.0.tar.gz if you don’t have a tar command (e.g windows), use: python -c \"import tarfile, sys; tarfile.op",
+    "scrapedAt": "2026-05-09 00:33:16.864526"
+  },
+  {
+    "id": 188,
+    "url": "https://ipython.org/",
+    "title": "Home | IPython",
+    "content": "Productive Interactive Computing IPython provides a rich architecture for interactive computing with a powerful shell, Jupyter kernel support, and flexible tools for parallel and distributed computing. Install IPython Get Started $ ipython Powerful Features Smart Tab Completion Context-aware completion powered by Jedi. Complete attributes, methods, and filenames with intelligent suggestions. Magic Commands Built-in commands for profiling, debugging, timing, and running external code. %timeit, %debug, %run, and many more. Object Introspection Explore objects with ? and ?? to view docstrings, signatures, and source code instantly. Rich History Powerful command history system with search, scrollback, and persistence across sessions. System Integration Execute shell commands directly with !, access system information, and manipulate the environment seamlessly. Jupyter Kernel Powers the Jupyter Notebook and JupyterLab, enabling interactive computing in web-based environments. Who Uses IPython? 📊 Data Scientists Explore datasets, prototype algorithms, and share findings with rich visualizations. 👨‍💻 Developers Debug code, test ideas interactively, and rapidly develop Python applications. 🎓 Educators Teach programming and data analysis interactively with immediate feedback and visualization. 🔧 System Admins Automate tasks, monitor systems, and manage infrastructure with Python scripts. Ready to Get Started? Install IPython today and boost your interactive computing experience. Install Now",
+    "scrapedAt": "2026-05-09 00:33:15.037924"
+  },
+  {
+    "id": 187,
+    "url": "https://litestar.dev/",
+    "title": "Litestar | Effortlessly Build Performant APIs",
+    "content": "Effortlessly build performant APIs with Litestar The powerful, lightweight and flexible ASGI framework Documentation View on GitHub → app.py from litestar import Litestar, get\n\n\n@get(\"/\")\nasync def hello_world() -\u003e str:\n return \"Hello, world!\"\n\n\napp \u003d Litestar([hello_world]) Effortlessly build performant APIs with Litestar The powerful, lightweight and flexible ASGI framework Documentation View on GitHub → Fully-featured Everything that\u0027s needed to build modern APIs, from data serialization and validation to websockets, ORM integration, session management, authentication and more Fast Litestar puts great emphasis on developer experience and performance: It\u0027s one of the fastest ASGI frameworks and developing with it is just as fast (a)synchronous Asynchronous at heart, but with synchronous execution not as a second class citizen: Synchronous applications run without performance penalties Data Validation And Parsing Leverage the power of type hints to define how data should be validated, parsed and serialized Click to Learn more → Open Ecosystem Define schemas and models for validation with standard types such as dataclasses, libraries like Pydantic, msgspec, attr, or integrate your own Click to Learn more → OpenAPI Automatically generated OpenAPI schemas help to document APIs and integrate with the frontend via TypeScript schema generation Click to Learn more → Interactive API Documentation Interactively explore your APIs through Swagger, Redoc or Stoplight Elements, powered by OpenAPI Click to Learn more → Middlewares Handle rate-limiting, CORS, CSRF, compression, logging and many more common tasks with Litestar\u0027s built-in middlewares Click to Learn more → Data Stores Interfaces for various key/value stores that seamlessly integrate with your application and third party extensions Click to Learn more → ORM Integration First-class SQLAlchemy support let\u0027s you use your models for validation and serialization directly, reducing code duplication Click to Learn more → Dependency Injection Powerful dependency injection on all application layers, aides in code decoupling and reduces repetition Click to Learn more → Caching Response caching with minimal configuration and overhead to speed up response times Click to Learn more → WebSockets Easy to use WebSockets integration, featuring high- and low-level APIs and support for automatic data validation and serialization Click to Learn more → Runtime Safety Through Strict Validation Litestar is strictly typed and user supplied functions are meticulously validated to minimize runtime errors Click to Learn more → Authentication And Authorization Session and JWT based authentication and utilities at your disposal to start building your authentication layer with ease Click to Learn more → Litestar 2.21.1 has been released! Check it out here → Dismiss",
+    "scrapedAt": "2026-05-09 00:33:13.821036"
+  },
+  {
+    "id": 186,
+    "url": "https://www.python.org/success-stories/",
+    "title": "Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Newest success stories Python on Arm: 2025 Update Want to know how Python is performing on Arm across Linux, Windows, and the cloud? Our 2025 update highlights the latest JIT improvements, ecosystem milestones like GitHub runners and PyTorch on Windows, and the continued collaboration driving it all forward. Read more Using Python to build a solution for instant tokenized real estate redemptions Python programmability on Algorand makes the entire development lifecycle easier and means more affordable and efficient maintenance and upgrades going forward. Read more Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning To simplify the adoption of FHE, which involves a complex and resource-intensive technological stack, Zama developed tools that streamline the integration of FHE into applications. Since Python is the de facto standard for building machine learning (ML) applications, it was an obvious choice to create an open-source FHE library in Python. Read more Building Robust Codebases with Python\u0027s Type Annotations Maintaining our ever-evolving Python codebase poses an intricate challenge: how do we make updates to reflect the changing rules and regulations of 200+ global markets without compromising access to the systems that our engineers and traders use on a daily basis? While an inner layer of shared business logic enables coherency in our codebase performance, it also means small regulatory changes can impact many systems. In this article, Python Engineer John Lekberg details how we use Python type annotations to minimize the time and risk involved in manual verification. Read more Newest success stories by category Arts See All Business Using Python to build a solution for instant tokenized real estate redemptions Lincoln Loop: Building a sustainable business inspired by Python’s ethos Using Python for commercial cloud backup Using Python to make unstable APIs reliable Python for Financial Machine Learning at Union Investment See All Data Science How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python Reimagining data science with Python-based operators in Einblick’s visual canvas Using Python with Gretel.ai to Generate Synthetic Location Data See All Education Elementary school education: Is it love or just Python? Using Python to Automate Tedious Tasks Python in the Blind Audio Tactile Mapping System See All Engineering Python for Collaborative Robots Abridging clinical conversations using Python Getting to Know Python See All Government Python Powered CrossCompute Report Automation for eReliability Tracker Leads to Cost and Time Savings for the American Public Power Association Saving the world with Open Data and Python Frequentis TAPtools® - Python in Air Traffic Control See All Scientific Why Python Matters for the VR Community Python for Collaborative Drug Discovery Python To Help Meteorologists Python for Scientific Data Visualization Simulating Biomolecules with Python See All Software Development Python on Arm: 2025 Update Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning Building Robust Codebases with Python\u0027s Type Annotations Building a Dependency Graph of Our Python Codebase Bleeding Edge Dependency Testing Using Python See All Submit Yours! Python users want to know more about Python in the wild. Tell us your story",
+    "scrapedAt": "2026-05-09 00:33:12.605223"
+  },
+  {
     "id": 185,
     "url": "https://www.tensorflow.org/",
     "title": "TensorFlow",
@@ -1293,26 +1328,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 186,
-    "url": "https://www.python.org/success-stories/"
-  },
-  {
-    "id": 187,
-    "url": "https://litestar.dev/"
-  },
-  {
-    "id": 188,
-    "url": "https://ipython.org/"
-  },
-  {
-    "id": 189,
-    "url": "https://www.roundup-tracker.org/"
-  },
-  {
-    "id": 190,
-    "url": "https://scikit-learn.org/"
   },
   {
     "id": 191,
@@ -33443,10 +33458,201 @@ window.searchData = [
     "id": 15419,
     "url": "https://blog.tensorflow.org/2023/10/simulated-spotify-listening-experiences-reinforcement-learning-tensorflow-tf-agents.html",
     "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 15456,
+    "url": "https://docs.litestar.dev/2/usage/openapi/index.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 15457,
+    "url": "https://docs.litestar.dev/2/usage/caching.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 15458,
+    "url": "https://docs.litestar.dev/2/usage/dto/index.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 15459,
+    "url": "https://docs.litestar.dev/2/usage/openapi/ui_plugins.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 15460,
+    "url": "https://docs.litestar.dev/2/usage/dependency-injection.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 15461,
+    "url": "https://docs.litestar.dev/latest/release-notes/changelog.html#2.21.1",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 15462,
+    "url": "https://docs.litestar.dev/2/usage/applications.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 15463,
+    "url": "https://docs.litestar.dev/2/usage/websockets.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 15464,
+    "url": "https://github.com/litestar-org/litestar",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 15465,
+    "url": "https://docs.litestar.dev/2/usage/databases/sqlalchemy/index.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 15466,
+    "url": "https://docs.litestar.dev/2",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 15467,
+    "url": "https://docs.litestar.dev/2/usage/security/index.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 15468,
+    "url": "https://docs.litestar.dev/2/usage/middleware/builtin-middleware.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 15469,
+    "url": "https://docs.litestar.dev/2/usage/stores.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 15470,
+    "url": "https://docs.litestar.dev/2/usage/routing/handlers.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 15471,
+    "url": "https://ipython.org/ipython.github.com/get-started",
+    "parentUrl": "https://ipython.org/"
+  },
+  {
+    "id": 15472,
+    "url": "https://ipython.org/ipython.github.com/install",
+    "parentUrl": "https://ipython.org/"
+  },
+  {
+    "id": 15473,
+    "url": "https://www.roundup-tracker.org/docs/upgrading.html#python-3-support-info",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15474,
+    "url": "https://www.roundup-tracker.org/docs/upgrading.html#cve-2025-53865",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15475,
+    "url": "https://gettingthingsdone.com/",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15476,
+    "url": "https://pypistats.org/packages/roundup",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15477,
+    "url": "https://www.roundup-tracker.org/#main",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15478,
+    "url": "https://hub.docker.com/r/rounduptracker/roundup",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15479,
+    "url": "https://www.roundup-tracker.org/docs/customizing.html",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15480,
+    "url": "https://www.roundup-tracker.org/docs/design.html",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15481,
+    "url": "https://github.com/roundup-tracker/roundup/actions?query\u003dworkflow%3Aroundup-ci++",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15482,
+    "url": "https://sourceforge.net/p/roundup/code/ci/tip/tree/CHANGES.txt",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15483,
+    "url": "https://www.roundup-tracker.org/docs/installation.html#docker-support",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15484,
+    "url": "https://pypi.org/project/roundup/#files",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15485,
+    "url": "https://www.roundup-tracker.org/docs/features.html",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15486,
+    "url": "https://www.roundup-tracker.org/docs.html",
+    "parentUrl": "https://www.roundup-tracker.org/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://img.shields.io/pypi/v/roundup?color\u003dblue\u0026label\u003dCurrent%20Version\u0026cacheSeconds\u003d86400",
+    "alt": "Display current version of Roundup on PyPI.",
+    "pageTitle": "Roundup Issue Tracker - Roundup 2.5.0 documentation",
+    "pageUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "src": "https://img.shields.io/badge/dynamic/json?color\u003dblue\u0026label\u003dDownloads%2FMonth\u0026cacheSeconds\u003d86400\u0026query\u003ddata.last_month\u0026url\u003dhttps%3A%2F%2Fpypistats.org%2Fapi%2Fpackages%2Froundup%2Frecent",
+    "alt": "Badge displaying number of downloads per month.",
+    "pageTitle": "Roundup Issue Tracker - Roundup 2.5.0 documentation",
+    "pageUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "src": "https://img.shields.io/docker/image-size/rounduptracker/roundup?label\u003dDocker%20Size",
+    "alt": "Graphic displaying size of newest docker image on hub.docker.com.",
+    "pageTitle": "Roundup Issue Tracker - Roundup 2.5.0 documentation",
+    "pageUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "src": "https://github.com/roundup-tracker/roundup/actions/workflows/ci-test.yml/badge.svg",
+    "alt": "Status of primary regression test job on github.",
+    "pageTitle": "Roundup Issue Tracker - Roundup 2.5.0 documentation",
+    "pageUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "src": "https://litestar.dev/_static/logo.svg",
+    "alt": "Litestar Logo",
+    "pageTitle": "Litestar | Effortlessly Build Performant APIs",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://litestar.dev/_static/logo.svg",
+    "alt": "Litestar Logo",
+    "pageTitle": "Litestar | Effortlessly Build Performant APIs",
+    "pageUrl": "https://litestar.dev/"
+  },
   {
     "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/tensorflow/images/lockup.svg",
     "alt": "TensorFlow",
