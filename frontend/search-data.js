@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1306,
+    "url": "https://docs.python.org/3/library/os.html#os.SCHED_DEADLINE",
+    "title": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » os — Miscellaneous operating system interfaces | Theme Auto Light Dark | os — Miscellaneous operating system interfaces¶ Source code: Lib/os.py This module provides a portable way of using operating system dependent functionality. If you just want to read or write a file see open(), if you want to manipulate paths, see the os.path module, and if you want to read all the lines in all the files on the command line see the fileinput module. For creating temporary files and directories see the tempfile module, and for high-level file and directory handling see the shutil module. Notes on the availability of these functions: The design of all built-in operating system dependent modules of Python is such that as long as the same functionality is available, it uses the same interface; for example, the function os.stat(path) returns stat information about path in the same format (which happens to have originated with the POSIX interface). Extensions peculiar to a particular operating system are also available through the os module, but using them is of course a threat to portability. All functions accepting path or file names accept both bytes and string objects, and result in an object of the same type, if a path or file name is returned. On VxWorks, os.popen, os.fork, os.execv and os.spawn*p* are not supported. On WebAssembly platforms, Android and iOS, large parts of the os module are not available or behave differently. APIs related to processes (e.g. fork(), execve()) and resources (e.g. nice()) are not available. Others like getuid() and getpid() are emulated or stubs. WebAssembly platforms also lack support for signals (e.g. kill(), wait()). Note All functions in this module raise OSError (or subclasses thereof) in the case of invalid or inaccessible file names and paths, or other arguments that have the correct type, but are not accepted by the operating system. exception os.error¶ An alias for the built-in OSError exception. os.name¶ The name of the operating system dependent module imported. The following names have currently been registered: \u0027posix\u0027, \u0027nt\u0027, \u0027java\u0027. See also sys.platform has a finer granularity. os.uname() gives system-dependent version information. The platform module provides detailed checks for the system’s identity. File Names, Command Line Arguments, and Environment Variables¶ In Python, file names, command line arguments, and environment variables are represented using the string type. On some systems, decoding these strings to and from bytes is necessary before passing them to the operating system. Python uses the filesystem encoding and error handler to perform this conversion (see sys.getfilesystemencoding()). The filesystem encoding and error handler are configured at Python startup by the PyConfig_Read() function: see filesystem_encoding and filesystem_errors members of PyConfig. Changed in version 3.1: On some systems, conversion using the file system encoding may fail. In this case, Python uses the surrogateescape encoding error handler, which means that undecodable bytes are replaced by a Unicode character U+DCxx on decoding, and these are again translated to the original byte on encoding. The file system encoding must guarantee to successfully decode all bytes below 128. If the file system encoding fails to provide this guarantee, API functions can raise UnicodeError. See also the locale encoding. Python UTF-8 Mode¶ Added in version 3.7: See PEP 540 for more details. The Python UTF-8 Mode ignores the locale encoding and forces the usage of the UTF-8 encoding: Use UTF-8 as the filesystem encoding. sys.getfilesystemencoding() returns \u0027utf-8\u0027. locale.getpreferredencoding() returns \u0027utf-8\u0027 (the do_setlocale argument has no effect). sys.stdin, sys.stdout, and sys.stderr all use UTF-8 as their text encoding, with the surrogateescape error handler being enabled for sys.stdin and sys.stdout (sys.stderr continues to use backslashreplace as it does in the default locale-aware mode) On Unix, os.device_encoding() returns \u0027utf-8\u0027 rather than the device encoding. Note that the standard stream settings in UTF-8 mode can be overridden by PYTHONIOENCODING (just as they can be in the default locale-aware mode). As a consequence of the changes in those lower level APIs, other higher level APIs also exhibit different default behaviours: Command line arguments, environment variables and filenames are decoded to text using the UTF-8 encoding. os.fsdecode() and os.fsencode() use the UTF-8 encoding. open(), io.open(), and codecs.open() use the UTF-8 encoding by default. However, they still use the strict error handler by default so that attempting to open a binary file in text mode is likely to raise an exception rather than producing nonsense data. The Python UTF-8 Mode is enabled if the LC_CTYPE locale is C or POSIX at Python startup (see the PyConfig_R",
+    "scrapedAt": "2026-05-09 01:15:00.452077"
+  },
+  {
+    "id": 1305,
+    "url": "https://github.com/python/cpython/issues/118805",
+    "title": "Remove `type`, `choices`, and `metavar` parameters of `argparse.BooleanOptionalAction` · Issue #118805 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Remove type, choices, and metavar parameters of argparse.BooleanOptionalAction #118805 New issue Copy link New issue Copy link Closed Closed Remove type, choices, and metavar parameters of argparse.BooleanOptionalAction#118805 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixestype-featureA feature request or enhancementA feature request or enhancement Description sobolevn opened on May 8, 2024 Issue body actions Feature or enhancement Original issue: #92248 I will send a PR. Linked PRs gh-118805: Remove type, choices, metavar params of BooleanOptionalAction #118806 Reactions are currently unavailable Metadata Metadata Assignees sobolevn Labels 3.14bugs and security fixesbugs and security fixestype-featureA feature request or enhancementA feature request or enhancement Projects Argparse issues Status Doc issues Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:14:59.160305"
+  },
+  {
+    "id": 1304,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.WindowsSelectorEventLoopPolicy",
+    "title": "Policies — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | Policies¶ Warning Policies are deprecated and will be removed in Python 3.16. Users are encouraged to use the asyncio.run() function or the asyncio.Runner with loop_factory to use the desired loop implementation. An event loop policy is a global object used to get and set the current event loop, as well as create new event loops. The default policy can be replaced with built-in alternatives to use different event loop implementations, or substituted by a custom policy that can override these behaviors. The policy object gets and sets a separate event loop per context. This is per-thread by default, though custom policies could define context differently. Custom event loop policies can control the behavior of get_event_loop(), set_event_loop(), and new_event_loop(). Policy objects should implement the APIs defined in the AbstractEventLoopPolicy abstract base class. Getting and Setting the Policy¶ The following functions can be used to get and set the policy for the current process: asyncio.get_event_loop_policy()¶ Return the current process-wide policy. Deprecated since version 3.14: The get_event_loop_policy() function is deprecated and will be removed in Python 3.16. asyncio.set_event_loop_policy(policy)¶ Set the current process-wide policy to policy. If policy is set to None, the default policy is restored. Deprecated since version 3.14: The set_event_loop_policy() function is deprecated and will be removed in Python 3.16. Policy Objects¶ The abstract event loop policy base class is defined as follows: class asyncio.AbstractEventLoopPolicy¶ An abstract base class for asyncio policies. get_event_loop()¶ Get the event loop for the current context. Return an event loop object implementing the AbstractEventLoop interface. This method should never return None. Changed in version 3.6. set_event_loop(loop)¶ Set the event loop for the current context to loop. new_event_loop()¶ Create and return a new event loop object. This method should never return None. Deprecated since version 3.14: The AbstractEventLoopPolicy class is deprecated and will be removed in Python 3.16. asyncio ships with the following built-in policies: class asyncio.DefaultEventLoopPolicy¶ The default asyncio policy. Uses SelectorEventLoop on Unix and ProactorEventLoop on Windows. There is no need to install the default policy manually. asyncio is configured to use the default policy automatically. Changed in version 3.8: On Windows, ProactorEventLoop is now used by default. Changed in version 3.14: The get_event_loop() method of the default asyncio policy now raises a RuntimeError if there is no set event loop. Deprecated since version 3.14: The DefaultEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsSelectorEventLoopPolicy¶ An alternative event loop policy that uses the SelectorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsSelectorEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsProactorEventLoopPolicy¶ An alternative event loop policy that uses the ProactorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsProactorEventLoopPolicy class is deprecated and will be removed in Python 3.16. Custom Policies¶ To implement a new event loop policy, it is recommended to subclass DefaultEventLoopPolicy and override the methods for which custom behavior is wanted, e.g.: class MyEventLoopPolicy(asyncio.DefaultEventLoopPolicy):\n\n    def get_event_loop(self):\n        \"\"\"Get the event loop.\n\n        This may be None or an instance of EventLoop.\n        \"\"\"\n        loop \u003d super().get_event_loop()\n        # Do something with loop ...\n        return loop\n\nasyncio.set_event_loop_policy(MyEventLoopPolicy())\n Table of Contents Policies Getting and Setting the Policy Policy Objects Custom Policies Previous topic Transports and Protocols Next topic Platform Support This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 01:14:56.827272"
+  },
+  {
+    "id": 1303,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_lnotab",
+    "title": "3. Data model — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 3. Data model | Theme Auto Light Dark | 3. Data model¶ 3.1. Objects, values and types¶ Objects are Python’s abstraction for data. All data in a Python program is represented by objects or by relations between objects. Even code is represented by objects. Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory. The is operator compares the identity of two objects; the id() function returns an integer representing its identity. CPython implementation detail: For CPython, id(x) is the memory address where x is stored. An object’s type determines the operations that the object supports (e.g., “does it have a length?”) and also defines the possible values for objects of that type. The type() function returns an object’s type (which is an object itself). Like its identity, an object’s type is also unchangeable. [1] The value of some objects can change. Objects whose value can change are said to be mutable; objects whose value is unchangeable once they are created are called immutable. (The value of an immutable container object that contains a reference to a mutable object can change when the latter’s value is changed; however the container is still considered immutable, because the collection of objects it contains cannot be changed. So, immutability is not strictly the same as having an unchangeable value, it is more subtle.) An object’s mutability is determined by its type; for instance, numbers, strings and tuples are immutable, while dictionaries and lists are mutable. Objects are never explicitly destroyed; however, when they become unreachable they may be garbage-collected. An implementation is allowed to postpone garbage collection or omit it altogether — it is a matter of implementation quality how garbage collection is implemented, as long as no objects are collected that are still reachable. CPython implementation detail: CPython currently uses a reference-counting scheme with (optional) delayed detection of cyclically linked garbage, which collects most objects as soon as they become unreachable, but is not guaranteed to collect garbage containing circular references. See the documentation of the gc module for information on controlling the collection of cyclic garbage. Other implementations act differently and CPython may change. Do not depend on immediate finalization of objects when they become unreachable (so you should always close files explicitly). Note that the use of the implementation’s tracing or debugging facilities may keep objects alive that would normally be collectable. Also note that catching an exception with a try…except statement may keep objects alive. Some objects contain references to “external” resources such as open files or windows. It is understood that these resources are freed when the object is garbage-collected, but since garbage collection is not guaranteed to happen, such objects also provide an explicit way to release the external resource, usually a close() method. Programs are strongly recommended to explicitly close such objects. The try…finally statement and the with statement provide convenient ways to do this. Some objects contain references to other objects; these are called containers. Examples of containers are tuples, lists and dictionaries. The references are part of a container’s value. In most cases, when we talk about the value of a container, we imply the values, not the identities of the contained objects; however, when we talk about the mutability of a container, only the identities of the immediately contained objects are implied. So, if an immutable container (like a tuple) contains a reference to a mutable object, its value changes if that mutable object is changed. Types affect almost all aspects of object behavior. Even the importance of object identity is affected in some sense: for immutable types, operations that compute new values may actually return a reference to any existing object with the same type and value, while for mutable objects this is not allowed. For example, after a \u003d 1; b \u003d 1, a and b may or may not refer to the same object with the value one, depending on the implementation. This is because int is an immutable type, so the reference to 1 can be reused. This behaviour depends on the implementation used, so should not be relied upon, but is something to be aware of when making use of object identity tests. However, after c \u003d []; d \u003d [], c and d are guaranteed to refer to two different, unique, newly created empty lists. (Note that e \u003d f \u003d [] assigns the same object to both e and f.) 3.2. The standard type hierarchy¶ Below is a list of the types that are built into Python. Extension modules (written in C, Java, or other languages, depending on the implementation) can define additional types. Future versions of P",
+    "scrapedAt": "2026-05-09 01:14:55.585578"
+  },
+  {
+    "id": 1302,
+    "url": "https://github.com/python/cpython/issues/102471",
+    "title": "The C-API for Python to C integer conversion is, to be frank, a mess. · Issue #102471 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k The C-API for Python to C integer conversion is, to be frank, a mess. #102471 New issue Copy link New issue Copy link Open Open The C-API for Python to C integer conversion is, to be frank, a mess.#102471 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description markshannon opened on Mar 6, 2023 Issue body actions The C-API has built up over 30 years, in a haphazard way. So, it is no surprise that it is a bit of a mess. What makes it worse is that it is based around the C long type, which is varies in size between architectures and operating systems in odd ways. C longs are 32 bit on (almost?) all 32 bit machines, 64 bit on most 64 bit machines, except Windows when C longs are 32 bits on 64 bit machines. In other words, it is not a useful fixed size, like int32_t, nor does match the machine word size, like intptr_t. We need a more consistent API for converting from Python integers to C integers and back again. We should support both 32 bit and word size C integers. 32 bit, because we often want to store 32 bit values to save space on 64 bit machines, or for portability. We also want to support word size integers for performance and ease of coding. This means we want 4 functions (2 sizes, 2 directions) to convert between C and Python integers. Currently we have: Width Py -\u003e C C -\u003e Py 32 bit Missing* Missing Machine word Missing* PyLong_FromSsize_t The C API has a function to convert Python ints to intptr_t, but it is missing efficient overflow handling. It also has a function with efficient overflow handling, PyLong_AsLongAndOverflow, but that returns a long. Here\u0027s what we want: Width Py -\u003e C C -\u003e Py 32 bit PyInt_AsInt32 PyInt_FromInt32 Machine word PyInt_AsSsize_t PyInt_FromSsize_t I\u0027m using PyInt prefix, now that Python 2 is history. It makes it clearer what is the new API. Note that I\u0027m not handling unsigned values. I think the extra bit of precision is not worth the complexity of a larger API. And if we decide that they are, we can always add them later. Linked PRs gh-102471, PEP 757: Add PyLong import and export API #121339 gh-127937: convert decimal module to use import API for ints (PEP 757) #127925 gh-102471: convert decimal module to use PyLong_Export API (PEP 757) #128267 gh-102471: Credit Sergey B Kirpichev for PEP 757 #129338 gh-102471: Change PyLongWriter_Discard(NULL) to do nothing #129339 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:14:54.264803"
+  },
+  {
     "id": 1301,
     "url": "https://github.com/python/cpython/issues/128863",
     "title": "[C API] Deprecate private functions which have a public replacement · Issue #128863 · python/cpython · GitHub",
@@ -8748,26 +8783,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1302,
-    "url": "https://github.com/python/cpython/issues/102471"
-  },
-  {
-    "id": 1303,
-    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_lnotab"
-  },
-  {
-    "id": 1304,
-    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.WindowsSelectorEventLoopPolicy"
-  },
-  {
-    "id": 1305,
-    "url": "https://github.com/python/cpython/issues/118805"
-  },
-  {
-    "id": 1306,
-    "url": "https://docs.python.org/3/library/os.html#os.SCHED_DEADLINE"
   },
   {
     "id": 1307,
@@ -225595,10 +225610,142 @@ window.searchData = [
     "id": 261247,
     "url": "https://github.com/python/cpython/pull/128864",
     "parentUrl": "https://github.com/python/cpython/issues/128863"
+  },
+  {
+    "id": 261249,
+    "url": "https://github.com/python/cpython/pull/128267",
+    "parentUrl": "https://github.com/python/cpython/issues/102471"
+  },
+  {
+    "id": 261251,
+    "url": "https://github.com/python/cpython/issues/102471#issue-1611612427",
+    "parentUrl": "https://github.com/python/cpython/issues/102471"
+  },
+  {
+    "id": 261253,
+    "url": "https://github.com/python/cpython/issues/102471#top",
+    "parentUrl": "https://github.com/python/cpython/issues/102471"
+  },
+  {
+    "id": 261256,
+    "url": "https://github.com/python/cpython/issues/102471#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/102471"
+  },
+  {
+    "id": 261257,
+    "url": "https://github.com/python/cpython/pull/121339",
+    "parentUrl": "https://github.com/python/cpython/issues/102471"
+  },
+  {
+    "id": 261258,
+    "url": "https://github.com/python/cpython/pull/127925",
+    "parentUrl": "https://github.com/python/cpython/issues/102471"
+  },
+  {
+    "id": 261261,
+    "url": "https://github.com/python/cpython/pull/129339",
+    "parentUrl": "https://github.com/python/cpython/issues/102471"
+  },
+  {
+    "id": 261262,
+    "url": "https://github.com/python/cpython/pull/129338",
+    "parentUrl": "https://github.com/python/cpython/issues/102471"
+  },
+  {
+    "id": 261889,
+    "url": "https://github.com/python/cpython/issues/118805#top",
+    "parentUrl": "https://github.com/python/cpython/issues/118805"
+  },
+  {
+    "id": 261896,
+    "url": "https://github.com/python/cpython/pull/118806",
+    "parentUrl": "https://github.com/python/cpython/issues/118805"
+  },
+  {
+    "id": 261897,
+    "url": "https://github.com/python/cpython/issues/118805#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/118805"
+  },
+  {
+    "id": 261899,
+    "url": "https://github.com/python/cpython/issues/118805#issue-2286556854",
+    "parentUrl": "https://github.com/python/cpython/issues/118805"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.SCHED_DEADLINE"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.SCHED_DEADLINE"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "sobolevn",
+    "pageTitle": "Remove `type`, `choices`, and `metavar` parameters of `argparse.BooleanOptionalAction` · Issue #118805 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118805"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@sobolevn",
+    "pageTitle": "Remove `type`, `choices`, and `metavar` parameters of `argparse.BooleanOptionalAction` · Issue #118805 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118805"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@sobolevn",
+    "pageTitle": "Remove `type`, `choices`, and `metavar` parameters of `argparse.BooleanOptionalAction` · Issue #118805 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118805"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "Remove `type`, `choices`, and `metavar` parameters of `argparse.BooleanOptionalAction` · Issue #118805 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118805"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.WindowsSelectorEventLoopPolicy"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.WindowsSelectorEventLoopPolicy"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Data model — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_lnotab"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Data model — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_lnotab"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d80",
+    "alt": "@markshannon",
+    "pageTitle": "The C-API for Python to C integer conversion is, to be frank, a mess. · Issue #102471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/102471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d48",
+    "alt": "@markshannon",
+    "pageTitle": "The C-API for Python to C integer conversion is, to be frank, a mess. · Issue #102471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/102471"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d80",
     "alt": "@vstinner",
