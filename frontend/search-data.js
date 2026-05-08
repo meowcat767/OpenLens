@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1578,
+    "url": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare",
+    "title": "graphlib — Functionality to operate with graph-like structures — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » graphlib — Functionality to operate with graph-like structures | Theme Auto Light Dark | graphlib — Functionality to operate with graph-like structures¶ Source code: Lib/graphlib.py class graphlib.TopologicalSorter(graph\u003dNone)¶ Provides functionality to topologically sort a graph of hashable nodes. A topological order is a linear ordering of the vertices in a graph such that for every directed edge u -\u003e v from vertex u to vertex v, vertex u comes before vertex v in the ordering. For instance, the vertices of the graph may represent tasks to be performed, and the edges may represent constraints that one task must be performed before another; in this example, a topological ordering is just a valid sequence for the tasks. A complete topological ordering is possible if and only if the graph has no directed cycles, that is, if it is a directed acyclic graph. If the optional graph argument is provided it must be a dictionary representing a directed acyclic graph where the keys are nodes and the values are iterables of all predecessors of that node in the graph (the nodes that have edges that point to the value in the key). Additional nodes can be added to the graph using the add() method. In the general case, the steps required to perform the sorting of a given graph are as follows: Create an instance of the TopologicalSorter with an optional initial graph. Add additional nodes to the graph. Call prepare() on the graph. While is_active() is True, iterate over the nodes returned by get_ready() and process them. Call done() on each node as it finishes processing. In case just an immediate sorting of the nodes in the graph is required and no parallelism is involved, the convenience method TopologicalSorter.static_order() can be used directly: \u003e\u003e\u003e graph \u003d {\"D\": {\"B\", \"C\"}, \"C\": {\"A\"}, \"B\": {\"A\"}}\n\u003e\u003e\u003e ts \u003d TopologicalSorter(graph)\n\u003e\u003e\u003e tuple(ts.static_order())\n(\u0027A\u0027, \u0027C\u0027, \u0027B\u0027, \u0027D\u0027)\n The class is designed to easily support parallel processing of the nodes as they become ready. For instance: topological_sorter \u003d TopologicalSorter()\n\n# Add nodes to \u0027topological_sorter\u0027...\n\ntopological_sorter.prepare()\nwhile topological_sorter.is_active():\n    for node in topological_sorter.get_ready():\n        # Worker threads or processes take nodes to work on off the\n        # \u0027task_queue\u0027 queue.\n        task_queue.put(node)\n\n    # When the work for a node is done, workers put the node in\n    # \u0027finalized_tasks_queue\u0027 so we can get more nodes to work on.\n    # The definition of \u0027is_active()\u0027 guarantees that, at this point, at\n    # least one node has been placed on \u0027task_queue\u0027 that hasn\u0027t yet\n    # been passed to \u0027done()\u0027, so this blocking \u0027get()\u0027 must (eventually)\n    # succeed.  After calling \u0027done()\u0027, we loop back to call \u0027get_ready()\u0027\n    # again, so put newly freed nodes on \u0027task_queue\u0027 as soon as\n    # logically possible.\n    node \u003d finalized_tasks_queue.get()\n    topological_sorter.done(node)\n add(node, *predecessors)¶ Add a new node and its predecessors to the graph. Both the node and all elements in predecessors must be hashable. If called multiple times with the same node argument, the set of dependencies will be the union of all dependencies passed in. It is possible to add a node with no dependencies (predecessors is not provided) or to provide a dependency twice. If a node that has not been provided before is included among predecessors it will be automatically added to the graph with no predecessors of its own. Raises ValueError if called after prepare(). prepare()¶ Mark the graph as finished and check for cycles in the graph. If any cycle is detected, CycleError will be raised, but get_ready() can still be used to obtain as many nodes as possible until cycles block more progress. After a call to this function, the graph cannot be modified, and therefore no more nodes can be added using add(). A ValueError will be raised if the sort has been started by static_order() or get_ready(). Changed in version 3.14: prepare() can now be called more than once as long as the sort has not started. Previously this raised ValueError. is_active()¶ Returns True if more progress can be made and False otherwise. Progress can be made if cycles do not block the resolution and either there are still nodes ready that haven’t yet been returned by TopologicalSorter.get_ready() or the number of nodes marked TopologicalSorter.done() is less than the number that have been returned by TopologicalSorter.get_ready(). The __bool__() method of this class defers to this function, so instead of: if ts.is_active():\n    ...\n it is possible to simply do: if ts:\n    ...\n Raises ValueError if called without calling prepare() previously. done(*nodes)¶ Marks a set of nodes returned by TopologicalSorter.get_ready() as processed, unblocking any successor of each node in nodes for being returned in the future by a call to TopologicalSorter.get_r",
+    "scrapedAt": "2026-05-09 01:25:23.698373"
+  },
+  {
+    "id": 1577,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-zstandard",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:25:22.475948"
+  },
+  {
+    "id": 1576,
+    "url": "https://github.com/python/cpython/issues/97702",
+    "title": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Contributor matthiasgoergens commented Oct 1, 2022 • edited Loading Uh oh! There was an error while loading. Please reload this page. The existing code is quite a mess and doesn\u0027t correspond to what gcc nor clang nor msvc are doing. This PR fixes all the issues below. Issue: ctypes: bit field data does not survive round trip #97588 Issue: ctypes: bitfield lost data with union on linux platform #95496 Issue: bitfield layout wrong in ctypes #84039 Issue: [Linux] ctypes packs bitfields Incorrectly #73939 Issue: ctypes mixed-types bitfield layout nonsensical; doesn\u0027t match compiler. #59324 Issue: Incorrect struct definition with bitfields #86098 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. ❤️ 1 gpshead reacted with heart emoji All reactions ❤️ 1 reaction pythongh-97588: Fix ctypes structs 7922585 bedevere-bot added the awaiting review label Oct 1, 2022 blurb-it Bot and others added 23 commits October 1, 2022 09:56 📜🤖 Added by blurb_it. 2307932 Handling pack as well 47f826c Handle basedict, too 5a32211 Merge branch \u0027main\u0027 into fix-bitfield-clean 8d79d8f Merge branch \u0027main\u0027 into fix-bitfield-clean 2d07375 Merge remote-tracking branch \u0027matthias/fix-bitfield-clean\u0027 into fix-b… … 8bc8535 …itfield-clean Merge remote-tracking branch \u0027origin/main\u0027 into fix-bitfield-clean c3d162b Split windows and linux e5ed9ac Compiles b0f9819 Abstract out proto stuff 2dee0e3 Clean align 79ef347 Hypothesis tests pass 6170dad Formatting 871ca1a Clean up c162144 Adapt tests for Windows a57cf2c Fix order 3f7c4cc Fix alignment test e39a271 Merge remote-tracking branch \u0027origin/main\u0027 into fix-bitfield-clean 359ed58 Avoid casting 52ef8d2 Fixup e8102c4 Merge branch \u0027main\u0027 into fix-bitfield-clean 600e144 Merge branch \u0027main\u0027 into fix-bitfield-clean 9bad706 Merge remote-tracking branch \u0027origin/main\u0027 into fix-bitfield-clean 5121857 matthiasgoergens mentioned this pull request Oct 6, 2022 gh-97588: Failing tests to demonstrate the issue #97589 Closed matthiasgoergens added 4 commits October 8, 2022 13:49 Merge remote-tracking branch \u0027origin/main\u0027 into fix-bitfield-clean 6cd27ea Add ability to force msvc compatibility even when not doing any packing 6b6fa8a More tests ca9d580 Merge branch \u0027main\u0027 into fix-bitfield-clean 1401ee4 195 hidden items Load more… Copy link Copy Markdown bedevere-bot commented May 5, 2024 🤖 New build scheduled with the buildbot fleet by @encukou for commit ba61051 🤖 If you want to schedule another build, you need to add the 🔨 test-with-buildbots label again. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-bot removed the 🔨 test-with-buildbots Test PR w/ buildbots; report in status section label May 5, 2024 Copy link Copy Markdown Member encukou commented May 6, 2024 This is about as good as it\u0027ll be for 3.13. So there is a decision to make: Put this in, and iterate with bugfixes. This PR is an improvement, but if more of those come in 3.14, things might break twice for users that rely on workarounds. Delay to 3.14, and iterate with more freedom. I can fix this properly in 2024, if I\u0027m allowed to spend dev-in-rez time on it. I\u0027m torn here. Does anyone want to play a more impartial judge? Or just chip in with an opinion? @zooba, @gpshead For an idea about what could go into 3.14: Things that are under-tested or missing, where fixes might break working code: unions Matching unsupported (non-PEP11) architectures \u0026 compilers handling types whose alignment !\u003d size GCC-style packed structs/bitfields (requires straddling bitfields, which needs a bigger refactoring) Missing features that would IMO be needed before we can claim that ctypes can match a C struct in the common ABIs: support for zero-length bit fields, which to most compilers means “avoid packing a bitfield together with the previous one” (but ctypes uses zero as “not a bitfield”) Things needed for better testability or implementability of the above: fields/types that are stored as PyLong_AsNativeBytes arguments, rather than struct codes better reflection of ctypes Hypothesis tests \u0026 fuzzing For this PR: all buildbots fail on only: s390x (here for example) -- might be due to stricter tests; today I can probably either fix this or at least build confidence to skip the test. Stuff that\u0027s not ctypes-related: test_pyrepl, test_import and a few more pre-existing failures, test_cext, No space left on device. 👀 1 gpshead reacted with eyes emoji All reactions 👀 1 reaction Sorr",
+    "scrapedAt": "2026-05-09 01:25:21.187271"
+  },
+  {
+    "id": 1575,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.buffered_stdio",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:25:17.908509"
+  },
+  {
+    "id": 1574,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.extractall",
+    "title": "tarfile — Read and write tar archive files — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Compression and Archiving » tarfile — Read and write tar archive files | Theme Auto Light Dark | tarfile — Read and write tar archive files¶ Source code: Lib/tarfile.py The tarfile module makes it possible to read and write tar archives, including those using gzip, bz2 and lzma compression. Use the zipfile module to read or write .zip files, or the higher-level functions in shutil. Some facts and figures: reads and writes gzip, bz2, compression.zstd, and lzma compressed archives if the respective modules are available. If any of these optional modules are missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. read/write support for the POSIX.1-1988 (ustar) format. read/write support for the GNU tar format including longname and longlink extensions, read-only support for all variants of the sparse extension including restoration of sparse files. read/write support for the POSIX.1-2001 (pax) format. handles directories, regular files, hardlinks, symbolic links, fifos, character devices and block devices and is able to acquire and restore file information like timestamp, access permissions and owner. Changed in version 3.3: Added support for lzma compression. Changed in version 3.12: Archives are extracted using a filter, which makes it possible to either limit surprising/dangerous features, or to acknowledge that they are expected and the archive is fully trusted. Changed in version 3.14: Set the default extraction filter to data, which disallows some dangerous features such as links to absolute paths or paths outside of the destination. Previously, the filter strategy was equivalent to fully_trusted. Changed in version 3.14: Added support for Zstandard compression using compression.zstd. tarfile.open(name\u003dNone, mode\u003d\u0027r\u0027, fileobj\u003dNone, bufsize\u003d10240, **kwargs)¶ Return a TarFile object for the pathname name. For detailed information on TarFile objects and the keyword arguments that are allowed, see TarFile Objects. mode has to be a string of the form \u0027filemode[:compression]\u0027, it defaults to \u0027r\u0027. Here is a full list of mode combinations: mode action \u0027r\u0027 or \u0027r:*\u0027 Open for reading with transparent compression (recommended). \u0027r:\u0027 Open for reading exclusively without compression. \u0027r:gz\u0027 Open for reading with gzip compression. \u0027r:bz2\u0027 Open for reading with bzip2 compression. \u0027r:xz\u0027 Open for reading with lzma compression. \u0027r:zst\u0027 Open for reading with Zstandard compression. \u0027x\u0027 or \u0027x:\u0027 Create a tarfile exclusively without compression. Raise a FileExistsError exception if it already exists. \u0027x:gz\u0027 Create a tarfile with gzip compression. Raise a FileExistsError exception if it already exists. \u0027x:bz2\u0027 Create a tarfile with bzip2 compression. Raise a FileExistsError exception if it already exists. \u0027x:xz\u0027 Create a tarfile with lzma compression. Raise a FileExistsError exception if it already exists. \u0027x:zst\u0027 Create a tarfile with Zstandard compression. Raise a FileExistsError exception if it already exists. \u0027a\u0027 or \u0027a:\u0027 Open for appending with no compression. The file is created if it does not exist. \u0027w\u0027 or \u0027w:\u0027 Open for uncompressed writing. \u0027w:gz\u0027 Open for gzip compressed writing. \u0027w:bz2\u0027 Open for bzip2 compressed writing. \u0027w:xz\u0027 Open for lzma compressed writing. \u0027w:zst\u0027 Open for Zstandard compressed writing. Note that \u0027a:gz\u0027, \u0027a:bz2\u0027 or \u0027a:xz\u0027 is not possible. If mode is not suitable to open a certain (compressed) file for reading, ReadError is raised. Use mode \u0027r\u0027 to avoid this. If a compression method is not supported, CompressionError is raised. If fileobj is specified, it is used as an alternative to a file object opened in binary mode for name. It is supposed to be at position 0. For modes \u0027w:gz\u0027, \u0027x:gz\u0027, \u0027w|gz\u0027, \u0027w:bz2\u0027, \u0027x:bz2\u0027, \u0027w|bz2\u0027, tarfile.open() accepts the keyword argument compresslevel (default 9) to specify the compression level of the file. For modes \u0027w:xz\u0027, \u0027x:xz\u0027 and \u0027w|xz\u0027, tarfile.open() accepts the keyword argument preset to specify the compression level of the file. For modes \u0027w:zst\u0027, \u0027x:zst\u0027 and \u0027w|zst\u0027, tarfile.open() accepts the keyword argument level to specify the compression level of the file. The keyword argument options may also be passed, providing advanced Zstandard compression parameters described by CompressionParameter. The keyword argument zstd_dict can be passed to provide a ZstdDict, a Zstandard dictionary used to improve compression of smaller amounts of data. For special purposes, there is a second format for mode: \u0027filemode|[compression]\u0027. tarfile.open() will return a TarFile object that processes its data as a stream of blocks. No random seeking will be done on the file. If given, fileobj may be any object that has a read() or write() method (depending on the mode) that works with bytes. bufsize specifies the blocksize and defaults ",
+    "scrapedAt": "2026-05-09 01:25:16.609114"
+  },
+  {
     "id": 1573,
     "url": "https://docs.python.org/3/library/threading.html#threading.Event.is_set",
     "title": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
@@ -10603,26 +10638,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1574,
-    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.extractall"
-  },
-  {
-    "id": 1575,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.buffered_stdio"
-  },
-  {
-    "id": 1576,
-    "url": "https://github.com/python/cpython/issues/97702"
-  },
-  {
-    "id": 1577,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-zstandard"
-  },
-  {
-    "id": 1578,
-    "url": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
   },
   {
     "id": 1579,
@@ -239780,10 +239795,1068 @@ window.searchData = [
     "id": 338483,
     "url": "https://github.com/python/cpython/issues/133197#issue-3030889713",
     "parentUrl": "https://github.com/python/cpython/issues/133197"
+  },
+  {
+    "id": 340618,
+    "url": "https://github.com/python/cpython/issues/59324",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340619,
+    "url": "https://github.com/furkanonder",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340620,
+    "url": "https://github.com/python/cpython/pull/97702#event-7500127874",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340621,
+    "url": "https://github.com/python/cpython/pull/97702/commits/3f7c4ccfc7eba649596f887467aa942b1b376752",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340623,
+    "url": "https://github.com/python/cpython/pull/97702#event-12708403762",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340624,
+    "url": "https://github.com/python/cpython/pull/97702#issuecomment-2098181219",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340625,
+    "url": "https://github.com/python/cpython/pull/97702#issuecomment-2094952062",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340626,
+    "url": "https://buildbot.python.org/all/#/builders/390/builds/1428/steps/5/logs/stdio",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340627,
+    "url": "https://github.com/python/cpython/pull/97702",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340628,
+    "url": "https://github.com/python/cpython/issues/56737",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340629,
+    "url": "https://github.com/python/cpython/pull/97702/commits/23079321a6ff7093b6f34a3df7a5451e06c9f2ca",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340630,
+    "url": "https://github.com/python/cpython/pull/97702#issuecomment-2096532682",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340631,
+    "url": "https://github.com/python/cpython/pull/97702/commits/2dee0e3234bc701af36dc8b2c64c73bd0ce6c953",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340632,
+    "url": "https://github.com/python/cpython/pull/97702/commits/c3d162bfaa326c8b0990a5f235af842c78112128",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340633,
+    "url": "https://github.com/python/cpython/pull/97702#ref-pullrequest-2899377146",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340634,
+    "url": "https://github.com/python/cpython/pull/97702#issuecomment-2095496965",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340635,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F97702",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340636,
+    "url": "https://github.com/python/cpython/pull/97702#issuecomment-2096604094",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340637,
+    "url": "https://github.com/python/cpython/issues/86098",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340638,
+    "url": "https://github.com/python/cpython/pull/97702#ref-pullrequest-2487339527",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340640,
+    "url": "https://github.com/python/cpython/pull/97702#ref-commit-50b0953",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340641,
+    "url": "https://github.com/python/cpython/pull/97702/commits/2d073753c6b2b7731b987a1c666d63731ee43fbd",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340642,
+    "url": "https://github.com/python/cpython/pull/97702#ref-issue-1323387664",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340643,
+    "url": "https://github.com/python/cpython/pull/97702/commits/a57cf2cd6cd8cb2fd5471093bba71544a0f927ea",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340647,
+    "url": "https://github.com/python/cpython/pull/97702/commits/79225852c16588e3c52027f12dd5c6b0e0482c60",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340649,
+    "url": "https://github.com/python/cpython/pull/97702/commits/e39a271632e9c0fc80558b5c082cc48d37d44bbf",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340650,
+    "url": "https://github.com/python/cpython/commit/bc1225b7083f5b326a130547f07143e1278c1ff0",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340651,
+    "url": "https://github.com/python/cpython/pull/97702#issuecomment-2097165936",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340654,
+    "url": "https://github.com/python/cpython/pull/97702/commits/600e144c2f8fb5d8e5edbc7225ab1c03de936f71",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340655,
+    "url": "https://github.com/python/cpython/pull/97702/commits/c162144f7485decd14467c31bcdde650174a5e10",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340657,
+    "url": "https://github.com/python/cpython/pull/97702#issuecomment-2104440470",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340658,
+    "url": "https://github.com/python/cpython/pull/97702/commits/871ca1afcbb8c44ba3824ac383be4d22010c96fa",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340659,
+    "url": "https://github.com/python/cpython/pull/97702/commits/6cd27ead7127ef604d27896b17508c38b8701e16",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340662,
+    "url": "https://github.com/matthiasgoergens",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340663,
+    "url": "https://github.com/python/cpython/pull/97702/commits/9bad7060456cafc768dc4b07f50c6c5486709bab",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340664,
+    "url": "https://github.com/slozier",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340665,
+    "url": "https://github.com/python/cpython/pull/97702/commits/512185753ad099c6a167ab1738336bbf061095ca",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340668,
+    "url": "https://github.com/python/cpython/pull/97702#ref-pullrequest-2484818526",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340669,
+    "url": "https://github.com/python/cpython/pull/97702/commits/8d79d8f9ba591e27ae9a4ae278c0c8a0b82bce94",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340670,
+    "url": "https://github.com/python/cpython/pull/97702#issuecomment-2269891643",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340671,
+    "url": "https://github.com/estyxx/cpython/commit/d53fca6bf96fb1f01f1d00ac10a856be2e349c69",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340672,
+    "url": "https://github.com/python/cpython/pull/97702#issuecomment-2137044013",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340673,
+    "url": "https://github.com/python/cpython/pull/97702#issuecomment-2096415912",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340676,
+    "url": "https://github.com/python/cpython/pull/97702/commits/52ef8d29c37336e6a5b2141fbbd7b4da608434ea",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340677,
+    "url": "https://github.com/python/cpython/pull/123300",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340678,
+    "url": "https://github.com/python/cpython/pull/97702#ref-pullrequest-1387268356",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340679,
+    "url": "https://github.com/python/cpython/pull/97702/commits/ca9d580dde68ca42e211b0bc4946094c807f7224",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340680,
+    "url": "https://github.com/python/cpython/pull/97702/commits/89914448877a37d453ac99bd9adb38b3eb79a499",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340681,
+    "url": "https://github.com/python/cpython/pull/97702#issuecomment-2095769733",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340682,
+    "url": "https://github.com/python/cpython/pull/97589",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340685,
+    "url": "https://github.com/python/cpython/commit/ba610517ae17b0354ceaaae2bb9d5b8e6399daf8",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340686,
+    "url": "https://github.com/python/cpython/pull/97702#issue-1393332924",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340687,
+    "url": "https://github.com/python/cpython/pull/97702/commits/e5ed9ac3a50bad6c399f83457884a3e7c1064f94",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340688,
+    "url": "https://github.com/IronLanguages/ironpython3/pull/1926",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340689,
+    "url": "https://github.com/python/cpython/issues/70045",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340690,
+    "url": "https://github.com/python/cpython/pull/97702/commits/b0f9819b12f15b26b3e66e8f59d0499fbebcfd6f",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340691,
+    "url": "https://github.com/python/cpython/pull/97702/commits/359ed5887bba41d08797d800fdbc59ced538b689",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340692,
+    "url": "https://github.com/eirannejad",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340693,
+    "url": "https://github.com/python/cpython/pull/97702/commits/8bc8535c6b0d24d85b9ecc02427295f5524a7635",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340694,
+    "url": "https://github.com/python/cpython/pull/97702#commits-pushed-8991444",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340695,
+    "url": "https://github.com/python/cpython/pull/97702/commits/47f826c396b412ed4194338aae0dc9e85d0d20c9",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340696,
+    "url": "https://github.com/python/cpython/commit/18c1a8d3a81bf8d287a06f2985bbf65c9a9b9794",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340697,
+    "url": "https://github.com/python/cpython/pull/97702/files/f75d7d66396436b3c2886950513befa938c7c4b0",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340699,
+    "url": "https://github.com/python/cpython/pull/97702/commits/bc1225b7083f5b326a130547f07143e1278c1ff0",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340700,
+    "url": "https://github.com/ab22ht",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340701,
+    "url": "https://github.com/python/cpython/issues/84039",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340702,
+    "url": "https://buildbot.python.org/all/#/builders/738/builds/3653",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340703,
+    "url": "https://github.com/python/cpython/pull/97702#event-12969295472",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340704,
+    "url": "https://github.com/python/cpython/pull/97702/commits/1401ee4593a8fe3162cfed94fdca70cdc06f732a",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340705,
+    "url": "https://github.com/python/cpython/issues/73939",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340706,
+    "url": "https://github.com/python/cpython/pull/97702/commits/5a322112d78b0c6a25670ee4811279aaba4bbc9e",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340707,
+    "url": "https://github.com/python/cpython/issues/68478",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340708,
+    "url": "https://github.com/python/cpython/pull/97702/commits/6170dad206e3253621bed7eafe9b1aae0c94cd90",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340710,
+    "url": "https://github.com/python/cpython/pull/97702#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340711,
+    "url": "https://github.com/python/cpython/pull/97702/commits/6b6fa8adf071f00edc52bc5225cd617be92bad3b",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340712,
+    "url": "https://github.com/python/cpython/pull/97702#issuecomment-2095769832",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340713,
+    "url": "https://github.com/python/cpython/pull/97702/files/a3a390b54681212e3188923769e3e3bf158ac953",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340714,
+    "url": "https://github.com/python/cpython/pull/97702#commits-pushed-2307932",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340715,
+    "url": "https://github.com/python/cpython/pull/123352",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340716,
+    "url": "https://github.com/python/cpython/pull/97702#ref-commit-d53fca6",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340717,
+    "url": "https://github.com/python/cpython/issues/83211",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340718,
+    "url": "https://github.com/python/cpython/pull/97702#commits-pushed-6cd27ea",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340720,
+    "url": "https://github.com/python/cpython/pull/97702/commits/e8102c41abcc7831c1218ebc2e8989aaf6af613a",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340722,
+    "url": "https://github.com/python/cpython/issues/121938",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340725,
+    "url": "https://github.com/python/cpython/pull/97702#event-12969294683",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340726,
+    "url": "https://github.com/hudson-trading/cpython/commit/50b0953217dd7bc6c9c2cd660b018c28fad8fa52",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340730,
+    "url": "https://github.com/python/cpython/issues/95496",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340732,
+    "url": "https://github.com/python/cpython/pull/97702/commits/79ef347384bc3615e3e84824e0a60ee631348a08",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 340733,
+    "url": "https://github.com/python/cpython/pull/97702#issuecomment-2095603425",
+    "parentUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "id": 341969,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/graphlib.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
+  },
+  {
+    "id": 341971,
+    "url": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.static_order",
+    "parentUrl": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
+  },
+  {
+    "id": 341976,
+    "url": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.done",
+    "parentUrl": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
+  },
+  {
+    "id": 341978,
+    "url": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.is_active",
+    "parentUrl": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
+  },
+  {
+    "id": 341979,
+    "url": "https://docs.python.org/3/library/graphlib.html#",
+    "parentUrl": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
+  },
+  {
+    "id": 341982,
+    "url": "https://docs.python.org/3/library/graphlib.html#graphlib.CycleError",
+    "parentUrl": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
+  },
+  {
+    "id": 341983,
+    "url": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.get_ready",
+    "parentUrl": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
+  },
+  {
+    "id": 341984,
+    "url": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter",
+    "parentUrl": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
+  },
+  {
+    "id": 341986,
+    "url": "https://docs.python.org/3/library/graphlib.html#module-graphlib",
+    "parentUrl": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
+  },
+  {
+    "id": 341990,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/graphlib.py",
+    "parentUrl": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
+  },
+  {
+    "id": 341994,
+    "url": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.add",
+    "parentUrl": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "graphlib — Functionality to operate with graph-like structures — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "graphlib — Functionality to operate with graph-like structures — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-zstandard"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-zstandard"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d80\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d48\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d40\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d40\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d80\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d80\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d80\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2894642?s\u003d80\u0026u\u003d3fd95e46e081102446b1ebdf31e1cf3d77406c0b\u0026v\u003d4",
+    "alt": "@gvanrossum",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d80\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d80\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d80\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d80\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d80\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d80\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d40\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d40\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28976199?s\u003d40\u0026v\u003d4",
+    "alt": "@estyxx",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6275069?s\u003d80\u0026u\u003db78cdccb1848810f082cb84d00711786c5341e38\u0026v\u003d4",
+    "alt": "@zware",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6061329?s\u003d40\u0026v\u003d4",
+    "alt": "@slozier",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1693688?s\u003d40\u0026v\u003d4",
+    "alt": "@zooba",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2894642?s\u003d40\u0026v\u003d4",
+    "alt": "@gvanrossum",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?s\u003d40\u0026v\u003d4",
+    "alt": "@markshannon",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/26890283?s\u003d40\u0026v\u003d4",
+    "alt": "@ab22ht",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1693688?s\u003d40\u0026v\u003d4",
+    "alt": "@zooba",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/57026?s\u003d52\u0026v\u003d4",
+    "alt": "@matthiasgoergens",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d52\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28750310?s\u003d52\u0026v\u003d4",
+    "alt": "@Fidget-Spinner",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1721820?s\u003d52\u0026v\u003d4",
+    "alt": "@pitrou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/24194934?s\u003d52\u0026v\u003d4",
+    "alt": "@furkanonder",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4881073?s\u003d52\u0026v\u003d4",
+    "alt": "@arhadthedev",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1693688?s\u003d52\u0026v\u003d4",
+    "alt": "@zooba",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d52\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8197916?s\u003d52\u0026v\u003d4",
+    "alt": "@eirannejad",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d52\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2894642?s\u003d52\u0026v\u003d4",
+    "alt": "@gvanrossum",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6275069?s\u003d52\u0026v\u003d4",
+    "alt": "@zware",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/26890283?s\u003d52\u0026v\u003d4",
+    "alt": "@ab22ht",
+    "pageTitle": "gh-97588: Fix ctypes structs by matthiasgoergens · Pull Request #97702 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97702"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.buffered_stdio"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.buffered_stdio"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tarfile — Read and write tar archive files — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.extractall"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tarfile — Read and write tar archive files — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.extractall"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
