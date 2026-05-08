@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1594,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive",
+    "title": "2. Using the Python Interpreter — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Tutorial » 2. Using the Python Interpreter | Theme Auto Light Dark | 2. Using the Python Interpreter¶ 2.1. Invoking the Interpreter¶ The Python interpreter is usually installed as /usr/local/bin/python3.14 on those machines where it is available; putting /usr/local/bin in your Unix shell’s search path makes it possible to start it by typing the command: python3.14\n to the shell. [1] Since the choice of the directory where the interpreter lives is an installation option, other places are possible; check with your local Python guru or system administrator. (E.g., /usr/local/python is a popular alternative location.) On Windows machines where you have installed Python from the Microsoft Store, the python3.14 command will be available. If you have the py.exe launcher installed, you can use the py command. See Python install manager for other ways to launch Python. Typing an end-of-file character (Control-D on Unix, Control-Z on Windows) at the primary prompt causes the interpreter to exit with a zero exit status. If that doesn’t work, you can exit the interpreter by typing the following command: quit(). The interpreter’s line-editing features include interactive editing, history substitution and code completion on most systems. Perhaps the quickest check to see whether command line editing is supported is typing a word in on the Python prompt, then pressing Left arrow (or Control-b). If the cursor moves, you have command line editing; see Appendix Interactive Input Editing and History Substitution for an introduction to the keys. If nothing appears to happen, or if a sequence like ^[[D or ^B appears, command line editing isn’t available; you’ll only be able to use backspace to remove characters from the current line. The interpreter operates somewhat like the Unix shell: when called with standard input connected to a tty device, it reads and executes commands interactively; when called with a file name argument or with a file as standard input, it reads and executes a script from that file. A second way of starting the interpreter is python -c command [arg] ..., which executes the statement(s) in command, analogous to the shell’s -c option. Since Python statements often contain spaces or other characters that are special to the shell, it is usually advised to quote command in its entirety. Some Python modules are also useful as scripts. These can be invoked using python -m module [arg] ..., which executes the source file for module as if you had spelled out its full name on the command line. When a script file is used, it is sometimes useful to be able to run the script and enter interactive mode afterwards. This can be done by passing -i before the script. All command line options are described in Command line and environment. 2.1.1. Argument Passing¶ When known to the interpreter, the script name and additional arguments thereafter are turned into a list of strings and assigned to the argv variable in the sys module. You can access this list by executing import sys. The length of the list is at least one; when no script and no arguments are given, sys.argv[0] is an empty string. When the script name is given as \u0027-\u0027 (meaning standard input), sys.argv[0] is set to \u0027-\u0027. When -c command is used, sys.argv[0] is set to \u0027-c\u0027. When -m module is used, sys.argv[0] is set to the full name of the located module. Options found after -c command or -m module are not consumed by the Python interpreter’s option processing but left in sys.argv for the command or module to handle. 2.1.2. Interactive Mode¶ When commands are read from a tty, the interpreter is said to be in interactive mode. In this mode it prompts for the next command with the primary prompt, usually three greater-than signs (\u003e\u003e\u003e); for continuation lines it prompts with the secondary prompt, by default three dots (...). The interpreter prints a welcome message stating its version number and a copyright notice before printing the first prompt: $ python3.14\nPython 3.14 (default, April 4 2024, 09:25:04)\n[GCC 10.2.0] on linux\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n\u003e\u003e\u003e\n Continuation lines are needed when entering a multi-line construct. As an example, take a look at this if statement: \u003e\u003e\u003e the_world_is_flat \u003d True\n\u003e\u003e\u003e if the_world_is_flat:\n...     print(\"Be careful not to fall off!\")\n...\nBe careful not to fall off!\n For more on interactive mode, see Interactive Mode. 2.2. The Interpreter and Its Environment¶ 2.2.1. Source Code Encoding¶ By default, Python source files are treated as encoded in UTF-8. In that encoding, characters of most languages in the world can be used simultaneously in string literals, identifiers and comments — although the standard library only uses ASCII characters for identifiers, a convention that any portable code should follow. To display all these characters properly, your editor must recognize that the file is UTF-8, a",
+    "scrapedAt": "2026-05-09 01:26:00.661294"
+  },
+  {
+    "id": 1593,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#c-api-changes",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:25:59.331215"
+  },
+  {
+    "id": 1592,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#sqlite3",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:25:58.050629"
+  },
+  {
+    "id": 1591,
+    "url": "https://github.com/python/cpython/issues/123165",
+    "title": "Add `show_positions` keyword argument to `dis.dis` and related functions · Issue #123165 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add show_positions keyword argument to dis.dis and related functions #123165 New issue Copy link New issue Copy link Closed Closed Add show_positions keyword argument to dis.dis and related functions#123165 Copy link Assignees Labels easystdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description markshannon opened on Aug 20, 2024 Issue body actions Feature or enhancement Proposal: dis.dis is a useful debugging tool when trying to debug minor bytecode compiler errors. However it lacks one important feature, the ability to see the exact positions attached to instructions. It can only show line numbers. We should add a show_positions keyword argument to show positions. For example, the function: def foo(x):\n    if x \u003d\u003d 2:\n        return 1 disassembles to: \n  2           RESUME                   0\n\n  3           LOAD_FAST                0 (x)\n              LOAD_CONST               1 (2)\n              COMPARE_OP              88 (bool(\u003d\u003d))\n              POP_JUMP_IF_FALSE        1 (to L1)\n\n  4           RETURN_CONST             2 (1)\n\n  3   L1:     RETURN_CONST             0 (None)\n with show_positions it would disassemble to something like: 2:0-2:0                RESUME                   0\n\n3:7-3:8                LOAD_FAST                0 (x)\n3:12-3:13              LOAD_CONST               1 (2)\n3:7-3:13               COMPARE_OP              88 (bool(\u003d\u003d))\n3:7-3:13               POP_JUMP_IF_FALSE        1 (to L1)\n\n4:15-4:16              RETURN_CONST             2 (1)\n\n3:7-3:13       L1:     RETURN_CONST             0 (None)\n Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-123165: make dis functions render positions on demand #123168 gh-123165: correct tests for dis.dis(func, show_positions\u003dTrue) #123220 gh-123165: improve docs signature for dis.disassemble #123808 Reactions are currently unavailable Metadata Metadata Assignees picnixz Labels easystdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:25:56.762657"
+  },
+  {
+    "id": 1590,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction",
+    "title": "fractions — Rational numbers — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Numeric and Mathematical Modules » fractions — Rational numbers | Theme Auto Light Dark | fractions — Rational numbers¶ Source code: Lib/fractions.py The fractions module provides support for rational number arithmetic. A Fraction instance can be constructed from a pair of rational numbers, from a single number, or from a string. class fractions.Fraction(numerator\u003d0, denominator\u003d1)¶ class fractions.Fraction(number) class fractions.Fraction(string) The first version requires that numerator and denominator are instances of numbers.Rational and returns a new Fraction instance with a value equal to numerator/denominator. If denominator is zero, it raises a ZeroDivisionError. The second version requires that number is an instance of numbers.Rational or has the as_integer_ratio() method (this includes float and decimal.Decimal). It returns a Fraction instance with exactly the same value. Assumed, that the as_integer_ratio() method returns a pair of coprime integers and last one is positive. Note that due to the usual issues with binary point (see Floating-Point Arithmetic: Issues and Limitations), the argument to Fraction(1.1) is not exactly equal to 11/10, and so Fraction(1.1) does not return Fraction(11, 10) as one might expect. (But see the documentation for the limit_denominator() method below.) The last version of the constructor expects a string. The usual form for this instance is: [sign] numerator [\u0027/\u0027 denominator]\n where the optional sign may be either ‘+’ or ‘-’ and numerator and denominator (if present) are strings of decimal digits (underscores may be used to delimit digits as with integral literals in code). In addition, any string that represents a finite value and is accepted by the float constructor is also accepted by the Fraction constructor. In either form the input string may also have leading and/or trailing whitespace. Here are some examples: \u003e\u003e\u003e from fractions import Fraction\n\u003e\u003e\u003e Fraction(16, -10)\nFraction(-8, 5)\n\u003e\u003e\u003e Fraction(123)\nFraction(123, 1)\n\u003e\u003e\u003e Fraction()\nFraction(0, 1)\n\u003e\u003e\u003e Fraction(\u00273/7\u0027)\nFraction(3, 7)\n\u003e\u003e\u003e Fraction(\u0027 -3/7 \u0027)\nFraction(-3, 7)\n\u003e\u003e\u003e Fraction(\u00271.414213 \\t\\n\u0027)\nFraction(1414213, 1000000)\n\u003e\u003e\u003e Fraction(\u0027-.125\u0027)\nFraction(-1, 8)\n\u003e\u003e\u003e Fraction(\u00277e-6\u0027)\nFraction(7, 1000000)\n\u003e\u003e\u003e Fraction(2.25)\nFraction(9, 4)\n\u003e\u003e\u003e Fraction(1.1)\nFraction(2476979795053773, 2251799813685248)\n\u003e\u003e\u003e from decimal import Decimal\n\u003e\u003e\u003e Fraction(Decimal(\u00271.1\u0027))\nFraction(11, 10)\n The Fraction class inherits from the abstract base class numbers.Rational, and implements all of the methods and operations from that class. Fraction instances are hashable, and should be treated as immutable. In addition, Fraction has the following properties and methods: Changed in version 3.2: The Fraction constructor now accepts float and decimal.Decimal instances. Changed in version 3.9: The math.gcd() function is now used to normalize the numerator and denominator. math.gcd() always returns an int type. Previously, the GCD type depended on numerator and denominator. Changed in version 3.11: Underscores are now permitted when creating a Fraction instance from a string, following PEP 515 rules. Changed in version 3.11: Fraction implements __int__ now to satisfy typing.SupportsInt instance checks. Changed in version 3.12: Space is allowed around the slash for string inputs: Fraction(\u00272 / 3\u0027). Changed in version 3.12: Fraction instances now support float-style formatting, with presentation types \"e\", \"E\", \"f\", \"F\", \"g\", \"G\" and \"%\"\". Changed in version 3.13: Formatting of Fraction instances without a presentation type now supports fill, alignment, sign handling, minimum width and grouping. Changed in version 3.14: The Fraction constructor now accepts any objects with the as_integer_ratio() method. numerator¶ Numerator of the Fraction in lowest term. denominator¶ Denominator of the Fraction in lowest terms. Guaranteed to be positive. as_integer_ratio()¶ Return a tuple of two integers, whose ratio is equal to the original Fraction. The ratio is in lowest terms and has a positive denominator. Added in version 3.8. is_integer()¶ Return True if the Fraction is an integer. Added in version 3.12. classmethod from_float(f)¶ Alternative constructor which only accepts instances of float or numbers.Integral. Beware that Fraction.from_float(0.3) is not the same value as Fraction(3, 10). Note From Python 3.2 onwards, you can also construct a Fraction instance directly from a float. classmethod from_decimal(dec)¶ Alternative constructor which only accepts instances of decimal.Decimal or numbers.Integral. Note From Python 3.2 onwards, you can also construct a Fraction instance directly from a decimal.Decimal instance. classmethod from_number(number)¶ Alternative constructor which only accepts instances of numbers.Integral, numbers.Rational, float or decimal.Decimal, and objects with the as_integer_ratio() method, but not strings. Added in vers",
+    "scrapedAt": "2026-05-09 01:25:54.381881"
+  },
+  {
     "id": 1589,
     "url": "https://github.com/python/cpython/issues/129939",
     "title": "Add darkmode support for difflib\u0027s comparison pages · Issue #129939 · python/cpython · GitHub",
@@ -10708,26 +10743,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1590,
-    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
-  },
-  {
-    "id": 1591,
-    "url": "https://github.com/python/cpython/issues/123165"
-  },
-  {
-    "id": 1592,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#sqlite3"
-  },
-  {
-    "id": 1593,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#c-api-changes"
-  },
-  {
-    "id": 1594,
-    "url": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
   },
   {
     "id": 1595,
@@ -240635,10 +240650,237 @@ window.searchData = [
     "id": 344597,
     "url": "https://github.com/python/cpython/pull/123475",
     "parentUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "id": 344600,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.__ceil__",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344606,
+    "url": "https://docs.python.org/3/library/numbers.html#numbers.Rational",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344607,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.numerator",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344608,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.is_integer",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344611,
+    "url": "https://docs.python.org/3/library/math.html#math.gcd",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344614,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.__format__",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344617,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/fractions.py",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344620,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/fractions.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344621,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.__round__",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344626,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.limit_denominator",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344627,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.as_integer_ratio",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344631,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.from_float",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344632,
+    "url": "https://docs.python.org/3/library/fractions.html#module-fractions",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344638,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.__floor__",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344642,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.from_decimal",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344647,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.denominator",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 344649,
+    "url": "https://github.com/python/cpython/pull/123220",
+    "parentUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "id": 344652,
+    "url": "https://github.com/python/cpython/issues/123165#top",
+    "parentUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "id": 344657,
+    "url": "https://github.com/python/cpython/issues/123165#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "id": 344658,
+    "url": "https://github.com/python/cpython/pull/123808",
+    "parentUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "id": 344661,
+    "url": "https://github.com/python/cpython/issues/123165#issue-2475068484",
+    "parentUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "id": 344662,
+    "url": "https://github.com/python/cpython/pull/123168",
+    "parentUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "id": 347134,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 347138,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#using-the-python-interpreter",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 347149,
+    "url": "https://docs.python.org/3/tutorial/appendix.html#tut-scripts",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 347150,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#id2",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 347151,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#id1",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 347152,
+    "url": "https://docs.python.org/3/tutorial/interactive.html#tut-interacting",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 347154,
+    "url": "https://docs.python.org/3/using/cmdline.html#using-on-general",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 347158,
+    "url": "https://docs.python.org/3/using/windows.html#windows-store",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "id": 347164,
+    "url": "https://github.com/python/cpython/blob/main/Doc/tutorial/interpreter.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "2. Using the Python Interpreter — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "2. Using the Python Interpreter — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/tutorial/interpreter.html#tut-interactive"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#c-api-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#c-api-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#sqlite3"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#sqlite3"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "Add `show_positions` keyword argument to `dis.dis` and related functions · Issue #123165 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d80",
+    "alt": "@markshannon",
+    "pageTitle": "Add `show_positions` keyword argument to `dis.dis` and related functions · Issue #123165 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d48",
+    "alt": "@markshannon",
+    "pageTitle": "Add `show_positions` keyword argument to `dis.dis` and related functions · Issue #123165 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "Add `show_positions` keyword argument to `dis.dis` and related functions · Issue #123165 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "fractions — Rational numbers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "fractions — Rational numbers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/71213467?u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4\u0026size\u003d80",
     "alt": "@Wulian233",
