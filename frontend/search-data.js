@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1467,
+    "url": "https://docs.python.org/3/library/locale.html#module-locale",
+    "title": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internationalization » locale — Internationalization services | Theme Auto Light Dark | locale — Internationalization services¶ Source code: Lib/locale.py The locale module opens access to the POSIX locale database and functionality. The POSIX locale mechanism allows programmers to deal with certain cultural issues in an application, without requiring the programmer to know all the specifics of each country where the software is executed. The locale module is implemented on top of the _locale module, which in turn uses an ANSI C locale implementation if available. The locale module defines the following exception and functions: exception locale.Error¶ Exception raised when the locale passed to setlocale() is not recognized. locale.setlocale(category, locale\u003dNone)¶ If locale is given and not None, setlocale() modifies the locale setting for the category. The available categories are listed in the data description below. locale may be a string, or a pair, language code and encoding. An empty string specifies the user’s default settings. If the modification of the locale fails, the exception Error is raised. If successful, the new locale setting is returned. If locale is a pair, it is converted to a locale name using the locale aliasing engine. The language code has the same format as a locale name, but without encoding and @-modifier. The language code and encoding can be None. If locale is omitted or None, the current setting for category is returned. Example: \u003e\u003e\u003e import locale\n\u003e\u003e\u003e loc \u003d locale.setlocale(locale.LC_ALL)  # get current locale\n# use German locale; name and availability varies with platform\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027de_DE.UTF-8\u0027)\n\u003e\u003e\u003e locale.strcoll(\u0027f\\xe4n\u0027, \u0027foo\u0027)  # compare a string containing an umlaut\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027\u0027)   # use user\u0027s preferred locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027C\u0027)  # use default (C) locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, loc)  # restore saved locale\n setlocale() is not thread-safe on most systems. Applications typically start with a call of: import locale\nlocale.setlocale(locale.LC_ALL, \u0027\u0027)\n This sets the locale for all categories to the user’s default setting (typically specified in the LANG environment variable). If the locale is not changed thereafter, using multithreading should not cause problems. locale.localeconv()¶ Returns the database of the local conventions as a dictionary. This dictionary has the following strings as keys: Category Key Meaning LC_NUMERIC \u0027decimal_point\u0027 Decimal point character. \u0027grouping\u0027 Sequence of numbers specifying which relative positions the \u0027thousands_sep\u0027 is expected. If the sequence is terminated with CHAR_MAX, no further grouping is performed. If the sequence terminates with a 0, the last group size is repeatedly used. \u0027thousands_sep\u0027 Character used between groups. LC_MONETARY \u0027int_curr_symbol\u0027 International currency symbol. \u0027currency_symbol\u0027 Local currency symbol. \u0027p_cs_precedes/n_cs_precedes\u0027 Whether the currency symbol precedes the value (for positive resp. negative values). \u0027p_sep_by_space/n_sep_by_space\u0027 Whether the currency symbol is separated from the value by a space (for positive resp. negative values). \u0027mon_decimal_point\u0027 Decimal point used for monetary values. \u0027frac_digits\u0027 Number of fractional digits used in local formatting of monetary values. \u0027int_frac_digits\u0027 Number of fractional digits used in international formatting of monetary values. \u0027mon_thousands_sep\u0027 Group separator used for monetary values. \u0027mon_grouping\u0027 Equivalent to \u0027grouping\u0027, used for monetary values. \u0027positive_sign\u0027 Symbol used to annotate a positive monetary value. \u0027negative_sign\u0027 Symbol used to annotate a negative monetary value. \u0027p_sign_posn/n_sign_posn\u0027 The position of the sign (for positive resp. negative values), see below. All numeric values can be set to CHAR_MAX to indicate that there is no value specified in this locale. The possible values for \u0027p_sign_posn\u0027 and \u0027n_sign_posn\u0027 are given below. Value Explanation 0 Currency and value are surrounded by parentheses. 1 The sign should precede the value and currency symbol. 2 The sign should follow the value and currency symbol. 3 The sign should immediately precede the value. 4 The sign should immediately follow the value. CHAR_MAX Nothing is specified in this locale. The function temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale or the LC_MONETARY locale if locales are different and numeric or monetary strings are non-ASCII. This temporary change affects other threads. Changed in version 3.7: The function now temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale in some cases. locale.nl_langinfo(option)¶ Return some locale-specific information as a string. This function is not available on all systems, and the set of possible options might also vary across platforms. The possible argument values are numbers, for which symbolic c",
+    "scrapedAt": "2026-05-09 01:21:04.952324"
+  },
+  {
+    "id": 1466,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.capture_call_graph",
+    "title": "Call Graph Introspection — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Call Graph Introspection | Theme Auto Light Dark | Call Graph Introspection¶ Source code: Lib/asyncio/graph.py asyncio has powerful runtime call graph introspection utilities to trace the entire call graph of a running coroutine or task, or a suspended future. These utilities and the underlying machinery can be used from within a Python program or by external profilers and debuggers. Added in version 3.14. asyncio.print_call_graph(future\u003dNone, /, *, file\u003dNone, depth\u003d1, limit\u003dNone)¶ Print the async call graph for the current task or the provided Task or Future. This function prints entries starting from the top frame and going down towards the invocation point. The function receives an optional future argument. If not passed, the current running task will be used. If the function is called on the current task, the optional keyword-only depth argument can be used to skip the specified number of frames from top of the stack. If the optional keyword-only limit argument is provided, each call stack in the resulting graph is truncated to include at most abs(limit) entries. If limit is positive, the entries left are the closest to the invocation point. If limit is negative, the topmost entries are left. If limit is omitted or None, all entries are present. If limit is 0, the call stack is not printed at all, only “awaited by” information is printed. If file is omitted or None, the function will print to sys.stdout. Example: The following Python code: import asyncio\n\nasync def test():\n    asyncio.print_call_graph()\n\nasync def main():\n    async with asyncio.TaskGroup() as g:\n        g.create_task(test(), name\u003d\u0027test\u0027)\n\nasyncio.run(main())\n will print: * Task(name\u003d\u0027test\u0027, id\u003d0x1039f0fe0)\n+ Call stack:\n|   File \u0027t2.py\u0027, line 4, in async test()\n+ Awaited by:\n   * Task(name\u003d\u0027Task-1\u0027, id\u003d0x103a5e060)\n      + Call stack:\n      |   File \u0027taskgroups.py\u0027, line 107, in async TaskGroup.__aexit__()\n      |   File \u0027t2.py\u0027, line 7, in async main()\n asyncio.format_call_graph(future\u003dNone, /, *, depth\u003d1, limit\u003dNone)¶ Like print_call_graph(), but returns a string. If future is None and there’s no current task, the function returns an empty string. asyncio.capture_call_graph(future\u003dNone, /, *, depth\u003d1, limit\u003dNone)¶ Capture the async call graph for the current task or the provided Task or Future. The function receives an optional future argument. If not passed, the current running task will be used. If there’s no current task, the function returns None. If the function is called on the current task, the optional keyword-only depth argument can be used to skip the specified number of frames from top of the stack. Returns a FutureCallGraph data class object: FutureCallGraph(future, call_stack, awaited_by) Where future is a reference to a Future or a Task (or their subclasses.) call_stack is a tuple of FrameCallGraphEntry objects. awaited_by is a tuple of FutureCallGraph objects. FrameCallGraphEntry(frame) Where frame is a frame object of a regular Python function in the call stack. Low level utility functions¶ To introspect an async call graph asyncio requires cooperation from control flow structures, such as shield() or TaskGroup. Any time an intermediate Future object with low-level APIs like Future.add_done_callback() is involved, the following two functions should be used to inform asyncio about how exactly such intermediate future objects are connected with the tasks they wrap or control. asyncio.future_add_to_awaited_by(future, waiter, /)¶ Record that future is awaited on by waiter. Both future and waiter must be instances of Future or Task or their subclasses, otherwise the call would have no effect. A call to future_add_to_awaited_by() must be followed by an eventual call to the future_discard_from_awaited_by() function with the same arguments. asyncio.future_discard_from_awaited_by(future, waiter, /)¶ Record that future is no longer awaited on by waiter. Both future and waiter must be instances of Future or Task or their subclasses, otherwise the call would have no effect. Table of Contents Call Graph Introspection Low level utility functions Previous topic Exceptions Next topic Event loop This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Call Graph Introspection | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, ",
+    "scrapedAt": "2026-05-09 01:21:03.700304"
+  },
+  {
+    "id": 1465,
+    "url": "https://github.com/python/cpython/issues/85957",
+    "title": "mimetypes module does not recognize jp2 type · Issue #85957 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k mimetypes module does not recognize jp2 type #85957 New issue Copy link New issue Copy link Closed #126966 Closed mimetypes module does not recognize jp2 type#85957 #126966 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description naro mannequin opened on Sep 15, 2020 Issue body actions BPO 41791 Nosy @naro, @iritkatriel Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2020-09-15.04:31:47.953\u003e\nlabels \u003d [\u0027type-feature\u0027, \u00273.11\u0027]\ntitle \u003d \u0027mimetypes module does not recognize jp2 type\u0027\nupdated_at \u003d \u003cDate 2022-01-19.00:38:51.433\u003e\nuser \u003d \u0027https://github.com/naro\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-01-19.00:38:51.433\u003e\nactor \u003d \u0027adelfino\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d []\ncreation \u003d \u003cDate 2020-09-15.04:31:47.953\u003e\ncreator \u003d \u0027naro\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 41791\nkeywords \u003d []\nmessage_count \u003d 5.0\nmessages \u003d [\u0027376927\u0027, \u0027377074\u0027, \u0027377086\u0027, \u0027377113\u0027, \u0027410860\u0027]\nnosy_count \u003d 2.0\nnosy_names \u003d [\u0027naro\u0027, \u0027iritkatriel\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue41791\u0027\nversions \u003d [\u0027Python 3.11\u0027] Linked PRs gh-85957: Add missing MIME types for images with RFCs #126966 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:21:02.450847"
+  },
+  {
+    "id": 1464,
+    "url": "https://docs.python.org/3/library/functions.html#isinstance",
+    "title": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Functions | Theme Auto Light Dark | Built-in Functions¶ The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order. Built-in Functions A abs() aiter() all() anext() any() ascii() B bin() bool() breakpoint() bytearray() bytes() C callable() chr() classmethod() compile() complex() D delattr() dict() dir() divmod() E enumerate() eval() exec() F filter() float() format() frozenset() G getattr() globals() H hasattr() hash() help() hex() I id() input() int() isinstance() issubclass() iter() L len() list() locals() M map() max() memoryview() min() N next() O object() oct() open() ord() P pow() print() property() R range() repr() reversed() round() S set() setattr() slice() sorted() staticmethod() str() sum() super() T tuple() type() V vars() Z zip() _ __import__() abs(number, /)¶ Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__(). If the argument is a complex number, its magnitude is returned. aiter(async_iterable, /)¶ Return an asynchronous iterator for an asynchronous iterable. Equivalent to calling x.__aiter__(). Note: Unlike iter(), aiter() has no 2-argument variant. Added in version 3.10. all(iterable, /)¶ Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to: def all(iterable):\n    for element in iterable:\n        if not element:\n            return False\n    return True\n awaitable anext(async_iterator, /)¶ awaitable anext(async_iterator, default, /) When awaited, return the next item from the given asynchronous iterator, or default if given and the iterator is exhausted. This is the async variant of the next() builtin, and behaves similarly. This calls the __anext__() method of async_iterator, returning an awaitable. Awaiting this returns the next value of the iterator. If default is given, it is returned if the iterator is exhausted, otherwise StopAsyncIteration is raised. Added in version 3.10. any(iterable, /)¶ Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to: def any(iterable):\n    for element in iterable:\n        if element:\n            return True\n    return False\n ascii(object, /)¶ As repr(), return a string containing a printable representation of an object, but escape the non-ASCII characters in the string returned by repr() using \\x, \\u, or \\U escapes. This generates a string similar to that returned by repr() in Python 2. bin(integer, /)¶ Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If integer is not a Python int object, it has to define an __index__() method that returns an integer. Some examples: \u003e\u003e\u003e bin(3)\n\u00270b11\u0027\n\u003e\u003e\u003e bin(-10)\n\u0027-0b1010\u0027\n If the prefix “0b” is desired or not, you can use either of the following ways. \u003e\u003e\u003e format(14, \u0027#b\u0027), format(14, \u0027b\u0027)\n(\u00270b1110\u0027, \u00271110\u0027)\n\u003e\u003e\u003e f\u0027{14:#b}\u0027, f\u0027{14:b}\u0027\n(\u00270b1110\u0027, \u00271110\u0027)\n See also enum.bin() to represent negative values as twos-complement. See also format() for more information. class bool(object\u003dFalse, /)¶ Return a Boolean value, i.e. one of True or False. The argument is converted using the standard truth testing procedure. If the argument is false or omitted, this returns False; otherwise, it returns True. The bool class is a subclass of int (see Numeric Types — int, float, complex). It cannot be subclassed further. Its only instances are False and True (see Boolean Type - bool). Changed in version 3.7: The parameter is now positional-only. breakpoint(*args, **kws)¶ This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or type as much code to enter the debugger. However, sys.breakpointhook() can be set to some other function and breakpoint() will automatically call that, allowing you to drop into the debugger of choice. If sys.breakpointhook() is not accessible, this function will raise RuntimeError. By default, the behavior of breakpoint() can be changed with the PYTHONBREAKPOINT environment variable. See sys.breakpointhook() for usage details. Note that this is not guaranteed if sys.breakpointhook() has been replaced. Raises an auditing event builtins.breakpoint with argument breakpointhook. Added in version 3.7. class bytearray(source\u003db\u0027\u0027) class bytearray(source, encoding, errors\u003d\u0027strict\u0027) Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 \u003c\u003d x \u003c 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and ",
+    "scrapedAt": "2026-05-09 01:21:00.202243"
+  },
+  {
+    "id": 1463,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError",
+    "title": "configparser — Configuration file parser — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » File Formats » configparser — Configuration file parser | Theme Auto Light Dark | configparser — Configuration file parser¶ Source code: Lib/configparser.py This module provides the ConfigParser class which implements a basic configuration language which provides a structure similar to what’s found in Microsoft Windows INI files. You can use this to write Python programs which can be customized by end users easily. Note This library does not interpret or write the value-type prefixes used in the Windows Registry extended version of INI syntax. See also Module tomllib TOML is a well-specified format for application configuration files. It is specifically designed to be an improved version of INI. Module shlex Support for creating Unix shell-like mini-languages which can also be used for application configuration files. Module json The json module implements a subset of JavaScript syntax which is sometimes used for configuration, but does not support comments. Quick Start¶ Let’s take a very basic configuration file that looks like this: [DEFAULT]\nServerAliveInterval \u003d 45\nCompression \u003d yes\nCompressionLevel \u003d 9\nForwardX11 \u003d yes\n\n[forge.example]\nUser \u003d hg\n\n[topsecret.server.example]\nPort \u003d 50022\nForwardX11 \u003d no\n The structure of INI files is described in the following section. Essentially, the file consists of sections, each of which contains keys with values. configparser classes can read and write such files. Let’s start by creating the above configuration file programmatically. \u003e\u003e\u003e import configparser\n\u003e\u003e\u003e config \u003d configparser.ConfigParser()\n\u003e\u003e\u003e config[\u0027DEFAULT\u0027] \u003d {\u0027ServerAliveInterval\u0027: \u002745\u0027,\n...                      \u0027Compression\u0027: \u0027yes\u0027,\n...                      \u0027CompressionLevel\u0027: \u00279\u0027}\n\u003e\u003e\u003e config[\u0027forge.example\u0027] \u003d {}\n\u003e\u003e\u003e config[\u0027forge.example\u0027][\u0027User\u0027] \u003d \u0027hg\u0027\n\u003e\u003e\u003e config[\u0027topsecret.server.example\u0027] \u003d {}\n\u003e\u003e\u003e topsecret \u003d config[\u0027topsecret.server.example\u0027]\n\u003e\u003e\u003e topsecret[\u0027Port\u0027] \u003d \u002750022\u0027     # mutates the parser\n\u003e\u003e\u003e topsecret[\u0027ForwardX11\u0027] \u003d \u0027no\u0027  # same here\n\u003e\u003e\u003e config[\u0027DEFAULT\u0027][\u0027ForwardX11\u0027] \u003d \u0027yes\u0027\n\u003e\u003e\u003e with open(\u0027example.ini\u0027, \u0027w\u0027) as configfile:\n...   config.write(configfile)\n...\n As you can see, we can treat a config parser much like a dictionary. There are differences, outlined later, but the behavior is very close to what you would expect from a dictionary. Now that we have created and saved a configuration file, let’s read it back and explore the data it holds. \u003e\u003e\u003e config \u003d configparser.ConfigParser()\n\u003e\u003e\u003e config.sections()\n[]\n\u003e\u003e\u003e config.read(\u0027example.ini\u0027)\n[\u0027example.ini\u0027]\n\u003e\u003e\u003e config.sections()\n[\u0027forge.example\u0027, \u0027topsecret.server.example\u0027]\n\u003e\u003e\u003e \u0027forge.example\u0027 in config\nTrue\n\u003e\u003e\u003e \u0027python.org\u0027 in config\nFalse\n\u003e\u003e\u003e config[\u0027forge.example\u0027][\u0027User\u0027]\n\u0027hg\u0027\n\u003e\u003e\u003e config[\u0027DEFAULT\u0027][\u0027Compression\u0027]\n\u0027yes\u0027\n\u003e\u003e\u003e topsecret \u003d config[\u0027topsecret.server.example\u0027]\n\u003e\u003e\u003e topsecret[\u0027ForwardX11\u0027]\n\u0027no\u0027\n\u003e\u003e\u003e topsecret[\u0027Port\u0027]\n\u002750022\u0027\n\u003e\u003e\u003e for key in config[\u0027forge.example\u0027]:\n...     print(key)\nuser\ncompressionlevel\nserveraliveinterval\ncompression\nforwardx11\n\u003e\u003e\u003e config[\u0027forge.example\u0027][\u0027ForwardX11\u0027]\n\u0027yes\u0027\n As we can see above, the API is pretty straightforward. The only bit of magic involves the DEFAULT section which provides default values for all other sections [1]. Note also that keys in sections are case-insensitive and stored in lowercase [1]. It is possible to read several configurations into a single ConfigParser, where the most recently added configuration has the highest priority. Any conflicting keys are taken from the more recent configuration while the previously existing keys are retained. The example below reads in an override.ini file, which will override any conflicting keys from the example.ini file. [DEFAULT]\nServerAliveInterval \u003d -1\n \u003e\u003e\u003e config_override \u003d configparser.ConfigParser()\n\u003e\u003e\u003e config_override[\u0027DEFAULT\u0027] \u003d {\u0027ServerAliveInterval\u0027: \u0027-1\u0027}\n\u003e\u003e\u003e with open(\u0027override.ini\u0027, \u0027w\u0027) as configfile:\n...     config_override.write(configfile)\n...\n\u003e\u003e\u003e config_override \u003d configparser.ConfigParser()\n\u003e\u003e\u003e config_override.read([\u0027example.ini\u0027, \u0027override.ini\u0027])\n[\u0027example.ini\u0027, \u0027override.ini\u0027]\n\u003e\u003e\u003e print(config_override.get(\u0027DEFAULT\u0027, \u0027ServerAliveInterval\u0027))\n-1\n This behaviour is equivalent to a ConfigParser.read() call with several files passed to the filenames parameter. Supported Datatypes¶ Config parsers do not guess datatypes of values in configuration files, always storing them internally as strings. This means that if you need other datatypes, you should convert on your own: \u003e\u003e\u003e int(topsecret[\u0027Port\u0027])\n50022\n\u003e\u003e\u003e float(topsecret[\u0027CompressionLevel\u0027])\n9.0\n Since this task is so common, config parsers provide a range of handy getter methods to handle integers, floats and booleans. The last one is the most interesting because simply passing the value to bool() would do no good since bool(\u0027False\u0027) is still True. This is why config parsers also provide getboolean(). This method is case-insensitive and recognizes Boolean values fr",
+    "scrapedAt": "2026-05-09 01:20:58.926147"
+  },
+  {
     "id": 1462,
     "url": "https://docs.python.org/3/library/threading.html#module-threading",
     "title": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
@@ -9833,26 +9868,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1463,
-    "url": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
-  },
-  {
-    "id": 1464,
-    "url": "https://docs.python.org/3/library/functions.html#isinstance"
-  },
-  {
-    "id": 1465,
-    "url": "https://github.com/python/cpython/issues/85957"
-  },
-  {
-    "id": 1466,
-    "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.capture_call_graph"
-  },
-  {
-    "id": 1467,
-    "url": "https://docs.python.org/3/library/locale.html#module-locale"
   },
   {
     "id": 1468,
@@ -234315,10 +234330,385 @@ window.searchData = [
     "id": 306887,
     "url": "https://github.com/t-strings/pep750-examples/blob/main/pep/logging.py",
     "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 307019,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.InterpolationMissingOptionError",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307021,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.SECTCRE",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307022,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.sections",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307024,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.UNNAMED_SECTION",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307025,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.InterpolationError",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307026,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/configparser.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307027,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.options",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307028,
+    "url": "https://docs.python.org/3/library/configparser.html#id9",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307029,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.read",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307030,
+    "url": "https://docs.python.org/3/library/configparser.html#id8",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307031,
+    "url": "https://docs.python.org/3/library/configparser.html#id7",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307032,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.RawConfigParser.set",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307033,
+    "url": "https://docs.python.org/3/library/configparser.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307034,
+    "url": "https://docs.python.org/3/library/configparser.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307035,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.has_section",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307036,
+    "url": "https://docs.python.org/3/library/configparser.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307038,
+    "url": "https://docs.python.org/3/library/configparser.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307039,
+    "url": "https://docs.python.org/3/library/configparser.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307041,
+    "url": "https://docs.python.org/3/library/configparser.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307042,
+    "url": "https://docs.python.org/3/library/configparser.html#id12",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307043,
+    "url": "https://docs.python.org/3/library/configparser.html#id16",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307048,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.items",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307049,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.getfloat",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307050,
+    "url": "https://docs.python.org/3/library/configparser.html#id11",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307052,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.remove_section",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307054,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.InterpolationDepthError",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307058,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.RawConfigParser",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307059,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.MissingSectionHeaderError",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307062,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.getboolean",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307067,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.BOOLEAN_STATES",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307068,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.RawConfigParser.add_section",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307069,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.DuplicateOptionError",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307070,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.InterpolationSyntaxError",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307071,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/configparser.py",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307076,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.add_section",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307079,
+    "url": "https://docs.python.org/3/library/configparser.html#module-configparser",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307081,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.Error",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307083,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.UnnamedSectionDisabledError",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307084,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.BasicInterpolation",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307086,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.set",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307087,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.DuplicateSectionError",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307088,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.get",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307089,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.read_dict",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307093,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.optionxform",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307095,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.remove_option",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307096,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.read_string",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307099,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.MultilineContinuationError",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307100,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.defaults",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307101,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.NoSectionError",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307104,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ExtendedInterpolation",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307107,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.has_option",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307108,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.NoOptionError",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307109,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.read_file",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307111,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.MAX_INTERPOLATION_DEPTH",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307114,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ParsingError",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307117,
+    "url": "https://docs.python.org/3/library/configparser.html#",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307119,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.getint",
+    "parentUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "id": 307429,
+    "url": "https://github.com/python/cpython/issues/85957#issue-1199043676",
+    "parentUrl": "https://github.com/python/cpython/issues/85957"
+  },
+  {
+    "id": 307430,
+    "url": "https://github.com/python/cpython/issues/85957#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/85957"
+  },
+  {
+    "id": 307434,
+    "url": "https://github.com/naro",
+    "parentUrl": "https://github.com/python/cpython/issues/85957"
+  },
+  {
+    "id": 307436,
+    "url": "https://bugs.python.org/issue41791",
+    "parentUrl": "https://github.com/python/cpython/issues/85957"
+  },
+  {
+    "id": 307437,
+    "url": "https://github.com/python/cpython/issues/85957#top",
+    "parentUrl": "https://github.com/python/cpython/issues/85957"
+  },
+  {
+    "id": 307438,
+    "url": "https://github.com/python/cpython/pull/126966",
+    "parentUrl": "https://github.com/python/cpython/issues/85957"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#module-locale"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#module-locale"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Call Graph Introspection — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.capture_call_graph"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Call Graph Introspection — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.capture_call_graph"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93804997?v\u003d4\u0026size\u003d80",
+    "alt": "@naro",
+    "pageTitle": "mimetypes module does not recognize jp2 type · Issue #85957 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/85957"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93804997?v\u003d4\u0026size\u003d48",
+    "alt": "@naro",
+    "pageTitle": "mimetypes module does not recognize jp2 type · Issue #85957 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/85957"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#isinstance"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#isinstance"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "configparser — Configuration file parser — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "configparser — Configuration file parser — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/configparser.html#configparser.InvalidWriteError"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
