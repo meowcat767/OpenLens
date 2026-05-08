@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1417,
+    "url": "https://docs.python.org/3/library/operator.html#operator.is_not_none",
+    "title": "operator — Standard operators as functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Functional Programming Modules » operator — Standard operators as functions | Theme Auto Light Dark | operator — Standard operators as functions¶ Source code: Lib/operator.py The operator module exports a set of efficient functions corresponding to the intrinsic operators of Python. For example, operator.add(x, y) is equivalent to the expression x+y. Many function names are those used for special methods, without the double underscores. For backward compatibility, many of these have a variant with the double underscores kept. The variants without the double underscores are preferred for clarity. The functions fall into categories that perform object comparisons, logical operations, mathematical operations and sequence operations. The object comparison functions are useful for all objects, and are named after the rich comparison operators they support: operator.lt(a, b)¶ operator.le(a, b)¶ operator.eq(a, b)¶ operator.ne(a, b)¶ operator.ge(a, b)¶ operator.gt(a, b)¶ operator.__lt__(a, b)¶ operator.__le__(a, b)¶ operator.__eq__(a, b)¶ operator.__ne__(a, b)¶ operator.__ge__(a, b)¶ operator.__gt__(a, b)¶ Perform “rich comparisons” between a and b. Specifically, lt(a, b) is equivalent to a \u003c b, le(a, b) is equivalent to a \u003c\u003d b, eq(a, b) is equivalent to a \u003d\u003d b, ne(a, b) is equivalent to a !\u003d b, gt(a, b) is equivalent to a \u003e b and ge(a, b) is equivalent to a \u003e\u003d b. Note that these functions can return any value, which may or may not be interpretable as a Boolean value. See Comparisons for more information about rich comparisons. The logical operations are also generally applicable to all objects, and support truth tests, identity tests, and boolean operations: operator.not_(obj)¶ operator.__not__(obj)¶ Return the outcome of not obj. (Note that there is no __not__() method for object instances; only the interpreter core defines this operation. The result is affected by the __bool__() and __len__() methods.) operator.truth(obj)¶ Return True if obj is true, and False otherwise. This is equivalent to using the bool constructor. operator.is_(a, b)¶ Return a is b. Tests object identity. operator.is_not(a, b)¶ Return a is not b. Tests object identity. operator.is_none(a)¶ Return a is None. Tests object identity. Added in version 3.14. operator.is_not_none(a)¶ Return a is not None. Tests object identity. Added in version 3.14. The mathematical and bitwise operations are the most numerous: operator.abs(obj)¶ operator.__abs__(obj)¶ Return the absolute value of obj. operator.add(a, b)¶ operator.__add__(a, b)¶ Return a + b, for a and b numbers. operator.and_(a, b)¶ operator.__and__(a, b)¶ Return the bitwise and of a and b. operator.floordiv(a, b)¶ operator.__floordiv__(a, b)¶ Return a // b. operator.index(a)¶ operator.__index__(a)¶ Return a converted to an integer. Equivalent to a.__index__(). Changed in version 3.10: The result always has exact type int. Previously, the result could have been an instance of a subclass of int. operator.inv(obj)¶ operator.invert(obj)¶ operator.__inv__(obj)¶ operator.__invert__(obj)¶ Return the bitwise inverse of the number obj. This is equivalent to ~obj. operator.lshift(a, b)¶ operator.__lshift__(a, b)¶ Return a shifted left by b. operator.mod(a, b)¶ operator.__mod__(a, b)¶ Return a % b. operator.mul(a, b)¶ operator.__mul__(a, b)¶ Return a * b, for a and b numbers. operator.matmul(a, b)¶ operator.__matmul__(a, b)¶ Return a @ b. Added in version 3.5. operator.neg(obj)¶ operator.__neg__(obj)¶ Return obj negated (-obj). operator.or_(a, b)¶ operator.__or__(a, b)¶ Return the bitwise or of a and b. operator.pos(obj)¶ operator.__pos__(obj)¶ Return obj positive (+obj). operator.pow(a, b)¶ operator.__pow__(a, b)¶ Return a ** b, for a and b numbers. operator.rshift(a, b)¶ operator.__rshift__(a, b)¶ Return a shifted right by b. operator.sub(a, b)¶ operator.__sub__(a, b)¶ Return a - b. operator.truediv(a, b)¶ operator.__truediv__(a, b)¶ Return a / b where 2/3 is .66 rather than 0. This is also known as “true” division. operator.xor(a, b)¶ operator.__xor__(a, b)¶ Return the bitwise exclusive or of a and b. Operations which work with sequences (some of them with mappings too) include: operator.concat(a, b)¶ operator.__concat__(a, b)¶ Return a + b for a and b sequences. operator.contains(a, b)¶ operator.__contains__(a, b)¶ Return the outcome of the test b in a. Note the reversed operands. operator.countOf(a, b)¶ Return the number of occurrences of b in a. operator.delitem(a, b)¶ operator.__delitem__(a, b)¶ Remove the value of a at index b. operator.getitem(a, b)¶ operator.__getitem__(a, b)¶ Return the value of a at index b. operator.indexOf(a, b)¶ Return the index of the first of occurrence of b in a. operator.setitem(a, b, c)¶ operator.__setitem__(a, b, c)¶ Set the value of a at index b to c. operator.length_hint(obj, default\u003d0)¶ Return an estimated length for the object obj. First try to return its ",
+    "scrapedAt": "2026-05-09 01:19:04.845881"
+  },
+  {
+    "id": 1416,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_stats",
+    "title": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » gc — Garbage Collector interface | Theme Auto Light Dark | gc — Garbage Collector interface¶ This module provides an interface to the optional garbage collector. It provides the ability to disable the collector, tune the collection frequency, and set debugging options. It also provides access to unreachable objects that the collector found but cannot free. Since the collector supplements the reference counting already used in Python, you can disable the collector if you are sure your program does not create reference cycles. Automatic collection can be disabled by calling gc.disable(). To debug a leaking program call gc.set_debug(gc.DEBUG_LEAK). Notice that this includes gc.DEBUG_SAVEALL, causing garbage-collected objects to be saved in gc.garbage for inspection. The gc module provides the following functions: gc.enable()¶ Enable automatic garbage collection. gc.disable()¶ Disable automatic garbage collection. gc.isenabled()¶ Return True if automatic collection is enabled. gc.collect(generation\u003d2)¶ With no arguments, run a full collection. The optional argument generation may be an integer specifying which generation to collect (from 0 to 2). A ValueError is raised if the generation number is invalid. The sum of collected objects and uncollectable objects is returned. The free lists maintained for a number of built-in types are cleared whenever a full collection or collection of the highest generation (2) is run. Not all items in some free lists may be freed due to the particular implementation, in particular float. The effect of calling gc.collect() while the interpreter is already performing a collection is undefined. Changed in version 3.14: generation\u003d1 performs an increment of collection. Changed in version 3.14.5: generation\u003d1 performs collection of the middle generation. gc.set_debug(flags)¶ Set the garbage collection debugging flags. Debugging information will be written to sys.stderr. See below for a list of debugging flags which can be combined using bit operations to control debugging. gc.get_debug()¶ Return the debugging flags currently set. gc.get_objects(generation\u003dNone)¶ Returns a list of all objects tracked by the collector, excluding the list returned. If generation is not None, return only the objects tracked by the collector that are in that generation. Changed in version 3.8: New generation parameter. Changed in version 3.14: Generation 1 is removed Changed in version 3.14.5: Generation 1 is reintroduced to maintain GC behavior from 3.13. Raises an auditing event gc.get_objects with argument generation. gc.get_stats()¶ Return a list of three per-generation dictionaries containing collection statistics since interpreter start. The number of keys may change in the future, but currently each dictionary will contain the following items: collections is the number of times this generation was collected; collected is the total number of objects collected inside this generation; uncollectable is the total number of objects which were found to be uncollectable (and were therefore moved to the garbage list) inside this generation. Added in version 3.4. gc.set_threshold(threshold0[, threshold1[, threshold2]])¶ Set the garbage collection thresholds (the collection frequency). Setting threshold0 to zero disables collection. The GC classifies objects into three generations depending on how many collection sweeps they have survived. New objects are placed in the youngest generation (generation 0). If an object survives a collection it is moved into the next older generation. Since generation 2 is the oldest generation, objects in that generation remain there after a collection. In order to decide when to run, the collector keeps track of the number object allocations and deallocations since the last collection. When the number of allocations minus the number of deallocations exceeds threshold0, collection starts. Initially only generation 0 is examined. If generation 0 has been examined more than threshold1 times since generation 1 has been examined, then generation 1 is examined as well. With the third generation, things are a bit more complicated, see Collecting the oldest generation for more information. In the free-threaded build, the increase in process memory usage is also checked before running the collector. If the memory usage has not increased by 10% since the last collection and the net number of object allocations has not exceeded 40 times threshold0, the collection is not run. See Garbage collector design for more information. Changed in version 3.14: threshold2 is ignored Changed in version 3.14.5: threshold2 is restored to match Python 3.13 behavior. gc.get_count()¶ Return the current collection counts as a tuple of (count0, count1, count2). gc.get_threshold()¶ Return the current collection thresholds as a tuple of (threshold0, threshold1, threshold2). g",
+    "scrapedAt": "2026-05-09 01:19:03.594215"
+  },
+  {
+    "id": 1415,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_UnbufferedStdioFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-09 01:19:02.355335"
+  },
+  {
+    "id": 1414,
+    "url": "https://github.com/python/cpython/issues/101552",
+    "title": "The builtin `help(...)` should unstringify (and \"unforwardref\") annotations · Issue #101552 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k The builtin help(...) should unstringify (and \"unforwardref\") annotations #101552 New issue Copy link New issue Copy link Closed Closed The builtin help(...) should unstringify (and \"unforwardref\") annotations#101552 Copy link Labels topic-typingtype-featureA feature request or enhancementA feature request or enhancement Description SimpleArt opened on Feb 3, 2023 Issue body actions Feature or enhancement When using help(...), annotations should be unstringified and displayed without typing.ForwardRef. Pitch Current behavior displays string annotations with quotes as follows: def foo(x: List[\"A\"], y: \"B\") -\u003e None:\n    ...\n\nhelp(foo)\n\"\"\"\nHelp on function foo in module ...:\n\nfoo(x: List[ForwardRef(\u0027A\u0027)], y: \u0027B\u0027) -\u003e None\n\n\"\"\" It should be fairly obvious how clunky this is to users, and that the desirable behavior should be something like: help(foo)\n\"\"\"\nHelp on function foo in module ...:\n\nfoo(x: List[A], y: B) -\u003e None\n\n\"\"\" #84171 is related, but whereas the suggestion there is to actually evaluate the annotations using typing.get_type_hints or similar, this proposal aims to only remove quotations and typing.ForwardRef(...) from the outputted documentation. This means that the resulting documentation may not be 100% accurate but will not require evaluating the annotation, which can avoid issues such as annotations which cannot be evaluated for some reason. For example: import typing\n\nif typing.TYPE_CHECKING:\n    import numpy as np\n\ndef foo(x: \"np.ndarray\") -\u003e None:\n    ...\n\nhelp(foo)\n\"\"\"\nHelp on function foo in module ...:\n\nfoo(x: np.ndarray) -\u003e None\n\n\"\"\" Note that the np.ndarray is not expanded out into its fully qualified name numpy.ndarray. There are also some additional edge cases to consider, such as \"ForwardRef(\u0027A\u0027)\". Ideally this should be changed to A, but I don\u0027t think there\u0027s much impact if it is purposefully left as that, and leaving it as-is avoids other problems e.g. ForwardRef is not actually typing.ForwardRef in that example. Linked PRs gh-101552: Allow pydoc to display signatures in source format #124669 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels topic-typingtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:19:01.106465"
+  },
+  {
+    "id": 1413,
+    "url": "https://docs.python.org/3/library/sys.html#sys._enablelegacywindowsfsencoding",
+    "title": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but refer",
+    "scrapedAt": "2026-05-09 01:18:58.732029"
+  },
+  {
     "id": 1412,
     "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph",
     "title": "Call Graph Introspection — Python 3.14.5rc1 documentation",
@@ -9483,26 +9518,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1413,
-    "url": "https://docs.python.org/3/library/sys.html#sys._enablelegacywindowsfsencoding"
-  },
-  {
-    "id": 1414,
-    "url": "https://github.com/python/cpython/issues/101552"
-  },
-  {
-    "id": 1415,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_UnbufferedStdioFlag"
-  },
-  {
-    "id": 1416,
-    "url": "https://docs.python.org/3/library/gc.html#gc.get_stats"
-  },
-  {
-    "id": 1417,
-    "url": "https://docs.python.org/3/library/operator.html#operator.is_not_none"
   },
   {
     "id": 1418,
@@ -231500,10 +231515,100 @@ window.searchData = [
     "id": 295104,
     "url": "https://docs.python.org/3/library/asyncio-graph.html#",
     "parentUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "id": 295447,
+    "url": "https://github.com/python/cpython/issues/101552#top",
+    "parentUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "id": 295451,
+    "url": "https://github.com/SimpleArt",
+    "parentUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "id": 295453,
+    "url": "https://github.com/python/cpython/issues/101552#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "id": 295454,
+    "url": "https://github.com/python/cpython/pull/124669",
+    "parentUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "id": 295456,
+    "url": "https://github.com/python/cpython/issues/101552#issue-1570578423",
+    "parentUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "id": 295457,
+    "url": "https://github.com/python/cpython/issues/84171",
+    "parentUrl": "https://github.com/python/cpython/issues/101552"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "operator — Standard operators as functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/operator.html#operator.is_not_none"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "operator — Standard operators as functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/operator.html#operator.is_not_none"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gc.html#gc.get_stats"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gc.html#gc.get_stats"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_UnbufferedStdioFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_UnbufferedStdioFlag"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71458112?v\u003d4\u0026size\u003d80",
+    "alt": "@SimpleArt",
+    "pageTitle": "The builtin `help(...)` should unstringify (and \"unforwardref\") annotations · Issue #101552 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71458112?v\u003d4\u0026size\u003d48",
+    "alt": "@SimpleArt",
+    "pageTitle": "The builtin `help(...)` should unstringify (and \"unforwardref\") annotations · Issue #101552 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._enablelegacywindowsfsencoding"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._enablelegacywindowsfsencoding"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
