@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1128,
+    "url": "https://github.com/hacl-star/hacl-star/",
+    "title": "GitHub - hacl-star/hacl-star: HACL*, a formally verified cryptographic library written in F* · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} hacl-star / hacl-star Public Notifications You must be signed in to change notification settings Fork 188 Star 1.8k main Branches Tags Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 19,000 Commits 19,000 Commits .ci .ci .docker/build .docker/build .github .github .nix .nix .scripts .scripts code code dist dist doc doc hints hints lib lib obj obj providers providers specs specs tests tests tools tools vale vale .drone.yml .drone.yml .gitattributes .gitattributes .gitignore .gitignore CHANGES.md CHANGES.md CODEOWNERS CODEOWNERS CODE_OF_CONDUCT.md CODE_OF_CONDUCT.md GOVERNANCE.md GOVERNANCE.md Hacl.fst.config.json Hacl.fst.config.json LICENSE LICENSE MAINTAINERS.md MAINTAINERS.md Makefile Makefile Makefile.common Makefile.common Makefile.include Makefile.include Makefile.local Makefile.local Makefile.openssl Makefile.openssl PULL_REQUEST.md PULL_REQUEST.md README.md README.md SECURITY.md SECURITY.md build_local.sh build_local.sh flake.nix flake.nix pull_request_template.md pull_request_template.md runtimeconfig.json runtimeconfig.json View all files Repository files navigation A High-Assurance Cryptographic Library This repository contains verified code for a library of modern cryptographic algorithms, including Curve25519, Ed25519, AES-GCM, Chacha20, Poly1305, SHA-2, SHA-3, HMAC, and HKDF. This set of algorithms is enough to support the full NaCl API and several TLS 1.3 ciphersuites. The code for all of these algorithms is formally verified using the F* verification framework for memory safety, functional correctness, and secret independence (resistance to some types of timing side-channels). Status Warning: This is the research home of HACL*. If you are looking for documentation, releases, language bindings and code that can be satisfactorily integrated into a production project, please check out HACL packages. The code in this repository is divided into three closely-related sub-projects, all developed as part of Project Everest. We are actively developing and integrating our code on the main branch, which tracks F*\u0027s master branch. HACL* HACL* is a formally verified library of modern cryptographic algorithms written in a subset of F* called Low* and compiled to C using a compiler called KaRaMeL. The Low* source code for each primitive is verified for memory safety, functional correctness, and secret independence. The compiler generates efficient, readable, standalone C code for each algorithm that can be easily integrated into any C project. We include the current C code for various HACL* algorithms in the dist directory. HACL* can also be compiled to WebAssembly. ValeCrypt ValeCrypt provides formally verified high-performance cryptographic code for selected primitives in assembly language. It relies on the Vale tool to produce code and proofs in F*. Vale supports multiple platforms and proves that its implementations are memory safe, functionally correct, and that timing and memory accesses are secret independent. EverCrypt EverCrypt is a high-performance, cross-platform, formally verified modern cryptographic provider that packages implementations from HACL* and ValeCrypt, and automatically picks the fastest one available, depending on processor support and the target execution environment (multiplexing). Furthermore, EverCrypt offers an (agile) API that makes it simple to switch between algorithms (e.g., from SHA2 to SHA3). Citing HACL* If you want to cite HACL* in a research publication, here is some guidance to make sure you pick the right publications. For HACL* in its current incarnation, including SIMD versions of algorithms: CCS\u002720. @inproceedings{polubelova2020haclxn,\n  title\u003d{{HACLxN}: Verified generic {SIMD} crypto (for all your favourite platforms)},\n  author\u003d{Polubelova, Marina and Bhargavan, Karthikeyan and Protzenko, Jonathan and Beurdouche, Benjamin and Fromherz, Aymeric and Kulatova, Natalia and Zanella-B{\\\u0027e}guelin, Santiago},\n  booktitle\u003d{Proceedings of the 2020 ACM SIGSAC Conference on Computer and Communications Security},\n  pages\u003d{899--918},\n  year\u003d{2020}\n}\n For HACL* in general (discouraged, since none of that code exists anymore): CCS\u002717 @inproceedings{zinzindohoue2017hacl,\n  title\u003d{{HACL*}: A verified modern cryptographic library},\n  author\u003d{Zinzindohou{\\\u0027e}, Jean-Karim and Bhargavan, Karthikeyan and Protzenko, Jonathan and Beurdouche, Benjamin},\n  booktitle\u003d{Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications Security},\n  pages\u003d{1789--1806},\n  year\u003d{2017}\n}\n For EverCrypt, the agile, multiplexing, CPU-detecting API on top of HACL*: S\u0026P\u002720 @inproceedings{protzenko2020evercrypt,\n  title\u003d{Evercrypt: A fast, verifie",
+    "scrapedAt": "2026-05-09 01:07:12.396308"
+  },
+  {
+    "id": 1127,
+    "url": "https://github.com/python/cpython/issues/121141",
+    "title": "Issue · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Support copy.replace() on AST nodes #121141 New issue Copy link New issue Copy link Closed Closed Support copy.replace() on AST nodes#121141 Copy link Assignees Labels type-featureA feature request or enhancementA feature request or enhancement Description JelleZijlstra opened on Jun 28, 2024 Issue body actions Feature or enhancement Proposal: I want this to work: \u003e\u003e\u003e n\u003dast.Name(id\u003d\"x\")\n\u003e\u003e\u003e copy.replace(n, id\u003d\"y\")\nTraceback (most recent call last):\n  File \"\u003cpython-input-4\u003e\", line 1, in \u003cmodule\u003e\n    copy.replace(n, id\u003d\"y\")\n    ~~~~~~~~~~~~^^^^^^^^^^^\n  File \"/Users/jelle/py/cpython/Lib/copy.py\", line 293, in replace\n    raise TypeError(f\"replace() does not support {cls.__name__} objects\")\nTypeError: replace() does not support Name objects\n Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-121141: add support for copy.replace to AST nodes #121162 Reactions are currently unavailable Metadata Metadata Assignees JelleZijlstra picnixz Labels type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:07:10.48383"
+  },
+  {
+    "id": 1126,
+    "url": "https://github.com/python/cpython/issues/123562",
+    "title": "Improve `SyntaxError` message for `case ... as a.b` · Issue #123562 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Improve SyntaxError message for case ... as a.b #123562 New issue Copy link New issue Copy link Closed Closed Improve SyntaxError message for case ... as a.b#123562 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-parsertype-featureA feature request or enhancementA feature request or enhancement Description sobolevn opened on Sep 1, 2024 Issue body actions Feature or enhancement There\u0027s already a similar rule: cpython/Grammar/python.gram Line 1378 in 084e0f3 | or_pattern \u0027as\u0027 !NAME a\u003dexpression { RAISE_SYNTAX_ERROR_KNOWN_LOCATION(a, \"invalid pattern target\") } But, it has two problems: It does not work for cases like as a.b, because a matches NAME It does not show rich error message, only a static one: invalid pattern target My proposed change:     | or_pattern \u0027as\u0027 a\u003dexpression {\n        RAISE_SYNTAX_ERROR_KNOWN_LOCATION(\n            a, \"cannot use pattern target as %s\", _PyPegen_get_expr_name(a)) }\n Why is it safe? Here\u0027s how the parent rule is defined: as_pattern[pattern_ty]:\n    | pattern\u003dor_pattern \u0027as\u0027 target\u003dpattern_capture_target {\n        _PyAST_MatchAs(pattern, target-\u003ev.Name.id, EXTRA) }\n    | invalid_as_pattern\n So, if pattern\u003dor_pattern \u0027as\u0027 target\u003dpattern_capture_target with a valid \u0027as\u0027 NAME is matched, we won\u0027t fall to the next invalid_ rule. Proposed result: \u003e\u003e\u003e match 1:\n...     case x as a.b: ...\n...     \n  File \"\u003cpython-input-0\u003e\", line 2\n    case x as a.b: ...\n              ^^^\nSyntaxError: cannot use pattern target as attribute Refs #123440 Linked PRs gh-123562: Improve SyntaxError message for case ... as a.b #123563 Reactions are currently unavailable Metadata Metadata Assignees sobolevn Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-parsertype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:07:07.803793"
+  },
+  {
+    "id": 1125,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#limited-c-api-changes",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:07:05.616086"
+  },
+  {
+    "id": 1124,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor.terminate_workers",
+    "title": "concurrent.futures — Launching parallel tasks — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » concurrent.futures — Launching parallel tasks | Theme Auto Light Dark | concurrent.futures — Launching parallel tasks¶ Added in version 3.2. Source code: Lib/concurrent/futures/thread.py, Lib/concurrent/futures/process.py, and Lib/concurrent/futures/interpreter.py The concurrent.futures module provides a high-level interface for asynchronously executing callables. The asynchronous execution can be performed with threads, using ThreadPoolExecutor or InterpreterPoolExecutor, or separate processes, using ProcessPoolExecutor. Each implements the same interface, which is defined by the abstract Executor class. concurrent.futures.Future must not be confused with asyncio.Future, which is designed for use with asyncio tasks and coroutines. See the asyncio’s Future documentation for a detailed comparison of the two. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Executor Objects¶ class concurrent.futures.Executor¶ An abstract class that provides methods to execute calls asynchronously. It should not be used directly, but through its concrete subclasses. submit(fn, /, *args, **kwargs)¶ Schedules the callable, fn, to be executed as fn(*args, **kwargs) and returns a Future object representing the execution of the callable. with ThreadPoolExecutor(max_workers\u003d1) as executor:\n    future \u003d executor.submit(pow, 323, 1235)\n    print(future.result())\n map(fn, *iterables, timeout\u003dNone, chunksize\u003d1, buffersize\u003dNone)¶ Similar to map(fn, *iterables) except: The iterables are collected immediately rather than lazily, unless a buffersize is specified to limit the number of submitted tasks whose results have not yet been yielded. If the buffer is full, iteration over the iterables pauses until a result is yielded from the buffer. fn is executed asynchronously and several calls to fn may be made concurrently. The returned iterator raises a TimeoutError if __next__() is called and the result isn’t available after timeout seconds from the original call to Executor.map(). timeout can be an int or a float. If timeout is not specified or None, there is no limit to the wait time. If a fn call raises an exception, then that exception will be raised when its value is retrieved from the iterator. When using ProcessPoolExecutor, this method chops iterables into a number of chunks which it submits to the pool as separate tasks. The (approximate) size of these chunks can be specified by setting chunksize to a positive integer. For very long iterables, using a large value for chunksize can significantly improve performance compared to the default size of 1. With ThreadPoolExecutor and InterpreterPoolExecutor, chunksize has no effect. Changed in version 3.5: Added the chunksize parameter. Changed in version 3.14: Added the buffersize parameter. shutdown(wait\u003dTrue, *, cancel_futures\u003dFalse)¶ Signal the executor that it should free any resources that it is using when the currently pending futures are done executing. Calls to Executor.submit() and Executor.map() made after shutdown will raise RuntimeError. If wait is True then this method will not return until all the pending futures are done executing and the resources associated with the executor have been freed. If wait is False then this method will return immediately and the resources associated with the executor will be freed when all pending futures are done executing. Regardless of the value of wait, the entire Python program will not exit until all pending futures are done executing. If cancel_futures is True, this method will cancel all pending futures that the executor has not started running. Any futures that are completed or running won’t be cancelled, regardless of the value of cancel_futures. If both cancel_futures and wait are True, all futures that the executor has started running will be completed prior to this method returning. The remaining futures are cancelled. You can avoid having to call this method explicitly if you use the executor as a context manager via the with statement, which will shutdown the Executor (waiting as if Executor.shutdown() were called with wait set to True): import shutil\nwith ThreadPoolExecutor(max_workers\u003d4) as e:\n    e.submit(shutil.copy, \u0027src1.txt\u0027, \u0027dest1.txt\u0027)\n    e.submit(shutil.copy, \u0027src2.txt\u0027, \u0027dest2.txt\u0027)\n    e.submit(shutil.copy, \u0027src3.txt\u0027, \u0027dest3.txt\u0027)\n    e.submit(shutil.copy, \u0027src4.txt\u0027, \u0027dest4.txt\u0027)\n Changed in version 3.9: Added cancel_futures. ThreadPoolExecutor¶ ThreadPoolExecutor is an Executor subclass that uses a pool of threads to execute calls asynchronously. Deadlocks can occur when the callable associated with a Future waits on the results of another Future. For example: import time\ndef wait_on_b():\n    time.sleep(5)\n    print(b.result())  # b will never complete because it is waiting on a.\n    return 5\n\ndef wait",
+    "scrapedAt": "2026-05-09 01:07:04.359379"
+  },
+  {
     "id": 1123,
     "url": "https://docs.python.org/3/library/exceptions.html#ValueError",
     "title": "Built-in Exceptions — Python 3.14.5rc1 documentation",
@@ -7523,26 +7558,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1124,
-    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor.terminate_workers"
-  },
-  {
-    "id": 1125,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#limited-c-api-changes"
-  },
-  {
-    "id": 1126,
-    "url": "https://github.com/python/cpython/issues/123562"
-  },
-  {
-    "id": 1127,
-    "url": "https://github.com/python/cpython/issues/121141"
-  },
-  {
-    "id": 1128,
-    "url": "https://github.com/hacl-star/hacl-star/"
   },
   {
     "id": 1129,
@@ -193495,10 +193510,614 @@ window.searchData = [
     "id": 196640,
     "url": "https://go.java/index.html",
     "parentUrl": "https://www.jython.org/"
+  },
+  {
+    "id": 198196,
+    "url": "https://github.com/python/cpython/issues/123562#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "id": 198198,
+    "url": "https://github.com/python/cpython/issues/123562#top",
+    "parentUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "id": 198201,
+    "url": "https://github.com/python/cpython/commit/084e0f35d1492495b01e7cf24c3106849e854188",
+    "parentUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "id": 198202,
+    "url": "https://github.com/python/cpython/issues/123562#issue-2499326398",
+    "parentUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "id": 198206,
+    "url": "https://github.com/python/cpython/blob/084e0f35d1492495b01e7cf24c3106849e854188/Grammar/python.gram#L1378",
+    "parentUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "id": 198210,
+    "url": "https://github.com/python/cpython/pull/123563",
+    "parentUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "id": 198211,
+    "url": "https://github.com/python/cpython/issues/121141#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "id": 198215,
+    "url": "https://github.com/python/cpython/pull/121162",
+    "parentUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "id": 198218,
+    "url": "https://github.com/python/cpython/issues/121141#top",
+    "parentUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "id": 198221,
+    "url": "https://github.com/python/cpython/issues/121141#issue-2381257086",
+    "parentUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "id": 198222,
+    "url": "https://github.com/hacl-star/hacl-star/activity",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198223,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/dist",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198224,
+    "url": "https://github.com/FStarLang/karamel",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198225,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/CODE_OF_CONDUCT.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198226,
+    "url": "https://github.com/hacl-star/hacl-star/graphs/contributors",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198227,
+    "url": "https://github.com/login?return_to\u003d%2Fhacl-star%2Fhacl-star",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198228,
+    "url": "https://github.com/cryspen/hacl-packages/",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198229,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/.ci",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198230,
+    "url": "https://github.com/FStarLang/FStar",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198231,
+    "url": "https://github.com/hacl-star/hacl-star/search?l\u003dmakefile",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198232,
+    "url": "https://github.com/hacl-star/hacl-star/search?l\u003dpython",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198233,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/Makefile.local",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198234,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/pull_request_template.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198235,
+    "url": "https://github.com/hacl-star/hacl-star/branches",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198236,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/build_local.sh",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198237,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/LICENSE",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198238,
+    "url": "https://github.com/hacl-star/hacl-star/watchers",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198239,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/providers/evercrypt",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198240,
+    "url": "https://github.com/topics/inria",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198241,
+    "url": "https://github.com/hacl-star/hacl-star/#a-high-assurance-cryptographic-library",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198242,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/specs",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198243,
+    "url": "https://github.com/topics/hacl",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198244,
+    "url": "https://github.com/contact/report-content?content_url\u003dhttps%3A%2F%2Fgithub.com%2Fhacl-star%2Fhacl-star\u0026report\u003dhacl-star+%28user%29",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198245,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/tools",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198246,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/.docker/build",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198247,
+    "url": "https://github.com/topics/everest",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198248,
+    "url": "https://github.com/orgs/hacl-star/packages?repo_name\u003dhacl-star",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198249,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/Makefile.common",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198250,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/CHANGES.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198251,
+    "url": "https://github.com/hacl-star/hacl-star/#coc-ov-file",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198252,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/dist",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198253,
+    "url": "https://project-everest.github.io/",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198254,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/obj",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198255,
+    "url": "https://github.com/hacl-star/hacl-star/#security-ov-file",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198256,
+    "url": "https://github.com/hacl-star/hacl-star/#valecrypt",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198257,
+    "url": "https://github.com/hacl-star/hacl-star/search?l\u003dc",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198258,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/vale",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198259,
+    "url": "https://github.com/hacl-star/hacl-star/#start-of-content",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198260,
+    "url": "https://github.com/hacl-star",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198261,
+    "url": "https://github.com/project-everest/vale",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198262,
+    "url": "https://github.com/topics/verified-primitives",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198263,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/SECURITY.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198264,
+    "url": "https://github.com/hacl-star/hacl-star/search?l\u003dshell",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198265,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/lib",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198266,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/code",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198268,
+    "url": "https://fstar-lang.org/",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198269,
+    "url": "https://github.com/project-everest/hacl-star/tree/main/",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198270,
+    "url": "https://github.com/hacl-star/hacl-star/releases/tag/ocaml-v0.4.5",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198271,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/hints",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198272,
+    "url": "https://github.com/hacl-star/hacl-star/#license",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198273,
+    "url": "https://github.com/hacl-star/hacl-star/commits/main/",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198274,
+    "url": "https://github.com/hacl-star/hacl-star/tags",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198275,
+    "url": "https://github.com/hacl-star/hacl-star/custom-properties",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198276,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/.gitignore",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198277,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/runtimeconfig.json",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198278,
+    "url": "https://github.com/topics/cryptography",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198279,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/Makefile.include",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198280,
+    "url": "https://github.com/hacl-star/hacl-star/#status",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198281,
+    "url": "https://github.com/hacl-star/hacl-star/#Apache-2.0-1-ov-file",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198282,
+    "url": "https://github.com/hacl-star/hacl-star/search?l\u003dassembly",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198283,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/.drone.yml",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198284,
+    "url": "https://fstarlang.github.io",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198285,
+    "url": "https://github.com/hacl-star/hacl-star/#citing-hacl",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198286,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/CODEOWNERS",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198287,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/Makefile.openssl",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198288,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/.nix",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198289,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/README.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198290,
+    "url": "https://github.com/hacl-star/hacl-star/#evercrypt",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198291,
+    "url": "https://github.com/hacl-star/hacl-star/#readme-ov-file",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198292,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/Makefile",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198293,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/PULL_REQUEST.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198294,
+    "url": "https://github.com/topics/verification",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198295,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/GOVERNANCE.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198296,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/MAINTAINERS.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198297,
+    "url": "https://github.com/topics/formal-verification",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198298,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/tests",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198299,
+    "url": "https://github.com/hacl-star/hacl-star/#contact-or-contribute",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198300,
+    "url": "https://github.com/hacl-star/hacl-star/#hacl",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198301,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/code",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198302,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/vale",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198303,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/doc",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198304,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/providers",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198305,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/.gitattributes",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198306,
+    "url": "https://github.com/hacl-star/hacl-star/stargazers",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198307,
+    "url": "https://github.com/hacl-star/hacl-star/releases",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198308,
+    "url": "https://github.com/hacl-star/hacl-star/forks",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198309,
+    "url": "https://github.com/hacl-star/hacl-star/search?l\u003df%2A",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198310,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/flake.nix",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198311,
+    "url": "https://github.com/topics/formal-methods",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198313,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/.github",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198314,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/.scripts",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198315,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/Hacl.fst.config.json",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198316,
+    "url": "https://github.com/topics/security",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 198317,
+    "url": "https://github.com/topics/high-performance",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "JelleZijlstra",
+    "pageTitle": "Issue · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "Issue · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Issue · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Issue · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Issue · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "Issue · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "sobolevn",
+    "pageTitle": "Improve `SyntaxError` message for `case ... as a.b` · Issue #123562 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@sobolevn",
+    "pageTitle": "Improve `SyntaxError` message for `case ... as a.b` · Issue #123562 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@sobolevn",
+    "pageTitle": "Improve `SyntaxError` message for `case ... as a.b` · Issue #123562 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "Improve `SyntaxError` message for `case ... as a.b` · Issue #123562 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#limited-c-api-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#limited-c-api-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor.terminate_workers"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor.terminate_workers"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
