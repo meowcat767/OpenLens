@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1322,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format",
+    "title": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » annotationlib — Functionality for introspecting annotations | Theme Auto Light Dark | annotationlib — Functionality for introspecting annotations¶ Added in version 3.14. Source code: Lib/annotationlib.py The annotationlib module provides tools for introspecting annotations on modules, classes, and functions. Annotations are lazily evaluated and often contain forward references to objects that are not yet defined when the annotation is created. This module provides a set of low-level tools that can be used to retrieve annotations in a reliable way, even in the presence of forward references and other edge cases. This module supports retrieving annotations in three main formats (see Format), each of which works best for different use cases: VALUE evaluates the annotations and returns their value. This is most straightforward to work with, but it may raise errors, for example if the annotations contain references to undefined names. FORWARDREF returns ForwardRef objects for annotations that cannot be resolved, allowing you to inspect the annotations without evaluating them. This is useful when you need to work with annotations that may contain unresolved forward references. STRING returns the annotations as a string, similar to how it would appear in the source file. This is useful for documentation generators that want to display annotations in a readable way. The get_annotations() function is the main entry point for retrieving annotations. Given a function, class, or module, it returns an annotations dictionary in the requested format. This module also provides functionality for working directly with the annotate function that is used to evaluate annotations, such as get_annotate_from_class_namespace() and call_annotate_function(), as well as the call_evaluate_function() function for working with evaluate functions. Caution Most functionality in this module can execute arbitrary code; see the security section for more information. See also PEP 649 proposed the current model for how annotations work in Python. PEP 749 expanded on various aspects of PEP 649 and introduced the annotationlib module. Annotations Best Practices provides best practices for working with annotations. typing-extensions provides a backport of get_annotations() that works on earlier versions of Python. Annotation semantics¶ The way annotations are evaluated has changed over the history of Python 3, and currently still depends on a future import. There have been execution models for annotations: Stock semantics (default in Python 3.0 through 3.13; see PEP 3107 and PEP 526): Annotations are evaluated eagerly, as they are encountered in the source code. Stringified annotations (used with from __future__ import annotations in Python 3.7 and newer; see PEP 563): Annotations are stored as strings only. Deferred evaluation (default in Python 3.14 and newer; see PEP 649 and PEP 749): Annotations are evaluated lazily, only when they are accessed. As an example, consider the following program: def func(a: Cls) -\u003e None:\n    print(a)\n\nclass Cls: pass\n\nprint(func.__annotations__)\n This will behave as follows: Under stock semantics (Python 3.13 and earlier), it will throw a NameError at the line where func is defined, because Cls is an undefined name at that point. Under stringified annotations (if from __future__ import annotations is used), it will print {\u0027a\u0027: \u0027Cls\u0027, \u0027return\u0027: \u0027None\u0027}. Under deferred evaluation (Python 3.14 and later), it will print {\u0027a\u0027: \u003cclass \u0027Cls\u0027\u003e, \u0027return\u0027: None}. Stock semantics were used when function annotations were first introduced in Python 3.0 (by PEP 3107) because this was the simplest, most obvious way to implement annotations. The same execution model was used when variable annotations were introduced in Python 3.6 (by PEP 526). However, stock semantics caused problems when using annotations as type hints, such as a need to refer to names that are not yet defined when the annotation is encountered. In addition, there were performance problems with executing annotations at module import time. Therefore, in Python 3.7, PEP 563 introduced the ability to store annotations as strings using the from __future__ import annotations syntax. The plan at the time was to eventually make this behavior the default, but a problem appeared: stringified annotations are more difficult to process for those who introspect annotations at runtime. An alternative proposal, PEP 649, introduced the third execution model, deferred evaluation, and was implemented in Python 3.14. Stringified annotations are still used if from __future__ import annotations is present, but this behavior will eventually be removed. Classes¶ class annotationlib.Format¶ An IntEnum describing the formats in which annotations can be returned. Members of the enum, or their equivalent integer values, can be passed to get_annotations() ",
+    "scrapedAt": "2026-05-09 01:15:39.613586"
+  },
+  {
+    "id": 1321,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.hash_seed",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:15:38.370116"
+  },
+  {
+    "id": 1320,
+    "url": "https://github.com/python/cpython/issues/112018",
+    "title": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Contributor rianhunter commented Nov 13, 2023 • edited Loading Uh oh! There was an error while loading. Please reload this page. ctypes currently has no way to easily create a buffer object from a pointer and a dynamic size. It is possible to create memoryview objects of array objects that refer to existing memory (e.g. memoryview((c_byte * size).from_address(address))) but this is inefficient and the resulting memoryview object doesn\u0027t allow editing via python (invalid format errors are thrown, this is due to how ctypes objects implements the buffer protocol). ctypes.memoryview_at() fills that gap in the API. This is similar to ffi.buffer() in the cffi module. Fixes #112015 📚 Documentation preview 📚: https://cpython-previews--112018.org.readthedocs.build/ Issue: Provide ctypes.memoryview_at() #112015 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👍 2 JesseTG and a-reich reacted with thumbs up emoji All reactions 👍 2 reactions Implement ctypes.buffer_at() … 236657b ctypes currently has no way to easily create a buffer object\nfrom a pointer and a dynamic size. It is possible to create\nmemoryview objects of array objects (e.g.\nmemoryview((c_ubyte * 10)())) but this is excessively slow when\nimplementing a callback function in Python that is passed a\ndynamic void * and a size_t.\n\n`ctypes.buffer_at()` fills that gap in the API. This is similar\nto `ffi.buffer()` in the cffi module. bedevere-app Bot added the awaiting review label Nov 13, 2023 rianhunter changed the title Implement ctypes.buffer_at() gh-112015: Implement ctypes.buffer_at() Nov 13, 2023 bedevere-app Bot mentioned this pull request Nov 13, 2023 Provide ctypes.memoryview_at() #112015 Closed Fix typo 55d7690 serhiy-storchaka reviewed Jan 18, 2024 View reviewed changes Comment thread Modules/_ctypes/_ctypes.c Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. serhiy-storchaka reviewed Jan 18, 2024 View reviewed changes Copy link Copy Markdown Member serhiy-storchaka left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Please add tests and What\u0027s New entry. And I think that it is worth to support large buffers. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Comment thread Modules/_ctypes/_ctypes.c Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/ctypes.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/ctypes.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Misc/NEWS.d/next/Library/2023-11-12-21-53-40.gh-issue-112015.2WPRxE.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Misc/NEWS.d/next/Library/2023-11-12-21-53-40.gh-issue-112015.2WPRxE.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/ctypes.rst Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. rianhunter and others added 6 commits January 18, 2024 14:14 Apply suggestions from code review … 00e3c23 Documentation improvements\n\nCo-authored-by: Serhiy Storchaka \u003cstorchaka@gmail.com\u003e Make size argument a Py_ssize_t, per @serhiy-storchaka suggestion df0f992 Add what\u0027s new entry eaa2d13 Rename buffer_at to memoryview_at … db3a26a It\u0027s a more descriptive and precise name. Make mutable objects the default … d7e2f25 It\u0027s more common that the user will want a memoryview object that can\nbe mutated. An immutable object is more rare, so make the default case\nreturn a mutable object. Add test for ctypes.memoryview_at 097a41c Copy link Copy Markdown Contributor Author rianhunter commented Jan 19, 2024 When merging, just flatten all the commits down to a single commit. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. rianhunter changed the title gh-112015: Implement ctypes.buffer_at() gh-112015: Implement ctypes.memoryview_at() Jan 19, 2024 Merge in the main branch; move What\u0027s Ne",
+    "scrapedAt": "2026-05-09 01:15:37.106643"
+  },
+  {
+    "id": 1319,
+    "url": "https://docs.python.org/3/library/dis.html#dis.disassemble",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code o",
+    "scrapedAt": "2026-05-09 01:15:31.908008"
+  },
+  {
+    "id": 1318,
+    "url": "https://docs.python.org/3/library/sys.html#sys._jit.is_available",
+    "title": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but refer",
+    "scrapedAt": "2026-05-09 01:15:30.642282"
+  },
+  {
     "id": 1316,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#types",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -8853,26 +8888,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1318,
-    "url": "https://docs.python.org/3/library/sys.html#sys._jit.is_available"
-  },
-  {
-    "id": 1319,
-    "url": "https://docs.python.org/3/library/dis.html#dis.disassemble"
-  },
-  {
-    "id": 1320,
-    "url": "https://github.com/python/cpython/issues/112018"
-  },
-  {
-    "id": 1321,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.hash_seed"
-  },
-  {
-    "id": 1322,
-    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format"
   },
   {
     "id": 1323,
@@ -226970,10 +226985,934 @@ window.searchData = [
     "id": 264603,
     "url": "https://github.com/python/cpython/issues/129965#start-of-content",
     "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 266451,
+    "url": "https://github.com/python/cpython/pull/112018/commits/3a6b559e08a2d0c53b93d5fda58dd5ff76e3a0d3",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266452,
+    "url": "https://github.com/python/cpython/pull/112018/files/097a41cae6c4a910d4686e5fd474df4f81e1186b",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266453,
+    "url": "https://github.com/python/cpython/pull/112018#issuecomment-2508023307",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266454,
+    "url": "https://github.com/python/cpython/pull/112018#event-11532455003",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266455,
+    "url": "https://github.com/python/cpython/pull/112018/files/e4af54f6c5279e23b35db10f3b5166c1ad353c6b#diff-402bc51df93eaaca2e2f2551ec0206d8af190722ae4703c178554b565d7c14b4",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266456,
+    "url": "https://github.com/python/cpython/pull/112018#pullrequestreview-1830587402",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266457,
+    "url": "https://github.com/python/cpython/pull/112018#pullrequestreview-2506848477",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266458,
+    "url": "https://github.com/python/cpython/pull/112018/commits/4fe9b442922a781553fd4e723aae293a5ea12b8f",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266459,
+    "url": "https://github.com/python/cpython/pull/112018#issuecomment-2545887901",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266460,
+    "url": "https://github.com/python/cpython/pull/112018#pullrequestreview-2312591740",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266461,
+    "url": "https://github.com/python/cpython/pull/112018#event-15800918709",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266462,
+    "url": "https://github.com/python/cpython/pull/112018/files/55d7690f5cac7674473ab714a2c33fb2cca389d7#diff-ffa37a813a6944f7aeb2b9ab58777911422512e8f408c98f460400d3589c2b45",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266463,
+    "url": "https://github.com/python/cpython/pull/112018/files/f3b1987b15e2bff30e2243186cb1653a3a01da33",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266464,
+    "url": "https://github.com/python/cpython/pull/112018/commits/df0f992fbbfd7911e7eb8eca97dc8abadc6ac441",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266465,
+    "url": "https://github.com/python/cpython/pull/112018/commits/00e3c234c82bcb2184d9afdca0bb8331918f9c06",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266466,
+    "url": "https://github.com/python/cpython/pull/112018/commits/c3c9e175a2c2ed5abbb8413880435ece17e8cdcf",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266467,
+    "url": "https://github.com/python/cpython/commit/b4f799b1e78ede17b41de9a2bc51b437a7e6dd74",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266468,
+    "url": "https://github.com/python/cpython/pull/112018#issuecomment-2377423052",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266469,
+    "url": "https://github.com/python/cpython/pull/112018/commits/e4af54f6c5279e23b35db10f3b5166c1ad353c6b",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266470,
+    "url": "https://cpython-previews--112018.org.readthedocs.build/",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266471,
+    "url": "https://github.com/python/cpython/pull/112018#ref-commit-b3d84e3",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266472,
+    "url": "https://github.com/python/cpython/pull/112018/files/d1ca15d4790f855bcc908fadc91fa716cd175e9f",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266474,
+    "url": "https://github.com/python/cpython/pull/112018#event-14326107621",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266475,
+    "url": "https://github.com/python/cpython/pull/112018#commits-pushed-d39bb42",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266476,
+    "url": "https://github.com/python/cpython/pull/112018/commits/375081a7f9783d9e1a81a2cd516cba8cf388823b",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266477,
+    "url": "https://github.com/python/cpython/pull/112018#pullrequestreview-2527967021",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266478,
+    "url": "https://github.com/rianhunter",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266479,
+    "url": "https://github.com/python/cpython/pull/112018/commits/d39bb42e1c317edd35719c66a9270b3eed936a89",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266480,
+    "url": "https://github.com/python/cpython/pull/112018#pullrequestreview-2514687583",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266481,
+    "url": "https://github.com/python/cpython/pull/112018/files/55d7690f5cac7674473ab714a2c33fb2cca389d7#diff-13b210c267218100dc49e485ac4735e44224ae266e36c35f1ac6bf774f59e60d",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266483,
+    "url": "https://github.com/python/cpython/pull/112018",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266486,
+    "url": "https://github.com/python/cpython/pull/112018/commits/55d7690f5cac7674473ab714a2c33fb2cca389d7",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266487,
+    "url": "https://github.com/python/cpython/pull/112018/files/55d7690f5cac7674473ab714a2c33fb2cca389d7#diff-402bc51df93eaaca2e2f2551ec0206d8af190722ae4703c178554b565d7c14b4",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266488,
+    "url": "https://github.com/python/cpython/pull/112018#pullrequestreview-2517583125",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266492,
+    "url": "https://github.com/python/cpython/pull/112018#commits-pushed-00e3c23",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266493,
+    "url": "https://github.com/python/cpython/pull/112018#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266494,
+    "url": "https://github.com/python/cpython/pull/112018#event-10936522419",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266495,
+    "url": "https://github.com/python/cpython/pull/112018/commits/d41a2011c1317a0ea294cbd71bd4f1839ea3cdc5",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266496,
+    "url": "https://github.com/python/cpython/pull/112018/commits/b9e857266b3fa7f6238ec0ccfc7f5a5bf8caba7c",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266498,
+    "url": "https://github.com/python/cpython/pull/112018#issuecomment-1899648205",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266499,
+    "url": "https://github.com/python/cpython/pull/112018#commits-pushed-82a6659",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266500,
+    "url": "https://github.com/python/cpython/pull/112018/files/e4af54f6c5279e23b35db10f3b5166c1ad353c6b#diff-edff4421a88bdc56335a84a1e5a0ce0eafe5cd0c37dcb1aff03ff075bfb9b57c",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266501,
+    "url": "https://github.com/python/cpython/pull/112018/commits/0198c89b04639beca150be2797e4417968b4bbb9",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266502,
+    "url": "https://github.com/python/cpython/pull/112018#issuecomment-2361316308",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266503,
+    "url": "https://github.com/python/cpython/pull/112018#commits-pushed-d41a201",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266505,
+    "url": "https://github.com/python/cpython/pull/112018#ref-commit-8f2cce6",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266507,
+    "url": "https://github.com/python/cpython/pull/112018#event-15807366944",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266508,
+    "url": "https://github.com/python/cpython/pull/112018#event-10936536298",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266509,
+    "url": "https://github.com/python/cpython/pull/112018/files/e4af54f6c5279e23b35db10f3b5166c1ad353c6b",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266510,
+    "url": "https://github.com/python/cpython/pull/112018/commits/e2c260999bb4b297d9ebdcc86d2715edfde8f8fe",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266511,
+    "url": "https://github.com/python/cpython/pull/112018/files/097a41cae6c4a910d4686e5fd474df4f81e1186b#diff-936beef2b9279c764144400a3efeb0eb228b122e7c2029355f5e6e9f87c21609",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266513,
+    "url": "https://github.com/python/cpython/pull/112018#event-15807367366",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266514,
+    "url": "https://github.com/python/cpython/pull/112018/commits/097a41cae6c4a910d4686e5fd474df4f81e1186b",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266515,
+    "url": "https://github.com/python/cpython/pull/112018#commits-pushed-5600cef",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266516,
+    "url": "https://github.com/python/cpython/pull/112018#pullrequestreview-1830565301",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266517,
+    "url": "https://github.com/python/cpython/pull/112018#event-15673931903",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266518,
+    "url": "https://github.com/python/cpython/pull/112018/files/400a62decf8e641cb0a7c6f23bf59bb02918a78c",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266519,
+    "url": "https://github.com/python/cpython/pull/112018#issue-1989795695",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266520,
+    "url": "https://github.com/python/cpython/pull/112018/files/55d7690f5cac7674473ab714a2c33fb2cca389d7",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266521,
+    "url": "https://github.com/python/cpython/pull/112018#event-14419519185",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266522,
+    "url": "https://github.com/python/cpython/pull/112018/commits/eaa2d136c4791bbc0e69b4f6cb5df728c8783cb8",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266523,
+    "url": "https://github.com/python/cpython/pull/112018/commits/f3b1987b15e2bff30e2243186cb1653a3a01da33",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266524,
+    "url": "https://github.com/python/cpython/pull/112018/commits/6b0a8ae6429dbe2f41985dfc04e79e29494ab0e1",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266525,
+    "url": "https://github.com/python/cpython/pull/112018#issuecomment-2377433722",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266526,
+    "url": "https://github.com/python/cpython/pull/112018/commits/d7e2f2516c35830eb4a67788083630d6dc25ee28",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266527,
+    "url": "https://github.com/python/cpython/pull/112018/files/e4af54f6c5279e23b35db10f3b5166c1ad353c6b#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266528,
+    "url": "https://github.com/python/cpython/pull/112018/files/e4af54f6c5279e23b35db10f3b5166c1ad353c6b#diff-ffa37a813a6944f7aeb2b9ab58777911422512e8f408c98f460400d3589c2b45",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266529,
+    "url": "https://github.com/python/cpython/pull/112018#pullrequestreview-2516246836",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266530,
+    "url": "https://github.com/WolframAlph/cpython/commit/b3d84e3cde80a3e29813e53a7d8bc0076641378a",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266531,
+    "url": "https://github.com/python/cpython/pull/112018#ref-issue-1989790309",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266533,
+    "url": "https://github.com/srinivasreddy/cpython/commit/8f2cce67f03ccf5efe89f288df9f39f4e3e404a3",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266535,
+    "url": "https://github.com/python/cpython/pull/112018#issuecomment-2546257968",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266537,
+    "url": "https://github.com/python/cpython/pull/112018/commits/82a66590b0fa2703d369f159521db1e3d0cd929d",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266538,
+    "url": "https://github.com/WolframAlph",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266539,
+    "url": "https://github.com/python/cpython/pull/112018/commits/db3a26a05512e8fa03e571ffa29d5a58e5061aab",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266540,
+    "url": "https://github.com/python/cpython/pull/112018/files/d1ca15d4790f855bcc908fadc91fa716cd175e9f#diff-402bc51df93eaaca2e2f2551ec0206d8af190722ae4703c178554b565d7c14b4",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266543,
+    "url": "https://github.com/python/cpython/pull/112018/commits/1a33fe373a0b3b2f541396521ef5e95654d5e017",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266544,
+    "url": "https://github.com/python/cpython/pull/112018/files/d1ca15d4790f855bcc908fadc91fa716cd175e9f#diff-936beef2b9279c764144400a3efeb0eb228b122e7c2029355f5e6e9f87c21609",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266545,
+    "url": "https://github.com/python/cpython/pull/112018/commits/236657b0fe8f20e18343dbad1dec966e7a2524f2",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266546,
+    "url": "https://github.com/python/cpython/pull/112018/files/f3b1987b15e2bff30e2243186cb1653a3a01da33#diff-936beef2b9279c764144400a3efeb0eb228b122e7c2029355f5e6e9f87c21609",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266547,
+    "url": "https://github.com/python/cpython/pull/112018/commits/5600cef2f4a5fefec8a742865b47f4565fa75829",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266548,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F112018",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266549,
+    "url": "https://github.com/python/cpython/pull/112018/commits/d1ca15d4790f855bcc908fadc91fa716cd175e9f",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 266550,
+    "url": "https://github.com/python/cpython/pull/112018/commits/400a62decf8e641cb0a7c6f23bf59bb02918a78c",
+    "parentUrl": "https://github.com/python/cpython/issues/112018"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.hash_seed"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.hash_seed"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d80\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d48\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d40\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d40\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d40\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d48\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d40\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d40\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d40\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d40\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d40\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d40\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d80\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d40\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d60\u0026v\u003d4",
+    "alt": "encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d80\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d40\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d80\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d80\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d80\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d80\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d80\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d60\u0026v\u003d4",
+    "alt": "encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d60\u0026v\u003d4",
+    "alt": "ZeroIntensity",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d48\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d60\u0026v\u003d4",
+    "alt": "ZeroIntensity",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d60\u0026v\u003d4",
+    "alt": "ZeroIntensity",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d48\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d40\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/46005801?s\u003d40\u0026v\u003d4",
+    "alt": "@WolframAlph",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d40\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/198396?s\u003d40\u0026v\u003d4",
+    "alt": "@srinivasreddy",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d40\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/120658?s\u003d52\u0026v\u003d4",
+    "alt": "@rianhunter",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d52\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d52\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d52\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d52\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-112015: Implement `ctypes.memoryview_at()` by rianhunter · Pull Request #112018 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#dis.disassemble"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#dis.disassemble"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._jit.is_available"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._jit.is_available"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
