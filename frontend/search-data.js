@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1360,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetExecPrefix",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-09 01:17:03.14217"
+  },
+  {
+    "id": 1359,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#textwrap",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:17:01.911182"
+  },
+  {
+    "id": 1358,
+    "url": "https://github.com/python/cpython/issues/101588",
+    "title": "Deprecate pickle support for itertools · Issue #101588 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Deprecate pickle support for itertools #101588 New issue Copy link New issue Copy link Closed Closed Deprecate pickle support for itertools#101588 Copy link Assignees Description rhettinger opened on Feb 5, 2023 Issue body actions Pickle support was long ago added to some itertools. It was done mostly to support an atypical use case for a single company. It was implemented in a very inefficient manner, essentially replaying iteration from the beginning to the mid-stream state where it was frozen. The implementation was of low quality and had many bugs. Also, it was not a documented or advertised feature. Newer itertools don\u0027t support pickling and no one has noticed or cared. The popular third-party package more-itertools is implemented with generators which do not have pickle support — again, none of their users seems to have noticed or cared. IMO, this is just cruft that has made maintenance more difficult and we should get rid of it. As an undocumented feature, we could just remove it directly. But to be on the safe side, we can go through a deprecation cycle. Linked PRs GH-101588: Deprecate pickle/copy/deepcopy support in itertools #104965 [3.12] GH-101588: Deprecate pickle/copy/deepcopy support in itertools (GH-104965) #104997 GH-101588: Remove deprecated pickle/copy/deepcopy from itertools #118816 Reactions are currently unavailable Metadata Metadata Assignees Yhg1s Labels No labels No labels Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:17:00.596756"
+  },
+  {
+    "id": 1357,
+    "url": "https://github.com/python/cpython/issues/128427",
+    "title": "Support Nil and Max UUID formats from RFC 9562 · Issue #128427 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Support Nil and Max UUID formats from RFC 9562 #128427 New issue Copy link New issue Copy link Closed Closed Support Nil and Max UUID formats from RFC 9562#128427 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description ngnpope opened on Jan 2, 2025 Issue body actions Feature or enhancement Proposal: RFC 9562 defines Nil and Max UUID formats: https://www.rfc-editor.org/rfc/rfc9562.html#name-nil-uuid https://www.rfc-editor.org/rfc/rfc9562.html#name-max-uuid I\u0027ve often had a need to use these as placeholders, sentinels or dummy values and it would be nice to be able to write uuid.NIL and uuid.MAX instead of uuid.UUID(int\u003d0) and uuid.UUID(int\u003d2 ** 128 - 1) every time I need to reach for them. Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: These have been referred to in #89083 (comment) and #89083 (comment). Linked PRs gh-128427: Add uuid.NIL and uuid.MAX #128429 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:16:58.250857"
+  },
+  {
+    "id": 1356,
+    "url": "https://github.com/python/cpython/issues/129515",
+    "title": "Syntax error on \u0027{z} if z is not None else pass\u0027 · Issue #129515 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Syntax error on \u0027{z} if z is not None else pass\u0027 #129515 New issue Copy link New issue Copy link Closed Closed Syntax error on \u0027{z} if z is not None else pass\u0027#129515 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-parsertype-featureA feature request or enhancementA feature request or enhancement Description none-of-my-names-is-available opened on Jan 31, 2025 Issue body actions Bug report Bug description: My question is in the title.\n\nIn the tutorial, I read: Use \u0027pass\u0027 in places, where code is required syntactically, but none is needed.\nIn order to save indentations, I used the conditional assignement in some segment of code. But I only want to include z in the set x, if it is not None, because later, the None disturbs.\n\nSo my thesis is: The code in the title is syntactically correct, but still, I get a syntax error.\n\nThank you for your kind consideration CPython versions tested on: 3.10 Operating systems tested on: Windows Linked PRs gh-129515: Clarify syntax error messages for conditional expressions #129880 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-parsertype-featureA feature request or enhancementA feature request or enhancement Projects docs issues Status Todo Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:16:56.062036"
+  },
+  {
     "id": 1355,
     "url": "https://github.com/python/cpython/issues/103998",
     "title": "gh-103997: Automatically dedent the argument to \"-c\" by Erotemic · Pull Request #103998 · python/cpython · GitHub",
@@ -9098,26 +9133,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1356,
-    "url": "https://github.com/python/cpython/issues/129515"
-  },
-  {
-    "id": 1357,
-    "url": "https://github.com/python/cpython/issues/128427"
-  },
-  {
-    "id": 1358,
-    "url": "https://github.com/python/cpython/issues/101588"
-  },
-  {
-    "id": 1359,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#textwrap"
-  },
-  {
-    "id": 1360,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetExecPrefix"
   },
   {
     "id": 1361,
@@ -228875,10 +228890,182 @@ window.searchData = [
     "id": 274009,
     "url": "https://github.com/python/cpython/pull/103998#issuecomment-1528920168",
     "parentUrl": "https://github.com/python/cpython/issues/103998"
+  },
+  {
+    "id": 274013,
+    "url": "https://github.com/python/cpython/pull/129880",
+    "parentUrl": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "id": 274014,
+    "url": "https://github.com/none-of-my-names-is-available",
+    "parentUrl": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "id": 274019,
+    "url": "https://github.com/python/cpython/issues/129515#top",
+    "parentUrl": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "id": 274020,
+    "url": "https://github.com/python/cpython/issues/129515#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "id": 274022,
+    "url": "https://github.com/python/cpython/issues/129515#issue-2823432112",
+    "parentUrl": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "id": 274025,
+    "url": "https://github.com/python/cpython/issues/89083#issuecomment-2303285259",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 274026,
+    "url": "https://www.rfc-editor.org/rfc/rfc9562.html#name-max-uuid",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 274029,
+    "url": "https://github.com/python/cpython/issues/128427#issue-2766610107",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 274031,
+    "url": "https://github.com/ngnpope",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 274032,
+    "url": "https://github.com/python/cpython/issues/128427#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 274033,
+    "url": "https://github.com/python/cpython/issues/128427#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 274035,
+    "url": "https://github.com/python/cpython/issues/89083#issuecomment-2304713522",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 274036,
+    "url": "https://github.com/python/cpython/pull/128429",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 274037,
+    "url": "https://www.rfc-editor.org/rfc/rfc9562.html#name-nil-uuid",
+    "parentUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "id": 274039,
+    "url": "https://github.com/python/cpython/pull/104997",
+    "parentUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "id": 274042,
+    "url": "https://github.com/python/cpython/issues/101588#top",
+    "parentUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "id": 274044,
+    "url": "https://github.com/python/cpython/pull/104965",
+    "parentUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "id": 274045,
+    "url": "https://github.com/python/cpython/pull/118816",
+    "parentUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "id": 274046,
+    "url": "https://github.com/python/cpython/issues/101588#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "id": 274049,
+    "url": "https://github.com/python/cpython/issues/101588#issue-1571582024",
+    "parentUrl": "https://github.com/python/cpython/issues/101588"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetExecPrefix"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetExecPrefix"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#textwrap"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#textwrap"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3949752?s\u003d64\u0026u\u003da137be5b5ea73c4e8ea264a37f38c4c60cb29e47\u0026v\u003d4",
+    "alt": "Yhg1s",
+    "pageTitle": "Deprecate pickle support for itertools · Issue #101588 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?u\u003de11cfc20d0f21ef549393dfe80ea91c42fbc9928\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@rhettinger",
+    "pageTitle": "Deprecate pickle support for itertools · Issue #101588 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?u\u003de11cfc20d0f21ef549393dfe80ea91c42fbc9928\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@rhettinger",
+    "pageTitle": "Deprecate pickle support for itertools · Issue #101588 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3949752?s\u003d64\u0026u\u003da137be5b5ea73c4e8ea264a37f38c4c60cb29e47\u0026v\u003d4",
+    "alt": "@Yhg1s",
+    "pageTitle": "Deprecate pickle support for itertools · Issue #101588 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2855582?v\u003d4\u0026size\u003d80",
+    "alt": "@ngnpope",
+    "pageTitle": "Support Nil and Max UUID formats from RFC 9562 · Issue #128427 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2855582?v\u003d4\u0026size\u003d48",
+    "alt": "@ngnpope",
+    "pageTitle": "Support Nil and Max UUID formats from RFC 9562 · Issue #128427 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128427"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/146201797?v\u003d4\u0026size\u003d80",
+    "alt": "@none-of-my-names-is-available",
+    "pageTitle": "Syntax error on \u0027{z} if z is not None else pass\u0027 · Issue #129515 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129515"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/146201797?v\u003d4\u0026size\u003d48",
+    "alt": "@none-of-my-names-is-available",
+    "pageTitle": "Syntax error on \u0027{z} if z is not None else pass\u0027 · Issue #129515 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129515"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/3186211?s\u003d80\u0026v\u003d4",
     "alt": "@Erotemic",
