@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1148,
+    "url": "https://github.com/python/cpython/issues/131507",
+    "title": "Syntax highlighting in PyREPL · Issue #131507 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Syntax highlighting in PyREPL #131507 New issue Copy link New issue Copy link Closed Closed Syntax highlighting in PyREPL#131507 Copy link Assignees Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-replRelated to the interactive shellRelated to the interactive shelltype-featureA feature request or enhancementA feature request or enhancement Description ambv opened on Mar 20, 2025 Issue body actions We want PyREPL to syntax highlight Python code, like this: Theming support is planned, but a separate concern. This issue is about enabling syntax to highlight correctly whenever color is used within the REPL anyway. This is a feature for 3.14, with some test and code refactors that we will be bringing back to 3.13 for improved future maintenance. Linked PRs gh-131507: Clean up tests and type checking for _pyrepl #131509 [3.13] gh-131507: Clean up tests and type checking for _pyrepl (GH-131509) #131546 gh-131507: Refactor screen and cursor position calculations #131547 [3.13] gh-131507: Refactor screen and cursor position calculations (GH-131547) #131557 gh-131507: Add support for syntax highlighting in PyREPL #131562 gh-131507: Remove Misc/mypy symlinks from the repository #132270 gh-131507: Add a way to recreate the Misc/mypy symlinks if missing #132274 [3.13] gh-131507: Add a way to recreate the Misc/mypy symlinks if missing (GH-132274) #132293 gh-131507: Add support for syntax highlighting in PyREPL #133247 Reactions are currently unavailable Metadata Metadata Assignees ambv Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-replRelated to the interactive shellRelated to the interactive shelltype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:08:04.044016"
+  },
+  {
+    "id": 1147,
+    "url": "https://docs.python.org/3/library/threading.html#threading.active_count",
+    "title": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » threading — Thread-based parallelism | Theme Auto Light Dark | threading — Thread-based parallelism¶ Source code: Lib/threading.py This module constructs higher-level threading interfaces on top of the lower level _thread module. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Introduction¶ The threading module provides a way to run multiple threads (smaller units of a process) concurrently within a single process. It allows for the creation and management of threads, making it possible to execute tasks in parallel, sharing memory space. Threads are particularly useful when tasks are I/O bound, such as file operations or making network requests, where much of the time is spent waiting for external resources. A typical use case for threading includes managing a pool of worker threads that can process multiple tasks concurrently. Here’s a basic example of creating and starting threads using Thread: import threading\nimport time\n\ndef crawl(link, delay\u003d3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks \u003d [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads \u003d []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t \u003d threading.Thread(target\u003dcrawl, args\u003d(link,), kwargs\u003d{\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()\n Changed in version 3.7: This module used to be optional, it is now always available. See also concurrent.futures.ThreadPoolExecutor offers a higher level interface to push tasks to a background thread without blocking execution of the calling thread, while still being able to retrieve their results when needed. queue provides a thread-safe interface for exchanging data between running threads. asyncio offers an alternative approach to achieving task level concurrency without requiring the use of multiple operating system threads. Note In the Python 2.x series, this module contained camelCase names for some methods and functions. These are deprecated as of Python 3.10, but they are still supported for compatibility with Python 2.5 and lower. CPython implementation detail: In CPython, due to the Global Interpreter Lock, only one thread can execute Python code at once (even though certain performance-oriented libraries might overcome this limitation). If you want your application to make better use of the computational resources of multi-core machines, you are advised to use multiprocessing or concurrent.futures.ProcessPoolExecutor. However, threading is still an appropriate model if you want to run multiple I/O-bound tasks simultaneously. GIL and performance considerations¶ Unlike the multiprocessing module, which uses separate processes to bypass the global interpreter lock (GIL), the threading module operates within a single process, meaning that all threads share the same memory space. However, the GIL limits the performance gains of threading when it comes to CPU-bound tasks, as only one thread can execute Python bytecode at a time. Despite this, threads remain a useful tool for achieving concurrency in many scenarios. As of Python 3.13, free-threaded builds can disable the GIL, enabling true parallel execution of threads, but this feature is not available by default (see PEP 703). Reference¶ This module defines the following functions: threading.active_count()¶ Return the number of Thread objects currently alive. The returned count is equal to the length of the list returned by enumerate(). The function activeCount is a deprecated alias for this function. threading.current_thread()¶ Return the current Thread object, corresponding to the caller’s thread of control. If the caller’s thread of control was not created through the threading module, a dummy thread object with limited functionality is returned. The function currentThread is a deprecated alias for this function. threading.excepthook(args, /)¶ Handle uncaught exception raised by Thread.run(). The args argument has the following attributes: exc_type: Exception type. exc_value: Exception value, can be None. exc_traceback: Exception traceback, can be None. thread: Thread which raised the exception, can be None. If exc_type is SystemExit, the exception is silently ignored. Otherwise, the exception is printed out on sys.stderr. If this function raises an exception, sys.excepthook() is called to handle it. threading.excepthook() can be overridden to control how uncaught exceptions raised by Thread.run() are handled. Storing exc_value using a custom hook can create a reference cycle. It should be ",
+    "scrapedAt": "2026-05-09 01:08:01.754474"
+  },
+  {
+    "id": 1146,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteChar",
+    "title": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Unicode Objects and Codecs | Theme Auto Light Dark | Unicode Objects and Codecs¶ Unicode Objects¶ Since the implementation of PEP 393 in Python 3.3, Unicode objects internally use a variety of representations, in order to allow handling the complete range of Unicode characters while staying memory efficient. There are special cases for strings where all code points are below 128, 256, or 65536; otherwise, code points must be below 1114112 (which is the full Unicode range). UTF-8 representation is created on demand and cached in the Unicode object. Note The Py_UNICODE representation has been removed since Python 3.12 with deprecated APIs. See PEP 623 for more information. Unicode Type¶ These are the basic Unicode object types used for the Unicode implementation in Python: PyTypeObject PyUnicode_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode type. It is exposed to Python code as str. PyTypeObject PyUnicodeIter_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode iterator type. It is used to iterate over Unicode string objects. type Py_UCS4¶ type Py_UCS2¶ type Py_UCS1¶ Part of the Stable ABI. These types are typedefs for unsigned integer types wide enough to contain characters of 32 bits, 16 bits and 8 bits, respectively. When dealing with single Unicode characters, use Py_UCS4. Added in version 3.3. type PyASCIIObject¶ type PyCompactUnicodeObject¶ type PyUnicodeObject¶ These subtypes of PyObject represent a Python Unicode object. In almost all cases, they shouldn’t be used directly, since all API functions that deal with Unicode objects take and return PyObject pointers. Added in version 3.3. The structure of a particular object can be determined using the following macros. The macros cannot fail; their behavior is undefined if their argument is not a Python Unicode object. PyUnicode_IS_COMPACT(o)¶ True if o uses the PyCompactUnicodeObject structure. Added in version 3.3. PyUnicode_IS_COMPACT_ASCII(o)¶ True if o uses the PyASCIIObject structure. Added in version 3.3. The following APIs are C macros and static inlined functions for fast checks and access to internal read-only data of Unicode objects: int PyUnicode_Check(PyObject *obj)¶ Return true if the object obj is a Unicode object or an instance of a Unicode subtype. This function always succeeds. int PyUnicode_CheckExact(PyObject *obj)¶ Return true if the object obj is a Unicode object, but not an instance of a subtype. This function always succeeds. Py_ssize_t PyUnicode_GET_LENGTH(PyObject *unicode)¶ Return the length of the Unicode string, in code points. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. Py_UCS1 *PyUnicode_1BYTE_DATA(PyObject *unicode)¶ Py_UCS2 *PyUnicode_2BYTE_DATA(PyObject *unicode)¶ Py_UCS4 *PyUnicode_4BYTE_DATA(PyObject *unicode)¶ Return a pointer to the canonical representation cast to UCS1, UCS2 or UCS4 integer types for direct character access. No checks are performed if the canonical representation has the correct character size; use PyUnicode_KIND() to select the right function. Added in version 3.3. PyUnicode_1BYTE_KIND¶ PyUnicode_2BYTE_KIND¶ PyUnicode_4BYTE_KIND¶ Return values of the PyUnicode_KIND() macro. Added in version 3.3. Changed in version 3.12: PyUnicode_WCHAR_KIND has been removed. int PyUnicode_KIND(PyObject *unicode)¶ Return one of the PyUnicode kind constants (see above) that indicate how many bytes per character this Unicode object uses to store its data. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void *PyUnicode_DATA(PyObject *unicode)¶ Return a void pointer to the raw Unicode buffer. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void PyUnicode_WRITE(int kind, void *data, Py_ssize_t index, Py_UCS4 value)¶ Write the code point value to the given zero-based index in a string. The kind value and data pointer must have been obtained from a string using PyUnicode_KIND() and PyUnicode_DATA() respectively. You must hold a reference to that string while calling PyUnicode_WRITE(). All requirements of PyUnicode_WriteChar() also apply. The function performs no checks for any of its requirements, and is intended for usage in loops. Added in version 3.3. Py_UCS4 PyUnicode_READ(int kind, void *data, Py_ssize_t index)¶ Read a code point from a canonical representation data (as obtained with PyUnicode_DATA()). No checks or ready calls are performed. Added in version 3.3. Py_UCS4 PyUnicode_READ_CHAR(PyObject *unicode, Py_ssize_t index)¶ Read a character from a Unicode object unicode, which must be in the “canonical” representation. This is less efficient than PyUnicode_READ() if you do multiple consecutive reads. Added in version 3.3. Py_U",
+    "scrapedAt": "2026-05-09 01:08:00.534462"
+  },
+  {
+    "id": 1145,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-BRANCH_RIGHT",
+    "title": "sys.monitoring — Execution event monitoring — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » sys.monitoring — Execution event monitoring | Theme Auto Light Dark | sys.monitoring — Execution event monitoring¶ Added in version 3.12. Note sys.monitoring is a namespace within the sys module, not an independent module, and import sys.monitoring would fail with a ModuleNotFoundError. Instead, simply import sys and then use sys.monitoring. This namespace provides access to the functions and constants necessary to activate and control event monitoring. As programs execute, events occur that might be of interest to tools that monitor execution. The sys.monitoring namespace provides means to receive callbacks when events of interest occur. The monitoring API consists of three components: Tool identifiers Events Callbacks Tool identifiers¶ A tool identifier is an integer and the associated name. Tool identifiers are used to discourage tools from interfering with each other and to allow multiple tools to operate at the same time. Currently tools are completely independent and cannot be used to monitor each other. This restriction may be lifted in the future. Before registering or activating events, a tool should choose an identifier. Identifiers are integers in the range 0 to 5 inclusive. Registering and using tools¶ sys.monitoring.use_tool_id(tool_id: int, name: str, /) → None¶ Must be called before tool_id can be used. tool_id must be in the range 0 to 5 inclusive. Raises a ValueError if tool_id is in use. sys.monitoring.clear_tool_id(tool_id: int, /) → None¶ Unregister all events and callback functions associated with tool_id. sys.monitoring.free_tool_id(tool_id: int, /) → None¶ Should be called once a tool no longer requires tool_id. Will call clear_tool_id() before releasing tool_id. sys.monitoring.get_tool(tool_id: int, /) → str | None¶ Returns the name of the tool if tool_id is in use, otherwise it returns None. tool_id must be in the range 0 to 5 inclusive. All IDs are treated the same by the VM with regard to events, but the following IDs are pre-defined to make co-operation of tools easier: sys.monitoring.DEBUGGER_ID \u003d 0\nsys.monitoring.COVERAGE_ID \u003d 1\nsys.monitoring.PROFILER_ID \u003d 2\nsys.monitoring.OPTIMIZER_ID \u003d 5\n Events¶ The following events are supported: sys.monitoring.events.BRANCH_LEFT¶ A conditional branch goes left. It is up to the tool to determine how to present “left” and “right” branches. There is no guarantee which branch is “left” and which is “right”, except that it will be consistent for the duration of the program. sys.monitoring.events.BRANCH_RIGHT¶ A conditional branch goes right. sys.monitoring.events.CALL¶ A call in Python code (event occurs before the call). sys.monitoring.events.C_RAISE¶ An exception raised from any callable, except for Python functions (event occurs after the exit). sys.monitoring.events.C_RETURN¶ Return from any callable, except for Python functions (event occurs after the return). sys.monitoring.events.EXCEPTION_HANDLED¶ An exception is handled. sys.monitoring.events.INSTRUCTION¶ A VM instruction is about to be executed. sys.monitoring.events.JUMP¶ An unconditional jump in the control flow graph is made. sys.monitoring.events.LINE¶ An instruction is about to be executed that has a different line number from the preceding instruction. sys.monitoring.events.PY_RESUME¶ Resumption of a Python function (for generator and coroutine functions), except for throw() calls. sys.monitoring.events.PY_RETURN¶ Return from a Python function (occurs immediately before the return, the callee’s frame will be on the stack). sys.monitoring.events.PY_START¶ Start of a Python function (occurs immediately after the call, the callee’s frame will be on the stack) sys.monitoring.events.PY_THROW¶ A Python function is resumed by a throw() call. sys.monitoring.events.PY_UNWIND¶ Exit from a Python function during exception unwinding. This includes exceptions raised directly within the function and that are allowed to continue to propagate. sys.monitoring.events.PY_YIELD¶ Yield from a Python function (occurs immediately before the yield, the callee’s frame will be on the stack). sys.monitoring.events.RAISE¶ An exception is raised, except those that cause a STOP_ITERATION event. sys.monitoring.events.RERAISE¶ An exception is re-raised, for example at the end of a finally block. sys.monitoring.events.STOP_ITERATION¶ An artificial StopIteration is raised; see the STOP_ITERATION event. More events may be added in the future. These events are attributes of the sys.monitoring.events namespace. Each event is represented as a power-of-2 integer constant. To define a set of events, simply bitwise OR the individual events together. For example, to specify both PY_RETURN and PY_START events, use the expression PY_RETURN | PY_START. sys.monitoring.events.NO_EVENTS¶ An alias for 0 so users can do explicit comparisons like: if get_events(DEBUGGER_ID) \u003d\u003d NO_EVENTS:\n    ..",
+    "scrapedAt": "2026-05-09 01:07:59.322335"
+  },
+  {
+    "id": 1144,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.get_event_loop_policy",
+    "title": "Policies — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | Policies¶ Warning Policies are deprecated and will be removed in Python 3.16. Users are encouraged to use the asyncio.run() function or the asyncio.Runner with loop_factory to use the desired loop implementation. An event loop policy is a global object used to get and set the current event loop, as well as create new event loops. The default policy can be replaced with built-in alternatives to use different event loop implementations, or substituted by a custom policy that can override these behaviors. The policy object gets and sets a separate event loop per context. This is per-thread by default, though custom policies could define context differently. Custom event loop policies can control the behavior of get_event_loop(), set_event_loop(), and new_event_loop(). Policy objects should implement the APIs defined in the AbstractEventLoopPolicy abstract base class. Getting and Setting the Policy¶ The following functions can be used to get and set the policy for the current process: asyncio.get_event_loop_policy()¶ Return the current process-wide policy. Deprecated since version 3.14: The get_event_loop_policy() function is deprecated and will be removed in Python 3.16. asyncio.set_event_loop_policy(policy)¶ Set the current process-wide policy to policy. If policy is set to None, the default policy is restored. Deprecated since version 3.14: The set_event_loop_policy() function is deprecated and will be removed in Python 3.16. Policy Objects¶ The abstract event loop policy base class is defined as follows: class asyncio.AbstractEventLoopPolicy¶ An abstract base class for asyncio policies. get_event_loop()¶ Get the event loop for the current context. Return an event loop object implementing the AbstractEventLoop interface. This method should never return None. Changed in version 3.6. set_event_loop(loop)¶ Set the event loop for the current context to loop. new_event_loop()¶ Create and return a new event loop object. This method should never return None. Deprecated since version 3.14: The AbstractEventLoopPolicy class is deprecated and will be removed in Python 3.16. asyncio ships with the following built-in policies: class asyncio.DefaultEventLoopPolicy¶ The default asyncio policy. Uses SelectorEventLoop on Unix and ProactorEventLoop on Windows. There is no need to install the default policy manually. asyncio is configured to use the default policy automatically. Changed in version 3.8: On Windows, ProactorEventLoop is now used by default. Changed in version 3.14: The get_event_loop() method of the default asyncio policy now raises a RuntimeError if there is no set event loop. Deprecated since version 3.14: The DefaultEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsSelectorEventLoopPolicy¶ An alternative event loop policy that uses the SelectorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsSelectorEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsProactorEventLoopPolicy¶ An alternative event loop policy that uses the ProactorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsProactorEventLoopPolicy class is deprecated and will be removed in Python 3.16. Custom Policies¶ To implement a new event loop policy, it is recommended to subclass DefaultEventLoopPolicy and override the methods for which custom behavior is wanted, e.g.: class MyEventLoopPolicy(asyncio.DefaultEventLoopPolicy):\n\n    def get_event_loop(self):\n        \"\"\"Get the event loop.\n\n        This may be None or an instance of EventLoop.\n        \"\"\"\n        loop \u003d super().get_event_loop()\n        # Do something with loop ...\n        return loop\n\nasyncio.set_event_loop_policy(MyEventLoopPolicy())\n Table of Contents Policies Getting and Setting the Policy Policy Objects Custom Policies Previous topic Transports and Protocols Next topic Platform Support This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 01:07:58.113321"
+  },
+  {
     "id": 1143,
     "url": "https://github.com/python/cpython/issues/80958",
     "title": "unittest discover throws TypeError on namespace packages · Issue #80958 · python/cpython · GitHub",
@@ -7663,26 +7698,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1144,
-    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.get_event_loop_policy"
-  },
-  {
-    "id": 1145,
-    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-BRANCH_RIGHT"
-  },
-  {
-    "id": 1146,
-    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteChar"
-  },
-  {
-    "id": 1147,
-    "url": "https://docs.python.org/3/library/threading.html#threading.active_count"
-  },
-  {
-    "id": 1148,
-    "url": "https://github.com/python/cpython/issues/131507"
   },
   {
     "id": 1149,
@@ -194600,10 +194615,158 @@ window.searchData = [
     "id": 202105,
     "url": "https://github.com/rbtcollins",
     "parentUrl": "https://github.com/python/cpython/issues/80958"
+  },
+  {
+    "id": 202621,
+    "url": "https://github.com/python/cpython/pull/131547",
+    "parentUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "id": 202622,
+    "url": "https://github.com/python/cpython/issues/131507#top",
+    "parentUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "id": 202623,
+    "url": "https://github.com/python/cpython/issues/131507#issue-2935638546",
+    "parentUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "id": 202624,
+    "url": "https://private-user-images.githubusercontent.com/55281/439584504-5bb47d56-2e80-4a9f-92c8-173f2836f4fb.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjM5ODMsIm5iZiI6MTc3ODI2MzY4MywicGF0aCI6Ii81NTI4MS80Mzk1ODQ1MDQtNWJiNDdkNTYtMmU4MC00YTlmLTkyYzgtMTczZjI4MzZmNGZiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA1MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNTA4VDE4MDgwM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ5MTQwZmMwODY1MTBmYWJkYmUzYjc3NDlkMjVlOTE5YTE1NTUxZWIxMjRlYjFjYTlhODNmOTdiNzE5NzQ1YjkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.PnHig7Z7l_ymbdilofvgpJvz_KwlGjL-pVY5g-DlL24",
+    "parentUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "id": 202627,
+    "url": "https://github.com/python/cpython/pull/131546",
+    "parentUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "id": 202628,
+    "url": "https://github.com/python/cpython/pull/131557",
+    "parentUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "id": 202630,
+    "url": "https://github.com/python/cpython/pull/131562",
+    "parentUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "id": 202631,
+    "url": "https://github.com/python/cpython/pull/132274",
+    "parentUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "id": 202634,
+    "url": "https://github.com/python/cpython/issues/131507#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "id": 202635,
+    "url": "https://github.com/python/cpython/pull/133247",
+    "parentUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "id": 202637,
+    "url": "https://github.com/python/cpython/pull/132270",
+    "parentUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "id": 202638,
+    "url": "https://github.com/python/cpython/pull/132293",
+    "parentUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "id": 202639,
+    "url": "https://github.com/python/cpython/pull/131509",
+    "parentUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "id": 202640,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-repl%22",
+    "parentUrl": "https://github.com/python/cpython/issues/131507"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d64\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "ambv",
+    "pageTitle": "Syntax highlighting in PyREPL · Issue #131507 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@ambv",
+    "pageTitle": "Syntax highlighting in PyREPL · Issue #131507 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@ambv",
+    "pageTitle": "Syntax highlighting in PyREPL · Issue #131507 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/55281/439584504-5bb47d56-2e80-4a9f-92c8-173f2836f4fb.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzgyNjM5ODMsIm5iZiI6MTc3ODI2MzY4MywicGF0aCI6Ii81NTI4MS80Mzk1ODQ1MDQtNWJiNDdkNTYtMmU4MC00YTlmLTkyYzgtMTczZjI4MzZmNGZiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA1MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNTA4VDE4MDgwM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ5MTQwZmMwODY1MTBmYWJkYmUzYjc3NDlkMjVlOTE5YTE1NTUxZWIxMjRlYjFjYTlhODNmOTdiNzE5NzQ1YjkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.PnHig7Z7l_ymbdilofvgpJvz_KwlGjL-pVY5g-DlL24",
+    "alt": "Image",
+    "pageTitle": "Syntax highlighting in PyREPL · Issue #131507 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d64\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "Syntax highlighting in PyREPL · Issue #131507 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131507"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.active_count"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.active_count"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteChar"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteChar"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys.monitoring — Execution event monitoring — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-BRANCH_RIGHT"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys.monitoring — Execution event monitoring — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-BRANCH_RIGHT"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.get_event_loop_policy"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.get_event_loop_policy"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/3972343?u\u003d68f36ba339adf3784e2d288e2be4442bea8e9004\u0026v\u003d4\u0026size\u003d80",
     "alt": "@tirkarthi",
