@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1629,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Finish",
+    "title": "Integer Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)",
+    "scrapedAt": "2026-05-09 01:27:29.018855"
+  },
+  {
+    "id": 1628,
+    "url": "https://docs.python.org/3/library/sys.html#sys.remote_exec",
+    "title": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but refer",
+    "scrapedAt": "2026-05-09 01:27:27.689052"
+  },
+  {
+    "id": 1627,
+    "url": "https://github.com/python/cpython/issues/131236",
+    "title": "Allow to generate multiple UUIDs at once via CLI · Issue #131236 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Allow to generate multiple UUIDs at once via CLI #131236 New issue Copy link New issue Copy link Closed #131218 Closed Allow to generate multiple UUIDs at once via CLI#131236 #131218 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description simon04 opened on Mar 14, 2025 Issue body actions Feature or enhancement Proposal: Add --count to the main() of the uuid module. Sometimes you need more than one UUID. In order to print 42 UUIDs, run python -m uuid --count 42 Inspired by https://www.man7.org/linux/man-pages/man1/uuidgen.1.html Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-131236: allow to generate multiple UUIDs at once via CLI #131218 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:27:26.39948"
+  },
+  {
+    "id": 1626,
+    "url": "https://docs.python.org/3/library/sys.html#sys._clear_type_cache",
+    "title": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but refer",
+    "scrapedAt": "2026-05-09 01:27:22.05924"
+  },
+  {
+    "id": 1625,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo._for_archive",
+    "title": "zipfile — Work with ZIP archives — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Compression and Archiving » zipfile — Work with ZIP archives | Theme Auto Light Dark | zipfile — Work with ZIP archives¶ Source code: Lib/zipfile/ The ZIP file format is a common archive and compression standard. This module provides tools to create, read, write, append, and list a ZIP file. Any advanced use of this module will require an understanding of the format, as defined in PKZIP Application Note. This module does not handle multipart ZIP files. It can handle ZIP files that use the ZIP64 extensions (that is ZIP files that are more than 4 GiB in size). It supports decryption of encrypted files in ZIP archives, but it cannot create an encrypted file. Decryption is extremely slow as it is implemented in native Python rather than C. Handling compressed archives requires optional modules such as zlib, bz2, lzma, and compression.zstd. If any of them are missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. The module defines the following items: exception zipfile.BadZipFile¶ The error raised for bad ZIP files. Added in version 3.2. exception zipfile.BadZipfile¶ Alias of BadZipFile, for compatibility with older Python versions. Deprecated since version 3.2. exception zipfile.LargeZipFile¶ The error raised when a ZIP file would require ZIP64 functionality but that has not been enabled. class zipfile.ZipFile The class for reading and writing ZIP files. See section ZipFile objects for constructor details. class zipfile.Path Class that implements a subset of the interface provided by pathlib.Path, including the full importlib.resources.abc.Traversable interface. Added in version 3.8. class zipfile.PyZipFile Class for creating ZIP archives containing Python libraries. class zipfile.ZipInfo(filename\u003d\u0027NoName\u0027, date_time\u003d(1980, 1, 1, 0, 0, 0))¶ Class used to represent information about a member of an archive. Instances of this class are returned by the getinfo() and infolist() methods of ZipFile objects. Most users of the zipfile module will not need to create these, but only use those created by this module. filename should be the full name of the archive member, and date_time should be a tuple containing six fields which describe the time of the last modification to the file; the fields are described in section ZipInfo objects. Changed in version 3.13: A public compress_level attribute has been added to expose the formerly protected _compresslevel. The older protected name continues to work as a property for backwards compatibility. _for_archive(archive)¶ Resolve the date_time, compression attributes, and external attributes to suitable defaults as used by ZipFile.writestr(). Returns self for chaining. Added in version 3.14. zipfile.is_zipfile(filename)¶ Returns True if filename is a valid ZIP file based on its magic number, otherwise returns False. filename may be a file or file-like object too. Changed in version 3.1: Support for file and file-like objects. zipfile.ZIP_STORED¶ The numeric constant for an uncompressed archive member. zipfile.ZIP_DEFLATED¶ The numeric constant for the usual ZIP compression method. This requires the zlib module. zipfile.ZIP_BZIP2¶ The numeric constant for the BZIP2 compression method. This requires the bz2 module. Added in version 3.3. zipfile.ZIP_LZMA¶ The numeric constant for the LZMA compression method. This requires the lzma module. Added in version 3.3. zipfile.ZIP_ZSTANDARD¶ The numeric constant for Zstandard compression. This requires the compression.zstd module. Note In APPNOTE 6.3.7, the method ID 20 was assigned to Zstandard compression. This was changed in APPNOTE 6.3.8 to method ID 93 to avoid conflicts, with method ID 20 being deprecated. For compatibility, the zipfile module reads both method IDs but will only write data with method ID 93. Added in version 3.14. Note The ZIP file format specification has included support for bzip2 compression since 2001, for LZMA compression since 2006, and Zstandard compression since 2020. However, some tools (including older Python releases) do not support these compression methods, and may either refuse to process the ZIP file altogether, or fail to extract individual files. See also PKZIP Application Note Documentation on the ZIP file format by Phil Katz, the creator of the format and algorithms used. Info-ZIP Home Page Information about the Info-ZIP project’s ZIP archive programs and development libraries. ZipFile objects¶ class zipfile.ZipFile(file, mode\u003d\u0027r\u0027, compression\u003dZIP_STORED, allowZip64\u003dTrue, compresslevel\u003dNone, *, strict_timestamps\u003dTrue, metadata_encoding\u003dNone)¶ Open a ZIP file, where file can be a path to a file (a string), a file-like object or a path-like object. The mode parameter should be \u0027r\u0027 to read an existing file, \u0027w\u0027 to truncate and write a new file, \u0027a\u0027 to appen",
+    "scrapedAt": "2026-05-09 01:27:20.805604"
+  },
+  {
     "id": 1624,
     "url": "https://github.com/python/cpython/issues/124704",
     "title": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
@@ -10953,26 +10988,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1625,
-    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo._for_archive"
-  },
-  {
-    "id": 1626,
-    "url": "https://docs.python.org/3/library/sys.html#sys._clear_type_cache"
-  },
-  {
-    "id": 1627,
-    "url": "https://github.com/python/cpython/issues/131236"
-  },
-  {
-    "id": 1628,
-    "url": "https://docs.python.org/3/library/sys.html#sys.remote_exec"
-  },
-  {
-    "id": 1629,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Finish"
   },
   {
     "id": 1630,
@@ -241850,10 +241865,100 @@ window.searchData = [
     "id": 353414,
     "url": "https://github.com/python/cpython/pull/129768",
     "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353899,
+    "url": "https://github.com/python/cpython/issues/131236#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "id": 353900,
+    "url": "https://github.com/python/cpython/pull/131218",
+    "parentUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "id": 353904,
+    "url": "https://github.com/python/cpython/issues/131236#issue-2919946296",
+    "parentUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "id": 353905,
+    "url": "https://github.com/simon04",
+    "parentUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "id": 353907,
+    "url": "https://github.com/python/cpython/issues/131236#top",
+    "parentUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "id": 353909,
+    "url": "https://www.man7.org/linux/man-pages/man1/uuidgen.1.html",
+    "parentUrl": "https://github.com/python/cpython/issues/131236"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Finish"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Finish"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.remote_exec"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.remote_exec"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/782446?u\u003db04ff20ddafb41870583859554c1e7c3180adca3\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@simon04",
+    "pageTitle": "Allow to generate multiple UUIDs at once via CLI · Issue #131236 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/782446?u\u003db04ff20ddafb41870583859554c1e7c3180adca3\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@simon04",
+    "pageTitle": "Allow to generate multiple UUIDs at once via CLI · Issue #131236 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._clear_type_cache"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._clear_type_cache"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipfile — Work with ZIP archives — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo._for_archive"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipfile — Work with ZIP archives — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo._for_archive"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
     "alt": "@gaogaotiantian",
