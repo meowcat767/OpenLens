@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 777,
+    "url": "https://www.python.org/events/python-events/2147/",
+    "title": "GeoPython 2026 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. GeoPython 2026 Basel, Switzerland From 08 June through 10 June, 2026 GeoPython 2026 ← Previous PyCon Italia 2026 in Bologna, Italy Next → PyCon DE 2027 in Heidelberg, Germany Explore events -- Change your date range The next 7 days The next 30 days The next 90 days The next year More events at Basel, Switzerland GeoPython 2026 GeoPython 2025 GeoPython 2024 EuroSciPy 2023 GeoPython 2023 EuroSciPy 2022 EuroPython 2019 GeoPython 2019 GeoPython 2018 GeoPython 2017",
+    "scrapedAt": "2026-05-08 17:51:16.860083"
+  },
+  {
+    "id": 776,
+    "url": "https://www.python.org/events/python-events/2131/",
+    "title": "PyCon US 2026 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PyCon US 2026 Long Beach, CA, USA From 13 May through 19 May, 2026 PyCon US 2026 ← Previous North Bay Python 2026 in Petaluma, California, USA Next → PyCon DE 2027 in Heidelberg, Germany Explore events -- Change your date range The next 7 days The next 30 days The next 90 days The next year More events at Long Beach, CA, USA PyCon US 2026",
+    "scrapedAt": "2026-05-08 17:51:15.495566"
+  },
+  {
+    "id": 775,
+    "url": "https://www.python.org/psf/",
+    "title": "Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! We support the Python Community through... Grants In 2024, the PSF awarded $655,000 USD to 257 groups or individuals in 61 countries around the world. Infrastructure We support and maintain python.org, The Python Package Index, Python Documentation, and many other services the Python Community relies on. PyCon US We produce and underwrite the PyCon US Conference, the largest annual gathering for the Python community. Support from sponsors, attendees, PyLadies, and CPython enabled us to award more than $384,000 USD in travel grants to 254 attendees for PyCon US 2025. Mastodon Become a Member Help the PSF promote, protect, and advance the Python programming language and community! Membership FAQ Donate Assist the foundation\u0027s goals with a donation. The PSF is a recognized 501(c)(3) non-profit organization. How to Contribute Volunteer Learn how you can help the PSF and the greater Python community! How to Volunteer Sponsors Without our sponsors we wouldn\u0027t be able to help the Python community grow and prosper. Sponsorship Possibilities PSF Grants Program The Python Software Foundation welcomes grant proposals for projects related to the development of Python, Python-related technology, and educational resources. Proposal Guidelines, FAQ and Examples PSF News Announcing Python Software Foundation Fellow Members for Q1 2026! 🎉 PyCon US 2026: Why we\u0027re asking you to think about your hotel reservation Reflecting on Five Years as the PSF’s First CPython Developer in Residence The PyCon US 2026 schedule is live 🌴🐍 plus security updates, community programs \u0026 more Applications to Join the PSF Meetup Pro Network Are Back Open Join the Python Security Response Team! Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group Introducing the PSF Community Partner Program Your Python. Your Voice. Join the Python Developers Survey 2026! Departing the Python Software Foundation (Staff)",
+    "scrapedAt": "2026-05-08 17:51:14.206136"
+  },
+  {
+    "id": 771,
+    "url": "https://www.python.org/events/calendars/",
+    "title": "Python Calendars | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Choose a calendar to view events. Python Events Calendar Python User Group Calendar",
+    "scrapedAt": "2026-05-08 17:51:12.763283"
+  },
+  {
+    "id": 764,
+    "url": "https://www.python.org/psf/membership/",
+    "title": "Become a Member of the PSF | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! By becoming a member, you tell us and the world that you are a part of the PSF and support our work, and as one of the classes of voting members, you add your voice to the future direction of the Foundation. We\u0027re so happy to have you! Voting Memberships As core stakeholders of the Python Software Foundation community, Supporting Members, Contributing Members, and PSF Fellows are all eligible to vote in PSF Board Elections. 1. Sign up as a Supporting Member here! Supporting Members donate an annual membership fee of $99 to the PSF to sustain the Foundation and support the Python community. We have also introduced a sliding scale rate for Supporting Membership, which you can sign up for here. Your support is crucial to the PSF\u0027s ability to do our work making Python available and supporting our community. More details are available on our Supporting Membership page. 2. Self-Certify as a Contributing Member here! Contributing Members qualify because of their work for the Python community and ecosystem. Fill out the short form linked above to sign up! You qualify as a Contributing Member if you dedicate at least five hours per month volunteering on projects which advance the mission of the PSF by creating or maintaining open source software available to the public at no charge, organizing Python events, participating in one of the PSF\u0027s working groups, etc. 3. Fellows Fellows are members who have been nominated for their extraordinary efforts and impact upon Python, the community, and the broader Python ecosystem. Visit this page to nominate a Fellow or learn more about the process. Basic Membership Sign up as a Basic Member here! Signing up as a Basic Member is free, and simply declares that you are part of the Python language community and agree to the community Code of Conduct. Thank you for being with us! Questions? Check out our Membership FAQ page. The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-08 17:51:11.554042"
+  },
+  {
     "id": 759,
     "url": "https://www.python.org/success-stories/",
     "title": "Our Success Stories | Python.org",
@@ -1835,26 +1870,6 @@ window.searchData = [
     "scrapedAt": "2026-05-08 17:50:45.338923"
   },
   {
-    "id": 764,
-    "url": "https://www.python.org/psf/membership/"
-  },
-  {
-    "id": 771,
-    "url": "https://www.python.org/events/calendars/"
-  },
-  {
-    "id": 775,
-    "url": "https://www.python.org/psf/"
-  },
-  {
-    "id": 776,
-    "url": "https://www.python.org/events/python-events/2131/"
-  },
-  {
-    "id": 777,
-    "url": "https://www.python.org/events/python-events/2147/"
-  },
-  {
     "id": 780,
     "url": "https://www.python.org/events/python-user-group/2170/"
   },
@@ -2625,6 +2640,162 @@ window.searchData = [
   {
     "id": 1141,
     "url": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 1142,
+    "url": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 1143,
+    "url": "https://psfmember.org/python-software-foundation-supporting-member-2/"
+  },
+  {
+    "id": 1144,
+    "url": "https://www.python.org/users/membership/"
+  },
+  {
+    "id": 1145,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d39"
+  },
+  {
+    "id": 1146,
+    "url": "https://www.python.org/nominations/elections/"
+  },
+  {
+    "id": 1147,
+    "url": "https://www.python.org/psf/mission/"
+  },
+  {
+    "id": 1149,
+    "url": "https://www.python.org/psf/membership/supporting/"
+  },
+  {
+    "id": 1150,
+    "url": "https://www.python.org/psf/fellows/"
+  },
+  {
+    "id": 1151,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
+  },
+  {
+    "id": 1152,
+    "url": "https://www.python.org/events/python-user-group/"
+  },
+  {
+    "id": 1153,
+    "url": "https://www.python.org/events/python-events/"
+  },
+  {
+    "id": 1154,
+    "url": "https://www.python.org/psf/volunteer"
+  },
+  {
+    "id": 1155,
+    "url": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 1159,
+    "url": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 1160,
+    "url": "https://www.python.org/psf/membership-faq"
+  },
+  {
+    "id": 1161,
+    "url": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html"
+  },
+  {
+    "id": 1162,
+    "url": "https://pyfound.blogspot.com/2026/01/your-python-your-voice-join-python.html"
+  },
+  {
+    "id": 1163,
+    "url": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 1166,
+    "url": "https://fosstodon.org/@ThePSF"
+  },
+  {
+    "id": 1168,
+    "url": "https://us.pycon.org"
+  },
+  {
+    "id": 1169,
+    "url": "https://pypi.org"
+  },
+  {
+    "id": 1170,
+    "url": "https://www.python.org/psf/grants/"
+  },
+  {
+    "id": 1172,
+    "url": "https://pyfound.blogspot.com/2026/03/applications-to-join-psf-meetup-pro.html"
+  },
+  {
+    "id": 1173,
+    "url": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
+  },
+  {
+    "id": 1174,
+    "url": "https://www.python.org/psf/sponsorship/"
+  },
+  {
+    "id": 1175,
+    "url": "https://www.python.org/events/python-events/locations/1667/"
+  },
+  {
+    "id": 1177,
+    "url": "https://us.pycon.org/"
+  },
+  {
+    "id": 1178,
+    "url": "https://www.python.org/events/python-events/2166/"
+  },
+  {
+    "id": 1180,
+    "url": "https://2026.geopython.net/"
+  },
+  {
+    "id": 1181,
+    "url": "https://www.python.org/events/python-events/1728/"
+  },
+  {
+    "id": 1182,
+    "url": "https://www.python.org/events/python-events/1391/"
+  },
+  {
+    "id": 1183,
+    "url": "https://www.python.org/events/python-events/locations/613/"
+  },
+  {
+    "id": 1186,
+    "url": "https://www.python.org/events/python-events/463/"
+  },
+  {
+    "id": 1187,
+    "url": "https://www.python.org/events/python-events/1553/"
+  },
+  {
+    "id": 1188,
+    "url": "https://www.python.org/events/python-events/796/"
+  },
+  {
+    "id": 1190,
+    "url": "https://www.python.org/events/python-events/748/"
+  },
+  {
+    "id": 1191,
+    "url": "https://www.python.org/events/python-events/1263/"
+  },
+  {
+    "id": 1192,
+    "url": "https://www.python.org/events/python-events/608/"
+  },
+  {
+    "id": 1193,
+    "url": "https://www.python.org/events/python-events/1843/"
   }
 ];
 
