@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1497,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html",
+    "title": "RFC 2177 - IMAP4 IDLE command",
+    "content": "Light Dark Auto Network Working Group                                           B. Leiba\nRequest for Comments: 2177               IBM T.J. Watson Research Center\nCategory: Standards Track                                      June 1997\n\n\n                           IMAP4 IDLE command\n\nStatus of this Memo\n\n   This document specifies an Internet standards track protocol for the\n   Internet community, and requests discussion and suggestions for\n   improvements.  Please refer to the current edition of the \"Internet\n   Official Protocol Standards\" (STD 1) for the standardization state\n   and status of this protocol.  Distribution of this memo is unlimited.\n\n1.   Abstract\n\n   The Internet Message Access Protocol [IMAP4] requires a client to\n   poll the server for changes to the selected mailbox (new mail,\n   deletions).  It\u0027s often more desirable to have the server transmit\n   updates to the client in real time.  This allows a user to see new\n   mail immediately.  It also helps some real-time applications based on\n   IMAP, which might otherwise need to poll extremely often (such as\n   every few seconds).  (While the spec actually does allow a server to\n   push EXISTS responses aysynchronously, a client can\u0027t expect this\n   behaviour and must poll.)\n\n   This document specifies the syntax of an IDLE command, which will\n   allow a client to tell the server that it\u0027s ready to accept such\n   real-time updates.\n\n2.   Conventions Used in this Document\n\n   In examples, \"C:\" and \"S:\" indicate lines sent by the client and\n   server respectively.\n\n   The key words \"MUST\", \"MUST NOT\", \"SHOULD\", \"SHOULD NOT\", and \"MAY\"\n   in this document are to be interpreted as described in RFC 2060\n   [IMAP4].\n\n3.   Specification\n\n   IDLE Command\n\n   Arguments:  none\n\n   Responses:  continuation data will be requested; the client sends\n               the continuation data \"DONE\" to end the command\n\n\n\nLeiba                       Standards Track                     [Page 1] \nRFC 2177                   IMAP4 IDLE command                  June 1997\n\n\n\n   Result:     OK - IDLE completed after client sent \"DONE\"\n               NO - failure: the server will not allow the IDLE\n                    command at this time\n              BAD - command unknown or arguments invalid\n\n   The IDLE command may be used with any IMAP4 server implementation\n   that returns \"IDLE\" as one of the supported capabilities to the\n   CAPABILITY command.  If the server does not advertise the IDLE\n   capability, the client MUST NOT use the IDLE command and must poll\n   for mailbox updates.  In particular, the client MUST continue to be\n   able to accept unsolicited untagged responses to ANY command, as\n   specified in the base IMAP specification.\n\n   The IDLE command is sent from the client to the server when the\n   client is ready to accept unsolicited mailbox update messages.  The\n   server requests a response to the IDLE command using the continuation\n   (\"+\") response.  The IDLE command remains active until the client\n   responds to the continuation, and as long as an IDLE command is\n   active, the server is now free to send untagged EXISTS, EXPUNGE, and\n   other messages at any time.\n\n   The IDLE command is terminated by the receipt of a \"DONE\"\n   continuation from the client; such response satisfies the server\u0027s\n   continuation request.  At that point, the server MAY send any\n   remaining queued untagged responses and then MUST immediately send\n   the tagged response to the IDLE command and prepare to process other\n   commands. As in the base specification, the processing of any new\n   command may cause the sending of unsolicited untagged responses,\n   subject to the ambiguity limitations.  The client MUST NOT send a\n   command while the server is waiting for the DONE, since the server\n   will not be able to distinguish a command from a continuation.\n\n   The server MAY consider a client inactive if it has an IDLE command\n   running, and if such a server has an inactivity timeout it MAY log\n   the client off implicitly at the end of its timeout period.  Because\n   of that, clients using IDLE are advised to terminate the IDLE and\n   re-issue it at least every 29 minutes to avoid being logged off.\n   This still allows a client to receive immediate mailbox updates even\n   though it need only \"poll\" at half hour intervals.\n\n\n\n\n\n\n\n\n\n\n\nLeiba                       Standards Track                     [Page 2] \nRFC 2177                   IMAP4 IDLE command                  June 1997\n\n\n   Example:    C: A001 SELECT INBOX\n               S: * FLAGS (Deleted Seen)\n               S: * 3 EXISTS\n               S: * 0 RECENT\n               S: * OK [UIDVALIDITY 1]\n               S: A001 OK SELECT completed\n               C: A002 IDLE\n               S: + idling\n               ...time passes; new mail arrives...\n               S: * 4 EXISTS\n               C: DONE\n               S: A002 OK IDLE terminated\n               ...another client expunges message 2 now...\n               C: A003 FETC",
+    "scrapedAt": "2026-05-09 01:22:12.498679"
+  },
+  {
+    "id": 1496,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#module-string.templatelib",
+    "title": "string.templatelib — Support for template string literals — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Text Processing Services » string.templatelib — Support for template string literals | Theme Auto Light Dark | string.templatelib — Support for template string literals¶ Source code: Lib/string/templatelib.py See also Format strings Template string literal (t-string) syntax PEP 750 Template strings¶ Added in version 3.14. Template strings are a mechanism for custom string processing. They have the full flexibility of Python’s f-strings, but return a Template instance that gives access to the static and interpolated (in curly brackets) parts of a string before they are combined. To write a t-string, use a \u0027t\u0027 prefix instead of an \u0027f\u0027, like so: \u003e\u003e\u003e pi \u003d 3.14\n\u003e\u003e\u003e t\u0027t-strings are new in Python {pi!s}!\u0027\nTemplate(\n   strings\u003d(\u0027t-strings are new in Python \u0027, \u0027!\u0027),\n   interpolations\u003d(Interpolation(3.14, \u0027pi\u0027, \u0027s\u0027, \u0027\u0027),)\n)\n Types¶ class string.templatelib.Template¶ The Template class describes the contents of a template string. It is immutable, meaning that attributes of a template cannot be reassigned. The most common way to create a Template instance is to use the template string literal syntax. This syntax is identical to that of f-strings, except that it uses a t prefix in place of an f: \u003e\u003e\u003e cheese \u003d \u0027Red Leicester\u0027\n\u003e\u003e\u003e template \u003d t\"We\u0027re fresh out of {cheese}, sir.\"\n\u003e\u003e\u003e type(template)\n\u003cclass \u0027string.templatelib.Template\u0027\u003e\n Templates are stored as sequences of literal strings and dynamic interpolations. A values attribute holds the values of the interpolations: \u003e\u003e\u003e cheese \u003d \u0027Camembert\u0027\n\u003e\u003e\u003e template \u003d t\u0027Ah! We do have {cheese}.\u0027\n\u003e\u003e\u003e template.strings\n(\u0027Ah! We do have \u0027, \u0027.\u0027)\n\u003e\u003e\u003e template.interpolations\n(Interpolation(\u0027Camembert\u0027, ...),)\n\u003e\u003e\u003e template.values\n(\u0027Camembert\u0027,)\n The strings tuple has one more element than interpolations and values; the interpolations “belong” between the strings. This may be easier to understand when tuples are aligned template.strings:  (\u0027Ah! We do have \u0027,              \u0027.\u0027)\ntemplate.values:   (                   \u0027Camembert\u0027,    )\n Attributes strings: tuple[str, ...]¶ A tuple of the static strings in the template. \u003e\u003e\u003e cheese \u003d \u0027Camembert\u0027\n\u003e\u003e\u003e template \u003d t\u0027Ah! We do have {cheese}.\u0027\n\u003e\u003e\u003e template.strings\n(\u0027Ah! We do have \u0027, \u0027.\u0027)\n Empty strings are included in the tuple: \u003e\u003e\u003e response \u003d \u0027We do have \u0027\n\u003e\u003e\u003e cheese \u003d \u0027Camembert\u0027\n\u003e\u003e\u003e template \u003d t\u0027Ah! {response}{cheese}.\u0027\n\u003e\u003e\u003e template.strings\n(\u0027Ah! \u0027, \u0027\u0027, \u0027.\u0027)\n The strings tuple is never empty, and always contains one more string than the interpolations and values tuples: \u003e\u003e\u003e t\u0027\u0027.strings\n(\u0027\u0027,)\n\u003e\u003e\u003e t\u0027\u0027.values\n()\n\u003e\u003e\u003e t\u0027{\u0027cheese\u0027}\u0027.strings\n(\u0027\u0027, \u0027\u0027)\n\u003e\u003e\u003e t\u0027{\u0027cheese\u0027}\u0027.values\n(\u0027cheese\u0027,)\n interpolations: tuple[Interpolation, ...]¶ A tuple of the interpolations in the template. \u003e\u003e\u003e cheese \u003d \u0027Camembert\u0027\n\u003e\u003e\u003e template \u003d t\u0027Ah! We do have {cheese}.\u0027\n\u003e\u003e\u003e template.interpolations\n(Interpolation(\u0027Camembert\u0027, \u0027cheese\u0027, None, \u0027\u0027),)\n The interpolations tuple may be empty and always contains one fewer values than the strings tuple: \u003e\u003e\u003e t\u0027Red Leicester\u0027.interpolations\n()\n values: tuple[object, ...]¶ A tuple of all interpolated values in the template. \u003e\u003e\u003e cheese \u003d \u0027Camembert\u0027\n\u003e\u003e\u003e template \u003d t\u0027Ah! We do have {cheese}.\u0027\n\u003e\u003e\u003e template.values\n(\u0027Camembert\u0027,)\n The values tuple always has the same length as the interpolations tuple. It is always equivalent to tuple(i.value for i in template.interpolations). Methods __new__(*args: str | Interpolation)¶ While literal syntax is the most common way to create a Template, it is also possible to create them directly using the constructor: \u003e\u003e\u003e from string.templatelib import Interpolation, Template\n\u003e\u003e\u003e cheese \u003d \u0027Camembert\u0027\n\u003e\u003e\u003e template \u003d Template(\n...     \u0027Ah! We do have \u0027, Interpolation(cheese, \u0027cheese\u0027), \u0027.\u0027\n... )\n\u003e\u003e\u003e list(template)\n[\u0027Ah! We do have \u0027, Interpolation(\u0027Camembert\u0027, \u0027cheese\u0027, None, \u0027\u0027), \u0027.\u0027]\n If multiple strings are passed consecutively, they will be concatenated into a single value in the strings attribute. For example, the following code creates a Template with a single final string: \u003e\u003e\u003e from string.templatelib import Template\n\u003e\u003e\u003e template \u003d Template(\u0027Ah! We do have \u0027, \u0027Camembert\u0027, \u0027.\u0027)\n\u003e\u003e\u003e template.strings\n(\u0027Ah! We do have Camembert.\u0027,)\n If multiple interpolations are passed consecutively, they will be treated as separate interpolations and an empty string will be inserted between them. For example, the following code creates a template with empty placeholders in the strings attribute: \u003e\u003e\u003e from string.templatelib import Interpolation, Template\n\u003e\u003e\u003e template \u003d Template(\n...     Interpolation(\u0027Camembert\u0027, \u0027cheese\u0027),\n...     Interpolation(\u0027.\u0027, \u0027punctuation\u0027),\n... )\n\u003e\u003e\u003e template.strings\n(\u0027\u0027, \u0027\u0027, \u0027\u0027)\n iter(template) Iterate over the template, yielding each non-empty string and Interpolation in the correct order: \u003e\u003e\u003e cheese \u003d \u0027Camembert\u0027\n\u003e\u003e\u003e list(t\u0027Ah! We do have {cheese}.\u0027)\n[\u0027Ah! We do have \u0027, Interpolation(\u0027Camembert\u0027, \u0027cheese\u0027, None, \u0027\u0027), \u0027.\u0027]\n Caution Empty strings are not included in the iteration: \u003e\u003e\u003e response \u003d",
+    "scrapedAt": "2026-05-09 01:22:10.99803"
+  },
+  {
+    "id": 1495,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteUCS4",
+    "title": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Unicode Objects and Codecs | Theme Auto Light Dark | Unicode Objects and Codecs¶ Unicode Objects¶ Since the implementation of PEP 393 in Python 3.3, Unicode objects internally use a variety of representations, in order to allow handling the complete range of Unicode characters while staying memory efficient. There are special cases for strings where all code points are below 128, 256, or 65536; otherwise, code points must be below 1114112 (which is the full Unicode range). UTF-8 representation is created on demand and cached in the Unicode object. Note The Py_UNICODE representation has been removed since Python 3.12 with deprecated APIs. See PEP 623 for more information. Unicode Type¶ These are the basic Unicode object types used for the Unicode implementation in Python: PyTypeObject PyUnicode_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode type. It is exposed to Python code as str. PyTypeObject PyUnicodeIter_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode iterator type. It is used to iterate over Unicode string objects. type Py_UCS4¶ type Py_UCS2¶ type Py_UCS1¶ Part of the Stable ABI. These types are typedefs for unsigned integer types wide enough to contain characters of 32 bits, 16 bits and 8 bits, respectively. When dealing with single Unicode characters, use Py_UCS4. Added in version 3.3. type PyASCIIObject¶ type PyCompactUnicodeObject¶ type PyUnicodeObject¶ These subtypes of PyObject represent a Python Unicode object. In almost all cases, they shouldn’t be used directly, since all API functions that deal with Unicode objects take and return PyObject pointers. Added in version 3.3. The structure of a particular object can be determined using the following macros. The macros cannot fail; their behavior is undefined if their argument is not a Python Unicode object. PyUnicode_IS_COMPACT(o)¶ True if o uses the PyCompactUnicodeObject structure. Added in version 3.3. PyUnicode_IS_COMPACT_ASCII(o)¶ True if o uses the PyASCIIObject structure. Added in version 3.3. The following APIs are C macros and static inlined functions for fast checks and access to internal read-only data of Unicode objects: int PyUnicode_Check(PyObject *obj)¶ Return true if the object obj is a Unicode object or an instance of a Unicode subtype. This function always succeeds. int PyUnicode_CheckExact(PyObject *obj)¶ Return true if the object obj is a Unicode object, but not an instance of a subtype. This function always succeeds. Py_ssize_t PyUnicode_GET_LENGTH(PyObject *unicode)¶ Return the length of the Unicode string, in code points. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. Py_UCS1 *PyUnicode_1BYTE_DATA(PyObject *unicode)¶ Py_UCS2 *PyUnicode_2BYTE_DATA(PyObject *unicode)¶ Py_UCS4 *PyUnicode_4BYTE_DATA(PyObject *unicode)¶ Return a pointer to the canonical representation cast to UCS1, UCS2 or UCS4 integer types for direct character access. No checks are performed if the canonical representation has the correct character size; use PyUnicode_KIND() to select the right function. Added in version 3.3. PyUnicode_1BYTE_KIND¶ PyUnicode_2BYTE_KIND¶ PyUnicode_4BYTE_KIND¶ Return values of the PyUnicode_KIND() macro. Added in version 3.3. Changed in version 3.12: PyUnicode_WCHAR_KIND has been removed. int PyUnicode_KIND(PyObject *unicode)¶ Return one of the PyUnicode kind constants (see above) that indicate how many bytes per character this Unicode object uses to store its data. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void *PyUnicode_DATA(PyObject *unicode)¶ Return a void pointer to the raw Unicode buffer. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void PyUnicode_WRITE(int kind, void *data, Py_ssize_t index, Py_UCS4 value)¶ Write the code point value to the given zero-based index in a string. The kind value and data pointer must have been obtained from a string using PyUnicode_KIND() and PyUnicode_DATA() respectively. You must hold a reference to that string while calling PyUnicode_WRITE(). All requirements of PyUnicode_WriteChar() also apply. The function performs no checks for any of its requirements, and is intended for usage in loops. Added in version 3.3. Py_UCS4 PyUnicode_READ(int kind, void *data, Py_ssize_t index)¶ Read a code point from a canonical representation data (as obtained with PyUnicode_DATA()). No checks or ready calls are performed. Added in version 3.3. Py_UCS4 PyUnicode_READ_CHAR(PyObject *unicode, Py_ssize_t index)¶ Read a character from a Unicode object unicode, which must be in the “canonical” representation. This is less efficient than PyUnicode_READ() if you do multiple consecutive reads. Added in version 3.3. Py_U",
+    "scrapedAt": "2026-05-09 01:22:09.75901"
+  },
+  {
+    "id": 1494,
+    "url": "https://www.sphinx-doc.org/",
+    "title": "Sphinx — Sphinx documentation",
+    "content": "GitHub Expand Sphinx Navigation Documentation » Sphinx On this page Sphinx Get started User guide Community guide Reference guide The Basics Installing Sphinx Getting started Build your first project User guide Using Sphinx Extending Sphinx Sphinx API LaTeX customization Community Get support Contribute to Sphinx Sphinx FAQ Sphinx authors Reference Command-line tools Configuration Extensions reStructuredText Glossary Changelog Projects using Sphinx Sphinx¶ Create intelligent and beautiful documentation with ease 📝 Rich Text Formatting Author in reStructuredText or MyST Markdown to create highly structured technical documents, including tables, highlighted code blocks, mathematical notations, and more. 🔗 Powerful Cross-Referencing Create cross-references within your project, and even across different projects. Include references to sections, figures, tables, citations, glossaries, code objects, and more. 📚 Versatile Documentation Formats Generate documentation in the preferred formats of your audience, including HTML, LaTeX (for PDF), ePub, Texinfo, and more. 🎨 Extensive Theme Support Create visually appealing documentation, with a wide choice of built-in and third-party HTML themes and the ability to customize or create new themes. 🔌 Fully Extensible Add custom functionality, via robust extension mechanisms with numerous built-in and third-party extensions available for tasks like creating diagrams, testing code, and more. 🛠️ Automatic API Documentation Generate API documentation for Python, C++ and other software domains, manually or automatically from docstrings, ensuring your code documentation stays up-to-date with minimal effort. 🌍 Internationalization (i18n) Add documentation translations multiple languages to reach a global audience. 🌟 Active Community and Support Benefit from an active community, with numerous resources, tutorials, forums, and examples. As used by: Python¶ Linux Kernel¶ Project Jupyter¶ See below for how to navigate Sphinx’s documentation. See also The Sphinx documentation Table of Contents has a full list of this site’s pages. Get started¶ These sections cover the basics of getting started with Sphinx, including creating and building your own documentation from scratch. The Basics Installing Sphinx PyPI package Conda package OS-specific package manager Docker Installation of the latest development release Installation from source Getting started Setting up the documentation sources Defining document structure Adding content Running the build Documenting objects Basic configuration Autodoc Intersphinx More topics to be covered Build your first project Getting started First steps to document your project using Sphinx More Sphinx customization Narrative documentation in Sphinx Describing code in Sphinx Automatic documentation generation from code Appendix: Deploying a Sphinx project online Where to go from here User guide¶ These sections cover various topics in using and extending Sphinx for various use-cases. They are a comprehensive guide to using Sphinx in many contexts and assume more knowledge of Sphinx. If you are new to Sphinx, we recommend starting with Get started. User guide Using Sphinx reStructuredText Markdown Cross-references Configuration Builders Domains Extensions HTML theming Internationalization Sphinx Web Support Extending Sphinx Tutorials How-tos HTML theme development Sphinx API Important objects Build phases Extension metadata APIs used for writing extensions LaTeX customization The latex_elements configuration setting The sphinxsetup configuration setting Additional CSS-like \u0027sphinxsetup\u0027 keys LaTeX macros and environments Community guide¶ Sphinx is community supported and welcomes contributions from anybody. The sections below should help you get started joining the Sphinx community as well as contributing. See the Sphinx contributors’ guide if you would like to contribute to the project. Community Get support Contribute to Sphinx Contributing to Sphinx Sphinx’s release process Organization of the Sphinx project Sphinx Code of Conduct Sphinx FAQ How do I… Using Sphinx with… Sphinx vs. Docutils Epub info Texinfo info Sphinx authors Maintainers Contributors Former maintainers Reference guide¶ Reference documentation is more complete and programmatic in nature, it is a collection of information that can be quickly referenced. If you would like usecase-driven documentation, see Get started or User guide. Reference Command-line tools Core applications Additional applications Configuration Project tags Project information General configuration Builder options Domain options Extension options Example configuration file Extensions Built-in extensions Third-party extensions reStructuredText reStructuredText Primer Roles Directives Field Lists Glossary Changelog Release 9.1.0 (released Dec 31, 2025) Prior releases Projects using Sphinx Documentation using the alabaster theme Documentation using the classic theme Documentation using the sphinxdoc theme Documentat",
+    "scrapedAt": "2026-05-09 01:22:08.508219"
+  },
+  {
+    "id": 1493,
+    "url": "https://docs.python.org/3/library/functions.html#float",
+    "title": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Functions | Theme Auto Light Dark | Built-in Functions¶ The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order. Built-in Functions A abs() aiter() all() anext() any() ascii() B bin() bool() breakpoint() bytearray() bytes() C callable() chr() classmethod() compile() complex() D delattr() dict() dir() divmod() E enumerate() eval() exec() F filter() float() format() frozenset() G getattr() globals() H hasattr() hash() help() hex() I id() input() int() isinstance() issubclass() iter() L len() list() locals() M map() max() memoryview() min() N next() O object() oct() open() ord() P pow() print() property() R range() repr() reversed() round() S set() setattr() slice() sorted() staticmethod() str() sum() super() T tuple() type() V vars() Z zip() _ __import__() abs(number, /)¶ Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__(). If the argument is a complex number, its magnitude is returned. aiter(async_iterable, /)¶ Return an asynchronous iterator for an asynchronous iterable. Equivalent to calling x.__aiter__(). Note: Unlike iter(), aiter() has no 2-argument variant. Added in version 3.10. all(iterable, /)¶ Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to: def all(iterable):\n    for element in iterable:\n        if not element:\n            return False\n    return True\n awaitable anext(async_iterator, /)¶ awaitable anext(async_iterator, default, /) When awaited, return the next item from the given asynchronous iterator, or default if given and the iterator is exhausted. This is the async variant of the next() builtin, and behaves similarly. This calls the __anext__() method of async_iterator, returning an awaitable. Awaiting this returns the next value of the iterator. If default is given, it is returned if the iterator is exhausted, otherwise StopAsyncIteration is raised. Added in version 3.10. any(iterable, /)¶ Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to: def any(iterable):\n    for element in iterable:\n        if element:\n            return True\n    return False\n ascii(object, /)¶ As repr(), return a string containing a printable representation of an object, but escape the non-ASCII characters in the string returned by repr() using \\x, \\u, or \\U escapes. This generates a string similar to that returned by repr() in Python 2. bin(integer, /)¶ Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If integer is not a Python int object, it has to define an __index__() method that returns an integer. Some examples: \u003e\u003e\u003e bin(3)\n\u00270b11\u0027\n\u003e\u003e\u003e bin(-10)\n\u0027-0b1010\u0027\n If the prefix “0b” is desired or not, you can use either of the following ways. \u003e\u003e\u003e format(14, \u0027#b\u0027), format(14, \u0027b\u0027)\n(\u00270b1110\u0027, \u00271110\u0027)\n\u003e\u003e\u003e f\u0027{14:#b}\u0027, f\u0027{14:b}\u0027\n(\u00270b1110\u0027, \u00271110\u0027)\n See also enum.bin() to represent negative values as twos-complement. See also format() for more information. class bool(object\u003dFalse, /)¶ Return a Boolean value, i.e. one of True or False. The argument is converted using the standard truth testing procedure. If the argument is false or omitted, this returns False; otherwise, it returns True. The bool class is a subclass of int (see Numeric Types — int, float, complex). It cannot be subclassed further. Its only instances are False and True (see Boolean Type - bool). Changed in version 3.7: The parameter is now positional-only. breakpoint(*args, **kws)¶ This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or type as much code to enter the debugger. However, sys.breakpointhook() can be set to some other function and breakpoint() will automatically call that, allowing you to drop into the debugger of choice. If sys.breakpointhook() is not accessible, this function will raise RuntimeError. By default, the behavior of breakpoint() can be changed with the PYTHONBREAKPOINT environment variable. See sys.breakpointhook() for usage details. Note that this is not guaranteed if sys.breakpointhook() has been replaced. Raises an auditing event builtins.breakpoint with argument breakpointhook. Added in version 3.7. class bytearray(source\u003db\u0027\u0027) class bytearray(source, encoding, errors\u003d\u0027strict\u0027) Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 \u003c\u003d x \u003c 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and ",
+    "scrapedAt": "2026-05-09 01:22:06.945757"
+  },
+  {
     "id": 1492,
     "url": "https://github.com/python/cpython/issues/84850",
     "title": "remove deprecated urllib.request.URLopener/FancyURLopener · Issue #84850 · python/cpython · GitHub",
@@ -10043,26 +10078,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1493,
-    "url": "https://docs.python.org/3/library/functions.html#float"
-  },
-  {
-    "id": 1494,
-    "url": "https://www.sphinx-doc.org/"
-  },
-  {
-    "id": 1495,
-    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteUCS4"
-  },
-  {
-    "id": 1496,
-    "url": "https://docs.python.org/3/library/string.templatelib.html#module-string.templatelib"
-  },
-  {
-    "id": 1497,
-    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html"
   },
   {
     "id": 1498,
@@ -235595,10 +235610,815 @@ window.searchData = [
     "id": 312969,
     "url": "https://bugs.python.org/issue40673",
     "parentUrl": "https://github.com/python/cpython/issues/84850"
+  },
+  {
+    "id": 313276,
+    "url": "https://www.sphinx-doc.org/en/master/usage/quickstart.html#documenting-objects",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313277,
+    "url": "https://www.sphinx-doc.org/en/master/usage/configuration.html#project-tags",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313278,
+    "url": "https://www.sphinx-doc.org/en/master/usage/installation.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313279,
+    "url": "https://www.sphinx-doc.org/en/master/internals/organization.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313280,
+    "url": "https://www.sphinx-doc.org/en/master/usage/configuration.html#extension-options",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313281,
+    "url": "https://www.sphinx-doc.org/en/master/tutorial/more-sphinx-customization.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313282,
+    "url": "https://www.sphinx-doc.org/en/master/usage/quickstart.html#defining-document-structure",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313283,
+    "url": "https://www.sphinx-doc.org/en/master/development/index.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313284,
+    "url": "https://www.sphinx-doc.org/en/master/usage/theming.html#third-party-themes",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313285,
+    "url": "https://www.sphinx-doc.org/en/master/usage/installation.html#installation-from-source",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313286,
+    "url": "https://www.sphinx-doc.org/en/master/examples.html#projects-integrating-sphinx-functionality",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313287,
+    "url": "https://www.sphinx-doc.org/en/master/usage/configuration.html#domain-options",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313288,
+    "url": "https://www.sphinx-doc.org/en/master/tutorial/getting-started.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313289,
+    "url": "https://www.sphinx-doc.org/en/master/usage/quickstart.html#adding-content",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313290,
+    "url": "https://www.sphinx-doc.org/en/master/examples.html#documentation-using-read-the-docs-sphinx-theme",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313291,
+    "url": "https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313292,
+    "url": "https://www.sphinx-doc.org/en/master/extdev/index.html#extension-metadata",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313293,
+    "url": "https://www.sphinx-doc.org/en/master/latex.html#the-sphinxsetup-configuration-setting",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313294,
+    "url": "https://www.sphinx-doc.org/en/master/examples.html#documentation-using-the-nature-theme",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313295,
+    "url": "https://www.sphinx-doc.org/en/master/usage/markdown.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313296,
+    "url": "https://www.sphinx-doc.org/en/master/#user-guides",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313297,
+    "url": "https://www.sphinx-doc.org/en/master/internals/index.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313298,
+    "url": "https://docs.jupyter.org",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313299,
+    "url": "https://www.sphinx-doc.org/en/master/usage/quickstart.html#intersphinx",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313300,
+    "url": "https://www.sphinx-doc.org/en/master/authors.html#maintainers",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313301,
+    "url": "https://www.sphinx-doc.org/en/master/usage/configuration.html#example-configuration-file",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313302,
+    "url": "https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313303,
+    "url": "https://www.sphinx-doc.org/en/master/#user-guide",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313304,
+    "url": "https://www.sphinx-doc.org/en/master/authors.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313305,
+    "url": "https://www.sphinx-doc.org/en/master/usage/domains/index.html#usage-domains",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313306,
+    "url": "https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#rst-primer",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313307,
+    "url": "https://www.sphinx-doc.org/en/master/usage/installation.html#docker",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313308,
+    "url": "https://www.sphinx-doc.org/en/master/usage/quickstart.html#running-the-build",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313309,
+    "url": "https://www.sphinx-doc.org/en/master/usage/extensions/index.html#built-in-extensions",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313310,
+    "url": "https://www.sphinx-doc.org/en/master/usage/advanced/websupport/index.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313311,
+    "url": "https://www.sphinx-doc.org/en/master/support.html#support-index",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313312,
+    "url": "https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313313,
+    "url": "https://www.sphinx-doc.org/en/master/examples.html#documentation-using-a-custom-theme-or-integrated-in-a-website",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313314,
+    "url": "https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313315,
+    "url": "https://www.sphinx-doc.org/en/master/latex.html#additional-css-like-sphinxsetup-keys",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313316,
+    "url": "https://www.sphinx-doc.org/en/master/changes/index.html#release-9-1-0-released-dec-31-2025",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313317,
+    "url": "https://www.sphinx-doc.org/en/master/tutorial/automatic-doc-generation.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313318,
+    "url": "https://www.sphinx-doc.org/en/master/tutorial/deploying.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313319,
+    "url": "https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313320,
+    "url": "https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#ext-autodoc",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313321,
+    "url": "https://www.sphinx-doc.org/en/master/usage/installation.html#os-specific-package-manager",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313322,
+    "url": "https://www.sphinx-doc.org/en/master/usage/installation.html#installation-of-the-latest-development-release",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313323,
+    "url": "https://docs.kernel.org/",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313324,
+    "url": "https://www.sphinx-doc.org/en/master/support.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313325,
+    "url": "https://www.sphinx-doc.org/en/master/faq.html#sphinx-vs-docutils",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313326,
+    "url": "https://www.sphinx-doc.org/en/master/usage/builders/index.html#builders",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313327,
+    "url": "https://www.sphinx-doc.org/en/master/usage/quickstart.html#basic-configuration",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313328,
+    "url": "https://www.sphinx-doc.org/en/master/examples.html#documentation-using-furo-theme",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313329,
+    "url": "https://www.sphinx-doc.org/en/master/examples.html#documentation-using-the-sphinxdoc-theme",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313330,
+    "url": "https://www.sphinx-doc.org/en/master/usage/quickstart.html#autodoc",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313331,
+    "url": "https://www.sphinx-doc.org/en/master/examples.html#documentation-using-another-builtin-theme",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313332,
+    "url": "https://www.sphinx-doc.org/en/master/usage/index.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313333,
+    "url": "https://www.sphinx-doc.org/en/master/usage/theming.html#builtin-themes",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313334,
+    "url": "https://www.sphinx-doc.org/en/master/faq.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313336,
+    "url": "https://www.sphinx-doc.org/en/master/usage/extensions/index.html#builtin-extensions",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313337,
+    "url": "https://www.sphinx-doc.org/en/master/changes/index.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313338,
+    "url": "https://www.sphinx-doc.org/en/master/faq.html#epub-info",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313339,
+    "url": "https://www.sphinx-doc.org/en/master/extdev/index.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313340,
+    "url": "https://www.sphinx-doc.org/en/master/examples.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313341,
+    "url": "https://www.sphinx-doc.org/en/master/#get-started",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313342,
+    "url": "https://www.sphinx-doc.org/en/master/extdev/index.html#apis-used-for-writing-extensions",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313343,
+    "url": "https://www.sphinx-doc.org/en/master/examples.html#documentation-using-pydata-sphinx-theme",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313344,
+    "url": "https://github.com/sphinx-doc/sphinx",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313345,
+    "url": "https://www.sphinx-doc.org/en/master/usage/advanced/intl.html#intl",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313346,
+    "url": "https://www.sphinx-doc.org/en/master/usage/extensions/index.html#third-party-extensions",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313347,
+    "url": "https://www.sphinx-doc.org/en/master/examples.html#documentation-using-the-classic-theme",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313348,
+    "url": "https://www.sphinx-doc.org/en/master/examples.html#books-produced-using-sphinx",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313349,
+    "url": "https://www.sphinx-doc.org/en/master/faq.html#how-do-i",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313350,
+    "url": "https://www.sphinx-doc.org/en/master/tutorial/describing-code.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313351,
+    "url": "https://www.sphinx-doc.org/en/master/development/index.html#extending-sphinx",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313352,
+    "url": "https://www.sphinx-doc.org/en/master/tutorial/narrative-documentation.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313353,
+    "url": "https://www.sphinx-doc.org/en/master/#community-guide",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313354,
+    "url": "https://www.sphinx-doc.org/en/master/latex.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313355,
+    "url": "https://www.sphinx-doc.org/en/master/latex.html#the-latex-elements-configuration-setting",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313356,
+    "url": "https://www.sphinx-doc.org/en/master/usage/quickstart.html#setting-up-the-documentation-sources",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313357,
+    "url": "https://www.sphinx-doc.org/en/master/usage/theming.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313358,
+    "url": "https://www.sphinx-doc.org/en/master/man/index.html#core-applications",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313359,
+    "url": "https://www.sphinx-doc.org/en/master/man/index.html#additional-applications",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313360,
+    "url": "https://www.sphinx-doc.org/en/master/usage/advanced/intl.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313361,
+    "url": "https://www.sphinx-doc.org/en/master/usage/builders/index.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313362,
+    "url": "https://www.sphinx-doc.org/en/master/extdev/index.html#important-objects",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313363,
+    "url": "https://www.sphinx-doc.org/en/master/faq.html#texinfo-info",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313364,
+    "url": "https://www.sphinx-doc.org/en/master/changes/index.html#prior-releases",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313365,
+    "url": "https://www.sphinx-doc.org/en/master/development/tutorials/index.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313366,
+    "url": "https://www.sphinx-doc.org/en/master/usage/extensions/index.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313367,
+    "url": "https://www.sphinx-doc.org/en/master/examples.html#theses-produced-using-sphinx",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313368,
+    "url": "https://www.sphinx-doc.org/en/master/man/index.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313369,
+    "url": "https://www.sphinx-doc.org/en/master/glossary.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313370,
+    "url": "https://www.sphinx-doc.org/en/master/usage/configuration.html#builder-options",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313371,
+    "url": "https://www.sphinx-doc.org/en/master/#id2",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313372,
+    "url": "https://www.sphinx-doc.org/en/master/examples.html#documentation-using-the-alabaster-theme",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313373,
+    "url": "https://www.sphinx-doc.org/en/master/#id3",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313374,
+    "url": "https://www.sphinx-doc.org/en/master/usage/markdown.html#markdown",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313375,
+    "url": "https://www.sphinx-doc.org/en/master/#id4",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313376,
+    "url": "https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313377,
+    "url": "https://www.sphinx-doc.org/en/master/internals/release-process.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313378,
+    "url": "https://www.sphinx-doc.org/en/master/examples.html#homepages-and-other-non-documentation-sites",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313379,
+    "url": "https://www.sphinx-doc.org/en/master/extdev/index.html#build-phases",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313380,
+    "url": "https://www.sphinx-doc.org/en/master/faq.html#using-sphinx-with",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313382,
+    "url": "https://www.sphinx-doc.org/en/master/usage/quickstart.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313383,
+    "url": "https://www.sphinx-doc.org/en/master/#reference-guide",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313384,
+    "url": "https://www.sphinx-doc.org/en/master/",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313385,
+    "url": "https://www.sphinx-doc.org/en/master/authors.html#former-maintainers",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313386,
+    "url": "https://www.sphinx-doc.org/en/master/development/html_themes/index.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313387,
+    "url": "https://www.sphinx-doc.org/en/master/development/howtos/index.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313388,
+    "url": "https://www.sphinx-doc.org/en/master/latex.html#latex-macros-and-environments",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313389,
+    "url": "https://www.sphinx-doc.org/en/master/#",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313390,
+    "url": "https://www.sphinx-doc.org/en/master/usage/installation.html#conda-package",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313391,
+    "url": "https://www.sphinx-doc.org/en/master/usage/quickstart.html#more-topics-to-be-covered",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313392,
+    "url": "https://www.sphinx-doc.org/en/master/usage/configuration.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313393,
+    "url": "https://www.sphinx-doc.org/en/master/usage/referencing.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313394,
+    "url": "https://www.sphinx-doc.org/en/master/usage/installation.html#pypi-package",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313395,
+    "url": "https://www.sphinx-doc.org/en/master/internals/contributing.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313396,
+    "url": "https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313397,
+    "url": "https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#ext-intersphinx",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313398,
+    "url": "https://www.sphinx-doc.org/en/master/tutorial/first-steps.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313399,
+    "url": "https://www.sphinx-doc.org/en/master/internals/code-of-conduct.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313400,
+    "url": "https://www.sphinx-doc.org/en/master/usage/referencing.html#xref",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313401,
+    "url": "https://www.sphinx-doc.org/en/master/development/html_themes/index.html#extension-html-theme",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313402,
+    "url": "https://www.sphinx-doc.org/en/master/usage/domains/index.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313403,
+    "url": "https://www.sphinx-doc.org/en/master/contents.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313404,
+    "url": "https://www.sphinx-doc.org/en/master/examples.html#documentation-using-sphinx-bootstrap-theme",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313405,
+    "url": "https://www.sphinx-doc.org/en/master/tutorial/end.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313406,
+    "url": "https://www.sphinx-doc.org/en/master/tutorial/index.html",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313407,
+    "url": "https://www.sphinx-doc.org/en/master/#sphinx",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313408,
+    "url": "https://www.sphinx-doc.org/en/master/authors.html#contributors",
+    "parentUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "id": 313718,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313719,
+    "url": "https://datatracker.ietf.org/doc/draft-leiba-imap-idle/01/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313720,
+    "url": "https://datatracker.ietf.org/doc/rfc2177/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313721,
+    "url": "https://datatracker.ietf.org/doc/rfc2177/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313722,
+    "url": "https://www.rfc-editor.org/rfc/rfc2177.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313723,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#ref-IMAP4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313725,
+    "url": "https://www.rfc-editor.org/rfc/pdfrfc/rfc2177.txt.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313726,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2060",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313727,
+    "url": "https://www.rfc-editor.org/rfc/rfc2177.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313728,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313730,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313731,
+    "url": "https://datatracker.ietf.org/person/barryleiba@gmail.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313732,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313733,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313734,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313735,
+    "url": "https://datatracker.ietf.org/doc/html/draft-leiba-imap-idle-01",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313736,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
+  },
+  {
+    "id": 313738,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2177.html#section-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2177.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "string.templatelib — Support for template string literals — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/string.templatelib.html#module-string.templatelib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "string.templatelib — Support for template string literals — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/string.templatelib.html#module-string.templatelib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteUCS4"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteUCS4"
+  },
+  {
+    "src": "https://www.sphinx-doc.org/en/master/_static/sphinx-logo.svg",
+    "alt": "logo",
+    "pageTitle": "Sphinx — Sphinx documentation",
+    "pageUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "src": "https://www.sphinx-doc.org/en/master/_images/python-logo.png",
+    "alt": "Python Logo",
+    "pageTitle": "Sphinx — Sphinx documentation",
+    "pageUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "src": "https://www.sphinx-doc.org/en/master/_images/linux-logo.png",
+    "alt": "Linux Logo",
+    "pageTitle": "Sphinx — Sphinx documentation",
+    "pageUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "src": "https://www.sphinx-doc.org/en/master/_images/jupyter-logo.png",
+    "alt": "Jupyter Logo",
+    "pageTitle": "Sphinx — Sphinx documentation",
+    "pageUrl": "https://www.sphinx-doc.org/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#float"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#float"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/93804622?v\u003d4\u0026size\u003d80",
     "alt": "@PetterS",
