@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 20,
+    "url": "https://www.bbc.co.uk/bitesize/articles/z3w93qt",
+    "title": "An article for parents on how to support their teen\u0027s wellbeing when revising for their GCSEs. - BBC Bitesize",
+    "content": "It’s the return of exam season. Over a million students take GCSEs or Nationals across the UK every year. And if a teenager in your household is revising for them, all you want is for them to do their best. It can be a stressful time for them and for you. Although there are practical ways to help them, like flashcard testing or revision timetables, there are also ways of supporting them emotionally. We caught up with Stevie from Young Minds - the Senior Manager of Parent and Carer Services - for her top tips on supporting teens with their wellbeing this exam season. Adjust your expectation of their role in the home As teens get more involved in their revision, they’ll naturally become more reserved and, potentially, irritable as their stress-load increases. “We need to look at how our routines and everyday life at home [and] need to accommodate the fact that [a] young person is probably going to be […] a bit more withdrawn from family or friends.” “So, just helping to ease the pressure and the load. It might be that you lessen the expectations on them doing loads of chores, for instance, or, not planning too much or making weekends and evenings busy and jam packed.” This isn’t to get them out of doing any chores. But Stevie mentioned that accommodating their revision period can do a lot to ease their own personal sense of pressure. Encourage them to take breaks We all know that frustration of spending hours cramming and not feeling the information going in. Often, this is the case: “There\u0027s a lot of research out there that says that beyond 20, 30 minutes, our ability to absorb information can really reduce.” If you notice your teen developing this habit, the best thing you can do to support them might be, “just offering permission” for them to take breaks. This could be as simple as taking them out to a café for a short revision break. Approach their school for additional support If you notice the teen in your household getting overwhelmed by their revision content or struggling with motivation, flagging this to schools can be a great way to get them the support they need. “I think there\u0027s a lot of value in always having that open dialogue, expressing your concerns and exploring whether there are things that the school could be doing.” This is particularly relevant for teens with SEND, continued Stevie, where mentioning issues early on will allow schools to, “hone in a bit more and sharpen their focus or maybe spend a bit more time observing and monitoring what\u0027s going on.” Encourage their efforts, not just the grades It’s natural to hope for high grades when you see the efforts your teen puts into their revision. But often mentioning exams or grades can increase their stress-load. Stevie pointed to a more productive place your direct your encouragement: “I think that sometimes we just focus on how high the grade is, but we ignore a young person might have put their absolute all in it.” By focussing on their effort, rather than simply the outcome, you might also be giving them the pep talk they need to keep going. “I think praising things like the motivation can spur them on. That can help keep them going through throughout that period.” Keep their options open While it’s important for teens to do the best they can in their exams, a linear route from school, to college, to university might not be the most suitable for them. “Another thing that we hear about is young people not really being presented withthe options that are available.” Stevie continued, “Maybe there\u0027s not that much dialogue about things like apprenticeships or the value of volunteering”. This was a topic touched on by Kerry Godliman in a recent episode of the Bitesize Parenting Podcast. She mentioned the conversations she was having with teachers about stepping back, rather than adding to a teen\u0027s exam anxiety with conversations about their future. If you think your child needs more support, let them know about helplines, textlines and online services that are available to them. You could also speak to your GP, who can provide help and refer them to mental health services if needs be. You could look at the resources together. The BBC Action Line is a good place to start. If you’re not sure of what to do and need some extra support, visit the Young Minds website for more advice. More from BBC Bitesize Parenting… How to help teenagers revise - and deal with exam stress. videoHow to help teenagers revise - and deal with exam stress Comedian Charlie Baker talks to Kerry Godliman about his difficulties getting his son to revise, helping teenagers find their path in life and how parents can help. Results Day: Parents\u0027 fears and expert advice A child psychologist offers advice to real parents with results day anxieties and expectations. How to tackle anxiety with Dr Anna Colton Dr Anna has made seven short films with easy to learn techniques. How to transform a smaller space for study or work Many of us are having to make do with the little spaces",
+    "scrapedAt": "2026-05-08 22:15:03.508361"
+  },
+  {
+    "id": 19,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t",
+    "title": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "content": "Live. 23,233 viewing23233 viewing Live pageUpdated 1 minute ago Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat Radio Wales Election 2026 BBC Radio Wales Close To play this video you need to enable JavaScript in your browser. This video can not be played Radio Wales Election 2026 BBC Radio Wales Listen live Summary Plaid Cymru and Reform UK lead the way as constituencies announce results in the race for the Senedd, with the full picture known by this evening First Minister Eluned Morgan to lose seat, multiple sources tell the BBC The deputy first minister says Labour is not going to form the next Welsh government, as the party admits defeat Newly elected Reform MS Dan Thomas, whose party topped the poll in Casnewydd Islwyn, has described his party as the \"people\u0027s army\" Plaid Cymru\u0027s Delyth Jewell says the election is a \"battle for Wales\u0027 soul\" and it\u0027s clear that Welsh voters are looking for change Early indications show that turnout figures will rise above 50% for the first time in a devolved election in Wales Elections are also taking place in England and Scotland. You can keep across the wider UK picture through our live coverage You can watch and listen to coverage of the election results by clicking play at the top of this page Scroll to previous item Scroll to next item 0:24The first ever result in the new-look Senedd. 00:00:24, play videoThe first ever result in the new-look Senedd 0:54Reform Wales leader\u0027s speech after winning seat. 00:00:54, play videoReform Wales leader\u0027s speech after winning seat 0:32Labour won\u0027t form next Welsh government, says deputy FM. 00:00:32, play videoLabour won\u0027t form next Welsh government, says deputy FM 0:46First result of Senedd election declared. 00:00:46, play videoFirst result of Senedd election declared 0:51It\u0027s election day: What are you hoping for? 00:00:51, play videoIt\u0027s election day: What are you hoping for? 1:01A quick look at the new Senedd voting system. 00:01:01, play videoA quick look at the new Senedd voting system 1:27Can you pronounce your constituency? 00:01:27, play videoCan you pronounce your constituency? 0:57The 6,000 votes that changed Wales forever 00:00:57, play videoThe 6,000 votes that changed Wales forever Live Reporting Edited by Oliver Slow and Adam Hale Share close panel Share page Copy link About sharing Plaid Cymru win 28,687 votes, while Reform win 22,217 and Labour win 9,344 votes. Share close panel Share page Copy link About sharing Share close panel Share page Copy link About sharing Image source, PA Media Speaking to BBC Wales after winning his seat, Dan Thomas says he doesn’t know if Nigel Farage will visit Wales later today. \"I\u0027d like to think he would,” he adds. \"But look, there\u0027s all sorts of results across England. \"I think he was in London this morning. So it’d be quite a trek to come over, but he\u0027s very welcome to come - I’ve not had time to check my phone yet.\" The newly elected member of the Senedd says that while it was still early days, there was \"no doubt\" Reform was a \"main contender for government\". Share close panel Share page Copy link About sharing Plaid Cymru has won three seats in Caerdydd Penarth, with Reform, Labour and the Greens each winning one seat. Plaid won 36,136 votes, while Reform won 15,525, Labour won 10,907 and Green party won 12,113 votes. Share close panel Share page Copy link About sharing Share close panel Share page Copy link About sharing Share close panel Share page Copy link About sharing Share close panel Share page Copy link About sharing Plaid Cymru and Reform win three seats each in Sir Gaerfyrddin. Plaid Cymru got 36,160 votes, with Reform second with 27,542 votes. Share close panel Share page Copy link About sharing It is looking increasingly the case that Labour\u0027s Alun Davies will lose his seat in Blaenau Gwent Caerffili Rhymni after a recount widened the gap between his party and Reform for the seventh seat. BBC Wales understood the gap to be 111 before the recount but its now about 200. If that\u0027s the case it is likely the seat will return three Plaid and three Reform members. Share close panel Share page Copy link About sharing Newly elected Reform MS Dan Thomas has spoken in Newport after his party came top of the poll in Casnewydd Islwyn. \"In just five years, Reform has gone from winning 1% of the vote in the Senedd elections to being the main contender for government, smashing Labour in the process,\" he says. \"It has taken Plaid Cymru decades to come anywhere near to the same. The momentum is with Reform because we are the people\u0027s army.\" Share close panel Share page Copy link About sharing The second seat has just been declared in Wales. Plaid Cymru has won 27,407 votes in Pen-y-Bont Morgannwg, with Reform coming second with 24,602 votes. Share close panel Share page Copy link About sharing Two seats have gone to Reform UK in Casnewydd Islwyn: One to the party\u0027s leader in Wales, Dan Thomas, and the other to Art Wright. Plaid Cymru\u0027s two seats",
+    "scrapedAt": "2026-05-08 22:15:02.330843"
+  },
+  {
+    "id": 18,
+    "url": "https://meowcat.site/posts",
+    "title": "",
+    "content": "Posts Write something about your posts. Or don\u0027t! 30 Apr 2026 — Why Wordpress didn\u0027t work. 16 Dec 2025 — How I accidentally deleted my bin folder 15 Dec 2025 — opening",
+    "scrapedAt": "2026-05-08 22:15:01.24725"
+  },
+  {
+    "id": 17,
+    "url": "https://meowcat.site/posts/How I accidentally deleted my bin folder/",
+    "title": "",
+    "content": "How I accidentally deleted my bin folder I accidentally deleted the whole of my bin folder. If you don\u0027t know much about Linux, know lots of system files live here, including bash, DE\u0027s, X11 and Wayland, among other things. I didn\u0027t check the command I was running for syntax errors, and nuked my system. OverlayFS Overlayed Filesystems is what my Linux distro of choice uses. My etc/ directory had become full, and I needed to install TeX. The command I ran was \"sudo rm -rf /etc/*\". I assumed this was the overlayed FS and not the main partition, but I was wrong. I got hit with \"sudo: you do not exist in the passwd database\" a few minutes later. cooked. What I did wrong Let\u0027s break down the command I ran. \"sudo\" is to run the rest of the command as root. This is normal, as I need permissions to operate in etc/. The next command \"rm\" with the flags \"-rf\" removes the passed file, and \"-rf\" is to force remove. I had passed \"/etc/\", \"/etc/\" being the directory, and \"\" being the files (all.) What I didn\u0027t realise is that I had not passed in the overlayFS, thus nuking my system. Conclusion Don\u0027t wildcard stuff. Previous: Why Wordpress didn\u0027t work. Next: opening",
+    "scrapedAt": "2026-05-08 22:14:59.84104"
+  },
+  {
+    "id": 16,
+    "url": "https://meowcat.site/posts/opening/",
+    "title": "",
+    "content": "opening After 2 hours of the \"great CSS war\", I present \"blog.meowcat.site\". It used to run off of WordPress (;-;), but now it\u0027s powered by 11ty! thats all I guess, you\u0027ve gotta wait out the next post. Previous: How I accidentally deleted my bin folder",
+    "scrapedAt": "2026-05-08 22:14:58.157226"
+  },
+  {
     "id": 15,
     "url": "https://meowcat.site/posts/Why wordpress didn\u0027t work/",
     "title": "",
@@ -103,26 +138,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-08 22:14:32.985064"
-  },
-  {
-    "id": 16,
-    "url": "https://meowcat.site/posts/opening/"
-  },
-  {
-    "id": 17,
-    "url": "https://meowcat.site/posts/How I accidentally deleted my bin folder/"
-  },
-  {
-    "id": 18,
-    "url": "https://meowcat.site/posts"
-  },
-  {
-    "id": 19,
-    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
-  },
-  {
-    "id": 20,
-    "url": "https://www.bbc.co.uk/bitesize/articles/z3w93qt"
   },
   {
     "id": 21,
@@ -4087,10 +4102,298 @@ window.searchData = [
   {
     "id": 1879,
     "url": "https://tweakers.net/nieuws/247620/ifixit-gaat-repareerbaarheid-koptelefoons-beoordelen-en-geeft-fairbuds-xl-een-10.html#reacties"
+  },
+  {
+    "id": 1887,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3A215e9ee2-acdd-4420-9ef6-8a93cec1ef30#post"
+  },
+  {
+    "id": 1888,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3A65064152-add9-430a-b541-51955bce5ae9#post"
+  },
+  {
+    "id": 1889,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3Ae90d2efd-d249-4fcb-a7a5-2424dc576ab8#post"
+  },
+  {
+    "id": 1890,
+    "url": "https://www.bbc.co.uk/usingthebbc/terms/can-i-share-things-from-the-bbc"
+  },
+  {
+    "id": 1892,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3A75114167-b763-4a4b-9354-6a08c5fb1694#post"
+  },
+  {
+    "id": 1894,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3A928282fa-6355-4089-8c5c-75df14650779#post"
+  },
+  {
+    "id": 1895,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zbrp7yc"
+  },
+  {
+    "id": 1896,
+    "url": "https://www.youngminds.org.uk/"
+  },
+  {
+    "id": 1897,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zsn6dnb"
+  },
+  {
+    "id": 1898,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zmy692p"
+  },
+  {
+    "id": 1899,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zbfrsk7"
+  },
+  {
+    "id": 1900,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zfnhxbk"
+  },
+  {
+    "id": 1901,
+    "url": "https://www.bbc.co.uk/bitesize/articles/zqv3sk7"
+  },
+  {
+    "id": 1902,
+    "url": "https://www.bbc.co.uk/bitesize/articles/z737rj6"
+  },
+  {
+    "id": 1904,
+    "url": "https://www.bbc.co.uk/bitesize/articles/z8r3ydm"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0nhttqk.jpg",
+    "alt": "",
+    "pageTitle": "An article for parents on how to support their teen\u0027s wellbeing when revising for their GCSEs. - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z3w93qt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0nhttvr.jpg",
+    "alt": "",
+    "pageTitle": "An article for parents on how to support their teen\u0027s wellbeing when revising for their GCSEs. - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z3w93qt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0nhttzc.jpg",
+    "alt": "",
+    "pageTitle": "An article for parents on how to support their teen\u0027s wellbeing when revising for their GCSEs. - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z3w93qt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0nhtv1t.jpg",
+    "alt": "",
+    "pageTitle": "An article for parents on how to support their teen\u0027s wellbeing when revising for their GCSEs. - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z3w93qt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0nhtv44.jpg",
+    "alt": "",
+    "pageTitle": "An article for parents on how to support their teen\u0027s wellbeing when revising for their GCSEs. - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z3w93qt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0f4zc17.jpg",
+    "alt": "",
+    "pageTitle": "An article for parents on how to support their teen\u0027s wellbeing when revising for their GCSEs. - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z3w93qt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0f4zc17.jpg",
+    "alt": "",
+    "pageTitle": "An article for parents on how to support their teen\u0027s wellbeing when revising for their GCSEs. - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z3w93qt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0n9xz8p.jpg",
+    "alt": "How to help teenagers revise - and deal with exam stress",
+    "pageTitle": "An article for parents on how to support their teen\u0027s wellbeing when revising for their GCSEs. - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z3w93qt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p09q4j5l.jpg",
+    "alt": "Results Day: Parents\u0027 fears and expert advice",
+    "pageTitle": "An article for parents on how to support their teen\u0027s wellbeing when revising for their GCSEs. - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z3w93qt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0fjqv72.jpg",
+    "alt": "How to tackle anxiety with Dr Anna Colton",
+    "pageTitle": "An article for parents on how to support their teen\u0027s wellbeing when revising for their GCSEs. - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z3w93qt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p08hvbsk.jpg",
+    "alt": "How to transform a smaller space for study or work",
+    "pageTitle": "An article for parents on how to support their teen\u0027s wellbeing when revising for their GCSEs. - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z3w93qt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0769pvq.jpg",
+    "alt": "What not to say to your kids during exam season",
+    "pageTitle": "An article for parents on how to support their teen\u0027s wellbeing when revising for their GCSEs. - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z3w93qt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480xn/p09793kq.jpg",
+    "alt": "How to chat with your child about their mental health",
+    "pageTitle": "An article for parents on how to support their teen\u0027s wellbeing when revising for their GCSEs. - BBC Bitesize",
+    "pageUrl": "https://www.bbc.co.uk/bitesize/articles/z3w93qt"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/796c/live/a3364660-4ae7-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Dan Thomas clapping",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk4xmd.jpg",
+    "alt": "Reporter",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/fbbe/live/5c394370-4aec-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Dan Thomas in a suit and a rosette",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/9f62/live/50d9b350-4ad5-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Huw Irranca-Davies",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk4t6d.jpg",
+    "alt": "Reform and Plaid Cymru win two seats apiece in the first result of the Senedd election",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/f2be/live/5f177ed0-4ad9-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "A woman with glasses and braces in a grey cardigan",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/e98b/live/0b018330-27ad-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "A designed image of a young woman walking her dog next to a polling station sign in English and Welsh.",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/4e8b/live/93bddc20-46be-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Teleri Glyn-Jones in a red and white striped shirt looking at the camera. She has brown hair cut into a bob, and she holds her hands in front of her.",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/896e/live/31c540f0-4496-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "girl smiling outside the Senedd building, wearing a plaid blue jacket.\n",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/d89e10e0-1161-4366-82a6-ebc3931ac42c.png.webp",
+    "alt": "Card showing the result for the constituency election for Afan Ogwr Rhondda. The six seats were won as follows: Plaid Cymru     3,    Reform UK     2,       Labour     1",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/b845487a-01fc-4361-aa6b-c7faa2132195.png.webp",
+    "alt": "Bar chart showing the results of the Pontypridd Cynon Merthyr seat in the Welsh Parliament with vote share for candidates with more than 1% of the vote: Plaid Cymru 39.5% and 3 seats, Reform UK 30.6% and 2 seats, Labour 12.9% and 1 seats, Conservative 6% ",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/ff4b37ff-4686-4b34-9bb5-e90e0902907a.png.webp",
+    "alt": "Card showing the result for the constituency election for Pontypridd Cynon Merthyr. The six seats were won as follows: Plaid Cymru     3,    Reform UK     2,       Labour     1",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/81b58e78-0ba2-40b0-aab7-15e85a6fe452.jpg.webp",
+    "alt": "Dan Thomas claps during the Senedd election count",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/59666bea-a6ad-497e-ba32-fbe728d7b293.png.webp",
+    "alt": "Bar chart showing the results of the Caerdydd Penarth seat in the Welsh Parliament with vote share for candidates with more than 1% of the vote: Plaid Cymru 41% and 3 seats, Reform UK 17.6% and 1 seats, Green 13.8% and 1 seats, Labour 12.4% and 1 seats, C",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/5792f4ec-3861-49b7-8a22-50841b94e9d1.png.webp",
+    "alt": "Card showing the result for the constituency election for Caerdydd Penarth. The six seats were won as follows: Plaid Cymru     3,    Reform UK     1,        Green     1,       Labour     1",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/6d6ef774-5162-47e1-b158-194c368cf937.png.webp",
+    "alt": "Card showing the result for the constituency election for Blaenau Gwent Caerffili Rhymni. The six seats were won as follows: Plaid Cymru     3,    Reform UK     3",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/3877e942-5b1d-4372-8f56-98e16a6b5670.png.webp",
+    "alt": "Card showing the result for the constituency election for Sir Gaerfyrddin. The six seats were won as follows: Plaid Cymru     3,    Reform UK     3",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/f1581219-4c4d-425f-be04-64378a7da9a0.jpg.webp",
+    "alt": "Dan Thomas",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/6eb40d60-495d-4599-a1ac-82755343a206.png.webp",
+    "alt": "A graphic showing the results",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/dee6a412-80bf-4420-9e1b-5030d3d34105.png.webp",
+    "alt": "Bar chart showing the results of the Casnewydd Islwyn seat in the Welsh Parliament with vote share for candidates with more than 1% of the vote: Reform UK 32.9% and 2 seats, Plaid Cymru 29.7% and 2 seats, Labour 13.7% and 1 seats, Conservative 11.4% and 1",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/69a6ce6e-11f4-4f17-aba8-b9f60555283f.png.webp",
+    "alt": "Card showing the result for the constituency election for Casnewydd Islwyn. The six seats were won as follows:    Reform UK     2,   Plaid Cymru     2,        Labour     1,  Conservative     1",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/f0d32f2f-1f79-49f7-9d20-19ba67cfe703.jpg.webp",
+    "alt": "Eluned Morgan walking wearing green suit and white shirt flanked by people",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/bf87e466-748c-4645-bd20-9409dbc18407.png.webp",
+    "alt": "Dan Thomas in dark suit with cycling track in background standing at table talking to people seated",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2026/4/28/66bc7433-f4b0-4993-87b9-8ea71b78a4d9.jpg.webp",
+    "alt": "",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Wales election 2026: Plaid Cymru and Reform UK dominate early results in Wales, as Labour admits defeat - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
   {
     "src": "https://tweakers.net/i/2evNJUo1m4LPprsXLJXlOEjgb70\u003d/704x220/filters:max_bytes(102400):strip_icc():strip_exif()/i/2008163566.jpeg?f\u003dfpa_thumb",
     "alt": "Zelfde paneel, maar toch weer iets beter",
