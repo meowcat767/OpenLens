@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1333,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Discard",
+    "title": "Integer Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)",
+    "scrapedAt": "2026-05-09 01:16:04.027098"
+  },
+  {
+    "id": 1332,
+    "url": "https://github.com/python/cpython/issues/69639",
+    "title": "Arithmetics with complex infinities is inconsistent with C/C++ · Issue #69639 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Arithmetics with complex infinities is inconsistent with C/C++ #69639 New issue Copy link New issue Copy link Closed Closed Arithmetics with complex infinities is inconsistent with C/C++#69639 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description FrancescoBiscani mannequin opened on Oct 21, 2015 Issue body actions BPO 25453 Nosy @malemburg, @tim-one, @mdickinson, @ericvsmith, @ezio-melotti, @stevendaprano, @asmeurer, @berkerpeksag Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2015-10-21.12:20:43.550\u003e\nlabels \u003d [\u0027interpreter-core\u0027, \u0027type-feature\u0027]\ntitle \u003d \u0027Arithmetics with complex infinities is inconsistent with C/C++\u0027\nupdated_at \u003d \u003cDate 2016-05-16.21:29:52.095\u003e\nuser \u003d \u0027https://bugs.python.org/FrancescoBiscani\u0027 bugs.python.org fields: activity \u003d \u003cDate 2016-05-16.21:29:52.095\u003e\nactor \u003d \u0027Aaron.Meurer\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Interpreter Core\u0027]\ncreation \u003d \u003cDate 2015-10-21.12:20:43.550\u003e\ncreator \u003d \u0027Francesco Biscani\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 25453\nkeywords \u003d []\nmessage_count \u003d 15.0\nmessages \u003d [\u0027253283\u0027, \u0027253284\u0027, \u0027253286\u0027, \u0027253289\u0027, \u0027253290\u0027, \u0027253293\u0027, \u0027253295\u0027, \u0027253296\u0027, \u0027253297\u0027, \u0027253301\u0027, \u0027253304\u0027, \u0027253305\u0027, \u0027253306\u0027, \u0027253308\u0027, \u0027253337\u0027]\nnosy_count \u003d 11.0\nnosy_names \u003d [\u0027lemburg\u0027, \u0027tim.peters\u0027, \u0027mark.dickinson\u0027, \u0027eric.smith\u0027, \u0027stutzbach\u0027, \u0027ezio.melotti\u0027, \u0027steven.daprano\u0027, \u0027Aaron.Meurer\u0027, \u0027berker.peksag\u0027, \u0027Francesco Biscani\u0027, \u0027Saksham Agrawal\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue25453\u0027\nversions \u003d [\u0027Python 3.6\u0027] Linked PRs gh-69639: add mixed-mode rules for complex arithmetic (C-like) #124829 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:16:02.76933"
+  },
+  {
+    "id": 1331,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork",
+    "title": "Operating System Utilities — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Utilities » Operating System Utilities | Theme Auto Light Dark | Operating System Utilities¶ PyObject *PyOS_FSPath(PyObject *path)¶ Return value: New reference. Part of the Stable ABI since version 3.6. Return the file system representation for path. If the object is a str or bytes object, then a new strong reference is returned. If the object implements the os.PathLike interface, then __fspath__() is returned as long as it is a str or bytes object. Otherwise TypeError is raised and NULL is returned. Added in version 3.6. int Py_FdIsInteractive(FILE *fp, const char *filename)¶ Return true (nonzero) if the standard I/O file fp with name filename is deemed interactive. This is the case for files for which isatty(fileno(fp)) is true. If the PyConfig.interactive is non-zero, this function also returns true if the filename pointer is NULL or if the name is equal to one of the strings \u0027\u003cstdin\u003e\u0027 or \u0027???\u0027. This function must not be called before Python is initialized. void PyOS_BeforeFork()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to prepare some internal state before a process fork. This should be called before calling fork() or any similar function that clones the current process. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_BeforeFork(). Added in version 3.7. void PyOS_AfterFork_Parent()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to update some internal state after a process fork. This should be called from the parent process after calling fork() or any similar function that clones the current process, regardless of whether process cloning was successful. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_AfterFork_Parent(). Added in version 3.7. void PyOS_AfterFork_Child()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to update internal interpreter state after a process fork. This must be called from the child process after calling fork(), or any similar function that clones the current process, if there is any chance the process will call back into the Python interpreter. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_AfterFork_Child(). Added in version 3.7. See also os.register_at_fork() allows registering custom Python functions to be called by PyOS_BeforeFork(), PyOS_AfterFork_Parent() and PyOS_AfterFork_Child(). void PyOS_AfterFork()¶ Part of the Stable ABI on platforms with fork(). Function to update some internal state after a process fork; this should be called in the new process if the Python interpreter will continue to be used. If a new executable is loaded into the new process, this function does not need to be called. Deprecated since version 3.7: This function is superseded by PyOS_AfterFork_Child(). int PyOS_CheckStack()¶ Part of the Stable ABI on platforms with USE_STACKCHECK since version 3.7. Return true when the interpreter runs out of stack space. This is a reliable check, but is only available when USE_STACKCHECK is defined (currently on certain versions of Windows using the Microsoft Visual C++ compiler). USE_STACKCHECK will be defined automatically; you should never change the definition in your own code. typedef void (*PyOS_sighandler_t)(int)¶ Part of the Stable ABI. PyOS_sighandler_t PyOS_getsig(int i)¶ Part of the Stable ABI. Return the current signal handler for signal i. This is a thin wrapper around either sigaction() or signal(). Do not call those functions directly! PyOS_sighandler_t PyOS_setsig(int i, PyOS_sighandler_t h)¶ Part of the Stable ABI. Set the signal handler for signal i to be h; return the old signal handler. This is a thin wrapper around either sigaction() or signal(). Do not call those functions directly! int PyOS_InterruptOccurred(void)¶ Part of the Stable ABI. Check if a SIGINT signal has been received. Returns 1 if a SIGINT has occurred and clears the signal flag, or 0 otherwise. In most cases, you should prefer PyErr_CheckSignals() over this function. PyErr_CheckSignals() invokes the appropriate signal handlers for all pending signals, allowing Python code to handle the signal properly. This function only detects SIGINT and does not invoke any Python signal handlers. This function is async-signal-safe and this function cannot fail. The caller must hold an attached thread state. wchar_t *Py_DecodeLocale(const char *arg, size_t *size)¶ Part of the Stable ABI since version 3.7. Warning This function should not be called directly: use the PyConfig API with the PyConfig_SetBytesStrin",
+    "scrapedAt": "2026-05-09 01:16:00.384573"
+  },
+  {
+    "id": 1330,
+    "url": "https://github.com/python/cpython/issues/124285",
+    "title": "Behavior change for `foo and 1 or 2`: 3.12 newly converts `foo` to bool twice · Issue #124285 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Behavior change for foo and 1 or 2: 3.12 newly converts foo to bool twice #124285 New issue Copy link New issue Copy link Open #124394 Open Behavior change for foo and 1 or 2: 3.12 newly converts foo to bool twice#124285 #124394 Copy link Labels 3.14bugs and security fixesbugs and security fixesdocsDocumentation in the Doc dirDocumentation in the Doc dirinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description frigus02 opened on Sep 20, 2024 Issue body actions Bug report Bug description: We noticed a behavior change between 3.11 and 3.12. The following code calls Foo.__bool__ once in 3.11 and twice in 3.12. Consequently for this contrived example, the expression evaluates to different results in 3.11 and 3.12. class Foo:\n    def __init__(self):\n        self._a \u003d True\n    def __bool__(self):\n        self._a \u003d not self._a\n        print(f\"Foo.__bool__ -\u003e {self._a}\")\n        return self._a\n\nFoo() and \"a string\" or 42 In Python 3.11: \u003e\u003e\u003e Foo() and \"a string\" or 42\nFoo.__bool__ -\u003e False\n42\n In Python 3.12 (and 3.13.0b2): \u003e\u003e\u003e Foo() and \"a string\" or 42\nFoo.__bool__ -\u003e False\nFoo.__bool__ -\u003e True\n\u003c__main__.Foo object at 0x7f0ae554c1a0\u003e\n Is this change intentional? Note that I\u0027m not necessarily asking to change this. We should arguably change the code to \"a string\" if Foo() else 42, which evaluates the same in 3.11 and 3.12. CPython versions tested on: 3.12 Operating systems tested on: Linux Linked PRs gh-124285: Fix bug where bool() is called multiple times for the same part of a boolean expression #124394 gh-124285: document assumptions on __bool__/__len__ behaviour #124723 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixesdocsDocumentation in the Doc dirDocumentation in the Doc dirinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects docs issues Status Todo Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:15:59.119245"
+  },
+  {
+    "id": 1329,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_IgnoreEnvironmentFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-09 01:15:56.668482"
+  },
+  {
     "id": 1327,
     "url": "https://docs.python.org/3/library/stdtypes.html#bytes",
     "title": "Built-in Types — Python 3.14.5rc1 documentation",
@@ -8923,26 +8958,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1329,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_IgnoreEnvironmentFlag"
-  },
-  {
-    "id": 1330,
-    "url": "https://github.com/python/cpython/issues/124285"
-  },
-  {
-    "id": 1331,
-    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork"
-  },
-  {
-    "id": 1332,
-    "url": "https://github.com/python/cpython/issues/69639"
-  },
-  {
-    "id": 1333,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Discard"
   },
   {
     "id": 1334,
@@ -227490,10 +227505,145 @@ window.searchData = [
     "id": 267477,
     "url": "https://github.com/python/cpython/pull/128502",
     "parentUrl": "https://github.com/python/cpython/issues/115765"
+  },
+  {
+    "id": 268277,
+    "url": "https://github.com/python/cpython/pull/124394",
+    "parentUrl": "https://github.com/python/cpython/issues/124285"
+  },
+  {
+    "id": 268280,
+    "url": "https://github.com/frigus02",
+    "parentUrl": "https://github.com/python/cpython/issues/124285"
+  },
+  {
+    "id": 268283,
+    "url": "https://github.com/python/cpython/issues/124285#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124285"
+  },
+  {
+    "id": 268288,
+    "url": "https://github.com/python/cpython/issues/124285#issue-2538563579",
+    "parentUrl": "https://github.com/python/cpython/issues/124285"
+  },
+  {
+    "id": 268289,
+    "url": "https://github.com/python/cpython/issues/124285#top",
+    "parentUrl": "https://github.com/python/cpython/issues/124285"
+  },
+  {
+    "id": 268291,
+    "url": "https://github.com/python/cpython/pull/124723",
+    "parentUrl": "https://github.com/python/cpython/issues/124285"
+  },
+  {
+    "id": 268396,
+    "url": "https://github.com/python/cpython/issues/69639#issue-1198942983",
+    "parentUrl": "https://github.com/python/cpython/issues/69639"
+  },
+  {
+    "id": 268400,
+    "url": "https://github.com/python/cpython/pull/124829",
+    "parentUrl": "https://github.com/python/cpython/issues/69639"
+  },
+  {
+    "id": 268401,
+    "url": "https://github.com/python/cpython/issues/69639#top",
+    "parentUrl": "https://github.com/python/cpython/issues/69639"
+  },
+  {
+    "id": 268403,
+    "url": "https://github.com/tim-one",
+    "parentUrl": "https://github.com/python/cpython/issues/69639"
+  },
+  {
+    "id": 268404,
+    "url": "https://github.com/asmeurer",
+    "parentUrl": "https://github.com/python/cpython/issues/69639"
+  },
+  {
+    "id": 268405,
+    "url": "https://github.com/berkerpeksag",
+    "parentUrl": "https://github.com/python/cpython/issues/69639"
+  },
+  {
+    "id": 268406,
+    "url": "https://github.com/python/cpython/issues/69639#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/69639"
+  },
+  {
+    "id": 268408,
+    "url": "https://github.com/stevendaprano",
+    "parentUrl": "https://github.com/python/cpython/issues/69639"
+  },
+  {
+    "id": 268410,
+    "url": "https://bugs.python.org/issue25453",
+    "parentUrl": "https://github.com/python/cpython/issues/69639"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Discard"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter_Discard"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/101771972?v\u003d4\u0026size\u003d80",
+    "alt": "@FrancescoBiscani",
+    "pageTitle": "Arithmetics with complex infinities is inconsistent with C/C++ · Issue #69639 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/69639"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/101771972?v\u003d4\u0026size\u003d48",
+    "alt": "@FrancescoBiscani",
+    "pageTitle": "Arithmetics with complex infinities is inconsistent with C/C++ · Issue #69639 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/69639"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Operating System Utilities — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Operating System Utilities — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3579251?u\u003d5f297551cbc94ff7e7e78d64c31775e108695092\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@frigus02",
+    "pageTitle": "Behavior change for `foo and 1 or 2`: 3.12 newly converts `foo` to bool twice · Issue #124285 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124285"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3579251?u\u003d5f297551cbc94ff7e7e78d64c31775e108695092\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@frigus02",
+    "pageTitle": "Behavior change for `foo and 1 or 2`: 3.12 newly converts `foo` to bool twice · Issue #124285 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124285"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_IgnoreEnvironmentFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_IgnoreEnvironmentFlag"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
