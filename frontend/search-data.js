@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1296,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertHasAttr",
+    "title": "unittest — Unit testing framework — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Development Tools » unittest — Unit testing framework | Theme Auto Light Dark | unittest — Unit testing framework¶ Source code: Lib/unittest/__init__.py (If you are already familiar with the basic concepts of testing, you might want to skip to the list of assert methods.) The unittest unit testing framework was originally inspired by JUnit and has a similar flavor as major unit testing frameworks in other languages. It supports test automation, sharing of setup and shutdown code for tests, aggregation of tests into collections, and independence of the tests from the reporting framework. To achieve this, unittest supports some important concepts in an object-oriented way: test fixture A test fixture represents the preparation needed to perform one or more tests, and any associated cleanup actions. This may involve, for example, creating temporary or proxy databases, directories, or starting a server process. test case A test case is the individual unit of testing. It checks for a specific response to a particular set of inputs. unittest provides a base class, TestCase, which may be used to create new test cases. test suite A test suite is a collection of test cases, test suites, or both. It is used to aggregate tests that should be executed together. test runner A test runner is a component which orchestrates the execution of tests and provides the outcome to the user. The runner may use a graphical interface, a textual interface, or return a special value to indicate the results of executing the tests. See also Module doctest Another test-support module with a very different flavor. Simple Smalltalk Testing: With Patterns Kent Beck’s original paper on testing frameworks using the pattern shared by unittest. pytest Third-party unittest framework with a lighter-weight syntax for writing tests. For example, assert func(10) \u003d\u003d 42. The Python Testing Tools Taxonomy An extensive list of Python testing tools including functional testing frameworks and mock object libraries. Testing in Python Mailing List A special-interest-group for discussion of testing, and testing tools, in Python. The script Tools/unittestgui/unittestgui.py in the Python source distribution is a GUI tool for test discovery and execution. This is intended largely for ease of use for those new to unit testing. For production environments it is recommended that tests be driven by a continuous integration system such as Buildbot, Jenkins, GitHub Actions, or AppVeyor. Basic example¶ The unittest module provides a rich set of tools for constructing and running tests. This section demonstrates that a small subset of the tools suffice to meet the needs of most users. Here is a short script to test three string methods: import unittest\n\nclass TestStringMethods(unittest.TestCase):\n\n    def test_upper(self):\n        self.assertEqual(\u0027foo\u0027.upper(), \u0027FOO\u0027)\n\n    def test_isupper(self):\n        self.assertTrue(\u0027FOO\u0027.isupper())\n        self.assertFalse(\u0027Foo\u0027.isupper())\n\n    def test_split(self):\n        s \u003d \u0027hello world\u0027\n        self.assertEqual(s.split(), [\u0027hello\u0027, \u0027world\u0027])\n        # check that s.split fails when the separator is not a string\n        with self.assertRaises(TypeError):\n            s.split(2)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    unittest.main()\n A test case is created by subclassing unittest.TestCase. The three individual tests are defined with methods whose names start with the letters test. This naming convention informs the test runner about which methods represent tests. The crux of each test is a call to assertEqual() to check for an expected result; assertTrue() or assertFalse() to verify a condition; or assertRaises() to verify that a specific exception gets raised. These methods are used instead of the assert statement so the test runner can accumulate all test results and produce a report. The setUp() and tearDown() methods allow you to define instructions that will be executed before and after each test method. They are covered in more detail in the section Organizing test code. The final block shows a simple way to run the tests. unittest.main() provides a command-line interface to the test script. When run from the command line, the above script produces an output that looks like this: ...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n Passing the -v option to your test script will instruct unittest.main() to enable a higher level of verbosity, and produce the following output: test_isupper (__main__.TestStringMethods.test_isupper) ... ok\ntest_split (__main__.TestStringMethods.test_split) ... ok\ntest_upper (__main__.TestStringMethods.test_upper) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK\n The above examples show the most commonly used unittest features which are sufficient to meet many everyday testing needs. The rem",
+    "scrapedAt": "2026-05-09 01:14:33.279008"
+  },
+  {
+    "id": 1295,
+    "url": "https://github.com/python/cpython/issues/129949",
+    "title": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Contributor mmingyu commented Feb 10, 2025 • edited Loading Uh oh! There was an error while loading. Please reload this page. Resolve : #129948 The SyncManager provides support for various data structures such as dict, list, and queue, but oddly, it does not support set. This inconsistency feels little bit weird. This PR introduces support for set by defining SetProxy and registering it with SyncManager. Issue: Add set() to multiprocessing.managers.SyncManager #129948 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions python#129948: support multiprocessing.manager.set bd5b81c mmingyu requested a review from gpshead as a code owner February 10, 2025 10:51 Copy link Copy Markdown ghost commented Feb 10, 2025 • edited by ghost Loading Uh oh! There was an error while loading. Please reload this page. All commit authors signed the Contributor License Agreement. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown bedevere-app Bot commented Feb 10, 2025 Most changes to Python require a NEWS entry. Add one using the blurb_it web app or the blurb command-line tool. If this change has little impact on Python users, wait for a maintainer to apply the skip news label instead. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot added the awaiting review label Feb 10, 2025 bedevere-app Bot mentioned this pull request Feb 10, 2025 Add set() to multiprocessing.managers.SyncManager #129948 Closed fix lint d762661 Copy link Copy Markdown bedevere-app Bot commented Feb 10, 2025 Most changes to Python require a NEWS entry. Add one using the blurb_it web app or the blurb command-line tool. If this change has little impact on Python users, wait for a maintainer to apply the skip news label instead. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 📜🤖 Added by blurb_it. 3514b42 mmingyu changed the title gh-129948: Add set() Support to multiprocessing.managers.SyncManager gh-129948: Add set() to multiprocessing.managers.SyncManager Feb 10, 2025 blurb-it Bot and others added 3 commits February 11, 2025 06:36 📜🤖 Added by blurb_it. e529f5f remove first doc f0f7d25 remove doc 41cb4a6 Copy link Copy Markdown bedevere-app Bot commented Feb 11, 2025 Most changes to Python require a NEWS entry. Add one using the blurb_it web app or the blurb command-line tool. If this change has little impact on Python users, wait for a maintainer to apply the skip news label instead. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. blurb-it Bot and others added 4 commits February 11, 2025 06:42 📜🤖 Added by blurb_it. 4796816 fix lint 40c60cc fix doc lint 5e0977f doc: update comment 5c02940 auvipy reviewed Feb 11, 2025 View reviewed changes Copy link Copy Markdown auvipy left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment may be some description regarding why adding this would be beneficiary is helpful to understand the reasoning Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Contributor Author mmingyu commented Feb 11, 2025 may be some description regarding why adding this would be beneficiary is helpful to understand the reasoning Thanks for the advice! Are you suggesting that I should make the PR description more detailed? I\u0027ve updated the PR description 👍 1 auvipy reacted with thumbs up emoji All reactions 👍 1 reaction Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. auvipy approved these changes Feb 11, 2025 View reviewed changes Copy link Copy Markdown auvipy left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment yes it seems more clear now Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👍 1 mmingyu reacted with thumbs up emoji All reactions 👍 1 reac",
+    "scrapedAt": "2026-05-09 01:14:31.983224"
+  },
+  {
+    "id": 1294,
+    "url": "https://peps.python.org/pep-0649/",
+    "title": "PEP 649 – Deferred Evaluation Of Annotations Using Descriptors | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 649 – Deferred Evaluation Of Annotations Using Descriptors PEP 649 – Deferred Evaluation Of Annotations Using Descriptors Author: Larry Hastings \u003clarry at hastings.org\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Topic: Typing Created: 11-Jan-2021 Python-Version: 3.14 Post-History: 11-Jan-2021, 12-Apr-2021, 18-Apr-2021, 09-Aug-2021, 20-Oct-2021, 20-Oct-2021, 17-Nov-2021, 15-Mar-2022, 23-Nov-2022, 07-Feb-2023, 11-Apr-2023 Replaces: 563 Resolution: 08-May-2023 Table of Contents Abstract Overview Comparison Of Annotation Semantics Mistaken Rejection Of This Approach In November 2017 Motivation A History Of Annotations The Current State Of Annotation Use Cases Static typing users Runtime annotation users Wrappers Documentation Motivation For This PEP Implementation Observed semantics for annotations expressions __annotate__ and __annotations__ Changes to allowable annotations syntax Changes to inspect.get_annotations and typing.get_type_hints The stringizer and the fake globals environment Compiler-generated __annotate__ functions Third-party __annotate__ functions Pseudocode Other modifications to the Python runtime Interactive REPL Shell Annotations On Local Variables Inside Functions Prototype Performance Comparison Backwards Compatibility Backwards Compatibility With Stock Semantics Backwards Compatibility With PEP 563 Semantics Rejected Ideas “Just store the strings” Acknowledgements References Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at Annotations. × See PEP 1 for how to propose changes. Abstract Annotations are a Python technology that allows expressing type information and other metadata about Python functions, classes, and modules. But Python’s original semantics for annotations required them to be eagerly evaluated, at the time the annotated object was bound. This caused chronic problems for static type analysis users using “type hints”, due to forward-reference and circular-reference problems. Python solved this by accepting PEP 563, incorporating a new approach called “stringized annotations” in which annotations were automatically converted into strings by Python. This solved the forward-reference and circular-reference problems, and also fostered intriguing new uses for annotation metadata. But stringized annotations in turn caused chronic problems for runtime users of annotations. This PEP proposes a new and comprehensive third approach for representing and computing annotations. It adds a new internal mechanism for lazily computing annotations on demand, via a new object method called __annotate__. This approach, when combined with a novel technique for coercing annotation values into alternative formats, solves all the above problems, supports all existing use cases, and should foster future innovations in annotations. Overview This PEP adds a new dunder attribute to the objects that support annotations–functions, classes, and modules. The new attribute is called __annotate__, and is a reference to a function which computes and returns that object’s annotations dict. At compile time, if the definition of an object includes annotations, the Python compiler will write the expressions computing the annotations into its own function. When run, the function will return the annotations dict. The Python compiler then stores a reference to this function in __annotate__ on the object. Furthermore, __annotations__ is redefined to be a “data descriptor” which calls this annotation function once and caches the result. This mechanism delays the evaluation of annotations expressions until the annotations are examined, which solves many circular reference problems. This PEP also defines new functionality for two functions in the Python standard library: inspect.get_annotations and typing.get_type_hints. The functionality is accessed via a new keyword-only parameter, format. format allows the user to request the annotations from these functions in a specific format. Format identifiers are always predefined integer values. The formats defined by this PEP are: inspect.VALUE \u003d 1 The default value. The function will return the conventional Python values for the annotations. This format is identical to the return value for these functions under Python 3.11. inspect.FORWARDREF \u003d 2 The function will attempt to return the conventional Python values for the annotations. However, if it encounters an undefined name, or a free variable that has not yet been associated with a value, it dynamically creates a proxy object (a ForwardRef) that substitutes for that value in the expression, then continues evaluation. The resulting dict may contain a mixture of proxies and real values. If all real values are defined at the time the function is called, inspect.FORWARDREF and inspect.VALUE produce identical results. inspect.SOURCE \u003d 3 The functio",
+    "scrapedAt": "2026-05-09 01:14:26.856298"
+  },
+  {
+    "id": 1293,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6713.html",
+    "title": "RFC 6713 - The \u0027application/zlib\u0027 and \u0027application/gzip\u0027 Media Types",
+    "content": "Light Dark Auto Internet Engineering Task Force (IETF)                         J. Levine\nRequest for Comments: 6713                          Taughannock Networks\nCategory: Informational                                      August 2012\nISSN: 2070-1721\n\n\n       The \u0027application/zlib\u0027 and \u0027application/gzip\u0027 Media Types\n\nAbstract\n\n   This document defines the \u0027application/gzip\u0027 and \u0027application/zlib\u0027\n   media types for compressed data using the gzip and zlib compression\n   formats.\n\nStatus of This Memo\n\n   This document is not an Internet Standards Track specification; it is\n   published for informational purposes.\n\n   This document is a product of the Internet Engineering Task Force\n   (IETF).  It represents the consensus of the IETF community.  It has\n   received public review and has been approved for publication by the\n   Internet Engineering Steering Group (IESG).  Not all documents\n   approved by the IESG are a candidate for any level of Internet\n   Standard; see Section 2 of RFC 5741.\n\n   Information about the current status of this document, any errata,\n   and how to provide feedback on it may be obtained at\n   http://www.rfc-editor.org/info/rfc6713.\n\nCopyright Notice\n\n   Copyright (c) 2012 IETF Trust and the persons identified as the\n   document authors.  All rights reserved.\n\n   This document is subject to BCP 78 and the IETF Trust\u0027s Legal\n   Provisions Relating to IETF Documents\n   (http://trustee.ietf.org/license-info) in effect on the date of\n   publication of this document.  Please review these documents\n   carefully, as they describe your rights and restrictions with respect\n   to this document.  Code Components extracted from this document must\n   include Simplified BSD License text as described in Section 4.e of\n   the Trust Legal Provisions and are provided without warranty as\n   described in the Simplified BSD License.\n\n\n\n\n\n\n\nLevine                        Informational                     [Page 1] \nRFC 6713              Media Types \u0027zlib\u0027 and \u0027gzip\u0027          August 2012\n\n\n1.  Introduction\n\n   zlib [RFC1950] and gzip [RFC1952] are widely used compression\n   formats. zlib is a stream format, while gzip adds header and trailer\n   fields more appropriate for a file format.  Both implement the\n   DEFLATE compression scheme described in [RFC1951].\n\n   They are used to compress a wide variety of material, from\n   unstructured text to structured data to executable code.\n\n   Some applications have informally used media types such as\n   application/gzip-compressed, application/gzipped, application/\n   x-gunzip, application/x-gzip, application/x-gzip-compressed, and\n   gzip/document to describe data compressed with gzip.  The media types\n   defined in this document should replace those media types in future\n   applications.\n\n2.  The \u0027application/zlib\u0027 Media Type\n\n   The \u0027application/zlib\u0027 media type describes a block of data that is\n   compressed using zlib [RFC1950] compression.  The data is a stream of\n   bytes as described in RFC 1950.\n\n2.1.  Registration Details\n\n   Type name: application\n\n   Subtype name: zlib\n\n   Required parameters: N/A\n\n   Optional parameters: N/A\n\n   Encoding considerations: Binary\n\n   Security considerations: See Section 4 below.\n\n   Interoperability considerations: N/A\n\n   Published specification: [RFC1950]\n\n   Applications that use this media type: anywhere data size is an issue\n\n   Additional information:\n      Magic number(s): first byte is usually 0x78 but can also be 0x08,\n      0x18, 0x28, 0x38, 0x48, 0x58, or 0x68.  The first two bytes, when\n      interpreted as an unsigned 16-bit number in big-endian byte order,\n      contain a value that is a multiple of 31.\n\n\n\nLevine                        Informational                     [Page 2] \nRFC 6713              Media Types \u0027zlib\u0027 and \u0027gzip\u0027          August 2012\n\n\n      File extension(s): N/A\n      Macintosh file type code(s): N/A\n\n   Person and email address to contact for further information: see\n   http://www.zlib.net/\n\n   Intended usage: COMMON\n\n   Restrictions on usage: N/A\n\n   Author: John Levine\n\n   Change controller: IETF\n\n3.  The \u0027application/gzip\u0027 Media Type\n\n   The \u0027application/gzip\u0027 media type describes a block of data that is\n   compressed using gzip [RFC1952] compression.  The data is a stream of\n   bytes as described in RFC 1952.\n\n3.1.  Registration Details\n\n   Type name: application\n\n   Subtype name: gzip\n\n   Required parameters: N/A\n\n   Optional parameters: N/A\n\n   Encoding considerations: Binary\n\n   Security considerations: See Section 4 below.\n\n   Interoperability considerations: N/A\n\n   Published specification: [RFC1952]\n\n   Applications that use this media type: anywhere data size is an issue\n\n   Additional information:\n      Magic number(s): first two bytes are 0x1f, 0x8b.\n      File extension(s): gz\n      Macintosh file type code(s): N/A\n\n   Person and email address to contact for further information: see\n   http://www.gzip.org/\n\n\n\n\nLevine                        Informational                     [Page",
+    "scrapedAt": "2026-05-09 01:14:25.456648"
+  },
+  {
+    "id": 1292,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.add_type",
+    "title": "mimetypes — Map filenames to MIME types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Data Handling » mimetypes — Map filenames to MIME types | Theme Auto Light Dark | mimetypes — Map filenames to MIME types¶ Source code: Lib/mimetypes.py The mimetypes module converts between a filename or URL and the MIME type associated with the filename extension. Conversions are provided from filename to MIME type and from MIME type to filename extension; encodings are not supported for the latter conversion. The module provides one class and a number of convenience functions. The functions are the normal interface to this module, but some applications may be interested in the class as well. The functions described below provide the primary interface for this module. If the module has not been initialized, they will call init() if they rely on the information init() sets up. mimetypes.guess_type(url, strict\u003dTrue)¶ Guess the type of a file based on its filename, path or URL, given by url. URL can be a string or a path-like object. The return value is a tuple (type, encoding) where type is None if the type can’t be guessed (missing or unknown suffix) or a string of the form \u0027type/subtype\u0027, usable for a MIME content-type header. encoding is None for no encoding or the name of the program used to encode (e.g. compress or gzip). The encoding is suitable for use as a Content-Encoding header, not as a Content-Transfer-Encoding header. The mappings are table driven. Encoding suffixes are case sensitive; type suffixes are first tried case sensitively, then case insensitively. The optional strict argument is a flag specifying whether the list of known MIME types is limited to only the official types registered with IANA. However, the behavior of this module also depends on the underlying operating system. Only file types recognized by the OS or explicitly registered with Python’s internal database can be identified. When strict is True (the default), only the IANA types are supported; when strict is False, some additional non-standard but commonly used MIME types are also recognized. Changed in version 3.8: Added support for url being a path-like object. Soft deprecated since version 3.13: Passing a file path instead of URL is soft deprecated. Use guess_file_type() for this. mimetypes.guess_file_type(path, *, strict\u003dTrue)¶ Guess the type of a file based on its path, given by path. Similar to the guess_type() function, but accepts a path instead of URL. Path can be a string, a bytes object or a path-like object. Added in version 3.13. mimetypes.guess_all_extensions(type, strict\u003dTrue)¶ Guess the extensions for a file based on its MIME type, given by type. The return value is a list of strings giving all possible filename extensions, including the leading dot (\u0027.\u0027). The extensions are not guaranteed to have been associated with any particular data stream, but would be mapped to the MIME type type by guess_type() and guess_file_type(). The optional strict argument has the same meaning as with the guess_type() function. mimetypes.guess_extension(type, strict\u003dTrue)¶ Guess the extension for a file based on its MIME type, given by type. The return value is a string giving a filename extension, including the leading dot (\u0027.\u0027). The extension is not guaranteed to have been associated with any particular data stream, but would be mapped to the MIME type type by guess_type() and guess_file_type(). If no extension can be guessed for type, None is returned. The optional strict argument has the same meaning as with the guess_type() function. Some additional functions and data items are available for controlling the behavior of the module. mimetypes.init(files\u003dNone)¶ Initialize the internal data structures. If given, files must be a sequence of file names which should be used to augment the default type map. If omitted, the file names to use are taken from knownfiles; on Windows, the current registry settings are loaded. Each file named in files or knownfiles takes precedence over those named before it. Calling init() repeatedly is allowed. Specifying an empty list for files will prevent the system defaults from being applied: only the well-known values will be present from a built-in list. If files is None the internal data structure is completely rebuilt to its initial default value. This is a stable operation and will produce the same results when called multiple times. Changed in version 3.2: Previously, Windows registry settings were ignored. mimetypes.read_mime_types(filename)¶ Load the type map given in the file filename, if it exists. The type map is returned as a dictionary mapping filename extensions, including the leading dot (\u0027.\u0027), to strings of the form \u0027type/subtype\u0027. If the file filename does not exist or cannot be read, None is returned. mimetypes.add_type(type, ext, strict\u003dTrue)¶ Add a mapping from the MIME type type to the extension ext. When the extension is already known, the new type will repl",
+    "scrapedAt": "2026-05-09 01:14:23.918072"
+  },
+  {
     "id": 1291,
     "url": "https://peps.python.org/pep-0734/",
     "title": "PEP 734 – Multiple Interpreters in the Stdlib | peps.python.org",
@@ -8678,26 +8713,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1292,
-    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.add_type"
-  },
-  {
-    "id": 1293,
-    "url": "https://datatracker.ietf.org/doc/html/rfc6713.html"
-  },
-  {
-    "id": 1294,
-    "url": "https://peps.python.org/pep-0649/"
-  },
-  {
-    "id": 1295,
-    "url": "https://github.com/python/cpython/issues/129949"
-  },
-  {
-    "id": 1296,
-    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertHasAttr"
   },
   {
     "id": 1297,
@@ -224070,10 +224085,1349 @@ window.searchData = [
     "id": 260126,
     "url": "https://peps.python.org/pep-0734/#threads-and-thread-states",
     "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260187,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1952#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260188,
+    "url": "https://datatracker.ietf.org/doc/rfc6713/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260189,
+    "url": "http://www.rfc-editor.org/info/rfc6713",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260190,
+    "url": "https://datatracker.ietf.org/doc/html/draft-levine-application-gzip-00",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260192,
+    "url": "https://datatracker.ietf.org/doc/html/draft-levine-application-gzip-02",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260193,
+    "url": "https://datatracker.ietf.org/doc/html/draft-levine-application-gzip-01",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260195,
+    "url": "https://datatracker.ietf.org/doc/html/draft-levine-application-gzip-03",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260196,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1950#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260197,
+    "url": "https://www.rfc-editor.org/rfc/pdfrfc/rfc6713.txt.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260198,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6713.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260199,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6713.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260200,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6713",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260201,
+    "url": "https://datatracker.ietf.org/person/ietf@johnlevine.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260202,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6713.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260203,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1951#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260204,
+    "url": "http://www.zlib.net/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260205,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6713.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260206,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6713.html#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260207,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6713.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260210,
+    "url": "https://datatracker.ietf.org/doc/draft-levine-application-gzip/03/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260211,
+    "url": "https://www.rfc-editor.org/rfc/rfc6713.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260212,
+    "url": "https://datatracker.ietf.org/doc/rfc6713/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260213,
+    "url": "https://www.rfc-editor.org/rfc/rfc6713.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260214,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1950",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260215,
+    "url": "http://www.gzip.org/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260216,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1952",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260217,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6713.html#section-3.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260219,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1951",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260220,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6713.html#section-2.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "id": 260221,
+    "url": "https://mail.python.org/archives/list/python-dev@python.org/thread/5QMMCRF4HTRRNJV56CGHVI5GRHVBDGQO/",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260222,
+    "url": "https://mail.python.org/archives/list/python-dev@python.org/thread/VIZEBX5EYMSYIJNDBF6DMUMZOCWHARSO/",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260223,
+    "url": "https://peps.python.org/pep-0649/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260224,
+    "url": "https://peps.python.org/pep-0649/#a-history-of-annotations",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260225,
+    "url": "https://github.com/larryhastings/co_annotations/issues",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260226,
+    "url": "https://peps.python.org/pep-0649/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260227,
+    "url": "https://discuss.python.org/t/finding-edge-cases-for-peps-484-563-and-649-type-annotations/14314",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260228,
+    "url": "https://peps.python.org/pep-0649/#backwards-compatibility-with-stock-semantics",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260229,
+    "url": "https://peps.python.org/pep-0649/#performance-comparison",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260232,
+    "url": "https://peps.python.org/pep-0649/#other-modifications-to-the-python-runtime",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260233,
+    "url": "https://github.com/larryhastings/co_annotations/",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260234,
+    "url": "https://discuss.python.org/t/pep-649-deferred-evaluation-of-annotations-tentatively-accepted/21331/43",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260235,
+    "url": "https://peps.python.org/pep-0649/#wrappers",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260236,
+    "url": "https://peps.python.org/pep-0649/#mistaken-rejection-of-this-approach-in-november-2017",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260237,
+    "url": "https://discuss.python.org/t/pep-649-deferred-evaluation-of-annotations-tentatively-accepted/21331",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260238,
+    "url": "https://peps.python.org/pep-0649/#pseudocode",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260239,
+    "url": "https://peps.python.org/pep-0649/#acknowledgements",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260241,
+    "url": "https://mail.python.org/archives/list/python-dev@python.org/thread/QSASX6PZ3LIIFIANHQQFS752BJYFUFPY/",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260242,
+    "url": "https://peps.python.org/pep-0649/#static-typing-users",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260243,
+    "url": "https://peps.python.org/pep-0649/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260244,
+    "url": "https://github.com/python/cpython/issues/89687",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260245,
+    "url": "https://peps.python.org/pep-0649/#compiler-generated-annotate-functions",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260246,
+    "url": "https://github.com/python/cpython/issues/90531",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260247,
+    "url": "https://peps.python.org/pep-0649/#third-party-annotate-functions",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260248,
+    "url": "https://peps.python.org/pep-0649/#backwards-compatibility-with-pep-563-semantics",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260249,
+    "url": "https://github.com/python/cpython/issues/97727",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260250,
+    "url": "https://mail.python.org/archives/list/python-dev@python.org/thread/WUZGTGE43T7XV3EUGT6AN2N52OD3U7AE/",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260251,
+    "url": "https://discuss.python.org/t/two-polls-on-how-to-revise-pep-649/23628",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260253,
+    "url": "https://peps.python.org/pep-0649/#annotations-on-local-variables-inside-functions",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260254,
+    "url": "https://peps.python.org/pep-0649/#motivation-for-this-pep",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260256,
+    "url": "https://mail.python.org/pipermail/python-dev/2017-November/150109.html",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260258,
+    "url": "https://discuss.python.org/t/a-massive-pep-649-update-with-some-major-course-corrections/25672",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260259,
+    "url": "https://peps.python.org/pep-0649/#prototype",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260261,
+    "url": "https://peps.python.org/pep-0649/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260264,
+    "url": "https://peps.python.org/pep-0649/#comparison-of-annotation-semantics",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260265,
+    "url": "https://peps.python.org/pep-0649/#references",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260266,
+    "url": "https://peps.python.org/pep-0649/#annotate-and-annotations",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260267,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0649.rst",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260268,
+    "url": "https://discuss.python.org/t/pep-649-deferred-evaluation-of-annotations-tentatively-accepted/21331/",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260270,
+    "url": "https://peps.python.org/pep-0649/#documentation",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260271,
+    "url": "https://peps.python.org/pep-0649/#overview",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260272,
+    "url": "https://peps.python.org/pep-0649/#interactive-repl-shell",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260273,
+    "url": "https://peps.python.org/pep-0649/#runtime-annotation-users",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260274,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0649.rst",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260276,
+    "url": "https://peps.python.org/pep-0649/#observed-semantics-for-annotations-expressions",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260277,
+    "url": "https://github.com/python/cpython/issues/85421",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260278,
+    "url": "https://mail.python.org/archives/list/python-dev@python.org/thread/SZLWVYV2HPLU6AH7DOUD7DWFUGBJGQAY/",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260279,
+    "url": "https://peps.python.org/pep-0649/#changes-to-allowable-annotations-syntax",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260281,
+    "url": "https://peps.python.org/pep-0649/#just-store-the-strings",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260283,
+    "url": "https://peps.python.org/pep-0649/#changes-to-inspect-get-annotations-and-typing-get-type-hints",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260284,
+    "url": "https://mail.python.org/archives/list/python-dev@python.org/thread/2MEOWHCVDLPABOBLYUGRXVOOOBYOLLU6/",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260285,
+    "url": "https://discuss.python.org/t/type-annotations-pep-649-and-pep-563/11363",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260287,
+    "url": "https://peps.python.org/pep-0649/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260288,
+    "url": "https://peps.python.org/pep-0649/#the-current-state-of-annotation-use-cases",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260289,
+    "url": "https://peps.python.org/pep-0649/#implementation",
+    "parentUrl": "https://peps.python.org/pep-0649/"
+  },
+  {
+    "id": 260290,
+    "url": "https://github.com/python/cpython/pull/129949/files/5c0294066ecc1d2bdba3ee475e5bd7f4c0963994#diff-c3db62f7c1928499afd71830c22c8bb8f56843a4533cecf69137973d73c489fc",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260291,
+    "url": "https://github.com/python/cpython/compare/6252328fbfdb961e1f0496a9e346d60ac6ae4f78..121b742acda7072d5bee16a8721c3c89a180e48b",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260292,
+    "url": "https://github.com/python/cpython/pull/129949#event-16261956665",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260295,
+    "url": "https://github.com/python/cpython/pull/129949/commits/f0f7d255b0ea95924483831184e43671743b3b6a",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260297,
+    "url": "https://github.com/python/cpython/pull/129949#event-16421347436",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260298,
+    "url": "https://github.com/mmingyu/typeshed/commit/75e584aaf908961aedbfeff47b5e4bca001c5585",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260299,
+    "url": "https://github.com/python/cpython/pull/129949/commits/121b742acda7072d5bee16a8721c3c89a180e48b",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260300,
+    "url": "https://github.com/python/cpython/pull/129949/files/c3c3075379a1b67f91e6c6751210c3ac30bd40f5#diff-c3db62f7c1928499afd71830c22c8bb8f56843a4533cecf69137973d73c489fc",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260301,
+    "url": "https://github.com/python/cpython/pull/129949/files/5c0294066ecc1d2bdba3ee475e5bd7f4c0963994#diff-7eadaf97b72ce35facfa72803d25f2d92126f71d444d717fb73fa41e97ba9f8c",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260302,
+    "url": "https://github.com/python/cpython/pull/129949#pullrequestreview-2608051684",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260303,
+    "url": "https://github.com/python/cpython/pull/129949#issuecomment-2647629180",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260304,
+    "url": "https://github.com/python/cpython/pull/129949#event-16261295417",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260305,
+    "url": "https://github.com/python/cpython/pull/129949#pullrequestreview-2608261020",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260306,
+    "url": "https://github.com/python/cpython/pull/129949#pullrequestreview-2635372073",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260307,
+    "url": "https://github.com/python/cpython/pull/129949/commits/af37eaeb47ccab07ff2d088410fdcadb6995a3e9",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260309,
+    "url": "https://github.com/python/cpython/pull/129949",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260311,
+    "url": "https://github.com/python/cpython/pull/129949#commits-pushed-e8b449f",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260312,
+    "url": "https://github.com/python/cpython/pull/129949/commits/a34e4616e632880bb844ecf69dc6925187d01a78",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260313,
+    "url": "https://github.com/python/cpython/pull/129949/commits/9d131292a67ad0a6ed794e7b89e15efc19d0dc1a",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260314,
+    "url": "https://github.com/python/cpython/pull/129949#issuecomment-2647622996",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260315,
+    "url": "https://github.com/python/cpython/pull/129949#issuecomment-2677094763",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260316,
+    "url": "https://github.com/python/cpython/pull/129949/files/5c0294066ecc1d2bdba3ee475e5bd7f4c0963994",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260317,
+    "url": "https://github.com/python/cpython/pull/129949#pullrequestreview-2608131313",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260319,
+    "url": "https://github.com/python/cpython/pull/129949#issuecomment-2647623050",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260320,
+    "url": "https://github.com/python/cpython/pull/129949#event-16422197436",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260322,
+    "url": "https://github.com/python/cpython/pull/129949#ref-issue-2842028667",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260323,
+    "url": "https://github.com/python/cpython/pull/129949/commits/e529f5f5270427f04ed4e16a119fd573e6a993c0",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260324,
+    "url": "https://github.com/python/cpython/pull/129949#issue-2842040554",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260327,
+    "url": "https://github.com/python/cpython/pull/129949/commits/3706c7833ea0793ac96838b16043355982e016b5",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260328,
+    "url": "https://github.com/python/cpython/pull/129949#commits-pushed-3132d2a",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260329,
+    "url": "https://github.com/python/cpython/pull/129949#event-16422351778",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260330,
+    "url": "https://github.com/python/cpython/pull/129949/commits/3af48c3c764e1336f434b82d2f3afd42f682fc15",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260331,
+    "url": "https://github.com/python/cpython/pull/129949/files/a34e4616e632880bb844ecf69dc6925187d01a78#diff-c3db62f7c1928499afd71830c22c8bb8f56843a4533cecf69137973d73c489fc",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260332,
+    "url": "https://github.com/python/cpython/pull/129949/commits/a259b395ed98aa3fbf09b23a08b269db226bb797",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260333,
+    "url": "https://github.com/python/cpython/pull/129949/files#diff-9e59d8c837ebf181d34af715ac88bb8a4b6141ec18b703cef2c3c8136391abf7",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260335,
+    "url": "https://github.com/python/cpython/pull/129949/commits/deb8b738eb23bec579bbc1aa47d386a9ca38eadc",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260336,
+    "url": "https://github.com/python/cpython/pull/129949/commits/479681673d6537c0d1bd7e097403731406fe768e",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260339,
+    "url": "https://github.com/python/cpython/pull/129949#issuecomment-2650227358",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260340,
+    "url": "https://github.com/python/cpython/pull/129949#pullrequestreview-2635723451",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260341,
+    "url": "https://github.com/python/cpython/pull/129949/commits/bd5b81cb332ff184eb1e5c26860f40ffedcf14fd",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260342,
+    "url": "https://github.com/python/cpython/pull/129949/commits/5e0977fe81c13ce1d92cb9b2f179e1075d8b7c8a",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260344,
+    "url": "https://github.com/python/cpython/pull/129949/files/df6330aff5dcb70c95355c6f22d576ca231772da#diff-2cf07acf4f2d547e93e35c6a4ba2ee818e991b54e88da4a904ee0a49acb99eb3",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260345,
+    "url": "https://github.com/python/cpython/pull/129949#pullrequestreview-2635721398",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260346,
+    "url": "https://github.com/python/cpython/pull/129949#ref-pullrequest-2876572970",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260348,
+    "url": "https://github.com/python/cpython/pull/129949/commits/41cb4a60634c95846cba3a9db0be6e16b12d7c96",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260349,
+    "url": "https://github.com/python/cpython/pull/129949#pullrequestreview-2608237882",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260350,
+    "url": "https://github.com/python/cpython/pull/129949#pullrequestreview-2635686602",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260351,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F129949",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260352,
+    "url": "https://github.com/python/cpython/pull/129949#commits-pushed-e529f5f",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260353,
+    "url": "https://github.com/python/cpython/commit/9f81f828c797f842d1df0a5cbda898bc0df8075a",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260354,
+    "url": "https://github.com/python/cpython/pull/129949#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260355,
+    "url": "https://github.com/python/cpython/commit/121b742acda7072d5bee16a8721c3c89a180e48b",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260356,
+    "url": "https://github.com/python/cpython/pull/129949#issuecomment-2677009845",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260357,
+    "url": "https://github.com/python/cpython/pull/129949/files/a34e4616e632880bb844ecf69dc6925187d01a78",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260358,
+    "url": "https://github.com/python/cpython/pull/129949/commits/40c60cc2923298a44bf04befac0048ec799be765",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260359,
+    "url": "https://github.com/python/cpython/pull/129949#commits-pushed-3706c78",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260361,
+    "url": "https://github.com/python/cpython/pull/129949#event-16245496372",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260362,
+    "url": "https://github.com/python/cpython/pull/129949/commits/d7626613a289f0b52b1118dab81d85693f13031e",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260363,
+    "url": "https://github.com/python/cpython/pull/129949/files/3af48c3c764e1336f434b82d2f3afd42f682fc15",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260364,
+    "url": "https://github.com/python/cpython/pull/129949/commits/13c18c7b233c226fb42da26c2cf7a030a742aa30",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260365,
+    "url": "https://github.com/python/cpython/pull/129949/files/5c0294066ecc1d2bdba3ee475e5bd7f4c0963994#diff-9e59d8c837ebf181d34af715ac88bb8a4b6141ec18b703cef2c3c8136391abf7",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260366,
+    "url": "https://github.com/python/cpython/pull/129949#event-16422351672",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260367,
+    "url": "https://github.com/python/typeshed/pull/13535",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260368,
+    "url": "https://github.com/auvipy",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260369,
+    "url": "https://github.com/python/cpython/pull/129949/commits/df6330aff5dcb70c95355c6f22d576ca231772da",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260370,
+    "url": "https://github.com/python/cpython/pull/129949#event-16416669755",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260371,
+    "url": "https://github.com/python/typeshed/pull/14076",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260372,
+    "url": "https://github.com/python/typeshed/pull/14077",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260373,
+    "url": "https://github.com/python/cpython/pull/129949/commits/5c0294066ecc1d2bdba3ee475e5bd7f4c0963994",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260374,
+    "url": "https://github.com/python/cpython/commit/6252328fbfdb961e1f0496a9e346d60ac6ae4f78",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260375,
+    "url": "https://github.com/python/cpython/pull/129949#event-16422194376",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260376,
+    "url": "https://github.com/python/cpython/pull/129949/commits/3132d2acf1a328324a9a4a67a2fdaa06ff6c198e",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260378,
+    "url": "https://github.com/python/cpython/pull/129949#commits-pushed-3af48c3",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260379,
+    "url": "https://github.com/python/cpython/pull/129949/files",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260380,
+    "url": "https://github.com/mmingyu",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260382,
+    "url": "https://github.com/python/cpython/pull/129949#ref-commit-75e584a",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260384,
+    "url": "https://github.com/python/cpython/pull/129949/commits/c3c3075379a1b67f91e6c6751210c3ac30bd40f5",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260385,
+    "url": "https://github.com/python/cpython/pull/129949/files/df6330aff5dcb70c95355c6f22d576ca231772da",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260386,
+    "url": "https://github.com/python/cpython/pull/129949/commits/3514b42a68309e55f55a0ec3842ba04f1808139c",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260387,
+    "url": "https://github.com/python/cpython/pull/129949#event-16245497440",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260388,
+    "url": "https://github.com/python/cpython/pull/129949#commits-pushed-4796816",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260393,
+    "url": "https://github.com/python/cpython/pull/129949#event-16245724279",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260394,
+    "url": "https://github.com/python/cpython/pull/129949/files/c3c3075379a1b67f91e6c6751210c3ac30bd40f5#diff-9e59d8c837ebf181d34af715ac88bb8a4b6141ec18b703cef2c3c8136391abf7",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260395,
+    "url": "https://github.com/python/cpython/pull/129949#event-16416623690",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260396,
+    "url": "https://github.com/python/cpython/pull/129949#issuecomment-2649948524",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260397,
+    "url": "https://github.com/python/cpython/pull/129949#event-16422194513",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260398,
+    "url": "https://github.com/python/cpython/pull/129949#issuecomment-2650339740",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260399,
+    "url": "https://github.com/python/cpython/pull/129949/commits/e8b449f87c7a46401902b42b8aef773bfc71f74c",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "id": 260400,
+    "url": "https://github.com/python/cpython/blob/b8f7bddd6c6b5d2d13c97882042ce808aceca5a8/.github/CODEOWNERS#L194",
+    "parentUrl": "https://github.com/python/cpython/issues/129949"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "unittest — Unit testing framework — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertHasAttr"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "unittest — Unit testing framework — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertHasAttr"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d80\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d48\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10137?s\u003d80\u0026v\u003d4",
+    "alt": "@ghost",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/68870d968496bce047e3fa048dd4dcea846616f952ec14481efffa6e1ba845e6/68747470733a2f2f63707974686f6e2d636c61626f742e6865726f6b756170702e636f6d2f636c612d7369676e65642e737667",
+    "alt": "CLA signed",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6212603?s\u003d60\u0026v\u003d4",
+    "alt": "auvipy",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6212603?s\u003d48\u0026v\u003d4",
+    "alt": "@auvipy",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d80\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6212603?s\u003d60\u0026v\u003d4",
+    "alt": "auvipy",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6212603?s\u003d48\u0026v\u003d4",
+    "alt": "@auvipy",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d60\u0026v\u003d4",
+    "alt": "mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d60\u0026v\u003d4",
+    "alt": "gpshead",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d60\u0026v\u003d4",
+    "alt": "gpshead",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d40\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6212603?s\u003d40\u0026v\u003d4",
+    "alt": "@auvipy",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d40\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66214527?s\u003d52\u0026v\u003d4",
+    "alt": "@mmingyu",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d52\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d52\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6212603?s\u003d52\u0026v\u003d4",
+    "alt": "@auvipy",
+    "pageTitle": "gh-129948: Add `set()` to `multiprocessing.managers.SyncManager` by mmingyu · Pull Request #129949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129949"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.64.0/ietf/images/ietf-logo-nor-white.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 6713 - The \u0027application/zlib\u0027 and \u0027application/gzip\u0027 Media Types",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.64.0/ietf/images/ietf-logo-nor.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 6713 - The \u0027application/zlib\u0027 and \u0027application/gzip\u0027 Media Types",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc6713.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "mimetypes — Map filenames to MIME types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.add_type"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "mimetypes — Map filenames to MIME types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.add_type"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
