@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 760,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread",
+    "title": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » threading — Thread-based parallelism | Theme Auto Light Dark | threading — Thread-based parallelism¶ Source code: Lib/threading.py This module constructs higher-level threading interfaces on top of the lower level _thread module. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Introduction¶ The threading module provides a way to run multiple threads (smaller units of a process) concurrently within a single process. It allows for the creation and management of threads, making it possible to execute tasks in parallel, sharing memory space. Threads are particularly useful when tasks are I/O bound, such as file operations or making network requests, where much of the time is spent waiting for external resources. A typical use case for threading includes managing a pool of worker threads that can process multiple tasks concurrently. Here’s a basic example of creating and starting threads using Thread: import threading\nimport time\n\ndef crawl(link, delay\u003d3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks \u003d [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads \u003d []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t \u003d threading.Thread(target\u003dcrawl, args\u003d(link,), kwargs\u003d{\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()\n Changed in version 3.7: This module used to be optional, it is now always available. See also concurrent.futures.ThreadPoolExecutor offers a higher level interface to push tasks to a background thread without blocking execution of the calling thread, while still being able to retrieve their results when needed. queue provides a thread-safe interface for exchanging data between running threads. asyncio offers an alternative approach to achieving task level concurrency without requiring the use of multiple operating system threads. Note In the Python 2.x series, this module contained camelCase names for some methods and functions. These are deprecated as of Python 3.10, but they are still supported for compatibility with Python 2.5 and lower. CPython implementation detail: In CPython, due to the Global Interpreter Lock, only one thread can execute Python code at once (even though certain performance-oriented libraries might overcome this limitation). If you want your application to make better use of the computational resources of multi-core machines, you are advised to use multiprocessing or concurrent.futures.ProcessPoolExecutor. However, threading is still an appropriate model if you want to run multiple I/O-bound tasks simultaneously. GIL and performance considerations¶ Unlike the multiprocessing module, which uses separate processes to bypass the global interpreter lock (GIL), the threading module operates within a single process, meaning that all threads share the same memory space. However, the GIL limits the performance gains of threading when it comes to CPU-bound tasks, as only one thread can execute Python bytecode at a time. Despite this, threads remain a useful tool for achieving concurrency in many scenarios. As of Python 3.13, free-threaded builds can disable the GIL, enabling true parallel execution of threads, but this feature is not available by default (see PEP 703). Reference¶ This module defines the following functions: threading.active_count()¶ Return the number of Thread objects currently alive. The returned count is equal to the length of the list returned by enumerate(). The function activeCount is a deprecated alias for this function. threading.current_thread()¶ Return the current Thread object, corresponding to the caller’s thread of control. If the caller’s thread of control was not created through the threading module, a dummy thread object with limited functionality is returned. The function currentThread is a deprecated alias for this function. threading.excepthook(args, /)¶ Handle uncaught exception raised by Thread.run(). The args argument has the following attributes: exc_type: Exception type. exc_value: Exception value, can be None. exc_traceback: Exception traceback, can be None. thread: Thread which raised the exception, can be None. If exc_type is SystemExit, the exception is silently ignored. Otherwise, the exception is printed out on sys.stderr. If this function raises an exception, sys.excepthook() is called to handle it. threading.excepthook() can be overridden to control how uncaught exceptions raised by Thread.run() are handled. Storing exc_value using a custom hook can create a reference cycle. It should be ",
+    "scrapedAt": "2026-05-09 00:52:32.298804"
+  },
+  {
+    "id": 759,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source",
+    "title": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Importing Modules » importlib — The implementation of import | Theme Auto Light Dark | importlib — The implementation of import¶ Added in version 3.1. Source code: Lib/importlib/__init__.py Introduction¶ The purpose of the importlib package is three-fold. One is to provide the implementation of the import statement (and thus, by extension, the __import__() function) in Python source code. This provides an implementation of import which is portable to any Python interpreter. This also provides an implementation which is easier to comprehend than one implemented in a programming language other than Python. Two, the components to implement import are exposed in this package, making it easier for users to create their own custom objects (known generically as an importer) to participate in the import process. Three, the package contains modules exposing additional functionality for managing aspects of Python packages: importlib.metadata presents access to metadata from third-party distributions. importlib.resources provides routines for accessing non-code “resources” from Python packages. See also The import statement The language reference for the import statement. Packages specification Original specification of packages. Some semantics have changed since the writing of this document (e.g. redirecting based on None in sys.modules). The __import__() function The import statement is syntactic sugar for this function. The initialization of the sys.path module search path The initialization of sys.path. PEP 235 Import on Case-Insensitive Platforms PEP 263 Defining Python Source Code Encodings PEP 302 New Import Hooks PEP 328 Imports: Multi-Line and Absolute/Relative PEP 366 Main module explicit relative imports PEP 420 Implicit namespace packages PEP 451 A ModuleSpec Type for the Import System PEP 488 Elimination of PYO files PEP 489 Multi-phase extension module initialization PEP 552 Deterministic pycs PEP 3120 Using UTF-8 as the Default Source Encoding PEP 3147 PYC Repository Directories Functions¶ importlib.__import__(name, globals\u003dNone, locals\u003dNone, fromlist\u003d(), level\u003d0)¶ An implementation of the built-in __import__() function. Note Programmatic importing of modules should use import_module() instead of this function. importlib.import_module(name, package\u003dNone)¶ Import a module. The name argument specifies what module to import in absolute or relative terms (e.g. either pkg.mod or ..mod). If the name is specified in relative terms, then the package argument must be set to the name of the package which is to act as the anchor for resolving the package name (e.g. import_module(\u0027..mod\u0027, \u0027pkg.subpkg\u0027) will import pkg.mod). The import_module() function acts as a simplifying wrapper around importlib.__import__(). This means all semantics of the function are derived from importlib.__import__(). The most important difference between these two functions is that import_module() returns the specified package or module (e.g. pkg.mod), while __import__() returns the top-level package or module (e.g. pkg). If you are dynamically importing a module that was created since the interpreter began execution (e.g., created a Python source file), you may need to call invalidate_caches() in order for the new module to be noticed by the import system. Changed in version 3.3: Parent packages are automatically imported. importlib.invalidate_caches()¶ Invalidate the internal caches of finders stored at sys.meta_path. If a finder implements invalidate_caches() then it will be called to perform the invalidation. This function should be called if any modules are created/installed while your program is running to guarantee all finders will notice the new module’s existence. Added in version 3.3. Changed in version 3.10: Namespace packages created/installed in a different sys.path location after the same namespace was already imported are noticed. importlib.reload(module)¶ Reload a previously imported module. The argument must be a module object, so it must have been successfully imported before. This is useful if you have edited the module source file using an external editor and want to try out the new version without leaving the Python interpreter. The return value is the module object (which can be different if re-importing causes a different object to be placed in sys.modules). When reload() is executed: Python module’s code is recompiled and the module-level code re-executed, defining a new set of objects which are bound to names in the module’s dictionary by reusing the loader which originally loaded the module. The init function of extension modules is not called a second time. As with all other objects in Python the old objects are only reclaimed after their reference counts drop to zero. The names in the module namespace are updated to point to any new or changed objects. Other references to the old objects (such as names e",
+    "scrapedAt": "2026-05-09 00:52:31.142164"
+  },
+  {
+    "id": 758,
+    "url": "https://docs.python.org/3/library/pprint.html#module-pprint",
+    "title": "pprint — Data pretty printer — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » pprint — Data pretty printer | Theme Auto Light Dark | pprint — Data pretty printer¶ Source code: Lib/pprint.py The pprint module provides a capability to “pretty-print” arbitrary Python data structures in a form which can be used as input to the interpreter. If the formatted structures include objects which are not fundamental Python types, the representation may not be loadable. This may be the case if objects such as files, sockets or classes are included, as well as many other objects which are not representable as Python literals. The formatted representation keeps objects on a single line if it can, and breaks them onto multiple lines if they don’t fit within the allowed width, adjustable by the width parameter defaulting to 80 characters. Changed in version 3.9: Added support for pretty-printing types.SimpleNamespace. Changed in version 3.10: Added support for pretty-printing dataclasses.dataclass. Functions¶ pprint.pp(object, stream\u003dNone, indent\u003d1, width\u003d80, depth\u003dNone, *, compact\u003dFalse, sort_dicts\u003dFalse, underscore_numbers\u003dFalse)¶ Prints the formatted representation of object, followed by a newline. This function may be used in the interactive interpreter instead of the print() function for inspecting values. Tip: you can reassign print \u003d pprint.pp for use within a scope. Parameters: object – The object to be printed. stream (file-like object | None) – A file-like object to which the output will be written by calling its write() method. If None (the default), sys.stdout is used. indent (int) – The amount of indentation added for each nesting level. width (int) – The desired maximum number of characters per line in the output. If a structure cannot be formatted within the width constraint, a best effort will be made. depth (int | None) – The number of nesting levels which may be printed. If the data structure being printed is too deep, the next contained level is replaced by .... If None (the default), there is no constraint on the depth of the objects being formatted. compact (bool) – Control the way long sequences are formatted. If False (the default), each item of a sequence will be formatted on a separate line, otherwise as many items as will fit within the width will be formatted on each output line. sort_dicts (bool) – If True, dictionaries will be formatted with their keys sorted, otherwise they will be displayed in insertion order (the default). underscore_numbers (bool) – If True, integers will be formatted with the _ character for a thousands separator, otherwise underscores are not displayed (the default). \u003e\u003e\u003e import pprint\n\u003e\u003e\u003e stuff \u003d [\u0027spam\u0027, \u0027eggs\u0027, \u0027lumberjack\u0027, \u0027knights\u0027, \u0027ni\u0027]\n\u003e\u003e\u003e stuff.insert(0, stuff)\n\u003e\u003e\u003e pprint.pp(stuff)\n[\u003cRecursion on list with id\u003d...\u003e,\n \u0027spam\u0027,\n \u0027eggs\u0027,\n \u0027lumberjack\u0027,\n \u0027knights\u0027,\n \u0027ni\u0027]\n Added in version 3.8. pprint.pprint(object, stream\u003dNone, indent\u003d1, width\u003d80, depth\u003dNone, *, compact\u003dFalse, sort_dicts\u003dTrue, underscore_numbers\u003dFalse)¶ Alias for pp() with sort_dicts set to True by default, which would automatically sort the dictionaries’ keys, you might want to use pp() instead where it is False by default. pprint.pformat(object, indent\u003d1, width\u003d80, depth\u003dNone, *, compact\u003dFalse, sort_dicts\u003dTrue, underscore_numbers\u003dFalse)¶ Return the formatted representation of object as a string. indent, width, depth, compact, sort_dicts and underscore_numbers are passed to the PrettyPrinter constructor as formatting parameters and their meanings are as described in the documentation above. pprint.isreadable(object)¶ Determine if the formatted representation of object is “readable”, or can be used to reconstruct the value using eval(). This always returns False for recursive objects. \u003e\u003e\u003e pprint.isreadable(stuff)\nFalse\n pprint.isrecursive(object)¶ Determine if object requires a recursive representation. This function is subject to the same limitations as noted in saferepr() below and may raise an RecursionError if it fails to detect a recursive object. pprint.saferepr(object)¶ Return a string representation of object, protected against recursion in some common data structures, namely instances of dict, list and tuple or subclasses whose __repr__ has not been overridden. If the representation of object exposes a recursive entry, the recursive reference will be represented as \u003cRecursion on typename with id\u003dnumber\u003e. The representation is not otherwise formatted. \u003e\u003e\u003e pprint.saferepr(stuff)\n\"[\u003cRecursion on list with id\u003d...\u003e, \u0027spam\u0027, \u0027eggs\u0027, \u0027lumberjack\u0027, \u0027knights\u0027, \u0027ni\u0027]\"\n PrettyPrinter Objects¶ class pprint.PrettyPrinter(indent\u003d1, width\u003d80, depth\u003dNone, stream\u003dNone, *, compact\u003dFalse, sort_dicts\u003dTrue, underscore_numbers\u003dFalse)¶ Construct a PrettyPrinter instance. Arguments have the same meaning as for pp(). Note that they are in a different order, and that sort_dicts defaults to True. \u003e\u003e\u003e import pprint\n\u003e\u003e\u003e stuff \u003d [\u0027spam\u0027, \u0027eggs\u0027, \u0027lumberjack\u0027, \u0027knights\u0027, \u0027ni\u0027]\n\u003e\u003e",
+    "scrapedAt": "2026-05-09 00:52:29.980896"
+  },
+  {
+    "id": 757,
+    "url": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB",
+    "title": "5. Building C and C++ Extensions on Windows — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Extending and Embedding the Python Interpreter » 5. Building C and C++ Extensions on Windows | Theme Auto Light Dark | 5. Building C and C++ Extensions on Windows¶ This chapter briefly explains how to create a Windows extension module for Python using Microsoft Visual C++, and follows with more detailed background information on how it works. The explanatory material is useful for both the Windows programmer learning to build Python extensions and the Unix programmer interested in producing software which can be successfully built on both Unix and Windows. Module authors are encouraged to use the distutils approach for building extension modules, instead of the one described in this section. You will still need the C compiler that was used to build Python; typically Microsoft Visual C++. Note This chapter mentions a number of filenames that include an encoded Python version number. These filenames are represented with the version number shown as XY; in practice, \u0027X\u0027 will be the major version number and \u0027Y\u0027 will be the minor version number of the Python release you’re working with. For example, if you are using Python 2.2.1, XY will actually be 22. 5.1. A Cookbook Approach¶ There are two approaches to building extension modules on Windows, just as there are on Unix: use the setuptools package to control the build process, or do things manually. The setuptools approach works well for most extensions; documentation on using setuptools to build and package extension modules is available in Building C and C++ Extensions with setuptools. If you find you really need to do things manually, it may be instructive to study the project file for the winsound standard library module. 5.2. Differences Between Unix and Windows¶ Unix and Windows use completely different paradigms for run-time loading of code. Before you try to build a module that can be dynamically loaded, be aware of how your system works. In Unix, a shared object (.so) file contains code to be used by the program, and also the names of functions and data that it expects to find in the program. When the file is joined to the program, all references to those functions and data in the file’s code are changed to point to the actual locations in the program where the functions and data are placed in memory. This is basically a link operation. In Windows, a dynamic-link library (.dll) file has no dangling references. Instead, an access to functions or data goes through a lookup table. So the DLL code does not have to be fixed up at runtime to refer to the program’s memory; instead, the code already uses the DLL’s lookup table, and the lookup table is modified at runtime to point to the functions and data. In Unix, there is only one type of library file (.a) which contains code from several object files (.o). During the link step to create a shared object file (.so), the linker may find that it doesn’t know where an identifier is defined. The linker will look for it in the object files in the libraries; if it finds it, it will include all the code from that object file. In Windows, there are two types of library, a static library and an import library (both called .lib). A static library is like a Unix .a file; it contains code to be included as necessary. An import library is basically used only to reassure the linker that a certain identifier is legal, and will be present in the program when the DLL is loaded. So the linker uses the information from the import library to build the lookup table for using identifiers that are not included in the DLL. When an application or a DLL is linked, an import library may be generated, which will need to be used for all future DLLs that depend on the symbols in the application or DLL. Suppose you are building two dynamic-load modules, B and C, which should share another block of code A. On Unix, you would not pass A.a to the linker for B.so and C.so; that would cause it to be included twice, so that B and C would each have their own copy. In Windows, building A.dll will also build A.lib. You do pass A.lib to the linker for B and C. A.lib does not contain code; it just contains information which will be used at runtime to access A’s code. In Windows, using an import library is sort of like using import spam; it gives you access to spam’s names, but does not create a separate copy. On Unix, linking with a library is more like from spam import *; it does create a separate copy. Py_NO_LINK_LIB¶ Turn off the implicit, #pragma-based linkage with the Python library, performed inside CPython header files. Added in version 3.14. 5.3. Using DLLs in Practice¶ Windows Python is built in Microsoft Visual C++; using other compilers may or may not work. The rest of this section is MSVC++ specific. When creating DLLs in Windows, you can use the CPython library in two ways: By default, inclusion of PC/pyconfig.h directly or via Python.h triggers an implicit, co",
+    "scrapedAt": "2026-05-09 00:52:28.839319"
+  },
+  {
+    "id": 756,
+    "url": "https://github.com/python/cpython/issues/128307",
+    "title": "add eager_start parameter to loop.create_task · Issue #128307 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k add eager_start parameter to loop.create_task #128307 New issue Copy link New issue Copy link Closed Closed add eager_start parameter to loop.create_task#128307 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-asynciotype-featureA feature request or enhancementA feature request or enhancement Description graingert opened on Dec 28, 2024 Issue body actions Feature or enhancement Proposal: We want to be able to opt in and opt out of eager tasks anywhere in the asyncio call stack, eg in some asyncio library, and not rely on some other asyncio framework setting the default. Has this already been discussed elsewhere? I have already discussed this feature proposal on Discourse Links to previous discussion of this feature: https://discuss.python.org/t/make-asyncio-eager-task-factory-default/75164/10 Linked PRs gh-128307: support eager_start kwarg in create_eager_task_factory, and pass kwargs from asyncio.create_task and TaskGroup.create_task #128306 gh-128307: Update docs for asyncio.create_task, TaskGroup.create_task, asyncio.create_task #134202 gh-128307: Update what\u0027s new in 3.13 and 3.14 with create_task changes #134304 [3.14] gh-128307: Update what\u0027s new in 3.13 and 3.14 with create_task changes of asyncio (GH-134304) #134319 [3.13] gh-128307: Update what\u0027s new in 3.13 with create_task changes of asyncio (#134304) #134335 [3.14] gh-128307: Update docs for asyncio.create_task, TaskGroup.create_task, asyncio.create_task (GH-134202) #134553 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-asynciotype-featureA feature request or enhancementA feature request or enhancement Projects asyncio Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:52:27.663966"
+  },
+  {
     "id": 755,
     "url": "https://docs.python.org/3/library/gc.html#gc.collect",
     "title": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
@@ -4998,26 +5033,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 756,
-    "url": "https://github.com/python/cpython/issues/128307"
-  },
-  {
-    "id": 757,
-    "url": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
-  },
-  {
-    "id": 758,
-    "url": "https://docs.python.org/3/library/pprint.html#module-pprint"
-  },
-  {
-    "id": 759,
-    "url": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
-  },
-  {
-    "id": 760,
-    "url": "https://docs.python.org/3/library/threading.html#threading.Thread"
   },
   {
     "id": 761,
@@ -129744,10 +129759,1180 @@ window.searchData = [
     "id": 93365,
     "url": "https://docs.python.org/3/library/gc.html#gc.get_freeze_count",
     "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 93366,
+    "url": "https://github.com/python/cpython/issues/128307#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 93367,
+    "url": "https://github.com/python/cpython/pull/134319",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 93371,
+    "url": "https://github.com/python/cpython/pull/134202",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 93372,
+    "url": "https://github.com/python/cpython/pull/134553",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 93373,
+    "url": "https://github.com/python/cpython/issues/128307#issue-2761671419",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 93376,
+    "url": "https://github.com/python/cpython/pull/134304",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 93378,
+    "url": "https://github.com/python/cpython/pull/134335",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 93381,
+    "url": "https://discuss.python.org/t/make-asyncio-eager-task-factory-default/75164/10",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 93382,
+    "url": "https://github.com/python/cpython/issues/128307#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 93383,
+    "url": "https://github.com/python/cpython/pull/128306",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 93385,
+    "url": "https://docs.python.org/3/extending/windows.html#a-cookbook-approach",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 93392,
+    "url": "https://docs.python.org/3/extending/windows.html#building-c-and-c-extensions-on-windows",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 93395,
+    "url": "https://docs.python.org/3/extending/building.html",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 93396,
+    "url": "https://github.com/python/cpython/tree/3.14/PCbuild/winsound.vcxproj",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 93397,
+    "url": "https://github.com/python/cpython/blob/main/Doc/extending/windows.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 93398,
+    "url": "https://docs.python.org/3/c-api/stable.html#stable-application-binary-interface",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 93399,
+    "url": "https://docs.python.org/3/extending/windows.html#",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 93402,
+    "url": "https://docs.python.org/3/extending/windows.html#differences-between-unix-and-windows",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 93406,
+    "url": "https://docs.python.org/3/extending/embedding.html",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 93408,
+    "url": "https://docs.python.org/3/extending/windows.html#using-dlls-in-practice",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 93410,
+    "url": "https://docs.python.org/3/extending/building.html#setuptools-index",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 93412,
+    "url": "https://docs.python.org/3/library/pprint.html#pprint.isreadable",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93416,
+    "url": "https://docs.python.org/3/library/pprint.html#pprint.PrettyPrinter.isreadable",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93423,
+    "url": "https://docs.python.org/3/library/pprint.html#pprint.isrecursive",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93428,
+    "url": "https://docs.python.org/3/library/pprint.html#functions",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93431,
+    "url": "https://docs.python.org/3/library/pprint.html#pprint.PrettyPrinter",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93433,
+    "url": "https://docs.python.org/3/library/pprint.html#pprint.pformat",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93434,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/pprint.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93436,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/pprint.py",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93438,
+    "url": "https://docs.python.org/3/library/pprint.html#pprint.pp",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93440,
+    "url": "https://docs.python.org/3/library/pprint.html#pprint.PrettyPrinter.pprint",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93446,
+    "url": "https://docs.python.org/3/library/pprint.html#",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93447,
+    "url": "https://docs.python.org/3/library/pprint.html#pprint.PrettyPrinter.format",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93448,
+    "url": "https://docs.python.org/3/library/pprint.html#pprint.pprint",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93450,
+    "url": "https://docs.python.org/3/library/pprint.html#prettyprinter-objects",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93451,
+    "url": "https://docs.python.org/3/library/pprint.html#pprint.saferepr",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93454,
+    "url": "https://docs.python.org/3/library/pprint.html#pprint.PrettyPrinter.pformat",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93457,
+    "url": "https://docs.python.org/3/library/pprint.html#pprint.PrettyPrinter.isrecursive",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93458,
+    "url": "https://docs.python.org/3/library/pprint.html#example",
+    "parentUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "id": 93461,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.FrozenImporter",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93464,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.util.spec_from_file_location",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93469,
+    "url": "https://peps.python.org/pep-3120/",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93470,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.FileFinder.path",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93472,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.AppleFrameworkLoader.name",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93473,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.util.find_spec",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93474,
+    "url": "https://docs.python.org/3/library/importlib.html#importing-programmatically",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93476,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.SourceLoader.path_mtime",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93477,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.Loader.load_module",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93478,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.SourceFileLoader.path",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93481,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ExtensionFileLoader",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93484,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.ExecutionLoader.get_filename",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93485,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ExtensionFileLoader.name",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93486,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.__import__",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93488,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ModuleSpec.origin",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93489,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.Loader.exec_module",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93490,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.MetaPathFinder.invalidate_caches",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93492,
+    "url": "https://docs.python.org/3/library/importlib.html#functions",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93493,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.AppleFrameworkLoader",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93495,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.AppleFrameworkLoader.path",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93498,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.PathFinder.find_spec",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93499,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ExtensionFileLoader.exec_module",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93504,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.util.LazyLoader",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93505,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#from",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93509,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.SourceLoader.get_code",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93512,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ModuleSpec.has_location",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93514,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.PathEntryFinder.find_spec",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93515,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.InspectLoader.source_to_code",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93517,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.SourceLoader.get_source",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93519,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.ResourceLoader.get_data",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93520,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.SourcelessFileLoader.get_source",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93522,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.SourcelessFileLoader.path",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93523,
+    "url": "https://docs.python.org/3/library/importlib.html#module-importlib.machinery",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93524,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ExtensionFileLoader.get_filename",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93525,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ExtensionFileLoader.path",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93526,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.all_suffixes",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93527,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.SourceFileLoader.name",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93529,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.PathEntryFinder.invalidate_caches",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93530,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.PathFinder.invalidate_caches",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93531,
+    "url": "https://docs.python.org/3/library/importlib.html#implementing-lazy-imports",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93533,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.BYTECODE_SUFFIXES",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93534,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.PathFinder",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93536,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.ExecutionLoader",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93537,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.DEBUG_BYTECODE_SUFFIXES",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93538,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.SourcelessFileLoader.name",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93539,
+    "url": "https://docs.python.org/3/library/importlib.html#introduction",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93540,
+    "url": "https://peps.python.org/pep-0328/",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93542,
+    "url": "https://docs.python.org/3/library/importlib.html#approximating-importlib-import-module",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93543,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.SourcelessFileLoader.get_code",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93544,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.SourceLoader.is_package",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93545,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.FileFinder",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93549,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.OPTIMIZED_BYTECODE_SUFFIXES",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93554,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.SourceFileLoader.is_package",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93555,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ExtensionFileLoader.is_package",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93556,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.FileLoader.path",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93557,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.FileLoader.get_data",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93560,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.SOURCE_SUFFIXES",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93561,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ExtensionFileLoader.create_module",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93562,
+    "url": "https://peps.python.org/pep-0263/",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93565,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ExtensionFileLoader.get_source",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93566,
+    "url": "https://docs.python.org/3/library/importlib.html#",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93568,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.SourceFileLoader.path_stats",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93570,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.ResourceReader",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93573,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.SourceLoader",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93575,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ModuleSpec.loader_state",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93577,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.SourcelessFileLoader.load_module",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93578,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.FileFinder.path_hook",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93579,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.FileLoader",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93580,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.SourceLoader.set_data",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93583,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/importlib/util.py",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93585,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.util.MAGIC_NUMBER",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93587,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/importlib/machinery.py",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93588,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ExtensionFileLoader.get_code",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93589,
+    "url": "https://docs.python.org/3/library/importlib.resources.html#module-importlib.resources",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93590,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.util.decode_source",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93592,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.InspectLoader.get_code",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93593,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.InspectLoader.exec_module",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93594,
+    "url": "https://docs.python.org/3/library/importlib.html#setting-up-an-importer",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93597,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.FileLoader.name",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93599,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.SourceLoader.load_module",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93600,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.SourcelessFileLoader.is_package",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93601,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.util.spec_from_loader",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93603,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.FileFinder.invalidate_caches",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93605,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.EXTENSION_SUFFIXES",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93607,
+    "url": "https://www.python.org/doc/essays/packages/",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93608,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/importlib.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93609,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/importlib/abc.py",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93610,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.FileLoader.load_module",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93613,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.SourceFileLoader.load_module",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93615,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.InspectLoader.get_source",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93617,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.BuiltinImporter",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93618,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.SourcelessFileLoader",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93619,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.FileFinder.find_spec",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93622,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.util.LazyLoader.factory",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93623,
+    "url": "https://docs.python.org/3/library/importlib.html#checking-if-a-module-can-be-imported",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93624,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getmodulename",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93625,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.SourceFileLoader.set_data",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93628,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.SourceLoader.exec_module",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93629,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.NamespaceLoader",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93631,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.ResourceLoader",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93636,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.util.resolve_name",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93641,
+    "url": "https://docs.python.org/3/library/importlib.html#importing-a-source-file-directly",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93643,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.InspectLoader",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93649,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.InspectLoader.is_package",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93650,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.invalidate_caches",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93652,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/importlib/__init__.py",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93653,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.Loader.create_module",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93655,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.FileLoader.get_filename",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93656,
+    "url": "https://docs.python.org/3/library/importlib.html#examples",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93659,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.SourceLoader.path_stats",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93660,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.reload",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93661,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.util.source_from_cache",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93662,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.InspectLoader.load_module",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93664,
+    "url": "https://peps.python.org/pep-0235/",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93665,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.util.source_hash",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93669,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.util._incompatible_extension_module_restrictions",
+    "parentUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "id": 93674,
+    "url": "https://docs.python.org/3/library/threading.html#introduction",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93675,
+    "url": "https://docs.python.org/3/library/threading.html#threading.settrace_all_threads",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93676,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.join",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93679,
+    "url": "https://docs.python.org/3/library/threading.html#using-locks-conditions-and-semaphores-in-the-with-statement",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93680,
+    "url": "https://docs.python.org/3/library/threading.html#thread-objects",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93682,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Event.wait",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93683,
+    "url": "https://docs.python.org/3/library/_thread.html#module-_thread",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93685,
+    "url": "https://docs.python.org/3/library/threading.html#condition-objects",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93686,
+    "url": "https://docs.python.org/3/library/threading.html#threading.setprofile",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93687,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Barrier.wait",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93688,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/threading.py",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93689,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Timer",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93693,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Condition.locked",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93694,
+    "url": "https://docs.python.org/3/library/threading.html#semaphore-example",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93695,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Barrier.broken",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93699,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Barrier.abort",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93700,
+    "url": "https://docs.python.org/3/library/threading.html#threading.gettrace",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93701,
+    "url": "https://docs.python.org/3/library/threading.html#threading.get_native_id",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93702,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.native_id",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93703,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Condition.wait_for",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93705,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/threading.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93707,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Condition.acquire",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93713,
+    "url": "https://docs.python.org/3/library/threading.html#threading.enumerate",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93716,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Barrier.n_waiting",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93717,
+    "url": "https://docs.python.org/3/library/threading.html#threading.RLock.release",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93719,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Event.set",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93720,
+    "url": "https://docs.python.org/3/library/threading.html#threading.BoundedSemaphore",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93721,
+    "url": "https://docs.python.org/3/library/threading.html#thread-local-data",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93722,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Lock.acquire",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93725,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Condition.notify",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93728,
+    "url": "https://docs.python.org/3/library/threading.html#threading.BrokenBarrierError",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93730,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.getName",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93733,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ThreadPoolExecutor",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93734,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Barrier.reset",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93736,
+    "url": "https://docs.python.org/3/library/threading.html#barrier-objects",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93738,
+    "url": "https://docs.python.org/3/library/threading.html#threading.TIMEOUT_MAX",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93740,
+    "url": "https://docs.python.org/3/library/threading.html#threading.main_thread",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93746,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Condition.wait",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93748,
+    "url": "https://docs.python.org/3/library/threading.html#threading.__excepthook__",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93749,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Semaphore.acquire",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93752,
+    "url": "https://docs.python.org/3/library/threading.html#semaphore-objects",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93755,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Event.clear",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93757,
+    "url": "https://docs.python.org/3/library/threading.html#reference",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93759,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Condition.release",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93760,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.is_alive",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93763,
+    "url": "https://docs.python.org/3/library/threading.html#threading.get_ident",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93764,
+    "url": "https://docs.python.org/3/library/threading.html#event-objects",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93765,
+    "url": "https://docs.python.org/3/library/threading.html#meth-thread-join",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93768,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.copy_context",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93769,
+    "url": "https://docs.python.org/3/library/threading.html#timer-objects",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93770,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Timer.cancel",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93772,
+    "url": "https://docs.python.org/3/library/threading.html#threading.RLock.acquire",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93774,
+    "url": "https://docs.python.org/3/library/threading.html#gil-and-performance-considerations",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93775,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Semaphore.release",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93776,
+    "url": "https://docs.python.org/3/library/threading.html#rlock-objects",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93780,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Barrier.parties",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93781,
+    "url": "https://docs.python.org/3/library/threading.html#threading.getprofile",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93782,
+    "url": "https://docs.python.org/3/library/threading.html#threading.stack_size",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93783,
+    "url": "https://docs.python.org/3/library/threading.html#threading.RLock.locked",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93784,
+    "url": "https://docs.python.org/3/library/threading.html#",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93785,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.ident",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93788,
+    "url": "https://docs.python.org/3/library/threading.html#with-locks",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93792,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Lock.release",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93793,
+    "url": "https://docs.python.org/3/library/threading.html#lock-objects",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93794,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Lock.locked",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93795,
+    "url": "https://docs.python.org/3/library/threading.html#threading.setprofile_all_threads",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "id": 93798,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.isDaemon",
+    "parentUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.html#importlib.util.cache_from_source"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pprint — Data pretty printer — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pprint — Data pretty printer — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pprint.html#module-pprint"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "5. Building C and C++ Extensions on Windows — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "5. Building C and C++ Extensions on Windows — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/413772?v\u003d4\u0026size\u003d80",
+    "alt": "@graingert",
+    "pageTitle": "add eager_start parameter to loop.create_task · Issue #128307 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/413772?v\u003d4\u0026size\u003d48",
+    "alt": "@graingert",
+    "pageTitle": "add eager_start parameter to loop.create_task · Issue #128307 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128307"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
