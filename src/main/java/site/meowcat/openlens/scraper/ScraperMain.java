@@ -96,7 +96,7 @@ public class ScraperMain {
             System.out.println(">> Committing and pushing updates to Git...");
 
             // 1. Git Add
-            new ProcessBuilder("git", "add", "frontend/search-data.js", "urls.txt", "blacklist.txt")
+            new ProcessBuilder("git", "add", "frontend/search-data.js", "urls.txt")
                     .directory(new java.io.File("."))
                     .inheritIO()
                     .start().waitFor();
