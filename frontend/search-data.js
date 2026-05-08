@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 210,
+    "url": "https://pyfound.blogspot.com/2026/04/pycon-us-2026-hotels.html",
+    "title": "Python Software Foundation News: PyCon US 2026: Why we\u0027re asking you to think about your hotel reservation",
+    "content": "Tuesday, April 14, 2026 PyCon US 2026: Why we\u0027re asking you to think about your hotel reservation The PyCon US 2026 team has already covered some of the fun, unexpected, and meaningful reasons you’ll want to stay in the PyCon US hotel block. The PSF wants to use our blog to give a different angle, to keep being transparent with you, and share a little bit of real talk on the economics of holding a conference in the US at this moment in time. The short version is, if you’re joining us in Long Beach, please book the official PyCon US hotels through your PyCon US 2026 dashboard, because bookings in our hotel block are critical to the economic viability of the event. Context on hotel bookings \u0026 PyCon US For many years, PyCon US has relied on hotel booking commissions to help pay for our conference space. This helps us keep the event tickets affordable and to continue offering Travel Grants to community members who might not otherwise be able to attend PyCon US. Once your event outgrows academic spaces, donated conference rooms, or theatre spaces, working with the hotels is the industry’s standard way to pay for a professional convention center space. You commit to a certain number of hotel nights blocked off at nearby hotels, based on your event’s numbers from previous years, and in return, you get a reduced rental charge at the convention center. If you sell enough rooms, you additionally earn a small percentage of the revenue from those rooms, i.e. a commission. If, on the other hand, you don’t sell enough rooms, you owe damages to the hotels–essentially paying the full rate for the rooms they reserved for your event but didn’t sell. This system has worked well for the PSF and PyCon US until this year. At the height of the pre-pandemic years, we brought in over $200,000 in hotel commissions. Even last year in Pittsburgh, we fully sold out one hotel and our total commission in 2025 was a healthy $95,909. Unfortunately, this year our hotel bookings are far behind the level they need to avoid damages, let alone earn any commission. We attribute this largely to the sad but understandable decline in willingness of international attendees, as well as some vulnerable domestic attendees, to travel to PyCon US, given the current environment. The bottom line is, if PyCon US hotel booking trends continue at their current pace, the PSF is on track to owe over $200,000 in damages under our hotel contracts. We are not alone in this. The travel industry has been talking about the slump in foreign visitors to the US for months. The decline in foreign tourism revenue is also making the hotels less interested in being generous with our rates, contracts, and deadlines, since most hotels have seen declines in their bookings all year, not just during our event. Everyone is feeling the squeeze. Where we’re at now PyCon US ticket sales are only lagging by a bit. Local attendees buy their tickets later, which is something we anticipate, but this year’s hotel bookings are lagging by a lot compared to last year: PyCon US Ticket sales as of April 10, 2025: 1,565 PyCon US Ticket sales as of April 12, 2026: 1,333 Hotel nights sold as of April 10th, 2025: 3,155 Hotel nights sold as of April 12th, 2026: 2,192 Hotel nights we need to sell by April 20th, 2026 to avoid damages: 3,338 Additional Hotel nights needed by April 20th, 2026 to avoid damages: 1,146 The PSF signed a contract for the Long Beach venue back in July of 2023. At that time we couldn‘t have foreseen this current situation where interest in coming to the US has sharply declined due to increased risk. In response, we have focused on attracting more domestic attendees, and that has been going pretty well, but it hasn’t made up for the macroeconomic and geopolitical impacts on our attendance. How you can help We’ll need as many of our attendees as possible to book the official conference hotel before the deadline: The first hotel block closes on April 20th, and the last block closes April 24th. Booking the official conference hotel helps us keep PyCon US running and affordable and it’s also a lot of fun to stay where the action is. If you are planning to join us at PyCon US this year (and we hope you can because there are a lot of great things happening at the event this year!) then we hope you will consider booking an official conference hotel. To book in our hotel block, first register for the conference, and then book your room directly from your attendee dashboard. If you need help or would like to reserve a group of rooms, please contact our housing partner Orchid: 1-877-505-0689 or help@orchid.events. Our hotels page has a full list of the four hotel options and their deadlines. A final note We want to thank you for your commitment to the community that makes PyCon US the special event it is. We hope to see you there to learn, collaborate, and share lots of fun moments. For all those who can’t be at PyCon US this year for whatever reason: you will be sorely missed and we h",
+    "scrapedAt": "2026-05-09 00:33:55.868923"
+  },
+  {
+    "id": 209,
+    "url": "https://www.openstack.org/",
+    "title": "Open Source Cloud Computing Infrastructure - OpenStack",
+    "content": "The Most Widely Deployed Open Source Cloud Software in the World Deployed by thousands. Proven production at scale. OpenStack is a set of software components that provide common services for cloud infrastructure. BROWSE OPENSTACK COMPONENTS OpenStack is developed by the community. For the community. Learn how to contribute ⮕ Learn more about the latest OpenStack release, 2026.1 Gazpacho! Learn More Cloud Infrastructure for Virtual Machines, Bare Metal, and Containers Openstack controls large pools of compute, storage, and networking resources, all managed through APIs or a dashboard. Beyond standard infrastructure-as-a-service functionality, additional components provide orchestration, fault management and service management amongst other services to ensure high availability of user applications. READ MORE On-Premises Host your cloud infrastructure internally or find an OpenStack partner in the Marketplace Public Cloud Leverage one of the 180+ OpenStack powered public cloud data centers At the Edge Telecoms and retailers rely on OpenStack for their distributed systems Latest Release: OpenStack 2026.1 ‘Gazpacho’ LATEST RELEASE: GazpachoUNDER DEVELOPMENT: HIBISCUS Marketplace Spotlight The OpenStack Marketplace is filled with experts working across industries, use cases, and regions to help your organization achieve your goals. Animbus Remotely Managed Private Cloud offers a pay-as-you-go model cloud service in an isolated infrastructure to our clients. With our managed services, you are able to focus on your main business without worrying about your cloud infrastructure. LEARN MORE OpenInfra Foundation Member Spotlight Rackspace Technology (NYSE: RXT) is a leading end-to-end multicloud technology services company. We can design, build, and operate our customers’ cloud environments across all major technology platforms, irrespective of technology stack or deployment model. We partner with our customers at every stage of their cloud journey, enabling them to modernize applications, build new products and adopt innovative technologies. LEARN MORE The World Runs on OpenStack OpenStack is trusted to manage 40 Million+ cores around the world, across dozens of industries. Blizzard Entertainment Video game developer, Blizzard Entertainment, implements OpenStack autoscaling to support running video games, like best-selling game Overwatch, in the cloud. WATCH VIDEO Walmart Walmart is the largest company in the world with 11,000 stores and over 80 million monthly website visitors. To manage e-commerce, including peak shopping times like Black Friday, Walmart relies on its OpenStack cloud with over 170,000 cores in more than 30 regions. READ MORE China Mobile China Mobile’s telecom network has more than 800 million subscribers and 3 million base stations. China Mobile is now building up the biggest NFV network based on OpenStack with more than 50,000 servers in the network. Read More SEE MORE CASE STUDIES OpenStack is a top - level open infrastructure project supported by the OpenInfra Foundation Subscribe to News About OpenStack Stay up to date on OpenStack and the Open Infrastructure community. SUBMIT",
+    "scrapedAt": "2026-05-09 00:33:54.49361"
+  },
+  {
+    "id": 208,
+    "url": "https://en.wikipedia.org/wiki/Tkinter",
+    "title": "Tkinter - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia Python binding to the Tk GUI toolkit Tkinter The IDLE Python editor License Python license Website wiki.python.org/moin/TkInter Tkinter is a binding to the Tk GUI toolkit for Python. It is the standard Python interface to the Tk GUI toolkit,[1] and is Python\u0027s de facto standard GUI.[2] Tkinter is included with standard Linux, Microsoft Windows and macOS installs of Python. The name Tkinter comes from Tk interface. Tkinter was written by Steen Lumholt and Guido van Rossum,[3] then later revised by Fredrik Lundh.[4] Tkinter is free software released under a Python license.[5] Description [edit] As with most other modern Tk bindings, Tkinter is implemented as a Python wrapper around a complete Tcl interpreter embedded in the Python interpreter. Tkinter calls are translated into Tcl commands, which are fed to this embedded interpreter, thus making it possible to mix Python and Tcl in a single application. There are several popular GUI library alternatives available, such as Kivy, Pygame, Pyglet, PyGObject, PyQt, PySide, and wxPython. Definitions [edit] from tkinter import *\n\ndef calculate():\n    price \u003d float(entry_price.get())\n    qty \u003d float(entry_qty.get())\n    total \u003d price * qty\n    label_result.config(text\u003d\"Total: \" + str(total))\n\napp \u003d Tk()\napp.title(\"Facturation App\")\n\nLabel(app, text\u003d\"Prix\").pack()\nentry_price \u003d Entry(app)\nentry_price.pack()\n\nLabel(app, text\u003d\"Quantité\").pack()\nentry_qty \u003d Entry(app)\nentry_qty.pack()\n\nButton(app, text\u003d\"Calculer\", command\u003dcalculate).pack()\n\nlabel_result \u003d Label(app, text\u003d\"\")\nlabel_result.pack()\n\napp.mainloop()\n Widget [edit] The generic term for any of the building blocks that make up an application in a graphical user interface. Core widgets: Containers: frame labelframe toplevel paned window. Buttons: button radiobutton checkbutton (checkbox) menubutton. Text widgets: label, message text Entry widgets: scale scrollbar listbox slider spinbox entry (singleline) optionmenu text (multiline) Canvas (vector and pixel graphics) Tkinter provides three modules that allow pop-up dialogs to be displayed: tk.messagebox (confirmation, information, warning and error dialogs), tk.filedialog (single file, multiple file and directory selection dialogs) and tk.colorchooser (colour picker). Python 2.7 and Python 3.1 incorporate the \"themed Tk\" (\"ttk\") functionality of Tk 8.5.[6][7] This allows Tk widgets to be easily themed to look like the native desktop environment in which the application is running, thereby addressing a long-standing criticism of Tk (and hence of Tkinter). Some widgets are exclusive to ttk, such as the combobox, progressbar, treeview, notebook, separator and sizegrip.[8] Frame [edit] In Tkinter, the Frame widget is the basic unit of organization for complex layouts. A frame is a rectangular area that can contain other widgets. Child and parent [edit] When any widget is created, a parent–child relationship is created. For example, if you place a text label inside a frame, the frame is the parent of the label. Minimal application [edit] Below is a minimal Python 3 Tkinter application with one widget:[9] #!/usr/bin/env python3\nfrom tkinter import *\nroot \u003d Tk() \t\t\t\t\t\t\t# Create the root (base) window \nw \u003d Label(root, text\u003d\"Hello, world!\") \t# Create a label with words\nw.pack() \t\t\t\t\t\t\t\t# Put the label into the window\nroot.mainloop() \t\t\t\t\t\t# Start the event loop\n For Python 2, the only difference is the word \"tkinter\" in the import command will be capitalized to \"Tkinter\".[10] Process [edit] There are four stages to creating a widget[11] Create Create it within a frame Configure Change the widget\u0027s attributes. Pack Pack it into position so it becomes visible. Developers also have the option to use .grid() (row\u003dint, column\u003dint to define rows and columns to position the widget, defaults to 0) and .place() (relx\u003dint or decimal, rely\u003dint or decimal, define coordinates in the frame, or window). Bind Bind it to a function or event. These are often compressed, and the order can vary. Simple application [edit] Using the object-oriented paradigm in Python, a simple program would be (requires Tcl version 8.6, which is not used by Python on MacOS by default): #!/usr/bin/env python3\nimport tkinter as tk\n\n\nclass Application(tk.Frame):\n    \"\"\"Application holds state for the whole app.\"\"\"\n    def __init__(self, root\u003dNone):\n        tk.Frame.__init__(self, root)\n        self.grid()\n        self.createWidgets()\n\n    def createWidgets(self):\n        self.medialLabel \u003d tk.Label(self, text\u003d\"Hello World\")\n        self.medialLabel.config(bg\u003d\"#00ffff\")\n        self.medialLabel.grid()\n        self.quitButton \u003d tk.Button(self, text\u003d\"Quit\", command\u003dself.quit)\n        self.quitButton.grid()\n\n\napp \u003d Application()\napp.root \u003d tk.Tk()\napp.root.title(\"Sample application\")\napp.mainloop()\n line 1: Hashbang directive to the program launcher, allowing the selection of an appropriate interpreter executable, when self-executing.[12] line 2: Imports the tkinter",
+    "scrapedAt": "2026-05-09 00:33:53.32426"
+  },
+  {
+    "id": 207,
+    "url": "https://www.python.org/events/python-user-group/2170/",
+    "title": "Python for (Almost) Everything | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python for (Almost) Everything St. Louis, Missouri, United States From 18 June at 9pm UTC through 19 June at 12am UTC, 2026 Python for (Almost) Everything ← Previous Python Meeting Düsseldorf in Düsseldorf, Germany Next → Django Girls Sogakope 2026 in Sogakope, Ghana Explore events -- Change your date range The next 7 days The next 30 days The next 90 days The next year More events at St. Louis, Missouri, United States Python for (Almost) Everything",
+    "scrapedAt": "2026-05-09 00:33:52.223685"
+  },
+  {
+    "id": 206,
+    "url": "https://xon.sh/",
+    "title": "Xonsh — Python-powered shell for Linux, macOS, Windows",
+    "content": "XONSH is a Python-powered shell Xonsh (sounds like \"consh\") is a full-featured and cross-platform Python-based shell. The language is a superset of Python 3 with seamless integration of shell functionality and commands. It works on all major platforms, including Linux, macOS, Windows, BSD, Jupyter, Android and Raspberry Pi. Install Docs Code Sponsor What is Xonsh? Xonsh (sounds like \"consh\") is a Python-based shell that seamlessly extends Python with powerful command-line functionality and integration with the operating system. Xonsh is the Shell The xonsh language provides the shell primitives commonly found in traditional Unix shells, including interaction with standard utilities, pipelines, and input/output streams. Read more → \ncd $HOME\n\nid $(whoami) \u003e ~/id.txt\n\ncat /etc/passwd | grep root\n\n$PROMPT \u003d \u0027@ \u0027\n Xonsh is Python The xonsh language is a superset of Python 3, allowing you to execute Python code directly, install and use third-party libraries, import modules, and take advantage of the broader Python ecosystem and tooling. \n2 + 2\n\nvar \u003d \"hello\".upper()\n\nimport json; json.loads(\u0027{\"a\":1}\u0027)\n\n[i for i in range(0,10)]\n Xonsh is the Shell in Python Xonsh provides a unified environment where shell functionality and Python code work together naturally. \nlen($(curl -L https://xon.sh))\n\n$PATH.append(\u0027/tmp\u0027)\n\np\u0027/etc/passwd\u0027.read_text().find(\u0027usr\u0027)\n\nid \u003d $(@json podman ps --format json)[\u0027ID\u0027]\ncfg \u003d $(@yaml cat config.yaml)\n\n@.imp.pathlib.Path(\u0027~/bin\u0027).exists()\n Xonsh is Python in the Shell Xonsh shell session builtins allow xonsh to function as a fully featured shell, tightly integrated with the operating system and its environment. \nname \u003d \u0027snail\u0027\necho @(name) \u003e /tmp/@(name)\n\nwith p\u0027/tmp/dir\u0027.mkdir().cd():\n    touch @(input(\u0027Create file: \u0027))\n\naliases[\u0027e\u0027] \u003d \u0027echo @(2+2)\u0027\naliases[\u0027a\u0027] \u003d lambda args: print(args)\n Xonsh is a Meta-Shell Xonsh can orchestrate and unify other shells and tools, allowing you to combine external programs into a single programmable environment. \nxontrib load sh \\\n             fish_completer\n\ndef nudf(cmd):\n    return @.imp.pandas.DataFrame(\n      @.imp.json.loads(\n          $(nu -c @(cmd + \u0027| to json\u0027))))\n\nnudf!(ls -la)\n\naliases[\u0027ai\u0027] \u003d \u0027ollama run llama3\u0027\nai! command to remove images from podman\n Xonsh is an Ecosystem Xonsh extends beyond a shell through xontribs — community-driven plugins that integrate frameworks, developer tools, AI assistants, themes, and system features into a cohesive ecosystem. \nxontrib load term_integration \\\n             prompt_starship  \\\n             powerline        \\\n             dracula          \\\n             chatgpt          \\\n             django           \\\n             jupyter          \\\n             1password        \\\n             github_copilot   \\\n             history_encrypt\n Xonsh is Everywhere Xonsh is designed to adapt seamlessly to any platform, enabling the same workflows to run seamlessly across macOS, Linux, Windows, so scripts, aliases, and tools behave consistently across different environments and package managers. \n$PATH\n[\u0027/bin\u0027, \u0027/sbin\u0027]            # Linux\n[\u0027/homebrew/bin\u0027]            # macOS\n[\u0027/usr/local/bin\u0027]           # FreeBSD\n[\u0027/mnt/c/Windows/System32\u0027]  # WSL\n[r\u0027c:\\Windows\\System32\u0027]     # Windows\n[\u0027/nix/store/0_-python/bin\u0027] # Nix\n[\u0027/data/com.termux/usr/bin\u0027] # Termux\n[\u0027/tmp/.mount_x/usr/bin\u0027]    # AppImage\n[\u0027/app/bin\u0027]                 # Flatpak\n$PATH \u003d [\u0027/my/own/path\u0027]\n Learn more → Extensions Extensions in the Xonsh ecosystem are called xontribs (short for “contributions”) — a set of tools and conventions for extending the functionality of xonsh. pipeliner Let your pipe lines from the standard output flow thru the Python code in the xonsh shell. output-search Get identifiers, paths, URLs and words from the previous command output and use them for the next command in the xonsh shell. back2dir Return to the most recently used directory when starting the xonsh shell. argcomplete Argcomplete support to tab completion of python and xonsh scripts in the xonsh shell. More xontribs →",
+    "scrapedAt": "2026-05-09 00:33:51.142506"
+  },
+  {
     "id": 205,
     "url": "https://fastapi.tiangolo.com/",
     "title": "FastAPI",
@@ -1433,26 +1468,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 206,
-    "url": "https://xon.sh/"
-  },
-  {
-    "id": 207,
-    "url": "https://www.python.org/events/python-user-group/2170/"
-  },
-  {
-    "id": 208,
-    "url": "https://en.wikipedia.org/wiki/Tkinter"
-  },
-  {
-    "id": 209,
-    "url": "https://www.openstack.org/"
-  },
-  {
-    "id": 210,
-    "url": "https://pyfound.blogspot.com/2026/04/pycon-us-2026-hotels.html"
   },
   {
     "id": 211,
@@ -37898,10 +37913,1250 @@ window.searchData = [
     "id": 16410,
     "url": "https://www.youtube.com/watch?v\u003dmpR8ngthqiE",
     "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 16411,
+    "url": "https://github.com/anki-code/xontrib-pipeliner",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 16412,
+    "url": "https://xon.sh/tutorial.html",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 16413,
+    "url": "https://github.com/topics/xontrib",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 16414,
+    "url": "https://github.com/anki-code/xontrib-output-search",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 16415,
+    "url": "https://xon.sh/contents.html",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 16416,
+    "url": "https://github.com/anki-code/xontrib-argcomplete",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 16417,
+    "url": "https://github.com/sponsors/xonsh",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 16418,
+    "url": "https://github.com/anki-code/xontrib-back2dir",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 16419,
+    "url": "https://xon.sh/install.html",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 16420,
+    "url": "https://github.com/xonsh/xonsh",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 16426,
+    "url": "https://en.wikipedia.org/wiki/Category:Python_(programming_language)_libraries",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16427,
+    "url": "https://en.wikipedia.org/wiki/JUCE",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16428,
+    "url": "https://en.wikipedia.org/wiki/FireMonkey",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16429,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_note-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16430,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_note-7",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16431,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_note-4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16432,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_note-5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16433,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_note-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16434,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_note-klein-11",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16435,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_note-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16436,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_note-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16437,
+    "url": "https://en.wikipedia.org/wiki/MacApp",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16440,
+    "url": "https://en.wikipedia.org/wiki/Google_Closure_Tools",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16441,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_note-8",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16442,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_note-9",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16443,
+    "url": "http://thinkingtkinter.sourceforge.net",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16444,
+    "url": "https://en.wikipedia.org/wiki/Windows_Presentation_Foundation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16447,
+    "url": "https://en.wikipedia.org/wiki/Lazarus_Component_Library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16448,
+    "url": "https://en.wikipedia.org/wiki/Mono_(software)#Xamarin.Android",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16451,
+    "url": "https://en.wikipedia.org/wiki/Bedrock_(framework)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16452,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Silverlight",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16454,
+    "url": "https://en.wikipedia.org/wiki/Language_binding",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16455,
+    "url": "https://en.wikipedia.org/wiki/LispWorks",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16456,
+    "url": "https://en.wikipedia.org/wiki/Python_license",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16457,
+    "url": "https://en.wikipedia.org/wiki/Dojo_(web_framework)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16458,
+    "url": "https://en.wikipedia.org/wiki/Ext_JS",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16461,
+    "url": "http://bugs.python.org/issue2983",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16462,
+    "url": "https://en.wikipedia.org/wiki/AmigaOS",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16463,
+    "url": "https://en.wikipedia.org/wiki/OpenTK",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16464,
+    "url": "https://en.wikipedia.org/wiki/JQuery_UI",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16465,
+    "url": "https://en.wikipedia.org/wiki/THINK_C",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16466,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_ref-10",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16467,
+    "url": "https://en.wikipedia.org/wiki/Common_Lisp_Interface_Manager",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16468,
+    "url": "https://en.wikipedia.org/wiki/Lively_Kernel",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16469,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_ref-12",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16470,
+    "url": "https://en.wikipedia.org/wiki/XForms_(toolkit)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16472,
+    "url": "https://en.wikipedia.org/wiki/Cocoa_Touch",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16473,
+    "url": "https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16474,
+    "url": "https://en.wikipedia.org/wiki/PyGObject",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16475,
+    "url": "https://en.wikipedia.org/wiki/Lightweight_User_Interface_Toolkit",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16476,
+    "url": "https://en.wikipedia.org/wiki/Wayland_(protocol)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16477,
+    "url": "https://en.wikipedia.org/wiki/Enlightenment_Foundation_Libraries",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16478,
+    "url": "https://en.wikipedia.org/wiki/OpenGL_User_Interface_Library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16479,
+    "url": "https://en.wikipedia.org/wiki/Hashbang",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16480,
+    "url": "https://en.wikipedia.org/wiki/Object_Windows_Library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16482,
+    "url": "https://en.wikipedia.org/wiki/Tcl_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16483,
+    "url": "https://coderslegacy.com/python/tkinter-ttk-widgets-tutorial/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16484,
+    "url": "https://www.python.org/dev/peps/pep-0397",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16485,
+    "url": "http://tkinter.unpythonic.net/wiki/Tkinter",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16486,
+    "url": "https://en.wikipedia.org/wiki/Flutter_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16487,
+    "url": "https://en.wikipedia.org/wiki/Fox_toolkit",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16488,
+    "url": "https://en.wikipedia.org/wiki/Simple_and_Fast_Multimedia_Library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16489,
+    "url": "https://en.wikipedia.org/wiki/Widget_toolkit",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16492,
+    "url": "https://en.wikipedia.org/wiki/Tao_Framework",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16493,
+    "url": "https://en.wikipedia.org/wiki/Common_Lisp",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16495,
+    "url": "https://en.wikipedia.org/wiki/Cocoa_(API)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16496,
+    "url": "https://en.wikipedia.org/wiki/Xamarin#Xamarin.Mac",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16497,
+    "url": "https://en.wikipedia.org/wiki/WxHaskell",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16498,
+    "url": "https://en.wikipedia.org/wiki/Dart_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16499,
+    "url": "https://en.wikipedia.org/wiki/Zune_(widget_toolkit)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16500,
+    "url": "https://en.wikipedia.org/wiki/BeOS",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16501,
+    "url": "https://en.wikipedia.org/wiki/Gtkmm",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16502,
+    "url": "http://www.tkdocs.com",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16503,
+    "url": "https://en.wikipedia.org/wiki/Mono_(software)#Xamarin.iOS",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16504,
+    "url": "https://en.wikipedia.org/wiki/CDK_(programming_library)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16505,
+    "url": "https://en.wikipedia.org/wiki/Macintosh_Toolbox",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16507,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_ref-klein_11-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16508,
+    "url": "https://en.wikipedia.org/wiki/PySide",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16511,
+    "url": "https://en.wikipedia.org/wiki/Template_talk:Widget_toolkits",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16512,
+    "url": "https://en.wikipedia.org/wiki/IUP_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16513,
+    "url": "https://en.wikipedia.org/wiki/Guido_van_Rossum",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16514,
+    "url": "https://docs.python.org/library/tkinter.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16515,
+    "url": "https://en.wikipedia.org/wiki/Moonlight_(runtime)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16517,
+    "url": "https://en.wikipedia.org/wiki/X_Window_System",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16519,
+    "url": "https://en.wikipedia.org/wiki/Component_Library_for_Cross_Platform",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16520,
+    "url": "https://en.wikipedia.org/wiki/Gtk_Sharp",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16521,
+    "url": "https://en.wikipedia.org/wiki/Fyne_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16522,
+    "url": "https://en.wikipedia.org/wiki/BeOS_API",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16524,
+    "url": "https://en.wikipedia.org/wiki/ReAction_GUI",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16527,
+    "url": "https://docs.python.org/3.9/library/tkinter",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16528,
+    "url": "https://en.wikipedia.org/wiki/IP_Pascal",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16529,
+    "url": "https://en.wikipedia.org/wiki/UIML",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16530,
+    "url": "https://en.wikipedia.org/wiki/File:Python%27s_IDLE.png",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16531,
+    "url": "https://en.wikipedia.org/wiki/Xlib",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16532,
+    "url": "https://en.wikipedia.org/wiki/Interpreter_directive",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16533,
+    "url": "https://en.wikipedia.org/wiki/React_Native",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16535,
+    "url": "https://www.wikidata.org/wiki/Q173871?uselang\u003den#P856",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16537,
+    "url": "https://en.wikipedia.org/wiki/List_of_widget_toolkits",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16538,
+    "url": "https://en.wikipedia.org/wiki/Wt_(web_toolkit)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16539,
+    "url": "https://en.wikipedia.org/wiki/OpenUI5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16541,
+    "url": "https://wiki.python.org/moin/TkInter",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16542,
+    "url": "https://en.wikipedia.org/wiki/LessTif",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16543,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTkinter\u0026action\u003dedit\u0026section\u003d9",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16544,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTkinter\u0026action\u003dedit\u0026section\u003d8",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16545,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTkinter\u0026action\u003dedit\u0026section\u003d7",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16546,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTkinter\u0026action\u003dedit\u0026section\u003d6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16547,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16548,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTkinter\u0026action\u003dedit\u0026section\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16549,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTkinter\u0026action\u003dedit\u0026section\u003d5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16550,
+    "url": "https://en.wikipedia.org/wiki/GNUstep",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16551,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTkinter\u0026action\u003dedit\u0026section\u003d4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16552,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTkinter\u0026action\u003dedit\u0026section\u003d3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16553,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTkinter\u0026action\u003dedit\u0026section\u003d2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16554,
+    "url": "https://en.wikipedia.org/wiki/PyGTK",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16555,
+    "url": "https://en.wikipedia.org/wiki/CEGUI",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16556,
+    "url": "https://en.wikipedia.org/wiki/FXML",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16557,
+    "url": "https://en.wikipedia.org/wiki/Visual_Component_Library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16560,
+    "url": "https://en.wikipedia.org/wiki/XUL",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16561,
+    "url": "https://en.wikipedia.org/wiki/WxPHP",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16562,
+    "url": "https://en.wikipedia.org/wiki/Universal_Windows_Platform",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16563,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTkinter\u0026oldid\u003d1351480220",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16564,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#bodyContent",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16565,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_ref-8",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16566,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_ref-7",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16567,
+    "url": "https://en.wikipedia.org/wiki/WxWidgets",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16568,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_ref-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16569,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_ref-5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16570,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_ref-9",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16571,
+    "url": "https://en.wikipedia.org/wiki/GTK",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16573,
+    "url": "https://en.wikipedia.org/wiki/Pygame",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16574,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_ref-4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16575,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_ref-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16577,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_ref-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16578,
+    "url": "https://en.wikipedia.org/wiki/Intuition_(Amiga)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16579,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_ref-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16580,
+    "url": "https://tkdocs.com/shipman/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16581,
+    "url": "https://en.wikipedia.org/wiki/Windows_Runtime",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16582,
+    "url": "https://en.wikipedia.org/wiki/XVT",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16583,
+    "url": "https://en.wikipedia.org/wiki/FpGUI",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16584,
+    "url": "https://en.wikipedia.org/wiki/Unix",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16585,
+    "url": "https://en.wikipedia.org/wiki/GDK",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16586,
+    "url": "https://en.wikipedia.org/wiki/Allegro_Common_Lisp",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16587,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTkinter\u0026action\u003dedit\u0026section\u003d10",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16588,
+    "url": "https://en.wikipedia.org/wiki/BOOPSI",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16589,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTkinter\u0026action\u003dedit\u0026section\u003d11",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16590,
+    "url": "https://en.wikipedia.org/wiki/Windows_API",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16591,
+    "url": "https://en.wikipedia.org/wiki/Classic_Mac_OS",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16593,
+    "url": "https://en.wikipedia.org/wiki/Apache_Flex",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16595,
+    "url": "https://en.wikipedia.org/wiki/Active_Template_Library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16596,
+    "url": "https://en.wikipedia.org/wiki/.NET#.NET_MAUI",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16599,
+    "url": "https://en.wikipedia.org/wiki/WxPerl",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16600,
+    "url": "https://en.wikipedia.org/wiki/FLTK",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16601,
+    "url": "https://en.wikipedia.org/wiki/Java_OpenGL",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16602,
+    "url": "https://en.wikipedia.org/wiki/OLIT",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16603,
+    "url": "https://en.wikipedia.org/wiki/Language_interpretation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16604,
+    "url": "https://en.wikipedia.org/wiki/Glade_Interface_Designer",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16605,
+    "url": "https://en.wikipedia.org/wiki/WxPython",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16606,
+    "url": "https://en.wikipedia.org/wiki/Qooxdoo",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16607,
+    "url": "https://en.wikipedia.org/wiki/Newt_(programming_library)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16608,
+    "url": "https://en.wikipedia.org/wiki/Tk_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16609,
+    "url": "https://en.wikipedia.org/wiki/Dialog_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16610,
+    "url": "https://en.wikipedia.org/wiki/MonoGame",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16612,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dSteen_Lumholt\u0026action\u003dedit\u0026redlink\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16613,
+    "url": "https://en.wikipedia.org/wiki/Windows_UI_Library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16614,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_note-12",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16615,
+    "url": "https://en.wikipedia.org/wiki/Tkinter#cite_note-10",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16616,
+    "url": "https://en.wikipedia.org/wiki/XView",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16617,
+    "url": "https://en.wikipedia.org/wiki/PowerPlant",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16619,
+    "url": "https://en.wikipedia.org/wiki/Unix_shell",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16620,
+    "url": "https://en.wikipedia.org/wiki/TnFOX",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16621,
+    "url": "https://en.wikipedia.org/wiki/Windows_Forms",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16622,
+    "url": "https://en.wikipedia.org/wiki/Xamarin#Xamarin.Forms",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16623,
+    "url": "https://cs.gmu.edu/~dfleck/classes/cs112/spring08/slides/tkinter.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16625,
+    "url": "http://svn.python.org/view?view\u003drev\u0026revision\u003d69051",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16626,
+    "url": "https://en.wikipedia.org/wiki/Category:Tk_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16627,
+    "url": "https://en.wikipedia.org/wiki/QtRuby",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16629,
+    "url": "https://en.wikipedia.org/wiki/YUI_Library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16630,
+    "url": "https://en.wikipedia.org/wiki/Extensible_Application_Markup_Language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16631,
+    "url": "https://en.wikipedia.org/wiki/Qt_Jambi",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16632,
+    "url": "https://coderslegacy.com/python/python-gui/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16633,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Foundation_Class_Library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16634,
+    "url": "https://tkdocs.com/shipman/minimal-app.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16635,
+    "url": "https://en.wikipedia.org/wiki/Rogue_Wave_Software",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16637,
+    "url": "https://en.wikipedia.org/wiki/Windows_Template_Library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16638,
+    "url": "https://en.wikipedia.org/wiki/Carbon_(API)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16639,
+    "url": "https://en.wikipedia.org/wiki/Magic_User_Interface",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16640,
+    "url": "https://en.wikipedia.org/wiki/Kivy_(framework)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16641,
+    "url": "https://en.wikipedia.org/wiki/PyQt",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16642,
+    "url": "https://web.archive.org/web/20131113222939/http://tkinter.unpythonic.net/wiki/Tkinter",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16643,
+    "url": "https://en.wikipedia.org/wiki/Echo_(framework)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16644,
+    "url": "https://en.wikipedia.org/wiki/Pyglet",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16645,
+    "url": "https://en.wikipedia.org/wiki/Haiku_(operating_system)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16646,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_XNA",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16647,
+    "url": "https://en.wikipedia.org/wiki/Shoes_(GUI_toolkit)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16648,
+    "url": "https://www.python-course.eu/tkinter_events_binds.php",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16649,
+    "url": "https://en.wikipedia.org/wiki/Template:Widget_toolkits",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16651,
+    "url": "https://en.wikipedia.org/wiki/Special:EditPage/Template:Widget_toolkits",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16653,
+    "url": "https://en.wikipedia.org/wiki/Qt_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16654,
+    "url": "https://en.wikipedia.org/wiki/PHP-GTK",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16655,
+    "url": "https://en.wikipedia.org/wiki/X_Athena_Widgets",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16656,
+    "url": "https://en.wikipedia.org/wiki/XCB",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "id": 16657,
+    "url": "https://www.openstack.org/software/project-navigator/openstack-components#openstack-services",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16658,
+    "url": "https://01.org/sites/default/files/performance_analysis_and_tuning_in_china_mobiles_openstack_production_cloud_2.pdf",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16659,
+    "url": "https://openinfra.dev/",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16660,
+    "url": "https://www.openstack.org/use-cases/",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16661,
+    "url": "https://www.openstack.org/software/",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16662,
+    "url": "https://www.rackspace.com/",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16663,
+    "url": "https://www.openstack.org/software/openstack-gazpacho/",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16664,
+    "url": "http://superuser.openstack.org/articles/inside-walmartlabs-and-its-openstack-core/",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16665,
+    "url": "https://releases.openstack.org/hibiscus/index.html",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16666,
+    "url": "https://www.openstack.org/videos/summits/denver-2019/how-blizzard-entertainment-uses-autoscaling-with-overwatch",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16667,
+    "url": "https://www.openstack.org/marketplace/remotely-managed-private-clouds/",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16668,
+    "url": "https://www.openstack.org/marketplace/remotely-managed-private-clouds/page-2/animbus-remotely-managed-private-cloud",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16669,
+    "url": "https://www.openstack.org/community/",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16670,
+    "url": "https://www.openstack.org/marketplace/public-clouds/",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16671,
+    "url": "https://www.openstack.org/software/openstack-gazpacho",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16672,
+    "url": "https://www.openstack.org/edge-computing/",
+    "parentUrl": "https://www.openstack.org/"
+  },
+  {
+    "id": 16690,
+    "url": "https://www.blogger.com/profile/06125752284896762014",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/pycon-us-2026-hotels.html"
+  },
+  {
+    "id": 16728,
+    "url": "https://pycon.blogspot.com/2026/04/stories-from-pycon-us-hotels.html",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/pycon-us-2026-hotels.html"
+  },
+  {
+    "id": 16750,
+    "url": "https://www.linkedin.com/pulse/2026-world-cup-peril-how-new-trump-slump-global-tensions-qux7e/?trackingId\u003dQNdSY%2FcXdeeRK9Bweix%2Bxg%3D%3D",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/pycon-us-2026-hotels.html"
+  },
+  {
+    "id": 16753,
+    "url": "https://pycon.blogspot.com/2026/03/attend-pycon-us-for-a-day-of-trailblazing-python-security.html",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/pycon-us-2026-hotels.html"
+  },
+  {
+    "id": 16822,
+    "url": "https://pycon.blogspot.com/2026/04/python-and-future-of-ai-agents.html",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/pycon-us-2026-hotels.html"
+  },
+  {
+    "id": 16891,
+    "url": "https://pycon.blogspot.com/2026/04/haciendo-historia-celebrating-pycon-uss.html",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/pycon-us-2026-hotels.html"
+  },
+  {
+    "id": 16923,
+    "url": "https://www.blogger.com/post-edit.g?blogID\u003d8520\u0026postID\u003d6183294659915928129\u0026from\u003dpencil",
+    "parentUrl": "https://pyfound.blogspot.com/2026/04/pycon-us-2026-hotels.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
+    "alt": "",
+    "pageTitle": "Python Software Foundation News: PyCon US 2026: Why we\u0027re asking you to think about your hotel reservation",
+    "pageUrl": "https://pyfound.blogspot.com/2026/04/pycon-us-2026-hotels.html"
+  },
+  {
+    "src": "https://blogger.googleusercontent.com/img/a/AVvXsEiagchpTRkriKoEe2Cqh2Bd5mX7Un4EYG-fq2Gdwx-Jx5scs09-0bmLVT89ewlhrQsiaJVE6nUU1Z0UkZFu0KUM2f82CiXXGsY_mg0JRq8iUtt_Rob_rcWX9meUjM2ql0XMoYFwO7dtt8T3cHO5oGfxo3HPk-9Lz358AlCHMDRAo5fgBXTuEuo\u003ds302",
+    "alt": "PSF Sponsors",
+    "pageTitle": "Python Software Foundation News: PyCon US 2026: Why we\u0027re asking you to think about your hotel reservation",
+    "pageUrl": "https://pyfound.blogspot.com/2026/04/pycon-us-2026-hotels.html"
+  },
+  {
+    "src": "https://www.openstack.org/static/51e4167e0776cf889018f572896dff76/homepage-OpenStack-SFAs.svg",
+    "alt": "alt",
+    "pageTitle": "Open Source Cloud Computing Infrastructure - OpenStack",
+    "pageUrl": "https://www.openstack.org/"
+  },
+  {
+    "src": "https://www.openstack.org/static/489b59511d9d91a1743d3da4b88ed8e5/OpenInfrastructureFoundation-icon-RGB.svg",
+    "alt": "logo",
+    "pageTitle": "Open Source Cloud Computing Infrastructure - OpenStack",
+    "pageUrl": "https://www.openstack.org/"
+  },
+  {
+    "src": "https://www.openstack.org/static/0db0b3d4fc521af8343bd26c37e1acb5/final-diagram-2025-title.svg",
+    "alt": "Cloud Infrastructure Diagram",
+    "pageTitle": "Open Source Cloud Computing Infrastructure - OpenStack",
+    "pageUrl": "https://www.openstack.org/"
+  },
+  {
+    "src": "https://www.openstack.org/static/cb647113f45ad4d4003607aa09f4f606/homepage-on-premises-icon.svg",
+    "alt": "On-Premises",
+    "pageTitle": "Open Source Cloud Computing Infrastructure - OpenStack",
+    "pageUrl": "https://www.openstack.org/"
+  },
+  {
+    "src": "https://www.openstack.org/static/5e606aa2a0870578089157f34b324880/homepage-public-cloud-icon.svg",
+    "alt": "Public Cloud",
+    "pageTitle": "Open Source Cloud Computing Infrastructure - OpenStack",
+    "pageUrl": "https://www.openstack.org/"
+  },
+  {
+    "src": "https://www.openstack.org/static/aedfdabbcb38a24089053dd78c13ff5c/homepage-at-the-edge-icon.svg",
+    "alt": "At the Edge",
+    "pageTitle": "Open Source Cloud Computing Infrastructure - OpenStack",
+    "pageUrl": "https://www.openstack.org/"
+  },
+  {
+    "src": "https://www.openstack.org/static/4a7e28abe22ab9161e5c763ce0772d99/gazpacho-sm.png",
+    "alt": "Gazpacho",
+    "pageTitle": "Open Source Cloud Computing Infrastructure - OpenStack",
+    "pageUrl": "https://www.openstack.org/"
+  },
+  {
+    "src": "https://object-storage.public.mtl1.vexxhost.net/swift/v1/6e4619c416ff4bd19e1c087f27a43eea/www-assets-prod/companies/main_logo/99cloud-new-lg.jpg",
+    "alt": "Animbus Remotely Managed Private Cloud",
+    "pageTitle": "Open Source Cloud Computing Infrastructure - OpenStack",
+    "pageUrl": "https://www.openstack.org/"
+  },
+  {
+    "src": "https://www.openstack.org/static/abe63860cd0f276e0096fe75f7b7503f/rackspace-lg2.png",
+    "alt": "Rackspace",
+    "pageTitle": "Open Source Cloud Computing Infrastructure - OpenStack",
+    "pageUrl": "https://www.openstack.org/"
+  },
+  {
+    "src": "https://www.openstack.org/static/684d8d41d1192930eef27beb36173e1e/blizzard-1-.jpg",
+    "alt": "Blizzard Entertainment",
+    "pageTitle": "Open Source Cloud Computing Infrastructure - OpenStack",
+    "pageUrl": "https://www.openstack.org/"
+  },
+  {
+    "src": "https://www.openstack.org/static/6520999c61396ad15bf71e811d4aafba/walmart-sm.jpg",
+    "alt": "Walmart",
+    "pageTitle": "Open Source Cloud Computing Infrastructure - OpenStack",
+    "pageUrl": "https://www.openstack.org/"
+  },
+  {
+    "src": "https://www.openstack.org/static/035948f239af3d3fea6e8896d94117ce/chinatelecom.jpg",
+    "alt": "China Mobile",
+    "pageTitle": "Open Source Cloud Computing Infrastructure - OpenStack",
+    "pageUrl": "https://www.openstack.org/"
+  },
+  {
+    "src": "https://www.openstack.org/static/a2bacfdff00e3a8c3baaca923e12e8a9/OpenInfraFoundation-logo-RGB-horiz2.svg",
+    "alt": "OpenInfra Foundation Logo",
+    "pageTitle": "Open Source Cloud Computing Infrastructure - OpenStack",
+    "pageUrl": "https://www.openstack.org/"
+  },
+  {
+    "src": "https://dc.ads.linkedin.com/collect/?pid\u003d36268\u0026fmt\u003dgif",
+    "alt": "",
+    "pageTitle": "Open Source Cloud Computing Infrastructure - OpenStack",
+    "pageUrl": "https://www.openstack.org/"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Python%27s_IDLE.png/250px-Python%27s_IDLE.png",
+    "alt": "The IDLE Python editor",
+    "pageTitle": "Tkinter - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png",
+    "alt": "Edit this on Wikidata",
+    "pageTitle": "Tkinter - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Tkinter - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Tkinter"
+  },
+  {
+    "src": "https://xon.sh/_static/landing2/images/conch_ascii_with_icon.gif",
+    "alt": "",
+    "pageTitle": "Xonsh — Python-powered shell for Linux, macOS, Windows",
+    "pageUrl": "https://xon.sh/"
+  },
   {
     "src": "https://fastapi.tiangolo.com/img/sponsors/blockbee-banner.png",
     "alt": "",
