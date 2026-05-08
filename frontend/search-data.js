@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 836,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Discard",
+    "title": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Unicode Objects and Codecs | Theme Auto Light Dark | Unicode Objects and Codecs¶ Unicode Objects¶ Since the implementation of PEP 393 in Python 3.3, Unicode objects internally use a variety of representations, in order to allow handling the complete range of Unicode characters while staying memory efficient. There are special cases for strings where all code points are below 128, 256, or 65536; otherwise, code points must be below 1114112 (which is the full Unicode range). UTF-8 representation is created on demand and cached in the Unicode object. Note The Py_UNICODE representation has been removed since Python 3.12 with deprecated APIs. See PEP 623 for more information. Unicode Type¶ These are the basic Unicode object types used for the Unicode implementation in Python: PyTypeObject PyUnicode_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode type. It is exposed to Python code as str. PyTypeObject PyUnicodeIter_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode iterator type. It is used to iterate over Unicode string objects. type Py_UCS4¶ type Py_UCS2¶ type Py_UCS1¶ Part of the Stable ABI. These types are typedefs for unsigned integer types wide enough to contain characters of 32 bits, 16 bits and 8 bits, respectively. When dealing with single Unicode characters, use Py_UCS4. Added in version 3.3. type PyASCIIObject¶ type PyCompactUnicodeObject¶ type PyUnicodeObject¶ These subtypes of PyObject represent a Python Unicode object. In almost all cases, they shouldn’t be used directly, since all API functions that deal with Unicode objects take and return PyObject pointers. Added in version 3.3. The structure of a particular object can be determined using the following macros. The macros cannot fail; their behavior is undefined if their argument is not a Python Unicode object. PyUnicode_IS_COMPACT(o)¶ True if o uses the PyCompactUnicodeObject structure. Added in version 3.3. PyUnicode_IS_COMPACT_ASCII(o)¶ True if o uses the PyASCIIObject structure. Added in version 3.3. The following APIs are C macros and static inlined functions for fast checks and access to internal read-only data of Unicode objects: int PyUnicode_Check(PyObject *obj)¶ Return true if the object obj is a Unicode object or an instance of a Unicode subtype. This function always succeeds. int PyUnicode_CheckExact(PyObject *obj)¶ Return true if the object obj is a Unicode object, but not an instance of a subtype. This function always succeeds. Py_ssize_t PyUnicode_GET_LENGTH(PyObject *unicode)¶ Return the length of the Unicode string, in code points. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. Py_UCS1 *PyUnicode_1BYTE_DATA(PyObject *unicode)¶ Py_UCS2 *PyUnicode_2BYTE_DATA(PyObject *unicode)¶ Py_UCS4 *PyUnicode_4BYTE_DATA(PyObject *unicode)¶ Return a pointer to the canonical representation cast to UCS1, UCS2 or UCS4 integer types for direct character access. No checks are performed if the canonical representation has the correct character size; use PyUnicode_KIND() to select the right function. Added in version 3.3. PyUnicode_1BYTE_KIND¶ PyUnicode_2BYTE_KIND¶ PyUnicode_4BYTE_KIND¶ Return values of the PyUnicode_KIND() macro. Added in version 3.3. Changed in version 3.12: PyUnicode_WCHAR_KIND has been removed. int PyUnicode_KIND(PyObject *unicode)¶ Return one of the PyUnicode kind constants (see above) that indicate how many bytes per character this Unicode object uses to store its data. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void *PyUnicode_DATA(PyObject *unicode)¶ Return a void pointer to the raw Unicode buffer. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void PyUnicode_WRITE(int kind, void *data, Py_ssize_t index, Py_UCS4 value)¶ Write the code point value to the given zero-based index in a string. The kind value and data pointer must have been obtained from a string using PyUnicode_KIND() and PyUnicode_DATA() respectively. You must hold a reference to that string while calling PyUnicode_WRITE(). All requirements of PyUnicode_WriteChar() also apply. The function performs no checks for any of its requirements, and is intended for usage in loops. Added in version 3.3. Py_UCS4 PyUnicode_READ(int kind, void *data, Py_ssize_t index)¶ Read a code point from a canonical representation data (as obtained with PyUnicode_DATA()). No checks or ready calls are performed. Added in version 3.3. Py_UCS4 PyUnicode_READ_CHAR(PyObject *unicode, Py_ssize_t index)¶ Read a character from a Unicode object unicode, which must be in the “canonical” representation. This is less efficient than PyUnicode_READ() if you do multiple consecutive reads. Added in version 3.3. Py_U",
+    "scrapedAt": "2026-05-09 00:55:29.026201"
+  },
+  {
+    "id": 835,
+    "url": "https://facebook.github.io/zstd/",
+    "title": "Zstandard - Real-time data compression algorithm",
+    "content": "Support Ukraine 🇺🇦 Help Provide Humanitarian Aid to Ukraine . Zstandard Zstandard is a fast compression algorithm, providing high compression ratios. It also offers a special mode for small data, called dictionary compression. The reference library offers a very wide range of speed / compression trade-off, and is backed by an extremely fast decoder (see benchmarks below). Zstandard library is provided as open source software using a BSD license. Its format is stable and published as IETF RFC 8878. \u003ca name\u003d\"intro-video\"\u003e\u003c/a\u003e ## Watch Introductory Video \u003cdiv\u003e \u003ciframe width\u003d\"560\" height\u003d\"315\" src\u003d\"https://www.youtube.com/embed/k5XsiuxHv_A\" title\u003d\"Explain Like I\u0027m 5: ZSTD\" frameBorder\u003d\"0\" allow\u003d\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowFullScreen \u003e\u003c/iframe\u003e \u003c/div\u003e \u003ca name\u003d\"benchmarks\"\u003e\u003c/a\u003e Benchmarks ---------- For reference, several fast compression algorithms were tested and compared on a desktop featuring a Core i7-9700K CPU @ 4.9GHz and running Ubuntu 24.04 (`Linux 6.8.0-53-generic`), using [lzbench], an open-source in-memory benchmark by @inikep compiled with [gcc] 14.2.0, on the [Silesia compression corpus]. [lzbench]: https://github.com/inikep/lzbench [Silesia compression corpus]: https://sun.aei.polsl.pl//~sdeor/index.php?page\u003dsilesia [gcc]: https://gcc.gnu.org/ | Compressor name | Ratio | Compression| Decompress.| | --------------- | ------| -----------| ---------- | | **zstd 1.5.7 -1** | 2.896 | 510 MB/s | 1550 MB/s | | [zlib] 1.3.1 -1 | 2.743 | 105 MB/s | 390 MB/s | | brotli 1.1.0 -0 | 2.702 | 400 MB/s | 425 MB/s | | **zstd 1.5.7 --fast\u003d1** | 2.439 | 545 MB/s | 1850 MB/s | | **zstd 1.5.7 --fast\u003d3** | 2.241 | 635 MB/s | 1980 MB/s | | quicklz 1.5.0 -1 | 2.238 | 520 MB/s | 750 MB/s | | lzo1x 2.10 -1 | 2.106 | 650 MB/s | 780 MB/s | | [lz4] 1.10.0 | 2.101 | 675 MB/s | 3850 MB/s | | snappy 1.2.1 | 2.089 | 520 MB/s | 1500 MB/s | | lzf 3.6 -1 | 2.077 | 410 MB/s | 820 MB/s | [zlib]: https://www.zlib.net/ [lz4]: http://www.lz4.org/ The negative compression levels, specified with `--fast\u003d#`, offer faster compression and decompression speed in exchange for some loss in compression ratio compared to level 1, as seen in the table above. Zstd can trade compression speed for stronger compression ratios. It is configurable by small increment. Decompression speed is preserved and remain roughly the same at all settings, a property shared by most LZ compression algorithms, such as [zlib] or lzma. The following tests were run on a server running Linux Debian (`Linux version 4.14.0-3-amd64`) with a Core i7-6700K CPU @ 4.0GHz, using [lzbench], an open-source in-memory benchmark by @inikep compiled with [gcc] 7.3.0, on the [Silesia compression corpus]. | Compression Speed vs Ratio | Decompression Speed | | ---------------------------|-------------------- | | \u003cimg src\u003d\"https://raw.githubusercontent.com/facebook/zstd/v1.3.4/doc/images/CSpeed2.png\" alt\u003d\"Compression Speed vs Ratio\" style\u003d\"height:500px;\"\u003e | \u003cimg src\u003d\"https://raw.githubusercontent.com/facebook/zstd/v1.3.4/doc/images/DSpeed3.png\" alt\u003d\"Decompression Speed\" style\u003d\"height:500px;\"\u003e Several algorithms can produce higher compression ratio but at slower speed, falling outside of the graph. For a larger picture including very slow modes, [click on this link](https://raw.githubusercontent.com/facebook/zstd/master/doc/images/DCspeed5.png) . \u003ca name\u003d\"small-data\"\u003e\u003c/a\u003e ### The case for Small Data compression Previous charts provide results applicable to typical file and stream scenarios (several MB). Small data comes with different perspectives. The smaller the amount of data to compress, the more difficult it is to compress. This problem is common to all compression algorithms, and reason is, compression algorithms learn from past data how to compress future data. But at the beginning of a new data set, there is no \"past\" to build upon. To solve this situation, Zstd offers a __training mode__, which can be used to tune the algorithm for a selected type of data. Training Zstandard is achieved by provide it with a few samples (one file per sample). The result of this training is stored in a file called \"dictionary\", which must be loaded before compression and decompression. Using this dictionary, the compression ratio achievable on small data improves dramatically. The following example uses the `github-users` [sample set](https://github.com/facebook/zstd/releases/tag/v1.1.3), created from [github public API](https://developer.github.com/v3/users/#get-all-users). It consists of roughly 10K records weighting about 1KB each. Compression Ratio | Compression Speed | Decompression Speed ------------------|-------------------|-------------------- ![Compression Ratio](https://raw.githubusercontent.com/facebook/zstd/master/doc/images/dict-cr.png \"Compression Ratio\") | ![Compression Speed](https://raw.githubusercontent.com/facebook/zstd/master/doc/images/dict-cs.png \"Compression Speed\") | ![Decompression Speed](https://raw.githubu",
+    "scrapedAt": "2026-05-09 00:55:27.818445"
+  },
+  {
+    "id": 834,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build",
+    "title": "sysconfig — Provide access to Python’s configuration information — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » sysconfig — Provide access to Python’s configuration information | Theme Auto Light Dark | sysconfig — Provide access to Python’s configuration information¶ Added in version 3.2. Source code: Lib/sysconfig The sysconfig module provides access to Python’s configuration information like the list of installation paths and the configuration variables relevant for the current platform. Configuration variables¶ A Python distribution contains a Makefile and a pyconfig.h header file that are necessary to build both the Python binary itself and third-party C extensions compiled using setuptools. sysconfig puts all variables found in these files in a dictionary that can be accessed using get_config_vars() or get_config_var(). Notice that on Windows, it’s a much smaller set. sysconfig.get_config_vars(*args)¶ With no arguments, return a dictionary of all configuration variables relevant for the current platform. With arguments, return a list of values that result from looking up each argument in the configuration variable dictionary. For each argument, if the value is not found, return None. sysconfig.get_config_var(name)¶ Return the value of a single variable name. Equivalent to get_config_vars().get(name). If name is not found, return None. Example of usage: \u003e\u003e\u003e import sysconfig\n\u003e\u003e\u003e sysconfig.get_config_var(\u0027Py_ENABLE_SHARED\u0027)\n0\n\u003e\u003e\u003e sysconfig.get_config_var(\u0027LIBDIR\u0027)\n\u0027/usr/local/lib\u0027\n\u003e\u003e\u003e sysconfig.get_config_vars(\u0027AR\u0027, \u0027CXX\u0027)\n[\u0027ar\u0027, \u0027g++\u0027]\n Installation paths¶ Python uses an installation scheme that differs depending on the platform and on the installation options. These schemes are stored in sysconfig under unique identifiers based on the value returned by os.name. The schemes are used by package installers to determine where to copy files to. Python currently supports nine schemes: posix_prefix: scheme for POSIX platforms like Linux or macOS. This is the default scheme used when Python or a component is installed. posix_home: scheme for POSIX platforms, when the home option is used. This scheme defines paths located under a specific home prefix. posix_user: scheme for POSIX platforms, when the user option is used. This scheme defines paths located under the user’s home directory (site.USER_BASE). posix_venv: scheme for Python virtual environments on POSIX platforms; by default it is the same as posix_prefix. nt: scheme for Windows. This is the default scheme used when Python or a component is installed. nt_user: scheme for Windows, when the user option is used. nt_venv: scheme for Python virtual environments on Windows; by default it is the same as nt. venv: a scheme with values from either posix_venv or nt_venv depending on the platform Python runs on. osx_framework_user: scheme for macOS, when the user option is used. Each scheme is itself composed of a series of paths and each path has a unique identifier. Python currently uses eight paths: stdlib: directory containing the standard Python library files that are not platform-specific. platstdlib: directory containing the standard Python library files that are platform-specific. platlib: directory for site-specific, platform-specific files. purelib: directory for site-specific, non-platform-specific files (‘pure’ Python). include: directory for non-platform-specific header files for the Python C-API. platinclude: directory for platform-specific header files for the Python C-API. scripts: directory for script files. data: directory for data files. User scheme¶ This scheme is designed to be the most convenient solution for users that don’t have write permission to the global site-packages directory or don’t want to install into it. Files will be installed into subdirectories of site.USER_BASE (written as userbase hereafter). This scheme installs pure Python modules and extension modules in the same location (also known as site.USER_SITE). posix_user¶ Path Installation directory stdlib userbase/lib/pythonX.Y platstdlib userbase/lib/pythonX.Y platlib userbase/lib/pythonX.Y/site-packages purelib userbase/lib/pythonX.Y/site-packages include userbase/include/pythonX.Y scripts userbase/bin data userbase nt_user¶ Path Installation directory stdlib userbase\\PythonXY platstdlib userbase\\PythonXY platlib userbase\\PythonXY\\site-packages purelib userbase\\PythonXY\\site-packages include userbase\\PythonXY\\Include scripts userbase\\PythonXY\\Scripts data userbase osx_framework_user¶ Path Installation directory stdlib userbase/lib/python platstdlib userbase/lib/python platlib userbase/lib/python/site-packages purelib userbase/lib/python/site-packages include userbase/include/pythonX.Y scripts userbase/bin data userbase Home scheme¶ The idea behind the “home scheme” is that you build and maintain a personal stash of Python modules. This scheme’s name is derived from the idea of a “home” directory on Unix, since it’s not unusual for a Unix user to make ",
+    "scrapedAt": "2026-05-09 00:55:26.511963"
+  },
+  {
+    "id": 833,
+    "url": "https://github.com/python/cpython/issues/125866",
+    "title": "Improve file URI ergonomics in `urllib.request` · Issue #125866 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Improve file URI ergonomics in urllib.request #125866 New issue Copy link New issue Copy link Closed Closed Improve file URI ergonomics in urllib.request#125866 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description barneygale opened on Oct 23, 2024 Issue body actions Feature or enhancement I request that we make pathname2url and url2pathname easier to use: pathname2url() is made to accept an optional include_scheme argument that sticks file: on the front when true url2pathname() is made to strip any file: prefix from its argument. I think this would go a long way towards making these functions usable, and allow us to remove the scary \"This does not accept/produce a complete URL\" warnings from the docs. Linked PRs GH-125866: Improve tests for pathname2url() and url2pathname() #125993 [3.13] GH-125866: Improve tests for pathname2url() and url2pathname() (GH-125993) #126144 [3.12] GH-125866: Improve tests for pathname2url() and url2pathname() (GH-125993) #126145 GH-125866: Preserve Windows drive letter case in file URIs #127138 GH-125866: Deprecate nturl2path module #131432 GH-125866: Support complete \"file:\" URLs in urllib #132378 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:55:25.343838"
+  },
+  {
+    "id": 832,
+    "url": "https://github.com/python/cpython/issues/121027",
+    "title": "Add __get__ to the partial object · Issue #121027 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add __get__ to the partial object #121027 New issue Copy link New issue Copy link Closed Closed Add __get__ to the partial object#121027 Copy link Labels 3.14bugs and security fixesbugs and security fixestype-featureA feature request or enhancementA feature request or enhancement Description serhiy-storchaka opened on Jun 26, 2024 Issue body actions Feature or enhancement In #119827 (comment), @rhettinger proposed to add the __get__ method to the partial object in functools. This is a breaking change, although the impact may be much lesser than of adding __get__ to builtin functions. But we should follow the common procedure for such changes: first add __get__ that emits FutureWarning with suggestion to wrap partial into staticmethod and return the partial object unchanged, then change the behavior few releases later. Linked PRs gh-121027: Add a future warning in functools.partial.__get__ #121086 gh-121027: Make the functools.partial object a method descriptor #121089 [3.13] gh-121027: Add a future warning in functools.partial.__get__ (GH-121086) #121092 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixestype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:55:23.121189"
+  },
+  {
     "id": 831,
     "url": "https://github.com/python/cpython/issues/132168",
     "title": "Add `__class_getitem__` support to `ctypes.py_object` · Issue #132168 · python/cpython · GitHub",
@@ -5523,26 +5558,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 832,
-    "url": "https://github.com/python/cpython/issues/121027"
-  },
-  {
-    "id": 833,
-    "url": "https://github.com/python/cpython/issues/125866"
-  },
-  {
-    "id": 834,
-    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
-  },
-  {
-    "id": 835,
-    "url": "https://facebook.github.io/zstd/"
-  },
-  {
-    "id": 836,
-    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Discard"
   },
   {
     "id": 837,
@@ -141704,10 +141719,304 @@ window.searchData = [
     "id": 111863,
     "url": "https://github.com/python/cpython/issues/132168#top",
     "parentUrl": "https://github.com/python/cpython/issues/132168"
+  },
+  {
+    "id": 111867,
+    "url": "https://github.com/python/cpython/pull/121086",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111868,
+    "url": "https://github.com/python/cpython/pull/121092",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111874,
+    "url": "https://github.com/python/cpython/issues/121027#issue-2374344106",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111875,
+    "url": "https://github.com/python/cpython/issues/121027#top",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111876,
+    "url": "https://github.com/python/cpython/pull/119827#issuecomment-2190108757",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111877,
+    "url": "https://github.com/python/cpython/issues/121027#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111878,
+    "url": "https://github.com/python/cpython/pull/121089",
+    "parentUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "id": 111879,
+    "url": "https://github.com/python/cpython/pull/126145",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111882,
+    "url": "https://github.com/python/cpython/pull/126144",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111883,
+    "url": "https://github.com/python/cpython/issues/125866#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111887,
+    "url": "https://github.com/python/cpython/issues/125866#issue-2607065453",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111888,
+    "url": "https://github.com/python/cpython/issues/125866#top",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111889,
+    "url": "https://github.com/barneygale",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111890,
+    "url": "https://github.com/python/cpython/pull/131432",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111891,
+    "url": "https://github.com/python/cpython/pull/132378",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111895,
+    "url": "https://github.com/python/cpython/pull/125993",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111896,
+    "url": "https://github.com/python/cpython/pull/127138",
+    "parentUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "id": 111902,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_path",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111903,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_platform",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111910,
+    "url": "https://docs.python.org/3/library/sysconfig.html#user-scheme",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111911,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_path_names",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111913,
+    "url": "https://docs.python.org/3/library/sysconfig.html#posix-prefix",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111915,
+    "url": "https://docs.python.org/3/library/sysconfig.html#posix-home",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111916,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_scheme_names",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111917,
+    "url": "https://docs.python.org/3/library/sysconfig.html#nt-user",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111918,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.parse_config_h",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111920,
+    "url": "https://docs.python.org/3/library/sysconfig.html#posix-user",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111923,
+    "url": "https://docs.python.org/3/library/sysconfig.html#",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111924,
+    "url": "https://docs.python.org/3/library/sysconfig.html#home-scheme",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111930,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_python_version",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111931,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/sysconfig.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111932,
+    "url": "https://docs.python.org/3/library/sysconfig.html#osx-framework-user",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111933,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_default_scheme",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111934,
+    "url": "https://docs.python.org/3/library/sysconfig.html#other-functions",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111935,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_makefile_filename",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111936,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/sysconfig",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111937,
+    "url": "https://docs.python.org/3/library/sysconfig.html#configuration-variables",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111938,
+    "url": "https://docs.python.org/3/library/sysconfig.html#installation-path-functions",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111939,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_config_h_filename",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111942,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig.get_preferred_scheme",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111947,
+    "url": "https://docs.python.org/3/library/sysconfig.html#nt",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111948,
+    "url": "https://docs.python.org/3/library/sysconfig.html#command-line-usage",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111949,
+    "url": "https://docs.python.org/3/library/sysconfig.html#prefix-scheme",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111951,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig._get_preferred_schemes",
+    "parentUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "id": 111953,
+    "url": "https://facebook.github.io/zstd/#benchmarks",
+    "parentUrl": "https://facebook.github.io/zstd/"
+  },
+  {
+    "id": 111954,
+    "url": "https://facebook.github.io/zstd/#small-data",
+    "parentUrl": "https://facebook.github.io/zstd/"
+  },
+  {
+    "id": 111955,
+    "url": "https://tools.ietf.org/html/rfc8878",
+    "parentUrl": "https://facebook.github.io/zstd/"
+  },
+  {
+    "id": 111956,
+    "url": "https://opensource.facebook.com/support-ukraine",
+    "parentUrl": "https://facebook.github.io/zstd/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Discard"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Discard"
+  },
+  {
+    "src": "https://facebook.github.io/zstd/images/zstd85.png",
+    "alt": "",
+    "pageTitle": "Zstandard - Real-time data compression algorithm",
+    "pageUrl": "https://facebook.github.io/zstd/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sysconfig — Provide access to Python’s configuration information — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sysconfig — Provide access to Python’s configuration information — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sysconfig.html#sysconfig.is_python_build"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/960340?v\u003d4\u0026size\u003d80",
+    "alt": "@barneygale",
+    "pageTitle": "Improve file URI ergonomics in `urllib.request` · Issue #125866 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/960340?v\u003d4\u0026size\u003d48",
+    "alt": "@barneygale",
+    "pageTitle": "Improve file URI ergonomics in `urllib.request` · Issue #125866 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125866"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Add __get__ to the partial object · Issue #121027 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121027"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Add __get__ to the partial object · Issue #121027 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121027"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/25313350?u\u003d73b184aa203a878927d87aa1fce19fd529155f39\u0026v\u003d4\u0026size\u003d80",
     "alt": "@brianschubert",
