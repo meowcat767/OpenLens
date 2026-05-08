@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1316,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#types",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:15:25.85473"
+  },
+  {
+    "id": 1315,
+    "url": "https://github.com/python/cpython/issues/129965",
+    "title": "Add missing MIME types · Issue #129965 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add missing MIME types #129965 New issue Copy link New issue Copy link Closed Closed Add missing MIME types#129965 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description hugovk opened on Feb 10, 2025 Issue body actions Feature or enhancement Proposal: https://github.com/mikeckennedy/content-types identifies some common MIME types missing from the default mimetypes list. Running https://github.com/mikeckennedy/content-types/blob/main/samples/compare_to_builtin.py on Python 3.13 to identify some missing ones: ❯ uv run --python 3.13 --with content-types https://raw.githubusercontent.com/mikeckennedy/content-types/refs/heads/main/samples/compare_to_builtin.py\nCompare types in mimetypes vs content-types.\nThere are 5 types where mimetypes and content-types disagree\nmimetypes: .exe application/octet-stream, content-types: .exe application/x-msdownload\nmimetypes: .xml text/xml, content-types: .xml application/xml\nmimetypes: .wav audio/x-wav, content-types: .wav audio/wav\nmimetypes: .dll application/octet-stream, content-types: .dll application/x-msdownload\nmimetypes: .obj application/octet-stream, content-types: .obj model/obj\n\nThere are 0 types in mimetypes that are not in content-types\n\nThere are 31 types in content-types that are not in mimetypes\nin_ct_only\n.xlsx  -\u003e application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\n.gz    -\u003e application/gzip\n.ods   -\u003e application/vnd.oasis.opendocument.spreadsheet\n.docx  -\u003e application/vnd.openxmlformats-officedocument.wordprocessingml.document\n.gltf  -\u003e model/gltf+json\n.rar   -\u003e application/vnd.rar\n.php   -\u003e application/x-httpd-php\n.7z    -\u003e application/x-7z-compressed\n.ogv   -\u003e video/ogg\n.odg   -\u003e application/vnd.oasis.opendocument.graphics\n.weba  -\u003e audio/webm\n.rpm   -\u003e application/x-rpm\n.odp   -\u003e application/vnd.oasis.opendocument.presentation\n.deb   -\u003e application/x-debian-package\n.epub  -\u003e application/epub+zip\n.woff2 -\u003e font/woff2\n.apk   -\u003e application/vnd.android.package-archive\n.glb   -\u003e model/gltf-binary\n.map   -\u003e application/json\n.tgz   -\u003e application/gzip\n.ttf   -\u003e font/ttf\n.otf   -\u003e font/otf\n.wmv   -\u003e video/x-ms-wmv\n.odt   -\u003e application/vnd.oasis.opendocument.text\n.ogg   -\u003e audio/ogg\n.pptx  -\u003e application/vnd.openxmlformats-officedocument.presentationml.presentation\n.m4a   -\u003e audio/mp4\n.m4v   -\u003e video/mp4\n.flac  -\u003e audio/flac\n.woff  -\u003e font/woff\n.stl   -\u003e model/stl With 3.14.0a4: ❯ uv run --python 3.14 --with content-types https://raw.githubusercontent.com/mikeckennedy/content-types/refs/heads/main/samples/compare_to_builtin.py\nCompare types in mimetypes vs content-types.\nThere are 5 types where mimetypes and content-types disagree\nmimetypes: .exe application/octet-stream, content-types: .exe application/x-msdownload\nmimetypes: .obj application/octet-stream, content-types: .obj model/obj\nmimetypes: .xml text/xml, content-types: .xml application/xml\nmimetypes: .wav audio/x-wav, content-types: .wav audio/wav\nmimetypes: .dll application/octet-stream, content-types: .dll application/x-msdownload\n\nThere are 13 types in mimetypes that are not in content-types\n.wmf : image/wmf\n.mka : audio/matroska\n.fits: image/fits\n.g3  : image/g3fax\n.eot : application/vnd.ms-fontobject\n.emf : image/emf\n.jp2 : image/jp2\n.jpm : image/jpm\n.jpx : image/jpx\n.t38 : image/t38\n.mk3d: video/matroska-3d\n.mkv : video/matroska\n.tfx : image/tiff-fx\n\nThere are 27 types in content-types that are not in mimetypes\nin_ct_only\n.m4v   -\u003e video/mp4\n.wmv   -\u003e video/x-ms-wmv\n.odt   -\u003e application/vnd.oasis.opendocument.text\n.deb   -\u003e application/x-debian-package\n.odp   -\u003e application/vnd.oasis.opendocument.presentation\n.gz    -\u003e application/gzip\n.xlsx  -\u003e application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\n.map   -\u003e application/json\n.apk   -\u003e application/vnd.android.package-archive\n.gltf  -\u003e model/gltf+json\n.php   -\u003e application/x-httpd-php\n.glb   -\u003e model/gltf-binary\n.rpm   -\u003e application/x-rpm\n.epub  -\u003e application/epub+zip\n.odg   -\u003e application/vnd.oasis.opendocument.graphics\n.docx  -\u003e application/vnd.openxmlformats-officedocument.wordprocessingml.document\n.ods   -\u003e application/vnd.oasis.opendocument.spreadsheet\n.7z    -\u003e application/x-7z-compressed\n.stl   -\u003e model/stl\n.m4a   -\u003e audio/mp4\n.ogv   -\u003e video/ogg\n.flac  -\u003e audio/flac\n.rar   -\u003e application/vnd.rar\n.tgz   -\u003e application/gzip\n.pptx  -\u003e application/vnd.openxmlformats-officedocument.presentationml.presentation\n.ogg   ",
+    "scrapedAt": "2026-05-09 01:15:24.524271"
+  },
+  {
+    "id": 1314,
+    "url": "https://docs.python.org/3/library/typing.html#typing.BinaryIO",
+    "title": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Development Tools » typing — Support for type hints | Theme Auto Light Dark | typing — Support for type hints¶ Added in version 3.5. Source code: Lib/typing.py Note The Python runtime does not enforce function and variable type annotations. They can be used by third party tools such as type checkers, IDEs, linters, etc. This module provides runtime support for type hints. Consider the function below: def surface_area_of_cube(edge_length: float) -\u003e str:\n    return f\"The surface area of the cube is {6 * edge_length ** 2}.\"\n The function surface_area_of_cube takes an argument expected to be an instance of float, as indicated by the type hint edge_length: float. The function is expected to return an instance of str, as indicated by the -\u003e str hint. While type hints can be simple classes like float or str, they can also be more complex. The typing module provides a vocabulary of more advanced type hints. New features are frequently added to the typing module. The typing_extensions package provides backports of these new features to older versions of Python. See also Typing cheat sheet A quick overview of type hints (hosted at the mypy docs) Type System Reference section of the mypy docs The Python typing system is standardised via PEPs, so this reference should broadly apply to most Python type checkers. (Some parts may still be specific to mypy.) Static Typing with Python Type-checker-agnostic documentation written by the community detailing type system features, useful typing related tools and typing best practices. Specification for the Python Type System¶ The canonical, up-to-date specification of the Python type system can be found at Specification for the Python type system. Type aliases¶ A type alias is defined using the type statement, which creates an instance of TypeAliasType. In this example, Vector and list[float] will be treated equivalently by static type checkers: type Vector \u003d list[float]\n\ndef scale(scalar: float, vector: Vector) -\u003e Vector:\n    return [scalar * num for num in vector]\n\n# passes type checking; a list of floats qualifies as a Vector.\nnew_vector \u003d scale(2.0, [1.0, -4.2, 5.4])\n Type aliases are useful for simplifying complex type signatures. For example: from collections.abc import Sequence\n\ntype ConnectionOptions \u003d dict[str, str]\ntype Address \u003d tuple[str, int]\ntype Server \u003d tuple[Address, ConnectionOptions]\n\ndef broadcast_message(message: str, servers: Sequence[Server]) -\u003e None:\n    ...\n\n# The static type checker will treat the previous type signature as\n# being exactly equivalent to this one.\ndef broadcast_message(\n    message: str,\n    servers: Sequence[tuple[tuple[str, int], dict[str, str]]]\n) -\u003e None:\n    ...\n The type statement is new in Python 3.12. For backwards compatibility, type aliases can also be created through simple assignment: Vector \u003d list[float]\n Or marked with TypeAlias to make it explicit that this is a type alias, not a normal variable assignment: from typing import TypeAlias\n\nVector: TypeAlias \u003d list[float]\n NewType¶ Use the NewType helper to create distinct types: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\nsome_id \u003d UserId(524313)\n The static type checker will treat the new type as if it were a subclass of the original type. This is useful in helping catch logical errors: def get_user_name(user_id: UserId) -\u003e str:\n    ...\n\n# passes type checking\nuser_a \u003d get_user_name(UserId(42351))\n\n# fails type checking; an int is not a UserId\nuser_b \u003d get_user_name(-1)\n You may still perform all int operations on a variable of type UserId, but the result will always be of type int. This lets you pass in a UserId wherever an int might be expected, but will prevent you from accidentally creating a UserId in an invalid way: # \u0027output\u0027 is of type \u0027int\u0027, not \u0027UserId\u0027\noutput \u003d UserId(23413) + UserId(54341)\n Note that these checks are enforced only by the static type checker. At runtime, the statement Derived \u003d NewType(\u0027Derived\u0027, Base) will make Derived a callable that immediately returns whatever parameter you pass it. That means the expression Derived(some_value) does not create a new class or introduce much overhead beyond that of a regular function call. More precisely, the expression some_value is Derived(some_value) is always true at runtime. It is invalid to create a subtype of Derived: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\n# Fails at runtime and does not pass type checking\nclass AdminUserId(UserId): pass\n However, it is possible to create a NewType based on a ‘derived’ NewType: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\nProUserId \u003d NewType(\u0027ProUserId\u0027, UserId)\n and typechecking for ProUserId will work as expected. See PEP 484 for more details. Note Recall that the use of a type alias declares two types to be equivalent to one another. Doing type Alias \u003d Original will make the static type checker treat Alias a",
+    "scrapedAt": "2026-05-09 01:15:22.397518"
+  },
+  {
+    "id": 1313,
+    "url": "https://github.com/python/cpython/issues/128629",
+    "title": "Add Py_PACK_VERSION macros · Issue #128629 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add Py_PACK_VERSION macros #128629 New issue Copy link New issue Copy link Closed Closed Add Py_PACK_VERSION macros#128629 Copy link Assignees Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description encukou opened on Jan 8, 2025 Issue body actions Add these to limited API: Py_PACK_FULL_VERSION(x, y, z, level, serial): pack a version number from components into the format used by Py_VERSION_HEX and Py_LIMITED_API. For example, Py_PACK_FULL_VERSION(3, 14, 0, 0xA, 1) evaluates to 0x030E00A1. Py_PACK_VERSION(x, y): shorthand for Py_PACK_FULL_VERSION(x, y, 0, 0, 0), useful because the first two version components often determine ABI compatibility. These are primarily macros, but we will export library functions with the same names and functionality, for use in wrappers for non-C languages – for example, Python with ctypes. The functions take int arguments and return uint32_t. Inputs are masked (high bits are ignored). C API WG decision: capi-workgroup/decisions#47 Linked PRs gh-128629: Add Py_PACK_VERSION and Py_PACK_FULL_VERSION #128630 gh-128629: Add _Py_PACK_VERSION for CPython\u0027s own definitions #134247 Reactions are currently unavailable Metadata Metadata Assignees encukou Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:15:21.084068"
+  },
+  {
+    "id": 1312,
+    "url": "https://github.com/python/cpython/issues/91349",
+    "title": "Use zlib-ng (fast!) rather than mainline stale zlib in binary releases · Issue #91349 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Use zlib-ng (fast!) rather than mainline stale zlib in binary releases #91349 New issue Copy link New issue Copy link Open Open Use zlib-ng (fast!) rather than mainline stale zlib in binary releases#91349 Copy link Labels OS-macOS-windowsbuildThe build process and cross-buildThe build process and cross-buildperformancePerformance or resource usagePerformance or resource usagetype-featureA feature request or enhancementA feature request or enhancement Description gpshead opened on Apr 1, 2022 Issue body actions BPO 47193 Nosy @gpshead, @pfmoore, @tjguk, @zware, @zooba, @corona10, @arhadthedev Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2022-04-01.19:19:24.173\u003e\nlabels \u003d [\u00273.11\u0027, \u0027OS-windows\u0027, \u0027performance\u0027]\ntitle \u003d \u0027Use zlib-ng rather than zlib in binary releases\u0027\nupdated_at \u003d \u003cDate 2022-04-02.09:48:33.061\u003e\nuser \u003d \u0027https://github.com/gpshead\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-04-02.09:48:33.061\u003e\nactor \u003d \u0027corona10\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Windows\u0027]\ncreation \u003d \u003cDate 2022-04-01.19:19:24.173\u003e\ncreator \u003d \u0027gregory.p.smith\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 47193\nkeywords \u003d []\nmessage_count \u003d 1.0\nmessages \u003d [\u0027416508\u0027]\nnosy_count \u003d 7.0\nnosy_names \u003d [\u0027gregory.p.smith\u0027, \u0027paul.moore\u0027, \u0027tim.golden\u0027, \u0027zach.ware\u0027, \u0027steve.dower\u0027, \u0027corona10\u0027, \u0027arhadthedev\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027needs patch\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027performance\u0027\nurl \u003d \u0027https://bugs.python.org/issue47193\u0027\nversions \u003d [\u0027Python 3.11\u0027] Linked PRs gh-91349: Replace zlib with zlib-ng in Windows build #131438 gh-91349: Adjust default compression level to 6 (down from 9) in gzip and tarfile #131470 gh-91349: Expose the crc32 function from the lzma library #131721 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels OS-macOS-windowsbuildThe build process and cross-buildThe build process and cross-buildperformancePerformance or resource usagePerformance or resource usagetype-featureA feature request or enhancementA feature request or enhancement Projects Compression issues Status No status Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:15:18.746677"
+  },
+  {
     "id": 1311,
     "url": "https://peps.python.org/pep-0626/",
     "title": "PEP 626 – Precise line numbers for debugging and other tools. | peps.python.org",
@@ -8818,26 +8853,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1312,
-    "url": "https://github.com/python/cpython/issues/91349"
-  },
-  {
-    "id": 1313,
-    "url": "https://github.com/python/cpython/issues/128629"
-  },
-  {
-    "id": 1314,
-    "url": "https://docs.python.org/3/library/typing.html#typing.BinaryIO"
-  },
-  {
-    "id": 1315,
-    "url": "https://github.com/python/cpython/issues/129965"
-  },
-  {
-    "id": 1316,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#types"
   },
   {
     "id": 1318,
@@ -226840,10 +226855,197 @@ window.searchData = [
     "id": 264204,
     "url": "https://github.com/python/peps/commits/main/peps/pep-0626.rst",
     "parentUrl": "https://peps.python.org/pep-0626/"
+  },
+  {
+    "id": 264205,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22OS-mac%22",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 264207,
+    "url": "https://github.com/python/cpython/pull/131438",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 264209,
+    "url": "https://github.com/python/cpython/pull/131721",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 264213,
+    "url": "https://bugs.python.org/issue47193",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 264215,
+    "url": "https://github.com/orgs/python/projects/20",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 264220,
+    "url": "https://github.com/python/cpython/issues/91349#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 264223,
+    "url": "https://github.com/python/cpython/issues/91349#top",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 264224,
+    "url": "https://github.com/python/cpython/pull/131470",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 264225,
+    "url": "https://github.com/python/cpython/issues/91349#issue-1199078073",
+    "parentUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "id": 264230,
+    "url": "https://github.com/python/cpython/pull/128630",
+    "parentUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "id": 264232,
+    "url": "https://github.com/python/cpython/issues/128629#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "id": 264236,
+    "url": "https://github.com/python/cpython/pull/134247",
+    "parentUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "id": 264238,
+    "url": "https://github.com/python/cpython/issues/128629#issue-2775242365",
+    "parentUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "id": 264239,
+    "url": "https://github.com/capi-workgroup/decisions/issues/47",
+    "parentUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "id": 264241,
+    "url": "https://github.com/python/cpython/issues/128629#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "id": 264588,
+    "url": "https://github.com/python/cpython/pull/132845",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 264591,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 264597,
+    "url": "https://github.com/python/cpython/issues/129965#top",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 264598,
+    "url": "https://github.com/python/cpython/issues/129965#issue-2843097343",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 264599,
+    "url": "https://github.com/mikeckennedy/content-types/blob/main/samples/compare_to_builtin.py",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 264601,
+    "url": "https://github.com/python/cpython/pull/129969",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 264602,
+    "url": "https://github.com/mikeckennedy/content-types",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "id": 264603,
+    "url": "https://github.com/python/cpython/issues/129965#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/129965"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#types"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#types"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@hugovk",
+    "pageTitle": "Add missing MIME types · Issue #129965 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@hugovk",
+    "pageTitle": "Add missing MIME types · Issue #129965 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129965"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.BinaryIO"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.BinaryIO"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d64\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "encukou",
+    "pageTitle": "Add Py_PACK_VERSION macros · Issue #128629 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@encukou",
+    "pageTitle": "Add Py_PACK_VERSION macros · Issue #128629 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@encukou",
+    "pageTitle": "Add Py_PACK_VERSION macros · Issue #128629 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d64\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "Add Py_PACK_VERSION macros · Issue #128629 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128629"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?v\u003d4\u0026size\u003d80",
+    "alt": "@gpshead",
+    "pageTitle": "Use zlib-ng (fast!) rather than mainline stale zlib in binary releases · Issue #91349 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91349"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?v\u003d4\u0026size\u003d48",
+    "alt": "@gpshead",
+    "pageTitle": "Use zlib-ng (fast!) rather than mainline stale zlib in binary releases · Issue #91349 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91349"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
