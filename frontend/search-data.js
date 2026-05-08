@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 473,
+    "url": "https://www.python.org/events/python-user-group/2030/",
+    "title": "Python Meeting Düsseldorf | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Meeting Düsseldorf Düsseldorf, Germany 10 Sept. from 4pm UTC to 7pm UTC, 2025 Python Meeting Düsseldorf Explore events -- Change your date range More events at Düsseldorf, Germany Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf - Python Herbst Sprint 2025 Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Sprint / Hackathon Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf",
+    "scrapedAt": "2026-05-09 00:42:54.234094"
+  },
+  {
+    "id": 472,
+    "url": "https://www.python.org/events/python-user-group/911/",
+    "title": "Python Meeting Düsseldorf | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Meeting Düsseldorf Düsseldorf, Germany 30 Sept. from 4pm UTC to 6pm UTC, 2020 Python Meeting Düsseldorf Explore events -- Change your date range More events at Düsseldorf, Germany Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf - Python Herbst Sprint 2025 Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Sprint / Hackathon Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf",
+    "scrapedAt": "2026-05-09 00:42:52.683629"
+  },
+  {
+    "id": 471,
+    "url": "https://www.python.org/events/python-user-group/2123/",
+    "title": "Python Meeting Düsseldorf - Python Herbst Sprint 2025 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Meeting Düsseldorf - Python Herbst Sprint 2025 Düsseldorf, Germany From 15 Nov. through 16 Nov., 2025 Python Meeting Düsseldorf - Python Herbst Sprint 2025 Explore events -- Change your date range More events at Düsseldorf, Germany Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf - Python Herbst Sprint 2025 Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Sprint / Hackathon Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf",
+    "scrapedAt": "2026-05-09 00:42:51.350529"
+  },
+  {
+    "id": 470,
+    "url": "https://www.python.org/events/python-user-group/2103/",
+    "title": "Python Meeting Düsseldorf | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Meeting Düsseldorf Düsseldorf, Germany 14 Jan. from 5pm UTC to 8pm UTC, 2026 Python Meeting Düsseldorf Explore events -- Change your date range More events at Düsseldorf, Germany Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf - Python Herbst Sprint 2025 Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Sprint / Hackathon Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf",
+    "scrapedAt": "2026-05-09 00:42:49.989748"
+  },
+  {
+    "id": 469,
+    "url": "https://www.pyddf.de/",
+    "title": "Python Meeting Düsseldorf",
+    "content": "Ein Treffen in Düsseldorf für Python Enthusiasten im Rheinland Featured articles Neue Python Meeting Videos online Gute Vorsätze für 2026 03 May Neue Python Meeting Videos online Videos vom 18.06.2025, 10.09.2025 und 14.01.2026 03 May 2026 1 min read 15 Apr Python Meeting Düsseldorf – April 2026 (verschoben) 22.04.2026, 18:00 Uhr 15 Apr 2026 1 min read 07 Mar Python Meeting Düsseldorf Spring Sprint 2026 21./22.03.2026 07 Mar 2026 3 min read 19 Jan In the making: Python Meeting Düsseldorf Spring Sprint 2026 Neuer Termin: 21./22.03. 19 Jan 2026 1 min read 03 Jan Python Meeting Düsseldorf – Januar 2026 14.01.2026, 18:00 Uhr 03 Jan 2026 2 min read 02 Jan Gute Vorsätze für 2026 Ein frohes Neues Jahr 😄🐍🎉 02 Jan 2026 1 min read",
+    "scrapedAt": "2026-05-09 00:42:48.603095"
+  },
+  {
     "id": 468,
     "url": "https://www.python.org/events/python-user-group/1253/",
     "title": "Python Meeting Düsseldorf | Python.org",
@@ -3258,26 +3293,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 469,
-    "url": "https://www.pyddf.de/"
-  },
-  {
-    "id": 470,
-    "url": "https://www.python.org/events/python-user-group/2103/"
-  },
-  {
-    "id": 471,
-    "url": "https://www.python.org/events/python-user-group/2123/"
-  },
-  {
-    "id": 472,
-    "url": "https://www.python.org/events/python-user-group/911/"
-  },
-  {
-    "id": 473,
-    "url": "https://www.python.org/events/python-user-group/2030/"
   },
   {
     "id": 474,
@@ -87499,10 +87514,99 @@ window.searchData = [
     "id": 65415,
     "url": "http://pyddf.de",
     "parentUrl": "https://www.python.org/events/python-user-group/133/"
+  },
+  {
+    "id": 65459,
+    "url": "https://www.pyddf.de/gute-vorsaetze-2026/",
+    "parentUrl": "https://www.pyddf.de/"
+  },
+  {
+    "id": 65460,
+    "url": "https://www.pyddf.de/neue-python-meeting-videos-online/",
+    "parentUrl": "https://www.pyddf.de/"
+  },
+  {
+    "id": 65461,
+    "url": "https://www.pyddf.de/python-meeting-dusseldorf-spring-sprint-2026/",
+    "parentUrl": "https://www.pyddf.de/"
+  },
+  {
+    "id": 65462,
+    "url": "https://www.pyddf.de/python-meeting-dusseldorf-april-2026-verschoben/",
+    "parentUrl": "https://www.pyddf.de/"
+  },
+  {
+    "id": 65463,
+    "url": "https://www.pyddf.de/python-meeting-dusseldorf-januar-2026/",
+    "parentUrl": "https://www.pyddf.de/"
+  },
+  {
+    "id": 65464,
+    "url": "https://www.pyddf.de/in-the-making-python-meeting-dusseldorf-spring-sprint-2026/",
+    "parentUrl": "https://www.pyddf.de/"
+  },
+  {
+    "id": 65504,
+    "url": "https://www.egenix.com/company/news/PyDDF-Herbst-Sprint-2025",
+    "parentUrl": "https://www.python.org/events/python-user-group/2123/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://pyddf.de/content/images/2026/01/Python-Meeting-Blog-Cover-3.webp",
+    "alt": "Python Meeting Düsseldorf",
+    "pageTitle": "Python Meeting Düsseldorf",
+    "pageUrl": "https://www.pyddf.de/"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1614058666972-e3bbb9cb96b7?crop\u003dentropy\u0026cs\u003dtinysrgb\u0026fit\u003dmax\u0026fm\u003djpg\u0026ixid\u003dM3wxMTc3M3wwfDF8c2VhcmNofDZ8fHJlc29sdmV8ZW58MHx8fHwxNzc3ODE1Njc4fDA\u0026ixlib\u003drb-4.1.0\u0026q\u003d80\u0026w\u003d750",
+    "alt": "Neue Python Meeting Videos online",
+    "pageTitle": "Python Meeting Düsseldorf",
+    "pageUrl": "https://www.pyddf.de/"
+  },
+  {
+    "src": "https://www.pyddf.de/content/images/size/w750/2026/01/0e881a85-2780-43ee-8db4-7944ea377bce.jpg",
+    "alt": "Gute Vorsätze für 2026",
+    "pageTitle": "Python Meeting Düsseldorf",
+    "pageUrl": "https://www.pyddf.de/"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1614058666972-e3bbb9cb96b7?crop\u003dentropy\u0026cs\u003dtinysrgb\u0026fit\u003dmax\u0026fm\u003djpg\u0026ixid\u003dM3wxMTc3M3wwfDF8c2VhcmNofDZ8fHJlc29sdmV8ZW58MHx8fHwxNzc3ODE1Njc4fDA\u0026ixlib\u003drb-4.1.0\u0026q\u003d80\u0026w\u003d750",
+    "alt": "Neue Python Meeting Videos online",
+    "pageTitle": "Python Meeting Düsseldorf",
+    "pageUrl": "https://www.pyddf.de/"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?crop\u003dentropy\u0026cs\u003dtinysrgb\u0026fit\u003dmax\u0026fm\u003djpg\u0026ixid\u003dM3wxMTc3M3wwfDF8c2VhcmNofDN8fGZyJUMzJUJDaGxpbmd8ZW58MHx8fHwxNzY4NTA2NjI4fDA\u0026ixlib\u003drb-4.1.0\u0026q\u003d80\u0026w\u003d750",
+    "alt": "Python Meeting Düsseldorf – April 2026 (verschoben)",
+    "pageTitle": "Python Meeting Düsseldorf",
+    "pageUrl": "https://www.pyddf.de/"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1767123792973-c6d2b5539681?crop\u003dentropy\u0026cs\u003dtinysrgb\u0026fit\u003dmax\u0026fm\u003djpg\u0026ixid\u003dM3wxMTc3M3wwfDF8c2VhcmNofDExNnx8ZmFzdCUyMGJyaWdodHxlbnwwfHx8fDE3NzI4MzA1NDJ8MA\u0026ixlib\u003drb-4.1.0\u0026q\u003d80\u0026w\u003d750",
+    "alt": "Python Meeting Düsseldorf Spring Sprint 2026",
+    "pageTitle": "Python Meeting Düsseldorf",
+    "pageUrl": "https://www.pyddf.de/"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1450897918656-527057db59d3?crop\u003dentropy\u0026cs\u003dtinysrgb\u0026fit\u003dmax\u0026fm\u003djpg\u0026ixid\u003dM3wxMTc3M3wwfDF8c2VhcmNofDV8fHNwcmludHxlbnwwfHx8fDE3Njg4NDUyNzV8MA\u0026ixlib\u003drb-4.1.0\u0026q\u003d80\u0026w\u003d750",
+    "alt": "In the making: Python Meeting Düsseldorf Spring Sprint 2026",
+    "pageTitle": "Python Meeting Düsseldorf",
+    "pageUrl": "https://www.pyddf.de/"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1674230547212-502a8af5ed64?crop\u003dentropy\u0026cs\u003dtinysrgb\u0026fit\u003dmax\u0026fm\u003djpg\u0026ixid\u003dM3wxMTc3M3wwfDF8c2VhcmNofDF8fHNub3clMjBpbiUyMGphbnVhcnl8ZW58MHx8fHwxNzY3NDcyNDQxfDA\u0026ixlib\u003drb-4.1.0\u0026q\u003d80\u0026w\u003d750",
+    "alt": "Python Meeting Düsseldorf – Januar 2026",
+    "pageTitle": "Python Meeting Düsseldorf",
+    "pageUrl": "https://www.pyddf.de/"
+  },
+  {
+    "src": "https://www.pyddf.de/content/images/size/w750/2026/01/0e881a85-2780-43ee-8db4-7944ea377bce.jpg",
+    "alt": "Gute Vorsätze für 2026",
+    "pageTitle": "Python Meeting Düsseldorf",
+    "pageUrl": "https://www.pyddf.de/"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
