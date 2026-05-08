@@ -76,12 +76,15 @@ public class StaticExporter {
                     if (content != null && content.length() > 5000) {
                         content = content.substring(0, 5000);
                     }
+
+                    var timestamp = rs.getTimestamp("scraped_at");
+
                     pages.add(new PageData(
                             rs.getInt("id"),
                             rs.getString("url"),
                             rs.getString("title"),
                             content,
-                            rs.getTimestamp("scraped_at").toString()));
+                            timestamp != null ? timestamp.toString() : null));
                 }
             }
 
