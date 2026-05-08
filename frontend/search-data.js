@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1757,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#socket",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:32:30.13745"
+  },
+  {
+    "id": 1756,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#concurrent-safe-warnings-control",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:32:28.849483"
+  },
+  {
+    "id": 1755,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsInt64",
+    "title": "Integer Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)",
+    "scrapedAt": "2026-05-09 01:32:27.538387"
+  },
+  {
+    "id": 1754,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_threshold",
+    "title": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » gc — Garbage Collector interface | Theme Auto Light Dark | gc — Garbage Collector interface¶ This module provides an interface to the optional garbage collector. It provides the ability to disable the collector, tune the collection frequency, and set debugging options. It also provides access to unreachable objects that the collector found but cannot free. Since the collector supplements the reference counting already used in Python, you can disable the collector if you are sure your program does not create reference cycles. Automatic collection can be disabled by calling gc.disable(). To debug a leaking program call gc.set_debug(gc.DEBUG_LEAK). Notice that this includes gc.DEBUG_SAVEALL, causing garbage-collected objects to be saved in gc.garbage for inspection. The gc module provides the following functions: gc.enable()¶ Enable automatic garbage collection. gc.disable()¶ Disable automatic garbage collection. gc.isenabled()¶ Return True if automatic collection is enabled. gc.collect(generation\u003d2)¶ With no arguments, run a full collection. The optional argument generation may be an integer specifying which generation to collect (from 0 to 2). A ValueError is raised if the generation number is invalid. The sum of collected objects and uncollectable objects is returned. The free lists maintained for a number of built-in types are cleared whenever a full collection or collection of the highest generation (2) is run. Not all items in some free lists may be freed due to the particular implementation, in particular float. The effect of calling gc.collect() while the interpreter is already performing a collection is undefined. Changed in version 3.14: generation\u003d1 performs an increment of collection. Changed in version 3.14.5: generation\u003d1 performs collection of the middle generation. gc.set_debug(flags)¶ Set the garbage collection debugging flags. Debugging information will be written to sys.stderr. See below for a list of debugging flags which can be combined using bit operations to control debugging. gc.get_debug()¶ Return the debugging flags currently set. gc.get_objects(generation\u003dNone)¶ Returns a list of all objects tracked by the collector, excluding the list returned. If generation is not None, return only the objects tracked by the collector that are in that generation. Changed in version 3.8: New generation parameter. Changed in version 3.14: Generation 1 is removed Changed in version 3.14.5: Generation 1 is reintroduced to maintain GC behavior from 3.13. Raises an auditing event gc.get_objects with argument generation. gc.get_stats()¶ Return a list of three per-generation dictionaries containing collection statistics since interpreter start. The number of keys may change in the future, but currently each dictionary will contain the following items: collections is the number of times this generation was collected; collected is the total number of objects collected inside this generation; uncollectable is the total number of objects which were found to be uncollectable (and were therefore moved to the garbage list) inside this generation. Added in version 3.4. gc.set_threshold(threshold0[, threshold1[, threshold2]])¶ Set the garbage collection thresholds (the collection frequency). Setting threshold0 to zero disables collection. The GC classifies objects into three generations depending on how many collection sweeps they have survived. New objects are placed in the youngest generation (generation 0). If an object survives a collection it is moved into the next older generation. Since generation 2 is the oldest generation, objects in that generation remain there after a collection. In order to decide when to run, the collector keeps track of the number object allocations and deallocations since the last collection. When the number of allocations minus the number of deallocations exceeds threshold0, collection starts. Initially only generation 0 is examined. If generation 0 has been examined more than threshold1 times since generation 1 has been examined, then generation 1 is examined as well. With the third generation, things are a bit more complicated, see Collecting the oldest generation for more information. In the free-threaded build, the increase in process memory usage is also checked before running the collector. If the memory usage has not increased by 10% since the last collection and the net number of object allocations has not exceeded 40 times threshold0, the collection is not run. See Garbage collector design for more information. Changed in version 3.14: threshold2 is ignored Changed in version 3.14.5: threshold2 is restored to match Python 3.13 behavior. gc.get_count()¶ Return the current collection counts as a tuple of (count0, count1, count2). gc.get_threshold()¶ Return the current collection thresholds as a tuple of (threshold0, threshold1, threshold2). g",
+    "scrapedAt": "2026-05-09 01:32:26.270333"
+  },
+  {
+    "id": 1753,
+    "url": "https://github.com/python/cpython/issues/118093",
+    "title": "Increase fraction of code executed by tier 2. · Issue #118093 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Increase fraction of code executed by tier 2. #118093 New issue Copy link New issue Copy link Closed Closed Increase fraction of code executed by tier 2.#118093 Copy link Labels 3.14bugs and security fixesbugs and security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)performancePerformance or resource usagePerformance or resource usage Description markshannon opened on Apr 19, 2024 Issue body actions According to stats and profiling only about 40% of bytecode instructions are executed by tier 2 and the remaining 60% by tier 1. We the expected improvements to the JIT and tier 2 optimizer we expect tier 2 (with JIT) to have a significantly faster than tier 1. It therefore make sense to get the fraction of instructions executed by tier 2 up from 40% to nearer 90%. To do that we need to: Enter tier 2 at some function entry points as well as back edges. #118094 Stay in tier 2 when exiting executors in most cases Trace stitching #112354 Increase the number of micro-ops that we can handle in tier 2 #118095 Linked PRs GH-118093: Add tier two support to several instructions #121884 GH-118093: Remove invalidated executors from side exits #121885 GH-118093: Better handling of short and mid-loop traces #122252 GH-118093: Add tier two support for BINARY_OP_INPLACE_ADD_UNICODE #122253 GH-118093: Add tier two support for LOAD_ATTR_PROPERTY #122283 GH-118093: Handle some polymorphism before requiring progress in tier two #122843 GH-118093: Turn some DEOPT_IFs into EXIT_IFs #122998 GH-118093: Specialize CALL_KW #123006 GH-118093: Specialize CALL_FUNCTION_EX #123034 GH-118093: Make CALL_ALLOC_AND_ENTER_INIT suitable for tier 2. #123140 GH-118093: Specialize calls to non-vectorcall classes as CALL_NON_PY_GENERAL #123212 GH-118093: Fix off-by-one errors in tier-up thresholds #124447 GH-118093: Don\u0027t lose confidence when tracing through 100% biased branches #124813 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)performancePerformance or resource usagePerformance or resource usage Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:32:25.008726"
+  },
+  {
     "id": 1752,
     "url": "https://github.com/python/cpython/issues/119180",
     "title": "Implement PEP 649 and PEP 749 · Issue #119180 · python/cpython · GitHub",
@@ -11828,26 +11863,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1753,
-    "url": "https://github.com/python/cpython/issues/118093"
-  },
-  {
-    "id": 1754,
-    "url": "https://docs.python.org/3/library/gc.html#gc.get_threshold"
-  },
-  {
-    "id": 1755,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsInt64"
-  },
-  {
-    "id": 1756,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#concurrent-safe-warnings-control"
-  },
-  {
-    "id": 1757,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#socket"
   },
   {
     "id": 1758,
@@ -248290,10 +248305,165 @@ window.searchData = [
     "id": 380956,
     "url": "https://github.com/python/cpython/pull/122212",
     "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380957,
+    "url": "https://github.com/python/cpython/pull/122283",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380960,
+    "url": "https://github.com/python/cpython/issues/118093#issue-2252563307",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380962,
+    "url": "https://github.com/python/cpython/issues/118095",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380963,
+    "url": "https://github.com/python/cpython/issues/118094",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380965,
+    "url": "https://github.com/python/cpython/pull/124447",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380966,
+    "url": "https://github.com/faster-cpython/benchmarking-public",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380967,
+    "url": "https://github.com/python/cpython/pull/122843",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380968,
+    "url": "https://github.com/python/cpython/issues/118093#top",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380969,
+    "url": "https://github.com/python/cpython/pull/123034",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380970,
+    "url": "https://github.com/python/cpython/pull/123212",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380971,
+    "url": "https://github.com/python/cpython/pull/123140",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380973,
+    "url": "https://github.com/python/cpython/pull/122252",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380977,
+    "url": "https://github.com/python/cpython/pull/122998",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380978,
+    "url": "https://github.com/python/cpython/issues/118093#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380979,
+    "url": "https://github.com/python/cpython/pull/124813",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380980,
+    "url": "https://github.com/python/cpython/pull/123006",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380981,
+    "url": "https://github.com/python/cpython/pull/121884",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380982,
+    "url": "https://github.com/python/cpython/pull/121885",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "id": 380984,
+    "url": "https://github.com/python/cpython/pull/122253",
+    "parentUrl": "https://github.com/python/cpython/issues/118093"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#socket"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#socket"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#concurrent-safe-warnings-control"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#concurrent-safe-warnings-control"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsInt64"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsInt64"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gc.html#gc.get_threshold"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gc.html#gc.get_threshold"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d80",
+    "alt": "@markshannon",
+    "pageTitle": "Increase fraction of code executed by tier 2. · Issue #118093 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118093"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d48",
+    "alt": "@markshannon",
+    "pageTitle": "Increase fraction of code executed by tier 2. · Issue #118093 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118093"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
     "alt": "JelleZijlstra",
