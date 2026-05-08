@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1044,
+    "url": "https://docs.python.org/bugs.html",
+    "title": "Dealing with Bugs — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Dealing with Bugs | Theme Auto Light Dark | Dealing with Bugs¶ Python is a mature programming language which has established a reputation for stability. In order to maintain this reputation, the developers would like to know of any deficiencies you find in Python. It can be sometimes faster to fix bugs yourself and contribute patches to Python as it streamlines the process and involves fewer people. Learn how to contribute. Documentation bugs¶ If you find a bug in this documentation or would like to propose an improvement, please submit a bug report on the issue tracker. If you have a suggestion on how to fix it, include that as well. You can also open a discussion item on our Documentation Discourse forum. If you find a bug in the theme (HTML / CSS / JavaScript) of the documentation, please submit a bug report on the python-doc-theme issue tracker. See also Documentation bugs A list of documentation bugs that have been submitted to the Python issue tracker. Issue Tracking Overview of the process involved in reporting an improvement on the tracker. Helping with Documentation Comprehensive guide for individuals that are interested in contributing to Python documentation. Documentation Translations A list of GitHub pages for documentation translation and their primary contacts. Using the Python issue tracker¶ Issue reports for Python itself should be submitted via the GitHub issues tracker (https://github.com/python/cpython/issues). The GitHub issues tracker offers a web form which allows pertinent information to be entered and submitted to the developers. The first step in filing a report is to determine whether the problem has already been reported. The advantage in doing so, aside from saving the developers’ time, is that you learn what has been done to fix it; it may be that the problem has already been fixed for the next release, or additional information is needed (in which case you are welcome to provide it if you can!). To do this, search the tracker using the search box at the top of the page. If the problem you’re reporting is not already in the list, log in to GitHub. If you don’t already have a GitHub account, create a new account using the “Sign up” link. It is not possible to submit a bug report anonymously. Being now logged in, you can submit an issue. Click on the “New issue” button in the top bar to report a new issue. The submission form has two fields, “Title” and “Comment”. For the “Title” field, enter a very short description of the problem; fewer than ten words is good. In the “Comment” field, describe the problem in detail, including what you expected to happen and what did happen. Be sure to include whether any extension modules were involved, and what hardware and software platform you were using (including version information as appropriate). Each issue report will be reviewed by a developer who will determine what needs to be done to correct the problem. You will receive an update each time an action is taken on the issue. See also How to Report Bugs Effectively Article which goes into some detail about how to create a useful bug report. This describes what kind of information is useful and why it is useful. Bug Writing Guidelines Information about writing a good bug report. Some of this is specific to the Mozilla project, but describes general good practices. Getting started contributing to Python yourself¶ Beyond just reporting bugs that you find, you are also welcome to submit patches to fix them. You can find more information on how to get started patching Python in the Python Developer’s Guide. If you have questions, the core-mentorship mailing list is a friendly place to get answers to any and all questions pertaining to the process of fixing issues in Python. Table of Contents Dealing with Bugs Documentation bugs Using the Python issue tracker Getting started contributing to Python yourself Previous topic About this documentation Next topic Copyright This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Dealing with Bugs | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 01:03:54.614227"
+  },
+  {
+    "id": 1043,
+    "url": "https://github.com/python/cpython/issues/123757",
+    "title": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member gaogaotiantian commented Sep 6, 2024 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. An allow_restart argument is added to pdb.Pdb to enable run/restart command when needed (for stdlib, only in command line mode). Issue: Only support restart command in pdb when it\u0027s a command line usage #123756 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Only allow restart in command line mode 8c6fb05 bedevere-app Bot added the awaiting core review label Sep 6, 2024 bedevere-app Bot mentioned this pull request Sep 6, 2024 Only support restart command in pdb when it\u0027s a command line usage #123756 Closed 📜🤖 Added by blurb_it. 8a46e08 Copy link Copy Markdown Member Author gaogaotiantian commented Sep 6, 2024 Hi @iritkatriel , could you take a quick look at the proposal and the implementation and see if this makes sense? I will add the tests and the documentation after your pre-approval. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. gaogaotiantian added 2 commits September 6, 2024 21:23 Use an invocation type enum for restart check 2342a34 Add PdbInvokeType to __all__ 1d731c7 Copy link Copy Markdown Member Author gaogaotiantian commented Sep 7, 2024 Okay I defined a new Enum - PdbInvokeType for pdb to check whether to enable some commands internally. I also exported the enum because the debuggers based on pdb might need it. Do you think code wise this is the way to go? I\u0027ll work on the docs and tests if the feature is good to go. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Fix pyclbr test 78746ba iritkatriel reviewed Sep 7, 2024 View reviewed changes Comment thread Lib/pdb.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Add unknown for invocation type 2b9e225 iritkatriel reviewed Sep 7, 2024 View reviewed changes Comment thread Lib/pdb.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. iritkatriel reviewed Sep 7, 2024 View reviewed changes Comment thread Misc/NEWS.d/next/Library/2024-09-06-01-35-11.gh-issue-123756.Ozbhke.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. gaogaotiantian added 2 commits September 19, 2024 22:20 Change the enum name and update docs/tests 420e498 Update news a49a13e Copy link Copy Markdown Member Author gaogaotiantian commented Sep 20, 2024 Hi @iritkatriel , I updated the docs and tests, also renamed the enum class. Could you review it? Thanks! All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Fix test_pyclbr.py a4b995e iritkatriel reviewed Sep 20, 2024 View reviewed changes Comment thread Doc/library/pdb.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/pdb.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/pdb.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. gaogaotiantian added 3 commits September 24, 2024 09:56 Use simple strings for mode 03f91dc Revert changes to test_pyclbr 8284118 Update 2024-09-06-01-35-11.gh-issue-123756.Ozbhke.rst 162c53c Copy link Copy Markdown Member Author gaogaotiantian commented Sep 24, 2024 Hey @iritkatriel , I made some changes after the discussion on discord. Now the name of the argument is mode and it accepts a string \u0027cli\u0027 or \u0027inline\u0027, or a None. A few questions - do you think we should add run-time checker for the value? If we do, will it affect devs that build their debugger based on pdb? Should we have a separate method to check it so it can be overwritten? We can also do a setting kind of thing. The related question - should we type hint this? It\u0027s not common to type hint arguments in pdb.py - one of the reasons is of course the age of the file. However, last time I heard there\u0027s still a debate on whether we should type hint as much as possible in stdlibs. I think one thing we need to factor in is that - this argument is basically exclusively used by debugger developers. The debugger users should never need to use this. So maybe we can cut some corners (not making it super safe to us",
+    "scrapedAt": "2026-05-09 01:03:53.296435"
+  },
+  {
+    "id": 1042,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetProgramFullPath",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-09 01:03:48.648986"
+  },
+  {
+    "id": 1041,
+    "url": "https://docs.python.org/3/library/tkinter.html#module-tkinter",
+    "title": "tkinter — Python interface to Tcl/Tk — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Graphical user interfaces with Tk » tkinter — Python interface to Tcl/Tk | Theme Auto Light Dark | tkinter — Python interface to Tcl/Tk¶ Source code: Lib/tkinter/__init__.py The tkinter package (“Tk interface”) is the standard Python interface to the Tcl/Tk GUI toolkit. Both Tk and tkinter are available on most Unix platforms, including macOS, as well as on Windows systems. Running python -m tkinter from the command line should open a window demonstrating a simple Tk interface, letting you know that tkinter is properly installed on your system, and also showing what version of Tcl/Tk is installed, so you can read the Tcl/Tk documentation specific to that version. Tkinter supports a range of Tcl/Tk versions, built either with or without thread support. The official Python binary release bundles Tcl/Tk 8.6 threaded. See the source code for the _tkinter module for more information about supported versions. Tkinter is not a thin wrapper, but adds a fair amount of its own logic to make the experience more pythonic. This documentation will concentrate on these additions and changes, and refer to the official Tcl/Tk documentation for details that are unchanged. Note Tcl/Tk 8.5 (2007) introduced a modern set of themed user interface components along with a new API to use them. Both old and new APIs are still available. Most documentation you will find online still uses the old API and can be woefully outdated. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. See also TkDocs Extensive tutorial on creating user interfaces with Tkinter. Explains key concepts, and illustrates recommended approaches using the modern API. Tkinter 8.5 reference: a GUI for Python Reference documentation for Tkinter 8.5 detailing available classes, methods, and options. Tcl/Tk Resources: Tk commands Comprehensive reference to each of the underlying Tcl/Tk commands used by Tkinter. Tcl/Tk Home Page Additional documentation, and links to Tcl/Tk core development. Books: Modern Tkinter for Busy Python Developers By Mark Roseman. (ISBN 978-1999149567) Python GUI programming with Tkinter By Alan D. Moore. (ISBN 978-1788835886) Programming Python By Mark Lutz; has excellent coverage of Tkinter. (ISBN 978-0596158101) Tcl and the Tk Toolkit (2nd edition) By John Ousterhout, inventor of Tcl/Tk, and Ken Jones; does not cover Tkinter. (ISBN 978-0321336330) Architecture¶ Tcl/Tk is not a single library but rather consists of a few distinct modules, each with separate functionality and its own official documentation. Python’s binary releases also ship an add-on module together with it. Tcl Tcl is a dynamic interpreted programming language, just like Python. Though it can be used on its own as a general-purpose programming language, it is most commonly embedded into C applications as a scripting engine or an interface to the Tk toolkit. The Tcl library has a C interface to create and manage one or more instances of a Tcl interpreter, run Tcl commands and scripts in those instances, and add custom commands implemented in either Tcl or C. Each interpreter has an event queue, and there are facilities to send events to it and process them. Unlike Python, Tcl’s execution model is designed around cooperative multitasking, and Tkinter bridges this difference (see Threading model for details). Tk Tk is a Tcl package implemented in C that adds custom commands to create and manipulate GUI widgets. Each Tk object embeds its own Tcl interpreter instance with Tk loaded into it. Tk’s widgets are very customizable, though at the cost of a dated appearance. Tk uses Tcl’s event queue to generate and process GUI events. Ttk Themed Tk (Ttk) is a newer family of Tk widgets that provide a much better appearance on different platforms than many of the classic Tk widgets. Ttk is distributed as part of Tk, starting with Tk version 8.5. Python bindings are provided in a separate module, tkinter.ttk. Internally, Tk and Ttk use facilities of the underlying operating system, i.e., Xlib on Unix/X11, Cocoa on macOS, GDI on Windows. When your Python application uses a class in Tkinter, e.g., to create a widget, the tkinter module first assembles a Tcl/Tk command string. It passes that Tcl command string to an internal _tkinter binary module, which then calls the Tcl interpreter to evaluate it. The Tcl interpreter will then call into the Tk and/or Ttk packages, which will in turn make calls to Xlib, Cocoa, or GDI. Tkinter Modules¶ Support for Tkinter is spread across several modules. Most applications will need the main tkinter module, as well as the tkinter.ttk module, which provides the modern themed widget set and API: from tkinter import *\nfrom tkinter import ttk\n class tkinter.Tk(screenName\u003dNone, bas",
+    "scrapedAt": "2026-05-09 01:03:47.438738"
+  },
+  {
+    "id": 1040,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getobjects",
+    "title": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but refer",
+    "scrapedAt": "2026-05-09 01:03:46.14927"
+  },
+  {
     "id": 1039,
     "url": "https://docs.python.org/3/library/logging.html#logging.warning",
     "title": "logging — Logging facility for Python — Python 3.14.5rc1 documentation",
@@ -6963,26 +6998,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1040,
-    "url": "https://docs.python.org/3/library/sys.html#sys.getobjects"
-  },
-  {
-    "id": 1041,
-    "url": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
-  },
-  {
-    "id": 1042,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetProgramFullPath"
-  },
-  {
-    "id": 1043,
-    "url": "https://github.com/python/cpython/issues/123757"
-  },
-  {
-    "id": 1044,
-    "url": "https://docs.python.org/bugs.html"
   },
   {
     "id": 1045,
@@ -189750,10 +189765,904 @@ window.searchData = [
     "id": 168668,
     "url": "https://docs.python.org/3/library/logging.html#logging.Handler.setFormatter",
     "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169010,
+    "url": "https://www.tcl.tk/man/tcl8.6/TkCmd/ttk_widget.htm",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169013,
+    "url": "https://www.tcl.tk/man/tcl8.6/TkCmd/grid.htm",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169022,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Widget.tk.createfilehandler",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169029,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.WRITABLE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169030,
+    "url": "https://tkdocs.com/",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169033,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#module-tkinter.ttk",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169035,
+    "url": "https://docs.python.org/3/library/tkinter.scrolledtext.html#module-tkinter.scrolledtext",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169036,
+    "url": "https://www.amazon.com/exec/obidos/ASIN/032133633X",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169038,
+    "url": "https://www.tcl.tk/man/tcl8.6/TkCmd/options.htm",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169041,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.READABLE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169042,
+    "url": "https://docs.python.org/3/library/tkinter.messagebox.html#module-tkinter.messagebox",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169043,
+    "url": "https://www.tkdocs.com/shipman/",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169044,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Tk",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169045,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Tcl",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169048,
+    "url": "https://www.packtpub.com/en-us/product/python-gui-programming-with-tkinter-9781788835886",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169051,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Widget.tk.deletefilehandler",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169052,
+    "url": "https://www.tcl.tk",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169054,
+    "url": "https://www.tcl.tk/man/tcl8.6/TkCmd/ttk_button.htm",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169055,
+    "url": "https://docs.python.org/3/library/tkinter.html#module-_tkinter",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169059,
+    "url": "https://docs.python.org/3/library/tkinter.dnd.html#module-tkinter.dnd",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169061,
+    "url": "https://tkdocs.com/book.html",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169069,
+    "url": "https://python-pillow.org/",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169071,
+    "url": "https://docs.python.org/3/library/tkinter.font.html#module-tkinter.font",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169072,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/tkinter.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169075,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Tk.master",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169077,
+    "url": "https://www.tcl.tk/man/tcl8.6/TkCmd/winfo.htm",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169078,
+    "url": "https://learning-python.com/about-pp4e.html",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169080,
+    "url": "https://manpages.debian.org/bind(3tk)",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169081,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.EXCEPTION",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169084,
+    "url": "https://docs.python.org/3/library/tkinter.html#",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169092,
+    "url": "https://manpages.debian.org/options(3)",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169095,
+    "url": "https://wiki.tcl-lang.org/37432",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169096,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/tkinter/__init__.py",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169097,
+    "url": "https://www.tcl.tk/man/tcl8.6/TkCmd/contents.htm",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169098,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Tk.children",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169100,
+    "url": "https://docs.python.org/3/library/tkinter.colorchooser.html#module-tkinter.colorchooser",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169101,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Tk.tk",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169292,
+    "url": "https://github.com/python/cpython/pull/123757#commits-pushed-0265d90",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169293,
+    "url": "https://github.com/python/cpython/pull/123757/commits/0265d90b07616d5aeee9e7d6354649393f238d21",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169294,
+    "url": "https://github.com/python/cpython/commit/28efeefab7d577ea4fb6e3f6e82f903f2aee271d",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169295,
+    "url": "https://github.com/python/cpython/pull/123757#event-14403672154",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169296,
+    "url": "https://github.com/python/cpython/pull/123757#ref-issue-2509224325",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169297,
+    "url": "https://github.com/python/cpython/pull/123757/commits/7281465250d789f7b0e05539e6e5ad91c23236b4",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169299,
+    "url": "https://github.com/python/cpython/pull/123757/commits/a4b995e58eaa63a375745bd0520245e6655f0703",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169300,
+    "url": "https://github.com/python/cpython/pull/123757#ref-issue-2553572437",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169301,
+    "url": "https://github.com/python/cpython/pull/123757#event-14155129170",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169302,
+    "url": "https://github.com/python/cpython/pull/123757/files/78e2e66650f340e388084d9236f9e13ce3b9790a#diff-0b058b84ad2260ed9d97d2e500f40dbc4857ecacd1a41cd389b1b500d3f38da0",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169303,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2288319938",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169304,
+    "url": "https://github.com/python/cpython/pull/123757#issuecomment-2371849980",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169305,
+    "url": "https://github.com/python/cpython/pull/123757#commits-pushed-03f91dc",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169306,
+    "url": "https://github.com/python/cpython/pull/123757/commits/f9d01f910409a4eff1cf5458bf37609185c36e92",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169307,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2329062647",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169308,
+    "url": "https://github.com/python/cpython/pull/123757#event-14403298442",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169309,
+    "url": "https://github.com/python/cpython/pull/123757/commits/78e2e66650f340e388084d9236f9e13ce3b9790a",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169310,
+    "url": "https://github.com/python/cpython/pull/123757#issuecomment-2333008974",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169311,
+    "url": "https://github.com/python/cpython/pull/123757/commits/420e498d55fa4848068ec1426abe9ccb90066f40",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169312,
+    "url": "https://github.com/python/cpython/pull/123757/commits/3ce16ec83932cf5186cd288f3e5253686be0ec3a",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169313,
+    "url": "https://github.com/python/cpython/pull/123757/commits/8284118c69395857ca38bf7fc6b74a9606bd9a33",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169314,
+    "url": "https://github.com/python/cpython/pull/123757/files/78e2e66650f340e388084d9236f9e13ce3b9790a#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169315,
+    "url": "https://github.com/python/cpython/pull/123757#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169316,
+    "url": "https://github.com/python/cpython/pull/123757/commits/03f91dc62c8a265d7ffb27f33165f88e2711a7f6",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169317,
+    "url": "https://github.com/python/cpython/pull/123757#commits-pushed-c50b039",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169318,
+    "url": "https://github.com/python/cpython/pull/123757#issuecomment-2334987705",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169320,
+    "url": "https://github.com/python/cpython/pull/123757/commits/2b9e2253e8b1c7ea97bb927fd48455002d8cff33",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169321,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F123757",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169323,
+    "url": "https://github.com/python/cpython/pull/123757/commits/2342a348494a1d5a1c552e5df538a337a4938769",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169324,
+    "url": "https://github.com/python/cpython/pull/123757/files/78746ba7f99258968a793fc7343ba57534b59582",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169325,
+    "url": "https://github.com/python/cpython/pull/123757/files/162c53cdb54658f0a9fd9a73d774b9530061775b",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169327,
+    "url": "https://github.com/python/cpython/pull/123757/files/2b9e2253e8b1c7ea97bb927fd48455002d8cff33#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169328,
+    "url": "https://github.com/python/cpython/pull/123757/files/78e2e66650f340e388084d9236f9e13ce3b9790a#diff-03cb75fe4cee43d472cdf7d000745d71b0d137dddde696c7053d4c178cf2c0f1",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169329,
+    "url": "https://github.com/python/cpython/pull/123757#event-14403671645",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169330,
+    "url": "https://github.com/python/cpython/pull/123757/commits/a49a13e993debc185766a81350831a93ddc3aaf7",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169331,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2328667191",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169332,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2317763985",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169333,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2326373825",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169334,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2328662731",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169335,
+    "url": "https://github.com/python/cpython/pull/123757#event-14403672177",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169337,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2325872600",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169338,
+    "url": "https://github.com/python/cpython/pull/123757/commits/1d731c7f659863f0b5c19f9169bab3ac0f8b9b9d",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169339,
+    "url": "https://github.com/python/cpython/pull/123757/files/f9d01f910409a4eff1cf5458bf37609185c36e92",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169340,
+    "url": "https://github.com/python/cpython/pull/123757/commits/8a46e08e477871a062b373485c22083c2012cacf",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169341,
+    "url": "https://github.com/python/cpython/pull/123757/files/162c53cdb54658f0a9fd9a73d774b9530061775b#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169342,
+    "url": "https://github.com/python/cpython/pull/123757/commits/c50b03995a092e414a5285da3a87766727b7f335",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169343,
+    "url": "https://github.com/python/cpython/pull/123757/files/a4b995e58eaa63a375745bd0520245e6655f0703#diff-03cb75fe4cee43d472cdf7d000745d71b0d137dddde696c7053d4c178cf2c0f1",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169344,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2328315130",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169345,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2328317755",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169346,
+    "url": "https://github.com/python/cpython/pull/123757",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169347,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2328665298",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169348,
+    "url": "https://github.com/python/cpython/pull/123757/files/2b9e2253e8b1c7ea97bb927fd48455002d8cff33#diff-0b058b84ad2260ed9d97d2e500f40dbc4857ecacd1a41cd389b1b500d3f38da0",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169349,
+    "url": "https://github.com/python/cpython/pull/123757#issuecomment-2374660739",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169350,
+    "url": "https://github.com/python/cpython/pull/123757#issuecomment-2362579214",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169352,
+    "url": "https://github.com/python/cpython/pull/123757#issue-2509226918",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169354,
+    "url": "https://github.com/python/cpython/pull/123757/commits/8c6fb0514346ba85aac4187ca0e682a559774b72",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169355,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2288318175",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169356,
+    "url": "https://github.com/python/cpython/pull/123757/files/a4b995e58eaa63a375745bd0520245e6655f0703..03f91dc62c8a265d7ffb27f33165f88e2711a7f6#diff-03cb75fe4cee43d472cdf7d000745d71b0d137dddde696c7053d4c178cf2c0f1",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169357,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2287462964",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169358,
+    "url": "https://github.com/python/cpython/pull/123757/files/78e2e66650f340e388084d9236f9e13ce3b9790a",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169361,
+    "url": "https://github.com/python/cpython/pull/123757/commits/27f065689c86391d9e4ac7953acfad35aa531992",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169363,
+    "url": "https://github.com/python/cpython/pull/123757/files/f9d01f910409a4eff1cf5458bf37609185c36e92#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169365,
+    "url": "https://github.com/python/cpython/pull/123757/files/3ce16ec83932cf5186cd288f3e5253686be0ec3a",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169366,
+    "url": "https://github.com/python/cpython/pull/123757#commits-pushed-2342a34",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169367,
+    "url": "https://github.com/python/cpython/pull/123757/commits/162c53cdb54658f0a9fd9a73d774b9530061775b",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169368,
+    "url": "https://github.com/python/cpython/pull/123757#commits-pushed-420e498",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169370,
+    "url": "https://github.com/python/cpython/pull/123757/files/78746ba7f99258968a793fc7343ba57534b59582#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169371,
+    "url": "https://github.com/python/cpython/pull/123757/files/2b9e2253e8b1c7ea97bb927fd48455002d8cff33",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169372,
+    "url": "https://github.com/python/cpython/pull/123757/files/a4b995e58eaa63a375745bd0520245e6655f0703",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169373,
+    "url": "https://github.com/ADThomas-astro",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 169374,
+    "url": "https://github.com/python/cpython/pull/123757/commits/78746ba7f99258968a793fc7343ba57534b59582",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Dealing with Bugs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/bugs.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Dealing with Bugs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/bugs.html"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/20833207?s\u003d40\u0026v\u003d4",
+    "alt": "@ADThomas-astro",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d52\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d52\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetProgramFullPath"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetProgramFullPath"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tkinter — Python interface to Tcl/Tk — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tkinter — Python interface to Tcl/Tk — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.getobjects"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.getobjects"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
