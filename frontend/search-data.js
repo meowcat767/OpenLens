@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1210,
+    "url": "https://docs.python.org/3/glossary.html#term-immortal",
+    "title": "Glossary — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Glossary | Theme Auto Light Dark | Glossary¶ \u003e\u003e\u003e¶ The default Python prompt of the interactive shell. Often seen for code examples which can be executed interactively in the interpreter. ...¶ Can refer to: The default Python prompt of the interactive shell when entering the code for an indented code block, when within a pair of matching left and right delimiters (parentheses, square brackets, curly braces or triple quotes), or after specifying a decorator. The three dots form of the Ellipsis object. abstract base class¶ Abstract base classes complement duck-typing by providing a way to define interfaces when other techniques like hasattr() would be clumsy or subtly wrong (for example with magic methods). ABCs introduce virtual subclasses, which are classes that don’t inherit from a class but are still recognized by isinstance() and issubclass(); see the abc module documentation. Python comes with many built-in ABCs for data structures (in the collections.abc module), numbers (in the numbers module), streams (in the io module), import finders and loaders (in the importlib.abc module). You can create your own ABCs with the abc module. annotate function¶ A function that can be called to retrieve the annotations of an object. This function is accessible as the __annotate__ attribute of functions, classes, and modules. Annotate functions are a subset of evaluate functions. annotation¶ A label associated with a variable, a class attribute or a function parameter or return value, used by convention as a type hint. Annotations of local variables cannot be accessed at runtime, but annotations of global variables, class attributes, and functions can be retrieved by calling annotationlib.get_annotations() on modules, classes, and functions, respectively. See variable annotation, function annotation, PEP 484, PEP 526, and PEP 649, which describe this functionality. Also see Annotations Best Practices for best practices on working with annotations. argument¶ A value passed to a function (or method) when calling the function. There are two kinds of argument: keyword argument: an argument preceded by an identifier (e.g. name\u003d) in a function call or passed as a value in a dictionary preceded by **. For example, 3 and 5 are both keyword arguments in the following calls to complex(): complex(real\u003d3, imag\u003d5)\ncomplex(**{\u0027real\u0027: 3, \u0027imag\u0027: 5})\n positional argument: an argument that is not a keyword argument. Positional arguments can appear at the beginning of an argument list and/or be passed as elements of an iterable preceded by *. For example, 3 and 5 are both positional arguments in the following calls: complex(3, 5)\ncomplex(*(3, 5))\n Arguments are assigned to the named local variables in a function body. See the Calls section for the rules governing this assignment. Syntactically, any expression can be used to represent an argument; the evaluated value is assigned to the local variable. See also the parameter glossary entry, the FAQ question on the difference between arguments and parameters, and PEP 362. asynchronous context manager¶ An object which controls the environment seen in an async with statement by defining __aenter__() and __aexit__() methods. Introduced by PEP 492. asynchronous generator¶ A function which returns an asynchronous generator iterator. It looks like a coroutine function defined with async def except that it contains yield expressions for producing a series of values usable in an async for loop. Usually refers to an asynchronous generator function, but may refer to an asynchronous generator iterator in some contexts. In cases where the intended meaning isn’t clear, using the full terms avoids ambiguity. An asynchronous generator function may contain await expressions as well as async for, and async with statements. asynchronous generator iterator¶ An object created by an asynchronous generator function. This is an asynchronous iterator which when called using the __anext__() method returns an awaitable object which will execute the body of the asynchronous generator function until the next yield expression. Each yield temporarily suspends processing, remembering the execution state (including local variables and pending try-statements). When the asynchronous generator iterator effectively resumes with another awaitable returned by __anext__(), it picks up where it left off. See PEP 492 and PEP 525. asynchronous iterable¶ An object, that can be used in an async for statement. Must return an asynchronous iterator from its __aiter__() method. Introduced by PEP 492. asynchronous iterator¶ An object that implements the __aiter__() and __anext__() methods. __anext__() must return an awaitable object. async for resolves the awaitables returned by an asynchronous iterator’s __anext__() method until it raises a StopAsyncIteration exception. Introduced by PEP 492. atomic operation¶ An operation that appears to execute as a single",
+    "scrapedAt": "2026-05-09 01:10:27.899763"
+  },
+  {
+    "id": 1209,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE",
+    "title": "Common Object Structures — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Object Implementation Support » Common Object Structures | Theme Auto Light Dark | Common Object Structures¶ There are a large number of structures which are used in the definition of object types for Python. This section describes these structures and how they are used. Base object types and macros¶ All Python objects ultimately share a small number of fields at the beginning of the object’s representation in memory. These are represented by the PyObject and PyVarObject types, which are defined, in turn, by the expansions of some macros also used, whether directly or indirectly, in the definition of all other Python objects. Additional macros can be found under reference counting. type PyObject¶ Part of the Limited API. (Only some members are part of the stable ABI.) All object types are extensions of this type. This is a type which contains the information Python needs to treat a pointer to an object as an object. In a normal “release” build, it contains only the object’s reference count and a pointer to the corresponding type object. Nothing is actually declared to be a PyObject, but every pointer to a Python object can be cast to a PyObject*. The members must not be accessed directly; instead use macros such as Py_REFCNT and Py_TYPE. Py_ssize_t ob_refcnt¶ Part of the Stable ABI. The object’s reference count, as returned by Py_REFCNT. Do not use this field directly; instead use functions and macros such as Py_REFCNT, Py_INCREF() and Py_DecRef(). The field type may be different from Py_ssize_t, depending on build configuration and platform. PyTypeObject *ob_type¶ Part of the Stable ABI. The object’s type. Do not use this field directly; use Py_TYPE and Py_SET_TYPE() instead. type PyVarObject¶ Part of the Limited API. (Only some members are part of the stable ABI.) An extension of PyObject that adds the ob_size field. This is intended for objects that have some notion of length. As with PyObject, the members must not be accessed directly; instead use macros such as Py_SIZE, Py_REFCNT and Py_TYPE. Py_ssize_t ob_size¶ Part of the Stable ABI. A size field, whose contents should be considered an object’s internal implementation detail. Do not use this field directly; use Py_SIZE instead. Object creation functions such as PyObject_NewVar() will generally set this field to the requested size (number of items). After creation, arbitrary values can be stored in ob_size using Py_SET_SIZE. To get an object’s publicly exposed length, as returned by the Python function len(), use PyObject_Length() instead. PyObject_HEAD¶ This is a macro used when declaring new types which represent objects without a varying length. The PyObject_HEAD macro expands to: PyObject ob_base;\n See documentation of PyObject above. PyObject_VAR_HEAD¶ This is a macro used when declaring new types which represent objects with a length that varies from instance to instance. The PyObject_VAR_HEAD macro expands to: PyVarObject ob_base;\n See documentation of PyVarObject above. PyTypeObject PyBaseObject_Type¶ Part of the Stable ABI. The base class of all other objects, the same as object in Python. int Py_Is(PyObject *x, PyObject *y)¶ Part of the Stable ABI since version 3.10. Test if the x object is the y object, the same as x is y in Python. Added in version 3.10. int Py_IsNone(PyObject *x)¶ Part of the Stable ABI since version 3.10. Test if an object is the None singleton, the same as x is None in Python. Added in version 3.10. int Py_IsTrue(PyObject *x)¶ Part of the Stable ABI since version 3.10. Test if an object is the True singleton, the same as x is True in Python. Added in version 3.10. int Py_IsFalse(PyObject *x)¶ Part of the Stable ABI since version 3.10. Test if an object is the False singleton, the same as x is False in Python. Added in version 3.10. PyTypeObject *Py_TYPE(PyObject *o)¶ Return value: Borrowed reference. Part of the Stable ABI since version 3.14. Get the type of the Python object o. The returned reference is borrowed from o. Do not release it with Py_DECREF() or similar. Changed in version 3.11: Py_TYPE() is changed to an inline static function. The parameter type is no longer const PyObject*. int Py_IS_TYPE(PyObject *o, PyTypeObject *type)¶ Return non-zero if the object o type is type. Return zero otherwise. Equivalent to: Py_TYPE(o) \u003d\u003d type. Added in version 3.9. void Py_SET_TYPE(PyObject *o, PyTypeObject *type)¶ Set the type of object o to type, without any checking or reference counting. This is a very low-level operation. Consider instead setting the Python attribute __class__ using PyObject_SetAttrString() or similar. Note that assigning an incompatible type can lead to undefined behavior. If type is a heap type, the caller must create a new reference to it. Similarly, if the old type of o is a heap type, the caller must release a reference to that type. Added in version 3.9. Py_ssize_t Py_SIZE(PyVarObject *",
+    "scrapedAt": "2026-05-09 01:10:26.634886"
+  },
+  {
+    "id": 1207,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#io",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:10:25.306858"
+  },
+  {
+    "id": 1206,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_TEMPLATE",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code o",
+    "scrapedAt": "2026-05-09 01:10:24.035579"
+  },
+  {
+    "id": 1205,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template",
+    "title": "string.templatelib — Support for template string literals — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Text Processing Services » string.templatelib — Support for template string literals | Theme Auto Light Dark | string.templatelib — Support for template string literals¶ Source code: Lib/string/templatelib.py See also Format strings Template string literal (t-string) syntax PEP 750 Template strings¶ Added in version 3.14. Template strings are a mechanism for custom string processing. They have the full flexibility of Python’s f-strings, but return a Template instance that gives access to the static and interpolated (in curly brackets) parts of a string before they are combined. To write a t-string, use a \u0027t\u0027 prefix instead of an \u0027f\u0027, like so: \u003e\u003e\u003e pi \u003d 3.14\n\u003e\u003e\u003e t\u0027t-strings are new in Python {pi!s}!\u0027\nTemplate(\n   strings\u003d(\u0027t-strings are new in Python \u0027, \u0027!\u0027),\n   interpolations\u003d(Interpolation(3.14, \u0027pi\u0027, \u0027s\u0027, \u0027\u0027),)\n)\n Types¶ class string.templatelib.Template¶ The Template class describes the contents of a template string. It is immutable, meaning that attributes of a template cannot be reassigned. The most common way to create a Template instance is to use the template string literal syntax. This syntax is identical to that of f-strings, except that it uses a t prefix in place of an f: \u003e\u003e\u003e cheese \u003d \u0027Red Leicester\u0027\n\u003e\u003e\u003e template \u003d t\"We\u0027re fresh out of {cheese}, sir.\"\n\u003e\u003e\u003e type(template)\n\u003cclass \u0027string.templatelib.Template\u0027\u003e\n Templates are stored as sequences of literal strings and dynamic interpolations. A values attribute holds the values of the interpolations: \u003e\u003e\u003e cheese \u003d \u0027Camembert\u0027\n\u003e\u003e\u003e template \u003d t\u0027Ah! We do have {cheese}.\u0027\n\u003e\u003e\u003e template.strings\n(\u0027Ah! We do have \u0027, \u0027.\u0027)\n\u003e\u003e\u003e template.interpolations\n(Interpolation(\u0027Camembert\u0027, ...),)\n\u003e\u003e\u003e template.values\n(\u0027Camembert\u0027,)\n The strings tuple has one more element than interpolations and values; the interpolations “belong” between the strings. This may be easier to understand when tuples are aligned template.strings:  (\u0027Ah! We do have \u0027,              \u0027.\u0027)\ntemplate.values:   (                   \u0027Camembert\u0027,    )\n Attributes strings: tuple[str, ...]¶ A tuple of the static strings in the template. \u003e\u003e\u003e cheese \u003d \u0027Camembert\u0027\n\u003e\u003e\u003e template \u003d t\u0027Ah! We do have {cheese}.\u0027\n\u003e\u003e\u003e template.strings\n(\u0027Ah! We do have \u0027, \u0027.\u0027)\n Empty strings are included in the tuple: \u003e\u003e\u003e response \u003d \u0027We do have \u0027\n\u003e\u003e\u003e cheese \u003d \u0027Camembert\u0027\n\u003e\u003e\u003e template \u003d t\u0027Ah! {response}{cheese}.\u0027\n\u003e\u003e\u003e template.strings\n(\u0027Ah! \u0027, \u0027\u0027, \u0027.\u0027)\n The strings tuple is never empty, and always contains one more string than the interpolations and values tuples: \u003e\u003e\u003e t\u0027\u0027.strings\n(\u0027\u0027,)\n\u003e\u003e\u003e t\u0027\u0027.values\n()\n\u003e\u003e\u003e t\u0027{\u0027cheese\u0027}\u0027.strings\n(\u0027\u0027, \u0027\u0027)\n\u003e\u003e\u003e t\u0027{\u0027cheese\u0027}\u0027.values\n(\u0027cheese\u0027,)\n interpolations: tuple[Interpolation, ...]¶ A tuple of the interpolations in the template. \u003e\u003e\u003e cheese \u003d \u0027Camembert\u0027\n\u003e\u003e\u003e template \u003d t\u0027Ah! We do have {cheese}.\u0027\n\u003e\u003e\u003e template.interpolations\n(Interpolation(\u0027Camembert\u0027, \u0027cheese\u0027, None, \u0027\u0027),)\n The interpolations tuple may be empty and always contains one fewer values than the strings tuple: \u003e\u003e\u003e t\u0027Red Leicester\u0027.interpolations\n()\n values: tuple[object, ...]¶ A tuple of all interpolated values in the template. \u003e\u003e\u003e cheese \u003d \u0027Camembert\u0027\n\u003e\u003e\u003e template \u003d t\u0027Ah! We do have {cheese}.\u0027\n\u003e\u003e\u003e template.values\n(\u0027Camembert\u0027,)\n The values tuple always has the same length as the interpolations tuple. It is always equivalent to tuple(i.value for i in template.interpolations). Methods __new__(*args: str | Interpolation)¶ While literal syntax is the most common way to create a Template, it is also possible to create them directly using the constructor: \u003e\u003e\u003e from string.templatelib import Interpolation, Template\n\u003e\u003e\u003e cheese \u003d \u0027Camembert\u0027\n\u003e\u003e\u003e template \u003d Template(\n...     \u0027Ah! We do have \u0027, Interpolation(cheese, \u0027cheese\u0027), \u0027.\u0027\n... )\n\u003e\u003e\u003e list(template)\n[\u0027Ah! We do have \u0027, Interpolation(\u0027Camembert\u0027, \u0027cheese\u0027, None, \u0027\u0027), \u0027.\u0027]\n If multiple strings are passed consecutively, they will be concatenated into a single value in the strings attribute. For example, the following code creates a Template with a single final string: \u003e\u003e\u003e from string.templatelib import Template\n\u003e\u003e\u003e template \u003d Template(\u0027Ah! We do have \u0027, \u0027Camembert\u0027, \u0027.\u0027)\n\u003e\u003e\u003e template.strings\n(\u0027Ah! We do have Camembert.\u0027,)\n If multiple interpolations are passed consecutively, they will be treated as separate interpolations and an empty string will be inserted between them. For example, the following code creates a template with empty placeholders in the strings attribute: \u003e\u003e\u003e from string.templatelib import Interpolation, Template\n\u003e\u003e\u003e template \u003d Template(\n...     Interpolation(\u0027Camembert\u0027, \u0027cheese\u0027),\n...     Interpolation(\u0027.\u0027, \u0027punctuation\u0027),\n... )\n\u003e\u003e\u003e template.strings\n(\u0027\u0027, \u0027\u0027, \u0027\u0027)\n iter(template) Iterate over the template, yielding each non-empty string and Interpolation in the correct order: \u003e\u003e\u003e cheese \u003d \u0027Camembert\u0027\n\u003e\u003e\u003e list(t\u0027Ah! We do have {cheese}.\u0027)\n[\u0027Ah! We do have \u0027, Interpolation(\u0027Camembert\u0027, \u0027cheese\u0027, None, \u0027\u0027), \u0027.\u0027]\n Caution Empty strings are not included in the iteration: \u003e\u003e\u003e response \u003d",
+    "scrapedAt": "2026-05-09 01:10:22.76401"
+  },
+  {
     "id": 1204,
     "url": "https://docs.python.org/3/library/ast.html#ast.NodeVisitor",
     "title": "ast — Abstract syntax trees — Python 3.14.5rc1 documentation",
@@ -8083,26 +8118,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1205,
-    "url": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
-  },
-  {
-    "id": 1206,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_TEMPLATE"
-  },
-  {
-    "id": 1207,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#io"
-  },
-  {
-    "id": 1209,
-    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
-  },
-  {
-    "id": 1210,
-    "url": "https://docs.python.org/3/glossary.html#term-immortal"
   },
   {
     "id": 1211,
@@ -216370,10 +216385,575 @@ window.searchData = [
     "id": 231967,
     "url": "https://py-free-threading.github.io/",
     "parentUrl": "https://discuss.python.org/t/84319/123"
+  },
+  {
+    "id": 232211,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Interpolation.__new__",
+    "parentUrl": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
+  {
+    "id": 232212,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Interpolation.format_spec",
+    "parentUrl": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
+  {
+    "id": 232214,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.convert",
+    "parentUrl": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
+  {
+    "id": 232224,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Interpolation.value",
+    "parentUrl": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
+  {
+    "id": 232228,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#",
+    "parentUrl": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
+  {
+    "id": 232230,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/string/templatelib.py",
+    "parentUrl": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
+  {
+    "id": 232236,
+    "url": "https://docs.python.org/3/library/string.html#formatstrings-conversion",
+    "parentUrl": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
+  {
+    "id": 232239,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template.interpolations",
+    "parentUrl": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
+  {
+    "id": 232240,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template.values",
+    "parentUrl": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
+  {
+    "id": 232241,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/string.templatelib.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
+  {
+    "id": 232242,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Interpolation.expression",
+    "parentUrl": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
+  {
+    "id": 232255,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template.strings",
+    "parentUrl": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
+  {
+    "id": 232258,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template.__new__",
+    "parentUrl": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
+  {
+    "id": 233767,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.METH_METHOD",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233769,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_BYTE",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233770,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_AUDIT_READ",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233774,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.METH_CLASS",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233776,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_INT",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233777,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/structures.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233779,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.METH_NOARGS",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233784,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCFunction_NewEx",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233785,
+    "url": "https://docs.python.org/3/c-api/intro.html#c.Py_UNUSED",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233789,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCFunction_GET_SELF",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233792,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_SHORT",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233793,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_ULONGLONG",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233794,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCFunction_GetFlags",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233795,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCMethod_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233801,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCFunctionFastWithKeywords",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233802,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyMethodDef.ml_meth",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233803,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_SET_TYPE",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233805,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_ULONG",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233807,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCMethod_CheckExact",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233809,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyMemberDef.name",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233810,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.T_OBJECT",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233812,
+    "url": "https://docs.python.org/3/c-api/structures.html#pymemberdef-types",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233816,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_OBJECT_EX",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233818,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCFunction_CheckExact",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233820,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyObject_HEAD_INIT",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233821,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_CHAR",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233823,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_USHORT",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233824,
+    "url": "https://docs.python.org/3/c-api/intro.html#c.PyDoc_STR",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233825,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_UINT",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233826,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyGetSetDef.name",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233827,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.METH_FASTCALL",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233833,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#countingrefs",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233834,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCFunction",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233841,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_LONG",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233844,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_IS_TYPE",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233845,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCFunction_GET_FLAGS",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233846,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_IsFalse",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233849,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.T_NONE",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233851,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCFunctionFast",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233853,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_RELATIVE_OFFSET",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233855,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_Length",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233856,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_IsTrue",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233859,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyMemberDef.flags",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233860,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.METH_STATIC",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233862,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_SetAttrString",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233865,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCFunction_GET_FUNCTION",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233867,
+    "url": "https://docs.python.org/3/c-api/structures.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233868,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.getter",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233870,
+    "url": "https://docs.python.org/3/c-api/structures.html#pymemberdef-flags",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233872,
+    "url": "https://docs.python.org/3/c-api/structures.html#meth-fastcall-meth-keywords",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233874,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyMemberDef.offset",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233876,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCMethod_New",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233880,
+    "url": "https://docs.python.org/3/c-api/structures.html#meth-varargs-meth-keywords",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233881,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyMethodDef.ml_name",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233882,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyGetSetDef.closure",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233884,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCFunction_GetSelf",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233886,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyGetSetDef.doc",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233887,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyMember_SetOne",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233889,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyMethodDef.ml_doc",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233891,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.METH_O",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233892,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCMethod_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233894,
+    "url": "https://docs.python.org/3/c-api/structures.html#common-object-structures",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233895,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_UBYTE",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233900,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCFunction_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233901,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_Is",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233902,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyGetSetDef.set",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233905,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_FLOAT",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233909,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_STRING_INPLACE",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233910,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCFunction_New",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233912,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_IsNone",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233914,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyGetSetDef.get",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233915,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCFunctionWithKeywords",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233917,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCFunction_GetFunction",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233918,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_DOUBLE",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233919,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_READONLY",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233921,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_BOOL",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233922,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyMember_GetOne",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233923,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyVarObject_HEAD_INIT",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233925,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.METH_COEXIST",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233928,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyMethodDef.ml_flags",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233931,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyMemberDef.type",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233932,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_LONGLONG",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233933,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.METH_KEYWORDS",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233934,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_PYSSIZET",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233935,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.setter",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233936,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCFunction_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233937,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_T_STRING",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "id": 233938,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyMemberDef.doc",
+    "parentUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-immortal"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-immortal"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Common Object Structures — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Common Object Structures — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/structures.html#c.Py_TYPE"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#io"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#io"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-BUILD_TEMPLATE"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-BUILD_TEMPLATE"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "string.templatelib — Support for template string literals — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "string.templatelib — Support for template string literals — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Template"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
