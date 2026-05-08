@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1624,
+    "url": "https://github.com/python/cpython/issues/124704",
+    "title": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member gaogaotiantian commented Sep 27, 2024 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. There are a few design details, which are open to discuss: lldb does not trigger confirm prompt on Ctrl+D, only on commands. gdb triggers on all. I prefer consistency so pdb will trigger confirmation in all cases. We don\u0027t want to make the quitting process too cumbersome for users, so there are more than one way to confirm: y/Y as suggested in the prompt \u003center\u003e so you can do q, \u003center\u003e, \u003center\u003e Ctrl+D so you can do Ctrl+D, Ctrl+D The latter two are not listed in the prompt because the prompt would be a bit confusing. That\u0027s how gdb and lldb does it as well. (they do have slightly different policies on some input). n/N will return to debugger, all other inputs brings you back to the prompt os._exit(0) vs sys.exit(0). I gave some thoughts about how we should exit, do we want to do it gracefully. I chose the os._exit(0) at the end because I think when the users attach a debugger and want to quit, they don\u0027t care about whether the process will end gracefully (with all the atexit callbacks and potential exit routines), they just want to stop the process. If they want the process to run to the end, they should do c instead of q. In rare cases, where a separate non-daemon thread is there or the code in a raw try ... except ... block, force exit would do well for a debugger. Issue: Do not raise an Exception when exiting pdb #124703 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions gaogaotiantian added 2 commits September 27, 2024 11:30 Do not raise an Exception for exit in inline mode anymore 8ad5baa Use lower + strip 63a6bf6 gaogaotiantian requested a review from iritkatriel September 27, 2024 19:20 bedevere-app Bot added the awaiting core review label Sep 27, 2024 bedevere-app Bot mentioned this pull request Sep 27, 2024 Do not raise an Exception when exiting pdb #124703 Closed 📜🤖 Added by blurb_it. 5747b27 JelleZijlstra reviewed Sep 29, 2024 View reviewed changes Comment thread Lib/pdb.py Outdated reply \u003d \u0027y\u0027 self.message(\u0027\u0027) if reply \u003d\u003d \u0027y\u0027 or reply \u003d\u003d \u0027\u0027: os._exit(0) Copy link Copy Markdown Member JelleZijlstra Sep 29, 2024 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment I think I\u0027d prefer sys.exit here. os._exit may lead to unreleased resources. If the user wants to kill the process faster, they can hit Ctrl-C or Ctrl-\\ after. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👍 1 AlexWaygood reacted with thumbs up emoji All reactions 👍 1 reaction Copy link Copy Markdown Member Author gaogaotiantian Sep 29, 2024 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment It\u0027s always possible to have unreleased resources - we can\u0027t prevent that with SystemExit. It may get better in some cases, but raising SystemExit in an arbitrary place of the code does not seem like a very safe way to end the program to me. The only way to make sure all resources are released (if the program is written correctly) is to continue the program. One of the problem of SystemExit is: while True:\n    try:\n        breakpoint()\n    except:\n        pass This will trap in debugger forever. I know this example is a bit artificial, but it\u0027s not that rare for programs to handle SystemExit, and it\u0027s frustrating for users to be stuck in the debugger when they just want to quit. We have a warning for the users already and they should be aware that they are \"killing\" a process - which means the resources could potentially be leaked. At least they\u0027ll know the process will definitely be killed after they say yes. Of course that\u0027s my thought, and is open to more discussion. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Member Author gaogaotiantian commented Oct 8, 2024 I\u0027m having second thought about this. Not because of the resource release, but it seems like some people will bring up pdb in REPL, for example by running some code with breakpoint() in",
+    "scrapedAt": "2026-05-09 01:27:15.493463"
+  },
+  {
+    "id": 1623,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.site_import",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:27:12.579876"
+  },
+  {
+    "id": 1622,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUInt32",
+    "title": "Integer Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)",
+    "scrapedAt": "2026-05-09 01:27:11.307799"
+  },
+  {
+    "id": 1621,
+    "url": "https://github.com/python/cpython/issues/121676",
+    "title": "Python implementation of `functools.reduce` accepts keyword arguments, while the C implementation does not · Issue #121676 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Python implementation of functools.reduce accepts keyword arguments, while the C implementation does not #121676 New issue Copy link New issue Copy link Closed Closed Python implementation of functools.reduce accepts keyword arguments, while the C implementation does not#121676 Copy link Labels 3.14bugs and security fixesbugs and security fixestype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description Eclips4 opened on Jul 13, 2024 Issue body actions Bug report Bug description: Steps to reproduce: printf \u0027*disabled*\\n_functools\\n\u0027 \u003e Modules/Setup.local\n./configure --with-pydebug \u0026\u0026 make -j\n./python\nPython 3.14.0a0 (heads/main:dc03ce797a, Jul 13 2024, 09:31:53) [GCC 13.2.0] on linux\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n\u003e\u003e\u003e import functools\n\u003e\u003e\u003e functools.reduce(function\u003dlambda x, y: x + y, sequence\u003d[1, 2, 3, 4, 5])\n15 Our docs mention functools.reduce as a function that accepts positional-only arguments. I have a PR ready to fix that. CPython versions tested on: CPython main branch Operating systems tested on: Linux Linked PRs gh-121676: Raise a DeprecationWarning if the Python implementation of functools.reduce is called with a keyword args #121677 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixestype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:27:10.022623"
+  },
+  {
+    "id": 1620,
+    "url": "https://github.com/python/cpython/issues/130396",
+    "title": "Implement stack overflow protection for linux based on actual stack depth · Issue #130396 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Implement stack overflow protection for linux based on actual stack depth #130396 New issue Copy link New issue Copy link Closed Closed Implement stack overflow protection for linux based on actual stack depth#130396 Copy link Labels OS-linuxinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description markshannon opened on Feb 21, 2025 Issue body actions Linux doesn\u0027t offer an API for determining the current stack bounds, at least not that I am aware of. This means we will need to probe the stack using a SIGSEGV handler and longjmp/setjump. It is somewhat ugly but should work. Actually, it looks like pthread_get_stackaddr_np might work, and avoid all the complexity of the signal handler. In theory, it should work for MacOS as well. Linked PRs GH-130396: Use computed stack limits on linux #130398 GH-130396: Broaden definition of \"optimized\" for gdb tests #130550 GH-130396: Increase trashcan overhead #130552 GH-130396: Include stack margin for debug windows builds #130554 [3.13] GH-130396: Treat clang -Og as optimized for gdb tests (GH-130550) #130572 [3.12] GH-130396: Treat clang -Og as optimized for gdb tests (GH-130550) #130573 [3.11] GH-130396: Treat clang -Og as optimized for gdb tests (GH-130550) (GH-130573) #130593 gh-130396: Fix thread sanitizer crashes on stack overflow tests #130966 GH-130396: Work around for broken pthread_get_stackaddr_np on Emscripten #131088 gh-130396: Move PYOS_LOG2_STACK_MARGIN to internal headers #135928 [3.14] gh-130396: Move PYOS_LOG2_STACK_MARGIN to internal headers (GH-135928) #136173 gh-130396: Remove _Py_ReachedRecursionLimitWithMargin() function #141951 gh-130396: Export _Py_ReachedRecursionLimitWithMargin() #142012 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels OS-linuxinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:27:07.844287"
+  },
+  {
     "id": 1619,
     "url": "https://github.com/python/cpython/issues/136931",
     "title": "gh-124621: Emscripten: Support pyrepl in browser by hoodmane · Pull Request #136931 · python/cpython · GitHub",
@@ -10918,26 +10953,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1620,
-    "url": "https://github.com/python/cpython/issues/130396"
-  },
-  {
-    "id": 1621,
-    "url": "https://github.com/python/cpython/issues/121676"
-  },
-  {
-    "id": 1622,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUInt32"
-  },
-  {
-    "id": 1623,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.site_import"
-  },
-  {
-    "id": 1624,
-    "url": "https://github.com/python/cpython/issues/124704"
   },
   {
     "id": 1625,
@@ -241555,10 +241570,524 @@ window.searchData = [
     "id": 352904,
     "url": "https://github.com/ambv/cpython/commit/c933a6bb329bb97bc7e448388dad1b74f7ca4baa",
     "parentUrl": "https://github.com/python/cpython/issues/136931"
+  },
+  {
+    "id": 352906,
+    "url": "https://github.com/python/cpython/pull/135928",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352909,
+    "url": "https://github.com/python/cpython/pull/130966",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352910,
+    "url": "https://github.com/python/cpython/issues/130396#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352913,
+    "url": "https://github.com/python/cpython/pull/131088",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352914,
+    "url": "https://github.com/python/cpython/issues/130396#top",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352915,
+    "url": "https://github.com/python/cpython/pull/130550",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352916,
+    "url": "https://github.com/python/cpython/pull/130572",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352917,
+    "url": "https://github.com/python/cpython/issues/130396#issue-2868599370",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352918,
+    "url": "https://github.com/python/cpython/pull/130593",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352920,
+    "url": "https://github.com/python/cpython/pull/130398",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352921,
+    "url": "https://github.com/python/cpython/pull/130552",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352922,
+    "url": "https://github.com/python/cpython/pull/130573",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352923,
+    "url": "https://github.com/python/cpython/pull/130554",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352926,
+    "url": "https://github.com/python/cpython/pull/141951",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352927,
+    "url": "https://github.com/python/cpython/pull/136173",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352929,
+    "url": "https://github.com/python/cpython/pull/142012",
+    "parentUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "id": 352933,
+    "url": "https://github.com/python/cpython/issues/121676#top",
+    "parentUrl": "https://github.com/python/cpython/issues/121676"
+  },
+  {
+    "id": 352934,
+    "url": "https://github.com/python/cpython/issues/121676#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/121676"
+  },
+  {
+    "id": 352936,
+    "url": "https://github.com/python/cpython/pull/121677",
+    "parentUrl": "https://github.com/python/cpython/issues/121676"
+  },
+  {
+    "id": 352939,
+    "url": "https://github.com/python/cpython/issues/121676#issue-2406836268",
+    "parentUrl": "https://github.com/python/cpython/issues/121676"
+  },
+  {
+    "id": 353365,
+    "url": "https://github.com/adamchainz",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353366,
+    "url": "https://github.com/python/cpython/pull/124704/commits/b0968bd75964a311085ea95ae8e4f5637d603d33",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353367,
+    "url": "https://github.com/python/cpython/pull/124704#event-16071708509",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353369,
+    "url": "https://github.com/python/cpython/pull/124704",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353370,
+    "url": "https://github.com/python/cpython/pull/124704#issuecomment-2423340036",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353371,
+    "url": "https://github.com/python/cpython/pull/124704#event-16072174982",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353372,
+    "url": "https://github.com/python/cpython/pull/124704/files/5747b27504ac7e8b20cd6940d9335609a60e1092#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353373,
+    "url": "https://github.com/python/cpython/pull/124704#event-14435344643",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353374,
+    "url": "https://github.com/python/cpython/pull/124704/commits/63a6bf6205d30878133b7897a3a9bec017e8efb9",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353375,
+    "url": "https://github.com/python/cpython/pull/124704#ref-pullrequest-2837247643",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353376,
+    "url": "https://github.com/python/cpython/commit/7d275611f62c9008c2d90b08c9f21462f80a8328",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353377,
+    "url": "https://github.com/python/cpython/pull/124704#issuecomment-2412792243",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353378,
+    "url": "https://github.com/python/cpython/pull/124704#event-16072174777",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353379,
+    "url": "https://github.com/python/cpython/pull/124704#discussion_r1780071043",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353381,
+    "url": "https://github.com/python/cpython/pull/124704#issue-2553589800",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353383,
+    "url": "https://github.com/python/cpython/pull/124704#event-14435345126",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353384,
+    "url": "https://github.com/python/cpython/pull/124704#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353385,
+    "url": "https://github.com/mayfield",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353387,
+    "url": "https://github.com/python/cpython/pull/124704#ref-issue-3811353847",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353388,
+    "url": "https://github.com/python/cpython/pull/124704#commits-pushed-8ad5baa",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353389,
+    "url": "https://github.com/python/cpython/pull/124704/files/0cc53df365fe480dfaa1e7d57584e8d93de59492",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353390,
+    "url": "https://github.com/python/cpython/pull/124704/commits/0cc53df365fe480dfaa1e7d57584e8d93de59492",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353393,
+    "url": "https://github.com/python/cpython/pull/124704#pullrequestreview-2574448250",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353394,
+    "url": "https://github.com/python/cpython/pull/124704#issuecomment-2614601729",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353396,
+    "url": "https://github.com/python/cpython/pull/124704#discussion_r1780167080",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353397,
+    "url": "https://github.com/python/cpython/pull/124704#issuecomment-2569269452",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353398,
+    "url": "https://github.com/python/cpython/pull/124704#ref-issue-2553572437",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353401,
+    "url": "https://github.com/python/cpython/pull/124704#issuecomment-2398439709",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353402,
+    "url": "https://github.com/python/cpython/issues/143824",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353406,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F124704",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353407,
+    "url": "https://github.com/python/cpython/pull/124704/commits/5747b27504ac7e8b20cd6940d9335609a60e1092",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353408,
+    "url": "https://github.com/python/cpython/pull/124704/files/5747b27504ac7e8b20cd6940d9335609a60e1092",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353410,
+    "url": "https://github.com/python/cpython/pull/124704/commits/8ad5baa584b8722e44794c57ce112eb208080710",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353411,
+    "url": "https://github.com/python/cpython/pull/124704#event-16072175046",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353413,
+    "url": "https://github.com/python/cpython/pull/124704#pullrequestreview-2335880672",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 353414,
+    "url": "https://github.com/python/cpython/pull/129768",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d60\u0026v\u003d4",
+    "alt": "JelleZijlstra",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d48\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/857609?s\u003d80\u0026v\u003d4",
+    "alt": "@adamchainz",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/20833207?s\u003d40\u0026v\u003d4",
+    "alt": "@ADThomas-astro",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/139316?s\u003d40\u0026v\u003d4",
+    "alt": "@mayfield",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d40\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d52\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/857609?s\u003d52\u0026v\u003d4",
+    "alt": "@adamchainz",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d52\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d52\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.site_import"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.site_import"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUInt32"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUInt32"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?u\u003d146c847600262651770cdd4ff70fea44f380cc1d\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@Eclips4",
+    "pageTitle": "Python implementation of `functools.reduce` accepts keyword arguments, while the C implementation does not · Issue #121676 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121676"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?u\u003d146c847600262651770cdd4ff70fea44f380cc1d\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@Eclips4",
+    "pageTitle": "Python implementation of `functools.reduce` accepts keyword arguments, while the C implementation does not · Issue #121676 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121676"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d80",
+    "alt": "@markshannon",
+    "pageTitle": "Implement stack overflow protection for linux based on actual stack depth · Issue #130396 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130396"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d48",
+    "alt": "@markshannon",
+    "pageTitle": "Implement stack overflow protection for linux based on actual stack depth · Issue #130396 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130396"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d80\u0026v\u003d4",
     "alt": "@hoodmane",
