@@ -1,5 +1,50 @@
 window.searchData = [
   {
+    "id": 518,
+    "url": "http://www.tryton.org/",
+    "title": "Tryton - Modularity, scalability \u0026 security for your business",
+    "content": "TRYTON® is business software, ideal for companies of any size, easy to use, complete and 100% Open Source. Start with Tryton All you need to run your business TRYTON® includes all these features fully integrated account_balance Financial Accounting Record all transactions in your chart of accounts. store_mall_directory Sales Follow orders from quotation to customer satisfaction. local_convenience_store Inventory \u0026 Stock Track goods in your warehouses from receipt to delivery. account_balance_wallet Analytic Accounting Break down your expenses and revenues by category. person CRM Convert your leads and opportunities into sales. shopping_cart Purchasing Follow your requests for quotation and reduce costs by grouping orders. equalizer Supply Chain Fill your warehouses just in time. build Manufacturing Transform raw materials into finished products with bill of materials and routing. local_shipping Shipping Package shipments for your carriers. work Project Management Check the profitability of projects and never forget to invoice customers. repeat Subscription Management Create recurring invoices for your customer contracts. group_work Third Party Integration Automate your communication with banks, carriers, websites etc. News Tryton News May 2026 Fri, 01 May 2026 During the last month we focused on fixing bugs, improving the behaviour of things, speeding-up performance issues - building on the changes from our last LTS release 8.0. We added some new features which we would like to introduce to... Moreon \"Tryton News May 2026\" Tryton Release 8.0 Tue, 21 Apr 2026 We are proud to announce the 8.0 LTS release of Tryton. This release provides many bug fixes, performance improvements and some fine tuning. You can give it a try on the demo server, use the docker image or download it here. As usual... Moreon \"Tryton Release 8.0\" Tryton News April 2026 Wed, 01 Apr 2026 During the last month we focused on fixing bugs, improving the behaviour of things, speeding-up performance issues - building on the changes from our last release. We also added some new features which we would like to introduce to you... Moreon \"Tryton News April 2026\" event Events If you are organizing an event around Tryton and want to be listed here, please send us a message. Send Next Events: 2027-12-31 Renew Foundation Board Add to calendar More events",
+    "scrapedAt": "2026-05-09 00:44:31.930394"
+  },
+  {
+    "id": 517,
+    "url": "http://flask.pocoo.org/",
+    "title": "Welcome to Flask — Flask Documentation (3.1.x)",
+    "content": "Navigation index modules | next | Flask Documentation (3.1.x) » Welcome to Flask Welcome to Flask¶ Welcome to Flask’s documentation. Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. Get started with Installation and then get an overview with the Quickstart. There is also a more detailed Tutorial that shows how to create a small but complete application with Flask. Common patterns are described in the Patterns for Flask section. The rest of the docs describe each component of Flask in detail, with a full reference in the API section. Flask depends on the Werkzeug WSGI toolkit, the Jinja template engine, and the Click CLI toolkit. Be sure to check their documentation as well as Flask’s when looking for information. User’s Guide¶ Flask provides configuration and conventions, with sensible defaults, to get started. This section of the documentation explains the different parts of the Flask framework and how they can be used, customized, and extended. Beyond Flask itself, look for community-maintained extensions to add even more functionality. Installation Python Version Dependencies Virtual environments Install Flask Quickstart A Minimal Application Debug Mode HTML Escaping Routing Static Files Rendering Templates Accessing Request Data Redirects and Errors About Responses Sessions Message Flashing Logging Hooking in WSGI Middleware Using Flask Extensions Deploying to a Web Server Tutorial Project Layout Application Setup Define and Access the Database Blueprints and Views Templates Static Files Blog Blueprint Make the Project Installable Test Coverage Deploy to Production Keep Developing! Templates Jinja Setup Standard Context Controlling Autoescaping Registering Filters Context Processors Streaming Testing Flask Applications Identifying Tests Fixtures Sending Requests with the Test Client Following Redirects Accessing and Modifying the Session Running Commands with the CLI Runner Tests that depend on an Active Context Handling Application Errors Error Logging Tools Error Handlers Custom Error Pages Blueprint Error Handlers Returning API Errors as JSON Logging Debugging Debugging Application Errors In Production The Built-In Debugger External Debuggers Logging Basic Configuration Email Errors to Admins Injecting Request Information Other Libraries Configuration Handling Configuration Basics Debug Mode Builtin Configuration Values Configuring from Python Files Configuring from Data Files Configuring from Environment Variables Configuration Best Practices Development / Production Instance Folders Signals Core Signals Subscribing to Signals Creating Signals Sending Signals Signals and Flask’s Request Context Decorator Based Signal Subscriptions Class-based Views Basic Reusable View URL Variables View Lifetime and self View Decorators Method Hints Method Dispatching and APIs Application Structure and Lifecycle Application Setup Serving the Application How a Request is Handled The Application Context Purpose of the Context Lifetime of the Context Manually Push a Context Storing Data Events and Signals The Request Context Purpose of the Context Lifetime of the Context Manually Push a Context How the Context Works Callbacks and Errors Notes On Proxies Modular Applications with Blueprints Why Blueprints? The Concept of Blueprints My First Blueprint Registering Blueprints Nesting Blueprints Blueprint Resources Building URLs Blueprint Error Handlers Extensions Finding Extensions Using Extensions Building Extensions Command Line Interface Application Discovery Run the Development Server Open a Shell Environment Variables From dotenv Environment Variables From virtualenv Custom Commands Plugins Custom Scripts PyCharm Integration Development Server Command Line In Code Working with the Shell Command Line Interface Creating a Request Context Firing Before/After Request Further Improving the Shell Experience Patterns for Flask Large Applications as Packages Application Factories Application Dispatching Using URL Processors Using SQLite 3 with Flask SQLAlchemy in Flask Uploading Files Caching View Decorators Form Validation with WTForms Template Inheritance Message Flashing JavaScript, fetch, and JSON Lazily Loading Views MongoDB with MongoEngine Adding a favicon Streaming Contents Deferred Request Callbacks Adding HTTP Method Overrides Request Content Checksums Background Tasks with Celery Subclassing Flask Single-Page Applications Security Considerations Resource Use Cross-Site Scripting (XSS) Cross-Site Request Forgery (CSRF) JSON Security Security Headers Host Header Validation Copy/Paste to Terminal Deploying to Production Self-Hosted Options Hosting Platforms Async with Gevent Enabling gevent Combining with async/await Using async and await Performance Background tasks When to use Quart instead Extensions Other event loops API Reference¶ If you are looking for information on a specific function, class or me",
+    "scrapedAt": "2026-05-09 00:44:30.698335"
+  },
+  {
+    "id": 516,
+    "url": "https://pypi.org/project/feedparser/",
+    "title": "feedparser · PyPI",
+    "content": "Skip to main content Switch to mobile version Warning Some features may not work without JavaScript. Please try enabling it if you encounter problems. Search PyPI Search feedparser 6.0.12 pip install feedparser Copy PIP instructions Latest version Released: Sep 10, 2025 Universal feed parser, handles RSS 0.9x, RSS 1.0, RSS 2.0, CDF, Atom 0.3, and Atom 1.0 feeds Navigation Verified details These details have been verified by PyPI Maintainers kurtmckee Unverified details These details have not been verified by PyPI Project links Homepage Download Meta License: BSD License (BSD-2-Clause) Author: Kurt McKee Tags atom , cdf , feed , parser , rdf , rss Requires: Python \u003e\u003d3.6 Classifiers Development Status 5 - Production/Stable Intended Audience Developers License OSI Approved :: BSD License Operating System OS Independent Programming Language Python Python :: 3.6 Python :: 3.7 Python :: 3.8 Python :: 3.9 Topic Software Development :: Libraries :: Python Modules Text Processing :: Markup :: XML Report project as malware Project description Parse Atom and RSS feeds in Python. Installation feedparser can be installed by running pip: $ pip install feedparser Documentation The feedparser documentation is available on the web at: https://feedparser.readthedocs.io/en/latest/ It is also included in its source format, ReST, in the docs/ directory. To build the documentation you’ll need the Sphinx package, which is available at: https://www.sphinx-doc.org/ You can then build HTML pages using a command similar to: $ sphinx-build -b html docs/ fpdocs This will produce HTML documentation in the fpdocs/ directory. Testing Feedparser has an extensive test suite, powered by tox. To run it, type this: $ python -m venv venv\n$ source venv/bin/activate  # or \"venv\\bin\\activate.ps1\" on Windows\n(venv) $ pip install -r requirements-dev.txt\n(venv) $ tox This will spawn an HTTP server that will listen on port 8097. The tests will fail if that port is in use. Project details Verified details These details have been verified by PyPI Maintainers kurtmckee Unverified details These details have not been verified by PyPI Project links Homepage Download Meta License: BSD License (BSD-2-Clause) Author: Kurt McKee Tags atom , cdf , feed , parser , rdf , rss Requires: Python \u003e\u003d3.6 Classifiers Development Status 5 - Production/Stable Intended Audience Developers License OSI Approved :: BSD License Operating System OS Independent Programming Language Python Python :: 3.6 Python :: 3.7 Python :: 3.8 Python :: 3.9 Topic Software Development :: Libraries :: Python Modules Text Processing :: Markup :: XML Release history Release notifications | RSS feed This version 6.0.12 Sep 10, 2025 6.0.11 Dec 10, 2023 6.0.10 May 21, 2022 6.0.9 May 19, 2022 6.0.8 Jun 22, 2021 6.0.7 Jun 22, 2021 6.0.6 Jun 15, 2021 6.0.5 Jun 14, 2021 6.0.4 Jun 13, 2021 6.0.3 Jun 13, 2021 6.0.2 Oct 25, 2020 6.0.1 yanked Sep 15, 2020 Reason this release was yanked: Wheels allow py2 installation despite being unsupported 6.0.0 yanked Sep 12, 2020 Reason this release was yanked: Missing python_requires in setup.py, allowing unsupported Python versions to try installing. 6.0.0b3 pre-release Feb 25, 2020 6.0.0b2 pre-release Feb 23, 2020 6.0.0b1 pre-release Oct 2, 2019 5.2.1 Jul 24, 2015 5.2.0 Apr 16, 2015 5.1.3 Dec 9, 2012 5.1.2 May 3, 2012 5.1.1 Mar 20, 2012 5.1 Dec 3, 2011 5.0.1 Feb 20, 2011 5.0 Jan 28, 2011 4.1 Jun 15, 2007 Download files Download the file for your platform. If you\u0027re not sure which to choose, learn more about installing packages. Source Distribution feedparser-6.0.12.tar.gz (286.6 kB view details) Uploaded Sep 10, 2025 Source Built Distribution Filter files by name, interpreter, ABI, and platform. If you\u0027re not sure about the file name format, learn more about wheel file names. The dropdown lists show the available interpreters, ABIs, and platforms. Enable javascript to be able to filter the list of wheel files. Copy a direct link to the current filters Copy File name Interpreter Interpreter py3 ABI ABI none Platform Platform any feedparser-6.0.12-py3-none-any.whl (81.5 kB view details) Uploaded Sep 10, 2025 Python 3 File details Details for the file feedparser-6.0.12.tar.gz. File metadata Download URL: feedparser-6.0.12.tar.gz Upload date: Sep 10, 2025 Size: 286.6 kB Tags: Source Uploaded using Trusted Publishing? No Uploaded via: twine/6.2.0 CPython/3.13.7 File hashes Hashes for feedparser-6.0.12.tar.gz Algorithm Hash digest SHA256 64f76ce90ae3e8ef5d1ede0f8d3b50ce26bcce71dd8ae5e82b1cd2d4a5f94228 Copy MD5 5f3c26e0f17ce73c31f875cdb4324b66 Copy BLAKE2b-256 dc79db7edb5e77d6dfbc54d7d9df72828be4318275b2e580549ff45a962f6461 Copy See more details on using hashes here. File details Details for the file feedparser-6.0.12-py3-none-any.whl. File metadata Download URL: feedparser-6.0.12-py3-none-any.whl Upload date: Sep 10, 2025 Size: 81.5 kB Tags: Python 3 Uploaded using Trusted Publishing? No Uploaded via: twine/6.2.0 CPython/3.13.7 File hashes Hashes for feedparser-6.0.12-py3-no",
+    "scrapedAt": "2026-05-09 00:44:29.275802"
+  },
+  {
+    "id": 515,
+    "url": "http://docs.python.org/library/internet",
+    "title": "Internet Protocols and Support — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Protocols and Support | Theme Auto Light Dark | Internet Protocols and Support¶ The modules described in this chapter implement internet protocols and support for related technology. They are all implemented in Python. Most of these modules require the presence of the system-dependent module socket, which is currently supported on most popular platforms. Here is an overview: webbrowser — Convenient web-browser controller Command-line interface Browser controller objects wsgiref — WSGI Utilities and Reference Implementation wsgiref.util – WSGI environment utilities wsgiref.headers – WSGI response header tools wsgiref.simple_server – a simple WSGI HTTP server wsgiref.validate — WSGI conformance checker wsgiref.handlers – server/gateway base classes wsgiref.types – WSGI types for static type checking Examples urllib — URL handling modules urllib.request — Extensible library for opening URLs Request Objects OpenerDirector Objects BaseHandler Objects HTTPRedirectHandler Objects HTTPCookieProcessor Objects ProxyHandler Objects HTTPPasswordMgr Objects HTTPPasswordMgrWithPriorAuth Objects AbstractBasicAuthHandler Objects HTTPBasicAuthHandler Objects ProxyBasicAuthHandler Objects AbstractDigestAuthHandler Objects HTTPDigestAuthHandler Objects ProxyDigestAuthHandler Objects HTTPHandler Objects HTTPSHandler Objects FileHandler Objects DataHandler Objects FTPHandler Objects CacheFTPHandler Objects UnknownHandler Objects HTTPErrorProcessor Objects Examples Legacy interface urllib.request Restrictions urllib.response — Response classes used by urllib urllib.parse — Parse URLs into components URL Parsing URL parsing security Parsing ASCII Encoded Bytes Structured Parse Results URL Quoting urllib.error — Exception classes raised by urllib.request urllib.robotparser — Parser for robots.txt http — HTTP modules HTTP status codes HTTP status category HTTP methods http.client — HTTP protocol client HTTPConnection Objects HTTPResponse Objects Examples HTTPMessage Objects ftplib — FTP protocol client Reference FTP objects FTP_TLS objects Module variables poplib — POP3 protocol client POP3 Objects POP3 Example imaplib — IMAP4 protocol client IMAP4 Objects IMAP4 Example smtplib — SMTP protocol client SMTP Objects SMTP Example uuid — UUID objects according to RFC 9562 Command-Line Usage Example Command-Line Example socketserver — A framework for network servers Server Creation Notes Server Objects Request Handler Objects Examples socketserver.TCPServer Example socketserver.UDPServer Example Asynchronous Mixins http.server — HTTP servers Command-line interface Security considerations http.cookies — HTTP state management Cookie Objects Morsel Objects Example http.cookiejar — Cookie handling for HTTP clients CookieJar and FileCookieJar Objects FileCookieJar subclasses and co-operation with web browsers CookiePolicy Objects DefaultCookiePolicy Objects Cookie Objects Examples xmlrpc — XMLRPC server and client modules xmlrpc.client — XML-RPC client access ServerProxy Objects DateTime Objects Binary Objects Fault Objects ProtocolError Objects MultiCall Objects Convenience Functions Example of Client Usage Example of Client and Server Usage xmlrpc.server — Basic XML-RPC servers SimpleXMLRPCServer objects SimpleXMLRPCServer example CGIXMLRPCRequestHandler Documenting XMLRPC server DocXMLRPCServer objects DocCGIXMLRPCRequestHandler ipaddress — IPv4/IPv6 manipulation library Convenience factory functions IP Addresses Address objects Conversion to Strings and Integers Operators Comparison operators Arithmetic operators IP Network definitions Prefix, net mask and host mask Network objects Operators Logical operators Iteration Networks as containers of addresses Interface objects Operators Logical operators Other Module Level Functions Custom Exceptions Previous topic xml.parsers.expat — Fast XML parsing using Expat Next topic webbrowser — Convenient web-browser controller This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Protocols and Support | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 00:44:28.139914"
+  },
+  {
+    "id": 514,
+    "url": "http://scipy.org/",
+    "title": "SciPy",
+    "content": "SciPy Fundamental algorithms for scientific computing in Python Get started SciPy 1.17.1 released! 2026-02-22 Fundamental algorithms SciPy provides algorithms for optimization, integration, interpolation, eigenvalue problems, algebraic equations, differential equations, statistics and many other classes of problems. Broadly applicable The algorithms and data structures provided by SciPy are broadly applicable across domains. Foundational Extends NumPy providing additional tools for array computing and provides specialized data structures, such as sparse matrices and k-dimensional trees. Performant SciPy wraps highly-optimized implementations written in low-level languages like Fortran, C, and C++. Enjoy the flexibility of Python with the speed of compiled code. Easy to use SciPy’s high level syntax makes it accessible and productive for programmers from any background or experience level. Open source Distributed under a liberal BSD license, SciPy is developed and maintained publicly on GitHub by a vibrant, responsive, and diverse community.",
+    "scrapedAt": "2026-05-09 00:44:26.682623"
+  },
+  {
+    "id": 513,
+    "url": "http://pragprog.com/book/gwpy2/practical-programming",
+    "scrapedAt": "2026-05-09 00:44:25.601445"
+  },
+  {
+    "id": 512,
+    "url": "https://roundup.sourceforge.net/",
+    "scrapedAt": "2026-05-09 00:44:24.372448"
+  },
+  {
     "id": 511,
     "url": "https://pypi.org/project/paramiko/",
     "title": "paramiko · PyPI",
@@ -3553,34 +3598,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 512,
-    "url": "https://roundup.sourceforge.net/"
-  },
-  {
-    "id": 513,
-    "url": "http://pragprog.com/book/gwpy2/practical-programming"
-  },
-  {
-    "id": 514,
-    "url": "http://scipy.org/"
-  },
-  {
-    "id": 515,
-    "url": "http://docs.python.org/library/internet"
-  },
-  {
-    "id": 516,
-    "url": "https://pypi.org/project/feedparser/"
-  },
-  {
-    "id": 517,
-    "url": "http://flask.pocoo.org/"
-  },
-  {
-    "id": 518,
-    "url": "http://www.tryton.org/"
   },
   {
     "id": 519,
@@ -92552,10 +92569,1154 @@ window.searchData = [
     "id": 67203,
     "url": "https://pypi.org/project/paramiko/1.9.0/",
     "parentUrl": "https://pypi.org/project/paramiko/"
+  },
+  {
+    "id": 67210,
+    "url": "https://docs.python.org/3/library/urllib.robotparser.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67212,
+    "url": "https://docs.python.org/3/library/http.html#http-status-category",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67213,
+    "url": "https://docs.python.org/3/library/http.cookiejar.html#defaultcookiepolicy-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67215,
+    "url": "https://docs.python.org/3/library/wsgiref.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67216,
+    "url": "https://docs.python.org/3/library/ipaddress.html#iteration",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67217,
+    "url": "https://docs.python.org/3/library/http.html#http-status-codes",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67218,
+    "url": "https://docs.python.org/3/library/smtplib.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67220,
+    "url": "https://docs.python.org/3/library/http.server.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67221,
+    "url": "https://docs.python.org/3/library/urllib.request.html#httpdigestauthhandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67223,
+    "url": "https://docs.python.org/3/library/http.cookiejar.html#cookie-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67224,
+    "url": "https://docs.python.org/3/library/http.client.html#httpconnection-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67225,
+    "url": "https://docs.python.org/3/library/uuid.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67226,
+    "url": "https://docs.python.org/3/library/ipaddress.html#network-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67227,
+    "url": "https://docs.python.org/3/library/socketserver.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67228,
+    "url": "https://docs.python.org/3/library/http.cookiejar.html#cookiejar-and-filecookiejar-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67229,
+    "url": "https://docs.python.org/3/library/http.cookies.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67230,
+    "url": "https://docs.python.org/3/library/webbrowser.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67231,
+    "url": "https://docs.python.org/3/library/urllib.request.html#basehandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67232,
+    "url": "https://docs.python.org/3/library/ipaddress.html#other-module-level-functions",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67233,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#structured-parse-results",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67234,
+    "url": "https://docs.python.org/3/library/internet.html#internet-protocols-and-support",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67235,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib-request-restrictions",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67236,
+    "url": "https://docs.python.org/3/library/xmlrpc.client.html#example-of-client-and-server-usage",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67237,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#url-parsing-security",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67238,
+    "url": "https://docs.python.org/3/library/urllib.error.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67239,
+    "url": "https://docs.python.org/3/library/poplib.html#pop3-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67240,
+    "url": "https://docs.python.org/3/library/urllib.request.html#httphandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67241,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/internet.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67242,
+    "url": "https://docs.python.org/3/library/urllib.request.html#module-urllib.response",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67243,
+    "url": "https://docs.python.org/3/library/ipaddress.html#prefix-net-mask-and-host-mask",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67244,
+    "url": "https://docs.python.org/3/library/xmlrpc.client.html#convenience-functions",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67245,
+    "url": "https://docs.python.org/3/library/xmlrpc.server.html#doccgixmlrpcrequesthandler",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67246,
+    "url": "https://docs.python.org/3/library/xmlrpc.client.html#multicall-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67247,
+    "url": "https://docs.python.org/3/library/xmlrpc.server.html#documenting-xmlrpc-server",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67248,
+    "url": "https://docs.python.org/3/library/socketserver.html#request-handler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67249,
+    "url": "https://docs.python.org/3/library/xmlrpc.server.html#simplexmlrpcserver-example",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67250,
+    "url": "https://docs.python.org/3/library/ipaddress.html#comparison-operators",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67251,
+    "url": "https://docs.python.org/3/library/socketserver.html#asynchronous-mixins",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67252,
+    "url": "https://docs.python.org/3/library/urllib.request.html#openerdirector-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67253,
+    "url": "https://docs.python.org/3/library/imaplib.html#imap4-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67254,
+    "url": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref.validate",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67255,
+    "url": "https://docs.python.org/3/library/ipaddress.html#convenience-factory-functions",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67256,
+    "url": "https://docs.python.org/3/library/ipaddress.html#logical-operators",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67257,
+    "url": "https://docs.python.org/3/library/ipaddress.html#arithmetic-operators",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67259,
+    "url": "https://docs.python.org/3/library/uuid.html#command-line-usage",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67260,
+    "url": "https://docs.python.org/3/library/http.cookiejar.html#filecookiejar-subclasses-and-co-operation-with-web-browsers",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67263,
+    "url": "https://docs.python.org/3/library/webbrowser.html#browser-controller-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67264,
+    "url": "https://docs.python.org/3/library/wsgiref.html#examples",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67265,
+    "url": "https://docs.python.org/3/library/http.server.html#security-considerations",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67266,
+    "url": "https://docs.python.org/3/library/ipaddress.html#address-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67267,
+    "url": "https://docs.python.org/3/library/urllib.parse.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67268,
+    "url": "https://docs.python.org/3/library/xmlrpc.server.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67269,
+    "url": "https://docs.python.org/3/library/webbrowser.html#command-line-interface",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67270,
+    "url": "https://docs.python.org/3/library/xmlrpc.client.html#protocolerror-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67271,
+    "url": "https://docs.python.org/3/library/xmlrpc.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67272,
+    "url": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref.handlers",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67273,
+    "url": "https://docs.python.org/3/library/http.client.html#examples",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67274,
+    "url": "https://docs.python.org/3/library/urllib.request.html#cacheftphandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67276,
+    "url": "https://docs.python.org/3/library/http.cookies.html#morsel-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67277,
+    "url": "https://docs.python.org/3/library/ipaddress.html#id3",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67278,
+    "url": "https://docs.python.org/3/library/ipaddress.html#id2",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67279,
+    "url": "https://docs.python.org/3/library/ipaddress.html#id1",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67280,
+    "url": "https://docs.python.org/3/library/xmlrpc.server.html#cgixmlrpcrequesthandler",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67281,
+    "url": "https://docs.python.org/3/library/urllib.request.html#unknownhandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67283,
+    "url": "https://docs.python.org/3/library/urllib.request.html#httpbasicauthhandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67284,
+    "url": "https://docs.python.org/3/library/xmlrpc.client.html#binary-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67285,
+    "url": "https://docs.python.org/3/library/ipaddress.html#ip-addresses",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67286,
+    "url": "https://docs.python.org/3/library/smtplib.html#smtp-example",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67287,
+    "url": "https://docs.python.org/3/library/urllib.request.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67288,
+    "url": "https://docs.python.org/3/library/socketserver.html#socketserver-udpserver-example",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67289,
+    "url": "https://docs.python.org/3/library/urllib.request.html#httperrorprocessor-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67290,
+    "url": "https://docs.python.org/3/library/urllib.request.html#examples",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67291,
+    "url": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref.headers",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67292,
+    "url": "https://docs.python.org/3/library/urllib.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67294,
+    "url": "https://docs.python.org/3/library/http.cookies.html#example",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67295,
+    "url": "https://docs.python.org/3/library/http.html#http-methods",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67296,
+    "url": "https://docs.python.org/3/library/urllib.request.html#abstractbasicauthhandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67297,
+    "url": "https://docs.python.org/3/library/urllib.request.html#request-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67298,
+    "url": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref.util",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67299,
+    "url": "https://docs.python.org/3/library/uuid.html#command-line-example",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67301,
+    "url": "https://docs.python.org/3/library/urllib.request.html#filehandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67302,
+    "url": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref.types",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67303,
+    "url": "https://docs.python.org/3/library/http.cookiejar.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67304,
+    "url": "https://docs.python.org/3/library/ipaddress.html#operators",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67306,
+    "url": "https://docs.python.org/3/library/socketserver.html#server-creation-notes",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67307,
+    "url": "https://docs.python.org/3/library/xmlrpc.client.html#datetime-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67308,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#url-parsing",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67309,
+    "url": "https://docs.python.org/3/library/poplib.html#pop3-example",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67310,
+    "url": "https://docs.python.org/3/library/xmlrpc.server.html#docxmlrpcserver-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67312,
+    "url": "https://docs.python.org/3/library/urllib.request.html#legacy-interface",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67313,
+    "url": "https://docs.python.org/3/library/urllib.request.html#httpshandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67314,
+    "url": "https://docs.python.org/3/library/xmlrpc.client.html#fault-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67315,
+    "url": "https://docs.python.org/3/library/http.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67316,
+    "url": "https://docs.python.org/3/library/xmlrpc.server.html#simplexmlrpcserver-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67319,
+    "url": "https://docs.python.org/3/library/http.server.html#command-line-interface",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67320,
+    "url": "https://docs.python.org/3/library/http.client.html#httpresponse-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67321,
+    "url": "https://docs.python.org/3/library/urllib.request.html#ftphandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67322,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#parsing-ascii-encoded-bytes",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67323,
+    "url": "https://docs.python.org/3/library/smtplib.html#smtp-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67325,
+    "url": "https://docs.python.org/3/library/pyexpat.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67326,
+    "url": "https://docs.python.org/3/library/urllib.request.html#abstractdigestauthhandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67327,
+    "url": "https://docs.python.org/3/library/socketserver.html#server-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67330,
+    "url": "https://docs.python.org/3/library/urllib.request.html#proxydigestauthhandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67331,
+    "url": "https://docs.python.org/3/library/urllib.request.html#httppasswordmgrwithpriorauth-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67333,
+    "url": "https://docs.python.org/3/library/ipaddress.html#ip-network-definitions",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67334,
+    "url": "https://docs.python.org/3/library/http.cookiejar.html#examples",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67335,
+    "url": "https://docs.python.org/3/library/urllib.request.html#httpredirecthandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67336,
+    "url": "https://docs.python.org/3/library/ipaddress.html#networks-as-containers-of-addresses",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67337,
+    "url": "https://docs.python.org/3/library/xmlrpc.client.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67338,
+    "url": "https://docs.python.org/3/library/xmlrpc.client.html#serverproxy-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67339,
+    "url": "https://docs.python.org/3/library/ipaddress.html#custom-exceptions",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67340,
+    "url": "https://docs.python.org/3/library/ipaddress.html",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67341,
+    "url": "https://docs.python.org/3/library/urllib.request.html#httppasswordmgr-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67342,
+    "url": "https://docs.python.org/3/library/ipaddress.html#interface-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67344,
+    "url": "https://docs.python.org/3/library/socketserver.html#socketserver-tcpserver-example",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67345,
+    "url": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref.simple_server",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67346,
+    "url": "https://docs.python.org/3/library/urllib.request.html#httpcookieprocessor-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67347,
+    "url": "https://docs.python.org/3/library/urllib.request.html#datahandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67348,
+    "url": "https://docs.python.org/3/library/uuid.html#example",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67349,
+    "url": "https://docs.python.org/3/library/http.cookiejar.html#cookiepolicy-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67351,
+    "url": "https://docs.python.org/3/library/http.cookies.html#cookie-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67352,
+    "url": "https://docs.python.org/3/library/urllib.request.html#proxybasicauthhandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67353,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#url-quoting",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67354,
+    "url": "https://docs.python.org/3/library/imaplib.html#imap4-example",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67355,
+    "url": "https://docs.python.org/3/library/xmlrpc.client.html#example-of-client-usage",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67356,
+    "url": "https://docs.python.org/3/library/urllib.request.html#proxyhandler-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67357,
+    "url": "https://docs.python.org/3/library/http.client.html#httpmessage-objects",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67359,
+    "url": "https://docs.python.org/3/library/socketserver.html#examples",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67360,
+    "url": "https://docs.python.org/3/library/ipaddress.html#conversion-to-strings-and-integers",
+    "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 67362,
+    "url": "https://pypi.org/project/feedparser/6.0.4/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67363,
+    "url": "https://pypi.org/project/feedparser/#content",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67365,
+    "url": "https://pypi.org/project/feedparser/6.0.8/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67366,
+    "url": "https://pypi.org/rss/project/feedparser/releases.xml",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67367,
+    "url": "https://pypi.org/project/feedparser/6.0.0/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67368,
+    "url": "https://pypi.org/project/feedparser/submit-malware-report/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67369,
+    "url": "https://pypi.org/project/feedparser/5.1/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67370,
+    "url": "https://pypi.python.org/pypi/feedparser",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67371,
+    "url": "https://pypi.org/project/feedparser/5.2.1/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67372,
+    "url": "https://pypi.org/project/feedparser/6.0.5/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67373,
+    "url": "https://pypi.org/project/feedparser/6.0.9/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67374,
+    "url": "https://pypi.org/project/feedparser/6.0.1/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67375,
+    "url": "https://files.pythonhosted.org/packages/4e/eb/c96d64137e29ae17d83ad2552470bafe3a7a915e85434d9942077d7fd011/feedparser-6.0.12-py3-none-any.whl",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67376,
+    "url": "https://pypi.org/project/feedparser/6.0.10/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67377,
+    "url": "https://pypi.org/project/feedparser/4.1/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67378,
+    "url": "https://pypi.org/project/feedparser/6.0.0b3/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67379,
+    "url": "https://pypi.org/project/feedparser/5.1.1/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67382,
+    "url": "https://pypi.org/project/feedparser/#feedparser-6.0.12.tar.gz",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67383,
+    "url": "https://pypi.org/project/feedparser/#files",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67385,
+    "url": "https://pypi.org/project/feedparser/6.0.2/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67387,
+    "url": "https://pypi.org/project/feedparser/5.0.1/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67388,
+    "url": "https://github.com/kurtmckee/feedparser",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67389,
+    "url": "https://pypi.org/project/feedparser/6.0.6/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67390,
+    "url": "https://files.pythonhosted.org/packages/dc/79/db7edb5e77d6dfbc54d7d9df72828be4318275b2e580549ff45a962f6461/feedparser-6.0.12.tar.gz",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67391,
+    "url": "https://pypi.org/project/feedparser/6.0.11/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67392,
+    "url": "https://pypi.org/search/?c\u003dTopic+%3A%3A+Text+Processing+%3A%3A+Markup+%3A%3A+XML",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67394,
+    "url": "https://pypi.org/project/feedparser/6.0.0b2/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67395,
+    "url": "https://pypi.org/project/feedparser/5.1.2/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67396,
+    "url": "https://pypi.org/search/?c\u003dLicense+%3A%3A+OSI+Approved+%3A%3A+BSD+License",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67399,
+    "url": "https://pypi.org/user/kurtmckee/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67400,
+    "url": "https://pypi.org/project/feedparser/6.0.3/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67401,
+    "url": "https://pypi.org/project/feedparser/6.0.7/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67402,
+    "url": "https://feedparser.readthedocs.io/en/latest/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67408,
+    "url": "https://pypi.org/project/feedparser/6.0.12/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67409,
+    "url": "https://pypi.org/project/feedparser/#feedparser-6.0.12-py3-none-any.whl",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67410,
+    "url": "https://pypi.org/search/?c\u003dProgramming+Language+%3A%3A+Python+%3A%3A+3.6",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67413,
+    "url": "https://pypi.org/search/?c\u003dTopic+%3A%3A+Software+Development+%3A%3A+Libraries+%3A%3A+Python+Modules",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67414,
+    "url": "https://pypi.org/project/feedparser/6.0.0b1/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67416,
+    "url": "https://pypi.org/search/?c\u003dProgramming+Language+%3A%3A+Python+%3A%3A+3.8",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67417,
+    "url": "https://pypi.org/project/feedparser/5.1.3/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67418,
+    "url": "https://pypi.org/project/feedparser/5.0/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67419,
+    "url": "https://pypi.org/search/?c\u003dProgramming+Language+%3A%3A+Python+%3A%3A+3.7",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67421,
+    "url": "https://pypi.org/project/feedparser/5.2.0/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 67726,
+    "url": "http://www.tryton.org/download",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 67727,
+    "url": "https://discuss.tryton.org/t/renew-foundation-board-2027/5804/1",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 67728,
+    "url": "https://discuss.tryton.org/new-message?groupname\u003dfoundation",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 67729,
+    "url": "https://discuss.tryton.org/t/tryton-news-april-2026/9179",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 67730,
+    "url": "http://www.tryton.org/events",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 67731,
+    "url": "http://www.tryton.org/news",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 67732,
+    "url": "http://www.tryton.org/foundation#trademark",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 67733,
+    "url": "https://discuss.tryton.org/t/tryton-news-may-2026/9214",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 67734,
+    "url": "https://discuss.tryton.org/t/tryton-release-8-0/9208",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 67735,
+    "url": "http://www.tryton.org/events.ics",
+    "parentUrl": "http://www.tryton.org/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://flask.palletsprojects.com/en/stable/_images/flask-name.svg",
+    "alt": "_images/flask-name.svg",
+    "pageTitle": "Welcome to Flask — Flask Documentation (3.1.x)",
+    "pageUrl": "http://flask.pocoo.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/23255a4de1d6c1478daa6040634301e2cefde5b1/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f30353134353031313138636234653831383839613564366233626261666234313f73697a653d3530",
+    "alt": "Avatar for kurtmckee from gravatar.com",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/23255a4de1d6c1478daa6040634301e2cefde5b1/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f30353134353031313138636234653831383839613564366233626261666234313f73697a653d3530",
+    "alt": "Avatar for kurtmckee from gravatar.com",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/blue-cube.572a5bfb.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/ed7074cadad1a06f56bc520ad9bd3e00d0704c5b/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d77686974652d6c6f676f2d7443615473387a432e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/8855f7c063a3bdb5b0ce8d91bfc50cf851cc5c51/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d77686974652d6c6f676f2d6668644c4e666c6f2e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/60f709d24f3e4d469f9adc77c65e2f5291a3d165/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6465706f742d77686974652d6c6f676f2d7038506f476831302e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/df6fe8829cbff2d7f668d98571df1fd011f36192/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d77686974652d6c6f676f2d65684d3077735f6f2e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/420cc8cf360bac879e24c923b2f50ba7d1314fb0/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d77686974652d6c6f676f2d616734424e3774332e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/d01053c02f3a626b73ffcb06b96367fdbbf9e230/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f70696e67646f6d2d77686974652d6c6f676f2d67355831547546362e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/67af7117035e2345bacb5a82e9aa8b5b3e70701d/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d77686974652d6c6f676f2d4a2d6b64742d706e2e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/b611884ff90435a0575dbab7d9b0d3e60f136466/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d77686974652d6c6f676f2d5467476c6a4a2d502e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Internet Protocols and Support — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Internet Protocols and Support — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "src": "https://scipy.org/images/logo.svg",
+    "alt": "SciPy logo. A blue circle with a snake in the shape of the letter \u0027S\u0027.",
+    "pageTitle": "SciPy",
+    "pageUrl": "http://scipy.org/"
+  },
   {
     "src": "https://pypi-camo.freetls.fastly.net/f4a4e7bf9d6c5872aae567a82d070134e48c8a44/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f66316163633633313830323866646261393837346337376263363232613266623f73697a653d3530",
     "alt": "Avatar for bitprophet from gravatar.com",
