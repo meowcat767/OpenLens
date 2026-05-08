@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 241,
+    "url": "https://source.android.com/docs/core/architecture",
+    "title": "Architecture overview | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs Core Topics Architecture overview Stay organized with collections Save and categorize content based on your preferences. The Android Open Source Project (AOSP) is publicly available and modifiable Android source code. Anyone can download and modify AOSP for their device. AOSP provides a complete and fully functional implementation of the Android mobile platform. Note: AOSP can\u0027t provide support for apps that require backend services, such as a cloud messaging or advanced location services app. AOSP also doesn\u0027t include a full set of end-user apps that might be needed for particular types of devices. There are two levels of compatibility for devices implementing AOSP: AOSP compatibility and Android compatibility. An AOSP-compatible device must conform to the list of requirements in the Compatibility Definition Document (CDD). An Android-compatible device must conform to the list of requirements in the CDD and Vendor Software Requirements (VSR) and tests such as those in the Vendor Test Suite (VTS) and Compatibility Test Suite (CTS). For further information on Android compatibility, refer to the Android compatibility program. AOSP architecture The software stack for AOSP contains the following layers: Figure 1. AOSP software stack architecture. Following is a list of definitions for terms used in Figure 1: Android app An app created solely using the Android API. Google Play Store is widely used to find and download Android apps, though there are many other alternatives. In some cases, a device manufacturer might want to preinstall an Android app to support the core functionality of the device. If you\u0027re interested in developing Android apps, refer to developers.android.com. Privileged app An app created using a combination of the Android and system APIs. These apps must be preinstalled as privileged apps on a device. Device manufacturer app An app created using a combination of the Android API, system API, and direct access to the Android framework implementation. Because a device manufacturer might directly access unstable APIs within the Android framework, these apps must be preinstalled on the device and can be updated only when the device\u0027s system software is updated. System API The System API represents Android APIs available only to partners and OEMs for inclusion in bundled applications. These APIs are marked as @SystemApi in the source code. Android API The Android API is the publicly available API for third-party Android app developers. For information on the Android API, refer to Android API reference. Android framework A group of Java classes, interfaces, and other precompiled code upon which apps are built. Portions of the framework are publicly accessible through the use of the Android API. Other portions of the framework are available only to OEMs through the use of the system APIs. Android framework code runs inside an app\u0027s process. System services System services are modular, focused components such as system_server, SurfaceFlinger, and MediaService. Functionality exposed by Android framework API communicates with system services to access the underlying hardware. Android runtime (ART) A Java runtime environment provided by AOSP. ART performs the translation of the app\u0027s bytecode into processor-specific instructions that are executed by the device\u0027s runtime environment. Hardware abstraction layer (HAL) A HAL is an abstraction layer with a standard interface for hardware vendors to implement. HALs allow Android to be agnostic about lower-level driver implementations. Using a HAL lets you implement functionality without affecting or modifying the higher level system. For further information, see the HAL overview. Native daemons and libraries Native daemons in this layer include init, healthd, logd, and storaged. These daemons interact directly with the kernel or other interfaces and don\u0027t depend on a userspace-based HAL implementation. Native libraries in this layer include libc, liblog, libutils, libbinder, and libselinux. These Native libraries interact directly with the kernel or other interfaces and don\u0027t depend on a userspace-based HAL implementation. Kernel The kernel is the central part of any operating system and talks to the underlying hardware on a device. Where possible, the AOSP kernel is split into hardware-agnostic modules and v",
+    "scrapedAt": "2026-05-09 00:34:58.463214"
+  },
+  {
+    "id": 240,
+    "url": "https://source.android.com/docs/whatsnew/android-16-release",
+    "title": "Android 16, Android 16 QPR1, and Android 16 QPR2 release notes | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs What\u0027s New? Android 16, Android 16 QPR1, and Android 16 QPR2 release notes Stay organized with collections Save and categorize content based on your preferences. This page summarizes the major features in the Android 16, Android 16 QPR1, and Android 16 QPR2 releases and provides links to additional information. These feature summaries are organized according to the feature\u0027s documentation location on this site. Audio Configurable Audio Policy support HIDL HAL let Android vendors use an alternative approach for specifying rules for audio routing called Configurable Audio Policy (CAP), which is more flexible than the default engine used for phones. When migrating to AIDL HAL, support for CAP wasn\u0027t implemented in Android 14 and 15 due to lack of resources. We fixed this in Android 16 by providing missing AIDL definitions and changing the mechanism for loading of CAP configuration by the framework. See Configurable Audio Policy support in AIDL HAL for more information. We converted the Cuttlefish Auto target to take advantage of the CAP AIDL implementation to help partners with migration of their products. Architecture Generic Bootloader (GBL) Android 16 introduces support for a new Generic Bootloader (GBL), a standardized, updatable bootloader designed to streamline the Android boot process. For more information on GBL, see Generic Bootloader (GBL) overview. 16 KB page size In Android 16, memory optimization has been implemented for thread-local storage (TLS). The buffers for the basename() and dirname() functions are now isolated from the main TLS region into dedicated memory pages that are allocated only upon first use. This change yields significant memory savings, particularly on systems with a 16 KB page size, as it frees up approximately 8 KB within the initial thread memory page. This optimization not only reduces overall memory consumption, but provides more space for the stack to grow before requiring a new page, helping to decrease page faults from stack expansion. Systems using a 4 KB page size also see some memory savings. For further information on 16 KB page size, see 16 KB page size. Compatibility Camera ITS updates Android 16 contains updates to the Camera Image Test Suite (ITS). For more details, see: Android 16 Camera ITS release notes Android 16 Camera ITS tests Compatibility Definition Document (CDD) The Android 16 Compatibility Definition Document (CDD) is released with Android 16 QPR2 updates. CTS Verifier Bluetooth MIDI test updates To simplify the testing procedure and reduce potential errors, Android 16 lets you run CTS-V Bluetooth MIDI loopback tests without a USB MIDI peripheral. For the documentation specific to this change, see CTS Verifier Bluetooth MIDI tests updates. CTS Verifier barometer test updates To support Android location features, Android 16 includes a new set of CTS-V barometer measurement tests. For the documentation specific to this change, see CTS Verifier barometer measurement tests. CTS Verifier multidevice test updates To support Android connectivity features, Android 16 includes a new set of CTS-V tests. For the documentation specific to this change, see Run CTS Verifier multidevice tests. Run Wi-Fi AP connection tests To support Android Better Together connectivity features, Android 16 QPR2 includes a new set of Wi-Fi AP connection tests. For the documentation specific to this change, see Set up Wi-Fi AP connection tests. Connectivity Android OS identification In Android 16 and higher, the Android framework includes a Generic Attribute (GATT) service called Android information service (AIS), which lets Bluetooth devices read the Android API level as a GATT characteristic of the service. This service lets Bluetooth device manufacturers know whether a Bluetooth peripheral is pairing with a central device that is running the Android OS, and manage specialized logic based on the API level. For more information, see Android OS identification. Emergency callback mode Android 16 introduces the EmergencyCallbackModeListener system API that lets the IMS module get the emergency callback mode state through a callback when the device enters or exits emergency callback mode for SMS or calls. Device manufacturers can use this API to implement IMS registration management to meet carrier and 3GPP requirements. For example,",
+    "scrapedAt": "2026-05-09 00:34:56.222936"
+  },
+  {
+    "id": 239,
+    "url": "https://source.android.com/docs/devices",
+    "title": "Android devices | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs Android Devices Stay organized with collections Save and categorize content based on your preferences. Android devices Beyond phones and tablets, the Android OS serves as a platform for a diverse array of hardware and technology, including unified corporate networks and entertainment devices. Cuttlefish Create configurable virtual Android devices that can run both remotely and locally. Enterprise Set up and manage devices running Android 5.0 and higher on a corporate network or enterprise environment. TV The Android TV Input Framework (TIF) simplifies delivery of live content to Android TV. Content and code samples on this page are subject to the licenses described in the Content License. Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Last updated 2024-12-12 UTC. [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINeed\",\"thumb-down\"],[\"Too complicated / too many steps\",\"tooComplicatedTooManySteps\",\"thumb-down\"],[\"Out of date\",\"outOfDate\",\"thumb-down\"],[\"Samples / code issue\",\"samplesCodeIssue\",\"thumb-down\"],[\"Other\",\"otherDown\",\"thumb-down\"]],[\"Last updated 2024-12-12 UTC.\"],[],[]]",
+    "scrapedAt": "2026-05-09 00:34:54.162861"
+  },
+  {
+    "id": 238,
+    "url": "https://android.com/ai/circle-to-search/",
+    "title": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "content": "Circle to Search Eén gebaar, veel mogelijkheden. Meer informatie Koop het. Laat je niet tegenhouden. Zoek gewoon wat je wilt en shop. Vertaal het. Je nieuwe tolk is er, klaar om te vertalen wat er op je scherm staat. Vind het. Noem snel de titel van het nummer. Zoek naar nummers die op je apparaat of in de buurt worden afgespeeld.1 Leer het. Krijg sneller en makkelijker informatie met een AI-overzicht.2 Circle to Search Eén gebaar, veel mogelijkheden. Meer informatie Koop het. Laat je niet tegenhouden. Zoek gewoon wat je wilt en shop. Vertaal het. Je nieuwe tolk is er, klaar om te vertalen wat er op je scherm staat. Vind het. Noem snel de titel van het nummer. Zoek naar nummers die op je apparaat of in de buurt worden afgespeeld.1 Leer het. Krijg sneller en makkelijker informatie met een AI-overzicht.2 Vind de antwoorden die je nodig hebt. Hoe activeer ik Circle to Search op mijn Pixel-telefoon? Houd in de navigatiemodus met 3 knoppen je vinger op de startknop. Houd in de navigatiemodus met gebaren je vinger op de navigatiebalk. Hoe verschilt Circle to Search van andere zoekmachines? Je kunt naar alles op je scherm zoeken met een gebaar, zoals omcirkelen, tikken, krabbelen of markeren. Moet ik Chrome instellen als mijn standaardbrowser om Circle to Search te gebruiken? Chrome hoeft niet je standaardbrowser te zijn om Circle to Search te gebruiken. Ik heb een iPhone. Kan ik Circle to Search ook gebruiken? Ja, iPhone-gebruikers hebben via de Google-app en de Google Chrome-app op hun iPhone toegang tot een functie die vergelijkbaar is met Circle to Search van Google. Met deze functie, die \u0027Zoeken op scherm met Google Lens\u0027 heet, kun je objecten of tekst op je scherm zoeken door ze te omcirkelen of te markeren. Moet ik Circle to Search downloaden op mijn telefoon? Je hoeft Circle to Search niet te downloaden op een Android-apparaat. Hoe werkt de vertaalfunctie van Circle to Search? Met de vertaalfunctie van Circle to Search kun je tekst op het scherm meteen vertalen naar je voorkeurstaal door op de vertaalknop naast de zoekbalk te tikken. Deze functie herkent de taal automatisch en vertaalt de tekst naar je standaardsysteemtaal. Koop Android-telefoons met Circle to Search. ... ..... .... .... ... ..... .... .... ... ..... .... .... ... ..... .... .... ... ..... .... .... ... ..... .... .... ..... ...... ... ..... ...... ... ..... ...... ... ..... ...... ... ..... ...... ... ..... ...... ... Telefoons kopen Telefoons kopen Ontdek meer over AI van Google op Android. Maak dagelijkse taken makkelijker. Of je nu op zoek bent naar decoratietips voor een thema-evenement of hulp nodig hebt bij het aanpassen van een recept voor meer personen, AI is veelzijdiger dan ooit. Gemini ontdekken Meer functies, meer mogelijkheden. Creëer, verbind en druk je uit als nooit tevoren met onze AI-gestuurde functies. Meer AI-functies ontdekken Circle to Search* Omcirkel het. Zoek het. Altijd en overal. Zonder tussen apps te wisselen. Vind het allerbeste. Laat je door niemand tegenhouden en koop precies wat je wilt. Wil je iets uitproberen? Omcirkel het, zoek het op en ga ervoor. Vertaal van alles op je telefoon zonder van app te wisselen. Beschikbaar op bepaalde Galaxy- en Pixel-apparaten. Galaxy S24 Ultra Nu kopen Pixel 9 Pro Fold Nu kopen Pixel 9 Pro Nu kopen Pixel Fold Galaxy Z Flip5 Galaxy Z Fold5 Galaxy S23 Ultra Pixel 9 Nu kopen Beschikbaar op bepaalde apparaten. Een internetverbinding is vereist. Werkt op compatibele apps en platforms. De resultaten kunnen verschillen afhankelijk van visuele overeenkomsten en zijn alleen ter illustratie. Reeksen zijn ingekort. Fotomoji* De perfecte emoji bestaat niet Van filmrol naar aangepaste emoji. Omdat elk moment een persoonlijke reactie verdient. Beschikbaar op de Galaxy S24- serie en de Google Pixel 9 Telefoons kopen De beschikbaarheid van functies kan per markt en apparaat verschillen. Je moet je misschien aanmelden voor bètatests en een data-abonnement hebben. Magisch opstellen* Maak de uitnodiging net zo gedenkwaardig als de afspraak Ontdek je innerlijke Shakespeare en laat een blijvende indruk achter. Als je een frisse blik nodig hebt, of gewoon wat opties om uit te kiezen. Beschikbaar op de Galaxy S24- serie en de Google Pixel 9 Telefoons kopen De beschikbaarheid van functies kan per markt en apparaat verschillen. Je moet je misschien aanmelden voor bètatests en een data-abonnement hebben. Ontdek het beste op Android Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Samsung Galaxy S24-serie Van een unieke klasse. Google Pixel 9 Ontdek het beste met Google en Android. Alleen op Android Ontdek het beste op Android Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Samsung Galaxy S24-serie Van een unieke klasse. Google Pixel 9 Ontdek het beste met Google en Android. Alleen op Android Ontdek het beste op Android Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Samsung Galaxy S24-serie Van een unieke klasse. Google Pixel 9 Ontdek het best",
+    "scrapedAt": "2026-05-09 00:34:51.649252"
+  },
+  {
+    "id": 237,
+    "url": "https://www.android.com/ai/circle-to-search/",
+    "title": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "content": "Circle to Search Eén gebaar, veel mogelijkheden. Meer informatie Koop het. Laat je niet tegenhouden. Zoek gewoon wat je wilt en shop. Vertaal het. Je nieuwe tolk is er, klaar om te vertalen wat er op je scherm staat. Vind het. Noem snel de titel van het nummer. Zoek naar nummers die op je apparaat of in de buurt worden afgespeeld.1 Leer het. Krijg sneller en makkelijker informatie met een AI-overzicht.2 Circle to Search Eén gebaar, veel mogelijkheden. Meer informatie Koop het. Laat je niet tegenhouden. Zoek gewoon wat je wilt en shop. Vertaal het. Je nieuwe tolk is er, klaar om te vertalen wat er op je scherm staat. Vind het. Noem snel de titel van het nummer. Zoek naar nummers die op je apparaat of in de buurt worden afgespeeld.1 Leer het. Krijg sneller en makkelijker informatie met een AI-overzicht.2 Vind de antwoorden die je nodig hebt. Hoe activeer ik Circle to Search op mijn Pixel-telefoon? Houd in de navigatiemodus met 3 knoppen je vinger op de startknop. Houd in de navigatiemodus met gebaren je vinger op de navigatiebalk. Hoe verschilt Circle to Search van andere zoekmachines? Je kunt naar alles op je scherm zoeken met een gebaar, zoals omcirkelen, tikken, krabbelen of markeren. Moet ik Chrome instellen als mijn standaardbrowser om Circle to Search te gebruiken? Chrome hoeft niet je standaardbrowser te zijn om Circle to Search te gebruiken. Ik heb een iPhone. Kan ik Circle to Search ook gebruiken? Ja, iPhone-gebruikers hebben via de Google-app en de Google Chrome-app op hun iPhone toegang tot een functie die vergelijkbaar is met Circle to Search van Google. Met deze functie, die \u0027Zoeken op scherm met Google Lens\u0027 heet, kun je objecten of tekst op je scherm zoeken door ze te omcirkelen of te markeren. Moet ik Circle to Search downloaden op mijn telefoon? Je hoeft Circle to Search niet te downloaden op een Android-apparaat. Hoe werkt de vertaalfunctie van Circle to Search? Met de vertaalfunctie van Circle to Search kun je tekst op het scherm meteen vertalen naar je voorkeurstaal door op de vertaalknop naast de zoekbalk te tikken. Deze functie herkent de taal automatisch en vertaalt de tekst naar je standaardsysteemtaal. Koop Android-telefoons met Circle to Search. ... ..... .... .... ... ..... .... .... ... ..... .... .... ... ..... .... .... ... ..... .... .... ... ..... .... .... ..... ...... ... ..... ...... ... ..... ...... ... ..... ...... ... ..... ...... ... ..... ...... ... Telefoons kopen Telefoons kopen Ontdek meer over AI van Google op Android. Maak dagelijkse taken makkelijker. Of je nu op zoek bent naar decoratietips voor een thema-evenement of hulp nodig hebt bij het aanpassen van een recept voor meer personen, AI is veelzijdiger dan ooit. Gemini ontdekken Meer functies, meer mogelijkheden. Creëer, verbind en druk je uit als nooit tevoren met onze AI-gestuurde functies. Meer AI-functies ontdekken Circle to Search* Omcirkel het. Zoek het. Altijd en overal. Zonder tussen apps te wisselen. Vind het allerbeste. Laat je door niemand tegenhouden en koop precies wat je wilt. Wil je iets uitproberen? Omcirkel het, zoek het op en ga ervoor. Vertaal van alles op je telefoon zonder van app te wisselen. Beschikbaar op bepaalde Galaxy- en Pixel-apparaten. Galaxy S24 Ultra Nu kopen Pixel 9 Pro Fold Nu kopen Pixel 9 Pro Nu kopen Pixel Fold Galaxy Z Flip5 Galaxy Z Fold5 Galaxy S23 Ultra Pixel 9 Nu kopen Beschikbaar op bepaalde apparaten. Een internetverbinding is vereist. Werkt op compatibele apps en platforms. De resultaten kunnen verschillen afhankelijk van visuele overeenkomsten en zijn alleen ter illustratie. Reeksen zijn ingekort. Fotomoji* De perfecte emoji bestaat niet Van filmrol naar aangepaste emoji. Omdat elk moment een persoonlijke reactie verdient. Beschikbaar op de Galaxy S24- serie en de Google Pixel 9 Telefoons kopen De beschikbaarheid van functies kan per markt en apparaat verschillen. Je moet je misschien aanmelden voor bètatests en een data-abonnement hebben. Magisch opstellen* Maak de uitnodiging net zo gedenkwaardig als de afspraak Ontdek je innerlijke Shakespeare en laat een blijvende indruk achter. Als je een frisse blik nodig hebt, of gewoon wat opties om uit te kiezen. Beschikbaar op de Galaxy S24- serie en de Google Pixel 9 Telefoons kopen De beschikbaarheid van functies kan per markt en apparaat verschillen. Je moet je misschien aanmelden voor bètatests en een data-abonnement hebben. Ontdek het beste op Android Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Samsung Galaxy S24-serie Van een unieke klasse. Google Pixel 9 Ontdek het beste met Google en Android. Alleen op Android Ontdek het beste op Android Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Samsung Galaxy S24-serie Van een unieke klasse. Google Pixel 9 Ontdek het beste met Google en Android. Alleen op Android Ontdek het beste op Android Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Samsung Galaxy S24-serie Van een unieke klasse. Google Pixel 9 Ontdek het best",
+    "scrapedAt": "2026-05-09 00:34:50.532011"
+  },
+  {
     "id": 236,
     "url": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026ios-min-version\u003d322.0\u0026is_sa\u003d1\u0026campaign_id\u003dandroid_web_gemini\u0026utm_medium\u003dxpa\u0026utm_source\u003dandroid_web\u0026utm_campaign\u003dandroid_web_gemini\u0026pt\u003d9008\u0026mt\u003d8\u0026ct\u003dandroid_web_gemini",
     "title": "Before you continue",
@@ -1648,26 +1683,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 237,
-    "url": "https://www.android.com/ai/circle-to-search/"
-  },
-  {
-    "id": 238,
-    "url": "https://android.com/ai/circle-to-search/"
-  },
-  {
-    "id": 239,
-    "url": "https://source.android.com/docs/devices"
-  },
-  {
-    "id": 240,
-    "url": "https://source.android.com/docs/whatsnew/android-16-release"
-  },
-  {
-    "id": 241,
-    "url": "https://source.android.com/docs/core/architecture"
   },
   {
     "id": 242,
@@ -42164,10 +42179,924 @@ window.searchData = [
     "id": 17920,
     "url": "https://accounts.google.com/ServiceLogin?hl\u003den-US\u0026continue\u003dhttps://gemini.google.com/?android-min-version%3D301356232%26ios-min-version%3D322.0%26is_sa%3D1%26campaign_id%3Dandroid_web_gemini%26utm_medium%3Dxpa%26utm_source%3Dandroid_web%26utm_campaign%3Dandroid_web_gemini%26pt%3D9008%26mt%3D8%26ct%3Dandroid_web_gemini\u0026gae\u003dcb-",
     "parentUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026ios-min-version\u003d322.0\u0026is_sa\u003d1\u0026campaign_id\u003dandroid_web_gemini\u0026utm_medium\u003dxpa\u0026utm_source\u003dandroid_web\u0026utm_campaign\u003dandroid_web_gemini\u0026pt\u003d9008\u0026mt\u003d8\u0026ct\u003dandroid_web_gemini"
+  },
+  {
+    "id": 17921,
+    "url": "https://www.android.com/intl/nl_nl/articles/how-to-use-circle-to-search/",
+    "parentUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "id": 17933,
+    "url": "https://source.android.com/docs/devices/cuttlefish",
+    "parentUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "id": 17934,
+    "url": "https://source.android.com/license",
+    "parentUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "id": 17935,
+    "url": "https://source.android.com/docs/devices/tv",
+    "parentUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "id": 17936,
+    "url": "https://source.android.com/docs/devices#main-content",
+    "parentUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "id": 17938,
+    "url": "https://source.android.com/docs/devices/admin",
+    "parentUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "id": 17939,
+    "url": "https://source.android.com/docs",
+    "parentUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "id": 17940,
+    "url": "https://source.android.com/docs/compatibility/cts/its-release-notes-16",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17941,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/TelephonyManager.java?q\u003d%22public%20List%3CUri%3E%20getImsPublicUserIdentities%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17942,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/SmsMessage.java?q\u003d%22public%20String%20getRecipientAddress%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17943,
+    "url": "https://source.android.com/docs/security/features/cellular-security/toggle-2g",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17944,
+    "url": "https://source.android.com/docs/whatsnew",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17945,
+    "url": "https://source.android.com/docs/core/interaction/haptics/haptics-pwle",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17946,
+    "url": "https://source.android.com/docs/compatibility/cts/camera-its-tests",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17947,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/MmTelFeature.java?q\u003d%22public%20final%20void%20triggerEpsFallback%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17948,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:packages/modules/Wifi/framework/java/android/net/wifi/WifiManager.java?q\u003d%22void%20onClientsDisconnected%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17949,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/ImsCallSessionListener.java?q\u003d%22public%20void%20callSessionTransferred%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17950,
+    "url": "https://source.android.com/docs/compatibility/16/android-16-cdd",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17951,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:packages/apps/Car/Settings/src/com/android/car/settings/wifi/WifiTetheringHandler.java?q\u003d%22WifiManager.SoftApCallback%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17952,
+    "url": "https://source.android.com/docs/compatibility/cts/cts-barometer",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17953,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/TelephonyManager.java?q\u003d%22public%20void%20getSimServiceTable%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17954,
+    "url": "https://developer.android.com/media/media3/exoplayer",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17955,
+    "url": "https://source.android.com/docs/core/interaction/sensors/sensor-types#heart_rate",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17956,
+    "url": "https://source.android.com/docs/security/safety-center/overview",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17957,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/TelephonyManager.java?q\u003d%22public%20List%3CString%3E%20getImsPcscfAddresses%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17958,
+    "url": "https://source.android.com/docs/compatibility/cts/cts-midi",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17959,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/TelephonyManager.java?q\u003d%22public%20String%20getImsPrivateUserIdentity%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17960,
+    "url": "https://source.android.com/docs/core/architecture/bootloader/generic-bootloader",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17961,
+    "url": "https://source.android.com/docs/core/connect/ranging-oob-spec",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17963,
+    "url": "https://source.android.com/docs/core/audio/aidl-cap",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17964,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/MmTelFeature.java?q\u003d%22public%20final%20void%20modifyImsTrafficSession%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17965,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/ConnectionFailureInfo.java?q\u003d%22public%20final%20class%20ConnectionFailureInfo%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17966,
+    "url": "https://source.android.com/docs/compatibility/cts/ctsv-multidevice-bt#setup-wifi",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17967,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/MmTelFeature.java?q\u003d%22interface%20EpsFallbackReason%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17968,
+    "url": "https://source.android.com/docs/security/features/keystore/attestation",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17969,
+    "url": "https://source.android.com/docs/core/permissions/android-roles",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17970,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/ImsTrafficSessionCallback.java?q\u003d%22public%20interface%20ImsTrafficSessionCallback%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17971,
+    "url": "https://source.android.com/docs/security/features/cellular-security/mobile-network-security",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17972,
+    "url": "https://source.android.com/docs/security/features/gpu-syscall-filtering",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17973,
+    "url": "https://source.android.com/docs/security/features/private-space#moving-content",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17974,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/MmTelFeature.java?q\u003d%22public%20final%20void%20stopImsTrafficSession%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17975,
+    "url": "https://source.android.com/docs/core/display/quick-settings-tile",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17976,
+    "url": "https://source.android.com/docs/core/perf/trade-in-mode",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17977,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/core/java/android/telephony/TelephonyCallback.java?q\u003d%22interface%20EmergencyCallbackModeListener%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17978,
+    "url": "https://source.android.com/docs/core/display/device-state-based-auto-rotate-setting",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17979,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/MmTelFeature.java?q\u003d%22interface%20ImsTrafficType%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17980,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/ImsCallSessionListener.java?q\u003d%22public%20final%20void%20callSessionSendAnbrQuery%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17981,
+    "url": "https://source.android.com/docs/core/virtualization",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17982,
+    "url": "https://source.android.com/docs/whatsnew/android-16-release#main-content",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17983,
+    "url": "https://source.android.com/docs/core/graphics/hdr-screenshots",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17984,
+    "url": "https://source.android.com/docs/core/connect/wifi-softap#source",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17985,
+    "url": "https://developer.android.com/training/data-storage/shared/photopicker",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17986,
+    "url": "https://developer.android.com/develop/connectivity/ranging",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17987,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/ImsCallSessionListener.java?q\u003d%22public%20void%20callSessionTransferFailed%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17989,
+    "url": "https://source.android.com/docs/core/display/multi-window",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17990,
+    "url": "https://source.android.com/docs/compatibility/cts/ctsv-multidevice-bt",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17991,
+    "url": "https://developer.android.com/develop/ui/views/quicksettings-tiles",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17993,
+    "url": "https://source.android.com/docs/core/architecture/16kb-page-size/16kb",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17994,
+    "url": "https://source.android.com/docs/compatibility/cts/camera-its",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17996,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/MmTelFeature.java?q\u003d%22interface%20ImsTrafficDirection%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17997,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/MmTelFeature.java?q\u003d%22public%20final%20void%20startImsTrafficSession%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17998,
+    "url": "https://source.android.com/docs/core/connect/bluetooth/os-identification",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 17999,
+    "url": "https://source.android.com/docs/core/architecture#main-content",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "id": 18001,
+    "url": "https://developer.android.com/reference",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "id": 18002,
+    "url": "https://source.android.com/docs/core/architecture/hal",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "id": 18003,
+    "url": "https://source.android.com/docs/compatibility/cdd",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "id": 18004,
+    "url": "https://source.android.com/docs/core/architecture/kernel",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "id": 18005,
+    "url": "https://source.android.com/docs/compatibility/cts",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "id": 18009,
+    "url": "https://developer.android.com/",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "id": 18011,
+    "url": "https://source.android.com/docs/core/tests/vts",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Architecture overview | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "src": "https://source.android.com/static/images/android-stack.png",
+    "alt": "AOSP software stack architecture.",
+    "pageTitle": "Architecture overview | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Android 16, Android 16 QPR1, and Android 16 QPR2 release notes | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Android devices | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "src": "https://developer.android.com/images/cluster-illustrations/android-development-kit-16-9.svg",
+    "alt": "",
+    "pageTitle": "Android devices | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/app-quality.svg",
+    "alt": "",
+    "pageTitle": "Android devices | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "src": "https://developer.android.com/images/spot-icons/interface.svg",
+    "alt": "",
+    "pageTitle": "Android devices | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "src": "https://developer.android.com/images/spot-icons/tv.svg",
+    "alt": "",
+    "pageTitle": "Android devices | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/_O35_SDzJTuayo05pm7IyulNXU25ENdPP3xWfRgId6vbcSnzCC_zd3rfXLwX4G9vDd4-n7bYcD-eeM9EI6KmjxOvnXfhjxS5m2VlEkACsPoFRv6Tjg",
+    "alt": "Een rode tas wordt gebruikt als voorbeeld om te tonen hoe Circle to Search werkt.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/5RiDl3zhRbp-XBe6raftjtKG2Ql0Se4idmILdRKeHZhtPgsxyuZ21wKiHdp1o8Jjkpt2CG1dYI3OAEMSkDlFdj3305shjkQtyKhVoK3fLzEPAmaRXw",
+    "alt": "Een persoon die een microfoon vasthoudt en zingt wordt gebruikt als voorbeeld voor de functie om nummers te vinden van Circle to Search.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/Uxdk-hQxBLFvmsKDDo49vu-14lRLNFpA_UzoQ9MMYNreDqJrrJsbvYNAsz_dbT2E-J2gGne_7hjvWAgMlbRteiGEq4CfH3b4A9B8_67BT94eCLe2NQ",
+    "alt": "Een Mont Blanc-dessert met matcha is omcirkeld en wordt gebruikt als voorbeeld om te tonen hoe de AI-overzichtsfunctie werkt in Circle to Search.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/_O35_SDzJTuayo05pm7IyulNXU25ENdPP3xWfRgId6vbcSnzCC_zd3rfXLwX4G9vDd4-n7bYcD-eeM9EI6KmjxOvnXfhjxS5m2VlEkACsPoFRv6Tjg",
+    "alt": "Een rode tas wordt gebruikt als voorbeeld om te tonen hoe Circle to Search werkt.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/5RiDl3zhRbp-XBe6raftjtKG2Ql0Se4idmILdRKeHZhtPgsxyuZ21wKiHdp1o8Jjkpt2CG1dYI3OAEMSkDlFdj3305shjkQtyKhVoK3fLzEPAmaRXw",
+    "alt": "Een persoon die een microfoon vasthoudt en zingt wordt gebruikt als voorbeeld voor de functie om nummers te vinden van Circle to Search.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/Uxdk-hQxBLFvmsKDDo49vu-14lRLNFpA_UzoQ9MMYNreDqJrrJsbvYNAsz_dbT2E-J2gGne_7hjvWAgMlbRteiGEq4CfH3b4A9B8_67BT94eCLe2NQ",
+    "alt": "Een Mont Blanc-dessert met matcha is omcirkeld en wordt gebruikt als voorbeeld om te tonen hoe de AI-overzichtsfunctie werkt in Circle to Search.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/VxmJOzExF_trdlbHRjQwcI5MTr5AF6TY4oHipUBQFE6qa6Rp3wXxLuAyIDyJUBjOKe0gIN3ejCcFKnyzwYTqfHN6kO26bB5L_HLWfdfkt9hmK4rhZXr1",
+    "alt": "Een zacht oplichtende lichtstraal omlijnt een telefoon, met daarop een voorbeeld van een Gemini-melding.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/AwIWLntGcNBUcQBfu6Ao__kazAxUtDeYSFHaacDAbCgLTQ9gwqIvHo5M9UOfVAB-nr402F1zGOtXiLCF8JSDh8dsabFYBIv4pWbKO5NJ-D90HQrU6wk",
+    "alt": "Een vinger drukt op het icoon van Magische editor op een telefoon.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pKgRV36gWXIFgFibX8NFqDzAjzmHdTSvq-pRcwIgoQjVtVPxjU4xkryQejkUPmfAd0WRTNUXcSfu5zDvfWNYogAXmKuP4fuzb2DXC9HO0W5tNmWjGw",
+    "alt": "Google Pixel 9 Pro Fold",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/nh3xrkYCZQOkOX7MybEgOANu8_2XgsQmO9nuYzAYZDqPPiash-XrEVY_EBcSwOd1bOgIfZilMYU6aPFqwHwv9IX7oufDmenJRmUKANbtJ7YA2J9jWT8s",
+    "alt": "Google Pixel 9 Pro",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/eJYQ2UvtFv7IYgwsvbiAHI1qlip8XwZgyi_0oDwxBSfDgVlUCe5bYjH62jqZdtN_ib4wnZUgre51WR9RJCw7zHnXBwO-AxVd-pgi_wQKzEOY0j5bhP0",
+    "alt": "Google Pixel Fold",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/p2ztmI4FRm-VOv2R9ZzKrSE1uf-5zhpfjihlggXXGrCbxkHDmmvI7RA6kWS89JflwQusRaWk6wYbOQXs94AGMOBMfeJ54AhEVv021_-UWxcOG7CrMQk",
+    "alt": "Samsung Galaxy Z Flip5",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/JdV0OtOBIycAWaj57-SFnmorA7yZjN-SDr-4aEUKWkE5F_ffyXOI32-y-KOBk5VxWFfdBpXkkAvoJBGgH94UVKGNqWqgbRZ4WcdTXJ_zrvG3vKtA4MM",
+    "alt": "Samsung Galaxy Z Fold5",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/CcyifUM5W2xM_VrU42oq0Hic2wpgBHAgCEwZ2i7nMCYBxJ7dRJbph8qNhekakpbpWv5E6OT6yJC7dtaFiYp5UtPBKeaL_VC-d6YBcfOHT4gnB8_k5Q",
+    "alt": "Samsung Galaxy S23 Ultra-apparaat",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/yVueoz3rM339cNnz1l6XQV8DfwdPwcPYSAfVmyHzXN6W03pbxnpvpUA3MIw4OW5kOygpvqypwECVz4_CPcvzRGQBhr_bhNSWPQwQszzqZO6KObb8HiM",
+    "alt": "Google Pixel 9",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/SVcRDl98876b6fB4vgGrniRsL23iZVEvoFEl1RYpPwf2JCum-DdVD8LeXcHcx4ZNxh4m_zO-k3jFhYn_Pz2TyUY6YUyK6VIIm0vu0h8IbgmXknYkQG4",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/vrHvIHmzjOuOENGb4zb7eT9W72NtPPW4XUoXrFaYdxxBhmOknxjtqLEjG2VpclczPVSMSierLF6cATNMTvFOYbSzV-jxvLl-YF8jpfB_CFGGpPRyw6w",
+    "alt": "De achterkant van de Samsung Galaxy S24+ in het kobaltpaars tegen een lichtpaarse achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/b0rkBWx-NeYIpHUqqeDnK5tXmD-WB06B_8t5lCKDMVw2VoeK5PBA39NGWjnUMYw0kXoiwQlivn_p3uZcG0Qov4NiYnEOHSwBbtQQyHlOqpw90YRIcGY",
+    "alt": "De achterkant van de Samsung Galaxy S24 in het ambergeel tegen een lichtgele achtergrond. De camera\u0027s zijn de belangrijkste functie die wordt uitgelicht. Deze telefoon kan nu besteld worden.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/SVcRDl98876b6fB4vgGrniRsL23iZVEvoFEl1RYpPwf2JCum-DdVD8LeXcHcx4ZNxh4m_zO-k3jFhYn_Pz2TyUY6YUyK6VIIm0vu0h8IbgmXknYkQG4",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/vrHvIHmzjOuOENGb4zb7eT9W72NtPPW4XUoXrFaYdxxBhmOknxjtqLEjG2VpclczPVSMSierLF6cATNMTvFOYbSzV-jxvLl-YF8jpfB_CFGGpPRyw6w",
+    "alt": "De achterkant van de Samsung Galaxy S24+ in het kobaltpaars tegen een lichtpaarse achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/b0rkBWx-NeYIpHUqqeDnK5tXmD-WB06B_8t5lCKDMVw2VoeK5PBA39NGWjnUMYw0kXoiwQlivn_p3uZcG0Qov4NiYnEOHSwBbtQQyHlOqpw90YRIcGY",
+    "alt": "De achterkant van de Samsung Galaxy S24 in het ambergeel tegen een lichtgele achtergrond. De camera\u0027s zijn de belangrijkste functie die wordt uitgelicht. Deze telefoon kan nu besteld worden.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/SVcRDl98876b6fB4vgGrniRsL23iZVEvoFEl1RYpPwf2JCum-DdVD8LeXcHcx4ZNxh4m_zO-k3jFhYn_Pz2TyUY6YUyK6VIIm0vu0h8IbgmXknYkQG4",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/vrHvIHmzjOuOENGb4zb7eT9W72NtPPW4XUoXrFaYdxxBhmOknxjtqLEjG2VpclczPVSMSierLF6cATNMTvFOYbSzV-jxvLl-YF8jpfB_CFGGpPRyw6w",
+    "alt": "De achterkant van de Samsung Galaxy S24+ in het kobaltpaars tegen een lichtpaarse achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/b0rkBWx-NeYIpHUqqeDnK5tXmD-WB06B_8t5lCKDMVw2VoeK5PBA39NGWjnUMYw0kXoiwQlivn_p3uZcG0Qov4NiYnEOHSwBbtQQyHlOqpw90YRIcGY",
+    "alt": "De achterkant van de Samsung Galaxy S24 in het ambergeel tegen een lichtgele achtergrond. De camera\u0027s zijn de belangrijkste functie die wordt uitgelicht. Deze telefoon kan nu besteld worden.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/z0giIx5WB0IwZ3756-9N5e1muR-YsYurcYNJFh6EaHRb-tHpHyl09B_qkfAJDhoCH3BiFLToKjVdSKZ1bMzDwyv9VFNArmy0Lz-fokVAMKeYKko7QXCV",
+    "alt": "Een half omlaag geklapte Samsung Galaxy Z Flip5 met een levendig scherm.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/_O35_SDzJTuayo05pm7IyulNXU25ENdPP3xWfRgId6vbcSnzCC_zd3rfXLwX4G9vDd4-n7bYcD-eeM9EI6KmjxOvnXfhjxS5m2VlEkACsPoFRv6Tjg",
+    "alt": "Een rode tas wordt gebruikt als voorbeeld om te tonen hoe Circle to Search werkt.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/5RiDl3zhRbp-XBe6raftjtKG2Ql0Se4idmILdRKeHZhtPgsxyuZ21wKiHdp1o8Jjkpt2CG1dYI3OAEMSkDlFdj3305shjkQtyKhVoK3fLzEPAmaRXw",
+    "alt": "Een persoon die een microfoon vasthoudt en zingt wordt gebruikt als voorbeeld voor de functie om nummers te vinden van Circle to Search.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/Uxdk-hQxBLFvmsKDDo49vu-14lRLNFpA_UzoQ9MMYNreDqJrrJsbvYNAsz_dbT2E-J2gGne_7hjvWAgMlbRteiGEq4CfH3b4A9B8_67BT94eCLe2NQ",
+    "alt": "Een Mont Blanc-dessert met matcha is omcirkeld en wordt gebruikt als voorbeeld om te tonen hoe de AI-overzichtsfunctie werkt in Circle to Search.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/_O35_SDzJTuayo05pm7IyulNXU25ENdPP3xWfRgId6vbcSnzCC_zd3rfXLwX4G9vDd4-n7bYcD-eeM9EI6KmjxOvnXfhjxS5m2VlEkACsPoFRv6Tjg",
+    "alt": "Een rode tas wordt gebruikt als voorbeeld om te tonen hoe Circle to Search werkt.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/5RiDl3zhRbp-XBe6raftjtKG2Ql0Se4idmILdRKeHZhtPgsxyuZ21wKiHdp1o8Jjkpt2CG1dYI3OAEMSkDlFdj3305shjkQtyKhVoK3fLzEPAmaRXw",
+    "alt": "Een persoon die een microfoon vasthoudt en zingt wordt gebruikt als voorbeeld voor de functie om nummers te vinden van Circle to Search.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/Uxdk-hQxBLFvmsKDDo49vu-14lRLNFpA_UzoQ9MMYNreDqJrrJsbvYNAsz_dbT2E-J2gGne_7hjvWAgMlbRteiGEq4CfH3b4A9B8_67BT94eCLe2NQ",
+    "alt": "Een Mont Blanc-dessert met matcha is omcirkeld en wordt gebruikt als voorbeeld om te tonen hoe de AI-overzichtsfunctie werkt in Circle to Search.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/VxmJOzExF_trdlbHRjQwcI5MTr5AF6TY4oHipUBQFE6qa6Rp3wXxLuAyIDyJUBjOKe0gIN3ejCcFKnyzwYTqfHN6kO26bB5L_HLWfdfkt9hmK4rhZXr1",
+    "alt": "Een zacht oplichtende lichtstraal omlijnt een telefoon, met daarop een voorbeeld van een Gemini-melding.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/AwIWLntGcNBUcQBfu6Ao__kazAxUtDeYSFHaacDAbCgLTQ9gwqIvHo5M9UOfVAB-nr402F1zGOtXiLCF8JSDh8dsabFYBIv4pWbKO5NJ-D90HQrU6wk",
+    "alt": "Een vinger drukt op het icoon van Magische editor op een telefoon.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pKgRV36gWXIFgFibX8NFqDzAjzmHdTSvq-pRcwIgoQjVtVPxjU4xkryQejkUPmfAd0WRTNUXcSfu5zDvfWNYogAXmKuP4fuzb2DXC9HO0W5tNmWjGw",
+    "alt": "Google Pixel 9 Pro Fold",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/nh3xrkYCZQOkOX7MybEgOANu8_2XgsQmO9nuYzAYZDqPPiash-XrEVY_EBcSwOd1bOgIfZilMYU6aPFqwHwv9IX7oufDmenJRmUKANbtJ7YA2J9jWT8s",
+    "alt": "Google Pixel 9 Pro",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/eJYQ2UvtFv7IYgwsvbiAHI1qlip8XwZgyi_0oDwxBSfDgVlUCe5bYjH62jqZdtN_ib4wnZUgre51WR9RJCw7zHnXBwO-AxVd-pgi_wQKzEOY0j5bhP0",
+    "alt": "Google Pixel Fold",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/p2ztmI4FRm-VOv2R9ZzKrSE1uf-5zhpfjihlggXXGrCbxkHDmmvI7RA6kWS89JflwQusRaWk6wYbOQXs94AGMOBMfeJ54AhEVv021_-UWxcOG7CrMQk",
+    "alt": "Samsung Galaxy Z Flip5",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/JdV0OtOBIycAWaj57-SFnmorA7yZjN-SDr-4aEUKWkE5F_ffyXOI32-y-KOBk5VxWFfdBpXkkAvoJBGgH94UVKGNqWqgbRZ4WcdTXJ_zrvG3vKtA4MM",
+    "alt": "Samsung Galaxy Z Fold5",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/CcyifUM5W2xM_VrU42oq0Hic2wpgBHAgCEwZ2i7nMCYBxJ7dRJbph8qNhekakpbpWv5E6OT6yJC7dtaFiYp5UtPBKeaL_VC-d6YBcfOHT4gnB8_k5Q",
+    "alt": "Samsung Galaxy S23 Ultra-apparaat",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/yVueoz3rM339cNnz1l6XQV8DfwdPwcPYSAfVmyHzXN6W03pbxnpvpUA3MIw4OW5kOygpvqypwECVz4_CPcvzRGQBhr_bhNSWPQwQszzqZO6KObb8HiM",
+    "alt": "Google Pixel 9",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/SVcRDl98876b6fB4vgGrniRsL23iZVEvoFEl1RYpPwf2JCum-DdVD8LeXcHcx4ZNxh4m_zO-k3jFhYn_Pz2TyUY6YUyK6VIIm0vu0h8IbgmXknYkQG4",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/vrHvIHmzjOuOENGb4zb7eT9W72NtPPW4XUoXrFaYdxxBhmOknxjtqLEjG2VpclczPVSMSierLF6cATNMTvFOYbSzV-jxvLl-YF8jpfB_CFGGpPRyw6w",
+    "alt": "De achterkant van de Samsung Galaxy S24+ in het kobaltpaars tegen een lichtpaarse achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/b0rkBWx-NeYIpHUqqeDnK5tXmD-WB06B_8t5lCKDMVw2VoeK5PBA39NGWjnUMYw0kXoiwQlivn_p3uZcG0Qov4NiYnEOHSwBbtQQyHlOqpw90YRIcGY",
+    "alt": "De achterkant van de Samsung Galaxy S24 in het ambergeel tegen een lichtgele achtergrond. De camera\u0027s zijn de belangrijkste functie die wordt uitgelicht. Deze telefoon kan nu besteld worden.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/SVcRDl98876b6fB4vgGrniRsL23iZVEvoFEl1RYpPwf2JCum-DdVD8LeXcHcx4ZNxh4m_zO-k3jFhYn_Pz2TyUY6YUyK6VIIm0vu0h8IbgmXknYkQG4",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/vrHvIHmzjOuOENGb4zb7eT9W72NtPPW4XUoXrFaYdxxBhmOknxjtqLEjG2VpclczPVSMSierLF6cATNMTvFOYbSzV-jxvLl-YF8jpfB_CFGGpPRyw6w",
+    "alt": "De achterkant van de Samsung Galaxy S24+ in het kobaltpaars tegen een lichtpaarse achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/b0rkBWx-NeYIpHUqqeDnK5tXmD-WB06B_8t5lCKDMVw2VoeK5PBA39NGWjnUMYw0kXoiwQlivn_p3uZcG0Qov4NiYnEOHSwBbtQQyHlOqpw90YRIcGY",
+    "alt": "De achterkant van de Samsung Galaxy S24 in het ambergeel tegen een lichtgele achtergrond. De camera\u0027s zijn de belangrijkste functie die wordt uitgelicht. Deze telefoon kan nu besteld worden.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/SVcRDl98876b6fB4vgGrniRsL23iZVEvoFEl1RYpPwf2JCum-DdVD8LeXcHcx4ZNxh4m_zO-k3jFhYn_Pz2TyUY6YUyK6VIIm0vu0h8IbgmXknYkQG4",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/vrHvIHmzjOuOENGb4zb7eT9W72NtPPW4XUoXrFaYdxxBhmOknxjtqLEjG2VpclczPVSMSierLF6cATNMTvFOYbSzV-jxvLl-YF8jpfB_CFGGpPRyw6w",
+    "alt": "De achterkant van de Samsung Galaxy S24+ in het kobaltpaars tegen een lichtpaarse achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/b0rkBWx-NeYIpHUqqeDnK5tXmD-WB06B_8t5lCKDMVw2VoeK5PBA39NGWjnUMYw0kXoiwQlivn_p3uZcG0Qov4NiYnEOHSwBbtQQyHlOqpw90YRIcGY",
+    "alt": "De achterkant van de Samsung Galaxy S24 in het ambergeel tegen een lichtgele achtergrond. De camera\u0027s zijn de belangrijkste functie die wordt uitgelicht. Deze telefoon kan nu besteld worden.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/z0giIx5WB0IwZ3756-9N5e1muR-YsYurcYNJFh6EaHRb-tHpHyl09B_qkfAJDhoCH3BiFLToKjVdSKZ1bMzDwyv9VFNArmy0Lz-fokVAMKeYKko7QXCV",
+    "alt": "Een half omlaag geklapte Samsung Galaxy Z Flip5 met een levendig scherm.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
   {
     "src": "https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_160x56px.svg",
     "alt": "Google",
