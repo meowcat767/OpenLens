@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1777,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappush_max",
+    "title": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » heapq — Heap queue algorithm | Theme Auto Light Dark | heapq — Heap queue algorithm¶ Source code: Lib/heapq.py This module provides an implementation of the heap queue algorithm, also known as the priority queue algorithm. Min-heaps are binary trees for which every parent node has a value less than or equal to any of its children. We refer to this condition as the heap invariant. For min-heaps, this implementation uses lists for which heap[k] \u003c\u003d heap[2*k+1] and heap[k] \u003c\u003d heap[2*k+2] for all k for which the compared elements exist. Elements are counted from zero. The interesting property of a min-heap is that its smallest element is always the root, heap[0]. Max-heaps satisfy the reverse invariant: every parent node has a value greater than any of its children. These are implemented as lists for which maxheap[2*k+1] \u003c\u003d maxheap[k] and maxheap[2*k+2] \u003c\u003d maxheap[k] for all k for which the compared elements exist. The root, maxheap[0], contains the largest element; heap.sort(reverse\u003dTrue) maintains the max-heap invariant. The heapq API differs from textbook heap algorithms in two aspects: (a) We use zero-based indexing. This makes the relationship between the index for a node and the indexes for its children slightly less obvious, but is more suitable since Python uses zero-based indexing. (b) Textbooks often focus on max-heaps, due to their suitability for in-place sorting. Our implementation favors min-heaps as they better correspond to Python lists. These two aspects make it possible to view the heap as a regular Python list without surprises: heap[0] is the smallest item, and heap.sort() maintains the heap invariant! Like list.sort(), this implementation uses only the \u003c operator for comparisons, for both min-heaps and max-heaps. In the API below, and in this documentation, the unqualified term heap generally refers to a min-heap. The API for max-heaps is named using a _max suffix. To create a heap, use a list initialized as [], or transform an existing list into a min-heap or max-heap using the heapify() or heapify_max() functions, respectively. The following functions are provided for min-heaps: heapq.heapify(x)¶ Transform list x into a min-heap, in-place, in linear time. heapq.heappush(heap, item)¶ Push the value item onto the heap, maintaining the min-heap invariant. heapq.heappop(heap)¶ Pop and return the smallest item from the heap, maintaining the min-heap invariant. If the heap is empty, IndexError is raised. To access the smallest item without popping it, use heap[0]. heapq.heappushpop(heap, item)¶ Push item on the heap, then pop and return the smallest item from the heap. The combined action runs more efficiently than heappush() followed by a separate call to heappop(). heapq.heapreplace(heap, item)¶ Pop and return the smallest item from the heap, and also push the new item. The heap size doesn’t change. If the heap is empty, IndexError is raised. This one step operation is more efficient than a heappop() followed by heappush() and can be more appropriate when using a fixed-size heap. The pop/push combination always returns an element from the heap and replaces it with item. The value returned may be larger than the item added. If that isn’t desired, consider using heappushpop() instead. Its push/pop combination returns the smaller of the two values, leaving the larger value on the heap. For max-heaps, the following functions are provided: heapq.heapify_max(x)¶ Transform list x into a max-heap, in-place, in linear time. Added in version 3.14. heapq.heappush_max(heap, item)¶ Push the value item onto the max-heap heap, maintaining the max-heap invariant. Added in version 3.14. heapq.heappop_max(heap)¶ Pop and return the largest item from the max-heap heap, maintaining the max-heap invariant. If the max-heap is empty, IndexError is raised. To access the largest item without popping it, use maxheap[0]. Added in version 3.14. heapq.heappushpop_max(heap, item)¶ Push item on the max-heap heap, then pop and return the largest item from heap. The combined action runs more efficiently than heappush_max() followed by a separate call to heappop_max(). Added in version 3.14. heapq.heapreplace_max(heap, item)¶ Pop and return the largest item from the max-heap heap and also push the new item. The max-heap size doesn’t change. If the max-heap is empty, IndexError is raised. The value returned may be smaller than the item added. Refer to the analogous function heapreplace() for detailed usage notes. Added in version 3.14. The module also offers three general purpose functions based on heaps. heapq.merge(*iterables, key\u003dNone, reverse\u003dFalse)¶ Merge multiple sorted inputs into a single sorted output (for example, merge timestamped entries from multiple log files). Returns an iterator over the sorted values. Similar to sorted(itertools.chain(*iterables)) but returns an iterable, does not pull the d",
+    "scrapedAt": "2026-05-09 01:33:21.766619"
+  },
+  {
+    "id": 1776,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_MAP",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code o",
+    "scrapedAt": "2026-05-09 01:33:20.51259"
+  },
+  {
+    "id": 1775,
+    "url": "https://github.com/python/cpython/issues/127146",
+    "title": "Emscripten: Get test suite passing · Issue #127146 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Emscripten: Get test suite passing #127146 New issue Copy link New issue Copy link Closed Closed Emscripten: Get test suite passing#127146 Copy link Labels OS-emscriptentestsTests in the Lib/test dirTests in the Lib/test dir Description hoodmane opened on Nov 22, 2024 Issue body actions First I\u0027d like to get the test suite to run all the way through, then to pass. cc @freakboy3742 Update 2025/01/30 Emscripten 4.0.2 has fixes for all of the file system bugs I\u0027ve looked into. There are still problems with nonblocking I/O which I haven\u0027t looked into. Emscripten PRs: Make seek work on /dev/null emscripten-core/emscripten#22886 Make readlink system call not resolve the link emscripten-core/emscripten#23000 Trying to create a directory in a file should return ENOTDIR not EPERM emscripten-core/emscripten#23025 Refactor lookupPath to avoid recursion. NFC emscripten-core/emscripten#23017 Fix path resolution for symlinks emscripten-core/emscripten#23072 Make readdir on /proc/self/fd work emscripten-core/emscripten#23073 Add nodefs readdir handling for directories that contain exotic entries emscripten-core/emscripten#22925 Make fstat work on file descriptor with no name emscripten-core/emscripten#23058 When opening broken symlink with O_CREAT, create file at target emscripten-core/emscripten#23002 JS file system: distinguish between atime, mtime, and ctime emscripten-core/emscripten#22998 Fix renaming a file on top of an existing file in memfs and nodefs emscripten-core/emscripten#23074 Handle trailing % in strftime emscripten-core/emscripten#23045 Add wcsftime from musl. NFC emscripten-core/emscripten#23061 Return EISDIR when trying to create a path ending in / with open emscripten-core/emscripten#23135 Fix mkdir(\"a/b/..\") should return EEXIST emscripten-core/emscripten#23136 Make open O_CREATE mode 0 work emscripten-core/emscripten#23137 Ensure the ino we give to readdir matches the ino we give to stat emscripten-core/emscripten#23139 Correctly handle calls setting timestamp to 0 emscripten-core/emscripten#23310 Raise ENOSYS if AT_SYMLINK_NOFOLLOW is used with chmod or chown in nodefs emscripten-core/emscripten#23307 [FS] Allow pipes to be stat\u0027ed emscripten-core/emscripten#23306 [FS] lookupPath should throw an error on an empty string emscripten-core/emscripten#23366 [FS] Make fstat work on file descriptors with no name in node rawfs emscripten-core/emscripten#23364 [FS] Make fstatfs actually work emscripten-core/emscripten#23381 [FS] Make fstat work on file descriptors with no name in memfs emscripten-core/emscripten#23470 [FS] Make fstat work on file descriptors with no name in nodefs emscripten-core/emscripten#23480 JS FS: Don\u0027t return ELOOP on a path with a large number of ..\u0027s emscripten-core/emscripten#24591 Looking up ip for localhost should return 127.0.0.1 emscripten-core/emscripten#24593 Linked PRs gh-127146: Emscripten: Skip segfaults in test suite #127151 gh-127146: Mark test_bz2 tests with requires_subprocess #127562 gh-127146: Resolve some minor problems in Emscripten tests #127565 gh-127146: Some expected failures in Emscripten time tests #127843 gh-127146: Emscripten clean up test suite #127984 gh-127146: Emscripten Include compiler version in _PYTHON_HOST_PLATFORM #127992 gh-127146: Fix test_sysconfidata_json in Emscripten #128545 gh-127146: skip Emscripten tests with pending fixes #128549 gh-127146: Fix test_sysconfigdata_json for Emscripten #128556 gh-127146: Strip dash from Emscripten compiler version #128557 gh-127146: Update test skips for Emscripten 4.0.1 #129375 gh-127146: Skip test_readinto_non_blocking on Emscripten #129421 gh-127146: Don\u0027t compare userbase in test_sysconfig_json #129422 gh-127146: Update test skips for Emscripten 4.0.2 #129474 gh-127146: Fix Emscripten build with --pydebug #131672 gh-127146: Fix Emscripten test suite when run with -uall #132092 gh-127146: xfail more Emscripten stack overflows #134358 [3.14] gh-127146: xfail more Emscripten stack overflows (GH-134358) #134382 gh-127146: Allow ignored keys to be missing in test_sysconfig #135622 gh-127146: Emscripten: Fix pathlib glob_dotdot test #135624 gh-127146: Emscripten: Fix test failure due to missing os.link #135626 gh-127146: Emscripten: Skip test_url2pathname_resolve_host #135634 gh-127146: Enable large files on Emscripten #135635 [3.14] gh-127146: Allow ignored keys to be missing in test_sysconfig (GH-135622) #135650 [3.14] gh-127146: Emscripten: Skip test_url2pathname_resolve_host (GH-135634) #135651 [3.14] gh-127146: Emscripten: Fix test failure due to missing os.link",
+    "scrapedAt": "2026-05-09 01:33:19.26012"
+  },
+  {
+    "id": 1774,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetPythonHome",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-09 01:33:16.334681"
+  },
+  {
+    "id": 1773,
+    "url": "https://github.com/python/cpython/issues/101410",
+    "title": "Customize and improve error messages in the math module. · Issue #101410 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Customize and improve error messages in the math module. #101410 New issue Copy link New issue Copy link Closed Closed Customize and improve error messages in the math module.#101410 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Description rhettinger opened on Jan 29, 2023 Issue body actions The default error messages on a several math functions are mostly opaque and and unhelpful. \u003e\u003e\u003e sqrt(-5)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\nValueError: math domain error\n It would require some effort, but the code could be refactored to give a customized and helpful response, a least in common cases (falling back to the C error code message when the cause is not known): ValueError:  math.sqrt() expects a non-negative input.  See cmath.sqrt() for variation that supports complex numbers\nValueError:  math.log() requires a non-negative input.   \n Linked PRs gh-101410: Improve error messages in math module #101492 gh-101410: support custom messages for domain errors in the math module #124299 gh-101410: customize error messages for 1-arg math functions #129497 gh-101410: revert loghelper() change in 75f59bb for integer input #132625 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:33:15.042532"
+  },
+  {
     "id": 1772,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#related-changes",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -11968,26 +12003,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1773,
-    "url": "https://github.com/python/cpython/issues/101410"
-  },
-  {
-    "id": 1774,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetPythonHome"
-  },
-  {
-    "id": 1775,
-    "url": "https://github.com/python/cpython/issues/127146"
-  },
-  {
-    "id": 1776,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_MAP"
-  },
-  {
-    "id": 1777,
-    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappush_max"
   },
   {
     "id": 1778,
@@ -248570,10 +248585,495 @@ window.searchData = [
     "id": 387347,
     "url": "https://github.com/python/cpython/commits/main/Doc/whatsnew/3.14.rst",
     "parentUrl": "https://github.com/python/cpython/blob/main/Doc/whatsnew/3.14.rst?plain\u003d1"
+  },
+  {
+    "id": 390125,
+    "url": "https://github.com/python/cpython/pull/132625",
+    "parentUrl": "https://github.com/python/cpython/issues/101410"
+  },
+  {
+    "id": 390129,
+    "url": "https://github.com/python/cpython/pull/101492",
+    "parentUrl": "https://github.com/python/cpython/issues/101410"
+  },
+  {
+    "id": 390130,
+    "url": "https://github.com/python/cpython/pull/129497",
+    "parentUrl": "https://github.com/python/cpython/issues/101410"
+  },
+  {
+    "id": 390131,
+    "url": "https://github.com/python/cpython/issues/101410#issue-1561489923",
+    "parentUrl": "https://github.com/python/cpython/issues/101410"
+  },
+  {
+    "id": 390136,
+    "url": "https://github.com/python/cpython/issues/101410#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/101410"
+  },
+  {
+    "id": 390137,
+    "url": "https://github.com/python/cpython/issues/101410#top",
+    "parentUrl": "https://github.com/python/cpython/issues/101410"
+  },
+  {
+    "id": 390138,
+    "url": "https://github.com/python/cpython/pull/124299",
+    "parentUrl": "https://github.com/python/cpython/issues/101410"
+  },
+  {
+    "id": 390327,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23381",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390328,
+    "url": "https://github.com/emscripten-core/emscripten/pull/24591",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390329,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23061",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390331,
+    "url": "https://github.com/python/cpython/pull/129474",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390332,
+    "url": "https://github.com/python/cpython/pull/137815",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390333,
+    "url": "https://github.com/emscripten-core/emscripten/pull/24593",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390334,
+    "url": "https://github.com/python/cpython/pull/131672",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390335,
+    "url": "https://github.com/python/cpython/pull/135634",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390336,
+    "url": "https://github.com/python/cpython/pull/135635",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390337,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23307",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390338,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23306",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390339,
+    "url": "https://github.com/python/cpython/pull/134382",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390340,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23025",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390341,
+    "url": "https://github.com/python/cpython/pull/128549",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390342,
+    "url": "https://github.com/python/cpython/issues/127146#issue-2682969519",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390343,
+    "url": "https://github.com/python/cpython/pull/128545",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390344,
+    "url": "https://github.com/python/cpython/pull/127565",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390345,
+    "url": "https://github.com/python/cpython/pull/127562",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390346,
+    "url": "https://github.com/python/cpython/pull/129422",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390347,
+    "url": "https://github.com/python/cpython/pull/129421",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390348,
+    "url": "https://github.com/python/cpython/pull/135626",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390349,
+    "url": "https://github.com/python/cpython/pull/136717",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390350,
+    "url": "https://github.com/python/cpython/pull/135622",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390351,
+    "url": "https://github.com/python/cpython/pull/136711",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390352,
+    "url": "https://github.com/python/cpython/pull/136712",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390353,
+    "url": "https://github.com/python/cpython/pull/135624",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390354,
+    "url": "https://github.com/python/cpython/pull/135784",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390355,
+    "url": "https://github.com/python/cpython/pull/136510",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390356,
+    "url": "https://github.com/python/cpython/pull/136631",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390358,
+    "url": "https://github.com/emscripten-core/emscripten/pull/22925",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390359,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23136",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390360,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23058",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390361,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23135",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390362,
+    "url": "https://github.com/python/cpython/pull/127843",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390363,
+    "url": "https://github.com/emscripten-core/emscripten/pull/22886",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390364,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23139",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390365,
+    "url": "https://github.com/python/cpython/issues/127146#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390366,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23017",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390368,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23137",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390369,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23480",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390370,
+    "url": "https://github.com/python/cpython/pull/136708",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390371,
+    "url": "https://github.com/python/cpython/issues/127146#top",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390372,
+    "url": "https://github.com/python/cpython/pull/127992",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390373,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23000",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390374,
+    "url": "https://github.com/python/cpython/pull/129375",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390375,
+    "url": "https://github.com/python/cpython/pull/127151",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390376,
+    "url": "https://github.com/python/cpython/pull/136706",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390377,
+    "url": "https://github.com/python/cpython/pull/136509",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390378,
+    "url": "https://github.com/python/cpython/pull/136707",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390379,
+    "url": "https://github.com/python/cpython/pull/135655",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390380,
+    "url": "https://github.com/python/cpython/pull/136227",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390381,
+    "url": "https://github.com/python/cpython/pull/135733",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390382,
+    "url": "https://github.com/python/cpython/pull/136624",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390383,
+    "url": "https://github.com/python/cpython/pull/136745",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390386,
+    "url": "https://github.com/python/cpython/pull/135651",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390387,
+    "url": "https://github.com/python/cpython/pull/136740",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390388,
+    "url": "https://github.com/python/cpython/pull/135652",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390389,
+    "url": "https://github.com/python/cpython/pull/135653",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390390,
+    "url": "https://github.com/emscripten-core/emscripten/pull/22998",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390391,
+    "url": "https://github.com/python/cpython/pull/135650",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390392,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23366",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390393,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23002",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390394,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23045",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390395,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23364",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390396,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23073",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390397,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23072",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390399,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23074",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390400,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23470",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390401,
+    "url": "https://github.com/python/cpython/pull/135722",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390402,
+    "url": "https://github.com/python/cpython/pull/134358",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390403,
+    "url": "https://github.com/python/cpython/pull/135764",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390404,
+    "url": "https://github.com/python/cpython/pull/136699",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390405,
+    "url": "https://github.com/python/cpython/pull/132092",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390406,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22OS-emscripten%22",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390407,
+    "url": "https://github.com/emscripten-core/emscripten/pull/23310",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390409,
+    "url": "https://github.com/python/cpython/pull/127984",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390410,
+    "url": "https://github.com/python/cpython/pull/128557",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 390411,
+    "url": "https://github.com/python/cpython/pull/128556",
+    "parentUrl": "https://github.com/python/cpython/issues/127146"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/heapq.html#heapq.heappush_max"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/heapq.html#heapq.heappush_max"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-BUILD_MAP"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-BUILD_MAP"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?v\u003d4\u0026size\u003d80",
+    "alt": "@hoodmane",
+    "pageTitle": "Emscripten: Get test suite passing · Issue #127146 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?v\u003d4\u0026size\u003d48",
+    "alt": "@hoodmane",
+    "pageTitle": "Emscripten: Get test suite passing · Issue #127146 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetPythonHome"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetPythonHome"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?u\u003de11cfc20d0f21ef549393dfe80ea91c42fbc9928\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@rhettinger",
+    "pageTitle": "Customize and improve error messages in the math module. · Issue #101410 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101410"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?u\u003de11cfc20d0f21ef549393dfe80ea91c42fbc9928\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@rhettinger",
+    "pageTitle": "Customize and improve error messages in the math module. · Issue #101410 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101410"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
