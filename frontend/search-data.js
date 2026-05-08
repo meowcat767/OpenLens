@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 552,
+    "url": "https://www.python.org/success-stories/simulating-biomolecules-with-python/",
+    "title": "Simulating Biomolecules with Python | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Simulating Biomolecules with Python Written by Konrad Hinsen, Centre National de la Recherche Scientifique Background The Molecular Modeling Toolkit (MMTK) is a open source Python library for molecular modeling and simulation with a focus on biomolecular systems, written in a mixture of Python and C. It provides standard techniques such as Molecular Dynamics or normal mode calculations in a ready-to-use form, but also provides a basis of low-level operations on top of which new techniques can easily be implemented. I started developing MMTK in 1996. I had some experience with mainstream simulation packages for biomolecules that were written in Fortran and had their origins in the 1970s. Those packages were too cumbersome to use and in particular to modify and extend. Since my research work is focused on the development of new simulation techniques, modifiability was a particularly important criterion. Dynamic deformation of the chaperon protein GroEL, obtained with the MMTK-based interactive DomainFinder (Zoom in) Characteristic features of biomolecular simulations that had to be taken into account are the long execution times of some simulation techniques (several weeks are not uncommon) and the complexity of the data structures describing biomolecules. Choice of languages The choice of Python plus C was made after an evaluation of various languages. I was rapidly convinced that only a mixture of a high-level interpreted language and a CPU-efficient compiled language could meet my seemingly conflicting requirements of rapid development and efficient execution. For the high-level part, Tcl was ruled out because it could not handle the complex data structures required by the project. Perl was ruled out because of its unpleasant syntax (this was of course a subjective choice), and because of its badly integrated OO mechanism. Python scored high in readability, OO support, library support, and integration with compiled languages. Moreover, Numerical Python had just been released and was an important building block for my developments. For the low-level part, Fortran 77 was eliminated because of its archaic character, lack of memory management, and portability issues in C-Fortran interfacing. C++ was a candidate, but ultimately not chosen because portability between compilers was still an issue in 1996, and because I considered the benefits of C++ for the small amount of compiled code in the project insufficient to compensate for the complexity of the language. Library architecture The architecture of MMTK is clearly Python-driven. To the user, it presents itself as a pure Python library. The C code in MMTK was written from scratch in the form of Python extension modules that only handle the few time-critical aspects: evaluation of interaction energies, and long-running iterative algorithms such as energy minimization and Molecular Dynamics, which run without any Python-related overhead. Extensive use is made of Numerical Python, LAPACK, and the netCDF library. MMTK provides multi-threading support for shared memory parallel machines, and MPI-based parallelization for distributed memory machines. The biggest part of MMTK is a set of classes that describe atoms and molecules and manage a database of molecules and fragments. Biomolecules (proteins, DNA, and RNA) are handled by subclasses of the generic Molecule class. Another important subset of MMTK implements schemas for calculating interaction energies (called somewhat incorrectly \"force fields\" in the simulation community). I/O-related code is the third pillar of MMTK. It reads and writes a few popular file formats plus its own trajectory format that is based on the netCDF format. Contrary to other trajectory file formats, MMTK\u0027s netCDF files are both binary (and thus compact) files and portable between platforms. and moreover permit efficient access to nearly arbitrary subsets. Snapshot from a Molecular Dynamics simulation of lysozyme in water, run with MMTK. Zoom in Modularity and extendibility were important design criteria. Algorithms, energy terms, and specializations of the data types can be added without having to modify the MMTK code. The design of MMTK as a library, rather than a closed program, is essential for many applications. An important aspect of biomolecular simulations is visualization. MMTK delegates this task to external tools. Two visualization programs, VMD and PyMOL, are particularly well integrated. Most MMTK users access the library from simple Python scripts, but MMTK has also been used as a basis for end-user programs with graphical user interfaces, such as nMOLDYN and DomainFinder. MMTK currently consists of about 18,000 lines of Python code, 12,000 lines of hand-written C code, and some machine-generated C code. The majority of the code was developed by one person dur",
+    "scrapedAt": "2026-05-09 00:45:38.869012"
+  },
+  {
+    "id": 551,
+    "url": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/",
+    "title": "Python Powered CrossCompute Report Automation for eReliability Tracker Leads to Cost and Time Savings for the American Public Power Association | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Powered CrossCompute Report Automation for eReliability Tracker Leads to Cost and Time Savings for the American Public Power Association Written by Roy Hyunjin Han, CrossCompute Overview The American Public Power Association eReliability Tracker is an award-winning Pyramid web application that helps electric utilities track performance metrics. As part of their subscription benefits, utilities receive a Reliability Benchmarking Report that is custom tailored to each utility using eReliability Tracker data. In this case study, we show how the American Public Power Association used Python + Markdown + CSS + JupyterLab + CrossCompute to transform a three to six month labor intensive process into a highly flexible automated PDF report that can leverage the full analytical power of Python. The outcome is that over five hundred utilities can now receive valuable reliability metrics more frequently to improve their services. The eReliability Tracker Team uses the time saved to innovate new analytics that help utilities deliver power to their communities. Challenge The Reliability Benchmarking Report was originally developed in Microsoft Access and had been faithfully and successfully delivered for many years to eReliability Tracker subscribers. However, as the number of subscriptions multiplied, the semi-manual click intensive process to generate a custom report for each utility became increasingly arduous. Changes in the underlying data could trigger a cascade of tedious updates to the tables and charts in each utility\u0027s report and significantly delay the iterative inter-departmental review process. Solution In 2021, an analyst in the APPA Office of Data Analytics decided to recreate the eReliability Tracker Benchmarking Report using Python. Within the next two months, she was able to automate all ten sections of the report in JupyterLab using the CrossCompute Report Automation Framework. She used numpy and pandas to compute the various statistics and matplotlib and seaborn to generate the plots. To style the report, the analyst used standard Markdown + CSS. Outcome For every change in the underlying dataset or downstream computation, the analyst is now able to regenerate custom PDF reports for all 500 utilities in about an hour, which means she can iterate and innovate faster. Subsequent iterations of the report can take advantage of the rich library of free and open source computational and visualization packages available in Python. All ten sections of the report are also deployed internally as web-based CrossCompute tools so that non-technical users can drag and drop new data and regenerate the report\u0027s tables and charts without touching code. Acknowledgments Thank you to the American Public Power Association, U.S. Department of Energy, Python Software Foundation, Tampa Bay Innovation Center and CrossCompute for making this work possible. Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-09 00:45:37.648662"
+  },
+  {
+    "id": 550,
+    "url": "https://www.python.org/success-stories/category/engineering/",
+    "title": "Engineering | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Engineering Engineering Python for Collaborative Robots Abridging clinical conversations using Python Getting to Know Python Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-09 00:45:36.434197"
+  },
+  {
+    "id": 549,
+    "url": "https://www.python.org/success-stories/category/government/",
+    "title": "Government | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Government Government Python Powered CrossCompute Report Automation for eReliability Tracker Leads to Cost and Time Savings for the American Public Power Association Saving the world with Open Data and Python Frequentis TAPtools® - Python in Air Traffic Control Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-09 00:45:35.197446"
+  },
+  {
+    "id": 548,
+    "url": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/",
+    "title": "Python for Collaborative Drug Discovery | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python for Collaborative Drug Discovery Written by Scott Boyer, Andrew Dalke, and Pierre Bruneau, AstraZeneca Introduction AstraZeneca is one of the world\u0027s leading pharmaceutical companies. With over 54,000 employees world-wide, it provides innovative, effective medicines designed to fight cancer, provide pain control, heal infection, and fight diseases of the cardiovascular, central nervous, gastrointestinal, and respiratory systems. Finding a new drug often takes over a decade and more than $800 million. A big problem early in the process is identifying those candidates more likely to be good drugs from the vast universe of possible molecules. Computational chemists have developed many techniques to predict molecular properties. These can be used to evaluate the likelihood that a molecule will be stable in the stomach (for pills that are swallowed), and that it can travel through the blood stream, cross the cell membrane, and eventually be broken down and eliminated, all without being too toxic to the body. If these computational techniques were good enough there would be no need to do actual experiments. But today\u0027s computer models cannot fully characterize a molecule\u0027s behavior in the body, nor replace the intuition of a skilled pharmaceutical chemist. Real molecules must still be tested in the laboratory to see how they react. To save time and money on laboratory work, experimental chemists use computational models to narrow the field of good drug candidates, while also verifying that the candidates to be tested are not simple variations of each other\u0027s basic chemical structure. Process Improvements Needed Much of the work on drug identification actually takes place through collaboration between many research groups scattered around the world. As part of this process, experimental chemists send a list of compounds to the computational chemist, who works on the data set and sends back the results. Historically, experimental chemists were forced to rely on computational chemists and other staff to run computer predictions. Each prediction technique required running a separate program, some commercial and others developed in-house by different groups around the company, and each program had its own set of inputs, options, configurations, and failure behaviors. An experimental chemist usually didn\u0027t have the training to work with them, which meant that the computational chemists were forced to take time out of their work on developing new techniques to run routine models. In 2000, AstraZeneca wanted to improve this process so that experimental chemists could make better computational predictions on their own, and so that the research of the computational chemists could progress at a faster rate, and make its way into the lab more quickly. Pierre Bruneau, a Principal Scientist at AstraZeneca, had worked on this problem while at Zeneca, which merged to form AstraZeneca. He developed a web-based interface called H2X, named after the allied navigation systems used during the second world war. H2X was based on an in-house molecular property calculator called Drone. This system used a Perl script which computed some of the simpler molecular properties by calling the appropriate prediction program, usually through a wrapper written in Perl, csh, or a domain specific control language. Python Chosen H2X using Drone was a successful experiment and it was used by many people. In 2001 AstraZeneca decided to develop it further and brought in Andrew Dalke as a consultant, to improve the back-end code by making it more robust, extensible, and maintainable. Andrew, a well-known advocate for Python in computational chemistry and biology, convinced the group that Python was the appropriate language for the next generation back-end, which was named PyDrone. Python was chosen for this work because it is one of the best languages available for physical scientists, that is, for people who do not have a computer science background. Many other powerful and expressive high level languages exist, including Perl, Lisp, Scheme, Ruby, CAML, and Haskell. Of all these, Python is one of the few that is based on research into usability and the factors that make a programming language easy to learn and use. Yet Python was also designed to solve real-world problems faced by an expert programmer. The result is a language that scales well from small scripts written by a chemist to large packages written by a software developer. Python\u0027s Error Handling Improves Robustness The first iteration of PyDrone refactored the existing Perl code into more appropriate functions, classes, and modules while translating the code base into Python. Refactoring the Perl code without moving to Python would have produced comparable architectural results, but Python\u0027s explicit error handling and str",
+    "scrapedAt": "2026-05-09 00:45:33.97964"
+  },
+  {
     "id": 546,
     "url": "https://www.python.org/success-stories/why-python-matters-for-the-vr-community/",
     "title": "Why Python Matters for the VR Community | Our Success Stories | Python.org",
@@ -3773,26 +3808,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 548,
-    "url": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/"
-  },
-  {
-    "id": 549,
-    "url": "https://www.python.org/success-stories/category/government/"
-  },
-  {
-    "id": 550,
-    "url": "https://www.python.org/success-stories/category/engineering/"
-  },
-  {
-    "id": 551,
-    "url": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/"
-  },
-  {
-    "id": 552,
-    "url": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
   },
   {
     "id": 553,
@@ -96319,10 +96334,73 @@ window.searchData = [
     "id": 68525,
     "url": "https://worldviz.com",
     "parentUrl": "https://www.python.org/success-stories/why-python-matters-for-the-vr-community/"
+  },
+  {
+    "id": 68533,
+    "url": "http://www.astrazeneca.com/",
+    "parentUrl": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/"
+  },
+  {
+    "id": 68543,
+    "url": "https://www.python.org/m/about/success/astra/property_manager.jpg",
+    "parentUrl": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/"
+  },
+  {
+    "id": 68577,
+    "url": "https://crosscompute.com",
+    "parentUrl": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/"
+  },
+  {
+    "id": 68579,
+    "url": "https://www.publicpower.org/reliability-tracking",
+    "parentUrl": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/"
+  },
+  {
+    "id": 68580,
+    "url": "https://github.com/crosscompute",
+    "parentUrl": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/"
+  },
+  {
+    "id": 68590,
+    "url": "http://dirac.cnrs-orleans.fr/MMTK/",
+    "parentUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
+  {
+    "id": 68591,
+    "url": "http://dirac.cnrs-orleans.fr/DomainFinder/",
+    "parentUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
+  {
+    "id": 68593,
+    "url": "https://www.python.org/m/about/success/mmtk/groel_deformation.tiff",
+    "parentUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
+  {
+    "id": 68597,
+    "url": "https://www.python.org/m/about/success/mmtk/lysozyme_with_solvent.tiff",
+    "parentUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.python.org/m/about/success/mmtk/groel_deformation-web.jpg",
+    "alt": "Example MMTK Molecular Model",
+    "pageTitle": "Simulating Biomolecules with Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/mmtk/lysozyme_with_solvent-web.jpg",
+    "alt": "Example MMTK Molecular Model",
+    "pageTitle": "Simulating Biomolecules with Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/astra/property_manager_web.gif",
+    "alt": "Architecture of the Property Manager",
+    "pageTitle": "Python for Collaborative Drug Discovery | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/"
+  },
   {
     "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/ep-sponsor-1.png",
     "alt": "EuroPython Arm Sponsor",
