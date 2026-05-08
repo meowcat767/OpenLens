@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 674,
+    "url": "http://wiki.python.org/moin/IntroductoryBooks",
+    "title": "IntroductoryBooks",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. The books on this page are all general introductions to the Python language. Most of these books will contain a few chapters on particular applications such as GUI interfaces or Web programming, but won\u0027t go into great detail on any one topic; refer to the PythonBooks page for lists of application-specific books. Experienced programmers who prefer a brief and condensed introduction should look at the list of ReferenceBooks. Python from Scratch By Nilo Ney Coutinho Menezes Logikraft/Novatec ISBN: 978-85-7522-949-1 (Paperback), 978-85-7522-950-7 (Hardcover), 978-85-7522-951-4 (E-book) Publication May/June, 2025 Book Overview This book is designed specifically with programming beginners in mind. Basic programming concepts — such as expressions, variables, loops, decisions, lists, dictionaries, sets, functions, files, classes, objects, SQLite 3 databases, regular expressions and graphical interfaces with Tkinter — are clearly presented one by one with examples and exercises to illustrate. The book aims to explore computer programming as an everyday tool. It can be read during an introduction to computer programming course or used as a study guide for self-learners. Only basic computer knowledge, such as typing texts, opening and saving files, is needed to start the course. All software used in the book can be downloaded for free and runs on Windows, Linux, and macOS. Although Python (version +3.13) is a very powerful language full of modern programming features, this book focuses primarily on programming logic and teaching how to program. Some language features were not used in order to favor programming logic exercises and offer the reader broader preparation for other languages. Powerful language features such as generators, sets, lambda functions and comprehensions are presented, and the reader will find various notes and explanations of Python-specific features in addition to programming logic. Who this book is written for: Students who want to learn programming on their own, the book was written so you can gradually learn to program. The first chapters explain the basic programming concepts in a logical order, with practical exercises. All you need to know is how to use a computer and a browser (Firefox, Edge, Safari, or Google Chrome). The book starts by showing how to download and install Python on Windows, but it also covers Linux (Ubuntu) and macOS. Special attention was given to conditional structures (if), loops (while), and functions (including recursion). The book also covers string manipulation (text processing), so you learn to work with variables containing text and prepare to write more complete programs. At the end, we cover files, creating simple web pages, a light introduction to object-oriented programming, regular expressions, and graphical interfaces. The Quick Python Book, 4th Edition By Naomi Ceder Manning Publications Co ISBN 9781633436336 580 pages Publication Feb, 2025 Sample chapters, liveBook, and source code available on the Manning Publications web site: The Quick Python Book, 4th Edition Book overview: For over 25 years, The Quick Python Book has been one of the best Python books money can buy. It concisely covers programming basics, while introducing Python\u0027s comprehensive standard library and unique features in depth and detail. In this fourth edition, you’ll find new coverage of AI coding tools like Copilot and Google\u0027s Colaboratory (Colab), and develop a mindset that can make the most of AI. The Quick Python Book, Fourth Edition includes: Python syntax, data structures, and best practices Python as an object oriented language Common Python libraries Basic data handling with Python Using AI code generation tools with Python Whether you’re new to Python or looking to advance your basic skills, The Quick Python Book, Fourth Edition will get you writing effective Python code fast. Python authority and former Chair of the Python Software Foundation Board or Directors Naomi Ceder has returned to author this extensively revised fourth edition. With the personal touch of a skilled teacher, Naomi beautifully balances details of the language with the insights and advice you need to handle any task. Who this book is written for: This book is for someone who knows how to program, who whats to learn Python quickly and efficiently. Python knowledge building step by step from the basics to the first desktop application Dr. Csaba Dobreff Released 2025 1819 Pages Book Overview The aim of this book is to take the reader from the basic knowledge of computing essentials for programming in Py",
+    "scrapedAt": "2026-05-09 00:48:57.008365"
+  },
+  {
+    "id": 672,
+    "url": "http://docs.python.org/3/tutorial/",
+    "title": "The Python Tutorial — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Tutorial | Theme Auto Light Dark | The Python Tutorial¶ Tip This tutorial is designed for programmers that are new to the Python language, not beginners who are new to programming. Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms. The Python interpreter and the extensive standard library are freely available in source or binary form for all major platforms from the Python website, https://www.python.org/, and may be freely distributed. The same site also contains distributions of and pointers to many free third party Python modules, programs and tools, and additional documentation. The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C). Python is also suitable as an extension language for customizable applications. This tutorial introduces the reader informally to the basic concepts and features of the Python language and system. Be aware that it expects you to have a basic understanding of programming in general. It helps to have a Python interpreter handy for hands-on experience, but all examples are self-contained, so the tutorial can be read off-line as well. For a description of standard objects and modules, see The Python Standard Library. The Python Language Reference gives a more formal definition of the language. To write extensions in C or C++, read Extending and Embedding the Python Interpreter and Python/C API reference manual. There are also several books covering Python in depth. This tutorial does not attempt to be comprehensive and cover every single feature, or even every commonly used feature. Instead, it introduces many of Python’s most noteworthy features, and will give you a good idea of the language’s flavor and style. After reading it, you will be able to read and write Python modules and programs, and you will be ready to learn more about the various Python library modules described in The Python Standard Library. The Glossary is also worth going through. 1. Whetting Your Appetite 2. Using the Python Interpreter 2.1. Invoking the Interpreter 2.1.1. Argument Passing 2.1.2. Interactive Mode 2.2. The Interpreter and Its Environment 2.2.1. Source Code Encoding 3. An Informal Introduction to Python 3.1. Using Python as a Calculator 3.1.1. Numbers 3.1.2. Text 3.1.3. Lists 3.2. First Steps Towards Programming 4. More Control Flow Tools 4.1. if Statements 4.2. for Statements 4.3. The range() Function 4.4. break and continue Statements 4.5. else Clauses on Loops 4.6. pass Statements 4.7. match Statements 4.8. Defining Functions 4.9. More on Defining Functions 4.9.1. Default Argument Values 4.9.2. Keyword Arguments 4.9.3. Special parameters 4.9.3.1. Positional-or-Keyword Arguments 4.9.3.2. Positional-Only Parameters 4.9.3.3. Keyword-Only Arguments 4.9.3.4. Function Examples 4.9.3.5. Recap 4.9.4. Arbitrary Argument Lists 4.9.5. Unpacking Argument Lists 4.9.6. Lambda Expressions 4.9.7. Documentation Strings 4.9.8. Function Annotations 4.10. Intermezzo: Coding Style 5. Data Structures 5.1. More on Lists 5.1.1. Using Lists as Stacks 5.1.2. Using Lists as Queues 5.1.3. List Comprehensions 5.1.4. Nested List Comprehensions 5.2. The del statement 5.3. Tuples and Sequences 5.4. Sets 5.5. Dictionaries 5.6. Looping Techniques 5.7. More on Conditions 5.8. Comparing Sequences and Other Types 6. Modules 6.1. More on Modules 6.1.1. Executing modules as scripts 6.1.2. The Module Search Path 6.1.3. “Compiled” Python files 6.2. Standard Modules 6.3. The dir() Function 6.4. Packages 6.4.1. Importing * From a Package 6.4.2. Intra-package References 6.4.3. Packages in Multiple Directories 7. Input and Output 7.1. Fancier Output Formatting 7.1.1. Formatted String Literals 7.1.2. The String format() Method 7.1.3. Manual String Formatting 7.1.4. Old string formatting 7.2. Reading and Writing Files 7.2.1. Methods of File Objects 7.2.2. Saving structured data with json 8. Errors and Exceptions 8.1. Syntax Errors 8.2. Exceptions 8.3. Handling Exceptions 8.4. Raising Exceptions 8.5. Exception Chaining 8.6. User-defined Exceptions 8.7. Defining Clean-up Actions 8.8. Predefined Clean-up Actions 8.9. Raising and Handling Multiple Unrelated Exceptions 8.10. Enriching Exceptions with Notes 9. Classes 9.1. A Word About Names and Objects 9.2. Python Scopes and Namespaces 9.2.1. Scopes and Namespaces Example 9.3. A First Look at Classes 9.3.1. Class Definition Syntax 9.3.2. Class Objects 9.3.3. Instance Objects 9.3.4. Method Objects 9.3.5. Class and Instance Variables 9.4. Random Remarks 9.5. Inheritance 9.5.1. Multiple Inheritance 9.6. Private Variables",
+    "scrapedAt": "2026-05-09 00:48:55.071867"
+  },
+  {
+    "id": 671,
+    "url": "http://www.google.com",
+    "title": "Google",
+    "content": "Klik hier als je niet binnen enkele seconden wordt omgeleid. OverStore Waar denk je aan? Afbeelding uploaden Bestand uploaden Snel Pro AI-modus Meer bekijken Verwijderen Verwijderen Ongepaste voorspellingen melden Google aangeboden in: Frysk Nederland AdverterenBedrijf Hoe Google Zoeken werkt Ons derde decennium van klimaatactie: dit is wat we doen PrivacyVoorwaarden Instellingen Zoekinstellingen Geavanceerd zoeken Je gegevens in Google Zoeken Personalisatie en cookies Zoekgeschiedenis Google Zoeken Help Feedback sturen Donker thema: uit nl ‪Nederlands‬ ‪Deutsch‬ ‪English (United Kingdom)‬ ‪Español (España)‬ ‪Français (France)‬ ‪Italiano‬ Alle talen ‪Afrikaans‬ ‪azərbaycan‬ ‪bosanski‬ ‪català‬ ‪Čeština‬ ‪Cymraeg‬ ‪Dansk‬ ‪Deutsch‬ ‪eesti‬ ‪English (United Kingdom)‬ ‪English (United States)‬ ‪English‬ ‪Español (España)‬ ‪Español (Latinoamérica)‬ ‪euskara‬ ‪Filipino‬ ‪Français (Canada)‬ ‪Français (France)‬ ‪Gaeilge‬ ‪galego‬ ‪Hrvatski‬ ‪Indonesia‬ ‪isiZulu‬ ‪íslenska‬ ‪Italiano‬ ‪Kiswahili‬ ‪latviešu‬ ‪lietuvių‬ ‪magyar‬ ‪Melayu‬ ‪norsk‬ ‪o‘zbek‬ ‪polski‬ ‪Português (Brasil)‬ ‪Português (Portugal)‬ ‪română‬ ‪shqip‬ ‪Slovenčina‬ ‪slovenščina‬ ‪srpski (latinica)‬ ‪Suomi‬ ‪Svenska‬ ‪Tiếng Việt‬ ‪Türkçe‬ ‪Ελληνικά‬ ‪беларуская‬ ‪български‬ ‪кыргызча‬ ‪македонски‬ ‪монгол‬ ‪Русский‬ ‪српски (ћирилица)‬ ‪Українська‬ ‪ქართული‬ ‪қазақ тілі‬ ‪հայերեն‬ ‫עברית‬ ‫اردو‬ ‫العربية‬ ‫فارسی‬ ‪አማርኛ‬ ‪नेपाली‬ ‪मराठी‬ ‪हिन्दी‬ ‪বাংলা‬ ‪ਪੰਜਾਬੀ‬ ‪ગુજરાતી‬ ‪தமிழ்‬ ‪తెలుగు‬ ‪ಕನ್ನಡ‬ ‪മലയാളം‬ ‪සිංහල‬ ‪ไทย‬ ‪ລາວ‬ ‪မြန်မာ‬ ‪ខ្មែរ‬ ‪한국어‬ ‪中文（香港）‬ ‪日本語‬ ‪简体中文‬ ‪繁體中文‬ Inloggen Voordat je verdergaat naar Google We gebruiken cookies en gegevens voor het volgende: Google-services leveren en onderhouden Uitval bijhouden en bescherming bieden tegen spam, fraude en misbruik Doelgroepbetrokkenheid en sitestatistieken meten om inzicht te krijgen in hoe onze services worden gebruikt en de kwaliteit van die services te verbeteren Als je Alles accepteren kiest, gebruiken we cookies en gegevens ook voor het volgende: Nieuwe services ontwikkelen en verbeteren Advertenties laten zien en de effectiviteit ervan meten Gepersonaliseerde content laten zien (afhankelijk van je instellingen) Gepersonaliseerde advertenties laten zien (afhankelijk van je instellingen) Als je Alles afwijzen kiest, gebruiken we cookies niet voor deze aanvullende doeleinden. Niet-gepersonaliseerde content wordt beïnvloed door factoren zoals de content die je op dat moment bekijkt, activiteit in je actieve zoeksessie en je locatie. Niet-gepersonaliseerde advertenties worden beïnvloed door de content die je op dat moment bekijkt en je algemene locatie. Gepersonaliseerde content en advertenties kunnen ook relevantere resultaten, aanbevelingen en op jou toegespitste advertenties omvatten die zijn gebaseerd op eerdere activiteit van deze browser, zoals uitgevoerde Google-zoekopdrachten. We gebruiken cookies en gegevens ook om te zorgen dat de functionaliteit geschikt is voor je leeftijd, als dit relevant is. Selecteer Meer opties om meer informatie te bekijken, waaronder over hoe je je privacyinstellingen beheert. Je kunt ook altijd naar g.co/privacytools gaan. Alles afwijzen Alles accepteren Meer opties Privacy · Voorwaarden Google-apps",
+    "scrapedAt": "2026-05-09 00:48:53.905295"
+  },
+  {
+    "id": 670,
+    "url": "http://code.activestate.com/recipes/langs/python/",
+    "title": "Popular Python recipes « ActiveState Code",
+    "content": "Skip to Search Skip to Navigation Skip to Content Community | Code | Docs | Downloads ▼ Perl Python Tcl Komodo IDE | more ▼ Lists Support PPM Index PyPM Index Welcome, guest | Sign In | My Account | Store | Cart ActiveState Code » Recipes Languages Tags Authors Sets Popular Python recipes Tags: Recipe 1 to 20 of 4591 « Prev 1 2 3 ... 230 Next » 261k views 2 score Uno (Text-Based) Python / artificial_intelligence, cards, game, text_game, uno / by Brandon Martin (6 years ago) 99k views 2 score Insert a Text Box in a PDF page (fitz / PyMuPDF) Python / fitz, mupdf, pdf, textbox / by Jorj X. McKie (6 years ago) 95k views 2 score Frame with border color for Tkinter Python / border, color, frame, tkinter / by Miguel Martínez López (7 years ago) 395k views 3 score The Game of Tic Tac Toe in Python Python / beginner, game, python / by Captain DeadBones (10 years ago) 77k views 2 score Inserting Images on PDF Pages Python / fitz, mupdf, pdf, pymupdf / by Jorj X. McKie (6 years ago) 76k views 2 score Convert Microsot Excel (XLSX) to PDF with Python and xtopdf Python / excel, formats, openpyxl, pdf, python, xlsx, xtopdf / by Vasudev Ram (8 years ago) 161k views 2 score Implementing function-based callbacks in Python Python / callback, function, functions, python, techniques / by Vasudev Ram (7 years ago) 38k views 2 score Implementing class-based callbacks in Python Python / callbacks, classes, functions, methods, objects, programming, python / by Vasudev Ram (7 years ago) 88k views 2 score Create Calendars on PDF with a few lines Python / calendar, fitz, mupdf, pdf, pymupdf / by Jorj X. McKie (6 years ago, revision 2) 96k views 3 score Tkinter table with scrollbars Python / scrollbars, table, tkinter / by Miguel Martínez López (6 years ago, revision 13) 65k views 3 score How to handle PDF embedded files with PyMuPDF Python / embedded_files, fitz, mupdf, pdf, pymupdf / by Jorj X. McKie (6 years ago, revision 3) 94k views 2 score How to create a simple PDF Pie Chart using fitz / PyMuPDF Python / fitz, pdf_generation / by Jorj X. McKie (6 years ago) 60k views 1 score Equally-spaced numbers (linspace) Python / float, linspace, range, spread / by Andrew Barnert (9 years ago) 56k views 2 score Inserting pages into a PDF with PyMuPDF Python / fitz, mupdf, pdf, text_conversion / by Jorj X. McKie (6 years ago, revision 2) 93k views 2 score Shoelace Formula for polygonal area Python / 2d, area / by Paddy McCarthy (6 years ago) 35k views 1 score PDF Text Extraction using fitz / MuPDF (PyMuPDF) Python / cbz, epub, mupdf, openxps, pdf, pymupdf, text_extraction, xps / by Jorj X. McKie (8 years ago) 77k views 2 score Simple multicolumn listbox for tkinter Python / listbox, multicolumn, table, tkinter / by Miguel Martínez López (7 years ago) 21k views 1 score Simulating an unless (reverse if) statement in Python Python / features, if, perl, programming, python, trick / by Vasudev Ram (7 years ago) 63k views 3 score groupby() For Unsorted Input Python / algorithm, datastructures, generators, grouping, lazy / by Alfe (6 years ago) 61k views 2 score How to Create a PDF with a Caustic Drawing Python / fitz, mupdf, pdf, pymupdf / by Jorj X. McKie (6 years ago) Recipe 1 to 20 of 4591 « Prev 1 2 3 ... 230 Next » View popular, latest, top-rated or most viewed Feed of the popular Python recipes Python Versions All Python 2 recipes All Python 3 recipes Top-rated recipes Decorator for BindingConstants at … (Python) Infix operators (Python) Spreadsheet (Python) Named Tuples (Python) Linear equations solver in 3 lines (Python) Singleton? We don\u0027t need no stinki… (Python) Send an HTML email with embedded i… (Python) Creating a daemon the Python way (Python) Groupby (Python) Readable switch construction witho… (Python) Python tags more… algorithms database debugging files graphics linux math mathematics network oop programs python shortcuts sysadmin text threads tkinter web windows xml Accounts Create Account (Free!) Sign In Code Recipes Recipes Languages Tags Authors Sets Feedback \u0026 Information About FAQ Terms of Service ActiveState ActiveState Blog Perl Solutions Python Solutions Tcl Solutions Download ActivePerl Download ActivePython Download ActiveTcl About ActiveState Careers Privacy Policy | Contact Us | Support © 2024 ActiveState Software Inc. All rights reserved. ActiveState®, Komodo®, ActiveState Perl Dev Kit®, ActiveState Tcl Dev Kit®, ActivePerl®, ActivePython®, and ActiveTcl® are registered trademarks of ActiveState. All other marks are property of their respective owners. x Undo",
+    "scrapedAt": "2026-05-09 00:48:52.621011"
+  },
+  {
+    "id": 669,
+    "url": "http://pypi.python.org/pypi?%3Aaction\u003dindex",
+    "title": "PyPI · The Python Package Index",
+    "content": "Skip to main content Switch to mobile version Warning Some features may not work without JavaScript. Please try enabling it if you encounter problems. Find, install and publish Python packages with the Python Package Index Search PyPI Search Or browse projects 804,741 projects 8,641,874 releases 18,766,045 files 1,053,593 users The Python Package Index (PyPI) is a repository of software for the Python programming language. PyPI helps you find and install software developed and shared by the Python community. Learn about installing packages. Package authors use PyPI to distribute their software. Learn how to package your Python code for PyPI. English español français 日本語 português (Brasil) українська Ελληνικά Deutsch 中文 (简体) 中文 (繁體) русский עברית Esperanto 한국어 Supported by AWS Cloud computing and Security Sponsor Datadog Monitoring Depot Continuous Integration Fastly CDN Google Download Analytics Pingdom Monitoring Sentry Error logging StatusPage Status page",
+    "scrapedAt": "2026-05-09 00:48:51.363516"
+  },
+  {
     "id": 668,
     "url": "https://www.python.org/doc/nonenglish/",
     "title": "Languages",
@@ -4403,26 +4438,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 669,
-    "url": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
-  },
-  {
-    "id": 670,
-    "url": "http://code.activestate.com/recipes/langs/python/"
-  },
-  {
-    "id": 671,
-    "url": "http://www.google.com"
-  },
-  {
-    "id": 672,
-    "url": "http://docs.python.org/3/tutorial/"
-  },
-  {
-    "id": 674,
-    "url": "http://wiki.python.org/moin/IntroductoryBooks"
   },
   {
     "id": 675,
@@ -105129,10 +105144,2730 @@ window.searchData = [
     "id": 72796,
     "url": "https://wiki.python.org/moin/LatvianLanguage.html",
     "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72809,
+    "url": "https://code.activestate.com/recipes/users/4182236/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72810,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/linux/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72811,
+    "url": "https://code.activestate.com/recipes/580794-simple-multicolumn-listbox-for-tkinter/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72812,
+    "url": "https://code.activestate.com/recipes/578816-the-game-of-tic-tac-toe-in-python/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72813,
+    "url": "https://code.activestate.com/recipes/tags/if/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72814,
+    "url": "https://code.activestate.com/recipes/579000-equally-spaced-numbers-linspace/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72815,
+    "url": "https://code.activestate.com/recipes/tags/text_extraction/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72816,
+    "url": "https://code.activestate.com/recipes/tags/mupdf/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72817,
+    "url": "https://code.activestate.com/recipes/tags/range/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72818,
+    "url": "https://code.activestate.com/recipes/580809-insert-a-text-box-in-a-pdf-page-fitz-pymupdf/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72819,
+    "url": "https://code.activestate.com/recipes/tags/embedded_files/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72820,
+    "url": "https://code.activestate.com/recipes/tags/listbox/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72821,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/tkinter/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72822,
+    "url": "https://www.activestate.com/blog",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72823,
+    "url": "https://code.activestate.com/recipes/tags/text_conversion/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72824,
+    "url": "https://code.activestate.com/recipes/tags/grouping/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72825,
+    "url": "https://code.activestate.com/recipes/277940-decorator-for-bindingconstants-at-compile-time/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72826,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/network/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72827,
+    "url": "https://code.activestate.com/recipes/tags/linspace/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72828,
+    "url": "https://code.activestate.com/recipes/tags/beginner/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72829,
+    "url": "https://community.activestate.com/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72830,
+    "url": "https://code.activestate.com/recipes/410692-readable-switch-construction-without-lambdas-or-di/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72831,
+    "url": "https://code.activestate.com/recipes/tags/programming/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72832,
+    "url": "https://code.activestate.com/recipes/580806-how-to-create-a-pdf-with-a-caustic-drawing/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72833,
+    "url": "https://code.activestate.com/recipes/users/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72834,
+    "url": "https://platform.activestate.com/signup/?activationnext\u003dhttps%3A//code.activestate.com/recipes/langs/python/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72835,
+    "url": "https://code.activestate.com/recipes/tags/pdf/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72836,
+    "url": "https://code.activestate.com/recipes/580787-implementing-function-based-callbacks-in-python/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72837,
+    "url": "https://www.activestate.com/support/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72838,
+    "url": "https://code.activestate.com/recipes/365013-linear-equations-solver-in-3-lines/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72839,
+    "url": "https://code.activestate.com/recipes/langs/python/#as_content",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72840,
+    "url": "https://code.activestate.com/recipes/users/4194238/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72841,
+    "url": "https://code.activestate.com/recipes/580803-inserting-images-on-pdf-pages/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72842,
+    "url": "https://platform.activestate.com/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72843,
+    "url": "https://code.activestate.com/recipes/278731-creating-a-daemon-the-python-way/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72844,
+    "url": "https://code.activestate.com/about/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72845,
+    "url": "https://code.activestate.com/recipes/tags/methods/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72846,
+    "url": "https://code.activestate.com/recipes/langs/python/popular/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72847,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/python/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72848,
+    "url": "https://code.activestate.com/recipes/tags/callback/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72849,
+    "url": "https://code.activestate.com/help/terms/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72850,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/programs/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72851,
+    "url": "https://www.activestate.com/support",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72852,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/shortcuts/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72853,
+    "url": "https://code.activestate.com/recipes/tags/border/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72854,
+    "url": "https://code.activestate.com/recipes/tags/python/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72855,
+    "url": "https://code.activestate.com/ppm",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72856,
+    "url": "https://code.activestate.com/recipes/users/4193772/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72857,
+    "url": "https://code.activestate.com/help/tags/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72858,
+    "url": "https://code.activestate.com/recipes/langs/python/#site_nav",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72859,
+    "url": "http://docs.activestate.com/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72860,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/meta:min_python_3/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72861,
+    "url": "https://www.activestate.com/products/python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72862,
+    "url": "https://code.activestate.com/recipes/tags/algorithm/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72863,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/xml/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72864,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/algorithms/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72865,
+    "url": "https://code.activestate.com/recipes/users/4184772/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72866,
+    "url": "https://www.activestate.com/privacy-policy",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72867,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/text/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72868,
+    "url": "https://store.activestate.com/cart",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72869,
+    "url": "https://code.activestate.com/recipes/tags/game/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72870,
+    "url": "https://code.activestate.com/recipes/tags/callbacks/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72871,
+    "url": "https://code.activestate.com/recipes/580758-simulating-an-unless-reverse-if-statement-in-pytho/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72872,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/windows/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72873,
+    "url": "https://www.activestate.com/downloads",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72874,
+    "url": "https://code.activestate.com/recipes/tags/multicolumn/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72875,
+    "url": "https://code.activestate.com/recipes/tags/lazy/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72876,
+    "url": "https://code.activestate.com/recipes/384122-infix-operators/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72877,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/files/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72878,
+    "url": "https://code.activestate.com/recipes/580810-how-to-create-a-simple-pdf-pie-chart-using-fitz-py/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72879,
+    "url": "https://code.activestate.com/recipes/473810-send-an-html-email-with-embedded-image-and-plain-t/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72880,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72881,
+    "url": "https://code.activestate.com/recipes/langs/python/new/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72882,
+    "url": "https://code.activestate.com/recipes/tags/features/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72883,
+    "url": "https://code.activestate.com/recipes/users/4189907/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72884,
+    "url": "https://code.activestate.com/recipes/tags/objects/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72885,
+    "url": "https://code.activestate.com/recipes/tags/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72886,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/meta:min_python_2/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72887,
+    "url": "https://code.activestate.com/pypm",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72888,
+    "url": "https://code.activestate.com/recipes/users/4173351/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72889,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/debugging/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72890,
+    "url": "https://www.activestate.com/tcl",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72891,
+    "url": "https://code.activestate.com/recipes/tags/artificial_intelligence/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72892,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/graphics/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72893,
+    "url": "https://code.activestate.com/help/faq/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72894,
+    "url": "https://code.activestate.com/recipes/259173-groupby/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72895,
+    "url": "https://www.activestate.com/komodo-ide/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72896,
+    "url": "https://code.activestate.com/recipes/langs/python/?page\u003d230",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72897,
+    "url": "https://code.activestate.com/recipes/tags/classes/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72898,
+    "url": "https://code.activestate.com/recipes/355045-spreadsheet/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72899,
+    "url": "https://www.activestate.com/company/contact-us",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72900,
+    "url": "https://www.activestate.com/python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72901,
+    "url": "https://www.activestate.com/activetcl/downloads",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72902,
+    "url": "https://code.activestate.com/recipes/tags/color/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72903,
+    "url": "https://code.activestate.com/recipes/langs/python/views/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72904,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/threads/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72905,
+    "url": "https://lists.activestate.com/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72906,
+    "url": "https://code.activestate.com/recipes/langs/python/top/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72907,
+    "url": "https://www.activestate.com/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72908,
+    "url": "https://code.activestate.com/recipes/tags/text_game/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72909,
+    "url": "https://www.activestate.com/company",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72910,
+    "url": "https://code.activestate.com/recipes/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72911,
+    "url": "https://platform.activestate.com/signin/?next\u003dhttps%3A//code.activestate.com/recipes/langs/python/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72912,
+    "url": "https://code.activestate.com/recipes/tags/xtopdf/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72913,
+    "url": "https://code.activestate.com/recipes/580805-create-calendars-on-pdf-with-a-few-lines/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72914,
+    "url": "https://code.activestate.com/recipes/tags/pdf_generation/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72915,
+    "url": "https://code.activestate.com/recipes/580802-inserting-pages-into-a-pdf-with-pymupdf/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72916,
+    "url": "https://code.activestate.com/recipes/users/398009/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72917,
+    "url": "https://code.activestate.com/recipes/tags/uno/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72918,
+    "url": "https://code.activestate.com/recipes/tags/fitz/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72919,
+    "url": "https://store.activestate.com/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72920,
+    "url": "https://code.activestate.com/recipes/580812-shoelace-formula-for-polygonal-area/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72921,
+    "url": "https://code.activestate.com/recipes/580811-uno-text-based/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72922,
+    "url": "https://code.activestate.com/recipes/580796-how-to-handle-pdf-embedded-files-with-pymupdf/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72923,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/oop/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72924,
+    "url": "https://www.activestate.com/perl",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72925,
+    "url": "https://code.activestate.com/recipes/tags/frame/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72926,
+    "url": "https://code.activestate.com/recipes/langs/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72927,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/math/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72928,
+    "url": "https://code.activestate.com/recipes/tags/float/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72929,
+    "url": "https://code.activestate.com/recipes/tags/perl/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72931,
+    "url": "https://code.activestate.com/recipes/tags/techniques/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72932,
+    "url": "https://code.activestate.com/recipes/tags/functions/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72933,
+    "url": "https://code.activestate.com/recipes/tags/xps/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72934,
+    "url": "https://code.activestate.com/recipes/tags/generators/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72935,
+    "url": "https://code.activestate.com/recipes/66531-singleton-we-dont-need-no-stinkin-singleton-the-bo/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72936,
+    "url": "https://code.activestate.com/recipes/580793-tkinter-table-with-scrollbars/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72937,
+    "url": "https://code.activestate.com/recipes/tags/epub/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72938,
+    "url": "https://code.activestate.com/recipes/tags/function/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72939,
+    "url": "https://code.activestate.com/recipes/tags/openxps/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72940,
+    "url": "https://code.activestate.com/recipes/tags/excel/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72941,
+    "url": "https://code.activestate.com/recipes/tags/scrollbars/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72942,
+    "url": "https://www.activestate.com/products/perl",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72943,
+    "url": "https://code.activestate.com/recipes/sets/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72944,
+    "url": "https://code.activestate.com/recipes/580735-frame-with-border-color-for-tkinter/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72945,
+    "url": "https://www.activestate.com/activeperl/downloads",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72946,
+    "url": "https://www.activestate.com/activepython/downloads",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72947,
+    "url": "https://code.activestate.com/recipes/users/4184316/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72948,
+    "url": "https://code.activestate.com/recipes/tags/cbz/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72949,
+    "url": "https://www.activestate.com/products/tcl",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72950,
+    "url": "https://code.activestate.com/recipes/tags/tkinter/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72951,
+    "url": "https://code.activestate.com/recipes/tags/cards/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72952,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/database/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72953,
+    "url": "https://code.activestate.com/recipes/tags/spread/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72954,
+    "url": "https://code.activestate.com/recipes/tags/pymupdf/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72955,
+    "url": "https://code.activestate.com/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72956,
+    "url": "https://code.activestate.com/recipes/langs/python/?page\u003d3",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72957,
+    "url": "https://code.activestate.com/recipes/langs/python/?page\u003d2",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72958,
+    "url": "https://code.activestate.com/recipes/tags/calendar/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72959,
+    "url": "https://code.activestate.com/recipes/tags/2d/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72960,
+    "url": "https://code.activestate.com/recipes/580626-pdf-text-extraction-using-fitz-mupdf-pymupdf/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72961,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/mathematics/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72962,
+    "url": "https://code.activestate.com/recipes/tags/table/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72963,
+    "url": "https://www.activestate.com/community",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72964,
+    "url": "https://code.activestate.com/recipes/tags/area/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72965,
+    "url": "https://code.activestate.com/recipes/500261-named-tuples/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72966,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/web/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72967,
+    "url": "https://code.activestate.com/recipes/tags/textbox/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72968,
+    "url": "https://code.activestate.com/recipes/580800-groupby-for-unsorted-input/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72969,
+    "url": "https://code.activestate.com/recipes/langs/python/#q",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72970,
+    "url": "https://code.activestate.com/recipes/tags/trick/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72971,
+    "url": "https://code.activestate.com/recipes/tags/datastructures/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72972,
+    "url": "https://code.activestate.com/feeds/recipes/langs/python/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72973,
+    "url": "https://code.activestate.com/recipes/tags/openpyxl/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72974,
+    "url": "https://www.activestate.com/company/careers",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72975,
+    "url": "https://code.activestate.com/recipes/tags/xlsx/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72976,
+    "url": "https://code.activestate.com/recipes/tags/formats/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72977,
+    "url": "http://ads.activestate.com/www/delivery/ck.php?n\u003daa9dea02\u0026cb\u003dINSERT_RANDOM_NUMBER_HERE",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72978,
+    "url": "https://code.activestate.com/recipes/579128-convert-microsot-excel-xlsx-to-pdf-with-python-and/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72979,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/sysadmin/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72980,
+    "url": "https://code.activestate.com/recipes/580788-implementing-class-based-callbacks-in-python/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 72981,
+    "url": "https://www.google.com/setprefs?sig\u003d0_kI1xo2lu6LzNQ8GVqnJBn7CxGpc%3D\u0026hl\u003dfy\u0026source\u003dhomepage\u0026sa\u003dX\u0026ved\u003d0ahUKEwim6pSVoKqUAxUy8QIHHeDoF-IQ2ZgBCCU",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72982,
+    "url": "https://www.google.com/history/optout?hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72983,
+    "url": "https://policies.google.com/technologies/cookies?utm_source\u003ducbs\u0026hl\u003dnl",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72984,
+    "url": "https://www.google.com/intl/nl_nl/ads/?subid\u003dww-ww-et-g-awa-a-g_hpafoot1_1!o2\u0026utm_source\u003dgoogle.com\u0026utm_medium\u003dreferral\u0026utm_campaign\u003dgoogle_hpafooter\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72985,
+    "url": "https://store.google.com/NL?utm_source\u003dhp_header\u0026utm_medium\u003dgoogle_ooo\u0026utm_campaign\u003dGS100042\u0026hl\u003dnl-NL",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72986,
+    "url": "https://consent.google.com/d?continue\u003dhttps://www.google.com/?gws_rd%3Dssl\u0026gl\u003dNL\u0026m\u003d0\u0026pc\u003dshp\u0026cm\u003d5\u0026hl\u003dnl\u0026src\u003d4",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72987,
+    "url": "https://policies.google.com/privacy?hl\u003dnl\u0026fg\u003d1\u0026utm_source\u003ducbs",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72988,
+    "url": "https://www.google.com/services/?subid\u003dww-ww-et-g-awa-a-g_hpbfoot1_1!o2\u0026utm_source\u003dgoogle.com\u0026utm_medium\u003dreferral\u0026utm_campaign\u003dgoogle_hpbfooter\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72989,
+    "url": "https://www.google.com/history/privacyadvisor/search/unauth?utm_source\u003dgooglemenu\u0026fg\u003d1\u0026cctld\u003dcom",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72990,
+    "url": "https://about.google/?fg\u003d1\u0026utm_source\u003dgoogle-NL\u0026utm_medium\u003dreferral\u0026utm_campaign\u003dhp-header",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72991,
+    "url": "https://policies.google.com/terms?hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72992,
+    "url": "https://www.google.com/?sca_esv\u003da869d935ffb722c4\u0026output\u003dsearch\u0026gbv\u003d1\u0026sei\u003dBSL-aebTMbLii-gP4NHfkA4",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72993,
+    "url": "https://policies.google.com/privacy?hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72994,
+    "url": "https://policies.google.com/terms?hl\u003dnl\u0026fg\u003d1\u0026utm_source\u003ducbs",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72995,
+    "url": "https://www.google.com/advanced_search?hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72996,
+    "url": "https://support.google.com/websearch/?p\u003dws_results_help\u0026hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72997,
+    "url": "https://google.com/search/howsearchworks/?fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72998,
+    "url": "https://sustainability.google/?utm_source\u003dgooglehpfooter\u0026utm_medium\u003dhousepromos\u0026utm_campaign\u003dbottom-footer\u0026utm_content\u003d",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72999,
+    "url": "https://www.google.com/preferences?hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 73000,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#default-argument-values",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73001,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73003,
+    "url": "https://docs.python.org/3/tutorial/introduction.html#using-python-as-a-calculator",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73004,
+    "url": "https://docs.python.org/3/tutorial/errors.html#exception-chaining",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73005,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#weak-references",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73006,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#the-string-format-method",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73007,
+    "url": "https://docs.python.org/3/tutorial/modules.html#packages",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73009,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73010,
+    "url": "https://docs.python.org/3/tutorial/modules.html#intra-package-references",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73011,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#performance-measurement",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73012,
+    "url": "https://docs.python.org/3/glossary.html#glossary",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73013,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#error-output-redirection-and-program-termination",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73016,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73017,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-queues",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73018,
+    "url": "https://docs.python.org/3/tutorial/modules.html#more-on-modules",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73019,
+    "url": "https://docs.python.org/3/tutorial/classes.html#instance-objects",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73020,
+    "url": "https://docs.python.org/3/tutorial/classes.html#class-and-instance-variables",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73021,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#command-line-arguments",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73022,
+    "url": "https://docs.python.org/3/tutorial/modules.html#executing-modules-as-scripts",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73023,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#match-statements",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73024,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73025,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#operating-system-interface",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73026,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#logging",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73027,
+    "url": "https://docs.python.org/3/tutorial/floatingpoint.html#representation-error",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73028,
+    "url": "https://docs.python.org/3/tutorial/introduction.html#first-steps-towards-programming",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73029,
+    "url": "https://docs.python.org/3/tutorial/appendix.html#the-customization-modules",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73030,
+    "url": "https://docs.python.org/3/tutorial/appendix.html#executable-python-scripts",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73031,
+    "url": "https://docs.python.org/3/tutorial/classes.html#multiple-inheritance",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73033,
+    "url": "https://docs.python.org/3/tutorial/errors.html#syntax-errors",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73035,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#positional-or-keyword-arguments",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73036,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#internet-access",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73037,
+    "url": "https://docs.python.org/3/tutorial/modules.html#the-module-search-path",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73038,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73039,
+    "url": "https://docs.python.org/3/tutorial/venv.html#introduction",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73040,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73041,
+    "url": "https://docs.python.org/3/tutorial/errors.html#exceptions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73042,
+    "url": "https://docs.python.org/3/tutorial/classes.html#class-objects",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73043,
+    "url": "https://docs.python.org/3/tutorial/classes.html#method-objects",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73044,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#arbitrary-argument-lists",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73045,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#manual-string-formatting",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73046,
+    "url": "https://docs.python.org/3/tutorial/errors.html#enriching-exceptions-with-notes",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73047,
+    "url": "https://docs.python.org/3/tutorial/classes.html#a-first-look-at-classes",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73048,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#batteries-included",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73049,
+    "url": "https://docs.python.org/3/tutorial/appendix.html#interactive-mode",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73050,
+    "url": "https://docs.python.org/3/tutorial/modules.html#compiled-python-files",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73051,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#intermezzo-coding-style",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73052,
+    "url": "https://docs.python.org/3/tutorial/introduction.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73053,
+    "url": "https://docs.python.org/3/tutorial/errors.html#handling-exceptions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73054,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73055,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#saving-structured-data-with-json",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73056,
+    "url": "https://docs.python.org/3/tutorial/classes.html#python-scopes-and-namespaces",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73057,
+    "url": "https://docs.python.org/3/tutorial/classes.html#iterators",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73058,
+    "url": "https://docs.python.org/3/tutorial/venv.html#managing-packages-with-pip",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73059,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#source-code-encoding",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73060,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#comparing-sequences-and-other-types",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73061,
+    "url": "https://docs.python.org/3/tutorial/errors.html#predefined-clean-up-actions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73062,
+    "url": "https://docs.python.org/3/tutorial/classes.html#random-remarks",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73063,
+    "url": "https://docs.python.org/3/tutorial/classes.html#scopes-and-namespaces-example",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73064,
+    "url": "https://docs.python.org/3/tutorial/classes.html#inheritance",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73065,
+    "url": "https://docs.python.org/3/tutorial/floatingpoint.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73066,
+    "url": "https://docs.python.org/3/tutorial/errors.html#raising-and-handling-multiple-unrelated-exceptions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73067,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#more-on-conditions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73068,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#dates-and-times",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73070,
+    "url": "https://docs.python.org/3/tutorial/introduction.html#text",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73071,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#file-wildcards",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73072,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#the-del-statement",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73073,
+    "url": "https://docs.python.org/3/tutorial/modules.html#importing-from-a-package",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73074,
+    "url": "https://docs.python.org/3/tutorial/interactive.html#tab-completion-and-history-editing",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73075,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#recap",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73076,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#templating",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73077,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#keyword-only-arguments",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73078,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73079,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#the-interpreter-and-its-environment",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73080,
+    "url": "https://docs.python.org/3/tutorial/interactive.html#alternatives-to-the-interactive-interpreter",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73082,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#special-parameters",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73083,
+    "url": "https://docs.python.org/3/tutorial/classes.html#class-definition-syntax",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73085,
+    "url": "https://docs.python.org/3/tutorial/classes.html#a-word-about-names-and-objects",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73086,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73087,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73088,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#data-compression",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73089,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#pass-statements",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73090,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73091,
+    "url": "https://docs.python.org/3/tutorial/classes.html#generators",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73092,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#argument-passing",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73093,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#invoking-the-interpreter",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73094,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#multi-threading",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73095,
+    "url": "https://docs.python.org/3/tutorial/errors.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73096,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#mathematics",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73097,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#more-on-defining-functions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73098,
+    "url": "https://docs.python.org/3/tutorial/appetite.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73099,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#tools-for-working-with-lists",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73100,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#if-statements",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73101,
+    "url": "https://docs.python.org/3/tutorial/introduction.html#numbers",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73102,
+    "url": "https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73103,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73104,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#string-pattern-matching",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73106,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73107,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#working-with-binary-data-record-layouts",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73108,
+    "url": "https://docs.python.org/3/tutorial/modules.html#packages-in-multiple-directories",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73109,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73110,
+    "url": "https://docs.python.org/3/tutorial/classes.html#generator-expressions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73111,
+    "url": "https://docs.python.org/3/tutorial/errors.html#raising-exceptions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73112,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#dictionaries",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73114,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#looping-techniques",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73115,
+    "url": "https://docs.python.org/3/tutorial/classes.html#odds-and-ends",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73116,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#the-range-function",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73117,
+    "url": "https://docs.python.org/3/tutorial/",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73118,
+    "url": "https://docs.python.org/3/tutorial/errors.html#user-defined-exceptions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73119,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#else-clauses-on-loops",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73120,
+    "url": "https://docs.python.org/3/tutorial/introduction.html#lists",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73121,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#fancier-output-formatting",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73122,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#methods-of-file-objects",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73123,
+    "url": "https://docs.python.org/3/tutorial/interactive.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73124,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#keyword-arguments",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73125,
+    "url": "https://docs.python.org/3/tutorial/classes.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73126,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#interactive-mode",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73127,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#old-string-formatting",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73130,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#function-examples",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73131,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#more-on-lists",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73132,
+    "url": "https://docs.python.org/3/tutorial/venv.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73133,
+    "url": "https://docs.python.org/3/tutorial/classes.html#private-variables",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73134,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#documentation-strings",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73135,
+    "url": "https://docs.python.org/3/tutorial/modules.html#standard-modules",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73136,
+    "url": "https://docs.python.org/3/tutorial/modules.html#the-dir-function",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73137,
+    "url": "https://github.com/python/cpython/blob/main/Doc/tutorial/index.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73138,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#positional-only-parameters",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73139,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#output-formatting",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73141,
+    "url": "https://docs.python.org/3/tutorial/#the-python-tutorial",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73142,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-stacks",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73143,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#for-statements",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73144,
+    "url": "https://docs.python.org/3/tutorial/appendix.html#the-interactive-startup-file",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73145,
+    "url": "https://docs.python.org/3/tutorial/modules.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73146,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#decimal-floating-point-arithmetic",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73147,
+    "url": "https://docs.python.org/3/tutorial/whatnow.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73149,
+    "url": "https://docs.python.org/3/tutorial/appendix.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73150,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#nested-list-comprehensions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73151,
+    "url": "https://docs.python.org/3/tutorial/appendix.html#error-handling",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73152,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73153,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#quality-control",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73154,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#sets",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73155,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#function-annotations",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73156,
+    "url": "https://docs.python.org/3/tutorial/errors.html#defining-clean-up-actions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 73157,
+    "url": "http://www.apress.com/book/bookDisplay.html?bID\u003d93",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73158,
+    "url": "https://wiki.python.org/moin/McDonald.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73159,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d1590590066",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73160,
+    "url": "http://www.pragprog.com/titles/gwpy/practical-programming",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73161,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0761523340",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73162,
+    "url": "https://www.amazon.com/Python-Dash-Christian-Mayer-dp-1718502222/dp/1718502222",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73163,
+    "url": "https://wiki.python.org/moin/NoStarch.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73164,
+    "url": "http://safari1.oreilly.com/main.asp?bookname\u003d0130260363",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73165,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0201709384",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73166,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0672319942",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73167,
+    "url": "http://www.packtpub.com/packt/free-ebook/learning-python",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73168,
+    "url": "https://www.packtpub.com/big-data-and-business-intelligence/python-machine-learning-cookbook",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73169,
+    "url": "http://www.oreilly.com/catalog/9780596158071/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73170,
+    "url": "http://www.accu.org/bookreviews/public/reviews/p/p003210.htm",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73171,
+    "url": "https://smile.amazon.com/gp/product/B08G1XLDNB/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73172,
+    "url": "http://www.cengagebrain.com/shop/isbn/9781111822705",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73174,
+    "url": "http://www.rmi.net/~lutz/about-pyref4e.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73175,
+    "url": "http://www.oreilly.com/catalog/python3/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73176,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d1590593561",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73177,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d1884777740",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73178,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d1-59059-519-x",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73179,
+    "url": "http://gnosis.cx/TPiP/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73180,
+    "url": "https://wiki.python.org/moin/BeautifulSoup.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73181,
+    "url": "https://www.packtpub.com/application-development/modular-programming-python",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73183,
+    "url": "http://www.accu.org/bookreviews/public/reviews/c/c002320.htm",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73184,
+    "url": "http://www.informit.com/articles/printerfriendly.asp?p\u003d28672\u0026rl\u003d1",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73185,
+    "url": "https://shortener.manning.com/1GBV",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73186,
+    "url": "http://www.qtrac.eu/py3book.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73187,
+    "url": "https://wiki.python.org/moin/CategoryPyCon2008.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73188,
+    "url": "http://home.wlu.edu/~lambertk/python/cs2python/index.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73189,
+    "url": "https://www.packtpub.com/application-development/python-3-object-oriented-programming-third-edition",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73190,
+    "url": "http://www.network-theory.co.uk/python/manual/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73191,
+    "url": "http://www.amazon.com/Quick-Python-Book-Second/dp/193518220X/ref\u003dsr_1_1?ie\u003dUTF8\u0026qid\u003d1309567984\u0026sr\u003d8-1",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73192,
+    "url": "https://www.packtpub.com/application-development/learn-python-7-days",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73193,
+    "url": "http://www.rmi.net/~lutz/about-lp5e.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73194,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0954161769",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73195,
+    "url": "https://pythonfromscratch.com",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73196,
+    "url": "https://play.google.com/store/books/details/Dr_Csaba_Dobreff_Python_knowledge_building_step_by?id\u003dJMZDEQAAQBAJ",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73197,
+    "url": "http://www.packtpub.com/building-machine-learning-systems-with-python/book",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73198,
+    "url": "https://wiki.python.org/moin/OpenRefine.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73199,
+    "url": "http://www.premierpressbooks.com/ptr_detail.cfm?group\u003dProgramming\u0026isbn\u003d1-59200-073-8",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73200,
+    "url": "http://www.manning.com/sande",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73201,
+    "url": "http://prenhall.com/goldwasser",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73202,
+    "url": "https://thomasweise.github.io/programmingWithPython/programmingWithPython.pdf",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73203,
+    "url": "https://python-freelancer.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73204,
+    "url": "http://dannyreviews.com/h/Text_Python.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73205,
+    "url": "https://www.createspace.com/3611970",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73206,
+    "url": "http://www.spronck.net/pythonbook",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73207,
+    "url": "http://coweb.cc.gatech.edu/mediaComp-teach",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73209,
+    "url": "http://corepython.com",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73210,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0136150314",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73211,
+    "url": "http://www.apress.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73212,
+    "url": "https://www.nostarch.com/pythonforkids",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73213,
+    "url": "https://books.google.com.br/books?id\u003dHvSsCAAAQBAJ",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73214,
+    "url": "http://mcsp.wartburg.edu/zelle/python",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73215,
+    "url": "http://www.toonzcat.com/book.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73216,
+    "url": "https://wiki.python.org/moin/TextProcessingInPython.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73217,
+    "url": "http://dannyreviews.com/h/Python.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73218,
+    "url": "http://www2.linuxjournal.com/lj-issues/issue73/3851.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73219,
+    "url": "https://wiki.python.org/moin/CategoryDocumentation.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73220,
+    "url": "https://www.amazon.com/dp/B0C9SDNCP3",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73221,
+    "url": "http://manning.com/ceder/SampleChapter-4.pdf",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73222,
+    "url": "http://www.pragprog.com/titles/gwpy2/practical-programming",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73223,
+    "url": "https://manning-content.s3.amazonaws.com/download/3/145ee71-1acd-4e02-a9b0-fb0f1892485e/SampleCh30.pdf",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73224,
+    "url": "https://wiki.python.org/moin/DevOps.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73225,
+    "url": "https://www.barnesandnoble.com/w/learning-iot-with-python-and-raspberry-pi-ei-horvath/1133345171?ean\u003d9780578549361",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73226,
+    "url": "http://homepage.mac.com/s_lott/books/python.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73227,
+    "url": "http://gnosis.cx/publish/programming/charming_python_b8.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73228,
+    "url": "http://www.manning.com/garrard/GeoPython_MEAP_ch01.pdf",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73229,
+    "url": "http://www.talentreboot.com/publications/book-how-would-pareto-learn-python/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73230,
+    "url": "http://python-ebook.blogspot.com",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73231,
+    "url": "http://manning.com/briggs/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73232,
+    "url": "http://books.dzone.com/reviews/quick-python-book-delivers",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73233,
+    "url": "http://lists.tummy.com/pipermail/frpythoneers/2000-June/000085.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73234,
+    "url": "https://www.nostarch.com/doingmathwithpython",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73235,
+    "url": "https://wiki.python.org/moin/FredrikLundh.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73237,
+    "url": "https://www.nostarch.com/pythonwithminecraft",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73238,
+    "url": "http://www.manning.com/foord",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73240,
+    "url": "http://www.diveintopython.net/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73241,
+    "url": "https://wiki.python.org/moin/ReferenceBooks.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73242,
+    "url": "http://www.apress.com/book/view/9781590599822/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73243,
+    "url": "http://www.otago.ac.nz",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73244,
+    "url": "http://www.china-pub.com/computers/common/info.asp?id\u003d3097",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73245,
+    "url": "http://www2.linuxjournal.com/lj-issues/issue85/4564.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73247,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0596009402",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73248,
+    "url": "https://thepythoncodingbook.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73249,
+    "url": "http://www.ironpythoninaction.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73250,
+    "url": "http://oreilly.com/catalog/9781449382674/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73251,
+    "url": "https://wiki.python.org/moin/PostScript.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73252,
+    "url": "http://www.wowbook.com/computer/book/info/book_detail.asp?isbn\u003dISBN89-450-7052-4",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73253,
+    "url": "https://github.com/thomasWeise/programmingWithPython",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73254,
+    "url": "http://uselesspython.com/gettingstarted.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73255,
+    "url": "http://www.headfirstlabs.com/books/hfpython/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73256,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0596000960",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73257,
+    "url": "http://www.cengagebrain.com/shop/isbn/9781285752006",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73258,
+    "url": "http://www.usenix.org/publications/login/1998-4/python.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73259,
+    "url": "http://home.wlu.edu/~lambertk/breezypythongui/easyguibook.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73260,
+    "url": "http://rmi.net/~lutz/about-lp4e.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73261,
+    "url": "https://nostarch.com/python-dash",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73262,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d1592000738",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73263,
+    "url": "http://www.ercb.com/ddj/1997/ddj.9711.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73264,
+    "url": "http://www.amazon.com/Python-complete-beginners-friendly-experience/dp/1514376989/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73265,
+    "url": "https://www.manning.com/books/the-quick-python-book-third-edition",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73266,
+    "url": "http://www.amazon.com/dp/B0063ZM6I0",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73267,
+    "url": "http://www.cambridge.org/us/catalogue/catalogue.asp?isbn\u003d9780521725965",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73268,
+    "url": "https://www.nostarch.com/automatestuff",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73269,
+    "url": "https://www.nostarch.com/pythoncrashcourse",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73270,
+    "url": "http://www.manning.com/getpage.html?project\u003dharms\u0026filename\u003dChapters.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73271,
+    "url": "https://wiki.python.org/moin/McNeil.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73272,
+    "url": "https://wiki.python.org/moin/CategoryPythonWebsite.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73274,
+    "url": "http://www.manning.com/garrard/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73275,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0971677506",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73276,
+    "url": "https://www.packtpub.com/packt/free-ebook/what-you-need-know-about-machine-learning2",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73277,
+    "url": "http://tinyurl.com/jskh",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73278,
+    "url": "http://shop.oreilly.com/product/9780596158118.do",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73279,
+    "url": "https://wiki.python.org/moin/GitHub.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73280,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d1887902996",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73281,
+    "url": "http://www.apress.com/book/bookDisplay.html?bID\u003d10013",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73283,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0471778648",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73284,
+    "url": "http://www.softbaugh.com/courses/python1/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73286,
+    "url": "http://www.rmi.net/~lutz/about-pp4e.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73287,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0596158068",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73289,
+    "url": "http://studypack.com/comp/course/view.php?id\u003d232",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73290,
+    "url": "https://github.com/thomasWeise/programmingWithPython/issues",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73291,
+    "url": "https://www.amazon.com/dp/1094777978",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73292,
+    "url": "http://www.accu.org/bookreviews/public/reviews/q/q002082.htm",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73293,
+    "url": "http://home.wlu.edu/~lambertk/python/cs1python/index.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73294,
+    "url": "https://www.packtpub.com/packt/free-ebook/what-you-need-know-about-python2",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73295,
+    "url": "http://www.pythonfood.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73296,
+    "url": "https://www.amazon.com/Python-3-8-Nat-Dunn/dp/1951959027",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73297,
+    "url": "https://pythonfromtheverybeginning.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73298,
+    "url": "http://www.manning.com/ceder",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73299,
+    "url": "https://www.manning.com/books/the-quick-python-book-third-edition#downloads",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73300,
+    "url": "https://github.com/thomasWeise/programmingWithPythonCode",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73301,
+    "url": "https://www.packtpub.com/packt/free-ebook/learning-python",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73302,
+    "url": "http://www.swaroopch.com/notes/Python",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73303,
+    "url": "https://www.packtpub.com/application-development/learn-programming-python-cody-jackson",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73304,
+    "url": "http://www.headfirstlabs.com/books/hfprog",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73305,
+    "url": "http://oreilly.com/catalog/9780596158071/toc.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73306,
+    "url": "http://home.wlu.edu/~lambertk/breezypythongui/index.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73307,
+    "url": "http://vig.prenhall.com/catalog/academic/product/1,4096,0130923613,00.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73308,
+    "url": "http://www.talentreboot.com",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73309,
+    "url": "https://www.nostarch.com/teachkids",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73310,
+    "url": "http://shop.oreilly.com/product/0636920028154.do",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73311,
+    "url": "http://homepage.mac.com/s_lott/books/nonprogrammer.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73312,
+    "url": "http://www.manning.com/ceder/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73313,
+    "url": "http://manning.com/ceder/SampleChapter-6.pdf",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73314,
+    "url": "https://nostarch.com/art-clean-code",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73315,
+    "url": "https://www.packtpub.com/application-development/python-apprentice",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73316,
+    "url": "https://wiki.python.org/moin/MapInfo.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73317,
+    "url": "http://www.rmi.net/~lutz/about-pp3e.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73319,
+    "url": "https://blog.finxter.com/book-leaving-the-rat-race-with-python/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73320,
+    "url": "https://nostarch.com/pythononeliners",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73321,
+    "url": "https://manning-content.s3.amazonaws.com/download/e/2d021c6-d4ed-40e5-8f6d-084f92ccbb86/SampleCh04.pdf",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73322,
+    "url": "http://www.freenetpages.co.uk/hp/alan.gauld/index.htm",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73323,
+    "url": "http://www.amk.ca/python/books/qpb.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73324,
+    "url": "https://www.amazon.com/Python-Very-Beginning-exercises-answers/dp/0957671156/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73325,
+    "url": "https://www.packtpub.com/big-data-and-business-intelligence/practical-data-analysis-cookbook",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73326,
+    "url": "https://nostarch.com/learn-code-solving-problems",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73327,
+    "url": "http://pythonforcompletebeginners.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73328,
+    "url": "https://www.packtpub.com/application-development/python-projects-kids",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73329,
+    "url": "http://shop.oreilly.com/product/9780596158095.do",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73330,
+    "url": "http://www.testingperspective.com/?page_id\u003d1889",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73331,
+    "url": "http://thinkpython.com",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73332,
+    "url": "https://regexusingpython.wordpress.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73333,
+    "url": "http://www.python.org/doc/essays/foreword.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73334,
+    "url": "https://www.manning.com/books/get-programming",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73335,
+    "url": "https://wiki.python.org/moin/CategoryPythonInEducation.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73336,
+    "url": "http://python.itcarlow.ie",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73337,
+    "url": "https://launchpad.net/practical-programming",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73338,
+    "url": "http://www.prakashbooks.com/details.php3?id\u003d5806",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73339,
+    "url": "https://www.amazon.com/Art-Clean-Code-Practices-Complexity/dp/1718502184",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73340,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0130923613",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73341,
+    "url": "http://www-106.ibm.com/developerworks/linux/library/l-pbook3.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73342,
+    "url": "https://www.learningiot.net/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73343,
+    "url": "http://www.pythonware.com/people/fredrik/librarybook.htm",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73344,
+    "url": "https://www.packtpub.com/networking-and-servers/learning-python-forensics",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73345,
+    "url": "http://www.llumina.com/store/python.htm",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73346,
+    "url": "https://www.packtpub.com/python-3-object-oriented-programming/book",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73347,
+    "url": "http://www.awaretek.com/CorePython.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73348,
+    "url": "https://www.amazon.com/dp/B0BW32CWD5",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73349,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0130410659",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73351,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0596009259",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73352,
+    "url": "https://thomasweise.github.io/programmingWithPython",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73353,
+    "url": "https://wiki.python.org/moin/PythonBooks.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73354,
+    "url": "https://www.packtpub.com/python-2-6-text-processing-beginners-guide/book",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73355,
+    "url": "http://www2.linuxjournal.com/lj-issues/issue66/3541.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 73356,
+    "url": "http://www.cs.otago.ac.nz/student/papers.php?name\u003dCOMP150",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://wiki.python.org/moin/logo.png",
+    "alt": "",
+    "pageTitle": "IntroductoryBooks",
+    "pageUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python Tutorial — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python Tutorial — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg",
+    "alt": "Google",
+    "pageTitle": "Google",
+    "pageUrl": "http://www.google.com"
+  },
+  {
+    "src": "https://code.activestate.com/static/activestyle/img/activestate.png",
+    "alt": "",
+    "pageTitle": "Popular Python recipes « ActiveState Code",
+    "pageUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "src": "https://code.activestate.com/static/img/arrowL.png",
+    "alt": "",
+    "pageTitle": "Popular Python recipes « ActiveState Code",
+    "pageUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "src": "https://code.activestate.com/static/img/arrowR.png",
+    "alt": "",
+    "pageTitle": "Popular Python recipes « ActiveState Code",
+    "pageUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "src": "https://code.activestate.com/static/img/arrowL.png",
+    "alt": "",
+    "pageTitle": "Popular Python recipes « ActiveState Code",
+    "pageUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "src": "https://code.activestate.com/static/img/feed.png",
+    "alt": "",
+    "pageTitle": "Popular Python recipes « ActiveState Code",
+    "pageUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "src": "https://code.activestate.com/static/img/help.png",
+    "alt": "",
+    "pageTitle": "Popular Python recipes « ActiveState Code",
+    "pageUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "src": "http://ads.activestate.com/www/delivery/avw.php?zoneid\u003d1\u0026cb\u003dINSERT_RANDOM_NUMBER_HERE\u0026n\u003daa9dea02",
+    "alt": "",
+    "pageTitle": "Popular Python recipes « ActiveState Code",
+    "pageUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "src": "https://pypi.org/static/images/logo-large.516e776d.svg",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/ed7074cadad1a06f56bc520ad9bd3e00d0704c5b/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d77686974652d6c6f676f2d7443615473387a432e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/8855f7c063a3bdb5b0ce8d91bfc50cf851cc5c51/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d77686974652d6c6f676f2d6668644c4e666c6f2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/60f709d24f3e4d469f9adc77c65e2f5291a3d165/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6465706f742d77686974652d6c6f676f2d7038506f476831302e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/df6fe8829cbff2d7f668d98571df1fd011f36192/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d77686974652d6c6f676f2d65684d3077735f6f2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/420cc8cf360bac879e24c923b2f50ba7d1314fb0/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d77686974652d6c6f676f2d616734424e3774332e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/d01053c02f3a626b73ffcb06b96367fdbbf9e230/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f70696e67646f6d2d77686974652d6c6f676f2d67355831547546362e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/67af7117035e2345bacb5a82e9aa8b5b3e70701d/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d77686974652d6c6f676f2d4a2d6b64742d706e2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/b611884ff90435a0575dbab7d9b0d3e60f136466/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d77686974652d6c6f676f2d5467476c6a4a2d502e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
   {
     "src": "https://wiki.python.org/moin/logo.png",
     "alt": "",
