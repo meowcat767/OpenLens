@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1101,
+    "url": "https://docs.python.org/3/library/optparse.html#module-optparse",
+    "title": "optparse — Parser for command line options — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Command-line interface libraries » optparse — Parser for command line options | Theme Auto Light Dark | optparse — Parser for command line options¶ Source code: Lib/optparse.py Choosing an argument parsing library¶ The standard library includes three argument parsing libraries: getopt: a module that closely mirrors the procedural C getopt API. Included in the standard library since before the initial Python 1.0 release. optparse: a declarative replacement for getopt that provides equivalent functionality without requiring each application to implement its own procedural option parsing logic. Included in the standard library since the Python 2.3 release. argparse: a more opinionated alternative to optparse that provides more functionality by default, at the expense of reduced application flexibility in controlling exactly how arguments are processed. Included in the standard library since the Python 2.7 and Python 3.2 releases. In the absence of more specific argument parsing design constraints, argparse is the recommended choice for implementing command line applications, as it offers the highest level of baseline functionality with the least application level code. getopt is retained almost entirely for backwards compatibility reasons. However, it also serves a niche use case as a tool for prototyping and testing command line argument handling in getopt-based C applications. optparse should be considered as an alternative to argparse in the following cases: an application is already using optparse and doesn’t want to risk the subtle behavioural changes that may arise when migrating to argparse the application requires additional control over the way options and positional parameters are interleaved on the command line (including the ability to disable the interleaving feature completely) the application requires additional control over the incremental parsing of command line elements (while argparse does support this, the exact way it works in practice is undesirable for some use cases) the application requires additional control over the handling of options which accept parameter values that may start with - (such as delegated options to be passed to invoked subprocesses) the application requires some other command line parameter processing behavior which argparse does not support, but which can be implemented in terms of the lower level interface offered by optparse These considerations also mean that optparse is likely to provide a better foundation for library authors writing third party command line argument processing libraries. As a concrete example, consider the following two command line argument parsing configurations, the first using optparse, and the second using argparse: import optparse\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    parser \u003d optparse.OptionParser()\n    parser.add_option(\u0027-o\u0027, \u0027--output\u0027)\n    parser.add_option(\u0027-v\u0027, dest\u003d\u0027verbose\u0027, action\u003d\u0027store_true\u0027)\n    opts, args \u003d parser.parse_args()\n    process(args, output\u003dopts.output, verbose\u003dopts.verbose)\n import argparse\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    parser \u003d argparse.ArgumentParser()\n    parser.add_argument(\u0027-o\u0027, \u0027--output\u0027)\n    parser.add_argument(\u0027-v\u0027, dest\u003d\u0027verbose\u0027, action\u003d\u0027store_true\u0027)\n    parser.add_argument(\u0027rest\u0027, nargs\u003d\u0027*\u0027)\n    args \u003d parser.parse_args()\n    process(args.rest, output\u003dargs.output, verbose\u003dargs.verbose)\n The most obvious difference is that in the optparse version, the non-option arguments are processed separately by the application after the option processing is complete. In the argparse version, positional arguments are declared and processed in the same way as the named options. However, the argparse version will also handle some parameter combination differently from the way the optparse version would handle them. For example (amongst other differences): supplying -o -v gives output\u003d\"-v\" and verbose\u003dFalse when using optparse, but a usage error with argparse (complaining that no value has been supplied for -o/--output, since -v is interpreted as meaning the verbosity flag) similarly, supplying -o -- gives output\u003d\"--\" and args\u003d() when using optparse, but a usage error with argparse (also complaining that no value has been supplied for -o/--output, since -- is interpreted as terminating the option processing and treating all remaining values as positional arguments) supplying -o\u003dfoo gives output\u003d\"\u003dfoo\" when using optparse, but gives output\u003d\"foo\" with argparse (since \u003d is special cased as an alternative separator for option parameter values) Whether these differing behaviors in the argparse version are considered desirable or a problem will depend on the specific command line application use case. See also click is a third party argument processing library (originally based on optparse), which allows command line applications to be developed as a set of decorated command implementation functions. Other third party ",
+    "scrapedAt": "2026-05-09 01:06:08.15256"
+  },
+  {
+    "id": 1100,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#logging-handlers",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:06:06.878538"
+  },
+  {
+    "id": 1099,
+    "url": "https://github.com/python/cpython/issues/118798",
+    "title": "Remove isdst parameter from `email.utils.localtime` · Issue #118798 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Remove isdst parameter from email.utils.localtime #118798 New issue Copy link New issue Copy link Closed Closed Remove isdst parameter from email.utils.localtime#118798 Copy link Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-email Description hugovk opened on May 8, 2024 Issue body actions It was deprecated in 3.12 and set for removal in 3.14. Deprecate isdst argument in email.utils.localtime #72346 gh-72346: Added isdst deprecation warning to email.utils.localtime #91450 Linked PRs gh-118798: Remove deprecated isdst parameter from email.utils.localtime #118799 gh-118875: Update tarfile.extractall and friends to use filter\u003d\"data\" by default #118940 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-email Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:06:05.649308"
+  },
+  {
+    "id": 1098,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#tarfile",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:06:03.679518"
+  },
+  {
+    "id": 1097,
+    "url": "https://github.com/python/cpython/issues/130080",
+    "title": "Implement PEP 765 · Issue #130080 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Implement PEP 765 #130080 New issue Copy link New issue Copy link Closed Closed Implement PEP 765#130080 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description iritkatriel opened on Feb 13, 2025 Issue body actions This issue serves as a tracker for implementing PEP-765. Linked PRs gh-130080: return in finally in subprocess.py #130081 gh-130080: implement PEP 765 #130087 gh-130080: move _Py_EnsureArrayLargeEnough to a separate header so it can be used outside of the compiler #130930 gh-130080: fix warnings in tests #131400 gh-130080: fix warnings in tests #131471 gh-130080: do not fold match case constants in unoptimized AST #131577 gh-130080: Remove unnecessary memset for _PyASTOptimizeState initializing #131745 Reactions are currently unavailable Metadata Metadata Assignees iritkatriel Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:06:02.410813"
+  },
+  {
     "id": 1096,
     "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_HashRandomizationFlag",
     "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
@@ -7348,26 +7383,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1097,
-    "url": "https://github.com/python/cpython/issues/130080"
-  },
-  {
-    "id": 1098,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#tarfile"
-  },
-  {
-    "id": 1099,
-    "url": "https://github.com/python/cpython/issues/118798"
-  },
-  {
-    "id": 1100,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#logging-handlers"
-  },
-  {
-    "id": 1101,
-    "url": "https://docs.python.org/3/library/optparse.html#module-optparse"
   },
   {
     "id": 1102,
@@ -192125,10 +192140,457 @@ window.searchData = [
     "id": 186292,
     "url": "https://github.com/python/cpython/pull/122214",
     "parentUrl": "https://github.com/python/cpython/issues/122213"
+  },
+  {
+    "id": 190192,
+    "url": "https://github.com/python/cpython/pull/130930",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 190193,
+    "url": "https://github.com/python/cpython/pull/131745",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 190194,
+    "url": "https://github.com/python/cpython/issues/130080#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 190198,
+    "url": "https://peps.python.org/765",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 190199,
+    "url": "https://github.com/python/cpython/pull/131471",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 190200,
+    "url": "https://github.com/python/cpython/pull/130087",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 190202,
+    "url": "https://github.com/python/cpython/pull/131400",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 190203,
+    "url": "https://github.com/python/cpython/pull/131577",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 190204,
+    "url": "https://github.com/python/cpython/issues/130080#issue-2851033188",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 190206,
+    "url": "https://github.com/python/cpython/pull/130081",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 190207,
+    "url": "https://github.com/python/cpython/issues/130080#top",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 191445,
+    "url": "https://github.com/python/cpython/issues/118798#top",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 191447,
+    "url": "https://github.com/python/cpython/issues/118798#issue-2286369906",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 191448,
+    "url": "https://github.com/python/cpython/pull/91450",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 191449,
+    "url": "https://github.com/python/cpython/issues/118798#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 191454,
+    "url": "https://github.com/python/cpython/pull/118940",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 191455,
+    "url": "https://github.com/python/cpython/pull/118799",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 191456,
+    "url": "https://github.com/python/cpython/issues/72346",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 191457,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-email%22",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 192693,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionValueError",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192697,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/optparse.py",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192698,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser.add_option",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192702,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.ALWAYS_TYPED_ACTIONS",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192703,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser.print_version",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192704,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.callback",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192707,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192709,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.metavar",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192710,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser.set_usage",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192712,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.nargs",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192716,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionGroup",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192718,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.const",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192719,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.dest",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192721,
+    "url": "https://pypi.org/project/click/",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192726,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.callback_kwargs",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192727,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse-parsing-arguments",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192729,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.AmbiguousOptionError",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192730,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.BadOptionError",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192731,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser.disable_interspersed_args",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192733,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser.enable_interspersed_args",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192734,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser.remove_option",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192735,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser.get_usage",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192736,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser.set_defaults",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192739,
+    "url": "https://pypi.org/project/typer/",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192740,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse-extending-optparse",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192747,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.choices",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192748,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Values",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192749,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.action",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192754,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.STORE_ACTIONS",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192757,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser.has_option",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192760,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse-standard-option-actions",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192761,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser.get_option_group",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192763,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser.get_option",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192764,
+    "url": "https://docs.python.org/3/library/getopt.html#module-getopt",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192768,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionError",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192770,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse-conflicts-between-options",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192771,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.help",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192772,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser.print_usage",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192775,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse-tutorial",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192776,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.callback_args",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192778,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.TYPES",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192780,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionConflictError",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192781,
+    "url": "https://docs.python.org/3/library/optparse.html#",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192785,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse-standard-option-types",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192791,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/optparse.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192793,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.default",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192797,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192799,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.TYPED_ACTIONS",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192800,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.type",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192801,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.ACTIONS",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192803,
+    "url": "https://pypi.org/project/msgspec-click/",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192806,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse-option-callbacks",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192811,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser.parse_args",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192812,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.Option.TYPE_CHECKER",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192813,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse-reference-guide",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "id": 192817,
+    "url": "https://docs.python.org/3/library/optparse.html#optparse.OptionParser.get_version",
+    "parentUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "optparse — Parser for command line options — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "optparse — Parser for command line options — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/optparse.html#module-optparse"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#logging-handlers"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#logging-handlers"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@hugovk",
+    "pageTitle": "Remove isdst parameter from `email.utils.localtime` · Issue #118798 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@hugovk",
+    "pageTitle": "Remove isdst parameter from `email.utils.localtime` · Issue #118798 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#tarfile"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#tarfile"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d64\u0026u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "Implement PEP 765 · Issue #130080 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@iritkatriel",
+    "pageTitle": "Implement PEP 765 · Issue #130080 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@iritkatriel",
+    "pageTitle": "Implement PEP 765 · Issue #130080 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d64\u0026u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "Implement PEP 765 · Issue #130080 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130080"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
