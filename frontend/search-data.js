@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1039,
+    "url": "https://docs.python.org/3/library/logging.html#logging.warning",
+    "title": "logging — Logging facility for Python — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » logging — Logging facility for Python | Theme Auto Light Dark | logging — Logging facility for Python¶ Source code: Lib/logging/__init__.py Important This page contains the API reference information. For tutorial information and discussion of more advanced topics, see Basic Tutorial Advanced Tutorial Logging Cookbook This module defines functions and classes which implement a flexible event logging system for applications and libraries. The key benefit of having the logging API provided by a standard library module is that all Python modules can participate in logging, so your application log can include your own messages integrated with messages from third-party modules. Here’s a simple example of idiomatic usage: # myapp.py\nimport logging\nimport mylib\nlogger \u003d logging.getLogger(__name__)\n\ndef main():\n    logging.basicConfig(filename\u003d\u0027myapp.log\u0027, level\u003dlogging.INFO)\n    logger.info(\u0027Started\u0027)\n    mylib.do_something()\n    logger.info(\u0027Finished\u0027)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    main()\n # mylib.py\nimport logging\nlogger \u003d logging.getLogger(__name__)\n\ndef do_something():\n    logger.info(\u0027Doing something\u0027)\n If you run myapp.py, you should see this in myapp.log: INFO:__main__:Started\nINFO:mylib:Doing something\nINFO:__main__:Finished\n The key feature of this idiomatic usage is that the majority of code is simply creating a module level logger with getLogger(__name__), and using that logger to do any needed logging. This is concise, while allowing downstream code fine-grained control if needed. Logged messages to the module-level logger get forwarded to handlers of loggers in higher-level modules, all the way up to the highest-level logger known as the root logger; this approach is known as hierarchical logging. For logging to be useful, it needs to be configured: setting the levels and destinations for each logger, potentially changing how specific modules log, often based on command-line arguments or application configuration. In most cases, like the one above, only the root logger needs to be so configured, since all the lower level loggers at module level eventually forward their messages to its handlers. basicConfig() provides a quick way to configure the root logger that handles many use cases. The module provides a lot of functionality and flexibility. If you are unfamiliar with logging, the best way to get to grips with it is to view the tutorials (see the links above and on the right). The basic classes defined by the module, together with their attributes and methods, are listed in the sections below. Loggers expose the interface that application code directly uses. Handlers send the log records (created by loggers) to the appropriate destination. Filters provide a finer grained facility for determining which log records to output. Formatters specify the layout of log records in the final output. Logger Objects¶ Loggers have the following attributes and methods. Note that Loggers should NEVER be instantiated directly, but always through the module-level function logging.getLogger(name). Multiple calls to getLogger() with the same name will always return a reference to the same Logger object. The name is potentially a period-separated hierarchical value, like foo.bar.baz (though it could also be just plain foo, for example). Loggers that are further down in the hierarchical list are children of loggers higher up in the list. For example, given a logger with a name of foo, loggers with names of foo.bar, foo.bar.baz, and foo.bam are all descendants of foo. In addition, all loggers are descendants of the root logger. The logger name hierarchy is analogous to the Python package hierarchy, and identical to it if you organise your loggers on a per-module basis using the recommended construction logging.getLogger(__name__). That’s because in a module, __name__ is the module’s name in the Python package namespace. class logging.Logger¶ name¶ This is the logger’s name, and is the value that was passed to getLogger() to obtain the logger. Note This attribute should be treated as read-only. level¶ The threshold of this logger, as set by the setLevel() method. Note Do not set this attribute directly - always use setLevel(), which has checks for the level passed to it. parent¶ The parent logger of this logger. It may change based on later instantiation of loggers which are higher up in the namespace hierarchy. Note This value should be treated as read-only. propagate¶ If this attribute evaluates to true, events logged to this logger will be passed to the handlers of higher level (ancestor) loggers, in addition to any handlers attached to this logger. Messages are passed directly to the ancestor loggers’ handlers - neither the level nor filters of the ancestor loggers in question are considered. If this evaluates to false, logging messages are not passed to the handlers of anc",
+    "scrapedAt": "2026-05-09 01:03:40.019485"
+  },
+  {
+    "id": 1038,
+    "url": "https://github.com/python/cpython/issues/89902",
+    "title": "The Python implementation of Decimal does not support the \"N\" format · Issue #89902 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k The Python implementation of Decimal does not support the \"N\" format #89902 New issue Copy link New issue Copy link Closed Closed The Python implementation of Decimal does not support the \"N\" format#89902 Copy link Labels 3.10only security fixesonly security fixes3.11only security fixesonly security fixes3.9 (EOL)end of lifeend of lifestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description serhiy-storchaka opened on Nov 6, 2021 Issue body actions BPO 45739 Nosy @rhettinger, @facundobatista, @mdickinson, @ericvsmith, @serhiy-storchaka Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2021-11-06.13:51:18.396\u003e\nlabels \u003d [\u0027type-bug\u0027, \u0027library\u0027, \u00273.9\u0027, \u00273.10\u0027, \u00273.11\u0027]\ntitle \u003d \u0027The Python implementation of Decimal does not support the \"N\" format\u0027\nupdated_at \u003d \u003cDate 2021-11-29.09:28:44.922\u003e\nuser \u003d \u0027https://github.com/serhiy-storchaka\u0027 bugs.python.org fields: activity \u003d \u003cDate 2021-11-29.09:28:44.922\u003e\nactor \u003d \u0027serhiy.storchaka\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2021-11-06.13:51:18.396\u003e\ncreator \u003d \u0027serhiy.storchaka\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 45739\nkeywords \u003d []\nmessage_count \u003d 10.0\nmessages \u003d [\u0027405861\u0027, \u0027405898\u0027, \u0027405901\u0027, \u0027407195\u0027, \u0027407196\u0027, \u0027407210\u0027, \u0027407212\u0027, \u0027407229\u0027, \u0027407234\u0027, \u0027407254\u0027]\nnosy_count \u003d 5.0\nnosy_names \u003d [\u0027rhettinger\u0027, \u0027facundobatista\u0027, \u0027mark.dickinson\u0027, \u0027eric.smith\u0027, \u0027serhiy.storchaka\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027behavior\u0027\nurl \u003d \u0027https://bugs.python.org/issue45739\u0027\nversions \u003d [\u0027Python 3.9\u0027, \u0027Python 3.10\u0027, \u0027Python 3.11\u0027] Linked PRs gh-89902: Deprecate non-standard format specifier \"N\" for Decimal #110508 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.10only security fixesonly security fixes3.11only security fixesonly security fixes3.9 (EOL)end of lifeend of lifestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:03:38.720961"
+  },
+  {
+    "id": 1037,
+    "url": "https://github.com/python/cpython/issues/85302",
+    "title": "Improve/fix FreeBSD Bluetooth socket support · Issue #85302 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Improve/fix FreeBSD Bluetooth socket support #85302 New issue Copy link New issue Copy link Closed Closed Improve/fix FreeBSD Bluetooth socket support#85302 Copy link Labels 3.10only security fixesonly security fixes3.7 (EOL)end of lifeend of life3.8 (EOL)end of lifeend of life3.9 (EOL)end of lifeend of lifeOS-freebsdextension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Description myfreeweb mannequin opened on Jun 26, 2020 Issue body actions BPO 41130 Nosy @koobs, @myfreeweb Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2020-06-26.19:00:41.062\u003e\nlabels \u003d [\u00273.8\u0027, \u0027type-feature\u0027, \u00273.7\u0027, \u00273.9\u0027, \u00273.10\u0027]\ntitle \u003d \u0027Improve/fix FreeBSD Bluetooth socket support\u0027\nupdated_at \u003d \u003cDate 2020-06-26.19:00:41.062\u003e\nuser \u003d \u0027https://github.com/myfreeweb\u0027 bugs.python.org fields: activity \u003d \u003cDate 2020-06-26.19:00:41.062\u003e\nactor \u003d \u0027myfreeweb\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027FreeBSD\u0027]\ncreation \u003d \u003cDate 2020-06-26.19:00:41.062\u003e\ncreator \u003d \u0027myfreeweb\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 41130\nkeywords \u003d []\nmessage_count \u003d 1.0\nmessages \u003d [\u0027372439\u0027]\nnosy_count \u003d 2.0\nnosy_names \u003d [\u0027koobs\u0027, \u0027myfreeweb\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue41130\u0027\nversions \u003d [\u0027Python 3.5\u0027, \u0027Python 3.6\u0027, \u0027Python 3.7\u0027, \u0027Python 3.8\u0027, \u0027Python 3.9\u0027, \u0027Python 3.10\u0027] Linked PRs gh-85302: Add support for BTPROTO_SCO on FreeBSD #131981 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.10only security fixesonly security fixes3.7 (EOL)end of lifeend of life3.8 (EOL)end of lifeend of life3.9 (EOL)end of lifeend of lifeOS-freebsdextension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:03:36.79338"
+  },
+  {
+    "id": 1036,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date",
+    "title": "datetime — Basic date and time types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » datetime — Basic date and time types | Theme Auto Light Dark | datetime — Basic date and time types¶ Source code: Lib/datetime.py The datetime module supplies classes for manipulating dates and times. While date and time arithmetic is supported, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation. Tip Skip to the format codes. See also Module calendar General calendar related functions. Module time Time access and conversions. Module zoneinfo Concrete time zones representing the IANA time zone database. Package dateutil Third-party library with expanded time zone and parsing support. Package DateType Third-party library that introduces distinct static types to for example, allow static type checkers to differentiate between naive and aware datetimes. Aware and naive objects¶ Date and time objects may be categorized as “aware” or “naive” depending on whether or not they include time zone information. With sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, an aware object can locate itself relative to other aware objects. An aware object represents a specific moment in time that is not open to interpretation. [1] A naive object does not contain enough information to unambiguously locate itself relative to other date/time objects. Whether a naive object represents Coordinated Universal Time (UTC), local time, or time in some other time zone is purely up to the program, just like it is up to the program whether a particular number represents metres, miles, or mass. Naive objects are easy to understand and to work with, at the cost of ignoring some aspects of reality. For applications requiring aware objects, datetime and time objects have an optional time zone information attribute, tzinfo, that can be set to an instance of a subclass of the abstract tzinfo class. These tzinfo objects capture information about the offset from UTC time, the time zone name, and whether daylight saving time is in effect. Only one concrete tzinfo class, the timezone class, is supplied by the datetime module. The timezone class can represent simple time zones with fixed offsets from UTC, such as UTC itself or North American EST and EDT time zones. Supporting time zones at deeper levels of detail is up to the application. The rules for time adjustment across the world are more political than rational, change frequently, and there is no standard suitable for every application aside from UTC. Constants¶ The datetime module exports the following constants: datetime.MINYEAR¶ The smallest year number allowed in a date or datetime object. MINYEAR is 1. datetime.MAXYEAR¶ The largest year number allowed in a date or datetime object. MAXYEAR is 9999. datetime.UTC¶ Alias for the UTC time zone singleton datetime.timezone.utc. Added in version 3.11. Available types¶ class datetime.date An idealized naive date, assuming the current Gregorian calendar always was, and always will be, in effect. Attributes: year, month, and day. class datetime.time An idealized time, independent of any particular day, assuming that every day has exactly 24*60*60 seconds. (There is no notion of “leap seconds” here.) Attributes: hour, minute, second, microsecond, and tzinfo. class datetime.datetime A combination of a date and a time. Attributes: year, month, day, hour, minute, second, microsecond, and tzinfo. class datetime.timedelta A duration expressing the difference between two datetime or date instances to microsecond resolution. class datetime.tzinfo An abstract base class for time zone information objects. These are used by the datetime and time classes to provide a customizable notion of time adjustment (for example, to account for time zone and/or daylight saving time). class datetime.timezone A class that implements the tzinfo abstract base class as a fixed offset from the UTC. Added in version 3.2. Objects of these types are immutable. Subclass relationships: Common properties¶ The date, datetime, time, and timezone types share these common features: Objects of these types are immutable. Objects of these types are hashable, meaning that they can be used as dictionary keys. Objects of these types support efficient pickling via the pickle module. Determining if an object is aware or naive¶ Objects of the date type are always naive. An object of type time or datetime may be aware or naive. A datetime object d is aware if both of the following hold: d.tzinfo is not None d.tzinfo.utcoffset(d) does not return None Otherwise, d is naive. A time object t is aware if both of the following hold: t.tzinfo is not None t.tzinfo.utcoffset(None) does not return None. Otherwise, t is naive. The distinction between aware and naive doesn’t apply to timedelta objects. timedelta objects¶ A timedelta object represents a",
+    "scrapedAt": "2026-05-09 01:03:34.532443"
+  },
+  {
+    "id": 1035,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_set_key_value",
+    "title": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Thread-local storage support | Theme Auto Light Dark | Thread-local storage support¶ The Python interpreter provides low-level support for thread-local storage (TLS) which wraps the underlying native TLS implementation to support the Python-level thread-local storage API (threading.local). The CPython C level APIs are similar to those offered by pthreads and Windows: use a thread key and functions to associate a void* value per thread. A thread state does not need to be attached when calling these functions; they supply their own locking. Note that Python.h does not include the declaration of the TLS APIs, you need to include pythread.h to use thread-local storage. Note None of these API functions handle memory management on behalf of the void* values. You need to allocate and deallocate them yourself. If the void* values happen to be PyObject*, these functions don’t do refcount operations on them either. Thread-specific storage API¶ The thread-specific storage (TSS) API was introduced to supersede the use of the existing TLS API within the CPython interpreter. This API uses a new type Py_tss_t instead of int to represent thread keys. Added in version 3.7. See also “A New C-API for Thread-Local Storage in CPython” (PEP 539) type Py_tss_t¶ This data structure represents the state of a thread key, the definition of which may depend on the underlying TLS implementation, and it has an internal field representing the key’s initialization state. There are no public members in this structure. When Py_LIMITED_API is not defined, static allocation of this type by Py_tss_NEEDS_INIT is allowed. Py_tss_NEEDS_INIT¶ This macro expands to the initializer for Py_tss_t variables. Note that this macro won’t be defined with Py_LIMITED_API. Dynamic allocation¶ Dynamic allocation of the Py_tss_t, required in extension modules built with Py_LIMITED_API, where static allocation of this type is not possible due to its implementation being opaque at build time. Py_tss_t *PyThread_tss_alloc()¶ Part of the Stable ABI since version 3.7. Return a value which is the same state as a value initialized with Py_tss_NEEDS_INIT, or NULL in the case of dynamic allocation failure. void PyThread_tss_free(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Free the given key allocated by PyThread_tss_alloc(), after first calling PyThread_tss_delete() to ensure any associated thread locals have been unassigned. This is a no-op if the key argument is NULL. Note A freed key becomes a dangling pointer. You should reset the key to NULL. Methods¶ The parameter key of these functions must not be NULL. Moreover, the behaviors of PyThread_tss_set() and PyThread_tss_get() are undefined if the given Py_tss_t has not been initialized by PyThread_tss_create(). int PyThread_tss_is_created(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a non-zero value if the given Py_tss_t has been initialized by PyThread_tss_create(). int PyThread_tss_create(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a zero value on successful initialization of a TSS key. The behavior is undefined if the value pointed to by the key argument is not initialized by Py_tss_NEEDS_INIT. This function can be called repeatedly on the same key – calling it on an already initialized key is a no-op and immediately returns success. void PyThread_tss_delete(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Destroy a TSS key to forget the values associated with the key across all threads, and change the key’s initialization state to uninitialized. A destroyed key is able to be initialized again by PyThread_tss_create(). This function can be called repeatedly on the same key – calling it on an already destroyed key is a no-op. int PyThread_tss_set(Py_tss_t *key, void *value)¶ Part of the Stable ABI since version 3.7. Return a zero value to indicate successfully associating a void* value with a TSS key in the current thread. Each thread has a distinct mapping of the key to a void* value. void *PyThread_tss_get(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return the void* value associated with a TSS key in the current thread. This returns NULL if no value is associated with the key in the current thread. Legacy APIs¶ Deprecated since version 3.7: This API is superseded by the thread-specific storage (TSS) API. Note This version of the API does not support platforms where the native TLS key is defined in a way that cannot be safely cast to int. On such platforms, PyThread_create_key() will return immediately with a failure status, and the other TLS functions will all be no-ops on such platforms. Due to the compatibility problem noted above, this version of the API should not be used in new code. int PyThread_create_key()¶ Part of the Stable ABI. void PyThread_delete_key(int key)¶ Part of the Stable ABI. int PyThread_set_key_value(int ",
+    "scrapedAt": "2026-05-09 01:03:33.248088"
+  },
+  {
     "id": 1034,
     "url": "https://docs.python.org/3/library/os.html#os.environ",
     "title": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
@@ -6928,26 +6963,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1035,
-    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_set_key_value"
-  },
-  {
-    "id": 1036,
-    "url": "https://docs.python.org/3/library/datetime.html#datetime.date"
-  },
-  {
-    "id": 1037,
-    "url": "https://github.com/python/cpython/issues/85302"
-  },
-  {
-    "id": 1038,
-    "url": "https://github.com/python/cpython/issues/89902"
-  },
-  {
-    "id": 1039,
-    "url": "https://docs.python.org/3/library/logging.html#logging.warning"
   },
   {
     "id": 1040,
@@ -188495,10 +188510,1316 @@ window.searchData = [
     "id": 166011,
     "url": "https://docs.python.org/3/c-api/arg.html#c.PyArg_VaParse",
     "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 168270,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.tzinfo",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168275,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.timezone.fromutc",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168278,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.__str__",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168280,
+    "url": "https://www.iana.org/time-zones",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168282,
+    "url": "https://docs.python.org/3/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168283,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.astimezone",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168284,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.time",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168286,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.replace",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168287,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.dst",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168289,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.second",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168291,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.hour",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168292,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.now",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168294,
+    "url": "https://docs.python.org/3/library/time.html#time.struct_time.tm_isdst",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168297,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.weekday",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168298,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.isoweekday",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168300,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.timedelta.resolution",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168301,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.fromisoformat",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168302,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.year",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168303,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.strftime",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168304,
+    "url": "https://docs.python.org/3/library/time.html#time.struct_time",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168308,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.month",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168309,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.minute",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168310,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.timedelta.total_seconds",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168312,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.timetz",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168314,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.max",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168315,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.date",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168316,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.fold",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168317,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.replace",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168318,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.timezone.dst",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168319,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.fromisoformat",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168323,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.minute",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168324,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.tzinfo.utcoffset",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168325,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.timedelta.days",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168326,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.combine",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168327,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.resolution",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168328,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.fold",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168329,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.tzname",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168332,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.timezone.tzname",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168333,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.UTC",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168334,
+    "url": "https://docs.python.org/3/library/time.html#time.time",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168337,
+    "url": "https://adamj.eu/tech/2019/09/12/how-i-import-pythons-datetime-module/",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168338,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.microsecond",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168339,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.strptime",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168340,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.dst",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168341,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.microsecond",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168345,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.strptime",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168350,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.fromisoformat",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168352,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.strftime",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168354,
+    "url": "https://docs.python.org/3/library/time.html#time.ctime",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168355,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.resolution",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168357,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.hour",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168358,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.replace",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168359,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.timedelta.microseconds",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168360,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.ctime",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168362,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.fromtimestamp",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168363,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.day",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168364,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.__format__",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168366,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.year",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168367,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.fromordinal",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168369,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.__str__",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168370,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.min",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168372,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.utcoffset",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168373,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.isocalendar",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168374,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.fromisocalendar",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168376,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.second",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168378,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.fromtimestamp",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168381,
+    "url": "https://web.archive.org/web/20220531051136/https://webspace.science.uu.nl/~gent0113/calendar/isocalendar.htm",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168382,
+    "url": "https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168383,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.utctimetuple",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168384,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.isoformat",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168385,
+    "url": "https://docs.python.org/3/library/datetime.html#format-codes",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168387,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.ctime",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168388,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.timetuple",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168389,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.tzinfo.dst",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168392,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.min",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168393,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.__str__",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168395,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.weekday",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168396,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.timetuple",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168398,
+    "url": "https://docs.python.org/3/library/datetime.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168399,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.MAXYEAR",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168400,
+    "url": "https://docs.python.org/3/library/datetime.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168401,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.tzinfo",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168402,
+    "url": "https://docs.python.org/3/library/datetime.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168404,
+    "url": "https://docs.python.org/3/library/datetime.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168405,
+    "url": "https://pypi.org/project/DateType/",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168406,
+    "url": "https://docs.python.org/3/library/datetime.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168408,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.timedelta.seconds",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168409,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.max",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168410,
+    "url": "https://docs.python.org/3/library/datetime.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168411,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.isocalendar",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168412,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.isoweekday",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168413,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.timedelta",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168414,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.max",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168417,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.toordinal",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168418,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.__format__",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168419,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.utcoffset",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168421,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.min",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168422,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.tzinfo.fromutc",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168425,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.MINYEAR",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168426,
+    "url": "https://docs.python.org/3/library/datetime.html#",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168427,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/datetime.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168428,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.month",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168429,
+    "url": "https://docs.python.org/3/library/time.html#time.strptime",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168430,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.timestamp",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168431,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.timezone.utc",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168432,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.fromisocalendar",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168433,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.tzname",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168434,
+    "url": "https://dateutil.readthedocs.io/en/stable/",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168435,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.today",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168436,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d13936",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168437,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.timedelta.max",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168438,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.strftime",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168439,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.day",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168440,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.isoformat",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168447,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.timezone.utcoffset",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168449,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.fromordinal",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168450,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time.__format__",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168452,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/datetime.py",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168453,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.resolution",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168454,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.isoformat",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168456,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.date.toordinal",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168457,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.timedelta.min",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168458,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime.today",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168460,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.tzinfo.tzname",
+    "parentUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "id": 168461,
+    "url": "https://github.com/python/cpython/issues/85302#issue-1199039573",
+    "parentUrl": "https://github.com/python/cpython/issues/85302"
+  },
+  {
+    "id": 168465,
+    "url": "https://github.com/python/cpython/issues/85302#top",
+    "parentUrl": "https://github.com/python/cpython/issues/85302"
+  },
+  {
+    "id": 168467,
+    "url": "https://github.com/myfreeweb",
+    "parentUrl": "https://github.com/python/cpython/issues/85302"
+  },
+  {
+    "id": 168468,
+    "url": "https://github.com/python/cpython/issues/85302#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/85302"
+  },
+  {
+    "id": 168469,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%223.7%20(EOL)%22",
+    "parentUrl": "https://github.com/python/cpython/issues/85302"
+  },
+  {
+    "id": 168472,
+    "url": "https://github.com/python/cpython/pull/131981",
+    "parentUrl": "https://github.com/python/cpython/issues/85302"
+  },
+  {
+    "id": 168475,
+    "url": "https://bugs.python.org/issue41130",
+    "parentUrl": "https://github.com/python/cpython/issues/85302"
+  },
+  {
+    "id": 168476,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22OS-freebsd%22",
+    "parentUrl": "https://github.com/python/cpython/issues/85302"
+  },
+  {
+    "id": 168477,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%223.8%20(EOL)%22",
+    "parentUrl": "https://github.com/python/cpython/issues/85302"
+  },
+  {
+    "id": 168478,
+    "url": "https://github.com/koobs",
+    "parentUrl": "https://github.com/python/cpython/issues/85302"
+  },
+  {
+    "id": 168483,
+    "url": "https://github.com/python/cpython/pull/110508",
+    "parentUrl": "https://github.com/python/cpython/issues/89902"
+  },
+  {
+    "id": 168485,
+    "url": "https://github.com/python/cpython/issues/89902#top",
+    "parentUrl": "https://github.com/python/cpython/issues/89902"
+  },
+  {
+    "id": 168487,
+    "url": "https://bugs.python.org/issue45739",
+    "parentUrl": "https://github.com/python/cpython/issues/89902"
+  },
+  {
+    "id": 168488,
+    "url": "https://github.com/facundobatista",
+    "parentUrl": "https://github.com/python/cpython/issues/89902"
+  },
+  {
+    "id": 168494,
+    "url": "https://github.com/python/cpython/issues/89902#issue-1199068854",
+    "parentUrl": "https://github.com/python/cpython/issues/89902"
+  },
+  {
+    "id": 168495,
+    "url": "https://github.com/python/cpython/issues/89902#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/89902"
+  },
+  {
+    "id": 168496,
+    "url": "https://github.com/ericvsmith",
+    "parentUrl": "https://github.com/python/cpython/issues/89902"
+  },
+  {
+    "id": 168500,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.exception",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168506,
+    "url": "https://docs.python.org/3/library/functions.html#filemodes",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168508,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.removeFilter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168510,
+    "url": "https://docs.python.org/3/library/logging.html#logging.LogRecord.getMessage",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168511,
+    "url": "https://docs.python.org/3/library/logging.html#logging.basicConfig",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168514,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.name",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168516,
+    "url": "https://docs.python.org/3/howto/logging-cookbook.html#logging-cookbook",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168517,
+    "url": "https://docs.python.org/3/library/traceback.html#traceback.print_exception",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168518,
+    "url": "https://docs.python.org/3/library/logging.html#logging.LoggerAdapter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168521,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.removeFilter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168524,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.hasHandlers",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168525,
+    "url": "https://docs.python.org/3/library/logging.html#logging.error",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168526,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Formatter.format",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168527,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/logging.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168529,
+    "url": "https://docs.python.org/3/library/logging.html#logging.raiseExceptions",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168530,
+    "url": "https://docs.python.org/3/library/logging.html#logging.addLevelName",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168531,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.release",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168532,
+    "url": "https://docs.python.org/3/howto/logging-cookbook.html#formatting-styles",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168533,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Filter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168534,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.emit",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168535,
+    "url": "https://docs.python.org/3/library/logging.html#logger",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168536,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.handle",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168539,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Formatter.formatStack",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168541,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.critical",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168543,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.format",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168544,
+    "url": "https://docs.python.org/3/library/logging.html#logging.setLogRecordFactory",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168545,
+    "url": "https://docs.python.org/3/library/logging.html#levels",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168546,
+    "url": "https://docs.python.org/3/library/traceback.html#traceback.print_stack",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168549,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.findCaller",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168550,
+    "url": "https://docs.python.org/3/library/logging.html#logging.DEBUG",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168551,
+    "url": "https://docs.python.org/3/library/logging.html#logging.disable",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168553,
+    "url": "https://docs.python.org/3/library/logging.html#logging.setLoggerClass",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168554,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Formatter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168556,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.handle",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168557,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.addHandler",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168558,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.handleError",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168561,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.addFilter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168562,
+    "url": "https://docs.python.org/3/library/logging.html#logging.info",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168564,
+    "url": "https://docs.python.org/3/library/logging.html#logging.LoggerAdapter._log",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168565,
+    "url": "https://old.red-dove.com/python_logging.html",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168568,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.getChildren",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168569,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#logging.StreamHandler",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168570,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.error",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168573,
+    "url": "https://docs.python.org/3/library/logging.html#logging.BufferingFormatter.formatHeader",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168574,
+    "url": "https://docs.python.org/3/howto/logging.html#arbitrary-object-messages",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168576,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.__init__",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168577,
+    "url": "https://docs.python.org/3/howto/logging.html#logging-basic-tutorial",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168580,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168581,
+    "url": "https://docs.python.org/3/library/logging.html#logging.getLogger",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168582,
+    "url": "https://docs.python.org/3/library/logging.html#logging.debug",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168583,
+    "url": "https://docs.python.org/3/library/logging.html#",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168584,
+    "url": "https://docs.python.org/3/library/logging.html#logging.log",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168585,
+    "url": "https://docs.python.org/3/library/logging.html#logging.critical",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168589,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.flush",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168592,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.makeRecord",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168593,
+    "url": "https://docs.python.org/3/library/logging.html#logging.LoggerAdapter.manager",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168594,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d28524",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168595,
+    "url": "https://docs.python.org/3/howto/logging-cookbook.html#filters-contextual",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168596,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.setLevel",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168597,
+    "url": "https://docs.python.org/3/library/logging.html#logging.lastResort",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168598,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.level",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168599,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Formatter.formatException",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168600,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.warning",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168601,
+    "url": "https://docs.python.org/3/library/logging.html#logging.getHandlerNames",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168602,
+    "url": "https://docs.python.org/3/library/logging.html#logging.CRITICAL",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168604,
+    "url": "https://docs.python.org/3/library/logging.html#logging.getLevelName",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168605,
+    "url": "https://docs.python.org/3/library/logging.html#logging.getHandlerByName",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168607,
+    "url": "https://docs.python.org/3/library/logging.html#logging.LoggerAdapter.process",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168608,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#logging.FileHandler",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168609,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.isEnabledFor",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168610,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.acquire",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168611,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.filter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168612,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.close",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168613,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.log",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168615,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.addFilter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168618,
+    "url": "https://docs.python.org/3/library/logging.html#logging.makeLogRecord",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168620,
+    "url": "https://docs.python.org/3/howto/logging-cookbook.html#context-info",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168621,
+    "url": "https://docs.python.org/3/library/logging.html#logging.BufferingFormatter.formatFooter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168622,
+    "url": "https://docs.python.org/3/howto/logging.html#custom-levels",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168625,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.setLevel",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168626,
+    "url": "https://docs.python.org/3/library/logging.html#logging.getLogRecordFactory",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168627,
+    "url": "https://docs.python.org/3/library/logging.html#logging.getLoggerClass",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168628,
+    "url": "https://docs.python.org/3/library/logging.html#logging.shutdown",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168630,
+    "url": "https://docs.python.org/3/library/logging.html#logging.BufferingFormatter.format",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168631,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.propagate",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168632,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.getEffectiveLevel",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168633,
+    "url": "https://docs.python.org/3/library/time.html#time.time_ns",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168637,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Formatter.formatTime",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168640,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.parent",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168641,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.debug",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168645,
+    "url": "https://docs.python.org/3/library/logging.config.html#module-logging.config",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168646,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.handlers",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168647,
+    "url": "https://docs.python.org/3/library/logging.html#logging.WARNING",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168648,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.filter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168649,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Filter.filter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168650,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.createLock",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168653,
+    "url": "https://docs.python.org/3/library/logging.html#logging.BufferingFormatter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168654,
+    "url": "https://docs.python.org/3/howto/logging.html#logging-advanced-tutorial",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168655,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#module-logging.handlers",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168660,
+    "url": "https://docs.python.org/3/library/logging.html#logging.exception",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168661,
+    "url": "https://docs.python.org/3/library/logging.html#logging.getLevelNamesMapping",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168662,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.removeHandler",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168664,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/logging/__init__.py",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168665,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.getChild",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168666,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.disabled",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168667,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.info",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168668,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.setFormatter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "logging — Logging facility for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "logging — Logging facility for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "The Python implementation of Decimal does not support the \"N\" format · Issue #89902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/89902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "The Python implementation of Decimal does not support the \"N\" format · Issue #89902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/89902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93804052?v\u003d4\u0026size\u003d80",
+    "alt": "@myfreeweb",
+    "pageTitle": "Improve/fix FreeBSD Bluetooth socket support · Issue #85302 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/85302"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93804052?v\u003d4\u0026size\u003d48",
+    "alt": "@myfreeweb",
+    "pageTitle": "Improve/fix FreeBSD Bluetooth socket support · Issue #85302 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/85302"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "datetime — Basic date and time types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/datetime-inheritance.svg",
+    "alt": "timedelta, tzinfo, time, and date inherit from object; timezone inherits from tzinfo; and datetime inherits from date.",
+    "pageTitle": "datetime — Basic date and time types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "datetime — Basic date and time types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/datetime.html#datetime.date"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_set_key_value"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_set_key_value"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
