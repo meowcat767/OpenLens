@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1752,
+    "url": "https://github.com/python/cpython/issues/119180",
+    "title": "Implement PEP 649 and PEP 749 · Issue #119180 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Implement PEP 649 and PEP 749 #119180 New issue Copy link New issue Copy link Closed Closed Implement PEP 649 and PEP 749#119180 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-typingtype-featureA feature request or enhancementA feature request or enhancement Description JelleZijlstra opened on May 19, 2024 Issue body actions PEP-649 has been accepted and should be implemented in Python 3.14. Let\u0027s use this issue to track the implementation: Decide on or clarify the adoption strategy (https://discuss.python.org/t/pep-649-deferred-evaluation-of-annotations-tentatively-accepted/21331/44) Add new __annotate__ attributes gh-119180: PEP 649: Add __annotate__ attributes #119209 Implement core interpreter changes (e.g., new symbol table functionality) gh-119180: PEP 649 compiler changes #119361 Implement new Python-level APIs, like the new format argument to inspect.get_annotations gh-119180: Add annotationlib module to support PEP 649 #119891 (PEP-649 specifies that inspect.AnnotationsFormat should be a \"global enum\". Is that desirable? TBD. https://github.com/python/cpython/pull/119361/files#r1614753031) Document the new semantics gh-119180: Documentation for PEP 649 and 749 #122235 Add higher-level documentation, e.g. a migration guide away from from __future__ import annotations; an introduction to annotationlib; an update to Larry\u0027s annotations HOWTO The SC would like https://peps.python.org/pep-0749/#appendix incorporated into the docs Make staticmethod and classmethod not force evaluation of annotations gh-119180: Lazily wrap annotations on classmethod and staticmethod #119864 Adapt standard library code that uses annotations to work excellently with PEP 649 dataclasses gh-119180: Add annotationlib module to support PEP 649 #119891 typing.py: TypedDict, NamedTuple, try to remove dependency on inspect. (If it can\u0027t be removed, get rid of the awkward dance we do for typing.Protocol to import inspect.getattr_static lazily.) singledispatch gh-119180: Add annotationlib module to support PEP 649 #119891 Also make it only evaluate the relevant parameter, gh-119180: Add annotationlib module to support PEP 649 #119891 (comment) functools.update_wrapper gh-119180: Add annotationlib module to support PEP 649 #119891, PEP 649: functools.update_wrapper implementation #124342 Add PEP 649-like functionality to TypeAliasType, TypeVar, etc. (pep649-typevar branch in my fork) Make sure the ecosystem is ready by testing third-party libraries like Pydantic typing_extensions: needs changes similar to those in typing.py ( Support my PEP 649 branch typing_extensions#412) beartype: had various unrelated problems on 3.13 ( [Future] Python 3.13 conformance beartype/beartype#387); a few additional tests fail on the PR branch due to direct manipulation of __dict__ typeguard: some unrelated 3.13 problems ( Support Python 3.13 agronholm/typeguard#460); no test failures related to PEP 649 pyanalyze: some unrelated 3.13 issues and a few changes necessary due to direct __dict__ access ( Support Python 3.13 quora/pyanalyze#773) pydantic: failed to build for 3.14 so far Optimize the implementation. Ideas: Avoid creation of function objects and store only code objects instead PEP 649: Avoid creation of function objects for __annotate__ #124157 Avoid creation of AST nodes and use of eval() for ForwardRefs that are just names gh-119180: Avoid going through AST and eval() when possible in annotationlib #124337 Things to revisit: Should FORWARDREF be the default? Some improvements for Python 3.14 / PEP 649 support beartype/beartype#440 (comment) Add VALUE_WITH_FAKE_GLOBALS format Name of __annotate__ parameter Should setting __annotations__ invalidate __annotate__? Rename SOURCE to STRING? I am planning to work on the interpreter core first. cc @larryhastings @carljm @samuelcolvin Linked PRs gh-119180: PEP 649: Add __annotate__ attributes #119209 gh-119180: Add LOAD_COMMON_CONSTANT opcode #119321 gh-119180: PEP 649 compiler changes #119361 gh-119180: Update the magic number #119397 gh-119180: Lazily wrap annotations on classmethod and staticmethod #119864 gh-119180: Add annotationlib module to support PEP 649 #119891 gh-119180: Fix annotations lookup on classes with custom metaclasses #120719 gh-119180: Alternative approach to metaclass annotations: never use ",
+    "scrapedAt": "2026-05-09 01:32:18.624444"
+  },
+  {
+    "id": 1751,
+    "url": "https://github.com/python/cpython/issues/119182",
+    "title": "[C API] Add an efficient public PyUnicodeWriter API · Issue #119182 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k [C API] Add an efficient public PyUnicodeWriter API #119182 New issue Copy link New issue Copy link Closed Closed [C API] Add an efficient public PyUnicodeWriter API#119182 Copy link Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description vstinner opened on May 19, 2024 Issue body actions Feature or enhancement Creating a Python string object in an efficient way is complicated. Python has private _PyUnicodeWriter API. It\u0027s being used by these projects: Affected projects (5): Cython (3.0.9) asyncpg (0.29.0) catboost (1.2.3) frozendict (2.4.0) immutables (0.20) I propose making the API public to promote it and help C extensions maintainers to write more efficient code to create Python string objects. API: typedef struct PyUnicodeWriter PyUnicodeWriter;\n\nPyAPI_FUNC(PyUnicodeWriter*) PyUnicodeWriter_Create(void);\nPyAPI_FUNC(void) PyUnicodeWriter_Discard(PyUnicodeWriter *writer);\nPyAPI_FUNC(PyObject*) PyUnicodeWriter_Finish(PyUnicodeWriter *writer);\n\nPyAPI_FUNC(void) PyUnicodeWriter_SetOverallocate(\n    PyUnicodeWriter *writer,\n    int overallocate);\n\nPyAPI_FUNC(int) PyUnicodeWriter_WriteChar(\n    PyUnicodeWriter *writer,\n    Py_UCS4 ch);\nPyAPI_FUNC(int) PyUnicodeWriter_WriteUTF8(\n    PyUnicodeWriter *writer,\n    const char *str,  // decoded from UTF-8\n    Py_ssize_t len);  // use strlen() if len \u003c 0\nPyAPI_FUNC(int) PyUnicodeWriter_Format(\n    PyUnicodeWriter *writer,\n    const char *format,\n    ...);\n\n// Write str(obj)\nPyAPI_FUNC(int) PyUnicodeWriter_WriteStr(\n    PyUnicodeWriter *writer,\n    PyObject *obj);\n\n// Write repr(obj)\nPyAPI_FUNC(int) PyUnicodeWriter_WriteRepr(\n    PyUnicodeWriter *writer,\n    PyObject *obj);\n\n// Write str[start:end]\nPyAPI_FUNC(int) PyUnicodeWriter_WriteSubstring(\n    PyUnicodeWriter *writer,\n    PyObject *str,\n    Py_ssize_t start,\n    Py_ssize_t end); The internal writer buffer is overallocated by default. PyUnicodeWriter_Finish() truncates the buffer to the exact size if the buffer was overallocated. Overallocation reduces the cost of exponential complexity when adding short strings in a loop. Use PyUnicodeWriter_SetOverallocate(writer, 0) to disable overallocation just before the last write. The writer takes care of the internal buffer kind: Py_UCS1 (latin1), Py_UCS2 (BMP) or Py_UCS4 (full Unicode Character Set). It also implements an optimization if a single write is made using PyUnicodeWriter_WriteStr(): it returns the string unchanged without any copy. Example of usage (simplified code from Python/unionobject.c): static PyObject *\nunion_repr(PyObject *self)\n{\n    unionobject *alias \u003d (unionobject *)self;\n    Py_ssize_t len \u003d PyTuple_GET_SIZE(alias-\u003eargs);\n\n    PyUnicodeWriter *writer \u003d PyUnicodeWriter_Create();\n    if (writer \u003d\u003d NULL) {\n        return NULL;\n    }\n\n    for (Py_ssize_t i \u003d 0; i \u003c len; i++) {\n        if (i \u003e 0 \u0026\u0026 PyUnicodeWriter_WriteUTF8(writer, \" | \", 3) \u003c 0) {\n            goto error;\n        }\n        PyObject *p \u003d PyTuple_GET_ITEM(alias-\u003eargs, i);\n        if (PyUnicodeWriter_WriteRepr(writer, p) \u003c 0) {\n            goto error;\n        }\n    }\n    return PyUnicodeWriter_Finish(writer);\n\nerror:\n    PyUnicodeWriter_Discard(writer);\n    return NULL;\n} Linked PRs gh-119182: Add PyUnicodeWriter C API #119184 gh-119396: Optimize PyUnicode_FromFormat() UTF-8 decoder #119398 gh-119182: Decode PyUnicode_FromFormat() format string from UTF-8 #120248 gh-119182: Use strict error handler in PyUnicode_FromFormat() #120307 gh-119182: Add PyUnicodeWriter_DecodeUTF8Stateful() #120639 gh-119182: Optimize PyUnicode_FromFormat() #120796 gh-119182: Use public PyUnicodeWriter API in union_repr() #120797 gh-119182: Use public PyUnicodeWriter API in ga_repr() #120799 gh-119182: Use public PyUnicodeWriter in contextvar_tp_repr() #120809 gh-119182: Rewrite PyUnicodeWriter tests in Python #120845 gh-119182: Add PyUnicodeWriter_WriteUCS4() function #120849 gh-119182: Use PyUnicodeWriter_WriteWideChar() #120851 gh-119182: Add checks to PyUnicodeWriter APIs #120870 gh-119182: Complete PyUnicodeWriter documentation #127607 gh-119182: Use public PyUnicodeWriter in wrap_strftime() #129206 gh-119182: Use public PyUnicodeWriter in time_strftime() #129207 gh-119182: Use public PyUnicodeWriter in ast_unparse.c #129208 gh-119182: Use public PyUnicodeWriter in Python-ast.c #129209 gh-119182: Use public PyUnicodeWriter in stringio.c #129243 gh-119182: Use public PyUnicodeWriter in _json.c #129249 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels topic-C-APItype-featureA fea",
+    "scrapedAt": "2026-05-09 01:32:15.68929"
+  },
+  {
+    "id": 1750,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html",
+    "title": "RFC 2361 - WAVE and AVI Codec Registries",
+    "content": "Light Dark Auto Network Working Group                                      E. Fleischman\nRequest for Comments: 2361                         Microsoft Corporation\nCategory: Informational                                        June 1998\n\n\n                     WAVE and AVI Codec Registries\n\nStatus of this Memo\n\n   This memo provides information for the Internet community.  It does\n   not specify an Internet standard of any kind.  Distribution of this\n   memo is unlimited.\n\nCopyright Notice\n\n   Copyright (C) The Internet Society (1998).  All Rights Reserved.\n\nAbstract\n\n   Internet applications may reference specific codecs within the WAVE\n   and AVI registries as follows:\n   * video/vnd.avi; codec\u003dXXX identifies a specific video codec (i.e.,\n     XXX) within the AVI Registry.\n   * audio/vnd.wave; codec\u003dYYY identifies a specific audio codec\n     (i.e., YYY) within the WAVE Registry.\n\n   Appendix A and Appendix B provides an authoritative reference for the\n   interpretation of the required \"codec\" parameter. That is, the\n   current set of audio codecs that are registered within the WAVE\n   Registry are enumerated in Appendix A. Appendix B enumerates the\n   current set of video codecs that have been registered to date within\n   the AVI Registry.\n\n1 Introduction\n\n   Internet-oriented multimedia applications reference multimedia\n   content via predefined mechanisms (e.g., [2]). In the general case,\n   this content was created primarily for the use of these Internet-\n   oriented applications. Unfortunately, this Internet-oriented\n   multimedia content represents a small minority of the total amount of\n   multimedia content that has been created to date.\n\n   For this reason, a growing interest is forming in establishing\n   mechanisms by which the repertoire of multimedia content available to\n   Internet-oriented applications(e.g., for RTSP [3]) may be greatly\n   extended to include multimedia content that has been created outside\n   of distinctly Internet contexts. For this to occur, a mechanism must\n\n\n\n\nFleischman                   Informational                      [Page 1] \nRFC 2361             WAVE and AVI Codec Registries             June 1998\n\n\n   be created for Internet protocols (e.g., [1], [3], [4]) to be able to\n   identify the codecs by which this so-called \"traditional\" multimedia\n   content has been encoded.\n\n   Unfortunately, several distinct encoding systems exist for\n   traditional multimedia content. Each system has its own registry to\n   ensure unique and stable codec identifications within that system.\n   Perhaps the best known of these registries are Microsoft (for WAVE\n   and AVI content) and Apple (for QuickTime content).\n\n   The purpose of this paper is to establish a mechanism by which codecs\n   registered within Microsoft\u0027s WAVE and AVI Registries may be\n   referenced within the IANA Namespace by Internet applications.\n\n2 References to Registries within the IANA Vendor Tree\n\n   Reference [7] specifies that the IANA Namespace encompasses several\n   trees. Discussions within the IETF-Types mailing list concluded that\n   the most appropriate tree in which to reference codecs, which had\n   already been registered by non-IANA Registries, is the Vendor Tree.\n\n   As a result, the non-IANA registry is identified within the IANA\n   Vendor tree by vnd.RegistryName. A specific codec, which has been\n   registered within that registry, is identified by a required codec\n   parameter as specified by Section 2.2.3 of [7].\n\n3 WAVE and AVI Registries\n\n   Both the WAVE and AVI Registries are historic databases that have\n   been maintained by Microsoft as a free service. The Registries sought\n   to assist developers of WAVE and AVI content and to standardize WAVE\n   and AVI content by\n   1) avoiding conflict and/or duplication with current definitions, and\n   2) providing the registered information in a standard document and\n      format that is publicly available.\n   The historic nature of these databases implies that unless the\n   original registrants informed the registrar of a change of status\n   (e.g., company acquired, new contact, new location, new phone), the\n   contact information has generally not been updated from the\n   originally registered values.\n\n   Audio codecs within the WAVE Registry are identified by WAVE Format\n   IDs. The (audio) WAVE Format ID is officially known as \"WAVE form\n   Registration Number\". The WAVE Format ID is a hexadecimal integer\n   value. These codecs may be referenced within the IANA namespace as\n\n\n\n\n\n\nFleischman                   Informational                      [Page 2] \nRFC 2361             WAVE and AVI Codec Registries             June 1998\n\n\n   \"audio/vnd.wave; codec\u003dXXX\", where XXX represents a valid WAVE Format\n   ID (e.g., the WAVE Format ID of \"123\" is referenced within the IANA\n   namespace by \"audio/vnd.wave; codec\u003d123\").\n\n   Video codecs within the AVI Registry are identified by AVI Codec IDs.\n   The AVI Codec ID value is a FourCC encoding. A FourCC is 32-bits",
+    "scrapedAt": "2026-05-09 01:32:12.866876"
+  },
+  {
+    "id": 1749,
+    "url": "https://docs.python.org/3/library/typing.html#typing.IO",
+    "title": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Development Tools » typing — Support for type hints | Theme Auto Light Dark | typing — Support for type hints¶ Added in version 3.5. Source code: Lib/typing.py Note The Python runtime does not enforce function and variable type annotations. They can be used by third party tools such as type checkers, IDEs, linters, etc. This module provides runtime support for type hints. Consider the function below: def surface_area_of_cube(edge_length: float) -\u003e str:\n    return f\"The surface area of the cube is {6 * edge_length ** 2}.\"\n The function surface_area_of_cube takes an argument expected to be an instance of float, as indicated by the type hint edge_length: float. The function is expected to return an instance of str, as indicated by the -\u003e str hint. While type hints can be simple classes like float or str, they can also be more complex. The typing module provides a vocabulary of more advanced type hints. New features are frequently added to the typing module. The typing_extensions package provides backports of these new features to older versions of Python. See also Typing cheat sheet A quick overview of type hints (hosted at the mypy docs) Type System Reference section of the mypy docs The Python typing system is standardised via PEPs, so this reference should broadly apply to most Python type checkers. (Some parts may still be specific to mypy.) Static Typing with Python Type-checker-agnostic documentation written by the community detailing type system features, useful typing related tools and typing best practices. Specification for the Python Type System¶ The canonical, up-to-date specification of the Python type system can be found at Specification for the Python type system. Type aliases¶ A type alias is defined using the type statement, which creates an instance of TypeAliasType. In this example, Vector and list[float] will be treated equivalently by static type checkers: type Vector \u003d list[float]\n\ndef scale(scalar: float, vector: Vector) -\u003e Vector:\n    return [scalar * num for num in vector]\n\n# passes type checking; a list of floats qualifies as a Vector.\nnew_vector \u003d scale(2.0, [1.0, -4.2, 5.4])\n Type aliases are useful for simplifying complex type signatures. For example: from collections.abc import Sequence\n\ntype ConnectionOptions \u003d dict[str, str]\ntype Address \u003d tuple[str, int]\ntype Server \u003d tuple[Address, ConnectionOptions]\n\ndef broadcast_message(message: str, servers: Sequence[Server]) -\u003e None:\n    ...\n\n# The static type checker will treat the previous type signature as\n# being exactly equivalent to this one.\ndef broadcast_message(\n    message: str,\n    servers: Sequence[tuple[tuple[str, int], dict[str, str]]]\n) -\u003e None:\n    ...\n The type statement is new in Python 3.12. For backwards compatibility, type aliases can also be created through simple assignment: Vector \u003d list[float]\n Or marked with TypeAlias to make it explicit that this is a type alias, not a normal variable assignment: from typing import TypeAlias\n\nVector: TypeAlias \u003d list[float]\n NewType¶ Use the NewType helper to create distinct types: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\nsome_id \u003d UserId(524313)\n The static type checker will treat the new type as if it were a subclass of the original type. This is useful in helping catch logical errors: def get_user_name(user_id: UserId) -\u003e str:\n    ...\n\n# passes type checking\nuser_a \u003d get_user_name(UserId(42351))\n\n# fails type checking; an int is not a UserId\nuser_b \u003d get_user_name(-1)\n You may still perform all int operations on a variable of type UserId, but the result will always be of type int. This lets you pass in a UserId wherever an int might be expected, but will prevent you from accidentally creating a UserId in an invalid way: # \u0027output\u0027 is of type \u0027int\u0027, not \u0027UserId\u0027\noutput \u003d UserId(23413) + UserId(54341)\n Note that these checks are enforced only by the static type checker. At runtime, the statement Derived \u003d NewType(\u0027Derived\u0027, Base) will make Derived a callable that immediately returns whatever parameter you pass it. That means the expression Derived(some_value) does not create a new class or introduce much overhead beyond that of a regular function call. More precisely, the expression some_value is Derived(some_value) is always true at runtime. It is invalid to create a subtype of Derived: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\n# Fails at runtime and does not pass type checking\nclass AdminUserId(UserId): pass\n However, it is possible to create a NewType based on a ‘derived’ NewType: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\nProUserId \u003d NewType(\u0027ProUserId\u0027, UserId)\n and typechecking for ProUserId will work as expected. See PEP 484 for more details. Note Recall that the use of a type alias declares two types to be equivalent to one another. Doing type Alias \u003d Original will make the static type checker treat Alias a",
+    "scrapedAt": "2026-05-09 01:32:11.320734"
+  },
+  {
+    "id": 1748,
+    "url": "https://docs.python.org/3/improve-page-nojs.html",
+    "title": "Improve a documentation page — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | Python » 3.14.5rc1 Documentation » Improve a documentation page | Theme Auto Light Dark | Improve a documentation page¶ We are always interested to hear ideas about improvements to the documentation. You have a few ways to ask questions or suggest changes: You can start a discussion about the page on the Python discussion forum. This link will start a topic in the Documentation category: New Documentation topic. You can open an issue on the Python GitHub issue tracker. This link will create a new issue with the “docs” label: New docs issue. This page Report a bug Improve this page Show source « Navigation index modules | Python » 3.14.5rc1 Documentation » Improve a documentation page | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 01:32:10.032358"
+  },
+  {
     "id": 1747,
     "url": "https://docs.python.org/3/c-api/sys.html#c.Py_fclose",
     "title": "Operating System Utilities — Python 3.14.5rc1 documentation",
@@ -11793,26 +11828,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1748,
-    "url": "https://docs.python.org/3/improve-page-nojs.html"
-  },
-  {
-    "id": 1749,
-    "url": "https://docs.python.org/3/library/typing.html#typing.IO"
-  },
-  {
-    "id": 1750,
-    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html"
-  },
-  {
-    "id": 1751,
-    "url": "https://github.com/python/cpython/issues/119182"
-  },
-  {
-    "id": 1752,
-    "url": "https://github.com/python/cpython/issues/119180"
   },
   {
     "id": 1753,
@@ -247725,10 +247740,620 @@ window.searchData = [
     "id": 380359,
     "url": "https://github.com/python/cpython/pull/126412",
     "parentUrl": "https://github.com/python/cpython/issues/89416"
+  },
+  {
+    "id": 380462,
+    "url": "https://discuss.python.org/new-topic?category\u003ddocumentation",
+    "parentUrl": "https://docs.python.org/3/improve-page-nojs.html"
+  },
+  {
+    "id": 380463,
+    "url": "https://github.com/python/cpython/blob/main/Doc/improve-page-nojs.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/improve-page-nojs.html"
+  },
+  {
+    "id": 380473,
+    "url": "https://github.com/python/cpython/issues/new?template\u003ddocumentation.yml",
+    "parentUrl": "https://docs.python.org/3/improve-page-nojs.html"
+  },
+  {
+    "id": 380474,
+    "url": "https://docs.python.org/3/improve-page-nojs.html#",
+    "parentUrl": "https://docs.python.org/3/improve-page-nojs.html"
+  },
+  {
+    "id": 380475,
+    "url": "https://docs.python.org/3/improve-page-nojs.html#improve-a-documentation-page",
+    "parentUrl": "https://docs.python.org/3/improve-page-nojs.html"
+  },
+  {
+    "id": 380823,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1890",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380824,
+    "url": "https://www.rfc-editor.org/rfc/pdfrfc/rfc2361.txt.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380827,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html#appendix-A",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380829,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html#appendix-C",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380830,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html#appendix-B",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380831,
+    "url": "https://datatracker.ietf.org/doc/rfc2361/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380832,
+    "url": "http://www.microsoft.com/asf/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380833,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1889",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380834,
+    "url": "https://datatracker.ietf.org/doc/rfc2361/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380835,
+    "url": "http://www.duck.com/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380836,
+    "url": "https://datatracker.ietf.org/person/ericfl@microsoft.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380837,
+    "url": "https://www.rfc-editor.org/rfc/rfc2361.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380838,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380839,
+    "url": "http://www.microsoft.com/asf/guids.htm",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380840,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380841,
+    "url": "https://datatracker.ietf.org/doc/html/draft-fleischman-codec-subtree-01",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380842,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380843,
+    "url": "http://www.microsoft.com/asf/specs.htm",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380844,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380845,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380846,
+    "url": "https://www.rfc-editor.org/rfc/rfc2361.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380847,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html#ref-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380848,
+    "url": "https://datatracker.ietf.org/doc/draft-fleischman-codec-subtree/01/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380850,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html#ref-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380851,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html#ref-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380852,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html#ref-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380853,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html#ref-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380856,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html#ref-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380857,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2326",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380858,
+    "url": "https://www.rfc-editor.org/rfc/inline-errata/rfc2361.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380859,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2361.html#ref-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380860,
+    "url": "https://www.rfc-editor.org/errata_search.php?rfc\u003d2361",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc2361.html"
+  },
+  {
+    "id": 380861,
+    "url": "https://github.com/python/cpython/issues/119182#issue-2304674964",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380863,
+    "url": "https://github.com/python/cpython/pull/119398",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380866,
+    "url": "https://github.com/python/cpython/pull/120845",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380867,
+    "url": "https://github.com/python/cpython/pull/120248",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380868,
+    "url": "https://github.com/python/cpython/pull/120849",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380869,
+    "url": "https://github.com/python/cpython/pull/120307",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380870,
+    "url": "https://github.com/python/cpython/issues/119182#top",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380872,
+    "url": "https://github.com/python/cpython/pull/119184",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380873,
+    "url": "https://github.com/python/cpython/pull/129243",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380874,
+    "url": "https://github.com/python/cpython/pull/120809",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380878,
+    "url": "https://github.com/python/cpython/pull/120799",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380879,
+    "url": "https://github.com/python/cpython/pull/120639",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380880,
+    "url": "https://github.com/python/cpython/pull/127607",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380881,
+    "url": "https://github.com/python/cpython/issues/119182#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380882,
+    "url": "https://github.com/python/cpython/pull/120870",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380883,
+    "url": "https://github.com/python/cpython/pull/129209",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380884,
+    "url": "https://github.com/python/cpython/pull/120797",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380885,
+    "url": "https://github.com/python/cpython/pull/129208",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380886,
+    "url": "https://github.com/python/cpython/pull/120796",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380887,
+    "url": "https://github.com/python/cpython/pull/120851",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380888,
+    "url": "https://github.com/python/cpython/pull/129207",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380889,
+    "url": "https://github.com/python/cpython/pull/129206",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380890,
+    "url": "https://github.com/python/cpython/pull/129249",
+    "parentUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "id": 380891,
+    "url": "https://github.com/python/cpython/pull/124461",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380893,
+    "url": "https://github.com/python/cpython/pull/131755",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380894,
+    "url": "https://github.com/larryhastings",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380896,
+    "url": "https://github.com/python/cpython/pull/119397",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380897,
+    "url": "https://github.com/python/cpython/issues/124342",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380899,
+    "url": "https://github.com/python/cpython/issues/119180#issue-2304664735",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380901,
+    "url": "https://github.com/python/cpython/pull/122365",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380902,
+    "url": "https://github.com/python/cpython/pull/122366",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380903,
+    "url": "https://github.com/python/cpython/pull/124620",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380904,
+    "url": "https://github.com/python/cpython/pull/133407",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380907,
+    "url": "https://peps.python.org/649",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380908,
+    "url": "https://github.com/quora/pyanalyze/pull/773",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380909,
+    "url": "https://github.com/python/cpython/pull/137247",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380910,
+    "url": "https://github.com/python/cpython/pull/133841",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380911,
+    "url": "https://github.com/python/cpython/pull/119864",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380912,
+    "url": "https://github.com/python/cpython/pull/134731",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380914,
+    "url": "https://github.com/python/cpython/pull/143758",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380916,
+    "url": "https://github.com/python/cpython/issues/124157",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380917,
+    "url": "https://github.com/python/cpython/pull/122235",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380918,
+    "url": "https://github.com/python/cpython/pull/124337",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380919,
+    "url": "https://github.com/python/cpython/pull/124415",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380920,
+    "url": "https://github.com/python/cpython/pull/124730",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380921,
+    "url": "https://github.com/python/cpython/pull/124561",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380922,
+    "url": "https://github.com/python/cpython/pull/119891",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380923,
+    "url": "https://github.com/python/cpython/pull/133552",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380925,
+    "url": "https://github.com/python/cpython/pull/134640",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380928,
+    "url": "https://github.com/python/cpython/pull/135654",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380929,
+    "url": "https://github.com/agronholm/typeguard/pull/460",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380930,
+    "url": "https://github.com/python/cpython/issues/119180#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380931,
+    "url": "https://github.com/python/cpython/pull/124326",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380932,
+    "url": "https://github.com/samuelcolvin",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380933,
+    "url": "https://github.com/python/typing_extensions/pull/412",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380934,
+    "url": "https://github.com/python/cpython/pull/133902",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380936,
+    "url": "https://github.com/beartype/beartype/issues/387",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380938,
+    "url": "https://github.com/python/cpython/pull/119891#discussion_r1636397226",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380939,
+    "url": "https://github.com/python/cpython/pull/124393",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380940,
+    "url": "https://github.com/python/cpython/pull/119361",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380941,
+    "url": "https://github.com/python/cpython/pull/133903",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380942,
+    "url": "https://github.com/python/cpython/pull/135644",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380944,
+    "url": "https://github.com/python/cpython/pull/119321",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380946,
+    "url": "https://github.com/beartype/beartype/pull/440#issuecomment-2373086020",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380947,
+    "url": "https://github.com/python/cpython/pull/119209",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380948,
+    "url": "https://github.com/python/cpython/pull/137263",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380949,
+    "url": "https://github.com/python/cpython/issues/119180#top",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380950,
+    "url": "https://github.com/python/cpython/pull/124634",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380951,
+    "url": "https://github.com/python/cpython/pull/124479",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380952,
+    "url": "https://github.com/python/cpython/pull/119361/files#r1614753031",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380954,
+    "url": "https://github.com/python/cpython/pull/122210",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380955,
+    "url": "https://github.com/python/cpython/pull/148901",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "id": 380956,
+    "url": "https://github.com/python/cpython/pull/122212",
+    "parentUrl": "https://github.com/python/cpython/issues/119180"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "JelleZijlstra",
+    "pageTitle": "Implement PEP 649 and PEP 749 · Issue #119180 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Implement PEP 649 and PEP 749 · Issue #119180 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Implement PEP 649 and PEP 749 · Issue #119180 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Implement PEP 649 and PEP 749 · Issue #119180 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119180"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Add an efficient public PyUnicodeWriter API · Issue #119182 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Add an efficient public PyUnicodeWriter API · Issue #119182 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119182"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.IO"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.IO"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Improve a documentation page — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/improve-page-nojs.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Improve a documentation page — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/improve-page-nojs.html"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
