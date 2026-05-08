@@ -110,6 +110,9 @@ public class WebScraper {
                 }
 
                 links = extractLinks(doc, url);
+                for (String link : links) {
+                    queueUrl(link, url);
+                }
                 storeImages(url, doc);
             }
 
@@ -262,15 +265,16 @@ public class WebScraper {
 
     // scraping stuff
 
-    public void queueUrl(String url) {
+    public void queueUrl(String url, String parentUrl) {
         if (!isValidLink(url) || getBlacklistedTerm(url) != null) return;
 
-        String sql = "INSERT INTO pages (url, scraped_at) VALUES (?, NULL)";
+        String sql = "INSERT INTO pages (url, parent_url, scraped_at) VALUES (?, ?, NULL)";
 
         try (java.sql.Connection conn = dbConfig.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, url);
+            stmt.setString(2, parentUrl);
             stmt.executeUpdate();
 
         } catch (SQLException e) {

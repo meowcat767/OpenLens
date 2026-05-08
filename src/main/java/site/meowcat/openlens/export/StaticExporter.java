@@ -24,13 +24,15 @@ public class StaticExporter {
         public String title;
         public String content;
         public String scrapedAt;
+        public String parentUrl;
 
-        public PageData(int id, String url, String title, String content, String scrapedAt) {
+        public PageData(int id, String url, String title, String content, String scrapedAt, String parentUrl) {
             this.id = id;
             this.url = url;
             this.title = title;
             this.content = content;
             this.scrapedAt = scrapedAt;
+            this.parentUrl = parentUrl;
         }
     }
 
@@ -58,7 +60,7 @@ public class StaticExporter {
         List<PageData> pages = new ArrayList<>();
         List<ImageData> images = new ArrayList<>();
 
-        String pageSql = "SELECT id, url, title, content, scraped_at FROM pages ORDER BY scraped_at DESC";
+        String pageSql = "SELECT id, url, title, content, scraped_at, parent_url FROM pages ORDER BY scraped_at DESC";
         String imageSql = """
                 SELECT i.src, i.alt, p.title, p.url
                 FROM images i
@@ -84,7 +86,8 @@ public class StaticExporter {
                             rs.getString("url"),
                             rs.getString("title"),
                             content,
-                            timestamp != null ? timestamp.toString() : null));
+                            timestamp != null ? timestamp.toString() : null,
+                            rs.getString("parent_url")));
                 }
             }
 

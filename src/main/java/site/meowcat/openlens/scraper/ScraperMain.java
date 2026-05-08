@@ -27,7 +27,7 @@ public class ScraperMain {
         // 1. Seed the database queue
         List<String> seedUrls = loadUrls(urlFile);
         for (String url : seedUrls) {
-            scraper.queueUrl(url);
+            scraper.queueUrl(url, null);
         }
         System.out.println("Seeded " + seedUrls.size() + " URLs into the database queue.");
 
@@ -53,13 +53,6 @@ public class ScraperMain {
 
             if (result.success) {
                 pagesScraped++;
-
-                // Add new links to queue
-                for (String newLink : result.discoveredLinks) {
-                    scraper.queueUrl(newLink);
-                    // Also save to text file for backup/seed
-                    saveUrl(urlFile, newLink);
-                }
 
                 // Update search index immediately
                 StaticExporter.export("frontend/search-data.js");

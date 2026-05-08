@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 
 <body>
@@ -24,6 +25,7 @@
         <div class="search-tabs">
             <button id="tabWeb" class="tab active">Web</button>
             <button id="tabImages" class="tab">Images</button>
+            <button id="tabMap" class="tab">Map</button>
         </div>
 
         <div id="stats"></div>
@@ -38,6 +40,13 @@
 
         <div id="resultsContainer"></div>
         <div id="imageResultsContainer" style="display: none;"></div>
+        <div id="mapContainer" style="display: none;">
+            <div id="sitemapControl" class="map-controls">
+                <button id="resetMap">Reset View</button>
+                <span>Scroll to Zoom, Drag to Pan</span>
+            </div>
+            <div id="sitemap"></div>
+        </div>
     </div>
 
     <div id="lightbox" class="lightbox" style="display: none;">

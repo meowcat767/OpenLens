@@ -62,13 +62,15 @@ public class DatabaseConfig {
                     content TEXT,
                     scraped_at TIMESTAMP,
                     last_error TEXT,
-                    error_count INT DEFAULT 0
+                    error_count INT DEFAULT 0,
+                    parent_url TEXT
                 );
                 """;
 
         String addColumns = """
                 ALTER TABLE pages ADD COLUMN IF NOT EXISTS last_error TEXT;
                 ALTER TABLE pages ADD COLUMN IF NOT EXISTS error_count INT DEFAULT 0;
+                ALTER TABLE pages ADD COLUMN IF NOT EXISTS parent_url TEXT;
                 """;
 
         String createImagesTable = """

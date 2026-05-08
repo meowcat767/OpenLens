@@ -29,7 +29,11 @@ const errorText = document.getElementById('errorText');
 const statsElement = document.getElementById('stats');
 const tabWeb = document.getElementById('tabWeb');
 const tabImages = document.getElementById('tabImages');
+const tabMap = document.getElementById('tabMap');
 const imageResultsContainer = document.getElementById('imageResultsContainer');
+const mapContainer = document.getElementById('mapContainer');
+const resetMapBtn = document.getElementById('resetMap');
+const sitemapEl = document.getElementById('sitemap');
 
 let currentMode = 'web'; // Default mode
 
@@ -54,11 +58,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Tab Handling
-if (tabWeb && tabImages) {
+if (tabWeb && tabImages && tabMap) {
     tabWeb.addEventListener('click', () => switchTab('web'));
     tabImages.addEventListener('click', () => switchTab('images'));
+    tabMap.addEventListener('click', () => switchTab('map'));
 } else {
     console.error('Tab elements not found in DOM');
+}
+
+if (resetMapBtn) {
+    resetMapBtn.addEventListener('click', () => renderSitemap());
 }
 
 function switchTab(mode) {
@@ -69,13 +78,25 @@ function switchTab(mode) {
     if (mode === 'web') {
         if (tabWeb) tabWeb.classList.add('active');
         if (tabImages) tabImages.classList.remove('active');
+        if (tabMap) tabMap.classList.remove('active');
         if (resultsContainer) resultsContainer.style.display = 'block';
         if (imageResultsContainer) imageResultsContainer.style.display = 'none';
-    } else {
+        if (mapContainer) mapContainer.style.display = 'none';
+    } else if (mode === 'images') {
         if (tabWeb) tabWeb.classList.remove('active');
         if (tabImages) tabImages.classList.add('active');
+        if (tabMap) tabMap.classList.remove('active');
         if (resultsContainer) resultsContainer.style.display = 'none';
-        if (imageResultsContainer) imageResultsContainer.style.display = 'grid'; // Grid for images
+        if (imageResultsContainer) imageResultsContainer.style.display = 'grid';
+        if (mapContainer) mapContainer.style.display = 'none';
+    } else if (mode === 'map') {
+        if (tabWeb) tabWeb.classList.remove('active');
+        if (tabImages) tabImages.classList.remove('active');
+        if (tabMap) tabMap.classList.add('active');
+        if (resultsContainer) resultsContainer.style.display = 'none';
+        if (imageResultsContainer) imageResultsContainer.style.display = 'none';
+        if (mapContainer) mapContainer.style.display = 'block';
+        renderSitemap();
     }
 
     // Re-run search if query exists
@@ -425,3 +446,112 @@ function escapeRegex(text) {
     return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+// ==========================================
+// Sitemap Visualization (D3.js)
+// ==========================================
+
+function renderSitemap() {
+    if (!window.searchData || !sitemapEl) return;
+    
+    // Clear previous
+    sitemapEl.innerHTML = '';
+    
+    const data = window.searchData;
+    const width = sitemapEl.clientWidth || 600;
+    const height = 500;
+    
+    // 1. Convert flat data to hierarchy
+    // We group by parentUrl
+    const urlMap = {};
+    data.forEach(p => {
+        urlMap[p.url] = { ...p, children: [] };
+    });
+    
+    const roots = [];
+    data.forEach(p => {
+        const node = urlMap[p.url];
+        if (p.parentUrl && urlMap[p.parentUrl]) {
+            urlMap[p.parentUrl].children.push(node);
+        } else {
+            roots.push(node);
+        }
+    });
+    
+    // Create a single virtual root if multiple actual roots exist
+    let hierarchyData;
+    if (roots.length === 1) {
+        hierarchyData = roots[0];
+    } else {
+        hierarchyData = {
+            title: "Roots",
+            url: "seeds",
+            children: roots
+        };
+    }
+    
+    const root = d3.hierarchy(hierarchyData);
+    
+    // 2. SVG Creation
+    const svg = d3.select("#sitemap")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
+        
+    const g = svg.append("g");
+    
+    // Zoom behavior
+    const zoom = d3.zoom()
+        .scaleExtent([0.1, 3])
+        .on("zoom", (event) => {
+            g.attr("transform", event.transform);
+        });
+        
+    svg.call(zoom);
+    
+    // 3. Layout
+    const treeLayout = d3.tree().size([width - 100, height - 150]);
+    treeLayout(root);
+    
+    // 4. Draw Links
+    g.selectAll(".link")
+        .data(root.links())
+        .enter()
+        .append("path")
+        .attr("class", "link")
+        .attr("d", d3.linkVertical()
+            .x(d => d.x)
+            .y(d => d.y));
+            
+    // 5. Draw Nodes
+    const node = g.selectAll(".node")
+        .data(root.descendants())
+        .enter()
+        .append("g")
+        .attr("class", "node")
+        .attr("transform", d => `translate(${d.x},${d.y})`)
+        .on("click", (event, d) => {
+            if (d.data.url && d.data.url !== "seeds") {
+                window.open(d.data.url, '_blank');
+            }
+        })
+        .style("cursor", d => d.data.url === "seeds" ? "default" : "pointer");
+        
+    node.append("circle")
+        .attr("r", 5);
+        
+    node.append("text")
+        .attr("dy", ".35em")
+        .attr("y", d => d.children ? -15 : 15)
+        .style("text-anchor", "middle")
+        .text(d => {
+            let t = d.data.title || d.data.url || "Untitled";
+            if (t.length > 20) t = t.substring(0, 17) + "...";
+            return t;
+        });
+
+    // Initial center
+    const initialScale = 0.8;
+    const initialTranslateX = width / 10;
+    const initialTranslateY = 50;
+    svg.call(zoom.transform, d3.zoomIdentity.translate(initialTranslateX, initialTranslateY).scale(initialScale));
+}
