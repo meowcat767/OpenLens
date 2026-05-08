@@ -68,6 +68,8 @@ public class ScraperMain {
                 if (pagesScraped % 5 == 0) {
                     pushUpdatesToGit();
                 }
+            } else {
+                scraper.markAsFailed(url, result.failureReason);
             }
 
             // Print progress every 10 pages

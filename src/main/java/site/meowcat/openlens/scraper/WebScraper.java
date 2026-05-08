@@ -21,7 +21,7 @@ import java.util.Set;
 public class WebScraper {
 
     private static final int TIMEOUT_MS = 60000;
-    private static final String USER_AGENT = "Mozilla/5.0 (compatible; SearchEngineBot/1.0)";
+    private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 
     private final Set<String> blacklist = new HashSet<>();
     private final DatabaseConfig dbConfig;
@@ -119,12 +119,10 @@ public class WebScraper {
             return new ScrapeResult(true, links);
 
         } catch (IOException e) {
-            System.err.println("✗ Error fetching " + url + ": " + e.getMessage());
+            return new ScrapeResult(false, Collections.emptySet(), e.getMessage());
         } catch (SQLException e) {
-            System.err.println("✗ Database error for " + url + ": " + e.getMessage());
+            return new ScrapeResult(false, Collections.emptySet(), "Database error: " + e.getMessage());
         }
-
-        return new ScrapeResult(false, Collections.emptySet());
     }
 
     // =========================
@@ -203,6 +201,13 @@ public class WebScraper {
             stmt.setString(3, content);
 
             stmt.executeUpdate();
+
+            // Reset error count on success
+            try (PreparedStatement resetStmt = conn.prepareStatement(
+                    "UPDATE pages SET error_count = 0, last_error = NULL WHERE url = ?")) {
+                resetStmt.setString(1, url);
+                resetStmt.executeUpdate();
+            }
         }
     }
 
@@ -254,6 +259,97 @@ public class WebScraper {
                 !src.contains("pixel") &&
                 !src.contains("analytics");
     }
+
+    // scraping stuff
+
+    public void queueUrl(String url) {
+        if (!isValidLink(url) || getBlacklistedTerm(url) != null) return;
+
+        String sql = "INSERT INTO pages (url, scraped_at) VALUES (?, NULL)";
+
+        try (java.sql.Connection conn = dbConfig.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, url);
+            stmt.executeUpdate();
+
+        } catch (SQLException e) {
+            if (!e.getSQLState().startsWith("23")) {
+                System.err.println("Queue error: " + e.getMessage());
+            }
+        }
+    }
+
+    public String getNextUrlToScrape() {
+        // Selection strategy:
+        // 1. Never-scraped URLs with low error count first
+        // 2. Then, failed URLs that have waited at least 1 hour (backoff)
+        // 3. Finally, successfully scraped URLs older than 7 days
+        String sql = """
+            SELECT url FROM pages
+            WHERE (scraped_at IS NULL AND error_count < 3)
+               OR (scraped_at < CURRENT_TIMESTAMP - INTERVAL '1' HOUR AND error_count > 0 AND error_count < 3)
+               OR (scraped_at < CURRENT_TIMESTAMP - INTERVAL '7' DAY AND error_count = 0)
+            ORDER BY 
+                CASE WHEN scraped_at IS NULL THEN 0 ELSE 1 END,
+                error_count ASC,
+                scraped_at ASC
+            LIMIT 1
+            """;
+
+        try (java.sql.Connection conn = dbConfig.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             java.sql.ResultSet rs = stmt.executeQuery()) {
+
+            if (rs.next()) return rs.getString("url");
+
+        } catch (SQLException e) {
+            System.err.println("Error getting next URL: " + e.getMessage());
+        }
+
+        return null;
+    }
+
+    public void markAsFailed(String url, String errorMessage) {
+        String sql = """
+                UPDATE pages 
+                SET last_error = ?, 
+                    error_count = error_count + 1,
+                    scraped_at = CURRENT_TIMESTAMP
+                WHERE url = ?
+                """;
+
+        try (java.sql.Connection conn = dbConfig.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, errorMessage);
+            stmt.setString(2, url);
+            stmt.executeUpdate();
+
+            System.out.println("✗ Marked " + url + " as failed (" + errorMessage + ")");
+
+        } catch (SQLException e) {
+            System.err.println("Error marking URL as failed: " + e.getMessage());
+        }
+    }
+
+    public void printStats() {
+        String sql = "SELECT COUNT(*) AS total FROM pages";
+
+        try (java.sql.Connection conn = dbConfig.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             java.sql.ResultSet rs = stmt.executeQuery()) {
+
+            if (rs.next()) {
+                System.out.println("Total pages: " + rs.getInt("total"));
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Stats error: " + e.getMessage());
+        }
+    }
+
+
 
     // =========================
     // SCHEDULING
