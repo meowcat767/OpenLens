@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1462,
+    "url": "https://docs.python.org/3/library/threading.html#module-threading",
+    "title": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » threading — Thread-based parallelism | Theme Auto Light Dark | threading — Thread-based parallelism¶ Source code: Lib/threading.py This module constructs higher-level threading interfaces on top of the lower level _thread module. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Introduction¶ The threading module provides a way to run multiple threads (smaller units of a process) concurrently within a single process. It allows for the creation and management of threads, making it possible to execute tasks in parallel, sharing memory space. Threads are particularly useful when tasks are I/O bound, such as file operations or making network requests, where much of the time is spent waiting for external resources. A typical use case for threading includes managing a pool of worker threads that can process multiple tasks concurrently. Here’s a basic example of creating and starting threads using Thread: import threading\nimport time\n\ndef crawl(link, delay\u003d3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks \u003d [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads \u003d []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t \u003d threading.Thread(target\u003dcrawl, args\u003d(link,), kwargs\u003d{\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()\n Changed in version 3.7: This module used to be optional, it is now always available. See also concurrent.futures.ThreadPoolExecutor offers a higher level interface to push tasks to a background thread without blocking execution of the calling thread, while still being able to retrieve their results when needed. queue provides a thread-safe interface for exchanging data between running threads. asyncio offers an alternative approach to achieving task level concurrency without requiring the use of multiple operating system threads. Note In the Python 2.x series, this module contained camelCase names for some methods and functions. These are deprecated as of Python 3.10, but they are still supported for compatibility with Python 2.5 and lower. CPython implementation detail: In CPython, due to the Global Interpreter Lock, only one thread can execute Python code at once (even though certain performance-oriented libraries might overcome this limitation). If you want your application to make better use of the computational resources of multi-core machines, you are advised to use multiprocessing or concurrent.futures.ProcessPoolExecutor. However, threading is still an appropriate model if you want to run multiple I/O-bound tasks simultaneously. GIL and performance considerations¶ Unlike the multiprocessing module, which uses separate processes to bypass the global interpreter lock (GIL), the threading module operates within a single process, meaning that all threads share the same memory space. However, the GIL limits the performance gains of threading when it comes to CPU-bound tasks, as only one thread can execute Python bytecode at a time. Despite this, threads remain a useful tool for achieving concurrency in many scenarios. As of Python 3.13, free-threaded builds can disable the GIL, enabling true parallel execution of threads, but this feature is not available by default (see PEP 703). Reference¶ This module defines the following functions: threading.active_count()¶ Return the number of Thread objects currently alive. The returned count is equal to the length of the list returned by enumerate(). The function activeCount is a deprecated alias for this function. threading.current_thread()¶ Return the current Thread object, corresponding to the caller’s thread of control. If the caller’s thread of control was not created through the threading module, a dummy thread object with limited functionality is returned. The function currentThread is a deprecated alias for this function. threading.excepthook(args, /)¶ Handle uncaught exception raised by Thread.run(). The args argument has the following attributes: exc_type: Exception type. exc_value: Exception value, can be None. exc_traceback: Exception traceback, can be None. thread: Thread which raised the exception, can be None. If exc_type is SystemExit, the exception is silently ignored. Otherwise, the exception is printed out on sys.stderr. If this function raises an exception, sys.excepthook() is called to handle it. threading.excepthook() can be overridden to control how uncaught exceptions raised by Thread.run() are handled. Storing exc_value using a custom hook can create a reference cycle. It should be ",
+    "scrapedAt": "2026-05-09 01:20:53.890248"
+  },
+  {
+    "id": 1461,
+    "url": "https://peps.python.org/pep-0750/",
+    "title": "PEP 750 – Template Strings | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 750 – Template Strings PEP 750 – Template Strings Author: Jim Baker \u003cjim.baker at python.org\u003e, Guido van Rossum \u003cguido at python.org\u003e, Paul Everitt \u003cpauleveritt at me.com\u003e, Koudai Aono \u003ckoxudaxi at gmail.com\u003e, Lysandros Nikolaou \u003clisandrosnik at gmail.com\u003e, Dave Peck \u003cdavepeck at davepeck.org\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Created: 08-Jul-2024 Python-Version: 3.14 Post-History: 09-Aug-2024, 17-Oct-2024, 21-Oct-2024, 18-Nov-2024 Resolution: 10-Apr-2025 Table of Contents Abstract Relationship With Other PEPs Motivation Specification Template String Literals The Template Type The Interpolation Type The Template.values Property Iterating Template Contents Processing Template Strings Template String Concatenation Template and Interpolation Equality No Support for Ordering Support for the debug specifier (\u003d) Raw Template Strings Interpolation Expression Evaluation Exceptions No Template.__str__() Implementation The string.templatelib Module Examples Example: Implementing f-strings with t-strings Example: Structured Logging Approach 1: Custom Log Messages Approach 2: Custom Formatters Example: HTML Templating Backwards Compatibility Security Implications How To Teach This Why another templating approach? Common Patterns Seen in Processing Templates Structural Pattern Matching Memoizing Parsing to Intermediate Representations Context-sensitive Processing of Interpolations Nested Template Strings Approaches to Lazy Evaluation Approaches to Asynchronous Evaluation Approaches to Template Reuse Relation to Format Strings Reference Implementation Rejected Ideas Arbitrary String Literal Prefixes Delayed Evaluation of Interpolations Making Template and Interpolation Into Protocols Overridden __eq__ and __hash__ for Template and Interpolation An Additional Decoded Type The Final Home for Template and Interpolation Enable Full Reconstruction of Original Template Literal Disallowing Template Concatenation Arbitrary Conversion Values Removing conversion From Interpolation Alternate Interpolation Symbols Alternate Layouts for Template Mechanism to Describe the “Kind” of Template Binary Template Strings Acknowledgements Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at Template strings. × See PEP 1 for how to propose changes. Abstract This PEP introduces template strings for custom string processing. Template strings are a generalization of f-strings, using a t in place of the f prefix. Instead of evaluating to str, t-strings evaluate to a new type, Template: template: Template \u003d t\"Hello {name}\"\n Templates provide developers with access to the string and its interpolated values before they are combined. This brings native flexible string processing to the Python language and enables safety checks, web templating, domain-specific languages, and more. Relationship With Other PEPs Python introduced f-strings in Python 3.6 with PEP 498. The grammar was then formalized in PEP 701 which also lifted some restrictions. This PEP is based on PEP 701. At nearly the same time PEP 498 arrived, PEP 501 was written to provide “i-strings” – that is, “interpolation template strings”. The PEP was deferred pending further experience with f-strings. Work on this PEP was resumed by a different author in March 2023, introducing “t-strings” as template literal strings, and built atop PEP 701. The authors of this PEP consider it to be a generalization and simplification of the updated work in PEP 501. (That PEP has also recently been updated to reflect the new ideas in this PEP.) Motivation Python f-strings are easy to use and very popular. Over time, however, developers have encountered limitations that make them unsuitable for certain use cases. In particular, f-strings provide no way to intercept and transform interpolated values before they are combined into a final string. As a result, incautious use of f-strings can lead to security vulnerabilities. For example, a user executing a SQL query with sqlite3 may be tempted to use an f-string to embed values into their SQL expression, which could lead to a SQL injection attack. Or, a developer building HTML may include unescaped user input in the string, leading to a cross-site scripting (XSS) vulnerability. More broadly, the inability to transform interpolated values before they are combined into a final string limits the utility of f-strings in more complex string processing tasks. Template strings address these problems by providing developers with access to the string and its interpolated values. For example, imagine we want to generate some HTML. Using template strings, we can define an html() function that allows us to automatically sanitize content: evil \u003d \"\u003cscript\u003ealert(\u0027evil\u0027)\u003c/script\u003e\"\ntemplate \u003d t\"\u003cp\u003e{evil}\u003c/p\u003e\"\nassert html(template) \u003d\u003d \"\u003cp\u003e\u0026lt;script\u0026gt;alert(\u0027evil\u0027)\u0026lt;/script\u0026gt;\u003c/p\u003e\"\n Likewise,",
+    "scrapedAt": "2026-05-09 01:20:52.652615"
+  },
+  {
+    "id": 1460,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write",
+    "title": "wave — Read and write WAV files — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Multimedia Services » wave — Read and write WAV files | Theme Auto Light Dark | wave — Read and write WAV files¶ Source code: Lib/wave.py The wave module provides a convenient interface to the Waveform Audio “WAVE” (or “WAV”) file format. Only uncompressed PCM encoded wave files are supported. Changed in version 3.12: Support for WAVE_FORMAT_EXTENSIBLE headers was added, provided that the extended format is KSDATAFORMAT_SUBTYPE_PCM. The wave module defines the following function and exception: wave.open(file, mode\u003dNone)¶ If file is a string, open the file by that name, otherwise treat it as a file-like object. mode can be: \u0027rb\u0027 Read only mode. \u0027wb\u0027 Write only mode. Note that it does not allow read/write WAV files. A mode of \u0027rb\u0027 returns a Wave_read object, while a mode of \u0027wb\u0027 returns a Wave_write object. If mode is omitted and a file-like object is passed as file, file.mode is used as the default value for mode. If you pass in a file-like object, the wave object will not close it when its close() method is called; it is the caller’s responsibility to close the file object. The open() function may be used in a with statement. When the with block completes, the Wave_read.close() or Wave_write.close() method is called. Changed in version 3.4: Added support for unseekable files. exception wave.Error¶ An error raised when something is impossible because it violates the WAV specification or hits an implementation deficiency. Wave_read Objects¶ class wave.Wave_read¶ Read a WAV file. Wave_read objects, as returned by open(), have the following methods: close()¶ Close the stream if it was opened by wave, and make the instance unusable. This is called automatically on object collection. getnchannels()¶ Returns number of audio channels (1 for mono, 2 for stereo). getsampwidth()¶ Returns sample width in bytes. getframerate()¶ Returns sampling frequency. getnframes()¶ Returns number of audio frames. getcomptype()¶ Returns compression type (\u0027NONE\u0027 is the only supported type). getcompname()¶ Human-readable version of getcomptype(). Usually \u0027not compressed\u0027 parallels \u0027NONE\u0027. getparams()¶ Returns a namedtuple() (nchannels, sampwidth, framerate, nframes, comptype, compname), equivalent to output of the get*() methods. readframes(n)¶ Reads and returns at most n frames of audio, as a bytes object. rewind()¶ Rewind the file pointer to the beginning of the audio stream. The following two methods are defined for compatibility with the old aifc module, and don’t do anything interesting. getmarkers()¶ Returns None. Deprecated since version 3.13, will be removed in version 3.15: The method only existed for compatibility with the aifc module which has been removed in Python 3.13. getmark(id)¶ Raise an error. Deprecated since version 3.13, will be removed in version 3.15: The method only existed for compatibility with the aifc module which has been removed in Python 3.13. The following two methods define a term “position” which is compatible between them, and is otherwise implementation dependent. setpos(pos)¶ Set the file pointer to the specified position. tell()¶ Return current file pointer position. Wave_write Objects¶ class wave.Wave_write¶ Write a WAV file. Wave_write objects, as returned by open(). For seekable output streams, the wave header will automatically be updated to reflect the number of frames actually written. For unseekable streams, the nframes value must be accurate when the first frame data is written. An accurate nframes value can be achieved either by calling setnframes() or setparams() with the number of frames that will be written before close() is called and then using writeframesraw() to write the frame data, or by calling writeframes() with all of the frame data to be written. In the latter case writeframes() will calculate the number of frames in the data and set nframes accordingly before writing the frame data. Changed in version 3.4: Added support for unseekable files. Wave_write objects have the following methods: close()¶ Make sure nframes is correct, and close the file if it was opened by wave. This method is called upon object collection. It will raise an exception if the output stream is not seekable and nframes does not match the number of frames actually written. setnchannels(n)¶ Set the number of channels. getnchannels()¶ Return the number of channels. setsampwidth(n)¶ Set the sample width to n bytes. getsampwidth()¶ Return the sample width in bytes. setframerate(n)¶ Set the frame rate to n. Changed in version 3.2: A non-integral input to this method is rounded to the nearest integer. getframerate()¶ Return the frame rate. setnframes(n)¶ Set the number of frames to n. This will be changed later if the number of frames actually written is different (this update attempt will raise an error if the output stream is not seekable). getnframes()¶ Return the number of audio frames written so far",
+    "scrapedAt": "2026-05-09 01:20:51.262652"
+  },
+  {
+    "id": 1459,
+    "url": "https://docs.python.org/3/library/sys.html#module-sys",
+    "title": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but refer",
+    "scrapedAt": "2026-05-09 01:20:50.025187"
+  },
+  {
+    "id": 1458,
+    "url": "https://github.com/python/cpython/issues/133139",
+    "title": "Add curses.assume_default_colors() · Issue #133139 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add curses.assume_default_colors() #133139 New issue Copy link New issue Copy link Closed Closed Add curses.assume_default_colors()#133139 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixesextension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Description serhiy-storchaka opened on Apr 29, 2025 Issue body actions Feature or enhancement This is a refinement of the curses.use_default_colors() function which allows to change the color pair 0. Linked PRs gh-133139: Add curses.assume_default_colors() #133145 Reactions are currently unavailable Metadata Metadata Assignees serhiy-storchaka Labels 3.14bugs and security fixesbugs and security fixesextension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Projects Curses issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:20:48.733508"
+  },
+  {
     "id": 1457,
     "url": "https://github.com/python/cpython/issues/89083",
     "title": "Support UUIDv6, UUIDv7, and UUIDv8 from RFC 9562 · Issue #89083 · python/cpython · GitHub",
@@ -9798,26 +9833,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1458,
-    "url": "https://github.com/python/cpython/issues/133139"
-  },
-  {
-    "id": 1459,
-    "url": "https://docs.python.org/3/library/sys.html#module-sys"
-  },
-  {
-    "id": 1460,
-    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_write"
-  },
-  {
-    "id": 1461,
-    "url": "https://peps.python.org/pep-0750/"
-  },
-  {
-    "id": 1462,
-    "url": "https://docs.python.org/3/library/threading.html#module-threading"
   },
   {
     "id": 1463,
@@ -233840,10 +233855,530 @@ window.searchData = [
     "id": 306377,
     "url": "https://github.com/python/cpython/pull/123224",
     "parentUrl": "https://github.com/python/cpython/issues/89083"
+  },
+  {
+    "id": 306380,
+    "url": "https://github.com/python/cpython/pull/133145",
+    "parentUrl": "https://github.com/python/cpython/issues/133139"
+  },
+  {
+    "id": 306381,
+    "url": "https://github.com/python/cpython/issues/133139#top",
+    "parentUrl": "https://github.com/python/cpython/issues/133139"
+  },
+  {
+    "id": 306385,
+    "url": "https://github.com/orgs/python/projects/18",
+    "parentUrl": "https://github.com/python/cpython/issues/133139"
+  },
+  {
+    "id": 306389,
+    "url": "https://github.com/python/cpython/issues/133139#issue-3027739329",
+    "parentUrl": "https://github.com/python/cpython/issues/133139"
+  },
+  {
+    "id": 306390,
+    "url": "https://github.com/python/cpython/issues/133139#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/133139"
+  },
+  {
+    "id": 306791,
+    "url": "https://peps.python.org/pep-0750/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306792,
+    "url": "https://peps.python.org/pep-0750/#no-support-for-ordering",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306793,
+    "url": "https://peps.python.org/pep-0750/#arbitrary-conversion-values",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306795,
+    "url": "https://github.com/t-strings/pep750-examples/blob/main/pep/test_fstring.py",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306796,
+    "url": "https://peps.python.org/pep-0750/#specification",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306797,
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306798,
+    "url": "https://peps.python.org/pep-0750/#example-html-templating",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306799,
+    "url": "https://discuss.python.org/t/71594",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306800,
+    "url": "https://peps.python.org/pep-0750/#the-final-home-for-template-and-interpolation",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306801,
+    "url": "https://peps.python.org/pep-0750/#relation-to-format-strings",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306802,
+    "url": "https://peps.python.org/pep-0750/#security-implications",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306805,
+    "url": "https://peps.python.org/pep-0750/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306806,
+    "url": "https://peps.python.org/pep-0498/#expression-evaluation",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306807,
+    "url": "https://github.com/t-strings/pep750-examples",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306808,
+    "url": "https://peps.python.org/pep-0750/#no-template-str-implementation",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306809,
+    "url": "https://peps.python.org/pep-0750/#the-template-values-property",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306811,
+    "url": "https://peps.python.org/pep-0750/#interpolation-expression-evaluation",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306812,
+    "url": "https://peps.python.org/pep-0750/#an-additional-decoded-type",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306813,
+    "url": "https://github.com/dropbox/pyxl",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306816,
+    "url": "https://peps.python.org/pep-0750/#processing-template-strings",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306817,
+    "url": "https://peps.python.org/pep-0750/#approaches-to-asynchronous-evaluation",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306819,
+    "url": "https://github.com/t-strings/pep750-examples/blob/main/pep/format.py",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306820,
+    "url": "https://peps.python.org/pep-0750/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306821,
+    "url": "https://github.com/t-strings/pep750-examples/blob/main/pep/test_format.py",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306822,
+    "url": "https://peps.python.org/pep-0750/#context-sensitive-processing-of-interpolations",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306823,
+    "url": "https://peps.python.org/pep-0501/",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306824,
+    "url": "https://peps.python.org/pep-0750/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306825,
+    "url": "https://peps.python.org/pep-0750/#template-string-literals",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306826,
+    "url": "https://peps.python.org/pep-0750/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306827,
+    "url": "https://peps.python.org/pep-0750/#template-and-interpolation-equality",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306828,
+    "url": "https://peps.python.org/pep-0750/#the-template-type",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306829,
+    "url": "https://peps.python.org/pep-0750/#removing-conversion-from-interpolation",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306830,
+    "url": "https://peps.python.org/pep-0750/#nested-template-strings",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306831,
+    "url": "https://peps.python.org/pep-0750/#template-string-concatenation",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306833,
+    "url": "https://github.com/t-strings/pep750-examples/blob/main/pep/test_logging.py",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306834,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0750.rst",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306835,
+    "url": "https://peps.python.org/pep-0750/#example-implementing-f-strings-with-t-strings",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306836,
+    "url": "https://peps.python.org/pep-0750/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306837,
+    "url": "https://peps.python.org/pep-0750/#arbitrary-string-literal-prefixes",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306838,
+    "url": "https://peps.python.org/pep-0750/#the-string-templatelib-module",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306839,
+    "url": "https://peps.python.org/pep-0750/#examples",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306840,
+    "url": "https://peps.python.org/pep-0750/#raw-template-strings",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306841,
+    "url": "https://peps.python.org/pep-0750/#delayed-evaluation-of-interpolations",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306842,
+    "url": "https://discuss.python.org/t/60408",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306843,
+    "url": "https://en.wikipedia.org/wiki/Cross-site_scripting",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306844,
+    "url": "https://peps.python.org/pep-0750/#enable-full-reconstruction-of-original-template-literal",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306845,
+    "url": "https://github.com/jviide/tagged",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306846,
+    "url": "https://peps.python.org/pep-0750/#common-patterns-seen-in-processing-templates",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306847,
+    "url": "https://peps.python.org/pep-0750/#the-interpolation-type",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306848,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0750.rst",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306849,
+    "url": "https://peps.python.org/pep-0750/#disallowing-template-concatenation",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306850,
+    "url": "https://peps.python.org/pep-0750/#approach-1-custom-log-messages",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306851,
+    "url": "https://github.com/t-strings/pep750-examples/blob/main/pep/afstring.py",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306852,
+    "url": "https://peps.python.org/pep-0750/#approaches-to-template-reuse",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306853,
+    "url": "https://docs.djangoproject.com/en/5.1/ref/utils/#django.utils.html.format_html",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306854,
+    "url": "https://peps.python.org/pep-0750/#support-for-the-debug-specifier",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306855,
+    "url": "https://peps.python.org/pep-0750/#approaches-to-lazy-evaluation",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306856,
+    "url": "https://discuss.python.org/t/71594/130",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306857,
+    "url": "https://peps.python.org/pep-0750/#example-structured-logging",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306858,
+    "url": "https://docs.python.org/3/howto/logging-cookbook.html#implementing-structured-logging",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306859,
+    "url": "https://discuss.python.org/t/60408/201",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306860,
+    "url": "https://github.com/lysnikolaou/cpython/tree/tstrings",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306861,
+    "url": "https://peps.python.org/pep-0750/#structural-pattern-matching",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306862,
+    "url": "https://peps.python.org/pep-0750/#memoizing",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306863,
+    "url": "https://peps.python.org/pep-0750/#acknowledgements",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306864,
+    "url": "https://peps.python.org/pep-0750/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306865,
+    "url": "https://docs.python.org/3.14/library/string.templatelib.html#template-strings",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306866,
+    "url": "https://peps.python.org/pep-0750/#alternate-layouts-for-template",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306867,
+    "url": "https://discuss.python.org/t/pep-750-tag-strings-for-writing-domain-specific-languages/60408/196",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306868,
+    "url": "https://peps.python.org/pep-0750/#iterating-template-contents",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306869,
+    "url": "https://peps.python.org/pep-0750/#mechanism-to-describe-the-kind-of-template",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306871,
+    "url": "https://peps.python.org/pep-0750/#overridden-eq-and-hash-for-template-and-interpolation",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306872,
+    "url": "https://github.com/t-strings/pep750-examples/blob/main/pep/fstring.py",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306873,
+    "url": "https://peps.python.org/pep-0750/#approach-2-custom-formatters",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306874,
+    "url": "https://peps.python.org/pep-0701/",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306876,
+    "url": "https://peps.python.org/pep-0750/#binary-template-strings",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306877,
+    "url": "https://peps.python.org/pep-0750/#making-template-and-interpolation-into-protocols",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306878,
+    "url": "https://peps.python.org/pep-0750/#alternate-interpolation-symbols",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306879,
+    "url": "https://peps.python.org/pep-0750/#exceptions",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306880,
+    "url": "https://peps.python.org/pep-0750/#parsing-to-intermediate-representations",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306881,
+    "url": "https://discuss.python.org/t/pep-750-tag-strings-for-writing-domain-specific-languages/60408/122",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306882,
+    "url": "https://discuss.python.org/t/60408/226",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306883,
+    "url": "https://peps.python.org/pep-0750/#relationship-with-other-peps",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306884,
+    "url": "https://peps.python.org/pep-0750/#why-another-templating-approach",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306885,
+    "url": "https://github.com/t-strings/pep750-examples/blob/main/pep/test_afstring.py",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306886,
+    "url": "https://github.com/t-strings/pep750-examples/",
+    "parentUrl": "https://peps.python.org/pep-0750/"
+  },
+  {
+    "id": 306887,
+    "url": "https://github.com/t-strings/pep750-examples/blob/main/pep/logging.py",
+    "parentUrl": "https://peps.python.org/pep-0750/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#module-threading"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#module-threading"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "wave — Read and write WAV files — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_write"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "wave — Read and write WAV files — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_write"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#module-sys"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#module-sys"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "Add curses.assume_default_colors() · Issue #133139 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133139"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Add curses.assume_default_colors() · Issue #133139 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133139"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Add curses.assume_default_colors() · Issue #133139 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133139"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Add curses.assume_default_colors() · Issue #133139 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133139"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
     "alt": "picnixz",
