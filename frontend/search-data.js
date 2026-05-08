@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1255,
+    "url": "https://docs.python.org/3/library/asyncio.html#module-asyncio",
+    "title": "asyncio — Asynchronous I/O — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O | Theme Auto Light Dark | asyncio — Asynchronous I/O¶ Hello World! import asyncio\n\nasync def main():\n    print(\u0027Hello ...\u0027)\n    await asyncio.sleep(1)\n    print(\u0027... World!\u0027)\n\nasyncio.run(main())\n asyncio is a library to write concurrent code using the async/await syntax. asyncio is used as a foundation for multiple Python asynchronous frameworks that provide high-performance network and web-servers, database connection libraries, distributed task queues, etc. asyncio is often a perfect fit for IO-bound and high-level structured network code. See also A Conceptual Overview of asyncio Explanation of the fundamentals of asyncio. asyncio provides a set of high-level APIs to: run Python coroutines concurrently and have full control over their execution; perform network IO and IPC; control subprocesses; distribute tasks via queues; synchronize concurrent code; Additionally, there are low-level APIs for library and framework developers to: create and manage event loops, which provide asynchronous APIs for networking, running subprocesses, handling OS signals, etc; implement efficient protocols using transports; bridge callback-based libraries and code with async/await syntax. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. asyncio REPL You can experiment with an asyncio concurrent context in the REPL: $ python -m asyncio\nasyncio REPL ...\nUse \"await\" directly instead of \"asyncio.run()\".\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n\u003e\u003e\u003e import asyncio\n\u003e\u003e\u003e await asyncio.sleep(10, result\u003d\u0027hello\u0027)\n\u0027hello\u0027\n This REPL provides limited compatibility with PYTHON_BASIC_REPL. It is recommended that the default REPL is used for full functionality and the latest features. Raises an auditing event cpython.run_stdin with no arguments. Changed in version 3.12.5: (also 3.11.10, 3.10.15, 3.9.20, and 3.8.20) Emits audit events. Changed in version 3.13: Uses PyREPL if possible, in which case PYTHONSTARTUP is also executed. Emits audit events. Reference High-level APIs Runners Coroutines and tasks Streams Synchronization Primitives Subprocesses Queues Exceptions Call Graph Introspection Low-level APIs Event loop Futures Transports and Protocols Policies Platform Support Extending Guides and Tutorials High-level API Index Low-level API Index Developing with asyncio Note The source code for asyncio can be found in Lib/asyncio/. Previous topic Networking and Interprocess Communication Next topic Runners This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 01:12:24.758768"
+  },
+  {
+    "id": 1254,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#a-new-type-of-interpreter",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:12:23.472335"
+  },
+  {
+    "id": 1253,
+    "url": "https://docs.python.org/3/library/faulthandler.html#faulthandler.dump_c_stack",
+    "title": "faulthandler — Dump the Python traceback — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Debugging and Profiling » faulthandler — Dump the Python traceback | Theme Auto Light Dark | faulthandler — Dump the Python traceback¶ Added in version 3.3. This module contains functions to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal. Call faulthandler.enable() to install fault handlers for the SIGSEGV, SIGFPE, SIGABRT, SIGBUS, and SIGILL signals. You can also enable them at startup by setting the PYTHONFAULTHANDLER environment variable or by using the -X faulthandler command line option. The fault handler is compatible with system fault handlers like Apport or the Windows fault handler. The module uses an alternative stack for signal handlers if the sigaltstack() function is available. This allows it to dump the traceback even on a stack overflow. The fault handler is called on catastrophic cases and therefore can only use signal-safe functions (e.g. it cannot allocate memory on the heap). Because of this limitation traceback dumping is minimal compared to normal Python tracebacks: Only ASCII is supported. The backslashreplace error handler is used on encoding. Each string is limited to 500 characters. Only the filename, the function name and the line number are displayed. (no source code) It is limited to 100 frames and 100 threads. The order is reversed: the most recent call is shown first. By default, the Python traceback is written to sys.stderr. To see tracebacks, applications must be run in the terminal. A log file can alternatively be passed to faulthandler.enable(). The module is implemented in C, so tracebacks can be dumped on a crash or when Python is deadlocked. The Python Development Mode calls faulthandler.enable() at Python startup. See also Module pdb Interactive source code debugger for Python programs. Module traceback Standard interface to extract, format and print stack traces of Python programs. Dumping the traceback¶ faulthandler.dump_traceback(file\u003dsys.stderr, all_threads\u003dTrue)¶ Dump the tracebacks of all threads into file. If all_threads is False, dump only the current thread. See also traceback.print_tb(), which can be used to print a traceback object. Changed in version 3.5: Added support for passing file descriptor to this function. Dumping the C stack¶ Added in version 3.14. faulthandler.dump_c_stack(file\u003dsys.stderr)¶ Dump the C stack trace of the current thread into file. If the Python build does not support it or the operating system does not provide a stack trace, then this prints an error in place of a dumped C stack. C Stack Compatibility¶ If the system does not support the C-level backtrace(3) or dladdr1(3), then C stack dumps will not work. An error will be printed instead of the stack. Additionally, some compilers do not support CPython’s implementation of C stack dumps. As a result, a different error may be printed instead of the stack, even if the operating system supports dumping stacks. Note Dumping C stacks can be arbitrarily slow, depending on the DWARF level of the binaries in the call stack. Fault handler state¶ faulthandler.enable(file\u003dsys.stderr, all_threads\u003dTrue, c_stack\u003dTrue)¶ Enable the fault handler: install handlers for the SIGSEGV, SIGFPE, SIGABRT, SIGBUS and SIGILL signals to dump the Python traceback. If all_threads is True, produce tracebacks for every running thread. Otherwise, dump only the current thread. The file must be kept open until the fault handler is disabled: see issue with file descriptors. If c_stack is True, then the C stack trace is printed after the Python traceback, unless the system does not support it. See dump_c_stack() for more information on compatibility. Changed in version 3.5: Added support for passing file descriptor to this function. Changed in version 3.6: On Windows, a handler for Windows exception is also installed. Changed in version 3.10: The dump now mentions if a garbage collector collection is running if all_threads is true. Changed in version 3.14: Only the current thread is dumped if the GIL is disabled to prevent the risk of data races. Changed in version 3.14: The dump now displays the C stack trace if c_stack is true. faulthandler.disable()¶ Disable the fault handler: uninstall the signal handlers installed by enable(). faulthandler.is_enabled()¶ Check if the fault handler is enabled. Dumping the tracebacks after a timeout¶ faulthandler.dump_traceback_later(timeout, repeat\u003dFalse, file\u003dsys.stderr, exit\u003dFalse)¶ Dump the tracebacks of all threads, after a timeout of timeout seconds, or every timeout seconds if repeat is True. If exit is True, call _exit() with status\u003d1 after dumping the tracebacks. (Note _exit() exits the process immediately, which means it doesn’t do any cleanup like flushing file buffers.) If the function is called twice, the new call replaces previous parameters and resets the timeout. The timer has a sub-second resolution. The file must be kept op",
+    "scrapedAt": "2026-05-09 01:12:22.208338"
+  },
+  {
+    "id": 1252,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html",
+    "title": "What’s New In Python 3.13 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s New In Python 3.13 | Theme Auto Light Dark | What’s New In Python 3.13¶ Editors: Adam Turner and Thomas Wouters This article explains the new features in Python 3.13, compared to 3.12. Python 3.13 was released on October 7, 2024. For full details, see the changelog. See also PEP 719 – Python 3.13 Release Schedule Summary – Release Highlights¶ Python 3.13 is a stable release of the Python programming language, with a mix of changes to the language, the implementation and the standard library. The biggest changes include a new interactive interpreter, experimental support for running in a free-threaded mode (PEP 703), and a Just-In-Time compiler (PEP 744). Error messages continue to improve, with tracebacks now highlighted in color by default. The locals() builtin now has defined semantics for changing the returned mapping, and type parameters now support default values. The library changes contain removal of deprecated APIs and modules, as well as the usual improvements in user-friendliness and correctness. Several legacy standard library modules have now been removed following their deprecation in Python 3.11 (PEP 594). This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.13 for guidance on upgrading from earlier versions of Python. Interpreter improvements: A greatly improved interactive interpreter and improved error messages. PEP 667: The locals() builtin now has defined semantics when mutating the returned mapping. Python debuggers and similar tools may now more reliably update local variables in optimized scopes even during concurrent code execution. PEP 703: CPython 3.13 has experimental support for running with the global interpreter lock disabled. See Free-threaded CPython for more details. PEP 744: A basic JIT compiler was added. It is currently disabled by default (though we may turn it on later). Performance improvements are modest – we expect to improve this over the next few releases. Color support in the new interactive interpreter, as well as in tracebacks and doctest output. This can be disabled through the PYTHON_COLORS and NO_COLOR environment variables. Python data model improvements: __static_attributes__ stores the names of attributes accessed through self.X in any function in a class body. __firstlineno__ records the first line number of a class definition. Significant improvements in the standard library: Add a new PythonFinalizationError exception, raised when an operation is blocked during finalization. The argparse module now supports deprecating command-line options, positional arguments, and subcommands. The new functions base64.z85encode() and base64.z85decode() support encoding and decoding Z85 data. The copy module now has a copy.replace() function, with support for many builtin types and any class defining the __replace__() method. The new dbm.sqlite3 module is now the default dbm backend. The os module has a suite of new functions for working with Linux’s timer notification file descriptors. The random module now has a command-line interface. Security improvements: ssl.create_default_context() sets ssl.VERIFY_X509_PARTIAL_CHAIN and ssl.VERIFY_X509_STRICT as default flags. C API improvements: The Py_mod_gil slot is now used to indicate that an extension module supports running with the GIL disabled. The PyTime C API has been added, providing access to system clocks. PyMutex is a new lightweight mutex that occupies a single byte. There is a new suite of functions for generating PEP 669 monitoring events in the C API. New typing features: PEP 696: Type parameters (typing.TypeVar, typing.ParamSpec, and typing.TypeVarTuple) now support defaults. PEP 702: The new warnings.deprecated() decorator adds support for marking deprecations in the type system and at runtime. PEP 705: typing.ReadOnly can be used to mark an item of a typing.TypedDict as read-only for type checkers. PEP 742: typing.TypeIs provides more intuitive type narrowing behavior, as an alternative to typing.TypeGuard. Platform support: PEP 730: Apple’s iOS is now an officially supported platform, at tier 3. PEP 738: Android is now an officially supported platform, at tier 3. wasm32-wasi is now supported as a tier 2 platform. wasm32-emscripten is no longer an officially supported platform. Important removals: PEP 594: The remaining 19 “dead batteries” (legacy stdlib modules) have been removed from the standard library: aifc, audioop, cgi, cgitb, chunk, crypt, imghdr, mailcap, msilib, nis, nntplib, ossaudi",
+    "scrapedAt": "2026-05-09 01:12:20.982343"
+  },
+  {
+    "id": 1251,
+    "url": "https://docs.python.org/3/library/http.server.html#module-http.server",
+    "title": "http.server — HTTP servers — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Protocols and Support » http.server — HTTP servers | Theme Auto Light Dark | http.server — HTTP servers¶ Source code: Lib/http/server.py This module defines classes for implementing HTTP servers. Warning http.server is not recommended for production. It only implements basic security checks. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. One class, HTTPServer, is a socketserver.TCPServer subclass. It creates and listens at the HTTP socket, dispatching the requests to a handler. Code to create and run the server looks like this: def run(server_class\u003dHTTPServer, handler_class\u003dBaseHTTPRequestHandler):\n    server_address \u003d (\u0027\u0027, 8000)\n    httpd \u003d server_class(server_address, handler_class)\n    httpd.serve_forever()\n class http.server.HTTPServer(server_address, RequestHandlerClass)¶ This class builds on the TCPServer class by storing the server address as instance variables named server_name and server_port. The server is accessible by the handler, typically through the handler’s server instance variable. class http.server.ThreadingHTTPServer(server_address, RequestHandlerClass)¶ This class is identical to HTTPServer but uses threads to handle requests by using the ThreadingMixIn. This is useful to handle web browsers pre-opening sockets, on which HTTPServer would wait indefinitely. Added in version 3.7. class http.server.HTTPSServer(server_address, RequestHandlerClass, bind_and_activate\u003dTrue, *, certfile, keyfile\u003dNone, password\u003dNone, alpn_protocols\u003dNone)¶ Subclass of HTTPServer with a wrapped socket using the ssl module. If the ssl module is not available, instantiating a HTTPSServer object fails with a RuntimeError. The certfile argument is the path to the SSL certificate chain file, and the keyfile is the path to file containing the private key. A password can be specified for files protected and wrapped with PKCS#8, but beware that this could possibly expose hardcoded passwords in clear. See also See ssl.SSLContext.load_cert_chain() for additional information on the accepted values for certfile, keyfile and password. When specified, the alpn_protocols argument must be a sequence of strings specifying the “Application-Layer Protocol Negotiation” (ALPN) protocols supported by the server. ALPN allows the server and the client to negotiate the application protocol during the TLS handshake. By default, it is set to [\"http/1.1\"], meaning the server supports HTTP/1.1. Added in version 3.14. class http.server.ThreadingHTTPSServer(server_address, RequestHandlerClass, bind_and_activate\u003dTrue, *, certfile, keyfile\u003dNone, password\u003dNone, alpn_protocols\u003dNone)¶ This class is identical to HTTPSServer but uses threads to handle requests by inheriting from ThreadingMixIn. This is analogous to ThreadingHTTPServer only using HTTPSServer. Added in version 3.14. The HTTPServer, ThreadingHTTPServer, HTTPSServer and ThreadingHTTPSServer must be given a RequestHandlerClass on instantiation, of which this module provides three different variants: class http.server.BaseHTTPRequestHandler(request, client_address, server)¶ This class is used to handle the HTTP requests that arrive at the server. By itself, it cannot respond to any actual HTTP requests; it must be subclassed to handle each request method (for example, \u0027GET\u0027 or \u0027POST\u0027). BaseHTTPRequestHandler provides a number of class and instance variables, and methods for use by subclasses. The handler will parse the request and the headers, then call a method specific to the request type. The method name is constructed from the request. For example, for the request method SPAM, the do_SPAM() method will be called with no arguments. All of the relevant information is stored in instance variables of the handler. Subclasses should not need to override or extend the __init__() method. BaseHTTPRequestHandler has the following instance variables: client_address¶ Contains a tuple of the form (host, port) referring to the client’s address. server¶ Contains the server instance. close_connection¶ Boolean that should be set before handle_one_request() returns, indicating if another request may be expected, or if the connection should be shut down. requestline¶ Contains the string representation of the HTTP request line. The terminating CRLF is stripped. This attribute should be set by handle_one_request(). If no valid request line was processed, it should be set to the empty string. command¶ Contains the command (request type). For example, \u0027GET\u0027. path¶ Contains the request path. If query component of the URL is present, then path includes the query. Using the terminology of RFC 3986, path here includes hier-part and the query. request_version¶ Contains the version string from the request. For example, \u0027HTTP/1.0\u0027. headers¶ Holds an instance of the class specified by the MessageClass class variabl",
+    "scrapedAt": "2026-05-09 01:12:19.699076"
+  },
+  {
     "id": 1250,
     "url": "https://github.com/python/cpython/issues/122854",
     "title": "[C API] Add Py_HashBuffer() function · Issue #122854 · python/cpython · GitHub",
@@ -8398,26 +8433,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1251,
-    "url": "https://docs.python.org/3/library/http.server.html#module-http.server"
-  },
-  {
-    "id": 1252,
-    "url": "https://docs.python.org/3/whatsnew/3.13.html"
-  },
-  {
-    "id": 1253,
-    "url": "https://docs.python.org/3/library/faulthandler.html#faulthandler.dump_c_stack"
-  },
-  {
-    "id": 1254,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#a-new-type-of-interpreter"
-  },
-  {
-    "id": 1255,
-    "url": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
   },
   {
     "id": 1256,
@@ -219500,10 +219515,1415 @@ window.searchData = [
     "id": 245013,
     "url": "https://github.com/capi-workgroup/decisions/issues/13",
     "parentUrl": "https://github.com/python/cpython/issues/122854"
+  },
+  {
+    "id": 245019,
+    "url": "https://docs.python.org/3/library/http.client.html#http.client.parse_headers",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245020,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.send_header",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245021,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.requestline",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245022,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.protocol_version",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245026,
+    "url": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-arg-port",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245027,
+    "url": "https://docs.python.org/3/library/http.server.html#",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245028,
+    "url": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-d",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245029,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.date_time_string",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245031,
+    "url": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-b",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245034,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.MessageClass",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245035,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.rfile",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245038,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.SimpleHTTPRequestHandler",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245039,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.SimpleHTTPRequestHandler.extensions_map",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245040,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.address_string",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245043,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.log_request",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245046,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.CGIHTTPRequestHandler.do_POST",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245047,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.client_address",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245048,
+    "url": "https://docs.python.org/3/library/socketserver.html#socketserver.ThreadingMixIn",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245049,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.close_connection",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245050,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.server",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245054,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/http/server.py",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245056,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/http.server.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245058,
+    "url": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-cgi",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245059,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.version_string",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245061,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.flush_headers",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245062,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.error_message_format",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245064,
+    "url": "https://docs.python.org/3/library/http.server.html#cmdoption-http.server-p",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245066,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.log_error",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245068,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.send_response",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245069,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.SimpleHTTPRequestHandler.server_version",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245071,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.send_response_only",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245074,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.request_version",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245075,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.end_headers",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245076,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.command",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245077,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.SimpleHTTPRequestHandler.do_GET",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245079,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.sys_version",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245082,
+    "url": "https://docs.python.org/3/library/http.client.html#http.client.HTTPMessage",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245083,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.ThreadingHTTPServer",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245084,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.CGIHTTPRequestHandler.cgi_directories",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245085,
+    "url": "https://docs.python.org/3/library/socketserver.html#socketserver.TCPServer",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245086,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.handle",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245088,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.wfile",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245090,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.path",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245091,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.handle_expect_100",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245092,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.responses",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245094,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.send_error",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245097,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.server_version",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245103,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.error_content_type",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245104,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.ThreadingHTTPSServer",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245105,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.headers",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245106,
+    "url": "https://docs.python.org/3/library/http.server.html#http-server-security",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245108,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.log_message",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245109,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.log_date_time_string",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245112,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.handle_one_request",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245113,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.SimpleHTTPRequestHandler.do_HEAD",
+    "parentUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "id": 245125,
+    "url": "https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv4Network",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245132,
+    "url": "https://github.com/python/cpython/issues/112389",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245139,
+    "url": "https://github.com/python/cpython/issues/100160",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245140,
+    "url": "https://docs.python.org/3/c-api/time.html#c.PyTime_PerfCounter",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245141,
+    "url": "https://pypi.org/project/python-magic/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245149,
+    "url": "https://pypi.org/project/legacycrypt/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245152,
+    "url": "https://github.com/python/cpython/issues/104750",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245154,
+    "url": "https://docs.python.org/3/library/stdtypes.html#list.clear",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245158,
+    "url": "https://pypi.org/project/standard-aifc/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245171,
+    "url": "https://github.com/python/cpython/issues/115863",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245172,
+    "url": "https://docs.python.org/3/c-api/profiling.html#c.PyRefTracer_GetTracer",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245173,
+    "url": "https://pypi.org/project/standard-cgitb/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245174,
+    "url": "https://github.com/python/cpython/issues/117802",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245175,
+    "url": "https://github.com/python/cpython/issues/115623",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245195,
+    "url": "https://docs.python.org/3/library/mmap.html#mmap.mmap.seekable",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245204,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_GetAttrString",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245206,
+    "url": "https://docs.python.org/3/c-api/time.html#c.PyTime_Monotonic",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245215,
+    "url": "https://docs.python.org/3/c-api/tuple.html#c.PyTuple_SET_ITEM",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245218,
+    "url": "https://github.com/microsoft/mimalloc/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245225,
+    "url": "https://docs.python.org/3/c-api/reflection.html#c.PyEval_GetFrameGlobals",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245237,
+    "url": "https://pypi.org/project/standard-pipes/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245244,
+    "url": "https://docs.python.org/3/c-api/time.html#c.PyTime_MAX",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245251,
+    "url": "https://docs.python.org/3/c-api/time.html#c.PyTime_MIN",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245258,
+    "url": "https://pypy.org/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245265,
+    "url": "https://pypi.org/project/standard-telnetlib/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245284,
+    "url": "https://docs.python.org/3/c-api/reflection.html#c.PyEval_GetBuiltins",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245291,
+    "url": "https://pypi.org/project/filetype/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245305,
+    "url": "https://github.com/python/cpython/issues/118501",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245313,
+    "url": "https://pypi.org/project/pygame/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245319,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_GetOptionalAttr",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245320,
+    "url": "https://docs.python.org/3/c-api/list.html#c.PyList_SET_ITEM",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245321,
+    "url": "https://pypi.org/project/bcrypt/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245342,
+    "url": "https://pypi.org/project/standard-xdrlib/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245354,
+    "url": "https://docs.python.org/3/c-api/mapping.html#c.PyMapping_GetOptionalItemString",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245360,
+    "url": "https://docs.python.org/3/library/textwrap.html#textwrap.indent",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245367,
+    "url": "https://docs.python.org/3/library/doctest.html#doctest.DocTestRunner.skips",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245368,
+    "url": "https://docs.python.org/3/c-api/call.html#c.PyObject_CallFunction",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245395,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#whatsnew313-better-interactive-interpreter",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245396,
+    "url": "https://docs.python.org/3/library/math.html#math.fma",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245398,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#module-importlib.resources.abc",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245406,
+    "url": "https://github.com/python/cpython/issues/95388",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245407,
+    "url": "https://github.com/python/cpython/issues/77714",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245409,
+    "url": "https://docs.python.org/3/library/zipapp.html#module-zipapp",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245413,
+    "url": "https://github.com/python/cpython/issues/112826",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245414,
+    "url": "https://docs.python.org/3/library/queue.html#queue.ShutDown",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245418,
+    "url": "https://docs.python.org/3/library/doctest.html#doctest.TestResults.skipped",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245419,
+    "url": "https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv6Address",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245423,
+    "url": "https://pypi.org/project/standard-mailcap/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245427,
+    "url": "https://docs.python.org/3/c-api/list.html#c.PyList_Extend",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245432,
+    "url": "https://docs.python.org/3/library/mmap.html#mmap.mmap.seek",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245436,
+    "url": "https://docs.python.org/3/c-api/object.html#c.Py_GetConstantBorrowed",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245444,
+    "url": "https://docs.python.org/3/library/enum.html#enum.EnumType",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245447,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html#asyncio.StreamReader.readuntil",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245457,
+    "url": "https://github.com/python/cpython/issues/90953",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245468,
+    "url": "https://docs.python.org/3/c-api/call.html#c.PyObject_CallNoArgs",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245474,
+    "url": "https://docs.python.org/3/library/_thread.html#thread.start_new_thread",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245477,
+    "url": "https://github.com/python/cpython/issues/118579",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245494,
+    "url": "https://manpages.debian.org/crypt_r(3)",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245504,
+    "url": "https://docs.python.org/3/library/random.html#random-cli",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245507,
+    "url": "https://en.wikipedia.org/wiki/Zip_(file_format)#ZIP64",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245512,
+    "url": "https://docs.python.org/3/c-api/mapping.html#c.PyMapping_HasKey",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245515,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_HasAttrWithError",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245526,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#whatsnew313-locals-semantics",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245529,
+    "url": "https://github.com/python/cpython/issues/116126",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245530,
+    "url": "https://docs.python.org/3/library/traceback.html#traceback.TracebackException.exc_type_str",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245552,
+    "url": "https://pypi.org/project/standard-cgi/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245556,
+    "url": "https://docs.python.org/3/using/mac.html#install-freethreaded-macos",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245557,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_HasAttrString",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245560,
+    "url": "https://pypi.org/project/standard-uu/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245561,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#whatsnew313-subprocess",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245564,
+    "url": "https://github.com/python/cpython/issues/86493",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245566,
+    "url": "https://github.com/python/cpython/blob/main/Doc/whatsnew/3.13.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245567,
+    "url": "https://docs.python.org/3/library/statistics.html#statistics.kde_random",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245568,
+    "url": "https://pypi.org/project/argon2-cffi/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245578,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#pep667-porting-notes-py",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245584,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#whatsnew313-jit-compiler",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245585,
+    "url": "https://pypi.org/project/standard-sunau/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245586,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#whatsnew313-platform-support",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245587,
+    "url": "https://github.com/python/cpython/issues/111320",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245596,
+    "url": "https://docs.python.org/3/c-api/reflection.html#c.PyEval_GetFrameLocals",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245598,
+    "url": "https://github.com/python/cpython/issues/126180",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245599,
+    "url": "https://github.com/python/cpython/issues/65559",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245603,
+    "url": "https://docs.python.org/3/c-api/mapping.html#c.PyMapping_GetOptionalItem",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245608,
+    "url": "https://docs.python.org/3/c-api/time.html#c.PyTime_t",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245609,
+    "url": "https://docs.python.org/3/c-api/reflection.html#c.PyEval_GetGlobals",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245620,
+    "url": "https://docs.python.org/3/library/statistics.html#statistics.kde",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245623,
+    "url": "https://docs.python.org/3/library/pkgutil.html#module-pkgutil",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245625,
+    "url": "https://docs.python.org/3/c-api/mapping.html#c.PyMapping_HasKeyStringWithError",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245636,
+    "url": "https://docs.python.org/3/library/importlib.resources.html#importlib.resources.path",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245639,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_GetOptionalAttrString",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245640,
+    "url": "https://docs.python.org/3/c-api/list.html#c.PyList_GetItemRef",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245641,
+    "url": "https://docs.python.org/3/c-api/profiling.html#c.PyRefTracer_SetTracer",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245647,
+    "url": "https://github.com/python/cpython/issues/108125",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245649,
+    "url": "https://docs.python.org/3/library/glob.html#glob.translate",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245654,
+    "url": "https://docs.python.org/3/library/mmap.html#mmap.mmap",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245657,
+    "url": "https://github.com/python/cpython/issues/111762",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245658,
+    "url": "https://docs.python.org/3/library/importlib.resources.html#importlib.resources.is_resource",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245661,
+    "url": "https://docs.python.org/3/library/importlib.resources.html#importlib.resources.read_text",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245664,
+    "url": "https://github.com/python/cpython/issues/64020",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245676,
+    "url": "https://py-free-threading.github.io/porting/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245689,
+    "url": "https://github.com/python/cpython/issues/88168",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245700,
+    "url": "https://docs.python.org/3/library/array.html#array.array.clear",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245704,
+    "url": "https://docs.python.org/3/c-api/profiling.html#c.PyEval_SetTraceAllThreads",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245724,
+    "url": "https://github.com/python/cpython/issues/77020",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245729,
+    "url": "https://docs.python.org/3/library/traceback.html#traceback.TracebackException",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245738,
+    "url": "https://docs.python.org/3/c-api/tuple.html#c.PyTuple_New",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245739,
+    "url": "https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv4Address",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245748,
+    "url": "https://github.com/python/cpython/issues/78573",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245758,
+    "url": "https://pypi.org/project/standard-imghdr/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245759,
+    "url": "https://pypi.org/project/telnetlib3/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245766,
+    "url": "https://peps.python.org/pep-0669/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245769,
+    "url": "https://pypi.org/project/standard-sndhdr/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245782,
+    "url": "https://docs.python.org/3/library/importlib.resources.html#importlib.resources.contents",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245788,
+    "url": "https://docs.python.org/3/library/traceback.html#traceback.TracebackException.exc_type",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245789,
+    "url": "https://github.com/python/cpython/issues/81322",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245791,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tkinter.ttk.Style.element_create",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245801,
+    "url": "https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv4Address.ipv6_mapped",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245803,
+    "url": "https://peps.python.org/pep-0730/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245810,
+    "url": "https://docs.python.org/3/c-api/synchronization.html#c.PyMutex",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245823,
+    "url": "https://docs.python.org/3/library/os.html#os-timerfd",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245847,
+    "url": "https://docs.python.org/3/c-api/time.html#c-api-time",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245850,
+    "url": "https://pypi.org/project/crypt_r/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245860,
+    "url": "https://github.com/python/cpython/issues/106676",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245863,
+    "url": "https://pypi.org/project/Exscript/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245865,
+    "url": "https://docs.python.org/3/library/asyncio-queue.html#asyncio.QueueShutDown",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245874,
+    "url": "https://docs.python.org/3/c-api/frame.html#c.PyFrame_GetLocals",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245887,
+    "url": "https://pypi.org/project/multipart/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245890,
+    "url": "https://docs.python.org/3/library/stdtypes.html#list.extend",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245894,
+    "url": "https://github.com/python/cpython/issues/112090",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245896,
+    "url": "https://github.com/python/cpython/issues/73965",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245909,
+    "url": "https://docs.python.org/3/library/copy.html#object.__replace__",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245914,
+    "url": "https://github.com/python/cpython/issues/109914",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245917,
+    "url": "https://github.com/python/cpython/issues/104228",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245918,
+    "url": "https://docs.python.org/3/library/importlib.resources.html#importlib.resources.open_text",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245922,
+    "url": "https://docs.python.org/3/c-api/time.html#c.PyTime_AsSecondsDouble",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245925,
+    "url": "https://github.com/python/cpython/issues/101193",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245936,
+    "url": "https://docs.python.org/3/c-api/list.html#c.PyList_Clear",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245937,
+    "url": "https://docs.python.org/3/c-api/mapping.html#c.PyMapping_GetItemString",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245938,
+    "url": "https://github.com/python/cpython/issues/105546",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245942,
+    "url": "https://github.com/python/cpython/issues/107962",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245946,
+    "url": "https://docs.python.org/3/c-api/list.html#c.PyList_GetItem",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245951,
+    "url": "https://docs.python.org/3/library/time.html#time.monotonic",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245954,
+    "url": "https://github.com/python/cpython/issues/107948",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245966,
+    "url": "https://github.com/python/cpython/issues/92248",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245967,
+    "url": "https://github.com/python/cpython/issues/113141",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245974,
+    "url": "https://docs.python.org/3/library/pyexpat.html#xml.parsers.expat.xmlparser.GetReparseDeferralEnabled",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245976,
+    "url": "https://docs.python.org/3/c-api/code.html#c.PyUnstable_Code_GetFirstFree",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245978,
+    "url": "https://docs.python.org/3/c-api/time.html#c.PyTime_MonotonicRaw",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245980,
+    "url": "https://pypi.org/project/standard-nntplib/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245985,
+    "url": "https://pypi.org/project/puremagic/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245986,
+    "url": "https://pypi.org/project/standard-chunk/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245993,
+    "url": "https://docs.python.org/3/c-api/time.html#c.PyTime_Time",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245997,
+    "url": "https://docs.python.org/3/c-api/time.html#c.PyTime_PerfCounterRaw",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 245999,
+    "url": "https://docs.python.org/3/library/importlib.resources.html#importlib.resources.open_binary",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246004,
+    "url": "https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv6Network",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246005,
+    "url": "https://github.com/python/cpython/issues/110769",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246011,
+    "url": "https://docs.python.org/3/c-api/mapping.html#c.PyMapping_HasKeyString",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246020,
+    "url": "https://docs.python.org/3/library/doctest.html#doctest.DocTestRunner.run",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246021,
+    "url": "https://github.com/python/cpython/issues/107116",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246029,
+    "url": "https://docs.python.org/3/c-api/call.html#c.PyObject_CallMethod",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246037,
+    "url": "https://github.com/python/cpython/issues/62308",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246043,
+    "url": "https://github.com/python/cpython/issues/115199",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246049,
+    "url": "https://github.com/python/cpython/issues/115192",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246059,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyObject_CheckBuffer",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246064,
+    "url": "https://docs.python.org/3/library/importlib.resources.html#importlib.resources.read_binary",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246080,
+    "url": "https://pypi.org/project/deprecated-crypt-alternative/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246090,
+    "url": "https://docs.python.org/3/license.html#mimalloc-license",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246092,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#whatsnew313-doctest",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246093,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#what-s-new-in-python-3-13",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246099,
+    "url": "https://docs.python.org/3/c-api/stable.html#c.Py_LIMITED_API",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246104,
+    "url": "https://github.com/python/cpython/issues/94146",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246105,
+    "url": "https://pypi.org/project/audioop-lts/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246106,
+    "url": "https://docs.python.org/3/using/windows.html#install-freethreaded-windows",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246116,
+    "url": "https://docs.python.org/3/library/enum.html#enum.EnumDict",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246119,
+    "url": "https://github.com/python/cpython/issues/124520",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246121,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#pep667-porting-notes-c",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246123,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#asyncio.DatagramTransport.sendto",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246126,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246136,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tkinter.ttk.Style",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246148,
+    "url": "https://docs.python.org/3/c-api/reflection.html#c.PyEval_GetLocals",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246150,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_HasAttr",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246151,
+    "url": "https://github.com/python/cpython/issues/104922",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246154,
+    "url": "https://docs.python.org/3/library/asyncio-queue.html#asyncio.Queue.shutdown",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246157,
+    "url": "https://docs.python.org/3/c-api/object.html#c.Py_GetConstant",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246162,
+    "url": "https://www.unicode.org/versions/Unicode15.1.0/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246164,
+    "url": "https://docs.python.org/3/library/traceback.html#traceback.TracebackException.format_exception_only",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246174,
+    "url": "https://github.com/python/cpython/issues/63272",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246175,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#whatsnew313-improved-error-messages",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246178,
+    "url": "https://docs.python.org/3/library/email.policy.html#email.policy.Policy.verify_generated_headers",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246180,
+    "url": "https://docs.python.org/3/c-api/mapping.html#c.PyMapping_HasKeyWithError",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246195,
+    "url": "https://github.com/python/cpython/issues/78502",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246214,
+    "url": "https://docs.python.org/3/c-api/arg.html#arg-parsing-string-and-buffers",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246218,
+    "url": "https://en.wikipedia.org/wiki/Call_stack",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246226,
+    "url": "https://pypi.org/project/standard-crypt/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246230,
+    "url": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246240,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#whatsnew313-pep594",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246242,
+    "url": "https://docs.python.org/3/c-api/time.html#c.PyTime_TimeRaw",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246243,
+    "url": "https://github.com/python/cpython/issues/75299",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246249,
+    "url": "https://docs.python.org/3/c-api/reflection.html#c.PyEval_GetFrameBuiltins",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246266,
+    "url": "https://pypi.org/project/pynntp/",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246275,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_HasAttrStringWithError",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246278,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 246290,
+    "url": "https://github.com/python/cpython/issues/108464",
+    "parentUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "id": 247583,
+    "url": "https://docs.python.org/3/howto/a-conceptual-overview-of-asyncio.html#a-conceptual-overview-of-asyncio",
+    "parentUrl": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
+  },
+  {
+    "id": 247595,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#loop-create-server",
+    "parentUrl": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
+  },
+  {
+    "id": 247600,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#loop-subprocess-exec",
+    "parentUrl": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
+  },
+  {
+    "id": 247603,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#loop-add-signal-handler",
+    "parentUrl": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
+  },
+  {
+    "id": 247611,
+    "url": "https://docs.python.org/3/library/asyncio-subprocess.html#asyncio-subprocess",
+    "parentUrl": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
+  },
+  {
+    "id": 247617,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#asyncio-transports-protocols",
+    "parentUrl": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
+  },
+  {
+    "id": 247618,
+    "url": "https://docs.python.org/3/library/asyncio-queue.html#asyncio-queues",
+    "parentUrl": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
+  },
+  {
+    "id": 247619,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#asyncio-futures",
+    "parentUrl": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
+  },
+  {
+    "id": 247621,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/asyncio.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
+  },
+  {
+    "id": 247629,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/asyncio/",
+    "parentUrl": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
+  },
+  {
+    "id": 247631,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio-sync",
+    "parentUrl": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "asyncio — Asynchronous I/O — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "asyncio — Asynchronous I/O — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#a-new-type-of-interpreter"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#a-new-type-of-interpreter"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "faulthandler — Dump the Python traceback — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.dump_c_stack"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "faulthandler — Dump the Python traceback — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.dump_c_stack"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s New In Python 3.13 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s New In Python 3.13 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.13.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "http.server — HTTP servers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "http.server — HTTP servers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/http.server.html#module-http.server"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d80",
     "alt": "@vstinner",
