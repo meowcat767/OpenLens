@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1782,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.writestr",
+    "title": "zipfile — Work with ZIP archives — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Compression and Archiving » zipfile — Work with ZIP archives | Theme Auto Light Dark | zipfile — Work with ZIP archives¶ Source code: Lib/zipfile/ The ZIP file format is a common archive and compression standard. This module provides tools to create, read, write, append, and list a ZIP file. Any advanced use of this module will require an understanding of the format, as defined in PKZIP Application Note. This module does not handle multipart ZIP files. It can handle ZIP files that use the ZIP64 extensions (that is ZIP files that are more than 4 GiB in size). It supports decryption of encrypted files in ZIP archives, but it cannot create an encrypted file. Decryption is extremely slow as it is implemented in native Python rather than C. Handling compressed archives requires optional modules such as zlib, bz2, lzma, and compression.zstd. If any of them are missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. The module defines the following items: exception zipfile.BadZipFile¶ The error raised for bad ZIP files. Added in version 3.2. exception zipfile.BadZipfile¶ Alias of BadZipFile, for compatibility with older Python versions. Deprecated since version 3.2. exception zipfile.LargeZipFile¶ The error raised when a ZIP file would require ZIP64 functionality but that has not been enabled. class zipfile.ZipFile The class for reading and writing ZIP files. See section ZipFile objects for constructor details. class zipfile.Path Class that implements a subset of the interface provided by pathlib.Path, including the full importlib.resources.abc.Traversable interface. Added in version 3.8. class zipfile.PyZipFile Class for creating ZIP archives containing Python libraries. class zipfile.ZipInfo(filename\u003d\u0027NoName\u0027, date_time\u003d(1980, 1, 1, 0, 0, 0))¶ Class used to represent information about a member of an archive. Instances of this class are returned by the getinfo() and infolist() methods of ZipFile objects. Most users of the zipfile module will not need to create these, but only use those created by this module. filename should be the full name of the archive member, and date_time should be a tuple containing six fields which describe the time of the last modification to the file; the fields are described in section ZipInfo objects. Changed in version 3.13: A public compress_level attribute has been added to expose the formerly protected _compresslevel. The older protected name continues to work as a property for backwards compatibility. _for_archive(archive)¶ Resolve the date_time, compression attributes, and external attributes to suitable defaults as used by ZipFile.writestr(). Returns self for chaining. Added in version 3.14. zipfile.is_zipfile(filename)¶ Returns True if filename is a valid ZIP file based on its magic number, otherwise returns False. filename may be a file or file-like object too. Changed in version 3.1: Support for file and file-like objects. zipfile.ZIP_STORED¶ The numeric constant for an uncompressed archive member. zipfile.ZIP_DEFLATED¶ The numeric constant for the usual ZIP compression method. This requires the zlib module. zipfile.ZIP_BZIP2¶ The numeric constant for the BZIP2 compression method. This requires the bz2 module. Added in version 3.3. zipfile.ZIP_LZMA¶ The numeric constant for the LZMA compression method. This requires the lzma module. Added in version 3.3. zipfile.ZIP_ZSTANDARD¶ The numeric constant for Zstandard compression. This requires the compression.zstd module. Note In APPNOTE 6.3.7, the method ID 20 was assigned to Zstandard compression. This was changed in APPNOTE 6.3.8 to method ID 93 to avoid conflicts, with method ID 20 being deprecated. For compatibility, the zipfile module reads both method IDs but will only write data with method ID 93. Added in version 3.14. Note The ZIP file format specification has included support for bzip2 compression since 2001, for LZMA compression since 2006, and Zstandard compression since 2020. However, some tools (including older Python releases) do not support these compression methods, and may either refuse to process the ZIP file altogether, or fail to extract individual files. See also PKZIP Application Note Documentation on the ZIP file format by Phil Katz, the creator of the format and algorithms used. Info-ZIP Home Page Information about the Info-ZIP project’s ZIP archive programs and development libraries. ZipFile objects¶ class zipfile.ZipFile(file, mode\u003d\u0027r\u0027, compression\u003dZIP_STORED, allowZip64\u003dTrue, compresslevel\u003dNone, *, strict_timestamps\u003dTrue, metadata_encoding\u003dNone)¶ Open a ZIP file, where file can be a path to a file (a string), a file-like object or a path-like object. The mode parameter should be \u0027r\u0027 to read an existing file, \u0027w\u0027 to truncate and write a new file, \u0027a\u0027 to appen",
+    "scrapedAt": "2026-05-09 01:33:33.67307"
+  },
+  {
+    "id": 1781,
+    "url": "https://github.com/zlib-ng/zlib-ng",
+    "title": "GitHub - zlib-ng/zlib-ng: zlib replacement with optimizations for \"next generation\" systems. · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} zlib-ng / zlib-ng Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 325 Star 2k develop Branches Tags Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 3,108 Commits 3,108 Commits .github .github arch arch cmake cmake doc doc test test tools tools win32 win32 .gitattributes .gitattributes .gitignore .gitignore .shellcheckrc .shellcheckrc CMakeLists.txt CMakeLists.txt FAQ.zlib FAQ.zlib INDEX.md INDEX.md LICENSE.md LICENSE.md Makefile.in Makefile.in PORTING.md PORTING.md README.md README.md adler32.c adler32.c adler32_p.h adler32_p.h arch_functions.h arch_functions.h arch_natives.h arch_natives.h chunkset_tpl.h chunkset_tpl.h compare256_rle.h compare256_rle.h compress.c compress.c configure configure cpu_features.c cpu_features.c cpu_features.h cpu_features.h crc32.c crc32.c crc32_braid_comb.c crc32_braid_comb.c crc32_braid_comb_p.h crc32_braid_comb_p.h crc32_braid_p.h crc32_braid_p.h crc32_braid_tbl.h crc32_braid_tbl.h crc32_chorba_p.h crc32_chorba_p.h crc32_p.h crc32_p.h deflate.c deflate.c deflate.h deflate.h deflate_fast.c deflate_fast.c deflate_huff.c deflate_huff.c deflate_medium.c deflate_medium.c deflate_p.h deflate_p.h deflate_quick.c deflate_quick.c deflate_rle.c deflate_rle.c deflate_slow.c deflate_slow.c deflate_stored.c deflate_stored.c fallback_builtins.h fallback_builtins.h functable.c functable.c functable.h functable.h gzguts.h gzguts.h gzlib.c gzlib.c gzread.c gzread.c gzread_mangle.h.in gzread_mangle.h.in gzwrite.c gzwrite.c infback.c infback.c inffast_tpl.h inffast_tpl.h inffixed_tbl.h inffixed_tbl.h inflate.c inflate.c inflate.h inflate.h inflate_p.h inflate_p.h inftrees.c inftrees.c inftrees.h inftrees.h insert_string.c insert_string.c insert_string_p.h insert_string_p.h insert_string_tpl.h insert_string_tpl.h match_tpl.h match_tpl.h trees.c trees.c trees.h trees.h trees_emit.h trees_emit.h trees_tbl.h trees_tbl.h uncompr.c uncompr.c zarch.h zarch.h zbuild.h zbuild.h zconf-ng.h.in zconf-ng.h.in zconf.h.in zconf.h.in zendian.h zendian.h zlib-config.cmake.in zlib-config.cmake.in zlib-ng-config.cmake.in zlib-ng-config.cmake.in zlib-ng.h.in zlib-ng.h.in zlib-ng.map.in zlib-ng.map.in zlib.h.in zlib.h.in zlib.map.in zlib.map.in zlib.pc.cmakein zlib.pc.cmakein zlib.pc.in zlib.pc.in zlib_name_mangling-ng.h.in zlib_name_mangling-ng.h.in zlib_name_mangling.h.empty zlib_name_mangling.h.empty zlib_name_mangling.h.in zlib_name_mangling.h.in zmemory.h zmemory.h zsanitizer.h zsanitizer.h zutil.c zutil.c zutil.h zutil.h zutil_p.h zutil_p.h View all files Repository files navigation CI Stable Develop GitHub Actions CodeFactor OSS-Fuzz Coveralls zlib-ng zlib data compression library for the next generation systems Maintained by Hans Kristian Rosbach aka Dead2 (zlib-ng àt circlestorm dót org) Features Zlib compatible API with support for dual-linking Modernized native API based on zlib API for ease of porting Major speed improvements, x86-64 can be about 4x faster than stock zlib for example. Modern C11 syntax and a clean code layout Deflate medium and quick algorithms based on Intel’s zlib fork Support for CPU intrinsics when available Adler32 implementation using SSSE3, SSE4.2, AVX2, AVX512, AVX512-VNNI, Neon, VMX \u0026 VSX, LSX, LASX, RVV CRC32-B implementation using SSE2, SSE4.1, (V)PCLMULQDQ, ARMv8, ARMv8.2 PMULL+EOR3, Power8, IBM Z, LoongArch, ZBC Slide hash implementations using SSE2, AVX2, ARMv6, Neon, Power8, VMX \u0026 VSX, LSX, LASX Compare256 implementations using SSE2, AVX2, AVX512, Neon, Power9, LSX, LASX, RVV Inflate chunk copying using SSE2, SSSE3, AVX2, AVX512, Neon, Power8, VSX, LSX, LASX, RVV Support for hardware-accelerated deflate using IBM Z DFLTCC Safe unaligned memory read/writes and large bit buffer improvements Includes improvements from Cloudflare and Intel forks Configure and CMake build system support Comprehensive set of CMake unit tests Code sanitizers, fuzzing, and coverage GitHub Actions continuous integration on Windows, macOS, and Linux Native CI for Aarch64, S390x, x86, x86-64 Emulated CI for ARM, LoongArch, PPC, PPC64, RISCV, SPARC64, S390x using qemu History The motivation for this fork was seeing several 3rd party contributions with new optimizations not getting implemented into the official zlib repository. Mark Adler has been maintaining zlib for a very long time, and he has done a great job and hopefully he will continue for a long time yet. The idea of zlib-ng is not to replace zlib, but to co-exist as a drop-in replacement with a lower threshold for code change. zlib has a long history and is incredibly portable, even supporting many sys",
+    "scrapedAt": "2026-05-09 01:33:32.324404"
+  },
+  {
+    "id": 1780,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#argparse",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:33:30.532647"
+  },
+  {
+    "id": 1779,
+    "url": "https://github.com/python/cpython/issues/115808",
+    "title": "Add operator.is_none() · Issue #115808 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add operator.is_none() #115808 New issue Copy link New issue Copy link Closed #115814 Closed Add operator.is_none()#115808 #115814 Copy link Labels type-featureA feature request or enhancementA feature request or enhancement Description rhettinger opened on Feb 22, 2024 Issue body actions Feature or enhancement Proposal: With floating point data, the float(\u0027NaN\u0027) special value is commonly used as a placeholder for missing values. We provide math.isnan to support stripping out those values prior to sorting or summation: \u003e\u003e\u003e from math import isnan\n\u003e\u003e\u003e from itertools import filterfalse\n\u003e\u003e\u003e data \u003d [3.3, float(\u0027nan\u0027), 1.1, 2.2]\n\u003e\u003e\u003e sorted(filterfalse(isnan, data))\n[1.1, 2.2, 3.3] For non-float data, the None special value is commonly used as a placeholder for missing values. I propose a new function in the operator module analogous to math.isnan(): \u003e\u003e\u003e data \u003d [\u0027c\u0027, None, \u0027a\u0027, \u0027b\u0027]\n\u003e\u003e\u003e sorted(filterfalse(is_none, data))\n[\u0027a\u0027, \u0027b\u0027, \u0027c\u0027] This helps fulfill a primary use case for the operator module which is to support functional programming with map(), filter(), etc. Has this already been discussed elsewhere? No response given Links to previous discussion of this feature: No response Linked PRs gh-115808: Add is_none and is_not_none operators #115814 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:33:29.225741"
+  },
+  {
+    "id": 1778,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#other-language-changes",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:33:26.984485"
+  },
+  {
     "id": 1777,
     "url": "https://docs.python.org/3/library/heapq.html#heapq.heappush_max",
     "title": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
@@ -12003,26 +12038,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1778,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#other-language-changes"
-  },
-  {
-    "id": 1779,
-    "url": "https://github.com/python/cpython/issues/115808"
-  },
-  {
-    "id": 1780,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#argparse"
-  },
-  {
-    "id": 1781,
-    "url": "https://github.com/zlib-ng/zlib-ng"
-  },
-  {
-    "id": 1782,
-    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.writestr"
   },
   {
     "id": 1783,
@@ -249010,10 +249025,908 @@ window.searchData = [
     "id": 390411,
     "url": "https://github.com/python/cpython/pull/128556",
     "parentUrl": "https://github.com/python/cpython/issues/127146"
+  },
+  {
+    "id": 391974,
+    "url": "https://github.com/python/cpython/pull/115814",
+    "parentUrl": "https://github.com/python/cpython/issues/115808"
+  },
+  {
+    "id": 391975,
+    "url": "https://github.com/python/cpython/issues/115808#issue-2148518675",
+    "parentUrl": "https://github.com/python/cpython/issues/115808"
+  },
+  {
+    "id": 391977,
+    "url": "https://github.com/python/cpython/issues/115808#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/115808"
+  },
+  {
+    "id": 391979,
+    "url": "https://github.com/python/cpython/issues/115808#top",
+    "parentUrl": "https://github.com/python/cpython/issues/115808"
+  },
+  {
+    "id": 393214,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/deflate_medium.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393215,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zlib.h.in",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393216,
+    "url": "https://github.com/zlib-ng/zlib-ng/graphs/contributors",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393217,
+    "url": "https://github.com/topics/zlib",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393218,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zlib.map.in",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393219,
+    "url": "https://github.com/zlib-ng/zlib-ng/releases/tag/2.3.3",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393220,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/compare256_rle.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393221,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zarch.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393222,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zlib_name_mangling.h.empty",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393223,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/FAQ.zlib",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393224,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/deflate_fast.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393225,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/crc32_p.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393226,
+    "url": "https://github.com/zlib-ng/zlib-ng/tree/develop/cmake",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393227,
+    "url": "https://github.com/zlib-ng/zlib-ng/actions/workflows/configure.yml?query\u003dbranch%3Adevelop",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393228,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zmemory.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393229,
+    "url": "https://github.com/zlib-ng/zlib-ng/tree/develop/arch",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393230,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/inftrees.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393231,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/gzguts.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393232,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/gzlib.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393233,
+    "url": "https://github.com/zlib-ng/zlib-ng#Zlib-1-ov-file",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393234,
+    "url": "https://github.com/zlib-ng/zlib-ng/releases",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393235,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/crc32_braid_comb_p.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393236,
+    "url": "https://github.com/zlib-ng/zlib-ng/custom-properties",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393237,
+    "url": "https://www.codefactor.io/repository/github/zlib-ng/zlib-ng/overview/develop",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393238,
+    "url": "https://github.com/zlib-ng/zlib-ng#readme-ov-file",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393239,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/crc32.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393240,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/configure",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393241,
+    "url": "https://github.com/zlib-ng/zlib-ng/activity",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393243,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zconf-ng.h.in",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393244,
+    "url": "https://github.com/zlib-ng/zlib-ng#contributing",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393245,
+    "url": "https://bugs.chromium.org/p/oss-fuzz/issues/list?sort\u003d-opened\u0026can\u003d1\u0026q\u003dproj:zlib-ng",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393246,
+    "url": "https://github.com/zlib-ng/zlib-ng#features",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393247,
+    "url": "https://github.com/zlib-ng/zlib-ng/watchers",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393248,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/adler32.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393249,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/compress.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393250,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/cpu_features.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393251,
+    "url": "https://github.com/zlib-ng/zlib-ng#build-options",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393252,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/chunkset_tpl.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393253,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/adler32_p.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393254,
+    "url": "https://github.com/topics/deflate",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393255,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zutil_p.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393256,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/inftrees.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393257,
+    "url": "https://github.com/zlib-ng/zlib-ng/tree/develop/doc",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393258,
+    "url": "https://github.com/topics/compression",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393259,
+    "url": "https://github.com/zlib-ng/zlib-ng/actions/workflows/configure.yml?query\u003dbranch%3Astable",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393260,
+    "url": "https://github.com/zlib-ng/zlib-ng/search?l\u003dcmake",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393261,
+    "url": "https://github.com/zlib-ng/zlib-ng#build",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393262,
+    "url": "https://github.com/topics/c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393263,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/inffixed_tbl.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393264,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/README.md",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393265,
+    "url": "https://github.com/zlib-ng/zlib-ng#configure",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393266,
+    "url": "https://github.com/zlib-ng/pigzbench",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393267,
+    "url": "https://github.com/zlib-ng/zlib-ng/tree/develop/tools",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393268,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/.shellcheckrc",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393269,
+    "url": "https://github.com/zlib-ng/patches",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393270,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/insert_string.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393271,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/trees.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393272,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zlib-config.cmake.in",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393273,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/trees.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393274,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zendian.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393275,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/functable.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393276,
+    "url": "https://github.com/zlib-ng/zlib-ng/search?l\u003dc",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393277,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/gzwrite.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393278,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/crc32_chorba_p.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393279,
+    "url": "https://github.com/topics/zlib-replacement",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393280,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/functable.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393281,
+    "url": "https://github.com/zlib-ng/zlib-ng/actions/workflows/cmake.yml?query\u003dbranch%3Astable",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393282,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zlib-ng.h.in",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393283,
+    "url": "https://coveralls.io/github/zlib-ng/zlib-ng?branch\u003dstable",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393284,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/insert_string_p.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393285,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/cpu_features.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393286,
+    "url": "https://github.com/zlib-ng/zlib-ng#install",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393287,
+    "url": "https://github.com/zlib-ng/zlib-ng#acknowledgments",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393288,
+    "url": "https://github.com/zlib-ng/zlib-ng#zlib-ng",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393289,
+    "url": "https://github.com/zlib-ng/zlib-ng#cmake",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393290,
+    "url": "https://github.com/zlib-ng/zlib-ng/commits/develop/",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393291,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/CMakeLists.txt",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393292,
+    "url": "https://github.com/zlib-ng/zlib-ng#start-of-content",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393293,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/deflate.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393294,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/deflate_huff.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393295,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/gzread.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393296,
+    "url": "https://github.com/topics/library",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393297,
+    "url": "https://github.com/zlib-ng/zlib-ng/tree/develop/win32",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393298,
+    "url": "https://github.com/zlib-ng/zlib-ng#configure-1",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393299,
+    "url": "https://github.com/sponsors",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393300,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zutil.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393301,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zlib-ng.map.in",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393302,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/deflate.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393303,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/insert_string_tpl.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393304,
+    "url": "https://github.com/Microsoft/vcpkg",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393305,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zbuild.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393306,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zlib.pc.cmakein",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393307,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/.gitattributes",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393308,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/match_tpl.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393309,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/deflate_rle.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393310,
+    "url": "https://github.com/zlib-ng/zlib-ng/stargazers",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393311,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/inffast_tpl.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393312,
+    "url": "https://github.com/Microsoft/vcpkg/",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393313,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/inflate_p.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393314,
+    "url": "https://github.com/zlib-ng/zlib-ng#related-projects",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393315,
+    "url": "https://github.com/zlib-ng/zlib-ng/branches",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393316,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/.gitignore",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393317,
+    "url": "https://github.com/topics/zlib-license",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393318,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zlib_name_mangling-ng.h.in",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393319,
+    "url": "https://github.com/zlib-ng/zlib-ng#advanced-build-options",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393320,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/gzread_mangle.h.in",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393321,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/deflate_slow.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393322,
+    "url": "https://github.com/zlib-ng/zlib-ng/search?l\u003dc%2B%2B",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393323,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/INDEX.md",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393324,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/PORTING.md",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393325,
+    "url": "https://github.com/zlib-ng/minizip-ng",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393326,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/uncompr.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393327,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/deflate_p.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393328,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/trees_tbl.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393329,
+    "url": "https://github.com/zlib-ng/zlib-ng/wiki/Contributing",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393330,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/fallback_builtins.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393331,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/crc32_braid_tbl.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393332,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/infback.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393333,
+    "url": "https://github.com/topics/inflate",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393334,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zlib.pc.in",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393335,
+    "url": "https://github.com/zlib-ng/zlib-ng/actions/workflows/cmake.yml?query\u003dbranch%3Adevelop",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393336,
+    "url": "https://github.com/zlib-ng/zlib-ng/tree/develop/.github",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393337,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/deflate_quick.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393338,
+    "url": "https://www.codefactor.io/repository/github/zlib-ng/zlib-ng/overview/stable",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393339,
+    "url": "https://github.com/zlib-ng/zlib-ng/search?l\u003dmakefile",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393340,
+    "url": "https://github.com/zlib-ng/zlib-ng/tags",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393341,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/LICENSE.md",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393342,
+    "url": "https://github.com/zlib-ng/deflatebench",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393343,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zsanitizer.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393344,
+    "url": "https://github.com/zlib-ng/zlib-ng#cmake-1",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393345,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/Makefile.in",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393346,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/trees_emit.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393347,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/crc32_braid_comb.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393348,
+    "url": "https://github.com/zlib-ng",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393349,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/arch_functions.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393350,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/arch_natives.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393351,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zlib-ng-config.cmake.in",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393352,
+    "url": "https://github.com/contact/report-content?content_url\u003dhttps%3A%2F%2Fgithub.com%2Fzlib-ng%2Fzlib-ng\u0026report\u003dzlib-ng+%28user%29",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393353,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/inflate.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393354,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zlib_name_mangling.h.in",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393355,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zutil.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393356,
+    "url": "https://github.com/zlib-ng/zlib-ng#vcpkg",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393357,
+    "url": "https://coveralls.io/github/zlib-ng/zlib-ng?branch\u003ddevelop",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393358,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/deflate_stored.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393359,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/inflate.c",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393360,
+    "url": "https://github.com/zlib-ng/zlib-ng/forks",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393361,
+    "url": "https://github.com/zlib-ng/zlib-ng#history",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393362,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/zconf.h.in",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393363,
+    "url": "https://github.com/login?return_to\u003d%2Fzlib-ng%2Fzlib-ng",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393364,
+    "url": "https://github.com/zlib-ng/zlib-ng/blob/develop/crc32_braid_p.h",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393365,
+    "url": "https://github.com/zlib-ng/zlib-ng/tree/develop/test",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393366,
+    "url": "https://github.com/zlib-ng/zlib-ng#cpack",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393367,
+    "url": "https://github.com/topics/optimized",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "id": 393368,
+    "url": "https://github.com/topics/zlib-ng",
+    "parentUrl": "https://github.com/zlib-ng/zlib-ng"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipfile — Work with ZIP archives — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.writestr"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipfile — Work with ZIP archives — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.writestr"
+  },
+  {
+    "src": "https://github.com/zlib-ng/zlib-ng/actions/workflows/cmake.yml/badge.svg?branch\u003dstable",
+    "alt": "Stable CMake",
+    "pageTitle": "GitHub - zlib-ng/zlib-ng: zlib replacement with optimizations for \"next generation\" systems. · GitHub",
+    "pageUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "src": "https://github.com/zlib-ng/zlib-ng/actions/workflows/configure.yml/badge.svg?branch\u003dstable",
+    "alt": "Stable Configure",
+    "pageTitle": "GitHub - zlib-ng/zlib-ng: zlib replacement with optimizations for \"next generation\" systems. · GitHub",
+    "pageUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "src": "https://github.com/zlib-ng/zlib-ng/actions/workflows/cmake.yml/badge.svg?branch\u003ddevelop",
+    "alt": "Develop CMake",
+    "pageTitle": "GitHub - zlib-ng/zlib-ng: zlib replacement with optimizations for \"next generation\" systems. · GitHub",
+    "pageUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "src": "https://github.com/zlib-ng/zlib-ng/actions/workflows/configure.yml/badge.svg?branch\u003ddevelop",
+    "alt": "Develop Configure",
+    "pageTitle": "GitHub - zlib-ng/zlib-ng: zlib replacement with optimizations for \"next generation\" systems. · GitHub",
+    "pageUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/d521dd6594b42780c03adf19dfd5b21c7c5635fb45a90c1df61e9d2ecc60cb1f/68747470733a2f2f7777772e636f6465666163746f722e696f2f7265706f7369746f72792f6769746875622f7a6c69622d6e672f7a6c69622d6e672f62616467652f737461626c65",
+    "alt": "CodeFactor",
+    "pageTitle": "GitHub - zlib-ng/zlib-ng: zlib replacement with optimizations for \"next generation\" systems. · GitHub",
+    "pageUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/c520b1b5106488ff44d9d6b684fac1658b1ece0063801689ea54796b93bd7915/68747470733a2f2f7777772e636f6465666163746f722e696f2f7265706f7369746f72792f6769746875622f7a6c69622d6e672f7a6c69622d6e672f62616467652f646576656c6f70",
+    "alt": "CodeFactor",
+    "pageTitle": "GitHub - zlib-ng/zlib-ng: zlib replacement with optimizations for \"next generation\" systems. · GitHub",
+    "pageUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/567da56280683327315dd2e901c9442bd9b2d3920d58795a61827ac545075dfb/68747470733a2f2f6f73732d66757a7a2d6275696c642d6c6f67732e73746f726167652e676f6f676c65617069732e636f6d2f6261646765732f7a6c69622d6e672e737667",
+    "alt": "Fuzzing Status",
+    "pageTitle": "GitHub - zlib-ng/zlib-ng: zlib replacement with optimizations for \"next generation\" systems. · GitHub",
+    "pageUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/567da56280683327315dd2e901c9442bd9b2d3920d58795a61827ac545075dfb/68747470733a2f2f6f73732d66757a7a2d6275696c642d6c6f67732e73746f726167652e676f6f676c65617069732e636f6d2f6261646765732f7a6c69622d6e672e737667",
+    "alt": "Fuzzing Status",
+    "pageTitle": "GitHub - zlib-ng/zlib-ng: zlib replacement with optimizations for \"next generation\" systems. · GitHub",
+    "pageUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/eae22ba68966df4b354a917ede7f3d75e1c3ddd0a853e33366c632ad74e5e4f4/68747470733a2f2f636f766572616c6c732e696f2f7265706f732f6769746875622f7a6c69622d6e672f7a6c69622d6e672f62616467652e7376673f6272616e63683d737461626c65",
+    "alt": "Coverage Status",
+    "pageTitle": "GitHub - zlib-ng/zlib-ng: zlib replacement with optimizations for \"next generation\" systems. · GitHub",
+    "pageUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/2ebf911692cd106cad517500b7fe7e0946d58265adbe08d92c61d25839353c06/68747470733a2f2f636f766572616c6c732e696f2f7265706f732f6769746875622f7a6c69622d6e672f7a6c69622d6e672f62616467652e7376673f6272616e63683d646576656c6f70",
+    "alt": "Coverage Status",
+    "pageTitle": "GitHub - zlib-ng/zlib-ng: zlib replacement with optimizations for \"next generation\" systems. · GitHub",
+    "pageUrl": "https://github.com/zlib-ng/zlib-ng"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#argparse"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#argparse"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?u\u003de11cfc20d0f21ef549393dfe80ea91c42fbc9928\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@rhettinger",
+    "pageTitle": "Add operator.is_none() · Issue #115808 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/115808"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?u\u003de11cfc20d0f21ef549393dfe80ea91c42fbc9928\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@rhettinger",
+    "pageTitle": "Add operator.is_none() · Issue #115808 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/115808"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#other-language-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#other-language-changes"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
