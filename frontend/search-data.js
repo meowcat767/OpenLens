@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1711,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-slower-safety",
+    "title": "3. Configure Python — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python Setup and Usage » 3. Configure Python | Theme Auto Light Dark | 3. Configure Python¶ 3.1. Build Requirements¶ To build CPython, you will need: A C11 compiler. Optional C11 features are not required. On Windows, Microsoft Visual Studio 2017 or later is required. Support for IEEE 754 floating-point numbers and floating-point Not-a-Number (NaN). Support for threads. Changed in version 3.5: On Windows, Visual Studio 2015 or later is now required. Changed in version 3.6: Selected C99 features, like \u003cstdint.h\u003e and static inline functions, are now required. Changed in version 3.7: Thread support is now required. Changed in version 3.11: C11 compiler, IEEE 754 and NaN support are now required. On Windows, Visual Studio 2017 or later is required. See also PEP 7 “Style Guide for C Code” and PEP 11 “CPython platform support”. 3.1.1. Requirements for optional modules¶ Some optional modules of the standard library require third-party libraries installed for development (for example, header files must be available). Missing requirements are reported in the configure output. Modules that are missing due to missing dependencies are listed near the end of the make output, sometimes using an internal name, for example, _ctypes for ctypes module. If you distribute a CPython interpreter without optional modules, it’s best practice to advise users, who generally expect that standard library modules are available. Dependencies to build optional modules are: Dependency Minimum version Python module libbz2 bz2 libffi 3.3.0 recommended ctypes liblzma lzma libmpdec 2.5.0 decimal [1] libreadline or libedit [2] readline libuuid _uuid [3] ncurses [4] curses OpenSSL 3.0.18 recommended (1.1.1 minimum) ssl, hashlib [5] SQLite 3.15.2 sqlite3 Tcl/Tk 8.5.12 tkinter, IDLE, turtle zlib 1.2.2.1 zlib, gzip, ensurepip zstd 1.4.5 compression.zstd [1] If libmpdec is not available, the decimal module will use a pure-Python implementation. See --with-system-libmpdec for details. [2] See --with-readline for choosing the backend for the readline module. [3] The uuid module uses _uuid to generate “safe” UUIDs. See the module documentation for details. [4] The curses module requires the libncurses or libncursesw library. The curses.panel module additionally requires the libpanel or libpanelw library. [5] If OpenSSL is not available, the hashlib module will use bundled implementations of several hash functions. See --with-builtin-hashlib-hashes for forcing usage of OpenSSL. Note that the table does not include all optional modules; in particular, platform-specific modules like winreg are not listed here. See also The devguide includes a full list of dependencies required to build all modules and instructions on how to install them on common platforms. --with-system-expat allows building with an external libexpat library. Options for third-party dependencies Changed in version 3.1: Tcl/Tk version 8.3.1 is now required for tkinter. Changed in version 3.5: Tcl/Tk version 8.4 is now required for tkinter. Changed in version 3.7: OpenSSL 1.0.2 is now required for hashlib and ssl. Changed in version 3.10: OpenSSL 1.1.1 is now required for hashlib and ssl. SQLite 3.7.15 is now required for sqlite3. Changed in version 3.11: Tcl/Tk version 8.5.12 is now required for tkinter. Changed in version 3.13: SQLite 3.15.2 is now required for sqlite3. 3.2. Generated files¶ To reduce build dependencies, Python source code contains multiple generated files. Commands to regenerate all generated files: make regen-all\nmake regen-stdlib-module-names\nmake regen-limited-abi\nmake regen-configure\n The Makefile.pre.in file documents generated files, their inputs, and tools used to regenerate them. Search for regen-* make targets. 3.2.1. configure script¶ The make regen-configure command regenerates the aclocal.m4 file and the configure script using the Tools/build/regen-configure.sh shell script which uses an Ubuntu container to get the same tools versions and have a reproducible output. The container is optional, the following command can be run locally: autoreconf -ivf -Werror\n The generated files can change depending on the exact versions of the tools used. The container that CPython uses has Autoconf 2.72, aclocal from Automake 1.16.5, and pkg-config 1.8.1. Changed in version 3.13: Autoconf 2.71 and aclocal 1.16.5 and are now used to regenerate configure. Changed in version 3.14: Autoconf 2.72 is now used to regenerate configure. 3.3. Configure Options¶ List all configure script options using: ./configure --help\n See also the Misc/SpecialBuilds.txt in the Python source distribution. 3.3.1. General Options¶ --enable-loadable-sqlite-extensions¶ Support loadable extensions in the _sqlite extension module (default is no) of the sqlite3 module. See the sqlite3.Connection.enable_load_extension() method of the sqlite3 module. Added in version 3.6. --disable-ipv6¶ Disable IPv6 support (enabled by default",
+    "scrapedAt": "2026-05-09 01:30:40.153793"
+  },
+  {
+    "id": 1710,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappushpop_max",
+    "title": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » heapq — Heap queue algorithm | Theme Auto Light Dark | heapq — Heap queue algorithm¶ Source code: Lib/heapq.py This module provides an implementation of the heap queue algorithm, also known as the priority queue algorithm. Min-heaps are binary trees for which every parent node has a value less than or equal to any of its children. We refer to this condition as the heap invariant. For min-heaps, this implementation uses lists for which heap[k] \u003c\u003d heap[2*k+1] and heap[k] \u003c\u003d heap[2*k+2] for all k for which the compared elements exist. Elements are counted from zero. The interesting property of a min-heap is that its smallest element is always the root, heap[0]. Max-heaps satisfy the reverse invariant: every parent node has a value greater than any of its children. These are implemented as lists for which maxheap[2*k+1] \u003c\u003d maxheap[k] and maxheap[2*k+2] \u003c\u003d maxheap[k] for all k for which the compared elements exist. The root, maxheap[0], contains the largest element; heap.sort(reverse\u003dTrue) maintains the max-heap invariant. The heapq API differs from textbook heap algorithms in two aspects: (a) We use zero-based indexing. This makes the relationship between the index for a node and the indexes for its children slightly less obvious, but is more suitable since Python uses zero-based indexing. (b) Textbooks often focus on max-heaps, due to their suitability for in-place sorting. Our implementation favors min-heaps as they better correspond to Python lists. These two aspects make it possible to view the heap as a regular Python list without surprises: heap[0] is the smallest item, and heap.sort() maintains the heap invariant! Like list.sort(), this implementation uses only the \u003c operator for comparisons, for both min-heaps and max-heaps. In the API below, and in this documentation, the unqualified term heap generally refers to a min-heap. The API for max-heaps is named using a _max suffix. To create a heap, use a list initialized as [], or transform an existing list into a min-heap or max-heap using the heapify() or heapify_max() functions, respectively. The following functions are provided for min-heaps: heapq.heapify(x)¶ Transform list x into a min-heap, in-place, in linear time. heapq.heappush(heap, item)¶ Push the value item onto the heap, maintaining the min-heap invariant. heapq.heappop(heap)¶ Pop and return the smallest item from the heap, maintaining the min-heap invariant. If the heap is empty, IndexError is raised. To access the smallest item without popping it, use heap[0]. heapq.heappushpop(heap, item)¶ Push item on the heap, then pop and return the smallest item from the heap. The combined action runs more efficiently than heappush() followed by a separate call to heappop(). heapq.heapreplace(heap, item)¶ Pop and return the smallest item from the heap, and also push the new item. The heap size doesn’t change. If the heap is empty, IndexError is raised. This one step operation is more efficient than a heappop() followed by heappush() and can be more appropriate when using a fixed-size heap. The pop/push combination always returns an element from the heap and replaces it with item. The value returned may be larger than the item added. If that isn’t desired, consider using heappushpop() instead. Its push/pop combination returns the smaller of the two values, leaving the larger value on the heap. For max-heaps, the following functions are provided: heapq.heapify_max(x)¶ Transform list x into a max-heap, in-place, in linear time. Added in version 3.14. heapq.heappush_max(heap, item)¶ Push the value item onto the max-heap heap, maintaining the max-heap invariant. Added in version 3.14. heapq.heappop_max(heap)¶ Pop and return the largest item from the max-heap heap, maintaining the max-heap invariant. If the max-heap is empty, IndexError is raised. To access the largest item without popping it, use maxheap[0]. Added in version 3.14. heapq.heappushpop_max(heap, item)¶ Push item on the max-heap heap, then pop and return the largest item from heap. The combined action runs more efficiently than heappush_max() followed by a separate call to heappop_max(). Added in version 3.14. heapq.heapreplace_max(heap, item)¶ Pop and return the largest item from the max-heap heap and also push the new item. The max-heap size doesn’t change. If the max-heap is empty, IndexError is raised. The value returned may be smaller than the item added. Refer to the analogous function heapreplace() for detailed usage notes. Added in version 3.14. The module also offers three general purpose functions based on heaps. heapq.merge(*iterables, key\u003dNone, reverse\u003dFalse)¶ Merge multiple sorted inputs into a single sorted output (for example, merge timestamped entries from multiple log files). Returns an iterator over the sorted values. Similar to sorted(itertools.chain(*iterables)) but returns an iterable, does not pull the d",
+    "scrapedAt": "2026-05-09 01:30:38.883744"
+  },
+  {
+    "id": 1709,
+    "url": "https://docs.python.org/3/library/annotationlib.html#module-annotationlib",
+    "title": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » annotationlib — Functionality for introspecting annotations | Theme Auto Light Dark | annotationlib — Functionality for introspecting annotations¶ Added in version 3.14. Source code: Lib/annotationlib.py The annotationlib module provides tools for introspecting annotations on modules, classes, and functions. Annotations are lazily evaluated and often contain forward references to objects that are not yet defined when the annotation is created. This module provides a set of low-level tools that can be used to retrieve annotations in a reliable way, even in the presence of forward references and other edge cases. This module supports retrieving annotations in three main formats (see Format), each of which works best for different use cases: VALUE evaluates the annotations and returns their value. This is most straightforward to work with, but it may raise errors, for example if the annotations contain references to undefined names. FORWARDREF returns ForwardRef objects for annotations that cannot be resolved, allowing you to inspect the annotations without evaluating them. This is useful when you need to work with annotations that may contain unresolved forward references. STRING returns the annotations as a string, similar to how it would appear in the source file. This is useful for documentation generators that want to display annotations in a readable way. The get_annotations() function is the main entry point for retrieving annotations. Given a function, class, or module, it returns an annotations dictionary in the requested format. This module also provides functionality for working directly with the annotate function that is used to evaluate annotations, such as get_annotate_from_class_namespace() and call_annotate_function(), as well as the call_evaluate_function() function for working with evaluate functions. Caution Most functionality in this module can execute arbitrary code; see the security section for more information. See also PEP 649 proposed the current model for how annotations work in Python. PEP 749 expanded on various aspects of PEP 649 and introduced the annotationlib module. Annotations Best Practices provides best practices for working with annotations. typing-extensions provides a backport of get_annotations() that works on earlier versions of Python. Annotation semantics¶ The way annotations are evaluated has changed over the history of Python 3, and currently still depends on a future import. There have been execution models for annotations: Stock semantics (default in Python 3.0 through 3.13; see PEP 3107 and PEP 526): Annotations are evaluated eagerly, as they are encountered in the source code. Stringified annotations (used with from __future__ import annotations in Python 3.7 and newer; see PEP 563): Annotations are stored as strings only. Deferred evaluation (default in Python 3.14 and newer; see PEP 649 and PEP 749): Annotations are evaluated lazily, only when they are accessed. As an example, consider the following program: def func(a: Cls) -\u003e None:\n    print(a)\n\nclass Cls: pass\n\nprint(func.__annotations__)\n This will behave as follows: Under stock semantics (Python 3.13 and earlier), it will throw a NameError at the line where func is defined, because Cls is an undefined name at that point. Under stringified annotations (if from __future__ import annotations is used), it will print {\u0027a\u0027: \u0027Cls\u0027, \u0027return\u0027: \u0027None\u0027}. Under deferred evaluation (Python 3.14 and later), it will print {\u0027a\u0027: \u003cclass \u0027Cls\u0027\u003e, \u0027return\u0027: None}. Stock semantics were used when function annotations were first introduced in Python 3.0 (by PEP 3107) because this was the simplest, most obvious way to implement annotations. The same execution model was used when variable annotations were introduced in Python 3.6 (by PEP 526). However, stock semantics caused problems when using annotations as type hints, such as a need to refer to names that are not yet defined when the annotation is encountered. In addition, there were performance problems with executing annotations at module import time. Therefore, in Python 3.7, PEP 563 introduced the ability to store annotations as strings using the from __future__ import annotations syntax. The plan at the time was to eventually make this behavior the default, but a problem appeared: stringified annotations are more difficult to process for those who introspect annotations at runtime. An alternative proposal, PEP 649, introduced the third execution model, deferred evaluation, and was implemented in Python 3.14. Stringified annotations are still used if from __future__ import annotations is present, but this behavior will eventually be removed. Classes¶ class annotationlib.Format¶ An IntEnum describing the formats in which annotations can be returned. Members of the enum, or their equivalent integer values, can be passed to get_annotations() ",
+    "scrapedAt": "2026-05-09 01:30:37.622173"
+  },
+  {
+    "id": 1708,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.sqlite_version",
+    "title": "sqlite3 — DB-API 2.0 interface for SQLite databases — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Persistence » sqlite3 — DB-API 2.0 interface for SQLite databases | Theme Auto Light Dark | sqlite3 — DB-API 2.0 interface for SQLite databases¶ Source code: Lib/sqlite3/ SQLite is a C library that provides a lightweight disk-based database that doesn’t require a separate server process and allows accessing the database using a nonstandard variant of the SQL query language. Some applications can use SQLite for internal data storage. It’s also possible to prototype an application using SQLite and then port the code to a larger database such as PostgreSQL or Oracle. The sqlite3 module was written by Gerhard Häring. It provides an SQL interface compliant with the DB-API 2.0 specification described by PEP 249, and requires the third-party SQLite library. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. This document includes four main sections: Tutorial teaches how to use the sqlite3 module. Reference describes the classes and functions this module defines. How-to guides details how to handle specific tasks. Explanation provides in-depth background on transaction control. See also https://www.sqlite.org The SQLite web page; the documentation describes the syntax and the available data types for the supported SQL dialect. https://www.w3schools.com/sql/ Tutorial, reference and examples for learning SQL syntax. PEP 249 - Database API Specification 2.0 PEP written by Marc-André Lemburg. Tutorial¶ In this tutorial, you will create a database of Monty Python movies using basic sqlite3 functionality. It assumes a fundamental understanding of database concepts, including cursors and transactions. First, we need to create a new database and open a database connection to allow sqlite3 to work with it. Call sqlite3.connect() to create a connection to the database tutorial.db in the current working directory, implicitly creating it if it does not exist: import sqlite3\ncon \u003d sqlite3.connect(\"tutorial.db\")\n The returned Connection object con represents the connection to the on-disk database. In order to execute SQL statements and fetch results from SQL queries, we will need to use a database cursor. Call con.cursor() to create the Cursor: cur \u003d con.cursor()\n Now that we’ve got a database connection and a cursor, we can create a database table movie with columns for title, release year, and review score. For simplicity, we can just use column names in the table declaration – thanks to the flexible typing feature of SQLite, specifying the data types is optional. Execute the CREATE TABLE statement by calling cur.execute(...): cur.execute(\"CREATE TABLE movie(title, year, score)\")\n We can verify that the new table has been created by querying the sqlite_master table built-in to SQLite, which should now contain an entry for the movie table definition (see The Schema Table for details). Execute that query by calling cur.execute(...), assign the result to res, and call res.fetchone() to fetch the resulting row: \u003e\u003e\u003e res \u003d cur.execute(\"SELECT name FROM sqlite_master\")\n\u003e\u003e\u003e res.fetchone()\n(\u0027movie\u0027,)\n We can see that the table has been created, as the query returns a tuple containing the table’s name. If we query sqlite_master for a non-existent table spam, res.fetchone() will return None: \u003e\u003e\u003e res \u003d cur.execute(\"SELECT name FROM sqlite_master WHERE name\u003d\u0027spam\u0027\")\n\u003e\u003e\u003e res.fetchone() is None\nTrue\n Now, add two rows of data supplied as SQL literals by executing an INSERT statement, once again by calling cur.execute(...): cur.execute(\"\"\"\n    INSERT INTO movie VALUES\n        (\u0027Monty Python and the Holy Grail\u0027, 1975, 8.2),\n        (\u0027And Now for Something Completely Different\u0027, 1971, 7.5)\n\"\"\")\n The INSERT statement implicitly opens a transaction, which needs to be committed before changes are saved in the database (see Transaction control for details). Call con.commit() on the connection object to commit the transaction: con.commit()\n We can verify that the data was inserted correctly by executing a SELECT query. Use the now-familiar cur.execute(...) to assign the result to res, and call res.fetchall() to return all resulting rows: \u003e\u003e\u003e res \u003d cur.execute(\"SELECT score FROM movie\")\n\u003e\u003e\u003e res.fetchall()\n[(8.2,), (7.5,)]\n The result is a list of two tuples, one per row, each containing that row’s score value. Now, insert three more rows by calling cur.executemany(...): data \u003d [\n    (\"Monty Python Live at the Hollywood Bowl\", 1982, 7.9),\n    (\"Monty Python\u0027s The Meaning of Life\", 1983, 7.5),\n    (\"Monty Python\u0027s Life of Brian\", 1979, 8.0),\n]\ncur.executemany(\"INSERT INTO movie VALUES(?, ?, ?)\", data)\ncon.commit()  # Remember to commit the transaction after executing INSERT.\n Notice that ? placeholders are used to bind data to the query. Always use placeholders inste",
+    "scrapedAt": "2026-05-09 01:30:36.358819"
+  },
+  {
+    "id": 1707,
+    "url": "https://github.com/python/cpython/issues/74598",
+    "title": "Add fnmatch.filterfalse function · Issue #74598 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add fnmatch.filterfalse function #74598 New issue Copy link New issue Copy link Closed Closed Add fnmatch.filterfalse function#74598 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description stevendaprano opened on May 20, 2017 Issue body actions BPO 30413 Nosy @brettcannon, @rhettinger, @vstinner, @stevendaprano, @serhiy-storchaka, @wm75 Dependencies bpo-30415: Improve fnmatch testing Files filterfalse.diff filterfalse.alternate_patch Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2017-05-20.13:19:02.837\u003e\nlabels \u003d [\u00273.7\u0027, \u0027type-feature\u0027, \u0027library\u0027]\ntitle \u003d \u0027Add fnmatch.filterfalse function\u0027\nupdated_at \u003d \u003cDate 2019-08-21.16:32:30.493\u003e\nuser \u003d \u0027https://github.com/stevendaprano\u0027 bugs.python.org fields: activity \u003d \u003cDate 2019-08-21.16:32:30.493\u003e\nactor \u003d \u0027gvanrossum\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2017-05-20.13:19:02.837\u003e\ncreator \u003d \u0027steven.daprano\u0027\ndependencies \u003d [\u002730415\u0027]\nfiles \u003d [\u002746879\u0027, \u002746880\u0027]\nhgrepos \u003d []\nissue_num \u003d 30413\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 17.0\nmessages \u003d [\u0027294029\u0027, \u0027294031\u0027, \u0027294036\u0027, \u0027294038\u0027, \u0027294039\u0027, \u0027294041\u0027, \u0027294078\u0027, \u0027294110\u0027, \u0027294111\u0027, \u0027294132\u0027, \u0027294133\u0027, \u0027294510\u0027, \u0027350056\u0027, \u0027350062\u0027, \u0027350066\u0027, \u0027350090\u0027, \u0027350093\u0027]\nnosy_count \u003d 7.0\nnosy_names \u003d [\u0027brett.cannon\u0027, \u0027rhettinger\u0027, \u0027vstinner\u0027, \u0027steven.daprano\u0027, \u0027serhiy.storchaka\u0027, \u0027wolma\u0027, \u0027Roee Nizan\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue30413\u0027\nversions \u003d [\u0027Python 3.7\u0027] Linked PRs gh-74598: add fnmatch.filterfalse for excluding names #121185 gh-74598: document that fnmatch.filterfalse is affected by cache limitation #136781 [3.14] gh-74598: document that fnmatch.filterfalse is affected by cache limitation (GH-136781) #136782 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects Fnmatch and glob issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:30:35.071212"
+  },
+  {
     "id": 1706,
     "url": "https://peps.python.org/pep-0011/",
     "title": "PEP 11 – CPython platform support | peps.python.org",
@@ -11513,26 +11548,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1707,
-    "url": "https://github.com/python/cpython/issues/74598"
-  },
-  {
-    "id": 1708,
-    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.sqlite_version"
-  },
-  {
-    "id": 1709,
-    "url": "https://docs.python.org/3/library/annotationlib.html#module-annotationlib"
-  },
-  {
-    "id": 1710,
-    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappushpop_max"
-  },
-  {
-    "id": 1711,
-    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-slower-safety"
   },
   {
     "id": 1712,
@@ -245775,10 +245790,130 @@ window.searchData = [
     "id": 371312,
     "url": "https://github.com/python/cpython/issues/78707#issue-1198996918",
     "parentUrl": "https://github.com/python/cpython/issues/78707"
+  },
+  {
+    "id": 373392,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d30415",
+    "parentUrl": "https://github.com/python/cpython/issues/74598"
+  },
+  {
+    "id": 373393,
+    "url": "https://github.com/python/cpython/pull/121185",
+    "parentUrl": "https://github.com/python/cpython/issues/74598"
+  },
+  {
+    "id": 373394,
+    "url": "https://bugs.python.org/issue30413",
+    "parentUrl": "https://github.com/python/cpython/issues/74598"
+  },
+  {
+    "id": 373395,
+    "url": "https://bugs.python.org/file46880/filterfalse.alternate_patch",
+    "parentUrl": "https://github.com/python/cpython/issues/74598"
+  },
+  {
+    "id": 373396,
+    "url": "https://github.com/orgs/python/projects/10",
+    "parentUrl": "https://github.com/python/cpython/issues/74598"
+  },
+  {
+    "id": 373397,
+    "url": "https://github.com/wm75",
+    "parentUrl": "https://github.com/python/cpython/issues/74598"
+  },
+  {
+    "id": 373399,
+    "url": "https://bugs.python.org/file46879/filterfalse.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/74598"
+  },
+  {
+    "id": 373400,
+    "url": "https://github.com/python/cpython/issues/74598#top",
+    "parentUrl": "https://github.com/python/cpython/issues/74598"
+  },
+  {
+    "id": 373404,
+    "url": "https://github.com/python/cpython/issues/74598#issue-1198973527",
+    "parentUrl": "https://github.com/python/cpython/issues/74598"
+  },
+  {
+    "id": 373407,
+    "url": "https://github.com/python/cpython/pull/136781",
+    "parentUrl": "https://github.com/python/cpython/issues/74598"
+  },
+  {
+    "id": 373408,
+    "url": "https://github.com/python/cpython/pull/136782",
+    "parentUrl": "https://github.com/python/cpython/issues/74598"
+  },
+  {
+    "id": 373410,
+    "url": "https://github.com/python/cpython/issues/74598#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/74598"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Configure Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/configure.html#cmdoption-enable-slower-safety"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Configure Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/configure.html#cmdoption-enable-slower-safety"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/heapq.html#heapq.heappushpop_max"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/heapq.html#heapq.heappushpop_max"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#module-annotationlib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#module-annotationlib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sqlite3 — DB-API 2.0 interface for SQLite databases — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sqlite3.html#sqlite3.sqlite_version"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sqlite3 — DB-API 2.0 interface for SQLite databases — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sqlite3.html#sqlite3.sqlite_version"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/19155079?v\u003d4\u0026size\u003d80",
+    "alt": "@stevendaprano",
+    "pageTitle": "Add fnmatch.filterfalse function · Issue #74598 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/74598"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/19155079?v\u003d4\u0026size\u003d48",
+    "alt": "@stevendaprano",
+    "pageTitle": "Add fnmatch.filterfalse function · Issue #74598 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/74598"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
