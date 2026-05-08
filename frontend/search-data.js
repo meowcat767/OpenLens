@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 704,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#itertools",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 00:50:11.823896"
+  },
+  {
+    "id": 703,
+    "url": "https://github.com/python/cpython/issues/131913",
+    "title": "Add `multiprocessing.Process.interrupt` · Issue #131913 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add multiprocessing.Process.interrupt #131913 New issue Copy link New issue Copy link Closed Closed Add multiprocessing.Process.interrupt#131913 Copy link Assignees Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-multiprocessingtype-featureA feature request or enhancementA feature request or enhancement Description pulkin opened on Mar 30, 2025 Issue body actions Feature or enhancement Proposal: We have .terminate() and .kill() but not .interrupt() for terminating multiprocessing.Process. I believe the latter could be a useful addition when we have a python subprocess that we want to terminate in a \"normal\" way: i.e. triggering finalizers, etc. This roughly demonstrates the difference when using one or the other (linux): from signal import SIGINT\nfrom multiprocessing import Process\nfrom time import sleep\n\ndef payload():\n    try:\n        print(\"working\")\n        sleep(10)\n    finally:\n        print(\"a very important teardown\")\n\nprint(\"\u003e kill or terminate\")\np \u003d Process(target\u003dpayload)\np.start()\nsleep(1)\np.kill()  # or terminate output \u003e kill or terminate\nworking\n class MyProcess(Process):\n    def interrupt(self):\n        return self._popen._send_signal(SIGINT)\n\nprint(\"\u003e interrupt\")\np \u003d MyProcess(target\u003dpayload)\np.start()\nsleep(1)\np.interrupt() output \u003e interrupt\nworking\na very important teardown\nProcess MyProcess-2:\nTraceback (most recent call last):\n  File \"/usr/lib64/python3.13/multiprocessing/process.py\", line 313, in _bootstrap\n    self.run()\n    ~~~~~~~~^^\n  File \"/usr/lib64/python3.13/multiprocessing/process.py\", line 108, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"test.py\", line 9, in payload\n    sleep(10)\n    ~~~~~^^^^\nKeyboardInterrupt\n Motivation for sending SIGINT to subprocesses in general: it allows usual python patterns in the payload: we can now define finally, with, etc. and expect them to trigger normally SIGINT is a very lean way to cancel heavy payloads. It is widely supported such that if you have non-pure-python stack you still have higher chances to exit gracefully I also think it enables a better interaction with nested subprocesses: if a subprocess S manages some Pool or concurrent object, sending SIGINT to S will let nested subprocesses to exit gracefully as opposed to, for example, leaving orphans on linux. A pure nested Process will still leave orphans but you can write some code in the payload to work with this: def payload():\n    try:\n        p \u003d MyProcess(target\u003dinner)\n        p.start()\n        p.join()\n    finally:\n        p.interrupt() Motivation for having Process.interrupt() in the standard library: it is very easy to misuse terminate or kill without understanding the consequences or particularities of the two. .interrupt could become the default or recommended way to interrupt long-running tasks. Even without any payload-specific code, it prints error and python stack trace on termination which is a good starting point to write and debug multiprocessing code, thus, making it a friendlier environment I feel like an average developer knows more about the difference between .interrupt and .kill than between .terminate and .kill. This is subjective, of course, but, discarding internal reasons to have both .terminate and .kill, I do not understand how .interrupt is not in this list. Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-131913: multiprocessing: add interrupt for POSIX #132453 Reactions are currently unavailable Metadata Metadata Assignees pulkin Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-multiprocessingtype-featureA feature request or enhancementA feature request or enhancement Projects Multiprocessing issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:50:10.648346"
+  },
+  {
+    "id": 702,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-O",
+    "title": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python Setup and Usage » 1. Command line and environment | Theme Auto Light Dark | 1. Command line and environment¶ The CPython interpreter scans the command line and the environment for various settings. CPython implementation detail: Other implementations’ command line schemes may differ. See Alternate Implementations for further resources. 1.1. Command line¶ When invoking Python, you may specify any of these options: python [-bBdEhiIOPqRsSuvVWx?] [-c command | -m module-name | script | - ] [args]\n The most common use case is, of course, a simple invocation of a script: python myscript.py\n 1.1.1. Interface options¶ The interpreter interface resembles that of the UNIX shell, but provides some additional methods of invocation: When called with standard input connected to a tty device, it prompts for commands and executes them until an EOF (an end-of-file character, you can produce that with Ctrl-D on UNIX or Ctrl-Z, Enter on Windows) is read. For more on interactive mode, see Interactive Mode. When called with a file name argument or with a file as standard input, it reads and executes a script from that file. When called with a directory name argument, it reads and executes an appropriately named script from that directory. When called with -c command, it executes the Python statement(s) given as command. Here command may contain multiple statements separated by newlines. Leading whitespace is significant in Python statements! When called with -m module-name, the given module is located on the Python module path and executed as a script. In non-interactive mode, the entire input is parsed before it is executed. An interface option terminates the list of options consumed by the interpreter, all consecutive arguments will end up in sys.argv – note that the first element, subscript zero (sys.argv[0]), is a string reflecting the program’s source. -c \u003ccommand\u003e¶ Execute the Python code in command. command can be one or more statements separated by newlines, with significant leading whitespace as in normal module code. If this option is given, the first element of sys.argv will be \"-c\" and the current directory will be added to the start of sys.path (allowing modules in that directory to be imported as top level modules). Raises an auditing event cpython.run_command with argument command. Changed in version 3.14: command is automatically dedented before execution. -m \u003cmodule-name\u003e¶ Search sys.path for the named module and execute its contents as the __main__ module. Since the argument is a module name, you must not give a file extension (.py). The module name should be a valid absolute Python module name, but the implementation may not always enforce this (e.g. it may allow you to use a name that includes a hyphen). Package names (including namespace packages) are also permitted. When a package name is supplied instead of a normal module, the interpreter will execute \u003cpkg\u003e.__main__ as the main module. This behaviour is deliberately similar to the handling of directories and zipfiles that are passed to the interpreter as the script argument. Note This option cannot be used with built-in modules and extension modules written in C, since they do not have Python module files. However, it can still be used for precompiled modules, even if the original source file is not available. If this option is given, the first element of sys.argv will be the full path to the module file (while the module file is being located, the first element will be set to \"-m\"). As with the -c option, the current directory will be added to the start of sys.path. -I option can be used to run the script in isolated mode where sys.path contains neither the current directory nor the user’s site-packages directory. All PYTHON* environment variables are ignored, too. Many standard library modules contain code that is invoked on their execution as a script. An example is the timeit module: python -m timeit -s \"setup here\" \"benchmarked code here\"\npython -m timeit -h # for details\n Raises an auditing event cpython.run_module with argument module-name. See also runpy.run_module() Equivalent functionality directly available to Python code PEP 338 – Executing modules as scripts Changed in version 3.1: Supply the package name to run a __main__ submodule. Changed in version 3.4: namespace packages are also supported - Read commands from standard input (sys.stdin). If standard input is a terminal, -i is implied. If this option is given, the first element of sys.argv will be \"-\" and the current directory will be added to the start of sys.path. Raises an auditing event cpython.run_stdin with no arguments. \u003cscript\u003e Execute the Python code contained in script, which must be a filesystem path (absolute or relative) referring to either a Python file, a directory containing a __main__.py file, or a zipfile containing a __main__.py file. If this option is given, the first element of sys",
+    "scrapedAt": "2026-05-09 00:50:08.102875"
+  },
+  {
+    "id": 701,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy",
+    "title": "Policies — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | Policies¶ Warning Policies are deprecated and will be removed in Python 3.16. Users are encouraged to use the asyncio.run() function or the asyncio.Runner with loop_factory to use the desired loop implementation. An event loop policy is a global object used to get and set the current event loop, as well as create new event loops. The default policy can be replaced with built-in alternatives to use different event loop implementations, or substituted by a custom policy that can override these behaviors. The policy object gets and sets a separate event loop per context. This is per-thread by default, though custom policies could define context differently. Custom event loop policies can control the behavior of get_event_loop(), set_event_loop(), and new_event_loop(). Policy objects should implement the APIs defined in the AbstractEventLoopPolicy abstract base class. Getting and Setting the Policy¶ The following functions can be used to get and set the policy for the current process: asyncio.get_event_loop_policy()¶ Return the current process-wide policy. Deprecated since version 3.14: The get_event_loop_policy() function is deprecated and will be removed in Python 3.16. asyncio.set_event_loop_policy(policy)¶ Set the current process-wide policy to policy. If policy is set to None, the default policy is restored. Deprecated since version 3.14: The set_event_loop_policy() function is deprecated and will be removed in Python 3.16. Policy Objects¶ The abstract event loop policy base class is defined as follows: class asyncio.AbstractEventLoopPolicy¶ An abstract base class for asyncio policies. get_event_loop()¶ Get the event loop for the current context. Return an event loop object implementing the AbstractEventLoop interface. This method should never return None. Changed in version 3.6. set_event_loop(loop)¶ Set the event loop for the current context to loop. new_event_loop()¶ Create and return a new event loop object. This method should never return None. Deprecated since version 3.14: The AbstractEventLoopPolicy class is deprecated and will be removed in Python 3.16. asyncio ships with the following built-in policies: class asyncio.DefaultEventLoopPolicy¶ The default asyncio policy. Uses SelectorEventLoop on Unix and ProactorEventLoop on Windows. There is no need to install the default policy manually. asyncio is configured to use the default policy automatically. Changed in version 3.8: On Windows, ProactorEventLoop is now used by default. Changed in version 3.14: The get_event_loop() method of the default asyncio policy now raises a RuntimeError if there is no set event loop. Deprecated since version 3.14: The DefaultEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsSelectorEventLoopPolicy¶ An alternative event loop policy that uses the SelectorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsSelectorEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsProactorEventLoopPolicy¶ An alternative event loop policy that uses the ProactorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsProactorEventLoopPolicy class is deprecated and will be removed in Python 3.16. Custom Policies¶ To implement a new event loop policy, it is recommended to subclass DefaultEventLoopPolicy and override the methods for which custom behavior is wanted, e.g.: class MyEventLoopPolicy(asyncio.DefaultEventLoopPolicy):\n\n    def get_event_loop(self):\n        \"\"\"Get the event loop.\n\n        This may be None or an instance of EventLoop.\n        \"\"\"\n        loop \u003d super().get_event_loop()\n        # Do something with loop ...\n        return loop\n\nasyncio.set_event_loop_policy(MyEventLoopPolicy())\n Table of Contents Policies Getting and Setting the Policy Policy Objects Custom Policies Previous topic Transports and Protocols Next topic Platform Support This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 00:50:06.934616"
+  },
+  {
+    "id": 700,
+    "url": "https://github.com/python/cpython/issues/124153",
+    "title": "Add `PyType_GetBaseByToken` function with `Py_tp_token` slot · Issue #124153 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add PyType_GetBaseByToken function with Py_tp_token slot #124153 New issue Copy link New issue Copy link Closed Closed Add PyType_GetBaseByToken function with Py_tp_token slot#124153 Copy link Labels type-featureA feature request or enhancementA feature request or enhancement Description neonene opened on Sep 17, 2024 Issue body actions This issue implements a proposal related to PEP-489 and PEP-630. Decision: Add Py_tp_token slot and PyType_GetBaseByToken function capi-workgroup/decisions#34 TODO: Implement the feature Use it in _PyStgInfo_FromType_NoState() in _ctypes.c Ensure no performance regression in PyType_GetModuleByDef() and other functions affected by this feature on Windows PGO builds TODO (optional): Replace PyType_GetModuleByDef() in defdict_or() (_collectionsmodule.c) Replace _PyType_GetModuleByDef2() in _decimal.c Remove _PyType_GetModuleByDef2() Has this already been discussed elsewhere? I have already discussed this feature proposal on Discourse Links to previous discussion of this feature: Better support for type checking encukou/abi3#19 https://discuss.python.org/t/55598 Linked PRs gh-124153: Introduce PyType_GetBaseByToken function (PoC) #121079 gh-124153: Implement PyType_GetBaseByToken() and Py_tp_token slot #124163 gh-124153: Remove _PyType_GetModuleByDef2 private function #124261 gh-124153: Clean up workarounds for PyType_GetBaseByToken() performance #124323 gh-124153: Fix unstable optimization of PyType_GetBaseByToken() and friends #124488 gh-124153: Add Py_tp_token support to xxlimited module #141644 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:50:05.752958"
+  },
+  {
     "id": 699,
     "url": "https://docs.python.org/3/library/dis.html#opcode-JUMP_IF_TRUE",
     "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
@@ -4613,26 +4648,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 700,
-    "url": "https://github.com/python/cpython/issues/124153"
-  },
-  {
-    "id": 701,
-    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
-  },
-  {
-    "id": 702,
-    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-O"
-  },
-  {
-    "id": 703,
-    "url": "https://github.com/python/cpython/issues/131913"
-  },
-  {
-    "id": 704,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#itertools"
   },
   {
     "id": 705,
@@ -115409,10 +115424,292 @@ window.searchData = [
     "id": 78338,
     "url": "https://github.com/python/cpython/issues/128509#start-of-content",
     "parentUrl": "https://github.com/python/cpython/issues/128509"
+  },
+  {
+    "id": 78612,
+    "url": "https://github.com/python/cpython/pull/124163",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 78615,
+    "url": "https://github.com/python/cpython/pull/124261",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 78616,
+    "url": "https://github.com/python/cpython/issues/124153#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 78618,
+    "url": "https://github.com/neonene",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 78620,
+    "url": "https://discuss.python.org/t/55598",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 78621,
+    "url": "https://github.com/python/cpython/pull/141644",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 78623,
+    "url": "https://github.com/python/cpython/issues/124153#issue-2529892601",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 78624,
+    "url": "https://github.com/encukou/abi3/issues/19",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 78625,
+    "url": "https://peps.python.org/630",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 78626,
+    "url": "https://peps.python.org/489",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 78627,
+    "url": "https://github.com/python/cpython/issues/124153#top",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 78628,
+    "url": "https://github.com/capi-workgroup/decisions/issues/34",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 78629,
+    "url": "https://github.com/python/cpython/pull/121079",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 78630,
+    "url": "https://github.com/python/cpython/pull/124323",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 78631,
+    "url": "https://github.com/python/cpython/pull/124488",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 78634,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.ProactorEventLoop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78635,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio-custom-policies",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78636,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.AbstractEventLoopPolicy.set_event_loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78640,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#custom-policies",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78643,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.AbstractEventLoopPolicy.new_event_loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78649,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#getting-and-setting-the-policy",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78650,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio-policy-get-set",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78651,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.AbstractEventLoop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78653,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/asyncio-policy.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78658,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.AbstractEventLoopPolicy.get_event_loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78663,
+    "url": "https://docs.python.org/3/library/asyncio-platforms.html",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78664,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio-event-loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78665,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#policy-objects",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78668,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78669,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78670,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#policies",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78673,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.set_event_loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78675,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio-policy-builtin",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78676,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.new_event_loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78678,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio-policy-objects",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 78881,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-multiprocessing%22",
+    "parentUrl": "https://github.com/python/cpython/issues/131913"
+  },
+  {
+    "id": 78882,
+    "url": "https://github.com/python/cpython/pull/132453",
+    "parentUrl": "https://github.com/python/cpython/issues/131913"
+  },
+  {
+    "id": 78883,
+    "url": "https://github.com/orgs/python/projects/14",
+    "parentUrl": "https://github.com/python/cpython/issues/131913"
+  },
+  {
+    "id": 78887,
+    "url": "https://github.com/python/cpython/issues/131913#top",
+    "parentUrl": "https://github.com/python/cpython/issues/131913"
+  },
+  {
+    "id": 78888,
+    "url": "https://github.com/python/cpython/issues/131913#issue-2958979719",
+    "parentUrl": "https://github.com/python/cpython/issues/131913"
+  },
+  {
+    "id": 78889,
+    "url": "https://github.com/python/cpython/issues/131913#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/131913"
+  },
+  {
+    "id": 78890,
+    "url": "https://github.com/pulkin",
+    "parentUrl": "https://github.com/python/cpython/issues/131913"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#itertools"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#itertools"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/14786764?s\u003d64\u0026v\u003d4",
+    "alt": "pulkin",
+    "pageTitle": "Add `multiprocessing.Process.interrupt` · Issue #131913 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131913"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/14786764?v\u003d4\u0026size\u003d80",
+    "alt": "@pulkin",
+    "pageTitle": "Add `multiprocessing.Process.interrupt` · Issue #131913 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131913"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/14786764?v\u003d4\u0026size\u003d48",
+    "alt": "@pulkin",
+    "pageTitle": "Add `multiprocessing.Process.interrupt` · Issue #131913 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131913"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/14786764?s\u003d64\u0026v\u003d4",
+    "alt": "@pulkin",
+    "pageTitle": "Add `multiprocessing.Process.interrupt` · Issue #131913 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131913"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-O"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-O"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/53406459?v\u003d4\u0026size\u003d80",
+    "alt": "@neonene",
+    "pageTitle": "Add `PyType_GetBaseByToken` function with `Py_tp_token` slot · Issue #124153 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/53406459?v\u003d4\u0026size\u003d48",
+    "alt": "@neonene",
+    "pageTitle": "Add `PyType_GetBaseByToken` function with `Py_tp_token` slot · Issue #124153 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124153"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
