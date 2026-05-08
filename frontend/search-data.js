@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1537,
+    "url": "https://github.com/python/cpython/issues/82017",
+    "title": "Support .as_integer_ratio() in fractions.Fraction · Issue #82017 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Support .as_integer_ratio() in fractions.Fraction #82017 New issue Copy link New issue Copy link Closed Closed Support .as_integer_ratio() in fractions.Fraction#82017 Copy link Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directory Description jdemeyer opened on Aug 13, 2019 Issue body actions BPO 37836 Nosy @rhettinger, @mdickinson, @serhiy-storchaka, @jdemeyer PRs bpo-37836: support .as_integer_ratio() in Fraction #15327 bpo-37836: document as_integer_ratio() in the data model #15328 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2019-08-13.09:41:19.711\u003e\nlabels \u003d [\u0027library\u0027, \u00273.9\u0027]\ntitle \u003d \u0027Support .as_integer_ratio() in fractions.Fraction\u0027\nupdated_at \u003d \u003cDate 2022-01-02.22:00:12.998\u003e\nuser \u003d \u0027https://github.com/jdemeyer\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-01-02.22:00:12.998\u003e\nactor \u003d \u0027rhettinger\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2019-08-13.09:41:19.711\u003e\ncreator \u003d \u0027jdemeyer\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 37836\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 6.0\nmessages \u003d [\u0027349536\u0027, \u0027349933\u0027, \u0027349940\u0027, \u0027349942\u0027, \u0027349945\u0027, \u0027409531\u0027]\nnosy_count \u003d 5.0\nnosy_names \u003d [\u0027rhettinger\u0027, \u0027mark.dickinson\u0027, \u0027stutzbach\u0027, \u0027serhiy.storchaka\u0027, \u0027jdemeyer\u0027]\npr_nums \u003d [\u002715327\u0027, \u002715328\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d None\nurl \u003d \u0027https://bugs.python.org/issue37836\u0027\nversions \u003d [\u0027Python 3.9\u0027] Linked PRs gh-82017: Support as_integer_ratio() in the Fraction constructor #120271 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directory Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:23:45.443821"
+  },
+  {
+    "id": 1536,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#for",
+    "title": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 8. Compound statements | Theme Auto Light Dark | 8. Compound statements¶ Compound statements contain (groups of) other statements; they affect or control the execution of those other statements in some way. In general, compound statements span multiple lines, although in simple incarnations a whole compound statement may be contained in one line. The if, while and for statements implement traditional control flow constructs. try specifies exception handlers and/or cleanup code for a group of statements, while the with statement allows the execution of initialization and finalization code around a block of code. Function and class definitions are also syntactically compound statements. A compound statement consists of one or more ‘clauses.’ A clause consists of a header and a ‘suite.’ The clause headers of a particular compound statement are all at the same indentation level. Each clause header begins with a uniquely identifying keyword and ends with a colon. A suite is a group of statements controlled by a clause. A suite can be one or more semicolon-separated simple statements on the same line as the header, following the header’s colon, or it can be one or more indented statements on subsequent lines. Only the latter form of a suite can contain nested compound statements; the following is illegal, mostly because it wouldn’t be clear to which if clause a following else clause would belong: if test1: if test2: print(x)\n Also note that the semicolon binds tighter than the colon in this context, so that in the following example, either all or none of the print() calls are executed: if x \u003c y \u003c z: print(x); print(y); print(z)\n Summarizing: compound_stmt: if_stmt\n               | while_stmt\n               | for_stmt\n               | try_stmt\n               | with_stmt\n               | match_stmt\n               | funcdef\n               | classdef\n               | async_with_stmt\n               | async_for_stmt\n               | async_funcdef\nsuite:         stmt_list NEWLINE | NEWLINE INDENT statement+ DEDENT\nstatement:     stmt_list NEWLINE | compound_stmt\nstmt_list:     simple_stmt (\";\" simple_stmt)* [\";\"]\n Note that statements always end in a NEWLINE possibly followed by a DEDENT. Also note that optional continuation clauses always begin with a keyword that cannot start a statement, thus there are no ambiguities (the ‘dangling else’ problem is solved in Python by requiring nested if statements to be indented). The formatting of the grammar rules in the following sections places each clause on a separate line for clarity. 8.1. The if statement¶ The if statement is used for conditional execution: if_stmt: \"if\" assignment_expression \":\" suite\n         (\"elif\" assignment_expression \":\" suite)*\n         [\"else\" \":\" suite]\n It selects exactly one of the suites by evaluating the expressions one by one until one is found to be true (see section Boolean operations for the definition of true and false); then that suite is executed (and no other part of the if statement is executed or evaluated). If all expressions are false, the suite of the else clause, if present, is executed. 8.2. The while statement¶ The while statement is used for repeated execution as long as an expression is true: while_stmt: \"while\" assignment_expression \":\" suite\n            [\"else\" \":\" suite]\n This repeatedly tests the expression and, if it is true, executes the first suite; if the expression is false (which may be the first time it is tested) the suite of the else clause, if present, is executed and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and goes back to testing the expression. 8.3. The for statement¶ The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object: for_stmt: \"for\" target_list \"in\" starred_expression_list \":\" suite\n          [\"else\" \":\" suite]\n The starred_expression_list expression is evaluated once; it should yield an iterable object. An iterator is created for that iterable. The first item provided by the iterator is then assigned to the target list using the standard rules for assignments (see Assignment statements), and the suite is executed. This repeats for each item provided by the iterator. When the iterator is exhausted, the suite in the else clause, if present, is executed, and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and continues with the next item, or with the else clause if there is no next item. The for-loop makes assignments to the variables in the target list. This overwrites all previous assignments to those v",
+    "scrapedAt": "2026-05-09 01:23:43.040178"
+  },
+  {
+    "id": 1535,
+    "url": "https://docs.python.org/3/library/base64.html#module-base64",
+    "title": "base64 — Base16, Base32, Base64, Base85 Data Encodings — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Data Handling » base64 — Base16, Base32, Base64, Base85 Data Encodings | Theme Auto Light Dark | base64 — Base16, Base32, Base64, Base85 Data Encodings¶ Source code: Lib/base64.py This module provides functions for encoding binary data to printable ASCII characters and decoding such encodings back to binary data. This includes the encodings specified in RFC 4648 (Base64, Base32 and Base16) and the non-standard Base85 encodings. There are two interfaces provided by this module. The modern interface supports encoding bytes-like objects to ASCII bytes, and decoding bytes-like objects or strings containing ASCII to bytes. Both base-64 alphabets defined in RFC 4648 (normal, and URL- and filesystem-safe) are supported. The legacy interface does not support decoding from strings, but it does provide functions for encoding and decoding to and from file objects. It only supports the Base64 standard alphabet, and it adds newlines every 76 characters as per RFC 2045. Note that if you are looking for RFC 2045 support you probably want to be looking at the email package instead. Changed in version 3.3: ASCII-only Unicode strings are now accepted by the decoding functions of the modern interface. Changed in version 3.4: Any bytes-like objects are now accepted by all encoding and decoding functions in this module. Ascii85/Base85 support added. RFC 4648 Encodings¶ The RFC 4648 encodings are suitable for encoding binary data so that it can be safely sent by email, used as parts of URLs, or included as part of an HTTP POST request. base64.b64encode(s, altchars\u003dNone)¶ Encode the bytes-like object s using Base64 and return the encoded bytes. Optional altchars must be a bytes-like object of length 2 which specifies an alternative alphabet for the + and / characters. This allows an application to e.g. generate URL or filesystem safe Base64 strings. The default is None, for which the standard Base64 alphabet is used. May assert or raise a ValueError if the length of altchars is not 2. Raises a TypeError if altchars is not a bytes-like object. base64.b64decode(s, altchars\u003dNone, validate\u003dFalse)¶ Decode the Base64 encoded bytes-like object or ASCII string s and return the decoded bytes. Optional altchars must be a bytes-like object or ASCII string of length 2 which specifies the alternative alphabet used instead of the + and / characters. A binascii.Error exception is raised if s is incorrectly padded. If validate is False (the default), characters that are neither in the normal base-64 alphabet nor the alternative alphabet are discarded prior to the padding check. If validate is True, these non-alphabet characters in the input result in a binascii.Error. For more information about the strict base64 check, see binascii.a2b_base64() May assert or raise a ValueError if the length of altchars is not 2. base64.standard_b64encode(s)¶ Encode bytes-like object s using the standard Base64 alphabet and return the encoded bytes. base64.standard_b64decode(s)¶ Decode bytes-like object or ASCII string s using the standard Base64 alphabet and return the decoded bytes. base64.urlsafe_b64encode(s)¶ Encode bytes-like object s using the URL- and filesystem-safe alphabet, which substitutes - instead of + and _ instead of / in the standard Base64 alphabet, and return the encoded bytes. The result can still contain \u003d. base64.urlsafe_b64decode(s)¶ Decode bytes-like object or ASCII string s using the URL- and filesystem-safe alphabet, which substitutes - instead of + and _ instead of / in the standard Base64 alphabet, and return the decoded bytes. base64.b32encode(s)¶ Encode the bytes-like object s using Base32 and return the encoded bytes. base64.b32decode(s, casefold\u003dFalse, map01\u003dNone)¶ Decode the Base32 encoded bytes-like object or ASCII string s and return the decoded bytes. Optional casefold is a flag specifying whether a lowercase alphabet is acceptable as input. For security purposes, the default is False. RFC 4648 allows for optional mapping of the digit 0 (zero) to the letter O (oh), and for optional mapping of the digit 1 (one) to either the letter I (eye) or letter L (el). The optional argument map01 when not None, specifies which letter the digit 1 should be mapped to (when map01 is not None, the digit 0 is always mapped to the letter O). For security purposes the default is None, so that 0 and 1 are not allowed in the input. A binascii.Error is raised if s is incorrectly padded or if there are non-alphabet characters present in the input. base64.b32hexencode(s)¶ Similar to b32encode() but uses the Extended Hex Alphabet, as defined in RFC 4648. Added in version 3.10. base64.b32hexdecode(s, casefold\u003dFalse)¶ Similar to b32decode() but uses the Extended Hex Alphabet, as defined in RFC 4648. This version does not allow the digit 0 (zero) to the letter O (oh) and digit 1 (one) to either the letter I (eye) or letter L (el) mappings,",
+    "scrapedAt": "2026-05-09 01:23:41.778898"
+  },
+  {
+    "id": 1534,
+    "url": "https://docs.python.org/3/library/os.html#os.environb",
+    "title": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » os — Miscellaneous operating system interfaces | Theme Auto Light Dark | os — Miscellaneous operating system interfaces¶ Source code: Lib/os.py This module provides a portable way of using operating system dependent functionality. If you just want to read or write a file see open(), if you want to manipulate paths, see the os.path module, and if you want to read all the lines in all the files on the command line see the fileinput module. For creating temporary files and directories see the tempfile module, and for high-level file and directory handling see the shutil module. Notes on the availability of these functions: The design of all built-in operating system dependent modules of Python is such that as long as the same functionality is available, it uses the same interface; for example, the function os.stat(path) returns stat information about path in the same format (which happens to have originated with the POSIX interface). Extensions peculiar to a particular operating system are also available through the os module, but using them is of course a threat to portability. All functions accepting path or file names accept both bytes and string objects, and result in an object of the same type, if a path or file name is returned. On VxWorks, os.popen, os.fork, os.execv and os.spawn*p* are not supported. On WebAssembly platforms, Android and iOS, large parts of the os module are not available or behave differently. APIs related to processes (e.g. fork(), execve()) and resources (e.g. nice()) are not available. Others like getuid() and getpid() are emulated or stubs. WebAssembly platforms also lack support for signals (e.g. kill(), wait()). Note All functions in this module raise OSError (or subclasses thereof) in the case of invalid or inaccessible file names and paths, or other arguments that have the correct type, but are not accepted by the operating system. exception os.error¶ An alias for the built-in OSError exception. os.name¶ The name of the operating system dependent module imported. The following names have currently been registered: \u0027posix\u0027, \u0027nt\u0027, \u0027java\u0027. See also sys.platform has a finer granularity. os.uname() gives system-dependent version information. The platform module provides detailed checks for the system’s identity. File Names, Command Line Arguments, and Environment Variables¶ In Python, file names, command line arguments, and environment variables are represented using the string type. On some systems, decoding these strings to and from bytes is necessary before passing them to the operating system. Python uses the filesystem encoding and error handler to perform this conversion (see sys.getfilesystemencoding()). The filesystem encoding and error handler are configured at Python startup by the PyConfig_Read() function: see filesystem_encoding and filesystem_errors members of PyConfig. Changed in version 3.1: On some systems, conversion using the file system encoding may fail. In this case, Python uses the surrogateescape encoding error handler, which means that undecodable bytes are replaced by a Unicode character U+DCxx on decoding, and these are again translated to the original byte on encoding. The file system encoding must guarantee to successfully decode all bytes below 128. If the file system encoding fails to provide this guarantee, API functions can raise UnicodeError. See also the locale encoding. Python UTF-8 Mode¶ Added in version 3.7: See PEP 540 for more details. The Python UTF-8 Mode ignores the locale encoding and forces the usage of the UTF-8 encoding: Use UTF-8 as the filesystem encoding. sys.getfilesystemencoding() returns \u0027utf-8\u0027. locale.getpreferredencoding() returns \u0027utf-8\u0027 (the do_setlocale argument has no effect). sys.stdin, sys.stdout, and sys.stderr all use UTF-8 as their text encoding, with the surrogateescape error handler being enabled for sys.stdin and sys.stdout (sys.stderr continues to use backslashreplace as it does in the default locale-aware mode) On Unix, os.device_encoding() returns \u0027utf-8\u0027 rather than the device encoding. Note that the standard stream settings in UTF-8 mode can be overridden by PYTHONIOENCODING (just as they can be in the default locale-aware mode). As a consequence of the changes in those lower level APIs, other higher level APIs also exhibit different default behaviours: Command line arguments, environment variables and filenames are decoded to text using the UTF-8 encoding. os.fsdecode() and os.fsencode() use the UTF-8 encoding. open(), io.open(), and codecs.open() use the UTF-8 encoding by default. However, they still use the strict error handler by default so that attempting to open a binary file in text mode is likely to raise an exception rather than producing nonsense data. The Python UTF-8 Mode is enabled if the LC_CTYPE locale is C or POSIX at Python startup (see the PyConfig_R",
+    "scrapedAt": "2026-05-09 01:23:40.529184"
+  },
+  {
+    "id": 1533,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-remote-debugging",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:23:39.236842"
+  },
+  {
     "id": 1532,
     "url": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK",
     "title": "difflib — Helpers for computing deltas — Python 3.14.5rc1 documentation",
@@ -10323,26 +10358,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1533,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-remote-debugging"
-  },
-  {
-    "id": 1534,
-    "url": "https://docs.python.org/3/library/os.html#os.environb"
-  },
-  {
-    "id": 1535,
-    "url": "https://docs.python.org/3/library/base64.html#module-base64"
-  },
-  {
-    "id": 1536,
-    "url": "https://docs.python.org/3/reference/compound_stmts.html#for"
-  },
-  {
-    "id": 1537,
-    "url": "https://github.com/python/cpython/issues/82017"
   },
   {
     "id": 1538,
@@ -238610,10 +238625,110 @@ window.searchData = [
     "id": 330453,
     "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.set_seq1",
     "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 332736,
+    "url": "https://github.com/python/cpython/issues/82017#top",
+    "parentUrl": "https://github.com/python/cpython/issues/82017"
+  },
+  {
+    "id": 332740,
+    "url": "https://github.com/python/cpython/pull/120271",
+    "parentUrl": "https://github.com/python/cpython/issues/82017"
+  },
+  {
+    "id": 332741,
+    "url": "https://bugs.python.org/issue37836",
+    "parentUrl": "https://github.com/python/cpython/issues/82017"
+  },
+  {
+    "id": 332746,
+    "url": "https://github.com/python/cpython/pull/15328",
+    "parentUrl": "https://github.com/python/cpython/issues/82017"
+  },
+  {
+    "id": 332747,
+    "url": "https://github.com/jdemeyer",
+    "parentUrl": "https://github.com/python/cpython/issues/82017"
+  },
+  {
+    "id": 332748,
+    "url": "https://github.com/python/cpython/issues/82017#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/82017"
+  },
+  {
+    "id": 332749,
+    "url": "https://github.com/python/cpython/issues/82017#issue-1199017735",
+    "parentUrl": "https://github.com/python/cpython/issues/82017"
+  },
+  {
+    "id": 332750,
+    "url": "https://github.com/python/cpython/pull/15327",
+    "parentUrl": "https://github.com/python/cpython/issues/82017"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/3625785?u\u003d59974a2a4b7e0b97575b2422efa1642e408e5496\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@jdemeyer",
+    "pageTitle": "Support .as_integer_ratio() in fractions.Fraction · Issue #82017 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/82017"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3625785?u\u003d59974a2a4b7e0b97575b2422efa1642e408e5496\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@jdemeyer",
+    "pageTitle": "Support .as_integer_ratio() in fractions.Fraction · Issue #82017 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/82017"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#for"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#for"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "base64 — Base16, Base32, Base64, Base85 Data Encodings — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/base64.html#module-base64"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "base64 — Base16, Base32, Base64, Base85 Data Encodings — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/base64.html#module-base64"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.environb"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.environb"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-remote-debugging"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-remote-debugging"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
