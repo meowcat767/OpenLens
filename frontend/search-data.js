@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 346,
+    "url": "https://www.autoscout24.nl/auto/elektrische-auto/",
+    "title": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "content": "Ga naar hoofdinhoud Homepage Auto Elektrische Auto Elektrische Auto Toon aanbod Toon aanbod Toon aanbod Elektrische Auto Elektrische auto’s zijn niet meer weg te denken uit het straatbeeld. De transitie naar elektrisch rijden is in volle gang. Ben je klaar om afscheid te nemen van de verbrandingsmotor? Klaar om geld te besparen met een elektrische auto en tegelijkertijd het milieu te beschermen? Bij AutoScout24 hebben we auto’s met een puur elektrische aandrijving in alle soorten, afmetingen maten en varianten voor je klaarstaan. Elektrische auto zoeken. Lees meer Meer tonen De populairste elektrische modellen Dit zijn de populairste auto\u0027s van dit moment Tesla Model 3 Renault Mégane E-Tech Hyundai IONIQ 5 Kia e-Niro Peugeot e-208 Volkswagen ID.3 Skoda Enyaq Tesla Model Y Audi Q4 e-tron Volvo EX30 Elektrische Auto aanbiedingen BYD Atto 3Comfort 60 kWh | 420KM WLTP | 18\" LMV | Apple Carp € 33.9501 06/2025 11.786 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 2544 CW\u0027s-gravenhage Peugeot e-2008EV GT 54 kWh | Carplay/Android Auto | Keyless | Ca € 24.3951 08/2024 30.697 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 4265 JJGenderen BYD TangAWD Executive 86 kWh | Origineel NL! | BTW Verreke € 38.9451 11/2023 38.111 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 4827 HJBreda Toyota Proace CityVerso Electric AUT. 7persoons !Active Long Soh 98% € 29.9451 11/2023 45.946 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5738 AKMariahout Fiat 500Icon 42 kWh € 15.995 05/2022 39.485 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 7102 JDWinterswijk Mercedes-Benz EQC 4004MATIC 80 kWh|Dak|Camera|Car-Play € 33.9501 10/2020 69.305 km Elektrisch - (kWh/100 km) 2,8 Nieuw Autobedrijf NL 2295 RVKwintsheul Opel Corsa-eLEVEL 2 50 kWh 11kW -CRUISE|METALLIC|NAVI|WARMTEPO € 16.3901 08/2023 22.075 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 2152 MDNieuw-vennep Peugeot e-2008EV Blue Lease Allure 50 kWh 2e-Eig. \u0026 Dealer-Onder € 14.9001 12/2020 83.891 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 2394 CGHazerswoude Rijndijk Polestar 2LONG RANGE DUAL MOTOR LAUNCH EDITION 78kWh -PANO.D € 27.8901 09/2020 137.859 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 2152 MDNieuw-vennep Volkswagen ID.5electric drive 150 kW Pro Performance € 31.549 08/2023 11.128 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 1101 CLAmsterdam Kia EV6Light 58 kWh | SOH 94% | Achteruitrijcamera | Cli € 26.9501 02/2024 49.349 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 9461 VAGieten Nissan Leafe+ Tekna 62 kWh | 92,9% SOH | Stoelverwarming acht € 18.950 11/2022 28.173 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 8242 BALelystad Peugeot e-208electric drive 100 kW GT Pack € 13.549 04/2022 129.354 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 1101 CLAmsterdam Audi e-tronSportback 50 quattro S edition 71 kWh | Trekhaak | € 27.5001 12/2020 104.527 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 1716 KJOpmeer Opel Corsa-eEdition 50 kWh SOH 93% | Warmtepomp | Carplay \u0026 An € 14.9501 11/2021 41.870 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 7905 SEHoogeveen Hyundai IONIQ 584 kWh - RWD Business € 39.9501 10/2025 282 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 1704 RMHeerhugowaard Kia EV6Plus 77.4 kWh | SOH 100% | Warmtepomp | Leder | Ap € 27.9451 12/2021 124.395 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 2761 BNZevenhuizen Tesla Model 3Standard RWD Plus 60 kWh | Trekhaak |90,6% SOH | A € 20.9501 11/2019 52.645 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 8242 BALelystad BYD Seal U1.5 DM-i FWD Boost | Inclusief € 3000,- ACTIE | 10 € 37.7201 01/2026 10 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5628 CJEindhoven Toyota C-HR+First Edition 77 kWh € 44.8901 04/2026 5 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 3247 CLDirksland Bekijk alle Elektrische Auto aanbiedingen Wat moet je weten over elektrische auto’s? Het rijden in een elektrische auto wordt steeds populairder in Nederland. Enerzijds komt dat omdat het gebruik ervan wordt gestimuleerd door de overheid, anderzijds omdat dezelfde overheid het gebruik van auto’s op brandstof ontmoedigt. Want we kunnen er niet om heen: het gebruik van fossiele brandstoffen en de uitstoot van vervuilende stoffen moeten worden teruggedrongen. En elektromobiliteit speelt een grote rol in die transitie. Waar elektrisch rijden eerst nog alleen was voor de liefhebbers van technologie, vindt e-mobility steeds beter zijn weg naar de zakelijke rijders en ook particuliere autorijders. Dit is ook terug te zien in een gestaag groeiend aantal geregistreerde elektrische auto\u0027s, terwijl ook de benodigde infrastructuur wordt uitgebreid. Wist jij dat Nederland de grootste laaddichtheid in Europa heeft? Er zijn maar weinig andere landen die meer laadpalen dan wij hebben op de beschikbare grond. De tijd is dus rijp om de aanschaf van een elektrische auto serieus te overwegen - want nooit eerder was er zo\u0027n breed aanbod van verschillende elektrische auto’s, die ook nog eens een steeds grotere actieradius hebben. Wat kost ee",
+    "scrapedAt": "2026-05-09 00:38:35.059806"
+  },
+  {
+    "id": 345,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/",
+    "title": "Occasions Nederland",
+    "content": "Ga naar hoofdinhoud Homepage Nederland Vind nu je tweedehands auto per regio Aanbod in jouw omgeving Toon meer Populairste modellen Volkswagen Golf Audi A3 BMW 3 Serie Audi A4 Volkswagen Polo Opel Astra Ford Focus Mercedes-Benz C-Klasse Ford Fiesta Opel Corsa Toon meer Populairste automerken in Nederland Volkswagen BMW Audi Mercedes-Benz Ford Opel Skoda Porsche Seat Renault Peugeot Toyota Alle merken Zoek op carrosserie Kleine Auto Stationwagon Van SUV Coupe Bedrijfswagen Cabrio Limousine Toon meer Zoek op provincie Noord-Brabant Zuid-Holland Noord-Holland Drenthe Gelderland Utrecht Groningen Friesland Limburg Overijssel Flevo-land Zeeland De 20 grootste steden in Nederland Amsterdam Rotterdam Den Haag Utrecht Eindhoven Tilburg Almere Groningen Almere Stad Breda Nijmegen Enschede Haarlem Haarlemmermeer Arnhem Zaanstad Amersfoort Apeldoorn \u0027s-Hertogenbosch Hoofddorp Toon alle auto’s Tweedehands auto’s in Nederland Audi Q2 1.4 TFSI CoD Sport Pro Line Cruise | Airco | € 18.950,- 85.791 km 06/2017 110 kW (150 PK) Gebruikt 1 vorige eigenaar Automatisch Benzine - (l/100 km) 119 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-1601 MJ ENKHUIZEN Volkswagen Golf 2.0 TSI 4Motion R PANO VIRTUAL LEER MEMORY € 23.999,- 159.356 km 04/2019 228 kW (310 PK) Gebruikt - (Vorige eigenaren) Automatisch Benzine - (l/100 km) 162 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-5015 AS TILBURG MINI Cooper SE Countryman Cooper S E Hybrid ALL4 Classic Trim € 23.949,- BTW verrekenbaar 28.673 km 02/2022 162 kW (220 PK) Gebruikt 2 vorige eigenaren Automatisch Elektro/Benzine 1,9 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl 41 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl 14,3 kWh/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-1101 CL AMSTERDAM Volkswagen Passat Variant 1.4 TSI PHEV GTE Business / BTW / Pano / Camera / € 18.950,- BTW verrekenbaar 115.461 km 11/2020 115 kW (156 PK) Gebruikt - (Vorige eigenaren) Automatisch Elektro/Benzine - (l/100 km) 37 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-4131 NN VIANEN Volkswagen Tiguan 1.4 TSI Sport\u0026Style 4Motion Airco Bj:2008 NAP! € 3.500,- 286.827 km 08/2008 110 kW (150 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 199 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-8304 AW EMMELOORD Jeep Wrangler 3.6 Sahara Chelsea uitvoering Cabrio Trekhaak afne € 32.950,- 83.681 km 12/2014 210 kW (286 PK) Gebruikt 2 vorige eigenaren Automatisch Benzine - (l/100 km) 267 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-1404 EG BUSSUM Volkswagen Golf 1.6 TDI COMFORTLINE. CRUISE, CARPLAY, ACC € 12.400,- BTW verrekenbaar 138.976 km 05/2018 85 kW (116 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Diesel 4,1 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl 104 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-7678 RL GEESTEREN Suzuki Vitara 1.5 Hybrid Select AllGrip Adapt cruise Climate con € 22.700,- 51.042 km 05/2022 75 kW (102 PK) Gebruikt - (Vorige eigenaren) Automatisch Elektro/Benzine - (l/100 km) - (g/km) Bedrijf, NL-6088 EB ROGGEL Toyota Yaris 1.5 Hybrid Dynamic Business € 17.249,- 31.973 km 07/2022 85 kW (116 PK) Gebruikt 2 vorige eigenaren Automatisch Elektro/Benzine - (l/100 km) 87 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-1101 CL AMSTERDAM Audi Q2 1.4 TFSI CoD Sport Pro Line Cruise | Airco | € 18.950,- 85.791 km 06/2017 110 kW (150 PK) Gebruikt 1 vorige eigenaar Automatisch Benzine - (l/100 km) 119 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-16",
+    "scrapedAt": "2026-05-09 00:38:33.917817"
+  },
+  {
+    "id": 344,
+    "url": "https://www.autoscout24.nl/bedrijf/privacy-verklaring/",
+    "title": "Toestemming voor reclame - AutoScout24",
+    "content": "Ga naar hoofdinhoud Toestemming voor reclame Toestemming voor reclame Versie 01.05.2026 (1) Ik ga ermee akkoord dat AutoScout24 Nederland B.V. (\u0027AutoScout24\u0027) mijn e-mailadres gebruikt voor reclamedoeleinden van AutoScout24. Hieronder valt het sturen van emails met alle reclame die betrekking heeft op de verkoop (bijv. informatie over de waarde van het voertuig en het verkoopproces), de aankoop (bijv. interessante aanbiedingen van voertuigen) en het bezit (bijv. aanbiedingen van verzekeringen en financieringen, evenals onderhoud en reparatie). (2) Ik ga ermee akkoord dat AutoScout24 mijn registratiegegevens gebruikt samen met gegevens over mijn gebruik van de websites en de mobiele apps van AutoScout24 (de bekeken pagina\u0027s, aangeklikte content, etc.) en gegevens uit marketingcampagnes of aanvullende diensten (bijv. de voertuiggegevens van de voertuigbeoordeling, de zoektermen van de zoekopdrachten, de opgeslagen voertuigen in de favorieten), om mij zo op deze websites/mobiele apps interessante aanbiedingen te kunnen tonen, evenals mij de in paragraaf 1 genoemde op mij toegespitste reclame via e-mail te versturen. (3) Ik kan deze toestemming op elk gewenst moment inttrekken voor toekomstige verwerkingen. Voor het intrekken van de toestemming kunt u een schriftelijke verklaring sturen naar AutoScout24 Nederland B.V., John M. Keynesplein 12-46, 1066 EP Amsterdam, per e-mail aan info@autoscout24.nl, of online via uw account. Meer informatie over het gebruik van uw gegevens vindt u bij de informatie over privacy. (4) Ik ga ermee akkoord dat AutoScout24 de door mij verstrekte en van mij gegenereerde gegevens gebruikt om een profiel van mij te creëren en deze gegevens over te dragen aan derden voor marktonderzoek. Voor meer informatie over het gebruik van uw gegevens, zie de privacyverklaring. Naar boven",
+    "scrapedAt": "2026-05-09 00:38:32.707902"
+  },
+  {
+    "id": 343,
+    "url": "https://www.autoscout24.nl/auto-verkopen/",
+    "title": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "content": "Ga naar hoofdinhoud Verkoop jouw auto gratis 1 Basisgegevens invoeren 2 Ontvang een prijsschatting 3 Betaling via AutoScout24 SafeTradeNieuw 4 Snel en eenvoudig verkopen Gegevensinvoer km Ga verder Zijn de gegevens van jouw voertuig niet vindbaar? Klik hier om de gegevens handmatig in te voeren ExpressVerkoop Verkoop aan een autobedrijf Gratis Geen verborgen kosten of vergoedingen Betrouwbaar Geselecteerde AutoScout24-partners in jouw buurt Binnen 24 uur Snelle verkoop en veilige betaling Gemak Minimale inspanning in het verkoopproces Advertentie Verkoop je auto op AutoScout24 Gratis Jouw basisadvertentie is gratis Groot bereik Miljoenen potentiële kopers Goede verkoopprijs Onderhandel en ontvang een goede verkoopprijs Verkoopkansen vergroten Meer zichtbaarheid met een promotiepakket Betaling via AutoScout24 SafeTrade Ontvang veilig geld van kopers met AutoScout24 SafeTrade Zo verloopt het verkoopproces ExpressVerkoop Kenteken invoerenVoertuiggegevens in slechts een paar klikken WaardebepalingOntvang direct een online waardebepaling Afspraak en offerteMaak een afspraak in jouw buurt en ontvang een vrijblijvend aanbod Verkoop aan een autobedrijfContract, betaling en overschrijving direct geregeld Advertentie Kenteken invoerenAccount aanmaken, foto\u0027s en omschrijving toevoegen AdvertentieBasis- of premiumadvertentie selecteren Vragen van potentiële kopersReacties en afspraken zelf beheren Proefritten en biedingenProefritten en onderhandelingen zelf afhandelen VerkoopContract, betaling en de overschrijving zelf afhandelen ExpressVerkoop Advertentie Snelheid Gemak Verkoopprijs Voertuigoverdracht Veelgestelde vragen Wat is het verschil tussen beide verkoopmogelijkheden? Advertentie op AutoScout24 Met een openbare advertentie op AutoScout24 kun je jouw voertuig eenvoudig verkopen. Je advertentie is zichtbaar voor zowel particulieren als autohandelaren. Bij interesse kunnen zij direct contact met je opnemen voor vragen, het plannen van een proefrit of het afronden van de verkoop. Gemiddeld duurt het verkoopproces 30 dagen. ExpressVerkoop Je ontvangt eerst een online waardebepaling van je auto op basis van je kenteken. AutoScout24 berekent de actuele marktwaarde aan de hand van gegevens zoals merk, model, bouwjaar, brandstofsoort, vermogen, kilometerstand en transmissie. Vervolgens plan je eenvoudig online een afspraak bij een AutoScout24-partner bij jou in de buurt. Op locatie voert de partner een voertuigcontrole uit, waarna je een vrijblijvend bod ontvangt. Met ExpressVerkoop kun je jouw auto binnen 24 uur verkopen en het geld veilig en snel ontvangen. Welke kosten of vergoedingen moet ik betalen? Geen, zowel het plaatsen van een advertentie op AutoScout24 als het gebruik van ExpressVerkoop zijn volledig gratis diensten. Met een gratis basisadvertentie kun je tot 15 foto\u0027s toevoegen. Kies je voor een betaalde advertentie, dan kun je meer foto\u0027s uploaden en profiteer je van extra zichtbaarheid. Of je nu verkoopt of niet: voor beide diensten betaal je tijdens het verkoopproces geen kosten of vergoedingen. Welke voertuiggegevens heb ik nodig bij de eerste stap? Je hebt de onderstaande gegevens van jouw voertuig nodig: Kenteken Kilometerstand Overige vragen over een advertentie Hoe lang is een advertentie geldig? Een advertentie blijft 126 dagen (18 weken) online. Je kunt binnen deze periode de advertentie op elk moment deactiveren of verwijderen. Wat is de aanbevolen verkoopprijs? Onze gratis online waardebepaling is een handig hulpmiddel om een realistische verkoopprijs voor jouw auto te bepalen. We berekenen de actuele marktwaarde op basis van merk, model, bouwjaar, brandstof, vermogen, kilometerstand en transmissie. Daarbij vergelijken we jouw auto met vergelijkbare voertuigen die momenteel te koop staan op AutoScout24. Houd er rekening mee dat de aanbevolen verkoopprijs een gemiddelde is, gebaseerd op de data uit onze AutoScout24-database. Dit betekent dat het geen garantie biedt dat jouw auto precies voor dit bedrag verkocht wordt, aangezien de daadwerkelijke prijs ook afhangt van de staat van het voertuig en de aanwezige opties. Wie kan mijn advertentie zien? Zowel potentiële particuliere kopers als autobedrijven kunnen jouw advertentie op AutoScout24 bekijken, als hun zoekopdracht overeenkomt met jouw voertuig. Met een promotiepakket kun je de zichtbaarheid van jouw advertentie vergroten. Overige vragen over ExpressVerkoop Met welke kosten en vergoedingen moet ik rekening houden? Geen, ExpressVerkoop is een gratis dienst. Er zijn voor jou geen kosten of vergoedingen tijdens het verkoopproces, ongeacht of de verkoop uiteindelijk doorgaat of niet. Hoe wordt de waarde van mijn auto bepaald? AutoScout24 berekent de huidige marktwaarde aan de hand merk, model, bouwjaar, transmissie, brandstof, vermogen en de kilometerstand. Ook de speciale uitvoering van jouw auto wordt in de berekening meegenomen als je dit hebt aangegeven. De berekening is gebaseerd op de gemiddelde verkoopprijs van vergelijkbare auto\u0027s uit meer",
+    "scrapedAt": "2026-05-09 00:38:31.440166"
+  },
+  {
+    "id": 342,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan",
+    "title": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "content": "Ga naar hoofdinhoud Filteren Alles reset Merk en model Volkswagen Tiguan Carroserievorm Bouwjaar Conditie Brandstof Prijs Locatie Nederland Kilometerstand Transmissie Vermogen Type verkoper Stoelen en deuren Opties Kleur exterieur Interieurkleur en bekleding Garantie en historie Energieverbruik Online sinds Zoeken op trefwoord Filteren2 Volkswagen Tiguan Nederland Zoekopdracht opslaan Volkswagen Tiguan 1.4 TSI 160PK Sport\u0026Style TREKH. | PDC V+A | NAVI Bewaar 29 € 8.945 05/2014 164.690 km Benzine 118 kW (160 PK) Met onderhoudshistorie, Lichtmetalen velgen, Getinte ramen, Sportstoelen, Armsteun, Alarm, Emergency Brake Assist, Airbag passagier Autobedrijf BoekNL-8822 WD ARUM + Meer voertuigen Volkswagen Tiguan 1.5 TSI ACT Comfortline Business Airco ECC | Panor Bewaar 43 € 19.995 09/2019 166.622 km Benzine 110 kW (150 PK) Garantie, Elektrische achterklep, Panorama dak, Alarm, Trekhaak, Elektrische ramen, Bandenspanningscontrole, Stoelverwarming Menges \u0026 De Vries Automotive B.V.NL-7825 AM EMMEN + Meer voertuigen Volkswagen Tiguan 1.5 TSI 3 x R-Line Business+ DSG / Navigatie full Bewaar 36 € 29.9501 05/2021 81.922 km Benzine 110 kW (150 PK) Spoiler, Geheel digitaal combi-instrument, Panorama dak, LED verlichting, Open dak, Trekhaak, Stoelverwarming, Elektrische achterklep Adelhart auto\u0027sNL-1704 RM HEERHUGOWAARD + Meer voertuigen Volkswagen Tiguan 1.5 TSI R-Line Business+ Black Style | Pano | Sfee Bewaar 46 € 30.900 03/2021 135.266 km Benzine 110 kW (150 PK) Panorama dak, Elektrische achterklep, Geheel digitaal combi-instrument, Getinte ramen, LED verlichting, Adaptieve Cruise Control, Sfeerverlichting, Met onderhoudshistorie Greven Automotive B.V.NL-9502 EC STADSKANAAL + Meer voertuigen Volkswagen Tiguan 1.4 TSI ACT R-line / 150pk / Panorama Dak / Leren Bewaar 40 € 24.000 11/2017 98.747 km Benzine 110 kW (150 PK) Spoiler, LED verlichting, Panorama dak, Sportstoelen, Open dak, Garantie, Geheel digitaal combi-instrument, Stoelverwarming MVI AutomotiveNL-3421 GV OUDEWATER + Meer voertuigen Volkswagen Tiguan 1.4 TSI eHybrid R-Line Business+ Pano|VOL! Bewaar 37 € 35.750 08/2022 34.470 km Elektro/Benzine 180 kW (245 PK) Panorama dak, Head-up display, Spoiler, Adaptieve Cruise Control, Sportonderstel, Open dak, Bochtverlichting, Parkeerhulp achter SB Automotive B.V.NL-3214 VP ZUIDLAND + Meer voertuigen Volkswagen Tiguan 1.5 TSI Comfortline Business - ACC l Auto Carplay Bewaar 41 € 16.400 € 17.400,- Prijsdaling 11/2019 155.463 km Benzine 96 kW (131 PK) Elektrische achterklep, Lichtmetalen velgen, Lane Departure Warning Systeem, Met onderhoudshistorie, Adaptieve Cruise Control, Niet-rokers auto, Parkeerhulp voor, Verkeersbordherkenning Van Diepen Automotive B.V.NL-1688 JH NIBBIXWOUD + Meer voertuigen Volkswagen Tiguan 1.4 TSI ACT R-line Led Adaptieve cruise Navigatie Bewaar 48 € 18.700 03/2017 137.320 km Benzine 110 kW (150 PK) LED verlichting, Sportonderstel, Spoiler, Geheel digitaal combi-instrument, Elektrische achterklep, Bochtverlichting, Lane Departure Warning Systeem, Navigatiesysteem B\u0026S Auto\u0027sNL-6088 EB ROGGEL + Meer voertuigen Volkswagen Tiguan 1.5 TSI R-LINE BUSINESS+ I AUTOMAAT I TREKHAAK I P Bewaar 43 € 35.945 06/2022 46.541 km Benzine 110 kW (150 PK) Spoiler, LED verlichting, Trekhaak, Geheel digitaal combi-instrument, Panorama dak, Parkeerhulp met camera, Bochtverlichting, Getinte ramen Autobetaalbaar.nlNL-3443 TJ WOERDEN + Meer voertuigen Volkswagen Tiguan 1.4 TSI Comfort\u0026Design 4Motion Clima Bj:2008 NAP! Bewaar 26 € 4.500 04/2008 204.602 km Benzine 110 kW (150 PK) Met onderhoudshistorie, 4x4, Getinte ramen, Lichtmetalen velgen, Airbag passagier, Radio, Elektrische ramen, Lichtsensor Autobedrijf DuranNL-8304 AW EMMELOORD + Meer voertuigen Volkswagen Tiguan 1.5 eTSI Life Goal Automaat | Navigatie | Trekhaak Bewaar 25 € 38.9451 08/2025 24.409 km Benzine 96 kW (131 PK) Parkeerhulp voor, Trekhaak, Alarm, Elektrische achterklep, Parkeerhulp met camera, Keyless Entry, 360° camera, Bochtverlichting Autobedrijf van Herick B.V.NL-3771 MT BARNEVELD + Meer voertuigen Volkswagen Tiguan 1.5 TSI Life Business | VIRTUAL | CAMERA | TREKHAA Bewaar 43 € 22.9501 01/2021 135.771 km Benzine 96 kW (131 PK) LED verlichting, Trekhaak, Geheel digitaal combi-instrument, Getinte ramen, Elektrische achterklep, Dakrails, Stuurwielverwarming, Grootlichtassistent Autobedrijf GerdesNL-7891 EV KLAZIENAVEEN + Meer voertuigen Volkswagen Tiguan 1.5 TSI ACT Highline Business R |PANO|MASSAGE|CARP Bewaar 34 € 24.995 07/2020 135.652 km Benzine 110 kW (150 PK) Spoiler, Geheel digitaal combi-instrument, LED verlichting, Panorama dak, Elektrische achterklep, Open dak, Getinte ramen, Bochtverlichting Vakgarage Prins AutoNL-2952 AX ALBLASSERDAM + Meer voertuigen Volkswagen Tiguan 2.0 TSI 4Motion 2x R-Line / 230pk / Panorama dak / Bewaar 46 € 31.000 05/2020 102.342 km Benzine 169 kW (230 PK) LED verlichting, 360° camera, Geheel digitaal combi-instrument, 4x4, Spoiler, Elektrische achterklep, Elektrische stoelverstelling, Elektrisch verstelbare buitens",
+    "scrapedAt": "2026-05-09 00:38:30.164158"
+  },
+  {
     "id": 341,
     "url": "https://www.autoscout24.nl/auto/audi/audi-q8/",
     "title": "Audi Q8 - Informatie, prijzen, alternatieven",
@@ -2383,26 +2418,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 342,
-    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
-  },
-  {
-    "id": 343,
-    "url": "https://www.autoscout24.nl/auto-verkopen/"
-  },
-  {
-    "id": 344,
-    "url": "https://www.autoscout24.nl/bedrijf/privacy-verklaring/"
-  },
-  {
-    "id": 345,
-    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/"
-  },
-  {
-    "id": 346,
-    "url": "https://www.autoscout24.nl/auto/elektrische-auto/"
   },
   {
     "id": 347,
@@ -54364,10 +54379,1858 @@ window.searchData = [
     "id": 21347,
     "url": "https://www.autoscout24.nl/auto/audi/audi-sq8/",
     "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-q8/"
+  },
+  {
+    "id": 21349,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/re_2022",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21350,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/ft_elektro%2Fbenzine",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21351,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/re_2026",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21352,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/re_2025",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21353,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/bc_zwart",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21354,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/almere",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21356,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/bt_suv%2Foff-road%2Fpick-up",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21357,
+    "url": "https://www.autoscout24.nl/lst/c/volkswagen-tiguan-tot-25000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21358,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/ot_nieuw",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21359,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/bc_wit",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21360,
+    "url": "https://www.autoscout24.nl/lst/c/volkswagen-tiguan-tot-40000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21364,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/tilburg",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21366,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/ve_1.4-tsi",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21368,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/breda",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21369,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/breda",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21371,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21372,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-allspace/bc_wit",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21373,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/ft_benzine",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21374,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/bt_stationwagen",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21375,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/tr_automatisch",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21378,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21380,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/apeldoorn",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21381,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-allspace/ft_benzine",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21382,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/re_2022",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21383,
+    "url": "https://www.autoscout24.nl/lst/c/volkswagen-tiguan-7-persoons",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21384,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/re_2021",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21385,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/apeldoorn",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21386,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/bt_stationwagen",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21387,
+    "url": "https://www.autoscout24.nl/autobedrijven/sb-automotive-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21388,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/bc_zwart",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21389,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/groningen",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21390,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan#main-target",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21391,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/re_2017",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21393,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-allspace/ft_diesel",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21395,
+    "url": "https://www.autoscout24.nl/lst/c/volkswagen-tiguan-tot-20000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21397,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/groningen",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21399,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/bc_blauw",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21400,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-boek",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21401,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21402,
+    "url": "https://www.autoscout24.nl/autobedrijven/bs-autobedrijf-rijswijk",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21403,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/tilburg",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21404,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/ot_demo",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21405,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/ve_r",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21406,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/golf-sportsvan",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21407,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/ft_benzine",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21408,
+    "url": "https://www.autoscout24.nl/lst/c/volkswagen-tiguan-tot-15000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21409,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/ft_elektro%2Fbenzine",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21410,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/ft_diesel",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21412,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/nijmegen",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21413,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/bc_blauw",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21417,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/bc_groen",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21418,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/ve_elegance",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21419,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/ve_r-line-business",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21421,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/ft_diesel",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21422,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/ve_2.0-tsi",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21423,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21425,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/bt_suv%2Foff-road%2Fpick-up",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21426,
+    "url": "https://www.autoscout24.nl/autobedrijven/mvi-automotive",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21428,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/utrecht",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21429,
+    "url": "https://www.autoscout24.nl/lst/c/volkswagen-tiguan-tot-17500-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21430,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/tr_automatisch",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21431,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/ve_highline",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21434,
+    "url": "https://www.autoscout24.nl/autobedrijven/van-diepen-automotive-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21435,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/ve_highline-business-r",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21436,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/re_2026",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21437,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/re_2025",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21438,
+    "url": "https://www.autoscout24.nl/autobedrijven/adelhart-auto-s",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21441,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/ot_demo",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21442,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/almere",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21443,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-allspace/tr_automatisch",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21444,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/bc_wit",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21445,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-van-herick-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21446,
+    "url": "https://www.autoscout24.nl/lst/c/volkswagen-tiguan-tot-30000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21447,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-allspace/re_2020",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21449,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/taigo",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21450,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-allspace/tr_handgeschakeld",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21452,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-allspace/re_2022",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21454,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-allspace/re_2021",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21456,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21457,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/bc_zilver",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21458,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/ve_r-line",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21459,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-allspace/re_2018",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21461,
+    "url": "https://www.autoscout24.nl/autobedrijven/broekhuisen-en-van-der-sande-automotive-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21462,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-(alle)/nijmegen",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21463,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobetaalbaar-nl",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21464,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan-allspace/bc_zwart",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21465,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/tr_handgeschakeld",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21466,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21467,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/bc_zilver",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21468,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/utrecht",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21469,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/ve_4motion",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21470,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/tiguan/bc_grijs",
+    "parentUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "id": 21471,
+    "url": "https://www.autoscout24.nl/auto-verkopen/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "id": 21472,
+    "url": "https://www.autoscout24.nl/auto-verkopen/adverteren/",
+    "parentUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "id": 21473,
+    "url": "https://www.autoscout24.nl/auto-verkopen/expressverkoop",
+    "parentUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "id": 21475,
+    "url": "https://www.autoscout24.nl/manual-listing-creation/private/vehicle-listing",
+    "parentUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "id": 21476,
+    "url": "https://www.autoscout24.nl/bedrijf/privacy/",
+    "parentUrl": "https://www.autoscout24.nl/bedrijf/privacy-verklaring/"
+  },
+  {
+    "id": 21477,
+    "url": "https://www.autoscout24.nl/bedrijf/privacy-verklaring/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/bedrijf/privacy-verklaring/"
+  },
+  {
+    "id": 21497,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/flevoland/almere-stad/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21502,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/utrecht/amersfoort/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21503,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21509,
+    "url": "https://www.autoscout24.nl/auto/opel/opel-corsa/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21511,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-brabant/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21512,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/gelderland/apeldoorn/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21514,
+    "url": "https://www.autoscout24.nl/informeren/advies/auto-kopen/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21517,
+    "url": "https://www.autoscout24.nl/auto/carrosserie/stationwagon/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21521,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/flevoland/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21532,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/overijssel/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21538,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/utrecht/utrecht/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21544,
+    "url": "https://www.autoscout24.nl/informeren/advies/autokosten/autokosten-en-budget/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21545,
+    "url": "https://www.autoscout24.nl/informeren/advies/aan-de-slag-met-de-verkoop/prijsbepaling/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21552,
+    "url": "https://www.autoscout24.nl/informeren/advies/voorbereiding-aankoop/kopen-bij-autobedrijf-of-particulier/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21561,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/gelderland/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21565,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/haarlemmermeer/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21569,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/haarlem/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21572,
+    "url": "https://www.autoscout24.nl/auto/carrosserie/van/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21573,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/gelderland/nijmegen/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21574,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/zaanstad/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21578,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-brabant/breda/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21589,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21590,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/friesland/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21593,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/overijssel/enschede/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21595,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/#all-car-makes",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21596,
+    "url": "https://www.autoscout24.nl/auto/carrosserie/coupe/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21601,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-brabant/s-hertogenbosch/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21603,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/drenthe/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21608,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/gelderland/arnhem/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21609,
+    "url": "https://www.autoscout24.nl/informeren/advies/auto-verkopen/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21611,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/flevoland/almere/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21622,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/hoofddorp/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "id": 21625,
+    "url": "https://www.autoscout24.nl/informeren/advies/besluit-en-aankoop/kleine-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "id": 21626,
+    "url": "https://www.autoscout24.nl/informeren/advies/milieu-en-technologie/onderhoud-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "id": 21628,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-elektrische-auto-voor-senioren/",
+    "parentUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "id": 21629,
+    "url": "https://www.autoscout24.nl/informeren/advies/voorbereiding-aankoop/goedkope-auto-kopen/",
+    "parentUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "id": 21630,
+    "url": "https://www.autoscout24.nl/lst?atype\u003dC\u0026cy\u003dD\u0026damaged_listing\u003dexclude\u0026desc\u003d0\u0026fuel\u003dE\u0026ocs_listing\u003dinclude\u0026pe_category\u003d2%2C1%2C3\u0026powertype\u003dkw\u0026search_id\u003d9lel92t95g\u0026sort\u003dstandard\u0026source\u003dautocatalog",
+    "parentUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "id": 21633,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-q4/audi-q4-e-tron/",
+    "parentUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "id": 21634,
+    "url": "https://www.autoscout24.nl/auto/elektrische-auto/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "id": 21637,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-koop-tweedehands-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "id": 21638,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/de-beste-elektrische-suv/",
+    "parentUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "id": 21639,
+    "url": "https://www.autoscout24.nl/auto/elektrische-auto/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "id": 21640,
+    "url": "https://www.autoscout24.nl/auto/peugeot/peugeot-208/peugeot-e-208/",
+    "parentUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "id": 21646,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/de-beste-chinese-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "id": 21647,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/de-beste-elektrische-hatchback/",
+    "parentUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "id": 21648,
+    "url": "https://www.autoscout24.nl/consulent-elektrische-auto/elektrische-auto-opladen/",
+    "parentUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2BwTq2yjoJSSXPi9b1pyLn/b0d41bef242442de31af79d18dcfbb51/header-image-elektroauto.jpg?w\u003d1100",
+    "alt": "header image elektroauto",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7ppsKgP0TnwftaAuR8ABId/f3de2396094038b1b599acd40abd0f66/Tesla-Model_Y-2021-1280-09.jpg?w\u003d480",
+    "alt": "Tesla Model 3",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2ohAFykDwB58YQpGOFxJ2a/2c734dc6ee342f38612646ed148b04bc/Renault_M_gane_E-Tech_Electric.jpeg?w\u003d480",
+    "alt": "Renault Mégane E-Tech",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/16hSek7I0ecaL2YOzVGBjF/3d4bd1b686c75f56c69cc37781af20de/hyundai-ioniq-5-n-front.jpg?w\u003d480",
+    "alt": "Hyundai IONIQ 5",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3u2QReHMeKzoLOVK01fWo7/2cf803f45ff639914800ef190e8c3f82/kia-niro-ev-2022-1.jpg?w\u003d480",
+    "alt": "Kia e-Niro",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2qpj6qlO1neLgbhE4heMde/c809072b66a0342c5eb5eb5841a5ed85/Peugeot-e-208-2020-1280-0a_1.jpg?w\u003d480",
+    "alt": "Peugeot e-208",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/P8eo2FaoxOA5dCDFcXv7E/a1230486c353190d15acbbb526446baa/volkswagen_id.3_gtx_40.jpeg?w\u003d480",
+    "alt": "Volkswagen ID",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/z77ExiuYOv8YTswcPvkqm/0f67647ee9aadb70dbd7ec386f5f6ce0/skoda_enyaq_iv_founders_edition_32.jpeg?w\u003d480",
+    "alt": "Skoda Enyaq",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3sRPS7WKKMNtDYCfarwloU/9fd59a959e40314d4f6445220151bc4a/tesla-model-y-long-range-rwd-2024-1.jpg?w\u003d480",
+    "alt": "Tesla Model Y",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2W7Ac4RypQ2Up8ax06O43i/441877ec7721e8c5e768c2ea765b3907/AS24-audi_01.jpg?w\u003d480",
+    "alt": "Audi Q4 e-tron",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7enmbEdMLPc6e8HKKyk9Wj/6cd42c973bebdb6d14749590625682e8/Volvo_EX30_ext.jpg?w\u003d480",
+    "alt": "Volvo EX30",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6d984851-7f2d-4957-b4bb-7c56fe0d34b6_e6bcdc4c-43b5-4fba-857f-ffc8265986dd.jpg/360x270.jpg",
+    "alt": "Comfort 60 kWh | 420KM WLTP | 18\" LMV | Apple Carp",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bcca6509-b587-4320-80cd-6b658c6fc89c_dc5bad38-11b5-44d2-bdad-44843927da08.jpg/360x270.jpg",
+    "alt": "EV GT 54 kWh | Carplay/Android Auto | Keyless | Ca",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2ccddbec-a019-4e8c-a181-50da9443fd51_3ee43eec-db7e-434e-9444-73a03eccd56e.jpg/360x270.jpg",
+    "alt": "AWD Executive 86 kWh | Origineel NL! | BTW Verreke",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3e1e75df-e241-4c27-9b85-82eb3657ea0c_db8cbdb1-b042-4ca1-ae12-4923347481f0.jpg/360x270.jpg",
+    "alt": "Verso Electric AUT. 7persoons !Active Long Soh 98%",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9321683f-2ff8-4b4a-a791-e52582a7570e_6dc828f5-475c-4967-b6cc-f16bbb6ad69a.jpg/360x270.jpg",
+    "alt": "Icon 42 kWh",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8608f838-6c3e-4db8-bec9-4981c66584ea_5aea8673-ff08-4709-9364-082e3909f9d6.jpg/360x270.jpg",
+    "alt": "4MATIC 80 kWh|Dak|Camera|Car-Play",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/00be98d2-31d9-481e-bfdf-91e6180358a2_781d14f0-5cd3-4a0d-b64b-c11d626d18b5.jpg/360x270.jpg",
+    "alt": "LEVEL 2 50 kWh 11kW -CRUISE|METALLIC|NAVI|WARMTEPO",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8bca183e-2148-4797-8cf4-82b79c35a581_eb9e6627-c17c-40f7-a1f7-54449dc4d894.jpg/360x270.jpg",
+    "alt": "EV Blue Lease Allure 50 kWh 2e-Eig. \u0026 Dealer-Onder",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/dfe62e5a-66e9-4bbc-beb4-e32f08e4c77d_3d937b4c-5ef5-4535-90a8-3a1d91045c6f.jpg/360x270.jpg",
+    "alt": "LONG RANGE DUAL MOTOR LAUNCH EDITION 78kWh -PANO.D",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/14519a4c-04b9-4935-8df1-b76fac6a6771_eca2944c-10a6-4503-81c8-84e65ee3050d.jpg/360x270.jpg",
+    "alt": "electric drive 150 kW Pro Performance",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6ffa224c-9606-4ec1-a2cb-54bc42701592_4ce77689-39ab-4704-bcfc-da6f9618ded2.jpg/360x270.jpg",
+    "alt": "Light 58 kWh | SOH 94% | Achteruitrijcamera  | Cli",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2916f7d2-01d2-4371-8adb-e92435180df5_f9d94078-ef83-4df7-b640-0aeede9ab015.jpg/360x270.jpg",
+    "alt": "e+ Tekna 62 kWh | 92,9% SOH | Stoelverwarming acht",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/19f49d5d-97d1-4887-9438-f12746959307_08faa47b-fc5f-443e-a0a5-0718e6a85a4b.jpg/360x270.jpg",
+    "alt": "electric drive 100 kW GT Pack",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/eb2810e9-cd79-4e6b-b7c5-3edda4e29314_fd151f62-b273-4415-9326-922f2f55c0e3.jpg/360x270.jpg",
+    "alt": "Sportback 50 quattro S edition 71 kWh | Trekhaak |",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4cc1e61d-0d21-4e79-ad35-3d1a2a68c111_7478cd52-7a9a-454c-9062-7e08088dec3c.jpg/360x270.jpg",
+    "alt": "Edition 50 kWh SOH 93% | Warmtepomp | Carplay \u0026 An",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2cf3eb98-cf84-4916-9954-f9a876042efb_8b10b16f-73a9-4b0b-83b9-9882b4dc8a48.jpg/360x270.jpg",
+    "alt": "84 kWh - RWD Business",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/644f15db-9a82-4a0e-8178-717fd3aa5b56_38554840-96ee-4b1a-843d-6e9b27d07f6a.jpg/360x270.jpg",
+    "alt": "Plus 77.4 kWh | SOH 100% | Warmtepomp | Leder | Ap",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/41960ff9-91ce-4482-890e-437ef0cf8d64_6c980771-b6bf-44ba-b9fa-2f3e270fd011.jpg/360x270.jpg",
+    "alt": "Standard RWD Plus 60 kWh | Trekhaak |90,6% SOH | A",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0ba9e32c-7322-4eb5-9d8b-99aabaa5f29a_3101ecd4-213e-4138-b82f-18dca4b62fdb.jpg/360x270.jpg",
+    "alt": "1.5 DM-i FWD Boost | Inclusief € 3000,- ACTIE | 10",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/517aaa25-3d70-42b1-a3d7-09d36d172e6b_98155aa3-f600-4c56-a9ef-f6bc0eda4ea0.jpg/360x270.jpg",
+    "alt": "First Edition 77 kWh",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3fBmvSbYmzOxnOtkn2Si6O/23ec0132caf53cb56c1c19d7e0194838/tesla-s-02-m.jpg?w\u003d1100",
+    "alt": "tesla-s-02-m",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7Djo4Wk4l3pevGnDnbXNRQ/47bf10debbaf9b0181388708dd1ba2c3/volkswagen-id3-2020-18-3.jpg?w\u003d1100",
+    "alt": "volkswagen-id3-2020-18-3",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5zfT0mSk1qXp4Hz5qyloZd/00a7d9c8f652eae7e7088eb3ec50eaa2/iStock-1187775458.jpg?w\u003d1100",
+    "alt": "Electric car, charging, landscape",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7siO8Y2KSe0hQvNR817tyg/d36f02194cf0a01811dda5ae1c92f451/iStock-1154125473.jpg?w\u003d1100",
+    "alt": "Elektroauto laden zuhause",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/EcWguzbnFimjyPs3tc0hQ/677a89ec897492d3298dc2517ce8c050/hyundai-kona-2024_02.jpg?w\u003d1100",
+    "alt": "hyundai-kona-2024 02",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Alle informatie over de elektrische auto bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/elektrische-auto/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/model-images/vw_golf_xs.jpg",
+    "alt": "Volkswagen Golf",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/model-images/audi_a3_xs.jpg",
+    "alt": "Audi A3",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/model-images/bmw_3er_xs.jpg",
+    "alt": "BMW 3 Serie",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/model-images/audi_a4_xs.jpg",
+    "alt": "Audi A4",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/model-images/vw_polo_xs.jpg",
+    "alt": "Volkswagen Polo",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/model-images/opel_astra_xs.jpg",
+    "alt": "Opel Astra",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/model-images/ford_focus_xs.jpg",
+    "alt": "Ford Focus",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/model-images/mercedes_benz_c-klasse_xs.jpg",
+    "alt": "Mercedes-Benz C-Klasse",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/model-images/ford_fiesta_xs.jpg",
+    "alt": "Ford Fiesta",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/model-images/opel_corsa_xs.jpg",
+    "alt": "Opel Corsa",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/bodytypes/kleinwagen-home-xs.jpg",
+    "alt": "Kleine Auto",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/bodytypes/kombi-home-xs.jpg",
+    "alt": "Stationwagon",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/bodytypes/minivan-home-xs.jpg",
+    "alt": "Van",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/bodytypes/suv-home-xs.jpg",
+    "alt": "SUV",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/bodytypes/coupe-home-xs.jpg",
+    "alt": "Coupe",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/bodytypes/transporter-home-xs.jpg",
+    "alt": "Bedrijfswagen",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/bodytypes/cabrio-home-xs.jpg",
+    "alt": "Cabrio",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/regional/images/model-finder/bodytypes/limousine-home-xs.jpg",
+    "alt": "Limousine",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/98b942ab-b580-4073-bb10-eab9aac96965_6139e60d-1608-4049-9d79-885d2f46d529.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f02bd88b-fc93-44cf-880b-4a41a1a0190c_42a2e014-9a46-42d0-83e9-272c3177ac54.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fa831cef-41eb-4b1f-a56a-190d4b82f2d8_0f02f4a4-f181-4047-991f-b85e8544c49b.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4cbc4071-c220-4449-b0c7-85df2be1abfc_4ac42353-fae0-4887-875c-46c5c57f1d3e.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/36703d7c-97c7-4265-b832-9fc2285e22a2_b2acd6e6-9f82-45ed-8cc2-d7b2f325759f.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bbd4a299-1e34-434c-ad7b-92be58ff4625_8342d454-1a55-4ff2-ad0b-e9112d9ff7e4.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/100f860c-ea30-45dc-a601-14895bff7191_3b3110a1-f2d9-41f1-aece-4ca10047d14d.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1ed4f3a5-e8ca-4c23-86a8-425fe0c5c1bb_8562e414-0ee6-4441-8da8-2f5c3a0cad6f.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7bd16d24-7e0c-4f96-87f6-44ca9ec50d98_1d5ae9d7-78dd-4ead-8811-58c9126d45af.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/98b942ab-b580-4073-bb10-eab9aac96965_6139e60d-1608-4049-9d79-885d2f46d529.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f02bd88b-fc93-44cf-880b-4a41a1a0190c_42a2e014-9a46-42d0-83e9-272c3177ac54.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fa831cef-41eb-4b1f-a56a-190d4b82f2d8_0f02f4a4-f181-4047-991f-b85e8544c49b.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4cbc4071-c220-4449-b0c7-85df2be1abfc_4ac42353-fae0-4887-875c-46c5c57f1d3e.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/36703d7c-97c7-4265-b832-9fc2285e22a2_b2acd6e6-9f82-45ed-8cc2-d7b2f325759f.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bbd4a299-1e34-434c-ad7b-92be58ff4625_8342d454-1a55-4ff2-ad0b-e9112d9ff7e4.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/100f860c-ea30-45dc-a601-14895bff7191_3b3110a1-f2d9-41f1-aece-4ca10047d14d.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1ed4f3a5-e8ca-4c23-86a8-425fe0c5c1bb_8562e414-0ee6-4441-8da8-2f5c3a0cad6f.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7bd16d24-7e0c-4f96-87f6-44ca9ec50d98_1d5ae9d7-78dd-4ead-8811-58c9126d45af.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Occasions Nederland",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Toestemming voor reclame - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/bedrijf/privacy-verklaring/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Toestemming voor reclame - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/bedrijf/privacy-verklaring/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/images/bg-desktop.webp",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/checkbox_black.f1f16ac5.svg",
+    "alt": "✓",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/checkbox_black.f1f16ac5.svg",
+    "alt": "✓",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/checkbox_black.f1f16ac5.svg",
+    "alt": "✓",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/checkbox_black.f1f16ac5.svg",
+    "alt": "✓",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/checkbox_black.f1f16ac5.svg",
+    "alt": "✓",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/checkbox_black.f1f16ac5.svg",
+    "alt": "✓",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/checkbox_black.f1f16ac5.svg",
+    "alt": "✓",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/checkbox_black.f1f16ac5.svg",
+    "alt": "✓",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/checkbox_black.f1f16ac5.svg",
+    "alt": "✓",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/1-text-black.63a5eca0.svg",
+    "alt": "Step 1 of 4: Kenteken invoeren",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/2-text-black.b98f1933.svg",
+    "alt": "Step 2 of 4: Waardebepaling",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/3-text-black.9e459b78.svg",
+    "alt": "Step 3 of 4: Afspraak en offerte",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/checkmark-sale.37df5d31.svg",
+    "alt": "Final step: Verkoop aan een autobedrijf",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/1-text-black.63a5eca0.svg",
+    "alt": "Step 1 of 5: Kenteken invoeren",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/2-text-black.b98f1933.svg",
+    "alt": "Step 2 of 5: Advertentie",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/3-text-black.9e459b78.svg",
+    "alt": "Step 3 of 5: Vragen van potentiële kopers",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/4-text-black.daa7973d.svg",
+    "alt": "Step 4 of 5: Proefritten en biedingen",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/checkmark-sale.37df5d31.svg",
+    "alt": "Final step: Verkoop",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/speed.344012bc.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/grey-star.f87a6fd5.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/grey-star.f87a6fd5.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/comfort.3e7a71c2.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/grey-star.f87a6fd5.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/grey-star.f87a6fd5.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/grey-star.f87a6fd5.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/grey-star.f87a6fd5.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/price.7cfa90bb.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/images/key.webp",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/black-star.8a0efb3f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/grey-star.f87a6fd5.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/private-seller-unified-flow/_next/static/media/grey-star.f87a6fd5.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Auto snel en gratis verkopen op AutoScout24: zo werkt het",
+    "pageUrl": "https://www.autoscout24.nl/auto-verkopen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
+    "alt": "Financing disclaimer",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a3ca1f12-6882-4ca4-a628-d8efc2ca0953_f340d1df-87b3-4b00-be7c-b45dbd6b3e9d.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b72b3edd-2e89-404a-8c50-e7b634cf7549_f565c253-cb89-4055-91e0-2cd68b1452ab.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/de4fda10-57a7-4053-97c0-5b4bf726d23e_09146c40-e946-4add-801a-12e580416142.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/36602128-original-92c591a4-3e3c-44ac-9a05-a8be853035f4.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cab2bade-3d42-4981-a683-7cbfe27ea24e_fb82c0d2-1dc1-46d5-bd80-41f6649c4192.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/46771975-original-ba63909c-ef93-4bde-8d2a-4c5408783f20.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9300d37c-e917-4782-9705-b16aa5b93f2b_752287e3-f302-4ebe-86bf-3162a6734326.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/24941293-original-fbf95c45-7c2c-4109-8b74-01d4dae8f9b9.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/afb05e6a-93e7-40b4-a722-f58e83db0eaa_50806c1b-7153-4411-bc98-b4a3b8b8d730.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/935b8f1d-6988-4dca-b90c-cdd2df1fdf84_c5dbfc57-0853-4e25-9065-47ba1062836b.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2e3b2c84-058c-4412-8ef0-dffa8af9b94e_daf8f32a-fddd-4c94-99c3-7fbb02f753be.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/7076818-original-477de26d-a130-45c0-86e4-332bb90c2f8d.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f07f9138-b1ce-41cc-81cb-a7c8cd3b755b_98ea8f44-e5d5-4a54-8181-8b71fe032732.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/10338138-original-7cd7ac5f-5db8-42d1-8e32-878b2350e008.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e7feb318-a4fd-4a7f-bcfc-e67e14784c6f_ebeaa978-a388-4986-ae05-848f372c7638.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/eb9b90bb-1cc8-4be5-9c88-c61dcb098a2c_c3c0ee10-b568-4ea0-af21-ce73ce297854.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/29364806-original-2548f931-9832-4028-8bfe-e5a992f8ca3f.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a26364a7-99b4-4867-a8cd-184784566a6a_6698f0fe-3a28-4cc2-aeae-013872bceb91.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/705acacb-6440-4cc2-810a-e49fc3530fc3_3d0ea36e-2a19-4fff-86f7-4e24a3daeea1.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/5171420-original-8dd55093-606d-4a30-86cc-6e1be1de9ca2.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/07125f25-c0c7-4086-b9f1-7d868e636bf0_74790243-0daa-4e18-a66a-a5f5a36ceff9.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/24941293-original-fbf95c45-7c2c-4109-8b74-01d4dae8f9b9.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6cc0f863-0d20-4527-b233-e86066678ff4_98e53470-18ba-4c76-bd0a-30d30eb22ecd.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/258/258.gif",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8bf693b9-8fbe-4bd5-82e0-0a3181ede811_45c94150-688e-4720-bd57-c8e19563c71f.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/25619956-original-636cd035-8493-4f10-9e94-4f87d585b9aa.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/dd4dcc61-abfc-4294-bd76-793000fdb07a_c70fc843-8ba2-490c-bce1-8f1f0d6f6be7.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5b320db6-c318-4ebd-9c43-1cc5056fd806_54cef634-68bf-492d-b7b4-b2ca426df6b6.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/11261-original-33375ed2-3618-450a-a45d-323e00c18962.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/997c2265-e936-4fd3-9154-fe55b88e100e_02ac1ed9-f4b4-4e5a-87b2-c38a004b7dce.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/43777327-original-49c3998e-de47-4589-8da3-266f02b95cbc.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e4b7c4f4-f6d8-4dc9-aafe-7545f8adab0c_ebb89b30-87e1-47b2-af59-07a3be761878.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/32937153-original-29782e6a-1273-4cf3-b8d6-9b1f51dc6577.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Koop Volkswagen Tiguan occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/volkswagen/tiguan"
+  },
   {
     "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
     "alt": "",
