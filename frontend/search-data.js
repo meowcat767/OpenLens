@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1583,
+    "url": "https://github.com/python/cpython/issues/118824",
+    "title": "Remove deprecated `master_open` and `slave_open` from `pty` · Issue #118824 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Remove deprecated master_open and slave_open from pty #118824 New issue Copy link New issue Copy link Closed Closed Remove deprecated master_open and slave_open from pty#118824 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description sobolevn opened on May 9, 2024 Issue body actions Feature or enhancement They were deprecated in #85984 and 244d4cd Linked PRs gh-118824: Remove deprecated master_open and slave_open from pty #118826 Reactions are currently unavailable Metadata Metadata Assignees sobolevn Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:25:36.929488"
+  },
+  {
+    "id": 1582,
+    "url": "https://github.com/python/cpython/issues/118827",
+    "title": "Remove deprecated `Quoter` from `urllib.parse` · Issue #118827 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Remove deprecated Quoter from urllib.parse #118827 New issue Copy link New issue Copy link Closed Closed Remove deprecated Quoter from urllib.parse#118827 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description sobolevn opened on May 9, 2024 Issue body actions Feature or enhancement It was deprecated in 3.11 d597fdc Linked PRs gh-118827: Remove Quoter from urllib.parse #118828 Reactions are currently unavailable Metadata Metadata Assignees sobolevn Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:25:34.695841"
+  },
+  {
+    "id": 1581,
+    "url": "https://github.com/python/cpython/issues/130914",
+    "title": "graphlib.TopologicalSorter.prepare() should be idempotent · Issue #130914 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k graphlib.TopologicalSorter.prepare() should be idempotent #130914 New issue Copy link New issue Copy link Closed #131317 Closed graphlib.TopologicalSorter.prepare() should be idempotent#130914 #131317 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description lordmauve opened on Mar 6, 2025 Issue body actions Feature or enhancement Proposal: Proposed Behaviour TopologicalSorter.prepare() should be idempotent such that calling it repeatedly without draining anything is not an error: \u003e\u003e\u003e import graphlib\n\u003e\u003e\u003e ts \u003d graphlib.TopologicalSorter()\n\u003e\u003e\u003e ts.prepare()\n\u003e\u003e\u003e ts.prepare() If you have called .get_ready()/.done() then calling prepare() is probably a programming error and this would raise: \u003e\u003e\u003e import graphlib\n\u003e\u003e\u003e ts \u003d graphlib.TopologicalSorter()\n\u003e\u003e\u003e ts.prepare()\n\u003e\u003e\u003e ts.get_ready()\n()\n\u003e\u003e\u003e ts.prepare()\nTraceback (most recent call last):\n  ...\nValueError: cannot prepare() after mutating prepared sorter Rationale TopologicalSorter.prepare() raises an exception if you call it twice: \u003e\u003e\u003e import graphlib\n\u003e\u003e\u003e ts \u003d graphlib.TopologicalSorter()\n\u003e\u003e\u003e ts.prepare()\n\u003e\u003e\u003e ts.prepare()\nTraceback (most recent call last):\n  File \"\u003cpython-input-3\u003e\", line 1, in \u003cmodule\u003e\n    ts.prepare()\n    ~~~~~~~~~~^^\n  File \"/home/mauve/.local/share/ext-python/python-3.13.0.82/lib/python3.13/graphlib.py\", line 95, in prepare\n    raise ValueError(\"cannot prepare() more than once\")\nValueError: cannot prepare() more than once This is rather unfortunate because if you return a TopologicalSorter that is prepared: def get_sorter(targets) -\u003e TopologicalSorter[str]:\n    \"\"\"Get a TopologicalSorter that pursues the given targets.\"\"\"\n    deps \u003d filter_deps(load_deps(), targets)\n    ts \u003d TopologicalSorter(deps)\n    ts.prepare()\n    return ts because then you cannot run .static_order() on it: \u003e\u003e\u003e get_sorter().static_order()\nTraceback (most recent call last):\n  ...\nValueError: cannot prepare() more than once while if you don\u0027t prepare(), you then require the caller to do it, meaning the function that populates and returns a TopologicalSorter didn\u0027t leave it in a prepared state. It seems appropriate for such a function to call prepare() in order to leave the TopologicalSorter ready to iterate and also closed for the addition of new nodes/predecessors. Therefore I think prepare() should be idempotent. Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: This is related to #91301 which discusses removing TopologicalSorter.prepare() entirely. Doing so would bypass this issue. Linked PRs gh-130914: Make graphlib.TopologicalSorter.prepare() idempotent #131317 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:25:32.249969"
+  },
+  {
+    "id": 1580,
+    "url": "https://docs.python.org/3/library/functools.html#functools.Placeholder",
+    "title": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Functional Programming Modules » functools — Higher-order functions and operations on callable objects | Theme Auto Light Dark | functools — Higher-order functions and operations on callable objects¶ Source code: Lib/functools.py The functools module is for higher-order functions: functions that act on or return other functions. In general, any callable object can be treated as a function for the purposes of this module. The functools module defines the following functions: @functools.cache(user_function)¶ Simple lightweight unbounded function cache. Sometimes called “memoize”. Returns the same as lru_cache(maxsize\u003dNone), creating a thin wrapper around a dictionary lookup for the function arguments. Because it never needs to evict old values, this is smaller and faster than lru_cache() with a size limit. For example: @cache\ndef factorial(n):\n    return n * factorial(n-1) if n else 1\n\n\u003e\u003e\u003e factorial(10)   # no previously cached result, makes 11 recursive calls\n3628800\n\u003e\u003e\u003e factorial(5)    # no new calls, just returns the cached result\n120\n\u003e\u003e\u003e factorial(12)   # two new recursive calls, factorial(10) is cached\n479001600\n The cache is threadsafe so that the wrapped function can be used in multiple threads. This means that the underlying data structure will remain coherent during concurrent updates. It is possible for the wrapped function to be called more than once if another thread makes an additional call before the initial call has been completed and cached. Added in version 3.9. @functools.cached_property(func)¶ Transform a method of a class into a property whose value is computed once and then cached as a normal attribute for the life of the instance. Similar to property(), with the addition of caching. Useful for expensive computed properties of instances that are otherwise effectively immutable. Example: class DataSet:\n\n    def __init__(self, sequence_of_numbers):\n        self._data \u003d tuple(sequence_of_numbers)\n\n    @cached_property\n    def stdev(self):\n        return statistics.stdev(self._data)\n The mechanics of cached_property() are somewhat different from property(). A regular property blocks attribute writes unless a setter is defined. In contrast, a cached_property allows writes. The cached_property decorator only runs on lookups and only when an attribute of the same name doesn’t exist. When it does run, the cached_property writes to the attribute with the same name. Subsequent attribute reads and writes take precedence over the cached_property method and it works like a normal attribute. The cached value can be cleared by deleting the attribute. This allows the cached_property method to run again. The cached_property does not prevent a possible race condition in multi-threaded usage. The getter function could run more than once on the same instance, with the latest run setting the cached value. If the cached property is idempotent or otherwise not harmful to run more than once on an instance, this is fine. If synchronization is needed, implement the necessary locking inside the decorated getter function or around the cached property access. Note, this decorator interferes with the operation of PEP 412 key-sharing dictionaries. This means that instance dictionaries can take more space than usual. Also, this decorator requires that the __dict__ attribute on each instance be a mutable mapping. This means it will not work with some types, such as metaclasses (since the __dict__ attributes on type instances are read-only proxies for the class namespace), and those that specify __slots__ without including __dict__ as one of the defined slots (as such classes don’t provide a __dict__ attribute at all). If a mutable mapping is not available or if space-efficient key sharing is desired, an effect similar to cached_property() can also be achieved by stacking property() on top of lru_cache(). See How do I cache method calls? for more details on how this differs from cached_property(). Added in version 3.8. Changed in version 3.12: Prior to Python 3.12, cached_property included an undocumented lock to ensure that in multi-threaded usage the getter function was guaranteed to run only once per instance. However, the lock was per-property, not per-instance, which could result in unacceptably high lock contention. In Python 3.12+ this locking is removed. functools.cmp_to_key(func)¶ Transform an old-style comparison function to a key function. Used with tools that accept key functions (such as sorted(), min(), max(), heapq.nlargest(), heapq.nsmallest(), itertools.groupby()). This function is primarily used as a transition tool for programs being converted from Python 2 which supported the use of comparison functions. A comparison function is any callable that accepts two arguments, compares them, and returns a negative number for less-than, zero for equality, or a positive number for greater-than. A key fun",
+    "scrapedAt": "2026-05-09 01:25:30.056628"
+  },
+  {
+    "id": 1579,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#elif",
+    "title": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 8. Compound statements | Theme Auto Light Dark | 8. Compound statements¶ Compound statements contain (groups of) other statements; they affect or control the execution of those other statements in some way. In general, compound statements span multiple lines, although in simple incarnations a whole compound statement may be contained in one line. The if, while and for statements implement traditional control flow constructs. try specifies exception handlers and/or cleanup code for a group of statements, while the with statement allows the execution of initialization and finalization code around a block of code. Function and class definitions are also syntactically compound statements. A compound statement consists of one or more ‘clauses.’ A clause consists of a header and a ‘suite.’ The clause headers of a particular compound statement are all at the same indentation level. Each clause header begins with a uniquely identifying keyword and ends with a colon. A suite is a group of statements controlled by a clause. A suite can be one or more semicolon-separated simple statements on the same line as the header, following the header’s colon, or it can be one or more indented statements on subsequent lines. Only the latter form of a suite can contain nested compound statements; the following is illegal, mostly because it wouldn’t be clear to which if clause a following else clause would belong: if test1: if test2: print(x)\n Also note that the semicolon binds tighter than the colon in this context, so that in the following example, either all or none of the print() calls are executed: if x \u003c y \u003c z: print(x); print(y); print(z)\n Summarizing: compound_stmt: if_stmt\n               | while_stmt\n               | for_stmt\n               | try_stmt\n               | with_stmt\n               | match_stmt\n               | funcdef\n               | classdef\n               | async_with_stmt\n               | async_for_stmt\n               | async_funcdef\nsuite:         stmt_list NEWLINE | NEWLINE INDENT statement+ DEDENT\nstatement:     stmt_list NEWLINE | compound_stmt\nstmt_list:     simple_stmt (\";\" simple_stmt)* [\";\"]\n Note that statements always end in a NEWLINE possibly followed by a DEDENT. Also note that optional continuation clauses always begin with a keyword that cannot start a statement, thus there are no ambiguities (the ‘dangling else’ problem is solved in Python by requiring nested if statements to be indented). The formatting of the grammar rules in the following sections places each clause on a separate line for clarity. 8.1. The if statement¶ The if statement is used for conditional execution: if_stmt: \"if\" assignment_expression \":\" suite\n         (\"elif\" assignment_expression \":\" suite)*\n         [\"else\" \":\" suite]\n It selects exactly one of the suites by evaluating the expressions one by one until one is found to be true (see section Boolean operations for the definition of true and false); then that suite is executed (and no other part of the if statement is executed or evaluated). If all expressions are false, the suite of the else clause, if present, is executed. 8.2. The while statement¶ The while statement is used for repeated execution as long as an expression is true: while_stmt: \"while\" assignment_expression \":\" suite\n            [\"else\" \":\" suite]\n This repeatedly tests the expression and, if it is true, executes the first suite; if the expression is false (which may be the first time it is tested) the suite of the else clause, if present, is executed and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and goes back to testing the expression. 8.3. The for statement¶ The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object: for_stmt: \"for\" target_list \"in\" starred_expression_list \":\" suite\n          [\"else\" \":\" suite]\n The starred_expression_list expression is evaluated once; it should yield an iterable object. An iterator is created for that iterable. The first item provided by the iterator is then assigned to the target list using the standard rules for assignments (see Assignment statements), and the suite is executed. This repeats for each item provided by the iterator. When the iterator is exhausted, the suite in the else clause, if present, is executed, and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and continues with the next item, or with the else clause if there is no next item. The for-loop makes assignments to the variables in the target list. This overwrites all previous assignments to those v",
+    "scrapedAt": "2026-05-09 01:25:28.805928"
+  },
+  {
     "id": 1578,
     "url": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare",
     "title": "graphlib — Functionality to operate with graph-like structures — Python 3.14.5rc1 documentation",
@@ -10638,26 +10673,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1579,
-    "url": "https://docs.python.org/3/reference/compound_stmts.html#elif"
-  },
-  {
-    "id": 1580,
-    "url": "https://docs.python.org/3/library/functools.html#functools.Placeholder"
-  },
-  {
-    "id": 1581,
-    "url": "https://github.com/python/cpython/issues/130914"
-  },
-  {
-    "id": 1582,
-    "url": "https://github.com/python/cpython/issues/118827"
-  },
-  {
-    "id": 1583,
-    "url": "https://github.com/python/cpython/issues/118824"
   },
   {
     "id": 1584,
@@ -240295,10 +240310,174 @@ window.searchData = [
     "id": 341994,
     "url": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.add",
     "parentUrl": "https://docs.python.org/3/library/graphlib.html#graphlib.TopologicalSorter.prepare"
+  },
+  {
+    "id": 342374,
+    "url": "https://github.com/python/cpython/issues/130914#top",
+    "parentUrl": "https://github.com/python/cpython/issues/130914"
+  },
+  {
+    "id": 342375,
+    "url": "https://github.com/python/cpython/pull/131317",
+    "parentUrl": "https://github.com/python/cpython/issues/130914"
+  },
+  {
+    "id": 342378,
+    "url": "https://github.com/python/cpython/issues/130914#issue-2900579752",
+    "parentUrl": "https://github.com/python/cpython/issues/130914"
+  },
+  {
+    "id": 342379,
+    "url": "https://github.com/python/cpython/issues/91301",
+    "parentUrl": "https://github.com/python/cpython/issues/130914"
+  },
+  {
+    "id": 342380,
+    "url": "https://github.com/lordmauve",
+    "parentUrl": "https://github.com/python/cpython/issues/130914"
+  },
+  {
+    "id": 342383,
+    "url": "https://github.com/python/cpython/issues/130914#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130914"
+  },
+  {
+    "id": 342390,
+    "url": "https://github.com/python/cpython/issues/118827#top",
+    "parentUrl": "https://github.com/python/cpython/issues/118827"
+  },
+  {
+    "id": 342391,
+    "url": "https://github.com/python/cpython/issues/118827#issue-2287286217",
+    "parentUrl": "https://github.com/python/cpython/issues/118827"
+  },
+  {
+    "id": 342395,
+    "url": "https://github.com/python/cpython/commit/d597fdc5fd0e8aa73a783fea27287db669950c15",
+    "parentUrl": "https://github.com/python/cpython/issues/118827"
+  },
+  {
+    "id": 342397,
+    "url": "https://github.com/python/cpython/issues/118827#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/118827"
+  },
+  {
+    "id": 342398,
+    "url": "https://github.com/python/cpython/pull/118828",
+    "parentUrl": "https://github.com/python/cpython/issues/118827"
+  },
+  {
+    "id": 342403,
+    "url": "https://github.com/python/cpython/issues/118824#issue-2287212036",
+    "parentUrl": "https://github.com/python/cpython/issues/118824"
+  },
+  {
+    "id": 342406,
+    "url": "https://github.com/python/cpython/commit/244d4cd9d22d73fb3c0938937c4f435bd68f32d4",
+    "parentUrl": "https://github.com/python/cpython/issues/118824"
+  },
+  {
+    "id": 342411,
+    "url": "https://github.com/python/cpython/pull/118826",
+    "parentUrl": "https://github.com/python/cpython/issues/118824"
+  },
+  {
+    "id": 342412,
+    "url": "https://github.com/python/cpython/issues/118824#top",
+    "parentUrl": "https://github.com/python/cpython/issues/118824"
+  },
+  {
+    "id": 342413,
+    "url": "https://github.com/python/cpython/issues/118824#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/118824"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "sobolevn",
+    "pageTitle": "Remove deprecated `master_open` and `slave_open` from `pty` · Issue #118824 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118824"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@sobolevn",
+    "pageTitle": "Remove deprecated `master_open` and `slave_open` from `pty` · Issue #118824 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118824"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@sobolevn",
+    "pageTitle": "Remove deprecated `master_open` and `slave_open` from `pty` · Issue #118824 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118824"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "Remove deprecated `master_open` and `slave_open` from `pty` · Issue #118824 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118824"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "sobolevn",
+    "pageTitle": "Remove deprecated `Quoter` from `urllib.parse` · Issue #118827 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118827"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@sobolevn",
+    "pageTitle": "Remove deprecated `Quoter` from `urllib.parse` · Issue #118827 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118827"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@sobolevn",
+    "pageTitle": "Remove deprecated `Quoter` from `urllib.parse` · Issue #118827 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118827"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "Remove deprecated `Quoter` from `urllib.parse` · Issue #118827 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118827"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/617224?u\u003d4ed9d681fcf3ee8766527ef730b201fc339cf163\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@lordmauve",
+    "pageTitle": "graphlib.TopologicalSorter.prepare() should be idempotent · Issue #130914 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130914"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/617224?u\u003d4ed9d681fcf3ee8766527ef730b201fc339cf163\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@lordmauve",
+    "pageTitle": "graphlib.TopologicalSorter.prepare() should be idempotent · Issue #130914 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130914"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#functools.Placeholder"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#functools.Placeholder"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#elif"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#elif"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
