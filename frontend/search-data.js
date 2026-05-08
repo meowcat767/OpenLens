@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1412,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph",
+    "title": "Call Graph Introspection — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Call Graph Introspection | Theme Auto Light Dark | Call Graph Introspection¶ Source code: Lib/asyncio/graph.py asyncio has powerful runtime call graph introspection utilities to trace the entire call graph of a running coroutine or task, or a suspended future. These utilities and the underlying machinery can be used from within a Python program or by external profilers and debuggers. Added in version 3.14. asyncio.print_call_graph(future\u003dNone, /, *, file\u003dNone, depth\u003d1, limit\u003dNone)¶ Print the async call graph for the current task or the provided Task or Future. This function prints entries starting from the top frame and going down towards the invocation point. The function receives an optional future argument. If not passed, the current running task will be used. If the function is called on the current task, the optional keyword-only depth argument can be used to skip the specified number of frames from top of the stack. If the optional keyword-only limit argument is provided, each call stack in the resulting graph is truncated to include at most abs(limit) entries. If limit is positive, the entries left are the closest to the invocation point. If limit is negative, the topmost entries are left. If limit is omitted or None, all entries are present. If limit is 0, the call stack is not printed at all, only “awaited by” information is printed. If file is omitted or None, the function will print to sys.stdout. Example: The following Python code: import asyncio\n\nasync def test():\n    asyncio.print_call_graph()\n\nasync def main():\n    async with asyncio.TaskGroup() as g:\n        g.create_task(test(), name\u003d\u0027test\u0027)\n\nasyncio.run(main())\n will print: * Task(name\u003d\u0027test\u0027, id\u003d0x1039f0fe0)\n+ Call stack:\n|   File \u0027t2.py\u0027, line 4, in async test()\n+ Awaited by:\n   * Task(name\u003d\u0027Task-1\u0027, id\u003d0x103a5e060)\n      + Call stack:\n      |   File \u0027taskgroups.py\u0027, line 107, in async TaskGroup.__aexit__()\n      |   File \u0027t2.py\u0027, line 7, in async main()\n asyncio.format_call_graph(future\u003dNone, /, *, depth\u003d1, limit\u003dNone)¶ Like print_call_graph(), but returns a string. If future is None and there’s no current task, the function returns an empty string. asyncio.capture_call_graph(future\u003dNone, /, *, depth\u003d1, limit\u003dNone)¶ Capture the async call graph for the current task or the provided Task or Future. The function receives an optional future argument. If not passed, the current running task will be used. If there’s no current task, the function returns None. If the function is called on the current task, the optional keyword-only depth argument can be used to skip the specified number of frames from top of the stack. Returns a FutureCallGraph data class object: FutureCallGraph(future, call_stack, awaited_by) Where future is a reference to a Future or a Task (or their subclasses.) call_stack is a tuple of FrameCallGraphEntry objects. awaited_by is a tuple of FutureCallGraph objects. FrameCallGraphEntry(frame) Where frame is a frame object of a regular Python function in the call stack. Low level utility functions¶ To introspect an async call graph asyncio requires cooperation from control flow structures, such as shield() or TaskGroup. Any time an intermediate Future object with low-level APIs like Future.add_done_callback() is involved, the following two functions should be used to inform asyncio about how exactly such intermediate future objects are connected with the tasks they wrap or control. asyncio.future_add_to_awaited_by(future, waiter, /)¶ Record that future is awaited on by waiter. Both future and waiter must be instances of Future or Task or their subclasses, otherwise the call would have no effect. A call to future_add_to_awaited_by() must be followed by an eventual call to the future_discard_from_awaited_by() function with the same arguments. asyncio.future_discard_from_awaited_by(future, waiter, /)¶ Record that future is no longer awaited on by waiter. Both future and waiter must be instances of Future or Task or their subclasses, otherwise the call would have no effect. Table of Contents Call Graph Introspection Low level utility functions Previous topic Exceptions Next topic Event loop This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Call Graph Introspection | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, ",
+    "scrapedAt": "2026-05-09 01:18:53.287167"
+  },
+  {
+    "id": 1411,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_LegacyWindowsStdioFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-09 01:18:51.970854"
+  },
+  {
+    "id": 1410,
+    "url": "https://docs.python.org/3/library/exceptions.html#OSError",
+    "title": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Exceptions | Theme Auto Light Dark | Built-in Exceptions¶ In Python, all exceptions must be instances of a class that derives from BaseException. In a try statement with an except clause that mentions a particular class, that clause also handles any exception classes derived from that class (but not exception classes from which it is derived). Two exception classes that are not related via subclassing are never equivalent, even if they have the same name. The built-in exceptions listed in this chapter can be generated by the interpreter or built-in functions. Except where mentioned, they have an “associated value” indicating the detailed cause of the error. This may be a string or a tuple of several items of information (e.g., an error code and a string explaining the code). The associated value is usually passed as arguments to the exception class’s constructor. User code can raise built-in exceptions. This can be used to test an exception handler or to report an error condition “just like” the situation in which the interpreter raises the same exception; but beware that there is nothing to prevent user code from raising an inappropriate error. The built-in exception classes can be subclassed to define new exceptions; programmers are encouraged to derive new exceptions from the Exception class or one of its subclasses, and not from BaseException. More information on defining exceptions is available in the Python Tutorial under User-defined Exceptions. Exception context¶ Three attributes on exception objects provide information about the context in which the exception was raised: BaseException.__context__¶ BaseException.__cause__¶ BaseException.__suppress_context__¶ When raising a new exception while another exception is already being handled, the new exception’s __context__ attribute is automatically set to the handled exception. An exception may be handled when an except or finally clause, or a with statement, is used. This implicit exception context can be supplemented with an explicit cause by using from with raise: raise new_exc from original_exc\n The expression following from must be an exception or None. It will be set as __cause__ on the raised exception. Setting __cause__ also implicitly sets the __suppress_context__ attribute to True, so that using raise new_exc from None effectively replaces the old exception with the new one for display purposes (e.g. converting KeyError to AttributeError), while leaving the old exception available in __context__ for introspection when debugging. The default traceback display code shows these chained exceptions in addition to the traceback for the exception itself. An explicitly chained exception in __cause__ is always shown when present. An implicitly chained exception in __context__ is shown only if __cause__ is None and __suppress_context__ is false. In either case, the exception itself is always shown after any chained exceptions so that the final line of the traceback always shows the last exception that was raised. Inheriting from built-in exceptions¶ User code can create subclasses that inherit from an exception type. It’s recommended to only subclass one exception type at a time to avoid any possible conflicts between how the bases handle the args attribute, as well as due to possible memory layout incompatibilities. CPython implementation detail: Most built-in exceptions are implemented in C for efficiency, see: Objects/exceptions.c. Some have custom memory layouts which makes it impossible to create a subclass that inherits from multiple exception types. The memory layout of a type is an implementation detail and might change between Python versions, leading to new conflicts in the future. Therefore, it’s recommended to avoid subclassing multiple exception types altogether. Base classes¶ The following exceptions are used mostly as base classes for other exceptions. exception BaseException¶ The base class for all built-in exceptions. It is not meant to be directly inherited by user-defined classes (for that, use Exception). If str() is called on an instance of this class, the representation of the argument(s) to the instance are returned, or the empty string when there were no arguments. args¶ The tuple of arguments given to the exception constructor. Some built-in exceptions (like OSError) expect a certain number of arguments and assign a special meaning to the elements of this tuple, while others are usually called only with a single string giving an error message. with_traceback(tb)¶ This method sets tb as the new traceback for the exception and returns the exception object. It was more commonly used before the exception chaining features of PEP 3134 became available. The following example shows how we can convert an instance of SomeException into an instance of OtherException while preserving the traceback. Once raised, the current ",
+    "scrapedAt": "2026-05-09 01:18:50.747906"
+  },
+  {
+    "id": 1409,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Pop",
+    "title": "Dictionary Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Dictionary Objects | Theme Auto Light Dark | Dictionary Objects¶ type PyDictObject¶ This subtype of PyObject represents a Python dictionary object. PyTypeObject PyDict_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python dictionary type. This is the same object as dict in the Python layer. int PyDict_Check(PyObject *p)¶ Thread safety: Atomic. Return true if p is a dict object or an instance of a subtype of the dict type. This function always succeeds. int PyDict_CheckExact(PyObject *p)¶ Thread safety: Atomic. Return true if p is a dict object, but not an instance of a subtype of the dict type. This function always succeeds. PyObject *PyDict_New()¶ Return value: New reference. Part of the Stable ABI. Thread safety: Atomic. Return a new empty dictionary, or NULL on failure. PyObject *PyDictProxy_New(PyObject *mapping)¶ Return value: New reference. Part of the Stable ABI. Return a types.MappingProxyType object for a mapping which enforces read-only behavior. This is normally used to create a view to prevent modification of the dictionary for non-dynamic class types. PyTypeObject PyDictProxy_Type¶ Part of the Stable ABI. The type object for mapping proxy objects created by PyDictProxy_New() and for the read-only __dict__ attribute of many built-in types. A PyDictProxy_Type instance provides a dynamic, read-only view of an underlying dictionary: changes to the underlying dictionary are reflected in the proxy, but the proxy itself does not support mutation operations. This corresponds to types.MappingProxyType in Python. void PyDict_Clear(PyObject *p)¶ Part of the Stable ABI. Thread safety: Atomic. Empty an existing dictionary of all key-value pairs. int PyDict_Contains(PyObject *p, PyObject *key)¶ Part of the Stable ABI. Thread safety: Safe for concurrent use on the same object. Determine if dictionary p contains key. If an item in p matches key, return 1, otherwise return 0. On error, return -1. This is equivalent to the Python expression key in p. Note The operation is atomic on free threading when key is str, int, float, bool or bytes. int PyDict_ContainsString(PyObject *p, const char *key)¶ Thread safety: Atomic. This is the same as PyDict_Contains(), but key is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. Added in version 3.13. PyObject *PyDict_Copy(PyObject *p)¶ Return value: New reference. Part of the Stable ABI. Thread safety: Atomic. Return a new dictionary that contains the same key-value pairs as p. int PyDict_SetItem(PyObject *p, PyObject *key, PyObject *val)¶ Part of the Stable ABI. Thread safety: Safe for concurrent use on the same object. Insert val into the dictionary p with a key of key. key must be hashable; if it isn’t, TypeError will be raised. Return 0 on success or -1 on failure. This function does not steal a reference to val. Note The operation is atomic on free threading when key is str, int, float, bool or bytes. int PyDict_SetItemString(PyObject *p, const char *key, PyObject *val)¶ Part of the Stable ABI. Thread safety: Atomic. This is the same as PyDict_SetItem(), but key is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. int PyDict_DelItem(PyObject *p, PyObject *key)¶ Part of the Stable ABI. Thread safety: Safe for concurrent use on the same object. Remove the entry in dictionary p with key key. key must be hashable; if it isn’t, TypeError is raised. If key is not in the dictionary, KeyError is raised. Return 0 on success or -1 on failure. Note The operation is atomic on free threading when key is str, int, float, bool or bytes. int PyDict_DelItemString(PyObject *p, const char *key)¶ Part of the Stable ABI. Thread safety: Atomic. This is the same as PyDict_DelItem(), but key is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. int PyDict_GetItemRef(PyObject *p, PyObject *key, PyObject **result)¶ Part of the Stable ABI since version 3.13. Thread safety: Safe for concurrent use on the same object. Return a new strong reference to the object from dictionary p which has a key key: If the key is present, set *result to a new strong reference to the value and return 1. If the key is missing, set *result to NULL and return 0. On error, raise an exception, set *result to NULL and return -1. Note The operation is atomic on free threading when key is str, int, float, bool or bytes. Added in version 3.13. See also the PyObject_GetItem() function. PyObject *PyDict_GetItem(PyObject *p, PyObject *key)¶ Return value: Borrowed reference. Part of the Stable ABI. Thread safety: Safe to call from multiple threads with external synchronization only. Return a borrowed reference to the object from dictionary p which has a key key. Return NULL if the key key is missing without setting an exception. Note Exceptions that occur while this calls __hash",
+    "scrapedAt": "2026-05-09 01:18:49.505064"
+  },
+  {
+    "id": 1408,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.sqlite_version_info",
+    "title": "sqlite3 — DB-API 2.0 interface for SQLite databases — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Persistence » sqlite3 — DB-API 2.0 interface for SQLite databases | Theme Auto Light Dark | sqlite3 — DB-API 2.0 interface for SQLite databases¶ Source code: Lib/sqlite3/ SQLite is a C library that provides a lightweight disk-based database that doesn’t require a separate server process and allows accessing the database using a nonstandard variant of the SQL query language. Some applications can use SQLite for internal data storage. It’s also possible to prototype an application using SQLite and then port the code to a larger database such as PostgreSQL or Oracle. The sqlite3 module was written by Gerhard Häring. It provides an SQL interface compliant with the DB-API 2.0 specification described by PEP 249, and requires the third-party SQLite library. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. This document includes four main sections: Tutorial teaches how to use the sqlite3 module. Reference describes the classes and functions this module defines. How-to guides details how to handle specific tasks. Explanation provides in-depth background on transaction control. See also https://www.sqlite.org The SQLite web page; the documentation describes the syntax and the available data types for the supported SQL dialect. https://www.w3schools.com/sql/ Tutorial, reference and examples for learning SQL syntax. PEP 249 - Database API Specification 2.0 PEP written by Marc-André Lemburg. Tutorial¶ In this tutorial, you will create a database of Monty Python movies using basic sqlite3 functionality. It assumes a fundamental understanding of database concepts, including cursors and transactions. First, we need to create a new database and open a database connection to allow sqlite3 to work with it. Call sqlite3.connect() to create a connection to the database tutorial.db in the current working directory, implicitly creating it if it does not exist: import sqlite3\ncon \u003d sqlite3.connect(\"tutorial.db\")\n The returned Connection object con represents the connection to the on-disk database. In order to execute SQL statements and fetch results from SQL queries, we will need to use a database cursor. Call con.cursor() to create the Cursor: cur \u003d con.cursor()\n Now that we’ve got a database connection and a cursor, we can create a database table movie with columns for title, release year, and review score. For simplicity, we can just use column names in the table declaration – thanks to the flexible typing feature of SQLite, specifying the data types is optional. Execute the CREATE TABLE statement by calling cur.execute(...): cur.execute(\"CREATE TABLE movie(title, year, score)\")\n We can verify that the new table has been created by querying the sqlite_master table built-in to SQLite, which should now contain an entry for the movie table definition (see The Schema Table for details). Execute that query by calling cur.execute(...), assign the result to res, and call res.fetchone() to fetch the resulting row: \u003e\u003e\u003e res \u003d cur.execute(\"SELECT name FROM sqlite_master\")\n\u003e\u003e\u003e res.fetchone()\n(\u0027movie\u0027,)\n We can see that the table has been created, as the query returns a tuple containing the table’s name. If we query sqlite_master for a non-existent table spam, res.fetchone() will return None: \u003e\u003e\u003e res \u003d cur.execute(\"SELECT name FROM sqlite_master WHERE name\u003d\u0027spam\u0027\")\n\u003e\u003e\u003e res.fetchone() is None\nTrue\n Now, add two rows of data supplied as SQL literals by executing an INSERT statement, once again by calling cur.execute(...): cur.execute(\"\"\"\n    INSERT INTO movie VALUES\n        (\u0027Monty Python and the Holy Grail\u0027, 1975, 8.2),\n        (\u0027And Now for Something Completely Different\u0027, 1971, 7.5)\n\"\"\")\n The INSERT statement implicitly opens a transaction, which needs to be committed before changes are saved in the database (see Transaction control for details). Call con.commit() on the connection object to commit the transaction: con.commit()\n We can verify that the data was inserted correctly by executing a SELECT query. Use the now-familiar cur.execute(...) to assign the result to res, and call res.fetchall() to return all resulting rows: \u003e\u003e\u003e res \u003d cur.execute(\"SELECT score FROM movie\")\n\u003e\u003e\u003e res.fetchall()\n[(8.2,), (7.5,)]\n The result is a list of two tuples, one per row, each containing that row’s score value. Now, insert three more rows by calling cur.executemany(...): data \u003d [\n    (\"Monty Python Live at the Hollywood Bowl\", 1982, 7.9),\n    (\"Monty Python\u0027s The Meaning of Life\", 1983, 7.5),\n    (\"Monty Python\u0027s Life of Brian\", 1979, 8.0),\n]\ncur.executemany(\"INSERT INTO movie VALUES(?, ?, ?)\", data)\ncon.commit()  # Remember to commit the transaction after executing INSERT.\n Notice that ? placeholders are used to bind data to the query. Always use placeholders inste",
+    "scrapedAt": "2026-05-09 01:18:48.255546"
+  },
+  {
     "id": 1407,
     "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetPath",
     "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
@@ -9448,26 +9483,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1408,
-    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.sqlite_version_info"
-  },
-  {
-    "id": 1409,
-    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Pop"
-  },
-  {
-    "id": 1410,
-    "url": "https://docs.python.org/3/library/exceptions.html#OSError"
-  },
-  {
-    "id": 1411,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_LegacyWindowsStdioFlag"
-  },
-  {
-    "id": 1412,
-    "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
   },
   {
     "id": 1413,
@@ -231450,10 +231465,105 @@ window.searchData = [
     "id": 293684,
     "url": "https://github.com/python/cpython/pull/127592#ref-commit-c5da367",
     "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 295089,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/asyncio/graph.py",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "id": 295091,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/asyncio-graph.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "id": 295092,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#call-graph-introspection",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "id": 295094,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.format_call_graph",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "id": 295098,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.future_discard_from_awaited_by",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "id": 295103,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.future_add_to_awaited_by",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "id": 295104,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Call Graph Introspection — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Call Graph Introspection — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_LegacyWindowsStdioFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_LegacyWindowsStdioFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#OSError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#OSError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Dictionary Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Pop"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Dictionary Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Pop"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sqlite3 — DB-API 2.0 interface for SQLite databases — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sqlite3.html#sqlite3.sqlite_version_info"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sqlite3 — DB-API 2.0 interface for SQLite databases — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sqlite3.html#sqlite3.sqlite_version_info"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
