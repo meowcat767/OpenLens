@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1183,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen",
+    "title": "Operating System Utilities — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Utilities » Operating System Utilities | Theme Auto Light Dark | Operating System Utilities¶ PyObject *PyOS_FSPath(PyObject *path)¶ Return value: New reference. Part of the Stable ABI since version 3.6. Return the file system representation for path. If the object is a str or bytes object, then a new strong reference is returned. If the object implements the os.PathLike interface, then __fspath__() is returned as long as it is a str or bytes object. Otherwise TypeError is raised and NULL is returned. Added in version 3.6. int Py_FdIsInteractive(FILE *fp, const char *filename)¶ Return true (nonzero) if the standard I/O file fp with name filename is deemed interactive. This is the case for files for which isatty(fileno(fp)) is true. If the PyConfig.interactive is non-zero, this function also returns true if the filename pointer is NULL or if the name is equal to one of the strings \u0027\u003cstdin\u003e\u0027 or \u0027???\u0027. This function must not be called before Python is initialized. void PyOS_BeforeFork()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to prepare some internal state before a process fork. This should be called before calling fork() or any similar function that clones the current process. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_BeforeFork(). Added in version 3.7. void PyOS_AfterFork_Parent()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to update some internal state after a process fork. This should be called from the parent process after calling fork() or any similar function that clones the current process, regardless of whether process cloning was successful. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_AfterFork_Parent(). Added in version 3.7. void PyOS_AfterFork_Child()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to update internal interpreter state after a process fork. This must be called from the child process after calling fork(), or any similar function that clones the current process, if there is any chance the process will call back into the Python interpreter. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_AfterFork_Child(). Added in version 3.7. See also os.register_at_fork() allows registering custom Python functions to be called by PyOS_BeforeFork(), PyOS_AfterFork_Parent() and PyOS_AfterFork_Child(). void PyOS_AfterFork()¶ Part of the Stable ABI on platforms with fork(). Function to update some internal state after a process fork; this should be called in the new process if the Python interpreter will continue to be used. If a new executable is loaded into the new process, this function does not need to be called. Deprecated since version 3.7: This function is superseded by PyOS_AfterFork_Child(). int PyOS_CheckStack()¶ Part of the Stable ABI on platforms with USE_STACKCHECK since version 3.7. Return true when the interpreter runs out of stack space. This is a reliable check, but is only available when USE_STACKCHECK is defined (currently on certain versions of Windows using the Microsoft Visual C++ compiler). USE_STACKCHECK will be defined automatically; you should never change the definition in your own code. typedef void (*PyOS_sighandler_t)(int)¶ Part of the Stable ABI. PyOS_sighandler_t PyOS_getsig(int i)¶ Part of the Stable ABI. Return the current signal handler for signal i. This is a thin wrapper around either sigaction() or signal(). Do not call those functions directly! PyOS_sighandler_t PyOS_setsig(int i, PyOS_sighandler_t h)¶ Part of the Stable ABI. Set the signal handler for signal i to be h; return the old signal handler. This is a thin wrapper around either sigaction() or signal(). Do not call those functions directly! int PyOS_InterruptOccurred(void)¶ Part of the Stable ABI. Check if a SIGINT signal has been received. Returns 1 if a SIGINT has occurred and clears the signal flag, or 0 otherwise. In most cases, you should prefer PyErr_CheckSignals() over this function. PyErr_CheckSignals() invokes the appropriate signal handlers for all pending signals, allowing Python code to handle the signal properly. This function only detects SIGINT and does not invoke any Python signal handlers. This function is async-signal-safe and this function cannot fail. The caller must hold an attached thread state. wchar_t *Py_DecodeLocale(const char *arg, size_t *size)¶ Part of the Stable ABI since version 3.7. Warning This function should not be called directly: use the PyConfig API with the PyConfig_SetBytesStrin",
+    "scrapedAt": "2026-05-09 01:09:26.792981"
+  },
+  {
+    "id": 1182,
+    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetObject",
+    "title": "Weak Reference Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Weak Reference Objects | Theme Auto Light Dark | Weak Reference Objects¶ Python supports weak references as first-class objects. There are two specific object types which directly implement weak references. The first is a simple reference object, and the second acts as a proxy for the original object as much as it can. int PyWeakref_Check(PyObject *ob)¶ Return non-zero if ob is either a reference or proxy object. This function always succeeds. int PyWeakref_CheckRef(PyObject *ob)¶ Return non-zero if ob is a reference object or a subclass of the reference type. This function always succeeds. int PyWeakref_CheckRefExact(PyObject *ob)¶ Return non-zero if ob is a reference object, but not a subclass of the reference type. This function always succeeds. int PyWeakref_CheckProxy(PyObject *ob)¶ Return non-zero if ob is a proxy object. This function always succeeds. PyObject *PyWeakref_NewRef(PyObject *ob, PyObject *callback)¶ Return value: New reference. Part of the Stable ABI. Return a weak reference object for the object ob. This will always return a new reference, but is not guaranteed to create a new object; an existing reference object may be returned. The second parameter, callback, can be a callable object that receives notification when ob is garbage collected; it should accept a single parameter, which will be the weak reference object itself. callback may also be None or NULL. If ob is not a weakly referenceable object, or if callback is not callable, None, or NULL, this will return NULL and raise TypeError. See also PyType_SUPPORTS_WEAKREFS() for checking if ob is weakly referenceable. PyObject *PyWeakref_NewProxy(PyObject *ob, PyObject *callback)¶ Return value: New reference. Part of the Stable ABI. Return a weak reference proxy object for the object ob. This will always return a new reference, but is not guaranteed to create a new object; an existing proxy object may be returned. The second parameter, callback, can be a callable object that receives notification when ob is garbage collected; it should accept a single parameter, which will be the weak reference object itself. callback may also be None or NULL. If ob is not a weakly referenceable object, or if callback is not callable, None, or NULL, this will return NULL and raise TypeError. See also PyType_SUPPORTS_WEAKREFS() for checking if ob is weakly referenceable. int PyWeakref_GetRef(PyObject *ref, PyObject **pobj)¶ Part of the Stable ABI since version 3.13. Get a strong reference to the referenced object from a weak reference, ref, into *pobj. On success, set *pobj to a new strong reference to the referenced object and return 1. If the reference is dead, set *pobj to NULL and return 0. On error, raise an exception and return -1. Added in version 3.13. PyObject *PyWeakref_GetObject(PyObject *ref)¶ Return value: Borrowed reference. Part of the Stable ABI. Return a borrowed reference to the referenced object from a weak reference, ref. If the referent is no longer live, returns Py_None. Note This function returns a borrowed reference to the referenced object. This means that you should always call Py_INCREF() on the object except when it cannot be destroyed before the last usage of the borrowed reference. Deprecated since version 3.13, will be removed in version 3.15: Use PyWeakref_GetRef() instead. PyObject *PyWeakref_GET_OBJECT(PyObject *ref)¶ Return value: Borrowed reference. Similar to PyWeakref_GetObject(), but does no error checking. Deprecated since version 3.13, will be removed in version 3.15: Use PyWeakref_GetRef() instead. int PyWeakref_IsDead(PyObject *ref)¶ Test if the weak reference ref is dead. Returns 1 if the reference is dead, 0 if it is alive, and -1 with an error set if ref is not a weak reference object. Added in version 3.14. void PyObject_ClearWeakRefs(PyObject *object)¶ Part of the Stable ABI. This function is called by the tp_dealloc handler to clear weak references. This iterates through the weak references for object and calls callbacks for those references which have one. It returns when all callbacks have been attempted. void PyUnstable_Object_ClearWeakRefsNoCallbacks(PyObject *object)¶ This is Unstable API. It may change without warning in minor releases. Clears the weakrefs for object without calling the callbacks. This function is called by the tp_dealloc handler for types with finalizers (i.e., __del__()). The handler for those objects first calls PyObject_ClearWeakRefs() to clear weakrefs and call their callbacks, then the finalizer, and finally this function to clear any weakrefs that may have been created by the finalizer. In most circumstances, it’s more appropriate to use PyObject_ClearWeakRefs() to clear weakrefs instead of this function. Added in version 3.13. Previous topic Pickle buffer objects Next topic Capsules This page Report a bug Improve this page Show source « Nav",
+    "scrapedAt": "2026-05-09 01:09:25.567386"
+  },
+  {
+    "id": 1181,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGINT",
+    "title": "signal — Set handlers for asynchronous events — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » signal — Set handlers for asynchronous events | Theme Auto Light Dark | signal — Set handlers for asynchronous events¶ Source code: Lib/signal.py This module provides mechanisms to use signal handlers in Python. General rules¶ The signal.signal() function allows defining custom handlers to be executed when a signal is received. A small number of default handlers are installed: SIGPIPE is ignored (so write errors on pipes and sockets can be reported as ordinary Python exceptions) and SIGINT is translated into a KeyboardInterrupt exception if the parent process has not changed it. A handler for a particular signal, once set, remains installed until it is explicitly reset (Python emulates the BSD style interface regardless of the underlying implementation), with the exception of the handler for SIGCHLD, which follows the underlying implementation. On WebAssembly platforms, signals are emulated and therefore behave differently. Several functions and signals are not available on these platforms. Execution of Python signal handlers¶ A Python signal handler does not get executed inside the low-level (C) signal handler. Instead, the low-level signal handler sets a flag which tells the virtual machine to execute the corresponding Python signal handler at a later point (for example, at the next bytecode instruction). This has consequences: It makes little sense to catch synchronous errors like SIGFPE or SIGSEGV that are caused by an invalid operation in C code. Python will return from the signal handler to the C code, which is likely to raise the same signal again, causing Python to apparently hang. From Python 3.3 onwards, you can use the faulthandler module to report on synchronous errors. A long-running calculation implemented purely in C (such as regular expression matching on a large body of text) may run uninterrupted for an arbitrary amount of time, regardless of any signals received. The Python signal handlers will be called when the calculation finishes. If the handler raises an exception, it will be raised “out of thin air” in the main thread. See the note below for a discussion. Signals and threads¶ Python signal handlers are always executed in the main Python thread of the main interpreter, even if the signal was received in another thread. This means that signals can’t be used as a means of inter-thread communication. You can use the synchronization primitives from the threading module instead. Besides, only the main thread of the main interpreter is allowed to set a new signal handler. Warning Synchronization primitives such as threading.Lock should not be used within signal handlers. Doing so can lead to unexpected deadlocks. Module contents¶ Changed in version 3.5: signal (SIG*), handler (SIG_DFL, SIG_IGN) and sigmask (SIG_BLOCK, SIG_UNBLOCK, SIG_SETMASK) related constants listed below were turned into enums (Signals, Handlers and Sigmasks respectively). getsignal(), pthread_sigmask(), sigpending() and sigwait() functions return human-readable enums as Signals objects. The signal module defines three enums: class signal.Signals¶ enum.IntEnum collection of SIG* constants and the CTRL_* constants. Added in version 3.5. class signal.Handlers¶ enum.IntEnum collection of the constants SIG_DFL and SIG_IGN. Added in version 3.5. class signal.Sigmasks¶ enum.IntEnum collection of the constants SIG_BLOCK, SIG_UNBLOCK and SIG_SETMASK. Availability: Unix. See the man page sigprocmask(2) and pthread_sigmask(3) for further information. Added in version 3.5. The variables defined in the signal module are: signal.SIG_DFL¶ This is one of two standard signal handling options; it will simply perform the default function for the signal. For example, on most systems the default action for SIGQUIT is to dump core and exit, while the default action for SIGCHLD is to simply ignore it. signal.SIG_IGN¶ This is another standard signal handler, which will simply ignore the given signal. signal.SIGABRT¶ Abort signal from abort(3). signal.SIGALRM¶ Timer signal from alarm(2). Availability: Unix. signal.SIGBREAK¶ Interrupt from keyboard (CTRL + BREAK). Availability: Windows. signal.SIGBUS¶ Bus error (bad memory access). Availability: Unix. signal.SIGCHLD¶ Child process stopped or terminated. Availability: Unix. signal.SIGCLD¶ Alias to SIGCHLD. Availability: not macOS. signal.SIGCONT¶ Continue the process if it is currently stopped Availability: Unix. signal.SIGFPE¶ Floating-point exception. For example, division by zero. See also ZeroDivisionError is raised when the second argument of a division or modulo operation is zero. signal.SIGHUP¶ Hangup detected on controlling terminal or death of controlling process. Availability: Unix. signal.SIGILL¶ Illegal instruction. signal.SIGINT¶ Interrupt from keyboard (CTRL + C). Default action is to raise KeyboardInterrupt. signal.SIGKILL¶ Kill ",
+    "scrapedAt": "2026-05-09 01:09:24.369744"
+  },
+  {
+    "id": 1180,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#discontinuation-of-pgp-signatures",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:09:23.144066"
+  },
+  {
+    "id": 1179,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.create_task",
+    "title": "Coroutines and tasks — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Coroutines and tasks | Theme Auto Light Dark | Coroutines and tasks¶ This section outlines high-level asyncio APIs to work with coroutines and Tasks. Coroutines¶ Source code: Lib/asyncio/coroutines.py Coroutines declared with the async/await syntax is the preferred way of writing asyncio applications. For example, the following snippet of code prints “hello”, waits 1 second, and then prints “world”: \u003e\u003e\u003e import asyncio\n\n\u003e\u003e\u003e async def main():\n...     print(\u0027hello\u0027)\n...     await asyncio.sleep(1)\n...     print(\u0027world\u0027)\n\n\u003e\u003e\u003e asyncio.run(main())\nhello\nworld\n Note that simply calling a coroutine will not schedule it to be executed: \u003e\u003e\u003e main()\n\u003ccoroutine object main at 0x1053bb7c8\u003e\n To actually run a coroutine, asyncio provides the following mechanisms: The asyncio.run() function to run the top-level entry point “main()” function (see the above example.) Awaiting on a coroutine. The following snippet of code will print “hello” after waiting for 1 second, and then print “world” after waiting for another 2 seconds: import asyncio\nimport time\n\nasync def say_after(delay, what):\n    await asyncio.sleep(delay)\n    print(what)\n\nasync def main():\n    print(f\"started at {time.strftime(\u0027%X\u0027)}\")\n\n    await say_after(1, \u0027hello\u0027)\n    await say_after(2, \u0027world\u0027)\n\n    print(f\"finished at {time.strftime(\u0027%X\u0027)}\")\n\nasyncio.run(main())\n Expected output: started at 17:13:52\nhello\nworld\nfinished at 17:13:55\n The asyncio.create_task() function to run coroutines concurrently as asyncio Tasks. Let’s modify the above example and run two say_after coroutines concurrently: async def main():\n    task1 \u003d asyncio.create_task(\n        say_after(1, \u0027hello\u0027))\n\n    task2 \u003d asyncio.create_task(\n        say_after(2, \u0027world\u0027))\n\n    print(f\"started at {time.strftime(\u0027%X\u0027)}\")\n\n    # Wait until both tasks are completed (should take\n    # around 2 seconds.)\n    await task1\n    await task2\n\n    print(f\"finished at {time.strftime(\u0027%X\u0027)}\")\n Note that expected output now shows that the snippet runs 1 second faster than before: started at 17:14:32\nhello\nworld\nfinished at 17:14:34\n The asyncio.TaskGroup class provides a more modern alternative to create_task(). Using this API, the last example becomes: async def main():\n    async with asyncio.TaskGroup() as tg:\n        task1 \u003d tg.create_task(\n            say_after(1, \u0027hello\u0027))\n\n        task2 \u003d tg.create_task(\n            say_after(2, \u0027world\u0027))\n\n        print(f\"started at {time.strftime(\u0027%X\u0027)}\")\n\n    # The await is implicit when the context manager exits.\n\n    print(f\"finished at {time.strftime(\u0027%X\u0027)}\")\n The timing and output should be the same as for the previous version. Added in version 3.11: asyncio.TaskGroup. Awaitables¶ We say that an object is an awaitable object if it can be used in an await expression. Many asyncio APIs are designed to accept awaitables. There are three main types of awaitable objects: coroutines, Tasks, and Futures. Coroutines Python coroutines are awaitables and therefore can be awaited from other coroutines: import asyncio\n\nasync def nested():\n    return 42\n\nasync def main():\n    # Nothing happens if we just call \"nested()\".\n    # A coroutine object is created but not awaited,\n    # so it *won\u0027t run at all*.\n    nested()  # will raise a \"RuntimeWarning\".\n\n    # Let\u0027s do it differently now and await it:\n    print(await nested())  # will print \"42\".\n\nasyncio.run(main())\n Important In this documentation the term “coroutine” can be used for two closely related concepts: a coroutine function: an async def function; a coroutine object: an object returned by calling a coroutine function. Tasks Tasks are used to schedule coroutines concurrently. When a coroutine is wrapped into a Task with functions like asyncio.create_task() the coroutine is automatically scheduled to run soon: import asyncio\n\nasync def nested():\n    return 42\n\nasync def main():\n    # Schedule nested() to run soon concurrently\n    # with \"main()\".\n    task \u003d asyncio.create_task(nested())\n\n    # \"task\" can now be used to cancel \"nested()\", or\n    # can simply be awaited to wait until it is complete:\n    await task\n\nasyncio.run(main())\n Futures A Future is a special low-level awaitable object that represents an eventual result of an asynchronous operation. When a Future object is awaited it means that the coroutine will wait until the Future is resolved in some other place. Future objects in asyncio are needed to allow callback-based code to be used with async/await. Normally there is no need to create Future objects at the application level code. Future objects, sometimes exposed by libraries and some asyncio APIs, can be awaited: async def main():\n    await function_that_returns_a_future_object()\n\n    # this is also valid:\n    await asyncio.gather(\n        function_that_returns_a_future_object(),\n        some_python_coroutine()\n    )\n A good e",
+    "scrapedAt": "2026-05-09 01:09:21.877612"
+  },
+  {
     "id": 1178,
     "url": "https://docs.python.org/3/library/zipfile.html#module-zipfile",
     "title": "zipfile — Work with ZIP archives — Python 3.14.5rc1 documentation",
@@ -7908,26 +7943,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1179,
-    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.create_task"
-  },
-  {
-    "id": 1180,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#discontinuation-of-pgp-signatures"
-  },
-  {
-    "id": 1181,
-    "url": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
-  },
-  {
-    "id": 1182,
-    "url": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetObject"
-  },
-  {
-    "id": 1183,
-    "url": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
   },
   {
     "id": 1184,
@@ -215175,10 +215190,460 @@ window.searchData = [
     "id": 221635,
     "url": "https://github.com/DimitrisJim",
     "parentUrl": "https://github.com/python/cpython/issues/74033"
+  },
+  {
+    "id": 225710,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGUSR1",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225712,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIG_SETMASK",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225714,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGUSR2",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225720,
+    "url": "https://manpages.debian.org/signal(2)",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225723,
+    "url": "https://docs.python.org/3/library/signal.html#signal.pthread_sigmask",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225724,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGPROF",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225725,
+    "url": "https://docs.python.org/3/library/signal.html#signal.Sigmasks",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225726,
+    "url": "https://docs.python.org/3/library/signal.html#signal.siginterrupt",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225727,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGQUIT",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225728,
+    "url": "https://docs.python.org/3/library/signal.html#signal.Handlers",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225730,
+    "url": "https://docs.python.org/3/library/signal.html#signal.sigwait",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225731,
+    "url": "https://docs.python.org/3/library/signal.html#signal.strsignal",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225736,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGXCPU",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225738,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGCLD",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225739,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGVTALRM",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225740,
+    "url": "https://docs.python.org/3/library/signal.html#signal.setitimer",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225741,
+    "url": "https://docs.python.org/3/library/signal.html#signal.alarm",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225744,
+    "url": "https://docs.python.org/3/library/signal.html#signal.valid_signals",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225747,
+    "url": "https://manpages.debian.org/sigwait(3)",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225748,
+    "url": "https://manpages.debian.org/pthread_sigmask(3)",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225749,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGBREAK",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225750,
+    "url": "https://docs.python.org/3/library/signal.html#signal.ITIMER_REAL",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225754,
+    "url": "https://docs.python.org/3/library/signal.html#signal.sigtimedwait",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225755,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGKILL",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225756,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGHUP",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225759,
+    "url": "https://manpages.debian.org/pidfd_send_signal(2)",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225760,
+    "url": "https://docs.python.org/3/library/signal.html#signal.getitimer",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225764,
+    "url": "https://docs.python.org/3/library/signal.html#signal.ITIMER_VIRTUAL",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225767,
+    "url": "https://manpages.debian.org/siginterrupt(3)",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225769,
+    "url": "https://manpages.debian.org/sigwaitinfo(2)",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225774,
+    "url": "https://docs.python.org/3/library/signal.html#signal.NSIG",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225776,
+    "url": "https://docs.python.org/3/library/signal.html#signal.ITIMER_PROF",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225777,
+    "url": "https://docs.python.org/3/library/signal.html#signal.sigpending",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225778,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/signal.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225780,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGSTKFLT",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225782,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGPIPE",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225783,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIG_BLOCK",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225785,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGALRM",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225791,
+    "url": "https://docs.python.org/3/library/signal.html#",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225793,
+    "url": "https://docs.python.org/3/library/signal.html#signal.pause",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225796,
+    "url": "https://manpages.debian.org/sigtimedwait(2)",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225797,
+    "url": "https://manpages.debian.org/abort(3)",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225799,
+    "url": "https://manpages.debian.org/sigpending(2)",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225804,
+    "url": "https://docs.python.org/3/library/signal.html#signal.sigwaitinfo",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225807,
+    "url": "https://manpages.debian.org/head(1)",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225808,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGSTOP",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225811,
+    "url": "https://manpages.debian.org/pthread_kill(3)",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225815,
+    "url": "https://docs.python.org/3/library/signal.html#signal.getsignal",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225816,
+    "url": "https://manpages.debian.org/sigprocmask(2)",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225817,
+    "url": "https://docs.python.org/3/library/signal.html#signal.pidfd_send_signal",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225819,
+    "url": "https://docs.python.org/3/library/signal.html#signal.ItimerError",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225820,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGWINCH",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225822,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIG_UNBLOCK",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225823,
+    "url": "https://manpages.debian.org/signal(7)",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225827,
+    "url": "https://docs.python.org/3/library/signal.html#signal.raise_signal",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225828,
+    "url": "https://docs.python.org/3/library/signal.html#signal.Signals",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225833,
+    "url": "https://manpages.debian.org/alarm(2)",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225834,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/signal.py",
+    "parentUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "id": 225884,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.Py_AuditHookFunction",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225885,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PySys_FormatStderr",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225889,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_FSPath",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225890,
+    "url": "https://docs.python.org/3/c-api/threads.html#fork-and-threads",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225891,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_CheckStack",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225894,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PySys_AuditTuple",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225895,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_getsig",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225901,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_setsig",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225902,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.Py_Exit",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225904,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_InterruptOccurred",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225905,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PySys_FormatStdout",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225909,
+    "url": "https://docs.python.org/3/c-api/sys.html#operating-system-utilities",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225918,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_sighandler_t",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225923,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PySys_SetObject",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225931,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PySys_WriteStdout",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225935,
+    "url": "https://docs.python.org/3/c-api/sys.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225937,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.Py_FdIsInteractive",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225938,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PySys_WriteStderr",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225939,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/sys.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 225972,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PySys_GetXOptions",
+    "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Operating System Utilities — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Operating System Utilities — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Weak Reference Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetObject"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Weak Reference Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetObject"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "signal — Set handlers for asynchronous events — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "signal — Set handlers for asynchronous events — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/signal.html#signal.SIGINT"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#discontinuation-of-pgp-signatures"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#discontinuation-of-pgp-signatures"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Coroutines and tasks — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.create_task"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Coroutines and tasks — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.create_task"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
