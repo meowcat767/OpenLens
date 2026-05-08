@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 175,
+    "url": "https://www.python.org/events/python-user-group/2104/",
+    "title": "Python Meeting Düsseldorf | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Meeting Düsseldorf Düsseldorf, Germany 03 June from 4pm UTC to 7pm UTC, 2026 Python Meeting Düsseldorf ← Previous IndyPy: Lightning Talks in Indianapolis, IN, USA and Online Next → Django Girls Sogakope 2026 in Sogakope, Ghana Explore events -- Change your date range The next 7 days The next 30 days The next 90 days The next year More events at Düsseldorf, Germany Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf - Python Herbst Sprint 2025 Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Sprint / Hackathon Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf",
+    "scrapedAt": "2026-05-09 00:32:47.154089"
+  },
+  {
+    "id": 174,
+    "url": "https://www.wxpython.org/",
+    "title": "Welcome to wxPython! | wxPython",
+    "content": "Skip to main content This website is all about wxPython, the cross-platform GUI toolkit for the Python language. With wxPython software developers can create truly native user interfaces for their Python applications, that run with little or no modifications on Windows, Macs and Linux or other unix-like systems. Learn more Latest News wxPython 4.2.4 is now available at PyPI, with some additional files at Extras Changes in this release: This release was built using the wxWidgets\u0027 v3.2.8.1 release tag. The only exception is that libtiff and pcre2 bundled with wxWidgets are updated to the versions from the wxWidgets master branch (libtiff 4.7.0 and pcre2 10.44). Fix using setuptools.build_meta backend (#2732) Fix EOL style in wx.py.editwindow.py (#2741) Replace imp with types in wx.py.editor.py (#2745) Fix floatcanvas Text.ShiftFunDict: convert float to int (#2749) Fix up/down option not working on the initial search in wx.py.frame (#2747) Fix floatcanvas Arrow, Point, Bitmap drawings (#2750) Officially support and build wheels for Python 3.14 and Windows 11 ARM Fix crash when calling wx.SystemSettings.GetAppearance() without App (#2771) Enable whole word search in wx.py.editwindow (#2769) Add MaxSize limit to ScaledBitmap drawing in FloatCanvas (#2768) Fix more OGL float/int conversion issues (#2739) Major speedups and bug fixes to CustomTreeCtrl and HyperTreeList (#2088) Fix duplicated string constants in wx.propgrid (#2790) Add non-zero width and height to default tab size to avoid wxWidgets warning in wx.lib.agw.aui.auibook (#2788) Fix SetHeaderHeight in UltimateListCtrl (#2239) Add ScrollLeft and ScrollDown to PlotCanvas (#2795) Add sample of PlotCanvas usage (#2794) Fix a linker issue with GCC 16+ and wxHelpControllerBase (#2807) wxPython 4.2.3 is now available at PyPI, with some additional files at Extras Changes in this release: This release was built using the wxWidgets\u0027 v3.2.7 release tag. The only exception is that libtiff and pcre2 bundled with wxWidgets are updated to the versions from the wxWidgets master branch (libtiff 4.7.0 and pcre2 10.44). Fix test issues with wx.lib.introspect (#2717) Add support for building on Windows ARM64 (#2521) Incorporate many improvements to type stubs (#2665) Fix building documentation with latest sphinx (#2672) Build smaller architecture-specific wheels on macOS instead of large universal2 wheels Calculate scroll based on child\u0027s relative position to scrolledpanel in wx.lib.scrolledpanel Fix float -\u003e int conversion issues in wx.lib.fancytext (#2703) Replace deprecated NumPy type aliases Use wx.StaticText in wx.lib.agw.hyperlink (#2686) Implement partial support for pyproject.toml and other build process improvements Remove use of six and most Python 2 compatibility code Fix wxWidgets build on OpenSUSE (#558, #1067, #2422, #2532) Fix more int conversions in wx.lib.agw.flatnotebook Make build output reproducible Enable overridding wx.Sizer.InformFirstDirection() (#2452) Implement iter for wxList iterator classes (fixes Python 3.13.1 issue) Fix wx.lib.mixins.rubberband not clearing DC on redraw Support implementing CreateBitmapBundle for custom ArtProvider Fix float/int conversion issues in wx.lib.ogl Include usage of wxMemoryFSHandler in webview demo Fix crash when accessing wx.stc.StyledTextCtrl.DropTarget.Data (#2043) Fix AuiManager pane minimizing issue Add range field to wx.lib.agw.pygauge.PyGauge format string (#2583) Fix pickling of wx.RealPoint (#2644) Avoid calling FlatMenu Destroy() in a finally block (#2630) Update wxApp.IsDisplayAvailable to work on Wayland Fix InspectionTool crashes due to bad perspective string errors Drop support for Python 3.8 (EOL) Add CreateAccessible for Windows only Added check condition to AuiManager LoadPerspective() Fix RecursionError in platebtn bitmap getters Add Python implementation of GetPaths (#1944) Support Wayland GTK backend in Window.GetHandle Refactor python only pdfviewer to support displaying pdf files where not all pages have the same size Improve support when specifying a pre-existing toolbar as the target for the restore icon when minimizing a pane in agw.aui Multiple bugfixes in pure python aui pdfviewer: Add support for pymupdf renaming wxPython 4.2.2 is now available at PyPI, with some additional files at Extras Changes in this release: This release was built using the wxWidgets\u0027 v3.2.6 release tag. This is the first release built using GitHub infrastructure instead of the buildbots. Please report any problems with the wheels. Fix some Python 3.12 compatibility issues (segfault on exit) by upgrading sip \u0026 waf Fix more float/int conversion issues in wx.lib classes (#2415, #2417, #2429, #2470, #2528, #2542) Add initialValue argument to wx.lib.DirBrowseButton (#2430) Fix wxImage.Clear() (#2433) Fix blurry text in AuiNotebook tab (#2360) Add support for frozen rows and columns to GridWithLabelRenderersMixin (#2436) demo: ShortcutEditor: Fix broken call GetMenuBar() (#2412) Add proper support for DataViewCheckIcon",
+    "scrapedAt": "2026-05-09 00:32:46.088016"
+  },
+  {
+    "id": 173,
+    "url": "https://www.python.org/downloads/release/python-3144/",
+    "title": "Python Release Python 3.14.4 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Note: Python 3.14.4 has been superseded by Python 3.14.5rc1. Release date: April 7, 2026 This is fourth maintenance release of Python 3.14 Python 3.14.4 is the fourth maintenance release of 3.14, containing around 337 bugfixes, build improvements and documentation changes since 3.14.3. Major new features of the 3.14 series, compared to 3.13 Some of the major new features and changes in Python 3.14 are: New features PEP 779: Free-threaded Python is officially supported PEP 649: The evaluation of annotations is now deferred, improving the semantics of using annotations. PEP 750: Template string literals (t-strings) for custom string processing, using the familiar syntax of f-strings. PEP 734: Multiple interpreters in the stdlib. PEP 784: A new module compression.zstd providing support for the Zstandard compression algorithm. PEP 758: except and except* expressions may now omit the brackets. Syntax highlighting in PyREPL, and support for color in unittest, argparse, json and calendar CLIs. PEP 768: A zero-overhead external debugger interface for CPython. UUID versions 6-8 are now supported by the uuid module, and generation of versions 3-5 are up to 40% faster. PEP 765: Disallow return/break/continue that exit a finally block. PEP 741: An improved C API for configuring Python. A new type of interpreter. For certain newer compilers, this interpreter provides significantly better performance. Opt-in for now, requires building from source. Improved error messages. Builtin implementation of HMAC with formally verified code from the HACL* project. A new command-line interface to inspect running Python processes using asynchronous tasks. The pdb module now supports remote attaching to a running Python process. For more details on the changes to Python 3.14, see What’s new in Python 3.14. Build changes PEP 761: Python 3.14 and onwards no longer provides PGP signatures for release artifacts. Instead, Sigstore is recommended for verifiers. Official macOS and Windows release binaries include an experimental JIT compiler. Official Android binary releases are now available. Incompatible changes, removals and new deprecations Incompatible changes Python removals and deprecations C API removals and deprecations Overview of all pending deprecations Python install manager The installer we offer for Windows is being replaced by our new install manager, which can be installed from the Windows Store or from its download page. See our documentation for more information. The JSON file available for download contains the list of all the installable packages available as part of this release, including file URLs and hashes, but is not required to install the latest release. The traditional installer will remain available throughout the 3.14 and 3.15 releases. More resources Online documentation PEP 745, 3.14 Release Schedule Report bugs at github.com/python/cpython/issues Help fund Python directly (or via GitHub Sponsors) and support the Python community And now for something completely different On 4th April, 3.14 months of the year had elapsed. Enjoy the new release Thanks to all of the many volunteers who help make Python Development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation. Full Changelog macOS Download macOS installer Windows Download Python install manager Source release Download XZ compressed source tarball Version Operating system Description File size Sigstore SBOM SHA-256 checksum Gzipped source tarball Source release 29.7 MB .sigstore SPDX b4c059d5895f030e7df9663894ce3732bfa1b32cd3ab2883980266a45ce3cb3b XZ compressed source tarball Source release 22.8 MB .sigstore SPDX d923c51303e38e249136fc1bdf3568d56ecb03214efdef48516176d3d7faaef8 Android embeddable package (aarch64) Android 20.4 MB .sigstore 410fff96f47d818136f91f79c8f83202e1364aeaab2022d00fa70e53007ebde1 Android embeddable package (x86_64) Android 20.8 MB .sigstore 389bff0b28ddf49651abcc150db21ba617fca3e6ad15cc05544ef1b5b23b9ac1 macOS installer macOS for macOS 10.15 and later 72.4 MB .sigstore 1c5a9b1d0a3f14cf3c38f033232b7ff45efd2eddde5940169f20ef84ec7235b5 Windows installer (64-bit) Windows Recommended 28.9 MB .sigstore SPDX b571567bd11ea98fd7a2cf85791d2c8557a63b1e04e9d1dae665a275cac87f1b Windows installer (32-bit) Windows 27.5 MB .sigstore SPDX 67bef323d951363d06aa73cbbb8a372303c96912b512778ce48fbf9a521cbbfe Windows installer (ARM64) Windows Experimental 28.2 MB .sigstore SPDX c1aee4dfe56ef32a0c5ebf58f6fb1c97dcf037683d659ee16ee5b8641204766a Windows embeddable package (64-bit) Windows 11.5 MB .sigstore SPDX cda80a9b1e75c0f1b4f9872ca1b417f0d19bce32facc811aea9180e70fad5fb9 Windows embeddable package (32-bit) Windows 10.1 MB .sigstore SPDX 30e96fbe2a92c24296dd76201dbf793fb877721060e834",
+    "scrapedAt": "2026-05-09 00:32:44.914377"
+  },
+  {
+    "id": 172,
+    "url": "https://www.oracle.com/javadownload",
+    "title": "Java Downloads | Oracle",
+    "content": "Java Technical Details Java Downloads Watch the JavaOne 2026 keynotes and select sessions Watch JavaOne Looking for other Java downloads? OpenJDK Early Access Builds JRE for Consumers Java 26, Java 25, Java 21, and earlier versions available now Learn about Java SE Subscription JDK 26 is the latest release of the Java SE Platform. JDK 25 is the latest Long-Term Support (LTS) release of the Java SE Platform. JDK 21 is the previous Long-Term Support (LTS) release of the Java SE Platform. Earlier JDK versions are available below. JDK 26 JDK 25 JDK 21 Java SE Development Kit 26.0.1 downloads JDK 26 binaries are free to use in production and free to redistribute, at no cost, under the Oracle No-Fee Terms and Conditions (NFTC). JDK 26 will receive updates under these terms, until September 2026, when it will be superseded by JDK 27. Linux macOS Windows Product/file description File size Download ARM64 Compressed Archive 208.96 MB https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.tar.gz (sha256) ARM64 RPM Package 208.53 MB https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.rpm (sha256) (OL 9 GPG Key) x64 Compressed Archive 211.05 MB https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.tar.gz (sha256) x64 Debian Package 180.82 MB https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.deb (sha256) x64 RPM Package 210.58 MB https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.rpm (sha256) (OL 9 GPG Key) Product/file description File size Download ARM64 Compressed Archive 203.74 MB https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.tar.gz (sha256) ARM64 DMG Installer 203.19 MB https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.dmg (sha256) x64 Compressed Archive 206.01 MB https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.tar.gz (sha256) x64 DMG Installer 205.44 MB https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.dmg (sha256) Product/file description File size Download x64 Compressed Archive 210.50 MB https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.zip (sha256) x64 Installer 188.65 MB https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.exe (sha256) x64 MSI Installer 187.42 MB https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.msi (sha256) Documentation Download Release information Online Documentation Installation Instructions Release Notes Documentation License JDK 26 Licensing Information User Manual (includes third-party licenses) Certified System Configurations Readme Java Value Engineering Java SE Development Kit 25.0.3 downloads JDK 25 binaries are free to use in production and free to redistribute, at no cost, under the Oracle No-Fee Terms and Conditions (NFTC). JDK 25 will receive updates under the NFTC, until September 2028, a year after the release of the next LTS. Subsequent JDK 25 updates will be licensed under the Java SE OTN License (OTN) and production use beyond the limited free grants of the OTN license will require a fee. Linux macOS Windows Product/file description File size Download ARM64 Compressed Archive 204.68 MB https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.tar.gz (sha256) ARM64 RPM Package 204.28 MB https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.rpm (sha256) (OL 9 GPG Key) x64 Compressed Archive 206.82 MB https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.tar.gz (sha256) x64 Debian Package 177.31 MB https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.deb (sha256) x64 RPM Package 206.38 MB https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.rpm (sha256) (OL 9 GPG Key) Product/file description File size Download ARM64 Compressed Archive 199.60 MB https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.tar.gz (sha256) ARM64 DMG Installer 199.11 MB https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.dmg (sha256) x64 Compressed Archive 201.79 MB https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.tar.gz (sha256) x64 DMG Installer 201.26 MB https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.dmg (sha256) Product/file description File size Download x64 Compressed Archive 205.71 MB https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.zip (sha256) x64 Installer 184.51 MB https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe (sha256) x64 MSI Installer 183.28 MB https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.msi (sha256) Documentation Download Release information Online Documentation Installation Instructions Release Notes Documentation License JDK 25 Licensing Information User Manual (includes third-party licenses) Certified System Configurations Readme Java Value Engineering Java SE Development Kit 21.0.11 downloads JDK 21 binaries are free to use in production and free to redistribute, at no cost, under the Oracle No-Fee Terms and Conditions (NFTC). JD",
+    "scrapedAt": "2026-05-09 00:32:43.692799"
+  },
+  {
+    "id": 171,
+    "url": "https://www.oracle.com/java/",
+    "title": "Java Software | Oracle",
+    "content": "Java Oracle Java is the #1 programming language and development platform. It helps reduce costs, shorten development timeframes, drive innovation, and improve application services. With millions of developers running more than 73 billion Java Virtual Machines worldwide, Java continues to be the development platform of choice for enterprises and developers. Download Java Watch the JavaOne 2026 keynotes and select sessions Java 26 is now available JDK 26 introduces improved performance, enhanced security, and new AI-ready features—empowering developers to boost productivity and helping organizations scale innovation with greater speed and reliability. Read the JDK 26 blog Java in the Era of AI \u0026 Cloud Native Innovation According to a recent VDC Research study, Java is the #1 language for cloud native development. Java remains the trusted foundation for enterprises and the go-to language for developers building the next generation of innovative solutions. Access the VDC Research report Announcing Java Verified Portfolio and commercial support for JavaFX Oracle Java Verified Portfolio (JVP) delivers enterprise-backed Java tools and libraries, now including commercial support for JavaFX, Helidon, and Java Platform Extension for Visual Studio Code. Read the JVP blog Are you a Java developer? Get tutorials, news, and videos from Java experts. Learn more about Java Unlock powerful insights with JMS Analyze Applications The new Java Management Service (JMS) feature enables instant, actionable insights on Java applications without the need for setting up JMS fleets or installing agents. Learn more Watch Georges Saab on Java 25 (JDK 25) LTS for AI and cloud See what’s new in the latest long-term supported Java release—Java 25 (JDK 25). Learn how Java helps teams modernize enterprise apps, go cloud native and multicloud, and build and run AI-driven workloads with confidence. Watch the video (9:10) Case study: Oracle Java EPP for Oracle Fusion Find out why Java SE Subscription Enterprise Performance Pack (EPP) helps Oracle Fusion Applications improve application response times by 40% and decrease CPU utilization by 25%. Read the case study (PDF) Java SE Java on OCI Oracle WebLogic Server Java Card Java Management Service The world’s most popular modern development platform The world’s most popular modern development platform, Java SE is the programming language of choice for enterprise applications. Java SE reduces costs, shortens development time, drives innovation, and improves application services. Protect your Java investment with Oracle Java SE Universal Subscription, which now includes Java SE Subscription Enterprise Performance Pack (EPP) and Java Management Service. Download Java now Explore Java SE Universal Subscription Products Oracle Java SE Universal Subscription Oracle JDK Oracle OpenJDK Oracle Java SE Platform Oracle Java Verified Portfolio (JVP) The best cloud platform for developing and deploying Java Oracle Cloud Infrastructure (OCI) enhances the versatility, power, and stability of Java. As the steward and leading contributor to the Java platform, Oracle continues to drive the evolution of Java in response to the demands of enterprises and to provide unparalleled expertise to support developers. OCI SDK for Java: The Oracle Cloud Infrastructure SDK for Java enables you to write code to manage OCI resources. Simplified Java Management Service gives you insights into all your Java deployments, on OCI and on-premises. Expert Java support from the stewards of Java to optimize Java apps whenever it makes sense. Exclusive access to patches and updates, even beyond the end of public updates. Benefits of Java SE on OCI at no additional cost. The world’s leading platform for developing and running enterprise Java applications Oracle WebLogic Server offers a robust, mature, and scalable implementation of Oracle Java Enterprise Edition (EE) and Jakarta EE to run enterprise Java applications in the cloud or on-premises. Explore Oracle WebLogic Server Products Oracle WebLogic Server Oracle Coherence Oracle WebLogic Server for Oracle Cloud Infrastructure Helidon Improves security for Internet of Things (IoT) edge devices Java Card enables secure elements, such as smart cards and other tamper-resistant security chips, to host applications based on Java technology. Store and update multiple applications on a single, resource-constrained device. Explore Java Card Documentation Features Interoperable Secure execution environment Multiapplication, multitenant Extensible and updatable Java Management Service Enterprises often run multiple versions of Java across desktops, laptops, servers, and cloud environments, making it challenging to maintain security and compliance. Outdated Java versions can expose organizations to vulnerabilities. Java Management Service (JMS) is an Oracle Cloud Infrastructure (OCI) service that provides centralized, real-time monitoring and management of Java environments both on-premises and in ",
+    "scrapedAt": "2026-05-09 00:32:42.472987"
+  },
+  {
     "id": 170,
     "url": "https://www.java.com/en/download/help/index.html",
     "title": "Java Help Center",
@@ -1188,26 +1223,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 171,
-    "url": "https://www.oracle.com/java/"
-  },
-  {
-    "id": 172,
-    "url": "https://www.oracle.com/javadownload"
-  },
-  {
-    "id": 173,
-    "url": "https://www.python.org/downloads/release/python-3144/"
-  },
-  {
-    "id": 174,
-    "url": "https://www.wxpython.org/"
-  },
-  {
-    "id": 175,
-    "url": "https://www.python.org/events/python-user-group/2104/"
   },
   {
     "id": 176,
@@ -30983,10 +30998,1252 @@ window.searchData = [
     "id": 14759,
     "url": "https://www.java.com/en/download/help/sitelist_disabled.html",
     "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 14760,
+    "url": "https://docs.oracle.com/en/java/javase/index.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14761,
+    "url": "https://www.oracle.com/java/?ytid\u003da1aro8bq30o",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14762,
+    "url": "https://dev.java/community/affinity/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14763,
+    "url": "https://www.oracle.com/a/tech/docs/javase-subscription-datasheet.pdf",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14765,
+    "url": "https://dev.java/community/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14766,
+    "url": "https://go.oracle.com/LP\u003d150255?elqCampaignId\u003d644147",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14767,
+    "url": "https://go.oracle.com/LP\u003d136406?elqCampaignId\u003d427886",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14768,
+    "url": "http://jdk.java.net/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14769,
+    "url": "https://mylearn.oracle.com/ou/story/40805",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14771,
+    "url": "https://education.oracle.com/oracle-certification-path/pfamily_48",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14772,
+    "url": "https://openjdk.org/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14773,
+    "url": "https://dev.java/playground/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14774,
+    "url": "https://newsroom.collegeboard.org/advanced-placement-program-collaborates-oracle-computer-science-updates",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14775,
+    "url": "https://blogs.oracle.com/java/post/detaching-graalvm-from-the-java-ecosystem-train",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14776,
+    "url": "https://www.oracle.com/java/technologies/java-se-glance.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14777,
+    "url": "https://www.oracle.com/java/java-se-subscription/value-engineering/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14778,
+    "url": "https://www.oracle.com/java/technologies/java-card/javacard-technology-getstarted.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14779,
+    "url": "https://www.oracle.com/java/weblogic/weblogic-for-oracle-cloud-infrastructure/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14780,
+    "url": "https://www.youtube.com/java",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14781,
+    "url": "https://www.oracle.com/events/java-graalvm-webcasts/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14782,
+    "url": "https://www.oracle.com/java/duke/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14784,
+    "url": "https://www.oracle.com/a/ocom/docs/java-erp-fusion-case-study.pdf",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14785,
+    "url": "https://www.oracle.com/java/coherence/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14786,
+    "url": "https://helidon.io/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14787,
+    "url": "https://learn.java/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14788,
+    "url": "https://blogs.oracle.com/java/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14789,
+    "url": "https://blogs.oracle.com/java/the-arrival-of-java-26",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14791,
+    "url": "https://www.oracle.com/java/weblogic/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14792,
+    "url": "https://blogs.oracle.com/java/analyze-applications-and-other-enhancements",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14793,
+    "url": "http://docs.oracle.com/javacomponents",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14794,
+    "url": "https://www.oracle.com/java/technologies/downloads/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14795,
+    "url": "https://www.oracle.com/a/ocom/docs/java-licensing-logo-guidelines-1908204.pdf",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14796,
+    "url": "https://www.oracle.com/education/training/java/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14797,
+    "url": "https://x.com/openjdk",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14798,
+    "url": "https://academy.oracle.com/en/solutions-curriculum-java.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14799,
+    "url": "https://www.oracle.com/java/contact-form.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14800,
+    "url": "https://www.oracle.com/java/jms/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14801,
+    "url": "https://ops.java/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14802,
+    "url": "https://www.oracle.com/java/technologies/downloads/jvp/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14803,
+    "url": "https://www.oracle.com/support/policies.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14804,
+    "url": "https://www.oracle.com/java/java-card/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14805,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk-relnotes-index.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14806,
+    "url": "https://www.oracle.com/java/java-se-subscription/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14807,
+    "url": "https://blogs.oracle.com/java/announcing-jvp",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14808,
+    "url": "https://www.oracle.com/cloud/free/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14810,
+    "url": "https://education.oracle.com/java-programming-learning-subscription/ls_40805",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14811,
+    "url": "https://shop.oracle.com/apex/f?p\u003dDSTORE:2:::NO:RIR,RP,2:PROD_HIER_ID:123775488249871532594385",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14812,
+    "url": "https://www.oracle.com/java/technologies/jvp-support-roadmap.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14813,
+    "url": "https://www.oracle.com/java/technologies/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14814,
+    "url": "https://go.oracle.com/LP\u003d25600?elqCampaignId\u003d109966\u0026bn\u003djava",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 14815,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.msi.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14816,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14817,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk21-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14818,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14819,
+    "url": "https://docs.oracle.com/en/java/javase/21/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14820,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.deb.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14821,
+    "url": "https://www.oracle.com/a/tech/docs/jdk25-lium.pdf",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14822,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.dmg.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14823,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14824,
+    "url": "https://www.oracle.com/java/technologies/downloads/#sjre8-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14825,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14826,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-x64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14827,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-x64_bin.dmg.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14828,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.dmg.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14829,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14830,
+    "url": "https://docs.oracle.com/en/java/java-components/enterprise-performance-pack/epp-user-guide/overview.html#GUID-4085FEE6-0685-4C9B-B981-3E742DE91094",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14831,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java11-mac",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14832,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk25-doc-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14833,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.msi",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14834,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java17",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14835,
+    "url": "https://www.oracle.com/java/technologies/javase/jre8-readme.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14836,
+    "url": "https://linux.oracle.com/security/gpg/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14837,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk21-doc-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14838,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java11",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14839,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.deb.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14840,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.msi",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14841,
+    "url": "https://docs.oracle.com/en/java/javase/17/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14842,
+    "url": "https://docs.oracle.com/en/java/javase/26/install/overview-jdk-installation.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14843,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.msi.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14844,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14845,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk21-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14846,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java17-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14847,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk25certconfig.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14849,
+    "url": "https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14850,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.msi",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14851,
+    "url": "https://www.oracle.com/java/javase/terms/license/java21speclicense.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14852,
+    "url": "https://www.java.com/otnlicense",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14853,
+    "url": "https://www.oracle.com/a/tech/docs/8u491checksum.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14855,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk11-doc-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14856,
+    "url": "https://www.oracle.com/java/technologies/downloads/#sjre8-solaris",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14857,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14858,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java17-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14859,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk21-readme-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14860,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jre8-macos",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14861,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.dmg.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14862,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk26-mac",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14863,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.rpm.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14864,
+    "url": "https://support.oracle.com/epmos/faces/DocContentDisplay?id\u003d1439822.2",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14866,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java17-mac",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14867,
+    "url": "https://blogs.oracle.com/java-platform-group/understanding-the-server-jre",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14868,
+    "url": "https://docs.oracle.com/en/java/javase/11/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14869,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14870,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk26-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14871,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.dmg",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14872,
+    "url": "https://www.oracle.com/java/technologies/javase/11u-relnotes.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14873,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk25-readme-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14874,
+    "url": "https://blogs.oracle.com/java/post/introducing-the-java-se-subscription-enterprise-performance-pack",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14875,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.dmg.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14876,
+    "url": "https://docs.oracle.com/en/java/javase/21/install/overview-jdk-installation.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14877,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.rpm",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14878,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.zip",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14879,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.dmg",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14880,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk8-doc-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14881,
+    "url": "https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14882,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14883,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14884,
+    "url": "https://www.oracle.com/a/tech/docs/jdk26-lium.pdf",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14885,
+    "url": "https://docs.oracle.com/en/java/javase/25/install/overview-jdk-installation.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14886,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java17-solaris",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14887,
+    "url": "https://www.oracle.com/java/technologies/java-archive-misc-downloads.html#jdk8demos",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14888,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.zip.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14889,
+    "url": "https://www.oracle.com/a/tech/docs/jdk17-lium.pdf",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14890,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14891,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.rpm.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14892,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.rpm.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14893,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14894,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jepp-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14895,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.deb",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14896,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jre8-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14898,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14901,
+    "url": "https://www.oracle.com/a/tech/docs/jdk21-lium.pdf",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14902,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14903,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8-mac",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14904,
+    "url": "https://docs.oracle.com/javase/8/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14905,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk8-jre8-certconfig.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14907,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java25",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14908,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.rpm.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14909,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java26",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14910,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8-solaris",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14911,
+    "url": "https://www.oracle.com/java/technologies/jdk-script-friendly-urls/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14912,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java21",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14913,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.zip",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14914,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.rpm",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14915,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14916,
+    "url": "https://www.oracle.com/downloads/licenses/javase-license1.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14917,
+    "url": "https://docs.oracle.com/en/java/javase/25/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14918,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14919,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk17-doc-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14920,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk21-mac",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14921,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.exe",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14922,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.dmg",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14924,
+    "url": "https://www.java.com",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14925,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk26-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14926,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14927,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk17-readme-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14928,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14929,
+    "url": "https://www.oracle.com/java/technologies/downloads/#sjre8-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14930,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14931,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk11certconfig.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14932,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jre8-solaris",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14933,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.rpm",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14934,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-x64_bin.dmg",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14935,
+    "url": "https://www.oracle.com/java/javase/terms/license/java25speclicense.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14936,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk26certconfig.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14937,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14938,
+    "url": "https://www.oracle.com/java/technologies/javase/26u-relnotes.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14939,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.deb",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14940,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14941,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk25-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14942,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.rpm",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14943,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14944,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14945,
+    "url": "https://www.oracle.com/java/technologies/javase/25u-relnotes.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14946,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jre8-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14947,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.msi.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14948,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.rpm",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14949,
+    "url": "https://docs.oracle.com/en/java/javase/17/install/overview-jdk-installation.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14950,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14951,
+    "url": "https://www.oracle.com/downloads/javase-software-license-agreement.html#license-lightbox",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14952,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java11-solaris",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14953,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14954,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.rpm.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14955,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14956,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.rpm.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14957,
+    "url": "https://www.oracle.com/a/tech/docs/jdk11-lium.pdf",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14959,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.dmg",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14960,
+    "url": "https://download.oracle.com/otndocs/jcp/java_se-11-final-spec/license.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14961,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java11-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14962,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-x64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14963,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk11-readme.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14964,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14965,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.zip.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14966,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk25-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14967,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk26-doc-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14968,
+    "url": "https://www.oracle.com/java/technologies/javase/8u-relnotes.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14969,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.exe.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14970,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java11-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14971,
+    "url": "https://www.oracle.com/a/tech/docs/jdk8-lium.pdf",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14972,
+    "url": "https://docs.oracle.com/en/java/javase/26/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14973,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk21certconfig.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14975,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk8-readme.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14976,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.dmg.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14977,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14978,
+    "url": "https://www.oracle.com/java/javase/terms/license/java26speclicense.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14979,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14980,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jepp",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14981,
+    "url": "https://www.oracle.com/a/tech/docs/17-0-19-checksum.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14982,
+    "url": "https://www.oracle.com/a/tech/docs/11-0-31-checksum.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14983,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.zip.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14984,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.rpm",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14985,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.dmg",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14986,
+    "url": "https://www.java.com/freeuselicense",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14987,
+    "url": "https://www.oracle.com/downloads/licenses/javase-license1.html#grants",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14988,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14989,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk17certconfig.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14990,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk26-readme-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14991,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk25-mac",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14992,
+    "url": "https://www.oracle.com/java/technologies/javase/21u-relnotes.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14993,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.zip",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14994,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14995,
+    "url": "https://www.oracle.com/java/technologies/javase/17u-relnotes.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14996,
+    "url": "https://www.oracle.com/java/javase/terms/license/java17speclicense.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 14997,
+    "url": "https://docs.oracle.com/en/java/java-components/enterprise-performance-pack/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 15074,
+    "url": "https://wiki.wxpython.org/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15075,
+    "url": "https://wxwidgets.org/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15076,
+    "url": "https://www.wxwidgets.org/blog/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15077,
+    "url": "https://www.wxpython.org/news/rss.xml",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15078,
+    "url": "https://pypi.org/project/wxPython/4.2.2",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15079,
+    "url": "https://pypi.org/project/wxPython/4.2.3",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15080,
+    "url": "https://pypi.org/project/wxPython/4.2.4",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15081,
+    "url": "https://github.com/wxWidgets/Phoenix/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15082,
+    "url": "https://www.findmyelectric.com/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15083,
+    "url": "https://www.wxpython.org/pages/overview",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15084,
+    "url": "http://wxglade.sourceforge.net/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15085,
+    "url": "https://www.wxpython.org/archive.html",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15086,
+    "url": "https://extras.wxpython.org/wxPython4/extras/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15087,
+    "url": "https://discuss.wxpython.org/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15088,
+    "url": "https://www.wxpython.org/pages/overview/#hello-world",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15089,
+    "url": "https://www.wxpython.org/#content",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15090,
+    "url": "https://www.wxpython.org/news",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15091,
+    "url": "https://www.wxpython.org/blog/rss.xml",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15092,
+    "url": "https://www.wxpython.org/categories/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15093,
+    "url": "http://docs.wxpython.org/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15094,
+    "url": "https://github.com/wxFormBuilder/wxFormBuilder",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15095,
+    "url": "http://www.blog.pythonlibrary.org/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 15096,
+    "url": "https://github.com/wxWidgets/Phoenix/issues",
+    "parentUrl": "https://www.wxpython.org/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://hugovk.dev/python-3.14.png",
+    "alt": "Two snakes enjoying a pie with 3.14 on the top and π crimping",
+    "pageTitle": "Python Release Python 3.14.4 | Python.org",
+    "pageUrl": "https://www.python.org/downloads/release/python-3144/"
+  },
+  {
+    "src": "https://www.oracle.com/a/ocom/img/rh03-java.webp",
+    "alt": "",
+    "pageTitle": "Java Software | Oracle",
+    "pageUrl": "https://www.oracle.com/java/"
+  },
   {
     "src": "https://dev.java/assets/images/javaone/cbgmd-javaone26-hero.webp",
     "alt": "JavaOne logo",
