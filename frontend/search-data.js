@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 593,
+    "url": "https://fosstodon.org/@ThePSF",
+    "title": "Python Software Foundation (@ThePSF@fosstodon.org) - Fosstodon",
+    "content": "To use the Mastodon web application, please enable JavaScript. Alternatively, try one of the native apps for Mastodon for your platform.",
+    "scrapedAt": "2026-05-09 00:46:54.230053"
+  },
+  {
+    "id": 590,
+    "url": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050",
+    "title": "The PyCon US 2026 schedule is live 🌴🐍 plus security updates, community programs \u0026 more",
+    "content": "Campaign URL Copy Twitter 0 tweets Subscribe Past Issues RSS Translate English العربية Afrikaans беларуская мова български català 中文（简体） 中文（繁體） Hrvatski Česky Dansk eesti keel Nederlands Suomi Français Deutsch Ελληνική हिन्दी Magyar Gaeilge Indonesia íslenska Italiano 日本語 ភាសាខ្មែរ 한국어 македонски јазик بهاس ملايو Malti Norsk Polski Português Português - Portugal Română Русский Español Kiswahili Svenska עברית Lietuvių latviešu slovenčina slovenščina српски தமிழ் ภาษาไทย Türkçe Filipino украї́нська Tiếng Việt From PyCon US news \u0026 deadlines, to PyPI security, and a new PSF Community Partner Program! View this email in your browser PyCon US 2026 is just around the corner in Long Beach, CA! 🌴🐍 We’re excited to welcome the Python community to Long Beach, California at the Long Beach Convention and Entertainment Center. From May 13–19, 2026, join us for a week filled with learning, collaboration, and connection. Whether you’re attending your first PyCon US or returning for your tenth, we can’t wait to bring everyone together again. Tickets are still available! Haven’t registered yet? Registration details can be found on the conference website. We’re a month away - so don’t wait! The PyCon US hotel block - book now before we sell out! Be sure to book your hotel reservations with the PyCon US hotel block to receive discounted conference rates (while supplies last)! Reserve your room directly from your PyCon US 2026 dashboard. Head to the Hotel and Venues page for more information and a list of all the PyCon US 2026 hotels and reservation deadlines. The hotel blocks will start closing April 20th and officially close on April 24th, 2026, so book today and avoid disappointment later! Sponsorships are also still available! Is your company featured on our all-star sponsors page yet? If not, head on over to our sponsor prospectus online and apply today through our sponsorship form. You’ll get a unique way to reach highly engaged Python users, with packages starting as low as $1750. We have openings at all levels as of now, but booth spaces are filling up fast and deadlines are approaching. We welcome you to contact sponsors@python.org with any questions. The PyCon US 2026 Schedule is officially live - See our wonderful lineup of more than 100 speakers, presenters, and keynotes, plus events for networking, socializing and learning. And don’t forget to check out our new dedicated talk tracks: The Future of AI with Python and Trailblazing Python Security! The fourteenth PyLadies Auction will be held at PyCon US this year—don’t forget to register for the auction if you’d like to attend; tickets will sell out ahead of the conference! We also welcome donations of fun items to auction, which you can submit via the PyLadies Auction Donation Form. Register for Tutorials, select Summits and events now! Advance registration is required, so sign up now to avoid disappointment. Don\u0027t worry, you can always change your mind and cancel later to open up the space for someone else. Tutorials: May 13 - May 14, 2026 - $150.00 per session. There are 2 time slots per day. Education Summit: May 14, 2026 - no entry fee Maintainers Summit: May 16, 2026 - no entry fee PyLadies Luncheon: May 17, 2026 - no entry fee Sprint project submissions are now open. Check out the Development Sprints page to learn more and submit your project today! The deadline to order your conference, PyLadies or Charlas t-shirts is April 14, 2026. Order via your attendee dashboard before they sell out! Be sure to read the Health and Safety Guidelines before attending PyCon US. We look forward to seeing our wonderful international community at PyCon US every year. The PyCon US and PSF team recognize that the situation around travel to the US is currently complex, and to better support our community during this time, we have updated the PyCon US International Travel Refund Policy. Find information about the latest Python-related events on the Python Events Calendar and Python Discuss Forum. Engineering and Development Updates Python Security Response Team (PSRT) and PEP 811 PEP 811 was approved by the Steering Council late last year. Now in 2026, PSF Security Developer in Residence Seth Larson is beginning the roll-out of the new processes and policies for the security team. There is now a public list of PSRT members and admins as well as documentation on the responsibilities and onboarding process for new PSRT members. Since the approval of PEP 811, there have been seven new members added to the PSRT (Jacob Coffee, William Woodruff, Petr Viktorin, Stan Ulbrych, Emma Smith, Adam Turner, and Bénédikt Tran). These are the first new PSRT members since Seth was added to the PSRT in 2023. Interested in joining? Learn more in Seth\u0027s post on the PSF Blog. The PSRT and PSF CVE Numbering Authority published 15 vulnerability advisories in Q1. Subscribe to the security-announce mailing list for security updates. Thanks to all PSRT members for their contributions towards keeping the P",
+    "scrapedAt": "2026-05-09 00:46:53.017846"
+  },
+  {
+    "id": 589,
+    "url": "https://pyfound.blogspot.com/2026/01/your-python-your-voice-join-python.html",
+    "title": "Python Software Foundation News: Your Python. Your Voice. Join the Python Developers Survey 2026!",
+    "content": "Monday, January 26, 2026 Your Python. Your Voice. Join the Python Developers Survey 2026! This year marks the ninth iteration of the official Python Developers Survey. We intentionally launched the survey in January (later than years prior) so that data collection and results can be completed and shared within the same calendar year. The survey aims to capture the current state of the Python language and its surrounding ecosystem. By comparing the results with last year’s, the community can identify emerging trends and gain deeper insight into how Python continues to evolve. We encourage you to contribute to our community’s knowledge by sharing your experience and perspective. Your participation is valued! The survey should only take you about 10-15 minutes to complete. Contribute to the Python Developers Survey 2026! This year we aim to reach even more of our community and ensure accurate global representation by highlighting our localization efforts: The survey is translated into Chinese, French, German, Japanese, Korean, Portuguese, Russian, Spanish. To assist individuals in promoting the survey and encouraging their local communities and professional networks we have created a Promotion Kit with images and social media posts translated into a variety of languages. We hope this promotion kit empowers folks to spread the invitation to respond to the survey within their local communities. We’d love it if you’d share one or more of the posts in the Promotion Kit to your social media or any community accounts you manage, as well as share the information in Python related discords, mailing lists, or chats you participate in. If you would like to help out with translations you see are missing, please request edit access to the doc and share what language you will be translating to. Translations for promotions into languages the survey may not be translated to is also welcome! If you have ideas about what else we can do to get the word out and encourage a diversity of responses, please comment on the corresponding Discuss thread. The survey is organized in partnership between the Python Software Foundation and JetBrains. After the survey is over, JetBrains will publish the aggregated results and randomly choose 20 winners (among those who complete the survey in its entirety), who will each receive a $100 Amazon Gift Card or a local equivalent. Posted by Marie Nordin at 1/26/2026 08:31:00 AM Newer Post Older Post Home Mission The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. Python Software Foundation Grants Program Membership Awards Meeting Minutes PSF Sponsors A big thank you to the above PSF sponsors for supporting our mission! Blog Archive ▼ 2026 (11) ► April (3) ► March (1) ► February (3) ▼ January (4) Your Python. Your Voice. Join the Python Developer... Departing the Python Software Foundation (Staff) Announcing Python Software Foundation Fellow Membe... Anthropic invests $1.5 million in the Python Softw... ► 2025 (50) ► December (1) ► November (4) ► October (7) ► September (3) ► August (6) ► July (4) ► June (14) ► May (3) ► April (2) ► March (4) ► February (1) ► January (1) ► 2024 (58) ► December (6) ► November (5) ► October (3) ► September (2) ► August (4) ► July (7) ► June (16) ► May (4) ► April (2) ► March (2) ► February (3) ► January (4) ► 2023 (37) ► December (1) ► November (3) ► October (3) ► September (2) ► August (3) ► June (5) ► May (12) ► April (2) ► March (1) ► February (3) ► January (2) ► 2022 (35) ► December (2) ► November (3) ► October (2) ► July (3) ► June (6) ► May (12) ► April (2) ► March (3) ► February (1) ► January (1) ► 2021 (42) ► December (3) ► November (4) ► October (3) ► September (2) ► August (1) ► July (2) ► June (4) ► May (12) ► April (5) ► March (1) ► February (4) ► January (1) ► 2020 (51) ► December (8) ► November (3) ► October (3) ► September (4) ► July (4) ► June (2) ► May (10) ► April (11) ► March (4) ► January (2) ► 2019 (45) ► December (3) ► November (3) ► October (3) ► September (4) ► August (3) ► July (3) ► June (5) ► May (11) ► April (1) ► March (2) ► February (5) ► January (2) ► 2018 (31) ► December (5) ► November (1) ► October (4) ► September (1) ► August (2) ► July (3) ► June (3) ► May (5) ► April (2) ► March (2) ► February (1) ► January (2) ► 2017 (32) ► December (3) ► November (2) ► October (4) ► September (6) ► August (2) ► July (2) ► May (2) ► April (3) ► March (2) ► February (2) ► January (4) ► 2016 (27) ► December (2) ► October (2) ► August (4) ► July (1) ► June (3) ► May (6) ► April (4) ► March (2) ► January (3) ► 2015 (67) ► December (2) ► November (4) ► October (4) ► September (1) ► August (2) ► July (4) ► June (6) ► May (4) ► April (13) ► March (14) ► February (9) ► January (4) ► 2014 (14) ► October (1) ► September (1) ► August (2) ► July (1) ► May (1) ► April (1) ► March (2) ► February (",
+    "scrapedAt": "2026-05-09 00:46:51.088167"
+  },
+  {
+    "id": 588,
+    "url": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html",
+    "title": "Python Software Foundation News: Departing the Python Software Foundation (Staff)",
+    "content": "Wednesday, January 21, 2026 Departing the Python Software Foundation (Staff) This week will be my last as the Director of Infrastructure at the Python Software Foundation and my last week as a staff member. Supporting the mission of this organization with my labor has been unbelievable in retrospect and I am filled with gratitude to every member of this community, volunteer, sponsor, board member, and staff member of this organization who have worked alongside me and entrusted me with root@python.org for all this time. But, it is time for me to do something new. I don’t believe there would ever be a perfect time for this transition, but I do believe that now is one of the best. The PSF has built out a team that shares the responsibilities I carried across our technical infrastructure, the maintenance and support of PyPI, relationships with our in-kind sponsors, and the facilitation of PyCon US. I’m also not “burnt-out” or worse, I knew that one day I would move on “dead or alive” and it is so good to feel alive in this decision, literally and figuratively. “The PSF and the Python community are very lucky to have had Ee at the helm for so many years. Ee’s approach to our technical needs has been responsive and resilient as Python, PyPI, PSF staff and the community have all grown, and their dedication to the community has been unmatched and unwavering. Ee is leaving the PSF in fantastic shape, and I know I join the rest of the staff in wishing them all the best as they move on to their next endeavor.” - Deb Nicholson, Executive Director The health and wellbeing of the PSF and the Python community is of utmost importance to me, and was paramount as I made decisions around this transition. Given that, I am grateful to be able to commit 20% of my time over the next six months to the PSF to provide support and continuity. Over the past few weeks we’ve been working internally to set things up for success, and I look forward to meeting the new staff and what they accomplish with the team at the PSF! My participation in the Python community and contributions to the infrastructure began long before my role as a staff member. As I transition out of participating as PSF staff I look forward to continuing to participate in and contribute to this community as a volunteer, as long as I am lucky enough to have the chance. Posted by Ee Durbin at 1/21/2026 03:00:00 PM Newer Post Older Post Home Mission The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. Python Software Foundation Grants Program Membership Awards Meeting Minutes PSF Sponsors A big thank you to the above PSF sponsors for supporting our mission! Blog Archive ▼ 2026 (11) ► April (3) ► March (1) ► February (3) ▼ January (4) Your Python. Your Voice. Join the Python Developer... Departing the Python Software Foundation (Staff) Announcing Python Software Foundation Fellow Membe... Anthropic invests $1.5 million in the Python Softw... ► 2025 (50) ► December (1) ► November (4) ► October (7) ► September (3) ► August (6) ► July (4) ► June (14) ► May (3) ► April (2) ► March (4) ► February (1) ► January (1) ► 2024 (58) ► December (6) ► November (5) ► October (3) ► September (2) ► August (4) ► July (7) ► June (16) ► May (4) ► April (2) ► March (2) ► February (3) ► January (4) ► 2023 (37) ► December (1) ► November (3) ► October (3) ► September (2) ► August (3) ► June (5) ► May (12) ► April (2) ► March (1) ► February (3) ► January (2) ► 2022 (35) ► December (2) ► November (3) ► October (2) ► July (3) ► June (6) ► May (12) ► April (2) ► March (3) ► February (1) ► January (1) ► 2021 (42) ► December (3) ► November (4) ► October (3) ► September (2) ► August (1) ► July (2) ► June (4) ► May (12) ► April (5) ► March (1) ► February (4) ► January (1) ► 2020 (51) ► December (8) ► November (3) ► October (3) ► September (4) ► July (4) ► June (2) ► May (10) ► April (11) ► March (4) ► January (2) ► 2019 (45) ► December (3) ► November (3) ► October (3) ► September (4) ► August (3) ► July (3) ► June (5) ► May (11) ► April (1) ► March (2) ► February (5) ► January (2) ► 2018 (31) ► December (5) ► November (1) ► October (4) ► September (1) ► August (2) ► July (3) ► June (3) ► May (5) ► April (2) ► March (2) ► February (1) ► January (2) ► 2017 (32) ► December (3) ► November (2) ► October (4) ► September (6) ► August (2) ► July (2) ► May (2) ► April (3) ► March (2) ► February (2) ► January (4) ► 2016 (27) ► December (2) ► October (2) ► August (4) ► July (1) ► June (3) ► May (6) ► April (4) ► March (2) ► January (3) ► 2015 (67) ► December (2) ► November (4) ► October (4) ► September (1) ► August (2) ► July (4) ► June (6) ► May (4) ► April (13) ► March (14) ► February (9) ► January (4) ► 2014 (14) ► October (1) ► September (1) ► August (2) ► July (1) ► May (1) ► April (1) ► March (2) ► February (3) ► January (2) ► 2013 (18) ► Novemb",
+    "scrapedAt": "2026-05-09 00:46:49.698467"
+  },
+  {
+    "id": 587,
+    "url": "https://www.python.org/psf/membership-faq",
+    "title": "PSF Membership Types \u0026 FAQ | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of the international community of Python programmers. —from the Mission Statement page What does it mean to be a member of the PSF? What membership classes are there? Who is allowed to vote? Why am I a Basic Member even though I’m a Supporting/Contributing/Fellow Member? How does a person become a PSF Fellow? What does the PSF do? How can I ask other questions? What does it mean to be a member of the PSF? Being part of the PSF means being part of the Python community. In 2014, we changed the bylaws to make the PSF an open membership organization, so that everyone who uses and supports Python can join. For those who wish to participate more, we have classes of membership that include voting rights for those who contribute time, work, and money to the foundation. What membership classes are there? There are four classes of members: Basic Members, Supporting Members, Contributing Members and Fellows. Basic Members Basic members are individuals or entities who are part of the Python language community and who have decided to declare their support for Python and agree to the community Code of Conduct. There is no cost to be a Basic Member. You can sign up as a basic member right here on the site. Supporting Members Supporting Members make a specific annual donation to the PSF to sustain the Foundation and support the Python community. Supporting Members are eligible to vote. You may combine Supporting Membership with any other Membership - i.e. you may sign up for Supporting Membership and also be a Basic Member, Contributing Member, or a Fellow. You can sign up as a Supporting Member here. Contributing Members Contributing Members are people who dedicate at least five hours per month volunteering on projects that advance the mission of the PSF, where the work relates to the creation or maintenance of open source software available to the public at no charge, or by organizing Python events, running infrastructure, participating in one of the PSF\u0027s working groups, etc. Contributing Members are eligible to vote. There is no cost to be a Contributing Member. For details on signing up as a Contributing Member, refer to this form. Fellows Fellows are members who have been nominated for their extraordinary efforts and impact upon Python, the community, and the broader Python ecosystem. Fellows are nominated from the broader community and elevated by a vote of the members. Fellow members are eligible to vote. More info on the nomination process is available here. Who is allowed to vote? Who is eligible: Supporting Members, Contributing Members, and Fellows are eligible for voting privileges. To vote you must be 1) eligible to vote, and then 2) affirm each year you would like to exercise your voting privileges. More information on affirming your voting status is here. Why am I a Basic Member even though I’m a Supporting/Contributing/Fellow Member? Your Basic Membership information is managed here on https://www.python.org/users/membership/edit/. To manage your Supporting and Contributing Memberships, visit https://psfmember.org/user-information/. This site, https://www.python.org , will list you as a Basic Member even if you are a Supporting, Contribution, or Fellowship member because the voting tiers of membership are managed on the separate, https://www.psfmember.org website. To verify your PSF Voting Eligibility you will need to use https://www.psfmember.org. If you believe you are a Supporting, Contributing, or Fellow Member but do not have an account on psfmember.org, please create an account and verify your email, then email psf-donations@python.org to get your account linked to your membership. How does a person become a PSF Fellow? To nominate someone to be a PSF Fellow member, please send your nomination to psf-fellow@python.org. More info on the nomination process is available here. The criteria for becoming a PSF Fellow are as follows: For those who have served the Python community by creating and/or maintaining various creative contributions, the following statement should be true: \"[Nominated Person] has served the Python community by making available code, tests, documentation, or design, either in a Python implementation or in a Python ecosystem project, that 1) shows technical excellence, 2) is an example of software engineering principles and best practices, and 3) has achieved widespread usage or acclaim.\" For those who have served the Python community by coordinating, organizing, teaching, writing, and evangelizing, the following statement should b",
+    "scrapedAt": "2026-05-09 00:46:48.289349"
+  },
+  {
     "id": 586,
     "url": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html",
     "title": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
@@ -4018,26 +4053,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 587,
-    "url": "https://www.python.org/psf/membership-faq"
-  },
-  {
-    "id": 588,
-    "url": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html"
-  },
-  {
-    "id": 589,
-    "url": "https://pyfound.blogspot.com/2026/01/your-python-your-voice-join-python.html"
-  },
-  {
-    "id": 590,
-    "url": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
-  },
-  {
-    "id": 593,
-    "url": "https://fosstodon.org/@ThePSF"
   },
   {
     "id": 595,
@@ -97414,10 +97429,648 @@ window.searchData = [
     "id": 69501,
     "url": "https://kjaymiller.com/",
     "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 69560,
+    "url": "https://pyfound.blogspot.com/2026/01/announcing-python-software-foundation.html",
+    "parentUrl": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html"
+  },
+  {
+    "id": 69697,
+    "url": "https://pyfound.blogspot.com/2025/12/anthropic-invests-in-python.html",
+    "parentUrl": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html"
+  },
+  {
+    "id": 69737,
+    "url": "https://www.blogger.com/profile/13577459520968677064",
+    "parentUrl": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html"
+  },
+  {
+    "id": 69748,
+    "url": "https://www.blogger.com/post-edit.g?blogID\u003d8520\u0026postID\u003d4397362145900791438\u0026from\u003dpencil",
+    "parentUrl": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html"
+  },
+  {
+    "id": 69899,
+    "url": "https://surveys.jetbrains.com/s3/python-developers-survey-2026",
+    "parentUrl": "https://pyfound.blogspot.com/2026/01/your-python-your-voice-join-python.html"
+  },
+  {
+    "id": 69905,
+    "url": "https://discuss.python.org/t/your-python-your-voice-join-the-python-developers-survey-2026/105883",
+    "parentUrl": "https://pyfound.blogspot.com/2026/01/your-python-your-voice-join-python.html"
+  },
+  {
+    "id": 69989,
+    "url": "https://docs.google.com/document/d/1C3r-dFY5LmklzCnf72vfeehzRqCCDuXzK8xKuwBES1Y/edit?usp\u003dsharing",
+    "parentUrl": "https://pyfound.blogspot.com/2026/01/your-python-your-voice-join-python.html"
+  },
+  {
+    "id": 70027,
+    "url": "https://www.blogger.com/post-edit.g?blogID\u003d8520\u0026postID\u003d696885033213796010\u0026from\u003dpencil",
+    "parentUrl": "https://pyfound.blogspot.com/2026/01/your-python-your-voice-join-python.html"
+  },
+  {
+    "id": 70054,
+    "url": "https://www.python.org/psf/prospectus2026/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70055,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|bg\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70059,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|zh-CN\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70061,
+    "url": "https://us.pycon.org/2026/tracks/security/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70062,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|pt-PT\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70063,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|tl\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70064,
+    "url": "https://github.com/python/cpython/pull/144436",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70065,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|mt\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70066,
+    "url": "https://jazzband.co/news/2026/03/14/sunsetting-jazzband",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70067,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|fi\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70068,
+    "url": "https://docs.google.com/document/d/1C3r-dFY5LmklzCnf72vfeehzRqCCDuXzK8xKuwBES1Y/edit?tab\u003dt.0#heading\u003dh.buwf11mw0n1e",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70069,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|de\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70072,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|uk\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70073,
+    "url": "https://www.python.org/events/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70074,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|ta\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70075,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|es\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70076,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|be\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70077,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|nl\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70078,
+    "url": "https://github.com/disposable-email-domains/disposable-email-domains",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70081,
+    "url": "https://conference.pyladies.com/2025-pyladiescon-recap/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70082,
+    "url": "https://devguide.python.org/developer-workflow/psrt/#how-can-i-join-the-psrt",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70083,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|sw\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70085,
+    "url": "http://eepurl.com/dLWCJ6",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70086,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|hu\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70087,
+    "url": "https://securitytxt.org/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70088,
+    "url": "https://devguide.python.org/developer-workflow/psrt",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70089,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|is\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70090,
+    "url": "https://github.com/disposable-email-domains/disposable-email-domains/pull/876",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70091,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|ga\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70092,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|mk\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70093,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|ja\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70094,
+    "url": "https://us.pycon.org/2026/events/maintainers-summit/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70097,
+    "url": "https://pyfound.blogspot.com/2025/02/where-is-psf-2025-edition.html",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70098,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|sr\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70099,
+    "url": "https://us19.campaign-archive.com/feed?u\u003d5697f493c3a48994f504d4deb\u0026id\u003d167eaa449b",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70100,
+    "url": "https://mail.python.org/archives/list/security-announce@python.org/latest",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70101,
+    "url": "https://github.com/pypi/warehouse/pull/19525",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70102,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|ar\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70103,
+    "url": "https://python.us19.list-manage.com/unsubscribe?u\u003d5697f493c3a48994f504d4deb\u0026id\u003d167eaa449b\u0026t\u003db\u0026e\u003d[UNIQID]\u0026c\u003d822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70104,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|hr\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70105,
+    "url": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050?e\u003d[UNIQID]",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70106,
+    "url": "https://pretix.northbaypython.org/nbpy/nbpy-2026/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70107,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|ca\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70108,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|ms\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70109,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|ro\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70110,
+    "url": "https://bsky.app/profile/python.org",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70111,
+    "url": "https://twitter.com/share?url\u003dhttps%3A%2F%2Fmailchi.mp%2Fpython%2Fpython-software-foundation-july-2024-newsletter-19886050",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70112,
+    "url": "https://peps.python.org/pep-0811/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70113,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|vi\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70115,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|ko\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70116,
+    "url": "https://conference.pyladies.com/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70118,
+    "url": "https://us.pycon.org/2026/attend/international-travel/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70119,
+    "url": "https://www.linkedin.com/company/thepsf",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70121,
+    "url": "https://pyohio.org/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70122,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|lt\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70123,
+    "url": "https://python.us19.list-manage.com/profile?u\u003d5697f493c3a48994f504d4deb\u0026id\u003d167eaa449b\u0026e\u003d[UNIQID]\u0026c\u003d822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70124,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|et\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70125,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|hi\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70126,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|th\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70127,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|cs\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70128,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|en\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70129,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|da\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70130,
+    "url": "https://linktr.ee/thepsf",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70131,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|no\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70132,
+    "url": "https://devguide.python.org/developer-workflow/psrt/#responsibilities-of-psrt-members",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70133,
+    "url": "https://us19.campaign-archive.com/home/?u\u003d5697f493c3a48994f504d4deb\u0026id\u003d167eaa449b",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70134,
+    "url": "https://us.pycon.org/2026/tracks/ai/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70135,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|sk\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70136,
+    "url": "https://pretalx.com/pyohio-2026/cfp",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70137,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|km\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70138,
+    "url": "https://docs.pypi.org/api/json/#ownership",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70139,
+    "url": "https://jazzband.co/news/2026/03/14/wind-down-plan",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70140,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|pt\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70142,
+    "url": "https://us.pycon.org/2026/events/education-summit/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70143,
+    "url": "https://jazzband.co/news/2026/03/14/10-years-of-jazzband",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70144,
+    "url": "https://discuss.python.org/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70145,
+    "url": "https://www.meetup.com/pro/python-software-foundation-meetups/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70146,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2026-1703",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70147,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|ru\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70148,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|iw\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70149,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|lv\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70151,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|sl\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70152,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|tr\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70153,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|el\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70154,
+    "url": "https://discuss.python.org/c/events/33",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70156,
+    "url": "https://us.pycon.org/2026/schedule/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70157,
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSciOIX5Omvwn8i41xI9zmBhljcuC6Soz-ryMRLL6RIDdC2yfQ/viewform",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70160,
+    "url": "https://newsletter.pyohio.org/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70161,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|fr\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70162,
+    "url": "https://www.longbeachcc.com/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70163,
+    "url": "https://www.pyohio.org/2026/PyOhio-2026-Sponsorship-Prospectus.pdf",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70164,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|id\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70165,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|sv\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70166,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|zh-TW\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70169,
+    "url": "https://us.pycon.org/2026/events/pyladies-lunch/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70170,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|af\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70171,
+    "url": "https://sethmlarson.dev/deprecate-confusing-apis-like-os-path-commonprefix",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70172,
+    "url": "https://www.python.org/cve-numbering-authority/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70173,
+    "url": "https://www.youtube.com/playlist?list\u003dPLOItnwPQ-eHxvEOnu1MsRX_qkX7dyXAZS",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70174,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|pl\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70175,
+    "url": "https://us.pycon.org/2026/sponsorship/sponsors/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70176,
+    "url": "https://www.python.org/psf/meetup-pro/",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70177,
+    "url": "http://translate.google.com/translate?hl\u003dauto\u0026langpair\u003dauto|it\u0026u\u003dhttps%3A%2F%2Fus19.campaign-archive.com%2F%3Fu%3D5697f493c3a48994f504d4deb%26id%3D822f7da2b5",
+    "parentUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "id": 70178,
+    "url": "https://joinmastodon.org/apps",
+    "parentUrl": "https://fosstodon.org/@ThePSF"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://fosstodon.org/packs/assets/logo-DXQkHAe5.svg",
+    "alt": "Mastodon",
+    "pageTitle": "Python Software Foundation (@ThePSF@fosstodon.org) - Fosstodon",
+    "pageUrl": "https://fosstodon.org/@ThePSF"
+  },
+  {
+    "src": "https://mcusercontent.com/5697f493c3a48994f504d4deb/_compresseds/76ce0e60-e389-45fa-a98a-eb2aea3e5ff0.jpg",
+    "alt": "",
+    "pageTitle": "The PyCon US 2026 schedule is live 🌴🐍 plus security updates, community programs \u0026 more",
+    "pageUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "src": "https://mcusercontent.com/5697f493c3a48994f504d4deb/images/87ad833a-8d56-f261-2392-e4bd299fda07.png",
+    "alt": "",
+    "pageTitle": "The PyCon US 2026 schedule is live 🌴🐍 plus security updates, community programs \u0026 more",
+    "pageUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "src": "https://mcusercontent.com/5697f493c3a48994f504d4deb/images/f974213b-145b-dabe-6363-6ad63d7d1c72.png",
+    "alt": "",
+    "pageTitle": "The PyCon US 2026 schedule is live 🌴🐍 plus security updates, community programs \u0026 more",
+    "pageUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "src": "https://cdn-images.mailchimp.com/icons/social-block-v2/color-link-48.png",
+    "alt": "Discuss",
+    "pageTitle": "The PyCon US 2026 schedule is live 🌴🐍 plus security updates, community programs \u0026 more",
+    "pageUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "src": "https://cdn-images.mailchimp.com/icons/social-block-v2/color-link-48.png",
+    "alt": "Mastodon",
+    "pageTitle": "The PyCon US 2026 schedule is live 🌴🐍 plus security updates, community programs \u0026 more",
+    "pageUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "src": "https://cdn-images.mailchimp.com/icons/social-block-v2/color-link-48.png",
+    "alt": "Website",
+    "pageTitle": "The PyCon US 2026 schedule is live 🌴🐍 plus security updates, community programs \u0026 more",
+    "pageUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "src": "https://cdn-images.mailchimp.com/icons/social-block-v2/color-linkedin-48.png",
+    "alt": "LinkedIn",
+    "pageTitle": "The PyCon US 2026 schedule is live 🌴🐍 plus security updates, community programs \u0026 more",
+    "pageUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "src": "https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png",
+    "alt": "X",
+    "pageTitle": "The PyCon US 2026 schedule is live 🌴🐍 plus security updates, community programs \u0026 more",
+    "pageUrl": "https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19886050"
+  },
+  {
+    "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
+    "alt": "",
+    "pageTitle": "Python Software Foundation News: Your Python. Your Voice. Join the Python Developers Survey 2026!",
+    "pageUrl": "https://pyfound.blogspot.com/2026/01/your-python-your-voice-join-python.html"
+  },
+  {
+    "src": "https://blogger.googleusercontent.com/img/a/AVvXsEiagchpTRkriKoEe2Cqh2Bd5mX7Un4EYG-fq2Gdwx-Jx5scs09-0bmLVT89ewlhrQsiaJVE6nUU1Z0UkZFu0KUM2f82CiXXGsY_mg0JRq8iUtt_Rob_rcWX9meUjM2ql0XMoYFwO7dtt8T3cHO5oGfxo3HPk-9Lz358AlCHMDRAo5fgBXTuEuo\u003ds302",
+    "alt": "PSF Sponsors",
+    "pageTitle": "Python Software Foundation News: Your Python. Your Voice. Join the Python Developers Survey 2026!",
+    "pageUrl": "https://pyfound.blogspot.com/2026/01/your-python-your-voice-join-python.html"
+  },
+  {
+    "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
+    "alt": "",
+    "pageTitle": "Python Software Foundation News: Departing the Python Software Foundation (Staff)",
+    "pageUrl": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html"
+  },
+  {
+    "src": "https://blogger.googleusercontent.com/img/a/AVvXsEiagchpTRkriKoEe2Cqh2Bd5mX7Un4EYG-fq2Gdwx-Jx5scs09-0bmLVT89ewlhrQsiaJVE6nUU1Z0UkZFu0KUM2f82CiXXGsY_mg0JRq8iUtt_Rob_rcWX9meUjM2ql0XMoYFwO7dtt8T3cHO5oGfxo3HPk-9Lz358AlCHMDRAo5fgBXTuEuo\u003ds302",
+    "alt": "PSF Sponsors",
+    "pageTitle": "Python Software Foundation News: Departing the Python Software Foundation (Staff)",
+    "pageUrl": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html"
+  },
   {
     "src": "https://blogger.googleusercontent.com/img/a/AVvXsEjkhgqUDZF7BIsaWJIMrfgV07w_awVOFJdKoIwf2gcrjinWZidBj0W4qNvYDyskySUTJzqGXYkH8gRDhVcyIWzBhJWicGPXxNQg_6NJMzi7QnSUtEF8Z8ZEjUW7uAk2sMChj8wXro1BWmEvMtqJJSqSPuWIZfQU24JroQwb_ng56s0zw_Vr2Q\u003dw510-h230",
     "alt": "",
