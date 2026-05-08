@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 529,
+    "url": "https://www.python.org/events/python-events/2171/",
+    "title": "PyCon DE 2027 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PyCon DE 2027 Heidelberg, Germany From 20 April through 22 April, 2027 PyCon DE 2027 ← Previous XtremePython 2026 in Online Explore events -- Change your date range The next 7 days The next 30 days The next 90 days The next year More events at Heidelberg, Germany PyCon DE 2027 enterPy (cancelled) DjangoCon Europe 2018",
+    "scrapedAt": "2026-05-09 00:44:55.360017"
+  },
+  {
+    "id": 528,
+    "url": "https://2026.pycon.it/en",
+    "title": "PyCon Italia 2026 | PyCon Italia",
+    "content": "Bologna, May 27 - 30, 2026 We welcome you to PyCon Italia 2026! Conference Breakdown Wednesday, May 27: Open Learning Day [Free Event] From Thursday, May 28 to Saturday, May 30: Conference (Talks, Tutorials, social events) [Tickets] Want to know more? Visit our FAQs section Program May 27 Wednesday May 28 Thursday May 29 Friday May 30 Saturday 11:05 - 13:05 Italian, Beginner Riccardo Figliozzi Tigella data-driven: come scegliere la tigella perfetta con l\u0027AI. 14:40 - 16:40 English, Beginner Aris Nivorlis Version Everything: From Chaos to Order in Reproducible Python Projects 15:20 - 16:05 English, Advanced Serena Sensini Quantum Chaos Monkey: Stress-Testing Algorithms in the NISQ Era 12:25 - 12:55 English, Intermediate Gina Häußge Basic Security for Open Source Maintainers Full Program Keynoters May 28English Django has a marketing problem: debunking the myths that won\u0027t die Sarah Boyce May 29English From “Fast Enough” to “Fast by Design”: The Evolution of CPython Performance Diego Russo May 28English Stop Being a Generalist: The Small Model Revolution Dawn Wages May 29English Open-source Multimodal AI MERVE NOYAN May 30English Durable Agents: long running AI workflows in a flakey world Samuel Colvin Keynoters Social Events PyCon Italia non è solo codice - è soprattutto le persone! Join us for the PyDrink on Wednesday evening: drinks, cured meats, and crescentine from Lab16, in the heart of Bologna. And don\u0027t miss the PyDinner on Thursday evening at the Savoia Hotel Regency for an Italian dinner with old and new acquaintances. The best conversations at PyCon happen outside of the talks! Social Events Speakers We have published the list of speakers for PyCon Italia! Speakers Tickets Student This reduced price is available for all full-time or unemployed individuals who have recently graduated. €60 Students Tickets Personal This ticket is available for all individuals. €300 Late Tickets Business This ticket is for companies and business purchases! €400 Late Tickets Sponsor Us With more than 1000 attendees, you can utilize this opportunity to gain recognition for your brand, meet highly qualified professionals, and so much more! Why not ask your organization to sponsor us? Learn More Gold Bronze Patron Startup Kinship Media Partners Follow us on #PyConIT",
+    "scrapedAt": "2026-05-09 00:44:54.151404"
+  },
+  {
+    "id": 527,
+    "url": "https://www.python.org/events/python-events/1873/",
+    "title": "PyCon Italia 2025 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PyCon Italia 2025 Bologna, Italy From 28 May through 31 May, 2025 PyCon Italia 2025 Explore events -- Change your date range More events at Bologna, Italy PyCon Italia 2026 PyCon Italia 2025",
+    "scrapedAt": "2026-05-09 00:44:52.893453"
+  },
+  {
+    "id": 526,
+    "url": "http://docs.python.org/library/markup",
+    "title": "Structured Markup Processing Tools — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Structured Markup Processing Tools | Theme Auto Light Dark | Structured Markup Processing Tools¶ Python supports a variety of modules to work with various forms of structured data markup. This includes modules to work with the Standard Generalized Markup Language (SGML) and the Hypertext Markup Language (HTML), and several interfaces for working with the Extensible Markup Language (XML). html — HyperText Markup Language support html.parser — Simple HTML and XHTML parser Example HTML Parser Application HTMLParser Methods Examples html.entities — Definitions of HTML general entities XML Processing Modules XML security xml.etree.ElementTree — The ElementTree XML API Tutorial XML tree and elements Parsing XML Pull API for non-blocking parsing Finding interesting elements Modifying an XML File Building XML documents Parsing XML with Namespaces XPath support Example Supported XPath syntax Reference Functions XInclude support Example Reference Functions Element Objects ElementTree Objects QName Objects TreeBuilder Objects XMLParser Objects XMLPullParser Objects Exceptions xml.dom — The Document Object Model API Module Contents Objects in the DOM DOMImplementation Objects Node Objects NodeList Objects DocumentType Objects Document Objects Element Objects Attr Objects NamedNodeMap Objects Comment Objects Text and CDATASection Objects ProcessingInstruction Objects Exceptions Conformance Type Mapping Accessor Methods xml.dom.minidom — Minimal DOM implementation DOM Objects DOM Example minidom and the DOM standard xml.dom.pulldom — Support for building partial DOM trees DOMEventStream Objects xml.sax — Support for SAX2 parsers SAXException Objects xml.sax.handler — Base classes for SAX handlers ContentHandler Objects DTDHandler Objects EntityResolver Objects ErrorHandler Objects LexicalHandler Objects xml.sax.saxutils — SAX Utilities xml.sax.xmlreader — Interface for XML parsers XMLReader Objects IncrementalParser Objects Locator Objects InputSource Objects The Attributes Interface The AttributesNS Interface xml.parsers.expat — Fast XML parsing using Expat XMLParser Objects ExpatError Exceptions Example Content Model Descriptions Expat error constants Previous topic quopri — Encode and decode MIME quoted-printable data Next topic html — HyperText Markup Language support This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Structured Markup Processing Tools | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 00:44:51.655066"
+  },
+  {
+    "id": 525,
+    "url": "http://wiki.python.org/moin/TkInter",
+    "title": "Tkinter",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. 2026-02-14 16:14",
+    "scrapedAt": "2026-05-09 00:44:50.213738"
+  },
+  {
     "id": 524,
     "url": "https://www.django-cms.org/",
     "title": "django CMS - Enterprise Content Management with Django - django CMS",
@@ -3633,26 +3668,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 525,
-    "url": "http://wiki.python.org/moin/TkInter"
-  },
-  {
-    "id": 526,
-    "url": "http://docs.python.org/library/markup"
-  },
-  {
-    "id": 527,
-    "url": "https://www.python.org/events/python-events/1873/"
-  },
-  {
-    "id": 528,
-    "url": "https://2026.pycon.it/en"
-  },
-  {
-    "id": 529,
-    "url": "https://www.python.org/events/python-events/2171/"
   },
   {
     "id": 531,
@@ -95104,10 +95119,1067 @@ window.searchData = [
     "id": 68124,
     "url": "https://www.django-cms.org/en/community/blog/",
     "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 68128,
+    "url": "https://docs.python.org/3/library/html.parser.html#htmlparser-methods",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68129,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#tutorial",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68131,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#element-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68132,
+    "url": "https://docs.python.org/3/library/xml.dom.html#accessor-methods",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68134,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml-tree-and-elements",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68135,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#reference",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68136,
+    "url": "https://docs.python.org/3/library/xml.sax.utils.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68137,
+    "url": "https://docs.python.org/3/library/xml.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68138,
+    "url": "https://docs.python.org/3/library/pyexpat.html#xmlparser-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68139,
+    "url": "https://docs.python.org/3/library/pyexpat.html#module-xml.parsers.expat.errors",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68141,
+    "url": "https://docs.python.org/3/library/html.parser.html#example-html-parser-application",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68142,
+    "url": "https://docs.python.org/3/library/xml.dom.minidom.html#dom-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68143,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#modifying-an-xml-file",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68144,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#building-xml-documents",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68145,
+    "url": "https://docs.python.org/3/library/xml.dom.html#text-and-cdatasection-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68146,
+    "url": "https://docs.python.org/3/library/html.parser.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68147,
+    "url": "https://docs.python.org/3/library/xml.sax.reader.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68149,
+    "url": "https://docs.python.org/3/library/xml.dom.html#conformance",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68150,
+    "url": "https://docs.python.org/3/library/markup.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68151,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xpath-support",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68152,
+    "url": "https://docs.python.org/3/library/xml.dom.html#type-mapping",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68153,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#supported-xpath-syntax",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68154,
+    "url": "https://docs.python.org/3/library/quopri.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68155,
+    "url": "https://docs.python.org/3/library/xml.dom.html#domimplementation-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68156,
+    "url": "https://docs.python.org/3/library/xml.dom.html#nodelist-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68157,
+    "url": "https://docs.python.org/3/library/html.entities.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68158,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xmlparser-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68159,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#example",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68160,
+    "url": "https://docs.python.org/3/library/xml.sax.reader.html#inputsource-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68162,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#pull-api-for-non-blocking-parsing",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68163,
+    "url": "https://docs.python.org/3/library/xml.dom.html#node-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68164,
+    "url": "https://docs.python.org/3/library/xml.dom.html#processinginstruction-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68165,
+    "url": "https://docs.python.org/3/library/xml.dom.html#namednodemap-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68166,
+    "url": "https://docs.python.org/3/library/xml.dom.html#exceptions",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68167,
+    "url": "https://docs.python.org/3/library/xml.sax.html#saxexception-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68168,
+    "url": "https://docs.python.org/3/library/xml.dom.html#element-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68169,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#elementinclude-functions",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68170,
+    "url": "https://docs.python.org/3/library/xml.sax.reader.html#the-attributes-interface",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68171,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xinclude-support",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68172,
+    "url": "https://docs.python.org/3/library/xml.sax.handler.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68173,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/markup.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68174,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#elementtree-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68175,
+    "url": "https://docs.python.org/3/library/xml.dom.html#attr-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68176,
+    "url": "https://docs.python.org/3/library/xml.sax.reader.html#xmlreader-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68177,
+    "url": "https://docs.python.org/3/library/xml.sax.reader.html#incrementalparser-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68178,
+    "url": "https://docs.python.org/3/library/xml.sax.handler.html#entityresolver-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68179,
+    "url": "https://docs.python.org/3/library/pyexpat.html#expaterror-exceptions",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68180,
+    "url": "https://docs.python.org/3/library/html.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68181,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68183,
+    "url": "https://docs.python.org/3/library/xml.sax.handler.html#errorhandler-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68186,
+    "url": "https://docs.python.org/3/library/xml.dom.pulldom.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68187,
+    "url": "https://docs.python.org/3/library/xml.sax.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68188,
+    "url": "https://docs.python.org/3/library/xml.sax.handler.html#dtdhandler-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68189,
+    "url": "https://docs.python.org/3/library/xml.dom.html#document-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68190,
+    "url": "https://docs.python.org/3/library/xml.sax.reader.html#the-attributesns-interface",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68191,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#parsing-xml",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68192,
+    "url": "https://docs.python.org/3/library/xml.sax.handler.html#contenthandler-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68193,
+    "url": "https://docs.python.org/3/library/xml.dom.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68194,
+    "url": "https://docs.python.org/3/library/markup.html#structured-markup-processing-tools",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68195,
+    "url": "https://docs.python.org/3/library/html.parser.html#examples",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68196,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#qname-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68197,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#id4",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68198,
+    "url": "https://docs.python.org/3/library/pyexpat.html#module-xml.parsers.expat.model",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68199,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#exceptions",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68200,
+    "url": "https://docs.python.org/3/library/xml.dom.html#documenttype-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68201,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#id3",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68202,
+    "url": "https://docs.python.org/3/library/xml.dom.pulldom.html#domeventstream-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68203,
+    "url": "https://docs.python.org/3/library/xml.sax.reader.html#locator-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68204,
+    "url": "https://docs.python.org/3/library/xml.dom.html#comment-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68205,
+    "url": "https://docs.python.org/3/library/xml.dom.minidom.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68207,
+    "url": "https://docs.python.org/3/library/xml.dom.minidom.html#minidom-and-the-dom-standard",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68210,
+    "url": "https://docs.python.org/3/library/xml.dom.html#objects-in-the-dom",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68212,
+    "url": "https://docs.python.org/3/library/xml.html#xml-vulnerabilities",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68213,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#finding-interesting-elements",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68214,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xmlpullparser-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68215,
+    "url": "https://docs.python.org/3/library/xml.dom.html#module-contents",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68216,
+    "url": "https://docs.python.org/3/library/xml.dom.minidom.html#dom-example",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68217,
+    "url": "https://docs.python.org/3/library/pyexpat.html#example",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68218,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#parsing-xml-with-namespaces",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68219,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#treebuilder-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68220,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#functions",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68221,
+    "url": "https://docs.python.org/3/library/xml.sax.handler.html#lexicalhandler-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 68222,
+    "url": "https://2025.pycon.it/en",
+    "parentUrl": "https://www.python.org/events/python-events/1873/"
+  },
+  {
+    "id": 68226,
+    "url": "https://2026.pycon.it/en/keynotes/from-fast-enough-to-fast-by-design",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68227,
+    "url": "https://bari.python.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68228,
+    "url": "https://pyre.it",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68229,
+    "url": "https://www.pytech.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68230,
+    "url": "https://www.soprasteria.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68231,
+    "url": "https://www.linkedin.com/company/pyzena/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68232,
+    "url": "https://materatech.it",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68233,
+    "url": "https://www.bloomberg.com/company/values/tech-at-bloomberg/python/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68234,
+    "url": "https://catania.python.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68235,
+    "url": "https://shetechitaly.org/eventi/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68236,
+    "url": "https://2026.pycon.it/en/event/version-everything-from-chaos-to-order-in-reproducible-python-projects",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68237,
+    "url": "https://www.nephila.digital/it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68238,
+    "url": "https://2026.pycon.it/tickets",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68239,
+    "url": "https://2026.pycon.it/en/keynotes/django-has-a-marketing-problem-debunking-the-myths-that-wont-die",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68240,
+    "url": "https://2026.pycon.it/en/sponsor",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68241,
+    "url": "https://marche.python.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68242,
+    "url": "https://pycon.it/speakers",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68243,
+    "url": "https://www.appsignal.com/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68244,
+    "url": "https://2026.pycon.it/en/event/quantum-chaos-monkey-stress-testing-algorithms-in-the-nisq-era",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68245,
+    "url": "https://www.meetup.com/it-IT/pycampania/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68246,
+    "url": "https://cargoful.tech/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68247,
+    "url": "https://www.facebook.com/pythonitalia",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68248,
+    "url": "https://www.jetbrains.com/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68249,
+    "url": "https://dvisionlab.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68250,
+    "url": "https://schroedinger-hat.org/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68251,
+    "url": "http://www.gogenerali.com",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68252,
+    "url": "https://2026.pycon.it/en/keynotes/duable-agents-long-running-ai-workflows-in-a-flakey-world",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68253,
+    "url": "https://www.linkedin.com/company/pycon-italia",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68254,
+    "url": "https://pythonbiellagroup.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68255,
+    "url": "https://2026.pycon.it/en/keynotes/open-source-multimodal-ai",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68256,
+    "url": "https://paradigma.me/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68257,
+    "url": "https://2026.pycon.it/en/event/basic-security-for-open-source-maintainers",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68258,
+    "url": "https://pydantic.dev/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68259,
+    "url": "https://kraken.tech/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68260,
+    "url": "https://pisa.dev/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68261,
+    "url": "https://venice.python.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68262,
+    "url": "https://www.cometocode.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68263,
+    "url": "https://linkeurope.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68264,
+    "url": "https://2026.pycon.it/faqs",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68265,
+    "url": "https://djangogirls.org/pt/bologna/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68266,
+    "url": "https://pycon.it/social-events",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68267,
+    "url": "https://venice.pydata.org/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68268,
+    "url": "https://torino.python.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68269,
+    "url": "https://2026.pycon.it/en/keynoters",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68270,
+    "url": "http://milano.python.it",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68271,
+    "url": "https://cassandra.app/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68272,
+    "url": "https://www.meetup.com/it-it/pydata-roma-capitale/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68273,
+    "url": "https://www.instagram.com/pycon.it",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68274,
+    "url": "https://2026.pycon.it/en/schedule",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68275,
+    "url": "https://pescara.python.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68276,
+    "url": "https://shop.strawberry.rocks/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68277,
+    "url": "https://2026.pycon.it/en/keynotes/stop-being-a-generalist-the-small-model-revolution",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68278,
+    "url": "https://t.me/pyroma",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68279,
+    "url": "https://www.py4ai.com/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68280,
+    "url": "http://www.fabiolamanna.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68281,
+    "url": "https://pointerpodcast.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68282,
+    "url": "https://www.theredcode.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68283,
+    "url": "https://2026.pycon.it/en/event/tigella-data-driven-come-scegliere-la-tigella-perfetta-con-lai",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68284,
+    "url": "https://www.europython-society.org/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68285,
+    "url": "https://social.python.it/@pycon",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68286,
+    "url": "https://twitter.com/pyconit",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 68288,
+    "url": "https://www.python.org/events/python-events/903/",
+    "parentUrl": "https://www.python.org/events/python-events/2171/"
+  },
+  {
+    "id": 68289,
+    "url": "http://pycon.de/",
+    "parentUrl": "https://www.python.org/events/python-events/2171/"
+  },
+  {
+    "id": 68290,
+    "url": "https://www.python.org/events/python-events/2142/",
+    "parentUrl": "https://www.python.org/events/python-events/2171/"
+  },
+  {
+    "id": 68291,
+    "url": "https://www.python.org/events/python-events/locations/764/",
+    "parentUrl": "https://www.python.org/events/python-events/2171/"
+  },
+  {
+    "id": 68292,
+    "url": "https://www.python.org/events/python-events/640/",
+    "parentUrl": "https://www.python.org/events/python-events/2171/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/6dc1cb80-e5b2-4531-a080-7ccb44aa7aca.jpg",
+    "alt": "Speaker",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/73ebf499-322f-4184-8004-a75459b4f08f.jpg",
+    "alt": "Speaker",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/bce1a131-ded6-440c-9f5e-52690ac77148.jpg",
+    "alt": "Speaker",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/8404f086-e001-49e7-ac33-080cd9dc031d.jpg",
+    "alt": "Speaker",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/7b5b9f4c-113a-4c5f-a72c-c6b135f6711c.jpg",
+    "alt": "",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/d852e4ed-ce4d-443d-b8ff-775a6fb2090d.jpeg",
+    "alt": "",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/3f18f8bc-8895-4f3a-a8e2-00a19ab63645.jpeg",
+    "alt": "",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/aed3e423-41e8-4c82-9c18-dd4355bd1643.png",
+    "alt": "",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/07e0d19b-76cb-4eca-a936-f622f766c02a.jpg",
+    "alt": "",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Generali_LOGO_LOCK_UP-ritagliato/55986ddfdc0f25fa5d35d4ccf18cb178.png",
+    "alt": "Generali",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/cassandra-logo/05c5c94324772079abb598dd168b4cd7.png",
+    "alt": "Cassandra",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/nephila-logo-blu-1024/91557c04f5ac11e14c3412e71182014b.png",
+    "alt": "Nephila",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Kraken_Logo_2022/84d1c4634056284ca5798b50ba11c077.png",
+    "alt": "Kraken",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/BBGEngineering_black/c42f4a5a5a9f0c768360b0f0c1a899a9.png",
+    "alt": "Bloomberg",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/SOPRASTERIA_logo_CMJN_exe_no30M8G/5ada1abea4ac81ad1f7829f8f16d7029.png",
+    "alt": "Sopra Steria",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/logo_pytech_r1_stampa/133853d7b643c0f90c8e5e482d6ca967.png",
+    "alt": "PyTech",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/FabioLamannaLogo-1_1/07c92eb5bf0f26ce132f01f6f59eff51.png",
+    "alt": "Fabio Lamanna",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/output-onlinepngtools/c0b753da6450c23ee79a97639fbc0b49.png",
+    "alt": "Pydantic",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/dvision_hori_light/1ebc3bc6cb8d84e310bc897d8365aae0.png",
+    "alt": "Dvision Lab",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/PNG_Logo_horizontal_dark_NEW/89d966a295585de6e5cf71bf166a930c.png",
+    "alt": "Cargoful",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/marchio_on_dark-paradigma/b6219ec6d49a7521c2c7c1b1a471ad5f.png",
+    "alt": "Paradigma",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/EPS-Logo-v3-300px-round-alpha-1/acd53699cf16f63adff35502225cc598.png",
+    "alt": "EuroPython Society",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Appsignal-original-azure_Gd8QSZi/5a0d181d303eeda37b6e96168cd037d9.png",
+    "alt": "AppSignal",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/jetbrains_jYR78eG/b12309ee70637191dc84c3ddf011f7c7.png",
+    "alt": "JetBrains",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Link_IT_Europe_Logo/4269147db9999ad4206b73c738c7013c.png",
+    "alt": "Link IT Europe",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/logo_strawberry/d8f1e5d7f942a4b4a2d7d7b2a5fe946d.png",
+    "alt": "Strawberry",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/PBG_logo_B_3300x_1/f7d01cbe0912f44bc6b46fc55229a0c4.png",
+    "alt": "Python Biella Group",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/PyRE_logo_trasparent_R8J7lRs/038abea0a2db11567e70c2500ca77dcd.png",
+    "alt": "PyRE",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Logo_PyMI/120858b0732bc0a1cdd353f0cd91376d.png",
+    "alt": "Python Milano",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/theRedCode_logo_xl/2a2399f0297f8a78c66ba96af5877c30.png",
+    "alt": "theRedCode",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/logo_-_background_-_rounded_-_flat_background.0157aeb9/bd5e8a7231dc6c1bb03b5ee501f54266.png",
+    "alt": "Schrödinger Hat",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/PLUG_logo_logo_transparent/0317be60b2d8061165d0de72b2ce8054.png",
+    "alt": "Come to Code",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/LOGO_FULL/4a00b8ef35064f2e8380e1ee0e779763.png",
+    "alt": "PointerPodcast",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Logo-very-h-res/3fc3459d3c088293a86f8f740535e164.png",
+    "alt": "She Tech",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/pisadev/52a80ea2efece100f3f7a27aaa02bd46.png",
+    "alt": "pisa.dev",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/django_girls_italy_magenta/71c2e7b569da6129fec6ca1adf96a064.png",
+    "alt": "Django Girls Italia",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/pybari-black/05add9db317c3442e3687997825511c2.png",
+    "alt": "PyBari",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/python-pescara-logo/6852f2c65b4102436b570f310df88a15.png",
+    "alt": "Python Pescara",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/LogoPyRoma/60743486dcfb37d6c2c1f0e5f4c723c6.png",
+    "alt": "PyRoma",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Logo/fad51e08b67179cd8266eab9ba5f8730.png",
+    "alt": "Python Torino",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/python-marche-title1/068b20ebd584cbc3244b43bfb2eb2e50.png",
+    "alt": "Python Marche",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/pyct-logo1/4233ff9e0ecf526eb9f96e508948e4fe.png",
+    "alt": "Python Catania",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/logo_0uLYy82/845f750a87d25b451010baf35b815e99.png",
+    "alt": "PyCampania",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/pydata_roma_capitale_logo_2000x857px/43d611a93e2d8d71296bfe0a0ba90f01.png",
+    "alt": "PyData Roma Capitale",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/99ec-1140o400o3-NibR2i48H8yVCaLCKjHe4G/da7ae794f69ff261050392cfb4a242b0.png",
+    "alt": "PyData Venice",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/93e6-1140o400o3-ErxQ6jqKoURTaUjbfakNLa/9580710171b41a48d6a7f4b86ba117a8.png",
+    "alt": "PyVenice",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Logo_Horizontal/6fa2de155d9e9ebdb1862c2fd0b2f17d.png",
+    "alt": "Matera Tech",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/image/911c5cf1dc4f7ef17ecd3cd992ecc712.png",
+    "alt": "PyZena",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Py4AI/2f65bf4e45b68cdcbcc94bb431851001.png",
+    "alt": "Py4AI",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Structured Markup Processing Tools — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Structured Markup Processing Tools — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "src": "https://wiki.python.org/moin/logo.png",
+    "alt": "",
+    "pageTitle": "Tkinter",
+    "pageUrl": "http://wiki.python.org/moin/TkInter"
+  },
   {
     "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public_thumbnails/filer_public/ba/29/ba29703b-7568-4379-8d37-1dda48f69246/bg-djangocms.png__1170x350_q90_subsampling-2.png",
     "alt": "",
