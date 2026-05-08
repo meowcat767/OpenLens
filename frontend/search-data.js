@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 866,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#threading",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 00:56:44.889604"
+  },
+  {
+    "id": 865,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_BytesWarningFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-09 00:56:43.686158"
+  },
+  {
+    "id": 864,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_double_complex",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 310, in __getitem__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function ordinal 0 not found\n\u003e\u003e\u003e\n Calling functions¶ You can call these functions like any other Python callable. This example uses the rand() functi",
+    "scrapedAt": "2026-05-09 00:56:42.512718"
+  },
+  {
+    "id": 863,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task",
+    "title": "Coroutines and tasks — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Coroutines and tasks | Theme Auto Light Dark | Coroutines and tasks¶ This section outlines high-level asyncio APIs to work with coroutines and Tasks. Coroutines¶ Source code: Lib/asyncio/coroutines.py Coroutines declared with the async/await syntax is the preferred way of writing asyncio applications. For example, the following snippet of code prints “hello”, waits 1 second, and then prints “world”: \u003e\u003e\u003e import asyncio\n\n\u003e\u003e\u003e async def main():\n...     print(\u0027hello\u0027)\n...     await asyncio.sleep(1)\n...     print(\u0027world\u0027)\n\n\u003e\u003e\u003e asyncio.run(main())\nhello\nworld\n Note that simply calling a coroutine will not schedule it to be executed: \u003e\u003e\u003e main()\n\u003ccoroutine object main at 0x1053bb7c8\u003e\n To actually run a coroutine, asyncio provides the following mechanisms: The asyncio.run() function to run the top-level entry point “main()” function (see the above example.) Awaiting on a coroutine. The following snippet of code will print “hello” after waiting for 1 second, and then print “world” after waiting for another 2 seconds: import asyncio\nimport time\n\nasync def say_after(delay, what):\n    await asyncio.sleep(delay)\n    print(what)\n\nasync def main():\n    print(f\"started at {time.strftime(\u0027%X\u0027)}\")\n\n    await say_after(1, \u0027hello\u0027)\n    await say_after(2, \u0027world\u0027)\n\n    print(f\"finished at {time.strftime(\u0027%X\u0027)}\")\n\nasyncio.run(main())\n Expected output: started at 17:13:52\nhello\nworld\nfinished at 17:13:55\n The asyncio.create_task() function to run coroutines concurrently as asyncio Tasks. Let’s modify the above example and run two say_after coroutines concurrently: async def main():\n    task1 \u003d asyncio.create_task(\n        say_after(1, \u0027hello\u0027))\n\n    task2 \u003d asyncio.create_task(\n        say_after(2, \u0027world\u0027))\n\n    print(f\"started at {time.strftime(\u0027%X\u0027)}\")\n\n    # Wait until both tasks are completed (should take\n    # around 2 seconds.)\n    await task1\n    await task2\n\n    print(f\"finished at {time.strftime(\u0027%X\u0027)}\")\n Note that expected output now shows that the snippet runs 1 second faster than before: started at 17:14:32\nhello\nworld\nfinished at 17:14:34\n The asyncio.TaskGroup class provides a more modern alternative to create_task(). Using this API, the last example becomes: async def main():\n    async with asyncio.TaskGroup() as tg:\n        task1 \u003d tg.create_task(\n            say_after(1, \u0027hello\u0027))\n\n        task2 \u003d tg.create_task(\n            say_after(2, \u0027world\u0027))\n\n        print(f\"started at {time.strftime(\u0027%X\u0027)}\")\n\n    # The await is implicit when the context manager exits.\n\n    print(f\"finished at {time.strftime(\u0027%X\u0027)}\")\n The timing and output should be the same as for the previous version. Added in version 3.11: asyncio.TaskGroup. Awaitables¶ We say that an object is an awaitable object if it can be used in an await expression. Many asyncio APIs are designed to accept awaitables. There are three main types of awaitable objects: coroutines, Tasks, and Futures. Coroutines Python coroutines are awaitables and therefore can be awaited from other coroutines: import asyncio\n\nasync def nested():\n    return 42\n\nasync def main():\n    # Nothing happens if we just call \"nested()\".\n    # A coroutine object is created but not awaited,\n    # so it *won\u0027t run at all*.\n    nested()  # will raise a \"RuntimeWarning\".\n\n    # Let\u0027s do it differently now and await it:\n    print(await nested())  # will print \"42\".\n\nasyncio.run(main())\n Important In this documentation the term “coroutine” can be used for two closely related concepts: a coroutine function: an async def function; a coroutine object: an object returned by calling a coroutine function. Tasks Tasks are used to schedule coroutines concurrently. When a coroutine is wrapped into a Task with functions like asyncio.create_task() the coroutine is automatically scheduled to run soon: import asyncio\n\nasync def nested():\n    return 42\n\nasync def main():\n    # Schedule nested() to run soon concurrently\n    # with \"main()\".\n    task \u003d asyncio.create_task(nested())\n\n    # \"task\" can now be used to cancel \"nested()\", or\n    # can simply be awaited to wait until it is complete:\n    await task\n\nasyncio.run(main())\n Futures A Future is a special low-level awaitable object that represents an eventual result of an asynchronous operation. When a Future object is awaited it means that the coroutine will wait until the Future is resolved in some other place. Future objects in asyncio are needed to allow callback-based code to be used with async/await. Normally there is no need to create Future objects at the application level code. Future objects, sometimes exposed by libraries and some asyncio APIs, can be awaited: async def main():\n    await function_that_returns_a_future_object()\n\n    # this is also valid:\n    await asyncio.gather(\n        function_that_returns_a_future_object(),\n        some_python_coroutine()\n    )\n A good e",
+    "scrapedAt": "2026-05-09 00:56:41.243491"
+  },
+  {
+    "id": 862,
+    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxError",
+    "title": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Exceptions | Theme Auto Light Dark | Built-in Exceptions¶ In Python, all exceptions must be instances of a class that derives from BaseException. In a try statement with an except clause that mentions a particular class, that clause also handles any exception classes derived from that class (but not exception classes from which it is derived). Two exception classes that are not related via subclassing are never equivalent, even if they have the same name. The built-in exceptions listed in this chapter can be generated by the interpreter or built-in functions. Except where mentioned, they have an “associated value” indicating the detailed cause of the error. This may be a string or a tuple of several items of information (e.g., an error code and a string explaining the code). The associated value is usually passed as arguments to the exception class’s constructor. User code can raise built-in exceptions. This can be used to test an exception handler or to report an error condition “just like” the situation in which the interpreter raises the same exception; but beware that there is nothing to prevent user code from raising an inappropriate error. The built-in exception classes can be subclassed to define new exceptions; programmers are encouraged to derive new exceptions from the Exception class or one of its subclasses, and not from BaseException. More information on defining exceptions is available in the Python Tutorial under User-defined Exceptions. Exception context¶ Three attributes on exception objects provide information about the context in which the exception was raised: BaseException.__context__¶ BaseException.__cause__¶ BaseException.__suppress_context__¶ When raising a new exception while another exception is already being handled, the new exception’s __context__ attribute is automatically set to the handled exception. An exception may be handled when an except or finally clause, or a with statement, is used. This implicit exception context can be supplemented with an explicit cause by using from with raise: raise new_exc from original_exc\n The expression following from must be an exception or None. It will be set as __cause__ on the raised exception. Setting __cause__ also implicitly sets the __suppress_context__ attribute to True, so that using raise new_exc from None effectively replaces the old exception with the new one for display purposes (e.g. converting KeyError to AttributeError), while leaving the old exception available in __context__ for introspection when debugging. The default traceback display code shows these chained exceptions in addition to the traceback for the exception itself. An explicitly chained exception in __cause__ is always shown when present. An implicitly chained exception in __context__ is shown only if __cause__ is None and __suppress_context__ is false. In either case, the exception itself is always shown after any chained exceptions so that the final line of the traceback always shows the last exception that was raised. Inheriting from built-in exceptions¶ User code can create subclasses that inherit from an exception type. It’s recommended to only subclass one exception type at a time to avoid any possible conflicts between how the bases handle the args attribute, as well as due to possible memory layout incompatibilities. CPython implementation detail: Most built-in exceptions are implemented in C for efficiency, see: Objects/exceptions.c. Some have custom memory layouts which makes it impossible to create a subclass that inherits from multiple exception types. The memory layout of a type is an implementation detail and might change between Python versions, leading to new conflicts in the future. Therefore, it’s recommended to avoid subclassing multiple exception types altogether. Base classes¶ The following exceptions are used mostly as base classes for other exceptions. exception BaseException¶ The base class for all built-in exceptions. It is not meant to be directly inherited by user-defined classes (for that, use Exception). If str() is called on an instance of this class, the representation of the argument(s) to the instance are returned, or the empty string when there were no arguments. args¶ The tuple of arguments given to the exception constructor. Some built-in exceptions (like OSError) expect a certain number of arguments and assign a special meaning to the elements of this tuple, while others are usually called only with a single string giving an error message. with_traceback(tb)¶ This method sets tb as the new traceback for the exception and returns the exception object. It was more commonly used before the exception chaining features of PEP 3134 became available. The following example shows how we can convert an instance of SomeException into an instance of OtherException while preserving the traceback. Once raised, the current ",
+    "scrapedAt": "2026-05-09 00:56:40.069717"
+  },
+  {
     "id": 861,
     "url": "https://github.com/python/cpython/issues/97850",
     "title": "Meta issue for cleaning up import system cruft · Issue #97850 · python/cpython · GitHub",
@@ -5733,26 +5768,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 862,
-    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxError"
-  },
-  {
-    "id": 863,
-    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
-  },
-  {
-    "id": 864,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_double_complex"
-  },
-  {
-    "id": 865,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_BytesWarningFlag"
-  },
-  {
-    "id": 866,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#threading"
   },
   {
     "id": 867,
@@ -147189,10 +147204,520 @@ window.searchData = [
     "id": 118373,
     "url": "https://github.com/python/cpython/pull/128655",
     "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 118597,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.run_in_executor",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118604,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id10",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118606,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id12",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118608,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id11",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118609,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Timeout",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118614,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.set_exception",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118615,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#terminating-a-task-group",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118617,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#awaitables",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118619,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Timeout.expired",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118620,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id14",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118621,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id13",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118622,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id16",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118623,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#task-groups",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118624,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id15",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118625,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.remove_done_callback",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118627,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#eager-task-factory",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118628,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.create_eager_task_factory",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118632,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id8",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118633,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#running-tasks-concurrently",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118634,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id9",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118636,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118637,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id7",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118639,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.get_coro",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118640,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.get_context",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118641,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118642,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#scheduling-from-other-threads",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118643,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.all_tasks",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118644,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118645,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118647,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.cancel",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118648,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#shielding-from-cancellation",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118649,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118650,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#introspection",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118651,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.to_thread",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118652,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.eager_task_factory",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118653,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.iscoroutine",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118655,
+    "url": "https://docs.python.org/3/reference/datamodel.html#async-context-managers",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118656,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#coroutines",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118658,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.cancelled",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118660,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#task-object",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118662,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.print_stack",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118663,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Timeout.reschedule",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118664,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.exception",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118665,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#timeouts",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118666,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#running-in-threads",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118667,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.FIRST_EXCEPTION",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118669,
+    "url": "https://docs.python.org/3/library/math.html#math.nan",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118670,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.gather",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118671,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.FIRST_COMPLETED",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118672,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.cancel",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118673,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/asyncio/tasks.py",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118676,
+    "url": "https://docs.python.org/3/library/contextvars.html#module-contextvars",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118678,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#sleeping",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118679,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.run_coroutine_threadsafe",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118680,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#creating-tasks",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118681,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.add_done_callback",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118683,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118684,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.get_stack",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118685,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/asyncio-task.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118687,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.set_result",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118690,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.result",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118691,
+    "url": "https://docs.python.org/3/library/asyncio-dev.html#asyncio-multithreading",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118694,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.shield",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118696,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118697,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Timeout.when",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118699,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.set_name",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118700,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/asyncio/coroutines.py",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118701,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.sleep",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118702,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.get_name",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118703,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.timeout",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118704,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.uncancel",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118705,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.as_completed",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118706,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.remove_done_callback",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118708,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.ALL_COMPLETED",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118709,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.wait",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118710,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.add_done_callback",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118712,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.current_task",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118713,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#waiting-primitives",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118717,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.cancelling",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118718,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#coroutines-and-tasks",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118719,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#asyncio.ensure_future",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118722,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#task-cancellation",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118726,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.done",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118728,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118729,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.timeout_at",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118731,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_running_loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118732,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#taskgroups",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118734,
+    "url": "https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.InvalidStateError",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118735,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio-awaitables",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 118736,
+    "url": "https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.TimeoutError",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#threading"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#threading"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_BytesWarningFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_BytesWarningFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.c_double_complex"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.c_double_complex"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Coroutines and tasks — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Coroutines and tasks — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxError"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/54418?s\u003d64\u0026u\u003d5fee810e3ef9706c1ef483a91d048cdbf8aa8397\u0026v\u003d4",
     "alt": "brettcannon",
