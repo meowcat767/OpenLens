@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 947,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-arm64.exe",
+    "title": "",
+    "content": "MZ�\u0000\u0003\u0000\u0000\u0000\u0004\u0000\u0000\u0000��\u0000\u0000�\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0018\u0001\u0000\u0000\u000e\u001f�\u000e\u0000� �!�\u0001L�!This program cannot be run in DOS mode. $\u0000\u0000\u0000\u0000\u0000\u0000\u0000�]aN�\u003c\u000f\u001d�\u003c\u000f\u001d�\u003c\u000f\u001d\u001fL \u001c�\u003c\u000f\u001d\u001fL \u001cj\u003c\u000f\u001d�T\u000b\u001c�\u003c\u000f\u001d�T \u001c�\u003c\u000f\u001d�T \u001c�\u003c\u000f\u001d\u001fL\u000b\u001c�\u003c\u000f\u001d\u001fL \u001c�\u003c\u000f\u001d\u001fL\u000e\u001c�\u003c\u000f\u001d�\u003c\u000e\u001d�\u003d\u000f\u001dPU \u001c�\u003c\u000f\u001dPU�\u001d�\u003c\u000f\u001d�\u003c�\u001d�\u003c\u000f\u001dPU \u001c�\u003c\u000f\u001dRich�\u003c\u000f\u001d\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000PE\u0000\u0000L\u0001\u0006\u0000�\u0002�e\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0000\u0002 \u000b\u0001\u000e\u0010\u0000�\u0004\u0000\u0000�\u0003\u0000\u0000\u0000\u0000\u0000�\u0002\u0003\u0000\u0000\u0010\u0000\u0000\u0000�\u0004\u0000\u0000\u0000@\u0000\u0000\u0010\u0000\u0000\u0000\u0002\u0000\u0000\u0006\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0006\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\b\u0000\u0000\u0004\u0000\u0000�E�\u0001\u0002\u0000@�\u0000\u0000\u0010\u0000\u0000\u0010\u0000\u0000\u0000\u0000\u0010\u0000\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000Կ\u0006\u0000�\u0000\u0000\u0000\u0000\u0010\u0007\u0000�e\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000x��\u0001@7\u0000\u0000\u0000�\b\u0000�\u003e\u0000\u0000�\u0006\u0000T\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00004�\u0006\u0000\u0018\u0000\u0000\u0000�F\u0006\u0000@\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0004\u0000�\u0003\u0000\u0000T�\u0006\u0000\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000.text\u0000\u0000\u0000\u003e�\u0004\u0000\u0000\u0010\u0000\u0000\u0000�\u0004\u0000\u0000\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000`.rdata\u0000\u0000\u0026�\u0001\u0000\u0000�\u0004\u0000\u0000�\u0001\u0000\u0000�\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u0000\u0000@.data\u0000\u0000\u0000\u003c\u0018\u0000\u0000\u0000�\u0006\u0000\u0000 \u0000\u0000\u0000�\u0006\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u0000\u0000�.wixburn8\u0000\u0000\u0000\u0000\u0000\u0007\u0000\u0000\u0002\u0000\u0000\u0000�\u0006\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u0000\u0000@.rsrc\u0000\u0000\u0000�e\u0001\u0000\u0000\u0010\u0007\u0000\u0000f\u0001\u0000\u0000�\u0006\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u0000\u0000@.reloc\u0000\u0000�\u003e\u0000\u0000\u0000�\b\u0000\u0000@\u0000\u0000\u0000\u003c\b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u0000\u0000B\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\b�D\u0000�D�F\u0000á �D\u0000�L�F\u0000á\u0010�D\u0000�d�F\u0000á\u0014�D\u0000�P�F\u0000á\u0018�D\u0000�T�F\u0000á\u0004�D\u0000�H�F\u0000á\u001c�D\u0000�X�F\u0000á �D\u0000�\\�F\u0000á$�D\u0000�`�F\u0000áH�D\u0000�\b�F\u0000���U��QQV�u\b�E�3�h4�D\u0000P�u��u��g\u0019\u0000\u0000�� ��x?V�u��a\u000b\u0000\u0000��u2V�u��*\u0000\u0000^��u$�E�PhH�D\u0000��\u0002\u0000\u0000��x\u0012�}�\u0000t\b�u��e \u0000\u0000��\u0004\u0000h�\u0007��\u0015��D\u0000�U���0�\b�F\u00003ŉE�S�]\b3�V�u\u0010WP�EЃ���EԍE�P�E�`�D\u0000�E�x�D\u0000�E���D\u0000�E��D\u0000�E��D\u0000�E���D\u0000�E���D\u0000�E�\u0000�D\u0000�E�\u0018�D\u0000��\u003c\u0000\u0000��x\u001dj\u0000h�\u0000\u0000\u0000j\u0003j\u0000j\u0005h\u0000\u0000\u0000��u��\u0015��D\u0000��V�t\\\u0000\u0000��t\u0007�\u0005\u0004\u0000\u0000�\u000bj �E�P�s\u0003\u0000\u0000�u�������E�P�u\u0014VWS�\\\u0000\u0000�����t\u0007W�\u0015��D\u0000�}�\u0000t\b�u��x\u001f\u0000\u0000��x\u0003�uЋM���_^3�[��\u0002\u0000��\u0010\u0000U��QV�u �E�W�}\bh���PVW�\\\u0001\u0000\u0000��x\u0027�}\u0014���v\u0007�W\u0000\u0007��\u0017�u\u0014�E�+��u\u0010j\u0000V�\u0004GP�\u0000\u0000\u0000_^��\u0010\u0000U��QV�u �E�W�}\bh���PVW�\u000f\u0001\u0000\u0000��x\u0019�E�+�h����u\u0010j\u0000V�\u0004GP�F\u0000\u0000\u0000_^�� \u0000U��E 3Ʌ�t\u0007\u003d���v\u0005�W\u0000\u0007���x\u0016�M\u0014Q�u\u0010j\u0000P�u\b�q\u0000\u0000\u0000��� ��t\u0006�E\b�\u0000\u0000��]�U��E 3ҋM\bV��t*�u\u0014SW�}\u0018+��t\u0016\u000f�\u001c\u000ef��t f�\u0019��\u0002OB��\u0001u�_[��u\u0004��\u0002J��\u001b�3�%���f�1�M\u0010\u0005z\u0000\u0007�^��t\u0002�\u0011]�\u0014\u0000U��SV�u 3�W�u\u0018�}\bNS�u\u0014VW�\u0001\u0000\u0000��\u0014��x\u000f;�w\u000bu\u0005�\u001c\u003e� ���\b�\u001c\u003e�z\u0000\u0007��E\u0010��t\u0002�0_^��[]�\u0014\u0000U��M VW3��W\u0000\u0007��ǅ�t\u0005;M\u0014v\u0002�ƅ�x8�E\b�х�t f98t\b��\u0002��\u0001u����\u001b�%���\u0003Ƌu\u0010��t\u0013��t\u0006+ʉ\u000e� �\u003e�\u0005�M\u0010�9_^]�\u0010\u0000� \u0000U��j\u0000�u �u\b�\u0004\u0000\u0000\u0000]�\b\u0000U��� \u0002\u0000\u0000�\b�F\u00003ŉE�S�] ������VW�}\u0010h\b\u0002\u0000\u0000j\u0000P���\u0002\u0000�� �������\u0004\u0001\u0000\u0000VP�\u0015 �D\u0000��u �\u0015\u0004�D\u0000����~\u000b\u000f����\u0000\u0000\u0007���xt�\u0005@\u0000��mj\\Yf;�E����t\u001fj\u0001hd�D\u0000V������P��������xF�\u0004\u0001\u0000\u0000�u\b������VP��������x+������P�\u0015\u0010�D\u0000�\u0003��t���t\u0014h\u0004\u0001\u0000\u0000������PW��\u0017\u0000\u0000���M���_^3�[���\u0002\u0000�� \u0000�(�F\u0000�U���u\u0018�u\u0014�u\u0010�u �u\b������\b�p\u0004��\u0001Q�Sn\u0003\u0000��\u001c��y\u0003���]�U��E\b���P�\u0015$�D\u0000]�\u0004\u0000U��QSVW3�VVj\u0001V�u��\u0015\u0018�D\u0000hl�D\u0000�\u0015\u001c�D\u0000��h��D\u0000S�\u0015 �D\u0000�\u003d\u0004�D\u0000��t h\u0000\b\u0000\u0000�Ѕ�u9��h��D\u0000S�\u0015 �D\u0000��t\u000bhh�D\u0000�Ѕ�u\u0002��9u v\u0015�}\b�E�P�4��@���F;u r�_^[��\b\u00003�PPj\u0001P�\u0015\u0018�D\u0000�U��QQVW3��E�Wh��D\u0000P�}��}��\u0019\u0014\u0000\u0000����xbW�u\b�E�P�\u0006\u0014\u0000\u0000����xO�E�P�u��\u0015@�D\u0000��u-�\u0015\u0004�D\u0000����~\u000b\u000f����\u0000\u0000\u0007���x\u0005�\u0005@\u0000�Vjch��D\u0000�����\u0011�H\u0004�E\u0010�\b�E �M�I�\b9}�t\b�u��\u0012\u001b\u0000\u0000_��^�� \u0000U��E 3҅�t\u0007\u003d���v\u0005�W\u0000\u0007���xO�M\b�Ѕ�t/VW�}\u0010����+�+��\u0004\u0016��t\u0014\u000f�\u0004\u000ff��t\u000bf�\u0001��\u0002��\u0001u�_^��u\u0003��\u00023���\u001bҁ�����z\u0000\u0007�� ��t\b�M\b3�f�\u0001��]� \u0000U��QS3�V�u\b�ÉE�W����t7f9\u001et(V�\u0015L�D\u0000��t\u001a�E�GPV�x8\u0000\u0000��x\u000b�E�����u��\u0003�E���t\u0006P�?\u001a\u0000\u0000��_^[��\b\u0000U���t\u0006\u0000\u0000�\b�F\u00003ŉE��E ���������\u0001S�]\bVW�\b\u0002\u0000\u0000������3�������!�����������WVP�s�\u0002\u0000W������VP�e�\u0002\u0000��\u0018S�\u0015D�D\u0000�\u003d\u0004�D\u0000�؃��u2�׋���\u0002u\u0003j\u0003^��~\u000b\u000f����\u0000\u0000\u0007���y\u0015Vh�\u0000\u0000\u0000h��D\u0000�\u0014����\\\u0003\u0000\u0000��\u0010\u000f�\u003c\u0003\u0000\u0000��\u0001t7h�\u0000\u0000\u0000�������\u0015P�D\u0000��u\"�׋���~\u000b\u000f����\u0000\u0000\u0007���x\u0005�\u0005@\u0000�Vh�\u0000\u0000\u0000묃�����\u0000u �E \u0002\u000f��\u0002\u0000\u0000��\u0000\u0004\u0000\u0000\u000f��\u0002\u0000\u0000�E \u0004t;������Ph\u0004\u0001\u0000\u0000�\u0015T�D\u0000��u%�׋���~\u000b\u000f����\u0000\u0000\u0007���x\u0005�\u0005@\u0000�Vh�\u0000\u0000\u0000�L���������������Ph,�D\u0000S�j/\u0000\u0000����\u000f��\u0002\u0000\u0000������P�������\u0015\u003c�D\u0000���������u%�׋���~\u000b\u000f����\u0000\u0000\u0007���x\u0005�\u0005@\u0000�Vh�\u0000\u0000\u0000�����j.Zf;�����u%3�f;�����\u000f�\u0013\u0001\u0000\u0000f;�����u f;�����\u000f��\u0000\u0000\u00003�f������������P������PS��.\u0000\u0000����\u000f��\u0001\u0000\u0000�E \u0002������t-�\u0010t)������P�R,\u0000\u0000����\u000f��\u0001\u0000\u0000�u ������������\u0000\u0000\u0000������\u0000\u000f��\u0000\u0000\u0000�\u0007t\u0019h�\u0000\u0000\u0000�������\u0015P�D\u0000��\u000f��\u0000\u0000\u0000�������\u00154�D\u0000��u]�E \u0004\u000f��\u0000\u0000\u0000������Pj\u0000h4�D\u0000������P�\u0015H�D\u0000��\u000f��\u0000\u0000\u0000�5X�D\u0000������j\u0001P��������j\u0004j\u0000��t ������P�\u0006�������֋�����������QP�\u0015@�D\u0000��t~�����������׋���~\u000b\u000f����\u0000\u0000\u0007���x\u0005�\u0005@\u0000�Vh\u000b\u0001\u0000\u0000h��D\u0000������\u0000\u0000\u0000�׋���~\u000b\u000f����\u0000\u0000\u0007���x\u0005�\u0005@\u0000�Vh\u0015\u0001\u0000\u0000���׋���~\u000b\u000f����\u0000\u0000\u0007���x\u0005�\u0005@\u0000�Vh%\u0001\u0000\u0000��׃�\u0012u\u00043��(�׋���~\u000b\u000f����\u0000\u0000\u0007���x\u0005�\u0005@\u0000�Vh2\u0001\u0000\u0000뀋�����S�\u0015L�D\u0000��uD�׋���~ \u000f����\u0000\u0000\u0007��� \u0000\u0007�u\u0017�E \u0004t\u0015j\u0004j\u0000S�\u0015X�D\u0000��t\u00063���y\u0010VhA\u0001\u0000\u0000�0������\u0000����������t\u0007P�\u00158�D\u0000������\u0000t\u000b�������\"\u0016\u0000\u0000�M���_^3�[�p�\u0002\u0000��\b\u0000U��VW�u �}\b3�W�\u00150�D\u0000��\u000f��\u0000\u0000\u0000�\u0015\u0004�D\u0000\u003d�\u0000\u0000\u0000u\u00073��\u0000\u0000\u0000��\u0003t j\u0000W�\u0000\u0000\u0000��u�\u000f�\u0007��S3�f��tpj\\��_f;�u\u0002�ك�\u0002\u000f�\u0001��f��u�}\b��tP�u 3�Wf�\u0003������j\\Xf�\u0003��xH�u W�\u00150�D\u0000��u$�\u0015\u0004�D\u0000�����\u0000\u0000\u0000u\u00053�F�%��~!\u000f����\u0000\u0000\u0007��\u00163��\u0012�\u0003\u0000\u0007�Vjrh��D\u0000����[_��^]�\b\u0000U��V�u\b3��\u0015D�D\u0000���t\u0010�\u0010t �M ��t\u0002�\u00013�F��^]�\b\u0000U��QSV3�W�}\b�ÉE����t\"9\u0007t\u001e�E�P�7��\u0015\u0000\u0000����\u000f��\u0000\u0000\u0000�E���t\u0002�\u001fSP�\u0015,�D\u0000�؅�u\u0026�\u0015\u0004�D\u0000����~\u000b\u000f����\u0000\u0000\u0007���x\u0005�\u0005@\u0000�Vh�\u0001\u0000\u0000�C9]�sHSW�\u0010 \u0000\u0000����x;�7S�\u0015,�D\u0000��u.�\u0015\u0004�D\u0000����~\u000b\u000f����\u0000\u0000\u0007���x\u0005�\u0005@\u0000�Vh�\u0001\u0000\u0000h��D\u0000�����_��^[��\u0004\u0000U��QSVW�}\b3�3��]�9\u001ft1�7�_6\u0000\u0000�����u �W\u0000\u0007��\u0000\u0000\u0000�E���Ph����7� \u0000\u0000��xn�]��}\u0010��u\u0018�E\u0010Ph����u � \u0000\u0000��xO�}\u0010�΍G\u0001+�;�s\u001d�u\u0014�\u0004;�]\b�4E\u0002\u0000\u0000\u0000VS�\u000b\u0001\u0000\u0000��x\u0026�\u0003�]\b�;\u0000t\u0017h\u0000\u0002\u0000\u0000j\u0000j\u0000W�u V�3�W\u0004\u0000\u0000�\u0005���\u0000�_^[��\u0010\u0000U��� �e�\u0000SV�u\bW3�!}��}�9\u003et,�6�5\u0000\u0000���}���u �W\u0000\u0007��\u0000\u0000\u0000�6���\u0015`�D\u0000��E�u\u0015�u �\u0000\u0001\u0000\u0000SV�\u0000\u0000\u0000����xt�}��u\u0014�E\b�u\u0010S�0��\b\u0000\u0000����z\u0000\u0007�u*�E\b��u\u000e�8�M�� \u00003�f�\u0014O�u \u0003�SP�\u003e\u0000\u0000\u0000����x\b3�F��\u0001t��ǉ}��}��t\u001b�} \u0000t\u000f�ȅ�t �\u0001\u0000A��\u0001u�P�73\u0000\u0000_��^[��\u0010\u0000U��E V\u003d���r\u0007�\u000e\u0000\u0007��]W�}\b\u0003��?\u0000t-3�9u\u0010t\u001b�M �u QVP�7��3\u0000\u0000����x4�E �\u0015VP�7�3\u0000\u0000� j\u0001P�\u00142\u0000\u00003���u\u0014�\u000e\u0000\u0007�Vjmh@�D\u0000������\u0002�\u0007_��^]� \u0000U��S�]\bV3�93t\u0017�3�[4\u0000\u0000�����u\u0007�W\u0000\u0007��Q��W�}\u0010��u\u000b�u �\u0015`�D\u0000���E\bPj\u0001W�O \u0000\u0000��x+;u\bs\u0011�u\u0014�u\bVS�-�����x\u0015h\u0000\u0002\u0000\u0000j\u0000j\u0000W�u V�3�\u0005\u0000\u0000_^[]�\u0010\u0000U��f�E\bj0Yf;�w f��9w\u0004*��\u0014jaYf;�w f��fw\u0004,W�\u0002,7]�\u0004\u0000U��E\b��x\u00043��\b�\u0016\u0002\u0007�����M �\u0001��]�\b\u0000U��S�]\bVW�}\u0010W�u S� \u0000\u0000����x`��u\u0019�E\u0010Ph��",
+    "scrapedAt": "2026-05-08 17:51:32.914145"
+  },
+  {
+    "id": 796,
+    "url": "https://www.python.org/about/gettingstarted/",
+    "title": "Python For Beginners | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e About\u003e\u003e\u003e Getting Started Welcome! Are you completely new to programming? If not then we presume you will be looking for information about why and how to get started with Python. Fortunately an experienced programmer in any programming language (whatever it may be) can pick up Python very quickly. It\u0027s also easy for beginners to use and learn, so jump in! Installing Installing Python is generally easy, and nowadays many Linux and UNIX distributions include a recent Python. Even some Windows computers (notably those from HP) now come with Python already installed. If you do need to install Python and aren\u0027t confident about the task you can find a few notes on the BeginnersGuide/Download wiki page, but installation is unremarkable on most platforms. Learning Before getting started, you may want to find out which IDEs and text editors are tailored to make Python editing easy, browse the list of introductory books, or look at code samples that you might find helpful. There is a list of tutorials suitable for experienced programmers on the BeginnersGuide/Tutorials page. There is also a list of resources in other languages which might be useful if English is not your first language. The online documentation is your first port of call for definitive information. There is a fairly brief tutorial that gives you basic information about the language and gets you started. You can follow this by looking at the library reference for a full description of Python\u0027s many libraries and the language reference for a complete (though somewhat dry) explanation of Python\u0027s syntax. If you are looking for common Python recipes and patterns, you can browse the ActiveState Python Cookbook Looking for Something Specific? If you want to know whether a particular application, or a library with particular functionality, is available in Python there are a number of possible sources of information. The Python web site provides a Python Package Index (also known as the Cheese Shop, a reference to the Monty Python script of that name). There is also a search page for a number of sources of Python-related information. Failing that, just Google for a phrase including the word \u0027\u0027python\u0027\u0027 and you may well get the result you need. If all else fails, ask on the python newsgroup and there\u0027s a good chance someone will put you on the right track. Frequently Asked Questions If you have a question, it\u0027s a good idea to try the FAQ, which answers the most commonly asked questions about Python. Looking to Help? If you want to help to develop Python, take a look at the developer area for further information. Please note that you don\u0027t have to be an expert programmer to help. The documentation is just as important as the compiler, and still needs plenty of work! The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-08 17:51:26.327156"
+  },
+  {
+    "id": 790,
+    "url": "https://www.python.org/psf/donations/",
+    "title": "Support the PSF with a Donation or by becoming a Supporting Member! | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! PSF\u003e\u003e\u003e Donate\u003e\u003e\u003e Donate to the PSF Donate Become a Supporting Member What does the Python Software Foundation do? The Python Software Foundation: Awards grants and provides resources for furthering the development and adoption of Python. Organizes and hosts the annual PyCon US conference. 2019 brought together 3,393 attendees from 55 countries, a new record for PyCon US! Our sponsors’ support enabled us to award $137,200 USD to 143 attendees. Pays for hardware and other costs for hosting the python.org servers. Hosts the Python Packaging Index. Supports CPython directly through the CPython Developer in Residence Holds and defends the copyright and other intellectual property rights for the Python programming language. Provides infrastructure and operations support to 13 regional conferences, meetups, and Python projects as a fiscal sponsor. Recognizes individuals who have contributed to the Python community with Community Awards. To learn about recent PSF activities, visit the Python Software Foundation\u0027s blog or check out our latest Annual Impact Report. The PSF is a public charity under section 501(c)(3) of the United States Internal Revenue Code. For more information, see the PSF IRS Determination Letter for details. Please consult your tax adviser to determine the tax deductibility of your gift to the PSF. How can I donate? We welcome contributions of any amount. You can support the PSF with a one-time donation, monthly donation, or annual donation to support all of our great initiatives. See below for more information and contact psf-donations@python.org with any questions. Donate by credit card or PayPal Please use the button above or this link to donate using a credit card or your PayPal account. You don\u0027t need a PayPal account to use the donation button. Check or Money Order You may donate to the PSF using a check or money order. Please address checks in USD to the PSF headquarters. Please include your email address and your home address with your check so that we may provide you a donation acknowledgment letter. Zelle, ACH, Transferwise, and Wire Transfers The PSF may receive donations by Zelle or ACH from US Domestic accounts, Transferwise from either US Domestic or International accounts, or Wire Transfers from International accounts. If you are interested in donating to the PSF using one of these methods, please contact psf-donations@python.org.. Other Ways to Give Your employer may offer a matching donation program. Please see the PSF Matching Gifts page for more information or let psf-donations@python.org know if you have questions. If you have questions about donations, please contact psf-donations@python.org. The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-08 17:51:25.098362"
+  },
+  {
+    "id": 788,
+    "url": "https://www.python.org/success-stories/saving-the-world-with-open-data-and-python/",
+    "title": "Saving the world with Open Data and Python | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Saving the world with Open Data and Python Written by James Baster, Open Data Services Co-op The policy side While it may seem to some developers that Open Data has been around forever and we probably don’t need to talk about it anymore, it’s important to remember why Open Data is something that people keenly push for. When an Open Data standard is created and promoted, it’s important to think why - what change is this trying to drive? What will people do with this data that they couldn’t do before? For instance, the Open Contracting Data Standard makes open the details of governments contracting out services and projects to private companies. It makes the data useable and tries to help people actually use it. By doing so, the aim is to root out corruption, open up the process to more bidders and drive efficiency, and save governments money. At Open Data Services we work on many standards - for instance, the Beneficial Ownership Data Standard opens data on people who ultimately own, control or benefit from companies around the world. As more and more countries try and cut down on tax avoidance, this data really helps. And that’s part of what we do - we work with our clients on their policy goals, and make sure that the Open Data standard they produce matches and builds on their policy goals. That’s how we can claim that our work saves the world - it’s great when we see people like ProZorro in Ukraine using Open Contracting Data to fight corruption and save their Goverment £1.2 billion. The Python Side We use Python as our tool of choice; from analysis in Jupyter with Google Colab notebooks to full Sphinx websites and the spreadsheets. Wait, the spreadsheets? Yup - spend any time in the world of Open Data and you’ll soon find that people love their spreadsheets. And while some developers will be rolling their eyes right now, it’s important to remember that for some people spreadsheets are a very powerful tool that enable them to do great data work they wouldn’t be able to do otherwise. So we have to embrace that, and this lead to one of the Python tools we have released as Open Source - Flatten Tool. Flatten Tool takes a JSON data file, and produces a spreadsheet of it’s contents. Of course a JSON data file may not be a flat structure and may have lists within lists and so on - we handle that by producing multiple sheets in an Excel file or multiple CSV files. Flatten Tool also takes a set of spreadsheets and produces a JSON file of your data. If you have a JSON Schema file describing your standard that helps. Also finally, we can take a JSON Schema file and produce a set of spreadsheet templates. This makes it easy for people to work with their favourite tools - spreadsheets - and for us to still be able to easily work with the data, both in terms of sending them data and dealing with data from them. Thanks to Python’s PyPi and pip, we include this as a library in other projects we do. We produce websites for the data standards we work on where people can upload some data - in it’s official JSON standard form, or as a spreadsheet - and we’ll take the data, analyse it and highlight problems and statistics with the data. We also offer conversion - so you can upload a spreadsheet and if it’s good, you can download a JSON file in the correct format. Thanks Python! At Open Data Services some of our members* are developers and some analysts - but even our analysts are very technical and are able to dive into the nitty gritty of issues with our developers. We don’t doubt that the welcoming Python language and ecosystem help with that - Thanks Python! Members? We are also a workers co-op - but that’s a story for another day! Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-08 17:51:23.972885"
+  },
+  {
+    "id": 780,
+    "url": "https://www.python.org/events/python-user-group/2170/",
+    "title": "Python for (Almost) Everything | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python for (Almost) Everything St. Louis, Missouri, United States From 18 June at 9pm UTC through 19 June at 12am UTC, 2026 Python for (Almost) Everything ← Previous Python Meeting Düsseldorf in Düsseldorf, Germany Next → Django Girls Sogakope 2026 in Sogakope, Ghana Explore events -- Change your date range The next 7 days The next 30 days The next 90 days The next year More events at St. Louis, Missouri, United States Python for (Almost) Everything",
+    "scrapedAt": "2026-05-08 17:51:21.768879"
+  },
+  {
     "id": 777,
     "url": "https://www.python.org/events/python-events/2147/",
     "title": "GeoPython 2026 | Python.org",
@@ -1870,26 +1905,6 @@ window.searchData = [
     "scrapedAt": "2026-05-08 17:50:45.338923"
   },
   {
-    "id": 780,
-    "url": "https://www.python.org/events/python-user-group/2170/"
-  },
-  {
-    "id": 788,
-    "url": "https://www.python.org/success-stories/saving-the-world-with-open-data-and-python/"
-  },
-  {
-    "id": 790,
-    "url": "https://www.python.org/psf/donations/"
-  },
-  {
-    "id": 796,
-    "url": "https://www.python.org/about/gettingstarted/"
-  },
-  {
-    "id": 947,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-arm64.exe"
-  },
-  {
     "id": 948,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#pep-784-zstandard-support-in-the-standard-library"
   },
@@ -2796,6 +2811,150 @@ window.searchData = [
   {
     "id": 1193,
     "url": "https://www.python.org/events/python-events/1843/"
+  },
+  {
+    "id": 1194,
+    "url": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "id": 1198,
+    "url": "https://www.python.org/events/python-user-group/locations/1681/"
+  },
+  {
+    "id": 1199,
+    "url": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 1203,
+    "url": "https://openownership.org/"
+  },
+  {
+    "id": 1204,
+    "url": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 1206,
+    "url": "http://opendataservices.coop/"
+  },
+  {
+    "id": 1211,
+    "url": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 1214,
+    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d2"
+  },
+  {
+    "id": 1216,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d2"
+  },
+  {
+    "id": 1218,
+    "url": "https://www.python.org/psf/about#how-do-i-reach-the-psf"
+  },
+  {
+    "id": 1219,
+    "url": "https://www.pypi.org/"
+  },
+  {
+    "id": 1220,
+    "url": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 1221,
+    "url": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 1222,
+    "url": "https://www.python.org/psf/donations/matching-gifts/"
+  },
+  {
+    "id": 1223,
+    "url": "http://pyfound.blogspot.com/"
+  },
+  {
+    "id": 1226,
+    "url": "https://www.python.org/m/files/irs_determination.pdf"
+  },
+  {
+    "id": 1227,
+    "url": "https://www.python.org/psf/annual-report/"
+  },
+  {
+    "id": 1228,
+    "url": "http://us.pycon.org"
+  },
+  {
+    "id": 1229,
+    "url": "http://wiki.python.org/moin/BeginnersGuide/Download"
+  },
+  {
+    "id": 1230,
+    "url": "http://wiki.python.org/moin/BeginnersGuide/Examples"
+  },
+  {
+    "id": 1231,
+    "url": "http://docs.python.org"
+  },
+  {
+    "id": 1232,
+    "url": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 1233,
+    "url": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 1234,
+    "url": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 1235,
+    "url": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 1236,
+    "url": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 1237,
+    "url": "https://www.python.org/dev/"
+  },
+  {
+    "id": 1238,
+    "url": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 1240,
+    "url": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 1241,
+    "url": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 1242,
+    "url": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "id": 1243,
+    "url": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 1244,
+    "url": "http://www.google.com"
+  },
+  {
+    "id": 1245,
+    "url": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 1247,
+    "url": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 1248,
+    "url": "https://www.python.org/search"
   }
 ];
 
