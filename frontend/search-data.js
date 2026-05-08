@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1327,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes",
+    "title": "Built-in Types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Types | Theme Auto Light Dark | Built-in Types¶ The following sections describe the standard types that are built into the interpreter. The principal built-in types are numerics, sequences, mappings, classes, instances and exceptions. Some collection classes are mutable. The methods that add, subtract, or rearrange their members in place, and don’t return a specific item, never return the collection instance itself but None. Some operations are supported by several object types; in particular, practically all objects can be compared for equality, tested for truth value, and converted to a string (with the repr() function or the slightly different str() function). The latter function is implicitly used when an object is written by the print() function. Truth Value Testing¶ Any object can be tested for truth value, for use in an if or while condition or as operand of the Boolean operations below. By default, an object is considered true unless its class defines either a __bool__() method that returns False or a __len__() method that returns zero, when called with the object. [1] If one of the methods raises an exception when called, the exception is propagated and the object does not have a truth value (for example, NotImplemented). Here are most of the built-in objects considered false: constants defined to be false: None and False zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1) empty sequences and collections: \u0027\u0027, (), [], {}, set(), range(0) Operations and built-in functions that have a Boolean result always return 0 or False for false and 1 or True for true, unless otherwise stated. (Important exception: the Boolean operations or and and always return one of their operands.) Boolean Operations — and, or, not¶ These are the Boolean operations, ordered by ascending priority: Operation Result Notes x or y if x is true, then x, else y (1) x and y if x is false, then x, else y (2) not x if x is false, then True, else False (3) Notes: This is a short-circuit operator, so it only evaluates the second argument if the first one is false. This is a short-circuit operator, so it only evaluates the second argument if the first one is true. not has a lower priority than non-Boolean operators, so not a \u003d\u003d b is interpreted as not (a \u003d\u003d b), and a \u003d\u003d not b is a syntax error. Comparisons¶ There are eight comparison operations in Python. They all have the same priority (which is higher than that of the Boolean operations). Comparisons can be chained arbitrarily; for example, x \u003c y \u003c\u003d z is equivalent to x \u003c y and y \u003c\u003d z, except that y is evaluated only once (but in both cases z is not evaluated at all when x \u003c y is found to be false). This table summarizes the comparison operations: Operation Meaning \u003c strictly less than \u003c\u003d less than or equal \u003e strictly greater than \u003e\u003d greater than or equal \u003d\u003d equal !\u003d not equal is object identity is not negated object identity Unless stated otherwise, objects of different types never compare equal. The \u003d\u003d operator is always defined but for some object types (for example, class objects) is equivalent to is. The \u003c, \u003c\u003d, \u003e and \u003e\u003d operators are only defined where they make sense; for example, they raise a TypeError exception when one of the arguments is a complex number. Non-identical instances of a class normally compare as non-equal unless the class defines the __eq__() method. Instances of a class cannot be ordered with respect to other instances of the same class, or other types of object, unless the class defines enough of the methods __lt__(), __le__(), __gt__(), and __ge__() (in general, __lt__() and __eq__() are sufficient, if you want the conventional meanings of the comparison operators). The behavior of the is and is not operators cannot be customized; also they can be applied to any two objects and never raise an exception. Two more operations with the same syntactic priority, in and not in, are supported by types that are iterable or implement the __contains__() method. Numeric Types — int, float, complex¶ There are three distinct numeric types: integers, floating-point numbers, and complex numbers. In addition, Booleans are a subtype of integers. Integers have unlimited precision. Floating-point numbers are usually implemented using double in C; information about the precision and internal representation of floating-point numbers for the machine on which your program is running is available in sys.float_info. Complex numbers have a real and imaginary part, which are each a floating-point number. To extract these parts from a complex number z, use z.real and z.imag. (The standard library includes the additional numeric types fractions.Fraction, for rationals, and decimal.Decimal, for floating-point numbers with user-definable precision.) Numbers are created by numeric literals or as the result of built-in functions and operators. Unadorned integer li",
+    "scrapedAt": "2026-05-09 01:15:51.817357"
+  },
+  {
+    "id": 1326,
+    "url": "https://github.com/python/cpython/issues/115765",
+    "title": "Upgrade to GNU Autoconf 2.72 · Issue #115765 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Upgrade to GNU Autoconf 2.72 #115765 New issue Copy link New issue Copy link Closed #128502 #128411 Closed Upgrade to GNU Autoconf 2.72#115765 #128502 #128411 Copy link Assignees Labels buildThe build process and cross-buildThe build process and cross-buildtype-featureA feature request or enhancementA feature request or enhancement Description erlend-aasland opened on Feb 21, 2024 Issue body actions Feature or enhancement Autoconf 2.72 was released 2023-12-22. Relevant highlights (some C\u0026P verbatim) from the release announcement: Pre-C89 compilers are no longer supported. This should not be a problem for us, as we\u0027re using C11. AC_USE_SYSTEM_EXTENSIONS now enables C23 Annex F extensions by defining __STDC_WANT_IEC_60559_EXT__ (is this a problem?) Autoconf now quotes \u0027like this\u0027 instead of `like this\u0027; perhaps we should clean up our quoting in a separate first, so the 2.72 change is easier to review. \u003c\u003d not worth the churn Improved compatibility with a wide variety of systems and tools including CheriBSD, Darwin (macOS), GNU Guix, OS/2, z/OS, Bash 5.2, the BusyBox shell and utilities, Clang/LLVM version 16, the upcoming GCC version 14, etc. The other version requirements (Perl, M4, etc.) should not affect us. Preliminary actions: gh-115765: Use AX_CHECK_DEFINE instead of AC_EGREP_* #116016 gh-115765: Don\u0027t use deprecated AC_CHECK_TYPE macro in configure.ac #115792 Linked PRs gh-115765: Upgrade to GNU Autoconf 2.72 #128411 gh-115765: Document and enforce Autoconf 2.72 requirement #128502 Reactions are currently unavailable Metadata Metadata Assignees erlend-aasland Labels buildThe build process and cross-buildThe build process and cross-buildtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:15:50.527406"
+  },
+  {
+    "id": 1325,
+    "url": "https://docs.python.org/3/library/ast.html#ast.parse",
+    "title": "ast — Abstract syntax trees — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » ast — Abstract syntax trees | Theme Auto Light Dark | ast — Abstract syntax trees¶ Source code: Lib/ast.py The ast module helps Python applications to process trees of the Python abstract syntax grammar. The abstract syntax itself might change with each Python release; this module helps to find out programmatically what the current grammar looks like. An abstract syntax tree can be generated by passing ast.PyCF_ONLY_AST as a flag to the compile() built-in function, or using the parse() helper provided in this module. The result will be a tree of objects whose classes all inherit from ast.AST. An abstract syntax tree can be compiled into a Python code object using the built-in compile() function. Abstract grammar¶ The abstract grammar is currently defined as follows: -- ASDL\u0027s 4 builtin types are:\n-- identifier, int, string, constant\n\nmodule Python\n{\n    mod \u003d Module(stmt* body, type_ignore* type_ignores)\n        | Interactive(stmt* body)\n        | Expression(expr body)\n        | FunctionType(expr* argtypes, expr returns)\n\n    stmt \u003d FunctionDef(identifier name, arguments args,\n                       stmt* body, expr* decorator_list, expr? returns,\n                       string? type_comment, type_param* type_params)\n          | AsyncFunctionDef(identifier name, arguments args,\n                             stmt* body, expr* decorator_list, expr? returns,\n                             string? type_comment, type_param* type_params)\n\n          | ClassDef(identifier name,\n             expr* bases,\n             keyword* keywords,\n             stmt* body,\n             expr* decorator_list,\n             type_param* type_params)\n          | Return(expr? value)\n\n          | Delete(expr* targets)\n          | Assign(expr* targets, expr value, string? type_comment)\n          | TypeAlias(expr name, type_param* type_params, expr value)\n          | AugAssign(expr target, operator op, expr value)\n          -- \u0027simple\u0027 indicates that we annotate simple name without parens\n          | AnnAssign(expr target, expr annotation, expr? value, int simple)\n\n          -- use \u0027orelse\u0027 because else is a keyword in target languages\n          | For(expr target, expr iter, stmt* body, stmt* orelse, string? type_comment)\n          | AsyncFor(expr target, expr iter, stmt* body, stmt* orelse, string? type_comment)\n          | While(expr test, stmt* body, stmt* orelse)\n          | If(expr test, stmt* body, stmt* orelse)\n          | With(withitem* items, stmt* body, string? type_comment)\n          | AsyncWith(withitem* items, stmt* body, string? type_comment)\n\n          | Match(expr subject, match_case* cases)\n\n          | Raise(expr? exc, expr? cause)\n          | Try(stmt* body, excepthandler* handlers, stmt* orelse, stmt* finalbody)\n          | TryStar(stmt* body, excepthandler* handlers, stmt* orelse, stmt* finalbody)\n          | Assert(expr test, expr? msg)\n\n          | Import(alias* names)\n          | ImportFrom(identifier? module, alias* names, int? level)\n\n          | Global(identifier* names)\n          | Nonlocal(identifier* names)\n          | Expr(expr value)\n          | Pass | Break | Continue\n\n          -- col_offset is the byte offset in the utf8 string the parser uses\n          attributes (int lineno, int col_offset, int? end_lineno, int? end_col_offset)\n\n          -- BoolOp() can use left \u0026 right?\n    expr \u003d BoolOp(boolop op, expr* values)\n         | NamedExpr(expr target, expr value)\n         | BinOp(expr left, operator op, expr right)\n         | UnaryOp(unaryop op, expr operand)\n         | Lambda(arguments args, expr body)\n         | IfExp(expr test, expr body, expr orelse)\n         | Dict(expr?* keys, expr* values)\n         | Set(expr* elts)\n         | ListComp(expr elt, comprehension* generators)\n         | SetComp(expr elt, comprehension* generators)\n         | DictComp(expr key, expr value, comprehension* generators)\n         | GeneratorExp(expr elt, comprehension* generators)\n         -- the grammar constrains where yield expressions can occur\n         | Await(expr value)\n         | Yield(expr? value)\n         | YieldFrom(expr value)\n         -- need sequences for compare to distinguish between\n         -- x \u003c 4 \u003c 3 and (x \u003c 4) \u003c 3\n         | Compare(expr left, cmpop* ops, expr* comparators)\n         | Call(expr func, expr* args, keyword* keywords)\n         | FormattedValue(expr value, int conversion, expr? format_spec)\n         | Interpolation(expr value, constant str, int conversion, expr? format_spec)\n         | JoinedStr(expr* values)\n         | TemplateStr(expr* values)\n         | Constant(constant value, string? kind)\n\n         -- the following expression can appear in assignment context\n         | Attribute(expr value, identifier attr, expr_context ctx)\n         | Subscript(expr value, expr slice, expr_context ctx)\n         | Starred(expr value, expr_context ctx)\n         | Name(iden",
+    "scrapedAt": "2026-05-09 01:15:48.008944"
+  },
+  {
+    "id": 1324,
+    "url": "https://github.com/python/cpython/issues/130704",
+    "title": "Optimize reference counting overhead of `LOAD_FAST` variants · Issue #130704 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Optimize reference counting overhead of LOAD_FAST variants #130704 New issue Copy link New issue Copy link Closed Closed Optimize reference counting overhead of LOAD_FAST variants#130704 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)performancePerformance or resource usagePerformance or resource usagetype-featureA feature request or enhancementA feature request or enhancement Description mpage opened on Feb 28, 2025 Issue body actions Feature or enhancement Proposal: LOAD_FAST and its super instruction form are the most frequently executed bytecode instructions in most Python programs (they represent ~20% of dynamic instruction frequency on the benchmark suite). While they are very cheap (they\u0027re just an incref and a push to the stack), they are not free. If we can prove that the reference in the frame outlives the reference that is loaded on the stack we can use a cheaper variant of LOAD_FAST that loads an appropriately tagged borrowed reference onto the operand stack, thereby avoiding the incref/decref. Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: faster-cpython/ideas#700 Linked PRs gh-130704: Strength reduce LOAD_FAST{_LOAD_FAST} #130708 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)performancePerformance or resource usagePerformance or resource usagetype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:15:46.749679"
+  },
+  {
+    "id": 1323,
+    "url": "https://docs.python.org/3/library/exceptions.html#DeprecationWarning",
+    "title": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Exceptions | Theme Auto Light Dark | Built-in Exceptions¶ In Python, all exceptions must be instances of a class that derives from BaseException. In a try statement with an except clause that mentions a particular class, that clause also handles any exception classes derived from that class (but not exception classes from which it is derived). Two exception classes that are not related via subclassing are never equivalent, even if they have the same name. The built-in exceptions listed in this chapter can be generated by the interpreter or built-in functions. Except where mentioned, they have an “associated value” indicating the detailed cause of the error. This may be a string or a tuple of several items of information (e.g., an error code and a string explaining the code). The associated value is usually passed as arguments to the exception class’s constructor. User code can raise built-in exceptions. This can be used to test an exception handler or to report an error condition “just like” the situation in which the interpreter raises the same exception; but beware that there is nothing to prevent user code from raising an inappropriate error. The built-in exception classes can be subclassed to define new exceptions; programmers are encouraged to derive new exceptions from the Exception class or one of its subclasses, and not from BaseException. More information on defining exceptions is available in the Python Tutorial under User-defined Exceptions. Exception context¶ Three attributes on exception objects provide information about the context in which the exception was raised: BaseException.__context__¶ BaseException.__cause__¶ BaseException.__suppress_context__¶ When raising a new exception while another exception is already being handled, the new exception’s __context__ attribute is automatically set to the handled exception. An exception may be handled when an except or finally clause, or a with statement, is used. This implicit exception context can be supplemented with an explicit cause by using from with raise: raise new_exc from original_exc\n The expression following from must be an exception or None. It will be set as __cause__ on the raised exception. Setting __cause__ also implicitly sets the __suppress_context__ attribute to True, so that using raise new_exc from None effectively replaces the old exception with the new one for display purposes (e.g. converting KeyError to AttributeError), while leaving the old exception available in __context__ for introspection when debugging. The default traceback display code shows these chained exceptions in addition to the traceback for the exception itself. An explicitly chained exception in __cause__ is always shown when present. An implicitly chained exception in __context__ is shown only if __cause__ is None and __suppress_context__ is false. In either case, the exception itself is always shown after any chained exceptions so that the final line of the traceback always shows the last exception that was raised. Inheriting from built-in exceptions¶ User code can create subclasses that inherit from an exception type. It’s recommended to only subclass one exception type at a time to avoid any possible conflicts between how the bases handle the args attribute, as well as due to possible memory layout incompatibilities. CPython implementation detail: Most built-in exceptions are implemented in C for efficiency, see: Objects/exceptions.c. Some have custom memory layouts which makes it impossible to create a subclass that inherits from multiple exception types. The memory layout of a type is an implementation detail and might change between Python versions, leading to new conflicts in the future. Therefore, it’s recommended to avoid subclassing multiple exception types altogether. Base classes¶ The following exceptions are used mostly as base classes for other exceptions. exception BaseException¶ The base class for all built-in exceptions. It is not meant to be directly inherited by user-defined classes (for that, use Exception). If str() is called on an instance of this class, the representation of the argument(s) to the instance are returned, or the empty string when there were no arguments. args¶ The tuple of arguments given to the exception constructor. Some built-in exceptions (like OSError) expect a certain number of arguments and assign a special meaning to the elements of this tuple, while others are usually called only with a single string giving an error message. with_traceback(tb)¶ This method sets tb as the new traceback for the exception and returns the exception object. It was more commonly used before the exception chaining features of PEP 3134 became available. The following example shows how we can convert an instance of SomeException into an instance of OtherException while preserving the traceback. Once raised, the current ",
+    "scrapedAt": "2026-05-09 01:15:44.299898"
+  },
+  {
     "id": 1322,
     "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format",
     "title": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
@@ -8888,26 +8923,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1323,
-    "url": "https://docs.python.org/3/library/exceptions.html#DeprecationWarning"
-  },
-  {
-    "id": 1324,
-    "url": "https://github.com/python/cpython/issues/130704"
-  },
-  {
-    "id": 1325,
-    "url": "https://docs.python.org/3/library/ast.html#ast.parse"
-  },
-  {
-    "id": 1326,
-    "url": "https://github.com/python/cpython/issues/115765"
-  },
-  {
-    "id": 1327,
-    "url": "https://docs.python.org/3/library/stdtypes.html#bytes"
   },
   {
     "id": 1329,
@@ -227405,10 +227420,152 @@ window.searchData = [
     "id": 266550,
     "url": "https://github.com/python/cpython/pull/112018/commits/400a62decf8e641cb0a7c6f23bf59bb02918a78c",
     "parentUrl": "https://github.com/python/cpython/issues/112018"
+  },
+  {
+    "id": 267207,
+    "url": "https://github.com/python/cpython/issues/130704#top",
+    "parentUrl": "https://github.com/python/cpython/issues/130704"
+  },
+  {
+    "id": 267208,
+    "url": "https://github.com/python/cpython/issues/130704#issue-2887911923",
+    "parentUrl": "https://github.com/python/cpython/issues/130704"
+  },
+  {
+    "id": 267212,
+    "url": "https://github.com/faster-cpython/ideas/issues/700",
+    "parentUrl": "https://github.com/python/cpython/issues/130704"
+  },
+  {
+    "id": 267214,
+    "url": "https://github.com/python/cpython/issues/130704#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130704"
+  },
+  {
+    "id": 267218,
+    "url": "https://github.com/python/cpython/pull/130708",
+    "parentUrl": "https://github.com/python/cpython/issues/130704"
+  },
+  {
+    "id": 267463,
+    "url": "https://github.com/python/cpython/pull/128411",
+    "parentUrl": "https://github.com/python/cpython/issues/115765"
+  },
+  {
+    "id": 267467,
+    "url": "https://github.com/python/cpython/issues/115765#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/115765"
+  },
+  {
+    "id": 267468,
+    "url": "https://peps.python.org/pep-0007/#c-dialect",
+    "parentUrl": "https://github.com/python/cpython/issues/115765"
+  },
+  {
+    "id": 267470,
+    "url": "https://github.com/python/cpython/issues/115765#top",
+    "parentUrl": "https://github.com/python/cpython/issues/115765"
+  },
+  {
+    "id": 267472,
+    "url": "https://github.com/python/cpython/pull/116016",
+    "parentUrl": "https://github.com/python/cpython/issues/115765"
+  },
+  {
+    "id": 267473,
+    "url": "https://github.com/python/cpython/pull/115792",
+    "parentUrl": "https://github.com/python/cpython/issues/115765"
+  },
+  {
+    "id": 267474,
+    "url": "https://github.com/python/cpython/issues/115765#issue-2146617008",
+    "parentUrl": "https://github.com/python/cpython/issues/115765"
+  },
+  {
+    "id": 267475,
+    "url": "https://lists.gnu.org/archive/html/info-gnu/2023-12/msg00002.html",
+    "parentUrl": "https://github.com/python/cpython/issues/115765"
+  },
+  {
+    "id": 267477,
+    "url": "https://github.com/python/cpython/pull/128502",
+    "parentUrl": "https://github.com/python/cpython/issues/115765"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#bytes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#bytes"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?s\u003d64\u0026u\u003dfd2a3ddb80bd163742847340896ae10103d3eac2\u0026v\u003d4",
+    "alt": "erlend-aasland",
+    "pageTitle": "Upgrade to GNU Autoconf 2.72 · Issue #115765 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/115765"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?u\u003dfd2a3ddb80bd163742847340896ae10103d3eac2\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@erlend-aasland",
+    "pageTitle": "Upgrade to GNU Autoconf 2.72 · Issue #115765 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/115765"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?u\u003dfd2a3ddb80bd163742847340896ae10103d3eac2\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@erlend-aasland",
+    "pageTitle": "Upgrade to GNU Autoconf 2.72 · Issue #115765 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/115765"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?s\u003d64\u0026u\u003dfd2a3ddb80bd163742847340896ae10103d3eac2\u0026v\u003d4",
+    "alt": "@erlend-aasland",
+    "pageTitle": "Upgrade to GNU Autoconf 2.72 · Issue #115765 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/115765"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ast — Abstract syntax trees — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ast.html#ast.parse"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ast — Abstract syntax trees — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ast.html#ast.parse"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/577841?v\u003d4\u0026size\u003d80",
+    "alt": "@mpage",
+    "pageTitle": "Optimize reference counting overhead of `LOAD_FAST` variants · Issue #130704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/577841?v\u003d4\u0026size\u003d48",
+    "alt": "@mpage",
+    "pageTitle": "Optimize reference counting overhead of `LOAD_FAST` variants · Issue #130704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130704"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#DeprecationWarning"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#DeprecationWarning"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
