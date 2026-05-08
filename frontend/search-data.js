@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 536,
+    "url": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/",
+    "title": "Using Python to Automate Tedious Tasks | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Using Python to Automate Tedious Tasks Written by Nat Dunn, Webucator We began using Python at Webucator in 2015. As most of our larger programming projects have to do with building web-based applications and we had long ago decided on our web stack, we haven\u0027t needed Python for any large scale projects. However, we use it regularly to quickly solve problems and to automate manual tasks. In this article, I\u0027ll describe how we used Python to automate a problem that occurred infrequently, but was a huge nuisance when it did occur. As an IT training company, we write a lot of courseware with many code examples, which are both included in the class files and embedded in the course manual. To avoid having to maintain the code both in the file and the manual, our build system, which is XML-based, reads the class files into the manual. To make that work, we have to mark up each class file with XML before committing it. Here is a sample of a marked-up courseware file: The XML here is simple. It includes a root element (cw:File) and a few emphasis elements (cw:Em). The build parses this XML and, using XSL:FO, pulls it into the manual to create this: When this works as expected, it works beautifully. But sometimes an author will commit a file that isn\u0027t well-formed XML, which breaks the build. The person building the courseware is often not the same person as the person writing the courseware, so there can be a lag between the time the error occurs and the time it gets fixed. Furthermore, our home-grown build system doesn\u0027t handle the error well. Rather than reporting it, it spins and spins. (We need to fix that eventually, but for reasons not relevant to this article, that\u0027s not going to happen any time soon.) The person building the courseware then has to let the author know that one of the XML files is poorly formed, but she doesn\u0027t know which one. The author then has to check each XML file until he finds the one that is poorly formed. Done one file at a time with a tool like XMLSPY, this is a laborious process. Enter Python! The last time I had to go through this process, I realized that Python could solve this problem very quickly. The Python program simply has to loop through the directories finding all the files that need checking, based on their locations and extensions, check whether the file begins with \"\u003ccw:\" as not all files are marked up as XML, and use lxml.etree to attempt to parse the file. On failure, it should report the file name. This program took less than 15 minutes to write and saved more than that the first time I used it. I\u0027ve copied it below to show how simple it is: This is just one of many examples in which we use Python at Webucator to quickly and easily automate time-intensive, manual tasks. Webucator provides live online and customized onsite Python training. Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-09 00:45:08.432041"
+  },
+  {
+    "id": 535,
+    "url": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/",
+    "title": "Building Robust Codebases with Python\u0027s Type Annotations | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Building Robust Codebases with Python\u0027s Type Annotations Written by John Lekberg, Hudson River Trading Hudson River Trading\u0027s (HRT\u0027s) Python codebase is large and constantly evolving. Millions of lines of Python reflect the work of hundreds of developers over the last decade. We trade in over 200 markets worldwide — including nearly all of the world\u0027s electronic markets — so we need to regularly update our code to handle changing rules and regulations. Our codebase provides command-line interface (CLI) tools, graphical user interfaces (GUIs), and event-triggered processes that assist our traders, engineers, and operations personnel. This outer layer of our codebase is supported by an inner layer of shared business logic. Business logic is often more complicated than it appears: even a simple question like \"what is the next business day for NASDAQ?\" involves querying a database of market calendars (a database that requires regular maintenance). So, by centralizing this business logic into a single source of truth, we ensure that all the different systems in our codebase behave coherently. Even a small change to shared business logic can affect many systems, and we need to check that these systems won\u0027t have issues with our change. It\u0027s inefficient and error-prone for a human to manually verify that nothing is broken. Python\u0027s type annotations have significantly improved how quickly we can update and verify changes to shared business logic. Type annotations allow you to describe the type of data handled by your code. \"Type checkers\" are tools that reconcile your descriptions against how the code is actually being used. When we update shared business logic, we update the type annotations and use a type checker to identify any downstream systems that are affected. We also thoroughly document and test our codebase. But written documentation is not automatically synchronized with the underlying code, so maintaining documentation requires a high level of vigilance and is subject to human error. Additionally, automated testing is limited to the scenarios that we test for, which means that novel uses of our shared business logic will be unverified until we add new tests. Let\u0027s look at an example of type annotations to see how they can be used to describe the shape of data. Here\u0027s some type annotated Python code that computes the checksum digit of a CUSIP: def cusip_checksum(cusip8: str) -\u003e int:\n    assert len(cusip8) \u003d\u003d 8\n    chars: str \u003d \"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ*@#\"\n    charmap: dict[str, int] \u003d {\n        char: value\n        for value, char in enumerate(chars, start\u003d0)\n    }\n    total: int  \u003d 0\n    for idx, char in enumerate(cusip8, start\u003d0):\n        value: int \u003d charmap[char]\n        if (idx % 2) \u003d\u003d 1:\n            value *\u003d 2\n        total +\u003d (value // 10) + (value % 10)\n    return (10 - total % 10) % 10\n Here\u0027s what the type annotations tell us: cusip_checksum() is a function that takes a string as input and returns an integer as output. chars is a string. charmap is a dictionary with string keys and integer values. total and value are integers. HRT uses mypy to analyze our Python type annotations. Mypy works by analyzing the type annotations in one or more Python files and determining if there are any issues or inconsistencies. Most of the time, mypy is good at type inference, so it’s better to focus on annotating the parameters and return values of a function rather than the internal variables used in a function. Here\u0027s a new function, validate_cusip(), that relies on the cusip_checksum() function from earlier: def cusip_checksum(cusip8: str) -\u003e int:\n    ...\n\ndef validate_cusip(cusip: str) -\u003e str | None:\n    checksum: int\n    if len(cusip) \u003d\u003d 9:\n        checksum \u003d cusip_checksum(cusip[:8])\n        if str(checksum) \u003d\u003d cusip[8]:\n            return cusip\n        else:\n            return None\n    elif len(cusip) \u003d\u003d 8:\n        checksum \u003d cusip_checksum(cusip)\n        return f\"{cusip}{checksum}\"\n    else:\n        return None\n Mypy is happy with this code: Success: no issues found in 1 source file\n Now, let\u0027s say that we decide we should update cusip_checksum() to return None if it detects that the CUSIP is not valid: def cusip_checksum(cusip8: str) -\u003e int | None:\n    if len(cusip8) !\u003d 8:\n        return None\n    chars: str \u003d \"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ*@#\"\n    charmap: dict[str, int] \u003d {\n        char: value\n        for value, char in enumerate(chars, start\u003d0)\n    }\n    total: int  \u003d 0\n    for idx, char in enumerate(cusip8, start\u003d0):\n        try:\n            value: int \u003d charmap[char]\n        except KeyError:\n            return None\n        if (idx % 2) \u003d\u003d 1:\n            value *\u003d 2\n        total +\u003d (value // 10) + (value % 10)\n    return (10 - total % 10) % 10\n Mypy automatically detects issues in how validate_cusip() is using cusip_c",
+    "scrapedAt": "2026-05-09 00:45:07.226701"
+  },
+  {
+    "id": 534,
+    "url": "https://www.python.org/success-stories/category/data-science/",
+    "title": "Data Science | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Data Science How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python Reimagining data science with Python-based operators in Einblick’s visual canvas Using Python with Gretel.ai to Generate Synthetic Location Data Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-09 00:45:06.013939"
+  },
+  {
+    "id": 533,
+    "url": "https://www.python.org/success-stories/using-python-to-make-unstable-apis-reliable/",
+    "title": "Using Python to make unstable APIs reliable | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Using Python to make unstable APIs reliable Written by Cédric Blom, Sales Spirit Introduction Sales Spirit is the company behind several publisher websites, such as Prijsvergelijken.nl: the largest telecom comparison website in the Netherlands. Important for our success is having a complete and flawless product offering on our websites. To achieve this goal, we work closely together with many business partners. Maintaining different and varying product offerings from business partners is a constant struggle. Automating the maintenance using partner APIs is an important aspect of our work at Sales Spirit. These APIs vary widely in terms of reliability, performance, protocols and language, completeness, etc. At the same time we like to offer our clients reliable, good performing and complete websites. It wasn’t until we incorporated Python in our workflow before we were fully up for this challenge. Python has helped us to built an API platform that does not only deliver output of great quality, but is very readable and maintainable as well. Building an API platform with Python We developed a tailor-made API platform at Sales Spirit, to deal with the APIs as provided by our business partners. The platform has many use cases, one such use case is our postcode check. Clients can fill in their postcode and house number at our broadband compare page, to check for broadband availability at their home address. Under the hood we check the availability of broadband at several broadband providers using their APIs. In this specific use case performance and reliability are very important, since we are dealing with a live service. The APIs themselves do not always offer this. We have ensured the performance and reliability by organizing our API platform in a master – worker configuration. The workers run concurrently, each dealing with one API call. The workers are also sandboxed, such that the API platform remains stable should anything happen to a worker. Another advantage of having the workers sandboxed is that they can easily be killed. We can therefore put workers on a time bound, this helps to ensure that our platform can deliver within a certain timespan. The master – worker configuration was implemented using Python Threads. As opposed to other thread solutions, Python threads are really easy to use. Most operations in Python have guaranteed atomicity, due to the Global Interpreter Lock (GIL). This has saved us a tremendous amount of time while ensuring thread safety for our workers. As a bonus, the infrastructure for creating Python Threads is well organized and documented and is incorporated in Python’s standard library. To finish off our API platform, we had to come up with a solution for making processing and collecting API results easy. For the processing part we ended up writing a library, containing a bunch of data processing tools. Most tools are essentially abstracted versions of popular Python libraries, entirely tailored to our needs. For example, our tool for generating SQL queries from API results is entirely based on SQLAlchemy. Python really shines when it comes down to writing powerful and easy to use abstractions of otherwise complicated operations. We designed a special thread safe output class for collecting API results. The class is passed to each worker as an object. Workers can write results to the object without having to worry about how all data eventually comes together. We used Python lists and dictionaries as our basic building blocks for developing the output class. Thus most of the heavy lifting for making the output class thread safe came out of the Python box. The results written to the output class are shared with the master thread. It is the master’s job to bring the individual results together and to generate a final output. The master gets its instructions from a configuration file. The configuration file may contain simple instructions, such as outputting all results as a list. It is also possible to setup a repeat instruction for failed API requests. Using instructions such as these may improve the quality of the output, but has an impact on performance. For live services such as the postcode check, this may not be the best approach for improving on output quality and completeness. Instead, we fill in the blanks using the output from workers that were successful. With our API platform, this advanced post processing technique is all setup with just a few lines in the configuration file. Conclusion Important for the success of Sales Spirit is having a complete and flawless product offering on our websites. The pages are often automatically populated with data, using partner APIs. Ensuring the quality of websites using these APIs is a real challenge. We used Python to develop a tailor-made API platform that deals with",
+    "scrapedAt": "2026-05-09 00:45:04.80749"
+  },
+  {
+    "id": 531,
+    "url": "https://www.python.org/events/python-events/locations/1491/",
+    "title": "Our Events | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Upcoming Events PyCon Italia 2026 27 May 2026 – 30 May 2026 Bologna, Italy Python Event Subscriptions Subscribe to Python Event Calendars: Events in iCal format Python Events Calendars For Python events near you, please have a look at the Python events map. The Python events calendars are maintained by the events calendar team. Please see the events calendar project page for details on how to submit events, subscribe to the calendars, get Twitter feeds or embed them. Thank you.",
+    "scrapedAt": "2026-05-09 00:45:03.581577"
+  },
+  {
     "id": 529,
     "url": "https://www.python.org/events/python-events/2171/",
     "title": "PyCon DE 2027 | Python.org",
@@ -3668,26 +3703,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 531,
-    "url": "https://www.python.org/events/python-events/locations/1491/"
-  },
-  {
-    "id": 533,
-    "url": "https://www.python.org/success-stories/using-python-to-make-unstable-apis-reliable/"
-  },
-  {
-    "id": 534,
-    "url": "https://www.python.org/success-stories/category/data-science/"
-  },
-  {
-    "id": 535,
-    "url": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/"
-  },
-  {
-    "id": 536,
-    "url": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/"
   },
   {
     "id": 537,
@@ -95864,10 +95879,69 @@ window.searchData = [
     "id": 68292,
     "url": "https://www.python.org/events/python-events/640/",
     "parentUrl": "https://www.python.org/events/python-events/2171/"
+  },
+  {
+    "id": 68300,
+    "url": "https://www.google.com/calendar/ical/j7gov1cmnqr9tvg14k621j7t5c@group.calendar.google.com/public/basic.ics",
+    "parentUrl": "https://www.python.org/events/python-events/locations/1491/"
+  },
+  {
+    "id": 68310,
+    "url": "https://www.prijsvergelijken.nl/",
+    "parentUrl": "https://www.python.org/success-stories/using-python-to-make-unstable-apis-reliable/"
+  },
+  {
+    "id": 68328,
+    "url": "https://www.hudsonrivertrading.com/",
+    "parentUrl": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/"
+  },
+  {
+    "id": 68330,
+    "url": "https://en.wikipedia.org/wiki/CUSIP",
+    "parentUrl": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/"
+  },
+  {
+    "id": 68333,
+    "url": "https://www.mypy-lang.org/",
+    "parentUrl": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/"
+  },
+  {
+    "id": 68336,
+    "url": "https://www.hudsonrivertrading.com/hrtbeat/building-robust-codebases-with-pythons-type-annotations/",
+    "parentUrl": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/"
+  },
+  {
+    "id": 68344,
+    "url": "https://www.webucator.com/programming-training/python-training.cfm",
+    "parentUrl": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/successstories/webucator/code-sample-class-file.png",
+    "alt": "Code Sample - Class File",
+    "pageTitle": "Using Python to Automate Tedious Tasks | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/successstories/webucator/code-sample-pdf.png",
+    "alt": "",
+    "pageTitle": "Using Python to Automate Tedious Tasks | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/successstories/webucator/check-xml.png",
+    "alt": "Check XML Python Program",
+    "pageTitle": "Using Python to Automate Tedious Tasks | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/Mypy_example.png",
+    "alt": "Mypy examples",
+    "pageTitle": "Building Robust Codebases with Python\u0027s Type Annotations | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/"
+  },
   {
     "src": "https://cdn.pycon.it/files/participant_avatar/6dc1cb80-e5b2-4531-a080-7ccb44aa7aca.jpg",
     "alt": "Speaker",
