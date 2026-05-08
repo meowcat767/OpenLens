@@ -1,5 +1,45 @@
 window.searchData = [
   {
+    "id": 494,
+    "url": "https://www.python.org/about/",
+    "title": "About Python™ | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Getting Started Python can be easy to pick up whether you\u0027re a first time programmer or you\u0027re experienced with other languages. The following pages are a useful first step to get on your way writing programs with Python! Beginner\u0027s Guide, Programmers Beginner\u0027s Guide, Non-Programmers Beginner\u0027s Guide, Download \u0026 Installation Code sample and snippets for Beginners Friendly \u0026 Easy to Learn The community hosts conferences and meetups, collaborates on code, and much more. Python\u0027s documentation will help you along the way, and the mailing lists will keep you in touch. Conferences and Workshops Python Documentation Mailing Lists and IRC channels Applications The Python Package Index (PyPI) hosts thousands of third-party modules for Python. Both Python\u0027s standard library and the community-contributed modules allow for endless possibilities. Web and Internet Development Database Access Desktop GUIs Scientific \u0026 Numeric Education Network Programming Software \u0026 Game Development Open-source Python is developed under an OSI-approved open source license, making it freely usable and distributable, even for commercial use. Python\u0027s license is administered by the Python Software Foundation. Learn more about the license Python license on OSI Learn more about the Foundation Can’t find what you’re looking for? Try our comprehensive Help section Latest News More 2026-05-07 Python 3.15.0 beta 1 is here! 2026-05-04 Python 3.14.5 release candidate 2026-04-23 Announcing Python Software Foundation Fellow Members for Q1 2026! 🎉 2026-04-14 PyCon US 2026: Why we\u0027re asking you to think about your hotel reservation 2026-04-13 Reflecting on Five Years as the PSF’s First CPython Developer in Residence Upcoming Events More 2026-05-13 PyCon US 2026 2026-05-27 PyCon Italia 2026 2026-06-03 Python Meeting Düsseldorf 2026-06-08 GeoPython 2026 2026-06-18 Python for (Almost) Everything \u003e\u003e\u003e Python Software Foundation The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. Learn more Become a Member Donate to the PSF",
+    "scrapedAt": "2026-05-09 00:43:43.360465"
+  },
+  {
+    "id": 493,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/",
+    "title": "How to Think Like a Computer Scientist — How to Think Like a Computer Scientist: Learning with Python 2nd Edition documentation",
+    "content": "Navigation index next | How to Think Like a Computer Scientist: Learning with Python 2nd Edition documentation » How to Think Like a Computer Scientist¶ Learning with Python¶ 2nd Edition (Using Python 2.x) by Jeffrey Elkner, Allen B. Downey, and Chris Meyers Last Updated: 21 April 2012 Copyright Notice Foreword Preface Contributor List Chapter 1 The way of the program Chapter 2 Variables, expressions, and statements Chapter 3 Functions Chapter 4 Conditionals Chapter 5 Fruitful functions Chapter 6 Iteration Chapter 7 Strings Chapter 8 Case Study: Catch Chapter 9 Lists Chapter 10 Modules and files Chapter 11 Recursion and exceptions Chapter 12 Dictionaries Chapter 13 Classes and objects Chapter 14 Classes and functions Chapter 15 Classes and methods Chapter 16 Sets of Objects Chapter 17 Inheritance Chapter 18 Linked Lists Chapter 19 Stacks Chapter 20 Queues Chapter 21 Trees Appendix A Debugging Appendix B GASP Appendix c Configuring Ubuntu for Python Development Appendix D Customizing and Contributing to the Book GNU Free Document License Search Page Navigation index next | How to Think Like a Computer Scientist: Learning with Python 2nd Edition documentation » © Copyright 2010, Jeffrey Elkner, Allen B. Downey and Chris Meyers. Created using Sphinx 1.2.2.",
+    "scrapedAt": "2026-05-09 00:43:42.218781"
+  },
+  {
+    "id": 492,
+    "url": "http://docs.python.org/library/json.html",
+    "title": "json — JSON encoder and decoder — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Data Handling » json — JSON encoder and decoder | Theme Auto Light Dark | json — JSON encoder and decoder¶ Source code: Lib/json/__init__.py JSON (JavaScript Object Notation), specified by RFC 7159 (which obsoletes RFC 4627) and by ECMA-404, is a lightweight data interchange format inspired by JavaScript object literal syntax (although it is not a strict subset of JavaScript [1] ). Note The term “object” in the context of JSON processing in Python can be ambiguous. All values in Python are objects. In JSON, an object refers to any data wrapped in curly braces, similar to a Python dictionary. Warning Be cautious when parsing JSON data from untrusted sources. A malicious JSON string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended. This module exposes an API familiar to users of the standard library marshal and pickle modules. Encoding basic Python object hierarchies: \u003e\u003e\u003e import json\n\u003e\u003e\u003e json.dumps([\u0027foo\u0027, {\u0027bar\u0027: (\u0027baz\u0027, None, 1.0, 2)}])\n\u0027[\"foo\", {\"bar\": [\"baz\", null, 1.0, 2]}]\u0027\n\u003e\u003e\u003e print(json.dumps(\"\\\"foo\\bar\"))\n\"\\\"foo\\bar\"\n\u003e\u003e\u003e print(json.dumps(\u0027\\u1234\u0027))\n\"\\u1234\"\n\u003e\u003e\u003e print(json.dumps(\u0027\\\\\u0027))\n\"\\\\\"\n\u003e\u003e\u003e print(json.dumps({\"c\": 0, \"b\": 0, \"a\": 0}, sort_keys\u003dTrue))\n{\"a\": 0, \"b\": 0, \"c\": 0}\n\u003e\u003e\u003e from io import StringIO\n\u003e\u003e\u003e io \u003d StringIO()\n\u003e\u003e\u003e json.dump([\u0027streaming API\u0027], io)\n\u003e\u003e\u003e io.getvalue()\n\u0027[\"streaming API\"]\u0027\n Compact encoding: \u003e\u003e\u003e import json\n\u003e\u003e\u003e json.dumps([1, 2, 3, {\u00274\u0027: 5, \u00276\u0027: 7}], separators\u003d(\u0027,\u0027, \u0027:\u0027))\n\u0027[1,2,3,{\"4\":5,\"6\":7}]\u0027\n Pretty printing: \u003e\u003e\u003e import json\n\u003e\u003e\u003e print(json.dumps({\u00276\u0027: 7, \u00274\u0027: 5}, sort_keys\u003dTrue, indent\u003d4))\n{\n    \"4\": 5,\n    \"6\": 7\n}\n Customizing JSON object encoding: \u003e\u003e\u003e import json\n\u003e\u003e\u003e def custom_json(obj):\n...     if isinstance(obj, complex):\n...         return {\u0027__complex__\u0027: True, \u0027real\u0027: obj.real, \u0027imag\u0027: obj.imag}\n...     raise TypeError(f\u0027Cannot serialize object of {type(obj)}\u0027)\n...\n\u003e\u003e\u003e json.dumps(1 + 2j, default\u003dcustom_json)\n\u0027{\"__complex__\": true, \"real\": 1.0, \"imag\": 2.0}\u0027\n Decoding JSON: \u003e\u003e\u003e import json\n\u003e\u003e\u003e json.loads(\u0027[\"foo\", {\"bar\":[\"baz\", null, 1.0, 2]}]\u0027)\n[\u0027foo\u0027, {\u0027bar\u0027: [\u0027baz\u0027, None, 1.0, 2]}]\n\u003e\u003e\u003e json.loads(\u0027\"\\\\\"foo\\\\bar\"\u0027)\n\u0027\"foo\\x08ar\u0027\n\u003e\u003e\u003e from io import StringIO\n\u003e\u003e\u003e io \u003d StringIO(\u0027[\"streaming API\"]\u0027)\n\u003e\u003e\u003e json.load(io)\n[\u0027streaming API\u0027]\n Customizing JSON object decoding: \u003e\u003e\u003e import json\n\u003e\u003e\u003e def as_complex(dct):\n...     if \u0027__complex__\u0027 in dct:\n...         return complex(dct[\u0027real\u0027], dct[\u0027imag\u0027])\n...     return dct\n...\n\u003e\u003e\u003e json.loads(\u0027{\"__complex__\": true, \"real\": 1, \"imag\": 2}\u0027,\n...     object_hook\u003das_complex)\n(1+2j)\n\u003e\u003e\u003e import decimal\n\u003e\u003e\u003e json.loads(\u00271.1\u0027, parse_float\u003ddecimal.Decimal)\nDecimal(\u00271.1\u0027)\n Extending JSONEncoder: \u003e\u003e\u003e import json\n\u003e\u003e\u003e class ComplexEncoder(json.JSONEncoder):\n...     def default(self, obj):\n...         if isinstance(obj, complex):\n...             return [obj.real, obj.imag]\n...         # Let the base class default method raise the TypeError\n...         return super().default(obj)\n...\n\u003e\u003e\u003e json.dumps(2 + 1j, cls\u003dComplexEncoder)\n\u0027[2.0, 1.0]\u0027\n\u003e\u003e\u003e ComplexEncoder().encode(2 + 1j)\n\u0027[2.0, 1.0]\u0027\n\u003e\u003e\u003e list(ComplexEncoder().iterencode(2 + 1j))\n[\u0027[2.0\u0027, \u0027, 1.0\u0027, \u0027]\u0027]\n Using json from the shell to validate and pretty-print: $ echo \u0027{\"json\":\"obj\"}\u0027 | python -m json\n{\n    \"json\": \"obj\"\n}\n$ echo \u0027{1.2:3.4}\u0027 | python -m json\nExpecting property name enclosed in double quotes: line 1 column 2 (char 1)\n See Command-line interface for detailed documentation. Note JSON is a subset of YAML 1.2. The JSON produced by this module’s default settings (in particular, the default separators value) is also a subset of YAML 1.0 and 1.1. This module can thus also be used as a YAML serializer. Note This module’s encoders and decoders preserve input and output order by default. Order is only lost if the underlying containers are unordered. Basic Usage¶ json.dump(obj, fp, *, skipkeys\u003dFalse, ensure_ascii\u003dTrue, check_circular\u003dTrue, allow_nan\u003dTrue, cls\u003dNone, indent\u003dNone, separators\u003dNone, default\u003dNone, sort_keys\u003dFalse, **kw)¶ Serialize obj as a JSON formatted stream to fp (a .write()-supporting file-like object) using this Python-to-JSON conversion table. Note Unlike pickle and marshal, JSON is not a framed protocol, so trying to serialize multiple objects with repeated calls to dump() using the same fp will result in an invalid JSON file. Parameters: obj (object) – The Python object to be serialized. fp (file-like object) – The file-like object obj will be serialized to. The json module always produces str objects, not bytes objects, therefore fp.write() must support str input. skipkeys (bool) – If True, keys that are not of a basic type (str, int, float, bool, None) will be skipped instead of raising a TypeError. Default False. ensure_ascii (bool) – If True (the default), the output is guaranteed to have all incoming non-ASCII and non-printable characters escaped. If False, all characters will",
+    "scrapedAt": "2026-05-09 00:43:35.443764"
+  },
+  {
+    "id": 491,
+    "url": "http://buildbot.sourceforge.net/",
+    "scrapedAt": "2026-05-09 00:43:34.368394"
+  },
+  {
+    "id": 490,
+    "url": "http://www.wxpython.org/",
+    "title": "Welcome to wxPython! | wxPython",
+    "content": "Skip to main content This website is all about wxPython, the cross-platform GUI toolkit for the Python language. With wxPython software developers can create truly native user interfaces for their Python applications, that run with little or no modifications on Windows, Macs and Linux or other unix-like systems. Learn more Latest News wxPython 4.2.4 is now available at PyPI, with some additional files at Extras Changes in this release: This release was built using the wxWidgets\u0027 v3.2.8.1 release tag. The only exception is that libtiff and pcre2 bundled with wxWidgets are updated to the versions from the wxWidgets master branch (libtiff 4.7.0 and pcre2 10.44). Fix using setuptools.build_meta backend (#2732) Fix EOL style in wx.py.editwindow.py (#2741) Replace imp with types in wx.py.editor.py (#2745) Fix floatcanvas Text.ShiftFunDict: convert float to int (#2749) Fix up/down option not working on the initial search in wx.py.frame (#2747) Fix floatcanvas Arrow, Point, Bitmap drawings (#2750) Officially support and build wheels for Python 3.14 and Windows 11 ARM Fix crash when calling wx.SystemSettings.GetAppearance() without App (#2771) Enable whole word search in wx.py.editwindow (#2769) Add MaxSize limit to ScaledBitmap drawing in FloatCanvas (#2768) Fix more OGL float/int conversion issues (#2739) Major speedups and bug fixes to CustomTreeCtrl and HyperTreeList (#2088) Fix duplicated string constants in wx.propgrid (#2790) Add non-zero width and height to default tab size to avoid wxWidgets warning in wx.lib.agw.aui.auibook (#2788) Fix SetHeaderHeight in UltimateListCtrl (#2239) Add ScrollLeft and ScrollDown to PlotCanvas (#2795) Add sample of PlotCanvas usage (#2794) Fix a linker issue with GCC 16+ and wxHelpControllerBase (#2807) wxPython 4.2.3 is now available at PyPI, with some additional files at Extras Changes in this release: This release was built using the wxWidgets\u0027 v3.2.7 release tag. The only exception is that libtiff and pcre2 bundled with wxWidgets are updated to the versions from the wxWidgets master branch (libtiff 4.7.0 and pcre2 10.44). Fix test issues with wx.lib.introspect (#2717) Add support for building on Windows ARM64 (#2521) Incorporate many improvements to type stubs (#2665) Fix building documentation with latest sphinx (#2672) Build smaller architecture-specific wheels on macOS instead of large universal2 wheels Calculate scroll based on child\u0027s relative position to scrolledpanel in wx.lib.scrolledpanel Fix float -\u003e int conversion issues in wx.lib.fancytext (#2703) Replace deprecated NumPy type aliases Use wx.StaticText in wx.lib.agw.hyperlink (#2686) Implement partial support for pyproject.toml and other build process improvements Remove use of six and most Python 2 compatibility code Fix wxWidgets build on OpenSUSE (#558, #1067, #2422, #2532) Fix more int conversions in wx.lib.agw.flatnotebook Make build output reproducible Enable overridding wx.Sizer.InformFirstDirection() (#2452) Implement iter for wxList iterator classes (fixes Python 3.13.1 issue) Fix wx.lib.mixins.rubberband not clearing DC on redraw Support implementing CreateBitmapBundle for custom ArtProvider Fix float/int conversion issues in wx.lib.ogl Include usage of wxMemoryFSHandler in webview demo Fix crash when accessing wx.stc.StyledTextCtrl.DropTarget.Data (#2043) Fix AuiManager pane minimizing issue Add range field to wx.lib.agw.pygauge.PyGauge format string (#2583) Fix pickling of wx.RealPoint (#2644) Avoid calling FlatMenu Destroy() in a finally block (#2630) Update wxApp.IsDisplayAvailable to work on Wayland Fix InspectionTool crashes due to bad perspective string errors Drop support for Python 3.8 (EOL) Add CreateAccessible for Windows only Added check condition to AuiManager LoadPerspective() Fix RecursionError in platebtn bitmap getters Add Python implementation of GetPaths (#1944) Support Wayland GTK backend in Window.GetHandle Refactor python only pdfviewer to support displaying pdf files where not all pages have the same size Improve support when specifying a pre-existing toolbar as the target for the restore icon when minimizing a pane in agw.aui Multiple bugfixes in pure python aui pdfviewer: Add support for pymupdf renaming wxPython 4.2.2 is now available at PyPI, with some additional files at Extras Changes in this release: This release was built using the wxWidgets\u0027 v3.2.6 release tag. This is the first release built using GitHub infrastructure instead of the buildbots. Please report any problems with the wheels. Fix some Python 3.12 compatibility issues (segfault on exit) by upgrading sip \u0026 waf Fix more float/int conversion issues in wx.lib classes (#2415, #2417, #2429, #2470, #2528, #2542) Add initialValue argument to wx.lib.DirBrowseButton (#2430) Fix wxImage.Clear() (#2433) Fix blurry text in AuiNotebook tab (#2360) Add support for frozen rows and columns to GridWithLabelRenderersMixin (#2436) demo: ShortcutEditor: Fix broken call GetMenuBar() (#2412) Add proper support for DataViewCheckIcon",
+    "scrapedAt": "2026-05-09 00:43:33.182286"
+  },
+  {
+    "id": 489,
+    "url": "https://www.python.org/community/sigs/current/edu-sig",
+    "title": "EDU-SIG: Python in Education | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. EDU-SIG: Python in Education More and more, Python is making inroads at all levels in education. Python offers an interactive environment in which to explore procedural, functional and object oriented approaches to problem solving. Its high level data structures and clear syntax make it an ideal first language, while the large number of existing libraries make it suitable to tackle almost any programming tasks. Edu-sig, through its mailing list, provides an informal venue for comparing notes and discussing future possibilities for Python in education. Its origins trace to Guido van Rossum\u0027s pioneering Computer Programming for Everybody (CP4E), a grant proposal accepted by DARPA, and which provided a modicum of funding in 1999. Membership includes, but is not limited to, educators using Python in their courses, independent developers, and authors of educational materials. Discussion focuses on Python use at all levels, from beginning to advanced applications. Python 2 or Python 3 ? Several years ago, a new version of Python (3) was introduced. This new version has some small but significant changes from the previous one. The most visible change for beginners is that print which used to be a Python keyword \u003e\u003e\u003e print \"Hello World!\"   # for Python 2\n is now a function: \u003e\u003e\u003e print(\"Hello World!\")   # for Python 3\n As a result of the changes, programs written for Python 2 are likely to be incompatible with Python 3 (and vice-versa). Some of you may have not control over which Python version is made available to the students. If that is the case, you should not despair too much if you and your students do not have access to the best/latest version of Python: Python is a fantastic choice as a first language and the relatively minor changes between versions do not change this fact. If you have some control over which version of Python is made available to the students, then you have a choice to make. In this case, we would like to offer the following: Use Python 3, and more specifically version 3.4, if you can, making use of the growing number of third-party libraries available for it. This is especially true if you plan to teach Python as an introductory language (say in a CS-1 course), since Python 3 is the future of Python. Also, if you teach Python in languages other than English, where non-ascii characters could be put to good use in writing identifiers, then Python 3 should definitely be your choice. Use Python 2, and more specifically version 2.7, if you need third-party modules which have not yet been porteded to Python 3. Resources Mailing lists Free books Textbooks Learning environments Learning resources Videos Specialized packages Academic papers Game time! Miscellaneous SIG administrivia Mailing lists, etc. As mentioned above, the Edu-Sig community has its own mailing list. Two other mailing lists are of potential interest to educators: the python tutor and the general python-list. All three are available in a searchable archive on the ActiveState site which is also hosting the famous Python Cookbook. The python tutor mailing list is useful to beginners learning the language and looking for answers to their programming problems; educators are welcome to join as volunteers; the edu-sig mailing list is more for discussions about uses of Python in educational settings. Free books and tutorials for educators There are a number of freely available tutorials for Python. For example, there is a collection of Beginner\u0027s Guide to Python available on the Python wiki. In addition, the following may be of particular interest to educators: Think Python, by Allen B. Downey, is a substantially revised version of How to Think Like a Computer Scientist Learning with Python. It is available for free in various formats; printed copies can be purchased as well. Python for Informatics: Exploring Information, by Charles Severance, is another book derived from the freely available How to Think Like a Computer Scientist Learning with Python mentioned above. As of January 2010, this book is only partially completed, with chapters available freely as pdf files. Dave Kuhlman\u0027s free book and other collection of tutorials is also a very good resource for educators. Andrew Harrington\u0027s hands-on tutorial is suitable for high school and university-level CS-0 students. Dr. Harrington teaches at Loyola University Chicago. Textbooks and other non-free books While there are a number of free books and tutorials available, some people prefer to have an actual copy on paper. If you are among this group, you might be surprised to learn that there are close to one hundred books that have been written about Python programming. Here, we will focus only on a subset that are of potential interest for educators who teach introductory courses in programming. More books can be found here ",
+    "scrapedAt": "2026-05-09 00:43:31.937008"
+  },
+  {
     "id": 488,
     "url": "http://docs.python.org/library/ftplib.html",
     "title": "ftplib — FTP protocol client — Python 3.14.5rc1 documentation",
@@ -3398,30 +3438,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 489,
-    "url": "https://www.python.org/community/sigs/current/edu-sig"
-  },
-  {
-    "id": 490,
-    "url": "http://www.wxpython.org/"
-  },
-  {
-    "id": 491,
-    "url": "http://buildbot.sourceforge.net/"
-  },
-  {
-    "id": 492,
-    "url": "http://docs.python.org/library/json.html"
-  },
-  {
-    "id": 493,
-    "url": "http://www.openbookproject.net/thinkcs/python/english2e/"
-  },
-  {
-    "id": 494,
-    "url": "https://www.python.org/about/"
   },
   {
     "id": 495,
@@ -88609,10 +88625,1078 @@ window.searchData = [
     "id": 66230,
     "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP_TLS.auth",
     "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66232,
+    "url": "http://docs.python.org/library/turtle.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66234,
+    "url": "http://wiki.python.org/moin/PythonBooks",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66235,
+    "url": "http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-642-30292-3",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66236,
+    "url": "http://www.4dsolutions.net/ocn/cp4e.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66237,
+    "url": "https://code.google.com/p/rur-ple/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66238,
+    "url": "http://www.pgbovine.net/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66239,
+    "url": "http://software-carpentry.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66240,
+    "url": "http://www.springer.com/mathematics/numerical+and+computational+mathematics/book/978-3-540-73915-9",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66241,
+    "url": "http://www.amazon.com/Scientific-Programming-Computational-Science-Engineering/dp/3642024742/ref\u003dsr_1_2?ie\u003dUTF8\u0026s\u003dbooks\u0026qid\u003d1252223300\u0026sr\u003d8-2",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66242,
+    "url": "http://wiki.python.org/moin/PythonForSecretaries",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66243,
+    "url": "http://code.google.com/p/sympy/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66244,
+    "url": "http://mcsp.wartburg.edu/zelle/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66245,
+    "url": "http://live.codenode.org/accounts/login/?next\u003d/bookshelf/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66246,
+    "url": "http://reeborg.ca",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66247,
+    "url": "http://vpython.org",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66248,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#game-time",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66249,
+    "url": "http://www.pearsonhighered.com/educator/product/Practice-of-Computing-using-Python-The/9780136110675.page",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66250,
+    "url": "http://www.python.org/mailman/listinfo/edu-sig",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66251,
+    "url": "http://www.pythontutor.com/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66252,
+    "url": "http://www.onlamp.com/pub/a/python/2000/10/04/pythonnews.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66253,
+    "url": "http://pyglet.org",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66254,
+    "url": "https://fbeedle.com/content/python-programming-introduction-computer-science%E2%80%942nd-edition",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66255,
+    "url": "http://pypi.python.org/pypi",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66257,
+    "url": "http://blip.tv/file/1947495",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66258,
+    "url": "http://cs.slu.edu/~goldwasser/publications/ITiCSE2008_Abstract.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66259,
+    "url": "http://www.oreilly.com/frank/elkner_0300.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66260,
+    "url": "http://www.oreillynet.com/pub/a/network/2000/01/31/hacktrack/index.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66261,
+    "url": "http://www.ifi.uio.no/~hpl/scripting/all-nosplit/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66263,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#learning-environments",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66264,
+    "url": "http://cs.slu.edu/~goldwasser/publications/SIGCSE2009_Abstract.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66265,
+    "url": "http://pygame.org",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66266,
+    "url": "http://www.libsdl.org/index.php",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66267,
+    "url": "http://ftp.ntua.gr/mirror/python/sigs/edu-sig/miller-dissertation.pdf",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66268,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#sig-administrivia",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66269,
+    "url": "http://mail.python.org/mailman/listinfo/tutor",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66270,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#academic-papers",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66271,
+    "url": "http://numpy.scipy.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66272,
+    "url": "http://www.rexx.com/~dkuhlman/#a-python-book",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66273,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#id1",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66274,
+    "url": "http://sagemath.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66275,
+    "url": "http://ipython.scipy.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66276,
+    "url": "http://codenode.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66277,
+    "url": "http://pgbovine.net/python-teaching.htm",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66278,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#specialized-packages",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66279,
+    "url": "http://interactivepython.org",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66280,
+    "url": "http://www.cs1graphics.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66281,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#videos",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66282,
+    "url": "http://www.handysoftware.com/cpif/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66283,
+    "url": "http://arxiv.org/ftp/arxiv/papers/0809/0809.1437.pdf",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66284,
+    "url": "http://www.openbookproject.net/pybiblio/papers/pyyhs/year01/pyyhs.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66285,
+    "url": "http://www.linuxjournal.com/articles/conversations/005.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66286,
+    "url": "http://en.wikipedia.org/wiki/IDLE_%28Python%29",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66287,
+    "url": "http://openopt.org/Welcome",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66288,
+    "url": "http://matplotlib.sourceforge.net/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66289,
+    "url": "http://showmedo.com/videos/video?name\u003d1430000\u0026fromSeriesID\u003d143",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66290,
+    "url": "http://aspn.activestate.com/ASPN/Cookbook/Python/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66291,
+    "url": "http://gvr-online.appspot.com/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66292,
+    "url": "http://www.pythonware.com/products/pil/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66293,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#textbooks",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66294,
+    "url": "http://www.openbookproject.net/py4fun/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66295,
+    "url": "http://cp4k.blogspot.com/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66296,
+    "url": "http://code.google.com/p/crunchy/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66297,
+    "url": "http://prenhall.com/goldwasser/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66298,
+    "url": "https://fbeedle.com/content/data-structures-and-algorithms-using-python-and-c",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66299,
+    "url": "http://svn.python.org/view/python/trunk/Lib/lib-tk/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66300,
+    "url": "http://www.jbpub.com/catalog/9780763746025/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66301,
+    "url": "http://www1.chapman.edu/~radenski/research/abstracts/python-iticse06.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66302,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#mailing-lists",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66304,
+    "url": "http://wiki.python.org/moin/EduSig/DataResources",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66305,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#free-books",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66307,
+    "url": "http://www.reportlab.com/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66308,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#learning-resources",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66309,
+    "url": "http://wiki.python.org/moin/SchoolsUsingPython",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66310,
+    "url": "http://gvr.sourceforge.net/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66311,
+    "url": "http://webpages.cs.luc.edu/~anh/python/hands-on",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66312,
+    "url": "http://emergent.brynmawr.edu/%7Edblank/pyro/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66313,
+    "url": "http://webpages.cs.luc.edu/~anh/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66314,
+    "url": "https://www.python.org/doc/essays/cp4e/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66315,
+    "url": "http://www.scipy.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66316,
+    "url": "http://pykata.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66317,
+    "url": "http://aspn.activestate.com/ASPN/Python/Mail/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66319,
+    "url": "http://pragprog.com/titles/gwpy2/practical-programming",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66320,
+    "url": "http://aspn.activestate.com",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66321,
+    "url": "http://mail.python.org/mailman/listinfo/python-list",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66322,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#miscellaneous",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66323,
+    "url": "http://www.py4inf.com/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66324,
+    "url": "http://www.amazon.com/Python-Programming-Absolute-Beginner-Second/dp/1598631128",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66325,
+    "url": "http://www.blender3d.com/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66326,
+    "url": "http://www.greenteapress.com/thinkpython/thinkpython.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66327,
+    "url": "https://code.google.com/p/pynguin/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66328,
+    "url": "http://www.skylit.com/mathandpython.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66329,
+    "url": "http://www.python.org/pipermail/edu-sig",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66354,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecoder.raw_decode",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66356,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-no-ensure-ascii",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66361,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONEncoder.default",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66363,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecoder",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66365,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-h",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66366,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError.msg",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66367,
+    "url": "https://docs.python.org/3/library/json.html#rfc-errata",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66369,
+    "url": "https://docs.python.org/3/library/exceptions.html#RecursionError",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66371,
+    "url": "https://docs.python.org/3/library/json.html#basic-usage",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66373,
+    "url": "https://yaml.org/",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66374,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError.pos",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66375,
+    "url": "https://docs.python.org/3/library/exceptions.html#UnicodeDecodeError",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66376,
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-404/",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66378,
+    "url": "https://docs.python.org/3/glossary.html#term-file-like-object",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66379,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError.lineno",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66380,
+    "url": "https://docs.python.org/3/library/json.html#module-json.tool",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66381,
+    "url": "https://docs.python.org/3/library/marshal.html#module-marshal",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66382,
+    "url": "https://docs.python.org/3/library/json.html#encoders-and-decoders",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66383,
+    "url": "https://docs.python.org/3/library/netdata.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66384,
+    "url": "https://docs.python.org/3/library/json.html#standard-compliance-and-interoperability",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66385,
+    "url": "https://docs.python.org/3/library/json.html#json.loads",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66387,
+    "url": "https://docs.python.org/3/library/json.html#json.load",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66388,
+    "url": "https://docs.python.org/3/library/json.html#exceptions",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66390,
+    "url": "https://docs.python.org/3/library/json.html#character-encodings",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66391,
+    "url": "https://docs.python.org/3/library/json.html#json.dump",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66392,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/json.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66394,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7159.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66396,
+    "url": "https://docs.python.org/3/library/json.html#",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66397,
+    "url": "https://docs.python.org/3/library/json.html#id1",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66400,
+    "url": "https://docs.python.org/3/glossary.html#term-binary-file",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66404,
+    "url": "https://docs.python.org/3/library/mailbox.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66406,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/json/__init__.py",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66407,
+    "url": "https://www.jsonrpc.org",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66408,
+    "url": "https://docs.python.org/3/library/json.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66409,
+    "url": "https://json.org",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66411,
+    "url": "https://docs.python.org/3/glossary.html#keyword-only-parameter",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66412,
+    "url": "https://docs.python.org/3/library/json.html#implementation-limitations",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66413,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-arg-infile",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66414,
+    "url": "https://docs.python.org/3/library/json.html#py-to-json-table",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66415,
+    "url": "https://docs.python.org/3/library/stdtypes.html#int-max-str-digits",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66416,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/json/tool.py",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66417,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-json-lines",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66418,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError.colno",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66419,
+    "url": "https://docs.python.org/3/library/json.html#top-level-non-object-non-array-values",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66420,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-sort-keys",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66421,
+    "url": "https://docs.python.org/3/library/json.html#repeated-names-within-an-object",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66422,
+    "url": "https://docs.python.org/3/library/json.html#command-line-options",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66424,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError.doc",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66425,
+    "url": "https://docs.python.org/3/library/json.html#json-to-py-table",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66429,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4627.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66430,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONEncoder",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66433,
+    "url": "https://docs.python.org/3/library/functions.html#object",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66434,
+    "url": "https://docs.python.org/3/library/sys.html#sys.stdin",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66436,
+    "url": "https://docs.python.org/3/library/email.iterators.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66437,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-arg-outfile",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66438,
+    "url": "https://docs.python.org/3/glossary.html#term-text-file",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66439,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-indent",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66440,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecoder.decode",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66441,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONEncoder.iterencode",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66442,
+    "url": "https://www.rfc-editor.org/errata_search.php?rfc\u003d7159",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66443,
+    "url": "https://docs.python.org/3/library/json.html#json.dumps",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66444,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONEncoder.encode",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66445,
+    "url": "https://docs.python.org/3/library/json.html#infinite-and-nan-number-values",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66446,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66448,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/genindex.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66449,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/app_c.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66450,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch07.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66451,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/preface.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66452,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch16.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66453,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch18.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66454,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch10.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66455,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/copyright.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66456,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/foreword.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66457,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch21.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66458,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch05.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66459,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch13.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66460,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/fdl-1.3.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66461,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/search.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66462,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/#how-to-think-like-a-computer-scientist",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66463,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch02.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66464,
+    "url": "http://sphinx-doc.org/",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66465,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/contrib.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66466,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/app_d.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66467,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch06.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66468,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/app_a.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66469,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch09.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66470,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch17.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66471,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch14.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66472,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch03.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66473,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch11.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66474,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch08.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66475,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch12.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66476,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch20.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66477,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch19.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66478,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/app_b.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66479,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/#",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66480,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch15.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66481,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch01.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66482,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch04.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66483,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/#learning-with-python",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66487,
+    "url": "https://www.python.org/about/apps/#desktop-guis",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66489,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/Examples",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66491,
+    "url": "https://opensource.org/license/pythonsoftfoundation-php/",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66494,
+    "url": "https://www.python.org/about/apps/#education",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66495,
+    "url": "https://www.python.org/psf",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66497,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/NonProgrammers",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66499,
+    "url": "https://pypi.python.org",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66501,
+    "url": "https://www.python.org/community/irc/",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66502,
+    "url": "https://www.python.org/about/apps/#database-access",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66503,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/Programmers",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66504,
+    "url": "https://www.python.org/community/workshops/",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66510,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/Download",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66512,
+    "url": "https://www.python.org/about/help/",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66515,
+    "url": "https://www.python.org/about/apps/#scientific-and-numeric",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66516,
+    "url": "https://www.python.org/about/apps/#network-programming",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66517,
+    "url": "https://www.python.org/about/apps/#web-and-internet-development",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66518,
+    "url": "https://www.python.org/community/lists",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66519,
+    "url": "https://www.python.org/about/apps/#software-development",
+    "parentUrl": "https://www.python.org/about/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "http://www.openbookproject.net/thinkcs/python/english2e/_images/gasp_lessons.png",
+    "alt": "GASP Logo",
+    "pageTitle": "How to Think Like a Computer Scientist — How to Think Like a Computer Scientist: Learning with Python 2nd Edition documentation",
+    "pageUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "json — JSON encoder and decoder — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "json — JSON encoder and decoder — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/library/json.html"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
