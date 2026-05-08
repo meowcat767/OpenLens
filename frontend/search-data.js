@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 200,
+    "url": "https://docs.python.org",
+    "title": "3.14.5rc1 Documentation",
+    "content": "Navigation index modules | Python » 3.14.5rc1 Documentation » | Theme Auto Light Dark | Python 3.14.5rc1 documentation Welcome! This is the official documentation for Python 3.14.5rc1. Documentation sections: What\u0027s new in Python 3.14? Or all \"What\u0027s new\" documents since Python 2.0 Tutorial Start here: a tour of Python\u0027s syntax and features Library reference Standard library and builtins Language reference Syntax and language elements Python setup and usage How to install, configure, and use Python Python HOWTOs In-depth topic manuals Installing Python modules Third-party modules and PyPI.org Distributing Python modules Publishing modules for use by other people Extending and embedding For C/C++ programmers Python\u0027s C API C API reference FAQs Frequently asked questions (with answers!) Deprecations Deprecated functionality Indices, glossary, and search: Global module index All modules and libraries General index All functions, classes, and terms Glossary Terms explained Search page Search this documentation Complete table of contents Lists all sections and subsections Project information: Reporting issues Contributing to docs Download the documentation History and license of Python Copyright About the documentation Download Download these documents Docs by version Python 3.16 (in development) Python 3.15 (pre-release) Python 3.14 (stable) Python 3.13 (stable) Python 3.12 (security-fixes) Python 3.11 (security-fixes) Python 3.10 (security-fixes) Python 3.9 (EOL) Python 3.8 (EOL) Python 3.7 (EOL) Python 3.6 (EOL) Python 3.5 (EOL) Python 3.4 (EOL) Python 3.3 (EOL) Python 3.2 (EOL) Python 3.1 (EOL) Python 3.0 (EOL) Python 2.7 (EOL) Python 2.6 (EOL) All versions Other resources PEP Index Beginner\u0027s Guide Book List Audio/Visual Talks Python Developer’s Guide « Navigation index modules | Python » 3.14.5rc1 Documentation » | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 00:33:37.461221"
+  },
+  {
+    "id": 199,
+    "url": "https://docs.ansible.com/",
+    "title": "Ansible Community | Ansible documentation",
+    "content": "Join us at Red Hat Summit in Atlanta to learn about Ansible Automation Platform | May 11-14, 2026 Ansible community documentation Ansible community documentation can help you configure most operating systems, deploy software, and orchestrate advanced workflows to support application deployment, system updates, and more! Looking for Red Hat Ansible Automation Platform?  Get started Users Developers Maintainers Ansible ecosystem Contribute to Ansible Get started Ansible is open-source technology that can perform virtually any IT task and remove complexity from workflows. Code that reads like documentation Ansible is an automation language that can describe any IT environment, whether homelab or large scale infrastructure. It is easy to learn, beautiful code that reads like clear documentation. Freedom from repetitive tasks As an automation engine, Ansible ensures that your IT environment stays exactly as you describe it, no matter the complexity. Not only that, you can automate any command with Ansible to eliminate drudgery from your daily routine. Ansible gives you tooling to be more productive and solve problems that really matter. Ready to start automating? pip install ansible  Copied! Understand the fundamentals of Ansible automation Install the Ansible package Run your first ad hoc command in a few easy steps Back to top  Users Automate the management of remote systems and control their desired state. Start writing Ansible playbooks Learn about Ansible modules Build inventory files to manage multiple hosts Find more user documentation  Back to top  Developers Extend automation with custom Ansible modules, add functionality to existing modules, or fix bugs to improve existing code. Set up your development environment Learn how Ansible works Write custom modules or plugins Find more developer documentation  Back to top  Maintainers Ansible community maintainers are trusted contributors who oversee project lifecycle and overall health. Review community maintainer responsibilities Understand Ansible contributor paths Explore ways to grow community Find more maintainer documentation  Back to top  Grab the Bullhorn The Bullhorn is a weekly newsletter full of Ansible Community news and updates. Read the latest edition Ansible ecosystem View more  Expand automation to an unlimited set of use cases with projects in the Ansible ecosystem. Ansible Core The Ansible programming language, automation tooling, and architectural framework. Find out more  Antsibull Nox A nox helper library that simplifies the process of testing Ansible collections through a common interface for various tools. Find out more  Ansible Builder Ansible Builder lets you create Execution Environments, which are container images that act as Ansible control nodes. Find out more  Ansible developer tools An integrated tool kit and framework for creating Ansible automation content, from bootstrapping new projects to setting up ci/cd pipelines. Find out more  Back to top  Contribute You can contribute to Ansible in so many ways... Organize meetups with other automation enthusiasts. Give lighting talks. Host Ansible workshops. Code a new module or fix a bug. Improve the documentation. Want to get involved? Check out our contributor resources and join the Ansible community - we\u0027d love to have you. Back to top  Red Hat Ansible Automation Platform provides everything needed to create, execute, and manage automation in a single subscription. From execution environments to certified collections to automation analytics, discover the features and benefits of Ansible Automation Platform. Red Hat Ansible Automation Platform documentation Back to top  CC BY-SA 4.0 Privacy policy Code of conduct Sponsored by",
+    "scrapedAt": "2026-05-09 00:33:36.344956"
+  },
+  {
+    "id": 198,
+    "url": "https://www.python.org/events/calendars/",
+    "title": "Python Calendars | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Choose a calendar to view events. Python Events Calendar Python User Group Calendar",
+    "scrapedAt": "2026-05-09 00:33:35.178395"
+  },
+  {
+    "id": 197,
+    "url": "https://www.tornadoweb.org/",
+    "title": "Tornado Web Server — Tornado 6.5.5 documentation",
+    "content": "Tornado Web Server View page source ¶ Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed. By using non-blocking network I/O, Tornado can scale to tens of thousands of open connections, making it ideal for long polling, WebSockets, and other applications that require a long-lived connection to each user. Quick links¶ Current version: 6.5.5 (download from PyPI, release notes) Source (GitHub) Mailing lists: discussion and announcements Stack Overflow Wiki Hello, world¶ Here is a simple “Hello, world” example web app for Tornado: import asyncio\nimport tornado\n\nclass MainHandler(tornado.web.RequestHandler):\n    def get(self):\n        self.write(\"Hello, world\")\n\ndef make_app():\n    return tornado.web.Application([\n        (r\"/\", MainHandler),\n    ])\n\nasync def main():\n    app \u003d make_app()\n    app.listen(8888)\n    await asyncio.Event().wait()\n\nif __name__ \u003d\u003d \"__main__\":\n    asyncio.run(main())\n This example does not use any of Tornado’s asynchronous features; for that see this simple chat room. Threads and WSGI¶ Tornado is different from most Python web frameworks. It is not based on WSGI, and it is typically run with only one thread per process. See the User’s guide for more on Tornado’s approach to asynchronous programming. While some support of WSGI is available in the tornado.wsgi module, it is not a focus of development and most applications should be written to use Tornado’s own interfaces (such as tornado.web) directly instead of using WSGI. In general, Tornado code is not thread-safe. The only method in Tornado that is safe to call from other threads is IOLoop.add_callback. You can also use IOLoop.run_in_executor to asynchronously run a blocking function on another thread, but note that the function passed to run_in_executor should avoid referencing any Tornado objects. run_in_executor is the recommended way to interact with blocking code. asyncio Integration¶ Tornado is integrated with the standard library asyncio module and shares the same event loop (by default since Tornado 5.0). In general, libraries designed for use with asyncio can be mixed freely with Tornado. Installation¶ pip install tornado\n Tornado is listed in PyPI and can be installed with pip. Note that the source distribution includes demo applications that are not present when Tornado is installed in this way, so you may wish to download a copy of the source tarball or clone the git repository as well. Prerequisites: Tornado 6.3 requires Python 3.9 or newer. The following optional packages may be useful: pycurl is used by the optional tornado.curl_httpclient. Libcurl version 7.22 or higher is required. pycares is an alternative non-blocking DNS resolver that can be used when threads are not appropriate. Platforms: Tornado is designed for Unix-like platforms, with best performance and scalability on systems supporting epoll (Linux), kqueue (BSD/macOS), or /dev/poll (Solaris). Tornado will also run on Windows, although this configuration is not officially supported or recommended for production use. Some features are missing on Windows (including multi-process mode) and scalability is limited (Even though Tornado is built on asyncio, which supports Windows, Tornado does not use the APIs that are necessary for scalable networking on Windows). Documentation¶ This documentation is also available in PDF and Epub formats. User’s guide Introduction Asynchronous and non-Blocking I/O Coroutines Queue example - a concurrent web spider Structure of a Tornado web application Templates and UI Authentication and security Running and deploying Web framework tornado.web — RequestHandler and Application classes tornado.template — Flexible output generation tornado.routing — Basic routing implementation tornado.escape — Escaping and string manipulation tornado.locale — Internationalization support tornado.websocket — Bidirectional communication to the browser HTTP servers and clients tornado.httpserver — Non-blocking HTTP server tornado.httpclient — Asynchronous HTTP client tornado.httputil — Manipulate HTTP headers and URLs tornado.http1connection – HTTP/1.x client/server implementation Asynchronous networking tornado.ioloop — Main event loop tornado.iostream — Convenient wrappers for non-blocking sockets tornado.netutil — Miscellaneous network utilities tornado.tcpclient — IOStream connection factory tornado.tcpserver — Basic IOStream-based TCP server Coroutines and concurrency tornado.gen — Generator-based coroutines tornado.locks – Synchronization primitives tornado.queues – Queues for coroutines tornado.process — Utilities for multiple processes Integration with other services tornado.auth — Third-party login with OpenID and OAuth tornado.wsgi — Interoperability with other Python frameworks and servers tornado.platform.caresresolver — Asynchronous DNS Resolver using C-Ares tornado.platform.twisted — Bridges between Twisted and Tornado tornado.platform.asyncio — Bridge between asyncio and Tornado Uti",
+    "scrapedAt": "2026-05-09 00:33:34.099964"
+  },
+  {
+    "id": 196,
+    "url": "https://pytorch.org/",
+    "title": "PyTorch",
+    "content": "Search Close Search JOIN US PyTorch Conference North America October 20-21, 2026 San Jose, CA #PyTorchCon SUBMIT TO SPEAKSPONSOR Get Started: Install PyTorch Locally or Launch Instantly on Supported Cloud Platforms Get started May 5, 2026 in Blog In-Kernel Broadcast Optimization: Co-Designing Kernels for RecSys Inference TL;DR: Traditional RecSys inference explicitly replicates shared user embeddings/sequences for every candidate. In-Kernel Broadcast Optimization (IKBO) eliminates this overhead via a kernel-model-system co-design that fuses broadcast logic directly into user-candidate… Read More April 30, 2026 in Blog SMG: The Case for Disaggregating CPU from GPU in LLM Serving How It Started: Hitting the GIL Wall at Scale We\u0027ve been running production model serving for many years. When we first started building Shepherd Model Gateway, the goal was modest:… Read More April 29, 2026 in Blog Introducing AutoSP ¹ SSAIL Lab, University of Illinois Urbana-Champaign, ² Anyscale, ³ Snowflake TL;DR: AutoSP automatically converts standard transformer training code into sequence-parallel code for long-context LLM training across multiple GPUs. Integrated… Read More Join PyTorch Foundation As a member of the PyTorch Foundation, you’ll have access to resources that allow you to be stewards of stable, secure, and long-lasting codebases. You can collaborate on training, local and regional events, open-source developer tooling, academic research, and guides to help new users and contributors have a productive experience. EXPLORE BENEFITS Key Features \u0026 Capabilities Production Ready Transition seamlessly between eager and graph modes with TorchScript, and accelerate the path to production with TorchServe. Distributed Training Scalable distributed training and performance optimization in research and production is enabled by the torch.distributed backend. Robust Ecosystem A rich ecosystem of tools and libraries extends PyTorch and supports development in computer vision, NLP and more. Cloud Support PyTorch is well supported on major cloud platforms, providing frictionless development and easy scaling. Install PyTorch Select your preferences and run the install command. Stable represents the most currently tested and supported version of PyTorch. This should be suitable for many users. Preview is available if you want the latest, not fully tested and supported, builds that are generated nightly. Please ensure that you have met the prerequisites below (e.g., numpy), depending on your package manager. You can also install previous versions of PyTorch. Note that LibTorch is only available for C++. NOTE: Latest Stable PyTorch requires Python 3.10 or later. PyTorch Build Your OS Package Language Compute Platform Run this Command: PyTorch Build Stable (2.7.0) Preview (Nightly) Your OS Linux Mac Windows Package Pip LibTorch Source Language Python C++ / Java Compute Platform CUDA 11.8 CUDA 12.6 CUDA 12.8 ROCm 6.3 CPU Run this Command: pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 Previous versions of PyTorch Quick Start With Cloud Partners Get up and running with PyTorch quickly through popular cloud platforms and machine learning services. Amazon Web Services PyTorch on AWS Amazon SageMaker AWS Deep Learning Containers AWS Deep Learning AMIs Google Cloud Platform Cloud Deep Learning VM Image Deep Learning Containers Microsoft Azure PyTorch on Azure Azure Machine Learning Azure Functions Lightning Studios lightning.ai Ecosystem BROWSE PROJECTS Featured Projects Explore a rich ecosystem of libraries, tools, and more to support development. Captum Captum (“comprehension” in Latin) is an open source, extensible library for model interpretability built on PyTorch. PyTorch Geometric PyTorch Geometric is a library for deep learning on irregular input data such as graphs, point clouds, and manifolds. skorch skorch is a high-level library for PyTorch that provides full scikit-learn compatibility. Companies \u0026 Universities Using PyTorch Amazon Advertising Reduce inference costs by 71% and scale out using PyTorch, TorchServe, and AWS Inferentia. READ CASE STUDIES Salesforce Pushing the state of the art in NLP and Multi-task learning. Stanford University Using PyTorch’s flexibility to efficiently research new algorithmic approaches. Docs Access comprehensive developer documentation for PyTorch View Docs › Tutorials Get in-depth tutorials for beginners and advanced developers View Tutorials › Resources Find development resources and get your questions answered View Resources › Stay in touch for updates, event info, and the latest news By submitting this form, I consent to receive marketing emails from the LF and its projects regarding their events, training, research, developments, and related announcements. I understand that I can unsubscribe at any time using the links in the footers of the emails I receive. Privacy Policy. x-twitter facebook linkedin youtube github slack discord © 2026 PyTorch. C",
+    "scrapedAt": "2026-05-09 00:33:32.763933"
+  },
+  {
     "id": 195,
     "url": "https://pandas.pydata.org/",
     "title": "pandas - Python Data Analysis Library",
@@ -1363,26 +1398,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 196,
-    "url": "https://pytorch.org/"
-  },
-  {
-    "id": 197,
-    "url": "https://www.tornadoweb.org/"
-  },
-  {
-    "id": 198,
-    "url": "https://www.python.org/events/calendars/"
-  },
-  {
-    "id": 199,
-    "url": "https://docs.ansible.com/"
-  },
-  {
-    "id": 200,
-    "url": "https://docs.python.org"
   },
   {
     "id": 201,
@@ -34603,10 +34618,1563 @@ window.searchData = [
     "id": 15692,
     "url": "https://pandas.pydata.org/pandas-docs/stable/whatsnew/v1.5.3.html",
     "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15693,
+    "url": "https://discord.com/invite/eNSRmh92XT",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15694,
+    "url": "https://pytorch.org/projects/safetensors/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15695,
+    "url": "https://docs.aws.amazon.com/deep-learning-containers/latest/devguide/deep-learning-containers-ec2-tutorials-training.html#deep-learning-containers-ec2-tutorials-training-pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15696,
+    "url": "https://pytorch.org/tutorials/beginner/basics/intro.html",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15697,
+    "url": "https://aws.amazon.com/pytorch/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15698,
+    "url": "https://aws.amazon.com/sagemaker",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15699,
+    "url": "https://www.linuxfoundation.org/legal/policies",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15700,
+    "url": "https://pytorch.org/projects/host-your-project/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15701,
+    "url": "https://pytorch.org/blog/category/blog/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15702,
+    "url": "https://www.linkedin.com/company/pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15703,
+    "url": "https://pytorch.org/get-started/locally/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15704,
+    "url": "https://pytorch.org/blog/in-kernel-broadcast-optimization-co-designing-kernels-for-recsys-inference/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15705,
+    "url": "https://docs.pytorch.org/tutorials/recipes_index.html",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15706,
+    "url": "https://pytorch.org/programs/ambassadors/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15707,
+    "url": "https://pytorch.org/members",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15708,
+    "url": "https://pytorch.org/get-started/previous-versions",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15709,
+    "url": "https://azure.microsoft.com/en-us/develop/pytorch/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15710,
+    "url": "https://pytorch.org/join",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15711,
+    "url": "https://pytorch.org/projects/pytorch/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15712,
+    "url": "https://docs.microsoft.com/en-us/azure/machine-learning/how-to-train-pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15713,
+    "url": "https://pytorch.org/webinars/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15714,
+    "url": "https://pytorch.org/#",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15715,
+    "url": "https://pytorch.org/contact/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15716,
+    "url": "https://events.linuxfoundation.org/pytorch-conference-north-america/sponsor/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15717,
+    "url": "https://pytorch.org/projects/helion/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15718,
+    "url": "https://pytorch.org/community-hub/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15719,
+    "url": "https://pytorch.org/projects/deepspeed/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15720,
+    "url": "https://pytorch.org/wp-content/uploads/2025/09/pytorch_brand_guide_091925a.pdf",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15721,
+    "url": "https://pytorch.org/docs/stable/index.html",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15722,
+    "url": "https://pytorch.org/projects/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15723,
+    "url": "https://docs.aws.amazon.com/dlami/latest/devguide/tutorial-pytorch.html",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15724,
+    "url": "https://discuss.pytorch.org/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15725,
+    "url": "https://pytorch.org/blog/introducing-autosp/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15726,
+    "url": "https://twitter.com/pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15727,
+    "url": "https://www.facebook.com/pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15728,
+    "url": "https://www.youtube.com/pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15729,
+    "url": "https://lightning.ai",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15730,
+    "url": "https://github.com/pytorch/pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15731,
+    "url": "https://pytorch.org/join/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15732,
+    "url": "https://pytorch.org/governing-board/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15733,
+    "url": "https://pytorch.org/contributor-awards/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15734,
+    "url": "https://pytorch.org/announcements",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15735,
+    "url": "https://cloud.google.com/deep-learning-vm/docs/pytorch_start_instance",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15736,
+    "url": "https://pytorch.org/tutorials",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15737,
+    "url": "https://pytorch.org/meeting-calendar/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15738,
+    "url": "https://pytorch.org/foundation/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15739,
+    "url": "https://pytorch.org/docs",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15740,
+    "url": "https://www.linuxfoundation.org/trademark-usage",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15741,
+    "url": "https://cloud.google.com/ai-platform/deep-learning-containers/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15742,
+    "url": "https://pytorch.org/get-started/previous-versions/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15743,
+    "url": "https://pytorch.org/newsletter/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15744,
+    "url": "https://pytorch.org/tac/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15745,
+    "url": "https://events.linuxfoundation.org/pytorch-conference-north-america/program/cfp/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15746,
+    "url": "https://pytorch.org/projects/ray/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15747,
+    "url": "https://pytorch.org/domains/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15748,
+    "url": "https://pytorch.org/case-studies/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15749,
+    "url": "https://join.slack.com/t/pytorch/shared_invite/zt-2j2la612p-miUinTTaxXczKOJw48poHA",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15750,
+    "url": "https://pytorch.org/resources",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15751,
+    "url": "https://pytorch.org/resources/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15752,
+    "url": "https://pytorch.org/events/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15753,
+    "url": "https://pytorch.org/projects/vllm/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15754,
+    "url": "https://www.linuxfoundation.org/privacy/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15755,
+    "url": "https://pytorch.org/credits/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15756,
+    "url": "https://landscape.pytorch.org/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15757,
+    "url": "https://pytorch.org/staff/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15758,
+    "url": "https://pytorch.org/tutorials/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15759,
+    "url": "https://docs.microsoft.com/en-us/azure/azure-functions/machine-learning-pytorch?tabs\u003dbash",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15760,
+    "url": "https://pytorch.org/blog/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15761,
+    "url": "https://pytorch.org/tutorials/beginner/introyt.html",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15762,
+    "url": "https://pytorch.org/blog/lightseek-smg/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15763,
+    "url": "http://www.linuxfoundation.org/privacy",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15764,
+    "url": "https://pytorch.org/join-ecosystem",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15765,
+    "url": "https://www.tornadoweb.org/en/stable/releases.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15766,
+    "url": "https://www.tornadoweb.org/en/stable/locale.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15767,
+    "url": "https://www.tornadoweb.org/en/stable/tcpclient.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15768,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.5.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15769,
+    "url": "https://www.tornadoweb.org/en/stable/process.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15770,
+    "url": "https://wsgi.readthedocs.io/en/latest/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15771,
+    "url": "https://pypi.python.org/pypi/tornado",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15772,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v5.1.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15773,
+    "url": "https://www.tornadoweb.org/en/stable/ioloop.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15774,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v5.0.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15775,
+    "url": "https://www.tornadoweb.org/en/stable/twisted.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15776,
+    "url": "https://www.tornadoweb.org/en/stable/httputil.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15777,
+    "url": "https://github.com/tornadoweb/tornado/tree/stable/demos/chat",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15778,
+    "url": "https://www.tornadoweb.org/en/stable/#threads-and-wsgi",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15779,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.0.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15780,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v5.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15781,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v5.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15782,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.5.3.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15783,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.4.3.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15784,
+    "url": "https://www.tornadoweb.org/en/stable/#quick-links",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15785,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.4.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15786,
+    "url": "https://www.tornadoweb.org/en/stable/caresresolver.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15787,
+    "url": "https://github.com/tornadoweb/tornado/wiki/Links",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15788,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.3.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15789,
+    "url": "https://www.tornadoweb.org/en/stable/_sources/index.rst.txt",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15790,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.5.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15791,
+    "url": "https://www.tornadoweb.org/en/stable/utilities.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15792,
+    "url": "https://www.tornadoweb.org/en/stable/ioloop.html#tornado.ioloop.IOLoop.add_callback",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15793,
+    "url": "https://www.tornadoweb.org/en/stable/#documentation",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15794,
+    "url": "https://www.tornadoweb.org/en/stable/guide/coroutines.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15795,
+    "url": "https://www.tornadoweb.org/en/stable/networking.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15796,
+    "url": "https://www.tornadoweb.org/en/stable/asyncio.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15797,
+    "url": "https://www.tornadoweb.org/en/stable/ioloop.html#tornado.ioloop.IOLoop.run_in_executor",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15798,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15799,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15800,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v5.0.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15801,
+    "url": "https://www.tornadoweb.org/en/stable/auth.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15802,
+    "url": "https://www.tornadoweb.org/en/stable/util.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15803,
+    "url": "https://www.tornadoweb.org/en/stable/locks.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15804,
+    "url": "https://www.tornadoweb.org/en/stable/webframework.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15805,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.0.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15806,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15807,
+    "url": "https://groups.google.com/forum/#!forum/python-tornado",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15808,
+    "url": "https://www.tornadoweb.org/en/stable/guide/intro.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15809,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.4.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15810,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15811,
+    "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15812,
+    "url": "https://www.tornadoweb.org/en/stable/#hello-world",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15813,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.3.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15814,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.0.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15815,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15816,
+    "url": "https://www.tornadoweb.org/en/stable/wsgi.html#module-tornado.wsgi",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15817,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.0.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15819,
+    "url": "https://www.tornadoweb.org/en/stable/guide/async.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15820,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.4.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15821,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.3.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15822,
+    "url": "https://www.tornadoweb.org/en/stable/integration.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15823,
+    "url": "https://www.tornadoweb.org/en/stable/options.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15824,
+    "url": "https://stackoverflow.com/questions/tagged/tornado",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15825,
+    "url": "https://github.com/tornadoweb/tornado",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15826,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.2.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15827,
+    "url": "https://www.tornadoweb.org/en/stable/httpclient.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15828,
+    "url": "https://www.tornadoweb.org/en/stable/iostream.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15829,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15830,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.4.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15831,
+    "url": "https://www.tornadoweb.org/en/stable/#asyncio-integration",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15832,
+    "url": "https://www.tornadoweb.org/en/stable/web.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15833,
+    "url": "https://www.tornadoweb.org/en/stable/#discussion-and-support",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15834,
+    "url": "https://www.tornadoweb.org/en/stable/guide/queues.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15835,
+    "url": "https://pypi.org/project/tornado/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15836,
+    "url": "https://pypi.org/project/pycares/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15837,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15838,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.0.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15839,
+    "url": "https://www.tornadoweb.org/en/stable/http1connection.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15840,
+    "url": "https://www.tornadoweb.org/en/stable/search.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15841,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15842,
+    "url": "https://www.tornadoweb.org/en/stable/genindex.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15843,
+    "url": "https://www.tornadoweb.org/en/stable/py-modindex.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15844,
+    "url": "https://www.tornadoweb.org/en/stable/gen.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15845,
+    "url": "https://www.tornadoweb.org/en/stable/httpserver.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15846,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.2.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15847,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.1.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15848,
+    "url": "https://www.tornadoweb.org/en/stable/guide/templates.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15849,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.4.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15850,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.0.4.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15851,
+    "url": "https://www.tornadoweb.org",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15852,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.5.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15853,
+    "url": "http://pycurl.io/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15854,
+    "url": "https://www.tornadoweb.org/en/stable/web.html#module-tornado.web",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15855,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.4.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15856,
+    "url": "https://github.com/tornadoweb/tornado/issues",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15857,
+    "url": "https://www.tornadoweb.org/en/stable/routing.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15858,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15859,
+    "url": "https://www.tornadoweb.org/en/stable/guide/structure.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15860,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.3.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15861,
+    "url": "https://readthedocs.org/projects/tornado/downloads/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15862,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15863,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15864,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.3.3.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15865,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.2.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15866,
+    "url": "https://www.tornadoweb.org/en/stable/#",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15867,
+    "url": "https://www.tornadoweb.org/en/stable/guide.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15868,
+    "url": "https://www.tornadoweb.org/en/stable/websocket.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15869,
+    "url": "https://en.wikipedia.org/wiki/FriendFeed",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15870,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15871,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15872,
+    "url": "https://www.tornadoweb.org/en/stable/tcpserver.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15873,
+    "url": "https://www.tornadoweb.org/en/stable/coroutine.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15874,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.0.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15875,
+    "url": "https://www.tornadoweb.org/en/stable/log.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15876,
+    "url": "https://www.tornadoweb.org/en/stable/guide/running.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15877,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.4.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15878,
+    "url": "https://www.tornadoweb.org/en/stable/testing.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15879,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.3.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15880,
+    "url": "https://www.tornadoweb.org/en/stable/concurrent.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15881,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15882,
+    "url": "https://www.tornadoweb.org/en/stable/#installation",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15883,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15884,
+    "url": "https://www.tornadoweb.org/en/stable/wsgi.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15885,
+    "url": "https://www.tornadoweb.org/en/stable/#tornado-web-server",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15886,
+    "url": "https://www.tornadoweb.org/en/stable/escape.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15887,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15888,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.4.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15889,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15890,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.2.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15891,
+    "url": "https://www.tornadoweb.org/en/stable/template.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15892,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.1.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15893,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.0.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15894,
+    "url": "https://en.wikipedia.org/wiki/Push_technology#Long_polling",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15895,
+    "url": "https://creativecommons.org/licenses/by/3.0/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15896,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.3.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15897,
+    "url": "https://www.tornadoweb.org/en/stable/netutil.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15899,
+    "url": "https://www.tornadoweb.org/en/stable/http.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15900,
+    "url": "https://www.tornadoweb.org/en/stable/autoreload.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15901,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.4.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15902,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.2.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15903,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.1.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15904,
+    "url": "https://www.tornadoweb.org/en/stable/faq.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15905,
+    "url": "https://www.tornadoweb.org/en/stable/guide/security.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15906,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.5.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15907,
+    "url": "https://www.tornadoweb.org/en/stable/queues.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15908,
+    "url": "https://groups.google.com/forum/#!forum/python-tornado-announce",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15909,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15910,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.0.3.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 15913,
+    "url": "https://forum.ansible.com/pub/how-to-contribute",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15914,
+    "url": "https://docs.ansible.com/projects/builder/",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15915,
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15916,
+    "url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_locally.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15917,
+    "url": "https://docs.ansible.com/ansible/latest/community/maintainers_guidelines.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15918,
+    "url": "https://docs.ansible.com/ansible/latest/community/maintainers_guidelines.html#expanding-the-collection-community",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15919,
+    "url": "https://docs.ansible.com/ansible/latest/module_plugin_guide/modules_intro.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15920,
+    "url": "https://docs.ansible.com/community.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15921,
+    "url": "https://docs.ansible.com/projects/ansible-core/",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15922,
+    "url": "https://www.redhat.com/en/technologies/management/ansible?sc_id\u003dRHCTE0250000464439",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15923,
+    "url": "https://www.redhat.com/en/summit?sc_id\u003dRHCTE0250000464461",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15924,
+    "url": "https://docs.ansible.com/#ecosystem",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15925,
+    "url": "https://docs.ansible.com/maintainers.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15926,
+    "url": "https://docs.ansible.com/ansible/latest/index.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15927,
+    "url": "https://docs.ansible.com/ansible/latest/dev_guide/overview_architecture.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15928,
+    "url": "https://docs.ansible.com/#get_started",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15929,
+    "url": "https://docs.ansible.com/ansible/latest/community/code_of_conduct.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15930,
+    "url": "https://docs.ansible.com/#contribute",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15931,
+    "url": "https://docs.ansible.com/developers.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15932,
+    "url": "https://docs.ansible.com/projects/dev-tools/",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15933,
+    "url": "https://docs.ansible.com/#developers",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15934,
+    "url": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/?sc_id\u003dRHCTE0250000464439",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15935,
+    "url": "https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-and-upgrading-ansible",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15936,
+    "url": "https://docs.ansible.com/#maintainers",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15937,
+    "url": "https://docs.ansible.com/#platform",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15938,
+    "url": "https://www.redhat.com/en/about/privacy-policy",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15939,
+    "url": "https://docs.ansible.com/users.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15940,
+    "url": "https://docs.ansible.com/ansible/latest/getting_started/index.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15941,
+    "url": "https://docs.ansible.com/#top",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15942,
+    "url": "https://docs.ansible.com/ansible/latest/community/contributor_path.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15943,
+    "url": "https://forum.ansible.com/c/news/bullhorn/17",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15944,
+    "url": "https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15945,
+    "url": "https://docs.ansible.com/#users",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15946,
+    "url": "https://docs.ansible.com/projects/antsibull-nox/",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15947,
+    "url": "https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html#playbook-syntax",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15948,
+    "url": "https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general.html#environment-setup",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15949,
+    "url": "https://docs.ansible.com/ecosystem.html",
+    "parentUrl": "https://docs.ansible.com/"
+  },
+  {
+    "id": 15950,
+    "url": "https://docs.python.org/3/library/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15951,
+    "url": "https://docs.python.org/3/glossary.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15952,
+    "url": "https://docs.python.org/3.13/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15953,
+    "url": "https://docs.python.org/3/about.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15955,
+    "url": "https://docs.python.org/3.0/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15957,
+    "url": "https://docs.python.org/3/#",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15959,
+    "url": "https://docs.python.org/3.4/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15960,
+    "url": "https://devguide.python.org/documentation/help-documenting/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15961,
+    "url": "https://docs.python.org/2.7/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15962,
+    "url": "https://wiki.python.org/moin/BeginnersGuide",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15963,
+    "url": "https://docs.python.org/3.8/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15964,
+    "url": "https://docs.python.org/3/search.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15965,
+    "url": "https://docs.python.org/3.12/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15966,
+    "url": "https://docs.python.org/3.1/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15968,
+    "url": "https://peps.python.org/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15969,
+    "url": "https://docs.python.org/3/c-api/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15970,
+    "url": "https://docs.python.org/3.16/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15971,
+    "url": "https://docs.python.org/3/tutorial/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15972,
+    "url": "https://docs.python.org/3.5/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15973,
+    "url": "https://www.python.org/doc/av/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15974,
+    "url": "https://docs.python.org/3/using/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15975,
+    "url": "https://docs.python.org/3.9/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15977,
+    "url": "https://docs.python.org/3.11/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15979,
+    "url": "https://docs.python.org/3/download.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15980,
+    "url": "https://docs.python.org/3/howto/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15981,
+    "url": "https://docs.python.org/3.2/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15984,
+    "url": "https://docs.python.org/3.15/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15985,
+    "url": "https://devguide.python.org/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15986,
+    "url": "https://docs.python.org/3/license.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15987,
+    "url": "https://docs.python.org/3.6/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15989,
+    "url": "https://docs.python.org/3/reference/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15990,
+    "url": "https://docs.python.org/3.14/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15992,
+    "url": "https://docs.python.org/3/faq/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15993,
+    "url": "https://docs.python.org/3.10/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15994,
+    "url": "https://docs.python.org/3.3/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 15999,
+    "url": "https://www.python.org/doc/versions/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 16000,
+    "url": "https://docs.python.org/3/installing/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 16001,
+    "url": "https://docs.python.org/3/distributing/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 16002,
+    "url": "https://docs.python.org/3/extending/index.html",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 16003,
+    "url": "https://docs.python.org/2.6/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 16004,
+    "url": "https://docs.python.org/3.7/",
+    "parentUrl": "https://docs.python.org"
+  },
+  {
+    "id": 16005,
+    "url": "https://wiki.python.org/moin/PythonBooks",
+    "parentUrl": "https://docs.python.org"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3.14.5rc1 Documentation",
+    "pageUrl": "https://docs.python.org"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3.14.5rc1 Documentation",
+    "pageUrl": "https://docs.python.org"
+  },
+  {
+    "src": "https://docs.ansible.com/images/redhat.svg",
+    "alt": "Red Hat logo",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/bull_welcome.svg",
+    "alt": "Welcome to Ansible",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/bullhorn_subscribe.svg",
+    "alt": "",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/project-logos/ansible-core.svg",
+    "alt": "Ansible Core project logo",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/project-logos/ansible-community.svg",
+    "alt": "Antsibull-nox project logo",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/project-logos/builder.svg",
+    "alt": "Ansible Builder project logo",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/project-logos/ansible-community.svg",
+    "alt": "Ansible DevTools project logo",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/bull-builder.svg",
+    "alt": "Ansible bull contributor logo",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/images/platform.svg",
+    "alt": "Red Hat Ansible Automation Platform logo",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://docs.ansible.com/assets/images/redhat_reversed.svg",
+    "alt": "Red Hat logo.",
+    "pageTitle": "Ansible Community | Ansible documentation",
+    "pageUrl": "https://docs.ansible.com/"
+  },
+  {
+    "src": "https://www.tornadoweb.org/en/stable/_images/tornado.png",
+    "alt": "Tornado Web Server",
+    "pageTitle": "Tornado Web Server — Tornado 6.5.5 documentation",
+    "pageUrl": "https://www.tornadoweb.org/"
+  },
   {
     "src": "https://pandas.pydata.org/static/img/partners/numfocus.svg",
     "alt": "NumFOCUS",
