@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 974,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_SPECIAL",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code o",
+    "scrapedAt": "2026-05-09 01:00:59.49719"
+  },
+  {
+    "id": 973,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata",
+    "title": "importlib.metadata – Accessing package metadata — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Importing Modules » importlib.metadata – Accessing package metadata | Theme Auto Light Dark | importlib.metadata – Accessing package metadata¶ Added in version 3.8. Changed in version 3.10: importlib.metadata is no longer provisional. Source code: Lib/importlib/metadata/__init__.py importlib.metadata is a library that provides access to the metadata of an installed Distribution Package, such as its entry points or its top-level names (Import Packages, modules, if any). Built in part on Python’s import system, this library provides the entry point and metadata APIs that were previously exposed by the now-removed pkg_resources package. Along with importlib.resources, it supersedes pkg_resources. importlib.metadata operates on third-party distribution packages installed into Python’s site-packages directory via tools such as pip. Specifically, it works with distributions with discoverable dist-info or egg-info directories, and metadata defined by the Core metadata specifications. Important These are not necessarily equivalent to or correspond 1:1 with the top-level import package names that can be imported inside Python code. One distribution package can contain multiple import packages (and single modules), and one top-level import package may map to multiple distribution packages if it is a namespace package. You can use packages_distributions() to get a mapping between them. By default, distribution metadata can live on the file system or in zip archives on sys.path. Through an extension mechanism, the metadata can live almost anywhere. See also https://importlib-metadata.readthedocs.io/ The documentation for importlib_metadata, which supplies a backport of importlib.metadata. This includes an API reference for this module’s classes and functions, as well as a migration guide for existing users of pkg_resources. Overview¶ Let’s say you wanted to get the version string for a Distribution Package you’ve installed using pip. We start by creating a virtual environment and installing something into it: $ python -m venv example\n$ source example/bin/activate\n(example) $ python -m pip install wheel\n You can get the version string for wheel by running the following: (example) $ python\n\u003e\u003e\u003e from importlib.metadata import version\n\u003e\u003e\u003e version(\u0027wheel\u0027)\n\u00270.32.3\u0027\n You can also get a collection of entry points selectable by properties of the EntryPoint (typically ‘group’ or ‘name’), such as console_scripts, distutils.commands and others. Each group contains a collection of EntryPoint objects. You can get the metadata for a distribution: \u003e\u003e\u003e list(metadata(\u0027wheel\u0027))\n[\u0027Metadata-Version\u0027, \u0027Name\u0027, \u0027Version\u0027, \u0027Summary\u0027, \u0027Home-page\u0027, \u0027Author\u0027, \u0027Author-email\u0027, \u0027Maintainer\u0027, \u0027Maintainer-email\u0027, \u0027License\u0027, \u0027Project-URL\u0027, \u0027Project-URL\u0027, \u0027Project-URL\u0027, \u0027Keywords\u0027, \u0027Platform\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Requires-Python\u0027, \u0027Provides-Extra\u0027, \u0027Requires-Dist\u0027, \u0027Requires-Dist\u0027]\n You can also get a distribution’s version number, list its constituent files, and get a list of the distribution’s Distribution requirements. exception importlib.metadata.PackageNotFoundError¶ Subclass of ModuleNotFoundError raised by several functions in this module when queried for a distribution package which is not installed in the current Python environment. Functional API¶ This package provides the following functionality via its public API. Entry points¶ importlib.metadata.entry_points(**select_params)¶ Returns a EntryPoints instance describing entry points for the current environment. Any given keyword parameters are passed to the select() method for comparison to the attributes of the individual entry point definitions. Note: it is not currently possible to query for entry points based on their EntryPoint.dist attribute (as different Distribution instances do not currently compare equal, even if they have the same attributes) class importlib.metadata.EntryPoints¶ Details of a collection of installed entry points. Also provides a .groups attribute that reports all identified entry point groups, and a .names attribute that reports all identified entry point names. class importlib.metadata.EntryPoint¶ Details of an installed entry point. Each EntryPoint instance has .name, .group, and .value attributes and a .load() method to resolve the value. There are also .module, .attr, and .extras attributes for getting the components of the .value attribute, and .dist for obtaining information regarding the distribution package that provides the entry point. Query all entry points: \u003e\u003e\u003e eps \u003d entry_points()\n The entry_points() function returns a EntryPoints object, a collection of all EntryPoint objects with names and groups attributes for convenience: \u003e\u003e\u003e sorted(eps.groups)\n[\u0027console_scripts\u0027, \u0027distutils.commands\u0027, \u0027distutil",
+    "scrapedAt": "2026-05-09 01:00:58.313667"
+  },
+  {
+    "id": 972,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_count",
+    "title": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » gc — Garbage Collector interface | Theme Auto Light Dark | gc — Garbage Collector interface¶ This module provides an interface to the optional garbage collector. It provides the ability to disable the collector, tune the collection frequency, and set debugging options. It also provides access to unreachable objects that the collector found but cannot free. Since the collector supplements the reference counting already used in Python, you can disable the collector if you are sure your program does not create reference cycles. Automatic collection can be disabled by calling gc.disable(). To debug a leaking program call gc.set_debug(gc.DEBUG_LEAK). Notice that this includes gc.DEBUG_SAVEALL, causing garbage-collected objects to be saved in gc.garbage for inspection. The gc module provides the following functions: gc.enable()¶ Enable automatic garbage collection. gc.disable()¶ Disable automatic garbage collection. gc.isenabled()¶ Return True if automatic collection is enabled. gc.collect(generation\u003d2)¶ With no arguments, run a full collection. The optional argument generation may be an integer specifying which generation to collect (from 0 to 2). A ValueError is raised if the generation number is invalid. The sum of collected objects and uncollectable objects is returned. The free lists maintained for a number of built-in types are cleared whenever a full collection or collection of the highest generation (2) is run. Not all items in some free lists may be freed due to the particular implementation, in particular float. The effect of calling gc.collect() while the interpreter is already performing a collection is undefined. Changed in version 3.14: generation\u003d1 performs an increment of collection. Changed in version 3.14.5: generation\u003d1 performs collection of the middle generation. gc.set_debug(flags)¶ Set the garbage collection debugging flags. Debugging information will be written to sys.stderr. See below for a list of debugging flags which can be combined using bit operations to control debugging. gc.get_debug()¶ Return the debugging flags currently set. gc.get_objects(generation\u003dNone)¶ Returns a list of all objects tracked by the collector, excluding the list returned. If generation is not None, return only the objects tracked by the collector that are in that generation. Changed in version 3.8: New generation parameter. Changed in version 3.14: Generation 1 is removed Changed in version 3.14.5: Generation 1 is reintroduced to maintain GC behavior from 3.13. Raises an auditing event gc.get_objects with argument generation. gc.get_stats()¶ Return a list of three per-generation dictionaries containing collection statistics since interpreter start. The number of keys may change in the future, but currently each dictionary will contain the following items: collections is the number of times this generation was collected; collected is the total number of objects collected inside this generation; uncollectable is the total number of objects which were found to be uncollectable (and were therefore moved to the garbage list) inside this generation. Added in version 3.4. gc.set_threshold(threshold0[, threshold1[, threshold2]])¶ Set the garbage collection thresholds (the collection frequency). Setting threshold0 to zero disables collection. The GC classifies objects into three generations depending on how many collection sweeps they have survived. New objects are placed in the youngest generation (generation 0). If an object survives a collection it is moved into the next older generation. Since generation 2 is the oldest generation, objects in that generation remain there after a collection. In order to decide when to run, the collector keeps track of the number object allocations and deallocations since the last collection. When the number of allocations minus the number of deallocations exceeds threshold0, collection starts. Initially only generation 0 is examined. If generation 0 has been examined more than threshold1 times since generation 1 has been examined, then generation 1 is examined as well. With the third generation, things are a bit more complicated, see Collecting the oldest generation for more information. In the free-threaded build, the increase in process memory usage is also checked before running the collector. If the memory usage has not increased by 10% since the last collection and the net number of object allocations has not exceeded 40 times threshold0, the collection is not run. See Garbage collector design for more information. Changed in version 3.14: threshold2 is ignored Changed in version 3.14.5: threshold2 is restored to match Python 3.13 behavior. gc.get_count()¶ Return the current collection counts as a tuple of (count0, count1, count2). gc.get_threshold()¶ Return the current collection thresholds as a tuple of (threshold0, threshold1, threshold2). g",
+    "scrapedAt": "2026-05-09 01:00:57.067107"
+  },
+  {
+    "id": 971,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2025-4435",
+    "title": "",
+    "content": "Common vulnerabilities and Exposures (CVE) We\u0027re sorry but the CVE Website doesn\u0027t work properly without JavaScript enabled. Please enable it to continue.",
+    "scrapedAt": "2026-05-09 01:00:55.875048"
+  },
+  {
+    "id": 970,
+    "url": "https://pypi.org/project/typing_extensions/",
+    "title": "Client Challenge",
+    "content": "JavaScript is disabled in your browser. Please enable JavaScript to proceed. A required part of this site couldn’t load. This may be due to a browser extension, network issues, or browser settings. Please check your connection, disable any ad blockers, or try using a different browser.",
+    "scrapedAt": "2026-05-09 01:00:54.177035"
+  },
+  {
     "id": 969,
     "url": "https://docs.python.org/3/library/io.html#io.Reader",
     "title": "io — Core tools for working with streams — Python 3.14.5rc1 documentation",
@@ -6473,26 +6508,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 970,
-    "url": "https://pypi.org/project/typing_extensions/"
-  },
-  {
-    "id": 971,
-    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2025-4435"
-  },
-  {
-    "id": 972,
-    "url": "https://docs.python.org/3/library/gc.html#gc.get_count"
-  },
-  {
-    "id": 973,
-    "url": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
-  },
-  {
-    "id": 974,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_SPECIAL"
   },
   {
     "id": 975,
@@ -163245,10 +163260,287 @@ window.searchData = [
     "id": 144859,
     "url": "https://github.com/python/cpython/pull/129270#event-16064777859",
     "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 145082,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#requirements",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145085,
+    "url": "https://pypi.org/project/backports.entry_points_selectable/",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145086,
+    "url": "https://importlib-metadata.readthedocs.io/en/latest/migration.html",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145088,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.PackageNotFoundError",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145089,
+    "url": "https://github.com/pypa/packaging-problems/issues/609",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145093,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#entry-points",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145095,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.packages_distributions",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145096,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#example",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145097,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145099,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.metadata",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145101,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.distribution",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145103,
+    "url": "https://packaging.python.org/en/latest/specifications/core-metadata/#version",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145104,
+    "url": "https://importlib-metadata.readthedocs.io/",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145105,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.files",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145106,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.requires",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145107,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/importlib/metadata/__init__.py",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145111,
+    "url": "https://importlib-metadata.readthedocs.io/en/latest/api.html",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145112,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#functional-api",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145114,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.EntryPoints",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145115,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.PackagePath",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145116,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#metadata",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145117,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#implementing-custom-providers",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145118,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/importlib.metadata.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145121,
+    "url": "https://more-itertools.readthedocs.io/en/stable/api.html#more_itertools.always_iterable",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145122,
+    "url": "https://packaging.python.org/en/latest/glossary/#term-Distribution-Package",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145123,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.Distribution",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145125,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#distribution-requirements",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145129,
+    "url": "https://importlib-metadata.readthedocs.io/en/latest/api.html#importlib_metadata.PackageMetadata",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145130,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#package-distributions",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145131,
+    "url": "https://peps.python.org/pep-0610/",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145133,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#version",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145136,
+    "url": "https://packaging.python.org/en/latest/glossary/#term-Import-Package",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145137,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.EntryPoint",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145138,
+    "url": "https://setuptools.pypa.io/en/latest/userguide/entry_point.html",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145139,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#distribution-metadata",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145140,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.version",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145141,
+    "url": "https://packaging.python.org/en/latest/specifications/core-metadata/#core-metadata",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145142,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#distribution-versions",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145143,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#mapping-import-to-distribution-packages",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145146,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#files",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145147,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#distribution-files",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145148,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.entry_points",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145151,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.PackageMetadata",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145152,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#distribution-discovery",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145153,
+    "url": "https://peps.python.org/pep-0566/",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145155,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#overview",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145156,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#distributions",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-LOAD_SPECIAL"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-LOAD_SPECIAL"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib.metadata – Accessing package metadata — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib.metadata – Accessing package metadata — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gc.html#gc.get_count"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gc.html#gc.get_count"
+  },
+  {
+    "src": "https://pypi.org/_fs-ch-1T1wmsGaOgGaSxcX/assets/errorIcon.svg",
+    "alt": "",
+    "pageTitle": "Client Challenge",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
