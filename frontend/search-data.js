@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1722,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromInt64",
+    "title": "Integer Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)",
+    "scrapedAt": "2026-05-09 01:31:04.75939"
+  },
+  {
+    "id": 1721,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotStartsWith",
+    "title": "unittest — Unit testing framework — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Development Tools » unittest — Unit testing framework | Theme Auto Light Dark | unittest — Unit testing framework¶ Source code: Lib/unittest/__init__.py (If you are already familiar with the basic concepts of testing, you might want to skip to the list of assert methods.) The unittest unit testing framework was originally inspired by JUnit and has a similar flavor as major unit testing frameworks in other languages. It supports test automation, sharing of setup and shutdown code for tests, aggregation of tests into collections, and independence of the tests from the reporting framework. To achieve this, unittest supports some important concepts in an object-oriented way: test fixture A test fixture represents the preparation needed to perform one or more tests, and any associated cleanup actions. This may involve, for example, creating temporary or proxy databases, directories, or starting a server process. test case A test case is the individual unit of testing. It checks for a specific response to a particular set of inputs. unittest provides a base class, TestCase, which may be used to create new test cases. test suite A test suite is a collection of test cases, test suites, or both. It is used to aggregate tests that should be executed together. test runner A test runner is a component which orchestrates the execution of tests and provides the outcome to the user. The runner may use a graphical interface, a textual interface, or return a special value to indicate the results of executing the tests. See also Module doctest Another test-support module with a very different flavor. Simple Smalltalk Testing: With Patterns Kent Beck’s original paper on testing frameworks using the pattern shared by unittest. pytest Third-party unittest framework with a lighter-weight syntax for writing tests. For example, assert func(10) \u003d\u003d 42. The Python Testing Tools Taxonomy An extensive list of Python testing tools including functional testing frameworks and mock object libraries. Testing in Python Mailing List A special-interest-group for discussion of testing, and testing tools, in Python. The script Tools/unittestgui/unittestgui.py in the Python source distribution is a GUI tool for test discovery and execution. This is intended largely for ease of use for those new to unit testing. For production environments it is recommended that tests be driven by a continuous integration system such as Buildbot, Jenkins, GitHub Actions, or AppVeyor. Basic example¶ The unittest module provides a rich set of tools for constructing and running tests. This section demonstrates that a small subset of the tools suffice to meet the needs of most users. Here is a short script to test three string methods: import unittest\n\nclass TestStringMethods(unittest.TestCase):\n\n    def test_upper(self):\n        self.assertEqual(\u0027foo\u0027.upper(), \u0027FOO\u0027)\n\n    def test_isupper(self):\n        self.assertTrue(\u0027FOO\u0027.isupper())\n        self.assertFalse(\u0027Foo\u0027.isupper())\n\n    def test_split(self):\n        s \u003d \u0027hello world\u0027\n        self.assertEqual(s.split(), [\u0027hello\u0027, \u0027world\u0027])\n        # check that s.split fails when the separator is not a string\n        with self.assertRaises(TypeError):\n            s.split(2)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    unittest.main()\n A test case is created by subclassing unittest.TestCase. The three individual tests are defined with methods whose names start with the letters test. This naming convention informs the test runner about which methods represent tests. The crux of each test is a call to assertEqual() to check for an expected result; assertTrue() or assertFalse() to verify a condition; or assertRaises() to verify that a specific exception gets raised. These methods are used instead of the assert statement so the test runner can accumulate all test results and produce a report. The setUp() and tearDown() methods allow you to define instructions that will be executed before and after each test method. They are covered in more detail in the section Organizing test code. The final block shows a simple way to run the tests. unittest.main() provides a command-line interface to the test script. When run from the command line, the above script produces an output that looks like this: ...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n Passing the -v option to your test script will instruct unittest.main() to enable a higher level of verbosity, and produce the following output: test_isupper (__main__.TestStringMethods.test_isupper) ... ok\ntest_split (__main__.TestStringMethods.test_split) ... ok\ntest_upper (__main__.TestStringMethods.test_upper) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK\n The above examples show the most commonly used unittest features which are sufficient to meet many everyday testing needs. The rem",
+    "scrapedAt": "2026-05-09 01:31:03.497379"
+  },
+  {
+    "id": 1720,
+    "url": "https://github.com/python/cpython/issues/133231",
+    "title": "Add JIT utilities in `sys._jit` · Issue #133231 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add JIT utilities in sys._jit #133231 New issue Copy link New issue Copy link Closed Closed Add JIT utilities in sys._jit#133231 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-JITtype-featureA feature request or enhancementA feature request or enhancement Description brandtbucher opened on May 1, 2025 Issue body actions Feature or enhancement ...as discussed in https://discuss.python.org/t/an-api-for-controlling-and-introspecting-the-jit/73356. This will include (for 3.14): sys._jit.is_available() -\u003e bool: Return True if the current Python executable supports JIT compilation, and False otherwise. sys._jit.is_enabled() -\u003e bool: Return True if JIT compilation is enabled for the current Python process (implies sys._jit.is_available()), and False otherwise. sys._jit.is_active() -\u003e bool: Return True if the topmost Python frame is currently executing JIT code, and False otherwise. Linked PRs GH-133231: Add JIT utilities in sys._jit #133233 GH-133231: Changes to executor management to support proposed sys._jit module #133287 [3.13] GH-133231: Backport PYTHON_JIT documentation to 3.13 #133539 Reactions are currently unavailable Metadata Metadata Assignees brandtbucher Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-JITtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:31:02.217156"
+  },
+  {
+    "id": 1718,
+    "url": "https://github.com/python/cpython/issues/121249",
+    "title": "Add support for C99 complex type (_Complex) to the struct module · Issue #121249 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add support for C99 complex type (_Complex) to the struct module #121249 New issue Copy link New issue Copy link Open Open Add support for C99 complex type (_Complex) to the struct module#121249 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Description skirpichev opened on Jul 2, 2024 Issue body actions Feature or enhancement Proposal: The struct module has support for float and double types, so at least there should be also float _Complex and double _Complex. I\u0027ll work on a patch. Initial version diff --git a/Lib/ctypes/__init__.py b/Lib/ctypes/__init__.py\nindex d2e6a8bfc8..d941036719 100644\n--- a/Lib/ctypes/__init__.py\n+++ b/Lib/ctypes/__init__.py\n@@ -208,6 +208,7 @@ class c_longdouble(_SimpleCData):\n try:\n     class c_double_complex(_SimpleCData):\n         _type_ \u003d \"C\"\n+    _check_size(c_double_complex)\n except AttributeError:\n     pass\n \ndiff --git a/Modules/_struct.c b/Modules/_struct.c\nindex 6a68478dd4..caf4975413 100644\n--- a/Modules/_struct.c\n+++ b/Modules/_struct.c\n@@ -12,6 +12,9 @@\n #include \"pycore_long.h\"          // _PyLong_AsByteArray()\n #include \"pycore_moduleobject.h\"  // _PyModule_GetState()\n \n+#ifdef Py_HAVE_C_COMPLEX\n+#  include \"_complex.h\"           // complex\n+#endif\n #include \u003cstddef.h\u003e               // offsetof()\n \n /*[clinic input]\n@@ -80,6 +83,9 @@ typedef struct { char c; int x; } st_int;\n typedef struct { char c; long x; } st_long;\n typedef struct { char c; float x; } st_float;\n typedef struct { char c; double x; } st_double;\n+#ifdef Py_HAVE_C_COMPLEX\n+typedef struct { char c; double complex x; } st_double_complex;\n+#endif\n typedef struct { char c; void *x; } st_void_p;\n typedef struct { char c; size_t x; } st_size_t;\n typedef struct { char c; _Bool x; } st_bool;\n@@ -89,6 +95,9 @@ typedef struct { char c; _Bool x; } st_bool;\n #define LONG_ALIGN (sizeof(st_long) - sizeof(long))\n #define FLOAT_ALIGN (sizeof(st_float) - sizeof(float))\n #define DOUBLE_ALIGN (sizeof(st_double) - sizeof(double))\n+#ifdef Py_HAVE_C_COMPLEX\n+#define DOUBLE_COMPLEX_ALIGN (sizeof(st_double_complex) - sizeof(double complex))\n+#endif\n #define VOID_P_ALIGN (sizeof(st_void_p) - sizeof(void *))\n #define SIZE_T_ALIGN (sizeof(st_size_t) - sizeof(size_t))\n #define BOOL_ALIGN (sizeof(st_bool) - sizeof(_Bool))\n@@ -518,6 +527,17 @@ nu_double(_structmodulestate *state, const char *p, const formatdef *f)\n     return PyFloat_FromDouble(x);\n }\n \n+#ifdef Py_HAVE_C_COMPLEX\n+static PyObject *\n+nu_double_complex(_structmodulestate *state, const char *p, const formatdef *f)\n+{\n+    double complex x;\n+\n+    memcpy(\u0026x, p, sizeof(x));\n+    return PyComplex_FromDoubles(creal(x), cimag(x));\n+}\n+#endif\n+\n static PyObject *\n nu_void_p(_structmodulestate *state, const char *p, const formatdef *f)\n {\n@@ -791,6 +811,24 @@ np_double(_structmodulestate *state, char *p, PyObject *v, const formatdef *f)\n     return 0;\n }\n \n+#ifdef Py_HAVE_C_COMPLEX\n+static int\n+np_double_complex(_structmodulestate *state, char *p, PyObject *v,\n+                  const formatdef *f)\n+{\n+    Py_complex c \u003d PyComplex_AsCComplex(v);\n+    double complex x \u003d CMPLX(c.real, c.imag);\n+\n+    if (c.real \u003d\u003d -1 \u0026\u0026 PyErr_Occurred()) {\n+        PyErr_SetString(state-\u003eStructError,\n+                        \"required argument is not a complex\");\n+        return -1;\n+    }\n+    memcpy(p, (char *)\u0026x, sizeof(x));\n+    return 0;\n+}\n+#endif\n+\n static int\n np_void_p(_structmodulestate *state, char *p, PyObject *v, const formatdef *f)\n {\n@@ -829,6 +867,9 @@ static const formatdef native_table[] \u003d {\n     {\u0027e\u0027,       sizeof(short),  SHORT_ALIGN,    nu_halffloat,   np_halffloat},\n     {\u0027f\u0027,       sizeof(float),  FLOAT_ALIGN,    nu_float,       np_float},\n     {\u0027d\u0027,       sizeof(double), DOUBLE_ALIGN,   nu_double,      np_double},\n+#ifdef Py_HAVE_C_COMPLEX\n+    {\u0027C\u0027,       sizeof(double complex), DOUBLE_COMPLEX_ALIGN, nu_double_complex, np_double_complex},\n+#endif\n     {\u0027P\u0027,       sizeof(void *), VOID_P_ALIGN,   nu_void_p,      np_void_p},\n     {0}\n }; Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-121249: Support _Complex types in the struct module #121613 gh-121249: Note struct module changes in What\u0027s New #131867 gh-121249: adjust formatting codes for complex types in struct/ctypes modules #132827 gh-121249: fix naming of struct tagPyCArgObject members #132863 gh-121249: unconditio",
+    "scrapedAt": "2026-05-09 01:30:59.497851"
+  },
+  {
+    "id": 1717,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_EnableDeferredRefcount",
+    "title": "Object Protocol — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Abstract Objects Layer » Object Protocol | Theme Auto Light Dark | Object Protocol¶ PyObject *Py_GetConstant(unsigned int constant_id)¶ Part of the Stable ABI since version 3.13. Get a strong reference to a constant. Set an exception and return NULL if constant_id is invalid. constant_id must be one of these constant identifiers: Constant Identifier Value Returned object Py_CONSTANT_NONE¶ 0 None Py_CONSTANT_FALSE¶ 1 False Py_CONSTANT_TRUE¶ 2 True Py_CONSTANT_ELLIPSIS¶ 3 Ellipsis Py_CONSTANT_NOT_IMPLEMENTED¶ 4 NotImplemented Py_CONSTANT_ZERO¶ 5 0 Py_CONSTANT_ONE¶ 6 1 Py_CONSTANT_EMPTY_STR¶ 7 \u0027\u0027 Py_CONSTANT_EMPTY_BYTES¶ 8 b\u0027\u0027 Py_CONSTANT_EMPTY_TUPLE¶ 9 () Numeric values are only given for projects which cannot use the constant identifiers. Added in version 3.13. CPython implementation detail: In CPython, all of these constants are immortal. PyObject *Py_GetConstantBorrowed(unsigned int constant_id)¶ Part of the Stable ABI since version 3.13. Similar to Py_GetConstant(), but return a borrowed reference. This function is primarily intended for backwards compatibility: using Py_GetConstant() is recommended for new code. The reference is borrowed from the interpreter, and is valid until the interpreter finalization. Added in version 3.13. PyObject *Py_NotImplemented¶ The NotImplemented singleton, used to signal that an operation is not implemented for the given type combination. Py_RETURN_NOTIMPLEMENTED¶ Properly handle returning Py_NotImplemented from within a C function (that is, create a new strong reference to NotImplemented and return it). Py_PRINT_RAW¶ Flag to be used with multiple functions that print the object (like PyObject_Print() and PyFile_WriteObject()). If passed, these functions use the str() of the object instead of the repr(). int PyObject_Print(PyObject *o, FILE *fp, int flags)¶ Print an object o, on file fp. Returns -1 on error. The flags argument is used to enable certain printing options. The only option currently supported is Py_PRINT_RAW; if given, the str() of the object is written instead of the repr(). int PyObject_HasAttrWithError(PyObject *o, PyObject *attr_name)¶ Part of the Stable ABI since version 3.13. Returns 1 if o has the attribute attr_name, and 0 otherwise. This is equivalent to the Python expression hasattr(o, attr_name). On failure, return -1. Added in version 3.13. int PyObject_HasAttrStringWithError(PyObject *o, const char *attr_name)¶ Part of the Stable ABI since version 3.13. This is the same as PyObject_HasAttrWithError(), but attr_name is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. Added in version 3.13. int PyObject_HasAttr(PyObject *o, PyObject *attr_name)¶ Part of the Stable ABI. Returns 1 if o has the attribute attr_name, and 0 otherwise. This function always succeeds. Note Exceptions that occur when this calls __getattr__() and __getattribute__() methods aren’t propagated, but instead given to sys.unraisablehook(). For proper error handling, use PyObject_HasAttrWithError(), PyObject_GetOptionalAttr() or PyObject_GetAttr() instead. int PyObject_HasAttrString(PyObject *o, const char *attr_name)¶ Part of the Stable ABI. This is the same as PyObject_HasAttr(), but attr_name is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. Note Exceptions that occur when this calls __getattr__() and __getattribute__() methods or while creating the temporary str object are silently ignored. For proper error handling, use PyObject_HasAttrStringWithError(), PyObject_GetOptionalAttrString() or PyObject_GetAttrString() instead. PyObject *PyObject_GetAttr(PyObject *o, PyObject *attr_name)¶ Return value: New reference. Part of the Stable ABI. Retrieve an attribute named attr_name from object o. Returns the attribute value on success, or NULL on failure. This is the equivalent of the Python expression o.attr_name. If the missing attribute should not be treated as a failure, you can use PyObject_GetOptionalAttr() instead. PyObject *PyObject_GetAttrString(PyObject *o, const char *attr_name)¶ Return value: New reference. Part of the Stable ABI. This is the same as PyObject_GetAttr(), but attr_name is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. If the missing attribute should not be treated as a failure, you can use PyObject_GetOptionalAttrString() instead. int PyObject_GetOptionalAttr(PyObject *obj, PyObject *attr_name, PyObject **result);¶ Part of the Stable ABI since version 3.13. Variant of PyObject_GetAttr() which doesn’t raise AttributeError if the attribute is not found. If the attribute is found, return 1 and set *result to a new strong reference to the attribute. If the attribute is not found, return 0 and set *result to NULL; the AttributeError is silenced. If an error other than AttributeError is raised, return -1 and set *result to NULL. Added in version 3.13. int PyObje",
+    "scrapedAt": "2026-05-09 01:30:57.128642"
+  },
+  {
     "id": 1716,
     "url": "https://github.com/python/cpython/issues/123424",
     "title": "Extract ZipInfo for archive functionality · Issue #123424 · python/cpython · GitHub",
@@ -11583,26 +11618,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1717,
-    "url": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_EnableDeferredRefcount"
-  },
-  {
-    "id": 1718,
-    "url": "https://github.com/python/cpython/issues/121249"
-  },
-  {
-    "id": 1720,
-    "url": "https://github.com/python/cpython/issues/133231"
-  },
-  {
-    "id": 1721,
-    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotStartsWith"
-  },
-  {
-    "id": 1722,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromInt64"
   },
   {
     "id": 1723,
@@ -245900,10 +245915,172 @@ window.searchData = [
     "id": 374930,
     "url": "https://github.com/python/cpython/issues/123424#start-of-content",
     "parentUrl": "https://github.com/python/cpython/issues/123424"
+  },
+  {
+    "id": 375084,
+    "url": "https://github.com/python/cpython/pull/131867",
+    "parentUrl": "https://github.com/python/cpython/issues/121249"
+  },
+  {
+    "id": 375087,
+    "url": "https://github.com/python/cpython/pull/132827",
+    "parentUrl": "https://github.com/python/cpython/issues/121249"
+  },
+  {
+    "id": 375089,
+    "url": "https://github.com/python/cpython/issues/121249#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/121249"
+  },
+  {
+    "id": 375090,
+    "url": "https://github.com/python/cpython/issues/121249#top",
+    "parentUrl": "https://github.com/python/cpython/issues/121249"
+  },
+  {
+    "id": 375093,
+    "url": "https://github.com/python/cpython/pull/132863",
+    "parentUrl": "https://github.com/python/cpython/issues/121249"
+  },
+  {
+    "id": 375094,
+    "url": "https://github.com/python/cpython/pull/133249",
+    "parentUrl": "https://github.com/python/cpython/issues/121249"
+  },
+  {
+    "id": 375095,
+    "url": "https://github.com/python/cpython/pull/132864",
+    "parentUrl": "https://github.com/python/cpython/issues/121249"
+  },
+  {
+    "id": 375098,
+    "url": "https://github.com/python/cpython/issues/121249#issue-2385121145",
+    "parentUrl": "https://github.com/python/cpython/issues/121249"
+  },
+  {
+    "id": 375099,
+    "url": "https://github.com/python/cpython/pull/121613",
+    "parentUrl": "https://github.com/python/cpython/issues/121249"
+  },
+  {
+    "id": 375100,
+    "url": "https://github.com/python/cpython/pull/149346",
+    "parentUrl": "https://github.com/python/cpython/issues/121249"
+  },
+  {
+    "id": 375101,
+    "url": "https://github.com/python/cpython/pull/133539",
+    "parentUrl": "https://github.com/python/cpython/issues/133231"
+  },
+  {
+    "id": 375105,
+    "url": "https://github.com/python/cpython/issues/133231#issue-3032998233",
+    "parentUrl": "https://github.com/python/cpython/issues/133231"
+  },
+  {
+    "id": 375106,
+    "url": "https://github.com/python/cpython/pull/133233",
+    "parentUrl": "https://github.com/python/cpython/issues/133231"
+  },
+  {
+    "id": 375107,
+    "url": "https://github.com/python/cpython/pull/133287",
+    "parentUrl": "https://github.com/python/cpython/issues/133231"
+  },
+  {
+    "id": 375110,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-JIT%22",
+    "parentUrl": "https://github.com/python/cpython/issues/133231"
+  },
+  {
+    "id": 375111,
+    "url": "https://github.com/python/cpython/issues/133231#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/133231"
+  },
+  {
+    "id": 375113,
+    "url": "https://discuss.python.org/t/an-api-for-controlling-and-introspecting-the-jit/73356",
+    "parentUrl": "https://github.com/python/cpython/issues/133231"
+  },
+  {
+    "id": 375114,
+    "url": "https://github.com/python/cpython/issues/133231#top",
+    "parentUrl": "https://github.com/python/cpython/issues/133231"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromInt64"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromInt64"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "unittest — Unit testing framework — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotStartsWith"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "unittest — Unit testing framework — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotStartsWith"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/40968415?s\u003d64\u0026u\u003db9fb61a07384ffc9174d8fd0a0826e06263a34a1\u0026v\u003d4",
+    "alt": "brandtbucher",
+    "pageTitle": "Add JIT utilities in `sys._jit` · Issue #133231 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133231"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/40968415?u\u003db9fb61a07384ffc9174d8fd0a0826e06263a34a1\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@brandtbucher",
+    "pageTitle": "Add JIT utilities in `sys._jit` · Issue #133231 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133231"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/40968415?u\u003db9fb61a07384ffc9174d8fd0a0826e06263a34a1\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@brandtbucher",
+    "pageTitle": "Add JIT utilities in `sys._jit` · Issue #133231 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133231"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/40968415?s\u003d64\u0026u\u003db9fb61a07384ffc9174d8fd0a0826e06263a34a1\u0026v\u003d4",
+    "alt": "@brandtbucher",
+    "pageTitle": "Add JIT utilities in `sys._jit` · Issue #133231 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133231"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@skirpichev",
+    "pageTitle": "Add support for C99 complex type (_Complex) to the struct module · Issue #121249 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121249"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@skirpichev",
+    "pageTitle": "Add support for C99 complex type (_Complex) to the struct module · Issue #121249 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121249"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Object Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_EnableDeferredRefcount"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Object Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_EnableDeferredRefcount"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/308610?s\u003d64\u0026u\u003d5b3fdef94d1b0ac7392d17643eaba029f5f13bea\u0026v\u003d4",
     "alt": "jaraco",
