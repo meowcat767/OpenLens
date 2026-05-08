@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 645,
+    "url": "https://www.python.org/psf/about#how-do-i-reach-the-psf",
+    "title": "About the Python Software Foundation | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! PSF\u003e\u003e\u003e About The Python Software Foundation is the organization behind the open source Python programming language. We are devoted to creating the conditions for Python and the Python community to grow and thrive. We fulfill our mission through these core activities: Infrastructure STRUCTURE AND STABILITY SO THE PYTHON LANGUAGE, ITS CONTRIBUTORS, AND USERS CAN THRIVE. We distribute Python, free of charge and available to all, for ever. We are the stewards of Python intellectual property—We establish PSF licenses, hold intellectual property rights to most Python releases, and protect Python-related trademarks. We put resources behind and help coordinate and improvements to the Python codebase and new Python releases. Community CONNECTION, DIVERSITY, SUPPORT, AND GROWTH FOR ALL WITHIN THE PYTHON COMMUNITY. We host PyCon US, the longest running annual event for celebrating, learning about, and coming together around Python. We give grants to groups around the world hosting events for and by Pythonistas supporting each other and welcoming newcomers. In 2024, the PSF awarded $655,000 USD to 257 groups or individuals in 61 countries around the world. We are responsible for establishing, maintaining, and enforcing the Python Code of Conduct, to work towards a Python community that is a safe and welcoming space for all. We provide and support resources to attract new Python users and keep the community growing, diverse, and healthy. We fiscally sponsor 20 Python-related community groups, conferences, and projects—including PyLadies, PyCascades, and Palletsto allow them to continue their contributions to the community with organizational infrastructure behind them. Investing in Python \u0026 Tools WE BUILD, SUPPORT, AND MAINTAIN CRITICAL PUBLIC GOODs FOR THE PYTHON COMMUNITY. We host PyPI, the Python package repository relied on by thousands of users with a huge range of projects. We\u0027ve brought on board a Packaging Project Manager to best serve PyPI users We\u0027ve added a full-time CPython Developer in Residence to our team, who amplifies volunteer contributors’ impact by processing CPython pull requests and tackling structural improvements. OUR SPONSORS DONATE TO THE PSF BECOME A MEMBER GET INVOLVED ANNUAL IMPACT REPORT NEWS \u0026 UPDATES PSF FAQ APPLY FOR A GRANT PYCON US The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-09 00:48:01.60662"
+  },
+  {
+    "id": 643,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d2",
+    "title": "Donation for the PSF – Python Software Foundation",
+    "content": "Skip to content The Python Software Foundation is the 501(c)(3) charitable organization behind the Python programming language. Our mission is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. The PSF’s team is small, but mighty, and donations from individuals like you are critical to keeping our work going year after year. Your donations allow us to keep supporting Python and its community, in a range of ways including: CPYTHON: We hold and defend Python’s IP; we host python.org where Python is downloaded millions of times daily. We contribute directly to the language’s continuous improvement through our team of three CPython Developers-in-Residence. PYPI: We run the Python Package Index, a public service utilized by millions of users– supported by a full-time PyPI Support Specialist. On average pypi.org receives 6 million unique visitors per month, who download billions of files per day. PYCON US: We run PyCon US, the flagship annual Python conference, which brings together Python users from beginners to experts from around the world. PyCon US is the place where individuals, projects, and companies gather annually to learn and connect around all things Python. PyCon US is volunteer-driven, and always by the community, for the community. SECURITY: We proactively maintain and improve security for the full Python ecosystem through our Security Developer-in-Residence and PyPI Safety \u0026 Security Engineer. COMMUNITY GRANTS: We support worldwide events and groups in the thriving global Python community, providing grants to local Python groups around the world as well as travel grants to individuals to attend PyCon US. In 2024, we disbursed a record $952,000 in grants to 174 groups across 52 countries. FISCAL SPONSORSHIP: We act as fiscal sponsor to mission-related Python events, groups, and projects. We provide 501(c)(3) tax-exempt status to our fiscal sponsorees and manage back office issues like cash flow, accounting, budgeting, insurance, and contract/legal support, as well as access to nonprofit discounts. Thank you for your support! We are so grateful to be able to rely on our wonderful community. Suggested Donation Amount $25 $50 $100 $256 $500 $1000 - none - Other Donation Amount Optional: Checking this box covers the PSF\u0027s 3% processing fees and makes your gift go further. Thank you! Total Amount I want to contribute this amount every month year for installments You can specify the number of installments, or you can leave the number of installments blank if you want to make an open-ended commitment. In either case, you can choose to cancel at any time. Email Address * * Payment Options Payment Method Credit Card Zip PayPal Stripe Checkout Pay later Contact information is required for transaction processing, accounting system, and compliance purposes. Please see the PSF Privacy Notice for more information. Name and Address Required First Name * Middle Name Last Name * How should your name appear publicly? Enter \"Anonymous\" to keep it hidden. Display Name Country (Home) * - select Country (Home) - United States Afghanistan Åland Islands Albania Algeria American Samoa Andorra Angola Anguilla Antarctica Antigua and Barbuda Argentina Armenia Aruba Australia Austria Azerbaijan Bahamas Bahrain Bangladesh Barbados Belarus Belgium Belize Benin Bermuda Bhutan Bolivia Bonaire, Saint Eustatius and Saba Bosnia and Herzegovina Botswana Bouvet Island Brazil British Indian Ocean Territory Brunei Darussalam Bulgaria Burkina Faso Burundi Cabo Verde Cambodia Cameroon Canada Cape Verde Cayman Islands Central African Republic Chad Chile China Christmas Island Cocos (Keeling) Islands Colombia Comoros Congo, Republic Of The Congo, The Democratic Republic of the Cook Islands Costa Rica Côte d’Ivoire Croatia Cuba Curaçao Cyprus Czech Republic Denmark Djibouti Dominica Dominican Republic Ecuador Egypt El Salvador Equatorial Guinea Eritrea Estonia Eswatini Ethiopia Falkland Islands (Malvinas) Faroe Islands Fiji Finland France French Guiana French Polynesia French Southern Territories Gabon Gambia Georgia Germany Ghana Gibraltar Greece Greenland Grenada Guadeloupe Guam Guatemala Guernsey Guinea Guinea-Bissau Guyana Haiti Heard Island and McDonald Islands Holy See (Vatican City State) Honduras Hong Kong Hungary Iceland India Indonesia Iran, Islamic Republic of Iraq Ireland Isle of Man Israel Italy Jamaica Japan Jersey Jordan Kazakhstan Kenya Kiribati Korea, Democratic People\u0027s Republic of Korea, Republic of Kosovo Kuwait Kyrgyzstan Lao People\u0027s Democratic Republic Latvia Lebanon Lesotho Liberia Libya Liechtenstein Lithuania Luxembourg Macao Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia (Federated States of) Micronesia, Federated States of Moldova Monaco Mongolia Montenegro Montserrat Morocco Mozambique Myanmar Namibia Nauru Nepal Netherland",
+    "scrapedAt": "2026-05-09 00:48:00.183004"
+  },
+  {
+    "id": 641,
+    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d2",
+    "title": "Donation for the PSF – Python Software Foundation",
+    "content": "Skip to content The Python Software Foundation is the 501(c)(3) charitable organization behind the Python programming language. Our mission is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. The PSF’s team is small, but mighty, and donations from individuals like you are critical to keeping our work going year after year. Your donations allow us to keep supporting Python and its community, in a range of ways including: CPYTHON: We hold and defend Python’s IP; we host python.org where Python is downloaded millions of times daily. We contribute directly to the language’s continuous improvement through our team of three CPython Developers-in-Residence. PYPI: We run the Python Package Index, a public service utilized by millions of users– supported by a full-time PyPI Support Specialist. On average pypi.org receives 6 million unique visitors per month, who download billions of files per day. PYCON US: We run PyCon US, the flagship annual Python conference, which brings together Python users from beginners to experts from around the world. PyCon US is the place where individuals, projects, and companies gather annually to learn and connect around all things Python. PyCon US is volunteer-driven, and always by the community, for the community. SECURITY: We proactively maintain and improve security for the full Python ecosystem through our Security Developer-in-Residence and PyPI Safety \u0026 Security Engineer. COMMUNITY GRANTS: We support worldwide events and groups in the thriving global Python community, providing grants to local Python groups around the world as well as travel grants to individuals to attend PyCon US. In 2024, we disbursed a record $952,000 in grants to 174 groups across 52 countries. FISCAL SPONSORSHIP: We act as fiscal sponsor to mission-related Python events, groups, and projects. We provide 501(c)(3) tax-exempt status to our fiscal sponsorees and manage back office issues like cash flow, accounting, budgeting, insurance, and contract/legal support, as well as access to nonprofit discounts. Thank you for your support! We are so grateful to be able to rely on our wonderful community. Suggested Donation Amount $25 $50 $100 $256 $500 $1000 - none - Other Donation Amount Optional: Checking this box covers the PSF\u0027s 3% processing fees and makes your gift go further. Thank you! Total Amount I want to contribute this amount every month year for installments You can specify the number of installments, or you can leave the number of installments blank if you want to make an open-ended commitment. In either case, you can choose to cancel at any time. Email Address * * Payment Options Payment Method Name Credit Card PayPal Stripe Checkout Pay later Contact information is required for transaction processing, accounting system, and compliance purposes. Please see the PSF Privacy Notice for more information. Name and Address Required First Name * Middle Name Last Name * How should your name appear publicly? Enter \"Anonymous\" to keep it hidden. Display Name Country (Home) * - select Country (Home) - United States Afghanistan Åland Islands Albania Algeria American Samoa Andorra Angola Anguilla Antarctica Antigua and Barbuda Argentina Armenia Aruba Australia Austria Azerbaijan Bahamas Bahrain Bangladesh Barbados Belarus Belgium Belize Benin Bermuda Bhutan Bolivia Bonaire, Saint Eustatius and Saba Bosnia and Herzegovina Botswana Bouvet Island Brazil British Indian Ocean Territory Brunei Darussalam Bulgaria Burkina Faso Burundi Cabo Verde Cambodia Cameroon Canada Cape Verde Cayman Islands Central African Republic Chad Chile China Christmas Island Cocos (Keeling) Islands Colombia Comoros Congo, Republic Of The Congo, The Democratic Republic of the Cook Islands Costa Rica Côte d’Ivoire Croatia Cuba Curaçao Cyprus Czech Republic Denmark Djibouti Dominica Dominican Republic Ecuador Egypt El Salvador Equatorial Guinea Eritrea Estonia Eswatini Ethiopia Falkland Islands (Malvinas) Faroe Islands Fiji Finland France French Guiana French Polynesia French Southern Territories Gabon Gambia Georgia Germany Ghana Gibraltar Greece Greenland Grenada Guadeloupe Guam Guatemala Guernsey Guinea Guinea-Bissau Guyana Haiti Heard Island and McDonald Islands Holy See (Vatican City State) Honduras Hong Kong Hungary Iceland India Indonesia Iran, Islamic Republic of Iraq Ireland Isle of Man Israel Italy Jamaica Japan Jersey Jordan Kazakhstan Kenya Kiribati Korea, Democratic People\u0027s Republic of Korea, Republic of Kosovo Kuwait Kyrgyzstan Lao People\u0027s Democratic Republic Latvia Lebanon Lesotho Liberia Libya Liechtenstein Lithuania Luxembourg Macao Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia (Federated States of) Micronesia, Federated States of Moldova Monaco Mongolia Montenegro Montserrat Morocco Mozambique Myanmar Namibia Nauru Nepal Netherlan",
+    "scrapedAt": "2026-05-09 00:47:58.631487"
+  },
+  {
+    "id": 638,
+    "url": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement",
+    "title": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "content": "Skip to main content Save StorySave this story Save StorySave this story At the gate of Mezhyhirya, the estate Viktor Yanukovych built with the money he stole from the people of Ukraine, a stall is selling rolls of toilet paper printed with the face of Vladimir Putin. Beside them are three large, flat, plastic loaves of bread, painted gold. Viktor Nestulia, director of innovation projects at Transparency International Ukraine, taps one with his finger. “When they came here after the revolution of dignity, they found a loaf made of solid gold, so this is a copy,” he says. “That’s what it is here. You will see.” He’s not wrong. Inside Mezhyhirya, we pass a yacht pier, a shooting range, a boxing gym, an ostrich farm, a petting zoo, a man-made lake, a greenhouse complex, a helicopter pad, several fountains, at least five guest houses and a mansion where every surface drips with decorative gold (although minus the two-kilo ornamental bloomer, which was stolen in 2015). In the echoing concrete garage where Yanukovych kept his vintage cars and jeeps, I count 36. Yet what makes the scene truly sickening is the fact that, until the former President – who rented the 140-hectare estate for 314 hryvnia, or roughly £10, an acre – fled to Russia on February 22, 2014, no-one knew any of this was here. There were rumours, of course. Journalists interviewed staff and flew drones over the site. (To refute the claims, Yanukovych took friendly reporters into one of the guest houses and told them it was where he lived.) But nothing was ever confirmed, so when, after months of anti-corruption protests, Ukrainians finally saw Mezhyhirya for themselves, they were astonished. Crowds took the half-hour drive from Kiev to gawp at the luxuries their taxes had bought – although Yanukovych continued to deny this was what he had done. Interviewed by the BBC in 2015, he dismissed the idea as “political technology”. The ostriches, he claimed, “just lived there.” Four years later, Ukraine is not cured of corruption. Bribery remains a way of life. The President, the eleventh-richest man in the country, talks regularly to Putin on the phone. But from the outburst of modernising zeal sprung a radical reform to one of the most vital functions of the state. A multi-award-winning digital system hailed as the best of its kind in the world. “It’s the gold standard,” says Henri Verdier, chief technology officer of France. Called ProZorro, after the Ukrainian word for transparency, the volunteer-built system radically restructures public procurement. Its motto? “Everyone sees everything.” Public procurement isn’t big business; it’s the biggest business of all. In Europe, it accounts for an average 16 per cent of GDP, according to the European Commission, dwarfing the contributions of finance (5.1 per cent), say, or agriculture (1.5 per cent). There are regional variations – the Netherlands is highest, at 20.2 per cent; Belgium lowest, at 14 per cent – but, across the board, two statements hold true. Governments spend a lot of money buying everything from pens to motorways to architectural blueprints. And, on the whole, they do it very badly. To see this in action, you only have to look at the news, which, on any given day, will almost certainly feature the confusions and inefficiencies of public procurement. On the sunny May morning I visited Mezhyhirya, for instance, three stories were making headlines in the UK, where public procurement is 14 per cent of GDP and 32 per cent of government spending. One concerned the Home Office’s decision to award the £490m contract to make the new “Brexit blue” passports to a French-Dutch firm rather than British manufacturer De La Rue. Another related to the 600 million disposable cups bought by English hospitals in the last five years, a figure roundly condemned as unacceptable. Yet no single story exposed the chronic procurement crisis as nakedly as the implosion of uber-supplier Carillion – which four months on, was still far from a resolution. The reason for the delay, perhaps even the crisis itself? Until Carillion issued a huge profit warning in July 2017, almost no-one knew its problems existed. The ignorance was so pervasive it resembled a form of psychological repression. In March 2017, directors boasted of Carillion’s “substantial liquidity”, and auditors and shareholders waved through its accounts. A parliamentary investigation found “the government was not aware of Carillion’s financial distress”, despite “clear and compelling problems with the business.” Even then, government departments continued to award major contracts to Carillion, which persuaded its 30,000 subcontractors – for it was effectively outsourcing the government’s outsourcing, acting as a middleman for everyone from cleaners to engineers to catering staff – to continue to work with it. Suppliers, who will now get back less than 1p for £1 they are owed, could not make their own checks. The parliamentary public accounts committee describ",
+    "scrapedAt": "2026-05-09 00:47:56.462151"
+  },
+  {
+    "id": 633,
+    "url": "http://opendataservices.coop/",
+    "title": "Open Data Services",
+    "content": "Open Data Services We help mission-driven organisations build data initiatives that can tackle global challenges. We work with governments, multilaterals, charities, researchers, social innovators, and others who share our commitment to meaningful impact through data. Our team partners closely with each organisation to design and deliver data initiatives that meet real needs, enable better decisions, and drive change in communities worldwide. Case studies Scroll left United Nations Development Programme Making sense of what development and humanitarian data enables in practice Energy Sector Management Assistance Program | World Bank Designing data governance frameworks that open up access to electricity CoST: the Infrastructure Transparency Initiative Tracking the sustainability of infrastructure projects Global Facility for Disaster Reduction and Recovery | World Bank Making it easier to find and use climate and disaster risk data with open standards Open Ownership Shining a light on corporate ownership and control World Bank | Mozilla | International Telecommunications Union | Community Broadband Network Mapping high speed internet networks in Sub Saharan Africa Sport England Developing data strategies that can get people moving Open Ownership Designing the Beneficial Ownership Data Standard to represent complex corporate networks 360Giving Making data about charitable donations easier to publish and use Scroll right Our mission Tackling today\u0027s complex challenges demands better use of data. From climate change and public health to social inequality and economic disparity, our world faces urgent, interconnected problems. At the same time, rapid advances in data and technology are creating new opportunities to understand and respond to these challenges. Our mission is to help governments, multilaterals, charities, researchers, and social innovators use data ethically and effectively to address their most pressing questions. We work to equip decision-makers with the information, tools, and technologies they need to drive real, sustainable change. Insights and tools Frameworks, reflections and resources shaped by real-world practice. Responsible Data Sharing Frameworks A practical approach for building trust and coordination when data is shared across organisations. Sustainability Canvas A conversation guide for data initiatives working towards long-term impact. Standards Lab Handbook A practical guide to designing, building and maintaining open data standards. Open Source Tools and Documentation Technical guides and references for open, adaptable data tools.",
+    "scrapedAt": "2026-05-09 00:47:53.602139"
+  },
+  {
     "id": 631,
     "url": "https://flatten-tool.readthedocs.io/en/latest/",
     "title": "Flatten Tool documentation",
@@ -4228,26 +4263,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 633,
-    "url": "http://opendataservices.coop/"
-  },
-  {
-    "id": 638,
-    "url": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
-  },
-  {
-    "id": 641,
-    "url": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d2"
-  },
-  {
-    "id": 643,
-    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d2"
-  },
-  {
-    "id": 645,
-    "url": "https://www.python.org/psf/about#how-do-i-reach-the-psf"
   },
   {
     "id": 646,
@@ -99534,10 +99549,372 @@ window.searchData = [
     "id": 71161,
     "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-iati/#convert-a-spreadsheet-to-xml",
     "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 71162,
+    "url": "https://opendataservices.coop:443/case-studies",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71163,
+    "url": "https://opendataservices.coop:443/insights/standards-lab-handbook/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71164,
+    "url": "https://opendataservices.coop:443/insights",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71165,
+    "url": "https://opendataservices.coop:443/case-studies/charitable-donations-data-publishing/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71166,
+    "url": "https://opendataservices.coop:443/case-studies/sport-england-data-strategy/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71167,
+    "url": "https://opendataservices.coop:443/case-studies/data-governance-frameworks-distributed-renewable-energy/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71168,
+    "url": "https://opendataservices.coop:443/case-studies/mapping-high-speed-internet/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71169,
+    "url": "https://opendataservices.coop:443/case-studies/making-sense-of-what-development-and-humanitarian-data-enables-in-practice/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71170,
+    "url": "https://opendataservices.coop:443/case-studies/beneficial-ownership-standard-corporate-networks/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71171,
+    "url": "https://opendataservices.coop:443/insights/open-source-tools-and-documentation/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71172,
+    "url": "https://opendataservices.coop:443/insights/responsible-data-sharing-frameworks/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71173,
+    "url": "https://opendataservices.coop:443/case-studies/climate-disaster-risk-open-standard/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71174,
+    "url": "https://opendataservices.coop:443/case-studies/tracking-infrastructure-sustainability/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71175,
+    "url": "https://opendataservices.coop:443/case-studies/beneficial-ownership-data-standard/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71176,
+    "url": "https://opendataservices.coop:443/insights/sustainability-canvas/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 71177,
+    "url": "https://www.wired.com/tag/politics/",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71178,
+    "url": "https://www.wired.com/story/book-excerpt-lucky-devils-1993-chess-mystery-solved/#intcid\u003d_wired-article-bottom-recirc_66393417-27ab-4abc-855f-a81ce9d40e8c_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71179,
+    "url": "https://www.wired.com/story/kathleen-fisher-jacques-carolan-aria-wired-health/#intcid\u003d_wired-article-bottom-recirc_66393417-27ab-4abc-855f-a81ce9d40e8c_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71180,
+    "url": "https://www.wired.com/story/we-were-not-ready-for-this-lebanons-emergency-system-is-hanging-by-a-thread/#intcid\u003d_wired-article-bottom-recirc_66393417-27ab-4abc-855f-a81ce9d40e8c_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71181,
+    "url": "https://www.wired.com/story/heres-how-much-san-francisco-tech-companies-are-paying-for-police-protection/#intcid\u003d_wired-article-bottom-recirc_66393417-27ab-4abc-855f-a81ce9d40e8c_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71182,
+    "url": "https://www.wired.com/tag/magazine/",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71183,
+    "url": "https://www.wired.com/story/telegram-is-still-hosting-a-sanctioned-21-billion-crypto-scammer-black-market/#intcid\u003d_wired-article-bottom-recirc_66393417-27ab-4abc-855f-a81ce9d40e8c_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71184,
+    "url": "https://www.wired.com/story/us-special-forces-soldier-allegedly-profited-off-of-maduro-capture-on-polymarket/#intcid\u003d_wired-article-bottom-recirc_66393417-27ab-4abc-855f-a81ce9d40e8c_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71185,
+    "url": "https://www.wired.com/tag/long-read/",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71186,
+    "url": "https://www.wired.com/story/crosswalk-city-hack-cybersecurity-lessons/#intcid\u003d_wired-article-bottom-recirc_66393417-27ab-4abc-855f-a81ce9d40e8c_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71187,
+    "url": "https://www.wired.com/story/ukraine-revolution-government-procurement/#main-content",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71188,
+    "url": "https://www.wired.com/story/the-fbi-didnt-answer-texts-from-minnesota-investigators-for-days-after-renee-goods-killing/#intcid\u003d_wired-article-bottom-recirc_66393417-27ab-4abc-855f-a81ce9d40e8c_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71189,
+    "url": "https://www.wired.com/story/usaid-whistleblower-says-it-was-even-worse-than-people-knew/#intcid\u003d_wired-article-bottom-recirc_66393417-27ab-4abc-855f-a81ce9d40e8c_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71190,
+    "url": "https://www.wired.com/story/where-the-doge-operatives-are-now/#intcid\u003d_wired-article-bottom-recirc_66393417-27ab-4abc-855f-a81ce9d40e8c_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71191,
+    "url": "https://www.wired.com/story/the-uk-launches-its-dollar675-million-sovereign-ai-fund/#intcid\u003d_wired-article-bottom-recirc_66393417-27ab-4abc-855f-a81ce9d40e8c_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71192,
+    "url": "https://www.wired.com/tag/september-october-2018-issue/",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71193,
+    "url": "https://www.wired.com/story/the-strait-of-hormuz-reopens-but-global-shipping-will-take-months-to-recover/#intcid\u003d_wired-article-bottom-recirc_66393417-27ab-4abc-855f-a81ce9d40e8c_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 71195,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d2#content",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d2"
+  },
+  {
+    "id": 71197,
+    "url": "http://python.org/psf/",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact?reset\u003d1\u0026id\u003d2"
+  },
+  {
+    "id": 71203,
+    "url": "https://www.python.org/psf/faq/",
+    "parentUrl": "https://www.python.org/psf/about#how-do-i-reach-the-psf"
+  },
+  {
+    "id": 71207,
+    "url": "https://www.python.org/psf/news-and-community/",
+    "parentUrl": "https://www.python.org/psf/about#how-do-i-reach-the-psf"
+  },
+  {
+    "id": 71208,
+    "url": "https://python.org/downloads/",
+    "parentUrl": "https://www.python.org/psf/about#how-do-i-reach-the-psf"
+  },
+  {
+    "id": 71210,
+    "url": "https://pypi.org/",
+    "parentUrl": "https://www.python.org/psf/about#how-do-i-reach-the-psf"
+  },
+  {
+    "id": 71215,
+    "url": "https://python.org/psf/grants/",
+    "parentUrl": "https://www.python.org/psf/about#how-do-i-reach-the-psf"
+  },
+  {
+    "id": 71216,
+    "url": "https://policies.python.org/python.org/code-of-conduct/",
+    "parentUrl": "https://www.python.org/psf/about#how-do-i-reach-the-psf"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://media.wired.com/photos/69d5764c8a99327c6fc9691a/16:9/w_640%2Cc_limit/undefined",
+    "alt": "The FBI Didn’t Answer Texts From Minnesota Investigators for Days After Renee Good’s Killing",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69d69a0c0c95e3e9dba17bff/16:9/w_640%2Cc_limit/undefined",
+    "alt": "As the Strait of Hormuz Reopens, Global Shipping Will Take Months to Recover",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69d66fdf5ed03f09403e5e8d/16:9/w_640%2Cc_limit/undefined",
+    "alt": "‘We Were Not Ready for This’: Lebanon\u0027s Emergency System Is Hanging by a Thread",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69dffe96100f73b2d7f78ec6/16:9/w_640%2Cc_limit/undefined",
+    "alt": "Where the DOGE Operatives Are Now",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69dd706b82626796181b9a93/16:9/w_640%2Cc_limit/undefined",
+    "alt": "Telegram Is Still Hosting a Sanctioned $21 Billion Crypto Scammer Black Market",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69dd573d3001957d4f673a2b/16:9/w_640%2Cc_limit/undefined",
+    "alt": "The Gamblers Behind One of the Weirdest Cheating Mysteries in Chess Have Been Unmasked",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69e8011875c782c19df35a8a/16:9/w_640%2Cc_limit/undefined",
+    "alt": "USAID Whistleblower Says It Was Even Worse Than People Knew",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69dff76f67d3fd19de3c134e/16:9/w_640%2Cc_limit/undefined",
+    "alt": "The UK Launches Its $675 Million Sovereign AI Fund",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69ea98d61e4e27233017ac08/16:9/w_640%2Cc_limit/undefined",
+    "alt": "US Special Forces Soldier Arrested for Polymarket Bets on Maduro Raid",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69ebb9925339d71f32f9873a/16:9/w_640%2Cc_limit/undefined",
+    "alt": "Here’s How Much San Francisco Tech Companies Pay for Police Protection",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69d440dbc4071a92611c33d5/16:9/w_640%2Cc_limit/undefined",
+    "alt": "The Dumbest Hack of the Year Exposed a Very Real Problem",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69ef9664ce67ed64909ae92c/16:9/w_640%2Cc_limit/undefined",
+    "alt": "The UK’s Answer to Darpa Wants to Rewire the Human Brain",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/chevron.zUKO04Go_ZE4rF9.svg",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/making-sense-development-humanitarian-data.CP4fQyPh_Z1Uc3hd.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/data-governance-frameworks-distributed-renewable-energy.C3q1ViZz_Z2laSPk.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/tracking-infrastructure-sustainability.Df86w8BY_1YVCQe.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/climate-disaster-risk-open-standard.BMIJTS4P_1yzqeI.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/beneficial-ownership-data-standard.wxo8X-Nn_1zjQ9F.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/mapping-high-speed-internet.CwSHkreC_Z2ikO9b.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/sport-england-data-strategy.fA7Rtapo_17bMR6.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/beneficial-ownership-standard-corporate-networks.BWDu6Zz-_Z14m4uh.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/charitable-donations-data-publishing.C6SwDFo8_Z1W1ou4.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/chevron.zUKO04Go_ZE4rF9.svg",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/responsible-data-sharing-frameworks.BtYsVhl0_1A1wzO.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/sustainability-canvas.dwfCLLhR_1T34zQ.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/standards-lab-handbook.C93Us228_Z14P9P.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/open-source-tools-and-documentation.BtV0HJNy_i3BcW.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
   {
     "src": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/_static/ods_logo_dark.svg",
     "alt": "Light Logo",
