@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1260,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#zlib",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:12:36.605121"
+  },
+  {
+    "id": 1259,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pydoc",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:12:35.353479"
+  },
+  {
+    "id": 1258,
+    "url": "https://docs.python.org/3/library/stdtypes.html#dict",
+    "title": "Built-in Types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Types | Theme Auto Light Dark | Built-in Types¶ The following sections describe the standard types that are built into the interpreter. The principal built-in types are numerics, sequences, mappings, classes, instances and exceptions. Some collection classes are mutable. The methods that add, subtract, or rearrange their members in place, and don’t return a specific item, never return the collection instance itself but None. Some operations are supported by several object types; in particular, practically all objects can be compared for equality, tested for truth value, and converted to a string (with the repr() function or the slightly different str() function). The latter function is implicitly used when an object is written by the print() function. Truth Value Testing¶ Any object can be tested for truth value, for use in an if or while condition or as operand of the Boolean operations below. By default, an object is considered true unless its class defines either a __bool__() method that returns False or a __len__() method that returns zero, when called with the object. [1] If one of the methods raises an exception when called, the exception is propagated and the object does not have a truth value (for example, NotImplemented). Here are most of the built-in objects considered false: constants defined to be false: None and False zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1) empty sequences and collections: \u0027\u0027, (), [], {}, set(), range(0) Operations and built-in functions that have a Boolean result always return 0 or False for false and 1 or True for true, unless otherwise stated. (Important exception: the Boolean operations or and and always return one of their operands.) Boolean Operations — and, or, not¶ These are the Boolean operations, ordered by ascending priority: Operation Result Notes x or y if x is true, then x, else y (1) x and y if x is false, then x, else y (2) not x if x is false, then True, else False (3) Notes: This is a short-circuit operator, so it only evaluates the second argument if the first one is false. This is a short-circuit operator, so it only evaluates the second argument if the first one is true. not has a lower priority than non-Boolean operators, so not a \u003d\u003d b is interpreted as not (a \u003d\u003d b), and a \u003d\u003d not b is a syntax error. Comparisons¶ There are eight comparison operations in Python. They all have the same priority (which is higher than that of the Boolean operations). Comparisons can be chained arbitrarily; for example, x \u003c y \u003c\u003d z is equivalent to x \u003c y and y \u003c\u003d z, except that y is evaluated only once (but in both cases z is not evaluated at all when x \u003c y is found to be false). This table summarizes the comparison operations: Operation Meaning \u003c strictly less than \u003c\u003d less than or equal \u003e strictly greater than \u003e\u003d greater than or equal \u003d\u003d equal !\u003d not equal is object identity is not negated object identity Unless stated otherwise, objects of different types never compare equal. The \u003d\u003d operator is always defined but for some object types (for example, class objects) is equivalent to is. The \u003c, \u003c\u003d, \u003e and \u003e\u003d operators are only defined where they make sense; for example, they raise a TypeError exception when one of the arguments is a complex number. Non-identical instances of a class normally compare as non-equal unless the class defines the __eq__() method. Instances of a class cannot be ordered with respect to other instances of the same class, or other types of object, unless the class defines enough of the methods __lt__(), __le__(), __gt__(), and __ge__() (in general, __lt__() and __eq__() are sufficient, if you want the conventional meanings of the comparison operators). The behavior of the is and is not operators cannot be customized; also they can be applied to any two objects and never raise an exception. Two more operations with the same syntactic priority, in and not in, are supported by types that are iterable or implement the __contains__() method. Numeric Types — int, float, complex¶ There are three distinct numeric types: integers, floating-point numbers, and complex numbers. In addition, Booleans are a subtype of integers. Integers have unlimited precision. Floating-point numbers are usually implemented using double in C; information about the precision and internal representation of floating-point numbers for the machine on which your program is running is available in sys.float_info. Complex numbers have a real and imaginary part, which are each a floating-point number. To extract these parts from a complex number z, use z.real and z.imag. (The standard library includes the additional numeric types fractions.Fraction, for rationals, and decimal.Decimal, for floating-point numbers with user-definable precision.) Numbers are created by numeric literals or as the result of built-in functions and operators. Unadorned integer li",
+    "scrapedAt": "2026-05-09 01:12:34.072461"
+  },
+  {
+    "id": 1257,
+    "url": "https://docs.python.org/3/library/operator.html#operator.is_none",
+    "title": "operator — Standard operators as functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Functional Programming Modules » operator — Standard operators as functions | Theme Auto Light Dark | operator — Standard operators as functions¶ Source code: Lib/operator.py The operator module exports a set of efficient functions corresponding to the intrinsic operators of Python. For example, operator.add(x, y) is equivalent to the expression x+y. Many function names are those used for special methods, without the double underscores. For backward compatibility, many of these have a variant with the double underscores kept. The variants without the double underscores are preferred for clarity. The functions fall into categories that perform object comparisons, logical operations, mathematical operations and sequence operations. The object comparison functions are useful for all objects, and are named after the rich comparison operators they support: operator.lt(a, b)¶ operator.le(a, b)¶ operator.eq(a, b)¶ operator.ne(a, b)¶ operator.ge(a, b)¶ operator.gt(a, b)¶ operator.__lt__(a, b)¶ operator.__le__(a, b)¶ operator.__eq__(a, b)¶ operator.__ne__(a, b)¶ operator.__ge__(a, b)¶ operator.__gt__(a, b)¶ Perform “rich comparisons” between a and b. Specifically, lt(a, b) is equivalent to a \u003c b, le(a, b) is equivalent to a \u003c\u003d b, eq(a, b) is equivalent to a \u003d\u003d b, ne(a, b) is equivalent to a !\u003d b, gt(a, b) is equivalent to a \u003e b and ge(a, b) is equivalent to a \u003e\u003d b. Note that these functions can return any value, which may or may not be interpretable as a Boolean value. See Comparisons for more information about rich comparisons. The logical operations are also generally applicable to all objects, and support truth tests, identity tests, and boolean operations: operator.not_(obj)¶ operator.__not__(obj)¶ Return the outcome of not obj. (Note that there is no __not__() method for object instances; only the interpreter core defines this operation. The result is affected by the __bool__() and __len__() methods.) operator.truth(obj)¶ Return True if obj is true, and False otherwise. This is equivalent to using the bool constructor. operator.is_(a, b)¶ Return a is b. Tests object identity. operator.is_not(a, b)¶ Return a is not b. Tests object identity. operator.is_none(a)¶ Return a is None. Tests object identity. Added in version 3.14. operator.is_not_none(a)¶ Return a is not None. Tests object identity. Added in version 3.14. The mathematical and bitwise operations are the most numerous: operator.abs(obj)¶ operator.__abs__(obj)¶ Return the absolute value of obj. operator.add(a, b)¶ operator.__add__(a, b)¶ Return a + b, for a and b numbers. operator.and_(a, b)¶ operator.__and__(a, b)¶ Return the bitwise and of a and b. operator.floordiv(a, b)¶ operator.__floordiv__(a, b)¶ Return a // b. operator.index(a)¶ operator.__index__(a)¶ Return a converted to an integer. Equivalent to a.__index__(). Changed in version 3.10: The result always has exact type int. Previously, the result could have been an instance of a subclass of int. operator.inv(obj)¶ operator.invert(obj)¶ operator.__inv__(obj)¶ operator.__invert__(obj)¶ Return the bitwise inverse of the number obj. This is equivalent to ~obj. operator.lshift(a, b)¶ operator.__lshift__(a, b)¶ Return a shifted left by b. operator.mod(a, b)¶ operator.__mod__(a, b)¶ Return a % b. operator.mul(a, b)¶ operator.__mul__(a, b)¶ Return a * b, for a and b numbers. operator.matmul(a, b)¶ operator.__matmul__(a, b)¶ Return a @ b. Added in version 3.5. operator.neg(obj)¶ operator.__neg__(obj)¶ Return obj negated (-obj). operator.or_(a, b)¶ operator.__or__(a, b)¶ Return the bitwise or of a and b. operator.pos(obj)¶ operator.__pos__(obj)¶ Return obj positive (+obj). operator.pow(a, b)¶ operator.__pow__(a, b)¶ Return a ** b, for a and b numbers. operator.rshift(a, b)¶ operator.__rshift__(a, b)¶ Return a shifted right by b. operator.sub(a, b)¶ operator.__sub__(a, b)¶ Return a - b. operator.truediv(a, b)¶ operator.__truediv__(a, b)¶ Return a / b where 2/3 is .66 rather than 0. This is also known as “true” division. operator.xor(a, b)¶ operator.__xor__(a, b)¶ Return the bitwise exclusive or of a and b. Operations which work with sequences (some of them with mappings too) include: operator.concat(a, b)¶ operator.__concat__(a, b)¶ Return a + b for a and b sequences. operator.contains(a, b)¶ operator.__contains__(a, b)¶ Return the outcome of the test b in a. Note the reversed operands. operator.countOf(a, b)¶ Return the number of occurrences of b in a. operator.delitem(a, b)¶ operator.__delitem__(a, b)¶ Remove the value of a at index b. operator.getitem(a, b)¶ operator.__getitem__(a, b)¶ Return the value of a at index b. operator.indexOf(a, b)¶ Return the index of the first of occurrence of b in a. operator.setitem(a, b, c)¶ operator.__setitem__(a, b, c)¶ Set the value of a at index b to c. operator.length_hint(obj, default\u003d0)¶ Return an estimated length for the object obj. First try to return its ",
+    "scrapedAt": "2026-05-09 01:12:32.81901"
+  },
+  {
+    "id": 1256,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary",
+    "title": "Object Protocol — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Abstract Objects Layer » Object Protocol | Theme Auto Light Dark | Object Protocol¶ PyObject *Py_GetConstant(unsigned int constant_id)¶ Part of the Stable ABI since version 3.13. Get a strong reference to a constant. Set an exception and return NULL if constant_id is invalid. constant_id must be one of these constant identifiers: Constant Identifier Value Returned object Py_CONSTANT_NONE¶ 0 None Py_CONSTANT_FALSE¶ 1 False Py_CONSTANT_TRUE¶ 2 True Py_CONSTANT_ELLIPSIS¶ 3 Ellipsis Py_CONSTANT_NOT_IMPLEMENTED¶ 4 NotImplemented Py_CONSTANT_ZERO¶ 5 0 Py_CONSTANT_ONE¶ 6 1 Py_CONSTANT_EMPTY_STR¶ 7 \u0027\u0027 Py_CONSTANT_EMPTY_BYTES¶ 8 b\u0027\u0027 Py_CONSTANT_EMPTY_TUPLE¶ 9 () Numeric values are only given for projects which cannot use the constant identifiers. Added in version 3.13. CPython implementation detail: In CPython, all of these constants are immortal. PyObject *Py_GetConstantBorrowed(unsigned int constant_id)¶ Part of the Stable ABI since version 3.13. Similar to Py_GetConstant(), but return a borrowed reference. This function is primarily intended for backwards compatibility: using Py_GetConstant() is recommended for new code. The reference is borrowed from the interpreter, and is valid until the interpreter finalization. Added in version 3.13. PyObject *Py_NotImplemented¶ The NotImplemented singleton, used to signal that an operation is not implemented for the given type combination. Py_RETURN_NOTIMPLEMENTED¶ Properly handle returning Py_NotImplemented from within a C function (that is, create a new strong reference to NotImplemented and return it). Py_PRINT_RAW¶ Flag to be used with multiple functions that print the object (like PyObject_Print() and PyFile_WriteObject()). If passed, these functions use the str() of the object instead of the repr(). int PyObject_Print(PyObject *o, FILE *fp, int flags)¶ Print an object o, on file fp. Returns -1 on error. The flags argument is used to enable certain printing options. The only option currently supported is Py_PRINT_RAW; if given, the str() of the object is written instead of the repr(). int PyObject_HasAttrWithError(PyObject *o, PyObject *attr_name)¶ Part of the Stable ABI since version 3.13. Returns 1 if o has the attribute attr_name, and 0 otherwise. This is equivalent to the Python expression hasattr(o, attr_name). On failure, return -1. Added in version 3.13. int PyObject_HasAttrStringWithError(PyObject *o, const char *attr_name)¶ Part of the Stable ABI since version 3.13. This is the same as PyObject_HasAttrWithError(), but attr_name is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. Added in version 3.13. int PyObject_HasAttr(PyObject *o, PyObject *attr_name)¶ Part of the Stable ABI. Returns 1 if o has the attribute attr_name, and 0 otherwise. This function always succeeds. Note Exceptions that occur when this calls __getattr__() and __getattribute__() methods aren’t propagated, but instead given to sys.unraisablehook(). For proper error handling, use PyObject_HasAttrWithError(), PyObject_GetOptionalAttr() or PyObject_GetAttr() instead. int PyObject_HasAttrString(PyObject *o, const char *attr_name)¶ Part of the Stable ABI. This is the same as PyObject_HasAttr(), but attr_name is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. Note Exceptions that occur when this calls __getattr__() and __getattribute__() methods or while creating the temporary str object are silently ignored. For proper error handling, use PyObject_HasAttrStringWithError(), PyObject_GetOptionalAttrString() or PyObject_GetAttrString() instead. PyObject *PyObject_GetAttr(PyObject *o, PyObject *attr_name)¶ Return value: New reference. Part of the Stable ABI. Retrieve an attribute named attr_name from object o. Returns the attribute value on success, or NULL on failure. This is the equivalent of the Python expression o.attr_name. If the missing attribute should not be treated as a failure, you can use PyObject_GetOptionalAttr() instead. PyObject *PyObject_GetAttrString(PyObject *o, const char *attr_name)¶ Return value: New reference. Part of the Stable ABI. This is the same as PyObject_GetAttr(), but attr_name is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. If the missing attribute should not be treated as a failure, you can use PyObject_GetOptionalAttrString() instead. int PyObject_GetOptionalAttr(PyObject *obj, PyObject *attr_name, PyObject **result);¶ Part of the Stable ABI since version 3.13. Variant of PyObject_GetAttr() which doesn’t raise AttributeError if the attribute is not found. If the attribute is found, return 1 and set *result to a new strong reference to the attribute. If the attribute is not found, return 0 and set *result to NULL; the AttributeError is silenced. If an error other than AttributeError is raised, return -1 and set *result to NULL. Added in version 3.13. int PyObje",
+    "scrapedAt": "2026-05-09 01:12:31.577145"
+  },
+  {
     "id": 1255,
     "url": "https://docs.python.org/3/library/asyncio.html#module-asyncio",
     "title": "asyncio — Asynchronous I/O — Python 3.14.5rc1 documentation",
@@ -8433,26 +8468,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1256,
-    "url": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
-  },
-  {
-    "id": 1257,
-    "url": "https://docs.python.org/3/library/operator.html#operator.is_none"
-  },
-  {
-    "id": 1258,
-    "url": "https://docs.python.org/3/library/stdtypes.html#dict"
-  },
-  {
-    "id": 1259,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#pydoc"
-  },
-  {
-    "id": 1260,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#zlib"
   },
   {
     "id": 1261,
@@ -220860,10 +220875,745 @@ window.searchData = [
     "id": 247631,
     "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio-sync",
     "parentUrl": "https://docs.python.org/3/library/asyncio.html#module-asyncio"
+  },
+  {
+    "id": 247634,
+    "url": "https://docs.python.org/3/c-api/object.html#c.Py_CONSTANT_NONE",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247645,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_GetItemData",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247649,
+    "url": "https://docs.python.org/3/c-api/object.html#c._PyObject_GetDictPtr",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247653,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/object.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247654,
+    "url": "https://docs.python.org/3/c-api/object.html#c.Py_RETURN_NOTIMPLEMENTED",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247657,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_DelAttr",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247672,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_DelItemString",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247674,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_RichCompareBool",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247677,
+    "url": "https://docs.python.org/3/c-api/object.html#c.Py_CONSTANT_EMPTY_BYTES",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247679,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyType_GetTypeDataSize",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247680,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_TryIncRef",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247682,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_Print",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247683,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_Bytes",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247686,
+    "url": "https://docs.python.org/3/c-api/object.html#c.Py_CONSTANT_EMPTY_TUPLE",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247691,
+    "url": "https://docs.python.org/3/c-api/object.html#object-protocol",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247693,
+    "url": "https://docs.python.org/3/c-api/object.html#c.Py_CONSTANT_ONE",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247695,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_Dir",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247699,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_GenericSetDict",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247701,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_ASCII",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247703,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_EnableTryIncRef",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247718,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_Not",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247727,
+    "url": "https://docs.python.org/3/c-api/gcsupport.html#c.PyObject_GC_IsTracked",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247730,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_GetAIter",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247733,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_LengthHint",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247734,
+    "url": "https://docs.python.org/3/c-api/object.html#c.Py_PRINT_RAW",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247740,
+    "url": "https://docs.python.org/3/c-api/file.html#c.PyFile_WriteObject",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247744,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_Format",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247754,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247757,
+    "url": "https://docs.python.org/3/c-api/object.html#c.Py_CONSTANT_EMPTY_STR",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247760,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_SelfIter",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247764,
+    "url": "https://docs.python.org/3/c-api/object.html#c.Py_CONSTANT_TRUE",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247774,
+    "url": "https://docs.python.org/3/c-api/object.html#c.Py_CONSTANT_ELLIPSIS",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247775,
+    "url": "https://docs.python.org/3/c-api/object.html#c.Py_CONSTANT_FALSE",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247776,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_IsTrue",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247778,
+    "url": "https://docs.python.org/3/c-api/object.html#c.Py_CONSTANT_NOT_IMPLEMENTED",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247780,
+    "url": "https://docs.python.org/3/c-api/object.html#c.Py_CONSTANT_ZERO",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247781,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_DelAttrString",
+    "parentUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "id": 247785,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__iadd__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247789,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__truediv__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247791,
+    "url": "https://docs.python.org/3/library/operator.html#operator.ifloordiv",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247794,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__xor__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247795,
+    "url": "https://docs.python.org/3/library/operator.html#operator.delitem",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247796,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__ixor__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247797,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__lt__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247799,
+    "url": "https://docs.python.org/3/library/operator.html#operator.call",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247800,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__inv__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247801,
+    "url": "https://docs.python.org/3/library/operator.html#operator.and_",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247803,
+    "url": "https://docs.python.org/3/library/operator.html#operator.add",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247805,
+    "url": "https://docs.python.org/3/library/operator.html#operator.indexOf",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247807,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__ge__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247808,
+    "url": "https://docs.python.org/3/library/operator.html#operator.ipow",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247809,
+    "url": "https://docs.python.org/3/library/operator.html#operator.ixor",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247811,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__le__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247812,
+    "url": "https://docs.python.org/3/library/operator.html#operator.neg",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247813,
+    "url": "https://docs.python.org/3/library/operator.html#operator.ge",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247814,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/operator.py",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247815,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__index__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247816,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__iand__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247819,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__lshift__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247820,
+    "url": "https://docs.python.org/3/library/operator.html#operator.isub",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247822,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__imul__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247824,
+    "url": "https://docs.python.org/3/library/operator.html#operator.is_",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247825,
+    "url": "https://docs.python.org/3/library/operator.html#operator.invert",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247827,
+    "url": "https://docs.python.org/3/library/operator.html#operator.imatmul",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247828,
+    "url": "https://docs.python.org/3/library/operator.html#operator.abs",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247829,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__ifloordiv__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247831,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__abs__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247832,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__ipow__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247833,
+    "url": "https://docs.python.org/3/library/operator.html#operator.setitem",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247834,
+    "url": "https://docs.python.org/3/library/operator.html#operator.concat",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247835,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__isub__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247836,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/operator.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247838,
+    "url": "https://docs.python.org/3/library/operator.html#",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247841,
+    "url": "https://docs.python.org/3/library/operator.html#operator.getitem",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247842,
+    "url": "https://docs.python.org/3/library/operator.html#operator.gt",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247843,
+    "url": "https://docs.python.org/3/library/operator.html#operator.rshift",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247844,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__imatmul__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247845,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__not__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247846,
+    "url": "https://docs.python.org/3/library/operator.html#operator.lshift",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247847,
+    "url": "https://docs.python.org/3/library/operator.html#operator.pow",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247848,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__or__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247849,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__itruediv__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247850,
+    "url": "https://docs.python.org/3/library/operator.html#operator.pos",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247853,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__mod__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247854,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__irshift__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247855,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__ne__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247856,
+    "url": "https://docs.python.org/3/library/operator.html#operator.xor",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247858,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__neg__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247860,
+    "url": "https://docs.python.org/3/library/operator.html#operator.eq",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247864,
+    "url": "https://docs.python.org/3/library/operator.html#operator.sub",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247865,
+    "url": "https://docs.python.org/3/library/operator.html#operator.truth",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247866,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__matmul__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247867,
+    "url": "https://docs.python.org/3/library/operator.html#operator.imod",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247869,
+    "url": "https://docs.python.org/3/library/operator.html#operator.truediv",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247871,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__imod__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247873,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__contains__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247874,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__call__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247875,
+    "url": "https://docs.python.org/3/library/operator.html#operator.not_",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247878,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__invert__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247879,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__setitem__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247880,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__ilshift__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247881,
+    "url": "https://docs.python.org/3/library/operator.html#operator.ne",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247882,
+    "url": "https://docs.python.org/3/library/operator.html#operator.iand",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247884,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__concat__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247885,
+    "url": "https://docs.python.org/3/library/operator.html#operator.itruediv",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247886,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__and__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247887,
+    "url": "https://docs.python.org/3/library/operator.html#operator.ior",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247888,
+    "url": "https://docs.python.org/3/library/operator.html#operator.ilshift",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247891,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__gt__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247892,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__getitem__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247894,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__ior__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247895,
+    "url": "https://docs.python.org/3/library/operator.html#operator.irshift",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247896,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__floordiv__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247897,
+    "url": "https://docs.python.org/3/library/operator.html#operator.mod",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247898,
+    "url": "https://docs.python.org/3/library/operator.html#operator.contains",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247899,
+    "url": "https://docs.python.org/3/library/operator.html#operator.floordiv",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247900,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__pow__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247902,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__delitem__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247903,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__iconcat__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247904,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__pos__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247905,
+    "url": "https://docs.python.org/3/library/operator.html#operator.imul",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247907,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__rshift__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247908,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__mul__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247909,
+    "url": "https://docs.python.org/3/library/operator.html#operator.is_not",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247910,
+    "url": "https://docs.python.org/3/library/operator.html#operator.inv",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247912,
+    "url": "https://docs.python.org/3/library/operator.html#operator.lt",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247914,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__sub__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247915,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__add__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247916,
+    "url": "https://docs.python.org/3/library/operator.html#operator.countOf",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247917,
+    "url": "https://docs.python.org/3/library/operator.html#operator.iadd",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247918,
+    "url": "https://docs.python.org/3/library/operator.html#operator.iconcat",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247920,
+    "url": "https://docs.python.org/3/library/operator.html#operator.__eq__",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247921,
+    "url": "https://docs.python.org/3/library/operator.html#operator.or_",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247922,
+    "url": "https://docs.python.org/3/library/operator.html#operator.matmul",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "id": 247924,
+    "url": "https://docs.python.org/3/library/operator.html#operator.le",
+    "parentUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#zlib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#zlib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pydoc"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pydoc"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#dict"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#dict"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "operator — Standard operators as functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "operator — Standard operators as functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/operator.html#operator.is_none"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Object Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Object Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniqueReferencedTemporary"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
