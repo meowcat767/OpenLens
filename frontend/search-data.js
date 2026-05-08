@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 391,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-macos11.pkg.sigstore",
+    "title": "",
+    "content": "{\"mediaType\": \"application/vnd.dev.sigstore.bundle.v0.3+json\", \"verificationMaterial\": {\"certificate\": {\"rawBytes\": \"MIICzzCCAlSgAwIBAgIUFTELJ2/kdcns4Wq/ca0jQ0vjlqkwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwNDA3MTc0ODQ5WhcNMjYwNDA3MTc1ODQ5WjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEUQ7yawAD2fEV/fjW3dcD0tusfZGkUu2mBVBOLU21vanxoy4OO0V+48eQJCUAkC4EBR6f/BujtPAHSXTeO/kuDaOCAXMwggFvMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUX32z8BWek5iNZpUNiEDA5g2MTm4wHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHQYDVR0RAQH/BBMwEYEPaHVnb0BweXRob24ub3JnMCwGCisGAQQBg78wAQEEHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDAuBgorBgEEAYO/MAEIBCAMHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDCBigYKKwYBBAHWeQIEAgR8BHoAeAB2AN09MGrGxxEyYxkeHJlnNwKiSl643jyt/4eKcoAvKe6OAAABnWkPsnsAAAQDAEcwRQIgVyz9SLcztCSxiowZQRJ1bx2QkFaajiSk3ospxNnQic0CIQCI7jHoSGEz6890cmcFdwl+i3p49BclwnGHXtEzOz8JvjAKBggqhkjOPQQDAwNpADBmAjEA/boyRIVe2fAHo/oGu854U7+vwBmBXZI8lJHgFLovO6MlLG/KocMM0Brm5NoXB3dQAjEA5JLZ9QCIIAsgXoI6RCXbCoPj9eG8pUrIXNO+3wfOVzeAyUTXICKeLoEPwoTA1jLZ\"}, \"tlogEntries\": [{\"logIndex\": \"1247676385\", \"logId\": {\"keyId\": \"wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0\u003d\"}, \"kindVersion\": {\"kind\": \"hashedrekord\", \"version\": \"0.0.1\"}, \"integratedTime\": \"1775584130\", \"inclusionPromise\": {\"signedEntryTimestamp\": \"MEUCIGB/NE6kNMCw88I5YM9qzkANjIObmoVVGRTMbY1mMZcDAiEAodY2A/1hleAxjqaFyDIUr+sP0a+i89CmJ1v2L6tmXYo\u003d\"}, \"inclusionProof\": {\"logIndex\": \"1125772123\", \"rootHash\": \"meTpVSJAfMmztAqZr9zWd46gWqtGZLGMSqCTNL6g24U\u003d\", \"treeSize\": \"1125772127\", \"hashes\": [\"BudjL4jG92DILaYTiBPmL7sARvWcGsqOYhdd3IZ6Odg\u003d\", \"p931oPlQ2MWw9w7UpWwGK6xL2mkNN4ecYkVp7GNIijM\u003d\", \"YOlvvKJaTg0j2LDj8nQH+DWhdxD3bHWPBc8smxJUN+g\u003d\", \"J5+EinhfZZnTmnvdQcOgpqjTczWn8hZj9cZ1KvAQsVo\u003d\", \"5kRR5CEDUCrThucErnPdsouRH8mqBDjkFxcSZw3WPjM\u003d\", \"zmBLZP0bwwnxrHyzGFdDU63XZvMcC+gI5povkq57SPA\u003d\", \"D8oBImywij7355j0NzbcVyK6zepoR6IzraPf3JJDeJU\u003d\", \"dJtu8pJ3yhn0rC0EFdgoebJF3MldcpHMX00y2eHPYDY\u003d\", \"81dr9W/Ax/UfYIsxNTxjBYK7sYU/az3TPo6rdJosDO0\u003d\", \"4rt9/yEt1Zy95yQxSCxpoOu6E3CWDDxpGd37aEEFadg\u003d\", \"+wrWv/cO9uKKpjC+BMIC/Fv2Ipe50C7wL0wd+YlH5Kw\u003d\", \"ZxCK8NmXD/qxQEyqBRFYo8WOz/kUHRHA+BXOPC6789o\u003d\", \"civ0dM20+gns15I1mfWo9Jt0YBzbex5QVYwaGjqgcs4\u003d\", \"2v7+H4Fejl7qkIhG2G79UQH+wJ0QpPreOZwulFGWzLI\u003d\", \"vXMaHYsu3vXUFKr78h1vCtaZWhgh1OwZh5O05RGwxkw\u003d\", \"WbswTMpSfvjDqroD6lDGb2VDeljBPlMsAchJ+0L+3U4\u003d\", \"psQ1PrYXqFtm6T3uF1q91rl1dhNiykO58GpOdq1ZaKI\u003d\", \"DOCeoSMovIvLExkhIvisow9AuNXgeWs4ECkyR6EcqYU\u003d\"], \"checkpoint\": {\"envelope\": \"rekor.sigstore.dev - 1193050959916656506\\n1125772127\\nmeTpVSJAfMmztAqZr9zWd46gWqtGZLGMSqCTNL6g24U\u003d\\n\\n\\u2014 rekor.sigstore.dev wNI9ajBEAiBB8O7VtvZdLIufHNqu/U5mwPvDa4qlAGitO4ov+0mdNAIgOCQZybzvcfb8vOUCjyYjIsBursXBLycNc6Bp/Y1FSTU\u003d\\n\"}}, \"canonicalizedBody\": \"eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiIxYzVhOWIxZDBhM2YxNGNmM2MzOGYwMzMyMzJiN2ZmNDVlZmQyZWRkZGU1OTQwMTY5ZjIwZWY4NGVjNzIzNWI1In19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FWUNJUUQxMUZKWENEa0xIMmlWdmxsMUNEdGFxUXVBWkh6TUNENkR5azJ4R01DcG13SWhBUGszQXlhZEhaaCtraEpqT3F6TVdCWmVOMWNhZHViSCtsM2s2TFlpdEFoUSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVTjZla05EUVd4VFowRjNTVUpCWjBsVlJsUkZURW95TDJ0a1kyNXpORmR4TDJOaE1HcFJNSFpxYkhGcmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDVFUVROTlZHTXdUMFJSTlZkb1kwNU5hbGwzVGtSQk0wMVVZekZQUkZFMVYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZWVVRkNVlYZEJSREptUlZZdlptcFhNMlJqUkRCMGRYTm1Xa2RyVlhVeWJVSldRazhLVEZVeU1YWmhibmh2ZVRSUFR6QldLelE0WlZGS1ExVkJhME0wUlVKU05tWXZRblZxZEZCQlNGTllWR1ZQTDJ0MVJHRlBRMEZZVFhkblowWjJUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlZZTXpKNkNqaENWMlZyTldsT1duQlZUbWxGUkVFMVp6Sk5WRzAwZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoUldVUldVakJTUVZGSUwwSkNUWGRGV1VWUVlVaFdibUl3UW5kbFdGSnZZakkwZFdJelNtNU5RM2RIUTJselIwRlJVVUpuTnpoM1FWRkZSUXBJYldnd1pFaENlazlwT0haYU1td3dZVWhXYVV4dFRuWmlVemx6WWpKa2NHSnBPWFpaV0ZZd1lVUkJkVUpuYjNKQ1owVkZRVmxQTDAxQlJVbENRMEZOQ2todGFEQmtTRUo2VDJrNGRsb3liREJoU0ZacFRHMU9kbUpUT1hOaU1tUndZbWs1ZGxsWVZqQmhSRU5DYVdkWlMwdDNXVUpDUVVoWFpWRkpSVUZuVWpnS1FraHZRV1ZCUWpKQlRqQTVUVWR5UjNoNFJYbFplR3RsU0Vwc2JrNTNTMmxUYkRZME0ycDVkQzgwWlV0amIwRjJTMlUyVDBGQlFVSnVWMnRRYzI1elFRcEJRVkZFUVVWamQxSlJTV2RXZVhvNVUweGplblJEVTNocGIzZGFVVkpLTVdKNE1sRnJSbUZoYW1sVGF6TnZjM0I0VG01UmFXTXdRMGxSUTBrM2FraHZDbE5IUlhvMk9Ea3dZMjFqUm1SM2JDdHBNM0EwT1VKamJIZHVSMGhZZEVWNlQzbzRTblpxUVV0Q1oyZHhhR3RxVDFCUlVVUkJkMDV3UVVSQ2JVRnFSVUVLTDJKdmVWSkpWbVV5WmtGSWJ5OXZSM1U0TlRSVk55dDJkMEp0UWxoYVNUaHNTa2huUmt4dmRrODJUV3hNUnk5TGIyTk5UVEJDY20wMVRtOVlRak5rVVFwQmFrVkJOVXBNV2psUlEwbEpRWE5uV0c5Sk5sSkRXR0pEYjFCcU9XVkhPSEJWY2tsWVRrOHJNM2RtVDFaNlpVRjVWVlJZU1VOTFpVeHZSVkIzYjFSQkNqRnFURm9LTFMwdExTMUZUa1FnUTBWU1ZFbEdTVU5CVkVVdExTMHRMUW89In19fX0\u003d\"}], \"tim",
+    "scrapedAt": "2026-05-09 00:40:07.444751"
+  },
+  {
+    "id": 390,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-win32.zip.sigstore",
+    "title": "",
+    "content": "{\"mediaType\": \"application/vnd.dev.sigstore.bundle.v0.3+json\", \"verificationMaterial\": {\"certificate\": {\"rawBytes\": \"MIIC0DCCAlWgAwIBAgIUN1lyG0+qFqOC5LjOpxP3pGqG1SkwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwNDA3MTc0ODQ2WhcNMjYwNDA3MTc1ODQ2WjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE54l3vB4ZY3LRBCcxFCA7VhAFfz815xH1MLCU/L7KgIMBUijvfZDqSBpG3jtKBWJcRQ1nGVjcay2tnwwFZsxOB6OCAXQwggFwMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUA+WcmvsDFkFzDP46pztaoXWnAcswHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHQYDVR0RAQH/BBMwEYEPaHVnb0BweXRob24ub3JnMCwGCisGAQQBg78wAQEEHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDAuBgorBgEEAYO/MAEIBCAMHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDCBiwYKKwYBBAHWeQIEAgR9BHsAeQB3AN09MGrGxxEyYxkeHJlnNwKiSl643jyt/4eKcoAvKe6OAAABnWkPp7EAAAQDAEgwRgIhAPTTgQmP1pNxzj86YOzA91QJHj5fBNNQ3BNKfGu3wlwDAiEA44Hf7fAk28jl3Xq7j/PT5PXwPAv60hXIlymWyDUXeiIwCgYIKoZIzj0EAwMDaQAwZgIxANtnf/nDqKJG7xNtjcStP6NH+Aze4CUQkrzSx4dvtPfkJEpb6N0U5u1n1+kZlQBFEQIxAOoDKWfKBOzGtlZAzl+Vx8e71RPzsx8/7sYd7+TsypvQiK/44ymqYB7gHpxJfBGAPQ\u003d\u003d\"}, \"tlogEntries\": [{\"logIndex\": \"1247676353\", \"logId\": {\"keyId\": \"wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0\u003d\"}, \"kindVersion\": {\"kind\": \"hashedrekord\", \"version\": \"0.0.1\"}, \"integratedTime\": \"1775584127\", \"inclusionPromise\": {\"signedEntryTimestamp\": \"MEUCID8Q8GH5X0LkRwOcgyITOqdY0dVM7jdUot+de/4QsnIhAiEA+S6LLZVrBwW+jJ0rYQ8xoA2KGWPuue62aVR5TWaR9CE\u003d\"}, \"inclusionProof\": {\"logIndex\": \"1125772091\", \"rootHash\": \"0Kdj+Z7lnQjSmn0ogJVZDG2H0C/kCafLfjkXgR07A+g\u003d\", \"treeSize\": \"1125772092\", \"hashes\": [\"Q1LYB7FwRdbJFrKK1FogPw+q8flZsCL6mg+4dLEKxb8\u003d\", \"sORMbRs9i4WqZcl3TEKIJRn9LEQchG40Mp6wEQuxZws\u003d\", \"HLaBKUTovHKqCdxHv2GAEIUweTnlA33RnwEoy4+B19M\u003d\", \"K5/inbKCQAaLsUI9ARNbTktWTHMX2oEo4UQ78lwxpQA\u003d\", \"JlezDmsKJjycuR/6UfSDDc6L+GXknVDOZK2xXNuMGPo\u003d\", \"D8oBImywij7355j0NzbcVyK6zepoR6IzraPf3JJDeJU\u003d\", \"dJtu8pJ3yhn0rC0EFdgoebJF3MldcpHMX00y2eHPYDY\u003d\", \"81dr9W/Ax/UfYIsxNTxjBYK7sYU/az3TPo6rdJosDO0\u003d\", \"4rt9/yEt1Zy95yQxSCxpoOu6E3CWDDxpGd37aEEFadg\u003d\", \"+wrWv/cO9uKKpjC+BMIC/Fv2Ipe50C7wL0wd+YlH5Kw\u003d\", \"ZxCK8NmXD/qxQEyqBRFYo8WOz/kUHRHA+BXOPC6789o\u003d\", \"civ0dM20+gns15I1mfWo9Jt0YBzbex5QVYwaGjqgcs4\u003d\", \"2v7+H4Fejl7qkIhG2G79UQH+wJ0QpPreOZwulFGWzLI\u003d\", \"vXMaHYsu3vXUFKr78h1vCtaZWhgh1OwZh5O05RGwxkw\u003d\", \"WbswTMpSfvjDqroD6lDGb2VDeljBPlMsAchJ+0L+3U4\u003d\", \"psQ1PrYXqFtm6T3uF1q91rl1dhNiykO58GpOdq1ZaKI\u003d\", \"DOCeoSMovIvLExkhIvisow9AuNXgeWs4ECkyR6EcqYU\u003d\"], \"checkpoint\": {\"envelope\": \"rekor.sigstore.dev - 1193050959916656506\\n1125772092\\n0Kdj+Z7lnQjSmn0ogJVZDG2H0C/kCafLfjkXgR07A+g\u003d\\n\\n\\u2014 rekor.sigstore.dev wNI9ajBFAiEAiEzjGbYAFTiBEuUaN/qKVWglEQeV/PdkEoD5efHJtbgCIADiD6QekCIhk5uBZ7z2qUPpPwnE41HJ+7dW1pLQEATt\\n\"}}, \"canonicalizedBody\": \"eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiIzMGU5NmZiZTJhOTJjMjQyOTZkZDc2MjAxZGJmNzkzZmI4Nzc3MjEwNjBlODM0OGI5YjY0N2FlYmY0MzA2ODUwIn19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FVUNJUUMxMnRFK2pZTjBxdWRxYnV5Z0dsV3RXMW8yMEJMNWVTMndNSXJ1V04xdHdBSWdhdDNiemRURVlWbUtrd3p3ZHA2eDlrdjFVWmEwQzFMeTlud2JybDJmaUtzPSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVTXdSRU5EUVd4WFowRjNTVUpCWjBsVlRqRnNlVWN3SzNGR2NVOUROVXhxVDNCNFVETndSM0ZITVZOcmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDVFUVROTlZHTXdUMFJSTWxkb1kwNU5hbGwzVGtSQk0wMVVZekZQUkZFeVYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVUxTkd3emRrSTBXbGt6VEZKQ1EyTjRSa05CTjFab1FVWm1lamd4TlhoSU1VMU1RMVVLTDB3M1MyZEpUVUpWYVdwMlpscEVjVk5DY0VjemFuUkxRbGRLWTFKUk1XNUhWbXBqWVhreWRHNTNkMFphYzNoUFFqWlBRMEZZVVhkblowWjNUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlZCSzFkakNtMTJjMFJHYTBaNlJGQTBObkI2ZEdGdldGZHVRV056ZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoUldVUldVakJTUVZGSUwwSkNUWGRGV1VWUVlVaFdibUl3UW5kbFdGSnZZakkwZFdJelNtNU5RM2RIUTJselIwRlJVVUpuTnpoM1FWRkZSUXBJYldnd1pFaENlazlwT0haYU1td3dZVWhXYVV4dFRuWmlVemx6WWpKa2NHSnBPWFpaV0ZZd1lVUkJkVUpuYjNKQ1owVkZRVmxQTDAxQlJVbENRMEZOQ2todGFEQmtTRUo2VDJrNGRsb3liREJoU0ZacFRHMU9kbUpUT1hOaU1tUndZbWs1ZGxsWVZqQmhSRU5DYVhkWlMwdDNXVUpDUVVoWFpWRkpSVUZuVWprS1FraHpRV1ZSUWpOQlRqQTVUVWR5UjNoNFJYbFplR3RsU0Vwc2JrNTNTMmxUYkRZME0ycDVkQzgwWlV0amIwRjJTMlUyVDBGQlFVSnVWMnRRY0RkRlFRcEJRVkZFUVVWbmQxSm5TV2hCVUZSVVoxRnRVREZ3VG5oNmFqZzJXVTk2UVRreFVVcElhalZtUWs1T1VUTkNUa3RtUjNVemQyeDNSRUZwUlVFME5FaG1DamRtUVdzeU9HcHNNMWh4TjJvdlVGUTFVRmgzVUVGMk5qQm9XRWxzZVcxWGVVUlZXR1ZwU1hkRFoxbEpTMjlhU1hwcU1FVkJkMDFFWVZGQmQxcG5TWGdLUVU1MGJtWXZia1J4UzBwSE4zaE9kR3BqVTNSUU5rNUlLMEY2WlRSRFZWRnJjbnBUZURSa2RuUlFabXRLUlhCaU5rNHdWVFYxTVc0eEsydGFiRkZDUmdwRlVVbDRRVTl2UkV0WFprdENUM3BIZEd4YVFYcHNLMVo0T0dVM01WSlFlbk40T0M4M2MxbGtOeXRVYzNsd2RsRnBTeTgwTkhsdGNWbENOMmRJY0hoS0NtWkNSMEZRVVQwOUNpMHRMUzB0UlU1RUlFTkZVbFJKUmtsRFFWUkZMUzB0TFMwSyJ9fX19\"}], \"timestampVerificationData\": {}}, \"messageSi",
+    "scrapedAt": "2026-05-09 00:40:06.27121"
+  },
+  {
+    "id": 389,
+    "url": "https://www.python.org/download/sigstore/",
+    "title": "Sigstore Information | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Starting with the Python 3.11.0, Python 3.10.7, Python 3.9.14, Python 3.8.14, and Python 3.7.14 releases, CPython release artifacts are additionally signed with Sigstore. Starting with Python 3.14, Sigstore is the only method of signing and verification of release artifacts. Releases of Python older than the 3.14 series also include legacy OpenPGP signatures that can be verified using public keys. See more in PEP 761 about this change. This page provides guidance on verifying Sigstore signatures as a CPython consumer, and outlines some motivation for using these additional signatures. Sigstore verification of CPython Releases Introduction to Sigstore Sigstore is a new standard for signing, verifying and protecting software. The Sigstore project is a set of tools and services: a certificate authority a signature transparency log multiple ecosystem-specific signing clients (such as https://pypi.org/p/sigstore/) At a high level, Sigstore uses a certificate authority to tie OpenID Connect (OIDC) identities to ephemeral keys, and uses a transparency log to publish the results of signing events. This eliminates the need for signers to manage private keys. It also allows users to verify signatures based on characteristics of the OIDC identities, such as an email address. More detail about the signing process and the interplay of these tools and services is provided in the Sigstore docs. Additionally, a security model for Sigstore can be found here. Verifying CPython release artifacts with Sigstore Verification requires the presence of two files: the release artifact in question and bundled \"verification materials\" which typically has a file extension of .sigstore. For example, for the Python 3.11.0 source release, you would download the following files: $ wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz\n$ wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz.sigstore\n These verification materials should exist for all release artifacts, and are listed on the downloads page along with their corresponding artifacts. Verification additionally requires prior knowledge of the identity of the signer. For CPython releases, these are the email addresses of the release manager for the given release. The release managers for current and upcoming releases are as follows: Release PEP Release manager OIDC Issuer 3.7 PEP 537 nad@python.org https://github.com/login/oauth 3.8 PEP 569 lukasz@langa.pl https://github.com/login/oauth 3.9 PEP 596 lukasz@langa.pl https://github.com/login/oauth 3.10 PEP 619 pablogsal@python.org https://accounts.google.com 3.11 PEP 664 pablogsal@python.org https://accounts.google.com 3.12 PEP 693 thomas@python.org https://accounts.google.com 3.13 PEP 719 thomas@python.org https://accounts.google.com 3.14 PEP 745 hugo@python.org https://github.com/login/oauth 3.15 PEP 790 hugo@python.org https://github.com/login/oauth 3.16 savannah@python.org https://github.com/login/oauth 3.17 savannah@python.org https://github.com/login/oauth Finally, verification requires a Sigstore client. Using https://pypi.org/p/sigstore/ is recommended: To install with additional install-time assurances including hash-checking and version pinning, you can run the following to install from a fully specified requirements file: $ python -m pip install -r https://raw.githubusercontent.com/sigstore/sigstore-python/main/install/requirements.txt\n Alternatively, to install as usual without these assurances: $ python -m pip install sigstore\n Finally, in the directory where you downloaded the release artifact and verification materials, you can run the following: $ python -m sigstore verify identity \\\n  --bundle Python-3.11.0.tgz.sigstore \\\n  --cert-identity pablogsal@python.org \\\n  --cert-oidc-issuer https://accounts.google.com \\\n  Python-3.11.0.tgz\n Running this command should result in the output OK: Python-3.11.0.tgz, which indicates that the signature is valid. Migrating from GPG signatures Before Sigstore signatures were available, CPython also provided GPG signatures as a means of verifying the origin and integrity of artifacts. Below are some tips for migrating an existing configuration verifying using GPG to adopting Sigstore. Instead of using a GPG key for verification, use the above table to choose which signing identity and OIDC issuer is expected for each Python release version. After an artifact has been verified using GPG, it\u0027s common to pin the artifact to a specific checksum value like SHA-256. If this value is already available, it\u0027s possible to check the validity of the artifact checksum using Sigstore using only the artifact checksum. For example, using a checksum of deadbeef...: $ python -m sigstore verify identity \\\n  --bundle Python-3.11.0.tgz.sigstore \\\n  --cert-identity pablogsal@python.org \\\n  --cert-oidc-issuer https://accounts.",
+    "scrapedAt": "2026-05-09 00:40:05.089628"
+  },
+  {
+    "id": 388,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-build-changes",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 00:40:03.772686"
+  },
+  {
+    "id": 387,
+    "url": "https://docs.python.org/3/deprecations/index.html",
+    "title": "Deprecations — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Deprecations | Theme Auto Light Dark | Deprecations¶ Pending removal in Python 3.15¶ The import system: Setting __cached__ on a module while failing to set __spec__.cached is deprecated. In Python 3.15, __cached__ will cease to be set or take into consideration by the import system or standard library. (gh-97879) Setting __package__ on a module while failing to set __spec__.parent is deprecated. In Python 3.15, __package__ will cease to be set or take into consideration by the import system or standard library. (gh-97879) ctypes: The undocumented ctypes.SetPointerType() function has been deprecated since Python 3.13. http.server: The obsolete and rarely used CGIHTTPRequestHandler has been deprecated since Python 3.13. No direct replacement exists. Anything is better than CGI to interface a web server with a request handler. The --cgi flag to the python -m http.server command-line interface has been deprecated since Python 3.13. importlib: load_module() method: use exec_module() instead. locale: The getdefaultlocale() function has been deprecated since Python 3.11. Its removal was originally planned for Python 3.13 (gh-90817), but has been postponed to Python 3.15. Use getlocale(), setlocale(), and getencoding() instead. (Contributed by Hugo van Kemenade in gh-111187.) pathlib: PurePath.is_reserved() has been deprecated since Python 3.13. Use os.path.isreserved() to detect reserved paths on Windows. platform: java_ver() has been deprecated since Python 3.13. This function is only useful for Jython support, has a confusing API, and is largely untested. sysconfig: The check_home argument of sysconfig.is_python_build() has been deprecated since Python 3.12. threading: RLock() will take no arguments in Python 3.15. Passing any arguments has been deprecated since Python 3.14, as the Python version does not permit any arguments, but the C version allows any number of positional or keyword arguments, ignoring every argument. types: types.CodeType: Accessing co_lnotab was deprecated in PEP 626 since 3.10 and was planned to be removed in 3.12, but it only got a proper DeprecationWarning in 3.12. May be removed in 3.15. (Contributed by Nikita Sobolev in gh-101866.) typing: The undocumented keyword argument syntax for creating NamedTuple classes (for example, Point \u003d NamedTuple(\"Point\", x\u003dint, y\u003dint)) has been deprecated since Python 3.13. Use the class-based syntax or the functional syntax instead. When using the functional syntax of TypedDicts, failing to pass a value to the fields parameter (TD \u003d TypedDict(\"TD\")) or passing None (TD \u003d TypedDict(\"TD\", None)) has been deprecated since Python 3.13. Use class TD(TypedDict): pass or TD \u003d TypedDict(\"TD\", {}) to create a TypedDict with zero field. The typing.no_type_check_decorator() decorator function has been deprecated since Python 3.13. After eight years in the typing module, it has yet to be supported by any major type checker. wave: The getmark(), setmark(), and getmarkers() methods of the Wave_read and Wave_write classes have been deprecated since Python 3.13. zipimport: load_module() has been deprecated since Python 3.10. Use exec_module() instead. (Contributed by Jiahao Li in gh-125746.) Pending removal in Python 3.16¶ The import system: Setting __loader__ on a module while failing to set __spec__.loader is deprecated. In Python 3.16, __loader__ will cease to be set or taken into consideration by the import system or the standard library. array: The \u0027u\u0027 format code (wchar_t) has been deprecated in documentation since Python 3.3 and at runtime since Python 3.13. Use the \u0027w\u0027 format code (Py_UCS4) for Unicode characters instead. asyncio: asyncio.iscoroutinefunction() is deprecated and will be removed in Python 3.16; use inspect.iscoroutinefunction() instead. (Contributed by Jiahao Li and Kumar Aditya in gh-122875.) asyncio policy system is deprecated and will be removed in Python 3.16. In particular, the following classes and functions are deprecated: asyncio.AbstractEventLoopPolicy asyncio.DefaultEventLoopPolicy asyncio.WindowsSelectorEventLoopPolicy asyncio.WindowsProactorEventLoopPolicy asyncio.get_event_loop_policy() asyncio.set_event_loop_policy() Users should use asyncio.run() or asyncio.Runner with loop_factory to use the desired event loop implementation. For example, to use asyncio.SelectorEventLoop on Windows: import asyncio\n\nasync def main():\n    ...\n\nasyncio.run(main(), loop_factory\u003dasyncio.SelectorEventLoop)\n (Contributed by Kumar Aditya in gh-127949.) builtins: Bitwise inversion on boolean types, ~True or ~False has been deprecated since Python 3.12, as it produces surprising and unintuitive results (-2 and -1). Use not x instead for the logical negation of a Boolean. In the rare case that you need the bitwise inversion of the underlying integer, convert to int explicitly (~int(x)). functools: Calling the Python implementation of functools.reduce() with function or sequence ",
+    "scrapedAt": "2026-05-09 00:40:02.604292"
+  },
+  {
     "id": 386,
     "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-macos11.pkg",
     "title": "",
@@ -2698,26 +2733,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 387,
-    "url": "https://docs.python.org/3/deprecations/index.html"
-  },
-  {
-    "id": 388,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-build-changes"
-  },
-  {
-    "id": 389,
-    "url": "https://www.python.org/download/sigstore/"
-  },
-  {
-    "id": 390,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-win32.zip.sigstore"
-  },
-  {
-    "id": 391,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-macos11.pkg.sigstore"
   },
   {
     "id": 392,
@@ -86489,10 +86504,199 @@ window.searchData = [
     "id": 31084,
     "url": "https://github.com/Tincre",
     "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 31128,
+    "url": "https://docs.python.org/3/faq/installed.html",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 31131,
+    "url": "https://docs.python.org/3/deprecations/index.html#deprecations",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 31154,
+    "url": "https://docs.python.org/3/deprecations/index.html#pending-removal-in-future-versions",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 31187,
+    "url": "https://docs.python.org/3/deprecations/index.html#c-api-deprecations",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 31263,
+    "url": "https://docs.python.org/3/deprecations/index.html#id1",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 31265,
+    "url": "https://docs.python.org/3/deprecations/index.html#id2",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 31267,
+    "url": "https://docs.python.org/3/deprecations/index.html#id3",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 31292,
+    "url": "https://docs.python.org/3/deprecations/index.html#",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 31330,
+    "url": "https://github.com/python/cpython/blob/main/Doc/deprecations/index.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 31358,
+    "url": "https://docs.python.org/3/deprecations/index.html#pending-removal-in-python-3-16",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 31359,
+    "url": "https://docs.python.org/3/deprecations/index.html#pending-removal-in-python-3-17",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 31361,
+    "url": "https://docs.python.org/3/deprecations/index.html#pending-removal-in-python-3-18",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 31362,
+    "url": "https://docs.python.org/3/deprecations/index.html#pending-removal-in-python-3-19",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 31379,
+    "url": "https://docs.python.org/3/deprecations/index.html#pending-removal-in-python-3-15",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 32619,
+    "url": "https://www.python.org/downloads/release/python-3110/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32620,
+    "url": "https://peps.python.org/pep-0719/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32621,
+    "url": "https://github.com/sigstore/sigstore-python/issues",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32623,
+    "url": "https://www.python.org/downloads/metadata/pgp/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32624,
+    "url": "https://peps.python.org/pep-0569/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32625,
+    "url": "https://peps.python.org/pep-0537/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32626,
+    "url": "https://docs.sigstore.dev/cosign/system_config/installation",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32627,
+    "url": "https://docs.sigstore.dev",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32628,
+    "url": "https://pypi.org/p/sigstore/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32629,
+    "url": "https://peps.python.org/pep-0619/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32630,
+    "url": "https://www.python.org/downloads/release/python-3914/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32631,
+    "url": "https://peps.python.org/pep-0693/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32632,
+    "url": "https://www.python.org/downloads/release/python-3814/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32634,
+    "url": "https://peps.python.org/pep-0596/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32635,
+    "url": "https://peps.python.org/pep-0664/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32636,
+    "url": "https://sigstore.dev",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32637,
+    "url": "https://www.python.org/downloads/release/python-3107/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32638,
+    "url": "https://docs.sigstore.dev/security",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 32639,
+    "url": "https://www.python.org/downloads/release/python-3714/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-build-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-build-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Deprecations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Deprecations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d160\u0026v\u003d4",
     "alt": "@python",
