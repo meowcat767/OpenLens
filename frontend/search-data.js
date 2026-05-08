@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 115,
+    "url": "https://www.bbc.co.uk/videos/ce9r1e20p2vo",
+    "title": "Neuroplasticity: The incredible story of Phineas Gage - BBC",
+    "content": "The \u0027freak accident\u0027 that changed our understanding of the human brain To play this video you need to enable JavaScript in your browser. This video can not be played The \u0027freak accident\u0027 that changed our understanding of the human brain Close A terrible accident left construction worker Phineas Gage with serious brain damage. Amazingly, he recovered - forever changing our understanding of the human brain. Made by BBC Ideas in partnership with the Royal Society., external Watch My Brain: After the Rupture on BBC iPlayer (UK) Listen to All in the Mind on BBC Radio 4 Watch Secrets of the Brain on BBC iPlayer (UK) Animation by Sheetal Thankey, narrated by Claudia Hammond 💡Watch more videos at BBC Ideas Published 25 September 2025 Share close panel Share page Copy link About sharing Read description Explore more The \u0027freak accident\u0027 that changed our understanding of the human brain. Video, 00:05:00The \u0027freak accident\u0027 that changed our understanding of the human brain Published 25 September 2025 5:00 Up Next. The woman whose paintings changed science forever. Video, 00:03:57The woman whose paintings changed science forever Published 29 August 2024 Up Next 3:57 The man who tried to eat every animal on Earth. Video, 00:03:53The man who tried to eat every animal on Earth Published 10 July 2024 3:53 Three ways to breathe your way to better health. Video, 00:04:53Three ways to breathe your way to better health Published 10 July 2024 4:53",
+    "scrapedAt": "2026-05-09 00:30:58.399523"
+  },
+  {
+    "id": 114,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC",
+    "title": "Death Valley - Series 1: Episode 1 - BBC iPlayer",
+    "content": "Close menu Home Death Valley Series 1: Episode 1 JavaScript seems to be disabled. Please enable JavaScript to take full advantage of iPlayer. Death Valley - Series 1: Episode 1 Death Valley Series 1: Episode 1 DS Janie Mallowan teams up with eccentric national treasure and beloved TV detective John Chapel, to solve a murder. More Duration 46 mins First shown8:15pm 25 May 2025 Available for over a year Watchlist Audio DescribedSign Language Series 1 Episodes This episode Episode 1 Episode 2 John and Janie solve the mysterious death of a walker found on a Welsh mountain trail. 44 mins Episode 3 John and Janie disagree on how to investigate the untimely death of a best man. 44 mins Episode 4 John goes undercover at an amateur dramatics group to help Janie solve a case. 45 mins Episode 5 John and Janie are stuck in a countryside manor after a murder mystery party goes wrong. 44 mins Episode 6 John and Janie struggle to get along as they unravel a mystery involving Janie’s past. 45 mins Programme website Credits Explore the BBC",
+    "scrapedAt": "2026-05-09 00:30:57.352009"
+  },
+  {
+    "id": 113,
+    "url": "https://www.bbc.co.uk/sounds/play/m001ng37",
+    "title": "Soul Music - Fast Car - BBC Sounds",
+    "content": "Close menu Use BBC.com or the new BBC App to listen to BBC podcasts, Radio 4 and the World Service outside the UK. Find out how to listen to other BBC stations Episode details Radio 4,·01 Jul 2023,·28 mins Fast Car Soul Music Play BookmarkBookmark SubscribeSubscribe Available for over a year \u0027Fast Car\u0027 is one of Tracy Chapman\u0027s biggest hits, with listeners from around the world finding striking connections with their own lives in the song\u0027s story. It was released in April 1988, and that summer, the American singer-songwriter performed it to a global audience of 600 million at Nelson Mandela\u0027s 70th Birthday Tribute. This broadcast catapulted Tracy and the song to super-stardom, as it became a top ten hit on both sides of the Atlantic and received three Grammy nominations. Ever since, \u0027Fast Car\u0027 has resonated with people around the world. The lyrics describe a working woman trying to escape a cycle of poverty, dreaming of a plan to leave in a \"fast car\". She speaks of wanting to get out of the life she finds herself in, living in a shelter, and driving towards the city to find something better. This episode features the personal stories of Fitzroy Samuels in Kingston, Jamaica; Priscilla Munson in Indiana, U.S; Gemma Brown in Gateshead, UK and Dev Cuny in California, U.S. We also hear from Alister Wright in Sydney, Australia whose band, Vlossom, covered Fast Car; and Nigel Williamson, music journalist who has met and interviewed Tracy Chapman many times. Produced by Eliza Lomas, BBC Audio Bristol Programme Website Show less More episodes Cymraeg Gaeilge Gàidhlig BBC Sounds Help Contacts, Privacy and Information Help with Signing In Newsletter Explore the BBC",
+    "scrapedAt": "2026-05-09 00:30:56.303863"
+  },
+  {
+    "id": 112,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366",
+    "title": "The Little Drummer Girl - BBC iPlayer",
+    "content": "Close menu Home The Little Drummer Girl Drama The Little Drummer Girl Seduction, betrayal and spies. A fiery actress meets a mysterious stranger, and is caught up in a deadly espionage sting. With Florence Pugh and Alexander Skarsgard. Series 1: Episode 1 (56 mins) Start watching Episode 1 A fiery and brilliant actress is drawn into a dangerous international espionage operation. 56 mins Episode 2 Charlie is recruited to infiltrate a revolutionary cell by Becker and Kurtz. 55 mins Episode 3 Kurtz and Becker race to save Charlie from a fatal mistake. 57 mins Episode 4 Charlie is tortured by feelings for Becker as she is drawn deeper into Michel\u0027s network. 58 mins Episode 5 Charlie is trained by militia in Lebanon and earns the trust of Fatmeh, Khalil\u0027s sister. 58 mins Episode 6 Charlie prepares for her part in Khalil\u0027s next strike, but has she really switched sides? 58 mins Explore the BBC",
+    "scrapedAt": "2026-05-09 00:30:55.188427"
+  },
+  {
+    "id": 111,
+    "url": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero",
+    "title": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "content": "Image source, Reuters ByHugh Pym, Health editor and Tabby Wilson Published 8 May 2026, 07:03 BST A third British national has suspected hantavirus in connection with an outbreak on board the cruise ship MV Hondius, the government has said. The patient is currently on the remote Atlantic island of Tristan da Cunha, where the ship stopped in mid-April. Two other British men have confirmed cases - one remains in a stable condition in the Netherlands after being evacuated from the ship on Wednesday, while the other remains in intensive care after being flown to South Africa last month. Five cases of hantavirus have been confirmed, including one of the three passengers on the cruise who died. The MV Hondius is expected to dock in the Canary Islands at the weekend, where the government has confirmed it will be met by a chartered plane to fly the remaining British passengers and crew on the cruise ship back to the UK. Although none of the remaining Britons are currently displaying symptoms, they will be asked to isolate upon their return home. British national Martin Anstee, a 56-year-old retired police officer and an expedition guide on board the MV Hondius, was evacuated to the Netherlands on Wednesday alongside a 41-year-old Dutch crew member and a 65-year-old German. He remains in a stable condition and told the BBC that he was \"fine\". Another British passenger, 69, has a confirmed case and was medically evacuated to South Africa at the end of April. He remains in intensive care and has been said by officials to be \"doing better\". Britons on hantavirus cruise ship face 45 days of self-isolation Published 23 hours ago What is hantavirus and how does it spread? Published 1 day ago Race to trace passengers who left hantavirus cruise ship at island Published 23 hours ago Two other British nationals are already self-isolating at home in the UK after potential exposure. They are doing so voluntarily and do not have any symptoms. They were part of a group of 30 people from a dozen nations - including seven Britons - who disembarked from the ship at St Helena in the south Atlantic on 24 April, according to operator Oceanwide Expeditions. The operator said the first confirmed case of hantavirus was not reported until 4 May and that all guests who disembarked the ship had been contacted. Four Britons who disembarked on St Helena remain there. They do not have symptoms but are in contact with health officials. It is understood that medical staff will be sent to the islands to provide support. A UK health official has said that British passengers who were on MV Hondius will likely be asked to self-isolate for 45 days on returning to the country. Contact tracing is under way in several other countries for dozens of passengers who left the Dutch cruise ship before the outbreak was detected - including Switzerland and the Netherlands. The World Health Organization (WHO) called it a \"serious incident\" but said the risk to the public was low, stressing the outbreak was not similar to the Covid-19 pandemic. British people affected by hantavirus outbreak Three Britons are confirmed or suspected to have contracted hantavirus One of them is being treated in the Netherlands, another man is being treated in South Africa, and a third is on the remote Atlantic island of Trista da Cunha Seven Britons disembarked the MV Hondius in St Helena on 24 April before the first confirmed case of hantavirus was reported on 4 May, with four remaining there Two of the Britons who disembarked on 24 April have already returned to the UK and are self-isolating voluntarily but do not have symptoms The seventh person has not yet been traced, the UKHSA has said The origin of the outbreak is still unknown and it is not known if people other than cruise ship passengers and crew have been infected with the disease. WHO director-general Tedros Ghebreyesus told a news conference that the first two cases had \"travelled through Argentina, Chile and Uruguay on a bird-watching trip which included visits to sites where the species of rat known to carry the virus was present\". One of the three deaths was a Dutch woman, 69, who left the MV Hondius when it stopped at St Helena on 24 April and travelled to South Africa where she died two days later. Her husband died on board the vessel on 11 April, while a German woman also died on board. Neither are confirmed to have had the virus. Hantavirus typically spreads from rodents such as mice and rats, but experts believe that in this circumstance it may have passed between humans who were in close contact. Symptoms can include fever, extreme fatigue, stomach pain, vomiting and shortness of breath, usually appearing between two to four weeks after being exposed to the virus. The UKHSA said the virus was not spread through everyday contact such as walking in public spaces and that in the rare instances where a person has caught it from another person, they have had \"close and prolonged\" contact. Are you on the ship or do you",
+    "scrapedAt": "2026-05-09 00:30:53.883781"
+  },
+  {
     "id": 110,
     "url": "https://www.bbc.co.uk/news/articles/c0r255xlr59o",
     "title": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
@@ -768,26 +803,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 111,
-    "url": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
-  },
-  {
-    "id": 112,
-    "url": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
-  },
-  {
-    "id": 113,
-    "url": "https://www.bbc.co.uk/sounds/play/m001ng37"
-  },
-  {
-    "id": 114,
-    "url": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC"
-  },
-  {
-    "id": 115,
-    "url": "https://www.bbc.co.uk/videos/ce9r1e20p2vo"
   },
   {
     "id": 116,
@@ -25528,10 +25543,344 @@ window.searchData = [
     "id": 12484,
     "url": "https://www.bbc.co.uk/news/topics/cp07jzgm24jt",
     "parentUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "id": 12529,
+    "url": "https://www.bbc.co.uk/news/articles/c9wepl8we90o",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "id": 12530,
+    "url": "https://www.bbc.co.uk/send/u236848972",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "id": 12535,
+    "url": "https://www.bbc.co.uk/news/articles/c8r8j1l6j0go",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "id": 12545,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0bqr4f6/the-little-drummer-girl-series-1-episode-1",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "id": 12546,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366/the-little-drummer-girl#",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "id": 12547,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0bt8t5j/the-little-drummer-girl-series-1-episode-5",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "id": 12548,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0brgchg/the-little-drummer-girl-series-1-episode-2",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "id": 12549,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0bs494y/the-little-drummer-girl-series-1-episode-3",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "id": 12550,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0bsrc4w/the-little-drummer-girl-series-1-episode-4",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "id": 12552,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0bv1fmv/the-little-drummer-girl-series-1-episode-6",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "id": 12558,
+    "url": "https://www.bbc.co.uk/sounds/brand/b008mj7p",
+    "parentUrl": "https://www.bbc.co.uk/sounds/play/m001ng37"
+  },
+  {
+    "id": 12560,
+    "url": "https://www.bbc.co.uk/sounds/play/m001ng37#",
+    "parentUrl": "https://www.bbc.co.uk/sounds/play/m001ng37"
+  },
+  {
+    "id": 12562,
+    "url": "https://www.bbc.co.uk/programmes/m001ng37",
+    "parentUrl": "https://www.bbc.co.uk/sounds/play/m001ng37"
+  },
+  {
+    "id": 12564,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002cg3f/death-valley-series-1-episode-2?seriesId\u003dm0029db3-structural-1-m002cg39",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "id": 12565,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002cg3r/death-valley-series-1-episode-6?seriesId\u003dm0029db3-structural-1-m002cg39",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "id": 12566,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/ad/death-valley-series-1-episode-1?seriesId\u003dm0029db3-structural-1-m002cg39",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "id": 12567,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002cg3h/death-valley-series-1-episode-3?seriesId\u003dm0029db3-structural-1-m002cg39",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "id": 12569,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/m0029db3/death-valley",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "id": 12570,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC#",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "id": 12571,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/sign/death-valley-series-1-episode-1?seriesId\u003dm0029db3-structural-1-m002cg39",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "id": 12572,
+    "url": "https://www.bbc.co.uk/programmes/m0029db3",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "id": 12573,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002cg3m/death-valley-series-1-episode-4?seriesId\u003dm0029db3-structural-1-m002cg39",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "id": 12574,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002cg3n/death-valley-series-1-episode-5?seriesId\u003dm0029db3-structural-1-m002cg39",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "id": 12576,
+    "url": "https://www.bbc.co.uk/programmes/m002cg3c#credits",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "id": 12577,
+    "url": "https://royalsociety.org",
+    "parentUrl": "https://www.bbc.co.uk/videos/ce9r1e20p2vo"
+  },
+  {
+    "id": 12578,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m0029cpt/arena-my-brain-after-the-rupture",
+    "parentUrl": "https://www.bbc.co.uk/videos/ce9r1e20p2vo"
+  },
+  {
+    "id": 12579,
+    "url": "https://www.bbc.co.uk/programmes/m002bbxm",
+    "parentUrl": "https://www.bbc.co.uk/videos/ce9r1e20p2vo"
+  },
+  {
+    "id": 12580,
+    "url": "https://www.bbc.co.uk/videos/cxr2qpw6vppo",
+    "parentUrl": "https://www.bbc.co.uk/videos/ce9r1e20p2vo"
+  },
+  {
+    "id": 12582,
+    "url": "https://www.bbc.co.uk/topics/cxw2g82zr01t",
+    "parentUrl": "https://www.bbc.co.uk/videos/ce9r1e20p2vo"
+  },
+  {
+    "id": 12583,
+    "url": "https://www.bbc.co.uk/programmes/b006qxx9",
+    "parentUrl": "https://www.bbc.co.uk/videos/ce9r1e20p2vo"
+  },
+  {
+    "id": 12584,
+    "url": "https://www.bbc.co.uk/videos/c978294gerpo",
+    "parentUrl": "https://www.bbc.co.uk/videos/ce9r1e20p2vo"
+  },
+  {
+    "id": 12586,
+    "url": "https://www.bbc.co.uk/videos/cxe2j3gzz7vo",
+    "parentUrl": "https://www.bbc.co.uk/videos/ce9r1e20p2vo"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/83bf/live/b388c760-aa95-11f0-ba75-093eca1ac29b.jpg",
+    "alt": "A death mask and a skull belonging to Phineas Gage",
+    "pageTitle": "Neuroplasticity: The incredible story of Phineas Gage - BBC",
+    "pageUrl": "https://www.bbc.co.uk/videos/ce9r1e20p2vo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/426a/live/a1dc0580-4b51-11ef-8f0f-0577398c3339.jpg",
+    "alt": "Illustration of a woman painting a flower",
+    "pageTitle": "Neuroplasticity: The incredible story of Phineas Gage - BBC",
+    "pageUrl": "https://www.bbc.co.uk/videos/ce9r1e20p2vo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/0841/live/9bed5880-3e00-11ef-96a8-e710c6bfc866.jpg",
+    "alt": "Illustration of a man eating with a fork",
+    "pageTitle": "Neuroplasticity: The incredible story of Phineas Gage - BBC",
+    "pageUrl": "https://www.bbc.co.uk/videos/ce9r1e20p2vo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/99a6/live/17cefe70-3ebc-11ef-96a8-e710c6bfc866.jpg",
+    "alt": "Woman in a white shirt sits cross-legged with her eyes closed ",
+    "pageTitle": "Neuroplasticity: The incredible story of Phineas Gage - BBC",
+    "pageUrl": "https://www.bbc.co.uk/videos/ce9r1e20p2vo"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Neuroplasticity: The incredible story of Phineas Gage - BBC",
+    "pageUrl": "https://www.bbc.co.uk/videos/ce9r1e20p2vo"
+  },
+  {
+    "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dbbc_one::iplayer.tv.episode.death_valley.series_1_episode_1.m002cg3c.page\u0026x1\u003d[page]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[player-episode]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[iplayer]\u0026x12\u003d[bbc_one]",
+    "alt": "",
+    "pageTitle": "Death Valley - Series 1: Episode 1 - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "src": "https://iplayer-web.files.bbci.co.uk/iplayer-web-app-playback-v2/1.0.0-2768.aarch64/img/dogs/bbc_one.svg",
+    "alt": "BBC One",
+    "pageTitle": "Death Valley - Series 1: Episode 1 - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "src": "http://b.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Death Valley - Series 1: Episode 1 - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episode/m002cg3c/death-valley-series-1-episode-1?at_mid\u003dcawsGWwWrV\u0026at_campaign\u003dDeath_Valley\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0029db3\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dDeath_Valley\u0026at_bbc_team\u003dBBC"
+  },
+  {
+    "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dunknown\u0026x1\u003d[]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[sounds]\u0026x12\u003d[]",
+    "alt": "",
+    "pageTitle": "Soul Music - Fast Car - BBC Sounds",
+    "pageUrl": "https://www.bbc.co.uk/sounds/play/m001ng37"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400x400/p0fxbpnd.jpg",
+    "alt": "",
+    "pageTitle": "Soul Music - Fast Car - BBC Sounds",
+    "pageUrl": "https://www.bbc.co.uk/sounds/play/m001ng37"
+  },
+  {
+    "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dbbc_one::iplayer.tv.tleo.the_little_drummer_girl.b0bqs366.page\u0026x1\u003d[page]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[list-tleo]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[iplayer]\u0026x12\u003d[bbc_one]",
+    "alt": "",
+    "pageTitle": "The Little Drummer Girl - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "src": "http://b.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "The Little Drummer Girl - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/ad9b/live/d59ba950-4a7a-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A drone view of the cruise ship MV Hondius, carrying passengers suspected of having cases of hantavirus on board, leaving Cape Verde on 6 May.",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/214d/live/4d682620-4a7b-11f1-bd52-e755d604ece4.png",
+    "alt": "Your Voice banner image. Your Voice is written in white against a purple background.  ",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/b9e2/live/f2e37910-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "A thin, grey banner promoting the News Daily newsletter. On the right, there is a graphic of an orange sphere with two concentric crescent shapes around it in a red-orange gradient, like a sound wave. The banner reads: \"The latest news in your inbox first",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/db69/live/015d7fe0-4aef-11f1-ac78-2112837ce2aa.png",
+    "alt": "Nigel Farage ",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/60a2/live/7bfa1c10-cadc-11f0-a892-01d657345866.jpg",
+    "alt": "Sir David Attenborough being filmed in front of the sea and mountains for Life on Earth in 1979",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/af4f/live/8c892de0-4ac1-11f1-b55d-0f258dce1735.png",
+    "alt": "A composite image of 5 people  in flamboyant costumes at the Met gala. In the centre in a largest part of the image is a women in white  wearing a mask over her face",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b327/live/76b6ee00-4a38-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A person in protective clothing walks next to an ambulance during an evacuation operation of suspected hantavirus patients, following an outbreak on the cruise ship MV Hondius, in Praia, Cape Verde, May 6, 2026",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/2d4c/live/d268f6b0-4a1c-11f1-a7ce-b934bcb15ff4.jpg",
+    "alt": "Two ladies are sat beside each other. The one on the left is wearing a mustard cardigan and has white wavy hair. The one on the right is wearing a pink collarless shirt and has blonde and brown hair. ",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/dd4d/live/992a5b50-494f-11f1-bd44-e578c5bd51ff.png",
+    "alt": "A pregnant woman stands in a garden with her hand on her belly. She has long, straight, dark hair and is wearing a matching top and trousers which are white with some patches of black. She also has a light brown hoodie on. ",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Third British national has suspected hantavirus infection, government says - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
   {
     "src": "https://static.files.bbci.co.uk/elections/images/uk2026/election-logo-cutout-en.svg",
     "alt": "Election",
