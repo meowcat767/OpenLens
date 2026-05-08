@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 220,
+    "url": "https://flask.palletsprojects.com/",
+    "title": "Welcome to Flask — Flask Documentation (3.1.x)",
+    "content": "Navigation index modules | next | Flask Documentation (3.1.x) » Welcome to Flask Welcome to Flask¶ Welcome to Flask’s documentation. Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. Get started with Installation and then get an overview with the Quickstart. There is also a more detailed Tutorial that shows how to create a small but complete application with Flask. Common patterns are described in the Patterns for Flask section. The rest of the docs describe each component of Flask in detail, with a full reference in the API section. Flask depends on the Werkzeug WSGI toolkit, the Jinja template engine, and the Click CLI toolkit. Be sure to check their documentation as well as Flask’s when looking for information. User’s Guide¶ Flask provides configuration and conventions, with sensible defaults, to get started. This section of the documentation explains the different parts of the Flask framework and how they can be used, customized, and extended. Beyond Flask itself, look for community-maintained extensions to add even more functionality. Installation Python Version Dependencies Virtual environments Install Flask Quickstart A Minimal Application Debug Mode HTML Escaping Routing Static Files Rendering Templates Accessing Request Data Redirects and Errors About Responses Sessions Message Flashing Logging Hooking in WSGI Middleware Using Flask Extensions Deploying to a Web Server Tutorial Project Layout Application Setup Define and Access the Database Blueprints and Views Templates Static Files Blog Blueprint Make the Project Installable Test Coverage Deploy to Production Keep Developing! Templates Jinja Setup Standard Context Controlling Autoescaping Registering Filters Context Processors Streaming Testing Flask Applications Identifying Tests Fixtures Sending Requests with the Test Client Following Redirects Accessing and Modifying the Session Running Commands with the CLI Runner Tests that depend on an Active Context Handling Application Errors Error Logging Tools Error Handlers Custom Error Pages Blueprint Error Handlers Returning API Errors as JSON Logging Debugging Debugging Application Errors In Production The Built-In Debugger External Debuggers Logging Basic Configuration Email Errors to Admins Injecting Request Information Other Libraries Configuration Handling Configuration Basics Debug Mode Builtin Configuration Values Configuring from Python Files Configuring from Data Files Configuring from Environment Variables Configuration Best Practices Development / Production Instance Folders Signals Core Signals Subscribing to Signals Creating Signals Sending Signals Signals and Flask’s Request Context Decorator Based Signal Subscriptions Class-based Views Basic Reusable View URL Variables View Lifetime and self View Decorators Method Hints Method Dispatching and APIs Application Structure and Lifecycle Application Setup Serving the Application How a Request is Handled The Application Context Purpose of the Context Lifetime of the Context Manually Push a Context Storing Data Events and Signals The Request Context Purpose of the Context Lifetime of the Context Manually Push a Context How the Context Works Callbacks and Errors Notes On Proxies Modular Applications with Blueprints Why Blueprints? The Concept of Blueprints My First Blueprint Registering Blueprints Nesting Blueprints Blueprint Resources Building URLs Blueprint Error Handlers Extensions Finding Extensions Using Extensions Building Extensions Command Line Interface Application Discovery Run the Development Server Open a Shell Environment Variables From dotenv Environment Variables From virtualenv Custom Commands Plugins Custom Scripts PyCharm Integration Development Server Command Line In Code Working with the Shell Command Line Interface Creating a Request Context Firing Before/After Request Further Improving the Shell Experience Patterns for Flask Large Applications as Packages Application Factories Application Dispatching Using URL Processors Using SQLite 3 with Flask SQLAlchemy in Flask Uploading Files Caching View Decorators Form Validation with WTForms Template Inheritance Message Flashing JavaScript, fetch, and JSON Lazily Loading Views MongoDB with MongoEngine Adding a favicon Streaming Contents Deferred Request Callbacks Adding HTTP Method Overrides Request Content Checksums Background Tasks with Celery Subclassing Flask Single-Page Applications Security Considerations Resource Use Cross-Site Scripting (XSS) Cross-Site Request Forgery (CSRF) JSON Security Security Headers Host Header Validation Copy/Paste to Terminal Deploying to Production Self-Hosted Options Hosting Platforms Async with Gevent Enabling gevent Combining with async/await Using async and await Performance Background tasks When to use Quart instead Extensions Other event loops API Reference¶ If you are looking for information on a specific function, class or me",
+    "scrapedAt": "2026-05-09 00:34:15.622468"
+  },
+  {
+    "id": 219,
+    "url": "https://docs.anthropic.com/",
+    "title": "Documentation - Claude API Docs",
+    "content": "Cookie settings We use cookies to deliver and improve our services, analyze site usage, and if you agree, to customize or personalize your experience and market our services to you. You can read our Cookie Policy here. CustomizeCustomize Cookie SettingsRejectReject All CookiesAcceptAccept All Cookies Loading... Browse Loading... Loading... Loading... Loading... Loading... Loading... Loading... Loading... Loading... Loading... Loading... Loading... Claude Platform Start building with Claude Everything you need to integrate Claude into your applications. From first API call to production. What do you want to build? ⌘K Quickstart Get API key API reference PythonTypeScriptGoJavaRubyPHPC#cURLCLI import anthropic\n\nclient \u003d anthropic.Anthropic()\n\nmessage \u003d client.messages.create(\n  model\u003d\"claude-opus-4-7\",\n  max_tokens\u003d1024,\n  messages\u003d[{\n    \"role\": \"user\",\n    \"content\": \"Hello, Claude\"\n  }]\n)\nprint(message.content[0].text) Platform Choose how you build Pick the developer surface that matches your approach, and the infrastructure that fits your stack. Messages Direct model access. You construct every turn, manage conversation state, and write your own tool loop. Quickstart API reference Client SDKs Managed Agents Fully managed agent infrastructure. Deploy and manage autonomous agents in stateful sessions with persistent event history. Quickstart API reference Define your agent AWS Bedrock Google Cloud Vertex AI Microsoft Foundry Developer journey From idea to production Follow the lifecycle or jump to what you need. MessagesManaged Agents 1 Get started Quickstart Get API key Choose a model Install an SDK Try the Workbench 2 Build Messages API Extended thinking Vision Tool use Web search Code execution Structured outputs Prompt caching Streaming 3 Evaluate \u0026 ship Prompting best practices Run evals Batch testing Safety \u0026 guardrails Rate limits \u0026 errors Cost optimization 4 Operate Workspaces \u0026 admin API key management Usage monitoring Model migration Models The Claude model family Choose the right model for your use case. Most capable Opus 4.7claude-opus-4-7 Best for complex analysis, coding, and creative tasks requiring deep reasoning. Best balance Sonnet 4.6claude-sonnet-4-6 Ideal balance of intelligence and speed for most production workloads. Fastest Haiku 4.5claude-haiku-4-5 Lightning-fast responses for high-volume, latency-sensitive applications. Resources Keep learning Courses Interactive courses to master Claude. Cookbook Code samples and patterns. Quickstarts Deployable starter apps. What\u0027s new Latest features and updates. Claude Code An agentic coding assistant in your terminal.",
+    "scrapedAt": "2026-05-09 00:34:14.262736"
+  },
+  {
+    "id": 218,
+    "url": "https://www.djangoproject.com/",
+    "title": "The web framework for perfectionists with deadlines | Django",
+    "content": "Skip to main content Django makes it easier to build better web apps more quickly and with less code. Get started with Django Until May 7, 2026, get PyCharm for 30% off! Get 💸✨30%✨💸 off a new or renewal annual PyCharm Professional license while supporting the Django Software Foundation. 🎁 Now includes renewals, and every purchase helps fund the DSF. Get PyCharm for 30% off Meet Django Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source. Ridiculously fast. Django was designed to help developers take applications from concept to completion as quickly as possible. Reassuringly secure. Django takes security seriously and helps developers avoid many common security mistakes. Exceedingly scalable. Some of the busiest sites on the web leverage Django’s ability to quickly and flexibly scale. Learn more about Django Join the Community Forum - Post a question Discord - Chat with us Back to Top Additional Information Additional Information Download latest release: 6.0.5 Django documentation Support Django! Alan donated to the Django Software Foundation to support Django development. Donate today! Latest news Announcing the Google Summer of Code 2026 contributors for Django We are excited to announce the contributors selected for Google Summer of Code 2026 with Django. This year saw strong interest from the community, with over 200 proposals submitted. Posted by Apoorv Garg on May 5, 2026 Django security releases issued: 6.0.5 and 5.2.14 Django 6.0.5 and 5.2.14 fix 3 security issues Posted by Sarah Boyce on May 5, 2026 More news New to Django? Installation guide Write your first Django app Getting started with Django The power of Django Object-relational mapper Automatic admin interface Robust template system Quick internationalization Explore more features Get involved Ticket system Report bugs and make feature requests Development dashboard see what\u0027s currently being worked on Inside the Django community Get Help Django Discord Server Join the Django Discord Community Official Django Forum Join the community on the Django Forum. The Django Software Foundation About the Foundation Our non-profit supports the project Support Django Your contribution makes Django stronger Contact the Django Software Foundation More about the DSF",
+    "scrapedAt": "2026-05-09 00:34:12.45075"
+  },
+  {
+    "id": 217,
+    "url": "https://www.python.org/psf/donations/",
+    "title": "Support the PSF with a Donation or by becoming a Supporting Member! | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! PSF\u003e\u003e\u003e Donate\u003e\u003e\u003e Donate to the PSF Donate Become a Supporting Member What does the Python Software Foundation do? The Python Software Foundation: Awards grants and provides resources for furthering the development and adoption of Python. Organizes and hosts the annual PyCon US conference. 2019 brought together 3,393 attendees from 55 countries, a new record for PyCon US! Our sponsors’ support enabled us to award $137,200 USD to 143 attendees. Pays for hardware and other costs for hosting the python.org servers. Hosts the Python Packaging Index. Supports CPython directly through the CPython Developer in Residence Holds and defends the copyright and other intellectual property rights for the Python programming language. Provides infrastructure and operations support to 13 regional conferences, meetups, and Python projects as a fiscal sponsor. Recognizes individuals who have contributed to the Python community with Community Awards. To learn about recent PSF activities, visit the Python Software Foundation\u0027s blog or check out our latest Annual Impact Report. The PSF is a public charity under section 501(c)(3) of the United States Internal Revenue Code. For more information, see the PSF IRS Determination Letter for details. Please consult your tax adviser to determine the tax deductibility of your gift to the PSF. How can I donate? We welcome contributions of any amount. You can support the PSF with a one-time donation, monthly donation, or annual donation to support all of our great initiatives. See below for more information and contact psf-donations@python.org with any questions. Donate by credit card or PayPal Please use the button above or this link to donate using a credit card or your PayPal account. You don\u0027t need a PayPal account to use the donation button. Check or Money Order You may donate to the PSF using a check or money order. Please address checks in USD to the PSF headquarters. Please include your email address and your home address with your check so that we may provide you a donation acknowledgment letter. Zelle, ACH, Transferwise, and Wire Transfers The PSF may receive donations by Zelle or ACH from US Domestic accounts, Transferwise from either US Domestic or International accounts, or Wire Transfers from International accounts. If you are interested in donating to the PSF using one of these methods, please contact psf-donations@python.org.. Other Ways to Give Your employer may offer a matching donation program. Please see the PSF Matching Gifts page for more information or let psf-donations@python.org know if you have questions. If you have questions about donations, please contact psf-donations@python.org. The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-09 00:34:11.305124"
+  },
+  {
+    "id": 216,
+    "url": "https://kivy.org/",
+    "title": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "content": "Kivy: The Open Source Python App Development Framework. Build and distribute beautiful Python cross-platform GUI apps with ease. Kivy runs on Android, iOS, Linux, macOS and Windows. MIT License 17.0K Stars Get started! Kivy has been built to be easy to use, cross-platform and fast. With a single codebase, you will be able to deploy apps on Windows, Linux, macOS, iOS and Android. Business Friendly Kivy is released under the MIT License, is 100% free to use, and is professionally developed, backed and maintained. Companies and individuals are using Kivy for their projects every day. Kivy is kept open source thanks to its contributors and backers. {{organizations.length}} organizations are supporting Kivy: {{ organization.account.name }} {{organization.tier.name}} ${{organization.totalDonations.value}} Amount contributed See all the {{organizations.length}} organizations supporting Kivy on OpenCollective {{individuals.length}} individuals are supporting Kivy See all the {{individuals.length}} individuals supporting Kivy on OpenCollective Start supporting Kivy from $5 Kivy is a free and open source software and is maintained by the community. Sometimes, a small contribution, could help to keep the wheel spinning flawlessly. Support Kivy as a Backer (Starts from $5/mo) Support Kivy as a Sponsor (Starts from $100/mo) Need help? The Kivy community will love ❤️ to help. Join us on Discord Join us on kivy-users group Source code hosted on Github Contact us",
+    "scrapedAt": "2026-05-09 00:34:10.220079"
+  },
+  {
     "id": 215,
     "url": "https://www.python.org/success-stories/saving-the-world-with-open-data-and-python/",
     "title": "Saving the world with Open Data and Python | Our Success Stories | Python.org",
@@ -1503,26 +1538,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 216,
-    "url": "https://kivy.org/"
-  },
-  {
-    "id": 217,
-    "url": "https://www.python.org/psf/donations/"
-  },
-  {
-    "id": 218,
-    "url": "https://www.djangoproject.com/"
-  },
-  {
-    "id": 219,
-    "url": "https://docs.anthropic.com/"
-  },
-  {
-    "id": 220,
-    "url": "https://flask.palletsprojects.com/"
   },
   {
     "id": 221,
@@ -39323,10 +39338,1939 @@ window.searchData = [
     "id": 17288,
     "url": "https://www.langchain.com/langsmith/evaluation",
     "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 17304,
+    "url": "https://opencollective.com/kivy",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 17305,
+    "url": "https://opencollective.com/kivy/contribute/sponsor-6730/checkout",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 17306,
+    "url": "https://m.do.co/c/bba66856dc94",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 17307,
+    "url": "https://opencollective.com/kivy/contribute/backer-6729/checkout",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 17308,
+    "url": "https://www.kivy.org/docs/contact.html",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 17309,
+    "url": "https://github.com/kivy",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 17310,
+    "url": "https://chat.kivy.org",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 17311,
+    "url": "https://kivy.org/doc/stable/gettingstarted/intro.html",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 17312,
+    "url": "https://groups.google.com/g/kivy-users",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 17328,
+    "url": "https://www.djangoproject.com/#top",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17329,
+    "url": "https://www.djangoproject.com/contact/foundation/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17330,
+    "url": "https://chat.djangoproject.com",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17331,
+    "url": "https://www.djangoproject.com/community/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17332,
+    "url": "https://forum.djangoproject.com/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17333,
+    "url": "https://docs.djangoproject.com/en/stable/topics/templates/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17334,
+    "url": "https://code.djangoproject.com/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17335,
+    "url": "https://www.djangoproject.com/start/overview/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17336,
+    "url": "https://www.djangoproject.com/weblog/2026/may/05/security-releases/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17337,
+    "url": "https://www.djangoproject.com/foundation/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17338,
+    "url": "https://www.djangoproject.com/#main-content",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17339,
+    "url": "https://docs.djangoproject.com/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17340,
+    "url": "https://www.djangoproject.com/fundraising/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17341,
+    "url": "https://www.djangoproject.com/start/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17342,
+    "url": "https://www.djangoproject.com/weblog/2026/may/05/gsoc-2026-django-contributors/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17343,
+    "url": "https://www.djangoproject.com/download/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17344,
+    "url": "https://docs.djangoproject.com/en/stable/topics/db/models/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17345,
+    "url": "https://docs.djangoproject.com/en/stable/topics/i18n/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17346,
+    "url": "https://docs.djangoproject.com/en/stable/intro/install/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17347,
+    "url": "https://dashboard.djangoproject.com/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17348,
+    "url": "https://www.jetbrains.com/pycharm/promo/support-django/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17349,
+    "url": "https://www.djangoproject.com/weblog/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17350,
+    "url": "https://docs.djangoproject.com/en/stable/intro/tutorial01/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17351,
+    "url": "https://docs.djangoproject.com/en/stable/intro/tutorial02/",
+    "parentUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "id": 17352,
+    "url": "https://platform.claude.com/settings/keys",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17353,
+    "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17354,
+    "url": "https://platform.claude.com/docs/en/api/rate-limits",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17355,
+    "url": "https://platform.claude.com/docs/en/test-and-evaluate/develop-tests",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17356,
+    "url": "https://platform.claude.com/docs/en/release-notes/overview",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17357,
+    "url": "https://github.com/anthropics/anthropic-quickstarts",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17358,
+    "url": "https://platform.claude.com/docs/en/build-with-claude/workspaces",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17359,
+    "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17360,
+    "url": "https://platform.claude.com/docs/en/build-with-claude/claude-on-vertex-ai",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17361,
+    "url": "https://platform.claude.com/docs/en/managed-agents/agent-setup",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17362,
+    "url": "https://platform.claude.com/docs/en/api/beta/sessions",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17363,
+    "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17364,
+    "url": "https://platform.claude.com/docs/en/api/client-sdks",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17365,
+    "url": "https://platform.claude.com/docs/en/get-started",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17366,
+    "url": "https://platform.claude.com/docs/en/managed-agents/quickstart",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17367,
+    "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17368,
+    "url": "https://platform.claude.com/docs/en/build-with-claude/streaming",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17369,
+    "url": "https://platform.claude.com/cookbooks",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17370,
+    "url": "https://platform.claude.com/docs/en/build-with-claude/extended-thinking",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17371,
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17372,
+    "url": "https://platform.claude.com/docs/en/about-claude/models/migration-guide",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17373,
+    "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17374,
+    "url": "https://platform.claude.com/docs/en/api/overview",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17375,
+    "url": "https://platform.claude.com/docs/en/build-with-claude/usage-cost-api",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17376,
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17377,
+    "url": "https://platform.claude.com/docs/en/build-with-claude/claude-in-amazon-bedrock",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17378,
+    "url": "https://anthropic.skilljar.com/",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17379,
+    "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/increase-consistency",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17380,
+    "url": "https://www.anthropic.com/legal/cookies",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17381,
+    "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17382,
+    "url": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17383,
+    "url": "https://code.claude.com/docs/en/overview",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17384,
+    "url": "https://platform.claude.com/docs/en/build-with-claude/claude-in-microsoft-foundry",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17385,
+    "url": "https://platform.claude.com/docs/en/build-with-claude/vision",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17386,
+    "url": "https://platform.claude.com/docs/en/api/messages/create",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17387,
+    "url": "https://platform.claude.com/workbench",
+    "parentUrl": "https://docs.anthropic.com/"
+  },
+  {
+    "id": 17388,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/javascript/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17389,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#template-rendering",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17390,
+    "url": "https://flask.palletsprojects.com/en/stable/#",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17391,
+    "url": "https://flask.palletsprojects.com/en/stable/blueprints/#the-concept-of-blueprints",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17392,
+    "url": "https://flask.palletsprojects.com/en/stable/license/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17393,
+    "url": "https://flask.palletsprojects.com/en/stable/tutorial/tests/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17394,
+    "url": "https://flask.palletsprojects.com/en/stable/debugging/#the-built-in-debugger",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17395,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17396,
+    "url": "https://flask.palletsprojects.com/en/stable/logging/#basic-configuration",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17397,
+    "url": "https://flask.palletsprojects.com/en/stable/design/#the-explicit-application-object",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17398,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#message-flashing",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17399,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#sessions",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17400,
+    "url": "https://flask.palletsprojects.com/en/stable/py-modindex/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17401,
+    "url": "https://flask.palletsprojects.com/en/stable/#additional-notes",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17402,
+    "url": "https://flask.palletsprojects.com/en/stable/appcontext/#lifetime-of-the-context",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17403,
+    "url": "https://flask.palletsprojects.com/en/stable/shell/#further-improving-the-shell-experience",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17404,
+    "url": "https://flask.palletsprojects.com/en/stable/appcontext/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17405,
+    "url": "https://flask.palletsprojects.com/en/stable/blueprints/#registering-blueprints",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17406,
+    "url": "https://flask.palletsprojects.com/en/stable/testing/#identifying-tests",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17407,
+    "url": "https://flask.palletsprojects.com/en/stable/async-await/#extensions",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17408,
+    "url": "https://flask.palletsprojects.com/en/stable/extensiondev/#views-and-models",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17409,
+    "url": "https://flask.palletsprojects.com/en/stable/appcontext/#storing-data",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17410,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/#a-minimal-application",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17411,
+    "url": "https://flask.palletsprojects.com/en/stable/cli/#custom-commands",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17412,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/#accessing-request-data",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17413,
+    "url": "https://flask.palletsprojects.com/en/stable/blueprints/#why-blueprints",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17414,
+    "url": "https://flask.palletsprojects.com/en/stable/extensiondev/#naming",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17415,
+    "url": "https://flask.palletsprojects.com/en/stable/extensiondev/#configuration-techniques",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17416,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/#html-escaping",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17417,
+    "url": "https://flask.palletsprojects.com/en/stable/cli/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17418,
+    "url": "https://flask.palletsprojects.com/en/stable/config/#configuration-best-practices",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17419,
+    "url": "https://flask.palletsprojects.com/en/stable/config/#builtin-configuration-values",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17420,
+    "url": "https://flask.palletsprojects.com/en/stable/gevent/#enabling-gevent",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17421,
+    "url": "https://flask.palletsprojects.com/en/stable/config/#configuring-from-environment-variables",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17422,
+    "url": "https://flask.palletsprojects.com/en/stable/design/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17423,
+    "url": "https://flask.palletsprojects.com/en/stable/deploying/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17424,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-10-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17425,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/sqlite3/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17426,
+    "url": "https://flask.palletsprojects.com/en/stable/reqcontext/#manually-push-a-context",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17427,
+    "url": "https://flask.palletsprojects.com/en/stable/shell/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17428,
+    "url": "https://flask.palletsprojects.com/en/stable/cli/#custom-scripts",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17429,
+    "url": "https://flask.palletsprojects.com/en/stable/signals/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17430,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/celery/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17431,
+    "url": "https://flask.palletsprojects.com/en/stable/reqcontext/#purpose-of-the-context",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17432,
+    "url": "https://flask.palletsprojects.com/en/stable/extensiondev/#recommended-extension-guidelines",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17433,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/#hooking-in-wsgi-middleware",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17434,
+    "url": "https://werkzeug.palletsprojects.com",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17435,
+    "url": "https://flask.palletsprojects.com/en/stable/tutorial/next/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17436,
+    "url": "https://flask.palletsprojects.com/en/stable/blueprints/#blueprint-resources",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17437,
+    "url": "https://flask.palletsprojects.com/en/stable/errorhandling/#debugging",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17438,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/#static-files",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17439,
+    "url": "https://flask.palletsprojects.com/en/stable/design/#what-flask-is-what-flask-is-not",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17440,
+    "url": "https://flask.palletsprojects.com/en/stable/cli/#environment-variables-from-dotenv",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17441,
+    "url": "https://flask.palletsprojects.com/en/stable/async-await/#background-tasks",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17442,
+    "url": "https://flask.palletsprojects.com/en/stable/logging/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17443,
+    "url": "https://flask.palletsprojects.com/en/stable/lifecycle/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17444,
+    "url": "https://flask.palletsprojects.com/en/stable/appcontext/#manually-push-a-context",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17445,
+    "url": "https://flask.palletsprojects.com/en/stable/shell/#firing-before-after-request",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17446,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/sqlalchemy/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17447,
+    "url": "https://flask.palletsprojects.com/en/stable/config/#configuring-from-python-files",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17448,
+    "url": "https://flask.palletsprojects.com/en/stable/templating/#standard-context",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17449,
+    "url": "https://flask.palletsprojects.com/en/stable/extensiondev/#adding-behavior",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17450,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-8-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17451,
+    "url": "https://flask.palletsprojects.com/en/stable/web-security/#host-header-validation",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17452,
+    "url": "https://flask.palletsprojects.com/en/stable/signals/#signals-and-flask-s-request-context",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17453,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/#sessions",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17454,
+    "url": "https://flask.palletsprojects.com/en/stable/tutorial/factory/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17455,
+    "url": "https://flask.palletsprojects.com/en/stable/design/#the-routing-system",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17456,
+    "url": "https://github.com/pallets/flask/issues/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17457,
+    "url": "https://flask.palletsprojects.com/en/stable/api/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17458,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/#deploying-to-a-web-server",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17459,
+    "url": "https://flask.palletsprojects.com/en/stable/extensiondev/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17460,
+    "url": "https://flask.palletsprojects.com/en/stable/templating/#controlling-autoescaping",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17461,
+    "url": "https://flask.palletsprojects.com/en/stable/debugging/#external-debuggers",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17462,
+    "url": "https://flask.palletsprojects.com/en/stable/views/#url-variables",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17463,
+    "url": "https://flask.palletsprojects.com/en/stable/web-security/#security-headers",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17464,
+    "url": "https://flask.palletsprojects.com/en/stable/#welcome-to-flask",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17465,
+    "url": "https://flask.palletsprojects.com/en/stable/errorhandling/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17466,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-3-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17467,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-3-0",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17468,
+    "url": "https://flask.palletsprojects.com/en/stable/reqcontext/#callbacks-and-errors",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17469,
+    "url": "https://flask.palletsprojects.com/en/stable/async-await/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17470,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#view-function-options",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17471,
+    "url": "https://flask.palletsprojects.com/en/stable/extensiondev/#data-during-a-request",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17472,
+    "url": "https://flask.palletsprojects.com/en/stable/debugging/#in-production",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17473,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-3-3",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17474,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-3-2",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17475,
+    "url": "https://flask.palletsprojects.com/en/stable/testing/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17476,
+    "url": "https://discord.gg/pallets",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17477,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/#using-flask-extensions",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17478,
+    "url": "https://flask.palletsprojects.com/en/stable/tutorial/database/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17479,
+    "url": "https://flask.palletsprojects.com/en/stable/design/#thread-locals",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17480,
+    "url": "https://flask.palletsprojects.com/en/stable/shell/#creating-a-request-context",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17481,
+    "url": "https://flask.palletsprojects.com/en/stable/signals/#sending-signals",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17482,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/#rendering-templates",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17483,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-7-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17484,
+    "url": "https://flask.palletsprojects.com/en/stable/server/#command-line",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17485,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/#redirects-and-errors",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17486,
+    "url": "https://flask.palletsprojects.com/en/stable/appcontext/#purpose-of-the-context",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17487,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-7-2",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17488,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-3",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17489,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-2",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17490,
+    "url": "https://flask.palletsprojects.com/en/stable/templating/#registering-filters",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17491,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-5",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17492,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-4",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17493,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-7",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17494,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-6",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17495,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-9",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17496,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-8",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17497,
+    "url": "https://flask.palletsprojects.com/en/stable/tutorial/deploy/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17498,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-3-0-3",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17499,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#class-based-views",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17500,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-3-0-2",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17501,
+    "url": "https://flask.palletsprojects.com/en/stable/signals/#creating-signals",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17502,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-3-0-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17503,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17504,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-3-0-0",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17505,
+    "url": "https://flask.palletsprojects.com/en/stable/views/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17506,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#response-objects",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17507,
+    "url": "https://flask.palletsprojects.com/en/stable/signals/#core-signals",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17508,
+    "url": "https://flask.palletsprojects.com/en/stable/blueprints/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17509,
+    "url": "https://flask.palletsprojects.com/en/stable/web-security/#cross-site-scripting-xss",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17510,
+    "url": "https://flask.palletsprojects.com/en/stable/installation/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17511,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-2-0",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17512,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-2-2",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17513,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-2-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17514,
+    "url": "https://flask.palletsprojects.com/en/stable/reqcontext/#how-the-context-works",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17515,
+    "url": "https://flask.palletsprojects.com/en/stable/config/#configuration-basics",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17516,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-2-4",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17517,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-2-3",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17518,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-2-5",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17519,
+    "url": "https://flask.palletsprojects.com/en/stable/errorhandling/#error-logging-tools",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17520,
+    "url": "https://flask.palletsprojects.com/en/stable/installation/#dependencies",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17521,
+    "url": "https://flask.palletsprojects.com/en/stable/testing/#running-commands-with-the-cli-runner",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17522,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#test-cli-runner",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17523,
+    "url": "https://flask.palletsprojects.com/en/stable/blueprints/#blueprint-error-handlers",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17524,
+    "url": "https://flask.palletsprojects.com/en/stable/errorhandling/#custom-error-pages",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17525,
+    "url": "https://flask.palletsprojects.com/en/stable/config/#instance-folders",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17526,
+    "url": "https://flask.palletsprojects.com/en/stable/templating/#jinja-setup",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17527,
+    "url": "https://flask.palletsprojects.com/en/stable/signals/#subscribing-to-signals",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17528,
+    "url": "https://flask.palletsprojects.com/en/stable/design/#one-template-engine",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17529,
+    "url": "https://flask.palletsprojects.com/en/stable/tutorial/blog/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17530,
+    "url": "https://flask.palletsprojects.com/en/stable/shell/#command-line-interface",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17531,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-6-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17532,
+    "url": "https://flask.palletsprojects.com/en/stable/installation/#python-version",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17533,
+    "url": "https://flask.palletsprojects.com/en/stable/web-security/#cross-site-request-forgery-csrf",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17534,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/templateinheritance/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17535,
+    "url": "https://flask.palletsprojects.com/en/stable/lifecycle/#how-a-request-is-handled",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17536,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#url-route-registrations",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17537,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/urlprocessors/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17538,
+    "url": "https://flask.palletsprojects.com/en/stable/testing/#tests-that-depend-on-an-active-context",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17539,
+    "url": "https://flask.palletsprojects.com/en/stable/appcontext/#events-and-signals",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17540,
+    "url": "https://flask.palletsprojects.com/en/stable/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17541,
+    "url": "https://flask.palletsprojects.com/en/stable/tutorial/templates/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17542,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-3-1-2",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17543,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-3-1-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17544,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-3-1-0",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17545,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-1-0",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17546,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/#routing",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17547,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-3-1-3",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17548,
+    "url": "https://flask.palletsprojects.com/en/stable/extensions/#building-extensions",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17549,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-1-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17550,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-1-0",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17551,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-1-3",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17552,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-1-2",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17553,
+    "url": "https://flask.palletsprojects.com/en/stable/config/#configuring-from-data-files",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17554,
+    "url": "https://flask.palletsprojects.com/en/stable/extensiondev/#the-extension-class-and-initialization",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17555,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17556,
+    "url": "https://flask.palletsprojects.com/en/stable/gevent/#combining-with-async-await",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17557,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/methodoverrides/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17558,
+    "url": "https://flask.palletsprojects.com/en/stable/blueprints/#building-urls",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17559,
+    "url": "https://flask.palletsprojects.com/en/stable/server/#in-code",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17560,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/streaming/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17561,
+    "url": "https://flask.palletsprojects.com/en/stable/views/#view-lifetime-and-self",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17562,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/requestchecksum/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17563,
+    "url": "https://flask.palletsprojects.com/en/stable/installation/#install-flask",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17564,
+    "url": "https://flask.palletsprojects.com/en/stable/gevent/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17565,
+    "url": "https://flask.palletsprojects.com/en/stable/errorhandling/#returning-api-errors-as-json",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17566,
+    "url": "https://flask.palletsprojects.com/en/stable/cli/#application-discovery",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17567,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-5-2",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17568,
+    "url": "https://flask.palletsprojects.com/en/stable/testing/#accessing-and-modifying-the-session",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17569,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#application-globals",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17570,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/wtforms/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17571,
+    "url": "https://flask.palletsprojects.com/en/stable/views/#basic-reusable-view",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17572,
+    "url": "https://flask.palletsprojects.com/en/stable/extensions/#using-extensions",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17573,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#command-line-interface",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17574,
+    "url": "https://flask.palletsprojects.com/en/stable/logging/#email-errors-to-admins",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17575,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/favicon/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17576,
+    "url": "https://flask.palletsprojects.com/en/stable/web-security/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17577,
+    "url": "https://flask.palletsprojects.com/en/stable/_images/flask-name.svg",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17578,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#useful-internals",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17579,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-5-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17580,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/lazyloading/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17581,
+    "url": "https://flask.palletsprojects.com/en/stable/errorhandling/#logging",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17582,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#configuration",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17583,
+    "url": "https://flask.palletsprojects.com/en/stable/logging/#other-libraries",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17584,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#test-client",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17585,
+    "url": "https://flask.palletsprojects.com/en/stable/design/#what-does-micro-mean",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17586,
+    "url": "https://flask.palletsprojects.com/en/stable/blueprints/#nesting-blueprints",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17587,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-0-2",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17588,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-0-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17589,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-0-3",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17590,
+    "url": "https://flask.palletsprojects.com/en/stable/tutorial/install/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17591,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-2-0-0",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17592,
+    "url": "https://flask.palletsprojects.com/en/stable/web-security/#resource-use",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17593,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/subclassing/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17594,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/viewdecorators/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17595,
+    "url": "https://flask.palletsprojects.com/en/stable/logging/#injecting-request-information",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17596,
+    "url": "https://flask.palletsprojects.com/en/stable/reqcontext/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17597,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/#logging",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17598,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/appfactories/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17599,
+    "url": "https://palletsprojects.com/donate",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17600,
+    "url": "https://flask.palletsprojects.com/en/stable/extensions/#finding-extensions",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17601,
+    "url": "https://flask.palletsprojects.com/en/stable/web-security/#copy-paste-to-terminal",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17602,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#stream-helpers",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17603,
+    "url": "https://flask.palletsprojects.com/en/stable/cli/#plugins",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17604,
+    "url": "https://flask.palletsprojects.com/en/stable/cli/#run-the-development-server",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17606,
+    "url": "https://flask.palletsprojects.com/en/stable/cli/#environment-variables-from-virtualenv",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17607,
+    "url": "https://flask.palletsprojects.com/en/stable/templating/#streaming",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17608,
+    "url": "https://flask.palletsprojects.com/en/stable/async-await/#when-to-use-quart-instead",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17609,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#incoming-request-data",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17610,
+    "url": "https://flask.palletsprojects.com/en/stable/genindex/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17611,
+    "url": "https://flask.palletsprojects.com/en/stable/#user-s-guide",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17612,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/mongoengine/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17613,
+    "url": "https://flask.palletsprojects.com/en/stable/tutorial/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17614,
+    "url": "https://flask.palletsprojects.com/en/stable/signals/#decorator-based-signal-subscriptions",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17615,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#useful-functions-and-classes",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17616,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/appdispatch/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17617,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-11",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17618,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-12",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17619,
+    "url": "https://flask.palletsprojects.com/en/stable/lifecycle/#serving-the-application",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17620,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#application-object",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17621,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-10",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17622,
+    "url": "https://flask.palletsprojects.com/en/stable/tutorial/static/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17623,
+    "url": "https://flask.palletsprojects.com/en/stable/views/#method-hints",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17624,
+    "url": "https://flask.palletsprojects.com/en/stable/reqcontext/#notes-on-proxies",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17625,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17626,
+    "url": "https://flask.palletsprojects.com/en/stable/extensions/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17627,
+    "url": "https://flask.palletsprojects.com/en/stable/config/#development-production",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17628,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-1-1-4",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17629,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-1-1-3",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17630,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-1-1-2",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17631,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-1-1-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17632,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-1-1-0",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17633,
+    "url": "https://pypi.org/project/Flask/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17634,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/#debug-mode",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17635,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/flashing/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17636,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/#message-flashing",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17637,
+    "url": "https://flask.palletsprojects.com/en/stable/installation/#virtual-environments",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17638,
+    "url": "https://flask.palletsprojects.com/en/stable/testing/#sending-requests-with-the-test-client",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17639,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-3-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17640,
+    "url": "https://flask.palletsprojects.com/en/stable/#api-reference",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17641,
+    "url": "https://github.com/pallets/flask/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17642,
+    "url": "https://flask.palletsprojects.com/en/stable/tutorial/layout/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17643,
+    "url": "https://flask.palletsprojects.com/en/stable/templating/#context-processors",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17644,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-12-3",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17645,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-12-2",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17646,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-12-5",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17647,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-12-4",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17648,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/deferredcallbacks/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17649,
+    "url": "https://flask.palletsprojects.com/en/stable/quickstart/#about-responses",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17650,
+    "url": "https://flask.palletsprojects.com/en/stable/errorhandling/#blueprint-error-handlers",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17651,
+    "url": "https://flask.palletsprojects.com/en/stable/contributing/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17652,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/caching/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17653,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#module-flask.json",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17654,
+    "url": "https://flask.palletsprojects.com/en/stable/cli/#pycharm-integration",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17655,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-12-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17656,
+    "url": "https://flask.palletsprojects.com/en/stable/templating/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17657,
+    "url": "https://flask.palletsprojects.com/en/stable/server/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17658,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#signals",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17659,
+    "url": "https://flask.palletsprojects.com/en/stable/lifecycle/#application-setup",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17660,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/singlepageapplications/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17661,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-1-0-4",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17662,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-1-0-3",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17663,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-1-0-2",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17664,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-1-0-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17665,
+    "url": "https://flask.palletsprojects.com/en/stable/config/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17666,
+    "url": "https://flask.palletsprojects.com/en/stable/deploying/#self-hosted-options",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17667,
+    "url": "https://flask.palletsprojects.com/en/stable/errorhandling/#error-handlers",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17668,
+    "url": "https://flask.palletsprojects.com/en/stable/tutorial/views/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17669,
+    "url": "https://flask.palletsprojects.com/en/stable/testing/#following-redirects",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17670,
+    "url": "https://flask.palletsprojects.com/en/stable/cli/#open-a-shell",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17672,
+    "url": "https://flask.palletsprojects.com/en/stable/debugging/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17673,
+    "url": "https://flask.palletsprojects.com/en/stable/async-await/#other-event-loops",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17674,
+    "url": "https://flask.palletsprojects.com/en/stable/views/#view-decorators",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17675,
+    "url": "https://flask.palletsprojects.com/en/stable/deploying/#hosting-platforms",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17676,
+    "url": "https://flask.palletsprojects.com/en/stable/blueprints/#my-first-blueprint",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17677,
+    "url": "https://flask.palletsprojects.com/en/stable/design/#async-await-and-asgi-support",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17678,
+    "url": "https://click.palletsprojects.com",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17679,
+    "url": "https://flask.palletsprojects.com/en/stable/web-security/#json-security",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17680,
+    "url": "https://flask.palletsprojects.com/en/stable/testing/#fixtures",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17681,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#session-interface",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17682,
+    "url": "https://flask.palletsprojects.com/en/stable/reqcontext/#lifetime-of-the-context",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17683,
+    "url": "https://flask.palletsprojects.com/en/stable/config/#debug-mode",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17684,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/fileuploads/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17685,
+    "url": "https://flask.palletsprojects.com/en/stable/async-await/#performance",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17686,
+    "url": "https://flask.palletsprojects.com/en/stable/views/#method-dispatching-and-apis",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17687,
+    "url": "https://flask.palletsprojects.com/en/stable/patterns/packages/",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17688,
+    "url": "https://flask.palletsprojects.com/en/stable/api/#blueprint-objects",
+    "parentUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "id": 17689,
+    "url": "https://flask.palletsprojects.com/en/stable/changes/#version-0-11-1",
+    "parentUrl": "https://flask.palletsprojects.com/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://flask.palletsprojects.com/en/stable/_images/flask-name.svg",
+    "alt": "_images/flask-name.svg",
+    "pageTitle": "Welcome to Flask — Flask Documentation (3.1.x)",
+    "pageUrl": "https://flask.palletsprojects.com/"
+  },
+  {
+    "src": "https://static.djangoproject.com/img/fundraising-heart.cd6bb84ffd33.svg",
+    "alt": "Support Django!",
+    "pageTitle": "The web framework for perfectionists with deadlines | Django",
+    "pageUrl": "https://www.djangoproject.com/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/scale-balanced.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/star.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/kivy-colorwheel-examples.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/homepage-fast.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/homepage-company.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/contribute_coffee.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/help.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/discord.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/envelope.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/github.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/envelope.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/DO_Badge.png",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
   {
     "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698dcf651e8e04cce00f9739_ae60ffcdd4838b256bffd9f86b1a4c70_Langchain-Hero%20%281%29%201.svg",
     "alt": "",
