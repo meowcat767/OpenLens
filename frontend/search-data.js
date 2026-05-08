@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1291,
+    "url": "https://peps.python.org/pep-0734/",
+    "title": "PEP 734 – Multiple Interpreters in the Stdlib | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 734 – Multiple Interpreters in the Stdlib PEP 734 – Multiple Interpreters in the Stdlib Author: Eric Snow \u003cericsnowcurrently at gmail.com\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Created: 06-Nov-2023 Python-Version: 3.14 Post-History: 14-Dec-2023 Replaces: 554 Resolution: 05-Jun-2025 Table of Contents Abstract Introduction Threads and Thread States Interpreter States Interpreters and Threads The “Main” Interpreter Interpreter Isolation Existing Execution Components builtins.exec() Command-line threading.Thread Motivation Specification Using Interpreters Interpreter Objects Communicating Between Interpreters Queue Objects Shareable Objects Synchronization Exceptions InterpreterPoolExecutor sys.implementation.supports_isolated_interpreters Examples Rationale A Minimal API create(), create_queue() Interpreter.prepare_main() Sets Multiple Variables Propagating Exceptions Objects vs. ID Proxies Rejected Ideas Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at concurrent.interpreters. × See PEP 1 for how to propose changes. Note This PEP is essentially a continuation of PEP 554. That document had grown a lot of ancillary information across 7 years of discussion. This PEP is a reduction back to the essential information. Much of that extra information is still valid and useful, just not in the immediate context of the specific proposal here. Note This PEP was accepted with the provision that the name change to concurrent.interpreters. Abstract This PEP proposes to add a new module, interpreters, to support inspecting, creating, and running code in multiple interpreters in the current process. This includes Interpreter objects that represent the underlying interpreters. The module will also provide a basic Queue class for communication between interpreters. Finally, we will add a new concurrent.futures.InterpreterPoolExecutor based on the interpreters module. Introduction Fundamentally, an “interpreter” is the collection of (essentially) all runtime state which Python threads must share. So, let’s first look at threads. Then we’ll circle back to interpreters. Threads and Thread States A Python process will have one or more OS threads running Python code (or otherwise interacting with the C API). Each of these threads interacts with the CPython runtime using its own thread state (PyThreadState), which holds all the runtime state unique to that thread. There is also some runtime state that is shared between multiple OS threads. Any OS thread may switch which thread state it is currently using, as long as it isn’t one that another OS thread is already using (or has been using). This “current” thread state is stored by the runtime in a thread-local variable, and may be looked up explicitly with PyThreadState_Get(). It gets set automatically for the initial (“main”) OS thread and for threading.Thread objects. From the C API it is set (and cleared) by PyThreadState_Swap() and may be set by PyGILState_Ensure(). Most of the C API requires that there be a current thread state, either looked up implicitly or passed in as an argument. The relationship between OS threads and thread states is one-to-many. Each thread state is associated with at most a single OS thread and records its thread ID. A thread state is never used for more than one OS thread. In the other direction, however, an OS thread may have more than one thread state associated with it, though, again, only one may be current. When there’s more than one thread state for an OS thread, PyThreadState_Swap() is used in that OS thread to switch between them, with the requested thread state becoming the current one. Whatever was running in the thread using the old thread state is effectively paused until that thread state is swapped back in. Interpreter States As noted earlier, there is some runtime state that multiple OS threads share. Some of it is exposed by the sys module, though much is used internally and not exposed explicitly or only through the C API. This shared state is called the interpreter state (PyInterpreterState). We’ll sometimes refer to it here as just “interpreter”, though that is also sometimes used to refer to the python executable, to the Python implementation, and to the bytecode interpreter (i.e. exec()/eval()). CPython has supported multiple interpreters in the same process (AKA “subinterpreters”) since version 1.5 (1997). The feature has been available via the C API. Interpreters and Threads Thread states are related to interpreter states in much the same way that OS threads and processes are related (at a high level). To begin with, the relationship is one-to-many. A thread state belongs to a single interpreter (and stores a pointer to it). That thread state is never used for a different interpreter. In the other direction, however, an interpreter may have zero",
+    "scrapedAt": "2026-05-09 01:14:19.024183"
+  },
+  {
+    "id": 1290,
+    "url": "https://www.python.org/downloads/metadata/sigstore/",
+    "title": "Sigstore Information | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Starting with the Python 3.11.0, Python 3.10.7, Python 3.9.14, Python 3.8.14, and Python 3.7.14 releases, CPython release artifacts are additionally signed with Sigstore. Starting with Python 3.14, Sigstore is the only method of signing and verification of release artifacts. Releases of Python older than the 3.14 series also include legacy OpenPGP signatures that can be verified using public keys. See more in PEP 761 about this change. This page provides guidance on verifying Sigstore signatures as a CPython consumer, and outlines some motivation for using these additional signatures. Sigstore verification of CPython Releases Introduction to Sigstore Sigstore is a new standard for signing, verifying and protecting software. The Sigstore project is a set of tools and services: a certificate authority a signature transparency log multiple ecosystem-specific signing clients (such as https://pypi.org/p/sigstore/) At a high level, Sigstore uses a certificate authority to tie OpenID Connect (OIDC) identities to ephemeral keys, and uses a transparency log to publish the results of signing events. This eliminates the need for signers to manage private keys. It also allows users to verify signatures based on characteristics of the OIDC identities, such as an email address. More detail about the signing process and the interplay of these tools and services is provided in the Sigstore docs. Additionally, a security model for Sigstore can be found here. Verifying CPython release artifacts with Sigstore Verification requires the presence of two files: the release artifact in question and bundled \"verification materials\" which typically has a file extension of .sigstore. For example, for the Python 3.11.0 source release, you would download the following files: $ wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz\n$ wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz.sigstore\n These verification materials should exist for all release artifacts, and are listed on the downloads page along with their corresponding artifacts. Verification additionally requires prior knowledge of the identity of the signer. For CPython releases, these are the email addresses of the release manager for the given release. The release managers for current and upcoming releases are as follows: Release PEP Release manager OIDC Issuer 3.7 PEP 537 nad@python.org https://github.com/login/oauth 3.8 PEP 569 lukasz@langa.pl https://github.com/login/oauth 3.9 PEP 596 lukasz@langa.pl https://github.com/login/oauth 3.10 PEP 619 pablogsal@python.org https://accounts.google.com 3.11 PEP 664 pablogsal@python.org https://accounts.google.com 3.12 PEP 693 thomas@python.org https://accounts.google.com 3.13 PEP 719 thomas@python.org https://accounts.google.com 3.14 PEP 745 hugo@python.org https://github.com/login/oauth 3.15 PEP 790 hugo@python.org https://github.com/login/oauth 3.16 savannah@python.org https://github.com/login/oauth 3.17 savannah@python.org https://github.com/login/oauth Finally, verification requires a Sigstore client. Using https://pypi.org/p/sigstore/ is recommended: To install with additional install-time assurances including hash-checking and version pinning, you can run the following to install from a fully specified requirements file: $ python -m pip install -r https://raw.githubusercontent.com/sigstore/sigstore-python/main/install/requirements.txt\n Alternatively, to install as usual without these assurances: $ python -m pip install sigstore\n Finally, in the directory where you downloaded the release artifact and verification materials, you can run the following: $ python -m sigstore verify identity \\\n  --bundle Python-3.11.0.tgz.sigstore \\\n  --cert-identity pablogsal@python.org \\\n  --cert-oidc-issuer https://accounts.google.com \\\n  Python-3.11.0.tgz\n Running this command should result in the output OK: Python-3.11.0.tgz, which indicates that the signature is valid. Migrating from GPG signatures Before Sigstore signatures were available, CPython also provided GPG signatures as a means of verifying the origin and integrity of artifacts. Below are some tips for migrating an existing configuration verifying using GPG to adopting Sigstore. Instead of using a GPG key for verification, use the above table to choose which signing identity and OIDC issuer is expected for each Python release version. After an artifact has been verified using GPG, it\u0027s common to pin the artifact to a specific checksum value like SHA-256. If this value is already available, it\u0027s possible to check the validity of the artifact checksum using Sigstore using only the artifact checksum. For example, using a checksum of deadbeef...: $ python -m sigstore verify identity \\\n  --bundle Python-3.11.0.tgz.sigstore \\\n  --cert-identity pablogsal@python.org \\\n  --cert-oidc-issuer https://accounts.",
+    "scrapedAt": "2026-05-09 01:14:17.660371"
+  },
+  {
+    "id": 1289,
+    "url": "https://peps.python.org/pep-0758/",
+    "title": "PEP 758 – Allow except and except* expressions without parentheses | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 758 – Allow except and except* expressions without parentheses PEP 758 – Allow except and except* expressions without parentheses Author: Pablo Galindo Salgado \u003cpablogsal at python.org\u003e, Brett Cannon \u003cbrett at python.org\u003e Status: Final Type: Standards Track Created: 30-Sep-2024 Python-Version: 3.14 Post-History: 02-Oct-2024 Resolution: 14-Mar-2025 Table of Contents Abstract Motivation Rationale Specification Backwards Compatibility Security Implications How to Teach This Reference Implementation Rejected Ideas Deferred Ideas Footnotes Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at The try statement. × See PEP 1 for how to propose changes. Abstract This PEP [1] proposes to allow unparenthesized except and except* blocks in Python’s exception handling syntax only when not using the as clause. Currently, when catching multiple exceptions, parentheses are required around the exception types. This was a Python 2 remnant. This PEP suggests allowing the omission of these parentheses, simplifying the syntax, making it more consistent with other parts of the syntax that make parentheses optional, and improving readability in certain cases. Motivation The current syntax for catching multiple exceptions requires parentheses in the except expression (equivalently for the except* expression). For example: try:\n    ...\nexcept (ExceptionA, ExceptionB, ExceptionC):\n    ...\n While this syntax is clear and unambiguous, it can be seen as unnecessarily verbose in some cases, especially when catching a large number of exceptions. By allowing the omission of parentheses, we can simplify the syntax: try:\n    ...\nexcept ExceptionA, ExceptionB, ExceptionC:\n    ...\n This change would bring the syntax more in line with other comma-separated lists in Python, such as function arguments, generator expressions inside of a function call, and tuple literals, where parentheses are optional. The same change would apply to except* expressions. For example: try:\n    ...\nexcept* ExceptionA, ExceptionB, ExceptionC:\n    ...\n When using the as clause to capture the exception instance parentheses must be used as before. Some users have expressed that they would find it confusing not to require parentheses as it would be unclear what exactly is being assigned to the target since in other parts of the language multiple as clauses can be used in similar situations (like in imports and context managers). This means that if an as clause its being added to the previous example it must be done as: try:\n    ...\nexcept (ExceptionA, ExceptionB, ExceptionC) as e:\n    ...\n Rationale The decision to allow unparenthesized except blocks is based on the following considerations: Simplicity: Removing the requirement for parentheses simplifies the syntax, making it more consistent with other parts of the language. Readability: In cases where many exceptions are being caught, the removal of parentheses can improve readability by reducing visual clutter. Consistency: This change makes the except clause more consistent with other parts of Python where unambiguous, comma-separated lists don’t require parentheses. Specification The syntax for the except clause will be modified to allow an unparenthesized list of exception types. The grammar will be updated as follows: except_block:\n    | \u0027except\u0027 expressions \u0027:\u0027 block\n    | \u0027except\u0027 expression \u0027as\u0027 NAME \u0027:\u0027 block\n    | \u0027except\u0027 \u0027:\u0027 block\n\nexcept_star_block\n    | \u0027except\u0027 \u0027*\u0027 expressions \u0027:\u0027 block\n    | \u0027except\u0027 \u0027*\u0027 expression \u0027as\u0027 NAME \u0027:\u0027 block\n This allows both the current parenthesized syntax and the new unparenthesized syntax while requiring parentheses when the as keyword is used: try:\n    ...\nexcept (ExceptionA, ExceptionB):  # Still valid\n    ...\nexcept ExceptionC, ExceptionD:    # New syntax\n    ...\nexcept (ExceptionE, ExceptionF) as e: # Parentheses still required\n    ...\n The semantics of exception handling remain unchanged. The interpreter will catch any of the listed exceptions, regardless of whether they are parenthesized or not. Backwards Compatibility This change is fully backwards compatible. All existing code using parenthesized except and except* blocks will continue to work without modification. The new syntax is purely additive and does not break any existing code. It’s worth noting that in Python 2 the unparenthesized syntax was allowed with two elements, but had different semantics, in which the first element of the list was used as the exception type and the second element as the capture variable. This change does not reintroduce the Python 2 semantics, and the unparenthesized syntax will behave identically to the parenthesized version. Security Implications There are no known security implications for this change. The semantics of exception handling remain the same, and this is purely a syntactic change. How to Teach This For new Python use",
+    "scrapedAt": "2026-05-09 01:14:16.386855"
+  },
+  {
+    "id": 1288,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModule",
+    "title": "Importing Modules — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Utilities » Importing Modules | Theme Auto Light Dark | Importing Modules¶ PyObject *PyImport_ImportModule(const char *name)¶ Return value: New reference. Part of the Stable ABI. This is a wrapper around PyImport_Import() which takes a const char* as an argument instead of a PyObject*. PyObject *PyImport_ImportModuleNoBlock(const char *name)¶ Return value: New reference. Part of the Stable ABI. This function is a deprecated alias of PyImport_ImportModule(). Changed in version 3.3: This function used to fail immediately when the import lock was held by another thread. In Python 3.3 though, the locking scheme switched to per-module locks for most purposes, so this function’s special behaviour isn’t needed anymore. Deprecated since version 3.13, will be removed in version 3.15: Use PyImport_ImportModule() instead. PyObject *PyImport_ImportModuleEx(const char *name, PyObject *globals, PyObject *locals, PyObject *fromlist)¶ Return value: New reference. Import a module. This is best described by referring to the built-in Python function __import__(). The return value is a new reference to the imported module or top-level package, or NULL with an exception set on failure. Like for __import__(), the return value when a submodule of a package was requested is normally the top-level package, unless a non-empty fromlist was given. Failing imports remove incomplete module objects, like with PyImport_ImportModule(). PyObject *PyImport_ImportModuleLevelObject(PyObject *name, PyObject *globals, PyObject *locals, PyObject *fromlist, int level)¶ Return value: New reference. Part of the Stable ABI since version 3.7. Import a module. This is best described by referring to the built-in Python function __import__(), as the standard __import__() function calls this function directly. The return value is a new reference to the imported module or top-level package, or NULL with an exception set on failure. Like for __import__(), the return value when a submodule of a package was requested is normally the top-level package, unless a non-empty fromlist was given. Added in version 3.3. PyObject *PyImport_ImportModuleLevel(const char *name, PyObject *globals, PyObject *locals, PyObject *fromlist, int level)¶ Return value: New reference. Part of the Stable ABI. Similar to PyImport_ImportModuleLevelObject(), but the name is a UTF-8 encoded string instead of a Unicode object. Changed in version 3.3: Negative values for level are no longer accepted. PyObject *PyImport_Import(PyObject *name)¶ Return value: New reference. Part of the Stable ABI. This is a higher-level interface that calls the current “import hook function” (with an explicit level of 0, meaning absolute import). It invokes the __import__() function from the __builtins__ of the current globals. This means that the import is done using whatever import hooks are installed in the current environment. This function always uses absolute imports. PyObject *PyImport_ReloadModule(PyObject *m)¶ Return value: New reference. Part of the Stable ABI. Reload a module. Return a new reference to the reloaded module, or NULL with an exception set on failure (the module still exists in this case). PyObject *PyImport_AddModuleRef(const char *name)¶ Return value: New reference. Part of the Stable ABI since version 3.13. Return the module object corresponding to a module name. The name argument may be of the form package.module. First check the modules dictionary if there’s one there, and if not, create a new one and insert it in the modules dictionary. Return a strong reference to the module on success. Return NULL with an exception set on failure. The module name name is decoded from UTF-8. This function does not load or import the module; if the module wasn’t already loaded, you will get an empty module object. Use PyImport_ImportModule() or one of its variants to import a module. Package structures implied by a dotted name for name are not created if not already present. Added in version 3.13. PyObject *PyImport_AddModuleObject(PyObject *name)¶ Return value: Borrowed reference. Part of the Stable ABI since version 3.7. Similar to PyImport_AddModuleRef(), but return a borrowed reference and name is a Python str object. Added in version 3.3. PyObject *PyImport_AddModule(const char *name)¶ Return value: Borrowed reference. Part of the Stable ABI. Similar to PyImport_AddModuleRef(), but return a borrowed reference. PyObject *PyImport_ExecCodeModule(const char *name, PyObject *co)¶ Return value: New reference. Part of the Stable ABI. Given a module name (possibly of the form package.module) and a code object read from a Python bytecode file or obtained from the built-in function compile(), load the module. Return a new reference to the module object, or NULL with an exception set if an error occurred. name is removed from sys.modules in error cases, even if name was already in sys.module",
+    "scrapedAt": "2026-05-09 01:14:14.99257"
+  },
+  {
+    "id": 1287,
+    "url": "https://github.com/python/cpython/issues/111187",
+    "title": "Postpone removal version for locale.getdefaultlocale() · Issue #111187 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Postpone removal version for locale.getdefaultlocale() #111187 New issue Copy link New issue Copy link Closed Closed Postpone removal version for locale.getdefaultlocale()#111187 Copy link Description hugovk opened on Oct 22, 2023 Issue body actions locale.getdefaultlocale() was deprecated in Python 3.11 and originally planned for removal in 3.13 (gh-90817). It\u0027s now time for 3.13 changes, but we decided to postpone its removal to 3.15 as it\u0027s still used by many projects. Re: gh-104783: Remove locale.resetlocale() function #104784 (comment) Remove locale.resetlocale() function in Python 3.13 #104783 (comment) Linked PRs gh-111187: Postpone removal version for locale.getdefaultlocale() to 3.15 #111188 [3.12] gh-111187: Postpone removal version for locale.getdefaultlocale() to 3.15 (GH-111188) #111323 [3.11] gh-111187: Postpone removal version for locale.getdefaultlocale() to 3.15 (GH-111188) #111326 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels No labels No labels Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:14:13.688443"
+  },
+  {
     "id": 1286,
     "url": "https://docs.python.org/3/library/os.html#os.unsetenv",
     "title": "os — Miscellaneous operating system interfaces — Python 3.14.5rc1 documentation",
@@ -8643,26 +8678,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1287,
-    "url": "https://github.com/python/cpython/issues/111187"
-  },
-  {
-    "id": 1288,
-    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModule"
-  },
-  {
-    "id": 1289,
-    "url": "https://peps.python.org/pep-0758/"
-  },
-  {
-    "id": 1290,
-    "url": "https://www.python.org/downloads/metadata/sigstore/"
-  },
-  {
-    "id": 1291,
-    "url": "https://peps.python.org/pep-0734/"
   },
   {
     "id": 1292,
@@ -223725,10 +223740,364 @@ window.searchData = [
     "id": 258469,
     "url": "https://bugs.python.org/issue22240",
     "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 259954,
+    "url": "https://github.com/python/cpython/issues/111187#issue-1956001652",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 259959,
+    "url": "https://github.com/python/cpython/issues/104783#issuecomment-1773986960",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 259960,
+    "url": "https://github.com/python/cpython/pull/104784#issuecomment-1558552650",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 259961,
+    "url": "https://github.com/python/cpython/pull/111326",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 259962,
+    "url": "https://github.com/python/cpython/pull/111323",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 259965,
+    "url": "https://github.com/python/cpython/pull/111188",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 259966,
+    "url": "https://github.com/python/cpython/issues/111187#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 259967,
+    "url": "https://github.com/python/cpython/issues/111187#top",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 260040,
+    "url": "https://discuss.python.org/t/66453",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260041,
+    "url": "https://peps.python.org/pep-0758/#id2",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260042,
+    "url": "https://peps.python.org/pep-0758/#id1",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260043,
+    "url": "https://peps.python.org/pep-0758/#specification",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260044,
+    "url": "https://peps.python.org/pep-0758/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260045,
+    "url": "https://peps.python.org/pep-0758/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260046,
+    "url": "https://github.com/pablogsal/cpython/commits/notuples/",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260047,
+    "url": "https://peps.python.org/pep-0758/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260048,
+    "url": "https://peps.python.org/pep-0758/#footnotes",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260049,
+    "url": "https://discuss.python.org/t/66453/63",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260051,
+    "url": "https://peps.python.org/pep-0758/#security-implications",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260052,
+    "url": "https://peps.python.org/pep-0758/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260053,
+    "url": "https://peps.python.org/pep-0758/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260055,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0758.rst",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260056,
+    "url": "https://peps.python.org/pep-0758/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260057,
+    "url": "https://peps.python.org/pep-0758/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260058,
+    "url": "https://peps.python.org/pep-0758/#deferred-ideas",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260059,
+    "url": "https://peps.python.org/pep-0758/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260060,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0758.rst",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 260083,
+    "url": "https://peps.python.org/pep-0734/#interpreter-objects",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260084,
+    "url": "https://peps.python.org/pep-0734/#interpreter-states",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260085,
+    "url": "https://peps.python.org/pep-0734/#interpreter-isolation",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260086,
+    "url": "https://peps.python.org/pep-0734/#propagating-exceptions",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260087,
+    "url": "https://peps.python.org/pep-0734/#introduction",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260088,
+    "url": "https://peps.python.org/pep-0734/#the-main-interpreter",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260089,
+    "url": "https://peps.python.org/pep-0734/#threading-thread",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260090,
+    "url": "https://peps.python.org/pep-0734/#queue-objects",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260091,
+    "url": "https://peps.python.org/pep-0734/#existing-execution-components",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260092,
+    "url": "https://peps.python.org/pep-0734/#exceptions",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260094,
+    "url": "https://peps.python.org/pep-0734/#command-line",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260095,
+    "url": "https://peps.python.org/pep-0734/#shareable-objects",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260097,
+    "url": "https://peps.python.org/pep-0734/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260098,
+    "url": "https://docs.python.org/3/c-api/init.html#bugs-and-caveats",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260099,
+    "url": "https://peps.python.org/pep-0554/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260100,
+    "url": "https://discuss.python.org/t/pep-734-multiple-interpreters-in-the-stdlib/41147",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260101,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0734.rst",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260102,
+    "url": "https://peps.python.org/pep-0734/#synchronization",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260103,
+    "url": "https://discuss.python.org/t/pep-734-multiple-interpreters-in-the-stdlib/41147/",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260104,
+    "url": "https://peps.python.org/pep-0734/#sys-implementation-supports-isolated-interpreters",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260105,
+    "url": "https://peps.python.org/pep-0734/#communicating-between-interpreters",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260106,
+    "url": "https://peps.python.org/pep-0734/#objects-vs-id-proxies",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260107,
+    "url": "https://github.com/ericsnowcurrently/concurrency-benchmarks",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260108,
+    "url": "https://peps.python.org/pep-0734/#builtins-exec",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260109,
+    "url": "https://peps.python.org/pep-0734/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260110,
+    "url": "https://peps.python.org/pep-0734/#using-interpreters",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260111,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0734.rst",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260112,
+    "url": "https://peps.python.org/pep-0734/#interpreterpoolexecutor",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260113,
+    "url": "https://peps.python.org/pep-0734/#a-minimal-api",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260114,
+    "url": "https://peps.python.org/pep-0734/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260115,
+    "url": "https://peps.python.org/pep-0734/#examples",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260116,
+    "url": "https://peps.python.org/pep-0734/#create-create-queue",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260117,
+    "url": "https://peps.python.org/pep-0734/#interpreter-prepare-main-sets-multiple-variables",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260119,
+    "url": "https://peps.python.org/pep-0734/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260121,
+    "url": "https://peps.python.org/pep-0734/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260122,
+    "url": "https://peps.python.org/pep-0734/#interpreters-and-threads",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260123,
+    "url": "https://discuss.python.org/t/41147/36",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260124,
+    "url": "https://peps.python.org/pep-0734/#specification",
+    "parentUrl": "https://peps.python.org/pep-0734/"
+  },
+  {
+    "id": 260126,
+    "url": "https://peps.python.org/pep-0734/#threads-and-thread-states",
+    "parentUrl": "https://peps.python.org/pep-0734/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Importing Modules — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModule"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Importing Modules — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModule"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@hugovk",
+    "pageTitle": "Postpone removal version for locale.getdefaultlocale() · Issue #111187 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@hugovk",
+    "pageTitle": "Postpone removal version for locale.getdefaultlocale() · Issue #111187 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/111187"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
