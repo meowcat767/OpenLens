@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1422,
+    "url": "https://docs.python.org/3/library/argparse.html#prog",
+    "title": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Command-line interface libraries » argparse — Parser for command-line options, arguments and subcommands | Theme Auto Light Dark | argparse — Parser for command-line options, arguments and subcommands¶ Added in version 3.2. Source code: Lib/argparse.py Note While argparse is the default recommended standard library module for implementing basic command line applications, authors with more exacting requirements for exactly how their command line applications behave may find it doesn’t provide the necessary level of control. Refer to Choosing an argument parsing library for alternatives to consider when argparse doesn’t support behaviors that the application requires (such as entirely disabling support for interspersed options and positional arguments, or accepting option parameter values that start with - even when they correspond to another defined option). Tutorial This page contains the API reference information. For a more gentle introduction to Python command-line parsing, have a look at the argparse tutorial. The argparse module makes it easy to write user-friendly command-line interfaces. The program defines what arguments it requires, and argparse will figure out how to parse those out of sys.argv. The argparse module also automatically generates help and usage messages. The module will also issue errors when users give the program invalid arguments. The argparse module’s support for command-line interfaces is built around an instance of argparse.ArgumentParser. It is a container for argument specifications and has options that apply to the parser as whole: parser \u003d argparse.ArgumentParser(\n                    prog\u003d\u0027ProgramName\u0027,\n                    description\u003d\u0027What the program does\u0027,\n                    epilog\u003d\u0027Text at the bottom of help\u0027)\n The ArgumentParser.add_argument() method attaches individual argument specifications to the parser. It supports positional arguments, options that accept values, and on/off flags: parser.add_argument(\u0027filename\u0027)           # positional argument\nparser.add_argument(\u0027-c\u0027, \u0027--count\u0027)      # option that takes a value\nparser.add_argument(\u0027-v\u0027, \u0027--verbose\u0027,\n                    action\u003d\u0027store_true\u0027)  # on/off flag\n The ArgumentParser.parse_args() method runs the parser and places the extracted data in a argparse.Namespace object: args \u003d parser.parse_args()\nprint(args.filename, args.count, args.verbose)\n Note If you’re looking for a guide about how to upgrade optparse code to argparse, see Upgrading Optparse Code. ArgumentParser objects¶ class argparse.ArgumentParser(prog\u003dNone, usage\u003dNone, description\u003dNone, epilog\u003dNone, parents\u003d[], formatter_class\u003dargparse.HelpFormatter, prefix_chars\u003d\u0027-\u0027, fromfile_prefix_chars\u003dNone, argument_default\u003dNone, conflict_handler\u003d\u0027error\u0027, add_help\u003dTrue, allow_abbrev\u003dTrue, exit_on_error\u003dTrue, *, suggest_on_error\u003dFalse, color\u003dTrue)¶ Create a new ArgumentParser object. All parameters should be passed as keyword arguments. Each parameter has its own more detailed description below, but in short they are: prog - The name of the program (default: generated from the __main__ module attributes and sys.argv[0]) usage - The string describing the program usage (default: generated from arguments added to parser) description - Text to display before the argument help (by default, no text) epilog - Text to display after the argument help (by default, no text) parents - A list of ArgumentParser objects whose arguments should also be included formatter_class - A class for customizing the help output prefix_chars - The set of characters that prefix optional arguments (default: ‘-‘) fromfile_prefix_chars - The set of characters that prefix files from which additional arguments should be read (default: None) argument_default - The global default value for arguments (default: None) conflict_handler - The strategy for resolving conflicting optionals (usually unnecessary) add_help - Add a -h/--help option to the parser (default: True) allow_abbrev - Allows long options to be abbreviated if the abbreviation is unambiguous (default: True) exit_on_error - Determines whether or not ArgumentParser exits with error info when an error occurs. (default: True) suggest_on_error - Enables suggestions for mistyped argument choices and subparser names (default: False) color - Allow color output (default: True) Changed in version 3.5: allow_abbrev parameter was added. Changed in version 3.8: In previous versions, allow_abbrev also disabled grouping of short flags such as -vv to mean -v -v. Changed in version 3.9: exit_on_error parameter was added. Changed in version 3.14: suggest_on_error and color parameters were added. The following sections describe how each of these are used. prog¶ By default, ArgumentParser calculates the name of the program to display in help messages depending on the way the Python interpreter was run: The base name of sys.argv[0] if a file was passe",
+    "scrapedAt": "2026-05-09 01:19:15.175865"
+  },
+  {
+    "id": 1421,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pathlib",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:19:13.932371"
+  },
+  {
+    "id": 1420,
+    "url": "https://peps.python.org/pep-0776/",
+    "title": "PEP 776 – Emscripten Support | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 776 – Emscripten Support PEP 776 – Emscripten Support Author: Hood Chatham \u003croberthoodchatham at gmail.com\u003e Sponsor: Łukasz Langa \u003clukasz at python.org\u003e Discussions-To: Discourse thread Status: Active Type: Informational Created: 18-Mar-2025 Python-Version: 3.14 Post-History: 18-Mar-2025, 28-Mar-2025 Resolution: 04-Apr-2026 Table of Contents Abstract Motivation Emscripten Platform Information “Pyodide” vs “Emscripten Python” Background on Emscripten POSIX Compliance Development Tools Emscripten Application Lifecycle File System Setup The Standard Library Third-party packages Console and Interactive Usage Traps and Uncaught Exceptions Specification Scope of Work Linkage Standard Library Unsupported Modules Removed Modules Included but not Working Modules Platform Identification Signals Support Function Pointer Casts CI Resources PEP 11 Future Work Improving Cross Builds in the Packaging Ecosystem Pyodide Runtime Features to be Upstreamed JavaScript API for Bootstrapping JavaScript foreign function interface (FFI) Asyncio Backwards Compatibility Security Implications How to Teach This Reference Implementation Copyright Abstract Emscripten is a complete open source compiler toolchain. It compiles C/C++ code into WebAssembly/JavaScript executables, for use in JavaScript runtimes, including browsers and Node.js. The Rust language also maintains an Emscripten target. This PEP formalizes the addition of Tier 3 for Emscripten support in Python 3.14 which was approved by the Steering Council on October 25, 2024. The goals are: To describe the current state of the CPython Emscripten runtime To describe the current state of the Pyodide runtime To identify minor features to be upstreamed from the Pyodide runtime into the CPython Emscripten runtime The minor features identified here are all features that could be implemented without a PEP. We discuss more significant runtime features that we would like to implement but we defer decisions on those features to subsequent PEPs. Motivation A web browser is a universal computing platform, available on Windows, macOS, Linux, and every smartphone. The Pyodide project has supported Emscripten Python since 2018. Hundreds of thousands of students have learned Python through Pyodide via projects like Capytale and PyodideU. Pyodide is also increasingly being used by Python packages to provide interactive documentation. This demonstrates both the importance and the maturity of the Emscripten platform. Emscripten and WASI are also the only supported platforms that offer any meaningful sandboxing. Emscripten Platform Information “Pyodide” vs “Emscripten Python” For the sake of this document, we use the term “Emscripten Python” to refer to the Emscripten Python maintained in the python/cpython repository, without any downstream additions. We contrast the features present in Emscripten Python to the features present in Pyodide. Pyodide is maintained on GitHub and distributed via jsDelivr, npm, and GitHub releases. Emscripten Python is not distributed, but it is possible to build by following the instructions in the devguide Background on Emscripten Emscripten consists of a C and C++ compiler and linker based on LLVM, together with a runtime based on a mildly patched musl libc. Emscripten is a POSIX-based platform. It uses the WebAssembly binary format, and the WebAssembly dynamic linking section. The emcc compiler is a wrapper around clang. The emcc linker is a wrapper around wasm-ld (also part of the LLVM toolchain). Emscripten support for portable C/C++ code source compatibility with Linux is fairly comprehensive, with certain expected exceptions to be spelled out. CPython already supports compilation to Emscripten, and it only requires a very modest number of modifications to the normal Linux target. POSIX Compliance Emscripten is a POSIX platform. However, there are POSIX APIs that exist but always fail when called and POSIX APIs that don’t exist at all. In particular, there are problems with networking APIs and blocking I/O, and there is no support for fork(). See Emscripten Portability Guidelines. Emscripten executables can be linked with threading support, but it comes with several limitations: Enabling threading requires websites to be served with special security headers that indicate acceptance of the possibility of Spectre-style information leakage. These headers are a usability hazard for users who are not intimately familiar with the web platform. If an executable is linked with both threading and a dynamic loader, Emscripten prints a warning that using dynamic loading and pthreads together is experimental. It may cause performance problems or crashes. These problems may require WebAssembly standards work to resolve. Because of these limitations, Pyodide standardizes a no-pthreads build of Python. If there is sufficient demand, a pthreads build with no dynamic loader could be added l",
+    "scrapedAt": "2026-05-09 01:19:12.635579"
+  },
+  {
+    "id": 1419,
+    "url": "https://peps.python.org/pep-0667/",
+    "title": "PEP 667 – Consistent views of namespaces | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 667 – Consistent views of namespaces PEP 667 – Consistent views of namespaces Author: Mark Shannon \u003cmark at hotpy.org\u003e, Tian Gao \u003cgaogaotiantian at hotmail.com\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Created: 30-Jul-2021 Python-Version: 3.13 Post-History: 20-Aug-2021, 22-Feb-2024 Resolution: 25-Apr-2024 Table of Contents Abstract Motivation Rationale Making the frame.f_locals attribute a write-through proxy Making the locals() builtin return independent snapshots Specification Python API The frame.f_locals attribute The locals() builtin The eval() and exec() builtins C API Additions to the PyEval C API PyFrame_GetLocals C API Deprecated C APIs Summary of Changes Python API changes frame.f_locals changes locals() changes eval() and exec() changes C API changes PyFrame_GetLocals change PyEval_GetLocals change Backwards Compatibility Python API compatibility frame.f_locals compatibility locals() compatibility Impact on exec() and eval() Impact on other code execution APIs in the standard library C API compatibility PyEval_GetLocals compatibility Impact on PEP 709 inlined comprehensions Implementation C API Implementation Notes Comparison with PEP 558 Reference Implementation Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at locals(). × See PEP 1 for how to propose changes. Abstract In early versions of Python all namespaces, whether in functions, classes or modules, were all implemented the same way: as a dictionary. For performance reasons, the implementation of function namespaces was changed. Unfortunately this meant that accessing these namespaces through locals() and frame.f_locals ceased to be consistent and some odd bugs crept in over the years as threads, generators and coroutines were added. This PEP proposes making these namespaces consistent once more. Modifications to frame.f_locals will always be visible in the underlying variables. Modifications to local variables will immediately be visible in frame.f_locals, and they will be consistent regardless of threading or coroutines. The locals() function will act the same as it does now for class and modules scopes. For function scopes it will return an instantaneous snapshot of the underlying frame.f_locals rather than implicitly refreshing a single shared dictionary cached on the frame object. Motivation The implementation of locals() and frame.f_locals in releases up to and including Python 3.12 is slow, inconsistent and buggy. We want to make it faster, consistent, and most importantly fix the bugs. For example, when attempting to manipulate local variables via frame objects: class C:\n    x \u003d 1\n    sys._getframe().f_locals[\u0027x\u0027] \u003d 2\n    print(x)\n prints 2, but: def f():\n    x \u003d 1\n    sys._getframe().f_locals[\u0027x\u0027] \u003d 2\n    print(x)\nf()\n prints 1. This is inconsistent, and confusing. Worse than that, the Python 3.12 behavior can result in strange bugs. With this PEP both examples would print 2 as the function level change would be written directly to the optimized local variables in the frame rather than to a cached dictionary snapshot. There are no compensating advantages for the Python 3.12 behavior; it is unreliable and slow. The locals() builtin has its own undesirable behaviours. Refer to PEP 558 for additional details on those concerns. Rationale Making the frame.f_locals attribute a write-through proxy The Python 3.12 implementation of frame.f_locals returns a dictionary that is created on the fly from the array of local variables. The PyFrame_LocalsToFast() C API is then called by debuggers and trace functions that want to write their changes back to the array (until Python 3.11, this API was called implicitly after every trace function invocation rather than being called explicitly by the trace functions). This can result in the array and dictionary getting out of sync with each other. Writes to the f_locals frame attribute may not show up as modifications to local variables if PyFrame_LocalsToFast() is never called. Writes to local variables can get lost if a dictionary snapshot created before the variables were modified is written back to the frame (since every known variable stored in the snapshot is written back to the frame, even if the value stored on the frame had changed since the snapshot was taken). By making frame.f_locals return a view on the underlying frame, these problems go away. frame.f_locals is always in sync with the frame because it is a view of it, not a copy of it. Making the locals() builtin return independent snapshots PEP 558 considered three potential options for standardising the behavior of the locals() builtin in optimized scopes: retain the historical behaviour of having each call to locals() on a given frame update a single shared snapshot of the local variables make locals() return write-through proxy instances (similar to frame",
+    "scrapedAt": "2026-05-09 01:19:11.257295"
+  },
+  {
+    "id": 1418,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__loader__",
+    "title": "3. Data model — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 3. Data model | Theme Auto Light Dark | 3. Data model¶ 3.1. Objects, values and types¶ Objects are Python’s abstraction for data. All data in a Python program is represented by objects or by relations between objects. Even code is represented by objects. Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory. The is operator compares the identity of two objects; the id() function returns an integer representing its identity. CPython implementation detail: For CPython, id(x) is the memory address where x is stored. An object’s type determines the operations that the object supports (e.g., “does it have a length?”) and also defines the possible values for objects of that type. The type() function returns an object’s type (which is an object itself). Like its identity, an object’s type is also unchangeable. [1] The value of some objects can change. Objects whose value can change are said to be mutable; objects whose value is unchangeable once they are created are called immutable. (The value of an immutable container object that contains a reference to a mutable object can change when the latter’s value is changed; however the container is still considered immutable, because the collection of objects it contains cannot be changed. So, immutability is not strictly the same as having an unchangeable value, it is more subtle.) An object’s mutability is determined by its type; for instance, numbers, strings and tuples are immutable, while dictionaries and lists are mutable. Objects are never explicitly destroyed; however, when they become unreachable they may be garbage-collected. An implementation is allowed to postpone garbage collection or omit it altogether — it is a matter of implementation quality how garbage collection is implemented, as long as no objects are collected that are still reachable. CPython implementation detail: CPython currently uses a reference-counting scheme with (optional) delayed detection of cyclically linked garbage, which collects most objects as soon as they become unreachable, but is not guaranteed to collect garbage containing circular references. See the documentation of the gc module for information on controlling the collection of cyclic garbage. Other implementations act differently and CPython may change. Do not depend on immediate finalization of objects when they become unreachable (so you should always close files explicitly). Note that the use of the implementation’s tracing or debugging facilities may keep objects alive that would normally be collectable. Also note that catching an exception with a try…except statement may keep objects alive. Some objects contain references to “external” resources such as open files or windows. It is understood that these resources are freed when the object is garbage-collected, but since garbage collection is not guaranteed to happen, such objects also provide an explicit way to release the external resource, usually a close() method. Programs are strongly recommended to explicitly close such objects. The try…finally statement and the with statement provide convenient ways to do this. Some objects contain references to other objects; these are called containers. Examples of containers are tuples, lists and dictionaries. The references are part of a container’s value. In most cases, when we talk about the value of a container, we imply the values, not the identities of the contained objects; however, when we talk about the mutability of a container, only the identities of the immediately contained objects are implied. So, if an immutable container (like a tuple) contains a reference to a mutable object, its value changes if that mutable object is changed. Types affect almost all aspects of object behavior. Even the importance of object identity is affected in some sense: for immutable types, operations that compute new values may actually return a reference to any existing object with the same type and value, while for mutable objects this is not allowed. For example, after a \u003d 1; b \u003d 1, a and b may or may not refer to the same object with the value one, depending on the implementation. This is because int is an immutable type, so the reference to 1 can be reused. This behaviour depends on the implementation used, so should not be relied upon, but is something to be aware of when making use of object identity tests. However, after c \u003d []; d \u003d [], c and d are guaranteed to refer to two different, unique, newly created empty lists. (Note that e \u003d f \u003d [] assigns the same object to both e and f.) 3.2. The standard type hierarchy¶ Below is a list of the types that are built into Python. Extension modules (written in C, Java, or other languages, depending on the implementation) can define additional types. Future versions of P",
+    "scrapedAt": "2026-05-09 01:19:09.868617"
+  },
+  {
     "id": 1417,
     "url": "https://docs.python.org/3/library/operator.html#operator.is_not_none",
     "title": "operator — Standard operators as functions — Python 3.14.5rc1 documentation",
@@ -9518,26 +9553,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1418,
-    "url": "https://docs.python.org/3/reference/datamodel.html#module.__loader__"
-  },
-  {
-    "id": 1419,
-    "url": "https://peps.python.org/pep-0667/"
-  },
-  {
-    "id": 1420,
-    "url": "https://peps.python.org/pep-0776/"
-  },
-  {
-    "id": 1421,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#pathlib"
-  },
-  {
-    "id": 1422,
-    "url": "https://docs.python.org/3/library/argparse.html#prog"
   },
   {
     "id": 1423,
@@ -231545,10 +231560,686 @@ window.searchData = [
     "id": 295457,
     "url": "https://github.com/python/cpython/issues/84171",
     "parentUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "id": 296415,
+    "url": "https://peps.python.org/pep-0667/#the-frame-f-locals-attribute",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296416,
+    "url": "https://peps.python.org/pep-0667/#additions-to-the-pyeval-c-api",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296417,
+    "url": "https://peps.python.org/pep-0667/#making-the-frame-f-locals-attribute-a-write-through-proxy",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296418,
+    "url": "https://peps.python.org/pep-0558/#pep-558-exec-eval-impact",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296419,
+    "url": "https://peps.python.org/pep-0667/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296420,
+    "url": "https://peps.python.org/pep-0558/#pep-558-motivation",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296421,
+    "url": "https://peps.python.org/pep-0667/#frame-f-locals-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296422,
+    "url": "https://peps.python.org/pep-0667/#impact-on-exec-and-eval",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296423,
+    "url": "https://peps.python.org/pep-0667/#the-locals-builtin",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296425,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0667.rst",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296426,
+    "url": "https://peps.python.org/pep-0667/#pep-667-f-locals-spec",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296427,
+    "url": "https://peps.python.org/pep-0667/#making-the-locals-builtin-return-independent-snapshots",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296428,
+    "url": "https://peps.python.org/pep-0667/#python-api-changes",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296429,
+    "url": "https://peps.python.org/pep-0667/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296430,
+    "url": "https://peps.python.org/pep-0667/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296431,
+    "url": "https://peps.python.org/pep-0667/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296432,
+    "url": "https://peps.python.org/pep-0667/#c-api-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296433,
+    "url": "https://github.com/python/cpython/pull/115153",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296434,
+    "url": "https://peps.python.org/pep-0667/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296435,
+    "url": "https://peps.python.org/pep-0667/#pyeval-getlocals-change",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296436,
+    "url": "https://peps.python.org/pep-0667/#c-api",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296437,
+    "url": "https://discuss.python.org/t/46631/25",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296438,
+    "url": "https://peps.python.org/pep-0558/#pep-withdrawal",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296439,
+    "url": "https://peps.python.org/pep-0667/#impact-on-pep-709-inlined-comprehensions",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296440,
+    "url": "https://peps.python.org/pep-0667/#comparison-with-pep-558",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296441,
+    "url": "https://peps.python.org/pep-0667/#pep-667-locals-changes",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296442,
+    "url": "https://peps.python.org/pep-0558/",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296443,
+    "url": "https://peps.python.org/pep-0667/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296444,
+    "url": "https://peps.python.org/pep-0667/#python-api-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296445,
+    "url": "https://peps.python.org/pep-0667/#id1",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296446,
+    "url": "https://peps.python.org/pep-0667/#summary-of-changes",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296447,
+    "url": "https://github.com/python/cpython/pull/125616",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296448,
+    "url": "https://peps.python.org/pep-0667/#eval-and-exec-changes",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296449,
+    "url": "https://peps.python.org/pep-0667/#locals-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296450,
+    "url": "https://peps.python.org/pep-0667/#pep-667-pyeval-getlocals-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296451,
+    "url": "https://peps.python.org/pep-0667/#pyframe-getlocals-c-api",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296452,
+    "url": "https://peps.python.org/pep-0667/#implementation",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296453,
+    "url": "https://peps.python.org/pep-0667/#specification",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296455,
+    "url": "https://peps.python.org/pep-0667/#deprecated-c-apis",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296456,
+    "url": "https://docs.python.org/3.13/glossary.html#term-optimized-scope",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296457,
+    "url": "https://discuss.python.org/t/46631",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296458,
+    "url": "https://github.com/python/steering-council/issues/245#issuecomment-2179005461",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296459,
+    "url": "https://peps.python.org/pep-0667/#frame-f-locals-changes",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296460,
+    "url": "https://peps.python.org/pep-0667/#python-api",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296461,
+    "url": "https://peps.python.org/pep-0667/#pyframe-getlocals-change",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296462,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0667.rst",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296464,
+    "url": "https://docs.python.org/3.13/library/functions.html#locals",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296465,
+    "url": "https://peps.python.org/pep-0667/#the-eval-and-exec-builtins",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296466,
+    "url": "https://peps.python.org/pep-0667/#locals-changes",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296467,
+    "url": "https://peps.python.org/pep-0667/#c-api-changes",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296468,
+    "url": "https://peps.python.org/pep-0667/#impact-on-other-code-execution-apis-in-the-standard-library",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296469,
+    "url": "https://peps.python.org/pep-0667/#implementation-notes",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296470,
+    "url": "https://peps.python.org/pep-0667/#pyeval-getlocals-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0667/"
+  },
+  {
+    "id": 296471,
+    "url": "https://peps.python.org/pep-0776/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296472,
+    "url": "https://pyodide.org/en/stable/usage/type-conversions.html",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296473,
+    "url": "https://github.com/python/cpython/blob/98fa4a49fecbac3c990a25ce5d300592dad31be0/Tools/wasm/emscripten/node_entry.mjs#L33-L46",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296474,
+    "url": "https://lld.llvm.org/WebAssembly.html",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296475,
+    "url": "https://peps.python.org/pep-0776/#posix-compliance",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296476,
+    "url": "https://github.com/pyodide/pyodide/blob/b3721fd5e9c7981216c4604025e2617e53f9726a/src/py/pyodide/webloop.py",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296477,
+    "url": "https://peps.python.org/pep-0776/#specification",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296478,
+    "url": "https://peps.python.org/pep-0776/#pep-11",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296479,
+    "url": "https://peps.python.org/pep-0776/#improving-cross-builds-in-the-packaging-ecosystem",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296480,
+    "url": "https://github.com/pyodide/pyodide/releases",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296481,
+    "url": "https://peps.python.org/pep-0776/#file-system-setup",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296482,
+    "url": "https://peps.python.org/pep-0776/#linkage",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296483,
+    "url": "https://discuss.python.org/t/pep-776-runtime-not-packaging-aspects-of-emscripten-support/86276/10",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296484,
+    "url": "https://peps.python.org/pep-0776/#included-but-not-working-modules",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296485,
+    "url": "https://www.jsdelivr.com/oss-cdn/pyodide",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296486,
+    "url": "https://peps.python.org/pep-0776/#standard-library",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296487,
+    "url": "https://peps.python.org/pep-0776/#pyodide-vs-emscripten-python",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296488,
+    "url": "https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296489,
+    "url": "https://web.dev/articles/optimize-long-tasks",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296490,
+    "url": "https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296491,
+    "url": "https://emscripten.org/docs/api_reference/emscripten.h.html#c.EM_JS",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296492,
+    "url": "https://web.archive.org/web/20241211090946/https://cfp.jupytercon.com/2023/talk/TJ9YEV/",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296493,
+    "url": "https://webassembly.github.io/gc/core/exec/instructions.html#xref-syntax-instructions-syntax-instr-ref-mathsf-ref-test-mathit-rt",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296494,
+    "url": "https://discuss.python.org/t/86276",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296495,
+    "url": "https://peps.python.org/pep-0776/#scope-of-work",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296496,
+    "url": "https://peps.python.org/pep-0776/#emscripten-platform-information",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296497,
+    "url": "https://peps.python.org/pep-0776/#unsupported-modules",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296498,
+    "url": "https://peps.python.org/pep-0776/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296500,
+    "url": "https://webassembly.github.io/spec/js-api/index.html#call-an-exported-function)",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296501,
+    "url": "https://emscripten.org/docs/porting/guidelines/portability_guidelines.html",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296502,
+    "url": "https://emscripten.org/docs/api_reference/module.html#id3",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296503,
+    "url": "https://github.com/python/steering-council/issues/256",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296504,
+    "url": "https://github.com/pyodide/pyodide",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296505,
+    "url": "https://peps.python.org/pep-0776/#removed-modules",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296506,
+    "url": "https://github.com/python/cpython/blob/2bef8ea8ea045d20394f0daec7a5c5b1046a4e22/Python/emscripten_signal.c",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296507,
+    "url": "https://emscripten.org/",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296508,
+    "url": "https://peps.python.org/pep-0776/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296509,
+    "url": "https://github.com/python/cpython/blob/98fa4a49fecbac3c990a25ce5d300592dad31be0/Tools/wasm/emscripten/web_example/python.worker.mjs#L64-L88",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296510,
+    "url": "https://www.open-std.org/JTC1/SC22/WG14/www/docs/n1256.pdf#page\u003d60",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296511,
+    "url": "https://peps.python.org/pep-0776/#security-implications",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296512,
+    "url": "https://peps.python.org/pep-0776/#future-work",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296513,
+    "url": "https://peps.python.org/pep-0776/#ci-resources",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296514,
+    "url": "https://peps.python.org/pep-0776/#background-on-emscripten",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296515,
+    "url": "https://peps.python.org/pep-0776/#development-tools",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296516,
+    "url": "https://wasi.dev/",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296517,
+    "url": "https://www.npmjs.com/package/pyodide",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296518,
+    "url": "https://peps.python.org/pep-0776/#emscripten-application-lifecycle",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296519,
+    "url": "https://peps.python.org/pep-0776/#pyodide-runtime-features-to-be-upstreamed",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296520,
+    "url": "https://peps.python.org/pep-0776/#the-standard-library",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296521,
+    "url": "https://webassembly.github.io/spec/core/exec/instructions.html#xref-syntax-instructions-syntax-instr-control-mathsf-call-indirect-x-y)",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296522,
+    "url": "https://peps.python.org/pep-0776/#platform-identification",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296523,
+    "url": "https://pyodide.org/",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296524,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0776.rst",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296525,
+    "url": "https://peps.python.org/pep-0776/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296527,
+    "url": "https://peps.python.org/pep-0776/#function-pointer-casts",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296528,
+    "url": "https://peps.python.org/pep-0776/#javascript-api-for-bootstrapping",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296529,
+    "url": "https://discuss.python.org/t/84996",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296530,
+    "url": "https://stanford.edu/~cpiech/bio/papers/pyodideU.pdf",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296531,
+    "url": "https://devguide.python.org/getting-started/setup-building/#emscripten",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296532,
+    "url": "https://llvm.org/",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296533,
+    "url": "https://peps.python.org/pep-0776/#traps-and-uncaught-exceptions",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296534,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0776.rst",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296535,
+    "url": "https://emscripten.org/docs/introducing_emscripten/about_emscripten.html",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296536,
+    "url": "https://cibuildwheel.pypa.io/",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296538,
+    "url": "https://peps.python.org/pep-0776/#signals-support",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296539,
+    "url": "https://webassembly.github.io/spec/core/binary/index.html",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296540,
+    "url": "https://peps.python.org/pep-0776/#console-and-interactive-usage",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296541,
+    "url": "https://github.com/python/cpython/blob/98fa4a49fecbac3c990a25ce5d300592dad31be0/Python/emscripten_trampoline.c",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296542,
+    "url": "https://peps.python.org/pep-0776/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296543,
+    "url": "https://peps.python.org/pep-0776/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296544,
+    "url": "https://peps.python.org/pep-0776/#asyncio",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296545,
+    "url": "https://emscripten.org/docs/porting/files/packaging_files.html#packaging-using-emcc",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296546,
+    "url": "https://pyodide.org/en/stable/usage/wasm-constraints.html#removed-modules",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296547,
+    "url": "https://peps.python.org/pep-0776/#third-party-packages",
+    "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 296548,
+    "url": "https://peps.python.org/pep-0776/#javascript-foreign-function-interface-ffi",
+    "parentUrl": "https://peps.python.org/pep-0776/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/argparse.html#prog"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/argparse.html#prog"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pathlib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pathlib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Data model — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/datamodel.html#module.__loader__"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Data model — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/datamodel.html#module.__loader__"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
