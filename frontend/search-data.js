@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1685,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsZero",
+    "title": "Integer Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)",
+    "scrapedAt": "2026-05-09 01:29:41.180915"
+  },
+  {
+    "id": 1684,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#else",
+    "title": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 8. Compound statements | Theme Auto Light Dark | 8. Compound statements¶ Compound statements contain (groups of) other statements; they affect or control the execution of those other statements in some way. In general, compound statements span multiple lines, although in simple incarnations a whole compound statement may be contained in one line. The if, while and for statements implement traditional control flow constructs. try specifies exception handlers and/or cleanup code for a group of statements, while the with statement allows the execution of initialization and finalization code around a block of code. Function and class definitions are also syntactically compound statements. A compound statement consists of one or more ‘clauses.’ A clause consists of a header and a ‘suite.’ The clause headers of a particular compound statement are all at the same indentation level. Each clause header begins with a uniquely identifying keyword and ends with a colon. A suite is a group of statements controlled by a clause. A suite can be one or more semicolon-separated simple statements on the same line as the header, following the header’s colon, or it can be one or more indented statements on subsequent lines. Only the latter form of a suite can contain nested compound statements; the following is illegal, mostly because it wouldn’t be clear to which if clause a following else clause would belong: if test1: if test2: print(x)\n Also note that the semicolon binds tighter than the colon in this context, so that in the following example, either all or none of the print() calls are executed: if x \u003c y \u003c z: print(x); print(y); print(z)\n Summarizing: compound_stmt: if_stmt\n               | while_stmt\n               | for_stmt\n               | try_stmt\n               | with_stmt\n               | match_stmt\n               | funcdef\n               | classdef\n               | async_with_stmt\n               | async_for_stmt\n               | async_funcdef\nsuite:         stmt_list NEWLINE | NEWLINE INDENT statement+ DEDENT\nstatement:     stmt_list NEWLINE | compound_stmt\nstmt_list:     simple_stmt (\";\" simple_stmt)* [\";\"]\n Note that statements always end in a NEWLINE possibly followed by a DEDENT. Also note that optional continuation clauses always begin with a keyword that cannot start a statement, thus there are no ambiguities (the ‘dangling else’ problem is solved in Python by requiring nested if statements to be indented). The formatting of the grammar rules in the following sections places each clause on a separate line for clarity. 8.1. The if statement¶ The if statement is used for conditional execution: if_stmt: \"if\" assignment_expression \":\" suite\n         (\"elif\" assignment_expression \":\" suite)*\n         [\"else\" \":\" suite]\n It selects exactly one of the suites by evaluating the expressions one by one until one is found to be true (see section Boolean operations for the definition of true and false); then that suite is executed (and no other part of the if statement is executed or evaluated). If all expressions are false, the suite of the else clause, if present, is executed. 8.2. The while statement¶ The while statement is used for repeated execution as long as an expression is true: while_stmt: \"while\" assignment_expression \":\" suite\n            [\"else\" \":\" suite]\n This repeatedly tests the expression and, if it is true, executes the first suite; if the expression is false (which may be the first time it is tested) the suite of the else clause, if present, is executed and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and goes back to testing the expression. 8.3. The for statement¶ The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object: for_stmt: \"for\" target_list \"in\" starred_expression_list \":\" suite\n          [\"else\" \":\" suite]\n The starred_expression_list expression is evaluated once; it should yield an iterable object. An iterator is created for that iterable. The first item provided by the iterator is then assigned to the target list using the standard rules for assignments (see Assignment statements), and the suite is executed. This repeats for each item provided by the iterator. When the iterator is exhausted, the suite in the else clause, if present, is executed, and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and continues with the next item, or with the else clause if there is no next item. The for-loop makes assignments to the variables in the target list. This overwrites all previous assignments to those v",
+    "scrapedAt": "2026-05-09 01:29:39.916583"
+  },
+  {
+    "id": 1683,
+    "url": "https://docs.python.org/3/library/wave.html#module-wave",
+    "title": "wave — Read and write WAV files — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Multimedia Services » wave — Read and write WAV files | Theme Auto Light Dark | wave — Read and write WAV files¶ Source code: Lib/wave.py The wave module provides a convenient interface to the Waveform Audio “WAVE” (or “WAV”) file format. Only uncompressed PCM encoded wave files are supported. Changed in version 3.12: Support for WAVE_FORMAT_EXTENSIBLE headers was added, provided that the extended format is KSDATAFORMAT_SUBTYPE_PCM. The wave module defines the following function and exception: wave.open(file, mode\u003dNone)¶ If file is a string, open the file by that name, otherwise treat it as a file-like object. mode can be: \u0027rb\u0027 Read only mode. \u0027wb\u0027 Write only mode. Note that it does not allow read/write WAV files. A mode of \u0027rb\u0027 returns a Wave_read object, while a mode of \u0027wb\u0027 returns a Wave_write object. If mode is omitted and a file-like object is passed as file, file.mode is used as the default value for mode. If you pass in a file-like object, the wave object will not close it when its close() method is called; it is the caller’s responsibility to close the file object. The open() function may be used in a with statement. When the with block completes, the Wave_read.close() or Wave_write.close() method is called. Changed in version 3.4: Added support for unseekable files. exception wave.Error¶ An error raised when something is impossible because it violates the WAV specification or hits an implementation deficiency. Wave_read Objects¶ class wave.Wave_read¶ Read a WAV file. Wave_read objects, as returned by open(), have the following methods: close()¶ Close the stream if it was opened by wave, and make the instance unusable. This is called automatically on object collection. getnchannels()¶ Returns number of audio channels (1 for mono, 2 for stereo). getsampwidth()¶ Returns sample width in bytes. getframerate()¶ Returns sampling frequency. getnframes()¶ Returns number of audio frames. getcomptype()¶ Returns compression type (\u0027NONE\u0027 is the only supported type). getcompname()¶ Human-readable version of getcomptype(). Usually \u0027not compressed\u0027 parallels \u0027NONE\u0027. getparams()¶ Returns a namedtuple() (nchannels, sampwidth, framerate, nframes, comptype, compname), equivalent to output of the get*() methods. readframes(n)¶ Reads and returns at most n frames of audio, as a bytes object. rewind()¶ Rewind the file pointer to the beginning of the audio stream. The following two methods are defined for compatibility with the old aifc module, and don’t do anything interesting. getmarkers()¶ Returns None. Deprecated since version 3.13, will be removed in version 3.15: The method only existed for compatibility with the aifc module which has been removed in Python 3.13. getmark(id)¶ Raise an error. Deprecated since version 3.13, will be removed in version 3.15: The method only existed for compatibility with the aifc module which has been removed in Python 3.13. The following two methods define a term “position” which is compatible between them, and is otherwise implementation dependent. setpos(pos)¶ Set the file pointer to the specified position. tell()¶ Return current file pointer position. Wave_write Objects¶ class wave.Wave_write¶ Write a WAV file. Wave_write objects, as returned by open(). For seekable output streams, the wave header will automatically be updated to reflect the number of frames actually written. For unseekable streams, the nframes value must be accurate when the first frame data is written. An accurate nframes value can be achieved either by calling setnframes() or setparams() with the number of frames that will be written before close() is called and then using writeframesraw() to write the frame data, or by calling writeframes() with all of the frame data to be written. In the latter case writeframes() will calculate the number of frames in the data and set nframes accordingly before writing the frame data. Changed in version 3.4: Added support for unseekable files. Wave_write objects have the following methods: close()¶ Make sure nframes is correct, and close the file if it was opened by wave. This method is called upon object collection. It will raise an exception if the output stream is not seekable and nframes does not match the number of frames actually written. setnchannels(n)¶ Set the number of channels. getnchannels()¶ Return the number of channels. setsampwidth(n)¶ Set the sample width to n bytes. getsampwidth()¶ Return the sample width in bytes. setframerate(n)¶ Set the frame rate to n. Changed in version 3.2: A non-integral input to this method is rounded to the nearest integer. getframerate()¶ Return the frame rate. setnframes(n)¶ Set the number of frames to n. This will be changed later if the number of frames actually written is different (this update attempt will raise an error if the output stream is not seekable). getnframes()¶ Return the number of audio frames written so far",
+    "scrapedAt": "2026-05-09 01:29:38.641902"
+  },
+  {
+    "id": 1682,
+    "url": "https://en.wikipedia.org/wiki/Tail_call",
+    "title": "Tail call - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia Subroutine call performed as final action of a procedure In computer science, a tail call is a subroutine call performed as the final action of a procedure.[1] If the target of a tail is the same subroutine, the subroutine is said to be tail recursive, which is a special case of direct recursion. Tail recursion (or tail-end recursion) is particularly useful, and is often easy to optimize in implementations. Tail calls can be implemented without adding a new stack frame to the call stack. Most of the frame of the current procedure is no longer needed, and can be replaced by the frame of the tail call, modified as appropriate (similar to overlay for processes, but for function calls). The program can then jump to the called subroutine. Producing such code instead of a standard call sequence is called tail-call elimination or tail-call optimization. Tail-call elimination allows procedure calls in tail position to be implemented as efficiently as goto statements, thus allowing efficient structured programming. In the words of Guy L. Steele, \"in general, procedure calls may be usefully thought of as GOTO statements which also pass parameters, and can be uniformly coded as [machine code] JUMP instructions.\"[2] Not all programming languages require tail-call elimination. However, in functional programming languages, tail-call elimination is often guaranteed by the language standard, allowing tail recursion to use a similar amount of memory as an equivalent loop. The special case of tail-recursive calls, when a function calls itself, may be more amenable to call elimination than general tail calls. When the language semantics do not explicitly support general tail calls, a compiler can often still optimize sibling calls, or tail calls to functions which take and return the same types as the caller.[3] Description [edit] When a function is called, the computer must \"remember\" the place it was called from, the return address, so that it can return to that location with the result once the call is complete. Typically, this information is saved on the call stack, a list of return locations in the order that the call locations were reached. In addition, compilers allocate memory for local variables of the called function and push register content (if any and/or relevant) onto the stack. Typically, it is done by allocating a stack frame including saved registers, space allocated for non-register local variables, return address and call parameters (unless they are passed in registers). For tail calls, there is no need to remember the caller or preserve content of registers – instead, tail-call elimination avoids allocation of new stack frames and makes only the minimum necessary changes to the existing stack frame before passing it on, and the tail-called function will return directly to the original caller.[4] This, however, leads to complete loss of the caller\u0027s stack frame, which is sometimes considered as a hindrance in debugging. The tail call doesn\u0027t have to appear lexically after all other statements in the source code; it is only important that the calling function return immediately after the tail call, returning the tail call\u0027s result if any, since the calling function is bypassed when the optimization is performed. For non-recursive function calls, this is usually an optimization that saves only a little time and space, since there are not that many different functions available to call. When dealing with recursive or mutually recursive functions where recursion happens through tail calls, however, the stack space and the number of returns saved can grow to be very significant, since a function can call itself, directly or indirectly, creating a new call stack frame each time. Tail-call elimination often reduces asymptotic stack space requirements from linear, or O(n), to constant, or O(1). Tail-call elimination is thus required by the standard definitions of some programming languages, such as Scheme, and languages in the ML family among others.[5][6] The Scheme language definition formalizes the intuitive notion of tail position exactly, by specifying which syntactic forms allow having results in tail context.[7] Implementations allowing an unlimited number of tail calls to be active at the same moment, thanks to tail-call elimination, can also be called \u0027properly tail recursive\u0027.[5] Besides space and execution efficiency, tail-call elimination is important in the functional programming idiom known as continuation-passing style (CPS), which would otherwise quickly run out of stack space. Syntactic form [edit] A tail call can be located just before the syntactical end of a function. int a(int n);\nint b(int n);\n\nint foo(int data) {\n    a(data);\n    return b(data);\n}\n Here, both a(data) and b(data) are calls, but b is the last thing the procedure executes before returning and is thus in tail position. However, not all tail calls are necessarily located at the",
+    "scrapedAt": "2026-05-09 01:29:37.374192"
+  },
+  {
+    "id": 1681,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#unicodeexceptions",
+    "title": "Exception Handling — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Exception Handling | Theme Auto Light Dark | Exception Handling¶ The functions described in this chapter will let you handle and raise Python exceptions. It is important to understand some of the basics of Python exception handling. It works somewhat like the POSIX errno variable: there is a global indicator (per thread) of the last error that occurred. Most C API functions don’t clear this on success, but will set it to indicate the cause of the error on failure. Most C API functions also return an error indicator, usually NULL if they are supposed to return a pointer, or -1 if they return an integer (exception: the PyArg_* functions return 1 for success and 0 for failure). Concretely, the error indicator consists of three object pointers: the exception’s type, the exception’s value, and the traceback object. Any of those pointers can be NULL if non-set (although some combinations are forbidden, for example you can’t have a non-NULL traceback if the exception type is NULL). When a function must fail because some function it called failed, it generally doesn’t set the error indicator; the function it called already set it. It is responsible for either handling the error and clearing the exception or returning after cleaning up any resources it holds (such as object references or memory allocations); it should not continue normally if it is not prepared to handle the error. If returning due to an error, it is important to indicate to the caller that an error has been set. If the error is not handled or carefully propagated, additional calls into the Python/C API may not behave as intended and may fail in mysterious ways. Note The error indicator is not the result of sys.exc_info(). The former corresponds to an exception that is not yet caught (and is therefore still propagating), while the latter returns an exception after it is caught (and has therefore stopped propagating). Printing and clearing¶ void PyErr_Clear()¶ Part of the Stable ABI. Clear the error indicator. If the error indicator is not set, there is no effect. void PyErr_PrintEx(int set_sys_last_vars)¶ Part of the Stable ABI. Print a standard traceback to sys.stderr and clear the error indicator. Unless the error is a SystemExit, in that case no traceback is printed and the Python process will exit with the error code specified by the SystemExit instance. Call this function only when the error indicator is set. Otherwise it will cause a fatal error! If set_sys_last_vars is nonzero, the variable sys.last_exc is set to the printed exception. For backwards compatibility, the deprecated variables sys.last_type, sys.last_value and sys.last_traceback are also set to the type, value and traceback of this exception, respectively. Changed in version 3.12: The setting of sys.last_exc was added. void PyErr_Print()¶ Part of the Stable ABI. Alias for PyErr_PrintEx(1). void PyErr_WriteUnraisable(PyObject *obj)¶ Part of the Stable ABI. Call sys.unraisablehook() using the current exception and obj argument. This utility function prints a warning message to sys.stderr when an exception has been set but it is impossible for the interpreter to actually raise the exception. It is used, for example, when an exception occurs in an __del__() method. The function is called with a single argument obj that identifies the context in which the unraisable exception occurred. If possible, the repr of obj will be printed in the warning message. If obj is NULL, only the traceback is printed. An exception must be set when calling this function. Changed in version 3.4: Print a traceback. Print only traceback if obj is NULL. Changed in version 3.8: Use sys.unraisablehook(). void PyErr_FormatUnraisable(const char *format, ...)¶ Similar to PyErr_WriteUnraisable(), but the format and subsequent parameters help format the warning message; they have the same meaning and values as in PyUnicode_FromFormat(). PyErr_WriteUnraisable(obj) is roughly equivalent to PyErr_FormatUnraisable(\"Exception ignored in: %R\", obj). If format is NULL, only the traceback is printed. Added in version 3.13. void PyErr_DisplayException(PyObject *exc)¶ Part of the Stable ABI since version 3.12. Print the standard traceback display of exc to sys.stderr, including chained exceptions and notes. Added in version 3.12. Raising exceptions¶ These functions help you set the current thread’s error indicator. For convenience, some of these functions will always return a NULL pointer for use in a return statement. void PyErr_SetString(PyObject *type, const char *message)¶ Part of the Stable ABI. This is the most common way to set the error indicator. The first argument specifies the exception type; it is normally one of the standard exceptions, e.g. PyExc_RuntimeError. You need not create a new strong reference to it (e.g. with Py_INCREF()). The second argument is an error message; it is decoded from \u0027utf-8\u0027. v",
+    "scrapedAt": "2026-05-09 01:29:36.05316"
+  },
+  {
     "id": 1680,
     "url": "https://docs.python.org/3/library/argparse.html#argparse.FileType",
     "title": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.5rc1 documentation",
@@ -11338,26 +11373,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1681,
-    "url": "https://docs.python.org/3/c-api/exceptions.html#unicodeexceptions"
-  },
-  {
-    "id": 1682,
-    "url": "https://en.wikipedia.org/wiki/Tail_call"
-  },
-  {
-    "id": 1683,
-    "url": "https://docs.python.org/3/library/wave.html#module-wave"
-  },
-  {
-    "id": 1684,
-    "url": "https://docs.python.org/3/reference/compound_stmts.html#else"
-  },
-  {
-    "id": 1685,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsZero"
   },
   {
     "id": 1686,
@@ -244120,10 +244135,1457 @@ window.searchData = [
     "id": 367321,
     "url": "https://github.com/python/cpython/issues/60191#issue-1198888613",
     "parentUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "id": 368113,
+    "url": "https://en.wikipedia.org/wiki/Evaluation_strategy#Applicative_order",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368114,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026action\u003dedit\u0026section\u003d12",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368115,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026action\u003dedit\u0026section\u003d11",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368117,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026action\u003dedit\u0026section\u003d10",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368121,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026oldid\u003d1347298501",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368122,
+    "url": "https://web.archive.org/web/20221023082940/https://legacy.cs.indiana.edu/ftp/techreports/TR19.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368123,
+    "url": "https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_June_2014",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368124,
+    "url": "https://en.wikipedia.org/wiki/Modulo_(jargon)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368125,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-Python_Tail-Call_Interpreter_Dev_Discussion-41",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368126,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-llvm-documentation-tco_17-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368127,
+    "url": "https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368128,
+    "url": "https://software.intel.com/en-us/node/522809",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368129,
+    "url": "https://en.wikipedia.org/wiki/Category:Articles_with_example_Julia_code",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368131,
+    "url": "https://en.wikipedia.org/wiki/Safari_(browser)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368132,
+    "url": "https://en.wikipedia.org/wiki/Scheme_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368133,
+    "url": "https://en.wikipedia.org/wiki/Interpreter_(computer_software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368135,
+    "url": "https://en.wikipedia.org/wiki/Program_optimization",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368137,
+    "url": "https://doi.org/10.1145%2F800179.810196",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368138,
+    "url": "https://en.wikipedia.org/wiki/Category:Articles_with_example_Scheme_(programming_language)_code",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368139,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-SchemeProperTailRec_5-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368142,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368144,
+    "url": "https://en.wikipedia.org/wiki/Category:Articles_with_example_C_code",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368145,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-Python_Tail-Call_Interpreter_Dev_Discussion_41-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368147,
+    "url": "https://prev.rust-lang.org/en-US/faq.html#does-rust-do-tail-call-optimization",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368148,
+    "url": "https://web.archive.org/web/20060303155622/http://home.pipeline.com/~hbaker1/CheneyMTA.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368149,
+    "url": "http://perldoc.perl.org/functions/goto.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368150,
+    "url": "https://hdl.handle.net/1721.1%2F5753",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368152,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-9",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368153,
+    "url": "https://en.wikipedia.org/wiki/LISP",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368154,
+    "url": "https://en.wikipedia.org/wiki/Hdl_(identifier)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368157,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-Chicken_24-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368158,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-Chicken_24-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368159,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-7",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368161,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368162,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368163,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-SchemeProperTailRec_5-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368165,
+    "url": "http://www.tcl.tk/man/tcl/TclCmd/tailcall.htm",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368167,
+    "url": "http://www.schemers.org/Documents/Standards/R5RS/HTML/r5rs-Z-H-6.html#%25_sec_3.5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368168,
+    "url": "https://en.wikipedia.org/wiki/Kotlin_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368169,
+    "url": "https://en.wikipedia.org/wiki/X86_assembly_language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368170,
+    "url": "https://en.wikipedia.org/wiki/Inline_expansion",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368173,
+    "url": "http://programmers.stackexchange.com/questions/157684/what-limitations-does-the-jvm-impose-on-tail-call-optimization",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368174,
+    "url": "https://en.wikipedia.org/wiki/Return_address_(computing)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368175,
+    "url": "https://en.wikipedia.org/wiki/Stack_traces",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368177,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-onyourtail_23-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368178,
+    "url": "https://docs.python.org/3.14/whatsnew/3.14.html#a-new-type-of-interpreter",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368179,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026action\u003dedit\u0026section\u003d15",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368180,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026action\u003dedit\u0026section\u003d14",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368181,
+    "url": "https://www.scala-lang.org/api/2.13.0/scala/annotation/tailrec.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368182,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026action\u003dedit\u0026section\u003d13",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368183,
+    "url": "https://en.wikipedia.org/wiki/Lua_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368184,
+    "url": "https://en.wikipedia.org/wiki/X86",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368185,
+    "url": "http://www.r6rs.org/final/html/r6rs-rationale/r6rs-rationale-Z-H-7.html#node_sec_5.3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368186,
+    "url": "https://en.wikipedia.org/wiki/Continuation-passing_style",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368187,
+    "url": "https://en.wikipedia.org/wiki/GOTO",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368188,
+    "url": "https://en.wikipedia.org/wiki/SWI-Prolog",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368190,
+    "url": "https://en.wikipedia.org/wiki/Primitive_recursive_function",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368191,
+    "url": "https://en.wikipedia.org/wiki/Category:Scheme_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368192,
+    "url": "https://en.wiktionary.org/wiki/tail_recursion",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368193,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-MuchnickAssociates1997_1-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368195,
+    "url": "https://en.wikipedia.org/wiki/Groovy_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368196,
+    "url": "http://www.cs.indiana.edu/cgi-bin/techreports/TRNNN.cgi?trnum\u003dTR19",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368197,
+    "url": "https://en.wikipedia.org/wiki/David_H._D._Warren",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368198,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-r5rs_13-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368199,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dDavid_S._Wise\u0026action\u003dedit\u0026redlink\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368200,
+    "url": "https://www.lix.polytechnique.fr/~catuscia/teaching/prolog/Manual/sec-2.10.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368201,
+    "url": "https://en.wikipedia.org/wiki/Loop_(computing)#Loops",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368202,
+    "url": "https://en.wikipedia.org/wiki/Racket_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368204,
+    "url": "https://en.wikipedia.org/wiki/Mutually_recursive",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368205,
+    "url": "https://en.wikipedia.org/wiki/Goto",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368206,
+    "url": "https://en.wikipedia.org/wiki/Gerald_Jay_Sussman",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368207,
+    "url": "https://en.wikipedia.org/wiki/Clojure_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368208,
+    "url": "https://en.wikipedia.org/wiki/F_Sharp_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368209,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-aim-443-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368210,
+    "url": "https://en.wikipedia.org/wiki/Call_frame",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368211,
+    "url": "https://functional-programming-in-elm.netlify.app/recursion/tail-call-elimination.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368212,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-SchemeProperTailRec-5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368213,
+    "url": "https://stackoverflow.com/questions/12045299/what-is-difference-between-tail-calls-and-tail-recursion",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368214,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-llvm.org-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368218,
+    "url": "https://api.semanticscholar.org/CorpusID:14069423",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368220,
+    "url": "https://en.wikipedia.org/wiki/While_loop",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368222,
+    "url": "https://api.semanticscholar.org/CorpusID:9807843",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368223,
+    "url": "https://www.jumpingrivers.com/blog/whats-new-r44/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368224,
+    "url": "https://legacy.cs.indiana.edu/ftp/techreports/TR19.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368225,
+    "url": "https://en.wikipedia.org/wiki/Chicken_(Scheme_implementation)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368226,
+    "url": "https://en.wikipedia.org/wiki/Automatic_Reference_Counting",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368229,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-51",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368230,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-52",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368231,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-53",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368232,
+    "url": "https://en.wikipedia.org/wiki/Loop_(computing)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368233,
+    "url": "https://archive.org/details/advancedcompiler00much",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368234,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-50",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368236,
+    "url": "https://kotlinlang.org/docs/reference/functions.html#tail-recursive-functions",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368237,
+    "url": "https://en.wikipedia.org/wiki/Daniel_P._Friedman",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368238,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-MuchnickAssociates1997-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368239,
+    "url": "https://docs.racket-lang.org/reference/eval-model.html#(part._.Tail_.Position)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368240,
+    "url": "https://en.wikipedia.org/wiki/Hardware_stack",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368241,
+    "url": "https://en.wikipedia.org/wiki/Haskell_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368242,
+    "url": "https://en.wikipedia.org/wiki/Cons",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368243,
+    "url": "https://en.wikipedia.org/wiki/Recursion_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368244,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-40",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368245,
+    "url": "https://docs.ruby-lang.org/en/master/RubyVM/InstructionSequence.html#method-c-compile_option-3D",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368246,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-42",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368247,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-Python_Tail-Calling_Interpreter_Proposal-43",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368248,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-r5rs-13",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368249,
+    "url": "https://en.wikipedia.org/wiki/Henry_Baker_(computer_scientist)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368250,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-53",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368251,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-52",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368252,
+    "url": "http://www.schemers.org/Documents/Standards/R5RS/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368253,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-51",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368254,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-50",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368255,
+    "url": "https://en.wikipedia.org/wiki/Category:Programming_language_implementation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368256,
+    "url": "http://bdadam.com/blog/video-douglas-crockford-about-the-new-good-parts.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368257,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-sicp_8-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368258,
+    "url": "https://en.wikipedia.org/wiki/Stack_frame",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368260,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-sicp_8-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368261,
+    "url": "http://home.pipeline.com/~hbaker1/CheneyMTA.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368262,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-sicp_8-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368263,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#bodyContent",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368264,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-262-01077-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368265,
+    "url": "https://archive.org/details/structureinterpr00abel",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368266,
+    "url": "https://en.wikipedia.org/wiki/Category:Subroutines",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368267,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-48",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368268,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-49",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368269,
+    "url": "https://en.wikipedia.org/wiki/Corecursion",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368270,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-44",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368271,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-45",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368272,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-Python_Tail-Calling_Interpreter_Proposal_43-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368273,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-46",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368274,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-47",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368276,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-30",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368277,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-31",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368278,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-32",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368280,
+    "url": "https://en.wikipedia.org/wiki/Exec_(system_call)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368281,
+    "url": "https://en.wikipedia.org/wiki/GNU_Compiler_Collection",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368283,
+    "url": "https://en.wikipedia.org/wiki/Assignment_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368284,
+    "url": "http://www.r6rs.org/final/html/r6rs/r6rs-Z-H-8.html#node_sec_5.11",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368285,
+    "url": "https://www.webkit.org/blog/4054/es6-in-webkit/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368286,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-37",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368287,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-38",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368288,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-39",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368291,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-33",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368292,
+    "url": "https://doi.org/10.1023%2FA%3A1010051815785",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368293,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-34",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368295,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-35",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368296,
+    "url": "http://llvm.org/docs/CodeGenerator.html#sibling-call-optimization",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368297,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-36",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368298,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-39",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368299,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-38",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368300,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-20",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368301,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-37",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368302,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-21",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368303,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-36",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368304,
+    "url": "https://en.wikipedia.org/wiki/Zig_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368305,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-31",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368306,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-30",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368307,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-35",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368308,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-34",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368309,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-33",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368310,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-32",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368311,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026action\u003dedit\u0026section\u003d8",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368312,
+    "url": "https://en.wikipedia.org/wiki/Category:Implementation_of_functional_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368313,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026action\u003dedit\u0026section\u003d9",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368314,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026action\u003dedit\u0026section\u003d6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368315,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026action\u003dedit\u0026section\u003d7",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368316,
+    "url": "https://en.wikipedia.org/wiki/Iteration",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368317,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-26",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368318,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-1-4503-2308-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368319,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026action\u003dedit\u0026section\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368320,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-27",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368322,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-28",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368323,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-29",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368324,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026action\u003dedit\u0026section\u003d4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368325,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-22",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368326,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026action\u003dedit\u0026section\u003d5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368327,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026action\u003dedit\u0026section\u003d2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368328,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTail_call\u0026action\u003dedit\u0026section\u003d3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368329,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-25",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368330,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-49",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368332,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-48",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368333,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-10",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368334,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-llvm-documentation-tco-17",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368336,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-47",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368338,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-Chicken-24",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368339,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-42",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368340,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-40",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368341,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-46",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368342,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-45",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368343,
+    "url": "https://en.wikipedia.org/wiki/Computer_science",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368344,
+    "url": "https://ocaml.org/releases/4.03.0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368345,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-44",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368347,
+    "url": "https://en.wikipedia.org/wiki/Perl_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368349,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-19",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368350,
+    "url": "https://ziglang.org/documentation/master/#call",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368353,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-15",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368354,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-16",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368355,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-llvm.org_3-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368356,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-18",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368357,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-11",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368358,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-12",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368359,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-14",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368360,
+    "url": "https://en.wikipedia.org/wiki/Programming_language_specification",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368361,
+    "url": "https://cstheory.stackexchange.com/q/7540",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368362,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-16",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368363,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-sicp-8",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368364,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-15",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368365,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-14",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368366,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-19",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368367,
+    "url": "http://blog.functionalfun.net/2008/04/bouncing-on-your-tail.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368369,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-18",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368370,
+    "url": "https://gcc.gnu.org/ml/gcc/2000-07/msg00595.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368371,
+    "url": "https://en.wikipedia.org/wiki/Functional_programming_language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368373,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-12",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368374,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-11",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368375,
+    "url": "https://clojure.org/reference/special_forms#recur",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368376,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-10",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368377,
+    "url": "https://www.lua.org/manual/5.3/manual.html#3.4.10",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368378,
+    "url": "https://en.wikipedia.org/wiki/Higher-order_function",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368379,
+    "url": "https://en.wikipedia.org/wiki/Cheney_algorithm",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368380,
+    "url": "https://ocaml.org/manual/4.03/extn.html#sec246",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368381,
+    "url": "https://en.wikipedia.org/wiki/Course-of-values_recursion",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368383,
+    "url": "https://en.wikipedia.org/wiki/Big-O_notation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368384,
+    "url": "https://en.wikipedia.org/wiki/Logic_programming",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368385,
+    "url": "https://stackoverflow.com/questions/24023580/does-swift-implement-tail-call-optimization-and-in-mutual-recursion-case",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368386,
+    "url": "https://en.wikipedia.org/wiki/Wikipedia:Citing_sources",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368387,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-28",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368388,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-9",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368389,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-27",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368390,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-26",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368391,
+    "url": "https://en.wikipedia.org/wiki/Visual_Basic_.NET",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368392,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-25",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368393,
+    "url": "https://github.com/baruchel/tco",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368395,
+    "url": "https://en.wikipedia.org/wiki/PureScript",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368396,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368397,
+    "url": "http://www.drdobbs.com/tackling-c-tail-calls/184401756",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368398,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-7",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368399,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-29",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368400,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-20",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368401,
+    "url": "https://en.wikipedia.org/wiki/Special:EditPage/Tail_call",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368403,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-22",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368404,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-21",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368405,
+    "url": "http://neopythonic.blogspot.com/2009/04/tail-recursion-elimination.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368406,
+    "url": "https://en.wikipedia.org/wiki/Node_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368407,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_note-onyourtail-23",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368408,
+    "url": "https://en.wikipedia.org/wiki/Algorithmic_efficiency",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368409,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368410,
+    "url": "https://wiki.haskell.org/Tail_recursion",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368411,
+    "url": "https://en.wikipedia.org/wiki/Jump_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368412,
+    "url": "https://en.wikipedia.org/wiki/Category:Control_flow",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368414,
+    "url": "http://llvm.org/docs/CodeGenerator.html#tail-call-optimization",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368415,
+    "url": "https://en.wikipedia.org/wiki/Single_assignment#Single_assignment",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368416,
+    "url": "https://en.wikipedia.org/wiki/Andrew_Appel",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368417,
+    "url": "https://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368418,
+    "url": "https://en.wikipedia.org/wiki/Intel_C_Compiler",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368419,
+    "url": "https://en.wikipedia.org/wiki/Parameter_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368420,
+    "url": "https://en.wikipedia.org/wiki/Leaf_subroutine",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368421,
+    "url": "https://en.wikipedia.org/wiki/Swap_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368422,
+    "url": "https://en.wikipedia.org/wiki/Return_statement",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368423,
+    "url": "https://en.wikipedia.org/wiki/Side_effect_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368424,
+    "url": "https://en.wikipedia.org/wiki/Clang",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368427,
+    "url": "https://en.wikipedia.org/wiki/Elm_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368428,
+    "url": "http://www.r6rs.org/final/html/r6rs/r6rs-Z-H-14.html#node_sec_11.20",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368429,
+    "url": "https://en.wikipedia.org/wiki/Trampoline_(computers)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368430,
+    "url": "http://elixir-lang.org/getting-started/recursion.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368431,
+    "url": "https://en.wikipedia.org/wiki/WebKit",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368432,
+    "url": "https://github.com/golang/go/issues/22624",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368433,
+    "url": "https://en.wikipedia.org/wiki/Lisp_programming_language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368434,
+    "url": "https://en.wikipedia.org/wiki/Guy_L._Steele",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368435,
+    "url": "https://en.wikipedia.org/wiki/Category:Recursion",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368437,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-1-55860-320-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368438,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-aim-443_2-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368439,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-aim-443_2-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368440,
+    "url": "https://en.wikipedia.org/wiki/Tail_call#cite_ref-aim-443_2-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368441,
+    "url": "https://blogs.msdn.microsoft.com/fsharpteam/2011/07/08/tail-calls-in-f/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 368442,
+    "url": "https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_December_2025",
+    "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsZero"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsZero"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#else"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#else"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "wave — Read and write WAV files — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/wave.html#module-wave"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "wave — Read and write WAV files — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/wave.html#module-wave"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png",
+    "alt": "icon",
+    "pageTitle": "Tail call - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/40px-Octicons-terminal.svg.png",
+    "alt": "icon",
+    "pageTitle": "Tail call - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wiktionary-logo-en-v2.svg/40px-Wiktionary-logo-en-v2.svg.png",
+    "alt": "Wiktionary logo",
+    "pageTitle": "Tail call - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Tail call - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Exception Handling — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/exceptions.html#unicodeexceptions"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Exception Handling — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/exceptions.html#unicodeexceptions"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
